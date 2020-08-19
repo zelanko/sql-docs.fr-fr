@@ -1,4 +1,5 @@
 ---
+description: '&amp;&amp; (AND logique) (expression SSIS)'
 title: '&amp;&amp; (AND logique) (expression SSIS) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8cb3517-d5d1-4861-9f04-905c719185ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 01e82c8971ae89580fa9613e3e9f94de11b6b4ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: abb14eae98abaad9ebaaf70331abd42300ee4eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425401"
 ---
 # <a name="ampamp-logical-and-ssis-expression"></a>&amp;&amp; (AND logique) (expression SSIS)
 
@@ -48,11 +49,11 @@ boolean_expression1 && boolean_expression2
 |Résultats|Expression|Expression|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
-|FALSE|TRUE|FALSE|  
+|false|true|FALSE|  
 |FALSE|FALSE|FALSE|  
 |NULL|NULL|NULL|  
-|NULL|NULL|TRUE|  
-|FALSE|NULL|FALSE|  
+|NULL|NULL|true|  
+|FALSE|NULL|false|  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
  L’exemple suivant utilise les colonnes **StandardCost** et **ListPrice** . L’exemple renvoie la valeur TRUE si la valeur de la colonne **StandardCost** est inférieure à 300 et que celle de la colonne **ListPrice** est supérieure à 500.  

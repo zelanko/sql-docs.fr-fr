@@ -1,4 +1,5 @@
 ---
+description: catalog.set_environment_property (base de données SSISDB)
 title: catalog.set_environment_property (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 71d673ddb0ebb66b22cee7651bc74bd44cf7e089
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba69c12d93b683afa8d11669523153dc6d79d0c6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425141"
 ---
 # <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property (base de données SSISDB)
 
@@ -43,10 +44,10 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  Nom de l’environnement. *environment_name* est de type **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Nom d'une propriété d'environnement. *property_name* est de type **nvarchar(128)** .  
+ Nom d'une propriété d'environnement. *property_name* est de type **nvarchar(128)**.  
   
  [ @property_value = ] *property_value*  
- Valeur de la propriété d'environnement. *property_value* est de type **nvarchar(1024)** .  
+ Valeur de la propriété d'environnement. *property_value* est de type **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  

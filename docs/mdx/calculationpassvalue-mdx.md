@@ -1,4 +1,5 @@
 ---
+description: CalculationPassValue (MDX)
 title: CalculationPassValue (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae667d2cecb65f2525aaf855d3d1b70d40a59b21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98d30326b709f7bd651b7941e48d412a7b875ffd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016876"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425041"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
 
@@ -54,14 +55,14 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  Si une expression de chaîne est fournie, la fonction retourne une valeur de chaîne en évaluant l’expression de chaîne MDX spécifiée dans le test de calcul spécifié, et éventuellement modifiée par un indicateur d’accès et un modificateur d’indicateur d’accès *.*  
   
- Avec la résolution de récurrence automatique dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], cette fonction n’a que peu d’utilité.  
+ Avec la résolution de récurrence automatique dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , cette fonction n’a que peu d’utilité.  
   
 > [!NOTE]  
 >  Seuls les administrateurs peuvent utiliser la fonction **CalculationPassValue** dans un script MDX. Une erreur se produit si un script MDX contenant cette fonction est exécuté dans le contexte d'un rôle qui ne dispose pas des droits d'administrateur.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CalculationCurrentPass&#41;MDX &#40;](../mdx/calculationcurrentpass-mdx.md)   
- [&#41;de &#40;IIf](../mdx/iif-mdx.md)   
+ [&#41;de &#40;IIf ](../mdx/iif-mdx.md)   
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

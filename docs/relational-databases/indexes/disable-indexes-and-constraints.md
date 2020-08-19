@@ -1,4 +1,5 @@
 ---
+description: Désactiver les index et contraintes
 title: Désactiver les index et contraintes | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -24,12 +25,12 @@ ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6a012fc4aca38401a7476b759a9a13995dad87b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 464b8069b09af65c86521878803fdf1bd7744548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424171"
 ---
 # <a name="disable-indexes-and-constraints"></a>Désactiver les index et contraintes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -126,7 +127,7 @@ ms.locfileid: "85629779"
  **Nom de l'index**  
  Affiche le nom de l'index. Durant l'exécution, cette colonne comporte également une icône pour indiquer l'état.  
   
- **Nom de la table**  
+ **Nom du tableau**  
  Affiche le nom de la table ou de la vue sur laquelle l'index a été créé.  
   
  **Type d'index**  

@@ -1,4 +1,5 @@
 ---
+description: Exécution de lots
 title: Exécution de lots | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ce0c043fcfad41a624ad129a757a047d2c87fb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3bb923f95dfcfb731d472aad8ead7ff35053171
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305730"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424641"
 ---
 # <a name="executing-batches"></a>Exécution de lots
 Avant qu’une application exécute un lot d’instructions, elle doit d’abord vérifier si elles sont prises en charge. Pour ce faire, l’application appelle **SQLGetInfo** avec les options SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS et SQL_PARAM_ARRAY_SELECTS. La première option indique si les instructions de génération de nombre de lignes et de génération de jeu de résultats sont prises en charge dans les traitements et les procédures explicites, tandis que les deux dernières options retournent des informations sur la disponibilité des nombres de lignes et des jeux de résultats dans l’exécution paramétrée.  

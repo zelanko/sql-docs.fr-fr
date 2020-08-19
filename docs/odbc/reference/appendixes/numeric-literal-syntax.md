@@ -1,4 +1,5 @@
 ---
+description: Syntaxe des littéraux numériques
 title: Syntaxe des littéraux numériques | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e035e3ec53c5b5494c029d6840b9f5c836821209
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be87238f1663bcf9b12d40cb90521bb404a25af3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425011"
 ---
 # <a name="numeric-literal-syntax"></a>Syntaxe des littéraux numériques
 La syntaxe suivante est utilisée pour les littéraux numériques dans ODBC :  

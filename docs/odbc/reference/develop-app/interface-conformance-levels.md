@@ -1,4 +1,5 @@
 ---
+description: Niveaux de conformité de l’interface
 title: Niveaux de conformité de l’interface | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fff555324746fcb92641126ddf11ea91ce5e3f89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb77ab0e77fc8a811acd956673a4ad4fe8664828
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424621"
 ---
 # <a name="interface-conformance-levels"></a>Niveaux de conformité de l’interface
 L’objectif de l’audit est d’informer l’application des fonctionnalités qui lui sont disponibles à partir du pilote. Un schéma de nivellement basé sur des fonctions n’atteint pas suffisamment cet objectif. Dans ODBC 3. *x*, les pilotes sont classés en fonction des fonctionnalités qu’ils possèdent. La prise en charge de la fonctionnalité peut inclure la prise en charge de la fonction. Il peut également inclure la prise en charge d’un champ de descripteur, d’un attribut d’instruction, d’une valeur « Y » pour un type d’informations retourné par **SQLGetInfo**, et ainsi de suite.  

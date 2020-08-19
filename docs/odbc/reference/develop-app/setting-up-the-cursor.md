@@ -1,4 +1,5 @@
 ---
+description: Configuration du curseur
 title: Configuration du curseur | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 805d8076c853513d86f9a3a92d9342d1224226c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 307245dc403167f5bd857005f084ed22498d3ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424581"
 ---
 # <a name="setting-up-the-cursor"></a>Configuration du curseur
 L’application peut spécifier le type de curseur avant d’exécuter une instruction qui crée un jeu de résultats. Pour ce faire, il utilise l’attribut d’instruction SQL_ATTR_CURSOR_TYPE. Si l’application ne spécifie pas explicitement un type, un curseur avant uniquement sera utilisé. Pour obtenir un curseur mixte, une application spécifie un curseur piloté par jeu de clés, mais déclare une taille de jeu de clés inférieure à la taille du jeu de résultats.  

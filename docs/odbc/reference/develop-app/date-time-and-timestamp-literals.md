@@ -1,4 +1,5 @@
 ---
+description: Littéraux de date, d’heure et d’horodatage
 title: Littéraux de date, d’heure et d’horodatage | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d899938be4689daab50a773f189219a797794006
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10fb362a8ab61595a9b7205492de9c1115ae7013
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424781"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Littéraux de date, d’heure et d’horodatage
 La séquence d’échappement pour les littéraux de date, d’heure et d’horodatage est  
@@ -28,9 +29,9 @@ La séquence d’échappement pour les littéraux de date, d’heure et d’horo
   
 |*type littéral*|Signification|Format de *valeur*|  
 |---------------------|-------------|-----------------------|  
-|**d**|Date|*aaaa*-*mm*mm-*JJ*|  
+|**d**|Date|*aaaa* - *mm* - *JJ*|  
 |**t**|Simultanément|*hh*:*mm*:*SS*[1]|  
-|**ts**|Timestamp|*aaaa*-*mm*mm-*JJ* *hh*:*mm*:*SS*[.* f...*] 1,0|  
+|**TS**|Timestamp|*aaaa* - *mm* - *JJ* *hh*:*mm*:*SS*[.* f...*] 1,0|  
   
  [1] le nombre de chiffres à droite de la virgule décimale dans un littéral d’intervalle de temps ou d’horodatage contenant un composant de secondes dépend de la précision en secondes, telle qu’elle est contenue dans le champ du descripteur de SQL_DESC_PRECISION. (Pour plus d’informations, consultez [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

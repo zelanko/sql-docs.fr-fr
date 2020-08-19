@@ -1,4 +1,5 @@
 ---
+description: Se connecter à Stockage Blob Azure (Assistant Importation et Exportation SQL Server)
 title: Se connecter à Stockage Blob Azure (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2c15c03c5041aeebb2ac46776eb65921f4725bd8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7338ef58a86667b829fc1554660b316690de451a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425261"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Se connecter à Stockage Blob Azure (Assistant Importation et Exportation SQL Server)
 
@@ -47,10 +48,10 @@ La capture d’écran suivante présente les options de configuration d’une co
 **Clé de compte**  
 Entrez la clé du compte de stockage Azure.  
   
- **Utiliser HTTPS**  
+ **Utiliser le protocole HTTPS**  
  Indiquez si vous souhaitez vous connecter au compte de stockage avec HTTP ou HTTPS.  
   
- **Utiliser un compte de développeur local**  
+ **Utiliser le compte de développeur local**  
  Spécifiez s’il convient d’utiliser l’émulateur de stockage sur l’ordinateur local.  
   
  **Nom du conteneur d’objets blob**  
@@ -62,7 +63,7 @@ Entrez la clé du compte de stockage Azure.
  **Caractère séparateur de colonnes**  
  Si vous avez sélectionné le format Texte, entrez le caractère délimiteur de colonne.  
   
- **Utiliser la première ligne comme noms de colonne**  
+ **Utiliser la première ligne comme noms des colonnes**  
  Spécifiez si la première ligne de données contient des noms de colonne.  
 
 ## <a name="see-also"></a>Voir aussi

@@ -1,4 +1,5 @@
 ---
+description: Utilisation de tableaux de paramètres
 title: Utilisation de tableaux de paramètres | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b584dc3d635e9fa8ce3228e4e89b0f24451fe165
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a592131165e7dc2370ab1d22a3d9eba5f9609dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424411"
 ---
 # <a name="using-arrays-of-parameters"></a>Utilisation de tableaux de paramètres
 Pour utiliser des tableaux de paramètres, l’application appelle **SQLSetStmtAttr** avec un argument d' *attribut* de SQL_ATTR_PARAMSET_SIZE pour spécifier le nombre de jeux de paramètres. Elle appelle **SQLSetStmtAttr** avec un argument d' *attribut* de SQL_ATTR_PARAMS_PROCESSED_PTR pour spécifier l’adresse d’une variable dans laquelle le pilote peut retourner le nombre d’ensembles de paramètres traités, y compris les ensembles d’erreurs. Elle appelle **SQLSetStmtAttr** avec un argument d' *attribut* de SQL_ATTR_PARAM_STATUS_PTR pour pointer vers un tableau dans lequel retourner les informations d’État pour chaque ligne de valeurs de paramètre. Le pilote stocke ces adresses dans la structure qu’elle gère pour l’instruction.  

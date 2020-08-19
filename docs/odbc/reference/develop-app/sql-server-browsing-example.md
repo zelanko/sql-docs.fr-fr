@@ -1,4 +1,5 @@
 ---
+description: Exemple de navigation SQL Server
 title: Exemple d’exploration de SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b15aa8e3d573660a312fceb5b9100a41f0384d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14016832989c6fcba1dc39bc64434e72b049c18a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424561"
 ---
 # <a name="sql-server-browsing-example"></a>Exemple de navigation SQL Server
 L’exemple suivant montre comment **SQLBrowseConnect** peut être utilisé pour parcourir les connexions disponibles avec un pilote pour SQL Server. Tout d’abord, l’application demande un descripteur de connexion :  
@@ -38,7 +39,7 @@ SQLBrowseConnect(hdbc, "DRIVER={SQL Server};", SQL_NTS, BrowseResult,
  Étant donné qu’il s’agit du premier appel à **SQLBrowseConnect**, le gestionnaire de pilotes charge le pilote SQL Server et appelle la fonction **SQLBrowseConnect** du pilote avec les mêmes arguments que ceux reçus de l’application.  
   
 > [!NOTE]  
->  Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification `Trusted_Connection=yes` Windows, vous devez spécifier à la place de l’ID d’utilisateur et des informations de mot de passe dans la chaîne de connexion.  
+>  Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification Windows, vous devez spécifier à `Trusted_Connection=yes` la place de l’ID d’utilisateur et des informations de mot de passe dans la chaîne de connexion.  
   
  Le pilote détermine qu’il s’agit du premier appel à **SQLBrowseConnect** et retourne le deuxième niveau des attributs de connexion : serveur, nom d’utilisateur, mot de passe, nom de l’application et ID de station de travail. Pour l’attribut Server, elle retourne une liste de noms de serveurs valides. Le code de retour de **SQLBrowseConnect** est SQL_NEED_DATA. Voici la chaîne de résultat de navigation :  
   

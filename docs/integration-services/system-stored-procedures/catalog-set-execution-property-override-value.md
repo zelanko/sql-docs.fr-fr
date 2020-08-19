@@ -1,4 +1,5 @@
 ---
+description: catalog.set_execution_property_override_value
 title: catalog.set_execution_property_override_value | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a009f23b1c6ca3520793a7c1f947afe0ff0516a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d68015c56a6b5552ebee72f661c879c26aef4a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425081"
 ---
 # <a name="catalogset_execution_property_override_value"></a>catalog.set_execution_property_override_value 
 
@@ -40,10 +41,10 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  Identificateur unique de l'instance d'exécution. *execution_id* est de type **bigint**.  
   
  [ @property_path = ] *property_path*  
- Chemin d'accès à la propriété dans le package. *property_path* est de type **nvarchar(4000)** .  
+ Chemin d'accès à la propriété dans le package. *property_path* est de type **nvarchar(4000)**.  
   
  [ @property_value = ] *property_value*  
- Valeur de remplacement à affecter à la propriété. *property_value* est de type **nvarchar(max)** .  
+ Valeur de remplacement à affecter à la propriété. *property_value* est de type **nvarchar(max)**.  
   
  [ @sensitive = ] *sensitive*  
  Lorsque la valeur est 1, la propriété est sensible et est chiffrée lorsqu'elle est stockée. Lorsque la valeur est 0, la propriété n'est pas sensible et la valeur est stockée dans en texte en clair. L’argument *sensitive* est de type **bit**.  

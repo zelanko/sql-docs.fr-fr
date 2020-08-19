@@ -1,4 +1,5 @@
 ---
+description: Propriétés personnalisées des sources XML
 title: Propriétés personnalisées des sources XML | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d9d64d5b477ff31334bc6b60b88e1bbb01811d8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f77a63b11636f2be16e3d7c81c5b902a95b2a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425591"
 ---
 # <a name="xml-source-custom-properties"></a>Propriétés personnalisées des sources XML
 
@@ -28,16 +29,16 @@ ms.locfileid: "86920305"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|AccessMode|Integer|Mode utilisé pour accéder aux données XML.|  
-|UseInlineSchema|Boolean|Valeur qui indique si une définition de schéma inséré doit être utilisée dans la source XML. La valeur par défaut de cette propriété est **False**.|  
-|XMLData|String|Fichier ou variables à partir desquels les données XML sont extraites.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
-|XMLSchemaDefinition|String|Chemin d'accès et nom de fichier du fichier de définition de schéma (.xsd).<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
+|AccessMode|Entier|Mode utilisé pour accéder aux données XML.|  
+|UseInlineSchema|Booléen|Valeur qui indique si une définition de schéma inséré doit être utilisée dans la source XML. La valeur par défaut de cette propriété est **False**.|  
+|XMLData|Chaîne|Fichier ou variables à partir desquels les données XML sont extraites.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
+|XMLSchemaDefinition|Chaîne|Chemin d'accès et nom de fichier du fichier de définition de schéma (.xsd).<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.|  
   
  Le tableau suivant décrit les propriétés personnalisées de la sortie de la source XML. Toutes les propriétés sont en lecture/écriture.  
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|RowsetID|String|Valeur qui identifie l'ensemble de lignes associé à la sortie.|  
+|RowsetID|Chaîne|Valeur qui identifie l'ensemble de lignes associé à la sortie.|  
   
  Les colonnes de sortie de la source XML ne possèdent pas de propriétés personnalisées.  
   

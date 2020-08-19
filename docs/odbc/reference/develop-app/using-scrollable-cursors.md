@@ -1,4 +1,5 @@
 ---
+description: Utilisation des curseurs avec défilement
 title: Utilisation des curseurs à défilement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a73f001146691edb8a59d8eee503ae3762fc541
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aa61b75f91ade10c44669e49eb432ed38ea3be86
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289130"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424381"
 ---
 # <a name="using-scrollable-cursors"></a>Utilisation des curseurs avec défilement
 L’utilisation d’un curseur de défilement nécessite les trois étapes suivantes :  

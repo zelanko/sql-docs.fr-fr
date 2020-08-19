@@ -1,4 +1,5 @@
 ---
+description: Mots clés réservés
 title: Mots clés réservés | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3c83df20d95b9fe968b7c1c01cd8a9031043c8ad
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: a469e48f9de46453f60cfcbb468110dfb1f5d9dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424981"
 ---
 # <a name="reserved-keywords"></a>Mots clés réservés
 Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire SQL minimale ; Toutefois, pour garantir la compatibilité avec les pilotes qui prennent en charge la grammaire SQL de base, les applications doivent éviter d’utiliser l’un de ces mots clés. La valeur #**define** SQL_ODBC_KEYWORDS contient une liste séparée par des virgules de ces mots clés.  
@@ -111,7 +112,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
         EXISTS  
         EXTERNAL  
         EXTRACT  
-        FAUX  
+        false  
         FETCH  
         FIRST  
         FLOAT  
@@ -143,7 +144,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
         INSENSITIVE  
         INSERT  
         INT  
-        ENTIER  
+        INTEGER  
         INTERSECT  
         INTERVAL  
         INTO  
@@ -202,7 +203,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
         PROCEDURE  
         PUBLIC  
         READ  
-        RÉEL  
+        real  
         REFERENCES  
         RELATIVE  
         RESTRICT  
@@ -246,7 +247,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
         TRANSLATE  
         TRANSLATION  
         TRIM  
-        VRAI  
+        true  
         UNION  
         UNIQUE  
         UNKNOWN  

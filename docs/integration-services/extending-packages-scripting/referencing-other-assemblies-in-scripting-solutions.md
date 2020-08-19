@@ -1,4 +1,5 @@
 ---
+description: Référencement d'autres assemblys dans les solutions de script
 title: Référencement d’autres assemblys dans les solutions de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9b655bcd-19f6-43d8-9f89-1b4d299c6380
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e3be777b41c72544d6ce4d998d39d528fc6fcc2d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d476bd87096a68be5154cb57563f08ad982e7d3c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425321"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Référencement d'autres assemblys dans les solutions de script
 

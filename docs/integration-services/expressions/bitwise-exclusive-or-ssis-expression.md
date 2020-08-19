@@ -1,4 +1,5 @@
 ---
+description: ^ (OR exclusif au niveau du bit) (expression SSIS)
 title: ^ (OR exclusif au niveau du bit) (expression SSIS)| Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64e9e58118ab2922f73b5c4dbb1047f12ab02c7e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8887ddc1b7b7fab04a510d856f22e90723858f51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425581"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (OR exclusif au niveau du bit) (expression SSIS)
 

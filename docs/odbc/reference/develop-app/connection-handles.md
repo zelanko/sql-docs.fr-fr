@@ -1,4 +1,5 @@
 ---
+description: Handles de connexion
 title: Handles de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d5b03e0733e35984350d2a218b885dc148ca8f8f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4457fa72c40892e208057ac013d3da1e557a6d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424791"
 ---
 # <a name="connection-handles"></a>Handles de connexion
 Une *connexion* se compose d’un pilote et d’une source de données. Un descripteur de connexion identifie chaque connexion. Le descripteur de connexion définit non seulement le pilote à utiliser mais la source de données à utiliser avec ce pilote. Dans un segment de code qui implémente ODBC (gestionnaire de pilotes ou pilote), le handle de connexion identifie une structure qui contient des informations de connexion, telles que les suivantes :  

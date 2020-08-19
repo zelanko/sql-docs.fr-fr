@@ -1,4 +1,5 @@
 ---
+description: Vue d’ensemble de la mise à jour des données
 title: Présentation de la mise à jour des données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9972ab61f041385ae4ca616df093ae63ad7a47d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b1755ea75426030a96ed7b349cc82f0fc7e282a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424421"
 ---
 # <a name="updating-data-overview"></a>Vue d’ensemble de la mise à jour des données
 Les applications peuvent mettre à jour les données en exécutant des instructions SQL ou en appelant **SQLSetPos** ou **SQLBulkOperations**. Les instructions **Update**, **Delete**et **Insert** agissent directement sur la source de données et sont généralement prises en charge par les pilotes. Les instructions Update et Delete recherchées contiennent une spécification des lignes à modifier. Les instructions Update et DELETE positionnées et **SQLSetPos** agissent sur la source de données via un curseur et sont moins largement prises en charge.  

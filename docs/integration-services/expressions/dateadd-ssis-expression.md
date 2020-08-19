@@ -1,4 +1,5 @@
 ---
+description: DATEADD (expression SSIS)
 title: DATEADD (expression SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2285a23325b91a78759d1dac26725e0e570b23fb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f6dd42e81d3b1d2db558962cbb9843488dd1ad16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425551"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (expression SSIS)
 
@@ -54,11 +55,11 @@ DATEADD(datepart, number, date)
 |partie de date|Abréviations|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
-|Quarter|qq, q|  
+|Quarter (Trimestre)|qq, q|  
 |Month|mm, m|  
 |Jour de l'année|dy, y|  
-|jour|dd, d|  
-|Week|wk, ww|  
+|Jour|dd, d|  
+|Semaine|wk, ww|  
 |Jour de la semaine|dw, w|  
 |Heure|Hh|  
 |Minute|mi, n|  

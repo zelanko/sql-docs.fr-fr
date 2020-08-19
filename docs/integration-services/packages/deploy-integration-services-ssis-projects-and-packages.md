@@ -1,4 +1,5 @@
 ---
+description: Déployer des projets et des packages Integration Services (SSIS)
 title: Déployer des projets et des packages SSIS (Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/26/2019
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 962b1db12c1208ea70c7cb906eb904bf17538a64
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f31196ca74fa8aac69958ec47e084a3b63220ee7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425221"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Déployer des projets et des packages Integration Services (SSIS)
 
@@ -86,7 +87,7 @@ Cette erreur est généralement le résultat d’autorisations DCOM manquantes. 
 1.  Ouvrez la console **Services de composants** (ou exécutez Dcomcnfg.exe).
 2.  Dans la console **Services de composants**, développez **Services de composants** > **Ordinateurs** > **Poste de travail** > **Configuration DCOM**.
 3.  Dans la liste, recherchez **Microsoft SQL Server Integration Services xx.0** pour la version de SQL Server que vous utilisez. Par exemple, SQL Server 2016 correspond à la version 13.
-4.  Cliquez avec le bouton droit, puis sélectionnez **Propriétés**.
+4.  Effectuez un clic droit et sélectionnez **Propriétés**.
 5.  Dans la boîte de dialogue **Propriétés de Microsoft SQL Server Integration Services 13.0**, sélectionnez l’onglet **Sécurité**.
 6.  Pour chacun des trois ensembles d’autorisations (Lancement et Activation, Accès et Configuration), sélectionnez **Personnaliser**, puis sélectionnez **Modifier** pour ouvrir la boîte de dialogue **Autorisation**.
 7.  Dans la boîte de dialogue **Autorisation**, ajoutez le compte de service qui n’est pas le compte par défaut, puis accordez les autorisations **Autoriser** appropriées. En règle générale, un compte a les autorisations **Exécution locale** et **Activation locale**.
@@ -94,7 +95,7 @@ Cette erreur est généralement le résultat d’autorisations DCOM manquantes. 
 
 Pour plus d’informations sur l’erreur décrite dans cette section et sur les autorisations nécessaires au compte de service SSIS, consultez le billet de blog suivant :
  
-- [System.ComponentModel.Win32Exception : le client ne dispose pas d’un privilège qui est obligatoire pendant le déploiement d’un projet SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+- [System.ComponentModel.Win32Exception : il manque un privilège obligatoire au client pendant le déploiement d’un projet SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Déployer des projets sur le serveur Integration Services
   Dans la version actuelle d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez déployer vos projets sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permet de gérer les packages, d'exécuter les packages et de configurer les valeurs d'exécution des packages à l'aide d'environnements.  
@@ -127,7 +128,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
      Pour plus d’informations sur la mise à niveau des packages, consultez [Mettre à niveau des packages Integration Services](../../integration-services/install-windows/upgrade-integration-services-packages.md) et [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Déployez le projet sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez les instructions ci-dessous : [Pour déployer un projet sur le serveur Integration Services](#deploy).  
+3.  Déployez le projet sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Pour plus d’informations, consultez les instructions ci-dessous : [Pour déployer un projet sur le serveur Integration Services](#deploy).  
   
 4.  (Facultatif) Créez un environnement pour le projet déployé. 
   
@@ -135,7 +136,7 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
 1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], puis dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet et sélectionnez **Convertir en modèle de déploiement de projet**.  
   
-     -ou-  
+     - ou -  
   
      Depuis l’Explorateur d’objets dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur le nœud **Projets** et sélectionnez **Importer les packages**.  
   
@@ -145,17 +146,17 @@ Pour plus d’informations sur l’erreur décrite dans cette section et sur les
   
 1.  Ouvrez le projet dans [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]puis, dans le menu **Projet** , sélectionnez **Déployer** pour lancer **l’Assistant Déploiement d’Integration Services**.  
   
-     or  
+     ou  
   
      Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez le nœud [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** dans l’Explorateur d’objets, puis recherchez le dossier du projet que vous souhaitez déployer. Cliquez avec le bouton droit sur le dossier des **projets** , puis cliquez sur **Déployer le projet**.  
   
-     or  
+     ou  
   
      À l’invite de commandes, exécutez **isdeploymentwizard.exe** à partir de **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn**. Sur les ordinateurs 64 bits, il existe également une version 32 bits de l’outil dans **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**.  
   
 2.  Dans la page **Sélectionner une source** , cliquez sur **Fichier de déploiement de projet** pour sélectionner le fichier de déploiement du projet.  
   
-     or  
+     ou  
   
      Cliquez sur **Catalogue Integration Services** pour sélectionner un projet qui a déjà été déployé dans le catalogue SSISDB.  
   
@@ -296,11 +297,11 @@ Lancer l’Assistant en :
 
  - En tapant **« Assistant déploiement SQL Server »** dans Windows Search 
 
- or
+ ou
 
  - En recherchant le fichier exécutable **ISDeploymentWizard.exe** sous le dossier d’installation de SQL Server, par exemple : « C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn ». 
  
- > **REMARQUE :** Cliquez sur **Suivant** sur la page **Introduction** pour afficher la page **Sélectionner une source** . 
+ > **REMARQUE :** cliquez sur **Suivant** sur la page **Introduction** pour afficher la page **Sélectionner une source** . 
  
  Les paramètres de cette page sont différents pour chaque modèle de déploiement. Suivez les étapes de la section [Project Deployment Model](#ProjectModel) ou de la section [Package Deployment Model](#PackageModel) en fonction du modèle que vous avez sélectionné sur cette page.  
   
@@ -593,7 +594,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Utiliser l'authentification SQL Server**  
  Quand un utilisateur se connecte avec un nom d’accès et un mot de passe spécifiés à partir d’une connexion non autorisée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifie la connexion en vérifiant si un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été défini et si le mot de passe spécifié correspond à celui enregistré. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne possède pas de compte de connexion, l'authentification échoue et un message d'erreur est envoyé à l'utilisateur.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Spécifiez un nom d'utilisateur lorsque vous utilisez l'authentification SQL Server.  
   
  **Mot de passe**  
@@ -703,14 +704,14 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Nom du paramètre**  
  Indique le nom du paramètre.  
   
- **Portée**  
+ **Étendue**  
  Sélectionnez l'étendue du paramètre, package ou projet.  
   
 ###  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a> Définir les options sur la page Configurer les paramètres  
  **Nom**  
  Indique le nom du paramètre.  
   
- **Portée**  
+ **Étendue**  
  Indique l'étendue du paramètre.  
   
  **Valeur**  

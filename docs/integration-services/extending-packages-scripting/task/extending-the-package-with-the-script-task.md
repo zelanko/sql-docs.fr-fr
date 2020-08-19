@@ -1,4 +1,5 @@
 ---
+description: Extension du package à l'aide de la tâche de script
 title: Extension du package à l’aide de la tâche de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c10db4b43ab6763d751af0eeb980979e74bf6c6e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c70136ad09aaa3cb24c04c2828e8335f96aef467
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425311"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Extension du package à l'aide de la tâche de script
 
@@ -42,7 +43,7 @@ ms.locfileid: "86917606"
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques suivantes fournissent des informations supplémentaires sur la tâche de script.  
   
- [Configuration de la tâche de script dans l’éditeur de tâche de script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
+ [Configuration de la tâche de script dans l'éditeur de tâche de script](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
  Explique de quelle manière les propriétés que vous configurez dans l’**éditeur de tâche de script** affectent les fonctionnalités et les performances du code de la tâche de script.  
   
  [Codage et débogage de la tâche de script](../../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md)  
@@ -54,7 +55,7 @@ ms.locfileid: "86917606"
  [Connexion à des sources de données dans la tâche de script](../../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)  
  Explique comment utiliser des connexions via la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>.  
   
- [Déclenchement d’événements dans la tâche de script](../../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)  
+ [Déclenchement d'événements dans la tâche de script](../../../integration-services/extending-packages-scripting/task/raising-events-in-the-script-task.md)  
  Explique comment déclencher des événements via la propriété <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>.  
   
  [Journalisation dans la tâche de script](../../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md)  

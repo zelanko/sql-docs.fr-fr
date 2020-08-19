@@ -1,4 +1,5 @@
 ---
+description: catalog.executions (base de données SSISDB)
 title: catalog.executions (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33a7603502d1b43ea7cfdd1fa5f9c84720705ade
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 438d551f45447b0b03b075576af9cffb2bde8a36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425101"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (base de données SSISDB)
 
@@ -43,9 +44,9 @@ ms.locfileid: "86912551"
 |executed_as_sid|**varbinary(85)**|SID de l'utilisateur qui a démarré l'exécution.|  
 |executed_as_name|**nvarchar(128)**|Nom du principal de la base de données utilisé pour démarrer l'instance d'exécution.|  
 |use32bitruntime|**bit**|Indique si l'exécution 32 bits est utilisée pour exécuter le package sur un système d'exploitation 64 bits. Quand la valeur est `1`, l’exécution 32 bits est utilisée. Lorsque la valeur est `0`, l'exécution 64 bits est utilisée.|  
-|object_type|**smallint**|Type de l'objet. L'objet peut être un projet (`20`) ou un package (`30`).|  
+|object_type|**smallint**|Type d'objet. L'objet peut être un projet (`20`) ou un package (`30`).|  
 |object_id|**bigint**|ID de l'objet affecté par l'opération.|  
-|status|**int**|L’état de l’opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
+|status|**int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
 |start_time|**datetimeoffset**|Heure de démarrage de l'instance d'exécution.|  
 |end_time|**datetimeoffsset**|Heure d'exécution de l'instance d'exécution.|  
 |caller_sid|**varbinary(85)**|ID de sécurité (SID) de l'utilisateur si l'Authentification Windows a été utilisée pour se connecter.|  
@@ -58,7 +59,7 @@ ms.locfileid: "86912551"
 |total_page_file_kb|**bigint**|Mémoire de pages totale (en mégaoctets) sur le serveur au démarrage de l'exécution.|  
 |available_page_file_kb|**bigint**|Mémoire de pages disponible (en mégaoctets) sur le serveur au démarrage de l'exécution.|  
 |cpu_count|**int**|Nombre d'UC logiques sur le serveur au démarrage de l'exécution.|  
-|server_name|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|nom_serveur|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Nom de l'ordinateur sur lequel s'exécute l'instance du serveur.|  
 |dump_id|**uniqueidentifier**|ID d'un vidage d'exécution.|  
   

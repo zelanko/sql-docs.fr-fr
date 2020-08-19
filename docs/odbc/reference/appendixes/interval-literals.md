@@ -1,4 +1,5 @@
 ---
+description: Littéraux d’intervalle
 title: Littéraux d’intervalle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1761ac0acb57b3f375a7d19e9371384c000eca5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd065091127645a45b836781fc6edf6c701e6685
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425031"
 ---
 # <a name="interval-literals"></a>Littéraux d’intervalle
 ODBC exige que tous les pilotes prennent en charge la conversion du type de données SQL_CHAR ou SQL_VARCHAR en tous les types de données de l’intervalle C. Toutefois, si la source de données sous-jacente ne prend pas en charge les types de données d’intervalle, le pilote doit connaître le format correct de la valeur dans le champ SQL_CHAR afin de prendre en charge ces conversions. De même, ODBC exige que tout type ODBC C soit convertible en SQL_CHAR ou SQL_VARCHAR, de sorte qu’un pilote doit savoir quel format un intervalle stocké dans le champ de caractère doit avoir. Cette section décrit la syntaxe des littéraux d’intervalle, que le writer de pilote doit utiliser pour valider les champs de SQL_CHAR lors de la conversion vers ou à partir des types de données de l’intervalle C.  
@@ -37,7 +38,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  où « INTERVAL » indique que le littéral de caractère est un intervalle. Le signe peut être plus ou moins ; Il est en dehors de la chaîne d’intervalle et est facultatif.  
   
- Le qualificateur Interval peut être un champ DateTime unique ou être composé de deux champs DateTime, sous la forme : \< *champ de début*> à la \<> de *champ de fin* .  
+ Le qualificateur Interval peut être un champ DateTime unique ou être composé de deux champs DateTime, sous la forme : \<*leading field*> à \<*trailing field*> .  
   
 -   Lorsque l’intervalle est composé d’un seul champ, le champ unique peut être un champ qui n’est pas un second, qui peut être accompagné d’une précision de début facultative entre parenthèses. Le champ DateTime unique peut également être un deuxième champ qui peut être accompagné de la précision de début facultative, de la précision de fraction de seconde facultative entre parenthèses, ou des deux. Si une précision de début et une précision de fraction de seconde sont présentes pour un champ de secondes, elles sont séparées par des virgules. Si le champ secondes a une précision de fraction de seconde, il doit également avoir une précision de début.  
   
@@ -45,7 +46,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  La chaîne d’intervalle de *valeur* est placée entre guillemets simples. Il peut s’agir d’un littéral d’année-mois ou d’un littéral de jour-heure. Le format de la chaîne dans la *valeur* est déterminé par les règles suivantes :  
   
--   La chaîne contient une valeur décimale pour chaque champ impliqué par le \< *qualificateur* d' *intervalle*>.  
+-   La chaîne contient une valeur décimale pour chaque champ impliqué par le \<*interval* *qualifier*> .  
   
 -   Si la précision de l’intervalle comprend les champs année et mois, les valeurs de ces champs sont séparées par un signe moins.  
   

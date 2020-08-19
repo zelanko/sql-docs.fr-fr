@@ -1,4 +1,5 @@
 ---
+description: Remplacement de la précision du début et de la fin par défaut pour les types de données d’intervalle
 title: Remplacer la précision de début et de seconde pour les types de données d’intervalle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e60d5d8fc696ad8e2bd4cfb0c082ff214e066d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97375bf23a8530d78dea65dc75ce487cc4f807dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425001"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Remplacement de la précision du début et de la fin par défaut pour les types de données d’intervalle
 Quand le champ SQL_DESC_TYPE d’un ARD est défini sur un type DateTime ou Interval C, en appelant **SQLBindCol** ou **SQLSetDescField**, le champ SQL_DESC_PRECISION (qui contient la précision de l’intervalle en secondes) est défini sur les valeurs par défaut suivantes :  

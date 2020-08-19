@@ -1,4 +1,5 @@
 ---
+description: Métadonnées des jeux de résultats
 title: Métadonnées du jeu de résultats | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d134515-e34d-4563-96d7-8ad7714818fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b78cdeb4c8b3522f4677c0277401cd9395a36a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46738682900509d22df1eebaa22b13d3abfb729e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424591"
 ---
 # <a name="result-set-metadata"></a>Métadonnées des jeux de résultats
 Les *métadonnées* sont des données qui décrivent d’autres données. Par exemple, les métadonnées du jeu de résultats décrivent le jeu de résultats, comme le nombre de colonnes dans le jeu de résultats, les types de données de ces colonnes, leurs noms, la précision, la possibilité de valeur null, etc.  

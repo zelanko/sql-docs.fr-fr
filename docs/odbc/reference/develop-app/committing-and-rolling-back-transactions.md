@@ -1,4 +1,5 @@
 ---
+description: Validation et annulation des transactions
 title: Validation et restauration des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c272d60242d31622452c4dcb0f6a16c4838768f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b84be4d2734d9485748351c99ff2675bf3b54213
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424841"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>Validation et annulation des transactions
 Pour valider ou restaurer une transaction en mode de validation manuelle, une application appelle **SQLEndTran**. Les pilotes pour les SGBD qui prennent en charge les transactions implémentent généralement cette fonction en exécutant une instruction **Commit** ou **Rollback** . Le gestionnaire de pilotes n’appelle pas **SQLEndTran** lorsque la connexion est en mode de validation automatique. elle retourne simplement SQL_SUCCESS, même si l’application tente de restaurer la transaction. Étant donné que les pilotes pour les SGBD qui ne prennent pas en charge les transactions sont toujours en mode de validation automatique, ils peuvent implémenter **SQLEndTran** pour retourner des SQL_SUCCESS sans effectuer aucune action ou ne pas implémenter le tout.  

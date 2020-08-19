@@ -1,4 +1,5 @@
 ---
+description: Extension du flux de données avec le composant Script
 title: Extension du flux de données avec le composant Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3f8818197bffefd42004dbd4d0cc4d1732d79029
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 82f34ab83935bee2972a4dbb2b007eb2632b9fba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913415"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425391"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extension du flux de données avec le composant Script
 
@@ -62,7 +63,7 @@ ms.locfileid: "86913415"
  [Connexion aux sources de données dans le composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)  
  L’élément de projet **ComponentWrapper** contient également des propriétés d’accesseur fortement typées pour les connexions définies dans le package.  
   
- [Déclenchement d’événements dans le composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)  
+ [Déclenchement d'événements dans le composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)  
  Vous pouvez déclencher des événements pour signaler des problèmes et des erreurs.  
   
  [Journalisation dans le composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)  

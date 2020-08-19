@@ -1,4 +1,5 @@
 ---
+description: Utilitaire d’exécution de package (dtexecui)
 title: Utilitaire d’exécution de package (dtexecui) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26e976ee2a62d29f8f14584159888de428431101
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 630fea974e83507984cae8a4ec2b7938fc551d25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472496"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425281"
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilitaire d’exécution de package (dtexecui)
 
@@ -76,7 +77,7 @@ ms.locfileid: "87472496"
   
  Chacune des sélections ci-dessus comporte la série d'options suivante :  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
@@ -142,7 +143,7 @@ ms.locfileid: "87472496"
  **Remove**  
  Sélectionnez un fichier de configuration dans la liste, puis cliquez sur **Supprimer**.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
@@ -164,7 +165,7 @@ ms.locfileid: "87472496"
  **Remove**  
  Permet de sélectionner un fichier de commandes dans la zone de texte, puis de le supprimer par le biais du bouton **Supprimer** .  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
@@ -183,7 +184,7 @@ ms.locfileid: "87472496"
  **Chaîne de connexion**  
  Modifie la chaîne de connexion d'un gestionnaire de connexions. Ce champ est modifiable uniquement lorsque la case à cocher **Gestionnaire de connexions** est activée.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
@@ -217,7 +218,7 @@ ms.locfileid: "87472496"
  **Option de redémarrage**  
  Indique comment utiliser les points de contrôle si vous ignorez les options de redémarrage.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
@@ -278,7 +279,7 @@ ms.locfileid: "87472496"
  **Heure de début et heure de fin**  
  Sélectionnez cette option pour générer un rapport sur l'heure à laquelle le package a commencé et s'est terminé.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
@@ -297,7 +298,7 @@ ms.locfileid: "87472496"
  **Remove**  
  Permet de sélectionner un module fournisseur d'informations pour le supprimer.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
@@ -316,7 +317,7 @@ ms.locfileid: "87472496"
  **Remove**  
  Sélectionnez le chemin d'accès à une propriété et cliquez dessus pour la supprimer.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
@@ -347,7 +348,7 @@ ms.locfileid: "87472496"
  ID de version  
  Spécifiez le numéro d'identification de la version.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
@@ -366,7 +367,7 @@ ms.locfileid: "87472496"
  **Ligne de commande**  
  Affiche la ligne de commande actuelle. Cet élément est modifiable si vous avez activé l'option de modifier la ligne de commande manuellement.  
   
- **Exécuter**  
+ **Execute**  
  Permet d'exécuter le package.  
   
  **Close**  
