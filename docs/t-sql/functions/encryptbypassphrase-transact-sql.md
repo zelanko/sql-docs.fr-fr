@@ -1,4 +1,5 @@
 ---
+description: ENCRYPTBYPASSPHRASE (Transact-SQL)
 title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5fc109c89fb32e42c97b5454bd67d41238d63835
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c73f2fac57dbb73ce95a734a8382b8a8f7568edd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112474"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366035"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +53,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @passphrase  
  Variable de type **nvarchar**, **char**, **varchar**, **binary**, **varbinary** ou **nchar** qui contient une phrase secrète à partir de laquelle générer une clé symétrique.  
   
- *cleartext*  
+ *texte clair*  
  Texte clair à chiffrer.  
   
  @cleartext  
@@ -73,7 +74,7 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
 ## <a name="return-types"></a>Types de retour  
  **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Une expression relative au mot de passe est un mot de passe qui comporte des espaces. L'avantage d'utiliser une expression relative au mot de passe est qu'il est plus facile de mémoriser une phrase qui a un sens plutôt qu'une longue chaîne de caractères.  
   
  Cette fonction ne vérifie pas la complexité des mots de passe.  
