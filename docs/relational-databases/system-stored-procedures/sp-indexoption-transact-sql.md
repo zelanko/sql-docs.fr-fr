@@ -1,4 +1,5 @@
 ---
+description: sp_indexoption (Transact-SQL)
 title: sp_indexoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc11f219d98e4b8018bc7d763345feb279790e13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 509d58a28f768fe774c813a8235ae4c0d9cd718a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469235"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,9 +33,9 @@ ms.locfileid: "85893243"
  Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] choisit automatiquement le niveau de verrouillage, à savoir table, ligne ou page. Vous n'avez pas besoin de définir ces options manuellement. **sp_indexoption** est fourni aux utilisateurs expérimentés qui savent avec certitude qu’un type particulier de verrou est toujours approprié.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Au lieu de cela, utilisez [ALTER INDEX &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-index-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Au lieu de cela, utilisez [ALTER INDEX &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-index-transact-sql.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,9 +47,9 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @IndexNamePattern = ] 'table_or_index_name'`Nom qualifié ou non qualifié d’une table ou d’un index défini par l’utilisateur. *table_or_index_name* est de type **nvarchar (1035)**, sans valeur par défaut. Les guillemets ne sont nécessaires que si l'on spécifie un nom qualifié de table ou d'index. Si un nom de table complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données en cours. Si un nom de table est spécifié sans index, la valeur d'option spécifiée est définie pour tous les index de cette table et, si aucun index cluster n'existe, pour la table elle-même.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` Nom qualifié ou non qualifié d’une table ou d’un index défini par l’utilisateur. *table_or_index_name* est de type **nvarchar (1035)**, sans valeur par défaut. Les guillemets ne sont nécessaires que si l'on spécifie un nom qualifié de table ou d'index. Si un nom de table complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données en cours. Si un nom de table est spécifié sans index, la valeur d'option spécifiée est définie pour tous les index de cette table et, si aucun index cluster n'existe, pour la table elle-même.  
   
-`[ @OptionName = ] 'option_name'`Nom d’option d’index. *option_name* est de type **varchar (35)**, sans valeur par défaut. *option_name* peut prendre l’une des valeurs suivantes.  
+`[ @OptionName = ] 'option_name'` Nom d’option d’index. *option_name* est de type **varchar (35)**, sans valeur par défaut. *option_name* peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -57,12 +58,12 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowRowLocks**|Si la valeur est TRUE, les verrous de ligne ne sont pas utilisés. Si la valeur est FALSE, les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés.|  
 |**DisAllowPageLocks**|Si la valeur est TRUE, les verrous de page ne sont pas utilisés. Si la valeur est FALSE, les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés.|  
   
-`[ @OptionValue = ] 'value'`Spécifie si le paramètre *option_name* est activé (true, on, Yes ou 1) ou désactivé (false, OFF, no ou 0). la *valeur* est de type **varchar (12)**, sans valeur par défaut.  
+`[ @OptionValue = ] 'value'` Spécifie si le paramètre *option_name* est activé (true, on, Yes ou 1) ou désactivé (false, OFF, no ou 0). la *valeur* est de type **varchar (12)**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou supérieur à 0 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les index XML ne sont pas pris en charge. Si un index XML est spécifié ou qu'un nom de table est spécifié sans nom d'index et que la table contient un index XML, l'instruction échoue. Pour définir ces options, utilisez [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) à la place.  
   
  Pour afficher les propriétés de verrouillage de page et de ligne actuelles, utilisez [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) ou l’affichage catalogue [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
@@ -140,7 +141,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

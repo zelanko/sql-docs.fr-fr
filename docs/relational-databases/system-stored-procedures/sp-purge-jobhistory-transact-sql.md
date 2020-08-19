@@ -1,4 +1,5 @@
 ---
+description: sp_purge_jobhistory (Transact-SQL)
 title: sp_purge_jobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,18 +19,19 @@ ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: db00bdaaf3414da7bf639331f47b4872992e016c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 771d053b8e775ee59266aa5ff53180f2ee739327
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469267"
 ---
 # <a name="sp_purge_jobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Supprime les enregistrements d'historique d'un travail.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,14 +44,14 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_name = ] 'job_name'`Nom du travail pour lequel supprimer les enregistrements d’historique. *job_name*est de **type sysname**, avec NULL comme valeur par défaut. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
+`[ @job_name = ] 'job_name'` Nom du travail pour lequel supprimer les enregistrements d’historique. *job_name*est de **type sysname**, avec NULL comme valeur par défaut. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
 > [!NOTE]  
 >  Les membres du rôle serveur fixe **sysadmin** ou des membres du rôle de base de données fixe **SQLAgentOperatorRole** peuvent exécuter **sp_purge_jobhistory** sans spécifier de *job_name* ou de *job_id*. Lorsque les utilisateurs **sysadmin** ne spécifient pas ces arguments, l’historique des travaux pour tous les travaux locaux et multiserveurs est supprimé dans le délai spécifié par *oldest_date*. Lorsque les utilisateurs **SQLAgentOperatorRole** ne spécifient pas ces arguments, l’historique des travaux de tous les travaux locaux est supprimé dans le délai spécifié par *oldest_date*.  
   
-`[ @job_id = ] job_id`Numéro d’identification du travail pour les enregistrements à supprimer. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Consultez la remarque dans la description de ** \@ job_name** pour plus d’informations sur la façon dont les utilisateurs **sysadmin** ou **SQLAgentOperatorRole** peuvent utiliser cet argument.  
+`[ @job_id = ] job_id` Numéro d’identification du travail pour les enregistrements à supprimer. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Consultez la remarque dans la description de ** \@ job_name** pour plus d’informations sur la façon dont les utilisateurs **sysadmin** ou **SQLAgentOperatorRole** peuvent utiliser cet argument.  
   
-`[ @oldest_date = ] oldest_date`Enregistrement le plus ancien à conserver dans l’historique. *oldest_date* est de **type DateTime**, avec NULL comme valeur par défaut. Lorsque *oldest_date* est spécifié, **sp_purge_jobhistory** supprime uniquement les enregistrements antérieurs à la valeur spécifiée.  
+`[ @oldest_date = ] oldest_date` Enregistrement le plus ancien à conserver dans l’historique. *oldest_date* est de **type DateTime**, avec NULL comme valeur par défaut. Lorsque *oldest_date* est spécifié, **sp_purge_jobhistory** supprime uniquement les enregistrements antérieurs à la valeur spécifiée.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -99,7 +101,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [GRANT – octroi d’autorisations d’objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [GRANT – Octroyer des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   
   

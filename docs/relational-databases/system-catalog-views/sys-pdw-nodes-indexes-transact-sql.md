@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_indexes (Transact-SQL)
 title: sys. pdw_nodes_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -12,12 +13,12 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f3d749eb32c8e7369c10e904f9e13991aa85be20
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: f6c518d53122015af3e86350b0037e1b88604543
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197369"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490243"
 ---
 # <a name="syspdw_nodes_indexes-transact-sql"></a>sys. pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86197369"
 |object_id|**int**|ID de l’objet auquel appartient cet index.||  
 |name|**sysname**|Nom de l'index. Le nom est unique dans l’objet. NULL = Segment||  
 |index_id|**int**|ID de l’index. index_id n'est unique qu'à l'intérieur de l'objet.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = Index non-cluster||  
-|Type|**tinyint**|Type de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = Clustered<br /><br /> 2 = Non cluster<br /><br /> 5 = index ColumnStore optimisé en mémoire xVelocity en cluster|  
+|type|**tinyint**|Type de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = Clustered<br /><br /> 2 = Non cluster<br /><br /> 5 = index ColumnStore optimisé en mémoire xVelocity en cluster|  
 |type_desc|**nvarchar(60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> COLUMNSTORE EN CLUSTER||  
 |is_unique|**bit**|0 = L'index n'est pas unique.|Toujours 0.|  
 |data_space_id|**int**|ID de l’espace de données pour cet index. L'espace de données est soit un groupe de fichiers, soit un schéma de partition.<br /><br /> 0 = object_id est une fonction table.||  

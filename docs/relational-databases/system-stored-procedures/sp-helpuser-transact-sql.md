@@ -1,4 +1,5 @@
 ---
+description: sp_helpuser (Transact-SQL)
 title: sp_helpuser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 049b1183ad21e481ca47368b3dfe916d0ee41185
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da6af8493f8646f19436501ab750455ebbe98558
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899459"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469233"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85899459"
 > [!IMPORTANT]  
 >  **sp_helpuser** ne retourne pas d’informations sur les éléments sécurisables introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Utilisez à la place [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name_in_db = ] 'security_account'`Nom de l’utilisateur de base de données ou du rôle de base de données dans la base de données actuelle. *security_account* doit exister dans la base de données active. *security_account* est de **type sysname**, avec NULL comme valeur par défaut. Si *security_account* n’est pas spécifié, **sp_helpuser** retourne des informations sur tous les principaux de la base de données.  
+`[ @name_in_db = ] 'security_account'` Nom de l’utilisateur de base de données ou du rôle de base de données dans la base de données actuelle. *security_account* doit exister dans la base de données active. *security_account* est de **type sysname**, avec NULL comme valeur par défaut. Si *security_account* n’est pas spécifié, **sp_helpuser** retourne des informations sur tous les principaux de la base de données.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -52,12 +53,12 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Nom d’utilisateur**|**sysname**|Utilisateurs dans la base de données en cours.|  
+|**UserName**|**sysname**|Utilisateurs dans la base de données en cours.|  
 |**RoleName**|**sysname**|Rôles auxquels appartient le **nom d’utilisateur** .|  
 |**LoginName**|**sysname**|Connexion du **nom d’utilisateur**.|  
 |**DefDBName**|**sysname**|Base de données par défaut du **nom d’utilisateur**.|  
 |**DefSchemaName**|**sysname**|Schéma par défaut de l'utilisateur de la base de données.|  
-|**IDutilisateur**|**smallint**|ID du **nom d’utilisateur** dans la base de données actuelle.|  
+|**l'UserId**|**smallint**|ID du **nom d’utilisateur** dans la base de données actuelle.|  
 |**SID**|**smallint**|Numéro d'identification de sécurité (SID) de l'utilisateur.|  
   
  Le tableau ci-dessous indique l'ensemble de résultats obtenu, lorsqu'aucun compte d'utilisateur n'est spécifié et que des alias existent dans la base de données en cours.  
@@ -76,7 +77,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Membre du rôle dans la base de données en cours.|  
 |**IDutilisateur**|**smallint**|ID d'utilisateur du membre du rôle.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour afficher des informations sur l’appartenance aux rôles de base de données, utilisez [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Pour afficher des informations sur les membres du rôle de serveur, utilisez [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)et pour afficher des informations sur les principaux au niveau du serveur, utilisez [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
@@ -108,12 +109,12 @@ EXEC sp_helpuser 'db_securityadmin';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys. database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [sys. database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
- [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
+ [sys.database_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
   

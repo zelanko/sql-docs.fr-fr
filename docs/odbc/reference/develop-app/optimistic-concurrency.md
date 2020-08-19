@@ -1,4 +1,5 @@
 ---
+description: Accès concurrentiel optimiste
 title: Accès concurrentiel optimiste | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 30eba3ea03b4c798a74a8cb928014b582846607b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dce1982edbb8f5a417404c6e24e8a40d25b58e0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429131"
 ---
 # <a name="optimistic-concurrency"></a>Accès concurrentiel optimiste
 L' *accès concurrentiel optimiste* dérive son nom de l’hypothèse optimiste selon laquelle les collisions entre les transactions sont rarement effectuées. une collision est réputée se produire lorsqu’une autre transaction met à jour ou supprime une ligne de données entre le moment où elle est lue par la transaction en cours et l’heure à laquelle elle est mise à jour ou supprimée. C’est l’opposé de l' *accès concurrentiel pessimiste,* ou le verrouillage, dans lequel le développeur d’applications estime que ces collisions sont courantes.  

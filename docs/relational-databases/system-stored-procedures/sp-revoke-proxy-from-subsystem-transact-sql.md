@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_proxy_from_subsystem (Transact-SQL)
 title: sp_revoke_proxy_from_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5c8dc5e9a20c9a00b840ec51d3339299cc3756a3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d58ec6db017fee031a2de2e242a18281eb3b7a68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469220"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Interdit à un proxy d'accéder à un sous-système.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,11 +44,11 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @proxy_id = ] id`Numéro d’identification du proxy à partir duquel révoquer l’accès. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut. *Proxy_id* ou *proxy_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
+`[ @proxy_id = ] id` Numéro d’identification du proxy à partir duquel révoquer l’accès. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut. *Proxy_id* ou *proxy_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @proxy_name = ] 'proxy_name'`Nom du proxy à partir duquel révoquer l’accès. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut. *Proxy_id* ou *proxy_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
+`[ @proxy_name = ] 'proxy_name'` Nom du proxy à partir duquel révoquer l’accès. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut. *Proxy_id* ou *proxy_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @subsystem_id = ] id`Numéro d’identification du sous-système auquel révoquer l’accès. *Subsystem_id* est de **type int**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
+`[ @subsystem_id = ] id` Numéro d’identification du sous-système auquel révoquer l’accès. *Subsystem_id* est de **type int**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -63,7 +64,7 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] Exécution du package|  
 |**12**|script PowerShell|  
   
-`[ @subsystem_name = ] 'subsystem_name'`Nom du sous-système auquel révoquer l’accès. *Subsystem_name* est de **type sysname**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
+`[ @subsystem_name = ] 'subsystem_name'` Nom du sous-système auquel révoquer l’accès. *Subsystem_name* est de **type sysname**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -79,7 +80,7 @@ sp_revoke_proxy_from_subsystem
 |Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] Exécution du package|  
 |PowerShell|script PowerShell|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Refuser l'accès à un sous-système ne change en rien les autorisations accordées au principal spécifié dans le proxy.  
   
 > [!NOTE]  
