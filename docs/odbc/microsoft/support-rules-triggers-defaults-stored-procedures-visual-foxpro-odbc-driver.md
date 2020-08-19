@@ -1,4 +1,5 @@
 ---
+description: Prise en charge des règles, des déclencheurs, des valeurs par défaut et des procédures stockées (pilote ODBC Visual FoxPro)
 title: Prise en charge des règles, des déclencheurs, des valeurs par défaut et des procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a02aeea8f33e3a4d87fc771a7b0fa7b1a0067b6d
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 56b1a2e50f26da8ce5ef581f8eda7c6a96afd741
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449111"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Prise en charge des règles, des déclencheurs, des valeurs par défaut et des procédures stockées (pilote ODBC Visual FoxPro)
 Vous ne pouvez pas créer des règles, des déclencheurs, des valeurs par défaut ou des procédures stockées Visual FoxPro à l’aide du pilote ODBC Visual FoxPro. Toutefois, votre application peut interagir avec les règles, les déclencheurs, les valeurs par défaut ou les procédures stockées existants lors de l’insertion, de la mise à jour ou de la suppression de données Visual FoxPro stockées dans une base de données.  

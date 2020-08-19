@@ -1,4 +1,5 @@
 ---
+description: Sous-clé des pilotes ODBC
 title: Sous-clé des pilotes ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dd1f8d3293e35a543cce6b5079d9c6e10a331a88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b950a352c3da69a2a8de9a89f7bbebf87e0a597a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448919"
 ---
 # <a name="odbc-drivers-subkey"></a>Sous-clé des pilotes ODBC
 Les valeurs de la sous-clé pilotes ODBC répertorient les pilotes installés. Le format de ces valeurs est indiqué dans le tableau suivant.  

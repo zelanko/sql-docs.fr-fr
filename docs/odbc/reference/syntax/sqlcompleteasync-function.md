@@ -1,4 +1,5 @@
 ---
+description: SQLCompleteAsync, fonction
 title: SQLCompleteAsync fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: bb5ec8ff7c0aa96e37ce66cabb1e18c9993e95f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448760"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync, fonction
 **Conformité**  

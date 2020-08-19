@@ -1,4 +1,5 @@
 ---
+description: SQLCancelHandle, fonction
 title: SQLCancelHandle fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3f9dcb6ccdef290b937b1317271758dddc0e848
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 3f466f63d6da9aa9a96b9e929ea2b59a3e43491d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279599"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448849"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle, fonction
 **Conformité**  
@@ -56,7 +57,7 @@ SQLRETURN SQLCancelHandle(
   
  Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLCancelHandle** et les explique dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Erreur|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) dans l’argument * \* MessageText* buffer décrit l’erreur et sa cause.|  

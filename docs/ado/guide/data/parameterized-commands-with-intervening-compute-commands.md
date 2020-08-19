@@ -1,4 +1,5 @@
 ---
+description: Commandes paramétrées avec des commandes COMPUTE intermédiaires
 title: Commandes paramétrables avec des commandes Compute intermédiaires | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f66bde29a5036ed671f9af17bf5aab1df4acbca
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9f5e4edf28f14763d4a7592f018f47135cae9981
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453091"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Commandes paramétrées avec des commandes COMPUTE intermédiaires
 Une commande d’ajout de forme paramétrable classique a une clause qui crée un **jeu d’enregistrements** parent avec une commande de requête et une autre clause qui crée un **jeu d’enregistrements** enfant avec une commande de requête paramétrable, c’est-à-dire une commande contenant un espace réservé de paramètre (un point d’interrogation, «  ? »). Le **Recordset** mis en forme obtenu a deux niveaux, dans lesquels le parent occupe le niveau supérieur et l’enfant occupe le niveau inférieur.  

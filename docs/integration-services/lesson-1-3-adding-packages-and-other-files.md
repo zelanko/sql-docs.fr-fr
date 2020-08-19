@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 1-3 : Ajout de packages et autres fichiers'
 title: 'Étape 3 : Ajout de packages et autres fichiers | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58cafdb2a547f5c911d2b53575327dc278d2ed61
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38d062e21ec2bd7eb0e9314f5e108ea785e5428a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449715"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Leçon 1-3 : Ajout de packages et autres fichiers
 
@@ -34,7 +35,7 @@ Les packages et les exemples de données utilisés par les packages sont install
   
 Pour prendre en charge le déploiement de ces packages, vous allez ajouter les fichiers annexes suivants au projet Didacticiel de déploiement.  
   
-|Package|Fichier|  
+|Paquet|Fichier|  
 |-----------|--------|  
 |DataTransfer|NewCustomers.txt|  
 |LoadXMLData|orders.xml et orders.xsd|  
@@ -69,10 +70,10 @@ Au cours de la tâche suivante, vous allez ajouter des configurations aux packag
   
 3.  Dans la boîte de dialogue **Ajouter un élément existant - Didacticiel de déploiement** , accédez à C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\, sélectionnez Readme.txt et cliquez sur **Ajouter**.  
   
-4.  Dans le menu Fichier, cliquez sur **Enregistrer tout**.  
+4.  Dans le menu Fichier , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 4 : Ajout de configurations de package](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[Étape 4 : Ajout de configurations au package](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

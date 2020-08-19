@@ -1,4 +1,5 @@
 ---
+description: Créer un domaine composite
 title: Créer un domaine composite
 ms.date: 11/22/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4af1fc255fd5691b3caaf3f5ce92a28740d1b7b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449892"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
 
@@ -91,7 +92,7 @@ ms.locfileid: "85900481"
   
 6.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a>Suivi : après la création d’un domaine composite  
+##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> Suivi : après la création d’un domaine composite  
  Après avoir créé un domaine composite, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="knowledge-based-parsing"></a><a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

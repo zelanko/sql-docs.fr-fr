@@ -1,4 +1,5 @@
 ---
+description: Réception de résultats
 title: Réception des résultats | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0e05bd86b908c8c6d7ac08525e425333d3e2f1ad
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3317441322d0f1be94ee1c897946d83f6291143c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452991"
 ---
 # <a name="receiving-results"></a>Réception de résultats
 Dans ADO, la plupart des commandes génèrent des informations retournées à l’appelant. Pour les commandes qui retournent l’ensemble de lignes, les résultats sont reçus dans un objet **Recordset** , qui est probablement le plus utilisé pour les objets ADO.  
   
  Il existe plusieurs façons de recevoir des données dans un objet **Recordset** à partir d’une source de données, notamment en appelant les éléments suivants :  
   
--   [Connection. Execute, méthode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [ Méthode deConnection.Exe](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
--   [Command. Execute, méthode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
+-   [ Méthode deCommand.Exe](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   
 -   [Recordset. Open, méthode](../../../ado/guide/data/creating-and-executing-a-simple-command.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Problèmes de performances des pilotes pour les bases de données de poste de travail
 title: Problèmes de performances des pilotes de base de données du Bureau | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a819d99a995fd7b287beb66b94f1df526e05f201
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20c21c493d81df6afb4a338675f86ad96ccfab68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449551"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Problèmes de performances des pilotes pour les bases de données de poste de travail
 Pour garantir la compatibilité avec les applications ANSI existantes, les types de données SQL_WCHAR, SQL_WVARCHAR et SQL_WLONGVARCHAR sont exposés en tant que SQL_CHAR, SQL_VARCHAR et SQL_LONGVARCHAR pour les sources de données Microsoft Access 4,0 ou version ultérieure. Les sources de données ne retournent pas de types de données CHAR ÉTENDUs, mais les données doivent toujours être envoyées à jet sous forme de caractères larges. Il est important de comprendre que la conversion est effectuée si un paramètre SQL_C_CHAR ou une colonne de résultats est lié à un type de données SQL_CHAR dans une application ANSI.  

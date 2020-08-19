@@ -1,4 +1,5 @@
 ---
+description: Clause COMPUTE de la commande SHAPE
 title: Shape Compute, clause | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452841"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
 Une clause COMPUTE Shape génère un **jeu d’enregistrements**parent, dont les colonnes se composent d’une référence à l' **objet Recordset**enfant ; les colonnes facultatives dont le contenu est un chapitre, une nouvelle colonne ou des colonnes calculées, ou le résultat de l’exécution des fonctions d’agrégation sur le **jeu d’enregistrements** enfant ou sur un **jeu d’enregistrements**précédemment mis en forme ; et toutes les colonnes de l' **objet Recordset** enfant qui sont listées dans la clause facultative by.  

@@ -1,4 +1,5 @@
 ---
+description: Section de schéma
 title: Section schéma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2b7d3a82231e31771a6f01dc558feebdc98dcbe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452891"
 ---
 # <a name="schema-section"></a>Section de schéma
 La section du schéma est obligatoire. Comme le montre l’exemple précédent, ADO écrit des métadonnées détaillées sur chaque colonne pour conserver la sémantique des valeurs de données le plus possible pour la mise à jour. Toutefois, pour charger dans le XML, ADO requiert uniquement les noms des colonnes et l’ensemble de lignes auquel ils appartiennent. Voici un exemple de schéma minimal :  

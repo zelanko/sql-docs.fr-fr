@@ -1,4 +1,5 @@
 ---
+description: Fournisseurs et composants de services
 title: Fournisseurs de services et composants | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6d0a4b9160ca0c2ff3ee64e5814e24df52141cf
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d8405ad88ca2fc087eb6f71f665a508690bf1142
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760875"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452871"
 ---
 # <a name="service-providers-and-components"></a>Fournisseurs et composants de services
 Les fournisseurs de services sont des composants qui étendent les fonctionnalités des fournisseurs de données en implémentant des interfaces étendues qui ne sont pas prises en charge en mode natif par le magasin de données.  

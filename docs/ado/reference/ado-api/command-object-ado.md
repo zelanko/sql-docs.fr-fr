@@ -1,4 +1,5 @@
 ---
+description: Command, objet (ADO)
 title: Command, objet (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f6b2e68947959ecd497645d2290bb7acaa03f86
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b53f70c5f9a0da139346865b67df57a069b03e80
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760401"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450881"
 ---
 # <a name="command-object-ado"></a>Command, objet (ADO)
 Définit une commande spécifique que vous avez l’intention d’exécuter sur une source de données.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez un objet de **commande** pour interroger une base de données et retourner des enregistrements dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , pour exécuter une opération en bloc ou pour manipuler la structure d’une base de données. Selon la fonctionnalité du fournisseur, certaines collections de **commandes** , méthodes ou propriétés peuvent générer une erreur lorsqu’elles sont référencées.  
   
  Avec les collections, les méthodes et les propriétés d’un objet **Command** , vous pouvez effectuer les opérations suivantes :  

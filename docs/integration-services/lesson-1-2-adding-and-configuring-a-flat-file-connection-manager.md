@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 1-2 : Ajouter et configurer un gestionnaire de connexions de fichiers plats'
 title: 'Étape 2 : Ajouter et configurer un gestionnaire de connexions de fichiers plats | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d03808293d5edbc9ae0be48b28f86df725304059
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d83b2c6a19b7a73be4293dcb66edc6cbc22909d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917419"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449731"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Leçon 1-2 : Ajouter et configurer un gestionnaire de connexions de fichiers plats
 
@@ -34,7 +35,7 @@ Dans cette leçon, vous configurez les propriétés suivantes dans votre gestion
 -   **Mappages des données :** les mappages des types de données que vous spécifiez pour le gestionnaire de connexions de fichiers plats sont utilisés par tous les composants des sources de données de fichiers plats qui référencent ce gestionnaire de connexions. Vous pouvez choisir de mapper les types de données manuellement en utilisant le gestionnaire de connexions de fichiers plats ou bien d’utiliser la boîte de dialogue **Suggérer les types de colonnes** . Dans cette tâche, vous visualisez les mappages suggérés dans la boîte de dialogue **Suggérer les types de colonnes**, puis vous créez manuellement les mappages nécessaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**.  
   
 > [!NOTE]
-> Le gestionnaire de connexions de fichiers plats fournit des informations de paramètres régionaux sur le fichier de données. Si votre ordinateur n’est pas configuré pour l’utilisation des paramètres régionaux **Anglais (États-Unis)** , vous devez définir des propriétés supplémentaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**.  
+> Le gestionnaire de connexions de fichiers plats fournit des informations de paramètres régionaux sur le fichier de données. Si votre ordinateur n’est pas configuré pour l’utilisation des paramètres régionaux **Anglais (États-Unis)**, vous devez définir des propriétés supplémentaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats**.  
   
 ## <a name="add-a-flat-file-connection-manager-to-the-ssis-package"></a>Ajouter un gestionnaire de connexions de fichiers plats au package SSIS  
   

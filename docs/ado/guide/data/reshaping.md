@@ -1,4 +1,5 @@
 ---
+description: Remise en forme
 title: Mise en forme | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0328b7a09f18cde0043cfbcc21d2dceb4893442
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9b0173b04e64365d1dad08ecc5f8d26880d05504
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452931"
 ---
 # <a name="reshaping"></a>Remise en forme
 Un **jeu d’enregistrements** créé par une clause d’une commande SHAPE peut se voir attribuer un nom d' *alias* (généralement avec le mot clé As). L’alias d’un **Recordset** mis en forme peut être référencé dans une commande complètement différente. Autrement dit, vous pouvez réutiliser, ou *reformer*, un **jeu d’enregistrements** précédemment mis en forme dans une nouvelle commande de forme. Pour prendre en charge cette fonctionnalité, ADO fournit une propriété, [Remodel Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
@@ -36,7 +37,7 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- La deuxième fonction consiste à activer l’accès non chapitre aux objets **Recordset** enfants existants, à l’aide de la syntaxe « Shape \< Recordset reshape Name> ».  
+ La deuxième fonction consiste à activer l’accès non chapitre aux objets **Recordset** enfants existants, à l’aide de la syntaxe « Shape \<recordset reshape name> ».  
   
 > [!NOTE]
 >  Vous ne pouvez pas ajouter de colonnes à un **jeu d’enregistrements**existant, reformer un **Recordset** paramétré ou des objets **Recordset** dans une clause COMPUTE intermédiaire, ou effectuer des opérations d’agrégation sur tout descendant du **Recordset** à partir du **Recordset** en cours de remodelage. **Recordset** en cours de mise en forme et la nouvelle commande Shape doit utiliser la même [connexion](../../../ado/reference/ado-api/connection-object-ado.md).  

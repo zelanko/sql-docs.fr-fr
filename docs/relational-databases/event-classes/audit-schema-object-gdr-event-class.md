@@ -1,4 +1,5 @@
 ---
+description: Audit Schema Object GDR (classe d'événements)
 title: Audit Schema Object GDR (classe d’événements) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: a0187811-dc71-4792-a282-3bfe1ca90c21
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3517327e65b50c91ec5d11030c7c1b5d8d08b4dc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 65bc0d2d361ff0a93b7d610db85ecb07d938307c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448676"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85726309"
 |**ObjectType**|**int**|Valeur représentant le type de l'objet qui intervient dans l'événement. Cette valeur correspond à la colonne type de l'affichage catalogue **sys.objects** . Pour connaître les valeurs, consultez [Colonne d’événements de trace ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Oui|  
 |**OwnerName**|**nvarchar**|Nom d'utilisateur de base de données du propriétaire de l'objet ciblé dans l'instruction grant/revoke/deny.|37|Oui|  
 |**ParentName**|**nvarchar**|Nom du schéma dans lequel se trouve l'objet.|59|Oui|  
-|**Autorisations**|**bigint**|Valeur entière représentant le type d'autorisations vérifiées.<br /><br /> 1=SELECT ALL<br /><br /> 2=UPDATE ALL<br /><br /> 4=REFERENCES ALL<br /><br /> 8=INSERT<br /><br /> 16=DELETE<br /><br /> 32=EXECUTE (procédures uniquement)<br /><br /> 4096=SELECT ANY (au moins une colonne)<br /><br /> 8192=UPDATE ANY<br /><br /> 16384=REFERENCES ANY|19|Oui|  
+|**autorisations**|**bigint**|Valeur entière représentant le type d'autorisations vérifiées.<br /><br /> 1=SELECT ALL<br /><br /> 2=UPDATE ALL<br /><br /> 4=REFERENCES ALL<br /><br /> 8=INSERT<br /><br /> 16=DELETE<br /><br /> 32=EXECUTE (procédures uniquement)<br /><br /> 4096=SELECT ANY (au moins une colonne)<br /><br /> 8192=UPDATE ANY<br /><br /> 16384=REFERENCES ANY|19|Oui|  
 |**RequestID**|**int**|ID de la demande contenant l'instruction.|49|Oui|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  

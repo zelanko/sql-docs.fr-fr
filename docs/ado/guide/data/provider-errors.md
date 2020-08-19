@@ -1,4 +1,5 @@
 ---
+description: Erreurs du fournisseur
 title: Erreurs du fournisseur | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9588ddddf094f391f442dd7ad9c4172cce70970e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453021"
 ---
 # <a name="provider-errors"></a>Erreurs du fournisseur
 Lorsqu’une erreur de fournisseur se produit, une erreur d’exécution de-2147467259 est retournée. Lorsque vous recevez cette erreur, vérifiez la collection d' **Erreurs** de l’objet de **connexion** actif, qui contient une ou plusieurs erreurs décrivant ce qui s’est produit.  
@@ -69,7 +70,7 @@ End Function
 |**Description**|Description textuelle de l’erreur qui s’est produite.|  
 |**HelpContext, HelpFile**|Fait référence à la rubrique d’aide et au fichier d’aide qui contiennent une description de l’erreur qui s’est produite.|  
 |**NativeError**|Numéro d’erreur spécifique au fournisseur.|  
-|**Number**|Entier long qui représente le nombre (listé dans **ErrorValueEnum**) de l’erreur qui s’est produite.|  
+|**Nombre**|Entier long qui représente le nombre (listé dans **ErrorValueEnum**) de l’erreur qui s’est produite.|  
 |**Source**|Indique le nom de l’objet ou de l’application qui a généré une erreur.|  
 |**SQLState**|Code d’erreur à cinq caractères renvoyé par le fournisseur pendant le processus d’une instruction SQL.|  
   

@@ -1,4 +1,5 @@
 ---
+description: Fonctionnement des commandes paramétrées
 title: Fonctionnement des commandes paramétrées | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 17d2d282eddcd358d8b3efe90ffda2d40e9e1574
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453101"
 ---
 # <a name="operation-of-parameterized-commands"></a>Fonctionnement des commandes paramétrées
 Si vous utilisez un **jeu d’enregistrements**enfant volumineux, en particulier par rapport à la taille du **Recordset**parent, mais que vous n’avez besoin d’accéder qu’à quelques chapitres enfants, il peut s’avérer plus efficace d’utiliser une commande paramétrable.  

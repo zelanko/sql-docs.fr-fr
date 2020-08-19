@@ -1,4 +1,5 @@
 ---
+description: SQLCancel, fonction
 title: SQLCancel fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fcc2afce495a1481692ba1f20162a2df5d9a9458
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 040cd9034a8f754a26f577b7efd6e1307e4c90c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301309"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448871"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel, fonction
 **Conformité**  
@@ -56,7 +57,7 @@ SQLRETURN SQLCancel(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) dans l’argument * \*MessageText* buffer décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) dans l’argument * \* MessageText* buffer décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLCancel** .<br /><br /> L’opération d’annulation (DM) a échoué, car une opération asynchrone est en cours sur un handle de connexion associé à *StatementHandle*.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  

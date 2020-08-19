@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 1-1 : Créer un projet Integration Services'
 title: 'Étape 1 : Créer un projet Integration Services | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 235d3682f7955201d6699e70197c2879ba0832b6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 575353cd2cf770ed42d439fd31647ccaef3e01bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917444"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449747"
 ---
 # <a name="lesson-1-1-create-a-new-integration-services-project"></a>Leçon 1-1 : Créer un projet Integration Services
 
@@ -25,7 +26,7 @@ ms.locfileid: "86917444"
 
 La première étape de la création d'un package dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] consiste à créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cet exemple de projet comprend les modèles des sources de données, vues de source de données et packages qui constituent une solution de transformation de données.  
   
-Les packages que vous créez dans ce didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] interprètent les valeurs des données de paramètres régionaux. Si votre ordinateur n'est pas configuré pour l'utilisation du paramètre **Anglais (États-Unis)** , vous devez définir des propriétés supplémentaires dans le package. 
+Les packages que vous créez dans ce didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] interprètent les valeurs des données de paramètres régionaux. Si votre ordinateur n'est pas configuré pour l'utilisation du paramètre **Anglais (États-Unis)**, vous devez définir des propriétés supplémentaires dans le package. 
 
 Les packages que vous utilisez dans les leçons 2 à 6 sont copiés à partir du package que vous créez dans cette leçon.  
   
@@ -34,7 +35,7 @@ Les packages que vous utilisez dans les leçons 2 à 6 sont copiés à partir du
 
 ## <a name="create-a-new-integration-services-project"></a>Créer un projet Integration Services  
   
-1.  Dans le menu **Démarrer** de Windows, recherchez et sélectionnez **Visual Studio (SSDT)** .  
+1.  Dans le menu **Démarrer** de Windows, recherchez et sélectionnez **Visual Studio (SSDT)**.  
   
 2.  Dans Visual Studio, sélectionnez **Fichier** > **Nouveau** > **Projet** pour créer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   

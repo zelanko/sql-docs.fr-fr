@@ -1,4 +1,5 @@
 ---
+description: Variables Integration Services (SSIS)
 title: Variables Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d4ee6dda0fbd91649a085cfda429ea3e554a83d4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c27f3936edfc031f336b487d90e185a56d366363
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449767"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
 
@@ -107,9 +108,9 @@ ms.locfileid: "86917484"
  **Lecture seule**  
  Quand la propriété a la valeur **False**, la variable est en lecture-écriture.  
   
-**Portée**    
+**Étendue**    
  > [!NOTE]  
->  Vous pouvez modifier ce paramètre de propriété uniquement en cliquant sur **Déplacer la variable** dans la fenêtre **Variables** .  
+>   Vous pouvez modifier ce paramètre de propriété uniquement en cliquant sur **Déplacer la variable** dans la fenêtre **Variables** .  
   
  Une variable est créée dans la portée d'un package ou dans la portée d'un conteneur, d'une tâche ou d'un gestionnaire d'événements dans le package. Le conteneur de packages se trouvant au sommet de la hiérarchie de conteneurs, les variables avec une portée de package fonctionnent comme les variables globales et peuvent être utilisées par tous les conteneurs du package. De même, les variables définies dans la portée d'un conteneur tel qu'un conteneur de boucles For peuvent être utilisées par toutes les tâches ou les conteneurs situés dans le conteneur de boucles For.  
   
@@ -147,7 +148,7 @@ Une variable a des options permettant de définir la valeur de la variable et le
   
 **ValueType**    
  > [!NOTE]  
->  La valeur de la propriété apparaît dans la colonne **Type de données** de la fenêtre **Variables** .  
+>   La valeur de la propriété apparaît dans la colonne **Type de données** dans la fenêtre **Variables** .  
   
  Spécifie le type de données de la valeur de la variable.  
 

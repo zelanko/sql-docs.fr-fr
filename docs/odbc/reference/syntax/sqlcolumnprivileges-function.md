@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLColumnPrivileges
 title: SQLColumnPrivileges fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e94c5524bcde3023bae3298c8dbb6d03347a0b8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29ac9ba44c0627e0aa72cc9e1bec087357864bb1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448785"
 ---
 # <a name="sqlcolumnprivileges-function"></a>Fonction SQLColumnPrivileges
 **Conformité**  
@@ -53,7 +54,7 @@ SQLRETURN SQLColumnPrivileges(
  *StatementHandle*  
  Entrée Descripteur d’instruction.  
   
- *Nomcatalogue*  
+ *CatalogName*  
  Entrée Nom du catalogue. Si un pilote prend en charge les noms de certains catalogues, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, une chaîne vide ("") dénote les catalogues qui n’ont pas de noms. *Nomcatalogue* ne peut pas contenir un modèle de recherche de chaînes.  
   
  Si l’attribut d’instruction SQL_ATTR_METADATA_ID est défini sur SQL_TRUE, *nomcatalogue* est traité comme un identificateur et sa casse n’est pas significative. S’il est SQL_FALSE, *nomcatalogue* est un argument ordinaire ; Il est traité littéralement et sa casse est importante. Pour plus d’informations, consultez [arguments dans les fonctions de catalogue](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -98,7 +99,7 @@ SQLRETURN SQLColumnPrivileges(
 |24 000|État de curseur non valide|Un curseur a été ouvert sur *StatementHandle,* et **SQLFetch** ou **SQLFetchScroll** ont été appelés. Cette erreur est retournée par le gestionnaire de pilotes si **SQLFetch** ou **SQLFetchScroll** n’a pas retourné SQL_NO_DATA, et est retourné par le pilote si **sqlfetch** ou **SQLFetchScroll** a retourné SQL_NO_DATA.<br /><br /> Un curseur a été ouvert sur le *StatementHandle*, mais **SQLFetch** ou **SQLFetchScroll** n’a pas été appelé.|  
 |40001|Échec de la sérialisation|La transaction a été restaurée en raison d’un blocage de ressource avec une autre transaction.|  
 |40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. Ensuite, la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY009|Utilisation non valide d’un pointeur null|L’argument *TableName* était un pointeur null.<br /><br /> L’attribut de l’instruction SQL_ATTR_METADATA_ID a été défini sur SQL_TRUE, l’argument *nomcatalogue* était un pointeur null, et l' *infotype* SQL_CATALOG_NAME retourne que les noms de catalogue sont pris en charge.<br /><br /> (DM) l’attribut d’instruction SQL_ATTR_METADATA_ID a été défini sur SQL_TRUE et l’argument *SchemaName* ou *ColumnName* était un pointeur null.|  

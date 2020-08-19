@@ -1,4 +1,5 @@
 ---
+description: Modifier les valeurs de domaine
 title: Modifier les valeurs de domaine
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b07dd7b8d121d1be70a6522e716fc304bbf3d9f1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901110"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450018"
 ---
 # <a name="change-domain-values"></a>Modifier les valeurs de domaine
 
@@ -44,7 +45,7 @@ ms.locfileid: "85901110"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour modifier les valeurs de domaine.  
   
-##  <a name="change-domain-values"></a><a name="Change"></a>Modifier les valeurs de domaine  
+##  <a name="change-domain-values"></a><a name="Change"></a> Modifier les valeurs de domaine  
  La table **Valeur** affiche la connaissance ajoutée à la base de connaissances pour un seul domaine. Vous pouvez sélectionner un domaine différent dans la liste des domaines à tout moment pour afficher les valeurs de ce domaine. Les colonnes du champ sont les suivantes :  
   
 -   La colonne **Valeur** affiche toutes les valeurs que le processus de découverte a ajoutées au domaine sélectionné d'un champ dans l'exemple de données. Toute valeur qui est projetée comme erreur apparaîtra comme synonyme d'une valeur désignée comme correcte.  

@@ -1,4 +1,5 @@
 ---
+description: Packages Integration Services (SSIS)
 title: Packages Integration Services (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/31/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34da25ac87cbcfbeb815b4053d60c390a9140f5d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449811"
 ---
 # <a name="integration-services-ssis-packages"></a>Packages Integration Services (SSIS)
 
@@ -77,7 +78,7 @@ ms.locfileid: "86917510"
  L'objet de package peut être configuré de manière à prendre en charge des fonctionnalités telles que le redémarrage du package aux points de contrôle, la signature du package avec un certificat numérique, la définition du niveau de protection du package et la sécurisation de l'intégrité des données à l'aide de transactions.  
   
 ### <a name="restarting-packages"></a>Redémarrage des packages  
- Le package comprend des propriétés de point de contrôle qui vous permettent de le redémarrer en cas d'échec d'une ou plusieurs de ses tâches. Par exemple, si un package possède deux tâches de flux de données qui mettent à jour deux tables différentes et que la deuxième tâche échoue, le package peut être réexécuté sans qu'il soit nécessaire de répéter la première tâche de flux de données. Le redémarrage d'un package peut être source de gain de temps pour les packages dont l'exécution est longue. La fonctionnalité de redémarrage vous permet de démarrer le package à partir de la tâche défaillante sans devoir réexécuter l'ensemble du package. Pour plus d’informations, consultez [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+ Le package comprend des propriétés de point de contrôle qui vous permettent de le redémarrer en cas d'échec d'une ou plusieurs de ses tâches. Par exemple, si un package possède deux tâches de flux de données qui mettent à jour deux tables différentes et que la deuxième tâche échoue, le package peut être réexécuté sans qu'il soit nécessaire de répéter la première tâche de flux de données. Le redémarrage d'un package peut être source de gain de temps pour les packages dont l'exécution est longue. La fonctionnalité de redémarrage vous permet de démarrer le package à partir de la tâche défaillante sans devoir réexécuter l'ensemble du package. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ### <a name="securing-packages"></a>Sécurisation des packages  
  Vous pouvez signer un package au moyen d'une signature numérique et le chiffrer à l'aide d'un mot de passe ou d'une clé utilisateur. Une signature numérique authentifie la source du package. Toutefois, vous devez également configurer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pour vérifier la signature numérique lors du chargement du package. Pour plus d’informations, consultez [Identifier la source de packages à l’aide de signatures numériques](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) et [Contrôle d’accès pour les données sensibles présentes dans les packages](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  

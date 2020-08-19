@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 1-1 : Création des variables d’environnement et des dossiers de travail'
 title: 'Étape 1 : Création des variables d’environnement et des dossiers de travail | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 32e0f638af3978a0bf9b938b7131b7e86431f6a6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c91be2fffde29a362dd73da41159b4a4658bce3e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917433"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449742"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Leçon 1-1 : Création des variables d’environnement et des dossiers de travail
 
@@ -36,9 +37,9 @@ Si vous envisagez de déployer les packages sur un autre ordinateur, vous devez 
   
 1.  Cliquez avec le bouton droit sur le menu Démarrer et cliquez sur Explorer.  
   
-2.  Cliquez sur **Disque local (C:)** .  
+2.  Cliquez sur **Disque local (C:)**.  
   
-3.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis cliquez sur **Dossier**.  
+3.  Dans le menu **Fichier**, pointez sur **Nouveau**, puis cliquez sur **Dossier**.  
   
 4.  Renommez le nouveau dossier **DeploymentTutorial**.  
   
@@ -87,7 +88,7 @@ Si vous envisagez de déployer les packages sur un autre ordinateur, vous devez 
 10. Redémarrez l'ordinateur si nécessaire.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 2 : Création du projet de déploiement](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
+[Étape 2 : Création du projet de déploiement](../integration-services/lesson-1-2-creating-the-deployment-project.md)  
   
   
   

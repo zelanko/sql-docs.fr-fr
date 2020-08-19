@@ -1,4 +1,5 @@
 ---
+description: Sauvegarde et restauration de bases de données DQS
 title: Sauvegarde et restauration de bases de données DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 5df48172681fef1ea75735702915ac1beedabee1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03b58daec9def4e902e111719353110bfad1d69b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897558"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449988"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Sauvegarde et restauration de bases de données DQS
 
@@ -40,7 +41,7 @@ ms.locfileid: "85897558"
   
 -   Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour mettre fin à toutes les activités en cours d'exécution ou arrêter tous les processus en cours d'exécution dans DQS.  
   
-##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>Sauvegarder et restaurer des bases de données DQS  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a> Sauvegarder et restaurer des bases de données DQS  
   
 1.  Démarrez Microsoft SQL Server Management Studio et connectez-vous à l'instance de SQL Server appropriée.  
   

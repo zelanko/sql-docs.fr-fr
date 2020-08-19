@@ -1,4 +1,5 @@
 ---
+description: 'Envoi des mises à jour : UpdateBatch, méthode'
 title: 'Envoi des mises à jour : méthode UpdateBatch | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abb0051ef336a145b2da75906831d7adc168e6e3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8b5378cad96bc2827badc2e15a23d7f48f683381
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452881"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Envoi des mises à jour : UpdateBatch, méthode
 Le code suivant ouvre un Recordset en mode batch en affectant à la propriété LockType la valeur adLockBatchOptimistic et à l’option CursorLocation la valeur adUseClient. Il ajoute deux nouveaux enregistrements et modifie la valeur d’un champ dans un enregistrement existant, en enregistrant les valeurs d’origine, puis appelle UpdateBatch pour renvoyer les modifications à la source de données.  

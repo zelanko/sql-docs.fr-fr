@@ -1,4 +1,5 @@
 ---
+description: Append, méthode (ADO)
 title: Append, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: dd3ee907aa2a7081ca7204dcc1b0b3b069581832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746907"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451261"
 ---
 # <a name="append-method-ado"></a>Append, méthode (ADO)
 Ajoute un objet à une collection. Si la collection est de [champs](../../../ado/reference/ado-api/fields-collection-ado.md), un nouvel objet de [champ](../../../ado/reference/ado-api/field-object.md) peut être créé avant d’être ajouté à la collection.  
@@ -37,10 +38,10 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *collecte*  
  Objet de collection.  
   
- *champs*  
+ *fields*  
  Collection de **champs** .  
   
- *objet*  
+ *object*  
  Variable objet qui représente l’objet à ajouter.  
   
  *Nom*  
@@ -58,7 +59,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  facultatif. **Variant** qui représente la valeur du nouveau champ. S’il n’est pas spécifié, le champ est ajouté avec une valeur null.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="parameters-collection"></a>Collection Parameters  
  Vous devez définir la propriété [type](../../../ado/reference/ado-api/type-property-ado.md) d’un objet [Parameter](../../../ado/reference/ado-api/parameter-object.md) avant de l’ajouter à la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Si vous sélectionnez un type de données de longueur variable, vous devez également affecter à la propriété [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md) une valeur supérieure à zéro.  

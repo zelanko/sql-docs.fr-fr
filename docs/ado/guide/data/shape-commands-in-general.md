@@ -1,4 +1,5 @@
 ---
+description: Généralités sur les commandes SHAPE
 title: Mettre en forme des commandes en général | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a0364d3b123f5d042a6e008a4312217e746b5b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760855"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452851"
 ---
 # <a name="shape-commands-in-general"></a>Généralités sur les commandes SHAPE
 La mise en forme des données définit les colonnes d’un **jeu d’enregistrements**mis en forme, les relations entre les entités représentées par les colonnes et la manière dont le **Recordset** est rempli avec les données.  

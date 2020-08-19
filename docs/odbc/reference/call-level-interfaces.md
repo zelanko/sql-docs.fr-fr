@@ -1,4 +1,5 @@
 ---
+description: Interfaces de niveau d’appel
 title: Interfaces de niveau appel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4288a278f745d533c92d3d45892753ef1a74c2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad1e89f945dbb739c4c20103fc2330cbf4e562b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448957"
 ---
 # <a name="call-level-interfaces"></a>Interfaces de niveau d’appel
 La dernière technique pour l’envoi d’instructions SQL au SGBD est d’utiliser une interface de niveau appel (CLI). Une interface au niveau de l’appel fournit une bibliothèque de fonctions SGBD qui peuvent être appelées par le programme d’application. Ainsi, au lieu d’essayer de fusionner SQL avec un autre langage de programmation, une interface au niveau de l’appel est similaire aux bibliothèques de routines que la plupart des programmeurs sont habitués à utiliser, comme les bibliothèques de chaînes, d’e/s ou mathématiques en C. Notez que les SGBD qui prennent en charge le SQL incorporé disposent déjà d’une interface de niveau appel, les appels Toutefois, ces appels ne sont pas documentés et peuvent faire l’objet de modifications sans préavis.  

@@ -1,4 +1,5 @@
 ---
+description: 'C en SQL : Timestamp'
 title: 'C en SQL : horodateur | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3102e5043527a1aa9463980c9dd546839cb92f37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e51d82e8acd59c8b4e6f5a8385720b0bd38eba4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449031"
 ---
 # <a name="c-to-sql-timestamp"></a>C en SQL : Timestamp
 L’identificateur pour le type de données ODBC C d’horodatage est :  
@@ -40,6 +41,6 @@ L’identificateur pour le type de données ODBC C d’horodatage est :
   
  Pour plus d’informations sur les valeurs qui sont valides dans une structure SQL_C_TIMESTAMP, consultez [types de données C](../../../odbc/reference/appendixes/c-data-types.md), plus haut dans cette annexe.  
   
- Lorsque les données timestamp C sont converties en données SQL de type caractère, les données de type caractère obtenues sont au format «*yyyy*-*mm*-*DD* *hh*:*mm*:*SS*[.* f...*]» format.  
+ Lorsque les données timestamp C sont converties en données SQL de type caractère, les données de type caractère obtenues sont au format «*yyyy* - *mm* - *DD* *hh*:*mm*:*SS*[.* f...*]» format.  
   
  Le pilote ignore la valeur de longueur/indicateur lors de la conversion des données du type de données timestamp C et suppose que la taille de la mémoire tampon de données est égale à la taille du type de données timestamp C. La valeur de longueur/indicateur est passée dans l’argument *StrLen_Or_Ind* dans **SQLPutData** et dans la mémoire tampon spécifiée avec l’argument *StrLen_or_IndPtr* dans **SQLBindParameter**. La mémoire tampon de données est spécifiée avec l’argument *DataPtr* dans **SQLPutData** et l’argument *ParameterValuePtr* dans **SQLBindParameter**.

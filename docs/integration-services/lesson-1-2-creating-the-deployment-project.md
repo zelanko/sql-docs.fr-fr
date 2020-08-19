@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 1-2 : Création du projet de déploiement'
 title: 'Étape 2 : Création du projet de déploiement | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e202a3b3429057418456618a08d7333994199a36
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 025e601dfb6f062246d1edcb1799c1daf2b69886
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449677"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>Leçon 1-2 : Création du projet de déploiement
 
@@ -43,7 +44,7 @@ Dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], l'unité déplo
 8.  Par défaut, un package vide, nommé Package.dtsx, est créé et ajouté à votre projet. Cependant, vous ne pourrez pas utiliser ce package ; à la place, vous allez ajouter des packages existants au projet. Dans la mesure où tous les packages d'un projet sont inclus dans le déploiement, vous devez supprimer le fichier Package.dtsx. Pour ce faire, cliquez dessus avec le bouton droit, puis cliquez sur **Supprimer**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 3 : Ajout de packages et d’autres fichiers](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
+[Étape 3 : Ajout de packages et autres fichiers](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Projets Integration Services &#40;SSIS&#41;](~/integration-services/integration-services-ssis-projects-and-solutions.md)  

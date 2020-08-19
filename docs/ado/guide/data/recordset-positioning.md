@@ -1,4 +1,5 @@
 ---
+description: Positionnement dans un recordset
 title: Positionnement du Recordset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e48c80c59a51b007832b8c68c8e27c66333f57dc
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9d5cdea25dbf14ef5f26d02612f357768acdad61
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760975"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452961"
 ---
 # <a name="recordset-positioning"></a>Positionnement dans un recordset
 Utilisez la propriété **AbsolutePosition** pour vous déplacer vers un enregistrement, en fonction de sa position ordinale dans l’objet **Recordset** , ou pour déterminer la position ordinale de l’enregistrement actif. Le fournisseur doit prendre en charge les fonctionnalités appropriées pour que cette propriété soit disponible.  

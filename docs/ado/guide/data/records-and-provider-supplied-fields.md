@@ -1,4 +1,5 @@
 ---
+description: Enregistrements et champs fournis par le fournisseur
 title: Enregistrements et champs fournis par le fournisseur | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6cd737ce36a53643503a5c76dfaafe2127c93f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453001"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs fournis par le fournisseur
 Lorsqu’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) est ouvert, sa source peut être la ligne actuelle d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)ouvert, une URL absolue ou une URL relative avec un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ouvert.  

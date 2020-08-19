@@ -1,4 +1,5 @@
 ---
+description: Configurer les niveaux de gravité pour les fichiers journaux DQS
 title: Configurer les niveaux de gravité pour les fichiers journaux DQS
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6a23806f7b7def561d7cecc8e1592772c5675f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449911"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurer les niveaux de gravité pour les fichiers journaux DQS
 
@@ -49,8 +50,8 @@ ms.locfileid: "85894225"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour configurer les paramètres de gravité du journal.  
   
-##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Configurer les niveaux de gravité au niveau de l’activité  
- Vous pouvez configurer des paramètres de gravité du journal pour les activités suivantes dans DQS : gestion de l'arborescence du domaine, découverte des connaissances, stratégie de correspondance, nettoyage des données, correspondance de données et services de données de référence. Pour ce faire :  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a> Configurer les niveaux de gravité au niveau de l’activité  
+ Vous pouvez configurer des paramètres de gravité du journal pour les activités suivantes dans DQS : gestion de l'arborescence du domaine, découverte des connaissances, stratégie de correspondance, nettoyage des données, correspondance de données et services de données de référence. Pour cela :  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85894225"
   
 5.  Cliquez sur **Fermer**.  
   
-##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Configurer les niveaux de gravité au niveau du module (avancé)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a> Configurer les niveaux de gravité au niveau du module (avancé)  
  La section **Avancé** sous l'onglet **Paramètres de journal** vous permet de configurer des paramètres de gravité du journal au niveau d'un module. Les modules sont des assemblys système DQS qui implémentent différentes fonctions au sein d'une fonctionnalité dans DQS. Par exemple, l'activité de gestion de l'arborescence du domaine contient diverses fonctions telles que la définition des règles de domaine, la définition des conditions de règle, la définition des règles entre domaines pour les domaines composites, et ainsi de suite.  
   
  Dans certains cas, le niveau de granularité au niveau de l'activité n'est pas suffisant. Vous pouvez analyser un problème qui se produit dans un module particulier au sein d'une activité. Il est utile de disposer d'une option pour configurer les niveaux de gravité de journal au niveau du module pour isoler et suivre le problème plus précisément.  

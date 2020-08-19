@@ -1,4 +1,5 @@
 ---
+description: Préparation et l’exécution de commandes
 title: Préparation et exécution des commandes | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a59e357db60e3a29ec2473d4331ef4b6954889c7
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19539844381f38de4700925a0ecdbc0f8e74fb0d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453031"
 ---
 # <a name="preparing-and-executing-commands"></a>Préparation et l’exécution de commandes
 Les commandes sont des instructions émises à un fournisseur pour effectuer des opérations sur la source de données sous-jacente. Une instruction SQL, par exemple, est une commande de l’Fournisseur de données Microsoft SQL. Dans ADO, les commandes sont généralement représentées par des objets de **commande** , bien que des commandes simples puissent également être émises via des objets de **connexion** ou **d’objet Recordset** .  

@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLColAttribute
 title: SQLColAttribute, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c94de3dfc7036277f8be56c401326cdab07a9606
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d5cc7020300fd9099b70ed6f33716f343d47d571
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301289"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448814"
 ---
 # <a name="sqlcolattribute-function"></a>Fonction SQLColAttribute
 **Conformité**  
@@ -68,7 +69,7 @@ SQLRETURN SQLColAttribute (
  Si *CharacterAttributePtr* a la valeur null, *StringLengthPtr* retourne toujours le nombre total d’octets (à l’exception du caractère de fin null pour les données de type caractère) disponibles pour retourner dans la mémoire tampon vers laquelle pointe *CharacterAttributePtr*.  
   
  *BufferLength*  
- Entrée Si *FieldIdentifier* est un champ défini par ODBC et que *CharacterAttributePtr* pointe vers une chaîne de caractères ou une mémoire tampon binaire, cet argument doit \*être la longueur de *CharacterAttributePtr*. Si *FieldIdentifier* est un champ défini par ODBC et \*que *CharacterAttribute*PTR est un entier, ce champ est ignoré. Si * \*CharacterAttributePtr* est une chaîne Unicode (lors de l’appel de **SQLColAttributeW**), l’argument *BufferLength* doit être un nombre pair. Si *FieldIdentifier* est un champ défini par le pilote, l’application indique la nature du champ au gestionnaire de pilotes en définissant l’argument *BufferLength* . *BufferLength* peut avoir les valeurs suivantes :  
+ Entrée Si *FieldIdentifier* est un champ défini par ODBC et que *CharacterAttributePtr* pointe vers une chaîne de caractères ou une mémoire tampon binaire, cet argument doit être la longueur de \* *CharacterAttributePtr*. Si *FieldIdentifier* est un champ défini par ODBC et que \* *CharacterAttribute*PTR est un entier, ce champ est ignoré. Si * \* CharacterAttributePtr* est une chaîne Unicode (lors de l’appel de **SQLColAttributeW**), l’argument *BufferLength* doit être un nombre pair. Si *FieldIdentifier* est un champ défini par le pilote, l’application indique la nature du champ au gestionnaire de pilotes en définissant l’argument *BufferLength* . *BufferLength* peut avoir les valeurs suivantes :  
   
 -   Si *CharacterAttributePtr* est un pointeur vers un pointeur, *BufferLength* doit avoir la valeur SQL_IS_POINTER.  
   
@@ -81,7 +82,7 @@ SQLRETURN SQLColAttribute (
  *StringLengthPtr*  
  Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total d’octets (à l’exclusion de l’octet de fin null pour les données caractères) disponible pour le retour dans **CharacterAttributePtr*.  
   
- Pour les données de type caractère, si le nombre d’octets disponibles à retourner est supérieur ou égal à *BufferLength*, les informations \*du descripteur dans *CharacterAttributePtr* sont tronquées à *BufferLength* moins la longueur d’un caractère de fin null et le pilote se termine par un caractère null.  
+ Pour les données de type caractère, si le nombre d’octets disponibles à retourner est supérieur ou égal à *BufferLength*, les informations du descripteur dans \* *CharacterAttributePtr* sont tronquées à *BufferLength* moins la longueur d’un caractère de fin null et le pilote se termine par un caractère null.  
   
  Pour tous les autres types de données, la valeur de *BufferLength* est ignorée et le pilote suppose que la taille de **CharacterAttributePtr* est de 32 bits.  
   
@@ -97,7 +98,7 @@ SQLRETURN SQLColAttribute (
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01004|Données de chaîne, tronquées à droite|Le \* *CharacterAttributePtr* de mémoire tampon n’est pas assez grand pour retourner la valeur de chaîne entière, donc la valeur de chaîne a été tronquée. La longueur de la valeur de chaîne non tronquée est retournée dans **StringLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01004|Données de chaîne, tronquées à droite|Le CharacterAttributePtr de mémoire tampon \* *CharacterAttributePtr* n’est pas assez grand pour retourner la valeur de chaîne entière, donc la valeur de chaîne a été tronquée. La longueur de la valeur de chaîne non tronquée est retournée dans **StringLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07005|L’instruction préparée n’est pas une *spécification de curseur*|L’instruction associée à *StatementHandle* n’a pas retourné de jeu de résultats et *FieldIdentifier* n’a pas été SQL_DESC_COUNT. Aucune colonne à décrire.|  
 |07009|Index de descripteur non valide|(DM) la valeur spécifiée pour *ColumnNumber* était égale à 0 et l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS était SQL_UB_OFF.<br /><br /> La valeur spécifiée pour l’argument *ColumnNumber* est supérieure au nombre de colonnes dans le jeu de résultats.|  
 |HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagField** à partir de la structure de données de diagnostic décrit l’erreur et sa cause.|  
@@ -105,7 +106,7 @@ SQLRETURN SQLColAttribute (
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. Ensuite, la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction aynchronous était toujours en cours d’exécution lors de l’appel de SQLColAttribute.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) la fonction a été appelée avant d’appeler **SQLPrepare**, **SQLExecDirect**ou une fonction de catalogue pour *StatementHandle*.<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
-|HY090|Longueur de chaîne ou de mémoire tampon non valide|(DM) * \*CharacterAttributePtr* est une chaîne de caractères et *BufferLength* a une valeur inférieure à 0 mais n’est pas égale à SQL_NTS.|  
+|HY090|Longueur de chaîne ou de mémoire tampon non valide|(DM) * \* CharacterAttributePtr* est une chaîne de caractères et *BufferLength* a une valeur inférieure à 0 mais n’est pas égale à SQL_NTS.|  
 |HY091|Identificateur de champ de descripteur non valide|La valeur spécifiée pour l’argument *FieldIdentifier* n’était pas l’une des valeurs définies et n’était pas une valeur définie par l’implémentation.|  
 |HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Pilote non conforme|La valeur spécifiée pour l’argument *FieldIdentifier* n’est pas prise en charge par le pilote.|  
@@ -121,16 +122,16 @@ SQLRETURN SQLColAttribute (
 ## <a name="comments"></a>Commentaires  
  Pour plus d’informations sur la façon dont les applications utilisent les informations retournées par **SQLColAttribute**, consultez [métadonnées du jeu de résultats](../../../odbc/reference/develop-app/result-set-metadata.md).  
   
- **SQLColAttribute** retourne des informations dans \* *NumericAttributePtr* ou dans \* *CharacterAttributePtr*. Des informations sur les entiers sont retournées dans \* *NumericAttributePtr* en tant que valeur sqllen ; tous les autres formats d’informations sont retournés dans \* *CharacterAttributePtr*. Lorsque des informations sont retournées dans \* *NumericAttributePtr*, le pilote ignore *CharacterAttributePtr*, *BufferLength*et *StringLengthPtr*. Lorsque des informations sont retournées dans \* *CharacterAttributePtr*, le pilote ignore *NumericAttributePtr*.  
+ **SQLColAttribute** retourne des informations dans \* *NumericAttributePtr* ou dans \* *CharacterAttributePtr*. Les informations sur les entiers sont retournées dans \* *NumericAttributePtr* en tant que valeur sqllen ; tous les autres formats d’informations sont retournés dans \* *CharacterAttributePtr*. Lorsque des informations sont retournées dans \* *NumericAttributePtr*, le pilote ignore *CharacterAttributePtr*, *BufferLength*et *StringLengthPtr*. Lorsque des informations sont retournées dans \* *CharacterAttributePtr*, le pilote ignore *NumericAttributePtr*.  
   
  **SQLColAttribute** retourne des valeurs à partir des champs de descripteur du IRD. La fonction est appelée avec un handle d’instruction plutôt qu’un handle de descripteur. Les valeurs retournées par **SQLColAttribute** pour les valeurs *FieldIdentifier* indiquées plus loin dans cette section peuvent également être récupérées en appelant **SQLGetDescField** avec le handle IRD approprié.  
   
  Les champs de descripteur actuellement définis, la version d’ODBC dans laquelle ils ont été introduits et les arguments dans lesquels les informations sont retournées sont présentés plus loin dans cette section. d’autres types de descripteurs peuvent être définis par des pilotes pour tirer parti de différentes sources de données.  
   
- ODBC 3. *x* le pilote doit retourner une valeur pour chacun des champs du descripteur. Si un champ de descripteur ne s’applique pas à un pilote ou à une source de données et sauf indication \*contraire, le pilote retourne 0 dans *StringLengthPtr* ou une chaîne vide dans **CharacterAttributePtr*.  
+ ODBC 3. *x* le pilote doit retourner une valeur pour chacun des champs du descripteur. Si un champ de descripteur ne s’applique pas à un pilote ou à une source de données et sauf indication contraire, le pilote retourne 0 dans \* *StringLengthPtr* ou une chaîne vide dans **CharacterAttributePtr*.  
   
 ## <a name="backward-compatibility"></a>Backward Compatibility  
- ODBC 3. la fonction *x* **SQLCOLATTRIBUTE** remplace le ODBC 2 déconseillé. *x* fonction x **SQLColAttributes**. Lors du mappage de **SQLColAttributes** à **SQLCOLATTRIBUTE** (quand ODBC 2.* *l’application x fonctionne avec ODBC 3. *x* ) ou en mappant **SQLColAttribute** à **SQLColAttributes** (quand ODBC 3.* *l’application x fonctionne avec ODBC 2. *x* ), le gestionnaire de pilotes transmet la valeur de *FieldIdentifier* à, le mappe à une nouvelle valeur, ou retourne une erreur, comme suit :  
+ ODBC 3. la fonction *x* **SQLCOLATTRIBUTE** remplace le ODBC 2 déconseillé. *x* fonction x **SQLColAttributes**. Lors du mappage de **SQLColAttributes** à **SQLCOLATTRIBUTE** (quand ODBC 2.* * l’application x fonctionne avec ODBC 3. *x* ) ou en mappant **SQLColAttribute** à **SQLColAttributes** (quand ODBC 3.* * l’application x fonctionne avec ODBC 2. *x* ), le gestionnaire de pilotes transmet la valeur de *FieldIdentifier* à, le mappe à une nouvelle valeur, ou retourne une erreur, comme suit :  
   
 > [!NOTE]  
 >  Préfixe utilisé dans les valeurs *FieldIdentifier* dans ODBC 3. *x* a été modifié par rapport à celui utilisé dans ODBC 2. *x*. Le nouveau préfixe est « SQL_DESC ». l’ancien préfixe était « SQL_COLUMN ».  

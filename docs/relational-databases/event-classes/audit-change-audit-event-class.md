@@ -1,4 +1,5 @@
 ---
+description: Audit Change Audit (classe d'événements)
 title: Audit Change Audit, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 8cfacc82-cee8-4199-a69e-acedecfc0b3b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 28009f6a84ef11668b84ae5fd8ff5c6f08a6a9aa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7255e91ed01ed5800053a274831e43aebaf8e1e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448673"
 ---
 # <a name="audit-change-audit-event-class"></a>Audit Change Audit (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,8 +46,8 @@ ms.locfileid: "85693329"
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
 |**OwnerName**|**nvarchar**|Nom d'utilisateur de base de données du propriétaire de l'objet.|37|Oui|  
 |**RequestID**|**int**|ID de la demande contenant l'instruction.|49|Oui|  
-|**ServerName**|**nvarchar**|Nom de l’instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
-|**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant Login1 et que vous exécutez une instruction sous le nom de Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
+|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
+|**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|**int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**Success**|**int**|1 = réussite. 0 = échec. Exemple : 1 indique la réussite de la vérification d'autorisations, 0 l'échec de cette vérification.|23|Oui|  

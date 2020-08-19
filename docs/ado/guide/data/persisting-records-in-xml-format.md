@@ -1,4 +1,5 @@
 ---
+description: Persistance des enregistrements au format XML
 title: Persistance des enregistrements au format XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b88bef75b0cbe13402d90264b766adf5a3005efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453041"
 ---
 # <a name="persisting-records-in-xml-format"></a>Persistance des enregistrements au format XML
-À l’instar du format ADTG, la persistance des **recordsets** au format XML est implémentée avec le fournisseur de persistance Microsoft OLE DB. Ce fournisseur génère un ensemble de lignes avant uniquement et en lecture seule à partir d’un fichier ou d’un flux XML enregistré qui contient les informations de schéma générées par ADO. De même, il peut utiliser un **jeu d’enregistrements**ADO, générer du code XML et l’enregistrer dans un fichier ou tout objet qui implémente l’interface com **IStream** . (En fait, un fichier est simplement un autre exemple d’un objet qui prend en charge **IStream**.) Pour les versions 2,5 et ultérieures, ADO s’appuie sur l’analyseur XML de Microsoft (MSXML) pour charger le code XML dans le **jeu d’enregistrements**; par conséquent, MSXML. dll est requis.  
+À l’instar du format ADTG, la persistance des **recordsets** au format XML est implémentée avec le fournisseur de persistance Microsoft OLE DB. Ce fournisseur génère un ensemble de lignes avant uniquement et en lecture seule à partir d’un fichier ou d’un flux XML enregistré qui contient les informations de schéma générées par ADO. De même, il peut utiliser un **jeu d’enregistrements**ADO, générer du code XML et l’enregistrer dans un fichier ou tout objet qui implémente l’interface com **IStream** . (En fait, un fichier est simplement un autre exemple d’un objet qui prend en charge **IStream**.) Pour les versions 2,5 et ultérieures, ADO s’appuie sur l’analyseur XML de Microsoft (MSXML) pour charger le code XML dans le **jeu d’enregistrements**; par conséquent, msxml.dll est obligatoire.  
   
 > [!NOTE]
 >  Certaines limitations s’appliquent lors de l’enregistrement de **recordsets** hiérarchiques (formes de données) au format XML. Vous ne pouvez pas enregistrer dans XML si le **jeu d’enregistrements** hiérarchique contient des mises à jour en attente et que vous ne pouvez pas enregistrer un **jeu d’enregistrements**hiérarchique paramétré. Pour plus d’informations, consultez [persistance des recordsets filtrés et hiérarchiques](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  

@@ -1,4 +1,5 @@
 ---
+description: Curseurs statiques
 title: Curseurs statiques | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4baacc48beffda2d83a23ce24d3a31c314da5841
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 396083b57ad12b3cf5e917416272ec636696e91a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452821"
 ---
 # <a name="static-cursors"></a>Curseurs statiques
 Le curseur statique affiche toujours l’ensemble de résultats tel qu’il était au moment où le curseur a été ouvert pour la première fois. En fonction de l’implémentation, les curseurs statiques sont en lecture seule ou en lecture/écriture, et permettent de faire défiler vers l’avant et vers l’arrière. Le curseur statique ne détecte généralement pas les modifications apportées à l’appartenance, à l’ordre ou aux valeurs du jeu de résultats après l’ouverture du curseur. Les curseurs statiques peuvent détecter leurs propres mises à jour, suppressions et insertions, bien qu’ils ne soient pas obligés de le faire.  

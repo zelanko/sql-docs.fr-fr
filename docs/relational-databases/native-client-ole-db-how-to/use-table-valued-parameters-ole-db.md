@@ -1,4 +1,5 @@
 ---
+description: Utiliser des paramètres table en SQL Server Native Client (OLE DB)
 title: Utiliser des paramètres table (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02f9960443d9ff9c5b3eb82577cf12180376b9e7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 4d8e35803c71047f73faac83cb79f309cf803a27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448431"
 ---
 # <a name="use-table-valued-parameters-in-sql-server-native-client-ole-db"></a>Utiliser des paramètres table en SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "87394082"
   
  Placez la troisième liste de code dans un fichier appelé OLEDBUtils.hpp.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez la quatrième liste de code  (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, remplacez la chaîne de connexion L "(local)" par L "(local) \\ \name", où nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez la quatrième liste de code  (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion L« (local) » par L« (local)\\\nom », où le nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  La cinquième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée la base de données utilisée par l'exemple.  
   

@@ -1,4 +1,5 @@
 ---
+description: Persistance des recordsets hiérarchiques
 title: Persistance des recordsets hiérarchiques | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9c671adb19bd2e955b67ce23f268738ccf9033f5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4bfcb79e532609ad9b3eeb14fb07dec4fd1239f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453051"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Persistance des recordsets hiérarchiques
 Vous pouvez enregistrer un **jeu d’enregistrements** hiérarchique dans un fichier au format ADTG ou XML en appelant la méthode [Save](../../../ado/reference/ado-api/save-method.md) . Toutefois, deux limitations s’appliquent lors de l’enregistrement des **jeux d’enregistrements**hiérarchiques au format XML : vous ne pouvez pas enregistrer dans XML si le **jeu d’enregistrements** hiérarchique contient des mises à jour en attente et que vous ne pouvez pas enregistrer un **jeu d’enregistrements**hiérarchique paramétré.  

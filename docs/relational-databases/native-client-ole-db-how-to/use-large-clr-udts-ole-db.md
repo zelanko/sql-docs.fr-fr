@@ -1,4 +1,5 @@
 ---
+description: Utiliser des UDT CLR volumineux en SQL Server Native Client (OLE DB)
 title: Utiliser de grands UDT CLR (Native Client OLE DB Provider)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -11,12 +12,12 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60f8978fa0dedfe40a3d48b7796bc4d0fb1359c7
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 6cec1e6076820e8d41feb077db417b168e80b05c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448456"
 ---
 # <a name="use-large-clr-udts--in-sql-server-native-client-ole-db"></a>Utiliser des UDT CLR volumineux en SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "87396885"
   
  Exécutez la deuxième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour ajouter l'assembly à la base de données master.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez la troisième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, remplacez la chaîne de connexion L "(local)" par L "(local) \\ \name", où nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez la troisième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion L« (local) » par L« (local)\\\nom », où le nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Exécutez la quatrième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour supprimer l'assembly dans la base de données master.  
   
