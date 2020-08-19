@@ -1,4 +1,5 @@
 ---
+description: DefinedSize, propriété
 title: DefinedSize, propriété | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08a7842a2fbfb2bd34f02ad2e45871132111a68f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: fa6b01afc3a8643f7e4f28917ebaa8283bf1876e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82757395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444181"
 ---
 # <a name="definedsize-property"></a>DefinedSize, propriété
 Indique la capacité de données d’un objet de [champ](../../../ado/reference/ado-api/field-object.md) .  
   
-## <a name="return-value"></a>Valeur renvoyée  
+## <a name="return-value"></a>Valeur de retour  
  Retourne une valeur de **type long** qui reflète la taille définie d’un champ, qui dépend du type de données de l’objet Field ; Pour plus d’informations, consultez [type](../../../ado/reference/ado-api/type-property-ado.md) . Pour un champ qui utilise un type de données de longueur fixe, la valeur de retour correspond à la taille du type de données en octets. Pour un champ qui utilise un type de données de longueur variable, il s’agit de l’un des éléments suivants :  
   
 1.  Longueur maximale du champ en caractères (pour **adVarChar** et **adVarWChar**) ou en octets (pour **adVarBinary**et **adVarNumeric**) si le champ a une longueur définie. Par exemple, le champ **adVarChar (5)** a une longueur maximale de 5.  
@@ -36,7 +37,7 @@ Indique la capacité de données d’un objet de [champ](../../../ado/reference/
   
 4.  Pour les types de données qui n’ont pas de longueur, cette valeur est définie sur ~ 0 (au niveau du bit, la valeur n’est pas 0 ; tous les bits sont définis sur 1).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la propriété **DefinedSize** pour déterminer la capacité de données d’un objet de **champ** .  
   
  Les propriétés **DefinedSize** et [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) sont différentes. Par exemple, considérez un objet de **champ** avec un type déclaré de **adVarChar** et une valeur de propriété **DefinedSize** de 50, contenant un caractère unique. La valeur de la propriété **ActualSize** renvoyée correspond à la longueur en octets du caractère unique.  

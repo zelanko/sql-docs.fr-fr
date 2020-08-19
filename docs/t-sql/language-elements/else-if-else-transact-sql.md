@@ -1,4 +1,5 @@
 ---
+description: ELSE (IF...ELSE) (Transact-SQL)
 title: ELSE (IF...ELSE) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,19 +21,19 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 727361bf8d655ba1783782feeb324b0c5701c5c4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b32f65b2dacb9f3a1c709df4f0a850fa08fec0ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918535"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459361"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Impose les conditions d'exécution d'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] (*sql_statement*) qui suit *Boolean_expression* est exécutée si *Boolean_expression* a la valeur TRUE. Le mot clé facultatif ELSE est une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] alternative exécutée lorsque la valeur renvoyée par *Boolean_expression* est FALSE ou NULL.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -138,7 +139,7 @@ GO
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E : Utilisation d'une requête dans le cadre d'une expression booléenne  
+### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E. Utilisation d’une requête dans le cadre d’une expression booléenne  
  L’exemple suivant utilise `IF...ELSE` pour déterminer quelle réponse donner à l’utilisateur entre deux réponses, en fonction du poids d’un élément dans la table `DimProduct`.  
   
 ```sql

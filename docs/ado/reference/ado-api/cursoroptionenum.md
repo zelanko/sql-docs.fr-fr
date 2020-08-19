@@ -1,4 +1,5 @@
 ---
+description: CursorOptionEnum
 title: CursorOptionEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7ac2825c5b700c7c9855f554cdd76cfd28547bd
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 35846bf873ff98ff15e2581c36e1963b7ddcd08c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444271"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 Spécifie les fonctionnalités que la méthode de [prise en charge](../../../ado/reference/ado-api/supports-method.md) doit tester.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|Prend en charge la méthode [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) pour ajouter de nouveaux enregistrements.|  
 |**adApproxPosition**|0x4000|Prend en charge les propriétés [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) et [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) .|  
@@ -44,7 +45,7 @@ Spécifie les fonctionnalités que la méthode de [prise en charge](../../../ado
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.CursorOption.ADDNEW|  
 |AdoEnums.CursorOption.APPROXPOSITION|  

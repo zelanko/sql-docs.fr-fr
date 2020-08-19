@@ -1,4 +1,5 @@
 ---
+description: Mots réservés MDX
 title: Mots réservés MDX | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d2b47a6860d73e72be54dbe9caa1f18ab95c6cff
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: b5405241a99c931c1f9e9354214f097645941efb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429751"
 ---
 # <a name="mdx-reserved-words"></a>Mots réservés MDX
 
@@ -100,7 +101,7 @@ ms.locfileid: "87362779"
         EXCEPT  
         EXCLUDEEMPTY  
         EXTRACT  
-        FAUX  
+        false  
         FILTER  
         FIRSTCHILD  
         FIRSTSIBLING  
@@ -217,7 +218,7 @@ ms.locfileid: "87362779"
         TOPSUM  
         TOTALS  
         trEE  
-        VRAI  
+        true  
         TUPLETOSTR  
         TYPE  
         UNION  

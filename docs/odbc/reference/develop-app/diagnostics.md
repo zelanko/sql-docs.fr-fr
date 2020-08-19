@@ -1,4 +1,5 @@
 ---
+description: Diagnostics
 title: Diagnostics | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a09f46d3fd6aa2f9b9c7310af6d3ddc90f78389f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 918dce41ca1c7e7b43c1a6d25de2c75a83312715
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305150"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476711"
 ---
 # <a name="diagnostics"></a>Diagnostics
 Dans ODBC, les fonctions renvoient des informations de diagnostic de deux manières. Le code de retour indique le succès ou l’échec global de la fonction, tandis que les enregistrements de diagnostic fournissent des informations détaillées sur la fonction. Au moins un enregistrement de diagnostic-l’enregistrement d’en-tête-est retourné même si la fonction réussit.  

@@ -1,4 +1,5 @@
 ---
+description: BOF, EOF, propriétés (ADO)
 title: BOF, EOF, propriétés (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,22 +18,22 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451126"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF, propriétés (ADO)
 -   **BOF** Indique que la position actuelle de l’enregistrement est antérieure au premier enregistrement d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
   
 -   **EOF** Indique que la position actuelle de l’enregistrement est après le dernier enregistrement d’un objet **Recordset** .  
   
-## <a name="return-value"></a>Valeur renvoyée  
+## <a name="return-value"></a>Valeur de retour  
  Les propriétés **BOF** et **EOF** retournent des valeurs **booléennes** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez les propriétés **BOF** et **EOF** pour déterminer si un objet **Recordset** contient des enregistrements ou si vous avez dépassé les limites d’un objet **Recordset** lorsque vous passez d’un enregistrement à l’autre.  
   
  La propriété **BOF** retourne **true** (-1) si la position actuelle de l’enregistrement est antérieure au premier enregistrement et **false** (0) si la position actuelle de l’enregistrement est égale ou postérieure au premier enregistrement.  

@@ -1,4 +1,5 @@
 ---
+description: catalog.execution_component_phases
 title: catalog.execution_component_phases | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9ec0b655aa3289ff23abd56d618f9ca0cc9be67d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e307babfd703b83758a6d1d3c7de3e6f62b00119
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495229"
 ---
 # <a name="catalogexecution_component_phases"></a>catalog.execution_component_phases 
 
@@ -41,7 +42,7 @@ ms.locfileid: "86912605"
 ## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque phase d'exécution d'un composant de flux de données, par exemple Validate, Pre-Execute, Post-Execute, PrimeOutput et ProcessInput. Chaque ligne affiche l'heure de début et de fin d'une phase d'exécution spécifique.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant utilise la vue catalog.execution_component_phases pour déterminer le temps total d’exécution d’un package spécifique au cours de toutes les phases (**active_time**), ainsi que le temps total écoulé pour le package (**total_time**).  
   
 > [!WARNING]  

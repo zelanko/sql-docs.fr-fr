@@ -1,4 +1,5 @@
 ---
+description: Paramètres du projet (Conversion) (SybaseToSQL)
 title: Paramètres du projet (conversion) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1d2f1c02b9a9400236381cdd30fb3deb570500c1
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 61795be0d1f851792846f2ede8c38eca1f3801b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468793"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Paramètres du projet (Conversion) (SybaseToSQL)
 La page conversion de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA convertit la syntaxe Sybase Adaptive Server Enterprise (ASE) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure syntaxe.  
@@ -241,9 +242,9 @@ Lorsque vous sélectionnez un mode de conversion dans la zone **mode** , SSMA ap
 **Stocker des objets temporaires définis dans des procédures**  
 Ce paramètre spécifie si les définitions des objets temporaires qui apparaissent dans les procédures doivent être stockées dans les métadonnées sources lors de la conversion.  
   
--   Sélectionnez **Oui** pour stocker dans les métadonnées.  
+-   Sélectionnez **Oui**  pour stocker dans les métadonnées.  
   
--   Sélectionnez **non** si les objets n’ont pas besoin d’être stockés.  
+-   Sélectionnez **non**  si les objets n’ont pas besoin d’être stockés.  
   
 **Mode par défaut/optimiste :** Oui  
   
@@ -261,7 +262,7 @@ Lorsque vous sélectionnez un mode de conversion dans la zone **mode** , SSMA ap
 **Mode par défaut/optimiste/mode complet :** Marquer avec une erreur  
   
 **Numéro de message de base RAISERROR**  
-Les messages utilisateur ASE sont stockés dans chaque base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les messages utilisateur sont stockés de manière centralisée et mis à disposition par le biais de l’affichage catalogue **sys. messages** . En outre, les messages utilisateur ASE commencent à 20000, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les messages d’erreur commencent à 50001.  
+Les messages utilisateur ASE sont stockés dans chaque base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les messages utilisateur sont stockés de manière centralisée et mis à disposition par le biais de l’affichage catalogue **sys. messages** . En outre, les messages utilisateur ASE commencent à 20000, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les messages d’erreur commencent à 50001.  
   
 Ce paramètre spécifie le nombre à ajouter au numéro de message utilisateur de l’ASE pour le convertir en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message utilisateur. Si votre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient des messages utilisateur dans l’affichage catalogue **sys. messages** , vous devrez peut-être modifier ce nombre en lui attribuant une valeur plus élevée. Ainsi, les numéros des messages convertis ne sont pas en conflit avec les numéros de message existants.  
   
@@ -324,7 +325,7 @@ Lorsque vous sélectionnez un mode de conversion dans la zone **mode** , SSMA ap
 **Mode complet :** Replace, fonction  
   
 **DATALENGTH (fonction)**  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure et ASE diffèrent dans la valeur retournée par la fonction DATALENGTH lorsque la valeur est un espace unique. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure retourne 0 et ASE retourne 1.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure et ASE diffèrent dans la valeur retournée par la fonction DATALENGTH lorsque la valeur est un espace unique. Dans ce cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure retourne 0 et ASE retourne 1.  
   
 -   Pour utiliser le comportement ASE, sélectionnez **remplacer la fonction**. Tous les appels à la fonction DATALENGTH sont substitués par l’expression CASE pour émuler le comportement de Sybase ASE.  
   

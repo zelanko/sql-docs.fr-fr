@@ -1,4 +1,5 @@
 ---
+description: catalog.validate_project (base de données SSISDB)
 title: catalog.validate_project (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8dfda68b04a898efc7aa87e5a821e79717113544
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c491a8914fb11da815d0887ae5b2248f1e2a7c19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495352"
 ---
 # <a name="catalogvalidate_project-ssisdb-database"></a>catalog.validate_project (base de données SSISDB)
 
@@ -46,7 +47,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Nom du projet. *project_name* est de type **nvarchar(128)** .  
   
  [ @validate_type = ] *validate_type*  
- Indique le type de validation à réaliser. Utilisez le caractère `F` pour effectuer une validation complète. Ce paramètre est facultatif, le caractère `F` sera utilisé par défaut. *validate_type* est de type **char(1)** .  
+ Indique le type de validation à réaliser. Utilisez le caractère `F` pour effectuer une validation complète. Ce paramètre est facultatif, le caractère `F` sera utilisé par défaut. *validate_type* est de type **char(1)**.  
   
  [ @validation_id = ] *validation_id*  
  Retourne l'identificateur unique (ID) de la validation. *validation_id* est de type **bigint**.  
@@ -55,7 +56,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Indique si l'exécution 32 bits doit être utilisée pour exécuter le package sur un système d'exploitation 64 bits. Utilisez la valeur `1` pour exécuter le package avec l’exécution 32 bits quand un système d’exploitation 64 bits est exécuté. Utilisez la valeur `0` pour exécuter le package avec l'exécution 64 bits lorsqu'un système d'exploitation 64 bits est exécuté. Ce paramètre est facultatif. *use32bitruntime* est de type **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation. Ce paramètre est facultatif, le caractère `D` sera utilisé par défaut. *environment_scope* est de type **char(1)** .  
+ Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation. Ce paramètre est facultatif, le caractère `D` sera utilisé par défaut. *environment_scope* est de type **char(1)**.  
   
  [ @reference_id = ] *reference_id*  
  ID unique de la référence environnementale. Ce paramètre est obligatoire uniquement quand une référence environnementale unique est incluse dans la validation, quand *environment_scope* est `S`. *reference_id* est de type **bigint**.  

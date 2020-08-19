@@ -1,4 +1,5 @@
 ---
+description: Arguments des fonctions Unicode
 title: Arguments de fonction Unicode | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 40ef9f63345572b5613942c1174ceeecadd146ee
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: d2d59cad60855c670f7c7e2b189ad3c97a3027b9
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529738"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564037"
 ---
 # <a name="unicode-function-arguments"></a>Arguments des fonctions Unicode
 Le gestionnaire de pilotes ODBC 3,5 (ou version ultérieure) prend en charge les versions ANSI et Unicode de toutes les fonctions qui acceptent des pointeurs vers des chaînes de caractères ou des SQLPOINTER dans leurs arguments. Les fonctions Unicode sont implémentées en tant que fonctions (avec un suffixe *W*), et non pas en tant que macros. Les fonctions ANSI (qui peuvent être appelées avec ou sans suffixe *) sont*identiques aux fonctions de l’API ODBC en cours.  
@@ -36,7 +37,7 @@ Le gestionnaire de pilotes ODBC 3,5 (ou version ultérieure) prend en charge les
 |**SQLColAttribute**|**SQLGetInfo**|  
 |**SQLColAttributes**|**SQLGetStmtAttr**|  
 |**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
-|**SQLColumns**|**SQLNativeSQL**|  
+|**SQLColumns**|**SQLNativeSql**|  
 |**SQLConnect**|**SQLPrepare**|  
 |**SQLDataSources**|**SQLPrimaryKeys**|  
 |**SQLDescribeCol**|**SQLProcedureColumns**|  

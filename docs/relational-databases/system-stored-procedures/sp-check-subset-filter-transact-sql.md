@@ -1,4 +1,5 @@
 ---
+description: sp_check_subset_filter (Transact-SQL)
 title: sp_check_subset_filter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f006cba8bfe0abecce995753863944f7d5bf0b71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 55b5160842e5be4bda385fd23afd22d304dc2dae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771308"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486175"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Est utilisée pour vérifier une clause de filtre en fonction d'une table, afin de déterminer si cette clause est valide pour la table. Cette procédure stockée renvoie des informations sur le filtre fourni, y compris si le filtre peut être utilisé avec des partitions précalculées. Cette procédure stockée est exécutée au niveau du serveur de publication dans la base de données contenant la publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @filtered_table = ] 'filtered_table'`Nom d’une table filtrée. *filtered_table* est de type **nvarchar (400)**, sans valeur par défaut.  
+`[ @filtered_table = ] 'filtered_table'` Nom d’une table filtrée. *filtered_table* est de type **nvarchar (400)**, sans valeur par défaut.  
   
-`[ @subset_filterclause = ] 'subset_filterclause'`Clause de filtre testée. *subset_filterclause* est de type **nvarchar (1000)**, sans valeur par défaut.  
+`[ @subset_filterclause = ] 'subset_filterclause'` Clause de filtre testée. *subset_filterclause* est de type **nvarchar (1000)**, sans valeur par défaut.  
   
-`[ @has_dynamic_filters = ] has_dynamic_filters`Indique si la clause de filtre est un filtre de lignes paramétrable. *has_dynamic_filters* est de type **bit**, avec NULL comme valeur par défaut et est un paramètre de sortie. Retourne la valeur **1** lorsque la clause de filtre est un filtre de lignes paramétrable.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` Indique si la clause de filtre est un filtre de lignes paramétrable. *has_dynamic_filters* est de type **bit**, avec NULL comme valeur par défaut et est un paramètre de sortie. Retourne la valeur **1** lorsque la clause de filtre est un filtre de lignes paramétrable.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -63,7 +64,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_check_subset_filter** est utilisé dans la réplication de fusion.  
   
  **sp_check_subset_filter** peut être exécutée sur n’importe quelle table, même si la table n’est pas publiée. Cette procédure stockée peut être utilisée pour vérifier une clause de filtre avant de définir un article filtré.  

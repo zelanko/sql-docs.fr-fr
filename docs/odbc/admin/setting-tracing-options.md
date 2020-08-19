@@ -1,4 +1,5 @@
 ---
+description: Définition des options de suivi
 title: Définition des options de suivi | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 21bee5d903459423a134389e62db844f5f63c9c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72e3805eded00b1bfa0c984d5ff0ace1ae1494fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307193"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476951"
 ---
 # <a name="setting-tracing-options"></a>Définition des options de suivi
 L’onglet **suivi** de la boîte de dialogue **administrateur de sources de données ODBC** vous permet de configurer la façon dont les appels de fonction ODBC sont suivis.  
@@ -42,7 +43,7 @@ L’onglet **suivi** de la boîte de dialogue **administrateur de sources de don
   
 2.  Dans outils d’administration, ouvrez l’administrateur de la source de données ODBC.  
   
-3.  Cliquez sur l’onglet **suivi** .  
+3.  Cliquez sur l’onglet **Traçage**.  
   
 4.  Configurez le mode de suivi à l’aide de la case à cocher **suivi au niveau de l’ordinateur pour toutes les identités utilisateur** :  
   

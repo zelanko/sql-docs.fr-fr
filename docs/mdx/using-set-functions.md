@@ -1,4 +1,5 @@
 ---
+description: Utilisation de fonctions de jeu
 title: Utilisation des fonctions set | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1325055017eeee392cd098d9168dd247a2664aa4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476981"
 ---
 # <a name="using-set-functions"></a>Utilisation de fonctions de jeu
 
@@ -22,7 +23,7 @@ ms.locfileid: "68038050"
   
  Les fonctions de jeu, comme les fonctions de membre et de tuple, sont essentielles à la négociation des structures multidimensionnelles présentes dans Analysis Services. Elles sont également essentielles pour l'obtention de résultats à partir de requêtes MDX (Multidimensional Expressions), car les expressions de jeu définissent les axes d'une requête MDX.  
   
- L’une des fonctions d’ensemble les plus courantes est les [membres &#40;définir&#41; &#40;fonction&#41;MDX](../mdx/members-set-mdx.md) , qui récupère un jeu contenant tous les membres d’une dimension, d’une hiérarchie ou d’un niveau. Ce qui suit est un exemple de son utilisation dans une requête :  
+ L’une des fonctions d’ensemble les plus courantes est les [membres &#40;définir&#41; &#40;fonction&#41;MDX ](../mdx/members-set-mdx.md) , qui récupère un jeu contenant tous les membres d’une dimension, d’une hiérarchie ou d’un niveau. Ce qui suit est un exemple de son utilisation dans une requête :  
   
  `SELECT`  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68038050"
   
  `FROM [Adventure Works]`  
   
- Une autre fonction couramment utilisée est la fonction [Crossjoin &#40;&#41;MDX](../mdx/crossjoin-mdx.md) . Elle retourne un jeu de tuples qui représente le produit cartésien des jeux passés dans celui-ci comme paramètres. En termes pratiques, cette fonction vous permet de créer des axes « imbriqués » ou de « tableau croisé dynamique » dans les requêtes :  
+ Une autre fonction couramment utilisée est la fonction [Crossjoin &#40;&#41;MDX ](../mdx/crossjoin-mdx.md) . Elle retourne un jeu de tuples qui représente le produit cartésien des jeux passés dans celui-ci comme paramètres. En termes pratiques, cette fonction vous permet de créer des axes « imbriqués » ou de « tableau croisé dynamique » dans les requêtes :  
   
  `SELECT`  
   
@@ -122,7 +123,7 @@ ms.locfileid: "68038050"
   
  Cette requête illustre également comment le jeu retourné par une fonction de jeu, Descendants, peut être passé comme un paramètre à une autre fonction de jeu, Order.  
   
- Le filtrage d’un jeu en fonction de certains critères est très utile lors de l’écriture de requêtes. à cette fin, vous pouvez utiliser la fonction [Filter &#40;&#41;MDX](../mdx/filter-mdx.md) , comme illustré dans l’exemple suivant :  
+ Le filtrage d’un jeu en fonction de certains critères est très utile lors de l’écriture de requêtes. à cette fin, vous pouvez utiliser la fonction [Filter &#40;&#41;MDX ](../mdx/filter-mdx.md) , comme illustré dans l’exemple suivant :  
   
  `SELECT`  
   
@@ -150,7 +151,7 @@ ms.locfileid: "68038050"
   
  `FROM [Adventure Works]`  
   
- D'autres fonctions plus sophistiquées existent et vous permettent de filtrer un jeu d'autres manières. Par exemple, la requête suivante affiche la fonction [topcount &#40;&#41;MDX](../mdx/topcount-mdx.md) retourne les n premiers éléments d’un jeu :  
+ D'autres fonctions plus sophistiquées existent et vous permettent de filtrer un jeu d'autres manières. Par exemple, la requête suivante affiche la fonction [topcount &#40;&#41;MDX ](../mdx/topcount-mdx.md) retourne les n premiers éléments d’un jeu :  
   
  `SELECT`  
   
@@ -176,7 +177,7 @@ ms.locfileid: "68038050"
   
  `FROM [Adventure Works]`  
   
- Enfin, il est possible d’effectuer un certain nombre d’opérations Set logiques à l’aide de fonctions telles que [Intersect &#40;mdx&#41;](../mdx/intersect-mdx.md), [Union &#40;MDX&#41;](../mdx/union-mdx.md) et, [à l’exception](../mdx/except-mdx-function.md) des fonctions &#40;MDX&#41;. La requête suivante affiche des exemples de ces deux dernières fonctions :  
+ Enfin, il est possible d’effectuer un certain nombre d’opérations Set logiques à l’aide de fonctions telles que [Intersect &#40;mdx&#41;](../mdx/intersect-mdx.md), [Union &#40;MDX&#41;](../mdx/union-mdx.md) et, [à l’exception ](../mdx/except-mdx-function.md) des fonctions &#40;MDX&#41;. La requête suivante affiche des exemples de ces deux dernières fonctions :  
   
  `SELECT`  
   

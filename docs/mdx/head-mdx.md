@@ -1,4 +1,5 @@
 ---
+description: Head (MDX)
 title: Head (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51a832bf38d3834c44f9b31f5bbfd27833d6d691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429921"
 ---
 # <a name="head-mdx"></a>Head (MDX)
 
@@ -58,7 +59,7 @@ FROM [Adventure Works]
  [&#41;MDX &#40;](../mdx/tail-mdx.md)   
  [Élément &#40;Tuple&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [Élément &#40;&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
- [Classement &#40;&#41;MDX](../mdx/rank-mdx.md)   
+ [Classement &#40;&#41;MDX ](../mdx/rank-mdx.md)   
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

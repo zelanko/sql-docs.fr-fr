@@ -1,4 +1,5 @@
 ---
+description: sp_help (Transact-SQL)
 title: sp_help (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
@@ -18,20 +19,20 @@ ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57a435db1aca6c2ab9f093792e26f7e88dcbf21a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 85fd7be3a9f82b43c19e344602a85e1adf06c68a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486028"
 ---
 # <a name="sp_help-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Fournit des informations sur un objet de base de données (n’importe quel objet figurant dans la vue de compatibilité des **objetssys.sys** ), un type de données défini par l’utilisateur ou un type de données.  
+  Fournit des informations sur un objet de base de données (n’importe quel objet figurant dans la vue de compatibilité des ** objetssys.sys** ), un type de données défini par l’utilisateur ou un type de données.  
   
  
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'name'`Nom d’un objet, dans **sysobjects** ou dans un type de données défini par l’utilisateur dans la table **systypes** . *Name* est de type **nvarchar (** 776 **)**, avec NULL comme valeur par défaut. Vous ne pouvez pas spécifier un nom de base de données.  Les noms en deux ou trois parties doivent être délimités, comme 'Personne.TypeAdresse' ou [Personne.TypeAdresse].   
+`[ @objname = ] 'name'` Nom d’un objet, dans **sysobjects** ou dans un type de données défini par l’utilisateur dans la table **systypes** . *Name* est de type **nvarchar (** 776 **)**, avec NULL comme valeur par défaut. Vous ne pouvez pas spécifier un nom de base de données.  Les noms en deux ou trois parties doivent être délimités, comme 'Personne.TypeAdresse' ou [Personne.TypeAdresse].   
    
   
 ## <a name="return-code-values"></a>Codet de retour  
@@ -105,8 +106,8 @@ sp_help [ [ @objname = ] 'name' ]
         |Nom de la colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**Identité**|**nvarchar (** 128 **)**|Nom de la colonne dont le type de données déclaré est identité.|  
-        |**Seed**|**numeric**|Valeur de départ de la colonne identité.|  
-        |**Lier**|**numeric**|Incrément à appliquer aux valeurs de la colonne.|  
+        |**Initiales**|**numeric**|Valeur de départ de la colonne identité.|  
+        |**Incrément**|**numeric**|Incrément à appliquer aux valeurs de la colonne.|  
         |**Pas pour la réplication**|**int**|La propriété IDENTity n’est pas appliquée quand une connexion de réplication, telle que **SQLRepl**, insère des données dans la table :<br /><br /> 1 = Vrai<br /><br /> 0 = Faux|  
   
     -   Jeu de résultats supplémentaire retourné sur des colonnes :  
@@ -158,7 +159,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Mise à l’échelle**|**int**|Nombre de chiffres situés à droite du séparateur décimal.|  
         |**Param_order**|**smallint**|Ordre du paramètre.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La procédure **sp_help** recherche uniquement un objet dans la base de données active.  
   
  Si vous ne spécifiez pas *Name* , **sp_help** répertorie les noms d’objets, les propriétaires et les types d’objets pour tous les objets de la base de données active. **sp_helptrigger** fournit des informations sur les déclencheurs.  
@@ -197,7 +198,7 @@ GO
  [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Objetssys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [ Objetssys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

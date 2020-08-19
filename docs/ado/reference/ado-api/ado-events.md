@@ -1,4 +1,5 @@
 ---
+description: Événements ADO
 title: Événements ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a93353be1737b38e7acb557a682e84cbb947c2a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 07ef1c379dcf59b386b86d5b9fce38f77c521e01
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242869"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451421"
 ---
 # <a name="ado-events"></a>Événements ADO
 

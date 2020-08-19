@@ -1,4 +1,5 @@
 ---
+description: Fonctions VBA dans MDX et DAX
 title: Fonctions VBA dans MDX et DAX | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 10658daae1321ac7e22af337ef946f5cfb6004cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68135019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429701"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Fonctions VBA dans MDX et DAX
 
@@ -22,14 +23,14 @@ ms.locfileid: "68135019"
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Référence des fonctions Visual Basic for Applications (VBA)  
   
-|Nom de fonction|Pris en charge|Notes|  
+|Nom de fonction|Prise en charge|Notes|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
-|Array|Non prise en charge||  
+|Array|Non pris en charge||  
 |Asc|MDX uniquement||  
 |AscW|MDX uniquement||  
 |Atn|MDX uniquement||  
-|CallByName|Non prise en charge||  
+|CallByName|Non pris en charge||  
 |CBool|MDX uniquement||  
 |CByte|MDX uniquement||  
 |CMonnaie|MDX uniquement||  
@@ -40,54 +41,54 @@ ms.locfileid: "68135019"
 |Chr|MDX uniquement||  
 |CEnt|MDX uniquement||  
 |CLong|MDX uniquement||  
-|CLngLng|Non prise en charge||  
-|CLngPtr|Non prise en charge||  
-|Commande|Non prise en charge||  
+|CLngLng|Non pris en charge||  
+|CLngPtr|Non pris en charge||  
+|Commande|Non pris en charge||  
 |Cos|MDX uniquement||  
-|CreateObject|Non prise en charge||  
+|CreateObject|Non pris en charge||  
 |CSmpl|MDX uniquement||  
 |CChaîne|MDX uniquement||  
-|RéperCour|Non prise en charge||  
+|RéperCour|Non pris en charge||  
 |CVar|MDX uniquement||  
-|CVErr|Non prise en charge||  
+|CVErr|Non pris en charge||  
 |Date|MDX uniquement|**Avertissement** DAX implémente une fonction différente avec le même nom ; la fonction DATE (année, mois, jour), utilisée pour générer une valeur de type date à partir des arguments donnés|  
-|AjDate|MDX uniquement|**Avertissement** DAX implémente une fonction différente avec le même nom ; fonction DATEADD (\<dates>, <number_of_intervals>,\<Interval>), utilisée pour déplacer les dates données d’un certain nombre d’intervalles donnés|  
+|AjDate|MDX uniquement|**Avertissement** DAX implémente une fonction différente avec le même nom ; fonction DATEADD ( \<dates> , <number_of_intervals>, \<interval> ), utilisée pour déplacer les dates données d’un certain nombre d’intervalles donnés|  
 |DiffDate|MDX uniquement||  
 |PartDate|MDX uniquement||  
 |SérieDate|MDX uniquement||  
 |ValDate|DAX, MDX||  
-|jour|DAX, MDX||  
+|Jour|DAX, MDX||  
 |DDB|MDX uniquement||  
-|Réper|Non prise en charge||  
-|DoEvents|Non prise en charge||  
-|Environ|Non prise en charge||  
-|EOF|Non prise en charge||  
-|Error|Non prise en charge||  
+|Réper|Non pris en charge||  
+|DoEvents|Non pris en charge||  
+|Environ|Non pris en charge||  
+|EOF|Non pris en charge||  
+|Error|Non pris en charge||  
 |Exp|DAX, MDX||  
-|FileAttr|Non prise en charge||  
-|DateHeureFich|Non prise en charge||  
-|LongFich|Non prise en charge||  
-|Filtrer|Non prise en charge|**Avertissement** MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu qui résulte du filtrage d’un jeu spécifié selon une condition de recherche à partir des arguments donnés.<br /><br /> **Avertissement** DAX implémente une fonction différente avec le même nom ; la fonction FILTER\<(table>\<, filtre>) retourne une table qui représente un sous-ensemble d’une autre table ou expression à partir des arguments donnés.|  
-|Fix|MDX uniquement||  
+|FileAttr|Non pris en charge||  
+|DateHeureFich|Non pris en charge||  
+|LongFich|Non pris en charge||  
+|Filtrer|Non pris en charge|**Avertissement** MDX implémente une fonction différente avec le même nom ; la fonction FILTER (Set_Expression, Logical_Expression) retourne le jeu qui résulte du filtrage d’un jeu spécifié selon une condition de recherche à partir des arguments donnés.<br /><br /> **Avertissement** DAX implémente une fonction différente avec le même nom ; la fonction FILTER ( \<table> , \<filter> ) retourne une table qui représente un sous-ensemble d’une autre table ou expression à partir des arguments donnés.|  
+|Correction|MDX uniquement||  
 |Format (Visual Basic for Applications)|DAX, MDX||  
-|FormatCurrency|Non prise en charge||  
-|FormatDateTime|Non prise en charge||  
-|FormatNumber|Non prise en charge||  
-|FormatPercent|Non prise en charge||  
-|FreeFile|Non prise en charge||  
+|FormatCurrency|Non pris en charge||  
+|FormatDateTime|Non pris en charge||  
+|FormatNumber|Non pris en charge||  
+|FormatPercent|Non pris en charge||  
+|FreeFile|Non pris en charge||  
 |VC|MDX uniquement||  
-|LireTousParam|Non prise en charge||  
-|LireAttr|Non prise en charge||  
-|GetObject|Non prise en charge||  
-|GetSetting|Non prise en charge||  
+|LireTousParam|Non pris en charge||  
+|LireAttr|Non pris en charge||  
+|GetObject|Non pris en charge||  
+|GetSetting|Non pris en charge||  
 |Hex|MDX uniquement||  
 |Heure|DAX, MDX||  
 |Iif|MDX uniquement|**Avertissement** DAX implémente une fonction similaire avec la fonction Name : IF (logical_test, value_if_true, value_if_false).|  
-|IMEStatus|Non prise en charge||  
-|Entrée|Non prise en charge||  
-|InputBox|Non prise en charge||  
+|IMEStatus|Non pris en charge||  
+|Entrée|Non pris en charge||  
+|InputBox|Non pris en charge||  
 |InStr|MDX uniquement||  
-|InStrRev|Non prise en charge||  
+|InStrRev|Non pris en charge||  
 |Int|DAX, MDX||  
 |IPmt|MDX uniquement||  
 |IRR|MDX uniquement||  
@@ -98,24 +99,24 @@ ms.locfileid: "68135019"
 |IsMissing|MDX uniquement||  
 |IsNull|MDX uniquement||  
 |IsNumeric|MDX uniquement||  
-|IsObject|Non prise en charge||  
-|Join|Non prise en charge||  
-|LBound|Non prise en charge||  
+|IsObject|Non pris en charge||  
+|Join|Non pris en charge||  
+|LBound|Non pris en charge||  
 |Minuscule|MDX uniquement||  
 |Gauche|DAX, MDX||  
 |NbCar|DAX, MDX||  
-|Loc|Non prise en charge||  
-|LOF|Non prise en charge||  
+|Loc|Non pris en charge||  
+|LOF|Non pris en charge||  
 |Journal|MDX uniquement|**Important** DAX implémente une fonction différente avec le même nom ; fonction LOG (Number, base). Retourne le logarithme d'un nombre à la base spécifiée à partir des arguments fournis.|  
 |SupprGauche|MDX uniquement||  
-|MacID|Non prise en charge||  
-|MacScript|Non prise en charge||  
+|MacID|Non pris en charge||  
+|MacScript|Non pris en charge||  
 |ExtracChaîne|DAX, MDX||  
 |Minute|DAX, MDX||  
 |MIRR|MDX uniquement||  
 |Month|DAX, MDX||  
-|MonthName|Non prise en charge||  
-|MsgBox|Non prise en charge||  
+|MonthName|Non pris en charge||  
+|MsgBox|Non pris en charge||  
 |maintenant|DAX, MDX||  
 |NPer|MDX uniquement||  
 |NPV|MDX uniquement||  
@@ -126,43 +127,43 @@ ms.locfileid: "68135019"
 |PV|MDX uniquement||  
 |RVBC|MDX uniquement||  
 |Tarif|MDX uniquement||  
-|Replace|Non prise en charge||  
+|Replace|Non pris en charge||  
 |RGB|MDX uniquement||  
 |Right|DAX, MDX||  
 |Aléat|MDX uniquement||  
 |Round|DAX, MDX||  
 |SupprDroite|MDX uniquement||  
 |Seconde|DAX, MDX||  
-|Seek|Non prise en charge||  
+|Seek|Non pris en charge||  
 |Sgn|DAX, MDX||  
-|Shell|Non prise en charge||  
+|Shell|Non pris en charge||  
 |Sin|MDX uniquement||  
 |AmorLin|MDX uniquement||  
 |Espace|MDX uniquement||  
-|Spc|Non prise en charge||  
-|Split|Non prise en charge||  
+|Spc|Non pris en charge||  
+|Split|Non pris en charge||  
 |Racine|MDX uniquement||  
 |NumChaîne|MDX uniquement||  
 |CompChaîne|MDX uniquement||  
 |ConvChaîne|MDX uniquement||  
 |String|MDX uniquement||  
-|StrReverse|Non prise en charge||  
+|StrReverse|Non pris en charge||  
 |Commutateur|MDX uniquement||  
 |SYD|MDX uniquement||  
-|Onglet|Non prise en charge||  
+|Onglet|Non pris en charge||  
 |Tan|MDX uniquement||  
-|Heure|Non prise en charge||  
-|Minuterie|MDX uniquement||  
+|Temps|Non pris en charge||  
+|Minuteur|MDX uniquement||  
 |SérieHeure|MDX uniquement||  
 |VHeure|DAX, MDX||  
 |SupprEspace|DAX, MDX||  
 |TypeName|MDX uniquement||  
-|UBound|Non prise en charge||  
+|UBound|Non pris en charge||  
 |UCase|MDX uniquement||  
 |Val|MDX uniquement||  
-|VarType|Non prise en charge||  
+|VarType|Non pris en charge||  
 |Jour de la semaine|DAX, MDX||  
-|WeekdayName|Non prise en charge||  
+|WeekdayName|Non pris en charge||  
 |Year|DAX, MDX||  
   
   

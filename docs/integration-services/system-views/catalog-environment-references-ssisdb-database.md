@@ -1,4 +1,5 @@
 ---
+description: catalog.environment_references (base de données SSISDB)
 title: catalog.environment_references (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fa2bd05cbd1c2d492a49e074705fdfdb546ddc5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c0eb92cb3370343345a487b16852ec05dddf338a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495281"
 ---
 # <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (base de données SSISDB)
 
@@ -51,7 +52,7 @@ ms.locfileid: "86912688"
 > [!NOTE]  
 >  Si vous avez l'autorisation READ sur un projet, vous avez également l'autorisation READ sur toutes les packages et les références environnementales associés à ce projet. La sécurité au niveau de la ligne est imposée ; uniquement les lignes que vous avez l'autorisation d'afficher s'affichent.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes   
  Un projet peut avoir des références environnementales relatives ou absolues. Les références relatives font référence à l'environnement par nom et requièrent qu'il réside dans le même dossier que le projet. Les références absolues font référence à l'environnement par nom et par dossier et peuvent faire référence aux environnements qui résident dans un dossier différent que le projet. Un projet peut référencer plusieurs environnements.  
   
   

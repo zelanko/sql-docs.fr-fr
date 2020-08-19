@@ -1,4 +1,5 @@
 ---
+description: Delete, méthode (objet Recordset ADO)
 title: Delete, méthode (objet Recordset ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5747704601e5e325624c79ce853526e36f6cbe1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b494885b6dafc7b91b76c37ac1817ac198335360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82765600"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444151"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete, méthode (objet Recordset ADO)
 Supprime l’enregistrement en cours ou un groupe d’enregistrements.  
@@ -40,7 +41,7 @@ recordset.Delete AffectRecords
 > [!NOTE]
 >  **adAffectAll** et **adAffectAllChapters** ne sont pas des arguments valides à **supprimer**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’utilisation de la méthode **Delete** marque l’enregistrement en cours ou un groupe d’enregistrements dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour suppression. Si l’objet **Recordset** n’autorise pas la suppression d’enregistrements, une erreur se produit. Si vous êtes en mode de mise à jour immédiate, les suppressions se produisent immédiatement dans la base de données. Si un enregistrement ne peut pas être correctement supprimé (en raison de violations d’intégrité de la base de données, par exemple), l’enregistrement reste en mode édition après l’appel à [Update](../../../ado/reference/ado-api/update-method.md). Cela signifie que vous devez annuler la mise à jour avec [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) avant de quitter l’enregistrement actif (par exemple, avec [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md)ou [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
  Si vous êtes en mode de mise à jour par lot, les enregistrements sont marqués pour suppression dans le cache et la suppression réelle se produit lorsque vous appelez la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Utilisez la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) pour afficher les enregistrements supprimés.  

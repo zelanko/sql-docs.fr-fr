@@ -1,4 +1,5 @@
 ---
+description: Liaison de paramètres par nom (paramètres nommés)
 title: Liaison de paramètres par nom (paramètres nommés) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1e214f50488c4600ed39f76e91618cc5ce53de4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75227b26b5f9f060089e6568e233d327e3f7faa7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476841"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Liaison de paramètres par nom (paramètres nommés)
 Certains SGBD permettent à une application de spécifier les paramètres d’une procédure stockée par nom et non par position dans l’appel de procédure. Ces paramètres sont appelés *paramètres nommés*. ODBC prend en charge l’utilisation de paramètres nommés. Dans ODBC, les paramètres nommés sont utilisés uniquement dans les appels aux procédures stockées et ne peuvent pas être utilisés dans d’autres instructions SQL.  
@@ -38,7 +39,7 @@ Certains SGBD permettent à une application de spécifier les paramètres d’un
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- Dans cette procédure, le premier paramètre, @title_id, a une valeur par défaut de 1. Une application peut utiliser le code suivant pour appeler cette procédure de façon à ce qu’elle spécifie un seul paramètre dynamique. Ce paramètre est un paramètre nommé portant le nom «\@quote ».  
+ Dans cette procédure, le premier paramètre, @title_id , a une valeur par défaut de 1. Une application peut utiliser le code suivant pour appeler cette procédure de façon à ce qu’elle spécifie un seul paramètre dynamique. Ce paramètre est un paramètre nommé portant le nom « \@ quote ».  
   
 ```  
 // Prepare the procedure invocation statement.  

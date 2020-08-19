@@ -1,4 +1,5 @@
 ---
+description: sp_check_join_filter (Transact-SQL)
 title: sp_check_join_filter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8e06efc20893454c4057b85ae2f3ca6d45cd150c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: daf5b155aa4319a20a3005687515fbafa8702e6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486205"
 ---
 # <a name="sp_check_join_filter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   S'utilise pour vérifier un filtre de jointure entre deux tables pour déterminer si la clause du filtre est valide. Cette procédure stockée renvoie également des informations sur le filtre de jointure fourni, y compris s'il est possible de l'utiliser avec des partitions précalculées pour la table donnée. Cette procédure stockée est exécutée sur la base de données du serveur de publication. Pour plus d’informations, consultez [Optimiser les performances des filtres paramétrés avec des partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,11 +46,11 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @filtered_table = ] 'filtered_table'`Nom d’une table filtrée. *filtered_table* est de type **nvarchar (400)**, sans valeur par défaut.  
+`[ @filtered_table = ] 'filtered_table'` Nom d’une table filtrée. *filtered_table* est de type **nvarchar (400)**, sans valeur par défaut.  
   
-`[ @join_table = ] 'join_table'`Nom d’une table jointe à *filtered_table*. *join_table* est de type **nvarchar (400)**, sans valeur par défaut.  
+`[ @join_table = ] 'join_table'` Nom d’une table jointe à *filtered_table*. *join_table* est de type **nvarchar (400)**, sans valeur par défaut.  
   
-`[ @join_filterclause = ] 'join_filterclause'`Clause de filtre de jointure en cours de test. *join_filterclause* est de type **nvarchar (1000)**, sans valeur par défaut.  
+`[ @join_filterclause = ] 'join_filterclause'` Clause de filtre de jointure en cours de test. *join_filterclause* est de type **nvarchar (1000)**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -64,7 +65,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_check_join_filter** est utilisé dans la réplication de fusion.  
   
  **sp_check_join_filter** peut être exécutée sur toutes les tables associées, même si elles ne sont pas publiées. Cette procédure stockée peut être utilisée pour vérifier une clause de filtre de jointure avant de définir un filtre de jointure entre deux articles.  
