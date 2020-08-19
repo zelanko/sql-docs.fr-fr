@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVICE (Transact-SQL)
 title: ALTER SERVICE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ed739b0994f6637729c2edf6a2f2da26097fbe44
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8a99076d994a9866c9b6a0d0b6b434dcf30a04d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380962"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426791"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie un service existant.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +55,7 @@ ALTER SERVICE service_name
  *service_name*  
  Nom du service à modifier. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés.  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  Spécifie la nouvelle file d'attente de ce service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] déplace tous les messages destinés à ce service de la file d'attente actuelle vers la nouvelle file d'attente.  
   
  ADD CONTRACT *contract_name*  
@@ -98,7 +99,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

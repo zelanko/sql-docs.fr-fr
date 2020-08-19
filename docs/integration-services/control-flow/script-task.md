@@ -1,4 +1,5 @@
 ---
+description: Tâche de script
 title: Script, tâche | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18ff96f3fd227507d57051cec69f5704b7b64749
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425881"
 ---
 # <a name="script-task"></a>Tâche de script
 
@@ -130,13 +131,13 @@ ms.locfileid: "86921155"
  Si vous modifiez le nom de la méthode dans le projet VSTA, vous devez modifier la valeur de la propriété **EntryPoint** .  
   
  **ReadOnlyVariables**  
- Tapez une liste séparée par des virgules des variables en lecture seule accessibles au script ou cliquez sur le bouton de sélection ( **...** ) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
+ Tapez une liste séparée par des virgules des variables en lecture seule accessibles au script ou cliquez sur le bouton de sélection (**...**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
   
 > [!NOTE]  
 >  Les noms des variables tiennent compte de la casse.  
   
  **ReadWriteVariables**  
- Tapez une liste séparée par des virgules des variables en lecture/écriture accessibles au script ou cliquez sur le bouton de sélection ( **...** ) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
+ Tapez une liste séparée par des virgules des variables en lecture/écriture accessibles au script ou cliquez sur le bouton de sélection (**...**) et sélectionnez les variables dans la boîte de dialogue **Sélectionner des variables** .  
   
 > [!NOTE]  
 >  Les noms des variables tiennent compte de la casse.  

@@ -1,4 +1,5 @@
 ---
+description: Destination SQL Server
 title: Destination SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 278cfb16ddc6c00fba9570d7912a6d5fa3a31727
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dbd48bf2dee8268fa87209ab3d4283938961c918
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917765"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425801"
 ---
 # <a name="sql-server-destination"></a>Destination SQL Server
 
@@ -68,7 +69,7 @@ ms.locfileid: "86917765"
   
  Pour plus d’informations sur les options de chargement en masse, consultez [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-#### <a name="performance-improvements"></a>Optimisation des performances  
+#### <a name="performance-improvements"></a>Amélioration des performances  
  Pour améliorer les performances d'une insertion en bloc et l'accès aux données de table durant l'opération d'insertion en bloc, vous devez modifier les options par défaut comme suit :  
   
 -   Ne pas vérifier les contraintes sur la table ou la vue cible durant l'opération d'importation en bloc.  
@@ -104,13 +105,13 @@ ms.locfileid: "86917765"
   
  Pour plus d'informations sur la définition des propriétés, cliquez sur l'une des rubriques suivantes :  
   
--   [Charger des données en masse à l’aide de la destination SQL Server](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
+-   [Charger des données en masse à l'aide de la destination SQL Server](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
 -   [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
--   [Charger des données en masse à l’aide de la destination SQL Server](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
+-   [Charger des données en masse à l'aide de la destination SQL Server](../../integration-services/data-flow/bulk-load-data-by-using-the-sql-server-destination.md)  
   
 -   [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   

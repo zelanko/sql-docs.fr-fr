@@ -1,4 +1,5 @@
 ---
+description: Propriétés de la source OData
 title: Propriétés de la source OData | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fe4a3c3d1375095a4766186e1b854ea038b54ac9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e6af5b248d0d6822b81c070bffc09e1f270abb54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425841"
 ---
 # <a name="odata-source-properties"></a>Propriétés de la source OData
 
@@ -32,7 +33,7 @@ Quand vous cliquez avec le bouton droit sur **Source OData** dans le flux de don
 |DefaultStringLength|Cette valeur spécifie la longueur par défaut des colonnes de chaîne qui n'ont pas de longueur maximale.<br /><br /> **Valeur par défaut :** 4000|  
 |Requête|Paramètres de requête OData. Cette propriété utilise des expressions et peut être définie au moment de l’exécution.|  
 |ResourcePath|Utilisez cette propriété lorsque vous devez spécifier un chemin d'accès de ressources complet, plutôt que sélectionner uniquement un nom de collection. Cette propriété est utilisée lorsque **UseResourcePath** a la valeur True.|  
-|UseResourcePath|Lorsque la valeur est définie à True, la valeur **ResourcePath** est ajoutée à l'URL de base pour déterminer l'emplacement du flux OData. Lorsque la valeur est False, la valeur **CollectionName** est utilisée.<br /><br /> **Valeur par défaut :** False|  
+|UseResourcePath|Lorsque la valeur est définie à True, la valeur **ResourcePath** est ajoutée à l'URL de base pour déterminer l'emplacement du flux OData. Lorsque la valeur est False, la valeur **CollectionName** est utilisée.<br /><br /> **Par défaut :** False|  
   
 ## <a name="see-also"></a>Voir aussi
 [Source OData](odata-source.md)

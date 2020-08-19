@@ -1,4 +1,5 @@
 ---
+description: Source OData
 title: Source OData | Microsoft Docs
 ms.date: 09/17/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e06cb4ec3bbc74779ad2fcb4f36d6e75a4e7cb55
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8f74fa8478953c4c1353d35f49250896ab2a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425821"
 ---
 # <a name="odata-source"></a>Source OData
 
@@ -107,7 +108,7 @@ Pour le type de données **Decimal**, la précision et l’échelle sont déterm
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Utilisez une collection ou un chemin d'accès de ressource = Resource Path.  
  **Resource path**  
- Type de chemin d'accès de ressource. Par exemple : Employees  
+ Type de chemin d'accès de ressource. Par exemple : Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Éditeur de source OData (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source OData** pour sélectionner des colonnes externes (source) à inclure dans la sortie et pour les mapper aux colonnes de la sortie.  

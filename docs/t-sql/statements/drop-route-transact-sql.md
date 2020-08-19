@@ -1,4 +1,5 @@
 ---
+description: DROP ROUTE (Transact-SQL)
 title: DROP ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85afe80062fafb0da1a9a2a4aaae21302cbc1891
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 20c273f77bdf3cb86a19ab154b6a8805b31ed6e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426611"
 ---
 # <a name="drop-route-transact-sql"></a>DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un itinéraire, en effaçant les informations de cet itinéraire dans la table de routage de la base de données active.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

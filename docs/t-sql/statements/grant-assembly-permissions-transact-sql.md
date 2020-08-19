@@ -1,4 +1,5 @@
 ---
+description: GRANT - Autorisations sur un assembly (Transact-SQL)
 title: GRANT - Octroyer des autorisations sur un assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2017
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 686675f2557a4f00da592116ba938523ad322514
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 897ecc72090649e881c82279dcbb8bac94b672c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426541"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT - Autorisations sur un assembly (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Accorde des autorisations sur un assembly.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

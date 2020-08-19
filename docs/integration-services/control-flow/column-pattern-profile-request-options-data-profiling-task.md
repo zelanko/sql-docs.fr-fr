@@ -1,4 +1,5 @@
 ---
+description: Options Demande de profil de modèle de colonne (tâche de profilage des données)
 title: Options Demande de profil de modèle de colonne (tâche de profilage des données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0119d52241741d318f4fd6aba17467144d3e9fb0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 85beabd085481a48d6681bbaf2d2d381a1d0df93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425971"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Options Demande de profil de modèle de colonne (tâche de profilage des données)
 
@@ -77,7 +78,7 @@ ms.locfileid: "86915789"
   
 -   **Données**, qui incluent les options **TableOrView** et **Column**  
   
--   **Généralités**  
+-   **Général**  
   
 -   **Options**  
   
@@ -126,7 +127,7 @@ ms.locfileid: "86915789"
  **CaseSensitive**  
  Indiquez si les modèles doivent respecter la casse. La valeur par défaut de cette option est **False**.  
   
- **Séparateurs**  
+ **Délimiteurs**  
  Répertoriez les caractères à traiter en tant qu'équivalents des espaces entre les mots lorsque vous marquez du texte sous forme de jetons. Par défaut, la liste des **séparateurs** contient les caractères suivants : espace, tabulation horizontale (\t), nouvelle ligne (\n) et retour chariot (\r). Vous pouvez définir d'autres séparateurs mais vous ne pouvez pas supprimer les séparateurs par défaut.  
   
  Pour plus d'informations, consultez la section « Fonctionnement de l'utilisation des séparateurs et des symboles » plus haut dans cette rubrique.  

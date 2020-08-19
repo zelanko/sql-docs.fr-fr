@@ -1,4 +1,5 @@
 ---
+description: CREATE EVENT NOTIFICATION (Transact-SQL)
 title: CREATE EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e5b1db8f48e6d4f336d47e8ce6dc09a1659be7f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 3c13c9635537ead88d8cb0f140a65cdf2dd82c35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392747"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426761"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crée un objet qui envoie des informations sur un événement de base de données ou de serveur à un service Service Broker. Les notifications d'événements sont créées uniquement au moyen d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVER ROLE (Transact-SQL)
 title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/16/2020
@@ -19,19 +20,19 @@ ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e16c698947dbe8ad6c324f16e644b2dd43276435
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c79b8ad73bc939354d3b9078c9486531ec8b01ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631833"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426811"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
 
 Modifie l'appartenance d'un rôle serveur ou modifie le nom d'un rôle serveur défini par l'utilisateur. Les rôles serveur fixes ne peuvent pas être renommés.  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -86,7 +87,7 @@ Pour ajouter un membre à un rôle serveur fixe, vous devez être membre de ce r
 > [!NOTE]  
 >  Les autorisations `CONTROL SERVER` et `ALTER ANY SERVER ROLE` ne sont pas suffisantes pour exécuter `ALTER SERVER ROLE` pour un rôle serveur fixe, et l’autorisation `ALTER` ne peut pas être accordée sur un rôle serveur fixe.  
   
-**Rôles serveur définis par l’utilisateur**  
+**Rôles de serveur définis par l'utilisateur**  
   
 Pour ajouter un membre à un rôle serveur défini par l’utilisateur, vous devez être membre du rôle serveur fixe `sysadmin`, ou disposer de l’autorisation`CONTROL SERVER` ou `ALTER ANY SERVER ROLE`. Sinon, vous devez disposer de l’autorisation `ALTER` sur ce rôle.  
   

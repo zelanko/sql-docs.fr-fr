@@ -1,4 +1,5 @@
 ---
+description: PredictCaseLikelihood (DMX)
 title: PredictCaseLikelihood (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3c1134e5cf1ca053cba52c943226f41fe3d4b625
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: b182e4a3a842065152b050ed1b428d71b7d0cf07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971548"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426121"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -82,7 +83,7 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
+ [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
   
   

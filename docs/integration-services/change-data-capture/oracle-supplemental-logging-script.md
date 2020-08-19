@@ -1,4 +1,5 @@
 ---
+description: Script de journalisation supplémentaire Oracle
 title: Script de journalisation supplémentaire Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2c2a71afd526aa177490c817631dd9cd1f5fdc2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ec1835467ed0fb3ac23d570d26d8416cd83521b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86901169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425991"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Script de journalisation supplémentaire Oracle
 
@@ -37,11 +38,11 @@ ms.locfileid: "86901169"
  **Enregistrer sous**  
  Enregistre le script dans un fichier texte. Cette option est utilisée si un administrateur de base de données Oracle (DBA) doit examiner et exécuter le script de journalisation supplémentaire, le programme vous permet d'enregistrer le script dans un fichier texte que vous pouvez ultérieurement envoyer à l'administrateur de base de données Oracle par courrier électronique ou par d'autres moyens en vue de son exécution ultérieure (à l'aide de l'utilitaire SQL*PLUS Oracle ou d'un autre outil pour exécuter des scripts sur une base de données Oracle).  
   
- **Copy**  
+ **Copier**  
  Copie le script dans le Presse-papiers. Lorsque vous serez prêt, vous pourrez coller le script dans n'importe quel emplacement si un administrateur de base de données Oracle (DBA) doit examiner et exécuter le script de journalisation supplémentaire.  
   
 ## <a name="see-also"></a>Voir aussi  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [Gérer une instance CDC](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
+ [Gérer une instance de capture de données modifiées](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   

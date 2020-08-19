@@ -1,5 +1,6 @@
 ---
-title: 'Tutoriel : Utiliser la source OData | Microsoft Docs'
+description: 'Tutoriel : Utiliser la source OData'
+title: 'Didacticiel : Utiliser la source OData | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 616a19e5c6af2c3818e3d9737e72b0f7cd7486e8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e12fe80482b6b6ffd96fe6e56e6dfad1a92362fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425671"
 ---
 # <a name="tutorial-using-the-odata-source"></a>Tutoriel : Utiliser la source OData
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-  Ce tutoriel vous guide dans le processus d’extraction de la collection **Employees** de l’exemple de service OData **Northwind** (https://services.odata.org/V3/Northwind/Northwind.svc/) ), puis de son chargement dans un fichier plat.  
+  Ce tutoriel vous guide dans le processus d’extraction de la collection **Employees** de l’exemple de service OData **Northwind** (https://services.odata.org/V3/Northwind/Northwind.svc/)), puis de son chargement dans un fichier plat.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Créer un projet Integration Services  
   

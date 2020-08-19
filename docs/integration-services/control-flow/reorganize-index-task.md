@@ -1,4 +1,5 @@
 ---
+description: Tâche Réorganiser l'index
 title: Réorganiser l’index, tâche | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ed87861-e5c3-4fcd-8760-d112f4c0af0c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 74e3b6d54dfddc976080a5a530d89905524887bc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d94d1cd62cc9fb8e367b112690de8331b6e2e5c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425931"
 ---
 # <a name="reorganize-index-task"></a>Tâche Réorganiser l'index
 
@@ -30,7 +31,7 @@ ms.locfileid: "86921165"
 
   La tâche Réorganiser l'index réorganise les index dans les vues et les tables de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur la gestion des index, consultez [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
- La tâche Réorganiser l'index permet à un package de réorganiser les index dans une ou plusieurs bases de données. Si la tâche réorganise uniquement les index d'une base de données, vous pouvez choisir les vues ou les tables dont les index sont à réorganiser. En outre, la tâche Réorganiser l'index comprend une option qui permet de compacter les données d'objets volumineux. Les données d’objets volumineux peuvent avoir les types de données suivants : **image**, **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** ou **xml** . Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
+ La tâche Réorganiser l'index permet à un package de réorganiser les index dans une ou plusieurs bases de données. Si la tâche réorganise uniquement les index d'une base de données, vous pouvez choisir les vues ou les tables dont les index sont à réorganiser. En outre, la tâche Réorganiser l'index comprend une option qui permet de compacter les données d'objets volumineux. Les données d’objets volumineux peuvent avoir les types de données suivants : **image**, **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** ou **xml** . Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).  
   
  La tâche Réorganiser l'index encapsule l'instruction Transact-SQL ALTER INDEX. Si vous choisissez de compacter les données d'objet volumineux, l'instruction utilise la clause REORGANIZE WITH (LOB_COMPACTION = ON), sinon l'option LOB_COMPACTION a pour valeur OFF. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

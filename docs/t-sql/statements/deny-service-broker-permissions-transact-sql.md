@@ -1,4 +1,5 @@
 ---
+description: Autorisations DENY dans Service Broker (Transact-SQL)
 title: Autorisations DENY dans Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
@@ -23,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 360c83ddf14139665c6ab1132c84b4e3b608e735
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8043eb95855e463c63bf4667209d47b293a492e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426601"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>Autorisations DENY dans Service Broker (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Refus d'autorisations sur un contrat, un type de message, une liaison de service distant, un itinéraire ou un service [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,19 +60,19 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Spécifie une autorisation qui peut être refusée sur un élément sécurisable [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  Spécifie le contrat sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Spécifie le type de message sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Spécifie la liaison de service distant sur laquelle l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Spécifie l'itinéraire sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
- SERVICE **::** _message_type_name_  
+ SERVICE **::**_message_type_name_  
  Spécifie le service sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
@@ -163,6 +164,6 @@ CASCADE
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Autorisations REVOKE dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)  
+ [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)  
   
   

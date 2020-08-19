@@ -1,4 +1,5 @@
 ---
+description: Importer des valeurs de projet de nettoyage dans un domaine
 title: Importer des valeurs de projet de nettoyage dans un domaine
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8688d5d20f1b5ac600e75327725ab18e9f8dba1b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 06600482f843ecf014b5ec8648bc8079c871be6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892396"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426351"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importer des valeurs de projet de nettoyage dans un domaine
 
@@ -73,10 +74,10 @@ ms.locfileid: "85892396"
     > [!NOTE]  
     >   Pour plus d'informations sur l'utilisation des valeurs dans l'onglet **Valeurs du domaine** , consultez [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
-##  <a name="follow-up-after-importing-project-values-into-a-domain"></a><a name="FollowUp"></a>Suivi : après l’importation de valeurs de projet dans un domaine  
+##  <a name="follow-up-after-importing-project-values-into-a-domain"></a><a name="FollowUp"></a> Suivi : après l’importation de valeurs de projet dans un domaine  
  Après avoir importé les connaissances de qualité des données collectées pendant le processus de nettoyage dans un domaine, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine et les valeurs. Pour plus d’informations, consultez [Gestion d’un domaine](../data-quality-services/managing-a-domain.md).  
   
-##  <a name="values-that-will-be-imported"></a><a name="Values"></a>Valeurs qui seront importées  
+##  <a name="values-that-will-be-imported"></a><a name="Values"></a> Valeurs qui seront importées  
  Les valeurs suivantes seront importées à partir d'un projet vers un domaine :  
   
 -   Seules les valeurs de chaîne sont importées vers le domaine.  
@@ -95,7 +96,7 @@ ms.locfileid: "85892396"
   
 -   Une correction effectuée suite à une relation à base de termes dans un domaine est importée en tant que valeur correcte (et non en tant qu'erreur).  
   
-##  <a name="values-that-will-not-be-imported"></a><a name="ValuesNot"></a>Valeurs qui ne seront pas importées  
+##  <a name="values-that-will-not-be-imported"></a><a name="ValuesNot"></a> Valeurs qui ne seront pas importées  
  Les valeurs suivantes ne seront pas importées à partir d'un projet vers un domaine :  
   
 -   Les valeurs des onglets **Suggérés** et **Non valides** disponibles dans la page **Gérer et afficher les résultats** de l'activité **Nettoyage** ne seront pas importées.  

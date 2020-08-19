@@ -1,4 +1,5 @@
 ---
+description: Gestionnaire de connexions SAP BW
 title: Gestionnaire de connexions SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c619db7e6386bb31b39b7a347f319ae45ddfacbc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426001"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestionnaire de connexions SAP BW
 
@@ -72,7 +73,7 @@ ms.locfileid: "86921435"
   
     -   Double-cliquez sur le gestionnaire de connexions SAP BW.  
   
-         -ou-  
+         - ou -  
   
     -   Cliquez avec le bouton droit sur le gestionnaire de connexions SAP BW, puis sélectionnez **Modifier**.  
   
@@ -87,7 +88,7 @@ ms.locfileid: "86921435"
  **Langage**  
  Spécifiez la langue utilisée par le système. Par exemple, spécifiez **FR** pour le français.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Spécifiez le nom d'utilisateur qui sera utilisé pour se connecter au système.  
   
  **Mot de passe**  
@@ -102,36 +103,36 @@ ms.locfileid: "86921435"
  Si vous vous connectez à un serveur d'applications unique, spécifiez le nom d'hôte.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser le serveur d’applications unique** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser le serveur d'applications unique** .  
   
  **Numéro système**  
  Si vous vous connectez à un serveur d'applications unique, spécifiez le numéro du système.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser le serveur d’applications unique** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser le serveur d'applications unique** .  
   
  **Utiliser l’équilibrage de charge**  
  Connectez-vous à un groupe de serveurs à charge équilibrée.  
   
  Pour vous connecter à un serveur d'applications unique, utilisez plutôt l'option **Utiliser le serveur d'applications unique** .  
   
- **Serveur de messages**  
+ **Serveur de messagerie**  
  Si vous vous connectez à un groupe de serveurs à charge équilibrée, spécifiez le nom du serveur de messages.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser l’équilibrage de charge** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser l'équilibrage de charge** .  
   
  **Groupe**  
  Si vous vous connectez à un groupe de serveurs à charge équilibrée, spécifiez le nom du groupe de serveurs.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser l’équilibrage de charge** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser l'équilibrage de charge** .  
   
  **SID**  
  Si vous vous connectez à un groupe de serveurs à charge équilibrée, spécifiez l'ID système pour la connexion.  
   
 > [!NOTE]  
->  Cette option est disponible uniquement si vous avez sélectionné l’option **Utiliser l’équilibrage de charge** .  
+>   Cette option est disponible uniquement si vous avez sélectionné l'option **Utiliser l'équilibrage de charge** .  
   
  **Répertoire du journal**  
  Activez la journalisation des composants de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 pour SAP BW.  
@@ -152,6 +153,6 @@ ms.locfileid: "86921435"
  Testez la connexion à l'aide des valeurs que vous avez fournies. Après avoir cliqué sur **Tester la connexion**, un message apparaît et indique si la connexion a été établie ou si elle a échoué.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

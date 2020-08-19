@@ -1,4 +1,5 @@
 ---
+description: DROP TRIGGER (Transact-SQL)
 title: DROP TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -24,19 +25,19 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 09041fdf91f58a815d5ef7d8df19e826578c326b
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 7c17174a19756128e5c9d1e4cb1b1fecf7aca72d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426571"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Supprime un ou plusieurs déclencheurs DML ou DDL de la base de données active.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

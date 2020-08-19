@@ -1,4 +1,5 @@
 ---
+description: Référence de l'interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers
 title: Référence de l’interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 226dd6c94787af8c32d17cd7bf923a860645c5ac
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8096ccaf1fc92710e46970744a7a4f7cbe000700
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921709"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426031"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Ajouter un gestionnaire de connexions de fichiers
 

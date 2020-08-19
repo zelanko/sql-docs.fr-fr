@@ -1,4 +1,5 @@
 ---
+description: How to Manage a CDC Instance
 title: Guide pratique pour gérer une instance CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ed9a511eec4af95b7fe2a76e621e3651fc1f92e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4c09c590d92d97ea56c795db6fe8676d5771277
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426051"
 ---
 # <a name="how-to-manage-a-cdc-instance"></a>How to Manage a CDC Instance
 
@@ -38,19 +39,19 @@ ms.locfileid: "86921545"
   
      Vous pouvez effectuer les tâches suivantes :  
   
-    -   **Démarrer** : pour lancer la capture des modifications.  
+    -   **Démarrer**: pour démarrer la capture des modifications.  
   
-    -   **Arrêter** : pour arrêter la capture des modifications.  
+    -   **Arrêter**: pour cesser de capturer des modifications.  
   
-    -   **Réinitialiser** : Cliquez sur **Réinitialiser** pour rétablir l’état (vide) initial de l’instance de capture de données modifiées. Cette option est disponible lorsque l'instance de capture de données modifiées est arrêtée. Toutes les modifications des tables de modifications et de l'état interne de l'instance de capture de données modifiées sont supprimées. Lorsque l'instance de capture de données modifiées est démarrée ultérieurement, la capture de modifications démarre à partir de ce point et inclut uniquement les transactions qui ont démarré après que l'instance de capture de données modifiées a démarré.  
+    -   **Réinitialiser**: cliquez sur **Réinitialiser** pour rétablir l’état (vide) initial de l’instance de capture de données modifiées. Cette option est disponible lorsque l'instance de capture de données modifiées est arrêtée. Toutes les modifications des tables de modifications et de l'état interne de l'instance de capture de données modifiées sont supprimées. Lorsque l'instance de capture de données modifiées est démarrée ultérieurement, la capture de modifications démarre à partir de ce point et inclut uniquement les transactions qui ont démarré après que l'instance de capture de données modifiées a démarré.  
   
-    -   **Supprimer** : pour supprimer l’instance CDC.  
+    -   **Supprimer**: pour supprimer l'instance de capture de données modifiées.  
   
-    -   **Script de journalisation Oracle** : cliquez sur ce lien pour afficher la boîte de dialogue du script de journalisation Oracle contenant le script de journalisation supplémentaire Oracle. Pour plus d'informations sur les opérations réalisables dans cette boîte de dialogue, consultez [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md).  
+    -   **** Script de journalisation Oracle****  : cliquez sur ce lien pour afficher la boîte de dialogue du script de journalisation Oracle contenant le script de journalisation supplémentaire Oracle. Pour plus d'informations sur les opérations réalisables dans cette boîte de dialogue, consultez [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md).  
   
-         **Remarque** : Lorsque vous exécutez des scripts de journalisation supplémentaires, la boîte de dialogue des informations d'identification Oracle pour l'exécution de script s'ouvre et vous permet de spécifier un nom d'utilisateur et un mot de passe Oracle valides. Pour plus d'informations sur la façon de fournir les informations d'identification Oracle appropriées, consultez [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
+         **Remarque**: lorsque vous exécutez des scripts de journalisation supplémentaires, la boîte de dialogue des informations d'identification Oracle pour l'exécution de script s'ouvre et vous permet de spécifier un nom d'utilisateur et un mot de passe Oracle valides. Pour plus d'informations sur la façon de fournir les informations d'identification Oracle appropriées, consultez [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
-    -   **Déploiement d’instance CDC** : pour générer un script de déploiement de l’instance CDC. Pour plus d'informations sur cette boîte de dialogue, consultez [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md).  
+    -   **Déploiement d'instance CDC**: pour générer un script de déploiement de l'instance de capture de données modifiées. Pour plus d'informations sur cette boîte de dialogue, consultez [CDC Instance Deployment Script](../../integration-services/change-data-capture/cdc-instance-deployment-script.md).  
   
      Pour plus d'informations sur ces tâches, consultez [Manage a CDC Instance](../../integration-services/change-data-capture/manage-a-cdc-instance.md).  
   

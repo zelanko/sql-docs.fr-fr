@@ -1,4 +1,5 @@
 ---
+description: DROP TABLE (Transact-SQL)
 title: DROP TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -37,19 +38,19 @@ ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e0c7cc3432a18ad0203816523dc02cba6b56788
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c8153dcaf2935163bd8991a9a2086f6d3e39a0c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426581"
 ---
 # <a name="drop-table-transact-sql"></a>DROP TABLE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Supprime une ou plusieurs définitions de table ainsi que toutes les données, index, déclencheurs, contraintes et spécifications d'autorisation se rapportant à celles-ci. Toute vue ou procédure stockée faisant référence à la table supprimée doit être supprimée explicitement au moyen de l’instruction [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) ou [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md). Pour signaler les dépendances sur une table, utilisez [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -110,22 +111,22 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 ### <a name="a-dropping-a-table-in-the-current-database"></a>R. Suppression d'une table dans la base de données active  
  Cet exemple supprime la table `ProductVendor1` ainsi que ses données et ses index de la base de données active.  
   
-```  
+```sql  
 DROP TABLE ProductVendor1 ;  
 ```  
   
 ### <a name="b-dropping-a-table-in-another-database"></a>B. Suppression d'une table dans une autre base de données  
  L'exemple suivant supprime la table `SalesPerson2` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Cet exemple peut être exécuté à partir de n'importe quelle base de données de l'instance de serveur.  
   
-```  
+```sql  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### <a name="c-dropping-a-temporary-table"></a>C. Suppression d'une table temporaire  
  Cet exemple crée une table temporaire, teste son existence, la supprime et teste une nouvelle fois son existence. Cet exemple n’utilise pas la syntaxe **IF EXISTS** qui est disponible depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
-CREATE TABLE #temptable (col1 int);  
+```sql  
+CREATE TABLE #temptable (col1 INT);  
 GO  
 INSERT INTO #temptable  
 VALUES (10);  
@@ -137,7 +138,6 @@ DROP TABLE #temptable;
 GO  
 --Test the drop.  
 SELECT * FROM #temptable;  
-  
 ```  
   
 ### <a name="d-dropping-a-table-using-if-exists"></a>D. Suppression d’une table à l’aide de IF EXISTS  
@@ -146,8 +146,8 @@ SELECT * FROM #temptable;
   
  L’exemple suivant crée une table nommée T1. Ensuite, la deuxième instruction supprime la table. La troisième instruction n’effectue aucune action, car la table est déjà supprimée, mais elle ne génère pas d’erreur.  
   
-```  
-CREATE TABLE T1 (Col1 int);  
+```sql  
+CREATE TABLE T1 (Col1 INT);  
 GO  
 DROP TABLE IF EXISTS T1;  
 GO  

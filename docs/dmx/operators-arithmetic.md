@@ -1,4 +1,5 @@
 ---
+description: Opérateurs arithmétiques (DMX)
 title: Opérateurs arithmétiques (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c01879c7b99b1cc9c184513c1e95ec174d8f39d7
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 77b9f300859b6ce1250ed9d36a33a88a3dd12fe1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86971604"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426191"
 ---
 # <a name="operators---arithmetic"></a>Opérateurs arithmétiques
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "86971604"
 |[+ &#40;ajouter&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Additionne deux nombres.|  
 |[-&#40;soustraire&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Soustrait un nombre d'un autre.|  
 |[&#42; &#40;multiplier&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Multiplie un nombre par un autre.|  
-|[&#40;diviser&#41; &#40;&#41;DMX](../dmx/divide-dmx.md)|Divise un nombre par un autre nombre.|  
+|[&#40;diviser&#41; &#40;&#41;DMX ](../dmx/divide-dmx.md)|Divise un nombre par un autre nombre.|  
   
  Les règles suivantes déterminent l'ordre de priorité des opérateurs arithmétiques dans une expression DMX :  
   
@@ -45,8 +46,8 @@ ms.locfileid: "86971604"
  [Conventions de syntaxe du&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Expressions &#40;DMX&#41;](../dmx/expressions-dmx.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)   
- [Opérateurs &#40;&#41;DMX](../dmx/operators-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
+ [Opérateurs &#40;&#41;DMX ](../dmx/operators-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

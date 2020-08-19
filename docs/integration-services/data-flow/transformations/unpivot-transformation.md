@@ -1,4 +1,5 @@
 ---
+description: Transformation Unpivot
 title: Unpivot, transformation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0a0d34a154b9b92258424718bb7cd62e4ed295e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e4dd81bf33b43f4adf73225faa199fd9c5f792fd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425631"
 ---
 # <a name="unpivot-transformation"></a>Transformation Unpivot
 
@@ -61,7 +62,7 @@ ms.locfileid: "86914870"
   Utilisez la boîte de dialogue **Éditeur de transformation UnPivot** pour sélectionner les colonnes à convertir en ligne, et définir la colonne de données et la nouvelle colonne de sortie de valeur croisée.  
   
 > [!NOTE]  
->  Cette rubrique s’appuie sur le scénario Unpivot décrit dans [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) pour illustrer l’utilisation des options.  
+>   Cette rubrique porte sur le scénario Unpivot décrit dans [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md) pour illustrer l'utilisation des options.  
   
 ### <a name="options"></a>Options  
  **Colonnes d'entrée disponibles**  

@@ -1,4 +1,5 @@
 ---
+description: PredictHistogram (DMX)
 title: PredictHistogram (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ecc213e023483245fb8b40a55de749c23ae16a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967813"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426161"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -47,11 +48,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]les algorithmes d’exploration de données ne prennent pas en charge **$ProbabilityVariance**. Cette colonne contient toujours 0 pour les algorithmes [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] les algorithmes d’exploration de données ne prennent pas en charge **$ProbabilityVariance**. Cette colonne contient toujours 0 pour les algorithmes [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)]les algorithmes d’exploration de données ne prennent pas en charge **$ProbabilityStdev**. Cette colonne contient toujours 0 pour les algorithmes [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)] les algorithmes d’exploration de données ne prennent pas en charge **$ProbabilityStdev**. Cette colonne contient toujours 0 pour les algorithmes [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
 -   **$AdjustedProbability**  
   
@@ -84,7 +85,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#41;DMX &#40;cluster](../dmx/cluster-dmx.md)   
+ [&#41;DMX &#40;cluster ](../dmx/cluster-dmx.md)   
  [ClusterProbability&#41;DMX &#40;](../dmx/clusterprobability-dmx.md)   
  [PredictAdjustedProbability&#41;DMX &#40;](../dmx/predictadjustedprobability-dmx.md)   
  [PredictProbability&#41;DMX &#40;](../dmx/predictprobability-dmx.md)   
@@ -93,7 +94,7 @@ NATURAL PREDICTION JOIN
  [PredictVariance&#41;DMX &#40;](../dmx/predictvariance-dmx.md)   
  [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
+ [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
   
   

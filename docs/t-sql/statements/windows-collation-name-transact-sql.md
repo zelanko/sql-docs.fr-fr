@@ -1,4 +1,5 @@
 ---
+description: Nom de classement Windows (Transact-SQL)
 title: Nom de classement Windows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2019
@@ -18,12 +19,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfe6578107f87eddb62f5f31efd93778f8c2af96
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 2a95152ded1edc82ea153c40b6f9df68c1d3dea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484047"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426521"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nom de classement Windows (Transact-SQL)
 
@@ -31,7 +32,7 @@ ms.locfileid: "86484047"
 
 Spécifie le nom de classement Windows dans la clause COLLATE dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nom de classement Windows est composé d'un indicateur de classement et de styles de comparaison.
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -74,12 +75,12 @@ L’oubli de cette option ne suit pas les caractères Kana, alors que **KS** les
 L’oubli de cette option ne tient pas compte des largeurs, alors que **WS** les respecte.
 
 *VariationSelectorSensitivity*  
-- **S’applique à** : Depuis [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **S’applique à** : À compter de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 - L’oubli de cette option spécifie le non-respect du sélecteur de variation, **VSS** spécifie le respect du sélecteur de variation.
 
 **UTF8**  
-- **S’applique à** : Depuis [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **S’applique à** : À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
 - Spécifie l’encodage UTF-8 à utiliser pour les types de données éligibles. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
 

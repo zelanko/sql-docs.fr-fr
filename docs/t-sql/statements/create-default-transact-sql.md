@@ -1,4 +1,5 @@
 ---
+description: CREATE DEFAULT (Transact-SQL)
 title: CREATE DEFAULT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 361963d6836cb4c4b89c62f8ca1481b292bc803e
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 8d1001196c5b4e88c105f0fa7e0355e97e3ee884
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392757"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426781"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ Crée un objet appelé default (valeur par défaut). Lorsqu'elle est liée à un
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt des définitions par défaut créées à l'aide du mot clé DEFAULT ou de ALTER TABLE ou CREATE TABLE.  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +57,7 @@ AS constant_expression [ ; ]
  Nom de la valeur par défaut. Le nom des valeurs par défaut doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Vous n'êtes pas obligé de spécifier le nom du propriétaire par défaut.  
   
 *constant_expression*  
-[Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui ne contient que des valeurs constantes (ne peut pas inclure les noms de colonnes ou d’autres objets de base de données). Vous pouvez utiliser toute constante, fonction intégrée ou expression mathématique, à l'exception de celles contenant des types d'alias. Les fonctions définies par l’utilisateur ne peuvent pas être utilisées. Placez les constantes de caractère et de date entre guillemets simples ( **'** ) ; les constantes monétaires, entières et à virgule flottante ne nécessitent pas de guillemets. Les données binaires doivent être précédées de 0x et les données monétaires du signe dollar ($). La valeur par défaut doit être compatible avec le type de données de la colonne.  
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui ne contient que des valeurs constantes (ne peut pas inclure les noms de colonnes ou d’autres objets de base de données). Vous pouvez utiliser toute constante, fonction intégrée ou expression mathématique, à l'exception de celles contenant des types d'alias. Les fonctions définies par l’utilisateur ne peuvent pas être utilisées. Placez les constantes de caractère et de date entre guillemets simples (**'**) ; les constantes monétaires, entières et à virgule flottante ne nécessitent pas de guillemets. Les données binaires doivent être précédées de 0x et les données monétaires du signe dollar ($). La valeur par défaut doit être compatible avec le type de données de la colonne.  
   
 ## <a name="remarks"></a>Notes  
  Vous ne pouvez créer un nom de valeur par défaut que dans la base de données active. Au sein d'une base de données, les noms de valeurs par défaut doivent être uniques pour chaque schéma. Quand vous créez une valeur par défaut, utilisez **sp_bindefault** pour la lier à une colonne ou à un type de données alias.  
@@ -82,7 +83,7 @@ AS constant_expression [ ; ]
 |Définition de la colonne|Pas d'entrée, pas de valeur par défaut|Pas d'entrée, valeur par défaut|Entrée NULL, pas de valeur par défaut|Entrée NULL, valeur par défaut|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
 |**NULL**|NULL|default|NULL|NULL|  
-|**NOT NULL**|Error|default|error|error|  
+|**NOT NULL**|Erreur|default|error|error|  
   
  Pour renommer une valeur par défaut, utilisez **sp_rename**. Pour obtenir un rapport sur une valeur par défaut, utilisez **sp_help**.  
   

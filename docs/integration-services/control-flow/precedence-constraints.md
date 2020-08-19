@@ -1,4 +1,5 @@
 ---
+description: Contraintes de précédence
 title: Contraintes de précédence | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ba2b9f0e9dbf23eea54da531305553db712ad677
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ee2c1ffab719566875a7c9f7f6090a12aef5675f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88425911"
 ---
 # <a name="precedence-constraints"></a>Contraintes de précédence
 
@@ -120,7 +121,7 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
  Spécifiez la valeur de contrainte : **Réussite**, **Échec** ou **À l'achèvement**.  
   
 > [!NOTE]  
->  La ligne de contrainte de précédence est verte pour **Réussite**, mise en surbrillance pour **Échec**et bleue pour **À l’achèvement**.  
+>   La ligne de contrainte de précédence est verte pour **Réussite**, mise en surbrillance pour **Échec**et bleue pour **À l'achèvement**.  
   
  **Expression**  
  Si vous utilisez les opérations **Expression**, **Expression et contrainte**ou **Expression ou contrainte**, tapez une expression ou lancez le Générateur d’expressions pour créer l’expression. L'expression doit prendre une valeur de type Boolean.  
@@ -216,16 +217,16 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
   
 |Opération d'évaluation|Résultat d'évaluation de la contrainte|Résultat d'évaluation de l'expression|L'exécutable contraint s'exécute|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Contrainte|True|N/A|True|  
-|Contrainte|False|N/A|False|  
+|Contrainte|Vrai|N/A|Vrai|  
+|Contrainte|Faux|N/A|Faux|  
 |Expression|N/A|True|True|  
 |Expression|N/A|False|False|  
 |Contrainte et expression|True|True|True|  
-|Contrainte et expression|True|False|False|  
-|Contrainte et expression|False|True|False|  
+|Contrainte et expression|Vrai|False|False|  
+|Contrainte et expression|False|True|Faux|  
 |Contrainte et expression|False|False|False|  
 |Contrainte ou expression|True|True|True|  
-|Contrainte ou expression|True|False|True|  
+|Contrainte ou expression|Vrai|False|True|  
 |Contrainte ou expression|False|True|True|  
 |Contrainte ou expression|False|False|False|  
 
