@@ -1,4 +1,5 @@
 ---
+description: Profils de l'Agent
 title: Profils de l’Agent | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,16 +16,16 @@ ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e90b24ea20076a8af4622c144358e50e7b998ad1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 71c77753c578b825ca04ff26fbe172f9a990db16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85739115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88380435"
 ---
 # <a name="agent-profiles"></a>Profils de l'Agent
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Utilisez la boîte de dialogue **Profils de l'Agent** pour gérer les profils de l'agent. Les profils d'agent permettent de gérer aisément les paramètres d'exécution de chaque agent. Chaque agent possède un profil par défaut tandis que certains ont des profils prédéfinis supplémentaires. Par exemple, l'Agent de fusion possède un profil « liaison lente » conçu pour les connexions à faible bande passante. Les profils prédéfinis suffisent pour la plupart des applications, mais vous pouvez également créer des profils définis par l'utilisateur, qui vous permettent de personnaliser le comportement de l'agent.  
+   Utilisez la boîte de dialogue **Profils de l’Agent** pour gérer les profils de l’agent. Les profils d'agent permettent de gérer aisément les paramètres d'exécution de chaque agent. Chaque agent possède un profil par défaut tandis que certains ont des profils prédéfinis supplémentaires. Par exemple, l'Agent de fusion possède un profil « liaison lente » conçu pour les connexions à faible bande passante. Les profils prédéfinis suffisent pour la plupart des applications, mais vous pouvez également créer des profils définis par l'utilisateur, qui vous permettent de personnaliser le comportement de l'agent.  
   
 ## <a name="options"></a>Options  
  **Sélectionner une page**  

@@ -1,4 +1,5 @@
 ---
+description: Audit Database Operation (classe d'événements)
 title: Audit Database Operation, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f851a4a14e8a36f2f9c88947a3290b9860f647b6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2f321bb7fe011edccb3fdbcada18a95756f4dd4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385345"
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe d'événements **Audit Database Operation** se produit lorsque surviennent des opérations dans une base de données telles qu'un point de contrôle ou une notification de requête d'abonnement.  
+   La classe d’événements **Audit Database Operation** se produit quand surviennent des opérations dans une base de données telles qu’un point de contrôle ou une notification de requête d’abonnement.  
   
 ## <a name="audit-database-operation-event-class-data-columns"></a>Colonnes de données de la classe d'événements Audit Database Operation  
   

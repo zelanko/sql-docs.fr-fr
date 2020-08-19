@@ -1,4 +1,5 @@
 ---
+description: Créer un compte de messagerie de base de données
 title: Créer un compte de messagerie de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6a35d325e976d0fc7ec75f348efb53c39b7bc51c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e80df479a6fbd13e51e69ebddff5634ce7a0c3b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737623"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385735"
 ---
 # <a name="create-a-database-mail-account"></a>Créer un compte de messagerie de base de données
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Utilisez l' **Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer un compte de messagerie de base de données.  
+   Utilisez **l’Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer un compte de messagerie de base de données.  
   
--   **Avant de commencer :**  [Prérequis](#Prerequisites)  
+-   **Avant de commencer :**  [Conditions préalables](#Prerequisites)  
   
--   **Pour créer un compte Database Mail, à l’aide de :**  [ Assistant Configuration de Database Mail](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour créer un compte de messagerie de base de données en utilisant :**  [Assistant Configuration de la messagerie de base de données](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Étapes suivantes pour configurer Database Mail](#FollowUp)  
+-   **Suivi :**  [Étapes suivantes pour configurer la messagerie de base de données](#FollowUp)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -85,7 +86,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="follow-up-next-steps-to-configuring-the-database-mail"></a><a name="FollowUp"></a> Suivi : Étapes suivantes pour configurer Database Mail  
+##  <a name="follow-up-next-steps-to-configuring-the-database-mail"></a><a name="FollowUp"></a> Suivi : Étapes suivantes pour configurer la messagerie de base de données  
   
 -   [Créer un profil de messagerie de base de données](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   

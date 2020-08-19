@@ -1,4 +1,5 @@
 ---
+description: Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL
 title: Créer un jeu d’éléments de collecte Trace SQL avec Profiler
 ms.date: 06/03/2020
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fdd751f282f1ba62150d5257dde04798962ecb84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25e6685166177b6adc436a1fc024d899be5f0233
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715532"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386425"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85715532"
   
      La boîte de dialogue **Propriétés de la trace** s'affiche.  
   
-6.  Sous l'onglet **Général** , effectuez les paramétrages suivants :  
+6.  Sous l’onglet **Général**, effectuez les actions suivantes :  
   
     1.  Dans la zone **Nom de la trace** , tapez le nom que vous souhaitez utiliser pour la trace. Pour cet exemple, le nom de la trace est **SPgt80**.  
   

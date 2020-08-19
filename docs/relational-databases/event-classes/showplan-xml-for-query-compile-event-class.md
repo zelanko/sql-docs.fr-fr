@@ -1,4 +1,5 @@
 ---
+description: Showplan XML For Query Compile (classe d'événements)
 title: Showplan XML for Query Compile, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: add53789c727e2c86fabd54d98cbe9c00efee254
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8e9756022e5536f941ac73734df41b74bf13aa2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88384095"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>Showplan XML For Query Compile (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85717771"
   
  La classe d'événements Showplan XML For Query Compile affiche des données de compilation complètes, de sorte que les traces qui contiennent cette classe d'événements peuvent entraîner une baisse significative des performances. Pour limiter ce problème, n'utilisez cette classe d'événements qu'avec les traces surveillant des problèmes spécifiques pendant de brèves périodes.  
   
- Les documents Showplan XML ont un schéma qui leur est associé. Ce schéma se trouve sur le [site web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740)ou dans le cadre de votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Les documents Showplan XML ont un schéma qui leur est associé. Ce schéma se trouve sur le [site web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740) ou dans votre installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="showplan-xml-for-query-compile-event-class-data-columns"></a>Colonnes de données de classe d'événements Showplan XML For Query Compile  
   

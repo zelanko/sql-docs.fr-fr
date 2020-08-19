@@ -1,4 +1,5 @@
 ---
+description: Audit Add DB User (classe d'événements)
 title: Audit Add DB User (classe d’événements) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,18 +13,18 @@ ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 752361d6ebf7d8171a2a40551932db5beed69a71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b953d49716cb6a99879ebc94c750fc1e765916e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88385335"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User (classe d'événements)
 
 [!INCLUDE [sql-asdb.md](../../includes/applies-to-version/sql-asdb.md)]
 
-  La classe d’événements **Audit Add DB User** est générée lorsqu’une connexion est ajoutée ou supprimée comme utilisateur de base de données dans une base de données. Cette classe d’événements est utilisée avec les procédures stockées **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**et **sp_dropuser** .  
+   La classe d’événements **Audit Add DB User** est générée quand une connexion est ajoutée ou supprimée comme utilisateur de base de données dans une base de données. Cette classe d’événements est utilisée avec les procédures stockées **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**et **sp_dropuser** .  
   
  Cette classe d'événements pourrait être supprimée dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nous vous recommandons d’utiliser la casse d’événements **Audit Database Principal Management** à la place.  
   

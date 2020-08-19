@@ -1,4 +1,5 @@
 ---
+description: Upgrade a Data-tier Application
 title: Mettre à niveau une application de la couche Données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,20 +23,20 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ed1b1698fb945d92fce7cb2a0d1a9d0e2713afb5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0cba55e7c9f979098b9f761fbc43cad7a8edc2b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88386445"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Utilisez l'Assistant Mise à niveau de l'application de la couche Données ou bien un script Windows PowerShell pour modifier le schéma et les propriétés d'une application de la couche Données (DAC) actuellement déployée pour qu'ils correspondent à ceux définis dans la nouvelle version de la DAC.  
   
--   **Avant de commencer :**  [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions), [Limitations et restrictions](#LimitationsRestrictions), [Prérequis](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
+-   **Avant de commencer :**  [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions), [Limitations et restrictions](#LimitationsRestrictions), [Conditions préalables](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
   
--   **Pour mettre à niveau une DAC à l’aide de** :  [l’Assistant Mise à niveau de l’application de la couche Données](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Pour mettre à niveau une DAC en utilisant :**  [L’Assistant Mise à niveau de l’application de la couche Données](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  La mise à niveau d'une DAC est un processus sur place qui modifie le schéma de la base de données existante de manière à ce qu'il corresponde au schéma défini dans une nouvelle version de la DAC. La nouvelle version de la DAC est fournie dans un fichier de package DAC. Pour plus d’informations sur la création d’un package DAC, consultez [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md).  
@@ -45,11 +46,11 @@ ms.locfileid: "85781620"
   
 -   **Ignorer les pertes de données** - Si sa valeur est **True**, la mise à niveau est effectuée, même si certaines opérations mènent à une perte des données. Si sa valeur est **False**, ces opérations mettent fin à la mise à niveau. Par exemple, si l’une des tables de la base de données actuelle n’est pas présente dans le schéma de la nouvelle DAC, la table est supprimée si la valeur **True** est spécifiée. Le paramètre par défaut est **True**.  
   
--   **Bloquer en cas de modifications** - Si la valeur est **True**, la mise à niveau est terminée si le schéma de la base de données est différent de celui défini dans la DAC précédente. Si la valeur est **False**, la mise à niveau continue, même si des modifications sont détectées. Le paramètre par défaut est **False**.  
+-   **Bloquer en cas de modifications** - Si la valeur est **True**, la mise à niveau est terminée si le schéma de la base de données est différent de celui défini dans la DAC précédente. Si la valeur est **False**, la mise à niveau continue, même si des modifications sont détectées. La valeur par défaut est **False**.  
   
--   **Restauration en cas d’échec** - Si la valeur est **True**, la mise à niveau est englobée dans une transaction, et une restauration est tentée en cas d’erreurs. Si la valeur est **False**, toutes les modifications sont validées à mesure qu’elles sont effectuées. Par conséquent, si des erreurs se produisent, vous pourrez avoir à restaurer une sauvegarde précédente de la base de données. Le paramètre par défaut est **False**.  
+-   **Restauration en cas d’échec** - Si la valeur est **True**, la mise à niveau est englobée dans une transaction, et une restauration est tentée en cas d’erreurs. Si la valeur est **False**, toutes les modifications sont validées à mesure qu’elles sont effectuées. Par conséquent, si des erreurs se produisent, vous pourrez avoir à restaurer une sauvegarde précédente de la base de données. La valeur par défaut est **False**.  
   
--   **Ignorer la validation de la stratégie** - Si la valeur est **True**, la stratégie de sélection du serveur de DAC n’est pas évaluée. Si la valeur est **False**, la stratégie est évaluée et la mise à niveau s’arrête en cas d’erreur de validation. Le paramètre par défaut est **False**.  
+-   **Ignorer la validation de la stratégie** - Si la valeur est **True**, la stratégie de sélection du serveur de DAC n’est pas évaluée. Si la valeur est **False**, la stratégie est évaluée et la mise à niveau s’arrête en cas d’erreur de validation. La valeur par défaut est **False**.  
   
 ###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitations et restrictions  
  Les mises à niveau d'une DAC ne peuvent être effectuées que dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ou dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) ou version ultérieure.  
@@ -82,7 +83,7 @@ ms.locfileid: "85781620"
   
 2.  Développez le nœud **Gestion** , puis le nœud **Applications de la couche Données** .  
   
-3.  Cliquez avec le bouton droit sur le nœud de la DAC à mettre à niveau, puis sélectionnez **Mettre à niveau l’application de la couche Données...** .  
+3.  Cliquez avec le bouton droit sur le nœud de la DAC à mettre à niveau, puis sélectionnez **Mettre à niveau l’application de la couche Données...**.  
   
 4.  Renseignez les boîtes de dialogue de l'Assistant :  
   
