@@ -1,4 +1,5 @@
 ---
+description: KEY_GUID (Transact-SQL)
 title: KEY_GUID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9246c7b2-7098-42c4-a222-cbf30267c46a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1fbddf97fc08ffe0b200b1affa7258cc2746e0ca
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 306930c6d66db06f36554dd1ab49bf70d586017a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417285"
 ---
 # <a name="key_guid-transact-sql"></a>KEY_GUID (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -49,7 +50,7 @@ Key_GUID( 'Key_Name' )
 ## <a name="return-types"></a>Types de retour  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si une valeur d'identité a été spécifiée lors de la création de la clé, le GUID de celle-ci est un hachage MD5 de cette valeur d'identité. Si aucune valeur d'identité n'a été spécifiée, le serveur a généré le GUID.  
   
  Si la clé est une clé temporaire, son nom doit commencer par un signe dièse (#).  

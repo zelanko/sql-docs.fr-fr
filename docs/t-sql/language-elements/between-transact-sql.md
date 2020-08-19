@@ -1,4 +1,5 @@
 ---
+description: BETWEEN (Transact-SQL)
 title: BETWEEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/28/2017
@@ -23,12 +24,12 @@ ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5d3108c49eb60a478c375e2afed320ee965361d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 709af562247c040508627527c299ee6f5181da49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417185"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
   
  NOT BETWEEN retourne **TRUE** si la valeur de *test_expression* est inférieure à la valeur de *begin_expression* ou supérieure à la valeur de *end_expression*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour spécifier un intervalle exclusif, employez les opérateurs « supérieur à » (>) et « inférieur à » (<). Si l'un des paramètres fournis avec le prédicat BETWEEN ou NOT BETWEEN a la valeur NULL, le résultat est UNKNOWN.  
   
 ## <a name="examples"></a>Exemples  

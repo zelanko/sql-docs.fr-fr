@@ -1,4 +1,5 @@
 ---
+description: APP_NAME (Transact-SQL)
 title: APP_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e491e192-9b30-4243-bc19-33c133fe08a8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5bba743ec083c5eda630e9d14799cae34726a848
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c8522004e6852ebb3e874811ec7eb198cdf0416a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113191"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417515"
 ---
 # <a name="app_name-transact-sql"></a>APP_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -50,7 +51,7 @@ APP_NAME  ( )
 ## <a name="return-types"></a>Types de retour
 **nvarchar(128)**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Utilisez `APP_NAME` pour faire la distinction entre différentes applications, comme un moyen d’effectuer des actions différentes pour ces applications. Par exemple, `APP_NAME` peut faire la distinction entre les différentes applications, ce qui autorise un format de date différent pour chaque application. Elle peut également autoriser le renvoi d’un message d’information à certaines applications.
   
 Pour définir un nom d’application dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez sur **Options** dans la boîte de dialogue **Se connecter au moteur de base de données**. Sous l’onglet **Paramètres de connexion supplémentaires**, spécifiez un attribut **app** au format `;app='application_name'`

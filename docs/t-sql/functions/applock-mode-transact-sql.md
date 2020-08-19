@@ -1,4 +1,5 @@
 ---
+description: APPLOCK_MODE (Transact-SQL)
 title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d3d171d77cf3462eb68893f4ac5f6230d73b8b11
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9f7433be40f2a0a08ae075edfc3eaa9bd3252dca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417505"
 ---
 # <a name="applock_mode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 Utilisateur, rôle ou rôle d’application qui peuvent se voir octroyer des autorisations sur des objets dans la base de données. Pour pouvoir appeler la fonction, l’appelant de la fonction doit être membre du rôle de base de données fixe *database_principal*, dbo ou db_owner.
   
 '*resource_name*'  
-Nom de ressource de verrouillage spécifié par l'application cliente. L'application doit garantir un nom de ressource unique. Le nom spécifié est haché en interne en une valeur que le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut stocker en interne. *resource_name* est de type **nvarchar(255)** , sans valeur par défaut. L’argument *resource_name* est évalué en binaire et respecte la casse, quels que soient les paramètres de classement de la base de données active.
+Nom de ressource de verrouillage spécifié par l'application cliente. L'application doit garantir un nom de ressource unique. Le nom spécifié est haché en interne en une valeur que le gestionnaire de verrous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut stocker en interne. *resource_name* est de type **nvarchar(255)**, sans valeur par défaut. L’argument *resource_name* est évalué en binaire et respecte la casse, quels que soient les paramètres de classement de la base de données active.
   
 '*lock_owner*'  
 Propriétaire du verrou, correspondant à la valeur *lock_owner* lorsque le verrou a été demandé. *lock_owner* est de type **nvarchar(32)** et sa valeur peut être **Transaction** (valeur par défaut) ou **Session**.
@@ -62,7 +63,7 @@ Renvoie le mode de verrouillage détenu par le propriétaire du verrou sur une r
 |-|-|-|  
 |**NoLock**|**Mettre à jour**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Shared**|**Exclusive**||  
+|**Partagé**|**Exclusif**||  
   
 *Ce mode de verrouillage est une combinaison d'autres modes de verrouillage et sp_getapplock ne peut pas l'acquérir explicitement.
   

@@ -1,4 +1,5 @@
 ---
+description: RETURN (Transact-SQL)
 title: RETURN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 89ccceece9d5d84faaae9b63c6846bfbd351f666
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6ea26a56bf28b555123bf456d607f79e7e443597
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417085"
 ---
 # <a name="return-transact-sql"></a>RETURN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  Sauf spécification contraire, toutes les procédures stockées système retournent la valeur 0. Celle-ci indique la réussite d'une procédure ; une valeur différente de zéro indique un échec.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisée avec une procédure stockée, l'instruction RETURN ne peut pas retourner de valeur Null. Si une procédure tente de retourner une valeur Null (par exemple à l'aide de RETURN @status alors que @status est NULL), un avertissement est généré et une valeur de 0 est retournée.  
   
  Il est possible d'inclure la valeur de l'état retourné dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes du lot ou de la procédure ayant exécuté la procédure en cours, mais il convient dans ce cas de respecter la forme suivante : `EXECUTE @return_status = <procedure_name>`.  

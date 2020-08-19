@@ -1,4 +1,5 @@
 ---
+description: GetDescendant (moteur de base de données)
 title: GetDescendant (moteur de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1e6471b791a4ff1196321de649c645d8775d9308
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c8642be92d56b2900abd4cb5c6b4d77fcac78c0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417635"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (moteur de base de données)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ Null ou **hierarchyid** d’un enfant du nœud actuel.
   
 **Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Retourne un nœud enfant qui est un descendant du parent.
 -   Si le parent est NULL, retourne NULL.  
 -   Si parent n'est pas NULL et que enfant1 et enfant2 sont NULL, retourne un enfant du parent.  

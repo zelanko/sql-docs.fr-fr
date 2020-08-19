@@ -1,4 +1,5 @@
 ---
+description: OBJECT_DEFINITION (Transact-SQL)
 title: OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 59f2044a1f7c23f5cb5c81dedf134eab69b880f5
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 82855e167f44106078e7e2e3589f349eb307e503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110394"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417235"
 ---
 # <a name="object_definition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ OBJECT_DEFINITION ( object_id )
   
  Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que OBJECT_DEFINITION, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] considère que *object_id* se situe dans le contexte de la base de données active. Le classement de la définition de l'objet correspond toujours au contexte de la base de données d'appel.  
   
  OBJECT_DEFINITION s'applique aux types d'objets suivants :  
@@ -81,7 +82,7 @@ OBJECT_DEFINITION ( object_id )
 -   V = Vue  
   
 ## <a name="permissions"></a>Autorisations  
- Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
+ Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
   
 ## <a name="examples"></a>Exemples  
   

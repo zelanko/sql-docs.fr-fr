@@ -1,4 +1,5 @@
 ---
+description: NEXT VALUE FOR (Transact-SQL)
 title: NEXT VALUE FOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cb3fd2d18f5602030de6231a0dbbcc92a200a5fc
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8d383cc1530835635cc4c25957c25221a653dbfa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112902"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417275"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87112902"
   
  Pour une description complète de la création et de l’utilisation de séquences, consultez [Numéros séquentiels](../../relational-databases/sequence-numbers/sequence-numbers.md). Utilisez [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) pour réserver une plage de numéros séquentiels.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +65,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 ## <a name="return-types"></a>Types de retour  
  Retourne un nombre à l'aide du type de la séquence.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction **NEXT VALUE FOR** peut être utilisée dans les procédures stockées et les déclencheurs.  
   
  Lorsque la fonction **NEXT VALUE FOR** est utilisée dans une requête ou une contrainte par défaut, si le même objet séquence est utilisé plusieurs fois, ou si le même objet séquence est utilisé à la fois dans l’instruction qui fournit les valeurs et dans une contrainte par défaut en cours d’exécution, la même valeur est retournée pour toutes les colonnes qui référencent la même séquence dans une ligne dans le jeu de résultats.  

@@ -1,4 +1,5 @@
 ---
+description: OBJECT_ID (Transact-SQL)
 title: OBJECT_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -26,12 +27,12 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2ae4289776787d2e91b3c9c911629b38ced975d
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 34139155f6d5e7f58657a5f8e8adf6ac2d4ecbf3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417245"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -69,7 +70,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
  Un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'une autorisation. Cela signifie que les fonctions intégrées générant des métadonnées, telles que OBJECT_ID, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Quand le paramètre d'une fonction système est facultatif, la base de données active, l'ordinateur hôte, l'utilisateur du serveur ou l'utilisateur de la base de données sont pris implicitement en considération. Les fonctions intégrées doivent toujours être suivies de parenthèses.  
   
  Lorsqu’un nom de table temporaire est spécifié, le nom de la base de données doit figurer avant le nom de la table temporaire, à moins que la base de données active soit **tempdb**. Par exemple : `SELECT OBJECT_ID('tempdb..#mytemptable')`.  

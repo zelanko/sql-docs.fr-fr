@@ -1,4 +1,5 @@
 ---
+description: STRING_ESCAPE (Transact-SQL)
 title: STRING_ESCAPE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
@@ -18,12 +19,12 @@ ms.assetid: 2163bc7a-3816-4304-9c40-8954804f5465
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: b2d9e783ba7ea6c73059a7b37c5df2be5b702984
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 393b1a79d12c3280013f609d9a62924359ad57e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417155"
 ---
 # <a name="string_escape-transact-sql"></a>STRING_ESCAPE (Transact-SQL)
 
@@ -35,14 +36,14 @@ ms.locfileid: "87110299"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```sql
+```syntaxsql
 STRING_ESCAPE( text , type )  
 ```  
 
 ## <a name="arguments"></a>Arguments
 
  *text*  
- **Expression**[nvarchar](../../t-sql/language-elements/expressions-transact-sql.md) représentant l’objet qui doit être échappé.  
+ [Expression](../../t-sql/language-elements/expressions-transact-sql.md)**nvarchar** représentant l’objet qui doit être échappé.  
   
  *type*  
  Règles d’échappement qui seront appliquées. La valeur prise en charge actuellement est `'json'`.  

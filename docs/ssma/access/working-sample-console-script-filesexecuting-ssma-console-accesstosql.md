@@ -1,4 +1,5 @@
 ---
+description: Utilisation de l’exemple de script de console FilesExecuting la console SSMA (AccessToSQL)
 title: Utiliser l’exemple de script de console FilesExecuting la console SSMA | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: e18677df3b1997c994e940cf41930771f7a1cd38
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 91ccdde50fc0e4f031f376132213881db0a85449
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418525"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>Utilisation de l’exemple de script de console FilesExecuting la console SSMA (AccessToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence et l’utilisation de l’utilisateur. Cette section décrit la façon de personnaliser facilement ces scripts en fonction des besoins de l’utilisateur final.  
@@ -58,13 +59,13 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     |Nom de la commande|Description|Attribut|  
     |----------------|---------------|-------------|  
-    |`map-schema`|Mappage de schéma de la base de données source vers le schéma cible.|`source-schema:`Spécifie la base de données source qui nécessite d’être convertie.<br /><br />`sql-server-schema`: Spécifie la base de données cible à migrer vers|  
-    |`convert-schema`|Effectue une conversion de schéma de la source vers le schéma cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans l' `convert-schema` exemple 4 de la commande de l’exemple de fichier de script de console.|`object-name`: Spécifiez le nom de la base de données ou de l’objet source qui doit être converti. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le`object-name`|  
-    |`synchronize-target`|Synchronise les objets cibles avec la base de données cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans l' `synchronize-target` exemple 3 de la commande de l’exemple de fichier de script de console.|`object-name:`Spécifiez le nom de la base de données ou de l’objet SQL Server qui doit être créé. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le`object-name`|  
-    |`migrate-data`|Migre les données sources vers la cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans l' `migrate-data` exemple 2 de la commande de l’exemple de fichier de script de console.|`object-name:`Spécifie le nom de la base de données/des tables source dont la migration doit être effectuée. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le`object-name`|  
+    |`map-schema`|Mappage de schéma de la base de données source vers le schéma cible.|`source-schema:` Spécifie la base de données source qui nécessite d’être convertie.<br /><br />`sql-server-schema`: Spécifie la base de données cible à migrer vers|  
+    |`convert-schema`|Effectue une conversion de schéma de la source vers le schéma cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans l' `convert-schema` exemple 4 de la commande de l’exemple de fichier de script de console.|`object-name`: Spécifiez le nom de la base de données ou de l’objet source qui doit être converti. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le `object-name`|  
+    |`synchronize-target`|Synchronise les objets cibles avec la base de données cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans l' `synchronize-target` exemple 3 de la commande de l’exemple de fichier de script de console.|`object-name:` Spécifiez le nom de la base de données ou de l’objet SQL Server qui doit être créé. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le `object-name`|  
+    |`migrate-data`|Migre les données sources vers la cible.<br /><br />Si l’utilisateur doit évaluer plusieurs objets/bases de données, il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans l' `migrate-data` exemple 2 de la commande de l’exemple de fichier de script de console.|`object-name:` Spécifie le nom de la base de données/des tables source dont la migration doit être effectuée. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le `object-name`|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Création de fichiers de valeurs de variables &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
 [Création des fichiers de connexion au serveur &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
-[Génération de rapports &#40;&#41;AccessToSQL](../../ssma/access/generating-reports-accesstosql.md)  
+[Génération de rapports &#40;&#41;AccessToSQL ](../../ssma/access/generating-reports-accesstosql.md)  
   

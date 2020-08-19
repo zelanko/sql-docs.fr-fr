@@ -1,4 +1,5 @@
 ---
+description: INDEXPROPERTY (Transact-SQL)
 title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -20,12 +21,12 @@ ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: deeed76ed033531695b321c3e185e03dd988739c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 065b792b1e9edec5bc8e1b12859e9152797ebfb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417365"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,10 +48,10 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Expression qui contient le numéro d'identification d'objet de la table ou de la vue indexée dont les informations de propriété d'index doivent être fournies. *object_ID* est de type **int**.  
   
  *index_or_statistics_name*  
- Expression qui contient le nom de l'index ou des statistiques dont les informations de propriété doivent être retournées. *index_or_statistics_name* est de type **nvarchar(128)** .  
+ Expression qui contient le nom de l'index ou des statistiques dont les informations de propriété doivent être retournées. *index_or_statistics_name* est de type **nvarchar(128)**.  
   
  *property*  
- Expression contenant le nom de la propriété de base de données à renvoyer. *property* est de type **varchar(128)** , et peut prendre l’une des valeurs suivantes.  
+ Expression contenant le nom de la propriété de base de données à renvoyer. *property* est de type **varchar(128)**, et peut prendre l’une des valeurs suivantes.  
   
 > [!NOTE]  
 >  Sauf indication contraire, la valeur NULL est renvoyée lorsque *property* n’est pas un nom de propriété valide, lorsque *object_ID* n’est pas un ID d’objet valide, lorsque *object_ID* est un type d’objet qui n’est pas pris en charge pour la propriété spécifiée ou lorsque l’appelant n’est pas autorisé à consulter les métadonnées de l’objet.  
@@ -60,18 +61,18 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IndexDepth**|Profondeur de l'index|Nombre de niveaux d'index.<br /><br /> NULL = une entrée ou un index XML n'est pas valide.|  
 |**IndexFillFactor**|Valeur de facteur de remplissage utilisée lors de la création et de la dernière restauration de l'index.|Facteur de remplissage|  
 |**IndexID**|Identificateur d'index sur une table ou une vue indexée spécifiée|ID de l'index|  
-|**IsAutoStatistics**|Les statistiques ont été générées par l'option AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = False ou index XML.|  
-|**IsClustered**|L’index est ordonné en cluster.|1 = True<br /><br /> 0 = False ou index XML.|  
-|**IsDisabled**|L'index est désactivé.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Entrée non valide.|  
-|**IsFulltextKey**|L'index est la clé d'indexation sémantique et de texte intégral pour une table.|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> 1 = True<br /><br /> 0 = False ou index XML.<br /><br /> NULL = Entrée non valide.|  
-|**IsHypothetical**|L'index est hypothétique et ne peut être utilisé directement comme un chemin d'accès aux données. Les index hypothétiques conservent des statistiques au niveau des colonnes et sont gérés et utilisés par l'Assistant Paramétrage du moteur de base de données.|1 = True<br /><br /> 0 = False ou index XML<br /><br /> NULL = Entrée non valide.|  
-|**IsPadIndex**|L'index spécifie l'espace à laisser ouvert sur chaque nœud intérieur.|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> 1 = True<br /><br /> 0 = False ou index XML.|  
+|**IsAutoStatistics**|Les statistiques ont été générées par l'option AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = Vrai<br /><br /> 0 = False ou index XML.|  
+|**IsClustered**|L’index est ordonné en cluster.|1 = Vrai<br /><br /> 0 = False ou index XML.|  
+|**IsDisabled**|L'index est désactivé.|1 = Vrai<br /><br /> 0 = Faux<br /><br /> NULL = Entrée non valide.|  
+|**IsFulltextKey**|L'index est la clé d'indexation sémantique et de texte intégral pour une table.|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> 1 = Vrai<br /><br /> 0 = False ou index XML.<br /><br /> NULL = Entrée non valide.|  
+|**IsHypothetical**|L'index est hypothétique et ne peut être utilisé directement comme un chemin d'accès aux données. Les index hypothétiques conservent des statistiques au niveau des colonnes et sont gérés et utilisés par l'Assistant Paramétrage du moteur de base de données.|1 = Vrai<br /><br /> 0 = False ou index XML<br /><br /> NULL = Entrée non valide.|  
+|**IsPadIndex**|L'index spécifie l'espace à laisser ouvert sur chaque nœud intérieur.|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> 1 = Vrai<br /><br /> 0 = False ou index XML.|  
 |**IsPageLockDisallowed**|Valeur de verrouillage de page définie par l'option ALLOW_PAGE_LOCKS de ALTER INDEX.|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> 1 = le verrouillage des pages n'est pas autorisé.<br /><br /> 0 = le verrouillage des pages est autorisé.<br /><br /> NULL = Entrée non valide.|  
 |**IsRowLockDisallowed**|Valeur de verrouillage de ligne définie par l'option ALLOW_ROW_LOCKS de ALTER INDEX.|**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.<br /><br /> 1 = le verrouillage des lignes n'est pas autorisé.<br /><br /> 0 = le verrouillage des lignes est autorisé.<br /><br /> NULL = Entrée non valide.|  
-|**IsStatistics**|*index_or_statistics_name* représente des statistiques créées par l’instruction CREATE STATISTICS ou par l’option AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = False ou index XML.|  
-|**IsUnique**|L'index est unique.|1 = True<br /><br /> 0 = False ou index XML.|  
-|**IsColumnstore**|L'index est un index columnstore optimisé en mémoire xVelocity.|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> 1 = True<br /><br /> 0 = False| 
-|**IsOptimizedForSequentialKey**|L’optimisation des insertions de dernière page est activée dans l’index.|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures. <br><br>1 = True<br><br>0 = False| 
+|**IsStatistics**|*index_or_statistics_name* représente des statistiques créées par l’instruction CREATE STATISTICS ou par l’option AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = Vrai<br /><br /> 0 = False ou index XML.|  
+|**IsUnique**|L'index est unique.|1 = Vrai<br /><br /> 0 = False ou index XML.|  
+|**IsColumnstore**|L'index est un index columnstore optimisé en mémoire xVelocity.|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> 1 = Vrai<br /><br /> 0 = Faux| 
+|**IsOptimizedForSequentialKey**|L’optimisation des insertions de dernière page est activée dans l’index.|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures. <br><br>1 = Vrai<br><br>0 = Faux| 
   
 ## <a name="return-types"></a>Types de retour  
  **int**  

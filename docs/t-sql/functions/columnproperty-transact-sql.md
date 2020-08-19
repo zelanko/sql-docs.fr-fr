@@ -1,4 +1,5 @@
 ---
+description: COLUMNPROPERTY (Transact-SQL)
 title: COLUMNPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d62953d88773c6f378590db64aeeb3f94d6fe22
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 360089db91ed52ba90f0566868b4f1c87eb2fd8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417425"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,31 +54,31 @@ Pour l’argument *id*, l’argument *property* spécifie le type des informatio
   
 |Valeur|Description|Valeur retournée|  
 |---|---|---|
-|**AllowsNull**|Autorise les valeurs NULL|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**AllowsNull**|Autorise les valeurs NULL|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**ColumnId**|Valeur d’identificateur de colonne correspondant à **sys.columns.column_id**.|ID de la colonne<br /><br /> **Remarque :** Lors de requêtes sur plusieurs colonnes, des écarts peuvent apparaître dans l’ordre des valeurs d’identificateur de colonne.|  
 |**FullTextTypeColumn**|TYPE COLUMN de la table qui contient les informations sur le type de document de la *colonne*.|Identificateur de TYPE COLUMN en texte intégral pour l’expression du nom de colonne passée comme second paramètre de cette fonction.|  
 |**GeneratedAlwaysType**|Valeur de la colonne générée par le système. Correspond à **sys.columns.generated_always_type**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.<br /><br /> 0 : Toujours non générée<br /><br /> 1 : Toujours générée au début de ligne<br /><br /> 2 : Toujours générée en fin de ligne|  
-|**IsColumnSet**|La colonne est un jeu de colonnes. Pour plus d’informations, consultez [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md).|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsComputed**|Est une colonne calculée.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsCursorType**|Le paramètre de la procédure est de type CURSOR.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsDeterministic**|La colonne est déterministe. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de la vue.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte. Aucune colonne calculée ou colonne de la vue.|  
-|**IsFulltextIndexed**|Colonne inscrite pour l’indexation en texte intégral.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsColumnSet**|La colonne est un jeu de colonnes. Pour plus d’informations, consultez [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md).|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsComputed**|Est une colonne calculée.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsCursorType**|Le paramètre de la procédure est de type CURSOR.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsDeterministic**|La colonne est déterministe. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de la vue.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte. Aucune colonne calculée ou colonne de la vue.|  
+|**IsFulltextIndexed**|Colonne inscrite pour l’indexation en texte intégral.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**IsHidden**|Valeur de la colonne générée par le système. Correspond à **sys.columns.is_hidden**|**S’applique à** : [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] et versions ultérieures.<br /><br /> 0 : Non masquée<br /><br /> 1 : Masquée|  
-|**IsIdentity**|La colonne utilise la propriété IDENTITY.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsIdNotForRepl**|La colonne vérifie le paramètre IDENTITY_INSERT.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsIndexable**|La colonne peut être indexée.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsOutParam**|Le paramètre de la procédure est un paramètre de sortie.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsPrecise**|La colonne est précise. Cette propriété s'applique uniquement aux colonnes déterministes.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte. Colonne non déterministe.|  
-|**IsRowGuidCol**|La colonne a le type de données **uniqueidentifier** et est définie avec la propriété ROWGUIDCOL.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsSparse**|La colonne est éparse. Pour plus d’informations, consultez [Utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsSystemVerified**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] peut vérifier les propriétés de déterminisme et de précision de la colonne. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de vues.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**IsXmlIndexable**|La colonne XML peut être utilisée dans un index XML.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsIdentity**|La colonne utilise la propriété IDENTITY.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsIdNotForRepl**|La colonne vérifie le paramètre IDENTITY_INSERT.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsIndexable**|La colonne peut être indexée.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsOutParam**|Le paramètre de la procédure est un paramètre de sortie.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsPrecise**|La colonne est précise. Cette propriété s'applique uniquement aux colonnes déterministes.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte. Colonne non déterministe.|  
+|**IsRowGuidCol**|La colonne a le type de données **uniqueidentifier** et est définie avec la propriété ROWGUIDCOL.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsSparse**|La colonne est éparse. Pour plus d’informations, consultez [Utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsSystemVerified**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] peut vérifier les propriétés de déterminisme et de précision de la colonne. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de vues.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**IsXmlIndexable**|La colonne XML peut être utilisée dans un index XML.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
 |**Précision**|Longueur du type de données de la colonne ou du paramètre.|Longueur du type de données de la colonne spécifiée.<br /><br /> -1 : **xml** ou types de grande valeur<br /><br /> NULL : entrée incorrecte.|  
-|**Mettre à l'échelle**|Échelle pour le type de données de la colonne ou du paramètre.|Valeur de l’échelle<br /><br /> NULL : entrée incorrecte.|  
-|**StatisticalSemantics**|La colonne est activée en vue de l'indexation sémantique.|1 : TRUE<br /><br /> 0 : FALSE|  
-|**SystemDataAccess**|La colonne est dérivée d'une fonction qui accède aux données dans les catalogues système ou les tables système virtuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de vues.|1 : TRUE (indique un accès en lecture seule)<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**UserDataAccess**|La colonne est dérivée d'une fonction qui accède aux données dans les tables utilisateur, y compris les vues et les tables temporaires, stockées dans l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de vues.|1 : TRUE (indique un accès en lecture seule)<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
-|**UsesAnsiTrim**|ANSI_PADDING est défini sur ON lors de la création de la table. Cette propriété ne s’applique qu’aux colonnes ou paramètres de type **char** ou **varchar**.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**Mise à l’échelle**|Échelle pour le type de données de la colonne ou du paramètre.|Valeur de l’échelle<br /><br /> NULL : entrée incorrecte.|  
+|**StatisticalSemantics**|La colonne est activée en vue de l'indexation sémantique.|1 : TRUE<br /><br /> 0 : FALSE|  
+|**SystemDataAccess**|La colonne est dérivée d'une fonction qui accède aux données dans les catalogues système ou les tables système virtuelles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de vues.|1 : TRUE (indique un accès en lecture seule)<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**UserDataAccess**|La colonne est dérivée d'une fonction qui accède aux données dans les tables utilisateur, y compris les vues et les tables temporaires, stockées dans l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette propriété s'applique uniquement aux colonnes calculées et aux colonnes de vues.|1 : TRUE (indique un accès en lecture seule)<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
+|**UsesAnsiTrim**|ANSI_PADDING est défini sur ON lors de la création de la table. Cette propriété ne s’applique qu’aux colonnes ou paramètres de type **char** ou **varchar**.|1 : TRUE<br /><br /> 0 : FALSE<br /><br /> NULL : entrée incorrecte.|  
   
 ## <a name="return-types"></a>Types de retour
  **int**  

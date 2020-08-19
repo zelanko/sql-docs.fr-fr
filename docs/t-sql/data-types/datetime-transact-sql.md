@@ -1,4 +1,5 @@
 ---
+description: datetime (Transact-SQL)
 title: datetime (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -22,12 +23,12 @@ ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fdd491296c9ba93e12421f46964016c0689a65c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 689a494e12f9b31f88d3ea060fe2c1b4a5fb2a3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417715"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,11 +43,11 @@ Définit une date qui est associée à une heure de la journée avec des fractio
 |Propriété|Valeur|  
 |---|---|
 |Syntaxe|**datetime**|  
-|Usage|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
+|Utilisation|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
 |Formats de littéraux de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|Non applicable|  
 |Plage de dates|Du 1er janvier 1753 au 31 décembre 9999|  
 |Plage temporelle|00:00:00 à 23:59:59.997|  
-|Plage de décalages de fuseau horaire|None|  
+|Plage de décalages de fuseau horaire|Aucun|  
 |Plages d'éléments|AAAA comprend quatre chiffres, entre 1753 et 9999, qui représentent une année.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l’année spécifiée.<br /><br /> DD comprend deux chiffres, entre 01 et 31 selon le mois, qui représentent un jour du mois spécifié.<br /><br /> hh comprend deux chiffres, entre 00 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 00 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 00 et 59, qui représentent la seconde.<br /><br /> n* comprend entre zéro et trois chiffres, entre 0 et 999, qui représentent les fractions de seconde.|  
 |Longueur de caractère|19 positions au minimum et 23 au maximum|  
 |Taille de stockage|8 octets|  
@@ -113,7 +114,7 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 --2016-12-21 00:00:00.000 2016-12-21  
 ```  
   
-Dans le cas d’une conversion à partir de **time(n)** , le composant heure est copié et le composant date est défini sur « 1900-01-01 ». Quand la précision de fraction de la valeur **time(n)** est supérieure à trois chiffres, la valeur est tronquée en conséquence. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `datetime`.  
+Dans le cas d’une conversion à partir de **time(n)**, le composant heure est copié et le composant date est défini sur « 1900-01-01 ». Quand la précision de fraction de la valeur **time(n)** est supérieure à trois chiffres, la valeur est tronquée en conséquence. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `datetime`.  
   
 ```sql
 DECLARE @time time(4) = '12:10:05.1237';  
@@ -141,7 +142,7 @@ SELECT @datetime AS '@datetime', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.000 2016-12-01 12:32:00  
 ```  
   
-Dans le cas d’une conversion à partir de **datetimeoffset(n)** , les composants date et heure sont copiés. Le fuseau horaire est tronqué. Quand la précision de fraction de la valeur **datetimeoffset(n)** est supérieure à trois chiffres, la valeur est tronquée. L'exemple suivant montre les résultats de la conversion d'une valeur `datetimeoffset(4)` en valeur `datetime`.  
+Dans le cas d’une conversion à partir de **datetimeoffset(n)**, les composants date et heure sont copiés. Le fuseau horaire est tronqué. Quand la précision de fraction de la valeur **datetimeoffset(n)** est supérieure à trois chiffres, la valeur est tronquée. L'exemple suivant montre les résultats de la conversion d'une valeur `datetimeoffset(4)` en valeur `datetime`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1968-10-23 12:45:37.1234 +10:0';  
@@ -155,7 +156,7 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 --1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237 +01:0   
 ```  
   
-Dans le cas d’une conversion à partir de **datetime2(n)** , la date et l’heure sont copiées. Quand la précision de fraction de la valeur **datetime2(n)** est supérieure à trois chiffres, la valeur est tronquée. L'exemple suivant montre les résultats de la conversion d'une valeur `datetime2(4)` en valeur `datetime`.  
+Dans le cas d’une conversion à partir de **datetime2(n)**, la date et l’heure sont copiées. Quand la précision de fraction de la valeur **datetime2(n)** est supérieure à trois chiffres, la valeur est tronquée. L'exemple suivant montre les résultats de la conversion d'une valeur `datetime2(4)` en valeur `datetime`.  
   
 ```sql
 DECLARE @datetime2 datetime2(4) = '1968-10-23 12:45:37.1237';  

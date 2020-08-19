@@ -1,4 +1,5 @@
 ---
+description: DBCC CLONEDATABASE (Transact-SQL)
 title: DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/23/2019
@@ -37,12 +38,12 @@ ms.assetid: ''
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 453d514ba879c4567d16cca0acafc793bf721f48
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b273762ea8218106a35a23f02f95d1b156b50ae9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417675"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -90,7 +91,7 @@ Spécifie si les catalogues système liés à Service Broker doivent être inclu
 BACKUP_CLONEDB  
 Crée et vérifie une sauvegarde de la base de données de clonage.  Dans le cas d’une utilisation avec VERIFY_CLONEDB, la base de données de clonage est vérifiée avant que la sauvegarde soit effectuée.  Cette option est disponible à partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP3, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU8.
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 Les validations suivantes sont effectuées par DBCC CLONEDATABASE. La commande échoue si l’une des validations échoue.
 - La base de données source doit être une base de données utilisateur. Le clonage des bases de données système (MASTER, model, msdb, tempdb, distribution, etc.) n’est pas autorisé.
 - La base de données source doit être en ligne ou accessible en lecture.

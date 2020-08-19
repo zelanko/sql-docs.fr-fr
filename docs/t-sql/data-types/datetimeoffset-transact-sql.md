@@ -1,4 +1,5 @@
 ---
+description: datetimeoffset (Transact-SQL)
 title: datetimeoffset (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -23,12 +24,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 274af7a5c9a1e8f12f661305e1e2d1206bf64664
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d58c0b86f5a3d46764d3be1e70444139b599172d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417665"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 
@@ -41,7 +42,7 @@ Définit une date qui est associée à une heure de la journée qui prend en cha
 |Propriété|Valeur|  
 |---|---|
 |Syntaxe|**datetimeoffset** [ (*précision à la fraction de seconde*) ]|  
-|Usage|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
+|Utilisation|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
 |Formats de littéraux de chaîne par défaut (utilisés pour le client de bas niveau)|AAAA-MM-JJ hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> Pour plus d’informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » ci-dessous.|  
 |Plage de dates|0001-01-01 à 9999-12-31<br /><br /> Du 1er janvier de l’an 1 au 31 décembre 9999|  
 |Plage temporelle|00:00:00 à 23:59:59.9999999|  
@@ -131,7 +132,7 @@ SELECT @datetimeoffset AS '@datetimeoffset ', @date AS 'date';
   
 ```  
   
-Dans le cas d’une conversion en **time(n)** , l’heure, la minute, la seconde et les fractions de seconde sont copiées. La valeur de fuseau horaire est tronquée. Quand la précision de la valeur **datetimeoffset(n)** est supérieure à la précision de la valeur **time(n)** , la valeur est arrondie. Le code suivant montre les résultats de la conversion d'une valeur `datetimeoffset(4)` en valeur `time(3)`.
+Dans le cas d’une conversion en **time(n)**, l’heure, la minute, la seconde et les fractions de seconde sont copiées. La valeur de fuseau horaire est tronquée. Quand la précision de la valeur **datetimeoffset(n)** est supérieure à la précision de la valeur **time(n)**, la valeur est arrondie. Le code suivant montre les résultats de la conversion d'une valeur `datetimeoffset(4)` en valeur `time(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '12-10-25 12:32:10.1237 +01:0';  
@@ -181,7 +182,7 @@ SELECT @datetimeoffset AS '@datetimeoffset', @smalldatetime AS '@smalldatetime';
 --(1 row(s) affected)  
 ```  
   
-Dans le cas d’une conversion en **datetime2(n)** , la date et l’heure sont copiées dans la valeur **datetime2** et le fuseau horaire est tronqué. Quand la précision de la valeur **datetime2(n)** est supérieure à la précision de la valeur **datetimeoffset(n)** , les fractions de seconde sont tronquées en conséquence. Le code suivant montre les résultats de la conversion d'une valeur `datetimeoffset(4)` en valeur `datetime2(3)`.
+Dans le cas d’une conversion en **datetime2(n)**, la date et l’heure sont copiées dans la valeur **datetime2** et le fuseau horaire est tronqué. Quand la précision de la valeur **datetime2(n)** est supérieure à la précision de la valeur **datetimeoffset(n)**, les fractions de seconde sont tronquées en conséquence. Le code suivant montre les résultats de la conversion d'une valeur `datetimeoffset(4)` en valeur `datetime2(3)`.
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1912-10-25 12:24:32.1277 +10:0';  

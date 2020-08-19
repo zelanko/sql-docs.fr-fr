@@ -1,4 +1,5 @@
 ---
+description: SWITCHOFFSET (Transact-SQL)
 title: SWITCHOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/02/2015
@@ -24,12 +25,12 @@ ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d6b5595e0a6489919768ab5a4ba9e21d04f7837
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: f8cffc510ca7d089be5326abf3d3823807b416e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417195"
 ---
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87112825"
   
  Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +51,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 
 ## <a name="arguments"></a>Arguments
  *DATETIMEOFFSET*  
- Expression qui peut être résolue en une valeur **datetimeoffset(n)** .  
+ Expression qui peut être résolue en une valeur **datetimeoffset(n)**.  
   
  *time_zone*  
  Chaîne de caractères au format [+|-]TZH:TZM ou entier signé (de minutes) qui représente le décalage de fuseau horaire, et qui est supposée être réglée et prendre en charge l'heure d'été.  
@@ -58,7 +59,7 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
 ## <a name="return-type"></a>Type de retour  
  **datetimeoffset** avec la précision fractionnelle de l’argument *DATETIMEOFFSET*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez SWITCHOFFSET pour sélectionner une valeur **datetimeoffset** dans un décalage de fuseau horaire qui est différent du décalage de fuseau horaire stocké à l’origine. SWITCHOFFSET ne met pas à jour la valeur *time_zone* stockée.  
   
  La fonction SWITCHOFFSET peut être utilisée pour mettre à jour une colonne **datetimeoffset**.  

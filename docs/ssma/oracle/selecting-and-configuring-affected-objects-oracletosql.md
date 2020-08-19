@@ -1,4 +1,5 @@
 ---
+description: Sélection et configuration des objets affectés (OracleToSQL)
 title: Sélection et configuration des objets affectés (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -13,12 +14,12 @@ ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 619da90c19cf918b3f53ac6cd213b27e718b6a10
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5cd9ca7c8789133fdbccc3367f3bda121d2499ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932910"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418345"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Sélection et configuration des objets affectés (OracleToSQL)
 Sur cette page, vous pouvez sélectionner des tables et des clés étrangères, les modifications dans lesquelles doivent être comparées lorsque SSMA vérifie les résultats de l’exécution pour les objets choisis à l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
@@ -28,7 +29,7 @@ Dans l’arborescence d’objets Oracle située sur le côté gauche de la fenê
   
 Si SSMA tester ne peut pas vérifier l’un de ces objets, le lien étiqueté **certains objets sélectionnés contient des erreurs** sous l’arborescence objets. Cliquez sur ce lien pour afficher les raisons pour lesquelles ces objets ne peuvent pas être comparés et pour effacer la sélection d’objets incorrects.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Table de charge de travail  
 L’onglet table contient la vue de grille de la table sélectionnée. La grille contient les informations suivantes sur la table sélectionnée :  
   
 -   Nom de la colonne  
@@ -41,7 +42,7 @@ L’onglet table contient la vue de grille de la table sélectionnée. La grille
   
 -   Règle  
   
--   Par défaut  
+-   Default  
   
 -   Identité  
   

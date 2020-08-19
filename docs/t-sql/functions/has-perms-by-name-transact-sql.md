@@ -1,4 +1,5 @@
 ---
+description: HAS_PERMS_BY_NAME (Transact-SQL)
 title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ca0bb9b4fb03cc3f567c6c642a3593d23963993
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e2fa743ae09dc8a09a8edbc8e4a6e3b5cf8415db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113523"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417345"
 ---
 # <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +52,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur lui-même, cette valeur doit être définie avec NULL. *securable* est une expression scalaire de type **sysname**. Il n'y a pas de valeur par défaut.  
   
  *securable_class*  
- Nom de la classe de l'élément sécurisable sur lequel l'autorisation est testée. *securable_class* est une expression scalaire de type **nvarchar(60)** .  
+ Nom de la classe de l'élément sécurisable sur lequel l'autorisation est testée. *securable_class* est une expression scalaire de type **nvarchar(60)**.  
   
  Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l’argument securable_class doit avoir l’une des valeurs suivantes : **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** ou **USER**.  
   
@@ -62,7 +63,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Expression scalaire facultative de type **sysname** qui représente le nom de la sous-entité sécurisable sur laquelle l’autorisation est testée. La valeur par défaut est NULL.  
   
 > [!NOTE]  
->  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et versions ultérieures, les éléments sub-securable ne peuvent pas utiliser de crochets sous la forme **'[** _nom sub_ **]'** . Utilisez **'** _sub name_ **'** à la place.  
+>  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et versions ultérieures, les éléments sub-securable ne peuvent pas utiliser de crochets sous la forme **'[**_nom sub_**]'**. Utilisez **'** _sub name_ **'** à la place.  
   
  *sub-securable_class*  
  Expression scalaire facultative de type **nvarchar(60)** qui représente la classe de la sous-entité sécurisable sur laquelle l’autorisation est testée. La valeur par défaut est NULL.  
@@ -74,7 +75,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
  Renvoie NULL lorsque la requête échoue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette fonction intégrée teste si le principal actif a une autorisation effective sur un élément sécurisable spécifié. HAS_PERMS_BY_NAME retourne 1 lorsque l'utilisateur dispose d'autorisation effective sur l'élément sécurisable, 0 lorsque l'utilisateur n'a pas cette autorisation et NULL si la classe sécurisable ou l'autorisation n'est pas valide. Une autorisation effective peut être :  
   
 -   une autorisation accordée directement au principal et non refusée ;  
