@@ -1,4 +1,5 @@
 ---
+description: Créer et exécuter des traces à l'aide de procédures stockées Transact-SQL.
 title: Créer et exécuter des traces à l'aide de procédures stockées Transact-SQL.
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae33b8b69f3c6da6e6ad86a554c5eb0bf7af9535
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eac3736784845b5dbae102bd91aa824b203a7ab8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751034"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88402475"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>Créer et exécuter des traces à l'aide de procédures stockées Transact-SQL.
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
