@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;CONNECTIONS (Transact-SQL)'
 title: '@@CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/18/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1865e3c12a468b8d9483e221f9aacaa2bca666c2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 48279ffe9c454a32545d28c7ed74556ba3f93157
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366925"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,9 +45,9 @@ Cette fonction renvoie le nombre de tentatives de connexion, réussies ou non, d
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>Types de retour
-**entier**
+**integer**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Les connexions sont différentes des utilisateurs. Une application, par exemple, peut très bien ouvrir plusieurs connexions au serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'insu de l'utilisateur.
   
 Exécutez **sp_monitor** pour afficher un rapport contenant plusieurs statistiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment le nombre de tentatives de connexion.

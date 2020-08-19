@@ -1,4 +1,5 @@
 ---
+description: DBCC FREEPROCCACHE (Transact-SQL)
 title: DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2017
@@ -25,12 +26,12 @@ ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 84f0dd9a38f118d71ca7417e2a241a03426e6753
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: d8b3b9733500dc56f4994dd13fd42939b0885a02
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88367785"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +83,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  Supprime tous les messages d'information.  
   
  COMPUTE  
- Vide le cache du plan de requête à partir de chaque nœud de calcul. Il s’agit de la valeur par défaut.  
+ Vide le cache du plan de requête à partir de chaque nœud de calcul. Valeur par défaut.  
   
  ALL  
  Vide le cache du plan de requête à partir de chaque nœud de calcul et du nœud de contrôle.  
@@ -90,7 +91,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 > [!NOTE]
 > À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], utilisez l’instruction `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` pour effacer le cache (du plan) de procédure pour la base de données dans l’étendue.
 
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Utilisez l'instruction DBCC FREEPROCCACHE pour effacer le cache du plan avec précaution. L’effacement du cache (du plan) de procédure entraîne la suppression de tous les plans et la compilation d’un nouveau plan par les exécutions de requêtes entrantes, et non la réutilisation d’un plan mis en cache précédemment. 
 
 Cette opération peut entraîner une baisse temporaire et brutale des performances des requêtes comme le nombre de nouvelles compilations augmente. Pour chaque mémoire cache effacée dans le cache du plan, le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient le message d’information suivant : « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a rencontré %d occurrence(s) de vidages de mémoire cache pour la mémoire cache '%s' (partie du cache du plan) en raison d’opérations 'DBCC FREEPROCCACHE' ou 'DBCC FREESYSTEMCACHE' ». Ce message est enregistré toutes les cinq minutes si le cache est vidé au cours de cet intervalle de temps.

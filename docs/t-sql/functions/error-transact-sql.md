@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;ERROR (Transact-SQL)'
 title: '@@ERROR (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/29/2017
@@ -20,12 +21,12 @@ ms.assetid: c8b43477-b6c0-49bf-a608-394a0b6cc7a2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbc22ecc5bb912ad7f303c2551c076f6ce8393a
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 93fe08c7dcba1b9c45f9dfabd0c360b3db2c152f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111583"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88366255"
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40;ERROR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "87111583"
 ## <a name="return-types"></a>Types de retour
  entier  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Retourne 0 si l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] précédente n'a rencontré aucune erreur.  
   
  Retourne un numéro d'erreur si l'instruction précédente a rencontré une erreur. Si l’erreur est l’une des erreurs de la vue de catalogue sys.messages, @@ERROR contient la valeur provenant de la colonne sys.messages.message_id pour cette erreur. Vous pouvez consulter le texte associé à un numéro d’erreur @@ERROR dans sys.messages.  

@@ -1,4 +1,5 @@
 ---
+description: Write (moteur de base de données)
 title: Write (moteur de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3394e41418a45c56625af084e4dca0afeefa50b8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 08f593fc3123e6f99f3e44473d75101eacd406e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554784"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368075"
 ---
 # <a name="write-database-engine"></a>Write (moteur de base de données)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,8 +32,8 @@ Write écrit une représentation binaire de **SqlHierarchyId** dans le **BinaryW
   
 ## <a name="syntax"></a>Syntaxe  
   
-```sql
-void Write( BinaryWriter w )   
+```syntaxsql
+void Write( BinaryWriter w )
 ```  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

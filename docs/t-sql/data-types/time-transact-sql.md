@@ -1,4 +1,5 @@
 ---
+description: time (Transact-SQL)
 title: time (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/07/2017
@@ -22,12 +23,12 @@ ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce15115e059018e7065f2a3fefc6943a110cf97
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fe87d9a583c60ba6d627168ade3eef07a47467b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007982"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368255"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 
@@ -40,10 +41,10 @@ ms.locfileid: "86007982"
   
 ## <a name="time-description"></a>Description de time  
   
-|Propriété|Valeur|  
+|Property|Valeur|  
 |--------------|-----------|  
 |Syntaxe|**time** [ (*échelle de fractions de seconde*) ]|  
-|Usage|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|Utilisation|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*échelle de fractions de seconde*|Spécifie le nombre de chiffres pour la partie fractionnaire des secondes.<br /><br /> Il peut s'agir d'un entier compris entre 0 et 7. Pour Informatica, il peut s’agir d’un entier compris entre 0 et 3.<br /><br /> L’échelle de fractions par défaut est 7 (100 ns).|  
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|hh:mm:ss[.nnnnnnn] pour Informatica)<br /><br /> Pour plus d’informations, consultez la section [Compatibilité descendante pour les clients de bas niveau](#BackwardCompatibilityforDownlevelClients).|  
 |Plage|00:00:00.0000000 à 23:59:59.9999999 (00:00:00.000 à 23:59:59.999 pour Informatica)|  
@@ -57,7 +58,7 @@ ms.locfileid: "86007982"
 |Prise en charge et conservation du décalage de fuseau horaire|Non|  
 |Prise en charge de l'heure d'été|Non|  
   
-|Échelle spécifiée|Résultat (précision, échelle)|Longueur de colonne (octets)|Fraction<br /><br /> secondes<br /><br /> precision|  
+|Échelle spécifiée|Résultat (précision, échelle)|Longueur de colonne (octets)|Fraction<br /><br /> secondes<br /><br /> précision|  
 |---------------------|---------------------------------|-----------------------------|------------------------------------------|  
 |**time**|(16,7) [(12,3) dans Informatica]|5 (4 dans Informatica)|7 (3 dans Informatica)|  
 |**time(0)**|(8,0)|3|0-2|  
@@ -105,7 +106,7 @@ ms.locfileid: "86007982"
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>Conversion de types de données time(n) vers d'autres types de date et d'heure  
  Cette section décrit ce qui se produit quand un type de données **time** est converti en d’autres types de données date et time.  
   
- Dans le cas d’une conversion en **time(n)** , les heures, minutes et secondes sont copiées. Lorsque la précision de destination est inférieure à la précision source, les fractions de seconde sont arrondies selon la précision de destination. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `time(3)`.  
+ Dans le cas d’une conversion en **time(n)**, les heures, minutes et secondes sont copiées. Lorsque la précision de destination est inférieure à la précision source, les fractions de seconde sont arrondies selon la précision de destination. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `time(3)`.  
   
 ```  
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
@@ -166,7 +167,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Dans le cas d’une conversion en **datetimeoffset(n)** , la date est définie sur « 1900-01-01 » et l’heure est copiée. Le décalage de fuseau horaire est défini sur +00:00. Quand la précision à la fraction de seconde de la valeur **time(n)** est supérieure à la précision de la valeur **datetimeoffset(n)** , la valeur est arrondie en conséquence. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en type `datetimeoffset(3)`.  
+ Dans le cas d’une conversion en **datetimeoffset(n)**, la date est définie sur « 1900-01-01 » et l’heure est copiée. Le décalage de fuseau horaire est défini sur +00:00. Quand la précision à la fraction de seconde de la valeur **time(n)** est supérieure à la précision de la valeur **datetimeoffset(n)**, la valeur est arrondie en conséquence. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en type `datetimeoffset(3)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -183,7 +184,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Dans le cas d’une conversion en **datetime2(n)** , la date est définie sur « 1900-01-01 », le composant heure est copié et le décalage de fuseau horaire est défini sur 00:00. Quand la précision à la fraction de seconde de la valeur **datetime2(n)** est supérieure à la valeur **time(n)** , la valeur est arrondie en conséquence.  L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `datetime2(2)`.  
+ Dans le cas d’une conversion en **datetime2(n)**, la date est définie sur « 1900-01-01 », le composant heure est copié et le décalage de fuseau horaire est défini sur 00:00. Quand la précision à la fraction de seconde de la valeur **datetime2(n)** est supérieure à la valeur **time(n)**, la valeur est arrondie en conséquence.  L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `datetime2(2)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
