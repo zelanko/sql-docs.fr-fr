@@ -1,4 +1,5 @@
 ---
+description: Objets créés sur le serveur de publication Oracle
 title: Objets créés sur le serveur de publication Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c58a124b-4da7-46e2-9292-af8ce9e6664b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 405deb86567c596372777dff5e6ccb9dd2e95fb1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 744cf1e5878382e1eae804b4705e21d1fa21d098
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901237"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420453"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Objets créés sur le serveur de publication Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -46,8 +47,8 @@ ms.locfileid: "85901237"
 |HREPL_ExecuteCommand|Procédure|Procédure définie en dehors du code du package de publication Oracle, utilisée pour exécuter une commande sur le serveur de publication.|  
 |HREPL_ArticleN_Trigger_Row|Déclencheur|Déclencheur généré pour chaque table publiée, utilisé pour le suivi des modifications de lignes.|  
 |HREPL_ArticleN_Trigger_Stmt|Déclencheur|Déclencheur généré pour chaque table publiée, utilisé pour le suivi des modifications au niveau des instructions.|  
-|HREPL_Article_I_J|Affichage|Vue créée pour chaque table publiée, utilisée pour des requêtes sur la table publiée.|  
-|HREPL_Log_I_J_K|Affichage|Vue créée pour chaque table publiée, utilisée pour des requêtes sur la table de suivi des modifications.|  
+|HREPL_Article_I_J|Vue|Vue créée pour chaque table publiée, utilisée pour des requêtes sur la table publiée.|  
+|HREPL_Log_I_J_K|Vue|Vue créée pour chaque table publiée, utilisée pour des requêtes sur la table de suivi des modifications.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

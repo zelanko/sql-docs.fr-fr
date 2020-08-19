@@ -1,4 +1,5 @@
 ---
+description: Écriture de pilotes ODBC 3.x
 title: Écriture des pilotes ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9b75f59b-623f-4711-9ca2-e751b3622e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 62f2a701fd5ac94c92d41494a4fd1ab023edaf25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5fec9b94dbcf60868c44e49d92bddb4bb73e9cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421343"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Écriture de pilotes ODBC 3.x
 Le tableau suivant montre la prise en charge des fonctions dans ODBC 3. *x* et une application ODBC, ainsi que le mappage effectué par le gestionnaire de pilotes quand les fonctions sont appelées sur ODBC 3. pilote *x* .  
   
-|Fonction|Pris en charge<br /><br /> par un<br /><br /> ODBC 3. *x*<br /><br /> pilote?|Pris en charge<br /><br /> par un<br /><br /> ODBC 3. *x*<br /><br /> oeuvre?|Mappé/pris en charge<br /><br /> par ODBC 3. *x*<br /><br /> Gestionnaire de pilotes pour<br /><br /> ODBC 3. pilote *x* ?|  
+|Fonction|Prise en charge<br /><br /> par un<br /><br /> ODBC 3. *x*<br /><br /> pilote?|Prise en charge<br /><br /> par un<br /><br /> ODBC 3. *x*<br /><br /> oeuvre?|Mappé/pris en charge<br /><br /> par ODBC 3. *x*<br /><br /> Gestionnaire de pilotes pour<br /><br /> ODBC 3. pilote *x* ?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|Non|Non [1]|Oui|  
 |**SQLAllocEnv**|Non|Non [1]|Oui|  
@@ -111,7 +112,7 @@ Le tableau suivant montre la prise en charge des fonctions dans ODBC 3. *x* et u
   
  [3] les rédacteurs de pilote doivent noter que ODBC 2. les attributs de colonne *x* SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE et SQL_COLUMN_LENGTH doivent être pris en charge avec **SQLColAttribute**.  
   
- [4] **SQLCopyDesc** est partiellement implémenté par le gestionnaire de pilotes lorsqu’un descripteur est copié entre des connexions qui appartiennent à des pilotes différents. Les pilotes sont requis pour prendre en charge les **SQLCopyDesc** sur deux de leurs propres connexions. Les fonctions telles que **SQLDrivers**, qui sont implémentées uniquement par le gestionnaire de pilotes, ne s’affichent pas dans cette liste.  
+ [4]   **SQLCopyDesc** est partiellement implémenté par le gestionnaire de pilotes lorsqu’un descripteur est copié entre des connexions qui appartiennent à des pilotes différents. Les pilotes sont requis pour prendre en charge les **SQLCopyDesc** sur deux de leurs propres connexions. Les fonctions telles que **SQLDrivers**, qui sont implémentées uniquement par le gestionnaire de pilotes, ne s’affichent pas dans cette liste.  
   
  [5] dans certains cas, il se peut que les pilotes doivent prendre en charge cette fonction. Pour plus d’informations, consultez la page de référence de cette fonction.  
   

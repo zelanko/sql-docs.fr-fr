@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLSetEnvAttr
 title: SQLSetEnvAttr fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640b1e6947d67b92e2b7f8e623597e1d99d4a877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f535c860df212c708f11339165b2d05d4a79647
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421113"
 ---
 # <a name="sqlsetenvattr-function"></a>Fonction SQLSetEnvAttr
 **Conformité**  
@@ -70,7 +71,7 @@ SQLRETURN SQLSetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01S02 ne|Valeur d’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée dans *ValuePtr* et substituait une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY009|Utilisation non valide d’un pointeur null|L’argument d’attribut a identifié un attribut d’environnement qui nécessitait une valeur de chaîne et l’argument *ValuePtr* était un pointeur null.|  
 |HY010|Erreur de séquence de fonction|(DM) un descripteur de connexion a été alloué sur *EnvironmentHandle*.<br /><br /> (DM) **SQL_ATTR_ODBC_VERSION** n’a pas été défini avec **SQLSetEnvAttr** et l' *attribut* n’est pas égal à **SQL_ATTR_ODBC_VERSION**. Vous n’avez pas besoin de définir **SQL_ATTR_ODBC_VERSION** explicitement si vous utilisez **SQLAllocHandleStd**.|  

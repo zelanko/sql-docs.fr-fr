@@ -1,4 +1,5 @@
 ---
+description: 'Requêtes distribuées Microsoft SQL Server : connectivité OLE DB'
 title: Créer un fournisseur de serveurs liés
 ms.date: 07/01/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ author: pmasl
 ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 528d1f6e1c7eea06b69fc60e2208eeb37ce3e36f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095993"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420843"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Requêtes distribuées Microsoft SQL Server : connectivité OLE DB
 
@@ -192,24 +193,24 @@ Voici les principales étapes que SQL Server effectue lorsqu’il se connecte à
 
 Propriété| Valeur par défaut| Utilisation |
 |:----|:----|:----|
-|`DBPROP_DBMSNAME`|None|Utilisée pour les messages d’erreur.|
-|`DBPROP_DBMSVER` |None|Utilisée pour les messages d’erreur.|
-|`DBPROP_PROVIDERNAME`|None|Utilisée pour les messages d’erreur.|
+|`DBPROP_DBMSNAME`|Aucun|Utilisée pour les messages d’erreur.|
+|`DBPROP_DBMSVER` |Aucun|Utilisée pour les messages d’erreur.|
+|`DBPROP_PROVIDERNAME`|Aucun|Utilisée pour les messages d’erreur.|
 |`DBPROP_PROVIDEROLEDBVER1`|1.5|Utilisée pour déterminer la disponibilité des fonctionnalités 2.0.
-|`DBPROP_CONCATNULLBEHAVIOR`|None|Utilisée pour déterminer si le comportement de concaténation `NULL` du fournisseur est le même que celui de SQL Server.|
-|`DBPROP_NULLCOLLATION`|None|Autorise l’utilisation du tri/de l’index uniquement si `NULLCOLLATION` correspond au comportement de classement null de l’instance SQL Server.|
-|`DBPROP_OLEOBJECTS`|None|Détermine si le fournisseur prend en charge les interfaces de stockage structuré pour les colonnes d’objets de données volumineux.|
-|`DBPROP_STRUCTUREDSTORAGE`|None|Identifie les interfaces de stockage structuré prises en charge pour les types d’objets volumineux (parmi `ILockBytes`, `Istream` et `ISequentialStream`).|
-|`DBPROP_MULTIPLESTORAGEOBJECTS`|False|Détermine si plusieurs colonnes d’objets volumineux peuvent être ouvertes en même temps.|
-|`DBPROP_SQLSUPPORT`|None|Détermine si les requêtes SQL peuvent être envoyées au fournisseur.|
+|`DBPROP_CONCATNULLBEHAVIOR`|Aucun|Utilisée pour déterminer si le comportement de concaténation `NULL` du fournisseur est le même que celui de SQL Server.|
+|`DBPROP_NULLCOLLATION`|Aucun|Autorise l’utilisation du tri/de l’index uniquement si `NULLCOLLATION` correspond au comportement de classement null de l’instance SQL Server.|
+|`DBPROP_OLEOBJECTS`|Aucun|Détermine si le fournisseur prend en charge les interfaces de stockage structuré pour les colonnes d’objets de données volumineux.|
+|`DBPROP_STRUCTUREDSTORAGE`|Aucun|Identifie les interfaces de stockage structuré prises en charge pour les types d’objets volumineux (parmi `ILockBytes`, `Istream` et `ISequentialStream`).|
+|`DBPROP_MULTIPLESTORAGEOBJECTS`|Faux|Détermine si plusieurs colonnes d’objets volumineux peuvent être ouvertes en même temps.|
+|`DBPROP_SQLSUPPORT`|Aucun|Détermine si les requêtes SQL peuvent être envoyées au fournisseur.|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|Utilisée pour construire des noms de table en plusieurs parties.
-|`SQLPROP_DYNAMICSQL`|False|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que les marqueurs de paramètres `?` sont pris en charge pour l’exécution des requêtes paramétrables.
-|`SQLPROP_NESTEDQUERIES`|False|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que le fournisseur prend en charge les instructions `SELECT` imbriquées dans la clause `FROM`.
-|`SQLPROP_GROUPBY`|False|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que le fournisseur prend en charge la clause GROUP BY dans l’instruction `SELECT` comme indiqué par la norme SQL-92.
-|`SQLPROP_DATELITERALS `|False|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que le fournisseur prend en charge les littéraux datetime conformément à la syntaxe SQL Server Transact-SQL.
-|`SQLPROP_ANSILIKE `|False|Propriété spécifique à SQL Server : cette propriété présente un intérêt pour un fournisseur qui prend en charge le niveau SQL-Minimum et l’opérateur `LIKE` conformément au niveau d’entrée SQL-92 (\'%\' et \'_\' comme caractères génériques).
-|`SQLPROP_SUBQUERIES `|False|Propriété SQL Server : Cette propriété présente un intérêt dans un fournisseur qui prend en charge le niveau SQL-Minimum. Cette propriété indique que le fournisseur prend en charge les sous-requêtes comme indiqué par le niveau d’entrée SQL-92. Cela comprend les sous-requêtes dans la liste `SELECT` et dans la clause `WHERE` avec prise en charge des sous-requêtes corrélées ainsi que des opérateurs `IN`, `EXISTS`, `ALL` et `ANY`.
-|`SQLPROP_INNERJOIN`|False|Propriété spécifique à SQL Server : Cette propriété présente un intérêt pour les fournisseurs qui prennent en charge le niveau SQL-Minimum. Cette propriété indique la prise en charge des jointures avec plusieurs tables dans la clause `FROM`. ------ ---
+|`SQLPROP_DYNAMICSQL`|Faux|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que les marqueurs de paramètres `?` sont pris en charge pour l’exécution des requêtes paramétrables.
+|`SQLPROP_NESTEDQUERIES`|Faux|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que le fournisseur prend en charge les instructions `SELECT` imbriquées dans la clause `FROM`.
+|`SQLPROP_GROUPBY`|Faux|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que le fournisseur prend en charge la clause GROUP BY dans l’instruction `SELECT` comme indiqué par la norme SQL-92.
+|`SQLPROP_DATELITERALS `|Faux|Propriété spécifique à SQL Server : si elle retourne `VARIANT_TRUE`, elle indique que le fournisseur prend en charge les littéraux datetime conformément à la syntaxe SQL Server Transact-SQL.
+|`SQLPROP_ANSILIKE `|Faux|Propriété spécifique à SQL Server : cette propriété présente un intérêt pour un fournisseur qui prend en charge le niveau SQL-Minimum et l’opérateur `LIKE` conformément au niveau d’entrée SQL-92 (\'%\' et \'_\' comme caractères génériques).
+|`SQLPROP_SUBQUERIES `|Faux|Propriété SQL Server : Cette propriété présente un intérêt dans un fournisseur qui prend en charge le niveau SQL-Minimum. Cette propriété indique que le fournisseur prend en charge les sous-requêtes comme indiqué par le niveau d’entrée SQL-92. Cela comprend les sous-requêtes dans la liste `SELECT` et dans la clause `WHERE` avec prise en charge des sous-requêtes corrélées ainsi que des opérateurs `IN`, `EXISTS`, `ALL` et `ANY`.
+|`SQLPROP_INNERJOIN`|Faux|Propriété spécifique à SQL Server : Cette propriété présente un intérêt pour les fournisseurs qui prennent en charge le niveau SQL-Minimum. Cette propriété indique la prise en charge des jointures avec plusieurs tables dans la clause `FROM`. ------ ---
 
 Les trois littéraux suivants sont récupérés d’`IDBInfo::GetLiteralInfo` : `DBLITERAL_CATALOG_SEPARATOR`, `DBLITERAL_SCHEMA_SEPARATOR` (pour construire un nom d’objet complet en fonction de ses parties catalogue, schéma et nom d’objet) et `DBLITERAL_QUOTE` (pour délimiter les noms d’identificateur dans une requête SQL envoyée au fournisseur).
 
@@ -262,7 +263,7 @@ Si l’interface `IDBSchemaRowset` n’est pas prise en charge avec les ensemble
 
 Si le fournisseur prend en charge les statistiques de distribution sur les tables de base, SQL Server utilise ces statistiques. Il existe deux types de statistiques qui présentent un intérêt pour le processeur de requêtes SQL Server :
 
-- **Cardinalités de colonne (ou tuple)** . Il s’agit du nombre de valeurs uniques qui se trouvent dans une colonne (ou une combinaison de colonnes) d’une table. Cela peut être utilisé pour estimer la sélectivité des prédicats par rapport aux colonnes. Un fournisseur qui prend en charge les statistiques de distribution doit prendre en charge au moins un type de cardinalité.
+- **Cardinalités de colonne (ou tuple)**. Il s’agit du nombre de valeurs uniques qui se trouvent dans une colonne (ou une combinaison de colonnes) d’une table. Cela peut être utilisé pour estimer la sélectivité des prédicats par rapport aux colonnes. Un fournisseur qui prend en charge les statistiques de distribution doit prendre en charge au moins un type de cardinalité.
 
 - **Histogrammes**. Si la distribution des valeurs n’est pas uniforme, alors le nombre de valeurs uniques n’est pas suffisant pour estimer avec précision la sélectivité des prédicats. Dans ce cas, vous pouvez fournir un histogramme qui donne des informations plus précises sur la distribution des valeurs de colonne dans une table.
 
@@ -323,31 +324,31 @@ Table de mappage des types de données SQL Server et OLE DB.
 |`DBTYPE_NUMERIC`| |`numeric`|
 |`DBTYPE_DECIMAL`| |`decimal`|
 |`DBTYPE_CY`| |`money`|
-|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>or<br> Longueur max. > 4 000 caractères|ntext|
+|`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>ou<br> Longueur max. > 4 000 caractères|ntext|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
 |`DBTYPE_IDISPATCH`| |Error|
 |`DBTYPE_ERROR`| |Error|
 |`DBTYPE_BOOL`| |`bit`|
 |`DBTYPE_VARIANT`*| |NVARCHAR|
-|`DBTYPE_IUNKNOWN`| |Error|
+|`DBTYPE_IUNKNOWN`| |Erreur|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longueur max. > 8 000|`image`|
-|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, taille de colonne = 8 <br>or<br> Longueur maximale non indiquée. | `timestamp` |
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>ou<br> Longueur max. > 8 000|`image`|
+|`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`, `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`, taille de colonne = 8 <br>ou<br> Longueur maximale non indiquée. | `timestamp` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `binary` |
 |`DBTYPE_BYTES`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varbinary`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `char`|
 |`DBTYPE_STR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` | `varchar` |
-|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longueur max. > 8 000 caractères <br>or<br>   Longueur maximale non indiquée. | `text`|
+|`DBTYPE_STR`| `DBCOLUMNFLAGS_ISLONG=true` <br>ou<br> Longueur max. > 8 000 caractères <br>ou<br>   Longueur maximale non indiquée. | `text`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
-|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>or<br> Longueur max. > 4 000 caractères <br>or<br>   Longueur maximale non indiquée. | `ntext`|
-|`DBTYPE_UDT`| |Error|
+|`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>ou<br> Longueur max. > 4 000 caractères <br>ou<br>   Longueur maximale non indiquée. | `ntext`|
+|`DBTYPE_UDT`| |Erreur|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (conversion explicite requise)|
 |`DBTYPE_DBTIME`| | `datetime` (conversion explicite requise)|
 |`DBTYPE_DBTIMESTAMP`* | | `datetime`|
-|`DBTYPE_ARRAY` | |Error|
+|`DBTYPE_ARRAY` | |Erreur|
 |`DBTYPE_BYREF` | | Ignoré |
 |`DBTYPE_VECTOR` | |Error|
 |`DBTYPE_RESERVED`| |Error|

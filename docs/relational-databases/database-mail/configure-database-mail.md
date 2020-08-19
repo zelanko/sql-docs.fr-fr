@@ -1,4 +1,5 @@
 ---
+description: Configuration de la Messagerie de base de données
 title: Configuration de la Messagerie de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -39,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3c52311482f8ad7107e384e3ed8e20100c094243
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421083"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85737624"
   
 -   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
--   **Pour configurer Database Mail, utilisez :**  [Assistant Configuration de Database Mail](#DBWizard), [Utilisation de modèles](#Template)  
+-   **Pour configurer la messagerie de base de données, utilisez :**  [Assistant Configuration de la messagerie de base de données](#DBWizard), [Utilisation de modèles](#Template)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
  Utilisez **l’option** pour activer la messagerie de base de données sur ce serveur. Pour plus d’informations, consultez la rubrique de référence [Messagerie de base de données XPs (option de configuration de serveur)](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
@@ -115,7 +116,7 @@ ms.locfileid: "85737624"
  Chaque fois que vous utilisez l'Assistant, utilisez la page **Sélectionner une tâche de configuration** pour indiquer quelle tâche vous allez réaliser. Si vous changez d'avis avant d'avoir terminé l'Assistant, utilisez le bouton **Précédent** pour retourner à cette page et sélectionner une autre tâche.  
   
 > [!NOTE]  
->  Si la messagerie de base de données n'a pas été activée, vous recevrez le message : **Le composant de messagerie de base de données n'est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui**équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  
+>  Si la messagerie de base de données n'a pas été activée, vous recevrez le message : **Le composant de messagerie de base de données n'est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui**équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  
   
  **Configurer la messagerie de base de données en effectuant les tâches suivantes**  
  Permet d'exécuter toutes les tâches nécessaires pour configurer la messagerie de base de données pour la première fois. Cette option inclut l'ensemble des trois autres options.  
@@ -168,7 +169,7 @@ ms.locfileid: "85737624"
  **Authentification de base**  
  Spécifiez le nom d'utilisateur et le mot de passe demandés par le serveur SMTP.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Tapez le nom d'utilisateur que la messagerie de base de données utilise pour se connecter au serveur SMTP. Ce nom est obligatoire si le serveur SMTP nécessite une authentification de base.  
   
  **Mot de passe**  
@@ -218,7 +219,7 @@ ms.locfileid: "85737624"
  **Authentification de base**  
  Spécifiez le nom d'utilisateur et le mot de passe demandés par le serveur SMTP.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Affichez ou modifiez le nom d'utilisateur que la messagerie de base de données utilise pour se connecter au serveur SMTP. Ce nom est obligatoire si le serveur SMTP nécessite une authentification de base.  
   
  **Mot de passe**  
@@ -237,7 +238,7 @@ ms.locfileid: "85737624"
   
  Utilisez les boutons **Monter** et **Descendre** pour modifier l'ordre d'utilisation des comptes de messagerie de base de données. Cet ordre est déterminé par une valeur nommée numéro de séquence. **Monter** diminue le numéro de séquence et **Descendre** l'augmente. Le numéro de séquence détermine l'ordre d'utilisation des comptes de messagerie de base de données dans le profil. Pour un nouveau message électronique, la messagerie de base de données démarre avec le compte dont le numéro de séquence est le plus petit. Si ce compte échoue, la messagerie de base de données utilise le compte qui possède le numéro de séquence plus élevé suivant, et ainsi de suite jusqu'à ce qu'elle envoie le message correctement ou que le compte qui possède le numéro de séquence le plus élevé échoue. Si le compte possédant le numéro de séquence le plus élevé échoue, la messagerie de base de données tente d'envoyer le message pendant la durée configurée dans le paramètre **AccountRetryDelay** de la messagerie de base de données. Elle tente ensuite de nouveau le processus d'envoi du message en commençant par le numéro de séquence le plus petit. Utilisez le paramètre **AccountRetryAttempts** de la messagerie de base de données pour configurer le nombre de fois que le processus de messagerie externe tente d’envoyer le message à l’aide de chacun des comptes du profil spécifié. Vous pouvez configurer les paramètres **AccountRetryDelay** et **AccountRetryAttempts** dans la page **Configurer les paramètres du système** de l'Assistant Configuration de la messagerie de base de données.  
   
- **Nom de profil**  
+ **Nom du profil**  
  Tapez le nom du nouveau profil. Le profil est créé avec ce nom. N'utilisez pas le nom d'un profil existant.  
   
  **Description**  
@@ -265,7 +266,7 @@ ms.locfileid: "85737624"
   
  Utilisez les boutons **Monter** et **Descendre** pour modifier l'ordre d'utilisation des comptes de messagerie de base de données. Cet ordre est déterminé par une valeur nommée numéro de séquence. **Monter** diminue le numéro de séquence et **Descendre** l'augmente. Le numéro de séquence détermine l'ordre d'utilisation des comptes de messagerie de base de données dans le profil. Pour un nouveau message électronique, la messagerie de base de données démarre avec le compte dont le numéro de séquence est le plus petit. Si ce compte échoue, la messagerie de base de données utilise le compte qui possède le numéro de séquence plus élevé suivant, et ainsi de suite jusqu'à ce qu'elle envoie le message correctement ou que le compte qui possède le numéro de séquence le plus élevé échoue. Si le compte possédant le numéro de séquence le plus élevé échoue, la messagerie de base de données tente d'envoyer le message pendant la durée configurée dans le paramètre **AccountRetryDelay** de la messagerie de base de données. Elle tente ensuite de nouveau le processus d'envoi du message en commençant par le numéro de séquence le plus petit. Utilisez le paramètre **AccountRetryAttempts** de la messagerie de base de données pour configurer le nombre de fois que le processus de messagerie externe tente d’envoyer le message à l’aide de chacun des comptes du profil spécifié. Vous pouvez configurer les paramètres **AccountRetryDelay** et **AccountRetryAttempts** dans la page **Configurer les paramètres du système** de l'Assistant Configuration de la messagerie de base de données.  
   
- **Nom de profil**  
+ **Nom du profil**  
  Sélectionnez le nom du profil à gérer.  
   
  **Supprimer**  
@@ -344,7 +345,7 @@ ms.locfileid: "85737624"
  **Public**  
  Sélectionnez cette option pour rendre public le profil spécifié.  
   
- **Profile Name**  
+ **Nom de profil**  
  Affiche le nom du profil.  
   
  **Profil par défaut**  
@@ -362,13 +363,13 @@ ms.locfileid: "85737624"
   
  Un profil peut être un profil par défaut. Dans ce cas, les utilisateurs ou les rôles peuvent envoyer des messages électroniques avec ce profil, sans le spécifier explicitement. Si l'utilisateur ou le rôle qui envoie ce message possède un profil privé par défaut, la messagerie de base de données utilise ce profil. Si l’utilisateur ou le rôle ne possède pas de profil privé par défaut, **sp_send_dbmail** utilise le profil public par défaut pour la base de données **msdb** . S’il n’existe ni profil privé par défaut pour l’utilisateur ou le rôle, ni profil public par défaut pour la base de données, **sp_send_dbmail** renvoie une erreur.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Pour sélectionner le nom d’un utilisateur ou d’un rôle dans la base de données **msdb** .  
   
  **y accéder**  
  Pour choisir si l'utilisateur ou le rôle a accès au profil spécifié.  
   
- **Nom de profil**  
+ **Nom du profil**  
  Permet d'afficher le nom du profil.  
   
  **Est le profil par défaut**  
@@ -392,7 +393,7 @@ ms.locfileid: "85737624"
  Taille maximale d'une pièce jointe, en octets.  
   
  **Extensions de fichiers joints interdites**  
- Liste séparée par des virgules des extensions qui ne peuvent pas être envoyées en pièces jointes dans un message électronique. Cliquez sur le bouton Parcourir ( **...** ) pour ajouter d’autres extensions.  
+ Liste séparée par des virgules des extensions qui ne peuvent pas être envoyées en pièces jointes dans un message électronique. Cliquez sur le bouton Parcourir (**...**) pour ajouter d’autres extensions.  
   
  **Durée de vie minimale de l'exécutable de la messagerie de base de données (secondes)**  
  Durée minimale (en secondes) pendant laquelle le processus de messagerie externe reste actif. Le processus demeure actif aussi longtemps qu'il reste des messages dans la file d'attente de la messagerie de base de données. Ce paramètre spécifie le délai pendant lequel le processus demeure actif s'il n'y a pas de messages à traiter.  
@@ -419,7 +420,7 @@ ms.locfileid: "85737624"
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
 ###  <a name="send-test-e-mail-page"></a><a name="TestEmail"></a> Send Test E-Mail Page  
- Utilisez la page **Envoyer un message électronique de test à partir de** _<nom_instance>_ pour envoyer un message électronique en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
+ Utilisez la page **Envoyer un message électronique de test à partir de**_<nom_instance>_ pour envoyer un message électronique en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
   
  **Profil de messagerie de base de données**  
  Sélectionnez un profil de messagerie de base de données dans la liste. Ce champ est obligatoire. Si aucun profil ne s'affiche, soit il n'en existe pas, soit vous n'avez pas d'autorisation sur ces profils. Utilisez l' **Assistant Configuration de la messagerie de base de données** pour créer et configurer des profils. Si aucun profil n'est répertorié, utilisez l'Assistant Configuration de la messagerie de base de données pour créer un profil pour votre propre usage.  

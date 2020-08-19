@@ -1,4 +1,5 @@
 ---
+description: SQLGetPrivateProfileString, fonction
 title: SQLGetPrivateProfileString fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c12fc8d08535960cbb239c14e017b2ad5faa6c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2223d46d507df2a9cf82e7feb800caf5b8f82cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303291"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421233"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString, fonction
 **Conformité**  
@@ -69,7 +70,7 @@ int SQLGetPrivateProfileString(
  **SQLGetPrivateProfileString** retourne une valeur entière qui indique le nombre de caractères lus.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsqu’un appel à **SQLGetPrivateProfileString** échoue, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Lorsqu’un appel à **SQLGetPrivateProfileString** échoue, une valeur * \* pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les valeurs * \* pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
@@ -77,9 +78,9 @@ int SQLGetPrivateProfileString(
 |ODBC_ERROR_OUT_OF_MEM|Mémoire insuffisante|Le programme d’installation n’a pas pu exécuter la fonction en raison d’un manque de mémoire.|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLGetPrivateProfileString** est fourni comme un moyen simple de porter des pilotes et des dll de configuration de pilote de Microsoft® Windows® à Microsoft windows NT®/Windows 2000. Les appels à **GetPrivateProfileString** qui récupèrent une chaîne de profil à partir du fichier ODBC. ini doivent être remplacés par des appels à **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** appelle des fonctions dans l’API de® Win32 pour récupérer les noms demandés de valeurs ou de données correspondant à une valeur de la sous-clé ODBC. ini des informations système.  
+ **SQLGetPrivateProfileString** est fourni comme un moyen simple de porter des pilotes et des dll de configuration de pilote de Microsoft® Windows® à Microsoft windows NT®/Windows 2000. Les appels à **GetPrivateProfileString** qui récupèrent une chaîne de profil à partir du fichier Odbc.ini doivent être remplacés par des appels à **SQLGetPrivateProfileString**. **SQLGetPrivateProfileString** appelle des fonctions dans l’API de® Win32 pour récupérer les noms demandés de valeurs ou de données correspondant à une valeur de la sous-clé Odbc.ini des informations système.  
   
- Le mode de configuration (tel que défini par **SQLSetConfigMode**) indique où l’entrée ODBC. ini qui répertorie les valeurs DSN se trouve dans les informations système. Si le DSN est un DSN utilisateur (le mode de configuration est USERDSN_ONLY), la fonction lit à partir de l’entrée ODBC. ini dans HKEY_CURRENT_USER. Si le DSN est un DSN système (SYSTEMDSN_ONLY), la fonction lit à partir de l’entrée ODBC. ini dans HKEY_LOCAL_MACHINE. Si le mode de configuration est BOTHDSN, HKEY_CURRENT_USER est essayé et, en cas d’échec, HKEY_LOCAL_MACHINE est utilisé.  
+ Le mode de configuration (tel que défini par **SQLSetConfigMode**) indique où l’entrée de Odbc.ini répertoriant les valeurs DSN se trouve dans les informations système. Si le DSN est un DSN utilisateur (le mode de configuration est USERDSN_ONLY), la fonction lit à partir de l’entrée de Odbc.ini dans HKEY_CURRENT_USER. Si le DSN est un DSN système (SYSTEMDSN_ONLY), la fonction lit à partir de l’entrée de Odbc.ini dans HKEY_LOCAL_MACHINE. Si le mode de configuration est BOTHDSN, HKEY_CURRENT_USER est essayé et, en cas d’échec, HKEY_LOCAL_MACHINE est utilisé.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   

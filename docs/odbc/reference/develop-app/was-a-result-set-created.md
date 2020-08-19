@@ -1,4 +1,5 @@
 ---
+description: Un jeu de résultats a-t-il été créé ?
 title: Un jeu de résultats a-t-il été créé ? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c171a154dd16a291c5dbe1dcade8c01ea95fb084
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b65c254f48d9c3f5078c3b2c1f576ae54d4740
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421383"
 ---
 # <a name="was-a-result-set-created"></a>Un jeu de résultats a-t-il été créé ?
 Dans la plupart des cas, les programmeurs d’applications savent si les instructions exécutées par leur application créent un jeu de résultats. C’est le cas si l’application utilise des instructions SQL codées en dur écrites par le programmeur. C’est généralement le cas lorsque l’application construit des instructions SQL au moment de l’exécution : le programmeur peut facilement inclure du code qui signale si une instruction **Select** ou une instruction **Insert** est en cours de construction. Dans certains cas, le programmeur ne peut pas savoir si une instruction crée un jeu de résultats. Cela est vrai si l’application permet à l’utilisateur d’entrer et d’exécuter une instruction SQL. C’est également le cas lorsque l’application construit une instruction au moment de l’exécution pour exécuter une procédure.  

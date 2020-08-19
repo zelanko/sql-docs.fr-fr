@@ -1,4 +1,5 @@
 ---
+description: Catégorie d'événement CLR
 title: CLR, catégorie d’événement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 978067f0d035fcd781d275bf77177e2b95383fdb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab5397eb8ddcce4b4e455382cf40affee05d29bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762987"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420933"
 ---
 # <a name="clr-event-category"></a>Catégorie d'événement CLR
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La catégorie d’événement **CLR** inclut les classes d’événements qui sont produites par l’exécution d’objets CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+   La catégorie d’événement **CLR** inclut les classes d’événements qui sont produites par l’exécution d’objets CLR (Common Language Runtime) [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
  ## <a name="assembly-load-event-class"></a>Classe d'événements Assembly Load 
   La classe d'événements **Assembly Load** se produit lorsqu'une demande de chargement d'un assembly est exécutée.  

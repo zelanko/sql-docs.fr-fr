@@ -1,4 +1,5 @@
 ---
+description: Aide (F1) des composants de la boîte à outils
 title: Aide (F1) des composants de la boîte à outils | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67681c110015ae119c9f5a28812f9fba68f968a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b2cc50fc56b82ac8e98a6bcbb4b31f7db5beb81c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420753"
 ---
 # <a name="toolbox-component-f1-help"></a>Aide (F1) des composants de la boîte à outils
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85715326"
  Les icônes de la**boîte à outils** peuvent être glissées et déplacées ou copiées et collées dans des éditeurs de code ou sur des surfaces de mode de création au sein de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="how-the-toolbox-works"></a>Fonctionnement de la boîte à outils  
- La boîte à outils est un contrôle d'arborescence qui se comporte comme l'Explorateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, mais sans quadrillages ou lignes de connexion. Plusieurs segments de la **boîte à outils** (appelés « onglets ») peuvent être développés simultanément, et l’intégralité de l’arborescence défile à l’intérieur de la fenêtre **Boîte à outils** . Pour développer un onglet de la **boîte à outils**, cliquez sur le signe plus ( **+** ) en regard de son nom. Pour réduire un onglet développé, cliquez sur le signe moins ( **-** ) en regard de son nom.  
+ La boîte à outils est un contrôle d'arborescence qui se comporte comme l'Explorateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, mais sans quadrillages ou lignes de connexion. Plusieurs segments de la **boîte à outils** (appelés « onglets ») peuvent être développés simultanément, et l’intégralité de l’arborescence défile à l’intérieur de la fenêtre **Boîte à outils** . Pour développer un onglet de la **boîte à outils**, cliquez sur le signe plus (**+**) en regard de son nom. Pour réduire un onglet développé, cliquez sur le signe moins ( **-** ) en regard de son nom.  
   
  Chaque fois que vous retournez dans un éditeur ou un concepteur, la **boîte à outils** accède automatiquement à l’onglet et à l’élément récemment sélectionnés. Quand vous basculez vers un autre éditeur ou concepteur, la sélection actuelle dans la **boîte à outils** bascule également.  
   

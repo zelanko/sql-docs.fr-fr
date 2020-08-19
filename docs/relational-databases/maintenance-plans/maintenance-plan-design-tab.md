@@ -1,4 +1,5 @@
 ---
+description: Plan de maintenance, onglet Conception
 title: Plan de maintenance (onglet Conception) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1bffeed97e9c56420750ce022c4fa5ec0a56f574
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e56d4d52cee3ac75354acd17d7496d062bc3ed73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85666973"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420873"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de maintenance, onglet Conception
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Utilisez **Plan de maintenance (onglet Conception)** pour spécifier les propriétés d’un plan de maintenance et de ses sous-plans. Faites glisser des tâches de la barre d'outils jusqu'au concepteur de plan. Cliquez avec le bouton droit sur des groupes de tâches pour créer des branchements de chemins d'exécution. Les plans de maintenance sont enregistrés en tant que packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui sont exécutés par les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+   Utilisez **Plan de maintenance (onglet Conception)** pour spécifier les propriétés d’un plan de maintenance et de ses sous-plans. Faites glisser des tâches de la barre d'outils jusqu'au concepteur de plan. Cliquez avec le bouton droit sur des groupes de tâches pour créer des branchements de chemins d'exécution. Les plans de maintenance sont enregistrés en tant que packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui sont exécutés par les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
  **Ajouter le sous-plan**  
@@ -69,7 +70,7 @@ ms.locfileid: "85666973"
   
  Une fois qu'une tâche de maintenance est placée sur la surface de dessin, ses propriétés peuvent être modifiées de manière appropriée. Par exemple, la base de données spécifique à sauvegarder dans une Tâche Sauvegarder la base de données est spécifiée après que la tâche a été ajoutée au plan. Les tâches sur la surface de dessin qui ne sont pas configurées correctement contiennent une icône rouge avec un x blanc.  
   
- Pour ajouter une tâche de maintenance dans un plan, faites glisser l’icône de la tâche à partir de la boîte à outils **Tâches du plan de maintenance** vers la surface de dessin, ou double-cliquez sur la tâche dans la boîte à outils qui ajoute cette tâche à l’aire du concepteur actif. Si la boîte à outils **Tâches du plan de maintenance** n’est pas affichée, choisissez **Boîte à outils** dans le menu **Affichage** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Développez le nœud **Tâches du plan de maintenance** dans le volet **Boîte à outils** .  
+ Pour ajouter une tâche de maintenance dans un plan, faites glisser l’icône de la tâche à partir de la boîte à outils **Tâches du plan de maintenance** vers la surface de dessin, ou double-cliquez sur la tâche dans la boîte à outils qui ajoute cette tâche à l’aire du concepteur actif. Si la boîte à outils **Tâches du plan de maintenance** n’est pas affichée, choisissez **Boîte à outils** dans le menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Affichage**. Développez le nœud **Tâches du plan de maintenance** dans le volet **Boîte à outils** .  
   
  Pour supprimer une tâche d’un plan, sélectionnez la tâche dans l’aire du concepteur et appuyez sur la touche **Suppr** ou cliquez avec le bouton droit sur la tâche et cliquez sur **Supprimer**.  
   
@@ -90,7 +91,7 @@ ms.locfileid: "85666973"
  **Modifier**  
  Ouvre la boîte de dialogue de propriétés de la tâche.  
   
- **Disable**  
+ **Désactiver**  
  Rend la tâche provisoirement indisponible.  
   
  **Activer**  
@@ -108,7 +109,7 @@ ms.locfileid: "85666973"
  **Collapse**  
  Masque les tâches au sein d’un groupe.  
   
- **Développer**  
+ **Développez**  
  Montre les tâches d’un groupe auparavant masquées à l’aide de l’option **Réduire**.  
   
  **Zoom**  

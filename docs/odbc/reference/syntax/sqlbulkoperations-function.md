@@ -1,4 +1,5 @@
 ---
+description: SQLBulkOperations, fonction
 title: SQLBulkOperations fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61f4f294a6d84856bc3065b599a370bb5658e3ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e065bc06150c3b12e469489c4d115d02c2142f14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421293"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations, fonction
 **Conformité**  
@@ -83,7 +84,7 @@ SQLRETURN SQLBulkOperations(
 |40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
 |42000|Erreur de syntaxe ou violation d’accès|Le pilote n’a pas pu verrouiller la ligne si nécessaire pour effectuer l’opération demandée dans l’argument de l' *opération* .|  
 |44000|Violation de WITH CHECK OPTION|L’argument *operation* était SQL_ADD ou SQL_UPDATE_BY_BOOKMARK, et l’insertion ou la mise à jour a été effectuée sur une table affichée (ou une table dérivée de la table affichée) qui a été créée en spécifiant **with Check option**, de telle sorte qu’une ou plusieurs lignes affectées par l’insertion ou la mise à jour ne seront plus présentes dans la table affichée.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. Ensuite, la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLBulkOperations** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) le *StatementHandle* spécifié n’était pas dans un état d’exécution. La fonction a été appelée sans appeler d’abord **SQLExecDirect**, **SQLExecute**ou une fonction de catalogue.<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLSetPos** a été appelé pour le *StatementHandle* et a retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) le pilote était un ODBC 2. *x* , et **SQLBulkOperations** a été appelé pour un *StatementHandle* avant l’appel de **SQLFetchScroll** ou **SQLFetch** .<br /><br /> (DM) **SQLBulkOperations** a été appelé après l’appel de **SQLExtendedFetch** sur le *StatementHandle*.|  
@@ -230,20 +231,20 @@ SQLRETURN SQLBulkOperations(
 ## <a name="providing-long-data-for-bulk-inserts-and-updates"></a>Fourniture de données longues pour les insertions et les mises à jour en bloc  
  Des données longues peuvent être fournies pour les insertions et mises à jour en bloc effectuées par les appels à **SQLBulkOperations**. Pour insérer ou mettre à jour des données de type long, une application effectue les étapes suivantes en plus des étapes décrites dans les sections « exécution d’insertions en bloc » et « exécution de mises à jour en bloc à l’aide de signets » plus haut dans cette rubrique.  
   
-1.  Quand il lie les données à l’aide de **SQLBindCol**, l’application place une valeur définie par l’application, telle que le numéro de colonne, dans la * \** mémoire tampon TargetValuePtr pour les colonnes de données en cours d’exécution. La valeur peut être utilisée ultérieurement pour identifier la colonne.  
+1.  Quand il lie les données à l’aide de **SQLBindCol**, l’application place une valeur définie par l’application, telle que le numéro de colonne, dans la mémoire tampon * \* TargetValuePtr* pour les colonnes de données en cours d’exécution. La valeur peut être utilisée ultérieurement pour identifier la colonne.  
   
-     L’application place le résultat de la macro SQL_LEN_DATA_AT_EXEC (*longueur*) dans la * \** mémoire tampon de StrLen_or_IndPtr. Si le type de données SQL de la colonne est SQL_LONGVARBINARY, SQL_LONGVARCHAR ou un type de données long spécifique à la source de données et que le pilote retourne « Y » pour le type d’informations SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo**, *Length* est le nombre d’octets de données à envoyer pour le paramètre. dans le cas contraire, il doit s’agir d’une valeur non négative et est ignorée.  
+     L’application place le résultat de la macro SQL_LEN_DATA_AT_EXEC (*longueur*) dans la mémoire tampon de * \* StrLen_or_IndPtr* . Si le type de données SQL de la colonne est SQL_LONGVARBINARY, SQL_LONGVARCHAR ou un type de données long spécifique à la source de données et que le pilote retourne « Y » pour le type d’informations SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo**, *Length* est le nombre d’octets de données à envoyer pour le paramètre. dans le cas contraire, il doit s’agir d’une valeur non négative et est ignorée.  
   
 2.  Quand **SQLBulkOperations** est appelé, s’il existe des colonnes de données en cours d’exécution, la fonction retourne SQL_NEED_DATA et passe à l’étape 3, qui suit. (S’il n’existe aucune colonne de données en cours d’exécution, le processus est terminé.)  
   
-3.  L’application appelle **SQLParamData** pour récupérer l’adresse de la * \** mémoire tampon TargetValuePtr pour la première colonne de données en cours d’exécution à traiter. **SQLParamData** retourne SQL_NEED_DATA. L’application récupère la valeur définie par l’application à partir * \** de la mémoire tampon TargetValuePtr.  
+3.  L’application appelle **SQLParamData** pour récupérer l’adresse de la mémoire tampon * \* TargetValuePtr* pour la première colonne de données en cours d’exécution à traiter. **SQLParamData** retourne SQL_NEED_DATA. L’application récupère la valeur définie par l’application à partir de la mémoire tampon * \* TargetValuePtr* .  
   
     > [!NOTE]  
     >  Bien que les paramètres de données en cours d’exécution ressemblent aux colonnes de données en cours d’exécution, la valeur retournée par **SQLParamData** est différente pour chaque.  
   
      Les colonnes de données en cours d’exécution sont des colonnes d’un ensemble de lignes pour lesquelles des données sont envoyées avec **SQLPutData** lorsqu’une ligne est mise à jour ou insérée avec **SQLBulkOperations**. Elles sont liées à **SQLBindCol**. La valeur retournée par **SQLParamData** est l’adresse de la ligne dans la mémoire tampon **TargetValuePtr* en cours de traitement.  
   
-4.  L’application appelle **SQLPutData** une ou plusieurs fois pour envoyer des données pour la colonne. Plusieurs appels sont nécessaires si toutes les valeurs de données ne peuvent pas être retournées dans la * \** mémoire tampon TargetValuePtr spécifiée dans **SQLPutData**; plusieurs appels à **SQLPutData** pour la même colonne sont autorisés uniquement lors de l’envoi de données de caractères c à une colonne avec un type de données caractère, binaire ou spécifique à la source de données, ou lors de l’envoi de données binaires c à une colonne avec un type de données caractère, binaire ou spécifique à la source de données.  
+4.  L’application appelle **SQLPutData** une ou plusieurs fois pour envoyer des données pour la colonne. Plusieurs appels sont nécessaires si toutes les valeurs de données ne peuvent pas être retournées dans la mémoire tampon * \* TargetValuePtr* spécifiée dans **SQLPutData**; plusieurs appels à **SQLPutData** pour la même colonne sont autorisés uniquement lors de l’envoi de données de caractères c à une colonne avec un type de données caractère, binaire ou spécifique à la source de données, ou lors de l’envoi de données binaires c à une colonne avec un  
   
 5.  L’application appelle **SQLParamData** à nouveau pour signaler que toutes les données ont été envoyées pour la colonne.  
   

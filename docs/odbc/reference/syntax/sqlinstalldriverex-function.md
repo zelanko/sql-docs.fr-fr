@@ -1,4 +1,5 @@
 ---
+description: SQLInstallDriverEx, fonction
 title: SQLInstallDriverEx fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,23 +20,23 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 054e8b6b9eae26bd5f973f3d46d7ef37363a8e79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c200615c9d3bc71ccb146d3b898517611b53eed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302121"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421183"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx, fonction
 **Conformité**  
  Version introduite : ODBC 3,0  
   
  **Résumé**  
- **SQLInstallDriverEx** ajoute des informations sur le pilote à l’entrée Odbcinst. ini dans les informations système et incrémente de 1 le *UsageCount* du pilote. Toutefois, si une version du pilote existe déjà mais que la valeur *UsageCount* pour le pilote n’existe pas, la nouvelle valeur *UsageCount* est définie sur 2.  
+ **SQLInstallDriverEx** ajoute des informations sur le pilote à l’entrée Odbcinst.ini dans les informations système et incrémente de 1 le *UsageCount* du pilote. Toutefois, si une version du pilote existe déjà mais que la valeur *UsageCount* pour le pilote n’existe pas, la nouvelle valeur *UsageCount* est définie sur 2.  
   
  Cette fonction ne copie en fait pas de fichiers. Il incombe au programme appelant de copier correctement les fichiers du pilote dans le répertoire cible.  
   
- Les fonctionnalités de **SQLInstallDriverEx** sont également accessibles avec [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ Vous pouvez également accéder aux fonctionnalités de **SQLInstallDriverEx** avec [ODBCCONF.EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -83,7 +84,7 @@ BOOL SQLInstallDriverEx(
  La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **SQLInstallDriverEx** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Quand **SQLInstallDriverEx** retourne false, une valeur * \* pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les valeurs * \* pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
@@ -99,9 +100,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Commentaires  
  L’argument *lpszDriver* est une liste d’attributs sous la forme de paires mot clé-valeur. Chaque paire se termine par un octet NULL, et la liste entière se termine par un octet NULL. (Autrement dit, deux octets de valeur null marquent la fin de la liste.) Le format de cette liste est le suivant :  
   
- _Driver-DESC_ **\\**0Driver**=**_pilote-dll-nom_fichier_**\\**0 [**=** programme d’installation _-dll-nom_fichier_<b>\\</b>0]  
+ _pilote-DESC_ **\\** **=**_pilote 0DRIVER-dll-nom de fichier_ **\\** 0 [programme d’installation **=** _-dll-nom de fichier_ <b>\\</b> 0]  
   
- [_Driver-attr-keyword1_**=**_value1_<b>\\</b>0] [_Driver-attr-keyword2_**=**_value2_<b>\\</b>0]... <b>\\</b>0  
+ [_Driver-attr-keyword1_ **=** _valeur1_ <b>\\</b> 0] [_Driver-attr-keyword2_ **=** _value2_ <b>\\</b> 0]... <b>\\</b> entre  
   
  où \ 0 est un octet NULL et *Driver-attr-Keyword* est un mot clé d’attribut Driver. Les mots clés doivent apparaître dans l’ordre spécifié. Par exemple, supposons qu’un pilote pour les fichiers texte mis en forme possède des dll de pilote et d’installation distinctes et peut utiliser des fichiers avec les extensions. txt et. csv. L’argument *lpszDriver* pour ce pilote peut être le suivant :  
   
@@ -116,7 +117,7 @@ FileExtns=*.txt,*.csv\0\0
 SQL Server\0Driver=SQLSRVR.DLL\0\0  
 ```  
   
- Une fois que **SQLInstallDriverEx** a récupéré des informations sur le pilote à partir de l’argument *lpszDriver* , il ajoute la description du pilote à la section [ODBC Drivers] de l’entrée Odbcinst. ini dans les informations système. Il crée ensuite une section intitulée avec la description du pilote et ajoute les chemins d’accès complets de la DLL du pilote et la DLL d’installation. Enfin, elle retourne le chemin d’accès du répertoire cible de l’installation, mais ne copie pas les fichiers du pilote vers celle-ci. Le programme appelant doit réellement copier les fichiers de pilote dans le répertoire cible.  
+ Une fois que **SQLInstallDriverEx** a récupéré des informations sur le pilote à partir de l’argument *lpszDriver* , il ajoute la description du pilote à la section [ODBC Drivers] de l’entrée Odbcinst.ini dans les informations système. Il crée ensuite une section intitulée avec la description du pilote et ajoute les chemins d’accès complets de la DLL du pilote et la DLL d’installation. Enfin, elle retourne le chemin d’accès du répertoire cible de l’installation, mais ne copie pas les fichiers du pilote vers celle-ci. Le programme appelant doit réellement copier les fichiers de pilote dans le répertoire cible.  
   
  **SQLInstallDriverEx** incrémente de 1 le nombre d’utilisations des composants pour le pilote installé. Si une version du pilote existe déjà mais que le nombre d’utilisations des composants pour le pilote n’existe pas, la valeur du nouveau nombre d’utilisations du composant est définie sur 2.  
   

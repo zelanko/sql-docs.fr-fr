@@ -1,4 +1,5 @@
 ---
+description: SQLSetDescRec, fonction
 title: SQLSetDescRec fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b29879ff7635d6eb7d5a0f7489ff3994758d4a35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f0e423de06acf82e6c883531514c57c29d9407
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421123"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec, fonction
 **Conformité**  
@@ -70,7 +71,7 @@ SQLRETURN SQLSetDescRec(
  *Précision*  
  Entrée Valeur sur laquelle définir le champ SQL_DESC_PRECISION pour l’enregistrement du descripteur.  
   
- *Mettre à l'échelle*  
+ *Mise à l’échelle*  
  Entrée Valeur sur laquelle définir le champ SQL_DESC_SCALE pour l’enregistrement du descripteur.  
   
  *DataPtr*  
@@ -95,7 +96,7 @@ SQLRETURN SQLSetDescRec(
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07009|Index de descripteur non valide|L’argument *recnumber* a été défini sur 0, et le *DescriptorHandle* a référencé un handle IPD.<br /><br /> L’argument *recnumber* est inférieur à 0.<br /><br /> L’argument *recnumber* a une valeur supérieure au nombre maximal de colonnes ou de paramètres que la source de données peut prendre en charge, et l’argument *DESCRIPTORHANDLE* était un APD, un IPD ou un ARD.<br /><br /> L’argument *recnumber* était égal à 0, et l’argument *DescriptorHandle* faisait appel à un APD alloué de manière implicite. (Cette erreur ne se produit pas avec un descripteur d’application explicitement alloué, car il n’est pas connu qu’un descripteur d’application explicitement alloué est un APD ou un ARD jusqu’à l’exécution.)|  
 |08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM) le *DescriptorHandle* a été associé à un *StatementHandle* pour lequel une fonction d’exécution asynchrone (pas celui-ci) a été appelée et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour le *StatementHandle* avec lequel le *DescriptorHandle* a été associé et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *DescriptorHandle*. Cette fonction aynchronous était toujours en cours d’exécution lors de l’appel de la fonction **SQLSetDescRec** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour l’un des handles d’instruction associés à *DescriptorHandle* et retournés SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  

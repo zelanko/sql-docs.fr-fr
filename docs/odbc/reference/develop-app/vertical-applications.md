@@ -1,4 +1,5 @@
 ---
+description: Applications verticales
 title: Applications verticales | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cc88f38fd1ffe8b2ee0033ad0a2abc4f15fd5cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a12be9247af3f273526dd08ee99ff7cc301af822
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421403"
 ---
 # <a name="vertical-applications"></a>Applications verticales
 En général, les applications verticales exécutent une tâche bien définie sur un seul SGBD. Par exemple, une application d’entrée de commande effectue le suivi des commandes d’une société. Ce que ces types d’applications ont en commun, c’est que le schéma de la base de données est généralement conçu par le développeur de l’application et, tandis que l’application peut fonctionner avec plusieurs SGBD différents, il fonctionne avec un seul SGBD pour un seul client.  

@@ -1,4 +1,5 @@
 ---
+description: bcp_setcolfmt
 title: bcp_setcolfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 16b5cd47a776a426ce515946794f0385eb0222e0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 01576468fb54618e34f72bbd42fbd1ae861c8520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420533"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -73,7 +75,7 @@ RETCODE bcp_setcolfmt (
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  Cette fonction remplace la fonction **bcp_colfmt** . Toutes les fonctionnalités de **bcp_colfmt** sont fournies dans **bcp_setcolfmt** fonction. Le classement des colonnes est également pris en charge. Il est préférable de définir les attributs de format de colonne suivants dans l'ordre précisé ci-dessous :  
   
  BCP_FMT_SERVER_COL  

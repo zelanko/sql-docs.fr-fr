@@ -1,4 +1,5 @@
 ---
+description: Écriture d’une application interopérable
 title: Écriture d’une application interopérable | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 553e718e0759e47701e7f8c04561693358d5dc52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d8bff1848e20705ab64b8284ed42331c80fb23a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81289081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421363"
 ---
 # <a name="writing-an-interoperable-application"></a>Écriture d’une application interopérable
 Chaque fois qu’une application utilise le même code sur plusieurs pilotes, ce code doit être interopérable entre ces pilotes. Dans la plupart des cas, il s’agit d’une tâche facile. Par exemple, le code permettant d’extraire des lignes avec un curseur avant uniquement est le même pour tous les pilotes. Dans certains cas, cela peut être plus difficile. Par exemple, le code permettant de construire des identificateurs pour une utilisation dans des instructions SQL doit prendre en compte les conventions d’affectation de noms, de guillemets et d’une partie, en deux parties et en trois parties.  

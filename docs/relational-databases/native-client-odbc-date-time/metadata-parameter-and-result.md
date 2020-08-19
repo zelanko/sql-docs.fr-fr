@@ -1,4 +1,5 @@
 ---
+description: Métadonnées - Paramètres et résultats
 title: Métadonnées de paramètre et de résultat | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,11 +14,12 @@ ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d9b4e8161abdade07a66eb742683bec0b057ce3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3beab01b2c2b8493bf598d508b7b1b37152e1f34
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88420583"
 ---
 # <a name="metadata---parameter-and-result"></a>Métadonnées - Paramètres et résultats
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
