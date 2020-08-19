@@ -1,4 +1,5 @@
 ---
+description: DeleteRecord et MoveRecord, exemple de méthodes (VB)
 title: DeleteRecord et MoveRecord, exemple de méthodes (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: af8f2a1431c8d41393e25638edf1ac83fee16236
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a3cb757703b7eebd3734ee33b97205e6491a4c40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444121"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord et MoveRecord, exemple de méthodes (VB)
 Cet exemple montre comment copier, déplacer, modifier et supprimer le contenu d’un fichier texte publié dans un dossier Web. Les autres propriétés et méthodes utilisées incluent [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [source](../../../ado/reference/ado-api/source-property-ado-record.md)et [flush](../../../ado/reference/ado-api/flush-method-ado.md).  

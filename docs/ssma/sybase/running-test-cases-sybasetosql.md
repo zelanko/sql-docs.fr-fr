@@ -1,4 +1,5 @@
 ---
+description: Exécution de cas de test (SybaseToSQL)
 title: Exécution des cas de test (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d828142d83f21cf38663241d593fe197b9715592
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ea2b250f59a29a16bc77ad23e28b0823461a8ace
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87930498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468752"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Exécution de cas de test (SybaseToSQL)
 Lorsque SSMA tester exécute un cas de test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance entre les objets entre Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est déterminée en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
@@ -30,7 +31,7 @@ Pour exécuter le cas de test préparé :
   
 2.  Dans la boîte de dialogue **se connecter à Sybase** , entrez les informations de connexion, puis cliquez sur **se connecter**.  
   
-Une fois le test terminé, le rapport de cas de test est créé. Cliquez sur le bouton **rapport** pour afficher les [rapports d’affichage des rapports de cas de Test &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). Le résultat du test (rapport de cas de test) est automatiquement stocké dans le [à l’aide des dépôts de test &#40;&#41;SybaseToSQL](../../ssma/sybase/using-test-repositories-sybasetosql.md) pour une utilisation ultérieure.  
+Une fois le test terminé, le rapport de cas de test est créé. Cliquez sur le bouton **rapport** pour afficher les [rapports d’affichage des rapports de cas de Test &#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md). Le résultat du test (rapport de cas de test) est automatiquement stocké dans le [à l’aide des dépôts de test &#40;&#41;SybaseToSQL ](../../ssma/sybase/using-test-repositories-sybasetosql.md) pour une utilisation ultérieure.  
   
 ## <a name="test-case-execution-steps"></a>Étapes d’exécution du cas de test  
   
@@ -47,12 +48,12 @@ Les objets suivants sont créés sur Sybase dans la base de données SSMATESTER2
 |Nom|Type|Description|  
 |--------|--------|---------------|  
 |USER_TABLE $ Trg|Déclencheur|Déclenchez l’audit des modifications dans la table vérifiée.|  
-|USER_TABLE $ AUD|Table|Table dans laquelle les lignes supprimées et remplacées sont enregistrées.|  
-|USER_TABLE $ AudI|Table|Table dans laquelle les lignes nouvelles et modifiées sont enregistrées.|  
-|USER_TABLE|Affichage|Représentation simplifiée des modifications de la table.|  
-|USER_TABLE $ nouveau|Affichage|Représentation simplifiée des lignes insérées et remplacées.|  
-|USER_TABLE $ new_id|Affichage|Identification des lignes insérées et modifiées.|  
-|USER_TABLE $ Old|Affichage|Représentation simplifiée des lignes supprimées et remplacées.|  
+|USER_TABLE $ AUD|Table de charge de travail|Table dans laquelle les lignes supprimées et remplacées sont enregistrées.|  
+|USER_TABLE $ AudI|Table de charge de travail|Table dans laquelle les lignes nouvelles et modifiées sont enregistrées.|  
+|USER_TABLE|Vue|Représentation simplifiée des modifications de la table.|  
+|USER_TABLE $ nouveau|Vue|Représentation simplifiée des lignes insérées et remplacées.|  
+|USER_TABLE $ new_id|Vue|Identification des lignes insérées et modifiées.|  
+|USER_TABLE $ Old|Vue|Représentation simplifiée des lignes supprimées et remplacées.|  
   
 L’objet suivant est créé dans la base de données de la table vérifiée sur Sybase et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

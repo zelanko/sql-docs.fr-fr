@@ -1,4 +1,5 @@
 ---
+description: ActiveConnection, propriété (ADO)
 title: ActiveConnection, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 375f0a0b81f71294b67200f8137ee381a638b8ac
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 058f1e16c6bdd84978c1131c436764f584fd80c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451671"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection, propriété (ADO)
 Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) la [commande](../../../ado/reference/ado-api/command-object-ado.md), le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)ou l’objet d' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) spécifiés appartiennent actuellement.  
@@ -40,7 +41,7 @@ Indique à quel objet de [connexion](../../../ado/reference/ado-api/connection-o
   
  Si un objet de **connexion** est affecté à la propriété **ActiveConnection** , l’objet doit être ouvert. L’attribution d’un objet de connexion fermé provoque une erreur.  
   
-### <a name="note"></a>Notes  
+### <a name="note"></a>Remarque  
  **Visual Basic Microsoft** L’affectation de la valeur *Nothing* à la propriété **ActiveConnection** dissocie l’objet **Command** de la **connexion** actuelle et oblige le fournisseur à libérer toutes les ressources associées sur la source de données. Vous pouvez ensuite associer l’objet de **commande** à la même ou à un autre objet de **connexion** . Certains fournisseurs vous permettent de modifier le paramètre de propriété d’une **connexion** à une autre, sans devoir d’abord affecter la valeur *Nothing*à la propriété.  
   
  Si la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) de l’objet **Command** contient des paramètres fournis par le fournisseur, la collection est effacée si vous définissez la propriété **ActiveConnection** sur *Nothing* ou sur un autre objet **Connection** . Si vous créez manuellement des objets de [paramètre](../../../ado/reference/ado-api/parameter-object.md) et que vous les utilisez pour remplir la collection de **paramètres** de l’objet de **commande** , la définition de la propriété **ActiveConnection** sur *Nothing* ou sur un autre objet de **connexion** laisse la collection **Parameters** intacte.  

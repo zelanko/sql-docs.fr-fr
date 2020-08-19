@@ -1,4 +1,5 @@
 ---
+description: ExecuteComplete, événement (ADO)
 title: ExecuteComplete, événement (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae8b426a0e4b95498cb0d4f9a4590c3aaf30196d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4e7b800f7dba925230ade048f3792020ad8a44ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760135"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88443841"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete, événement (ADO)
 L’événement **ExecuteComplete** est appelé à la fin de l’exécution d’une commande.  
@@ -46,7 +47,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  Avant le retour de cet événement, définissez ce paramètre sur **adStatusUnwantedEvent** pour empêcher les notifications suivantes.  
   
  *pCommand*  
- Objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) qui a été exécuté. Contient un objet **Command** même si vous **appelez connection. Execute** ou **Recordset. Open** sans créer explicitement une **commande**, auquel cas l’objet **Command** est créé en interne par ADO.  
+ Objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) qui a été exécuté. Contient un objet **Command** même lors de l’appel de **Connection.Exejolie** ou **Recordset. Open** sans créer explicitement une **commande**, auquel cas l’objet **Command** est créé en interne par ADO.  
   
  *pRecordset*  
  Objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) qui est le résultat de la commande exécutée. Ce **jeu d’enregistrements** peut être vide. Vous ne devez jamais détruire cet objet Recordset dans ce gestionnaire d’événements. Cela entraînera une violation d’accès lorsque ADO tente d’accéder à un objet qui n’existe plus.  
@@ -54,7 +55,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  Objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) . Connexion sur laquelle l’opération a été exécutée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un événement **ExecuteComplete** peut se produire en raison de la **connexion.** [Exécutez](../../../ado/reference/ado-api/execute-method-ado-connection.md)la **commande.** [Exécutez](../../../ado/reference/ado-api/execute-method-ado-command.md), **Recordset.** [Ouvrez](../../../ado/reference/ado-api/open-method-ado-recordset.md), **Recordset.** [Requery](../../../ado/reference/ado-api/requery-method.md)ou **Recordset.** Méthodes [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) .  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,4 +1,5 @@
 ---
+description: Cancel, méthode (ADO)
 title: Cancel, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e0db4e15-6787-41e2-8f13-9e9b524d620a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25b6de609d286847fe7458353203dd7f4b9c7b4b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 24d4beba2c703d2c8e21f51dd5bac9d06444a651
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451061"
 ---
 # <a name="cancel-method-ado"></a>Cancel, méthode (ADO)
 Annule l’exécution d’un appel de méthode asynchrone en attente.  
@@ -43,7 +44,7 @@ object.Cancel
   
 |Si l' *objet* est un|Le dernier appel asynchrone à cette méthode est terminé|  
 |----------------------|-------------------------------------------------------------|  
-|[Commande](../../../ado/reference/ado-api/command-object-ado.md)|[Effectue](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
+|[Commande](../../../ado/reference/ado-api/command-object-ado.md)|[Execute](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
 |[Connection](../../../ado/reference/ado-api/connection-object-ado.md)|[Exécuter](../../../ado/reference/ado-api/execute-method-ado-connection.md) ou [ouvrir](../../../ado/reference/ado-api/open-method-ado-connection.md)|  
 |[Enregistrement](../../../ado/reference/ado-api/record-object-ado.md)|[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)ou [Open](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  

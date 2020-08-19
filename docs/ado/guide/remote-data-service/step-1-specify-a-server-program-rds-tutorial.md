@@ -1,4 +1,5 @@
 ---
+description: 'Étape 1 : Spécifier un programme serveur (tutoriel RDS)'
 title: 'Étape 1 : spécifier un programme serveur (didacticiel RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7856a6a77720b4988c4a15afd86f24ff0070b28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4b5c76aebd80ff4a5706c9226abc051c03940707
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451951"
 ---
 # <a name="step-1-specify-a-server-program-rds-tutorial"></a>Étape 1 : Spécifier un programme serveur (tutoriel RDS)
-Dans le cas le plus général, utilisez le [RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md)La méthode [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) de l’objet DataSpace permet de spécifier le programme serveur par défaut, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), ou votre propre programme serveur personnalisé (objet métier). Un programme serveur est instancié sur le serveur, et une référence au programme serveur, ou *proxy*, est retournée.  
+Dans le cas le plus général, utilisez le [RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md) La méthode [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) de l’objet DataSpace permet de spécifier le programme serveur par défaut, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), ou votre propre programme serveur personnalisé (objet métier). Un programme serveur est instancié sur le serveur, et une référence au programme serveur, ou *proxy*, est retournée.  
   
  Ce didacticiel utilise le programme serveur par défaut :  
   

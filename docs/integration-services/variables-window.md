@@ -1,4 +1,5 @@
 ---
+description: Fenêtre Variables
 title: Fenêtre Variables | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 061adfeced9ab5caa6da3e303593310761fa9e96
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad545578e9d3baf019be37b1bc9c7969df5ee1ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495099"
 ---
 # <a name="variables-window"></a>Fenêtre Variables
 
@@ -54,7 +55,7 @@ ms.locfileid: "86913695"
  **Nom**  
  Affichez le nom de la variable. Vous pouvez mettre à jour le nom des variables définies par l'utilisateur.  
   
- **Portée**  
+ **Étendue**  
  Affichez l'étendue de la variable. Une variable a l'étendue du package entier ou celle d'un conteneur ou d'une tâche. L'étendue de la variable doit être suffisante pour qu'elle soit visible pour tout autre composant ou tâche qui doit lire ou définir ses valeurs.  
   
  Vous pouvez modifier l'étendue en cliquant sur la variable puis en cliquant sur **Déplacer la variable** dans la fenêtre **Variables** .  
@@ -99,7 +100,7 @@ ms.locfileid: "86913695"
 ### <a name="options-for-columns"></a>Options pour les colonnes  
  Sélectionnez les colonnes que vous souhaitez afficher dans la fenêtre **Variables** .  
   
--   **Portée**  
+-   **Étendue**  
   
 -   **Type de données**  
   

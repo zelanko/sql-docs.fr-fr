@@ -1,4 +1,5 @@
 ---
+description: DataTypeEnum
 title: DataTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 456b11972fcb9b7bb20ee07b58e36d2daa5cc0da
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ec805f403e3f76cacde3374cda091bf9b587b74c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444201"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Spécifie le type de données d’un [champ](../../../ado/reference/ado-api/field-object.md), d’un [paramètre](../../../ado/reference/ado-api/parameter-object.md)ou d’une [propriété](../../../ado/reference/ado-api/property-object-ado.md). L’indicateur de type de OLE DB correspondant est indiqué entre parenthèses dans la colonne Description du tableau suivant.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Valeur d’indicateur, toujours combinée à une autre constante de type de données, qui indique un tableau de l’autre type de données. Ne s’applique pas à ADOX.|  
 |**adBigInt**|20|Indique un entier signé de 8 octets (DBTYPE_I8).|  
@@ -71,7 +72,7 @@ Spécifie le type de données d’un [champ](../../../ado/reference/ado-api/fiel
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.DataType.ARRAY|  
 |AdoEnums.DataType.BIGINT|  

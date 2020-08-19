@@ -1,4 +1,5 @@
 ---
+description: Propriétés dynamiques ADO
 title: Propriétés dynamiques ADO | Microsoft Docs
 ms.prod: sql
 ms.technology: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c727f73abed5fe9a30ebf191e2c6da60f8baa13a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 32e592d7e6d89789168db962a5788c0280e28c14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242889"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451451"
 ---
 # <a name="ado-dynamic-properties"></a>Propriétés dynamiques ADO
 Les propriétés dynamiques peuvent être ajoutées aux collections [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) des objets [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Command](../../../ado/reference/ado-api/command-object-ado.md)ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . La source de ces propriétés est un fournisseur de données, tel que le [fournisseur de OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)ou un fournisseur de services, tel que le [service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md). Pour plus d’informations sur une propriété dynamique spécifique, reportez-vous à la documentation appropriée du fournisseur de données ou du fournisseur de services.  

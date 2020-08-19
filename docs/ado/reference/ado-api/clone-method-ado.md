@@ -1,4 +1,5 @@
 ---
+description: Clone, méthode (ADO)
 title: Clone, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c936eb8016be0851fa6d3ecff1f624eab6c895f3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449d453ba8e1d27489fecaa8da56e76e1c85f313
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450981"
 ---
 # <a name="clone-method-ado"></a>Clone, méthode (ADO)
 Crée un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dupliqué à partir d’un objet **Recordset** existant. Spécifie éventuellement que le clone doit être en lecture seule.  
@@ -46,7 +47,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *Verrou*  
  facultatif. Valeur [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) qui spécifie le type de verrou du **Recordset**d’origine ou un **jeu d’enregistrements**en lecture seule. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la méthode **clone** pour créer plusieurs objets **Recordset** dupliqués, en particulier si vous souhaitez conserver plusieurs enregistrements actifs dans un ensemble donné d’enregistrements. L’utilisation de la méthode **clone** est plus efficace que la création et l’ouverture d’un nouvel objet **Recordset** qui utilise la même définition que l’original.  
   
  La propriété [Filter](../../../ado/reference/ado-api/filter-property.md) du **Recordset**d’origine, le cas échéant, ne sera pas appliquée au clone. Définissez la propriété **Filter** du nouvel ensemble d' **enregistrements** pour filtrer les résultats. La façon la plus simple de copier une valeur de **filtre** existante consiste à l’assigner directement, comme suit.  
@@ -69,17 +70,17 @@ rsNew.Filter = rsOriginal.Filter
   
 |Événement|Déclenché dans les clones ?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|No|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|No|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|No|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Yes|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|No|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Yes|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|No|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Yes|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Yes|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|No|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|No|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Non|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Non|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Non|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Non|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Non|  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

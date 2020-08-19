@@ -1,4 +1,5 @@
 ---
+description: Créer une publication à partir d'une base de données Oracle
 title: Créer une publication à partir d’une base de données Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdb8847a7aaf7aaa9b21a64ed6736738da6df9dc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daff2b55669f1922425c2976340e5ee46f964dc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423453"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Créer une publication à partir d'une base de données Oracle
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

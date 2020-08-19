@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_service (Transact-SQL)
 title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 435d2e2a5b290e8307b322831a96a1e55847339b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 33610db3883facdc6dfb198cfe8947ef965baa82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486029"
 ---
 # <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie les propriétés serveur de la recherche en texte intégral pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ sp_fulltext_service [ [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @action = ] 'action'`Propriété à modifier ou à réinitialiser. *action* est de type **nvarchar (100),** sans valeur par défaut. Pour obtenir la liste des propriétés de*c*, leurs descriptions et les valeurs qui peuvent être définies, consultez le tableau sous l’argument *valeur* . Cet argument retourne les propriétés suivantes : type de données, valeur d'exécution actuelle, valeur minimum ou maximum et état de désapprobation, le cas échéant.  
+`[ @action = ] 'action'` Propriété à modifier ou à réinitialiser. *action* est de type **nvarchar (100),** sans valeur par défaut. Pour obtenir la liste des propriétés de*c*, leurs descriptions et les valeurs qui peuvent être définies, consultez le tableau sous l’argument *valeur* . Cet argument retourne les propriétés suivantes : type de données, valeur d'exécution actuelle, valeur minimum ou maximum et état de désapprobation, le cas échéant.  
   
-`[ @value = ] value`Valeur de la propriété spécifiée. la *valeur* est **sql_variant**, avec NULL comme valeur par défaut. Si @value a la valeur null, **sp_fulltext_service** retourne le paramètre actuel. Ce tableau répertorie les propriétés relatives aux actions, leurs descriptions et les valeurs qui peuvent être définies.  
+`[ @value = ] value` Valeur de la propriété spécifiée. la *valeur* est **sql_variant**, avec NULL comme valeur par défaut. Si @value a la valeur null, **sp_fulltext_service** retourne le paramètre actuel. Ce tableau répertorie les propriétés relatives aux actions, leurs descriptions et les valeurs qui peuvent être définies.  
   
 > [!NOTE]  
 >  Les actions suivantes seront supprimées dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **clean_up**, **connect_timeout**, **data_timeout**et **resource_usage**. Évitez par conséquent d'utiliser ces actions dans un nouveau travail de développement et prévoyez la modification des applications qui les utilisent actuellement.  

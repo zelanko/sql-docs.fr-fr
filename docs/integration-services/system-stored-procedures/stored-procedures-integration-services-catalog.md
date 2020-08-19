@@ -1,4 +1,5 @@
 ---
+description: Procédures stockées (catalogue Integration Services)
 title: Procédures stockées (catalogue Integration Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9b9169d79a724d5d4a9d79f32d611e5b6faa4f0a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c5b0f5c9dad9633950d0c0fd8698d3f658d9d390
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495340"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>Procédures stockées (catalogue Integration Services)
 
@@ -162,7 +163,7 @@ ms.locfileid: "86912715"
  Valide de façon asynchrone un projet dans le catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 [catalog.add_execution_worker &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-add-execution-worker-ssisdb-database.md)   
-Ajoute un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker à une instance d’exécution dans Scale-out.
+Ajoute un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker à une instance d’exécution dans Scale Out.
 
 [catalog.enable_worker_agent &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-enable-worker-agent-ssisdb-database.md)   
 Active un Scale Out Worker pour Scale Out Master utilisant ce catalogue [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].

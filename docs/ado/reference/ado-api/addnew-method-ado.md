@@ -1,4 +1,5 @@
 ---
+description: AddNew, méthode (ADO)
 title: AddNew, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b3c6d6b33177f3c3db7c2d414759a5067a91b80d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760725"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451581"
 ---
 # <a name="addnew-method-ado"></a>AddNew, méthode (ADO)
 Crée un nouvel enregistrement pour un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pouvant être mis à jour.  
@@ -43,7 +44,7 @@ recordset.AddNew FieldList, Values
  *Valeurs*  
  facultatif. Une valeur unique, ou un tableau de valeurs pour les champs dans le nouvel enregistrement. Si *FieldList* est un tableau, les *valeurs* doivent également être un tableau avec le même nombre de membres ; dans le cas contraire, une erreur se produit. L’ordre des noms de champs doit correspondre à l’ordre des valeurs de champ dans chaque tableau.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la méthode **AddNew** pour créer et initialiser un nouvel enregistrement. Utilisez la méthode [supports](../../../ado/reference/ado-api/supports-method.md) avec **adAddNew** (une valeur [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) ) pour vérifier si vous pouvez ajouter des enregistrements à l’objet **Recordset** actuel.  
   
  Une fois que vous avez appelé la méthode **AddNew** , le nouvel enregistrement devient l’enregistrement actif et reste actif après l’appel de la méthode [Update](../../../ado/reference/ado-api/update-method.md) . Étant donné que le nouvel enregistrement est ajouté au **Recordset**, un appel à **MoveNext** après la mise à jour se déplacera au-delà de la fin de l’ensemble d' **enregistrements**, ce qui rend **EOF** true. Si l’objet **Recordset** ne prend pas en charge les signets, vous risquez de ne pas pouvoir accéder au nouvel enregistrement après l’avoir déplacé vers un autre enregistrement. Selon le type de curseur, vous devrez peut-être appeler la méthode [Requery](../../../ado/reference/ado-api/requery-method.md) pour rendre le nouvel enregistrement accessible.  

@@ -1,4 +1,5 @@
 ---
+description: catalog.get_parameter_values (base de données SSISDB)
 title: catalog.get_parameter_values (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 947b8607c54e3cb2022b32be0f68bab0dc53ffee
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 349a68fa94cfb479c6c3823b2b295a3a65498692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495402"
 ---
 # <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (base de données SSISDB)
 
@@ -44,7 +45,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  Nom du projet où les paramètres résident. *project_name* est de type **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nom du package. Spécifiez le nom du package pour extraire tous les paramètres du projet et les paramètres d'un package spécifique. *package_name* est de type **nvarchar(260)** .  
+ Nom du package. Spécifiez le nom du package pour extraire tous les paramètres du projet et les paramètres d'un package spécifique. *package_name* est de type **nvarchar(260)**.  
   
  [ @reference_id = ] *reference_id*  
  Identificateur unique d’une référence environnementale. Ce paramètre est facultatif. *reference_id* est de type **bigint**.  
@@ -62,7 +63,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |parameter_name|**sysname**|Le nom du paramètre.|  
 |parameter_value|**sql_variant**|Valeur du paramètre.|  
 |sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
-|Obligatoire|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est obligatoire pour démarrer l'exécution. Lorsque la valeur est `0`, la valeur de paramètre n'est pas obligatoire pour démarrer l'exécution.|  
+|obligatoire|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est obligatoire pour démarrer l'exécution. Lorsque la valeur est `0`, la valeur de paramètre n'est pas obligatoire pour démarrer l'exécution.|  
 |value_set|**bit**|Lorsque la valeur est `1`, la valeur de paramètre a été affectée. Lorsque la valeur est `0`, la valeur de paramètre n'a pas été affectée.|  
   
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: Initialisation de cas de test (SybaseToSQL)
 title: Initialisation des cas de test (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa0e0797-d1fb-4e56-a5da-8458cc2d2401
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 29e9394e6c88aa671bf32811ccf8ea16b6f5f491
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6ac2be2735d8adb5b5790edc9e3aa10818428f06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468764"
 ---
 # <a name="initializing-test-cases-sybasetosql"></a>Initialisation de cas de test (SybaseToSQL)
 À cette étape, vous spécifiez les informations initiales du nouveau cas de test.  

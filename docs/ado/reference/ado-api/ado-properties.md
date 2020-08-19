@@ -1,4 +1,5 @@
 ---
+description: Propriétés ADO
 title: Propriétés ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef825848ee0e2c43a1a70441009a590c41ce5526
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 72a14ac3114a3b27a7570bc5961b9bd6ffff51cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451361"
 ---
 # <a name="ado-properties"></a>Propriétés ADO
 
