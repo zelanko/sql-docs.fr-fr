@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLBindCol
 title: SQLBindCol, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90bb1c1aa4dbfa2614f689faa47eb0c41a6cecd6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84793bdd1261c4a2f65b1bdb60eec4a516a1a1d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298739"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476167"
 ---
 # <a name="sqlbindcol-function"></a>Fonction SQLBindCol
 **Conformité**  
@@ -55,7 +56,7 @@ SQLRETURN SQLBindCol(
  Entrée Numéro de la colonne du jeu de résultats à lier. Les colonnes sont numérotées dans l’ordre des colonnes de plus en plus à partir de 0, où la colonne 0 est la colonne de signets. Si les signets ne sont pas utilisés (autrement dit, l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS est défini sur SQL_UB_OFF), les numéros de colonne commencent à 1.  
   
  *TargetType*  
- Entrée Identificateur du type de données C de la \*mémoire tampon *TargetValuePtr* . Lorsqu’il récupère des données de la source de données avec **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**ou **SQLSetPos**, le pilote convertit les données en ce type ; lorsqu’il envoie des données à la source de données avec **SQLBulkOperations** ou **SQLSetPos**, le pilote convertit les données de ce type. Pour obtenir la liste des types de données et des identificateurs de type C valides, consultez la section [types de données c](../../../odbc/reference/appendixes/c-data-types.md) dans l’annexe D : types de données.  
+ Entrée Identificateur du type de données C de la \* mémoire tampon *TargetValuePtr* . Lorsqu’il récupère des données de la source de données avec **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**ou **SQLSetPos**, le pilote convertit les données en ce type ; lorsqu’il envoie des données à la source de données avec **SQLBulkOperations** ou **SQLSetPos**, le pilote convertit les données de ce type. Pour obtenir la liste des types de données et des identificateurs de type C valides, consultez la section [types de données c](../../../odbc/reference/appendixes/c-data-types.md) dans l’annexe D : types de données.  
   
  Si l’argument *TargetType* est un type de données Interval, la précision de l’intervalle par défaut (2) et la précision de l’intervalle par défaut (6), telles que définies dans les champs SQL_DESC_DATETIME_INTERVAL_PRECISION et SQL_DESC_PRECISION de l’ARD, respectivement, sont utilisées pour les données. Si l’argument *TargetType* est SQL_C_NUMERIC, la précision par défaut (définie par le pilote) et l’échelle par défaut (0), telles que définies dans les champs SQL_DESC_PRECISION et SQL_DESC_SCALE de ARD, sont utilisées pour les données. Si une précision ou une échelle par défaut n’est pas appropriée, l’application doit définir explicitement le champ de descripteur approprié à l’aide d’un appel à **SQLSetDescField** ou **SQLSetDescRec**.  
   
@@ -67,9 +68,9 @@ SQLRETURN SQLBindCol(
  Si *TargetValuePtr* est un pointeur null, le pilote dissocie la mémoire tampon de données pour la colonne. Une application peut dissocier toutes les colonnes en appelant **SQLFreeStmt** à l’aide de l’option SQL_UNBIND. Une application peut dissocier la mémoire tampon de données pour une colonne tout en gardant une limite de mémoire tampon de longueur/d’indicateur pour la colonne, si l’argument *TargetValuePtr* dans l’appel à **SQLBindCol** est un pointeur null, mais que l’argument *StrLen_or_IndPtr* est une valeur valide.  
   
  *BufferLength*  
- Entrée Longueur en octets \*de la mémoire tampon *TargetValuePtr* .  
+ Entrée Longueur \* en octets de la mémoire tampon *TargetValuePtr* .  
   
- Le pilote utilise *BufferLength* pour éviter d’écrire au-delà de \*la fin de la mémoire tampon *TargetValuePtr* lorsqu’il retourne des données de longueur variable, telles que des données de type caractère ou binaire. Notez que le pilote compte le caractère de fin null lorsqu’il retourne des données de \*type caractère à *TargetValuePtr*. \**TargetValuePtr* doit donc contenir de l’espace pour le caractère de fin null ou le pilote va tronquer les données.  
+ Le pilote utilise *BufferLength* pour éviter d’écrire au-delà de la fin de la \* mémoire tampon *TargetValuePtr* lorsqu’il retourne des données de longueur variable, telles que des données de type caractère ou binaire. Notez que le pilote compte le caractère de fin null lorsqu’il retourne des données de type caractère à \* *TargetValuePtr*. \**TargetValuePtr* doit donc contenir de l’espace pour le caractère de fin null ou le pilote va tronquer les données.  
   
  Lorsque le pilote retourne des données de longueur fixe, telles qu’un entier ou une structure de date, le pilote ignore *BufferLength* et suppose que la mémoire tampon est suffisamment grande pour contenir les données. Par conséquent, il est important pour l’application d’allouer une mémoire tampon suffisamment importante pour les données de longueur fixe ou le pilote écrit au-delà de la fin de la mémoire tampon.  
   
@@ -119,7 +120,7 @@ SQLRETURN SQLBindCol(
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violation d’attribut de type de données restreint|(DM) l’argument *ColumnNumber* était 0 et l’argument *TargetType* n’était pas SQL_C_BOOKMARK ou SQL_C_VARBOOKMARK.|  
 |07009|Index de descripteur non valide|La valeur spécifiée pour l’argument *ColumnNumber* a dépassé le nombre maximal de colonnes dans le jeu de résultats.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY003|Type de tampon d’application non valide|L’argument *TargetType* n’était ni un type de données valide, ni SQL_C_DEFAULT.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lorsque **SQLBindCol** était appelé.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  
@@ -232,7 +233,7 @@ SQLRETURN SQLBindCol(
 ## <a name="buffer-addresses"></a>Adresses de mémoire tampon  
  L' *adresse de la mémoire tampon* correspond à l’adresse réelle de la mémoire tampon de données ou de longueur/indicateur. Le pilote calcule l’adresse de la mémoire tampon juste avant d’écrire dans les tampons (par exemple pendant l’exécution de l’extraction). Elle est calculée à partir de la formule suivante, qui utilise les adresses spécifiées dans les arguments *TargetValuePtr* et *StrLen_or_IndPtr* , le décalage de liaison et le numéro de ligne :  
   
- *Bound Address* + *Décalage de liaison* d’adresse liée + ((*numéro de ligne* -1) x taille de l' *élément*)  
+ *Adresse liée*  +  *Décalage de liaison* + ((*numéro de ligne* -1) x taille de l' *élément*)  
   
  où les variables de la formule sont définies comme décrit dans le tableau suivant.  
   
@@ -240,7 +241,7 @@ SQLRETURN SQLBindCol(
 |--------------|-----------------|  
 |*Adresse liée*|Pour les mémoires tampons de données, adresse spécifiée avec l’argument *TargetValuePtr* dans **SQLBindCol**.<br /><br /> Pour les mémoires tampons de longueur/d’indicateur, adresse spécifiée avec l’argument *StrLen_or_IndPtr* dans **SQLBindCol**. Pour plus d’informations, consultez « commentaires supplémentaires » dans la section « descripteurs et SQLBindCol ».<br /><br /> Si l’adresse liée est 0, aucune valeur de données n’est retournée, même si l’adresse telle que calculée par la formule précédente est différente de zéro.|  
 |*Décalage de liaison*|Si la liaison selon les lignes est utilisée, il s’agit de la valeur stockée à l’adresse spécifiée avec l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR.<br /><br /> Si la liaison selon les colonnes est utilisée ou si la valeur de l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR est un pointeur null, l' *offset de liaison* est 0.|  
-|*Row Number*|Numéro de base 1 de la ligne dans l’ensemble de lignes. Pour les extractions sur une seule ligne, il s’agit de la valeur par défaut 1.|  
+|*Numéro de ligne*|Numéro de base 1 de la ligne dans l’ensemble de lignes. Pour les extractions sur une seule ligne, il s’agit de la valeur par défaut 1.|  
 |*Taille de l’élément*|Taille d’un élément dans le tableau lié.<br /><br /> Si la liaison selon les colonnes est utilisée, il s’agit de **sizeof (SQLINTEGER destinée)** pour les mémoires tampons de longueur/indicateur. Pour les mémoires tampons de données, il s’agit de la valeur de l’argument *BufferLength* dans **SQLBindCol** si le type de données est de longueur variable et de la taille du type de données si la longueur est fixe.<br /><br /> Si la liaison selon les lignes est utilisée, il s’agit de la valeur de l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE pour les tampons de données et de longueur/d’indicateur.|  
   
 ## <a name="descriptors-and-sqlbindcol"></a>Descripteurs et SQLBindCol  

@@ -1,4 +1,5 @@
 ---
+description: Format de persistance XML
 title: Format de persistance XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7a014addf2d3ff6c7b02ed9abc103cdbd7b2ecb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748319"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452511"
 ---
 # <a name="xml-persistence-format"></a>Format de persistance XML
 ADO utilise l’encodage UTF-8 pour le flux XML qu’il conserve.  
@@ -68,7 +69,7 @@ xmlns:z="#RowsetSchema">
   
  Les définitions de schéma sont conformes à la [spécification de données XML W3C](http://www.w3.org/TR/1998/NOTE-XML-data/) et peuvent être entièrement validées (même si la validation ne se produit pas dans Internet Explorer 5). XML-Data est actuellement le seul format de schéma pris en charge pour la persistance du Recordset.  
   
- La section des données comporte trois lignes contenant des informations sur les expéditeurs. Pour un ensemble de lignes vide, la section des données peut être vide, mais les \< balises RS : data> doivent être présentes. Sans données, vous pouvez écrire la balise sténographique comme simple \< RS : Data/>. Toute balise précédée de « RS » indique qu’elle se trouve dans l’espace de noms défini par urn : schemas-microsoft-com : rowset.  
+ La section des données comporte trois lignes contenant des informations sur les expéditeurs. Pour un ensemble de lignes vide, la section de données peut être vide, mais les \<rs:data> balises doivent être présentes. Sans données, vous pouvez écrire la balise sténographique comme simple \<rs:data/> . Toute balise précédée de « RS » indique qu’elle se trouve dans l’espace de noms défini par urn : schemas-microsoft-com : rowset.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

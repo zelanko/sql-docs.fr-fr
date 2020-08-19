@@ -1,4 +1,5 @@
 ---
+description: FULLTEXTCATALOGPROPERTY (Transact-SQL)
 title: FULLTEXTCATALOGPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bcf1047008c59844630aa0391f798ddf751c4e89
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: c6e8c856b81bd4ff4ab03c988af1edf6a8b3ac43
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110976"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468006"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Renvoie des informations concernant les propriétés de catalogue de texte intégral dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,7 +62,7 @@ Expression contenant le nom de la propriété de catalogue de texte intégral. L
 |**LogSize**|Pris en charge pour la compatibilité descendante uniquement. Retourne toujours 0.<br /><br /> Taille en octets du jeu combiné de journaux d'erreurs associés à un catalogue de texte intégral du service de Recherche [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**MergeStatus**|Indique si une fusion principale est en cours.<br /><br /> 0 = Aucune fusion principale en cours<br /><br /> 1 = Fusion principale en cours|  
 |**PopulateCompletionAge**|Différence en secondes entre la fin du remplissage du dernier index de texte intégral et le 01/01/1990 00:00:00<br /><br /> Propriété uniquement mise à jour pour des analyses complètes ou incrémentielles. Renvoie la valeur 0 si aucun remplissage ne s'est produit.|  
-|**PopulateStatus**|0 = Inactif<br /><br /> 1 = Remplissage complet en cours<br /><br /> 2 = En pause<br /><br /> 3 = Accéléré<br /><br /> 4 = Récupération<br /><br /> 5 = Arrêt<br /><br /> 6 = Remplissage incrémentiel en cours<br /><br /> 7 = Indexation en cours<br /><br /> 8 = Disque plein Suspendu.<br /><br /> 9 = Suivi des modifications|  
+|**PopulateStatus**|0 = Inactif <br /><br /> 1 = Remplissage complet en cours<br /><br /> 2 = En pause <br /><br /> 3 = Accéléré<br /><br /> 4 = Récupération<br /><br /> 5 = Arrêt<br /><br /> 6 = Remplissage incrémentiel en cours<br /><br /> 7 = Indexation en cours<br /><br /> 8 = Disque plein Suspendu.<br /><br /> 9 = Suivi des modifications|  
 |**UniqueKeyCount**|Nombre de clés uniques dans le catalogue de texte intégral.|  
 |**ImportStatus**|Indique si le catalogue de texte intégral est en cours d’importation.<br /><br /> 0 = Le catalogue de texte intégral n’est pas en cours d’importation.<br /><br /> 1 = Indique que le catalogue de texte intégral est en cours d'importation.|  
   
@@ -73,7 +74,7 @@ Retourne NULL en cas d’erreur ou si un appelant n’est pas autorisé à voir 
   
 Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un utilisateur ne peut qu’afficher les métadonnées des sécurisables. Ces sécurisables sont ceux dont il est propriétaire ou pour lesquels il dispose des autorisations nécessaires. Par conséquent, les fonctions intégrées générant des métadonnées, telles que FULLTEXTCATALOGPROPERTY, peuvent retourner la valeur NULL si l’utilisateur ne dispose d’aucune autorisation sur l’objet. Pour plus d’informations, consultez [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 FULLTEXTCATALOGPROPERTY ('_catalog\_name_','**IndexSize**') n’examine que les fragments ayant l’état 4 ou 6, comme indiqué dans [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Ces fragments font partie de l'index logique. Par conséquent, la propriété **IndexSize** ne retourne que la taille de l’index logique. 
 
 Pendant une fusion d'index, toutefois, la taille d'index réelle peut être le double de sa taille logique. Pour rechercher la taille réelle consommée par un index de recherche en texte intégral pendant une fusion, utilisez la procédure stockée système [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Cette procédure examine tous les fragments associés à un index de recherche en texte intégral. 

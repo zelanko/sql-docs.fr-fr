@@ -1,4 +1,5 @@
 ---
+description: SQLAsyncNotificationCallback, fonction
 title: SQLAsyncNotificationCallback fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6c182c48b8e5ddb70204ddd3a94d9651f97595d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9d03e8a3fa7e62c19dd09a210dca3a56348c692
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476228"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback, fonction
 **Conformité**  

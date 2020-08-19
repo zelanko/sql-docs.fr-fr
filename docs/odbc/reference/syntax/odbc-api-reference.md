@@ -1,4 +1,5 @@
 ---
+description: Informations de référence sur l’API ODBC
 title: Informations de référence sur l’API ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6065db0ea99efaec11190902ec9268db63a6d255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1627838d3f34f8092dce2806a1b1d8f885b9bf6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298933"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476180"
 ---
 # <a name="odbc-api-reference"></a>Informations de référence sur l’API ODBC
 Les rubriques de cette section décrivent chaque fonction ODBC par ordre alphabétique. Chaque fonction est définie en tant que fonction de langage de programmation C. Les descriptions sont les suivantes :  
@@ -82,7 +83,7 @@ Les rubriques de cette section décrivent chaque fonction ODBC par ordre alphab�
   
 -   [SQLCompleteAsync, fonction](../../../odbc/reference/syntax/sqlcompleteasync-function.md)  
   
--   [Fonction SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
+-   [SQLConnect, fonction](../../../odbc/reference/syntax/sqlconnect-function.md)  
   
 -   [SQLCopyDesc, fonction](../../../odbc/reference/syntax/sqlcopydesc-function.md)  
   
@@ -94,7 +95,7 @@ Les rubriques de cette section décrivent chaque fonction ODBC par ordre alphab�
   
 -   [SQLDisconnect, fonction](../../../odbc/reference/syntax/sqldisconnect-function.md)  
   
--   [Fonction SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+-   [SQLDriverConnect, fonction](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
   
 -   [SQLDrivers, fonction](../../../odbc/reference/syntax/sqldrivers-function.md)  
   

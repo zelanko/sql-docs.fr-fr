@@ -1,4 +1,5 @@
 ---
+description: Utilisation des recordsets
 title: Utilisation des recordsets | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 84f60e269bcd01bdacc7647f1498c588620f049e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748341"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452521"
 ---
 # <a name="working-with-recordsets"></a>Utilisation des recordsets
 L’objet **Recordset** offre des fonctionnalités intégrées qui vous permettent de réorganiser l’ordre des données dans le jeu de résultats, de rechercher un enregistrement spécifique en fonction des critères que vous fournissez, et même d’optimiser ces opérations de recherche à l’aide d’index. Le fait que ces fonctionnalités soient disponibles dépend du fournisseur et, dans certains cas, de la propriété [index](../../../ado/reference/ado-api/index-property.md) (la structure de la source de données elle-même).  
@@ -53,7 +54,7 @@ L’objet **Recordset** offre des fonctionnalités intégrées qui vous permette
   
  Seul un nom de colonne unique peut être spécifié pour le critère. En d’autres termes, cette méthode ne prend pas en charge les recherches multicolonnes.  
   
- L’opérateur de comparaison pour le critère peut être " **>** " (supérieur à), " **\<** " (inférieur à), "=" (égal à), ">=" (supérieur ou égal à), "<=" (inférieur ou égal à), "<>" (différent de) ou "like" (critères spéciaux).  
+ L’opérateur de comparaison pour le critère peut être " **>** " (supérieur à), "* * \<**" (less than), "=" (equal), "> =" (supérieur ou égal à), "<=" (inférieur ou égal à), "<>" (différent de) ou "like" (critères spéciaux).  
   
  La valeur de critère peut être une chaîne, un nombre à virgule flottante ou une date. Les valeurs de chaîne sont délimitées par des guillemets simples ou par des signes dièse (#) (par exemple, "State = 'WA" "ou" state = #WA # "). Les valeurs de date sont délimitées par des signes « # » (dièse) (par exemple, « start_date > #7/22/97 # »).  
   
@@ -87,7 +88,7 @@ L’objet **Recordset** offre des fonctionnalités intégrées qui vous permette
   
 -   *FieldName* doit être un nom de champ valide du **Recordset**. Si le nom du champ contient des espaces, vous devez placer le nom entre crochets.  
   
--   L' *opérateur* doit être l’un des suivants : **\<** , **>** , **\<=** ,,, **>=** **<>** **=** ou **Like**.  
+-   L' *opérateur* doit être l’un des suivants : **\<**, **>** ,,, **\<=**, **>=** **<>** **=** ou **Like**.  
   
 -   La *valeur* est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple,,, `'Smith'` `#8/24/95#` `12.345` ou `$50.00` ). Utilisez des guillemets simples (') avec des chaînes et des signes dièse ( `#` ) avec des dates. Pour les nombres, vous pouvez utiliser des points décimaux, des signes dollar et une notation scientifique. Si l' *opérateur* est **comme**, la *valeur* peut utiliser des caractères génériques. Uniquement l’astérisque ( \* ) et le signe de pourcentage (%) les caractères génériques sont autorisés et doivent être le dernier caractère de la chaîne. La *valeur* ne peut pas être null.  
   

@@ -1,4 +1,5 @@
 ---
+description: Définition de données MDX - CREATE MEMBER
 title: Instruction CREATe MEMBER (MDX) | Microsoft Docs
 ms.date: 07/22/2020
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3ca2c664246dfeab8070337a0daf818fb0a3327c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110157"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483902"
 ---
 # <a name="mdx-data-definition---create-member"></a>Définition de données MDX - CREATE MEMBER
 
@@ -122,6 +123,6 @@ WHERE ProfitRatio
 ## <a name="see-also"></a>Voir aussi  
  [Instruction DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Instruction UPDATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
- [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

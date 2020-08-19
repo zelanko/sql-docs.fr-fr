@@ -1,4 +1,5 @@
 ---
+description: Classe d'événement Audit Broker Conversation
 title: Audit Broker Conversation, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22dba70f903d19a0be15bfe7acb440dd1b1f4b1a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 910d0aba243c7d42cd0866d516ae392320913cd8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85693771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475995"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Classe d'événement Audit Broker Conversation
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "85693771"
 |**SPID**|**int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |**StartTime**|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
 |**State**|**int**|Indique l'emplacement dans le code source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a produit l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|Non|  
-|**TextData**|**ntext**|En cas d'erreurs, contient un message qui décrit la raison de l'échec. L’une des valeurs suivantes :<br /><br /> <br /><br /> **Le certificat est introuvable**. L'utilisateur spécifié pour la sécurité du protocole du dialogue n'a pas de certificat.<br /><br /> **Période non valide**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier est arrivé à expiration.<br /><br /> **Le certificat est trop volumineux pour une allocation de mémoire**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier est trop volumineux. La taille maximale que Service Broker prend en charge pour les certificats est de 32 768 octets.<br /><br /> **Clé privée introuvable**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier n'est associé à aucune clé privée.<br /><br /> **La taille de la clé privée du certificat est incompatible avec le fournisseur de services de chiffrement**. Du fait de sa taille, la clé privée qui accompagne le certificat rend le traitement impossible. La taille d'une clé privée doit être un multiple de 64 octets.<br /><br /> **La taille de la clé publique du certificat est incompatible avec le fournisseur de services de chiffrement**. Du fait de sa taille, la clé publique qui accompagne le certificat rend le traitement impossible. La taille d'une clé publique doit être un multiple de 64 octets.<br /><br /> **La taille de la clé privée du certificat est incompatible avec la clé d’échange de clés chiffrées**. La taille de la clé spécifiée dans la clé d'échange de clés ne correspond pas à la taille de la clé privée définie pour le certificat. Cela indique généralement que le certificat sur l'ordinateur distant ne correspond pas au certificat figurant dans la base de données.<br /><br /> **La taille de la clé publique du certificat est incompatible avec la signature de l’en-tête de sécurité**. L'en-tête de sécurité contient une signature qu'il est impossible de valider par rapport à la clé publique du certificat. Cela indique généralement que le certificat sur l'ordinateur distant ne correspond pas au certificat figurant dans la base de données.|1|Oui|  
+|**TextData**|**ntext**|En cas d'erreurs, contient un message qui décrit la raison de l'échec. Une des valeurs suivantes :<br /><br /> <br /><br /> **Le certificat est introuvable**. L'utilisateur spécifié pour la sécurité du protocole du dialogue n'a pas de certificat.<br /><br /> **Période non valide**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier est arrivé à expiration.<br /><br /> **Le certificat est trop volumineux pour une allocation de mémoire**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier est trop volumineux. La taille maximale que Service Broker prend en charge pour les certificats est de 32 768 octets.<br /><br /> **Clé privée introuvable**. L'utilisateur spécifié pour la sécurité du protocole de dialogue a un certificat, mais ce dernier n'est associé à aucune clé privée.<br /><br /> **La taille de la clé privée du certificat est incompatible avec le fournisseur de services de chiffrement**. Du fait de sa taille, la clé privée qui accompagne le certificat rend le traitement impossible. La taille d'une clé privée doit être un multiple de 64 octets.<br /><br /> **La taille de la clé publique du certificat est incompatible avec le fournisseur de services de chiffrement**. Du fait de sa taille, la clé publique qui accompagne le certificat rend le traitement impossible. La taille d'une clé publique doit être un multiple de 64 octets.<br /><br /> **La taille de la clé privée du certificat est incompatible avec la clé d’échange de clés chiffrées**. La taille de la clé spécifiée dans la clé d'échange de clés ne correspond pas à la taille de la clé privée définie pour le certificat. Cela indique généralement que le certificat sur l'ordinateur distant ne correspond pas au certificat figurant dans la base de données.<br /><br /> **La taille de la clé publique du certificat est incompatible avec la signature de l’en-tête de sécurité**. L'en-tête de sécurité contient une signature qu'il est impossible de valider par rapport à la clé publique du certificat. Cela indique généralement que le certificat sur l'ordinateur distant ne correspond pas au certificat figurant dans la base de données.|1|Oui|  
   
  Le tableau suivant répertorie les valeurs des sous-classes pour cette classe d'événements.  
   

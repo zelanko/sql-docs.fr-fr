@@ -1,4 +1,5 @@
 ---
+description: Méthodes ADO
 title: Méthodes ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a08f7c896b48f6cb76c9805d3bea9910a8f5bda8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 10f9aaf7aefa87586df77dd0da5ac1be336d4f53
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451381"
 ---
 # <a name="ado-methods"></a>Méthodes ADO
 
@@ -31,7 +32,7 @@ ms.locfileid: "87242859"
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Annule l’exécution d’un appel de méthode asynchrone en attente.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Annule une mise à jour par lot en attente.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Annule toutes les modifications apportées à la ligne actuelle ou nouvelle d’un objet **Recordset** , ou à la collection **Fields** d’un objet **Record** , avant d’appeler la méthode **Update** .|  
-|[Effacer](../../../ado/reference/ado-api/clear-method-ado.md)|Supprime tous les objets **Error** de la collection **Errors** .|  
+|[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|Supprime tous les objets **Error** de la collection **Errors** .|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Crée un objet **Recordset** dupliqué à partir d’un objet **Recordset** existant. Spécifie éventuellement que le clone doit être en lecture seule.|  
 |[Close](../../../ado/reference/ado-api/close-method-ado.md)|Ferme un objet ouvert et tous les objets dépendants.|  
 |[CompareBookmarks,](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Compare deux signets et retourne une indication de leurs valeurs relatives.|  
@@ -44,7 +45,7 @@ ms.locfileid: "87242859"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Supprime un fichier ou un répertoire, ainsi que tous ses sous-répertoires.|  
 |[Execute (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Exécute la requête, l’instruction SQL ou la procédure stockée spécifiée dans la propriété **CommandText** .|  
 |[Execute (connexion ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Exécute la requête, l’instruction SQL, la procédure stockée ou le texte spécifique au fournisseur spécifié.|  
-|[Rechercher](../../../ado/reference/ado-api/find-method-ado.md)|Recherche dans un **Recordset** la ligne qui répond aux critères spécifiés.|  
+|[Trouver](../../../ado/reference/ado-api/find-method-ado.md)|Recherche dans un **Recordset** la ligne qui répond aux critères spécifiés.|  
 |[Purge](../../../ado/reference/ado-api/flush-method-ado.md)|Force le contenu du **flux** restant dans la mémoire tampon ADO à l’objet sous-jacent auquel le **flux** est associé.|  
 |[get_OLEDBCommand, méthode](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Retourne la commande OLEDB sous-jacente, en propageant tout d’abord les informations sur les paramètres définis sur la commande ADO à la commande OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Retourne un **jeu d’enregistrements** dont les lignes représentent les fichiers et les sous-répertoires du répertoire représenté par cet **enregistrement**.|  

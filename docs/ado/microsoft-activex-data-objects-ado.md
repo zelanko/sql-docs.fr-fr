@@ -1,4 +1,5 @@
 ---
+description: Microsoft ActiveX Data Objects (ADO)
 title: Microsoft ActiveX Data Objects (ADO) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2018
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 18b9a6590ce777402456c8e9f8c8f28807ec5670
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606611"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451831"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -41,7 +42,7 @@ Chaque section de cet article décrit un composant d’ADO.
  RDS (Remote Data Service) est une fonctionnalité d’ADO, qui vous permet de déplacer des données d’un serveur vers une application cliente ou une page Web, de manipuler les données sur le client et de retourner des mises à jour au serveur en un seul aller-retour.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le  [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="adox"></a>ADOX  
  Microsoft ActiveX Data Objects Extensions pour la sécurité et le langage de définition de données (ADOX) est une extension du modèle de programmation et des objets ADO. ADOX comprend des objets pour la création et la modification d’un schéma, ainsi que pour la sécurité. Étant donné qu’il s’agit d’une approche basée sur les objets de la manipulation de schéma, vous pouvez écrire du code qui fonctionnera sur diverses sources de données, quelles que soient les différences dans leurs syntaxes natives.  
@@ -61,7 +62,7 @@ Chaque section de cet article décrit un composant d’ADO.
   
  [Glossaire ADO](../ado/ado-glossary.md)  
   
-## <a name="support"></a>Assistance  
+## <a name="support"></a>Support  
  Pour obtenir une aide gratuite sur les problèmes liés à ADO, essayez de publier dans le groupe de discussion public ADO. Ce groupe de discussion est surveillé par les professionnels du support technique Microsoft qui couvrent ADO et par d’autres développeurs ADO expérimentés.  
   
  Vous trouverez plus d'informations sur les options de support sur le site Web Aide et support Microsoft.

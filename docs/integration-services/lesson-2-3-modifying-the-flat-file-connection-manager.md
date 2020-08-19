@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 2-3 : Modifier le gestionnaire de connexions de fichiers plats'
 title: 'Étape 3 : Modifier le gestionnaire de connexions de fichiers plats | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 348b7e9b948443f1cfd14390f30c58ab17d08ec6
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bbe7698c4b97a11fd9b2b4dba581fbad5a8be8df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921501"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484104"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Leçon 2-3 : Modifier le gestionnaire de connexions de fichiers plats
 
@@ -31,7 +32,7 @@ En modifiant le gestionnaire de connexions de sorte à utiliser la valeur de la 
 
 2.  Dans la fenêtre **Propriétés**, vérifiez que le **PackagePath** commence par **\Package.Connections**. Si ce n’est pas le cas, dans le volet **Gestionnaires de connexions**, cliquez avec le bouton droit sur **Sample Flat File Source Data**, puis sélectionnez **Convertir en connexion de package**.
   
-3.  Dans la fenêtre **Propriétés**, pour **Expressions**, sélectionnez la cellule vide, puis le bouton **(...)** .  
+3.  Dans la fenêtre **Propriétés**, pour **Expressions**, sélectionnez la cellule vide, puis le bouton **(...)**.  
   
 4.  Dans la boîte de dialogue **Éditeur d’expressions de la propriété**, dans la colonne **Propriété**, sélectionnez **ConnectionString**.  
   

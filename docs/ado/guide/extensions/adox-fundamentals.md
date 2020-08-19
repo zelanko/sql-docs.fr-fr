@@ -1,4 +1,5 @@
 ---
+description: Concepts de base d’ADOX
 title: Notions de base d’ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 131df9d5712bf89c28e1b8e7eae30217b6c16947
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 74b7f3a17bddb068d82f4e05b13a28abff219c2c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748175"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452461"
 ---
 # <a name="adox-fundamentals"></a>Concepts de base d’ADOX
 Les extensions Microsoft® ActiveX® Data Objects pour la sécurité et le langage de définition de données (ADOX) sont une extension du modèle de programmation et des objets ADO. ADOX comprend des objets pour la création et la modification d’un schéma, ainsi que pour la sécurité. Étant donné qu’il s’agit d’une approche basée sur les objets de la manipulation de schéma, vous pouvez écrire du code qui fonctionnera sur diverses sources de données, quelles que soient les différences dans leurs syntaxes natives.  
   
  ADOX est une bibliothèque associée aux objets ADO de base. Il expose des objets supplémentaires pour la création, la modification et la suppression d’objets de schéma, tels que des tables et des procédures. Il comprend également des objets de sécurité pour gérer les utilisateurs et les groupes, ainsi que pour accorder et révoquer des autorisations sur des objets.  
   
- Pour utiliser ADOX avec votre outil de développement, vous devez établir une référence à la bibliothèque de types ADOX. La description de la bibliothèque ADOX est « Microsoft ADO ext. for DDL and Security ». Le nom du fichier de bibliothèque ADOX est msadox. dll, et l’ID de programme (ProgID) est « ADOX ». Pour plus d’informations sur la création de références à des bibliothèques, consultez la documentation de votre outil de développement.  
+ Pour utiliser ADOX avec votre outil de développement, vous devez établir une référence à la bibliothèque de types ADOX. La description de la bibliothèque ADOX est « Microsoft ADO ext. for DDL and Security ». Le nom du fichier de bibliothèque ADOX est Msadox.dll, et l’ID de programme (ProgID) est « ADOX ». Pour plus d’informations sur la création de références à des bibliothèques, consultez la documentation de votre outil de développement.  
   
  Le fournisseur Microsoft OLE DB pour Microsoft Jet Moteur de base de données prend entièrement en charge ADOX. Certaines fonctionnalités d’ADOX peuvent ne pas être prises en charge, en fonction de votre fournisseur de données.  
   

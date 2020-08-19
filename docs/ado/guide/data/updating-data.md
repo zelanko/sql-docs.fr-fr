@@ -1,4 +1,5 @@
 ---
+description: Mise à jour des données
 title: Mise à jour des données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6508e4e9-e33a-4dad-b340-5d632fd78a91
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26f3ca9220ea41db43b9f98a12429dcb5874bba4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5ea884479e7353b822e8b679a0fff34d70c3fd93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452641"
 ---
 # <a name="updating-data"></a>Mise à jour des données
 Le comportement et les fonctionnalités de mise à jour dépendent en grande partie du mode de mise à jour (type de verrou), du type de curseur et de l’emplacement du curseur.  
@@ -35,4 +36,4 @@ Le comportement et les fonctionnalités de mise à jour dépendent en grande par
   
 -   [Mode Batch](../../../ado/guide/data/batch-mode.md)  
   
--   [Traitement des transactions](../../../ado/guide/data/transaction-processing.md)
+-   [Traitement transactionnel](../../../ado/guide/data/transaction-processing.md)

@@ -1,4 +1,5 @@
 ---
+description: Résumé du modèle objet RDS
 title: Résumé du modèle objet RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 95ddd84bfd755e044d97a6043f295014933ae18c
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d7488811326dda4228ef2f458b70d5575b33b122
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452141"
 ---
 # <a name="rds-object-model-summary"></a>Résumé du modèle objet RDS
 > [!IMPORTANT]
