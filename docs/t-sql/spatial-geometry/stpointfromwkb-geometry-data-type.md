@@ -1,4 +1,5 @@
 ---
+description: STPointFromWKB (type de données geometry)
 title: STPointFromWKB (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0536529d063dc8f6e26eb7f8e548d6a46f2f69b3
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c0cb0023b2c51392e881ec5b50038ad69c4bbea2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416865"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
 
 ## <a name="arguments"></a>Arguments
  *WKB_point*  
- Représentation WKB de l’instance **geometryPoint** à retourner. *WKB_point* est une expression **varbinary(max)** .  
+ Représentation WKB de l’instance **geometryPoint** à retourner. *WKB_point* est une expression **varbinary(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryPoint** à retourner.  
@@ -52,7 +53,7 @@ STPointFromWKB ( 'WKB_point' , SRID )
   
  Type OGC : **Point**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -64,8 +65,8 @@ SET @g = geometry::STPointFromWKB(0x010100000000000000000059400000000000005940, 
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes géométriques statiques OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: CREATE SERVER ROLE (Transact-SQL)
 title: CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8c4b791e77ceea4de4a39245adcaf95cc37aec62
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 61a2e779e61d76f81c4ec818b2f07e4f1cd628b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392927"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88416845"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,7 +54,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  Compte de connexion qui détiendra le nouveau rôle de serveur. Si aucun compte de connexion n'est spécifié, le rôle de serveur appartient au compte qui exécute CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les rôles de serveur sont des éléments sécurisables au niveau du serveur. Lorsque vous avez créé un rôle de serveur, configurez les autorisations au niveau serveur à l'aide des instructions GRANT, DENY et REVOKE. Pour supprimer ou ajouter des connexions à un rôle serveur, utilisez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Pour supprimer un rôle serveur, utilisez [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Pour plus d’informations, consultez [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Vous pouvez consulter les rôles serveur en interrogeant les vues de catalogue [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) et [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
