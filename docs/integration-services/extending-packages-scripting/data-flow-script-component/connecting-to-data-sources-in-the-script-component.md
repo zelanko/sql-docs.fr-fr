@@ -1,4 +1,5 @@
 ---
+description: Connexion aux sources de données dans le composant Script
 title: Connexion aux sources de données dans le composant Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96de63ab-ff48-4e7e-89e0-ffd6a89c63b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50b9b20381c413173c6a17fd578352f85f6e2c1e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b647745e46b2326ab247cd2ef67ec480835dc16e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430271"
 ---
 # <a name="connecting-to-data-sources-in-the-script-component"></a>Connexion aux sources de données dans le composant Script
 
@@ -58,7 +59,7 @@ ms.locfileid: "86913425"
   
  Pour plus d’informations sur l’utilisation des gestionnaires de connexions avec le composant Script, consultez [Création d’une source avec le composant Script](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) et [Création d’une destination avec le composant Script](../../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](../../../integration-services/connection-manager/integration-services-ssis-connections.md)   
  [Créer des gestionnaires de connexions](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)  
   

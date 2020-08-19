@@ -1,4 +1,5 @@
 ---
+description: Mise à niveau de la fonction de recherche en texte intégral
 title: Mise à niveau de la fonction de recherche en texte intégral | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 841c5bd53f2498a6e057495e3953744784beb211
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490575"
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -123,7 +124,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Utilisez l’action **upgrade\_option** de [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Utilisez l’**Option de mise à niveau du catalogue de texte intégral** de la boîte de dialogue **Propriétés du serveur**. Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** utilisez **l’option de mise à niveau de texte intégral** de la boîte de dialogue **Propriétés du serveur** . Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a> Considérations relatives à la restauration d’un catalogue de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Une méthode de mise à niveau de données de texte intégral d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est de restaurer une sauvegarde de la base de données complète vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -152,7 +153,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
 -   [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L'exemple suivant utilise la clause MOVE dans l'instruction [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , afin de restaurer une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] nommée `ftdb1`. Les fichiers catalogue, le journal et la base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] sont déplacés vers les nouveaux emplacements sur l'instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , comme suit :  
   
 -   Le fichier de base de données, `ftdb1.mdf`, est déplacé vers `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`.  

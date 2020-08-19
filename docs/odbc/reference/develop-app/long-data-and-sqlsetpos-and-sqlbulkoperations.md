@@ -1,4 +1,5 @@
 ---
+description: Données de type Long, et SQLSetPos et SQLBulkOperations
 title: Données de type long et SQLSetPos et SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4bc6c5d2da2f796a7c312971635fc36bc2fae8af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12bc0299df58bf85272445773a8f33a872c39ef2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429271"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Données de type Long, et SQLSetPos et SQLBulkOperations
 Comme c’est le cas avec les paramètres dans les instructions SQL, les données longues peuvent être envoyées lors de la mise à jour de lignes avec **SQLBulkOperations** ou **SQLSetPos** ou lors de l’insertion de lignes avec **SQLBulkOperations**. Les données sont envoyées par parties, avec plusieurs appels à **SQLPutData**. Les colonnes pour lesquelles les données sont envoyées au moment de l’exécution sont connues sous le nom de *colonnes de données en*cours d’exécution.  

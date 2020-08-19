@@ -1,4 +1,5 @@
 ---
+description: Préparer SQL Server pour la capture de données modifiées
 title: Préparer SQL Server pour CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8b17436de4950b4dcda69e4c381477640821c9a2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a98ff226c4e2e861b60d04cb50e8b201035c16a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921745"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431081"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>Préparer SQL Server pour la capture de données modifiées
 
@@ -40,7 +41,7 @@ ms.locfileid: "86921745"
   
 -   **Authentification Windows**  
   
--   **Authentification SQL Server** : Si vous sélectionnez cette option, vous devez taper le **nom d’utilisateur** et le **mot de passe** de l’utilisateur dans l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous vous connectez.  
+-   **Authentification SQL Server**: si vous sélectionnez cette option, vous devez taper le **Nom d’utilisateur** et le **Mot de passe** pour l’utilisateur dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous vous connectez.  
   
  Pour préparer l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la capture de données modifiées Oracle, la connexion doit avoir l'autorisation d'écriture dans la base de données MSXDBCDC. Entrez les informations d'identification pour une connexion qui a l'autorisation d'écriture dans la base de données MSXDBCDC, telle qu'un membre du rôle `sysasmin` .  
   
@@ -51,9 +52,9 @@ ms.locfileid: "86921745"
   
 -   **Délai d’exécution** : Tapez le délai (en secondes) pendant lequel le service Windows de capture de données modifiées Oracle attend l'exécution d'une commande avant expiration. La valeur par défaut est **30**.  
   
--   **Chiffrer la connexion** : Sélectionnez **Chiffrer la connexion** pour la communication entre le service de capture de données modifiées Oracle et l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à l'aide d'une connexion chiffrée.  
+-   **Chiffrer la connexion**: sélectionnez **Chiffrer la connexion** pour la communication entre le service de capture de données modifiées Oracle et l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible à l'aide d'une connexion chiffrée.  
   
--   **Avancé** : Tapez des propriétés de connexion supplémentaires, si nécessaire.  
+-   **Avancé**: tapez des propriétés de connexion supplémentaires, si nécessaire.  
   
 ### <a name="view-script"></a>Afficher le script  
  Cliquez sur **Afficher le script** pour afficher une version en lecture seule du script d’installation. Un administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut copier ce script dans la console de gestion SQL Server en vue de le modifier et de l'exécuter, si nécessaire. Pour plus d’informations sur le script Préparer SQL Server, consultez [Préparer SQL Server pour Oracle CDC : afficher le script](../../integration-services/change-data-capture/prepare-sql-server-for-oracle-cdc-view-script.md).  

@@ -1,4 +1,5 @@
 ---
+description: Octroi de privilèges d’invité à un serveur web
 title: Octroi de privilèges d’invité à un ordinateur serveur Web | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9a2145fdf106814647b4d9cca067c28db72f848
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9fa62e95920e8a4aece0f7b6833c635cfdbf7b09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749591"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452181"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Octroi de privilèges d’invité à un serveur web
 Le compte de serveur Web anonyme (IUSR_*ComputerName*) doit être ajouté au groupe local invités sur l’ordinateur serveur Web pour utiliser RDS.  

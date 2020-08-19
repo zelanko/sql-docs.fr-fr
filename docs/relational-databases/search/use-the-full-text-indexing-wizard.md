@@ -1,4 +1,5 @@
 ---
+description: Utiliser l'Assistant Indexation de texte intégral
 title: Utiliser l’Assistant Indexation de texte intégral | Microsoft Docs
 ms.date: 08/19/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2531d7f8034440b48a032ee1e9e74ae7fdb9df73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24903e075fc7ce38e79c0b99a559afac194638bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490551"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -98,7 +99,7 @@ ms.locfileid: "85628809"
      Spécifiez le groupe de fichiers sur lequel créer l'index de recherche en texte intégral.  
   
      e. Sélectionner une valeur :  
-      |Valeur|Description|  
+      |Value|Description|  
       |-----------|-----------------|
       |**<default>**| Si la table ou la vue n'est pas partitionnée, sélectionnez cette option pour utiliser le même groupe de fichiers que la table ou la vue sous-jacente. Si la table ou la vue est partitionnée, le groupe de fichiers principal est utilisé|
       |**PRIMARY**|Sélectionnez cette option pour utiliser le groupe de fichiers primaire pour le nouvel index de recherche en texte intégral.|
@@ -112,7 +113,7 @@ ms.locfileid: "85628809"
   
      Sélectionnez l'une des valeurs suivantes :  
   
-   |Valeur|Description|  
+   |Value|Description|  
     |-----------|-----------------|  
     |**<system>**|Sélectionnez cette option pour utiliser la liste de mots vides système sur le nouvel index de recherche en texte intégral. Il s'agit du paramètre par défaut.|  
     |**<off>**|Sélectionnez cette option pour désactiver des listes de mots vides pour le nouvel index de recherche en texte intégral.|  

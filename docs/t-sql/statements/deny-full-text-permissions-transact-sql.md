@@ -1,4 +1,5 @@
 ---
+description: DENY - Autorisations relatives au texte intégral (Transact-SQL)
 title: DENY - Autorisations relatives au texte intégral | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 296f30c5e8a6f8b296f09c5e9360ad4e81b7d2bf
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 226ee1104f6be9bb50bfbcc87c774f05170abbd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444701"
 ---
 # <a name="deny-full-text-permissions-transact-sql"></a>DENY - Autorisations relatives au texte intégral (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86484814"
   Refuse des autorisations sur un catalogue de texte intégral et des listes de mots vides de texte intégral.  
   
 
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

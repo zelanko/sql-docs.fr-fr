@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_loader_backup_runs (Transact-SQL)
 title: sys. pdw_loader_backup_runs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6ca5fc44e34153411e32a890b509d86caacbd9db
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: fc85ec89f07359714c4661b3b7c4c8d8d5138b1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490255"
 ---
 # <a name="syspdw_loader_backup_runs-transact-sql"></a>sys. pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "86196991"
 |end_time|**datetime**|Heure à laquelle l’opération s’est terminée, a échoué ou a été annulée.||  
 |total_elapsed_time|**int**|Temps total écoulé entre start_time et l’heure actuelle, ou entre start_time et end_time pour les exécutions terminées, annulées ou ayant échoué.|Si total_elapsed_time dépasse la valeur maximale d’un entier (24,8 jours en millisecondes), cela entraînera un échec de matérialisation en raison d’un dépassement de capacité.<br /><br /> La valeur maximale en millisecondes est équivalente à 24,8 jours.|  
 |operation_type|**nvarchar (16)**|Type de charge.|« BACKUP », « LOAD », « RESTORE »|  
-|mode|**nvarchar (16)**|Mode dans le type d’exécution.|Pour operation_type = **sauvegarde**<br />**DIFFÉRENTIELLE**<br />**FULL**<br /><br /> Pour operation_type = **Load**<br />**PARENTHÈSE**<br />**RECHARGER**<br />**UPSERT**<br /><br /> Pour operation_type = **Restore**<br />**DATABASE**<br />**HEADER_ONLY**|  
+|mode|**nvarchar (16)**|Mode dans le type d’exécution.|Pour operation_type = **sauvegarde**<br />**DIFFERENTIAL**<br />**FULL**<br /><br /> Pour operation_type = **Load**<br />**PARENTHÈSE**<br />**RECHARGER**<br />**UPSERT**<br /><br /> Pour operation_type = **Restore**<br />**DATABASE**<br />**HEADER_ONLY**|  
 |database_name|**nvarchar(255)**|Nom de la base de données qui est le contexte de cette opération||  
 |table_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |Principal_id|**int**|ID de l’utilisateur qui demande l’opération.||  
@@ -41,7 +42,7 @@ ms.locfileid: "86196991"
 |request_id|**nvarchar(32)**|ID de la demande effectuant l’opération. Pour les chargements, il s’agit de la requête actuelle ou de la dernière demande associée à cette charge..|Consultez request_id dans [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar (16)**|État de l’exécution.|« CANCELLED », « COMPLETED », « FAILED », « QUEUED », « RUNNING »|  
 |progress|**int**|Pourcentage effectué.|0 à 100|  
-|.|**nvarchar(4000)**|Texte complet de la commande envoyée par l’utilisateur.|Sera tronqué si plus de 4000 caractères (compter les espaces).|  
+|command|**nvarchar(4000)**|Texte complet de la commande envoyée par l’utilisateur.|Sera tronqué si plus de 4000 caractères (compter les espaces).|  
 |rows_processed|**bigint**|Nombre de lignes traitées dans le cadre de cette opération.||  
 |rows_rejected|**bigint**|Nombre de lignes rejetées dans le cadre de cette opération.||  
 |rows_inserted|**bigint**|Nombre de lignes insérées dans la ou les tables de base de données dans le cadre de cette opération.||  

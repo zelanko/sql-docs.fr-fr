@@ -1,4 +1,5 @@
 ---
+description: Destination d’apprentissage du modèle d’exploration de données
 title: Destination d’apprentissage du modèle d’exploration de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5332b93b6f51204700473d2faadbde39458db4fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e79b6190a8e3659b97f3e8f1c82533f3270bd42
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916778"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430911"
 ---
 # <a name="data-mining-model-training-destination"></a>Destination d’apprentissage du modèle d’exploration de données
 
@@ -49,7 +50,7 @@ ms.locfileid: "86916778"
   
 -   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propriétés personnalisées de la destination d’apprentissage du modèle d’exploration de données](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
+-   [Propriétés personnalisées de la destination d'apprentissage du modèle d'exploration de données](../../integration-services/data-flow/data-mining-model-training-destination-custom-properties.md)  
   
  Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
@@ -79,12 +80,12 @@ ms.locfileid: "86916778"
  **Colonnes d'entrée disponibles**  
  Affichez la liste des colonnes d'entrée disponibles. Faites glisser les colonnes d'entrée pour les mapper sur les colonnes de la structure d'exploration de données.  
   
- **Colonnes de structure d’exploration de données**  
+ **Colonnes de structure d'exploration de données**  
  Affiche la liste des colonnes de la structure d'exploration de données. Faites glisser les colonnes de la structure d'exploration de données pour les mapper sur les colonnes d'entrée disponibles.  
   
  **Colonne d'entrée**  
  Affiche les colonnes d'entrée sélectionnées dans le tableau ci-dessus. Pour modifier ou supprimer une sélection de mappage, utilisez la liste **Colonnes d'entrée disponibles**.  
   
- **Colonnes de structure d’exploration de données**  
+ **Colonnes de structure d'exploration de données**  
  Affiche chaque colonne de destination disponible, qu’elle soit mappée ou non.  
   

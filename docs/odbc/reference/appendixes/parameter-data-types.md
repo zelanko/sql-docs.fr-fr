@@ -1,4 +1,5 @@
 ---
+description: Types de données de paramètre
 title: Types de données de paramètre | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: ''
-ms.openlocfilehash: f29bb70937df32e03480c13c7ef739eb273f15eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0114f0cff269d35ddf1e93c653c46bcc8d863a29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483242"
 ---
 # <a name="parameter-data-types"></a>Types de données de paramètre
 Même si chaque paramètre spécifié avec **SQLBindParameter** est défini à l’aide d’un type de données SQL, les paramètres d’une instruction SQL n’ont pas de type de données intrinsèque. Par conséquent, les marqueurs de paramètres peuvent être inclus dans une instruction SQL uniquement si leurs types de données peuvent être déduits à partir d’un autre opérande dans l’instruction. Par exemple, dans une expression arithmétique telle que ? + COLONNE1, le type de données du paramètre peut être déduit à partir du type de données de la colonne nommée représentée par COLONNE1. Une application ne peut pas utiliser un marqueur de paramètre si le type de données ne peut pas être déterminé.  

@@ -1,4 +1,5 @@
 ---
+description: sys. security_predicates (Transact-SQL)
 title: sys. security_predicates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80ca5a060d464562b9b97d2931082af98f3df785
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c2ba8b6c9c4a2fc2f6b3beb562edfac0728678fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490131"
 ---
 # <a name="syssecurity_predicates-transact-sql"></a>sys. security_predicates (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "87395230"
 |predicate_definition|**nvarchar(max)**|Nom qualifié complet de la fonction qui sera utilisée comme prédicat de sécurité, y compris les arguments. Notez que le nom `schema.function` peut être normalisé (autrement dit, placé dans une séquence d'échappement), ainsi que tout autre élément dans le texte à des fins de cohérence. Par exemple :<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**int**|Type de prédicat utilisé par la stratégie de sécurité :<br /><br /> 0 = PRÉDICAT DE FILTRE<br /><br /> 1 = PRÉDICAT DE BLOC|  
 |predicate_type_desc|**nvarchar(60)**|Type de prédicat utilisé par la stratégie de sécurité :<br /><br /> FILTER<br /><br /> BLOQUER|  
-|opération|**int**|Type d’opération spécifié pour le prédicat :<br /><br /> NULL = toutes les opérations applicables<br /><br /> 1 = APRÈS INSERTION<br /><br /> 2 = APRÈS LA MISE À JOUR<br /><br /> 3 = AVANT MISE À JOUR<br /><br /> 4 = AVANT SUPPRESSION|  
+|operation|**int**|Type d’opération spécifié pour le prédicat :<br /><br /> NULL = toutes les opérations applicables<br /><br /> 1 = APRÈS INSERTION<br /><br /> 2 = APRÈS LA MISE À JOUR<br /><br /> 3 = AVANT MISE À JOUR<br /><br /> 4 = AVANT SUPPRESSION|  
 |operation_desc|**nvarchar(60)**|Type d’opération spécifié pour le prédicat :<br /><br /> NULL<br /><br /> APRÈS INSERTION<br /><br /> AFTER UPDATE<br /><br /> AVANT MISE À JOUR<br /><br /> AVANT SUPPRESSION|  
   
 ## <a name="permissions"></a>Autorisations  

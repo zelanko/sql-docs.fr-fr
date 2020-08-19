@@ -1,4 +1,5 @@
 ---
+description: Défilement relatif et absolu
 title: Défilement relatif et absolu | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae0ed5af8d116a3038b55b1e3d68231154c2a35c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c7471e7ee245d9cf70adc8c3453705453bc1aac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482941"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Défilement relatif et absolu
 La plupart des options de défilement dans **SQLFetchScroll** déplacent le curseur par rapport à la position actuelle ou à une position absolue. **SQLFetchScroll** prend en charge l’extraction des ensembles de lignes suivant, précédent, premier et dernier, ainsi que l’extraction relative (extraction de *l’ensemble de* lignes à partir du début de l’ensemble de lignes actuel) et l’extraction absolue (extraction de l’ensemble de lignes à partir de la ligne *n*). Si *n* est négatif dans une extraction absolue, les lignes sont comptées à partir de la fin du jeu de résultats. Ainsi, une extraction absolue de Row-1 signifie extraire l’ensemble de lignes qui commence par la dernière ligne du jeu de résultats.  

@@ -1,4 +1,5 @@
 ---
+description: Options Demande de profil d'inclusion de valeur (tâche de profilage des données)
 title: Options Demande de profil d’inclusion de valeur (tâche de profilage des données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bebe29e50ad4adaa6152eaef17de64a926433c8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2c30a5e35a3c3e5b8e127a317e6d44880dee2e7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430931"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Options Demande de profil d'inclusion de valeur (tâche de profilage des données)
 
@@ -59,7 +60,7 @@ ms.locfileid: "86913825"
   
 -   **Données**, qui incluent les options **SubsetTableOrView**, **SupersetTableOrView**et **InclusionColumns**  
   
--   **Généralités**  
+-   **Général**  
   
 -   **Options**  
   
@@ -132,7 +133,7 @@ ms.locfileid: "86913825"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n'est spécifié. La puissance de la clé est signalée, quelle que soit sa valeur.|  
-|**Specified**|Utilisez le seuil spécifié dans **InclusionStrengthThreshold**. La puissance d'inclusion est précisée uniquement si elle est supérieure au seuil.|  
+|**Spécifié**|Utilisez le seuil spécifié dans **InclusionStrengthThreshold**. La puissance d'inclusion est précisée uniquement si elle est supérieure au seuil.|  
 |**Exact**|Aucun seuil n'est spécifié. La puissance d'inclusion est signalée uniquement si les valeurs de sous-ensemble sont incluses entièrement dans les valeurs de sur-ensemble.|  
   
  **InclusionStrengthThreshold**  
@@ -146,7 +147,7 @@ ms.locfileid: "86913825"
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Aucun**|Aucun seuil n'est spécifié. La puissance d'inclusion est signalée, quelle que soit la puissance de clé de la colonne du sur-ensemble.|  
-|**Specified**|Utilisez le seuil spécifié dans **SupersetColumnsKeyThreshold**. La puissance d'inclusion est signalée uniquement si la puissance de clé de la colonne du sur-ensemble est supérieure au seuil.|  
+|**Spécifié**|Utilisez le seuil spécifié dans **SupersetColumnsKeyThreshold**. La puissance d'inclusion est signalée uniquement si la puissance de clé de la colonne du sur-ensemble est supérieure au seuil.|  
 |**Exact**|Aucun seuil n'est spécifié. La puissance d'inclusion est signalée uniquement si les colonnes du sur-ensemble sont une clé exacte dans la table côté sur-ensemble.|  
   
  **SupersetColumnsKeyThreshold**  

@@ -1,4 +1,5 @@
 ---
+description: Séquence d’échappement d’appel de procédure
 title: Séquence d’échappement d’appel de procédure | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1194efe6a21c456a722ccd4352661c998f0316d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba88f3d78edeaa1ce4f4884977656cd8a4a16062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483222"
 ---
 # <a name="procedure-call-escape-sequence"></a>Séquence d’échappement d’appel de procédure
 ODBC utilise des séquences d’échappement pour les appels de procédure. La syntaxe de cette séquence d’échappement est la suivante :  

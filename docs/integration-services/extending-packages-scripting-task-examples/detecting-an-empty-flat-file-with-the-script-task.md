@@ -1,4 +1,5 @@
 ---
+description: Détection d'un fichier plat vide à l'aide de la tâche de script
 title: Détection d’un fichier plat vide à l’aide de la tâche de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26b07dfb31b7fadf1a1135a0cf716a3051d3961a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d5c1c5473eb307480b772d2cecd31b3ebb2a9bed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923820"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430431"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Détection d'un fichier plat vide à l'aide de la tâche de script
 

@@ -1,4 +1,5 @@
 ---
+description: Paramètres client obligatoires
 title: Paramètres client requis | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ec52c594cb058ef8359c39d696d47d4cd3dd127
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d21cf3f08b284ed2642f9567ae86909fb35579b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452021"
 ---
 # <a name="required-client-settings"></a>Paramètres client obligatoires
 > [!IMPORTANT]
@@ -31,11 +32,11 @@ ms.locfileid: "82749388"
   
 -   Spécifiez le nom du gestionnaire à utiliser dans la propriété du **Gestionnaire** de l’objet [DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) ou le mot clé de la chaîne de connexion de l’objet [Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) «**handler**= ». (Vous ne pouvez pas définir le gestionnaire dans la chaîne de connexion de l’objet de **connexion** .)  
   
- Les services Bureau à distance fournissent un gestionnaire par défaut sur le serveur nommé **msdfmap. Gestionnaire**. (Le fichier de personnalisation par défaut est nommé MSDFMAP. INI.)  
+ Les services Bureau à distance fournissent un gestionnaire par défaut sur le serveur nommé **msdfmap. Gestionnaire**. (Le fichier de personnalisation par défaut est nommé MSDFMAP.INI.)  
   
  **Exemple**  
   
- Supposons que les sections suivantes dans le **msdfmap. INI** et le nom de la source de données, AdvWorks, ont été définis précédemment :  
+ Supposons que les sections suivantes dans **MSDFMAP.INI** et le nom de la source de données, AdvWorks, ont été définis précédemment :  
   
 ```console
 [connect CustomerDataBase]  

@@ -1,4 +1,5 @@
 ---
+description: LOG (Transact-SQL)
 title: LOG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/29/2017
@@ -20,19 +21,19 @@ ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb06ff97c4972507e63b8990c9d70c8598e8e2c2
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4c962baabeaccdd2c2cbf517cab5894458046bb2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468005"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Renvoie le logarithme népérien de l’expression **float** spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,10 +63,10 @@ LOG ( float_expression )
 ## <a name="return-types"></a>Types de retour  
  **float**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Par défaut, **LOG()** renvoie le logarithme népérien. À partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez changer la base du logarithme à l’aide du paramètre facultatif *base*.  
   
- Le logarithme népérien est le logarithme en base **e**, où **e** est une constante irrationnelle environ égale à 2,718281828.  
+ Le logarithme naturel est le logarithme pour la base **e**, où **e** est une constante irrationnelle approximativement égale à 2,718281828.  
   
  Le logarithme népérien de l’exponentiel d’un nombre est le nombre lui-même : LOG( EXP( *n* ) ) = *n*. De même, l’exponentiel du logarithme népérien d’un nombre est le nombre lui-même : EXP( LOG( *n* ) ) = *n*.  
   

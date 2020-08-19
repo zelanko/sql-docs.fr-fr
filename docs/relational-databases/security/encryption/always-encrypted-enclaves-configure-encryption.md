@@ -1,4 +1,5 @@
 ---
+description: Configurer le chiffrement de colonne sur place en utilisant Always Encrypted avec enclaves sécurisées
 title: Configurer le chiffrement de colonne sur place en utilisant Always Encrypted avec enclaves sécurisées | Microsoft Docs
 ms.custom: ''
 ms.date: 10/10/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b4f794e66e881ddeb36c724fc583d95a42bce33d
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 38f421815202b16fe5d7d2570ce5661be5097109
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490486"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Configurer le chiffrement de colonne sur place en utilisant Always Encrypted avec enclaves sécurisées 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "87411434"
 
 Le chiffrement sur place permet aussi de déclencher des opérations de chiffrement avec l’instruction [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md), ce qui n’est pas possible sans une enclave.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 Les opérations de chiffrement prises en charge et les exigences pour la ou les clés de chiffrement de colonne utilisées pour les opérations sont les suivantes :
 - Chiffrement d’une colonne de texte en clair. La clé de chiffrement de colonne utilisée pour chiffrer la colonne doit être activée pour les enclaves.
 - Rechiffrement d’une colonne chiffrée avec un nouveau type de chiffrement et/ou une nouvelle clé de chiffrement de colonne. La clé de chiffrement de colonne actuelle et la nouvelle clé de chiffrement de colonne (si elle est différente de la clé actuelle) doivent être activées pour les enclaves.

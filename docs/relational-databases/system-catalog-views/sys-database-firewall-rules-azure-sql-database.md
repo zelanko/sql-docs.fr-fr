@@ -1,4 +1,5 @@
 ---
+description: sys.database_firewall_rules (Azure SQL Database)
 title: sys. database_firewall_rules (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 2e821593-3b9f-43d6-a99b-1ceffe177faf
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d14ae77b15121b1344d3881f8966d6a707f71fa6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49a48533c800093090465819610052009633839f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475461"
 ---
 # <a name="sysdatabase_firewall_rules-azure-sql-database"></a>sys.database_firewall_rules (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85784989"
 |create_date|**Date/heure**|Date et heure UTC de création du paramètre de pare-feu de niveau base de données.|  
 |modify_date|**Date/heure**|Date et heure UTC de la dernière modification du paramètre de pare-feu de niveau base de données.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour renvoyer des informations sur les paramètres de pare-feu au niveau du serveur associés à votre Microsoft Azure SQL Database, utilisez [sys. firewall_rules (Azure SQL Database)](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md).  
   
 ## <a name="permissions"></a>Autorisations  

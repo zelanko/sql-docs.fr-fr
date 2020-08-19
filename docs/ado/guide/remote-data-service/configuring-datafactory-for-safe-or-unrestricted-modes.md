@@ -1,4 +1,5 @@
 ---
+description: Configuration de DataFactory en mode sans échec ou unrestricted
 title: Configuration de DataFactory pour les modes sécurisés ou non restreints | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cff72ed7c02cb4f0e9dc2a719ee7e82b55e44408
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: a0b01eada84095b94740319a6d63ed6b0066425d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750080"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452301"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Configuration de DataFactory en mode sans échec ou unrestricted
 > [!IMPORTANT]
@@ -29,7 +30,7 @@ ms.locfileid: "82750080"
   
 2.  Le gestionnaire par défaut, msdfmap. Handler, est inscrit, est présent dans la liste des gestionnaires sécurisés et est marqué comme gestionnaire par défaut.  
   
-3.  Le fichier Msdfmap. ini est installé dans le répertoire Windows. Vous devez configurer ce fichier en fonction de vos besoins, avant d’utiliser RDS en mode à trois niveaux.  
+3.  Msdfmap.ini fichier est installé dans le répertoire Windows. Vous devez configurer ce fichier en fonction de vos besoins, avant d’utiliser RDS en mode à trois niveaux.  
   
  Si vous le souhaitez, vous pouvez configurer une installation non restreinte de **DataFactory** . **DataFactory** peut être utilisé directement sans le gestionnaire personnalisé. Les utilisateurs peuvent toujours utiliser un gestionnaire personnalisé en modifiant les chaînes de connexion, mais cela n’est pas obligatoire. Pour plus d’informations sur les implications de l’utilisation de l’objet **RDSServer. DataFactory** , consultez [sécurisation des applications RDS](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
   

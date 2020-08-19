@@ -1,4 +1,5 @@
 ---
+description: Conserver la valeur par défaut de l'option de configuration locks
 title: Conserver la valeur par défaut de l’option de configuration locks | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f214f05b-5f0b-4786-b2ad-b8b4b6e58d72
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 07131fc6d0e3505b15d432f738597285fcbeb402
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 657700eeaf04ec49aec410fc5d183a828e514963
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490616"
 ---
 # <a name="keep-the-locks-configuration-option-default-value"></a>Conserver la valeur par défaut de l'option de configuration locks
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ EXEC sp_configure 'locks', 0;
 ```  
   
 ## <a name="for-more-information"></a>Pour plus d'informations  
- [Configurer l'option de configuration du serveur locks](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)  
+ [Configurer l'option de configuration de serveur locks](../../database-engine/configure-windows/configure-the-locks-server-configuration-option.md)  
   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

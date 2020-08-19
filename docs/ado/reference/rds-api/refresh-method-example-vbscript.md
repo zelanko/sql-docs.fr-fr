@@ -1,4 +1,5 @@
 ---
+description: Refresh, exemple de méthode (VBScript)
 title: Refresh, exemple de méthode (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2926578-bc60-464b-916e-ddfdb8014253
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a93b769f364206bda80d347166cf77ed8edd18ac
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 823b25bb30d83ad96d6f963f6a7fb676ff81135e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82751116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438721"
 ---
 # <a name="refresh-method-example-vbscript"></a>Refresh, exemple de méthode (VBScript)
 > [!IMPORTANT]

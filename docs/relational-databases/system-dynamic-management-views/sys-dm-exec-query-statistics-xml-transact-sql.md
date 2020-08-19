@@ -1,4 +1,5 @@
 ---
+description: sys. dm_exec_query_statistics_xml (Transact-SQL)
 title: sys. dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -16,11 +17,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3b1621a89d38e8e241b69aadfb3f2016b63cdb7d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 250b97f93eb7a40fe23b44da4b760ce4681f33aa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490212"
 ---
 # <a name="sysdm_exec_query_statistics_xml-transact-sql"></a>sys. dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -53,10 +55,10 @@ sys.dm_exec_query_statistics_xml(session_id)
 |plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot en cours d’exécution. Autorise la valeur Null.|
 |query_plan|**xml**|Contient la représentation Showplan du runtime du plan d’exécution de requête spécifié avec *plan_handle* contenant des statistiques partielles. Le plan d'exécution de requêtes est au format XML. Un plan est généré pour chaque traitement contenant par exemple des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, des appels de procédures stockées et des appels de fonctions définies par l'utilisateur. Autorise la valeur Null.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Notes
 Cette fonction système est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Voir KB [3190871](https://support.microsoft.com/help/3190871)
 
-Cette fonction système fonctionne à la fois dans l’infrastructure de profilage des statistiques d’exécution de requête **standard** et **légère** . Pour plus d’informations, consultez [interroger l’infrastructure de profilage](../../relational-databases/performance/query-profiling-infrastructure.md).  
+Cette fonction système fonctionne à la fois dans l’infrastructure de profilage des statistiques d’exécution de requête **standard** et **légère** . Pour plus d’informations, consultez [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md).  
 
 Dans les conditions suivantes, aucune sortie Showplan n’est retournée dans la colonne **query_plan** de la table retournée pour **sys. dm_exec_query_statistics_xml**:  
   
@@ -97,6 +99,6 @@ GO
   
 ## <a name="see-also"></a>Voir aussi
   [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

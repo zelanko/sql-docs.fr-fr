@@ -1,4 +1,5 @@
 ---
+description: STGeometryType (type de données geography)
 title: STGeometryType (type de données geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 957615b665641afd3ffbfbcac8d789a2426b35cc
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 082c6ede155c04f9ea323db2c345a690a2d39a7d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555404"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445259"
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,6 +57,6 @@ SELECT @g.STGeometryType();
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Méthodes OGC sur des instances Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

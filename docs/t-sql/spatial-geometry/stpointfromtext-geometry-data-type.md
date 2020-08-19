@@ -1,4 +1,5 @@
 ---
+description: STPointFromText (type de données geometry)
 title: STPointFromText (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: f9dcc83f9b164f27d50e047792a069b148239872
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 469971c7a5b40f97ac67feca3dfb20f25a679486
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444988"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Arguments
  *point_tagged_text*  
- Représentation WKT de l’instance **geometryPoint** à retourner. *point_tagged_text* est une expression **nvarchar(max)** .  
+ Représentation WKT de l’instance **geometryPoint** à retourner. *point_tagged_text* est une expression **nvarchar(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryPoint** à retourner.  
@@ -64,8 +65,8 @@ SET @g = geometry::STPointFromText('POINT (100 100)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes géométriques statiques OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: AbsolutePosition et CursorLocation, exemple de propriétés (VB)
 title: AbsolutePosition et CursorLocation, exemple de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 34ccef63f898063abd4e87332285bd81c1e4a845
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 409d54437c8f43ce3b2f42e42fe8abe67f77d964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451771"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition et CursorLocation, exemple de propriétés (VB)
 Cet exemple montre comment la propriété [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) peut suivre la progression d’une boucle qui énumère tous les enregistrements d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Elle utilise la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) pour activer la propriété **AbsolutePosition** en définissant le curseur sur un curseur client.  

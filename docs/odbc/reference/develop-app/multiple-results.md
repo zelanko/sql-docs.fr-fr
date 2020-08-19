@@ -1,4 +1,5 @@
 ---
+description: Résultats multiples
 title: Résultats multiples | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d90414b631a7e81a7868ab7974b64ea84a0ea452
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc42bfa96c4784d232d8359a15ac74b2f3c5a2be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429251"
 ---
 # <a name="multiple-results"></a>Résultats multiples
 Une *valeur est* retournée par la source de données après l’exécution d’une instruction. ODBC comporte deux types de résultats : les jeux de résultats et les nombres de lignes. Les *nombres* de lignes sont le nombre de lignes affectées par une instruction Update, Delete ou Insert. Les lots, décrits par [lots d’instructions SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md), peuvent générer plusieurs résultats.  

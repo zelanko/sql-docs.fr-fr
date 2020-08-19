@@ -1,4 +1,5 @@
 ---
+description: Prise en charge de FILESTREAM
 title: Support FILESTREAM | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 26e1d47dea484e818870eb829f6de6318bac1c86
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b1229da063f1752ba68a0fc172f892bf23236194
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885663"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498883"
 ---
 # <a name="filestream-support"></a>Prise en charge de FILESTREAM
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   FILESTREAM permet de stocker et d'accéder à de grandes valeurs binaires, soit par le biais de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], soit par accès direct au système de fichiers Windows. Une grande valeur binaire est une valeur supérieure à 2 gigaoctets (Go). Pour plus d'informations sur la prise en charge FILESTREAM améliorée, consultez [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
- Lorsqu’une connexion de base de données est ouverte, ** \@ \@ TEXTSIZE** prend la valeur-1 (« illimité ») par défaut.  
+ Lorsqu’une connexion de base de données est ouverte, **\@\@TEXTSIZE** est défini avec la valeur -1 (« illimité ») par défaut.  
   
  Il est également possible d'accéder et de mettre à jour des colonnes FILESTREAM à l'aide d'API de système de fichiers Windows.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "85885663"
   
  Pour créer des colonnes FILESTREAM ou détecter les colonnes existantes qui sont des colonnes FILESTREAM, vous pouvez utiliser la colonne **is_filestream** de l’affichage catalogue [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).  
   
- Voici un exemple :  
+ Par exemple :  
   
 ```  
 -- Create a table with a FILESTREAM column.  

@@ -1,4 +1,5 @@
 ---
+description: Déployer des packages avec SSIS
 title: Déployer des packages avec SSIS | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d6636cbd74f31448381b1f6cb2c3dd3826324a5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4ba92220b368e1ef7ee1218d972e6113e1378d27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430651"
 ---
 # <a name="deploy-packages-with-ssis"></a>Déployer des packages avec SSIS
 
@@ -51,7 +52,7 @@ L'objectif de ce didacticiel est de simuler la complexité de problèmes de dép
 ## <a name="what-you-learn"></a>Contenu du didacticiel    
 Le meilleur moyen de se familiariser avec les nouveaux outils et les nouvelles commandes et fonctionnalités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est de les utiliser. Ce didacticiel vous guide dans les étapes de création d'un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] puis d'ajout des packages et autres fichiers nécessaires au projet. Une fois le projet terminé, vous allez créer une application de déploiement, copier cette application sur l'ordinateur de destination, puis installer les packages sur l'ordinateur de destination.    
     
-## <a name="prerequisites"></a>Conditions préalables requises    
+## <a name="prerequisites"></a>Prérequis    
 Ce tutoriel s’adresse aux utilisateurs qui sont déjà familiers avec les principales opérations de système de fichiers, mais qui ont une connaissance limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour mieux comprendre les concepts [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de base que vous allez mettre en œuvre dans ce didacticiel, il est peut-être intéressant de terminer d’abord le didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suivant : [SSIS : comment créer un package ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>Sur l’ordinateur source
@@ -66,7 +67,7 @@ Sur l’ordinateur sur lequel vous créez le bundle de déploiement, **les compo
 
 -   Vous devez disposer des autorisations pour créer et supprimer des tables dans la base de données AdventureWorks.
     
--   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
+-   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) .    
     
 ### <a name="on-the-destination-computer"></a>Sur l’ordinateur de destination
 
@@ -89,13 +90,13 @@ Les composants suivants **doivent être installés**sur l’ordinateur vers lequ
 Si vous envisagez de déployer les packages sur le même ordinateur que celui où vous créez l'application de déploiement, ce dernier doit avoir la configuration requise pour les ordinateurs source et de destination.    
         
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel    
-[Leçon 1 : Préparation à la création de l’application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
+[Leçon 1 : Préparation à la création de l'application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 Au cours de cette leçon, vous allez vous préparer à déployer une solution ETL en créant un nouveau projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et en ajoutant au projet les packages et les autres fichiers requis.    
     
-[Leçon 2 : Créer l’application de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[Leçon 2 : Créer l’application de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 Au cours de cette leçon, vous allez élaborer un utilitaire de déploiement et vérifier que l'application de déploiement inclut les fichiers nécessaires.    
     
-[Leçon 3 : Installer des packages SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
+[Leçon 3 : Installer des packages SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 Vous allez aussi copier l'application de déploiement sur l'ordinateur cible, installer les packages, puis les exécuter.    
     
 

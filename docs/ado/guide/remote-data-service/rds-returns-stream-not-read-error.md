@@ -1,4 +1,5 @@
 ---
+description: RDS retourne une &quot; erreur d’Inlecture du flux &quot;
 title: RDS retourne une &quot; erreur de lecture de flux non lu &quot; | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca194c911b590dfcc8baba87195c91a70640dd24
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 039a881d0d38e6dc58661c92f59ba74bd9ea2bb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452101"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS retourne une &quot; erreur d’Inlecture du flux &quot;
 «L’objet de flux n’a pas pu être lu, car il est vide ou la position actuelle se trouve à la fin du flux. Pour les flux non vides, définissez la position actuelle avec la propriété position. Pour déterminer si un flux est vide, vérifiez la propriété Size.  

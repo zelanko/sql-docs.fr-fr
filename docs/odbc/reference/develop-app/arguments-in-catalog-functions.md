@@ -1,4 +1,5 @@
 ---
+description: Arguments dans les fonctions de catalogue
 title: Arguments dans les fonctions de catalogue | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 819c10d0b137d5e0999c1e10bf22810392509f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef53514f41d28e93648970b03fa53927529d8344
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483132"
 ---
 # <a name="arguments-in-catalog-functions"></a>Arguments dans les fonctions de catalogue
 Toutes les fonctions de catalogue acceptent les arguments avec lesquels une application peut limiter l’étendue des données retournées. Par exemple, le premier et le deuxième appel à **SQLTables** dans le code suivant retournent un jeu de résultats contenant des informations sur toutes les tables, tandis que le troisième appel retourne des informations sur la table Orders :  

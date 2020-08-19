@@ -1,4 +1,5 @@
 ---
+description: Codage d'un énumérateur Foreach personnalisé
 title: Codage d’un énumérateur ForEach personnalisé | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 539231ea284fd43f797858cf2dd549d578dfab6c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 046b40b0dd7502e57614691066d8c87bcfe5d9fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430551"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>Codage d'un énumérateur Foreach personnalisé
 
@@ -113,6 +114,6 @@ End Function
  
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un énumérateur Foreach personnalisé](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/creating-a-custom-foreach-enumerator.md)   
- [Développement d’une interface utilisateur pour un énumérateur ForEach personnalisé](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
+ [Développement d'une interface utilisateur pour un énumérateur ForEach personnalisé](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   
   

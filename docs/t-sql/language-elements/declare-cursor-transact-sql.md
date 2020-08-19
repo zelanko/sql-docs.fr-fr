@@ -1,4 +1,5 @@
 ---
+description: DECLARE CURSOR (Transact-SQL)
 title: DECLARE CURSOR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -24,19 +25,19 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3544d4a9530be4ff90609593e8335c725a4f1a22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ecef1c20be4350646cb98fb96db8152074a97dda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921475"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445501"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Définit les attributs d'un curseur [!INCLUDE[tsql](../../includes/tsql-md.md)], notamment s'il permet ou non le défilement, et la requête utilisée pour créer le jeu de résultats sur lequel le curseur opère. La syntaxe d’une instruction `DECLARE CURSOR` peut utiliser à la fois la syntaxe ISO et un jeu d’extensions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +78,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Interdit les mises à jour par l'intermédiaire de ce curseur. Le curseur ne peut pas être référencé dans une clause `WHERE CURRENT OF` d’une instruction `UPDATE` ou `DELETE`. Cette option remplace la possibilité par défaut de mise à jour d'un curseur.  
   
- UPDATE [OF *column_name* [ **,** ...*n*]]  
+ UPDATE [OF *column_name* [**,**...*n*]]  
  Définit les colonnes qui peuvent être mises à jour par le curseur. Si OF <column_name> [, <... n>] est spécifié, seules les colonnes listées autorisent les modifications. Si vous spécifiez `UPDATE` sans liste de colonnes, toutes les colonnes peuvent être mises à jour.  
   
 *cursor_name*  
@@ -136,7 +137,7 @@ Spécifie que les mises à jour ou les suppressions positionnées effectuées vi
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit implicitement le curseur en un autre type si les clauses de l’instruction *select_statement* sont incompatibles avec la fonctionnalité du type de curseur demandé. Pour plus d'informations, consultez la rubrique Conversions implicites de curseur.  
   
-FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
+FOR UPDATE [OF *column_name* [**,**...*n*]]  
 Définit les colonnes qui peuvent être mises à jour par le curseur. Si `OF <column_name> [, <... n>]` est fourni, seules les colonnes listées permettent les modifications. Si vous spécifiez `UPDATE`sans liste de colonnes, toutes les colonnes peuvent être mises à jour, sauf si l’option de concurrence `READ_ONLY` a été spécifiée.  
   
 ## <a name="remarks"></a>Notes  

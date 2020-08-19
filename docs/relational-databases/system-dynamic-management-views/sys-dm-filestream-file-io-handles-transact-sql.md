@@ -1,4 +1,5 @@
 ---
+description: sys.dm_filestream_file_io_handles (Transact-SQL)
 title: sys. dm_filestream_file_io_handles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56e498fb942b87f187ae53a04ec1b240b71d2c96
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 543d74e0c62c80ea768009b6a7c9c9f965acbd54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489908"
 ---
 # <a name="sysdm_filestream_file_io_handles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,8 +41,8 @@ ms.locfileid: "85898877"
 |**creation_client_process_id**|**varbinary (8)**|Affiche un champ de la requête d'E/S REQ_PRE_CREATE utilisé pour créer ce handle. Autorise la valeur NULL.|  
 |**filestream_transaction_id**|**varbinary(128)**|Affiche l'ID de la transaction associée au handle donné. Il s’agit de la valeur retournée par la fonction **GET_FILESTREAM_TRANSACTION_CONTEXT** . Utilisez ce champ pour effectuer une jointure à la vue **sys. dm_filestream_file_io_requests** . Autorise la valeur NULL.|  
 |**access_type**|**nvarchar(60)**|N'accepte pas la valeur NULL.|  
-|**logical_path**|**nvarchar(256)**|Affiche le nom de chemin d'accès logique du fichier ouvert par ce handle. Il s’agit du même chemin d’accès que celui retourné par **. Méthode PathName** de **varbinary**(**Max**) FileStream. Autorise la valeur NULL.|  
-|**physical_path**|**nvarchar(256)**|Affiche le nom de chemin d'accès NTFS réel du fichier. Il s’agit du même nom de chemin d’accès retourné par **. Méthode PhysicalPathName** de **varbinary**(**Max**) FileStream. Il est activé par l'indicateur de suivi 5556. Autorise la valeur NULL.|  
+|**logical_path**|**nvarchar (256)**|Affiche le nom de chemin d'accès logique du fichier ouvert par ce handle. Il s’agit du même chemin d’accès que celui retourné par **. Méthode PathName** de **varbinary**(**Max**) FileStream. Autorise la valeur NULL.|  
+|**physical_path**|**nvarchar (256)**|Affiche le nom de chemin d'accès NTFS réel du fichier. Il s’agit du même nom de chemin d’accès retourné par **. Méthode PhysicalPathName** de **varbinary**(**Max**) FileStream. Il est activé par l'indicateur de suivi 5556. Autorise la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  

@@ -1,4 +1,5 @@
 ---
+description: CRYPT_GEN_RANDOM (Transact-SQL)
 title: CRYPT_GEN_RANDOM (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 35fed704434a533f3c2aeddc8b2bcabcf9e6981f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d0cdca25e14d58270185d4605287d22d1af5e0d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468171"
 ---
 # <a name="crypt_gen_random-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Cette fonction retourne un nombre aléatoire de chiffrement généré par l'API Crypto (CAPI). `CRYPT_GEN_RANDOM` retourne un nombre hexadécimal avec une longueur d’un nombre spécifié d’octets.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +45,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
 La longueur, en octets, du nombre que `CRYPT_GEN_RANDOM` va créer. L’argument *length* comporte un type de données **int** et une plage de valeurs comprises entre 1 et 8000. `CRYPT_GEN_RANDOM` retourne la valeur NULL pour une valeur **int** en dehors de cette plage. 
   
 *seed*  
-Un nombre hexadécimal facultatif à utiliser comme valeur de départ aléatoire. La longueur de la valeur *seed* doit correspondre à la valeur de l’argument *length*. L’argument *seed* comporte un type de données **varbinary(8000)** .
+Un nombre hexadécimal facultatif à utiliser comme valeur de départ aléatoire. La longueur de la valeur *seed* doit correspondre à la valeur de l’argument *length*. L’argument *seed* comporte un type de données **varbinary(8000)**.
   
 ## <a name="returned-types"></a>Types retournés  
 **varbinary(8000)**

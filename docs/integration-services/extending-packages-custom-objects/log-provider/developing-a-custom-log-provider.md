@@ -1,4 +1,5 @@
 ---
+description: Développement d'un module fournisseur d'informations personnalisé
 title: Développement d’un module fournisseur d’informations personnalisé | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 41da6c13c50ded80c5388da1b38dad582084b3c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e69139c38d87c1a61a61b774efdd80db49ea8181
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916418"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430491"
 ---
 # <a name="developing-a-custom-log-provider"></a>Développement d'un module fournisseur d'informations personnalisé
 
@@ -39,7 +40,7 @@ ms.locfileid: "86916418"
  [Création d’un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/creating-a-custom-log-provider.md)  
  Explique comment créer les classes d'un projet de module fournisseur d'informations personnalisé.  
   
- [Codage d’un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
+ [Codage d'un module fournisseur d'informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/coding-a-custom-log-provider.md)  
  Décrit comment implémenter un module fournisseur d'informations personnalisé en substituant les méthodes et propriétés de la classe de base.  
   
  [Développement d’une interface utilisateur pour un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)  
@@ -62,7 +63,7 @@ ms.locfileid: "86916418"
 ### <a name="information-about-other-custom-objects"></a>Informations sur les autres objets personnalisés  
  Pour plus d’informations sur les autres types d’objets personnalisés que vous pouvez créer dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consultez les rubriques suivantes :  
   
- [Développement d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Développement d'une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Explique comment programmer des tâches personnalisées.  
   
  [Développement d’un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  

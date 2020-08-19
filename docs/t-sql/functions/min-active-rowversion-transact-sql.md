@@ -1,4 +1,5 @@
 ---
+description: MIN_ACTIVE_ROWVERSION (Transact-SQL)
 title: MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 87c89547-8ea1-4820-b75e-36be683e4e10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29c44806ff3a5677f8d59841782e3a8bc4bb5044
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4f895b4bcd743cec45431ad55131c1118ace33b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111455"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467961"
 ---
 # <a name="min_active_rowversion-transact-sql"></a>MIN_ACTIVE_ROWVERSION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "87111455"
   Retourne la valeur **rowversion** active la plus basse dans la base de données active. Une valeur **rowversion** est active si elle est utilisée dans une transaction qui n'a pas encore été validée. Pour plus d’informations, consultez [rowversion &#40;Transact-SQL&#41;](../../t-sql/data-types/rowversion-transact-sql.md).  
   
 > [!NOTE]  
->  Le type de données **rowversion** est aussi appelé **timestamp**.  
+>   Le type de données **rowversion** est aussi appelé **timestamp**.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,9 +45,9 @@ MIN_ACTIVE_ROWVERSION
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>Types de retour
- Retourne une valeur **binary(8)** .  
+ Retourne une valeur **binary(8)**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  MIN_ACTIVE_ROWVERSION est une fonction non déterministe qui retourne la valeur **rowversion** active la plus basse dans la base de données active. Une nouvelle valeur **rowversion** est générée en règle générale lorsqu'une insertion ou une mise à jour est effectuée sur une table qui contient une colonne de type **rowversion**. S’il n’y a pas de valeurs actives dans la base de données, MIN_ACTIVE_ROWVERSION retourne la même valeur que @@DBTS + 1.  
   
  MIN_ACTIVE_ROWVERSION est utile dans certains scénarios, par exemple dans le cadre de la synchronisation de données qui utilise des valeurs **rowversion** pour grouper des jeux de modifications. Si une application utilise @@DBTS au lieu de MIN_ACTIVE_ROWVERSION, il est possible de manquer des modifications qui sont actives au moment de la synchronisation.  

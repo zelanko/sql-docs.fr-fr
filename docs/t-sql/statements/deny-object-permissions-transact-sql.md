@@ -1,4 +1,5 @@
 ---
+description: DENY – refus d'autorisations d'objet (Transact-SQL)
 title: DENY - Refuser des autorisations sur un objet (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 63de8be6e32ecece4bc277e4aeb299e943cae02e
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8be1d18c6caae4751ab1168f99aa7b5192510185
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444712"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY – refus d'autorisations d'objet (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -80,7 +81,7 @@ PRIVILEGES
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
  Spécifie l’objet sur lequel l’autorisation doit être refusée. L’expression OBJECT est facultative si *schema_name* est spécifié. Si l’expression OBJECT est utilisée, le qualificateur d’étendue ( **::** ) est obligatoire. Si *schema_name* n’est pas spécifié, le schéma par défaut est utilisé. Si *schema_name* est spécifié, le qualificateur d’étendue de schéma ( **.** ) est obligatoire.  
   
- À \<database_principal>  
+ TO \<database_principal>  
  Spécifie le principal auquel l'autorisation est refusée.  
   
  CASCADE  

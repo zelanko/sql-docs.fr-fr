@@ -1,4 +1,5 @@
 ---
+description: Tâche de profilage des données
 title: Profilage des données, tâche | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8076ccc258b7de7075bafc9f0a0f5c9bed6d6a0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 60e136951deb8701893ea3d611597e8388909816
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430991"
 ---
 # <a name="data-profiling-task"></a>Tâche de profilage des données
 
@@ -90,7 +91,7 @@ ms.locfileid: "86914825"
   
  Les types d’entiers sont **bit**, **tinyint**, **smallint**, **int**et **bigint**.  
   
- Les types de caractères sont **char**, **nchar**, **varchar**et **nvarchar,** mais n’incluent pas **varchar (max)** et **nvarchar (max)** .  
+ Les types de caractères sont **char**, **nchar**, **varchar**et **nvarchar,** mais n’incluent pas **varchar (max)** et **nvarchar (max)**.  
   
  Les types de date et d’heure sont **datetime**, **smalldatetime**et **timestamp**.  
   

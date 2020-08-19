@@ -1,4 +1,5 @@
 ---
+description: Contrôle d'accès pour les données sensibles présentes dans les packages
 title: Contrôle d’accès pour les données sensibles présentes dans les packages | Microsoft Docs
 ms.custom: security
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6b5347b8b3d241bc7d65fb4d344b74822150185e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 01e2b133fcd1e4fbf008ae591c92cb549b22479a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922057"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430131"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Contrôle d'accès pour les données sensibles présentes dans les packages
 
