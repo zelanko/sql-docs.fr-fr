@@ -1,4 +1,5 @@
 ---
+description: Conversion de types de données (moteur de base de données)
 title: Conversion de types de données (moteur de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -21,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 656f76bfb0b015742824b02e8d7f2f09c8bfe098
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008102"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88368555"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversion de types de données (moteur de base de données)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
