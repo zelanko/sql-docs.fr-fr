@@ -1,4 +1,5 @@
 ---
+description: Propriété ProtocolName (classe ClientNetworkProtocol)
 title: Propriété ProtocolName (ClientNetworkProtocol)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 17236b165dd76fa2713a9fed99e4fd3df58a6097
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 295295d4e6672187c2f33251cbff73d5062dbd4d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427331"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Propriété ProtocolName (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nom du protocole réseau actuel spécifié par la [Configuration des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,7 +43,7 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le nom du protocole réseau client actuel référencé par la [méthode SetOrderValue (classe ClientNetworkProtocol)](https://technet.microsoft.com/library/ms179295.aspx).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  

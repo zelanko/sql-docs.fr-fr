@@ -1,4 +1,5 @@
 ---
+description: sys.fn_hadr_is_primary_replica (Transact-SQL)
 title: sys. fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1ed8bf04b624746d6a84efc6b515d0efa6c9d598
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 1c7bc3d91eafbfa72149c5c228afe409b044b089
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427841"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +49,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="returns"></a>Retours  
  Retourne le type de données **bool**: 1 si la base de données sur l’instance actuelle est le réplica principal, sinon 0.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez cette fonction pour déterminer aisément si l'instance locale héberge le réplica principal de la base de données de disponibilité spécifiée. L'exemple de code devrait ressembler à ce qui suit :  
   
 ```  

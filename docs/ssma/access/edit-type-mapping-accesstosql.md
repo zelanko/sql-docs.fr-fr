@@ -1,4 +1,5 @@
 ---
+description: Modifier le mappage de type (AccessToSQL)
 title: Modifier le mappage de type (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 8a5406bd58e62e34bfaaa6046bd2feb9f58f73a7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 246c8187a35b5990497712ab5b83ea4cb3acf59f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427061"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>Modifier le mappage de type (AccessToSQL)
 La boîte de dialogue **modifier le mappage de type** vous permet de spécifier la manière dont les types sont mappés entre les objets de base de données source et de destination.  
@@ -44,6 +45,6 @@ Sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type 
   
 Si le type de données est de longueur variable, le champ suivant s’affiche sous **type de cible**:  
   
-**Remplacer par**  
+**Replace with**  
 Spécifiez la longueur cible pour ce mappage. Par exemple, pour le type de données **nvarchar** , vous pouvez entrer 20 pour spécifier que le type de données source spécifié doit être mappé à **nvarchar (20)**.  
   

@@ -1,4 +1,5 @@
 ---
+description: sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 title: sys. fn_cdc_map_time_to_lsn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bba5095587b8ddbb4c06d3334ad60e16cb2f5e35
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 638bf2b99069c718e4e84ab0ccc888300a56bc68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427881"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Retourne la valeur du numéro séquentiel dans le journal (LSN) à partir de la colonne **start_lsn** de la table système [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) pour l’heure spécifiée. Vous pouvez utiliser cette fonction pour mapper systématiquement les plages DateTime dans la plage basée sur LSN requise par les fonctions d’énumération de capture de données modifiées, [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) et [CDC. fn_cdc_get_net_changes_](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>pour retourner des modifications de données dans cette plage.  
+  Retourne la valeur du numéro séquentiel dans le journal (LSN) à partir de la colonne **start_lsn** de la table système [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) pour l’heure spécifiée. Vous pouvez utiliser cette fonction pour mapper systématiquement les plages DateTime dans la plage basée sur LSN requise par les fonctions d’énumération de capture de données modifiées, [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) et [CDC. fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>pour retourner des modifications de données dans cette plage.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

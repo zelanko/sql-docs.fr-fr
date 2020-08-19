@@ -1,4 +1,5 @@
 ---
+description: BufferWithCurves (type de données geometry)
 title: BufferWithCurves (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,12 +16,12 @@ ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c49d71c0e7e149ed66d699e04126cdd1f6f9b726
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9a3a8ff7006a2ac48f8b357cd820d0c47e162885
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442337"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427071"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (type de données geometry)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -29,16 +30,17 @@ ms.locfileid: "87442337"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```syntaxsql
 .BufferWithCurves ( distance )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Arguments  
  *distance*  
  Expression **float** indiquant la distance maximale à laquelle les points qui forment la mémoire tampon peuvent se trouver par rapport à l’instance **geometry**.  
   
-## <a name="return-types"></a>Types de retour  
+## <a name="return-types"></a>Types de retour
 Type de retour SQL Server : **geometry**  
   
  Type de retour CLR : **SqlGeometry**  
@@ -157,5 +159,5 @@ Type de retour SQL Server : **geometry**
  Les deux premières instructions **SELECT** retournent une instance `GeometryCollection`, car le paramètre *distance* est inférieur ou égal à 1/2 de la distance entre les deux points (1 1) et (1 4). La troisième instruction **SELECT** retourne une instance `CurvePolygon`, car les instances mises en mémoire tampon des deux points (1 1) et (1 4) se chevauchent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Méthodes étendues sur les instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  

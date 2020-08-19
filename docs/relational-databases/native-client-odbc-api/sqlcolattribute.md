@@ -1,4 +1,5 @@
 ---
+description: SQLColAttribute
 title: SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1815a76dcfde42e45cb3b2ca1ffe4186ff52a238
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 86590239e22f19ba0858af583193675bc711a0ae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428341"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86012429"
 |SQL_DESC_TABLE_NAME|Disponible dans des jeux de résultats extraits d'instructions générant des curseurs côté serveur ou sur des instructions SELECT exécutées qui contiennent une clause FOR BROWSE.|  
 |SQL_DESC_UNNAMED|Valeur SQL_NAMED de toutes les colonnes dans un jeu de résultats sauf si une colonne est le résultat d'une expression qui ne contient aucune étiquette affectée dans le cadre de l'expression. Lorsque SQL_DESC_UNNAMED retourne la valeur SQL_UNNAMED, tous les attributs d'identificateur de colonne ODBC contiennent des chaînes de longueur nulle pour la colonne.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Le pilote ODBC Native Client utilise l’instruction SET FMTONLY pour réduire la charge du serveur lorsque **SQLColAttribute** est appelé pour des instructions préparées mais non exécutées.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le pilote ODBC Native Client utilise l’instruction SET FMTONLY pour réduire la charge du serveur lorsque **SQLColAttribute** est appelé pour des instructions préparées mais non exécutées.  
   
  Pour les types de valeur élevée, **SQLColAttribute** renverra les valeurs suivantes :  
   
@@ -73,9 +75,9 @@ ms.locfileid: "86012429"
 |SQL_CA_SS_NUM_COMPUTES|Nombre de clauses COMPUTE spécifiées dans l'instruction SELECT Transact-SQL actuelle.|  
 |SQL_CA_SS_NUM_ORDERS|Nombre de colonnes spécifiées dans une clause ORDER BY d'une instruction Transact-SQL SELECT.|  
   
- \*Disponible si l’attribut d’instruction SQL_SOPT_SS_HIDDEN_COLUMNS a la valeur SQL_HC_ON.  
+ \*   Disponible si l’attribut d’instruction SQL_SOPT_SS_HIDDEN_COLUMNS a la valeur SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]a introduit des champs de descripteur spécifiques au pilote pour fournir des informations supplémentaires pour indiquer respectivement le nom de la collection de schémas XML, le nom du schéma et le nom du catalogue. Ces propriétés ne nécessitent pas l'usage de guillemets ou d'un caractère d'échappement si elles contiennent des caractères non alphanumériques. Le tableau suivant répertorie ces nouveaux champs de descripteur :  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit des champs de descripteur spécifiques au pilote pour fournir des informations supplémentaires pour indiquer respectivement le nom de la collection de schémas XML, le nom du schéma et le nom du catalogue. Ces propriétés ne nécessitent pas l'usage de guillemets ou d'un caractère d'échappement si elles contiennent des caractères non alphanumériques. Le tableau suivant répertorie ces nouveaux champs de descripteur :  
   
 |Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  

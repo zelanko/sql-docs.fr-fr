@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLNativeSql
 title: SQLNativeSql fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9666bc767affb3b6bb624c416614079193d4b921
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbdf43d1120065f981d43e58490e328c6ef7691c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428901"
 ---
 # <a name="sqlnativesql-function"></a>Fonction SQLNativeSql
 **Conformité**  
@@ -62,7 +63,7 @@ SQLRETURN SQLNativeSql(
  Si *OutStatementText* a la valeur null, *TextLength2Ptr* retourne toujours le nombre total de caractères (à l’exception du caractère de fin null pour les données de type caractère) disponibles pour retourner dans la mémoire tampon vers laquelle pointe *OutStatementText*.  
   
  *BufferLength*  
- Entrée Nombre de caractères dans la \*mémoire tampon *OutStatementText* . Si la valeur retournée dans * \*InStatementText* est une chaîne Unicode (lors de l’appel de **SQLNativeSqlW**), l’argument *BufferLength* doit être un nombre pair.  
+ Entrée Nombre de caractères dans la \* mémoire tampon *OutStatementText* . Si la valeur retournée dans * \* InStatementText* est une chaîne Unicode (lors de l’appel de **SQLNativeSqlW**), l’argument *BufferLength* doit être un nombre pair.  
   
  *TextLength2Ptr*  
  Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (sans fin null) disponibles pour retourner dans \* *OutStatementText*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength*, la chaîne SQL traduite dans \* *OutStatementText* est tronquée à *BufferLength* moins la longueur d’un caractère de fin null.  
@@ -76,12 +77,12 @@ SQLRETURN SQLNativeSql(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01004|Données de chaîne, tronquées à droite|Le \* *OutStatementText* de mémoire tampon n’est pas assez grand pour retourner la chaîne SQL entière, donc la chaîne SQL a été tronquée. La longueur de la chaîne SQL non tronquée est retournée dans **TextLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01004|Données de chaîne, tronquées à droite|Le OutStatementText de mémoire tampon \* *OutStatementText* n’est pas assez grand pour retourner la chaîne SQL entière, donc la chaîne SQL a été tronquée. La longueur de la chaîne SQL non tronquée est retournée dans **TextLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |08003|Connexion non ouverte|Le *ConnectionHandle* n’était pas dans un état connecté.|  
 |08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
 |22007|Format de date/heure non valide|**InStatementText* contenait une clause Escape avec une valeur de date, d’heure ou d’horodatage non valide.|  
 |24 000|État de curseur non valide|Le curseur référencé dans l’instruction a été placé avant le début du jeu de résultats ou après la fin du jeu de résultats. Cette erreur ne peut pas être retournée par un pilote disposant d’une implémentation de curseur SGBD native.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY009|Utilisation non valide d’un pointeur null|(DM) **InStatementText* était un pointeur null.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le *ConnectionHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.|  

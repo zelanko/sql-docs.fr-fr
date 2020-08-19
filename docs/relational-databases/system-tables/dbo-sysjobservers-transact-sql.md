@@ -1,4 +1,5 @@
 ---
+description: dbo.sysjobservers (Transact-SQL)
 title: dbo.sysjobservers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/26/2019
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b02aa88951f7dd4e82ab26fcd54d715027b1ab7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b4df04c6a9564c2912f39173f71735162e7dc1cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427661"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +43,11 @@ Stocke les associations ou les relations existant entre un travail particulier e
 |last_run_duration|**int**|Durée d'exécution du travail, en heures, minutes et secondes. Calculé à l’aide de la formule suivante : (*heures* \* 10000) + (*minutes* \* 100) + *secondes*.|  
 
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Une valeur supérieure à *4* signifie que l’agent SQL ne connaît pas l’état de ce travail. La *last_run_outcome* est initialement définie sur *5* lorsqu’un travail est créé.
 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Tables SQL Server Agent &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
+[Tables SQL Server Agent &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  

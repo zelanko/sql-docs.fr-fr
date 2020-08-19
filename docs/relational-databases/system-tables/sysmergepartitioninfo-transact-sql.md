@@ -1,4 +1,5 @@
 ---
+description: sysmergepartitioninfo (Transact-SQL)
 title: sysmergepartitioninfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7429ad2c-dd33-4f7d-89cc-700e083af518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 44f44ede09eaf6eabfee9ef6b240e599c8eec744
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b987adef188e580b38f5f4df5b24b4f6ab22825b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427581"
 ---
 # <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85889249"
 |**partition_options**|**tinyint**|Définit le mode de partitionnement des données de l'article, ce qui permet l'optimisation des performances lorsque toutes les lignes appartiennent à une seule partition ou à un seul abonnement. *partition_options* peut prendre l’une des valeurs suivantes.<br /><br /> **0** = le filtrage de l’article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition, c’est-à-dire une partition « qui se chevauche ».<br /><br /> **1** = les partitions se chevauchent, et les mises à jour DML effectuées sur l’abonné ne peuvent pas modifier la partition à laquelle une ligne appartient.<br /><br /> **2** = le filtrage de l’article génère des partitions qui ne se chevauchent pas, mais plusieurs abonnés peuvent recevoir la même partition.<br /><br /> **3** = le filtrage de l’article génère des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

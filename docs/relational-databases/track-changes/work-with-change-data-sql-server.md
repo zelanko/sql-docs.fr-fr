@@ -1,4 +1,5 @@
 ---
+description: Utiliser les données modifiées (SQL Server)
 title: Utiliser les données modifiées
 ms.custom: seo-dt-2019
 ms.date: 01/02/2019
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18002782d7d34b88706b227cf8ac828f9da4976a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 90513b794e7d7125e46aa5f1d6cdb2d85ad34880
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427371"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utiliser les données modifiées (SQL Server)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +62,7 @@ ms.locfileid: "85889089"
  Consultez le modèle utilisé pour énumérer des modifications nettes à l'aide de TRY CATCH afin de voir comment intercepter ces erreurs de fonction table connues et retourner des informations plus explicites à propos de l'échec.  
   
 > [!NOTE]  
->  Pour rechercher des modèles de capture de données modifiées dans SQL Server Management Studio, dans le menu **Affichage** , cliquez sur **Explorateur de modèles**, développez **Modèles SQL Server** , puis développez le dossier **Capture de données modifiées** .  
+>   Pour localiser des modèles de capture de données modifiées dans SQL Server Management Studio, dans le menu **Affichage** , cliquez sur **Explorateur de modèles**, développez **Modèles SQL Server** , puis développez le dossier **Capture de données modifiées** .  
   
 ##  <a name="query-functions"></a><a name="Functions"></a> Fonctions de requête  
  Selon les caractéristiques de la table source faisant l'objet d'un suivi et la configuration de son instance de capture, une ou deux fonctions table sont générées pour la recherche des données modifiées.  

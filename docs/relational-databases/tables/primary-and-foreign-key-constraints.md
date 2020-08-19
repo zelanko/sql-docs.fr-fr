@@ -1,4 +1,5 @@
 ---
+description: Contraintes de clé primaire et de clé étrangère
 title: Contraintes de clé primaire et de clé étrangère | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2017
@@ -16,12 +17,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f9f47b2149bb308bf0e2ca8b5c975d24d11c37
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8a7802c1bbf767ae45a2b25da21f8db3d8705c79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427501"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Contraintes de clé primaire et de clé étrangère
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "86004769"
   
  Par exemple, la table **Sales.SalesOrderHeader** possède une liaison de clé étrangère avec la table **Sales.SalesPerson** car il existe une relation logique entre les commandes et les vendeurs. La colonne **SalesPersonID** de la table **SalesOrderHeader** correspond à la colonne clé primaire de la table **SalesPerson** . La colonne **SalesPersonID** de la table **SalesOrderHeader** est donc la clé étrangère de la table **SalesPerson** . Lors de la création de cette relation de clé étrangère, une valeur pour **SalesPersonID** ne peut pas être insérée dans la table **SalesOrderHeader** si elle n'existe pas déjà dans la table **SalesPerson** .  
   
- Une table peut référencer au maximum 253 autres tables et colonnes en tant que clés étrangères (références sortantes). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fait passer de 253 à 10 000 le nombre limite des autres tables et colonnes pouvant référencer des colonnes dans une table unique (références entrantes). (Cela nécessite au minimum le niveau de compatibilité 130). Cette augmentation est soumise aux restrictions suivantes :  
+ Une table peut référencer au maximum 253 autres tables et colonnes en tant que clés étrangères (références sortantes). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fait passer de 253 à 10 000 le nombre limite des autres tables et colonnes pouvant référencer des colonnes dans une table unique (références entrantes). (Cela nécessite au minimum le niveau de compatibilité 130). Cette augmentation est soumise aux restrictions suivantes :  
   
 -   Les références de clés étrangères supérieures à 253 sont uniquement prises en charge pour les opérations DELETE DML. Les opérations UPDATE et MERGE ne sont pas prises en charge.  
   
@@ -126,7 +127,7 @@ ms.locfileid: "86004769"
 |Décrit comment créer une clé primaire.|[Créer des clés primaires](../../relational-databases/tables/create-primary-keys.md)|  
 |Décrit comment supprimer une clé primaire.|[Supprimer des clés primaires](../../relational-databases/tables/delete-primary-keys.md)|  
 |Explique comment modifier une clé primaire.|[Modifier des clés primaires](../../relational-databases/tables/modify-primary-keys.md)|  
-|Explique comment créer des relations de clé étrangère|[Créer les relations entre les clés étrangères](../../relational-databases/tables/create-foreign-key-relationships.md)|  
+|Explique comment créer des relations de clé étrangère|[Créer des relations de clé étrangère](../../relational-databases/tables/create-foreign-key-relationships.md)|  
 |Décrit comment modifier les relations de clé étrangère.|[Modifier des relations de clé étrangère](../../relational-databases/tables/modify-foreign-key-relationships.md)|  
 |Décrit comment supprimer des relations de clé étrangère.|[Supprimer les relations entre les clés étrangères](../../relational-databases/tables/delete-foreign-key-relationships.md)|  
 |Décrit comment afficher les propriétés de clé étrangère.|[Afficher les propriétés de clés étrangères](../../relational-databases/tables/view-foreign-key-properties.md)|  

@@ -1,4 +1,5 @@
 ---
+description: STLineFromText (type de données geometry)
 title: STLineFromText (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d050440ae605b5bb43cb3ac5c423929088a48626
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 77d76ddaeab5952db35f6395d0d2b14a5b904290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427041"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Arguments
  *linestring_tagged_text*  
- Représentation WKT de l’instance **geometryLineString** à retourner. *linestring_tagged_text* est une expression **nvarchar(max)** .  
+ Représentation WKT de l’instance **geometryLineString** à retourner. *linestring_tagged_text* est une expression **nvarchar(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (spatial reference identifier ) de l’instance **geometryLineString** à retourner.  
@@ -86,7 +87,7 @@ SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)
 SELECT @g.ToString();  
 ``` 
 ## <a name="see-also"></a>Voir aussi  
- [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+ [Méthodes géométriques statiques OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

@@ -1,4 +1,5 @@
 ---
+description: Utilisation des sources de données
 title: Utilisation des sources de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: df9b09e4c5519e0fff44902bd83b8e3d92a67ca8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 162f1c2bf8d75757ac2c29d60f675ac07ba8b00d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428831"
 ---
 # <a name="using-data-sources"></a>Utilisation des sources de données
 Les sources de données sont généralement créées par l’utilisateur final ou un technicien avec un programme appelé *administrateur ODBC*. L’administrateur ODBC invite l’utilisateur à utiliser le pilote, puis appelle ce pilote. Le pilote affiche une boîte de dialogue qui demande les informations dont il a besoin pour se connecter à la source de données. Une fois que l’utilisateur a entré les informations, le pilote le stocke sur le système.  

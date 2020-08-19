@@ -1,4 +1,5 @@
 ---
+description: ConfigDriver, fonction
 title: ConfigDriver fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a2da5fd5ce01bd97f13d7c8d805c615c1ac436a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d59765d1b6a6a662c02b459e07bac10895838a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428951"
 ---
 # <a name="configdriver-function"></a>ConfigDriver, fonction
 **Conformité**  
@@ -61,7 +62,7 @@ BOOL ConfigDriver(
  Cette option peut également être spécifique au pilote, auquel cas l’argument *fRequest* de la première option doit commencer à partir de ODBC_CONFIG_DRIVER_MAX + 1. L’argument *fRequest* d’une option supplémentaire doit également démarrer à partir d’une valeur supérieure à ODBC_CONFIG_DRIVER_MAX + 1.  
   
  *lpszDriver*  
- Entrée Nom du pilote tel qu’il est enregistré dans la clé Odbcinst. ini des informations système.  
+ Entrée Nom du pilote inscrit dans la clé Odbcinst.ini des informations système.  
   
  *lpszArgs*  
  Entrée Chaîne terminée par le caractère null qui contient des arguments pour un *fRequest*spécifique au pilote.  
@@ -81,7 +82,7 @@ BOOL ConfigDriver(
  La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **ConfigDriver** retourne false, une valeur * \*pfErrorCode* associée est publiée dans la mémoire tampon d’erreur du programme d’installation par un appel à **SQLPostInstallerError** et peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Quand **ConfigDriver** retourne false, une valeur * \* pfErrorCode* associée est publiée dans la mémoire tampon d’erreur du programme d’installation par un appel à **SQLPostInstallerError** et peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les valeurs * \* pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  

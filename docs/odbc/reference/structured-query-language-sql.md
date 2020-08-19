@@ -1,4 +1,5 @@
 ---
+description: SQL (Structured Query Language)
 title: Langage SQL (SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c669b4424271fc1a3c91dea37159474fb52b97cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c68f14bd3e1ae5df29f52332d29393bf15c3b665
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293389"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428971"
 ---
 # <a name="structured-query-language-sql"></a>SQL (Structured Query Language)
 Un SGBD classique permet aux utilisateurs de stocker, d’accéder et de modifier les données d’une manière organisée et efficace. À l’origine, les utilisateurs de SGBD étaient des programmeurs. Accès aux données stockées nécessaires à l’écriture d’un programme dans un langage de programmation tel que COBOL. Bien que ces programmes soient souvent écrits pour présenter une interface conviviale à un utilisateur non technique, l’accès aux données lui-même nécessitait les services d’un programmeur compétent. L’accès occasionnel aux données n’était pas pratique.  

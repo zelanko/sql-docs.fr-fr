@@ -1,4 +1,5 @@
 ---
+description: Classe d'événements de connexion de mise en miroir de bases de données
 title: Database Mirroring Connection, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,16 +11,16 @@ ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 37f1658a49fa5bc6577e4b7668dc62914aab3aa7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a600b4a319297be30e5f734bd5a272748f6e8c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765292"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428601"
 ---
 # <a name="database-mirroring-connection-event-class"></a>Classe d'événements de connexion de mise en miroir de bases de données
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement de **connexion de mise en miroir de bases de données** pour indiquer l’état d’une connexion de transport gérée par la mise en miroir de bases de données.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un **événement de connexion de mise en miroir de bases de données** pour indiquer l’état d’une connexion de transport gérée par la mise en miroir de bases de données.  
   
 ## <a name="database-mirroringconnection-event-class-data-columns"></a>Mise en miroir de bases de données:Colonnes de données de la classe d'événements de connexion  
   

@@ -1,4 +1,5 @@
 ---
+description: Propriété PropertyValType (classe ClientNetworkProtocolProperty)
 title: Propriété PropertyValType (ClientNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 193df6ad932a4eeb496f696f15ff100b74584d00
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0068939076c91870e55b333886c7339255b87085
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427311"
 ---
 # <a name="propertyvaltype-property-clientnetworkprotocolproperty-class"></a>Propriété PropertyValType (classe ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le type de données de la valeur stockée dans la propriété référencée par la valeur de la [propriété PropertyIdx (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,9 +43,9 @@ object.PropertyValType [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** qui spécifie le type de données de la valeur de la propriété.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
- [configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
+ [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

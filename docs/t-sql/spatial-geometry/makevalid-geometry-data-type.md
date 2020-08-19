@@ -1,4 +1,5 @@
 ---
+description: MakeValid (type de données geometry)
 title: MakeValid (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 75c3dd359121ea24a69100e6297a790a1812a612
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 379443977316123a2c233c163670598926841e91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427081"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid (type de données geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +84,7 @@ SELECT @g.MakeValid().ToString();
   
 ## <a name="see-also"></a>Voir aussi  
  [STIsValid &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
- [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Méthodes étendues sur les instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

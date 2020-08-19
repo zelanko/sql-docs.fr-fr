@@ -1,4 +1,5 @@
 ---
+description: Propriété ServiceName (classe SqlServiceAdvancedProperty)
 title: ServiceName, propriété (SqlServiceAdvancedProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/03/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59a22566ab25d667652ae47b8e27dc170893a55e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 937171a5267ac2b8dc6bab4b019fcfa9189e3404
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880492"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427161"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>Propriété ServiceName (classe SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nom du service managé associé à la propriété avancée.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,7 +43,7 @@ object.ServiceName [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le nom du service associé à la propriété avancée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

@@ -1,4 +1,5 @@
 ---
+description: sysmail_faileditems (Transact-SQL)
 title: sysmail_faileditems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5fa83e2f49d97c6318944251f68da18f10646c04
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 60e6e4b4411c55467aab30359ae25f07237ceb12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427891"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "85893221"
 |**destinataire**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
 |**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
 |**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
-|**Objet**|**nvarchar (510)**|Ligne d'objet du message.|  
+|**subject**|**nvarchar (510)**|Ligne d'objet du message.|  
 |**body**|**varchar(max)**|le corps du message.|  
 |**body_format**|**varchar (20)**|Format du corps du message. Les valeurs possibles sont TEXT et HTML.|  
 |**importance**|**varchar (6)**|Paramètre d' **importance** du message.|  
@@ -61,7 +62,7 @@ ms.locfileid: "85893221"
 |**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la vue **sysmail_faileditems** pour voir les messages qui n’ont pas été envoyés par Database mail. En cas de dépannage de la messagerie de base de données, cette vue peut vous aider à identifier la nature du problème en vous montrant les attributs des messages qui n'ont pas pu être envoyés. Pour afficher la raison de l’échec, consultez l’entrée correspondant au message ayant échoué dans le [sysmail_event_log &#40;vue Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) .  
   
 ## <a name="permissions"></a>Autorisations  

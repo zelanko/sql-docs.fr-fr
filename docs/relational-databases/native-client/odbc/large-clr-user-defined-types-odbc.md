@@ -1,4 +1,5 @@
 ---
+description: Types CLR volumineux définis par l’utilisateur (ODBC)
 title: Types CLR volumineux définis par l’utilisateur (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,11 +15,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec445a457f948c2fb75d26a6ad632633230f6fec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3f1beb11da79f41349ef0f01bb203d969654db07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009756"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88428161"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -135,7 +137,7 @@ ms.locfileid: "86009756"
 |SQL_C_BINARY|Prise en charge|  
 |SQL_C_CHAR|Géré|  
   
- \*Les données binaires sont converties en une chaîne hexadécimale.  
+ \* Les données binaires sont converties en une chaîne hexadécimale.  
   
  Les conversions suivantes sont prises en charge entre les types de données C et SQL :  
   
@@ -145,7 +147,7 @@ ms.locfileid: "86009756"
 |SQL_C_BINARY|Prise en charge|  
 |SQL_C_CHAR|Géré|  
   
- \*La conversion de chaînes hexadécimales en données binaires se produit.  
+ \* La conversion de chaînes hexadécimales en données binaires se produit.  
   
 ## <a name="sql_variant-support-for-udts"></a>Prise en charge des UDT par SQL_VARIANT  
  Les UDT ne sont pas pris en charge dans les colonnes SQL_VARIANT.  
@@ -158,8 +160,8 @@ ms.locfileid: "86009756"
   
 |Version du serveur|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |--------------------|-------------------------------------------------------------------|----------------------------------------------------------|  
-|SQL Server 2005|**ASSORTI**|**varbinary(max)**|  
-|SQL Server 2008 et ultérieur|**ASSORTI**|**ASSORTI**|  
+|SQL Server 2005|**UDT**|**varbinary(max)**|  
+|SQL Server 2008 et ultérieur|**UDT**|**UDT**|  
   
 ## <a name="odbc-functions-supporting-large-clr-udts"></a>Fonctions ODBC prenant en charge les types CLR volumineux définis par l'utilisateur  
  Cette section indique les modifications apportées aux fonctions ODBC SQL Server Native Client au niveau des types CLR volumineux définis par l'utilisateur.  
@@ -212,7 +214,7 @@ ms.locfileid: "86009756"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Les valeurs retournées pour les UDT sont les suivantes :  
   
-|Type de données SQL|Type|Subtype|Longueur|Precision|Scale|  
+|Type de données SQL|Type|Subtype|Longueur|Précision|Scale|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -232,7 +234,7 @@ ms.locfileid: "86009756"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Les valeurs autorisées pour les UDT sont les suivantes :  
   
-|Type de données SQL|Type|Subtype|Longueur|Precision|Scale|  
+|Type de données SQL|Type|Subtype|Longueur|Précision|Scale|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -241,6 +243,6 @@ ms.locfileid: "86009756"
  Les valeurs retournées pour les UDT des colonnes DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH et DECIMAL_DIGTS sont celles décrites dans « Métadonnées retournés par SQLColumns et SQLProcedureColumns (métadonnées de catalogue) », plus haut dans cette rubrique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types CLR volumineux définis par l'utilisateur](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
+ [Types CLR volumineux définis par l’utilisateur](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

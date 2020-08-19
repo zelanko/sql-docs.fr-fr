@@ -1,4 +1,5 @@
 ---
+description: Améliorer les performances des index de recherche en texte intégral
 title: Améliorer les performances des index de recherche en texte intégral | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4fd63c14206848107e2fea8c2e8972e76b77cc1c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4b893bd45de93ab0ee934343e16bf6d577f1123
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629495"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427931"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -82,7 +83,7 @@ Le fichier journal de l'analyse respecte le modèle de dénomination suivant :
   
 Les parties variables du nom de fichier du journal d’analyse sont les suivantes.
 -   \<**DatabaseID**> – L’ID d’une base de données. <**dbid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
--   <**FullTextCatalogID**> - ID du catalogue de texte intégral. \<**catid**> est un nombre à cinq chiffres commençant par des zéros.  
+-   <**FullTextCatalogID**> - ID du catalogue de texte intégral. \<**catid**> est un nombre à cinq chiffres commençant par des zéros.  
 -   <**n**> - Entier qui indique qu’il existe un ou plusieurs journaux d’analyse du même catalogue de texte intégral.  
   
  Par exemple, `SQLFT0000500008.2` est le fichier journal d’analyse pour une base de données ayant un ID de base de données = 5 et un ID de catalogue de texte intégral = 8. Le 2 à la fin du nom de fichier indique qu'il existe deux fichiers journaux d'analyse pour cette combinaison base de données/catalogue.  

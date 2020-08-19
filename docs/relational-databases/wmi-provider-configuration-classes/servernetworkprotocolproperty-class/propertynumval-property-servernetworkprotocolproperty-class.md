@@ -1,4 +1,5 @@
 ---
+description: Propriété PropertyNumVal (classe ServerNetworkProtocolProperty)
 title: Propriété PropertyNumVal (ServerNetworkProtocolProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6836060c0e928dc82662437c616d89801c2fd645
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 295794ae460a34f35fce493220cfa4768079ab96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427301"
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>Propriété PropertyNumVal (classe ServerNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient la valeur numérique d'une propriété référencée.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,7 +43,7 @@ object.PropertyNumVal [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** qui spécifie la valeur numérique de la propriété référencée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

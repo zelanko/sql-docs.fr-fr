@@ -1,4 +1,5 @@
 ---
+description: sys. fn_db_backup_file_snapshots (Transact-SQL)
 title: sys. fn_db_backup_file_snapshots (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2015
@@ -12,18 +13,19 @@ dev_langs:
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6944817524a339eb8e48aa223c291cef1de1879
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 067a1d65b65c1e2cc9bde252e6f56951e87950a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052749"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427791"
 ---
 # <a name="sysfn_db_backup_file_snapshots-transact-sql"></a>sys. fn_db_backup_file_snapshots (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Retourne les instantanés Azure associés aux fichiers de base de données. Si la base de données spécifiée est introuvable ou si les fichiers de base de données ne sont pas stockés dans le service de stockage d’objets BLOB Microsoft Azure, aucune ligne n’est retournée. Utilisez cette fonction système conjointement avec la procédure stockée système **sys. sp_delete_backup_file_snapshot** pour identifier et supprimer les instantanés de sauvegarde orphelins. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -1,4 +1,5 @@
 ---
+description: sys.fn_helpcollations (Transact-SQL)
 title: sys. fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
@@ -20,11 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d91ff0f85ba496397025ea99012509edea9dd865
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 66b0a9ad6c68e209cbcf21a05ef015f43535ec4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000909"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427831"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -32,7 +34,7 @@ ms.locfileid: "86000909"
 
   Retourne une liste de tous les classements pris en charge.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +51,7 @@ fn_helpcollations ()
 |Nom|**sysname**|Nom de classement standard|  
 |Description|**nvarchar(1000)**|Description du classement|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les classements Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend également en charge un nombre limité (<80) de classements appelés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements qui ont été développés avant les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements Windows pris en charge. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les classements sont toujours pris en charge pour la compatibilité descendante, mais ne doivent pas être utilisés pour de nouveaux travaux de développement. Pour plus d’informations sur le classement Windows, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les classements Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend également en charge un nombre limité (<80) de classements appelés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements qui ont été développés avant les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements Windows pris en charge. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les classements sont toujours pris en charge pour la compatibilité descendante, mais ne doivent pas être utilisés pour de nouveaux travaux de développement. Pour plus d’informations sur le classement Windows, consultez [Nom de classement Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemples
 

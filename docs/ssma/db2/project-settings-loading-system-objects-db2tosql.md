@@ -1,4 +1,5 @@
 ---
+description: Paramètres du projet (chargement des objets système) (DB2ToSQL)
 title: Paramètres du projet (chargement des objets système) (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 188634d6e4efcfb72aaa6fd890bc180a499bf5b9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cb0f25ce5063a22fb89d0afa8619b90d34a96f16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933680"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426961"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Paramètres du projet (chargement des objets système) (DB2ToSQL)
 La page chargement des objets système de la boîte de dialogue **paramètres du projet** vous permet de spécifier les objets système DB2 que SSMA convertit et charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
