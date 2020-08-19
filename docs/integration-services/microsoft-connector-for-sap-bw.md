@@ -1,4 +1,5 @@
 ---
+description: Microsoft Connector pour SAP BW
 title: Microsoft Connector for SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 12375a5d09c34ac9b9e79e99efdee3ccebbe823b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430151"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector pour SAP BW
 
@@ -35,7 +36,7 @@ ms.locfileid: "86918093"
 > [!IMPORTANT]  
 >  Vous devez disposer d'une licence SAP supplémentaire pour extraire des données à partir de SAP Netweaver BW. Vérifiez auprès de SAP.  
   
-## <a name="components"></a>Components  
+## <a name="components"></a>Composants  
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW comprend les éléments suivants :  
   
 -   **Source SAP BW** : la source SAP BW est un composant source de flux de données qui vous permet d’extraire des données d’un système SAP Netweaver BW version 7.  
@@ -52,7 +53,7 @@ ms.locfileid: "86918093"
  [Installation de Microsoft Connector pour SAP BW](../integration-services/installing-the-microsoft-connector-for-sap-bw.md)  
  Décrit la configuration requise pour l’installation de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW.  
   
- [Composants Microsoft Connector pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Composants Microsoft Connector 1.1 pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
  Décrit chaque composant de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW.  
   
  [Aide (F1) sur Microsoft Connector pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  

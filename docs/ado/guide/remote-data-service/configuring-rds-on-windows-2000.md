@@ -1,4 +1,5 @@
 ---
+description: Configuration de RDS sur Windows 2000
 title: Configuration des services Bureau à distance sur Windows 2000 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c5bd4829382a3724b4999e3f87de29a561bd6a29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: db965e76f8d62bc90f0f6a5640e8ca4e7752bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750062"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452291"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Configuration de RDS sur Windows 2000
 Si vous rencontrez des difficultés pour que RDS fonctionne correctement après la mise à niveau vers Windows 2000, procédez comme suit pour résoudre le problème :  
   
 1.  Assurez-vous que le service de publication World Wide Web s’exécute en premier en accédant à https://Server à l’aide d’Internet Explorer. Si vous ne pouvez pas accéder au serveur Web de cette manière, ouvrez une invite de commandes et entrez la commande suivante, « NET START W3SVC ».  
   
-2.  Dans le menu Démarrer, sélectionnez Exécuter. Tapez msdfmap. ini, puis cliquez sur OK pour ouvrir le fichier Msdfmap. ini dans le bloc-notes. Vérifiez la section [CONNECT DEFAULT] et, si le paramètre d’accès a la valeur NoAccess, remplacez-le par READONLY.  
+2.  Dans le menu Démarrer, sélectionnez Exécuter. Tapez msdfmap.ini, puis cliquez sur OK pour ouvrir le fichier msdfmap.ini dans le bloc-notes. Vérifiez la section [CONNECT DEFAULT] et, si le paramètre d’accès a la valeur NoAccess, remplacez-le par READONLY.  
   
 3.  À l’aide de l’utilitaire RegEdit, accédez à « HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\DataFactory\HandlerInfo » et assurez-vous que **HandlerRequired** est défini sur 0 et que le **DefaultHandler** est «» (chaîne null).  
   

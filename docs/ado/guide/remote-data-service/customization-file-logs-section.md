@@ -1,4 +1,5 @@
 ---
+description: Fichier de personnalisation, section Logs
 title: Section journaux des fichiers de personnalisation | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3be02570fbff1efd9adb091c121d4eb1a8782817
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 365b57f174f289317a7e8b3e09fe0c29b051ef64
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82749954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452251"
 ---
 # <a name="customization-file-logs-section"></a>Fichier de personnalisation, section Logs
 La section **logs** contient une entrée de fichier journal qui spécifie le nom d’un fichier qui enregistre les erreurs lors de l’opération du **DataFactory**.  
@@ -36,7 +37,7 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 |Élément|Description|  
 |----------|-----------------|  

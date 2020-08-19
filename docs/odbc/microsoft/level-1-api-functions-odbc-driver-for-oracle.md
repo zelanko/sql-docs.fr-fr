@@ -1,4 +1,5 @@
 ---
+description: Fonctions de l’API du niveau 1 (pilote ODBC pour Oracle)
 title: Fonctions de l’API de niveau 1 (pilote ODBC pour Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 37305ee75ebeb0686bafe039f1102cb3c6e18674
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c82ab0f481fbc60d0308895640371e84886e77e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299949"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483542"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau 1 (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -36,7 +37,7 @@ ms.locfileid: "81299949"
 |**Sqlgetconnectoption,**|Retourne le paramètre actuel d’une option de connexion. Cette fonction est partiellement prise en charge. Le pilote prend en charge toutes les valeurs pour l’argument *fOption* , mais ne prend pas en charge certaines valeurs *vParam* pour l’argument *fOption* [SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). Pour plus d’informations, consultez [options de connexion](../../odbc/microsoft/connect-options.md).|  
 |**SQLGetData**|Récupère la valeur d’un champ unique dans l’enregistrement actif du jeu de résultats donné.|  
 |**SQLGetFunctions**|Retourne la valeur TRUE pour toutes les fonctions prises en charge. Implémenté par le gestionnaire de pilotes.|  
-|**SQLGetInfo**|Retourne des informations, notamment SQLHDBC, SQLUSMALLINT, SQLPOINTER, SQLSMALLINT et SQLSMALLINT \*, sur le pilote ODBC pour Oracle et la source de données associée à un handle de connexion, *hdbc*.|  
+|**SQLGetInfo**|Retourne des informations, notamment SQLHDBC, SQLUSMALLINT, SQLPOINTER, SQLSMALLINT et SQLSMALLINT \* , sur le pilote ODBC pour Oracle et la source de données associée à un handle de connexion, *hdbc*.|  
 |**SQLGetStmtOption**|Retourne le paramètre actuel d’une option d’instruction. Pour plus d’informations, consultez [Options des instructions](../../odbc/microsoft/statement-options.md).|  
 |**SQLGetTypeInfo**|Retourne des informations sur les types de données pris en charge par une source de données. Le pilote retourne les informations dans un jeu de résultats SQL.|  
 |**SQLParamData**|Utilisé conjointement avec **SQLPutData** pour spécifier des données de paramètre au moment de l’exécution de l’instruction.|  

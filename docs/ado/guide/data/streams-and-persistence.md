@@ -1,4 +1,5 @@
 ---
+description: Flux et persistance
 title: Flux et persistance | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 869c5ef7380c315b60d2cbf6ad11f0cf638a0d7f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452771"
 ---
 # <a name="streams-and-persistence"></a>Flux et persistance
 La méthode [Save](../../../ado/reference/ado-api/save-method.md) de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) stocke ou *conserve*un **jeu d’enregistrements** dans un fichier, et la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) restaure le **Recordset** à partir de ce fichier.  
@@ -104,7 +105,7 @@ Set rs = nothing
   
  Une nouvelle propriété sur le [DATACONTROL](../../../ado/reference/rds-api/datacontrol-object-rds.md)RDS, [URL](../../../ado/reference/rds-api/url-property-rds.md), pointe vers la page. asp qui génère le **Recordset**. Cela signifie qu’un objet **Recordset** peut être obtenu sans RDS à l’aide de l’objet [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) côté serveur ou de l’utilisateur qui écrit un objet métier. Cela simplifie considérablement le modèle de programmation RDS.  
   
- Code côté serveur, nomméhttps://server/directory/recordset.asp:  
+ Code côté serveur, nommé https://server/directory/recordset.asp:  
   
 ```  
 <%  

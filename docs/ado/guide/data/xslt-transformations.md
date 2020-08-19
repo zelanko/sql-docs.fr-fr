@@ -1,4 +1,5 @@
 ---
+description: Transformations XSLT
 title: Transformations XSLT | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8556576656d4b6eb6ba5e38216a78074cd1f9fc4
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 13326277c0be8abbf7c2d7d623233b34ad2ed348
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452481"
 ---
 # <a name="xslt-transformations"></a>Transformations XSLT
 XSLT peut être appliqué au code XML généré pour le transformer en un autre format. La compréhension du format XML dans ADO vous aide à développer des modèles XSLT qui peuvent le transformer en une forme plus conviviale.  
   
  Par exemple, vous savez que chaque ligne de l’ensemble d’enregistrements est enregistrée en tant qu’élément z :Row à l’intérieur de l’élément RS : Data. De même, chaque champ de l’ensemble d’enregistrements est enregistré en tant que paire attribut-valeur pour cet élément.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le script XSLT suivant peut être appliqué au code XML présenté dans la section précédente pour le transformer en table HTML à afficher dans le navigateur :  
   
 ```  

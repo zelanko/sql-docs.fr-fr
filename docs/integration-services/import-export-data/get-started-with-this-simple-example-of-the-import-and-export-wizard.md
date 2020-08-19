@@ -1,4 +1,5 @@
 ---
+description: Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation
 title: Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
@@ -9,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 58225c6728915c5b9dcd73937b2bd645bd08950f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0f2d241fa54c59eed331c1377f828aec980691e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86910122"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430201"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Bien démarrer avec cet exemple simple de l’Assistant Importation et Exportation
 

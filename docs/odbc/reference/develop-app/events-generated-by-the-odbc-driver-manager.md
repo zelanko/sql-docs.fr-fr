@@ -1,4 +1,5 @@
 ---
+description: Événements générés par le gestionnaire de pilotes ODBC
 title: Événements générés par le gestionnaire de pilotes ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a7ce17f9ef8e082f94609e0f8fc432b8963d73a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2259867b2291299b5bed35536637a7968118e87b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482922"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Événements générés par le gestionnaire de pilotes ODBC
 > [!IMPORTANT]  
@@ -28,7 +29,7 @@ ms.locfileid: "81305750"
   
 |Événement Visual Studio Analyzer|Description|  
 |----------------------------------|-----------------|  
-|**Appeler**|Généré sur chaque entrée d’API ODBC.|  
+|**Invoqu**|Généré sur chaque entrée d’API ODBC.|  
 |**ReturnException**|Généré à chaque retour de l’API ODBC si le code de retour est SQL_ERROR.|  
 |**ReturnNormal**|Généré à chaque retour de l’API ODBC si le code de retour n’est pas SQL_ERROR.|  
 |**Début de la connexion**|Indique qu’une connexion a démarré ; généré lorsque le gestionnaire de pilotes ODBC appelle les API de connexion du pilote.|  

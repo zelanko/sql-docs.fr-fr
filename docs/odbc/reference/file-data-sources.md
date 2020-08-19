@@ -1,4 +1,5 @@
 ---
+description: Sources de données de fichier
 title: Sources de données de fichier | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0661aa424a7a118b8b12f4bf8433987ff83bd788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d02c767adab90ee4a7b6ff93a34886c03b87780c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429041"
 ---
 # <a name="file-data-sources"></a>Sources de données de fichier
 Les *sources de données de fichier* sont stockées dans un fichier et permettent aux informations de connexion d’être utilisées à plusieurs reprises par un seul utilisateur ou partagées entre plusieurs utilisateurs. Quand une source de données de fichier est utilisée, le gestionnaire de pilotes établit la connexion à la source de données à l’aide des informations contenues dans un fichier. DSN. Ce fichier peut être manipulé comme n’importe quel autre fichier. Une source de données de fichier n’a pas de nom de source de données, comme la source de données d’une machine, et n’est pas inscrite auprès d’un utilisateur ou d’un ordinateur.  

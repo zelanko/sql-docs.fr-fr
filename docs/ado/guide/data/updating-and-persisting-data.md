@@ -1,4 +1,5 @@
 ---
+description: Mise à jour et enregistrement des données
 title: Mise à jour et persistance des données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a77bb6f8f26652a9f435683c56b14d0bc8eb4b65
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 19e281e6108005279cd807e5ee76d383437b8814
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452651"
 ---
 # <a name="updating-and-persisting-data"></a>Mise à jour et enregistrement des données
 Les chapitres précédents ont expliqué comment utiliser ADO pour accéder aux données d’une source de données, comment se déplacer dans les données, et même comment modifier les données. Bien sûr, si l’objectif de votre application est de permettre aux utilisateurs d’apporter des modifications aux données, vous devrez comprendre comment enregistrer ces modifications. Vous pouvez conserver les modifications apportées au **jeu d’enregistrements** dans un fichier à l’aide de la méthode **Save** , ou vous pouvez renvoyer les modifications à la source de données pour le stockage à l’aide des méthodes **Update** ou **UpdateBatch** .  

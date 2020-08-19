@@ -1,4 +1,5 @@
 ---
+description: Informations du serveur de distribution, publications
 title: Informations du serveur de distribution, publications | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2018
@@ -17,12 +18,12 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0e2cdb7832e97c575af79c322e1cd21d1d8f09f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498762"
 ---
 # <a name="distributor-information-publications"></a>Informations du serveur de distribution, publications
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +43,7 @@ Les informations affichées relatives aux publications prises en charge par le s
   Les informations pour les abonnements de publication d'instantané incluent le nom du serveur de publication. Dans le cas contraire, les fonctionnalités et les informations fournies dans cette boîte de dialogue sont les mêmes que celles de la vue Serveur de publication. Pour plus d’informations sur l’utilisation de cette boîte de dialogue, consultez [Informations sur le serveur de distribution, Liste de suivi des abonnements &#40;Publication d’instantané, SQL Server 2005 et versions ultérieures&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md).  
 
 ## <a name="agents"></a>Agents
-L'onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication et à l'Abonné.  
+ L’onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication et à l’Abonné.  
   
  Les agents qui sont disponibles dans l'onglet **Agents** pour un serveur de distribution dans la vue Serveur de distribution incluent tous les agents qui sont disponibles dans l'onglet **Agents** pour un serveur de publication. Toutefois, l'onglet **Agents** pour un serveur de distribution dans la vue Serveur de distribution  inclut également un agent de distribution et un agent de fusion.  
   
@@ -55,7 +56,7 @@ L'onglet **Agents** affiche des informations sur les agents et les travaux de ma
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error    
+-   Erreur    
 -   Recommencer    
 -   Exécution en cours    
 -   Non exécuté   
@@ -101,7 +102,7 @@ L'onglet **Agents** affiche des informations sur les agents et les travaux de ma
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
 -   Recommencer  
   

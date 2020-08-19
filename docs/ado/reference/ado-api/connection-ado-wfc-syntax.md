@@ -1,4 +1,5 @@
 ---
+description: Connection (ADO - syntaxe WFC)
 title: Connection (ADO-syntaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8602b170d4c067744fd002a98c949b8d0836d2e
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4a9d467a2ab9073bd287fd0cf6a3fc36c60cabda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444521"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO - syntaxe WFC)
 ## <a name="package-commswfcdata"></a>package com. ms. wfc. Data  
@@ -44,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- La méthode **executeUpdate** est une méthode spéciale qui appelle la méthode ADO **Execute** sous-jacente avec certains paramètres. La méthode **executeUpdate** ne prend pas en charge le retour d’un objet Recordset, donc le paramètre *options* de la méthode **Execute** est modifié avec **AdoEnums. ExecuteOptions.** **NORECORDS** . Une fois la méthode **Execute** terminée, son paramètre *RecordsAffected* mis à jour est passé à la méthode **executeUpdate** , qui est enfin retourné comme **int**.  
+ La méthode **executeUpdate** est une méthode spéciale qui appelle la méthode ADO **Execute** sous-jacente avec certains paramètres. La méthode **executeUpdate** ne prend pas en charge le retour d’un objet **Recordset** , donc le paramètre *options* de la méthode **Execute** est modifié avec **AdoEnums.ExecuteOptions. noenregistrements**. Une fois la méthode **Execute** terminée, son paramètre *RecordsAffected* mis à jour est passé à la méthode **executeUpdate** , qui est enfin retourné comme **int**.  
   
 ```  
 public void open()   

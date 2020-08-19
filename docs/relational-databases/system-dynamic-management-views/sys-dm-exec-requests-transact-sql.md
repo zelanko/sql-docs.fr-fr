@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_requests (Transact-SQL)
 title: sys. dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/01/2019
@@ -20,12 +21,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44c20aeed09468b9f2e0cc7047364f563e463daf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 375dc6e15f8bf592ff3d5d9e8f9388f188008d3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489959"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -39,7 +40,7 @@ Retourne des informations sur chaque requête qui s’exécute dans [!INCLUDE[ss
 |request_id|**int**|ID de la demande. Unique dans le contexte de la session. N'accepte pas la valeur NULL.|  
 |start_time|**datetime**|Horodateur lors la réception de la demande. N'accepte pas la valeur NULL.|  
 |status|**nvarchar(30)**|Statut de la demande. Il peut s'agir de l'une des ressources suivantes :<br /><br /> Arrière-plan<br />Exécution en cours<br />Exécutable<br />En état de veille<br />Interrompu<br /><br /> N'accepte pas la valeur NULL.|  
-|.|**nvarchar(32)**|Identifie le type de commande en cours de traitement. Les types de commandes courants comprennent notamment :<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Suppression<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Le texte de la demande peut être extrait à l'aide de sys.dm_exec_sql_text avec le paramètre sql_handle correspondant pour la demande. Des processus système internes définissent la commande en fonction du type de tâche à exécuter. Il peut s'agir des tâches suivantes :<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> N'accepte pas la valeur NULL.|  
+|command|**nvarchar(32)**|Identifie le type de commande en cours de traitement. Les types de commandes courants comprennent notamment :<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Suppression<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Le texte de la demande peut être extrait à l'aide de sys.dm_exec_sql_text avec le paramètre sql_handle correspondant pour la demande. Des processus système internes définissent la commande en fonction du type de tâche à exécuter. Il peut s'agir des tâches suivantes :<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> N'accepte pas la valeur NULL.|  
 |sql_handle|**varbinary(64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Autorise la valeur NULL.| 
 |statement_start_offset|**int**|Indique, en octets, à partir de 0, la position de départ de l’instruction en cours d’exécution pour le lot en cours d’exécution ou l’objet persistant. Peut être utilisé avec `sql_handle` , `statement_end_offset` et la `sys.dm_exec_sql_text` fonction de gestion dynamique pour récupérer l’instruction en cours d’exécution pour la demande. Autorise la valeur NULL.|  
 |statement_end_offset|**int**|Indique, en octets, à partir de 0, la position de fin de l’instruction en cours d’exécution pour le lot en cours d’exécution ou l’objet persistant. Peut être utilisé avec `sql_handle` , `statement_start_offset` et la `sys.dm_exec_sql_text` fonction de gestion dynamique pour récupérer l’instruction en cours d’exécution pour la demande. Autorise la valeur NULL.|  
@@ -51,7 +52,7 @@ Retourne des informations sur chaque requête qui s’exécute dans [!INCLUDE[ss
 |wait_type|**nvarchar(60)**|Si la demande est actuellement bloquée, cette colonne retourne le type d'attente. Autorise la valeur NULL.<br /><br /> Pour plus d’informations sur les types d’attentes, consultez [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |wait_time|**int**|Si la demande est actuellement bloquée, cette colonne retourne la durée de l'attente, en millisecondes. N'accepte pas la valeur NULL.|  
 |last_wait_type|**nvarchar(60)**|Si la demande a été bloquée précédemment, cette colonne indique le type de la dernière attente. N'accepte pas la valeur NULL.|  
-|wait_resource|**nvarchar(256)**|Si la demande est actuellement bloquée, cette colonne retourne la ressource attendue par la demande. N'accepte pas la valeur NULL.|  
+|wait_resource|**nvarchar (256)**|Si la demande est actuellement bloquée, cette colonne retourne la ressource attendue par la demande. N'accepte pas la valeur NULL.|  
 |open_transaction_count|**int**|Nombre de transactions ouvertes pour cette demande. N'accepte pas la valeur NULL.|  
 |open_resultset_count|**int**|Nombre de jeux de résultats ouverts pour cette demande. N'accepte pas la valeur NULL.|  
 |transaction_id|**bigint**|ID de la transaction dans laquelle cette demande s'exécute. N'accepte pas la valeur NULL.|  
@@ -98,13 +99,13 @@ Retourne des informations sur chaque requête qui s’exécute dans [!INCLUDE[ss
 |page_server_reads|**bigint**|**S’applique à**: Azure SQL Database hyperscale<br /><br /> Nombre de lectures du serveur de pages effectuées par cette demande. N'accepte pas la valeur NULL.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="remarks"></a>Remarques 
+## <a name="remarks"></a>Notes 
 Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif. Les valeurs temporelles retournées par cette vue de gestion dynamique n'incluent pas le temps passé en mode préemptif.
 
 Lors de l’exécution de requêtes parallèles en [mode ligne](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigne un thread de travail pour coordonner les threads de travail chargés d’effectuer les tâches qui leur sont attribuées. Dans cette vue de gestion dynamique, seul le thread coordinateur est visible pour la demande. Les colonnes **reads**, **writes**, **LOGICAL_READS**et **row_count** ne sont **pas mises à jour** pour le thread coordinateur. Les colonnes **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**et **granted_query_memory** sont **uniquement mises à jour** pour le thread coordinateur. Pour plus d’informations, consultez le [Guide de l’architecture des threads et des tâches](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Autorisations
-Si l’utilisateur dispose `VIEW SERVER STATE` de l’autorisation sur le serveur, il voit toutes les sessions en cours d’exécution sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; sinon, il ne verra que la session en cours. `VIEW SERVER STATE`ne peut pas être accordé dans Azure SQL Database donc `sys.dm_exec_requests` est toujours limité à la connexion actuelle.
+Si l’utilisateur dispose `VIEW SERVER STATE` de l’autorisation sur le serveur, il voit toutes les sessions en cours d’exécution sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; sinon, il ne verra que la session en cours. `VIEW SERVER STATE` ne peut pas être accordé dans Azure SQL Database donc `sys.dm_exec_requests` est toujours limité à la connexion actuelle.
 
 Dans les scénarios Always on, si le réplica secondaire est défini en **lecture-intention uniquement**, la connexion à l’application secondaire doit spécifier son intention d’application dans les paramètres de chaîne de connexion en ajoutant `applicationintent=readonly` . Dans le cas contraire, la vérification de l’accès `sys.dm_exec_requests` ne réussira pas pour les bases de données du groupe de disponibilité, même si l' `VIEW SERVER STATE` autorisation est présente.
 

@@ -1,4 +1,5 @@
 ---
+description: sys. pdw_nodes_tables (Transact-SQL)
 title: sys. pdw_nodes_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -12,12 +13,12 @@ ms.assetid: 473b5d14-171b-4a16-9195-acf36d3f786c
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78af01169c643acfc82f7a3db035ae32518695bd
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 7b50d1757371a1ca379a4cf8f79410ceaef9a614
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196867"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475359"
 ---
 # <a name="syspdw_nodes_tables-transact-sql"></a>sys. pdw_nodes_tables (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "86196867"
 |-----------------|---------------|-----------------|-----------|  
 |\<inherited columns>||Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. Objects](../system-catalog-views/sys-objects-transact-sql.md).||  
 |lob_data_space_id|**int**||Toujours 0.|  
-|filestream_data_space_id|**int**|ID d’espace de données pour un groupe de fichiers FILESTREAM ou[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
+|filestream_data_space_id|**int**|ID d’espace de données pour un groupe de fichiers FILESTREAM ou [!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|NULL|  
 |max_column_id_used|**int**|ID de colonne maximal utilisé par cette table.||  
 |lock_on_bulk_load|**bit**|La table est verrouillée pour le chargement en masse.|TBD|  
 |uses_ansi_nulls|**bit**|Lorsque la table a été créée, l'option de base de données SET ANSI_NULLS avait pour valeur ON.|1|  

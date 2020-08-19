@@ -1,4 +1,5 @@
 ---
+description: Vue d’ensemble des données et des schémas multidimensionnels
 title: Vue d’ensemble des schémas et des données multidimensionnels | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748091"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452421"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Vue d’ensemble des données et des schémas multidimensionnels
 ## <a name="understanding-multidimensional-schemas"></a>Fonctionnement des schémas multidimensionnels  
@@ -58,15 +59,15 @@ Hamburg, Munich, Stuttgart}
   
  Chaque niveau a un ensemble de membres, comme suit :  
   
--   Le monde`= {All}`  
+-   Le monde `= {All}`  
   
--   Continents`= {North America, Europe}`  
+-   Continents `= {North America, Europe}`  
   
--   Provenance`= {Canada, USA, UK, Germany}`  
+-   Provenance `= {Canada, USA, UK, Germany}`  
   
--   Certaines`= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
+-   Certaines `= {Canada-East, Canada-West, USA-NE, USA-NW, USA-SE, USA-SW, England, Ireland, Scotland, Wales, Germany-North, Germany-South}`  
   
--   Villes`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
+-   Villes `= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
 ### <a name="members"></a>Membres  
  Les membres au niveau feuille d’une hiérarchie n’ont pas d’enfants et les membres au niveau de la racine n’ont pas de parent. Tous les autres membres ont au moins un parent et au moins un enfant. Par exemple, une traversée partielle de l’arborescence hiérarchique dans la dimension Geography produit les relations parent-enfant suivantes :  

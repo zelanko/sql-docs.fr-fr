@@ -1,4 +1,5 @@
 ---
+description: Changement de comportement du pilote ODBC lors de la gestion des conversions de caractères
 title: Conversions de caractères de gestion des modifications ODBC
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,11 +11,12 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0bce5fa58dfb665d3c4fe23f417a8585a4ec8eb6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 48c2230327a92a560291aacbf802ae775b99fe8f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498893"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Changement de comportement du pilote ODBC lors de la gestion des conversions de caractères
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -47,7 +49,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
   
  Ce qui suit montre l'impact du changement de pilote lors de l'utilisation d'un motif incorrect. Cette application interroge une colonne **varchar** et une liaison au format Unicode (SQL_UNICODE/SQL_WCHAR) :  
   
- Demande`select convert(varchar(36), '123')`  
+ Demande  `select convert(varchar(36), '123')`  
   
 ```  
 SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempting to determine storage size needed  
@@ -76,7 +78,7 @@ while( (SQL_SUCCESS or SQL_SUCCESS_WITH_INFO) == SQLFetch(...) ) {
 ```  
   
 ## <a name="sqlbindcol-behavior"></a>Comportement de SQLBindCol  
- Demande`select convert(varchar(36), '1234567890')`  
+ Demande  `select convert(varchar(36), '1234567890')`  
   
 ```  
 SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting String Data Right Truncation behavior  
@@ -88,7 +90,7 @@ SQLBindCol(... SQL_W_CHAR, ...)   // Only bound a buffer of WCHAR[4] - Expecting
 |[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (version 11.0.2100.60) ou ultérieur|-4 (SQL_NO_TOTAL)|**SQLFetch** signale qu’il existe une troncation à droite des données.<br /><br /> La longueur indique -4 (SQL_NO_TOTAL), car le reste des données n'a pas été converti.<br /><br /> Les données stockées dans la mémoire tampon sont 123\0. - La mémoire tampon est alors certaine de se terminer par une valeur NULL.|  
   
 ## <a name="sqlbindparameter-output-parameter-behavior"></a>SQLBindParameter (comportement du paramètre OUTPUT)  
- Demande`create procedure spTest @p1 varchar(max) OUTPUT`  
+ Demande  `create procedure spTest @p1 varchar(max) OUTPUT`  
   
  `select @p1 = replicate('B', 1234)`  
   

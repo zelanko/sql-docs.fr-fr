@@ -1,4 +1,5 @@
 ---
+description: Field, objet
 title: Objet Field | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 16f1b85006366702b0f95d5a41a74abf91ac7997
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763090"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452761"
 ---
 # <a name="the-field-object"></a>Field, objet
 Chaque objet de **champ** correspond généralement à une colonne dans une table de base de données. Toutefois, un **champ** peut également représenter un pointeur vers un autre **Recordset**, appelé un chapitre. Les exceptions, telles que les colonnes de chapitre, seront abordées plus loin dans ce guide.  

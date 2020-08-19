@@ -1,4 +1,5 @@
 ---
+description: Fonction ConnectionValidSharedMemory dans la mémoire partagée dbmslpcn.dll
 title: ConnectionValidSharedMemory dbmslpcn.dll
 ms.custom: ''
 ms.date: 03/07/2017
@@ -10,11 +11,12 @@ ms.assetid: 6ae35826-7d75-4542-b686-5f79316b6157
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8fea72023f929fb01c8ee5ca699a1d695aa0788
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 02247866c1f83693202d649d1c05be31214b5ded
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498932"
 ---
 # <a name="connectionvalidsharedmemory-function-in-dbmslpcndll-shared-memory"></a>Fonction ConnectionValidSharedMemory dans la mémoire partagée dbmslpcn.dll
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +36,7 @@ BOOL ConnectionValidSharedMemory(char * szServerName);
   
 -   Nom du serveur SQL Server.  
   
-## <a name="return-value"></a>Valeur renvoyée  
+## <a name="return-value"></a>Valeur retournée  
  Type : **bool**  
   
  Retourne 0 s’il n’est pas valide ; else retourne une valeur différente de zéro.  

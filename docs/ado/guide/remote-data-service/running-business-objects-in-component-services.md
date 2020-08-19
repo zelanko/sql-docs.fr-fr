@@ -1,4 +1,5 @@
 ---
+description: Exécution d’objets métier dans les services de composants
 title: Exécution d’objets métier dans les services de composants | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f13e876cb5707b7e906235c5b12e5f019f7b5d60
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 52e90a1913a0500a174e335c178ea8a556d9659a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452011"
 ---
 # <a name="running-business-objects-in-component-services"></a>Exécution d’objets métier dans les services de composants
 > [!IMPORTANT]
@@ -30,7 +31,7 @@ ms.locfileid: "82758995"
 -   Les objets métier créés en tant que fichiers. dll peuvent être utilisés par le biais d’IIS, et par conséquent également par HTTP. Ils peuvent également être utilisés sur DCOM uniquement par le biais des services de composants ou via Microsoft Transaction Server, si vous utilisez Windows NT. Les dll de l’objet métier devront être inscrites sur l’ordinateur serveur IIS pour y accéder via IIS. Pour plus d’informations sur la configuration d’une DLL à exécuter sur DCOM, consultez la section [activation d’une dll à exécuter sur DCOM](../../../ado/guide/remote-data-service/enabling-a-dll-to-run-on-dcom.md).  
   
 > [!NOTE]
->  Lorsque des objets métier sur le niveau intermédiaire sont implémentés en tant que composants de services de composants à l’aide de **GetObjectContext**, **SetComplete**et **SetAbort**, les objets métier peuvent utiliser les services de composants (ou MTS, si vous utilisez Windows NT) pour maintenir leur état entre plusieurs appels clients. Ce scénario est possible avec DCOM, qui est généralement implémenté entre les clients et les serveurs approuvés dans un intranet. Dans ce cas, le [RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md)L’objet DataSpace et la méthode [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) côté client sont remplacés par l’objet de contexte de transaction et la méthode **CreateInstance** , qui sont fournis par l’interface **ITransactionContext** et implémentés par les services de composants.  
+>  Lorsque des objets métier sur le niveau intermédiaire sont implémentés en tant que composants de services de composants à l’aide de **GetObjectContext**, **SetComplete**et **SetAbort**, les objets métier peuvent utiliser les services de composants (ou MTS, si vous utilisez Windows NT) pour maintenir leur état entre plusieurs appels clients. Ce scénario est possible avec DCOM, qui est généralement implémenté entre les clients et les serveurs approuvés dans un intranet. Dans ce cas, le [RDS. ](../../../ado/reference/rds-api/dataspace-object-rds.md) L’objet DataSpace et la méthode [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) côté client sont remplacés par l’objet de contexte de transaction et la méthode **CreateInstance** , qui sont fournis par l’interface **ITransactionContext** et implémentés par les services de composants.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

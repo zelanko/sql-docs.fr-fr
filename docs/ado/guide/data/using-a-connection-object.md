@@ -1,4 +1,5 @@
 ---
+description: Utilisation d’un objet Connection
 title: Utilisation d’un objet de connexion | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba23a9584e94df817e55b710ddadb073313e865b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7e3041abc535557f9f92e3a994d536fb07abde8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452621"
 ---
 # <a name="using-a-connection-object"></a>Utilisation d’un objet Connection
 Avant d’ouvrir un objet de **connexion** , vous devez définir certaines informations sur la source de données et le type de connexion. La plupart de ces informations sont détenues par le paramètre *ConnectionString* de la [méthode Open](../../../ado/reference/ado-api/open-method-ado-connection.md) sur l’objet **Connection** , ou par la [propriété ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) de l’objet **Connection** . Une chaîne de connexion se compose d’une liste de paires argument/valeur séparées par des points-virgules, les valeurs étant placées entre guillemets simples. Par exemple :  

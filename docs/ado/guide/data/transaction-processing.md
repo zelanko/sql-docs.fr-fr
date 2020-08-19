@@ -1,4 +1,5 @@
 ---
+description: Traitement transactionnel
 title: Traitement des transactions | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 74ab6706-e2dc-42cb-af77-dbc58a9cf4ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33e78f7a278623c5990a22a638c5a8e693b9a3e1
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 5b4d8e959cab799c5436b1c1357ae1e734d3d5a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759075"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452701"
 ---
-# <a name="transaction-processing"></a>Traitement des transactions
+# <a name="transaction-processing"></a>Traitement transactionnel
 Une *transaction* délimite le début et la fin d’une série d’opérations d’accès aux données exécutées sur une connexion. Selon les fonctionnalités transactionnelles de votre source de données, l’objet de **connexion** vous permet également de créer et de gérer des transactions. Par exemple, en utilisant le fournisseur Microsoft OLE DB pour SQL Server pour accéder à une base de données sur Microsoft SQL Server, vous pouvez créer plusieurs transactions imbriquées pour les commandes que vous exécutez.  
   
  ADO garantit que les modifications apportées à une source de données résultant d’opérations dans une transaction se produisent correctement ensemble ou pas du tout.  

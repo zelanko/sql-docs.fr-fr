@@ -1,4 +1,5 @@
 ---
+description: Présentation des curseurs et des verrous
 title: Fonctionnement des curseurs et des verrous | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13a175d9e98fec5795c2756e79f96304b2ab2cc6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: cfe2d50af04309a439c276674581f07a26f9cb04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759015"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452671"
 ---
 # <a name="understanding-cursors-and-locks"></a>Présentation des curseurs et des verrous
 Il est important de comprendre comment les curseurs fonctionnent pour vous permettre de sélectionner le type de curseur le plus efficace et le plus efficace pour les besoins d’accès aux données d’une application. Une configuration de curseur peu optimale peut rendre les opérations d’accès aux données très lentes.  

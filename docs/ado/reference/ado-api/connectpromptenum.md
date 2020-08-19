@@ -1,4 +1,5 @@
 ---
+description: ConnectPromptEnum
 title: ConnectPromptEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 61a66866f8206f2df4cbdeb3f2144e0ac12ac695
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 0ad8fe77bb3472931d3b16d5849b047001922c96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444411"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Spécifie si une boîte de dialogue doit être affichée pour demander des paramètres manquants lors de l’ouverture d’une connexion à une source de données.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|Les invites s’affichent toujours.|  
 |**adPromptComplete**|2|Demande si des informations supplémentaires sont requises.|  
@@ -35,7 +36,7 @@ Spécifie si une boîte de dialogue doit être affichée pour demander des param
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.ConnectPrompt.ALWAYS|  
 |AdoEnums.ConnectPrompt.COMPLETE|  

@@ -1,4 +1,5 @@
 ---
+description: CURRENT_REQUEST_ID (Transact-SQL)
 title: CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4eb54d5762466b19f83c1e03ce3194e1d996b19
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: ffeab1c74711374df8c165a0e73f1b347d11cf95
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468111"
 ---
 # <a name="current_request_id-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Cette fonction retourne l'ID de la demande actuelle dans la session en cours.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ CURRENT_REQUEST_ID()
 ## <a name="return-types"></a>Types de retour
 **smallint**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Pour rechercher des informations exactes sur la session active, utilisez @@SPID. Pour obtenir des informations exactes sur la requête actuelle, utilisez CURRENT_REQUEST_ID().
   
 ## <a name="see-also"></a>Voir aussi

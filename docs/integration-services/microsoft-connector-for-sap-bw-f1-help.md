@@ -1,4 +1,5 @@
 ---
+description: Aide (F1) sur Microsoft Connector 1.1 pour SAP BW
 title: Aide (F1) sur Microsoft Connector for SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aee724d88bfc203472c09d80e3e3ceec9bafa7f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f52bd1f1c56a8f9dc84b1474bf4447c6311cb508
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86924010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430161"
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Aide (F1) sur Microsoft Connector 1.1 pour SAP BW
 
@@ -83,6 +84,6 @@ ms.locfileid: "86924010"
 -   [Créer un InfoPackage](../integration-services/data-flow/create-infopackage.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants Microsoft Connector pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Composants Microsoft Connector 1.1 pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

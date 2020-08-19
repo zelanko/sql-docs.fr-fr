@@ -1,4 +1,5 @@
 ---
+description: Écriture d’un gestionnaire personnalisé
 title: Écriture de votre propre gestionnaire personnalisé | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 73e71438b7f49472dff8c3f4732c541222598b08
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82747601"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451841"
 ---
 # <a name="writing-your-own-customized-handler"></a>Écriture d’un gestionnaire personnalisé
 Vous pouvez écrire votre propre gestionnaire si vous êtes un administrateur de serveur IIS qui souhaite la prise en charge de RDS par défaut, mais plus de contrôle sur les demandes utilisateur et les droits d’accès.  

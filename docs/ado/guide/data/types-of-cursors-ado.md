@@ -1,4 +1,5 @@
 ---
+description: Types de curseurs (ADO)
 title: Types de curseurs (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4953b0509cade52a8badd8d578c9fa13f0c2b42b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ea996827565f0cc6d593078e7772c336699260bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759045"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452711"
 ---
 # <a name="types-of-cursors-ado"></a>Types de curseurs (ADO)
 En règle générale, votre application doit utiliser le curseur le plus simple qui fournit l’accès aux données requis. Chaque caractéristique de curseur supplémentaire au-delà des principes de base (avant uniquement, en lecture seule, statique, de défilement, sans mise en mémoire tampon) a un prix en mémoire client, de charge réseau ou de performances. Dans de nombreux cas, les options de curseur par défaut génèrent un curseur plus complexe que celui dont votre application a réellement besoin.  

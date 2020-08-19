@@ -1,4 +1,5 @@
 ---
+description: Scénario RDS
 title: Scénario RDS | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d73bb03ceb08e61257c0e4fc6d3f6a627ddb746d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88452091"
 ---
 # <a name="rds-scenario"></a>Scénario RDS
 > [!IMPORTANT]
@@ -43,7 +44,7 @@ ms.locfileid: "82763580"
   
 -   Liaison de données DHTML pour afficher les données retournées par les requêtes sur une base de données principale (via **RDS. DataControl** objet de liaison de données) dans une table.  
   
--   Les routines VBScript qui connectent chacun des éléments précédemment mentionnés et les autorisent à interagir. Le code VBScript est également utilisé pour initialiser les **services Bureau à distance. DataControl** et créer dynamiquement les en-têtes de colonne dans le tableau HTML à partir des noms de l’objet **RDS. **Champs du jeu d’enregistrements DataControl.  
+-   Les routines VBScript qui connectent chacun des éléments précédemment mentionnés et les autorisent à interagir. Le code VBScript est également utilisé pour initialiser les **services Bureau à distance. DataControl** et créer dynamiquement les en-têtes de colonne dans le tableau HTML à partir des noms de l’objet **RDS. ** Champs du jeu d’enregistrements DataControl.  
   
  Suivez les liens de la rubrique pas à pas pour configurer et exécuter le scénario et pour en savoir plus sur le fonctionnement du scénario.  
   

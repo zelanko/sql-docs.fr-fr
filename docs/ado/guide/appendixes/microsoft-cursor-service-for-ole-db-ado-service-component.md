@@ -1,4 +1,5 @@
 ---
+description: Service de curseur Microsoft pour OLE DB (composant du service ADO)
 title: Service de curseur Microsoft pour OLE DB (composant du service ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3f83f151331fe483400edda90d7deb7c469b5574
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444551"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Vue d’ensemble du service de curseur Microsoft pour OLE DB
 Le service de curseur Microsoft pour OLE DB complète les fonctions de prise en charge de curseur des fournisseurs de données. Par conséquent, l’utilisateur perçoit des fonctionnalités relativement uniformes de tous les fournisseurs de données.
@@ -86,7 +87,7 @@ rs.Properties("Optimize") = True
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complète les types de curseurs disponibles pour un **Recordset**.|
 |[Verrou](../../../ado/reference/ado-api/locktype-property-ado.md)|Complète les types de verrous disponibles pour un **Recordset**. Active les mises à jour par lots.|
-|[Trier](../../../ado/reference/ado-api/sort-property.md)|Spécifie un ou plusieurs noms de champs sur lesquels le **Recordset** est trié, et indique si chaque champ est trié par ordre croissant ou décroissant.|
+|[Sort](../../../ado/reference/ado-api/sort-property.md)|Spécifie un ou plusieurs noms de champs sur lesquels le **Recordset** est trié, et indique si chaque champ est trié par ordre croissant ou décroissant.|
 
 ## <a name="method-behavior"></a>Comportement de la méthode
  Le service de curseur pour OLE DB active ou affecte le comportement de la méthode [Append](../../../ado/reference/ado-api/append-method-ado.md) de l’objet [Field](../../../ado/reference/ado-api/field-object.md) . et les méthodes [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)et [Save](../../../ado/reference/ado-api/save-method.md) de l’objet **Recordset** .

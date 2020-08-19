@@ -1,4 +1,5 @@
 ---
+description: COMPRESS (Transact-SQL)
 title: COMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6edda04e2520ec915a6c4767751130f091668e85
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 51cf2e37ae548383d7c02b3ba4028b9327857928
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468184"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-Cette fonction compresse l’expression d’entrée à l’aide de l’algorithme GZIP. La fonction retourne un tableau d’octets de type **varbinary(max)** .
+Cette fonction compresse l’expression d’entrée à l’aide de l’algorithme GZIP. La fonction retourne un tableau d’octets de type **varbinary(max)**.
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,11 +36,9 @@ Cette fonction compresse l’expression d’entrée à l’aide de l’algorithm
 COMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## <a name="arguments"></a>Arguments
 *expression*  
-Un
+A
 
 * **binary(***n***)**
 * **char(***n***)**
@@ -50,7 +49,7 @@ Un
 * **varbinary(***n***)**
 * **varchar(max)**
 
-or
+ou
 
 * **varchar(***n***)**
 
@@ -59,7 +58,7 @@ expression. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL
 ## <a name="return-types"></a>Types de retour
 **varbinary(max)** représentant le contenu compressé de l’entrée.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Les données compressées ne peuvent pas être indexées.
   
 La fonction `COMPRESS` compresse les données d’expression d’entrée. Vous devez appeler cette fonction pour chaque section de données à compresser. Consultez [Compression des données](../../relational-databases/data-compression/data-compression.md) pour plus d’informations sur la compression automatique des données pendant le stockage au niveau des lignes ou des pages.

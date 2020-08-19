@@ -1,4 +1,5 @@
 ---
+description: Configuration du composant Script dans l'éditeur de composant de script
 title: Configuration du composant Script dans l’éditeur de composant de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ac2db997c49df1ef482ab6b9dba5647426eb7bb3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d3193a0801e5e9babf187ea88782a1c71f5216f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430301"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configuration du composant Script dans l'éditeur de composant de script
 
@@ -130,7 +131,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Pour plus d’informations, consultez [Connexion aux sources de données dans le composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Codage et débogage du composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

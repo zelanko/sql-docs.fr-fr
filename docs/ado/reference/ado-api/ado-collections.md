@@ -1,4 +1,5 @@
 ---
+description: Collections ADO
 title: Collections ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c19252e14ba5a04329c9cdc1c38b5ee6398b7874
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242899"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88451471"
 ---
 # <a name="ado-collections"></a>Collections ADO
 Les relations entre ces collections et les objets ADO sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  

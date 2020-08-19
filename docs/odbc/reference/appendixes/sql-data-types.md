@@ -1,4 +1,5 @@
 ---
+description: Types de données SQL
 title: Types de données SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3cc91213533aa39f30be1bc838cc014c20e70884
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8209463c3c316a5bd2e45a2d7b08eb65b3cb113d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483152"
 ---
 # <a name="sql-data-types"></a>Types de données SQL
 Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement les types de données SQL que le SGBD associé définit. Informations sur la façon dont un pilote mappe les types SQL SGBD aux identificateurs de type SQL définis par ODBC et comment un pilote mappe les types SQL SGBD à ses propres identificateurs de type SQL propres au pilote, par le biais d’un appel à **SQLGetTypeInfo**. Un pilote retourne également les types de données SQL lors de la description des types de données des colonnes et des paramètres par le biais d’appels à **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**et **SQLSpecialColumns**.  
@@ -42,8 +43,8 @@ Chaque SGBD définit ses propres types SQL. Chaque pilote ODBC expose uniquement
 |SQL_WCHAR|WCHAR (*n*)|Chaîne de caractères Unicode de longueur de chaîne fixe *n*|  
 |SQL_WVARCHAR|VARWCHAR (*n*)|Chaîne de caractères de longueur variable Unicode avec une longueur de chaîne maximale *n*|  
 |SQL_WLONGVARCHAR|LONGWVARCHAR|Données de caractères de longueur variable Unicode. La longueur maximale dépend de la source de données|  
-|SQL_DECIMAL|DÉCIMAL (*p*,*s*)|Valeur numérique, exacte et signée avec une précision d’au moins *p* et Scale *s.* (La précision maximale est définie par le pilote.) (1 <= *p* <= 15 ; *s* <= *p*). 4|  
-|SQL_NUMERIC|NUMÉRIQUE (*p*,*s*)|Valeur numérique, exacte et signée avec une précision *p* et une échelle *s* (1 <= *p* <= 15 ; *s* <= *p*). 4|  
+|SQL_DECIMAL|DÉCIMAL (*p*,*s*)|Valeur numérique, exacte et signée avec une précision d’au moins *p* et Scale *s.* (La précision maximale est définie par le pilote.) (1 <= *p* <= 15 ; *s*  <=  *p*). 4|  
+|SQL_NUMERIC|NUMÉRIQUE (*p*,*s*)|Valeur numérique, exacte et signée avec une précision *p* et une échelle *s* (1 <= *p* <= 15 ; *s*  <=  *p*). 4|  
 |SQL_SMALLINT|SMALLINT|Valeur numérique exacte avec une précision de 5 et une échelle de 0 (signée :-32 768 <= *n* <= 32 767, non signée : 0 <= *n* <= 65535) [3].|  
 |SQL_INTEGER|INTEGER|Valeur numérique exacte avec une précision de 10 et une échelle de 0 (signée :-2 [31] <= *n* <= 2 [31]-1, non signée : 0 <= *n* <= 2 [32]-1) [3].|  
 |SQL_REAL|real|Valeur numérique approximative signée avec une précision binaire de 24 (zéro ou valeur absolue 10 [-38] à 10 [38]).|  

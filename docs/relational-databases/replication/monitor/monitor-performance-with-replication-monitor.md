@@ -1,4 +1,5 @@
 ---
+description: Analyser les performances avec le Moniteur de réplication
 title: Analyser les performances avec le moniteur de réplication | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d98498fa2f63ef4e4c3cd977c7612fd3277fbf91
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a881bfd928d8a8d1c84d85ea8d226bc2751126a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498735"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Analyser les performances avec le Moniteur de réplication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -63,9 +64,9 @@ ms.locfileid: "86918715"
   
 -   Excellent  
   
--   Bonne  
+-   Bien  
   
--   Correcte  
+-   Moyen  
   
 -   Médiocre  
   
@@ -75,7 +76,7 @@ ms.locfileid: "86918715"
   
 -   Pour la réplication transactionnelle, la qualité des performances est déterminée par le seuil de latence. Si le seuil n'est pas défini, aucune valeur n'est affichée. Le tableau suivant montre la corrélation entre le seuil et la valeur de la qualité des performances. Par exemple, si le seuil est défini à 60 secondes et que la latence réelle est de 30 secondes, la latence représente 50% du seuil, ce qui correspond à la valeur « Bonne ».  
   
-    |Excellent|Bonne|Correcte|Médiocre|Critique|  
+    |Excellent|Bien|Moyen|Médiocre|Critique|  
     |---------------|----------|----------|----------|--------------|  
     |0 – 34%|35 – 59%|60 – 84%|85 – 99%|100% +|  
   
@@ -83,7 +84,7 @@ ms.locfileid: "86918715"
   
      Le tableau suivant montre la corrélation entre la performance moyenne et la valeur de la qualité des performances. Par exemple, si dix Abonnés se sont synchronisés via une connexion LAN avec un taux moyen de 100 lignes par seconde, et que l'un des abonnements se synchronise ensuite à un taux de 125 lignes par seconde, la performance pour la synchronisation de cet Abonné est à 125% de la moyenne, ce qui correspond à la valeur « Bonne ».  
   
-    |Excellent|Bonne|Correcte|Médiocre|  
+    |Excellent|Bien|Moyen|Médiocre|  
     |---------------|----------|----------|----------|  
     |151+%|76 – 150%|26 – 75%|0 – 25%|  
   
@@ -100,6 +101,6 @@ ms.locfileid: "86918715"
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)   
- [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+ [Définir des seuils et des avertissements dans le moniteur de réplication](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
   
