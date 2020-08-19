@@ -1,4 +1,5 @@
 ---
+description: New Publication Wizard
 title: Assistant Nouvelle Publication | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -40,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 57d65d16-90d1-4b4c-b68e-6418a7064e76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b4585af3758327ea21834918a89142d8101b8745
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 679534bfdd567a0bbe48e43188d846b99e16e860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85721227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405825"
 ---
 # <a name="new-publication-wizard"></a>New Publication Wizard
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -53,13 +54,13 @@ ms.locfileid: "85721227"
   
 -   [Serveur de publication Oracle](../../relational-databases/replication/oracle-publisher.md)  
   
--   [Mot de passe d’administration](../../relational-databases/replication/administrative-password.md)  
+-   [Mot de passe d'administration](../../relational-databases/replication/administrative-password.md)  
   
 -   [Base de données de publication](../../relational-databases/replication/publication-database.md)  
   
 -   [Type de publication](../../relational-databases/replication/publication-type.md)  
   
--   [Types d’abonné](../../relational-databases/replication/subscriber-types.md)  
+-   [Types d'Abonnés](../../relational-databases/replication/subscriber-types.md)  
   
 -   [Sécurité de l’agent &#40;Assistant Nouvelle publication&#41;](../../relational-databases/replication/agent-security-new-publication-wizard.md)  
   
@@ -69,7 +70,7 @@ ms.locfileid: "85721227"
   
 -   [Filtrer les lignes de la table](../../relational-databases/replication/filter-table-rows.md)  
   
--   [Ajouter ou modifier un filtre un filtre](../../relational-databases/replication/add-or-edit-filter.md)  
+-   [Ajouter un filtre ou Modifier le filtre](../../relational-databases/replication/add-or-edit-filter.md)  
   
 -   [Ajouter ou modifier une jointure](../../relational-databases/replication/add-or-edit-join.md)  
   

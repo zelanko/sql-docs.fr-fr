@@ -6,7 +6,7 @@
   href: sql-server/previous-versions-sql-server.md
 - name: Vue d’ensemble
   items:
-    - name: What's New
+    - name: Nouveautés
       items:
         - name: "SQL Server\_2019"
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -102,10 +102,14 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
+                - name: OpenShift
+                  href: big-data-cluster/deploy-openshift.md
             - name: Scripts de déploiement
               items:
                 - name: Script Python AKS
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+                - name: Script Python ARO
+                  href: big-data-cluster/quickstart-big-data-cluster-deploy-aro.md
                 - name: Script kubeadm mononœud
                   href: big-data-cluster/deployment-script-single-node-kubeadm.md
                 - name: Déployer avec des notebooks
@@ -128,8 +132,10 @@
           href: big-data-cluster/concept-security.md
     - name: Guides pratiques
       items:
-        - name: Configuration
+        - name: Configurer
           items:
+            - name: Cluster
+              href: big-data-cluster/configure-cluster.md
             - name: Instance principale SQL Server
               href: big-data-cluster/configure-sql-server-master-instance.md
             - name: Configurer Apache Spark et Apache Hadoop
@@ -178,6 +184,116 @@
           items:
             - name: 'Utiliser Machine Learning Services (Python, R)'
               href: big-data-cluster/machine-learning-services.md
+            - name: Démarrages rapides sur le machine learning
+              items:
+                - name: Python
+                  items:
+                    - name: Exécuter des scripts Python
+                      href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Objets et structures de données
+                      href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Fonctions Python
+                      href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Entraîner et scorer un modèle
+                      href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                - name: R
+                  items:
+                    - name: Exécuter des scripts R
+                      href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Types de données et objets
+                      href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: "Fonctions\_R"
+                      href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Entraîner et scorer un modèle
+                      href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: Tutoriels sur le machine learning
+              items:
+                - name: Python
+                  items:
+                    - name: Location de ski (régression linéaire)
+                      items:
+                        - name: 1 - Introduction
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - Préparer les données
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - Entraîner le modèle
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - Déployer le modèle
+                          href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Catégoriser les clients (clustering k-moyennes)
+                      items:
+                        - name: 1 - Introduction
+                          href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - Préparer les données
+                          href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - Créer le modèle
+                          href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - Déployer le modèle
+                          href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Courses des taxis new-yorkais (classification)
+                      items:
+                        - name: 1 - Introduction
+                          href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - Exploration des données
+                          href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - Ingénierie des caractéristiques
+                          href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - Entraîner et déployer
+                          href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 5 - Prédictions
+                          href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                - name: R
+                  items:
+                    - name: Location de ski (arbre de décision)
+                      items:
+                        - name: 1 - Introduction
+                          href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - Préparer les données
+                          href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - Entraîner le modèle
+                          href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - Déployer le modèle
+                          href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Catégoriser les clients (clustering k-moyennes)
+                      items:
+                        - name: 1 - Introduction
+                          href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - Préparer les données
+                          href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - Créer le modèle
+                          href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - Déployer le modèle
+                          href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Courses des taxis new-yorkais (classification)
+                      items:
+                        - name: 1 - Introduction
+                          href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 2 - Exploration des données
+                          href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 3 - Ingénierie des caractéristiques
+                          href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 4 - Entraîner et déployer
+                          href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+                        - name: 5 - Prédictions
+                          href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: Gérer les packages Python et R
+              items:
+                - name: Python
+                  items:
+                    - name: Obtenir des informations sur les packages Python
+                      href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Installer avec sqlmlutils
+                      href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                - name: R
+                  items:
+                    - name: "Obtenir des informations sur les packages\_R"
+                      href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Installer avec sqlmlutils
+                      href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Créer un dépôt miniCRAN
+                      href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15
+                    - name: Conseils pour l’utilisation de packages R
+                      href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: Data wrangling avec l’accélérateur de code PROSE
               href: big-data-cluster/use-prose-for-big-data-automation.md
             - name: Modèles Machine Learning Spark avec MLeap
@@ -198,12 +314,26 @@
               href: big-data-cluster/notebooks-manage-bdc.md
             - name: Exécuter un notebook avec Spark
               href: big-data-cluster/notebooks-tutorial-spark.md
-            - name: Sécurité
-              items:
-                - name: Mettre à jour AZDATA_PASSWORD
-                  href: big-data-cluster/change-azdata-password.md
-                - name: Gérer l’accès des utilisateurs
-                  href: big-data-cluster/manage-user-access.md
+        - name: Performances
+          items:
+            - name: Guide de réglage
+              href: big-data-cluster/performance-guidelines-tuned.md
+        - name: Sécuriser
+          items:
+            - name: RBAC Kubernetes pour BDC
+              href: big-data-cluster/kubernetes-rbac.md
+            - name: Mettre à jour AZDATA_PASSWORD
+              href: big-data-cluster/change-azdata-password.md
+            - name: Gérer l’accès des utilisateurs
+              href: big-data-cluster/manage-user-access.md
+            - name: Conteneurs non-racine
+              href: big-data-cluster/non-root-containers.md
+            - name: Plusieurs BDC dans le même domaine AD
+              href: big-data-cluster/active-directory-deployment-background.md
+            - name: Objets AD générés automatiquement
+              href: big-data-cluster/active-directory-objects.md
+            - name: Rapprochement DNS AD
+              href: big-data-cluster/active-directory-dns-reconciliation.md
         - name: Travaux Spark
           items:
             - name: Envoyer des travaux Spark dans Azure Data Studio
@@ -218,13 +348,15 @@
           items:
             - name: Résoudre les problèmes liés à Kubernetes
               href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Résoudre les problèmes du notebook pyspark
+              href: big-data-cluster/troubleshoot-pyspark-notebook.md
             - name: Étendue des groupes de domaine Active Directory
               href: big-data-cluster/troubleshoot-active-directory.md
-            - name: DNS Active directory
+            - name: DNS Active Directory
               href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
             - name: Échec de la connexion Active Directory
               href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
-            - name: Droits d’administrateur HDFS
+            - name: Autorisations d’administrateur HDFS
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Informations de référence
       items:
@@ -234,6 +366,12 @@
           items:
             - name: Fichier config du déploiement
               href: big-data-cluster/reference-deployment-config.md
+        - name: Configuration
+          items:
+            - name: Instance principale
+              href: big-data-cluster/reference-config-master-instance.md
+            - name: Apache Spark et Apache Hadoop
+              href: big-data-cluster/reference-config-spark-hadoop.md
         - name: Informations de référence sur azdata
           items:
             - name: azdata
@@ -300,7 +438,7 @@
       items:
         - name: Vue d’ensemble
           items:
-            - name: Vue d’ensemble
+            - name: Vue d'ensemble
               href: relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
             - name: Stockage Blob Azure
               href: relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
@@ -1813,12 +1951,13 @@
             - name: Interopérabilité
               href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
     - name: Déclencheurs
-      href: relational-databases/triggers/logon-triggers.md
       items:
-        - name: Capturer des données d'événements de déclencheurs de connexion
-          href: relational-databases/triggers/capture-logon-trigger-event-data.md
-        - name: Gérer la sécurité des déclencheurs
-          href: relational-databases/triggers/manage-trigger-security.md
+        - name: Déclencheurs de connexion
+          items:
+            - name: Déclencheurs de connexion
+              href: relational-databases/triggers/logon-triggers.md
+            - name: Capturer des données d'événements de déclencheurs de connexion
+              href: relational-databases/triggers/capture-logon-trigger-event-data.md
         - name: Déclencheurs DDL
           href: relational-databases/triggers/ddl-triggers.md
           items:
@@ -1853,6 +1992,8 @@
               href: relational-databases/triggers/get-information-about-dml-triggers.md
             - name: Supprimer ou désactiver les déclencheurs DML
               href: relational-databases/triggers/delete-or-disable-dml-triggers.md
+        - name: Gérer la sécurité des déclencheurs
+          href: relational-databases/triggers/manage-trigger-security.md
     - name: Fonctions définies par l’utilisateur
       href: relational-databases/user-defined-functions/user-defined-functions.md
       items:
@@ -2111,8 +2252,6 @@
     - name: Applications de la couche Données
       href: relational-databases/data-tier-applications/data-tier-applications.md
       items:
-        - name: Prise en charge DAC pour les objets et versions SQL Server
-          href: relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md
         - name: DELETE
           href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
         - name: Déployer
@@ -2565,7 +2704,7 @@
             - name: Types de données Java vers SQL
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Créer un fichier jar Java
-              href: language-extensions/how-to/call-java-from-sql.md
+              href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
         - name: Informations de référence
           items:
             - name: API de framework d’extensibilité
@@ -4393,6 +4532,10 @@
               href: database-engine/configure-windows/access-check-cache-server-configuration-options.md
             - name: requêtes distribuées appropriées
               href: database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md
+            - name: Délai d’attente de nouvelle tentative de nettoyage de l’ADR
+              href: database-engine/configure-windows/adr-cleaner-retry-timeout-configuration-option.md
+            - name: Facteur de préallocation de l’ADR
+              href: database-engine/configure-windows/adr-preallocation-factor-server-configuration-option.md
             - name: affinity Input-Output mask
               href: database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md
             - name: affinity64 Input-Output mask
@@ -4403,6 +4546,8 @@
               href: database-engine/configure-windows/affinity64-mask-server-configuration-option.md
             - name: Agent XPs
               href: database-engine/configure-windows/agent-xps-server-configuration-option.md
+            - name: allow polybase export
+              href: database-engine/configure-windows/allow-polybase-export.md
             - name: allow updates
               href: database-engine/configure-windows/allow-updates-server-configuration-option.md
             - name: paramètre par défaut de la somme de contrôle de sauvegarde
@@ -4521,6 +4666,8 @@
               href: database-engine/configure-windows/show-advanced-options-server-configuration-option.md
             - name: SMO & DMO XPs
               href: database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md
+            - name: suppress recovery model errors
+              href: database-engine/configure-windows/suppress-recovery-model-errors-server-configuration-option.md
             - name: transform noise words
               href: database-engine/configure-windows/transform-noise-words-server-configuration-option.md
             - name: Configurer two digit year cutoff
@@ -4591,6 +4738,8 @@
               href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
             - name: Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP
               href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+            - name: Guide pratique pour activer le protocole TCP avec SQLPS
+              href: powershell/how-to-enable-tcp-sqlps.md
             - name: Déterminer si le moteur de base de données est installé et démarré
               href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
             - name: Se connecter au moteur de base de données à l'aide de la protection étendue
@@ -6232,7 +6381,7 @@
             - name: Aide sur l'Explorateur d'objets accessible via la touche F1
               href: relational-databases/manage/utility-explorer-f1-help.md
         - name: "API d’évaluation\_SQL"
-          href: sql-assessment-api/sql-assessment-api-overview.md
+          href: tools/sql-assessment-api/sql-assessment-api-overview.md
     - name: Superviser
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
@@ -6707,7 +6856,7 @@
                   href: relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
                 - name: MERGE dans des procédures compilées en mode natif
                   href: relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-                - name: 'SMO C# pour OLTP en mémoire'
+                - name: SMO C# pour OLTP en mémoire
                   href: relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
             - name: Guides pratiques
               items:
@@ -6849,7 +6998,7 @@
       href: relational-databases/cursors.md
     - name: Jointures
       href: relational-databases/performance/joins.md
-    - name: Création de scripts
+    - name: Scripts
       href: relational-databases/scripting/database-engine-scripting.md
     - name: Sous-requêtes
       href: relational-databases/performance/subqueries.md
@@ -6903,9 +7052,9 @@
                   href: relational-databases/polybase/configure-scale-out-groups-windows.md
             - name: Assistant Virtualisation de données
               items:
-                - name: Virtualiser les données relationnelles
+                - name: Virtualiser des données
                   href: relational-databases/polybase/data-virtualization.md
-                - name: Virtualiser les données CSV
+                - name: Virtualiser un fichier CSV
                   href: relational-databases/polybase/data-virtualization-csv.md
             - name: Dépanner
               items:
@@ -7554,6 +7703,8 @@
                   items:
                     - name: Interroger des colonnes avec Always Encrypted en utilisant SSMS
                       href: relational-databases/security/encryption/always-encrypted-query-columns-ssms.md
+                    - name: Interroger des colonnes en utilisant Always Encrypted avec Azure Data Studio
+                      href: relational-databases/security/encryption/always-encrypted-query-columns-ads.md
                 - name: Migrer des données sensibles protégées avec Always Encrypted
                   items:
                     - name: L’exportation et l’importation
@@ -7762,118 +7913,8 @@
   items:
     - name: Vue d’ensemble
       href: tools/overview-sql-tools.md
-    - name: Azure Data Studio
-      href: azure-data-studio/what-is.md
-      items:
-        - name: Installer
-          href: azure-data-studio/download-azure-data-studio.md
-        - name: Notes de publication
-          href: azure-data-studio/release-notes-azure-data-studio.md
-        - name: Démarrages rapides
-          items:
-            - name: "Connexion & interrogation de SQL\_Server"
-              href: azure-data-studio/quickstart-sql-server.md
-            - name: Connexion & interrogation d’Azure SQL Database
-              href: azure-data-studio/quickstart-sql-database.md
-            - name: Connexion & interrogation d’Azure SQL Warehouse
-              href: azure-data-studio/quickstart-sql-dw.md
-            - name: Connexion & interrogation de PostgreSQL
-              href: azure-data-studio/quickstart-postgres.md
-        - name: Tutoriels
-          items:
-            - name: Éditeur T-SQL
-              href: azure-data-studio/tutorial-sql-editor.md
-            - name: "Exemple d’insight\_: requêtes lentes"
-              href: azure-data-studio/tutorial-qds-sql-server.md
-            - name: "Exemple d’insight\_: utilisation de l’espace de table"
-              href: azure-data-studio/tutorial-table-space-sql-server.md
-            - name: Créer un insight personnalisé
-              href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
-            - name: Sauvegarde et restauration
-              href: azure-data-studio/tutorial-backup-restore-sql-server.md
-        - name: Concepts
-          items:
-            - name: Extensions
-              href: azure-data-studio/extensions.md
-              items:
-                - name: Extension PostgreSQL
-                  href: azure-data-studio/postgres-extension.md
-                - name: Extension de virtualisation de données
-                  href: azure-data-studio/data-virtualization-extension.md
-                - name: SQL Server Agent
-                  href: azure-data-studio/sql-server-agent-extension.md
-                - name: Extension de serveurs SQL Server Central Management
-                  href: azure-data-studio/sql-server-cms-extension.md
-                - name: Extension dacpac SQL Server
-                  href: azure-data-studio/sql-server-dacpac-extension.md
-                - name: SQL Server Import
-                  href: azure-data-studio/sql-server-import-extension.md
-                - name: SQL Server Profiler
-                  href: azure-data-studio/sql-server-profiler-extension.md
-                - name: Extension de comparaison de schéma
-                  href: azure-data-studio/schema-compare-extension.md
-                - name: Extension PowerShell
-                  href: azure-data-studio/powershell-extension.md
-                - name: Extension Managed Instance
-                  href: azure-data-studio/azure-sql-managed-instance-extension.md
-                - name: Extension SandDance
-                  href: azure-data-studio/sanddance-extension.md
-            - name: Création d’extensions
-              items:
-                - name: Vue d’ensemble de l’extensibilité
-                  href: azure-data-studio/extensibility.md
-                - name: Création d’extensions
-                  href: azure-data-studio/extension-authoring.md
-                - name: Créer une extension
-                  href: azure-data-studio/tutorial-create-extension.md
-                - name: API d’extensibilité
-                  href: azure-data-studio/extensibility-apis.md
-            - name: Notebooks
-              items:
-                - name: Vue d’ensemble des notebooks
-                  href: azure-data-studio/notebooks-guidance.md
-                - name: Utiliser le noyau SQL
-                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
-                - name: Utiliser le noyau Python
-                  href: azure-data-studio/notebooks-tutorial-python-kernel.md
-                - name: Kqlmagic
-                  href: azure-data-studio/notebooks-kql-magic.md
-                - name: Gérer un notebook
-                  href: azure-data-studio/notebooks-manage-sql-server.md
-        - name: Guides pratiques
-          items:
-            - name: Tableaux de bord et widgets d’insight
-              href: azure-data-studio/insight-widgets.md
-            - name: Extraits de code
-              href: azure-data-studio/code-snippets.md
-            - name: 'Terminal intégré (PowerShell, Bash)'
-              href: azure-data-studio/integrated-terminal.md
-            - name: Raccourcis clavier
-              href: azure-data-studio/keyboard-shortcuts.md
-            - name: Explorer des ressources SQL Azure
-              href: azure-data-studio/azure-resource-explorer.md
-            - name: Groupes de serveurs
-              href: azure-data-studio/server-groups.md
-            - name: Contrôle de code source
-              href: azure-data-studio/source-control.md
-            - name: Collecte des données d’utilisation
-              href: azure-data-studio/usage-data-collection.md
-            - name: Espace de travail & paramètres utilisateur
-              href: azure-data-studio/settings.md
-            - name: Authentification Windows (Kerberos)
-              href: azure-data-studio/enable-kerberos.md
-            - name: Collecte des données d’utilisation
-              href: azure-data-studio/usage-data-collection.md
-        - name: Ressources
-          items:
-            - name: Questions fréquentes (FAQ)
-              href: azure-data-studio/faq.md
-            - name: Dépôt GitHub Azure Data Studio >>
-              href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: Blog SQL Server >>
-              href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: Signaler des problèmes et faire des suggestions >>
-              href: 'https://github.com/microsoft/azuredatastudio/issues'
+    - name: Azure Data Studio >
+      href: azure-data-studio/index.yml
     - name: Utilitaires de ligne de commande
       href: tools/command-prompt-utility-reference-database-engine.md
       items:
@@ -8416,6 +8457,8 @@
               href: ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
             - name: Ajouter un outil externe au menu Outils
               href: ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+            - name: Installer des extensions dans SQL Server Management Studio (SSMS)
+              href: ssms/install-extensions-in-sql-server-management-studio-ssms.md
             - name: Utilitaire SSMS
               href: ssms/ssms-utility.md
             - name: Raccourcis clavier SSMS
@@ -9755,7 +9798,7 @@
     - name: Visual Studio Code
       items:
         - name: Scripts T-SQL
-          href: visual-studio-code/sql-server-develop-use-vscode.md
+          href: tools/visual-studio-code/sql-server-develop-use-vscode.md
 - name: Tutoriels
   items:
     - name: SQL Server
@@ -10107,14 +10150,10 @@
   items:
     - name: Exemples de base de données
       items:
-        - name: Vue d’ensemble des exemples
+        - name: Vue d’ensemble
           href: samples/sql-samples-where-are.md
-        - name: Tous les exemples GitHub >>
-          href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
-          items:
-            - name: Installer et configurer
-              href: samples/adventureworks-install-configure.md
+          href: samples/adventureworks-install-configure.md
         - name: Wide World Importers
           items:
             - name: Vue d’ensemble
@@ -10139,6 +10178,8 @@
               href: samples/wide-world-importers-generate-data.md
             - name: Flux de travail ETL
               href: samples/wide-world-importers-perform-etl.md
+        - name: Tous les exemples GitHub >>
+          href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
     - name: Erreurs et événements
       href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
       items:
@@ -15434,6 +15475,8 @@
                   href: t-sql/functions/current-timestamp-transact-sql.md
                 - name: CURRENT_TIMEZONE
                   href: t-sql/functions/current-timezone-transact-sql.md
+                - name: CURRENT_TIMEZONE_ID
+                  href: t-sql/functions/current-timezone-id-transact-sql.md
                 - name: DATEADD
                   href: t-sql/functions/dateadd-transact-sql.md
                 - name: DATEDIFF
@@ -16011,7 +16054,7 @@
                       href: t-sql/language-elements/modulo-transact-sql.md
                     - name: '%= Affectation du modulo'
                       href: t-sql/language-elements/modulo-equals-transact-sql.md
-                - name: = (Affectation)
+                - name: '= (Affectation)'
                   href: t-sql/language-elements/assignment-operator-transact-sql.md
                 - name: Au niveau du bit
                   href: t-sql/language-elements/bitwise-operators-transact-sql.md
@@ -16033,7 +16076,7 @@
                 - name: Comparaison
                   href: t-sql/language-elements/comparison-operators-transact-sql.md
                   items:
-                    - name: = (Égal à)
+                    - name: '= (Égal à)'
                       href: t-sql/language-elements/equals-transact-sql.md
                     - name: '> (supérieur à)'
                       href: t-sql/language-elements/greater-than-transact-sql.md

@@ -1,6 +1,6 @@
 ---
 title: SQL Server et ADO.NET
-description: Décrit comment utiliser des fonctions et fonctionnalités spécifiques à SQL Server
+description: Fournit une vue d’ensemble des fonctions et fonctionnalités Microsoft.Data.SqlClient qui sont spécifiques à SQL Server.
 ms.date: 10/15/2019
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: bacd59fc2fd6cd12476b02c6ea7cc52a9b289bb0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e06ea16a4a4cde039bbdc6cd978d4f404aea2eef
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924351"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435419"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server et ADO.NET
 

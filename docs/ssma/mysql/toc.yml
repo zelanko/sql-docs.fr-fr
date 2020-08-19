@@ -8,7 +8,7 @@
   href: legal-notice-mysqltosql.md
 - name: Paramètres de conversion
   href: conversion-settings-mysqltosql.md
-- name: Installation de SSMA pour MySQL Client
+- name: Installation du client SSMA pour MySQL
   href: installing-ssma-for-mysql-client-mysqltosql.md
 - name: Exécution de la console SSMA
   href: executing-the-ssma-console-mysqltosql.md
@@ -18,7 +18,7 @@
   href: sql-modes-mysqltosql.md
 - name: Se connecter à SQL Server
   href: connect-to-sql-server-mysqltosql.md
-- name: Connexion à Azure SQL DB
+- name: Connexion à Azure SQL Database
   href: connecting-to-azure-sql-db-mysqltosql.md
 - name: Création de fichiers de script
   href: creating-script-files-mysqltosql.md
@@ -26,7 +26,7 @@
   href: loading-converted-database-objects-into-sql-server-mysqltosql.md
 - name: Conversion de bases de données MySQL
   href: converting-mysql-databases-mysqltosql.md
-- name: Migration vers SQL Server - Azure SQL DB
+- name: Migration vers SQL Server - Azure SQL Database
   href: migrating-mysql-data-into-sql-server-azure-sql-db-mysqltosql.md
 - name: Options de ligne de commande dans la console SSMA
   href: command-line-options-in-ssma-console-mysqltosql.md
@@ -38,15 +38,15 @@
   href: save-metadata-mysqltosql.md
 - name: Commandes de menu et autres touches de raccourci
   href: menu-commands-and-other-shortcut-keys-mysqltosql.md
-- name: Dépannage
+- name: Résolution des problèmes
   href: troubleshooting-mysqltosql.md
 - name: Se connecter à MySQL
   href: connect-to-mysql-mysqltosql.md
 - name: Suppression des composants SSMA pour MySQL
   href: removing-the-ssma-for-mysql-components-mysqltosql.md
-- name: Se connecter à Azure SQL DB
+- name: Connexion à Azure SQL Database
   href: connect-to-azure-sql-db-mysqltosql.md
-- name: Migration de bases de données MySQL vers Azure SQL DB
+- name: Migration des bases de données MySQL vers Azure SQL Database
   href: migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md
 - name: Utilisation des exemples de fichiers de script de console
   href: working-with-the-sample-console-script-files-mysqltosql.md
@@ -102,7 +102,7 @@
   items:
     - name: Interface graphique utilisateur
       href: project-settings-gui-mysqltosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-mysqltosql.md
     - name: Mappage de types
       href: project-settings-type-mapping-mysqltosql.md

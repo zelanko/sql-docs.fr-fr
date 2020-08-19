@@ -4,6 +4,8 @@
   href: ../sql-server/index.yml
 - name: Pilotes SQL Server
   href: ../connect/sql-connection-libraries.md
+- name: Matrice de prise en charge des fonctionnalités des pilotes
+  href: ../connect/driver-feature-matrix.md
 - name: Historique des pilotes SQL Server
   href: ../connect/connect-history.md
 - name: Développeur de données SQL
@@ -30,6 +32,10 @@
           href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
         - name: Télécharger le fournisseur de données Microsoft SqlClient pour SQL Server
           href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: Activer le suivi d’événements dans SqlClient
+          href: ../connect/ado-net/enable-eventsource-tracing.md
+        - name: Commutateurs AppContext dans SqlClient
+          href: ../connect/ado-net/appcontext-switches.md
         - name: Cycle de vie de prise en charge des pilotes SqlClient
           href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
         - name: Recherche d’informations supplémentaires sur le pilote SqlClient
@@ -92,6 +98,8 @@
                   href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
                 - name: Transaction et opérations de copie en bloc
                   href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+                - name: Indicateurs d’ordre pour les opérations de copie en bloc
+                  href: ../connect/ado-net/sql/bulk-copy-order-hints.md
             - name: MARS (Multiple Active Result Sets)
               href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
               items:
@@ -142,6 +150,15 @@
               href: ../connect/ado-net/sql/sqlclient-support-localdb.md
             - name: Prise en charge par SqlClient d’Always Encrypted
               href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
+              items:
+                - name: Développer une application .NET en utilisant Always Encrypted avec enclaves sécurisées
+                  href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+                - name: Utilisation d’Azure Key Vault avec Always Encrypted
+                  href: ado-net/sql/azure-key-vault-example.md
+                - name: Utilisation d’Azure Key Vault avec Always Encrypted avec des enclaves sécurisées
+                  href: ado-net/sql/azure-key-vault-enclave-example.md
+            - name: Découverte et classification des données dans SqlClient
+              href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
     - name: Pilote Microsoft JDBC pour SQL Server
@@ -2631,8 +2648,8 @@
         - name: Utilisation du chiffrement intégral avec le pilote JDBC
           href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
           items:
-            - name: Always Encrypted avec enclaves sécurisées
-              href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+            - name: Utilisation d’Always Encrypted avec enclaves sécurisées avec le pilote JDBC
+              href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
         - name: Articles du guide
           items:
             - name: Utilisation des instructions avec SQL
@@ -2747,6 +2764,8 @@
               href: ../connect/jdbc/using-sql-escape-sequences.md
             - name: Utilisation d'instructions avec des procédures stockées
               href: ../connect/jdbc/using-statements-with-stored-procedures.md
+            - name: Authentification par certificat client pour les scénarios de bouclage
+              href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
             - name: 'Exemples Azure Key Vault, pour 7.0 et autres'
               href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
               items:
@@ -2790,14 +2809,16 @@
               href: ../connect/odbc/linux-mac/programming-guidelines.md
             - name: Outils
               items:
-                - name: Connexion avec bcp.exe
+                - name: Connexion avec bcp
                   href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-                - name: Connexion avec sqlcmd.exe
+                - name: Connexion avec sqlcmd
                   href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
             - name: Utilisation de l’authentification intégrée
               href: ../connect/odbc/linux-mac/using-integrated-authentication.md
         - name: Notes de publication
           href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+        - name: Notes de publication (mssql-tools)
+          href: ../connect/odbc/linux-mac/release-notes-tools.md
         - name: Problèmes connus
           href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
         - name: Questions fréquentes (FAQ) pour ODBC Linux et macOS
@@ -2836,7 +2857,7 @@
       items:
         - name: Fournisseurs de magasins de clés personnalisés
           href: ../connect/odbc/custom-keystore-providers.md
-        - name: Attributs et mots clés de chaîne de connexion DSN
+        - name: Attributs et mots clés de chaîne de connexion et DSN
           href: ../connect/odbc/dsn-connection-string-attribute.md
         - name: Utilisation d’Always Encrypted
           href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
@@ -5111,6 +5132,8 @@
           href: ../connect/oledb/features/using-large-value-types.md
         - name: Utilisation de MARS (Multiple Active Result Sets)
           href: ../connect/oledb/features/using-multiple-active-result-sets-mars.md
+        - name: Utilisation de la résolution d’adresses IP réseau transparente
+          href: ../connect/oledb/features/using-transparent-network-ip-resolution.md
         - name: Utilisation des types définis par l'utilisateur
           href: ../connect/oledb/features/using-user-defined-types.md
         - name: "Utilisation de types de données\_XML"
@@ -5960,7 +5983,7 @@
               href: ../ado/guide/data/handling-errors-in-vbscript.md
             - name: Gestion des erreurs dans Visual C++
               href: ../ado/guide/data/handling-errors-in-visual-c.md
-            - name: Gestion des erreurs dans Visual J++
+            - name: "Gestion des erreurs dans Visual\_J++"
               href: ../ado/guide/data/handline-errors-in-visual-j.md
             - name: Gestion des erreurs dans JScript
               href: ../ado/guide/data/handling-errors-in-jscript.md

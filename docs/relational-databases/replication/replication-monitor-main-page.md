@@ -1,4 +1,5 @@
 ---
+description: Moniteur de réplication, Page principale
 title: Moniteur de réplication, Page principale | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,12 +14,12 @@ ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: ff52e42beb47e69e3dab9af73573b42029f29710
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf9ee6397d9278017511f569be579438647759bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88405195"
 ---
 # <a name="replication-monitor-main-page"></a>Moniteur de réplication, Page principale
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "85716744"
   
 -   Pour plus d'informations sur les tâches qui peuvent être exécutées dans le Moniteur de réplication, consultez les rubriques suivantes :  
   
-    -   [Actualiser des données dans le moniteur de réplication](../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
+    -   [Actualiser des données dans le Moniteur de réplication](../../relational-databases/replication/monitor/refresh-data-in-replication-monitor.md)  
   
     -   [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)    
   
     -   [Mesurer la latence et valider les connexions pour la réplication transactionnelle](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
-    -   [Set Thresholds and Warnings in Replication Monitor](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
+    -   [Définir des seuils et des avertissements dans le moniteur de réplication](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   
     -   [Autoriser des non-administrateurs à utiliser le moniteur de réplication](../../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md)  
   

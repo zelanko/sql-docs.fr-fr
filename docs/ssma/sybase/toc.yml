@@ -20,7 +20,7 @@
   href: initializing-test-cases-sybasetosql.md
 - name: Utilisation des exemples de fichiers de script de console
   href: working-with-the-sample-console-script-files-sybasetosql.md
-- name: Migration de bases de données ASE Sybase vers Azure SQL DB
+- name: Migration des bases de données Sybase ASE vers Azure SQL Database
   href: migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md
 - name: Évaluation d’objets de base de données Sybase ASE pour la conversion
   href: assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md
@@ -56,13 +56,13 @@
   href: connecting-to-sybase-ase-sybasetosql.md
 - name: Sélection et configuration des objets affectés
   href: selecting-and-configuring-affected-objects-sybasetosql.md
-- name: Connexion à Azure SQL DB
+- name: Connexion à Azure SQL Database
   href: connecting-to-azure-sql-db-sybasetosql.md
 - name: Gestion des mots de passe
   href: managing-passwords-sybasetosql.md
 - name: Définition des options du projet
   href: setting-project-options-sybasetosql.md
-- name: Se connecter à Azure SQL DB
+- name: Connexion à Azure SQL Database
   href: connect-to-azure-sql-db-sybasetosql.md
 - name: Paramètres de migration de données
   href: data-migration-settings-sybasetosql.md
@@ -76,7 +76,7 @@
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
 - name: Installation des composants SSMA sur SQL Server
   href: installing-ssma-components-on-sql-server-sybasetosql.md
-- name: Migration de données Sybase ASE dans Azure SQL DB
+- name: Migration des données Sybase ASE vers Azure SQL Database
   href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md
 - name: Se connecter à Sybase
   href: connect-to-sybase-sybasetosql.md
@@ -124,7 +124,7 @@
       href: project-settings-type-mapping-sybasetosql.md
     - name: Synchronization
       href: project-settings-synchronization-sybasetosql.md
-    - name: Azure SQL DB
+    - name: Azure SQL Database
       href: project-settings-azure-sql-db-sybasetosql.md
     - name: Migration
       href: project-settings-migration-sybasetosql.md

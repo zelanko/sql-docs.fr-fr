@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation, classe d'événements
 title: Broker:Conversation, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0be5e9b2a86f49fdb80b36ac33cb51a6df4ddae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5167a04707739bd83b966aba28d7a2cab0003f2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410225"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation, classe d'événements
 
@@ -55,7 +56,7 @@ ms.locfileid: "85679500"
 |||**CO**. Conversation en cours. La conversation est établie et ses deux parties peuvent envoyer des messages. L'essentiel de la communication pour un service classique a lieu lorsque la conversation se trouve dans cet état.|||  
 |||**DI**. Déconnecté en entrée. La partie distante de la conversation a émis une instruction END CONVERSATION. La conversation demeure dans cet état jusqu'à ce que la partie locale de la conversation émette une instruction END CONVERSATION. Une application peut encore recevoir des messages pour la conversation. Dans la mesure où la partie distante de la conversation a terminé celle-ci, une application ne peut pas envoyer de messages sur cette conversation. Lorsqu'une application émet une instruction END CONVERSATION, la conversation passe à l'état CD (fermée).|||  
 |||**DÉPLOYER**. Déconnecté en sortie. La partie locale de la conversation a émis une instruction END CONVERSATION. La conversation reste dans cet état jusqu'à ce que le côté distant accuse réception de la commande END CONVERSATION. Une application ne peut pas envoyer ou recevoir des messages pour la conversation. Lorsque la partie distante de la conversation accuse réception de l'instruction END CONVERSATION, la conversation passe en état CD (fermée).|||  
-|||**ER**. . Une erreur s'est produite sur ce point de terminaison. Les colonnes Error, Severity et State contiennent des informations sur l'erreur spécifique qui s'est produite.|||  
+|||**ER**. Erreur. Une erreur s'est produite sur ce point de terminaison. Les colonnes Error, Severity et State contiennent des informations sur l'erreur spécifique qui s'est produite.|||  
 |||**CD**. Fermé. Le point de terminaison de la conversation n'est plus en cours d'utilisation.|||  
 |**ID de transaction**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
   

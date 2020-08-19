@@ -1,4 +1,5 @@
 ---
+description: Broker:Forwarded Message Dropped, classe d'événements
 title: Broker:Forwarded Message Dropped, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,12 +13,12 @@ ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11ac4c7c86b2add288271d56b91f7d9ab0848476
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fe9b893b04f48a582e0ff0125c1fc33b77a16f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88409865"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped, classe d'événements
 
@@ -51,7 +52,7 @@ ms.locfileid: "85715411"
 |OwnerName|**nvarchar**|Identificateur de l'instance de Service Broker correspondant à la destination du message.|37|Non|  
 |RoleName|**nvarchar**|Rôle du descripteur de conversation. Valeurs possibles :<br /><br /> -Initiateur. Cette instance de Service Broker a lancé la conversation.<br /><br /> -Cible. Cette instance de Service Broker correspond à la cible de la conversation.|38|Non|  
 |ServerName|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
-|severity|**int**|Numéro de gravité du texte de l'événement.|29|Non|  
+|Gravité|**int**|Numéro de gravité du texte de l'événement.|29|Non|  
 |SPID|**int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |StartTime|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
 |State|**int**|Indique l'emplacement dans le code source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a produit l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|Non|  

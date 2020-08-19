@@ -2,7 +2,7 @@
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: Bienvenue dans SQL Server >
   href: ../sql-server/index.yml
-- name: Vue d’ensemble
+- name: Vue d'ensemble
   items:
     - name: Nouveautés de Reporting Services
       href: ../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md
@@ -1053,7 +1053,7 @@
           href: ../reporting-services/report-data/power-pivot-connection-type-ssrs.md
         - name: Type de connexion de liste SharePoint
           href: ../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md
-        - name: Type de connexion SQL Azure
+        - name: Type de connexion Azure SQL
           href: ../reporting-services/report-data/sql-azure-connection-type-ssrs.md
         - name: Type de connexion OLE DB
           href: ../reporting-services/report-data/ole-db-connection-type-ssrs.md

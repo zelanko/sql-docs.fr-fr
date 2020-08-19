@@ -1,4 +1,5 @@
 ---
+description: Broker:Conversation Group, classe d'événements
 title: Broker:Conversation Group, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2019
@@ -12,18 +13,18 @@ ms.assetid: 6595bef6-9d40-42eb-a934-735622dd23fb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c767f77683c46151fd0d9804a35f838d88ca0f0a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 68afde98f2e219cacf20175bfa0cb71ad7afa90a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88410125"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group, classe d'événements
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker:Conversation Group** lorsque Service Broker crée un groupe de conversion ou supprime un groupe existant.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker:Conversation Group** quand Service Broker crée un groupe de conversion ou supprime un groupe existant.  
   
 ## <a name="brokerconversation-group-event-class-data-columns"></a>Colonnes de données de la classe d'événement Broker:Conversation Group  
   
