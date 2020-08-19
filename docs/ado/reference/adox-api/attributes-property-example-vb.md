@@ -1,4 +1,5 @@
 ---
+description: Attributes, exemple de propriété (VB)
 title: Attributes, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d951722b341d073364efd699021215cb99001613
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 3d1067f47d50b344731c0f270671861f381a3242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440431"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes, exemple de propriété (VB)
 Cet exemple illustre la propriété [attributes](../../../ado/reference/adox-api/attributes-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md). Sa définition sur **adColNullable** permet à l’utilisateur de définir la valeur d’un [champ](../../../ado/reference/ado-api/field-object.md) du [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sur une chaîne vide. Dans ce cas, l’utilisateur peut faire la distinction entre un enregistrement où les données ne sont pas connues et un enregistrement où les données ne s’appliquent pas.  

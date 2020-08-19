@@ -1,4 +1,5 @@
 ---
+description: Attributes, exemple de propriété (VC++)
 title: Attributes, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b1d3da3d5228345f6f6ae995718b641ecaead89
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 84ca29160d8d26930a3edb644b9317392dc0603f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763980"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440421"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes, exemple de propriété (VC++)
 Cet exemple illustre la propriété [attributes](../../../ado/reference/adox-api/attributes-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md). Sa définition sur **adColNullable** permet à l’utilisateur de définir la valeur d’un [champ](../../../ado/reference/ado-api/field-object.md) du [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sur une chaîne vide. Dans ce cas, l’utilisateur peut faire la distinction entre un enregistrement où les données ne sont pas connues et un enregistrement où les données ne s’appliquent pas.  

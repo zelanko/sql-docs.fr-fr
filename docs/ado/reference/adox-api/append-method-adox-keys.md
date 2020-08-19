@@ -1,4 +1,5 @@
 ---
+description: Append, méthode (clés ADOX)
 title: Append, méthode (clés ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d4797344958391dca278e23be2efafa6d1b3f69
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ae3ef035594b696b829f0f1898e1749a2c33f11
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440531"
 ---
 # <a name="append-method-adox-keys"></a>Append, méthode (clés ADOX)
 Ajoute un nouvel objet [clé](../../../ado/reference/adox-api/key-object-adox.md) à la collection de [clés](../../../ado/reference/adox-api/keys-collection-adox.md) .  
@@ -49,7 +50,7 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  *; RelatedColumn*  
  facultatif. Valeur de **chaîne** qui spécifie le nom de la colonne associée pour une clé étrangère. Le paramètre *RelatedColumn* correspond à la valeur de la propriété **Name** d’un objet [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le paramètre *Columns* peut prendre soit le nom d’une colonne, soit un tableau de noms de colonnes.  
   
 ## <a name="applies-to"></a>S'applique à  

@@ -1,4 +1,5 @@
 ---
+description: DefinedSize, exemple de propriété (VB)
 title: DefinedSize, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 09e65fec85fd224df64ce7cc7fdb5166e67897e8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 059bec9781abe0903c9a5af2d78e46d532028e04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440131"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize, exemple de propriété (VB)
 Cet exemple illustre la propriété [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md). Le code redéfinit la taille de la colonne FirstName de la table **Employees** de la base de données *Northwind* . Ensuite, la modification des valeurs du [champ](../../../ado/reference/ado-api/field-object.md) FirstName d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) basé sur la table **Employees** s’affiche. Notez que, par défaut, le champ FirstName est complété par des espaces après avoir redéfini la propriété **DefinedSize** .  

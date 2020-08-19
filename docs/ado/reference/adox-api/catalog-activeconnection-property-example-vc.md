@@ -1,4 +1,5 @@
 ---
+description: Exemple de propriété ActiveConnection de l’objet Catalog (VC++)
 title: Catalog ActiveConnection, propriété, exemple (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d39b018f74bf4edbc443ac3d49004e03efb007b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 37b50500b66c4f9e4bdca19facf27e290ac242c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763950"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440391"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Exemple de propriété ActiveConnection de l’objet Catalog (VC++)
 La définition de la propriété [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) sur une connexion ouverte valide « ouvre » le catalogue. À partir d’un catalogue ouvert, vous pouvez accéder aux objets de schéma contenus dans ce catalogue.  

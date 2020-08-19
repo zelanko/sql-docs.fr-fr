@@ -1,4 +1,5 @@
 ---
+description: Append (méthode) sur les collections Groups et Users, ChangePassword, exemple de méthodes (VB)
 title: Groups and Users Append, ChangePassword, exemple de méthodes (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c71cca25412a00ea53d62b44a0a4ff7ced67643
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7aa335dc2aabdf05ab34a0245bb0aafc14b17cf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88439981"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Append (méthode) sur les collections Groups et Users, ChangePassword, exemple de méthodes (VB)
 Cet exemple illustre la méthode [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) des [groupes](../../../ado/reference/adox-api/groups-collection-adox.md), ainsi que la méthode [Append](../../../ado/reference/adox-api/append-method-adox-users.md) des [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) en ajoutant un nouveau [groupe](../../../ado/reference/adox-api/group-object-adox.md) et un nouvel [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) au système. Le nouveau **groupe** est ajouté à la collection de **groupes** du nouvel **utilisateur**. Par conséquent, le nouvel **utilisateur** est ajouté au **groupe**. En outre, la méthode [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) est utilisée pour spécifier le mot de passe de l' **utilisateur** .  

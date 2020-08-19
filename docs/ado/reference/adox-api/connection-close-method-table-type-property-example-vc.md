@@ -1,4 +1,5 @@
 ---
+description: Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VC++)
 title: Connection Close, méthode, table type, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa016c166bc2459c61c34a5ca40f8c1444811782
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6b8d3263ee4d343f9e77b4d64d42ee8e871888d0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440221"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VC++)
 La définition de la propriété [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) sur **Nothing** doit « fermer » le catalogue. Les regroupements associés seront vides. Tous les objets qui ont été créés à partir d’objets de schéma dans le catalogue sont orphelins. Toutes les propriétés de ces objets qui ont été mises en cache seront toujours disponibles, mais la tentative de lecture des propriétés qui nécessitent un appel du fournisseur échouera.  

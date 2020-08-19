@@ -1,4 +1,5 @@
 ---
+description: Catalog, objet (ADOX)
 title: Catalog, objet (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f13533ce9d14a650e409507e646eb536bad14e4d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 35fa08ba0d93a7adacf6d58338f4808e2a5eba9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440381"
 ---
 # <a name="catalog-object-adox"></a>Catalog, objet (ADOX)
 Contient des collections ([tables](../../../ado/reference/adox-api/tables-collection-adox.md), [vues](../../../ado/reference/adox-api/views-collection-adox.md), [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md), [groupes](../../../ado/reference/adox-api/groups-collection-adox.md)et [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md)) qui décrivent le catalogue de schémas d’une source de données.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez modifier l’objet **catalogue** en ajoutant ou en supprimant des objets ou en modifiant des objets existants. Certains fournisseurs peuvent ne pas prendre en charge tous les objets de **catalogue** ou ne prendre en charge que l’affichage des informations de schéma.  
   
  Avec les propriétés et les méthodes d’un objet **catalogue** , vous pouvez :  

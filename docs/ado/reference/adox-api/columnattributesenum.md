@@ -1,4 +1,5 @@
 ---
+description: ColumnAttributesEnum
 title: ColumnAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c590e0f5dd94713c84a858063a81c680e4a0029
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7f9ab23767ccac617694468f5ff1502b8c60f14e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440311"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
 Spécifie les caractéristiques d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md).  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adColFixed**|1|La colonne a une longueur fixe.|  
 |**adColNullable**|2|La colonne peut contenir des valeurs NULL.|  

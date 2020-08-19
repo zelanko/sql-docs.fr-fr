@@ -1,4 +1,5 @@
 ---
+description: DateModified, propriété (ADOX)
 title: DateModified, propriété (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c3a2a8ba0890dd50621fac143aa102091abcc19
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7ee921e1865530356e1fd88c97489b63a81a02ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440151"
 ---
 # <a name="datemodified-property-adox"></a>DateModified, propriété (ADOX)
 Indique la date à laquelle l’objet a été modifié pour la dernière fois.  
@@ -30,7 +31,7 @@ Indique la date à laquelle l’objet a été modifié pour la dernière fois.
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne une valeur de **type Variant** spécifiant la date de modification. La valeur est null si **DateModified** n’est pas pris en charge par le fournisseur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La propriété **DateModified** a la valeur null pour les objets récemment ajoutés. Après avoir ajouté une nouvelle [vue](../../../ado/reference/adox-api/view-object-adox.md) ou une nouvelle [procédure](../../../ado/reference/adox-api/procedure-object-adox.md), vous devez appeler la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) de la collection [views](../../../ado/reference/adox-api/views-collection-adox.md) ou [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) pour obtenir les valeurs de la propriété **DateModified** .  
   
 ## <a name="applies-to"></a>S'applique à  

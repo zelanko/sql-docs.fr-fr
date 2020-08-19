@@ -1,4 +1,5 @@
 ---
+description: Append, méthode (tables ADOX)
 title: Append, méthode (Tables ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19617c65b350527753895ed613f671c3ac0f88e8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6069b3d99e021be01d8fd2d724b7c25868167bd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764010"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440471"
 ---
 # <a name="append-method-adox-tables"></a>Append, méthode (tables ADOX)
 Ajoute un nouvel objet [table](../../../ado/reference/adox-api/table-object-adox.md) à la collection [tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
@@ -34,10 +35,10 @@ Tables.Append Table
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Tableau*  
+ *Table*  
  Valeur de **type Variant** qui contient une référence à la **table** à ajouter ou le nom de la table à créer et à ajouter.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Une erreur se produit si le fournisseur ne prend pas en charge la création de tables.  
   
 ## <a name="applies-to"></a>S'applique à  

@@ -1,4 +1,5 @@
 ---
+description: DefinedSize, propriété (ADOX)
 title: DefinedSize, propriété (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a13a0ef430404735d15303549dfd6f812864f81
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 2f122574ba5aa405ca4493b498bb0179249cccf1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759195"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440141"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize, propriété (ADOX)
 Indique la taille maximale indiquée de la colonne.  

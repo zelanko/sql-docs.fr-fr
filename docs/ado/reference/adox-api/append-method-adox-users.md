@@ -1,4 +1,5 @@
 ---
+description: Append, méthode (utilisateurs ADOX)
 title: Append, méthode (utilisateurs ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c010b291468432544a037d15fbaa790fc3ee789d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e774ab590e3f405cab157293405eba5e575ecb52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440461"
 ---
 # <a name="append-method-adox-users"></a>Append, méthode (utilisateurs ADOX)
 Ajoute un nouvel objet [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) à la collection [Users](../../../ado/reference/adox-api/users-collection-adox.md) .  
@@ -40,7 +41,7 @@ Users.Append User[,Password]
  *Mot de passe*  
  facultatif. Valeur de **chaîne** qui contient le mot de passe de l’utilisateur. Le paramètre de *mot de passe* correspond à la valeur spécifiée par la méthode [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) d’un objet **utilisateur** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La collection d' **utilisateurs** d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le regroupement **utilisateurs** pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs qui ont une appartenance au groupe spécifique.  
   
  Une erreur se produit si le fournisseur ne prend pas en charge la création d’utilisateurs.  

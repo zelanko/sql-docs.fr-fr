@@ -1,4 +1,5 @@
 ---
+description: Append, méthode des collections Columns et Tables, Name (exemple de propriété) (VC++)
 title: Columns et tables Append, méthodes, Name, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 424813731993841bc503592e42459548dcaf5152
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 655c1d014f312ae0706b242bb8b108d871bcef3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82759345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440291"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vc"></a>Append, méthode des collections Columns et Tables, Name (exemple de propriété) (VC++)
 Le code suivant montre comment créer une nouvelle table.  

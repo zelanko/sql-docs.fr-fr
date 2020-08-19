@@ -1,4 +1,5 @@
 ---
+description: Append, méthode (procédures ADOX)
 title: Append, méthode (procédures ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8571790b596f037bb528df375c43c98b6b77c3a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88440481"
 ---
 # <a name="append-method-adox-procedures"></a>Append, méthode (procédures ADOX)
 Ajoute un nouvel objet de [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) à la collection [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) .  
@@ -40,7 +41,7 @@ Procedures.Append Name, Command
  *Commande*  
  Objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) ADO qui représente la procédure à créer et à ajouter.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Crée une nouvelle procédure dans la source de données avec le nom et les attributs spécifiés dans l’objet **Command** .  
   
  Si le texte de la commande que l’utilisateur spécifie représente une vue plutôt qu’une procédure, le comportement dépend du fournisseur utilisé. L' **Ajout** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  
