@@ -1,4 +1,5 @@
 ---
+description: Manipulation de valeurs vides
 title: Utilisation de valeurs vides | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f497ba1ccf84ac642144340af4d5597d773dcadb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125848"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421893"
 ---
 # <a name="working-with-empty-values"></a>Manipulation de valeurs vides
 
@@ -54,7 +55,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
 -   lorsque la valeur de cellule vide est l'opérande de l'opérateur de concaténation de chaîne (+), elle est considérée comme une chaîne vide si l'autre opérande est une valeur non vide. Si les deux opérandes sont vides, l'opérateur de concaténation de chaîne retourne la valeur de cellule vide ;  
   
--   lorsque la valeur de cellule vide est un opérande d'un opérateur de comparaison quelconque (=, <>, >=, \<=, >, <), la valeur de cellule vide est considérée comme zéro ou une chaîne vide, selon que le type de données de l’autre opérande est numérique ou chaîne, respectivement. Si les deux opérandes sont vides, ils sont considérés comme le chiffre zéro ;  
+-   lorsque la valeur de cellule vide est un opérande d'un opérateur de comparaison quelconque (=, <>, >=, \<=, > , <), la valeur de cellule vide est considérée comme zéro ou une chaîne vide, selon que le type de données de l’autre opérande est numérique ou chaîne, respectivement. Si les deux opérandes sont vides, ils sont considérés comme le chiffre zéro ;  
   
 -   lors d'un classement de valeurs numériques, la valeur de cellule vide occupe la même position que le chiffre zéro. S'ils sont tous deux présents, la valeur de cellule vide se place avant le chiffre zéro ;  
   
@@ -120,31 +121,31 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  Ce tableau représente les résultats de l'application d'un opérateur AND à deux opérandes booléens.  
   
-|AND|TRUE|EMPTY|FALSE|  
+|AND|true|EMPTY|false|  
 |---------|----------|-----------|-----------|  
-|**TRUE**|TRUE|FALSE|FALSE|  
-|**VIDÉ**|FALSE|EMPTY|FALSE|  
-|**FALSE**|FALSE|FALSE|FALSE|  
+|**TRUE**|true|false|false|  
+|**VIDÉ**|false|EMPTY|false|  
+|**FALSE**|false|false|false|  
   
  Ce tableau représente les résultats de l'application d'un opérateur OR à deux opérandes booléens.  
   
-|OR|TRUE|FALSE|  
+|OR|true|false|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**VIDÉ**|TRUE|TRUE|  
-|**FALSE**|TRUE|FALSE|  
+|**FALSE**|true|false|  
   
  Ce tableau illustre la manière dont l'opérateur NOT négocie ou annule le résultat d'un opérateur booléen.  
   
 |Expression booléenne à laquelle l'opérateur NOT est appliqué|est évalué à|  
 |-------------------------------------------------------------|------------------|  
-|TRUE|FALSE|  
+|true|false|  
 |EMPTY|EMPTY|  
-|FALSE|TRUE|  
+|false|true|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
- [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
+ [Référence des opérateurs MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

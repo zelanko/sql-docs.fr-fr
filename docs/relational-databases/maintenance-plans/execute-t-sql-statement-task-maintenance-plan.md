@@ -1,4 +1,5 @@
 ---
+description: Exécuter la tâche de l’instruction T-SQL (Plan de maintenance)
 title: Exécuter la tâche de l’instruction T-SQL (Plan de maintenance) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a38c1bcb1dc4f1aa48f69b2abd6c5d67924c7847
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d90a9aaa1b038d4d890c66ceb5f5e7b9c4befc81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85667081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88424061"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Exécuter la tâche de l’instruction T-SQL (Plan de maintenance)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Utilisez la boîte de dialogue **Exécuter la tâche de l’instruction T-SQL** pour personnaliser le plan de maintenance en y ajoutant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de votre choix.  
+   Utilisez la boîte de dialogue **Exécuter la tâche de l’instruction T-SQL** pour personnaliser le plan de maintenance en y ajoutant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de votre choix.  
   
 ## <a name="options"></a>Options  
  **Connection**  
@@ -58,7 +59,7 @@ ms.locfileid: "85667081"
  Spécifiez le mode d'authentification sur le serveur.  
   
  **Utiliser la sécurité intégrée à Windows NT**  
- Permet de se connecter à une instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avec l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Permet de se connecter à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] avec l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
  Se connecte à une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette option n'est pas disponible.  

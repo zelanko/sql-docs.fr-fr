@@ -1,4 +1,5 @@
 ---
+description: Exécuter un package SSIS avec PowerShell
 title: Exécuter un package SSIS avec PowerShell | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a86309c484cac3538b48c797665661341ca6648
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 659fb23619eeb8f4f74c43307a03b082dfca1919
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422173"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>Exécuter un package SSIS avec PowerShell
 
@@ -22,7 +23,7 @@ ms.locfileid: "86921843"
 
 Ce guide de démarrage rapide montre comment utiliser un script PowerShell pour se connecter à un serveur de base de données et exécuter un package SSIS.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Conditions préalables
 
 Un serveur Azure SQL Database écoute sur le port 1433. Si vous essayez de vous connecter à un serveur Azure SQL Database en étant derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter.
 

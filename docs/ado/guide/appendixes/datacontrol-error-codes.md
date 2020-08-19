@@ -1,4 +1,5 @@
 ---
+description: Codes d’erreur de l’objet DataControl
 title: Codes d’erreur DataControl | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 90501e24a9d4ec3dd5a68f641bf25c3adade1a62
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82760515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422193"
 ---
 # <a name="datacontrol-object-error-codes"></a>Codes d’erreur de l’objet DataControl
-Le tableau suivant répertorie les [services Bureau à distance. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Codes d’erreur de l’objet DataControl. La traduction décimale positive des deux octets de poids faible, la traduction décimale négative du code d’erreur complet et les valeurs hexadécimales sont affichées.
+Le tableau suivant répertorie les [services Bureau à distance. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Codes d’erreur de l’objet DataControl. La traduction décimale positive des deux octets de poids faible, la traduction décimale négative du code d’erreur complet et les valeurs hexadécimales sont affichées.
 
 |Licence. Codes d’erreur DataControl|Number|Description|
 |---------------------------------|------------|-----------------|
@@ -44,7 +45,7 @@ Le tableau suivant répertorie les [services Bureau à distance. ](../../../ado/
 |**IDS_RowsetNotUpdateable**|4104 -2146824184 0x800A1008|L’ensemble de lignes n’est pas modifiable.|
 |**IDS_UnexpectedError**|4351-2146823937 0x800A10FF|Erreur inattendue.|
 |**IDS_UpdatesFailed**|4098 -2146824190 0x800A1002|Impossible de mettre à jour la base de données.|
-|**IDS_URLMONNotFound**|4119 -2146824169 0x800A1017|La propriété de l' **URL** DataControl requiert le fichier système urlmon. dll, qui est introuvable.|
+|**IDS_URLMONNotFound**|4119 -2146824169 0x800A1017|La propriété de l' **URL** DataControl requiert le fichier système Urlmon.dll, qui est introuvable.|
 
 ## <a name="see-also"></a>Voir aussi
  [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

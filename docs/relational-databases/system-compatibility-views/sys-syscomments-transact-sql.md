@@ -1,4 +1,5 @@
 ---
+description: sys.syscomments (Transact-SQL)
 title: Commentaires sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49473b85d6c0a52f9c7ec7ed4bab519b19b04693
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3956dd945052a8977a2d9fccfefa6a34ea7b33fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423353"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "85883481"
 |**statut**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**ctext**|**varbinary(8000)**|Octets bruts de l'instruction de définition SQL.|  
 |**texttype**|**smallint**|0 = Commentaire fourni par l'utilisateur<br /><br /> 1 = Commentaire fourni par le système<br /><br /> 4 = Commentaire chiffré|  
-|**langue**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**language**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**chiffrées**|**bit**|Indique si la définition de procédure est obscurcie.<br /><br /> 0 = Non obscurci<br /><br /> 1 = Obscurci<br /><br /> Important pour obscurcir les définitions des procédures stockées, utilisez CREATE PROCEDURE avec le mot clé Encryption. ** \* \* \* \* **|  
 |**Compact**|**bit**|Retourne toujours 0. Cette valeur indique que la procédure est compressée.|  
 |**text**|**nvarchar(4000)**|Texte intégral de l'instruction de définition SQL<br /><br /> La sémantique de l'expression décodée est équivalente au texte d'origine, par contre la syntaxe n'est pas garantie. Par exemple, les espaces sont supprimés de l'expression décodée.<br /><br /> Cette [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] vue compatible obtient des informations à partir des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] structures actuelles et peut retourner plus de caractères que la définition **nvarchar (4000)** . **sp_help** retourne **nvarchar (4000)** comme type de données de la colonne de texte. Lorsque vous utilisez **syscomments** , envisagez d’utiliser **nvarchar (max)**. Pour les nouveaux travaux de développement, n’utilisez pas **syscomments**.|  

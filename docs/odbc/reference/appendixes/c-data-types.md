@@ -1,4 +1,5 @@
 ---
+description: Type de données C
 title: Types de données C | Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 979bfe85e1e78b55718e1f12fdcfcc7583097bb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dadd93f13418d520c4ab908ba0d9402d07c893a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81292299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421523"
 ---
 # <a name="c-data-types"></a>Type de données C
 Les types de données ODBC C indiquent le type de données des mémoires tampons C utilisées pour stocker les données dans l’application.  
@@ -55,7 +56,7 @@ Les types de données ODBC C indiquent le type de données des mémoires tampons
   
  **Typedef C ODBC** SQL_DATE_STRUCT  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagDATE_STRUCT {  
@@ -69,7 +70,7 @@ struct tagDATE_STRUCT {
   
  **Typedef C ODBC** SQL_TIME_STRUCT  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagTIME_STRUCT {  
@@ -83,7 +84,7 @@ struct tagTIME_STRUCT {
   
  **Typedef C ODBC** SQL_TIMESTAMP_STRUCT  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagTIMESTAMP_STRUCT {  
@@ -101,7 +102,7 @@ struct tagTIMESTAMP_STRUCT {
   
  **Typedef C ODBC** SQL_NUMERIC_STRUCT  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagSQL_NUMERIC_STRUCT {  
@@ -116,7 +117,7 @@ struct tagSQL_NUMERIC_STRUCT {
   
  **Typedef C ODBC** SQLGUID  
   
- **Type C**  
+ **Type C**  
   
 ```  
 struct tagSQLGUID {  

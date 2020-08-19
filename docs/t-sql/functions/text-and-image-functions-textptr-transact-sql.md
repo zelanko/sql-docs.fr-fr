@@ -1,4 +1,5 @@
 ---
+description: Fonctions texte et image - TEXTPTR (Transact-SQL)
 title: TEXTPTR (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0150b1b9dace457b76130b7b0b3f863471637970
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 510f2e6f0097b79cd458907a73ae094ff5cc637d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422593"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Fonctions texte et image - TEXTPTR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,7 +76,7 @@ TEXTPTR ( column )
 >  Pour exécuter les exemples suivants, vous devez installer la base de données **pubs**.  
   
 ### <a name="a-using-textptr"></a>R. Utilisation de TEXTPTR  
- L’exemple qui suit utilise la fonction `TEXTPTR` pour rechercher le **de la colonne**image`logo` associé à `New Moon Books` dans la table `pub_info` de la base de données `pubs`. Le pointeur de texte identifie la variable locale `@ptrval.`.  
+ L’exemple qui suit utilise la fonction `TEXTPTR` pour rechercher le `logo` de la colonne **image** associé à `New Moon Books` dans la table `pub_info` de la base de données `pubs`. Le pointeur de texte identifie la variable locale `@ptrval.`.  
   
 ```  
 USE pubs;  

@@ -1,4 +1,5 @@
 ---
+description: catalog.validations (base de données SSISDB)
 title: catalog.validations (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6847053a171fbfac422457de2411e8329e339ec8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4bfa8f9b0ba11574059e3dc05ef7b731d259999
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912452"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421973"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (base de données SSISDB)
 
@@ -29,8 +30,8 @@ ms.locfileid: "86912452"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |validation_id|**bigint**|Identificateur (ID) unique de la validation.|  
-|environment_scope|**Char(1)**|Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation.|  
-|validate_type|**Char(1)**|Type de validation à réaliser. Les types de validation possibles sont la validation de dépendance (`D`) ou la validation complète (`F`). La validation du package est toujours une validation complète.|  
+|environment_scope|**Char (1)**|Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation.|  
+|validate_type|**Char (1)**|Type de validation à réaliser. Les types de validation possibles sont la validation de dépendance (`D`) ou la validation complète (`F`). La validation du package est toujours une validation complète.|  
 |folder_name|**nvarchar(128)**|Nom du dossier qui contient le projet correspondant.|  
 |project_name|**nvarchar(128)**|Nom du projet.|  
 |project_lsn|**bigint**|Version du projet validé.|  
@@ -38,17 +39,17 @@ ms.locfileid: "86912452"
 |reference_id|**bigint**|ID unique de la référence d'environnement de projet utilisée par le projet pour référencer un environnement.|  
 |operation_type|**smallint**|Type d’opération. Les opérations affichées dans cette vue incluent la validation de projet (`300`) et la validation du package (`301`).|  
 |object_name|**nvarhcar(260)**|Nom de l'objet.|  
-|object_type|**smallint**|Type de l'objet. L'objet peut être un projet (`20`) ou un package (`30`).|  
+|object_type|**smallint**|Type d'objet. L'objet peut être un projet (`20`) ou un package (`30`).|  
 |object_id|**bigint**|ID de l'objet affecté par l'opération.|  
 |start_time|**datetimeoffset(7)**|Heure de début de l'opération, si disponible.|  
 |end_time|**datetimeoffsset(7)**|Heure à laquelle l'opération s'est terminée.|  
-|status|**int**|L’état de l’opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
+|status|**int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
 |caller_sid|**varbinary(85)**|ID de sécurité (SID) de l'utilisateur si l'Authentification Windows a été utilisée pour se connecter.|  
 |caller_name|**nvarchar(128)**|Nom du compte qui a effectué l'opération.|  
 |process_id|**int**|ID de processus externe, le cas échéant.|  
 |stopped_by_sid|**varbinary(85)**|SID de l'utilisateur qui a arrêté l'opération.|  
 |stopped_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a arrêté l'opération.|  
-|server_name|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|nom_serveur|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Nom de l'ordinateur sur lequel s'exécute l'instance du serveur.|  
 |dump_id|**uniqueidentifier**|ID du vidage d'exécution.|  
   

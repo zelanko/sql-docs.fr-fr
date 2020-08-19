@@ -1,4 +1,5 @@
 ---
+description: Table de mise en lots des relations (Master Data Services)
 title: Table de mise en lots des relations
 ms.custom: ''
 ms.date: 04/01/2016
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: bc1264be90f65ce6e7e523670893177ef78eb646
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ba606cd7c5eeef578b4a2a224a8322e4cbe8bb55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811694"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421983"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Table de mise en lots des relations (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "85811694"
 
   Utilisez la table de mise en lots des relations (stg.name_Relationship) dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour modifier l’emplacement des membres dans une hiérarchie explicite, en fonction de la relation que les membres entretiennent les uns par rapport aux autres.  
   
-##  <a name="table-columns"></a><a name="TableColumns"></a>Colonnes de table  
+##  <a name="table-columns"></a><a name="TableColumns"></a> Colonnes de table  
  Le tableau suivant explique la fonction de chacun des champs de la table de mise en lots Relation.  
   
 |Nom de la colonne|Description|Valeur|  

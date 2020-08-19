@@ -1,4 +1,5 @@
 ---
+description: Constantes (Transact-SQL)
 title: Constantes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -32,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a63cfeca3d5843d29c68eece832fec4f8e330bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422933"
 ---
 # <a name="constants-transact-sql"></a>Constantes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +67,7 @@ Les chaînes vides sont représentées par deux guillemets simples, sans aucun c
 Les constantes de chaînes de caractères prennent en charge les classements évolués.
   
 > [!NOTE]  
->  Les constantes de caractères dont la taille est supérieure à 8 000 octets sont des données de type **varchar(max)** .  
+>  Les constantes de caractères dont la taille est supérieure à 8 000 octets sont des données de type **varchar(max)**.  
   
 ## <a name="unicode-strings"></a>Chaînes Unicode
 Une chaîne Unicode a le même format qu'une chaîne de caractères, mais celle-ci est précédée de l'identificateur N (N correspond à National Language dans la norme SQL-92). Le préfixe N doit être en majuscule. Par exemple, 'Michel' est une constante de type caractère tandis que N'Michel' est une constante Unicode. Les constantes Unicode sont interprétées comme des données Unicode et ne sont pas évaluées à l'aide d'une page de codes. Les constantes Unicode présentent un classement, qui contrôle essentiellement les comparaisons et le respect de la casse. Les constantes Unicode reçoivent le classement par défaut de la base de données active, sauf si la clause COLLATE est utilisée pour spécifier un classement. Les données Unicode sont stockées en utilisant 2 octets par caractère, alors que les données de type caractère utilisent 1 octet par caractère. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
@@ -74,7 +75,7 @@ Une chaîne Unicode a le même format qu'une chaîne de caractères, mais celle-
 Les constantes de chaînes Unicode prennent en charge les classements évolués.
   
 > [!NOTE]  
->  Les constantes Unicode dont la taille est supérieure à 8 000 octets sont des données de type **nvarchar(max)** .  
+>  Les constantes Unicode dont la taille est supérieure à 8 000 octets sont des données de type **nvarchar(max)**.  
   
 ## <a name="binary-constants"></a>Constantes binaires
 Une constante binaire a le préfixe `0x` et se compose d'une chaîne de nombres hexadécimaux. La chaîne n'est pas entourée de guillemets.
@@ -89,7 +90,7 @@ Voici des exemples de chaînes binaires :
 ```  
   
 > [!NOTE]  
->  Les constantes binaires dont la taille est supérieure à 8 000 octets sont des données de type **varbinary(max)** .  
+>  Les constantes binaires dont la taille est supérieure à 8 000 octets sont des données de type **varbinary(max)**.  
   
 ## <a name="bit-constants"></a>Constantes de type bit
 Les constantes de type **bit** sont représentées par les nombres 0 ou 1, et elles ne sont pas entourées de guillemets. Si un nombre supérieur à 1 est utilisé, il est converti en 1.

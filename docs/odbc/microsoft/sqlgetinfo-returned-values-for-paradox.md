@@ -1,4 +1,5 @@
 ---
+description: Valeurs retournées par SQLGetInfo pour Paradox
 title: La valeur de SQLGetInfo a été retournée pour Paradox | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d53d912941079865328ab97fae0f0f814a76114
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54f5386d2b9ae6d0e6f7c558e34bec6d43e46d20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298529"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421703"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Valeurs retournées par SQLGetInfo pour Paradox
 Le tableau suivant répertorie les #defines en langage C pour l’argument *fInfoType* et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être récupérées en transmettant le #defines de langage C indiqué à **SQLGetInfo** dans l’argument *fInfoType* . Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le *Guide de référence du programmeur ODBC*.  
@@ -81,7 +82,7 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Le nom de source de fichier ODBC. ini ou «» si le mot clé DRIVER est utilisé dans ODBC. ini|  
+|SQL_DATA_SOURCE_NAME|Le nom de source de Odbc.ini ou «» si le mot clé DRIVER est utilisé dans Odbc.ini|  
 |SQL_DATA_SOURCE_READ_ONLY|« N » (dépend de la source de données.)|  
 |SQL_DATABASE_NAME|Répertoire de base de données actuel|  
 |SQL_DATETIME_LITERALS|0|  
@@ -94,7 +95,7 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_DRIVER_HENV|Géré par le gestionnaire de pilotes.|  
 |SQL_DRIVER_HLIB|Géré par le gestionnaire de pilotes.|  
 |SQL_DRIVER_HSTMT|Géré par le gestionnaire de pilotes.|  
-|SQL_DRIVER_NAME|« OdbcJt32. dll »|  
+|SQL_DRIVER_NAME|« OdbcJt32.dll »|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|« 4,00.*nnnn*» (*nnnn* spécifie la date de génération)|  
 |SQL_DROP_ASSERTION|0|  
@@ -111,7 +112,7 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_GETDATA_EXTENSIONS|Valeurs multiples|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (guillemets de retour)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|" \` " (guillemets de retour)|  
 |SQL_KEYWORDS|Valeurs multiples|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -156,7 +157,7 @@ Le tableau suivant répertorie les #defines en langage C pour l’argument *fInf
 |SQL_SCROLL_OPTIONS|Valeurs multiples|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|Paradox|  
-|SQL_SPECIAL_CHARACTERS|"~\`@ # $% ^& * _-+ =\\} {" ';:?/><,. ! ' [] &#124;»|  
+|SQL_SPECIAL_CHARACTERS|"~ \` @ # $% ^& * _-+ = \\ } {" ';:?/><,. ! ' [] &#124;»|  
 |SQL_STRING_FUNCTIONS|Valeurs multiples|  
 |SQL_SUBQUERIES|Valeurs multiples|  
 |SQL_SYSTEM_FUNCTIONS|0|  

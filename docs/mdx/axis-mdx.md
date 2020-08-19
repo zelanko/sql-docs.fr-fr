@@ -1,4 +1,5 @@
 ---
+description: Axis (MDX)
 title: Axe (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa65c1531be29273c0a838b978109bbd1c8a2b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 47e0da231b0792e0099f5e6ee4fe8eda9fb45f9d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421933"
 ---
 # <a name="axis-mdx"></a>Axis (MDX)
 

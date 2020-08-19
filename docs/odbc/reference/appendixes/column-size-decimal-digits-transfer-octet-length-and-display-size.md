@@ -1,4 +1,5 @@
 ---
+description: Taille de colonne, chiffres décimaux, longueur d’octet de transfert et taille d’affichage-ODBC
 title: Taille de la colonne, chiffres décimaux, longueur de l’octet de transfert, taille d’affichage | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55b8e9dd305764a89601e9ffd5a337e42a8d8db3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d00a23fb38bdece97ffcbde0974b7bdf893a5133
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306570"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88421503"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>Taille de colonne, chiffres décimaux, longueur d’octet de transfert et taille d’affichage-ODBC
 Les types de données sont caractérisés par leur taille de colonne (ou de paramètre), les chiffres décimaux, la longueur et la taille d’affichage. Les fonctions ODBC suivantes retournent ces attributs pour un paramètre dans une instruction SQL ou pour un type de données SQL sur une source de données. Chaque fonction ODBC retourne un ensemble différent de ces attributs, comme suit :  

@@ -1,4 +1,5 @@
 ---
+description: catalog.operations (base de données SSISDB)
 title: catalog.operations (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 46f17290ddc026d66910e4a28c1ea36d7ad0286b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 231fa098ababe70c8a375e3f3f357bcbe90d6f09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912469"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422013"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (base de données SSISDB)
 
@@ -37,7 +38,7 @@ ms.locfileid: "86912469"
 |object_type|**smallint**|Type d'objet affecté par l'opération. L'objet peut être un dossier (`10`), un projet (`20`), un package (`30`), un environnement (`40`) ou une instance d'exécution (`50`).|  
 |object_id|**bigint**|ID de l'objet affecté par l'opération.|  
 |object_name|**nvarchar(260)**|Nom de l'objet.|  
-|status|**int**|L’état de l’opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
+|status|**int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
 |start_time|**datetimeoffset**|Heure de début de l'opération, si disponible.|  
 |end_time|**datetimeoffsset**|Heure à laquelle l'opération s'est terminée.|  
 |caller_sid|**varbinary(85)**|ID de sécurité (SID) de l'utilisateur si l'Authentification Windows a été utilisée pour se connecter.|  
@@ -45,7 +46,7 @@ ms.locfileid: "86912469"
 |process_id|**int**|ID de processus externe, le cas échéant.|  
 |stopped_by_sid|**varbinary(85)**|SID de l'utilisateur qui a arrêté l'opération.|  
 |stopped_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a arrêté l'opération.|  
-|server_name|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|nom_serveur|**nvarchar(128)**|Informations relatives à l'instance et au serveur Windows pour une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Nom de l'ordinateur sur lequel s'exécute l'instance du serveur.|  
   
 ## <a name="remarks"></a>Notes  

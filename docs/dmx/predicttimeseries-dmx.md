@@ -1,4 +1,5 @@
 ---
+description: PredictTimeSeries (DMX)
 title: PredictTimeSeries (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bf63bb1002e1e4ae467838b84314e1cbaaf93275
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943100"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422262"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -67,7 +68,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Type de retour  
  \<*table expression*>  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series) ne prend pas en charge la prédiction historique lorsque vous utilisez l'instruction PREDICTION JOIN pour ajouter de nouvelles données.  
   
  Dans une instruction PREDICTION JOIN, le processus de prédiction commence toujours à l'étape venant immédiatement après la fin de la série d'apprentissage d'origine. Cela est vrai même si vous ajoutez de nouvelles données. Par conséquent, le paramètre *n* et les valeurs de paramètre *n-Start* doivent être un entier supérieur à 0.  

@@ -1,4 +1,5 @@
 ---
+description: Améliorer les performances de réplication de fusion
 title: Améliorer les performances de réplication de fusion | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eee65227e767ec92fbb6d2c9d0f304b29cbc6aaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 70399a3d0e21fc75014828837e7b4cb7738d9966
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423603"
 ---
 # <a name="enhance-merge-replication-performance"></a>Améliorer les performances de réplication de fusion
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "85897878"
   
 -   Envisagez de surnormaliser les tables qui incluent des types de données LOB.  
   
-     Lors d'une synchronisation, l'Agent de fusion peut avoir besoin de lire et de transférer la totalité de la ligne de données à partir d'un serveur de publication ou d'un Abonné. Si la ligne contient des colonnes utilisant des données de type LOB, ce processus peut nécessiter un surcroît d'allocation de mémoire et nuire aux performances, même si ces colonnes peuvent ne pas avoir été mises à jour. Pour limiter la probabilité d'une perte de performance, vous pouvez envisager de placer les colonnes LOB dans une table indépendante en les reliant aux autres données de la ligne avec une relation un-à-un. Les types de données **text**, **ntext**et **image** sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données **varchar(max)** , **nvarchar(max)** , **varbinary(max)** .  
+     Lors d'une synchronisation, l'Agent de fusion peut avoir besoin de lire et de transférer la totalité de la ligne de données à partir d'un serveur de publication ou d'un Abonné. Si la ligne contient des colonnes utilisant des données de type LOB, ce processus peut nécessiter un surcroît d'allocation de mémoire et nuire aux performances, même si ces colonnes peuvent ne pas avoir été mises à jour. Pour limiter la probabilité d'une perte de performance, vous pouvez envisager de placer les colonnes LOB dans une table indépendante en les reliant aux autres données de la ligne avec une relation un-à-un. Les types de données **text**, **ntext**et **image** sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)**.  
   
 ## <a name="publication-design"></a>Conception de la publication  
   

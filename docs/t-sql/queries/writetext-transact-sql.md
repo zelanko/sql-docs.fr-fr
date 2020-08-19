@@ -1,4 +1,5 @@
 ---
+description: WRITETEXT (Transact-SQL)
 title: WRITETEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/23/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b264935bd4cbbeaffe9ad3228734cd7acc542476
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e55a8822677162472d9f005eec213e184003cf00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422393"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "86552543"
 > [!IMPORTANT]
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] À la place, utilisez les types de données de valeur élevée et la clause **.** WRITE de l’instruction [UPDATE](../../t-sql/queries/update-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +63,7 @@ WRITETEXT [BULK]
  Nom de la table et de la colonne **text**, **ntext** ou **image** à mettre à jour. Les noms de la table et de la colonne doivent suivre les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). La spécification des noms de la base de données et du propriétaire est facultative.  
   
  *text_ptr*  
- Valeur qui stocke le pointeur des données **text**, **ntext** ou **image**. *text_ptr* doit être de type **binary(16)** . Pour créer un pointeur de texte, exécutez une instruction [INSERT](../../t-sql/statements/insert-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md) avec des données non NULL pour la colonne **text**, **ntext** ou **image**.  
+ Valeur qui stocke le pointeur des données **text**, **ntext** ou **image**. *text_ptr* doit être de type **binary(16)**. Pour créer un pointeur de texte, exécutez une instruction [INSERT](../../t-sql/statements/insert-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md) avec des données non NULL pour la colonne **text**, **ntext** ou **image**.  
   
  WITH LOG  
  Ignoré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'enregistrement dans un journal est déterminé par le mode de récupération en vigueur dans la base de données.  

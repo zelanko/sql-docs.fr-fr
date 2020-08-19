@@ -1,4 +1,5 @@
 ---
+description: catalog.extended_operation_info (base de données SSISDB)
 title: catalog.extended_operation_info (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dfc87963af1a7d55a8368b31d1ed94ccdc04b717
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c4082c0bbf428a96776ae18fece7333f0401a2b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422073"
 ---
 # <a name="catalogextended_operation_info-ssisdb-database"></a>catalog.extended_operation_info (base de données SSISDB)
 
@@ -33,7 +34,7 @@ ms.locfileid: "86912547"
 |object_name|**nvarchar(260)**|Nom de l'objet.|  
 |object_type|**smallint**|Type d'objet affecté par l'opération. L'objet peut être un dossier (`10`), un projet (`20`), un package (`30`), un environnement (`40`) ou une instance d'exécution (`50`).|  
 |reference_id|**bigint**|ID unique de la référence utilisée dans l'opération.|  
-|status|**int**|L’état de l’opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
+|status|**int**|État de l'opération. Les valeurs possibles sont Créé (`1`), En cours d'exécution (`2`), Annulé (`3`), Échec (`4`), En attente (`5`), Arrêté prématurément (`6`), Opération réussie (`7`), Arrêt en cours (`8`) et Fin (`9`).|  
 |start_time|**datetimeoffset(7)**|Date et heure du début de l'opération.|  
 |end_time|**datetimeoffset(7)**|Date et heure auxquelles l'opération s'est terminée.|  
   

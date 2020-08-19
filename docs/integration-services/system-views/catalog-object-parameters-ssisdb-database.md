@@ -1,4 +1,5 @@
 ---
+description: catalog.object_parameters (base de données SSISDB)
 title: catalog.object_parameters (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7ca6cf256e00c992e492c6d1a6d1a698a739c871
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 856676c6ad5330e6039711d7a391bdd264a2b062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422043"
 ---
 # <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (base de données SSISDB)
 
@@ -34,7 +35,7 @@ ms.locfileid: "86912505"
 |object_name|**sysname**|Nom du projet ou package correspondant.|  
 |parameter_name|**sysname(nvarchar(128))**|Le nom du paramètre.|  
 |data_type|**nvarchar(128)**|Type de données du paramètre.|  
-|Obligatoire|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est obligatoire pour démarrer l'exécution. Lorsque la valeur est `0`, la valeur de paramètre n'est pas obligatoire pour démarrer l'exécution.|  
+|obligatoire|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est obligatoire pour démarrer l'exécution. Lorsque la valeur est `0`, la valeur de paramètre n'est pas obligatoire pour démarrer l'exécution.|  
 |sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
 |description|**nvarchar(1024)**|Description facultative du package.|  
 |design_default_value|**sql_variant**|Valeur par défaut du paramètre qui a été affecté pendant la conception du projet ou du package.|  

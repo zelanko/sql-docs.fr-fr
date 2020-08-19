@@ -1,4 +1,5 @@
 ---
+description: Boîte de dialogue Importer des stratégies
 title: Importer des stratégies, boîte de dialogue | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 78ab5f6e-2f13-4788-937e-8892ef4e2345
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b7c5e5667222a7d7591c61670f2058276035c299
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8cd6f4223d3cf23d9ccd98f5b8e4f787872132f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749356"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423693"
 ---
 # <a name="import-policies-dialog-box"></a>Boîte de dialogue Importer des stratégies
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85749356"
   
 ## <a name="options"></a>Options  
  **Fichiers à importer**  
- Pour importer une stratégie à partir d’un fichier XML, tapez le nom et le chemin du fichier ou utilisez le bouton d’exploration ( **...** ).  
+ Pour importer une stratégie à partir d’un fichier XML, tapez le nom et le chemin du fichier ou utilisez le bouton d’exploration (**...**).  
   
  **Remplacer les doublons avec les éléments importés**  
  Sélectionnez cette option pour remplacer toute stratégie ou condition existante du même nom si elle existe déjà sur cette instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Une condition avec une stratégie dépendante ne peut pas être remplacée, à moins que la stratégie dépendante ne soit également remplacée. Si cette option n'est pas sélectionnée, une condition existante qui utilise la même expression de condition ne provoquera pas d'erreur.  
