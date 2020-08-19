@@ -1,4 +1,5 @@
 ---
+description: Permuter des clés Always Encrypted à l’aide de PowerShell
 title: Permuter des clés Always Encrypted à l’aide de PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -11,12 +12,12 @@ ms.assetid: 5117b4fd-c8d3-48d5-87c9-756800769f31
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5e9cbaffe30849f5e2bb2385f49fabd603bc1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1f2010ad30f38d2e7bf89a18b833d93e00aec1f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88448111"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Permuter des clés Always Encrypted à l’aide de PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -94,7 +95,7 @@ Le flux de travail de permutation de clé principale de colonne décrit dans cet
 > [!IMPORTANT]
 > Avant d’exécuter des étapes où *Accède au magasin de clés/aux clés en texte clair*=**Oui** dans le tableau ci-dessous (étapes qui accèdent à des clés en texte clair ou au magasin de clés), vérifiez que l’environnement PowerShell s’exécute sur un ordinateur sécurisé différent de celui qui héberge votre base de données. Pour plus d’informations, consultez [Considérations en matière de sécurité pour la gestion des clés](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
-### <a name="part-1-dba"></a>Première partie : DBA
+### <a name="part-1-dba"></a>Partie 1 : Administrateur de base de données
 
 Un administrateur de base de données récupère les métadonnées concernant la clé principale de colonne à permuter, et concernant les clés de chiffrement de colonne affectées, qui sont associées à la clé principale de colonne active. L’administrateur de base de données partage toutes ces informations avec un administrateur de la sécurité.
 
@@ -107,7 +108,7 @@ Un administrateur de base de données récupère les métadonnées concernant la
 |Étape 4. Récupérer les métadonnées relatives aux clés de chiffrement de colonne, protégées avec l’ancienne clé principale de colonne, notamment leurs valeurs chiffrées. | [Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey) | Non | Oui
 |Étape 5. Partager l’emplacement de la clé principale de colonne (nom du fournisseur et chemin d’accès à la clé principale de colonne) et les valeurs chiffrées des clés de chiffrement de colonne correspondantes, protégées avec l’ancienne clé principale de colonne.| Consultez les exemples ci-dessous. | Non | Non
 
-### <a name="part-2-security-administrator"></a>Deuxième partie : Security Administrator
+### <a name="part-2-security-administrator"></a>Partie 2 : Administrateur de la sécurité
 
 L’administrateur de la sécurité génère une nouvelle clé principale de colonne, rechiffre les clés de chiffrement de colonne affectées avec la nouvelle clé principale de colonne, puis partage avec l’administrateur les informations relatives à la nouvelle clé principale de colonne ainsi que l’ensemble des nouvelles valeurs chiffrées pour les clés de chiffrement de colonne affectées.
 
@@ -119,13 +120,13 @@ L’administrateur de la sécurité génère une nouvelle clé principale de col
 |Étape 4. Créer un objet SqlColumnMasterKeySettings qui contient des informations sur l’emplacement de votre **ancienne** clé principale de colonne. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). |New-SqlColumnMasterKeySettings| Non | Non
 |Étape 5. Créer un objet SqlColumnMasterKeySettings qui contient des informations sur l’emplacement de votre **nouvelle** clé principale de colonne. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Pour le créer, utilisez l’applet de commande propre à votre magasin de clés. | [New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)<br><br>[New-SqlCertificateStoreColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcertificatestorecolumnmasterkeysettings)<br><br>[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)<br><br>[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)| Non | Non
 |Étape 6. S’authentifier auprès d’Azure, si votre ancienne clé principale de colonne (actuelle) ou votre nouvelle clé principale de colonne est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Oui | Non
-|Étape 7. Rechiffrer chaque valeur de la clé de chiffrement de colonne, qui est actuellement protégée avec l’ancienne clé principale de colonne, à l’aide de la nouvelle clé principale de colonne. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Remarque :** quand vous appelez cette cmdlet, passez les objets SqlColumnMasterKeySettings de l’ancienne et de la nouvelle clé principale de colonne à chiffrer, ainsi qu’une valeur de la clé de chiffrement de colonne.|Oui|Non
+|Étape 7. Rechiffrer chaque valeur de la clé de chiffrement de colonne, qui est actuellement protégée avec l’ancienne clé principale de colonne, à l’aide de la nouvelle clé principale de colonne. | [New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)<br><br>**Remarque :** Quand vous appelez cette applet de commande, passez les objets SqlColumnMasterKeySettings pour l’ancienne et la nouvelle clé de principale de colonne à chiffrer, ainsi qu’une valeur de la clé de chiffrement de colonne.|Oui|Non
 |Étape 8 : Partager avec votre administrateur de base de données l’emplacement de la nouvelle clé principale de colonne (nom du fournisseur et chemin d’accès à la clé principale de colonne) et l’ensemble des nouvelles valeurs chiffrées des clés de chiffrement de colonne.| Consultez les exemples ci-dessous. | Non | Non
 
 > [!NOTE]
 > Nous vous recommandons vivement de ne pas supprimer définitivement l’ancienne clé principale de colonne après la permutation. Au lieu de cela, laissez l’ancienne clé principale de colonne dans son magasin de clés actuel ou archivez-la dans un autre emplacement sécurisé. Si vous restaurez votre base de données à partir d’un fichier de sauvegarde à un point dans le temps *avant* la configuration de la nouvelle clé principale de colonne, vous aurez besoin de l’ancienne clé pour accéder aux données.
 
-### <a name="part-3-dba"></a>Troisième partie : DBA
+### <a name="part-3-dba"></a>Partie 3 : Administrateur de base de données
 
 L’administrateur de base de données crée des métadonnées pour la nouvelle clé principale de colonne et met à jour les métadonnées des clés de chiffrement de colonne concernées, pour ajouter le nouvel ensemble de valeurs chiffrées. Lors de cette étape, l’administrateur de base de données travaille également en coordination avec les administrateurs des applications qui interrogent des colonnes de chiffrement, qui garantissent que l’application peut accéder à la nouvelle clé principale de colonne. Une fois que toutes les applications sont configurées pour utiliser la nouvelle clé principale de colonne, l’administrateur de base de données supprime l’ancien ensemble de valeurs chiffrées et les anciennes métadonnées de clés principales de colonne.
 
@@ -146,7 +147,7 @@ L’administrateur de base de données crée des métadonnées pour la nouvelle 
 
 Le script ci-dessous est un exemple de bout en bout qui permet de générer une nouvelle clé principale de colonne qui est un certificat dans le Magasin de certificats Windows, afin de remplacer une clé principale de colonne existante (active) par la nouvelle clé principale de colonne. Le script part du principe que la base de données cible contient la clé principale de colonne, nommée CMK1 (à permuter), qui chiffre certaines clés de chiffrement de colonne.
 
-Première partie : DBA
+Partie 1 : Administrateur de base de données
 
 ```powershell
 # Import the SqlServer module.
@@ -191,7 +192,7 @@ for($i=0; $i -lt $ceks.Length; $i++){
 ```
 
 
-Deuxième partie : Security Administrator
+Partie 2 : Administrateur de la sécurité
 
 ```powershell
 # Obtain the location of the old column master key and the encrypted values of the corresponding column encryption keys, from your DBA, via a CSV file on a share drive.
@@ -233,7 +234,7 @@ $newCmkSettings.KeyStoreProviderName +", " + $newCmkSettings.KeyPath >> $newCmkD
 ```
 
 
-Troisième partie : DBA
+Partie 3 : Administrateur de base de données
 
 ```powershell
 # Obtain the location of the new column master key and the new encrypted values of the corresponding column encryption keys, from your Security Administrator, via a CSV file on a share drive.
@@ -298,7 +299,7 @@ Vous pouvez faire pivoter une clé de chiffrement de colonne à l’aide d’une
 |Étape 4. Générer une clé de chiffrement de colonne, la chiffrer avec la clé principale de colonne et créer les métadonnées de clé de chiffrement de colonne dans la base de données.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Remarque :** Utilisez une variation de l’applet de commande qui génère et chiffre en interne une clé de chiffrement de colonne.<br>En arrière-plan, l’applet de commande exécute l’instruction [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour créer les métadonnées de clé. | Oui | Oui
 |Étape 5. Rechercher toutes les colonnes chiffrées avec l’ancienne clé de chiffrement de colonne. | [Guide de programmation SMO (SQL Server Management Objects)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | Non | Oui
 |Étape 6. Créer un objet *SqlColumnEncryptionSettings* pour chaque colonne concernée.  SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Il spécifie le schéma de chiffrement cible pour une colonne. Dans ce cas, l’objet doit spécifier que la colonne concernée doit être chiffrée à l’aide de la nouvelle clé de chiffrement de colonne. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Non | Non
-|Étape 7. Rechiffrer les colonnes identifiées à l’étape 5 à l’aide de la nouvelle clé de chiffrement de colonne. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Remarque :** cette étape est susceptible de prendre un certain temps. Vos applications ne peuvent pas accéder aux tables pendant toute la durée de l’opération ou pendant une partie de l’opération, en fonction de l’approche sélectionnée (en ligne ou hors ligne). | Oui | Oui
+|Étape 7. Rechiffrer les colonnes identifiées à l’étape 5 à l’aide de la nouvelle clé de chiffrement de colonne. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Remarque :** cette étape peut prendre longtemps. Vos applications ne peuvent pas accéder aux tables pendant toute la durée de l’opération ou pendant une partie de l’opération, en fonction de l’approche sélectionnée (en ligne ou hors ligne). | Oui | Oui
 |Étape 8 : Supprimer les métadonnées de l’ancienne clé de chiffrement de colonne. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | Non | Oui
 
 ### <a name="example---rotating-a-column-encryption-key"></a>Exemple : permutation d’une clé de chiffrement de colonne

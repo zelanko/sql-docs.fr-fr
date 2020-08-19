@@ -1,4 +1,5 @@
 ---
+description: sp_get_query_template (Transact-SQL)
 title: sp_get_query_template (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b6bef227f94188afe6f1eade92c54ff119982902
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881651"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447091"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la forme paramétrable d'une requête. Les résultats retournés simulent la forme paramétrable d'une requête obtenue à l'aide d'un paramétrage forcé. sp_get_query_template est principalement utilisé lorsque vous créez des repères de plan TEMPLATE.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,7 +52,7 @@ sp_get_query_template
  @parameters  
  Paramètre de sortie de type **nvarchar (max)**, fourni comme indiqué, pour recevoir un littéral de chaîne des noms de paramètres et des types de données qui ont été paramétrés dans @templatetext .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  sp_get_query_template retourne une erreur dans les cas suivants :  
   
 -   Elle ne paramétre pas de valeurs littérales constantes dans *query_text*.  
@@ -113,7 +114,7 @@ SELECT @my_parameters;
 >  L'ordre et la dénomination des paramètres dans la sortie de sp_get_query_template peuvent varier suivant les correctifs QFE, les Service Packs et les mises à niveau de version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les mises à niveau peuvent également provoquer le paramétrage d'un ensemble différent de littéraux de constante pour la même requête et l'application d'un espacement différent dans les résultats de deux paramètres de sortie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Spécifier le comportement du paramétrage de requêtes grâce aux repères de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   

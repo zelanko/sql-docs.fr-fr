@@ -1,4 +1,5 @@
 ---
+description: sp_cursorfetch (Transact-SQL)
 title: sp_cursorfetch (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7d68223e7ed12477b446934f01b600b840b6651a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447352"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Extrait une mémoire tampon d'une ou de plusieurs lignes de la base de données. Le groupe de lignes dans cette mémoire tampon est appelé le *tampon d’extraction*du curseur. sp_cursorfetch est appelée en spécifiant ID = 7 dans un paquet tabular data stream (TDS).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -96,7 +97,7 @@ sp_cursorfetch cursor
 |Pour les curseurs KEYSET et STATIC|En général, taille du jeu de clés actuel.<br /><br /> **-m** si le curseur est en création asynchrone avec *m* lignes trouvées à ce point.|  
 |Pour les curseurs DYNAMIC|-1|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="cursor-parameter"></a>Paramètre de curseur  
  Avant toute opération d'extraction, la position par défaut d'un curseur se situe avant la première ligne du jeu de résultats.  

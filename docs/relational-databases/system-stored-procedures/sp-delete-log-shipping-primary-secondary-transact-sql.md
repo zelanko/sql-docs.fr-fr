@@ -1,4 +1,5 @@
 ---
+description: sp_delete_log_shipping_primary_secondary (Transact-SQL)
 title: sp_delete_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a9c714d2f43ecf53f048f57dcb049bfd8acd0f2e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 72d76081ac46d55bbb60843403b22a9ed4a9f9a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864037"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447296"
 ---
 # <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime l'entrée d'une base de données secondaire sur le serveur principal.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,11 +43,11 @@ sp_delete_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @primary_database = ] 'primary_database'`Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'` Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
   
-`[ @secondary_server = ] 'secondary_server'`Nom du serveur secondaire. *secondary_server* est de **type sysname**, sans valeur par défaut.  
+`[ @secondary_server = ] 'secondary_server'` Nom du serveur secondaire. *secondary_server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @secondary_database = ] 'secondary_database'`Nom de la base de données secondaire. *secondary_database* est de **type sysname**, sans valeur par défaut.  
+`[ @secondary_database = ] 'secondary_database'` Nom de la base de données secondaire. *secondary_database* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -54,11 +55,11 @@ sp_delete_log_shipping_primary_secondary
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_delete_log_shipping_primary_secondary** doit être exécuté à partir de la base de données **Master** sur le serveur principal. Cette procédure stockée supprime l’entrée d’une base de données secondaire de **log_shipping_primary_secondaries** sur le serveur principal.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
+ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  Dans l'exemple suivant, `sp_delete_log_shipping_primary_secondary` est utilisée pour supprimer la base de données secondaire `LogShipAdventureWorks` du serveur secondaire `FLATIRON`.  

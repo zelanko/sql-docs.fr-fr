@@ -1,4 +1,5 @@
 ---
+description: sys.server_event_session_events (Transact-SQL)
 title: sys. server_event_session_events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 18a39be6519d22e8a568e48be616c57bc1b6a069
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: cc4b6f67d282ce838ab5a5b8a401ade3a5e2e4c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442487"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447771"
 ---
 # <a name="sysserver_event_session_events-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -45,10 +46,10 @@ ms.locfileid: "87442487"
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette vue a les cardinalités de relation suivantes.  
   
-| À partir | À | Relation |
+| Du | À | Relation |
 | ---- | -- | ------------ |
 |sys.server_event_session_events.event_session_id|sys. server_event_sessions. event_session_id|Plusieurs-à-un|  
   

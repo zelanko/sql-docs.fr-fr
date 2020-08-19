@@ -1,4 +1,5 @@
 ---
+description: Référence SQL Server Express LocalDB
 title: Référence SQL Server Express LocalDB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,20 +11,20 @@ ms.topic: reference
 ms.assetid: 25b71829-bdb1-46f4-ac36-80ddced52f3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 465b78999808a8b44f05861251da43a2e6f0ee72
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b176dd15896cae3335ea606b4aa06cc95bb06df4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447951"
 ---
 # <a name="sql-server-express-localdb-reference"></a>Référence SQL Server Express LocalDB
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   Cette section contient des informations sur SQL Server Express LocalDB :  
   
--   [Guide de référence des messages d’erreur propres à SQL Server Express LocalDB](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  
+-   [Guide de référence des messages d'erreur propres à SQL Server Express LocalDB](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  
   
--   [Guide de référence de l’API d’instance SQL Server Express LocalDB](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)  
+-   [Guide de référence de l'API d'instance SQL Server Express LocalDB](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)  
   
 ## <a name="code-sample"></a>Exemple de code  
  L'exemple ci-dessous illustre l'API LocalDB.  Avant d'exécuter cet exemple, assurez-vous que LocalDB est installé sur l'ordinateur.  Vous pouvez installer LocalDB à partir du programme d'installation de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Express.  

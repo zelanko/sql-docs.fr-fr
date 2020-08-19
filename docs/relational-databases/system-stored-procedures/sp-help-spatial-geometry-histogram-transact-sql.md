@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geometry_histogram (Transact-SQL)
 title: sp_help_spatial_geometry_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8829d5f259f9a2e2b26b1e3252907ba9bd0b25dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d6e17d2e4ae048c563a2130918d137d5c186b60
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733249"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447029"
 ---
 # <a name="sp_help_spatial_geometry_histogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,23 +45,23 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tabname = ] 'tabname'`Nom qualifié ou non qualifié de la table pour laquelle l’index spatial a été spécifié.  
+`[ @tabname = ] 'tabname'` Nom qualifié ou non qualifié de la table pour laquelle l’index spatial a été spécifié.  
   
  Les guillemets ne sont nécessaires que si une une table qualifiée est spécifiée. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *tabname* est de **type sysname**, sans valeur par défaut.  
   
-`[ @colname = ] 'colname'`Nom de la colonne spatiale spécifiée. *colname* est de **type sysname**et n’a pas de valeur par défaut.  
+`[ @colname = ] 'colname'` Nom de la colonne spatiale spécifiée. *colname* est de **type sysname**et n’a pas de valeur par défaut.  
   
-`[ @resolution = ] 'resolution'`Résolution du cadre englobant. Les valeurs possibles sont comprises entre 10 et 5000. la *résolution* est de **type tinyint**, sans valeur par défaut.  
+`[ @resolution = ] 'resolution'` Résolution du cadre englobant. Les valeurs possibles sont comprises entre 10 et 5000. la *résolution* est de **type tinyint**, sans valeur par défaut.  
   
-`[ @xmin = ] 'xmin'`Est la propriété de zone englobante minimale X. *xmin* est de **type float**, sans valeur par défaut.  
+`[ @xmin = ] 'xmin'` Est la propriété de zone englobante minimale X. *xmin* est de **type float**, sans valeur par défaut.  
   
-`[ @ymin = ] 'ymin'`Propriété de zone englobante minimale Y. *ymin* est de **type float**, sans valeur par défaut.  
+`[ @ymin = ] 'ymin'` Propriété de zone englobante minimale Y. *ymin* est de **type float**, sans valeur par défaut.  
   
-`[ @xmax = ] 'xmax'`Est la propriété du cadre englobant X-maximum. *Xmax* est de **type float**, sans valeur par défaut.  
+`[ @xmax = ] 'xmax'` Est la propriété du cadre englobant X-maximum. *Xmax* est de **type float**, sans valeur par défaut.  
   
-`[ @ymax = ] 'ymax'`Propriété du rectangle englobant Y-maximum. *ymax* est de **type float**, sans valeur par défaut.  
+`[ @ymax = ] 'ymax'` Propriété du rectangle englobant Y-maximum. *ymax* est de **type float**, sans valeur par défaut.  
   
-`[ @sample = ] 'sample'`Pourcentage de la table utilisée. Les valeurs valides sont comprises entre 0 et 100. l' *exemple* est un **float**. La valeur par défaut est 100.  
+`[ @sample = ] 'sample'` Pourcentage de la table utilisée. Les valeurs valides sont comprises entre 0 et 100. l' *exemple* est un **float**. La valeur par défaut est 100.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Une valeur de table est retournée. La grille suivante décrit le contenu de colonne de la table.  
@@ -74,7 +75,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Autorisations  
  L’utilisateur doit être membre du rôle **public** . Nécessite une autorisation READ ACCESS sur le serveur et l'objet.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'onglet spatial SSMS affiche une représentation graphique des résultats. Vous pouvez interroger les résultats dans la fenêtre spatiale afin d'obtenir un nombre approximatif d'éléments de résultat. Les objets dans la table peuvent couvrir plusieurs cellules ; par conséquent, la somme de cellules peut être supérieure au nombre d'objets réels.  
   
  Une ligne supplémentaire peut être ajoutée au jeu de résultats qui conserve le nombre d'objets qui se trouvent en dehors du rectangle englobant ou qui touchent la bordure du rectangle englobant. Le **CellID** de cette ligne est 0 et la **cellule** de cette ligne contient un **LineString** qui représente le cadre englobant. Cette ligne représente l'espace entier à l'extérieur du rectangle englobant.  

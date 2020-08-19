@@ -1,4 +1,5 @@
 ---
+description: sp_databases (Transact-SQL)
 title: sp_databases (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 862101470f004c1e3681bd91745e9e2d10aab6bc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 427014e08e10a018fd8b04841a1082f2cdce292a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85867482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447380"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Répertorie les bases de données présentes dans une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou accessibles via une passerelle de base de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +50,7 @@ sp_databases
 |**DATABASE_SIZE**|**int**|Taille de la base de données, exprimée en kilo-octets.|  
 |**NOTES**|**varchar (254)**|Pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ce champ retourne toujours la valeur null.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les noms de bases de données qui sont renvoyés peuvent être utilisés comme paramètres dans l'instruction USE pour changer de contexte de base de données active.  
   
  **sp_databases** n’a pas d’équivalent dans Open Database Connectivity (ODBC).  

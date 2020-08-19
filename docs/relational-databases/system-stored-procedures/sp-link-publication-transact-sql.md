@@ -1,4 +1,5 @@
 ---
+description: sp_link_publication (Transact-SQL)
 title: sp_link_publication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c3c414507b0dfe58cc4b13bc18c992e3a46bea9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c1df8b2f62ce305b89b061526415c73e07a18511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446949"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85899413"
 > [!IMPORTANT]
 >  Dans certaines conditions, cette procédure stockée peut échouer si l’abonné exécute [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou version ultérieure, et que le serveur de publication exécute une version antérieure. Si la procédure stockée échoue dans ce scénario, mettez à niveau l'Éditeur vers [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 ou version ultérieure.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,13 +50,13 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom de l’éditeur à lier. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Nom de l’éditeur à lier. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication vers laquelle établir la liaison. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données du serveur de publication vers laquelle établir la liaison. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'`Nom de la publication à lier. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication à lier. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @security_mode = ] security_mode`Mode de sécurité utilisé par l’abonné pour se connecter à un serveur de publication distant pour la mise à jour immédiate. *security_mode* est de **type int**et peut prendre l’une des valeurs suivantes. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` Mode de sécurité utilisé par l’abonné pour se connecter à un serveur de publication distant pour la mise à jour immédiate. *security_mode* est de **type int**et peut prendre l’une des valeurs suivantes. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -63,16 +64,16 @@ sp_link_publication [ @publisher = ] 'publisher'
 |**1**|Utilise le contexte de sécurité (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows) de l'utilisateur apportant la modification sur l'Abonné.<br /><br /> Remarque : ce compte doit également exister sur le serveur de publication avec des privilèges suffisants. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.|  
 |**2**|Utilise une connexion de serveur lié existante, définie par l’utilisateur et créée à l’aide de **sp_link_publication**.|  
   
-`[ @login = ] 'login'`Nom de la connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* a la **valeur 0**.  
+`[ @login = ] 'login'` Nom de la connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* a la **valeur 0**.  
   
-`[ @password = ] 'password'`Est le mot de passe. *Password* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* a la **valeur 0**.  
+`[ @password = ] 'password'` Est le mot de passe. *Password* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* a la **valeur 0**.  
   
-`[ @distributor = ] 'distributor'`Nom du serveur de distribution. *Distributor* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @distributor = ] 'distributor'` Nom du serveur de distribution. *Distributor* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_link_publication** est utilisé par les abonnements avec mise à jour immédiate lors de la réplication transactionnelle.  
   
  **sp_link_publication** peut être utilisé pour les abonnements par envoi et par extraction. Cette procédure peut être appelée avant ou après la création de l’abonnement. Une entrée est insérée ou mise à jour dans la table système [MSsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  

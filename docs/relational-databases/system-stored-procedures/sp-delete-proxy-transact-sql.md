@@ -1,4 +1,5 @@
 ---
+description: sp_delete_proxy (Transact-SQL)
 title: sp_delete_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d037718577e57887e8ba27787fade5b8d08abc28
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fe7fa16aa15e20be9419a3cb3705bc40d4bba9f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862530"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447287"
 ---
 # <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime le proxy spécifié.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,9 +41,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @proxy_id = ] id`Numéro d’identification du proxy à supprimer. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @proxy_id = ] id` Numéro d’identification du proxy à supprimer. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @proxy_name = ] 'proxy_name'`Nom du proxy à supprimer. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @proxy_name = ] 'proxy_name'` Nom du proxy à supprimer. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

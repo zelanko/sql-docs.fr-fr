@@ -1,4 +1,5 @@
 ---
+description: sp_help_notification (Transact-SQL)
 title: sp_help_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2e680c10037119020a1f667e40a7f77817a08cdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891729"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447047"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fournit une liste d'alertes pour un opérateur donné ou une liste d'opérateurs pour une alerte donnée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +45,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @object_type = ] 'object_type'`Type d’informations à retourner. *object_type*est de **type char (9)**, sans valeur par défaut. *object_type* peut être Alerts, qui répertorie les alertes assignées au nom d’opérateur fourni *,* ou Operators, qui répertorie les opérateurs responsables du nom d’alerte fourni *.*  
+`[ @object_type = ] 'object_type'` Type d’informations à retourner. *object_type*est de **type char (9)**, sans valeur par défaut. *object_type* peut être Alerts, qui répertorie les alertes assignées au nom d’opérateur fourni *,* ou Operators, qui répertorie les opérateurs responsables du nom d’alerte fourni *.*  
   
-`[ @name = ] 'name'`Un nom d’opérateur (si *object_type* est Operators) ou un nom d’alerte (si *object_type* est alertes). *Name* est de **type sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Un nom d’opérateur (si *object_type* est Operators) ou un nom d’alerte (si *object_type* est alertes). *Name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @enum_type = ] 'enum_type'`Informations de *object_type*retournées. *enum_type* est réel dans la plupart des cas. *enum_type*est de **type char (10)**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
+`[ @enum_type = ] 'enum_type'` Informations de *object_type*retournées. *enum_type* est réel dans la plupart des cas. *enum_type*est de **type char (10)**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -56,7 +57,7 @@ sp_help_notification
 |ALL|Répertorie tous les*object_types* y compris ceux qui ne sont pas associés au *nom*.|  
 |TARGET|Répertorie uniquement les *object_types* correspondant à la *target_name*fournie, quelle que soit l’association avec le*nom*.|  
   
-`[ @notification_method = ] notification_method`Valeur numérique qui détermine les colonnes de méthode de notification à retourner. *notification_method* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
+`[ @notification_method = ] notification_method` Valeur numérique qui détermine les colonnes de méthode de notification à retourner. *notification_method* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -65,7 +66,7 @@ sp_help_notification
 |**4**|NetSend : retourne uniquement la colonne **use_netsend** .|  
 |**7**|Tout : retourne toutes les colonnes.|  
   
-`[ @target_name = ] 'target_name'`Nom d’alerte à rechercher (si *object_type* est Alerts) ou nom d’opérateur à rechercher (si *object_type* opérateur est). *target_name* n’est nécessaire que si *enum_type* est cible. *target_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @target_name = ] 'target_name'` Nom d’alerte à rechercher (si *object_type* est Alerts) ou nom d’opérateur à rechercher (si *object_type* opérateur est). *target_name* n’est nécessaire que si *enum_type* est cible. *target_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-valves"></a>Valeur des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -77,9 +78,9 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Numéro d'identification de l'alerte.|  
 |**alert_name**|**sysname**|Nom de l’alerte.|  
-|**use_email**|**int**|Un message électronique est utilisé pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**use_pager**|**int**|La radiomessagerie est utilisée pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**use_netsend**|**int**|Le réseau est utilisé pour avertir l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
+|**use_email**|**int**|Un message électronique est utilisé pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_pager**|**int**|La radiomessagerie est utilisée pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_netsend**|**int**|Le réseau est utilisé pour avertir l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**has_email**|**int**|Nombre de notifications envoyées par messagerie électronique pour cette alerte.|  
 |**has_pager**|**int**|Nombre de notifications envoyées par radiomessagerie pour cette alerte.|  
 |**has_netsend**|**int**|Nombre de notifications **net send** envoyées pour cette alerte.|  
@@ -90,14 +91,14 @@ sp_help_notification
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Numéro d'identification de l'opérateur.|  
 |**operator_name**|**sysname**|Nom de l’opérateur.|  
-|**use_email**|**int**|Un message électronique est utilisé pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**use_pager**|**int**|La radiomessagerie est utilisée pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**use_netsend**|**int**|Fenêtre contextuelle du réseau utilisée pour notifier l’opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**has_email**|**int**|L'opérateur possède une adresse électronique :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**has_pager**|**int**|L'opérateur possède une adresse de radiomessagerie :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
-|**has_netsend**|**int**|Une notification d'envoi réseau est configurée pour l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = non|  
+|**use_email**|**int**|Un message électronique est utilisé pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_pager**|**int**|La radiomessagerie est utilisée pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_netsend**|**int**|Fenêtre contextuelle du réseau utilisée pour notifier l’opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**has_email**|**int**|L'opérateur possède une adresse électronique :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**has_pager**|**int**|L'opérateur possède une adresse de radiomessagerie :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**has_netsend**|**int**|Une notification d'envoi réseau est configurée pour l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette procédure stockée doit être exécutée à partir de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

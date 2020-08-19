@@ -1,4 +1,5 @@
 ---
+description: sp_execute_external_script (Transact-SQL)
 title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2020
@@ -20,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 074836973123ae4f0f49acf72cf7bf6f56b17cf5
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180251"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447187"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -49,7 +50,7 @@ Pour exécuter **sp_execute_external_script**, vous devez d’abord installer ma
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 La procédure stockée **sp_execute_external_script** exécute un script fourni en tant qu’argument d’entrée pour la procédure et est utilisé avec [R Services](../../machine-learning/r/sql-server-r-services.md) sur SQL Server 2016.
 
-Pour R services, [r](../../machine-learning/concepts/extension-r.md) est le langage pris en charge.
+Pour R services,  [r](../../machine-learning/concepts/extension-r.md) est le langage pris en charge.
 
 Pour exécuter **sp_execute_external_script**, vous devez d’abord installer R services. Pour plus d’informations, consultez [installer SQL Server machine learning services (Python et R) sur Windows](../../machine-learning/install/sql-r-services-windows-install.md).
 ::: moniker-end
@@ -62,7 +63,7 @@ Pour Machine Learning Services, [python](../../machine-learning/concepts/extensi
 Pour exécuter **sp_execute_external_script**, vous devez d’abord activer machine learning services. Pour plus d’informations, consultez la [machine learning services dans la documentation Azure SQL Managed instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ## <a name="syntax"></a>Syntaxe
@@ -114,27 +115,27 @@ sp_execute_external_script
 
  ** \@ script = N** script du langage externe de*script*spécifié en tant qu’entrée littérale ou variable. le *script* est **de type nvarchar (max)**.  
 
-`[ @input_data_1 =  N'input_data_1' ]`Spécifie les données d’entrée utilisées par le script externe sous la forme d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] requête. Le type de données de *input_data_1* est **nvarchar (max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Spécifie les données d’entrée utilisées par le script externe sous la forme d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] requête. Le type de données de *input_data_1* est **nvarchar (max)**.
 
-`[ @input_data_1_name = N'input_data_1_name' ]`Spécifie le nom de la variable utilisée pour représenter la requête définie par @input_data_1 . Le type de données de la variable dans le script externe dépend de la langue. Dans le cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être tabulaire. *input_data_1_name* est de **type sysname**.  La valeur par défaut est *InputDataSet*.  
+`[ @input_data_1_name = N'input_data_1_name' ]` Spécifie le nom de la variable utilisée pour représenter la requête définie par @input_data_1 . Le type de données de la variable dans le script externe dépend de la langue. Dans le cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être tabulaire. *input_data_1_name* est de **type sysname**.  La valeur par défaut est *InputDataSet*.  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]`Utilisé pour générer des modèles par partition. Spécifie le nom de la colonne utilisée pour trier le jeu de résultats, par exemple par nom de produit. Le type de données de la variable dans le script externe dépend de la langue. Dans le cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être tabulaire.
+`[ @input_data_1_order_by_columns = N'input_data_1_order_by_columns' ]` Utilisé pour générer des modèles par partition. Spécifie le nom de la colonne utilisée pour trier le jeu de résultats, par exemple par nom de produit. Le type de données de la variable dans le script externe dépend de la langue. Dans le cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être tabulaire.
 
-`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]`Utilisé pour générer des modèles par partition. Spécifie le nom de la colonne utilisée pour segmenter les données, telles que la région géographique ou la date. Le type de données de la variable dans le script externe dépend de la langue. Dans le cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être tabulaire. 
+`[ @input_data_1_partition_by_columns = N'input_data_1_partition_by_columns' ]` Utilisé pour générer des modèles par partition. Spécifie le nom de la colonne utilisée pour segmenter les données, telles que la région géographique ou la date. Le type de données de la variable dans le script externe dépend de la langue. Dans le cas de R, la variable d’entrée est une trame de données. Dans le cas de Python, l’entrée doit être tabulaire. 
 ::: moniker-end
 
-`[ @output_data_1_name =  N'output_data_1_name' ]`Spécifie le nom de la variable dans le script externe qui contient les données à retourner à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’achèvement de l’appel de la procédure stockée. Le type de données de la variable dans le script externe dépend de la langue. Pour R, la sortie doit être une trame de données. Pour Python, la sortie doit être une trame de données pandas. *output_data_1_name* est de **type sysname**.  La valeur par défaut est *OutputDataSet*.  
+`[ @output_data_1_name =  N'output_data_1_name' ]` Spécifie le nom de la variable dans le script externe qui contient les données à retourner à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’achèvement de l’appel de la procédure stockée. Le type de données de la variable dans le script externe dépend de la langue. Pour R, la sortie doit être une trame de données. Pour Python, la sortie doit être une trame de données pandas. *output_data_1_name* est de **type sysname**.  La valeur par défaut est *OutputDataSet*.  
 
-`[ @parallel = 0 | 1 ]`Activez l’exécution parallèle des scripts R en affectant la valeur `@parallel` 1 au paramètre. La valeur par défaut de ce paramètre est 0 (aucun parallélisme). Si `@parallel = 1` et que la sortie est diffusée directement sur l’ordinateur client, la `WITH RESULT SETS` clause est obligatoire et un schéma de sortie doit être spécifié.  
+`[ @parallel = 0 | 1 ]` Activez l’exécution parallèle des scripts R en affectant la valeur `@parallel` 1 au paramètre. La valeur par défaut de ce paramètre est 0 (aucun parallélisme). Si `@parallel = 1` et que la sortie est diffusée directement sur l’ordinateur client, la `WITH RESULT SETS` clause est obligatoire et un schéma de sortie doit être spécifié.  
 
- + Pour les scripts R qui n’utilisent pas de fonctions RevoScaleR, l’utilisation du `@parallel` paramètre peut être bénéfique pour le traitement de jeux de données volumineux, en supposant que le script peut être parallélisée de façon triviale. Par exemple, lors de l’utilisation de la `predict` fonction R avec un modèle pour générer de nouvelles prédictions, définissez `@parallel = 1` en tant qu’indicateur pour le moteur de requête. Si la requête peut être parallélisée, les lignes sont distribuées selon le paramètre **MAXDOP** .  
+ + Pour les scripts R qui n’utilisent pas de fonctions RevoScaleR, l’utilisation du  `@parallel` paramètre peut être bénéfique pour le traitement de jeux de données volumineux, en supposant que le script peut être parallélisée de façon triviale. Par exemple, lors de l’utilisation de la `predict` fonction R avec un modèle pour générer de nouvelles prédictions, définissez `@parallel = 1` en tant qu’indicateur pour le moteur de requête. Si la requête peut être parallélisée, les lignes sont distribuées selon le paramètre **MAXDOP** .  
   
  + Pour les scripts R qui utilisent des fonctions RevoScaleR, le traitement parallèle est géré automatiquement et vous ne devez pas spécifier `@parallel = 1` à l’appel **sp_execute_external_script** .  
   
-`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]`Liste des déclarations de paramètre d’entrée utilisées dans le script externe.  
+`[ @params = N'@parameter_name data_type [ OUT | OUTPUT ] [ ,...n ]' ]` Liste des déclarations de paramètre d’entrée utilisées dans le script externe.  
   
-`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Liste de valeurs pour les paramètres d’entrée utilisés par le script externe.  
+`[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Liste de valeurs pour les paramètres d’entrée utilisés par le script externe.  
 
 ## <a name="remarks"></a>Notes
 
@@ -326,7 +327,7 @@ Pour calculer les scores, vous pouvez également utiliser la fonction [PREDICT](
 + [Machine Learning SQL](../../machine-learning/index.yml)
 + [Extensions de langage SQL Server](../../language-extensions/language-extensions-overview.md). 
 + [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
-+ [CRÉER une bibliothèque externe &#40;&#41;Transact-SQL](../../t-sql/statements/create-external-library-transact-sql.md)  
++ [CRÉER une bibliothèque externe &#40;&#41;Transact-SQL ](../../t-sql/statements/create-external-library-transact-sql.md)  
 + [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
 + [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
 + [external scripts enabled (option de configuration de serveur)](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   

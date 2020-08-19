@@ -1,4 +1,5 @@
 ---
+description: sys.database_files (Transact-SQL)
 title: sys. database_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
@@ -20,11 +21,12 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c12fdc6ebdd5932715de28083ff5bbb9169d930
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c57ffe323ce471c8c5e524ff5b7ba7ee3a85adf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447983"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +37,7 @@ ms.locfileid: "86003029"
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|ID du fichier dans la base de données.|  
 |**file_guid**|**uniqueidentifier**|GUID du fichier<br /><br /> NULL = la base de données a été mise à niveau à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (valide pour SQL Server 2005 et versions antérieures).|  
-|**type**|**tinyint**|Type de fichier :<br/><br /> 0 = lignes<br /><br/> 1 = journal<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texte intégral|  
+|**type**|**tinyint**|Type de fichier :<br/><br /> 0 = lignes<br /><br/> 1 = journal<br/><br /> 2 = FILESTREAM<br /><br /> 3 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texte intégral|  
 |**type_desc**|**nvarchar(60)**|Description du type de fichier :<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|La valeur peut être supérieure ou égale à 0. La valeur 0 représente le fichier journal de la base de données et une valeur supérieure à 0 représente l'ID du groupe de fichiers où ce fichier de données est stocké.|  
 |**name**|**sysname**|Nom logique du fichier dans la base de données.|  
@@ -85,7 +87,7 @@ Pour plus d’informations sur l’utilisation de [!INCLUDE[ssSDS_md](../../incl
  [États des fichiers](../../relational-databases/databases/file-states.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
- [Fichiers de base de données et groupes de fichiers](../../relational-databases/databases/database-files-and-filegroups.md)   
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)  
   
   

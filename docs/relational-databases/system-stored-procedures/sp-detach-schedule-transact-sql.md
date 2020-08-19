@@ -1,4 +1,5 @@
 ---
+description: sp_detach_schedule (Transact-SQL)
 title: sp_detach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 19988c59d020d0f77d1f23bf0a210f2ae1488933
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3f81a771e8dc40d6eb27cb68ea3a62e37c3b6b99
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447255"
 ---
 # <a name="sp_detach_schedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime l'association entre une planification et un travail.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,21 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id`Numéro d’identification du travail à partir duquel supprimer la planification. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail à partir duquel supprimer la planification. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail à partir duquel supprimer la planification. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail à partir duquel supprimer la planification. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @schedule_id = ] schedule_id`Numéro d’identification de la planification à supprimer du travail. *schedule_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @schedule_id = ] schedule_id` Numéro d’identification de la planification à supprimer du travail. *schedule_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @schedule_name = ] 'schedule_name'`Nom de la planification à supprimer du travail. *schedule_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @schedule_name = ] 'schedule_name'` Nom de la planification à supprimer du travail. *schedule_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Schedule_id* ou *schedule_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`Spécifie s’il faut supprimer les planifications de travaux non utilisés. *delete_unused_schedule* est de **bit**, avec **0**comme valeur par défaut, ce qui signifie que toutes les planifications sont conservées, même si aucun travail ne les référence. Si la valeur est **1**, les planifications de travail inutilisées sont supprimées si aucun travail ne les référence.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Spécifie s’il faut supprimer les planifications de travaux non utilisés. *delete_unused_schedule* est de **bit**, avec **0**comme valeur par défaut, ce qui signifie que toutes les planifications sont conservées, même si aucun travail ne les référence. Si la valeur est **1**, les planifications de travail inutilisées sont supprimées si aucun travail ne les référence.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

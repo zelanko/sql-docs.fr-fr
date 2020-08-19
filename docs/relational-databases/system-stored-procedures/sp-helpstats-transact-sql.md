@@ -1,4 +1,5 @@
 ---
+description: sp_helpstats (Transact-SQL)
 title: sp_helpstats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cc07dec5878e0d31a325aa75af483ab4b1b04e58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f88558a41c4a169ca61ec7cc615cd0ba5b991589
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447031"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,9 +32,9 @@ ms.locfileid: "85736968"
   Retourne les informations statistiques sur les colonnes et les index de la table spécifiée.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]Pour obtenir des informations sur les statistiques, interrogez les affichages catalogue [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) et [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Pour obtenir des informations sur les statistiques, interrogez les affichages catalogue [sys. stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) et [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,9 +45,9 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'object_name'`Spécifie la table sur laquelle fournir des informations statistiques. *object_name* est de type **nvarchar (520)** et ne peut pas être null. Vous pouvez spécifier un nom en une ou deux parties.  
+`[ @objname = ] 'object_name'` Spécifie la table sur laquelle fournir des informations statistiques. *object_name* est de type **nvarchar (520)** et ne peut pas être null. Vous pouvez spécifier un nom en une ou deux parties.  
   
-`[ @results = ] 'value'`Spécifie l’étendue des informations à fournir. Les entrées valides sont **All** et **stats**. **Toutes les** listes de statistiques pour tous les index et les colonnes sur lesquelles des statistiques sont créées ; **Stats** répertorie uniquement les statistiques qui ne sont pas associées à un index. *value* est de type **nvarchar (5),** avec stats comme valeur par défaut.  
+`[ @results = ] 'value'` Spécifie l’étendue des informations à fournir. Les entrées valides sont **All** et **stats**. **Toutes les** listes de statistiques pour tous les index et les colonnes sur lesquelles des statistiques sont créées ; **Stats** répertorie uniquement les statistiques qui ne sont pas associées à un index. *value* est de type **nvarchar (5),** avec stats comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -59,7 +60,7 @@ sp_helpstats[ @objname = ] 'object_name'
 |**statistics_name**|Nom des statistiques. Retourne **sysname** et ne peut pas avoir la valeur null.|  
 |**statistics_keys**|Clés sur lesquelles sont basées les statistiques. Retourne une valeur de type **nvarchar (2078)** et ne peut pas être null.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez DBCC SHOW_STATISTICS pour afficher des informations statistiques détaillées sur l'index ou les statistiques de votre choix. Pour plus d’informations, consultez [DBCC SHOW_STATISTICS &#40;Transact-sql&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) et [sp_helpindex &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
@@ -99,7 +100,7 @@ EXEC sp_helpstats
  `PK_Customer_CustomerID        CustomerID`  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

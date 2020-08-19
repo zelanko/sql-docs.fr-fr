@@ -1,4 +1,5 @@
 ---
+description: sp_adddistpublisher (Transact-SQL)
 title: sp_adddistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2020
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ba76aefe1b3b4f18a596c25d136c4ec6914ce5a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5af634687088e305a15e41fd54110832195d0cab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447427"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Configure un serveur de publication pour qu'il utilise une base de données de distribution spécifique. Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution. Notez que les procédures stockées [sp_adddistributor &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) et [sp_adddistributiondb &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) doivent avoir été exécutées avant l’utilisation de cette procédure stockée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,47 +48,47 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
 
 > [!NOTE]
 > Le nom du serveur peut être spécifié sous la forme `<Hostname>,<PortNumber>` . Vous devrez peut-être spécifier le numéro de port de votre connexion lorsque SQL Server est déployé sur Linux ou Windows avec un port personnalisé, et que le service Browser est désactivé.
   
-`[ @distribution_db = ] 'distribution_db'`Nom de la base de données de distribution. *distributor_db* est de **type sysname**, sans valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
+`[ @distribution_db = ] 'distribution_db'` Nom de la base de données de distribution. *distributor_db* est de **type sysname**, sans valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
   
-`[ @security_mode = ] security_mode`Est le mode de sécurité implémenté. Ce paramètre est utilisé uniquement par les agents de réplication pour se connecter au serveur de publication pour les abonnements de mise à jour en attente ou avec un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *security_mode* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @security_mode = ] security_mode` Est le mode de sécurité implémenté. Ce paramètre est utilisé uniquement par les agents de réplication pour se connecter au serveur de publication pour les abonnements de mise à jour en attente ou avec un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *security_mode* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**0**|Les Agents de réplication situés sur le serveur de distribution utilisent l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour se connecter au serveur de publication.|  
 |**1** (par défaut)|Les agents de réplication situés sur le serveur de distribution utilisent l'authentification Windows pour se connecter au serveur de publication.|  
   
-`[ @login = ] 'login'`Nom de la connexion. Ce paramètre est obligatoire si *security_mode* a la **valeur 0**. *login* est de type **sysname**, avec NULL comme valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
+`[ @login = ] 'login'` Nom de la connexion. Ce paramètre est obligatoire si *security_mode* a la **valeur 0**. *login* est de type **sysname**, avec NULL comme valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
   
-`[ @password = ] 'password']`Est le mot de passe. *Password* est de **type sysname**, avec NULL comme valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
+`[ @password = ] 'password']` Est le mot de passe. *Password* est de **type sysname**, avec NULL comme valeur par défaut. Il est utilisé par les agents de réplication pour se connecter au serveur de publication.  
   
 > [!IMPORTANT]  
 >  N'utilisez pas de mot de passe vide. Utilisez un mot de passe fort.  
   
-`[ @working_directory = ] 'working_directory'`Nom du répertoire de travail utilisé pour stocker les fichiers de données et de schéma de la publication. *working_directory* est de type **nvarchar (255)**, et par défaut le dossier repldata pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , par exemple `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` . Le nom doit être indiqué au format UNC.  
+`[ @working_directory = ] 'working_directory'` Nom du répertoire de travail utilisé pour stocker les fichiers de données et de schéma de la publication. *working_directory* est de type **nvarchar (255)**, et par défaut le dossier repldata pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , par exemple `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` . Le nom doit être indiqué au format UNC.  
 
  Pour Azure SQL Database, utilisez `\\<storage_account>.file.core.windows.net\<share>` .
 
-`[ @storage_connection_string = ] 'storage_connection_string'`Est requis pour SQL Database. Utilisez la clé d’accès du portail Azure sous paramètres de > de stockage.
+`[ @storage_connection_string = ] 'storage_connection_string'` Est requis pour SQL Database. Utilisez la clé d’accès du portail Azure sous paramètres de > de stockage.
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
 
-`[ @trusted = ] 'trusted'`Ce paramètre est déconseillé et n’est fourni qu’à des fins de compatibilité descendante. *Trusted* est de type **nvarchar (5)** et son affectation à la **valeur false** génère une erreur.  
+`[ @trusted = ] 'trusted'` Ce paramètre est déconseillé et n’est fourni qu’à des fins de compatibilité descendante. *Trusted* est de type **nvarchar (5)** et son affectation à la **valeur false** génère une erreur.  
   
-`[ @encrypted_password = ] encrypted_password`La définition de *encrypted_password* n’est plus prise en charge. Si vous tentez de définir ce paramètre de **bit** sur **1** , une erreur se produit.  
+`[ @encrypted_password = ] encrypted_password` La définition de *encrypted_password* n’est plus prise en charge. Si vous tentez de définir ce paramètre de **bit** sur **1** , une erreur se produit.  
   
-`[ @thirdparty_flag = ] thirdparty_flag`Est lorsque le serveur de publication est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* est de **bits**et peut prendre l’une des valeurs suivantes.  
+`[ @thirdparty_flag = ] thirdparty_flag` Est lorsque le serveur de publication est [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* est de **bits**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**0** (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Database.|  
+|**0** (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database.|  
 |**1**|Base de données autre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
-`[ @publisher_type = ] 'publisher_type'`Spécifie le type de serveur de publication lorsque le serveur de publication n’est pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* est de type sysname et peut prendre l’une des valeurs suivantes.  
+`[ @publisher_type = ] 'publisher_type'` Spécifie le type de serveur de publication lorsque le serveur de publication n’est pas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* est de type sysname et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -114,7 +115,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)  
   
   

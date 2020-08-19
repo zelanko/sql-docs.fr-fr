@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_wait_stats (Transact-SQL)
 title: sys. dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -20,11 +21,12 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: a10193722529fabd7cce09569107520fe1b6410d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447571"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,14 +43,14 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
 |wait_time_ms|**bigint**|Temps d'attente total en millisecondes pour ce type d'attente. Ce temps comprend signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
-|pdw_node_id|**int**|Identificateur du nœud sur lequel cette distribution se trouve. <br/> **S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|Identificateur du nœud sur lequel cette distribution se trouve. <br/> **S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Types d’attente  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Types d’attente  
  **Attentes des ressources** Les attentes de ressource se produisent lorsqu’un Worker demande l’accès à une ressource qui n’est pas disponible parce que la ressource est utilisée par un autre travail ou qu’elle n’est pas encore disponible. Ces attentes sont par exemple des attentes de verrous, de verrous internes, de réseau et d'E/S de disque. Les attentes de verrous et de verrous internes sont des attentes sur des objets de synchronisation.  
   
 **Queue waits**  
@@ -166,8 +168,8 @@ Cette commande remet tous les compteurs à 0.
 |CONNECTION_ENDPOINT_LOCK |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures.| 
 |COUNTRECOVERYMGR |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |CREATE_DATINISERVICE |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
-|CXCONSUMER<a name="cxconsumer"></a>|Se produit avec des plans de requête parallèles lorsqu’un thread de consommateur (parent) attend qu’un thread producteur envoie des lignes. Les attentes CXCONSUMER sont provoquées par un itérateur Exchange qui ne dispose plus de lignes de son thread producteur. Il s’agit d’une partie normale de l’exécution des requêtes parallèles. <br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET<a name="cxpacket"></a>|Se produit avec des plans de requête parallèles lors de la synchronisation de l’itérateur d’échange du processeur de requêtes, et lors de la production et de la consommation de lignes. Si l’attente est excessive et ne peut pas être réduite par le paramétrage de la requête (par exemple, l’ajout d’index), envisagez d’ajuster le seuil de coût pour le parallélisme ou de réduire le degré maximal de parallélisme (MaxDOP).<br /> **Remarque :** À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , CXPACKET fait uniquement référence à la synchronisation de l’itérateur d’échange du processeur de requêtes et à la production de lignes. Si les threads de consommateur sont trop lents, la mémoire tampon de l’itérateur Exchange peut devenir pleine et provoquer l’attente de CXPACKET. Les threads de consommateur sont suivis séparément dans le type d’attente CXCONSUMER.| 
+|CXCONSUMER <a name="cxconsumer"></a>|Se produit avec des plans de requête parallèles lorsqu’un thread de consommateur (parent) attend qu’un thread producteur envoie des lignes. Les attentes CXCONSUMER sont provoquées par un itérateur Exchange qui ne dispose plus de lignes de son thread producteur. Il s’agit d’une partie normale de l’exécution des requêtes parallèles. <br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET <a name="cxpacket"></a>|Se produit avec des plans de requête parallèles lors de la synchronisation de l’itérateur d’échange du processeur de requêtes, et lors de la production et de la consommation de lignes. Si l’attente est excessive et ne peut pas être réduite par le paramétrage de la requête (par exemple, l’ajout d’index), envisagez d’ajuster le seuil de coût pour le parallélisme ou de réduire le degré maximal de parallélisme (MaxDOP).<br /> **Remarque :** À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , CXPACKET fait uniquement référence à la synchronisation de l’itérateur d’échange du processeur de requêtes et à la production de lignes. Si les threads de consommateur sont trop lents, la mémoire tampon de l’itérateur Exchange peut devenir pleine et provoquer l’attente de CXPACKET. Les threads de consommateur sont suivis séparément dans le type d’attente CXCONSUMER.| 
 |CXROWSET_SYNC |Se produit pendant une analyse de plage parallèle.| 
 |DAC_INIT |Se produit alors que la connexion administrateur dédiée est en cours d'initialisation.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
@@ -943,7 +945,7 @@ Cette commande remet tous les compteurs à 0.
 |WAIT_XTP_CKPT_CLOSE |Se produit lors de l’attente de la fin d’un point de contrôle. <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
 |WAIT_XTP_CKPT_ENABLED |Se produit lorsque les points de contrôle sont désactivés et en attente d’activation des points de contrôle. <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
 |WAIT_XTP_CKPT_STATE_LOCK |Se produit lors de la synchronisation de la vérification de l’état du point de contrôle. <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
-|WAIT_XTP_COMPILE_WAIT |À usage interne uniquement <br /> **S’applique à**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et versions ultérieures.| 
+|WAIT_XTP_COMPILE_WAIT |À usage interne uniquement <br /> **S’APPLIQUE À** : [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et versions ultérieures.| 
 |WAIT_XTP_GUEST |Se produit lorsque l’allocateur de mémoire de la base de données doit cesser de recevoir des notifications de mémoire insuffisante. <br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |WAIT_XTP_HOST_WAIT |Se produit lorsque des attentes sont déclenchées par le moteur de base de données et implémentées par l’hôte. <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |À usage interne uniquement <br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 

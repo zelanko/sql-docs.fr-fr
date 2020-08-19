@@ -1,4 +1,5 @@
 ---
+description: sp_change_users_login (Transact-SQL)
 title: sp_change_users_login (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/13/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ecd2576cac046984394b093832769363968e637a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c82241030646e2ef20c978cb1905cf836f9a589b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447401"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,10 +31,10 @@ ms.locfileid: "85715890"
   Mappe un utilisateur de base de données existant à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
  > [!IMPORTANT]
- > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
+ > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [ALTER USER](../../t-sql/statements/alter-user-transact-sql.md) .  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +78,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserName|**sysname**|Nom de l'utilisateur de la base de données.|  
 |UserSID|**varbinary (85)**|Identificateur de sécurité de l'utilisateur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez sp_change_users_login pour lier un utilisateur de la base de données active à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte de connexion d'un utilisateur a changé, utilisez sp_change_users_login pour lier l'utilisateur au nouveau compte de connexion sans perdre les autorisations de l'utilisateur. La nouvelle *connexion* ne peut pas être sa et l' *utilisateur* ne peut pas être dbo, guest ou un utilisateur INFORMATION_SCHEMA.  
   
  La procédure sp_change_users_login ne peut pas être utilisée pour mapper des utilisateurs de base de données sur des principaux, des certificats ou des clés asymétriques de niveau Windows.  
@@ -123,11 +124,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [CRÉER une connexion &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
  [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
   

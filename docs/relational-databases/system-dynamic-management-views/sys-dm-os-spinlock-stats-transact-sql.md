@@ -1,4 +1,5 @@
 ---
+description: sys. dm_os_spinlock_stats (Transact-SQL)
 title: sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
@@ -22,12 +23,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: df183fe9b6ee5365f623e59dd1c94738afe5df8d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718780"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447580"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
@@ -38,7 +39,7 @@ Retourne des informations sur toutes les attentes de verrouillages spinlock orga
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|name|**nvarchar(256)**|Nom du type de verrouillage SpinLock.|  
+|name|**nvarchar (256)**|Nom du type de verrouillage SpinLock.|  
 |collisions|**bigint**|Nombre de fois où un thread tente d’acquérir le SpinLock et est bloqué, car un autre thread contient actuellement le SpinLock.|  
 |tourne|**bigint**|Nombre de fois où un thread exécute une boucle lors de la tentative d’acquisition du SpinLock.|  
 |spins_per_collision|**real**|Taux de spins par collision.|  
@@ -48,9 +49,9 @@ Retourne des informations sur toutes les attentes de verrouillages spinlock orga
 
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .    
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .    
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  
  sys. dm_os_spinlock_stats peut être utilisé pour identifier la source de contention de verrouillage SpinLock. Dans certains cas, vous pouvez être en mesure de résoudre ou de réduire la contention des verrouillages spinlock. Il peut toutefois arriver que vous soyez obligé de contacter le Support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   

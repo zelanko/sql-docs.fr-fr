@@ -1,4 +1,5 @@
 ---
+description: sp_create_plan_guide_from_handle (Transact-SQL)
 title: sp_create_plan_guide_from_handle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2a43abe560238f13f76cebc837adaac6a536f7fb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 909bd7489421abb4b9ee1650c267eb7a35c1e072
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869858"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447387"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crée un ou plusieurs repères de plan à partir d'un plan de requête dans le cache du plan. Vous pouvez appliquer cette procédure stockée pour garantir que l'optimiseur de requête utilise toujours un plan de requête spécifique pour une requête spécifiée. Pour plus d'informations sur les repères de plan, consultez [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +54,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Lorsque la valeur NULL est spécifiée ou qu'un décalage d'instruction n'est pas spécifié, un repère de plan est créé pour chaque instruction du lot à l'aide du plan de requête pour le descripteur de plan spécifié. Les repères de plan obtenus sont équivalents à ceux qui utilisent l'indicateur de requête USE PLAN pour forcer l'utilisation d'un plan spécifique.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un repère de plan ne peut pas être créé pour tous les types d'instructions. Si un repère de plan ne peut pas être créé pour une instruction du lot, la procédure stockée ignore l'instruction et passe à la suivante dans le lot. Si une instruction apparaît plusieurs fois dans le même lot, le plan de la dernière occurrence est activé et les plans précédents de l'instruction sont désactivés. Si aucune instruction dans le lot ne peut être utilisée dans un repère de plan, l'erreur 10532 est générée et l'instruction échoue. Nous vous recommandons de toujours obtenir le descripteur de plan à partir de la vue de gestion dynamique sys.dm_exec_query_stats pour empêcher toute occurrence de cette erreur.  
   
 > [!IMPORTANT]  

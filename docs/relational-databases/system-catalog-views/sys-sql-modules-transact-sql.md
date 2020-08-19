@@ -1,4 +1,5 @@
 ---
+description: sys.sql_modules (Transact-SQL)
 title: sys. sql_modules (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/06/2018
@@ -20,11 +21,12 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35364b70b54c0837f5cdbcc3b747a6c066c7beb9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1d465b315fedb484143153e7be97dd2e895faf12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447791"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +51,7 @@ ms.locfileid: "86008354"
 |**inline_type**|**bit**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] et versions ultérieures.<br /><br />Indique si l’incorporation est activée pour le module actuellement. <br /><br />0 = l’incorporation est désactivée<br /><br /> 1 = l’incorporation est activée.<br /><br /> Pour les fonctions définies par l’utilisateur scalaire, la valeur est 1 si l’incorporation est activée (explicitement ou implicitement). La valeur sera toujours 1 pour Inline TVF, et 0 pour les autres types de modules.<br />|  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  L’expression SQL d’une contrainte par défaut, objet de type D, se trouve dans l’affichage catalogue [sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) . L’expression SQL d’une contrainte CHECK, objet de type C, se trouve dans l’affichage catalogue [sys. CHECK_CONSTRAINTS](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) .  
   
  Ces informations sont également décrites dans [sys. dm_db_uncontained_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  
@@ -69,9 +71,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Interrogation du SQL Server FAQ du catalogue système](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

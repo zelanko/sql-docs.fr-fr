@@ -1,4 +1,5 @@
 ---
+description: sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 title: sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 584723414da47dbb0696ae991860d8bed50a3a26
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 40347ef5e273b19a4ae04362a5e80b6f8d813e5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447171"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85881720"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt la compression ROW et PAGE. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md). Pour obtenir des effets de compression sur la taille des tables et des index, consultez [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table = ] 'table'`Nom en trois parties de la table dont le format de stockage doit être modifié. *table* est **de type nvarchar (776)**.  
+`[ @table = ] 'table'` Nom en trois parties de la table dont le format de stockage doit être modifié. *table* est **de type nvarchar (776)**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -60,7 +61,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**décimal (12, 2)**|Représente la taille de ligne moyenne lorsque le format de stockage vardecimal est utilisé.|  
 |**row_count**|**int**|Nombre de lignes dans la table.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez **sp_estimated_rowsize_reduction_for_vardecimal** pour estimer les économies qui résultent si vous activez une table pour le format de stockage vardecimal. Par exemple, si la taille moyenne de la ligne peut être réduite de 40 %, vous pouvez réduire la taille de la table de 40 %. Vous n'économiserez peut-être pas d'espace en fonction du facteur de remplissage et de la taille de la ligne. Par exemple, si vous disposez d'une ligne d'une longueur de 8 000 octets et que vous réduisez sa taille de 40 %, vous ne pourrez toujours pas intégrer plus d'une ligne sur une page de données, ce qui ne génère pas de gains.  
   
  Si les résultats de **sp_estimated_rowsize_reduction_for_vardecimal** indiquent que la table va croître, cela signifie que de nombreuses lignes de la table utilisent presque toute la précision des types de données décimaux, et l’ajout de la faible surcharge requise pour le format de stockage vardecimal est plus important que le format de stockage vardecimal. Dans ce cas très peu fréquent, n'activez pas le format de stockage vardecimal.  

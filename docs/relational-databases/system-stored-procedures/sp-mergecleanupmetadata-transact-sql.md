@@ -1,4 +1,5 @@
 ---
+description: sp_mergecleanupmetadata (Transact-SQL)
 title: sp_mergecleanupmetadata (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385176695fe9600250eaa5b6a839ebd833910618
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 356c0aefb862d37d4c87af995e3b8d676a33e8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446941"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Doit être utilisé uniquement dans les topologies de réplication qui incluent des serveurs exécutant des versions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures au [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1.** sp_mergecleanupmetadata** permet aux administrateurs de nettoyer les métadonnées dans les tables système **MSmerge_genhistory**, **MSmerge_contents** et **MSmerge_tombstone** . Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,14 +39,14 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui nettoie les métadonnées de toutes les publications. La publication doit déjà exister si elle est spécifiée de manière explicite.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui nettoie les métadonnées de toutes les publications. La publication doit déjà exister si elle est spécifiée de manière explicite.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'`Spécifie s’il faut réinitialiser l’abonné. *Subscriber* est de type **nvarchar (5)**, peut avoir la valeur **true** ou **false**, avec **true**comme valeur par défaut. Si la **valeur est true**, les abonnements sont marqués pour la réinitialisation. Si la **valeur est false**, les abonnements ne sont pas marqués pour la réinitialisation.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Spécifie s’il faut réinitialiser l’abonné. *Subscriber* est de type **nvarchar (5)**, peut avoir la valeur **true** ou **false**, avec **true**comme valeur par défaut. Si la **valeur est true**, les abonnements sont marqués pour la réinitialisation. Si la **valeur est false**, les abonnements ne sont pas marqués pour la réinitialisation.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_mergecleanupmetadata** doit être utilisé uniquement dans les topologies de réplication qui incluent des serveurs exécutant des versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures au [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Les topologies qui incluent uniquement [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ou une version ultérieure doivent utiliser la rétention automatique basée sur le nettoyage des métadonnées. Lorsque vous exécutez cette procédure stockée, soyez conscient de l'importance de la croissance nécessaire et potentielle du fichier journal sur l'ordinateur sur lequel la procédure stockée est exécutée.  
   
 > [!CAUTION]
@@ -100,7 +101,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
     EXEC central..sp_changemergepublication @publication = 'dynpart_pubn', @property = 'status', @value = 'inactive'  
     ```  
   
- Lorsque vous avez terminé l’étape 3 de l’exécution de **sp_mergecleanupmetadata**, reprenez les fusions en mode continu en fonction de la façon dont vous les avez arrêtées. Au choix :   
+ Lorsque vous avez terminé l’étape 3 de l’exécution de **sp_mergecleanupmetadata**, reprenez les fusions en mode continu en fonction de la façon dont vous les avez arrêtées. Un des deux éléments suivants :  
   
 -   Rajoutez le paramètre **-Continuous** pour le agent de fusion.  
   

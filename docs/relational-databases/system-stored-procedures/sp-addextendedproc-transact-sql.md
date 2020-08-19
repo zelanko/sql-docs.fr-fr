@@ -1,4 +1,5 @@
 ---
+description: sp_addextendedproc (Transact-SQL)
 title: sp_addextendedproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 28711f289e86309baf6f2b54cf6c037d04d54d4d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a64b9b173b6b76429723c47bcf55fab4257b073c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447402"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85877996"
   Enregistre le nom d’une nouvelle procédure stockée étendue dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez plutôt l' [intégration du CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt l' [intégration du CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,9 +44,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @functname = ] 'procedure'`Nom de la fonction à appeler dans la bibliothèque de liens dynamiques (DLL). la *procédure* est **nvarchar (517)**, sans valeur par défaut. la *procédure* peut éventuellement inclure le nom du propriétaire sous la forme *propriétaire. Function*.  
+`[ @functname = ] 'procedure'` Nom de la fonction à appeler dans la bibliothèque de liens dynamiques (DLL). la *procédure* est **nvarchar (517)**, sans valeur par défaut. la *procédure* peut éventuellement inclure le nom du propriétaire sous la forme *propriétaire. Function*.  
   
-`[ @dllname = ] 'dll'`Nom de la DLL qui contient la fonction. *dll* est de type **varchar (255)**, sans valeur par défaut. Il est recommandé de spécifier le chemin complet d'accès à la DLL.  
+`[ @dllname = ] 'dll'` Nom de la DLL qui contient la fonction. *dll* est de type **varchar (255)**, sans valeur par défaut. Il est recommandé de spécifier le chemin complet d'accès à la DLL.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -77,8 +78,8 @@ EXEC sp_addextendedproc xp_hello, 'c:\xp_hello.dll';
   
 ## <a name="see-also"></a>Voir aussi  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [GRANT &#40;&#41;Transact-SQL](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;&#41;Transact-SQL](../../t-sql/statements/revoke-transact-sql.md)   
+ [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)   
  [sp_helpextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpextendedproc-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

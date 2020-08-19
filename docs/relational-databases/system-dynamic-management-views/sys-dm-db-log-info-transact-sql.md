@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_log_info (Transact-SQL)
 title: sys. dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aba965d4a0289db9ef7def58b90f15a1479cb485
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262079"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447661"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,7 +45,7 @@ sys.dm_db_log_info ( database_id )
  
  Spécifiez NULL pour retourner les informations de fichier journal virtuel de la base de données actuelle.
 
- Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Lorsque vous `DB_ID` utilisez sans spécifier de nom de base de données, le niveau de compatibilité de la base de données actuelle doit être supérieur ou égal à 90.  
+ Vous pouvez spécifier la fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Lorsque vous utilisez `DB_ID` sans spécifier de nom de base de données, le niveau de compatibilité de la base de données actuelle doit être supérieur ou égal à 90.  
 
 ## <a name="table-returned"></a>Table retournée  
 
@@ -63,7 +64,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_encryptor_thumbprint|**varbinary(20)**| **S’applique à :** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Affiche l’empreinte numérique du chiffreur du fichier journal virtuel si le fichier journal virtuel est chiffré à l’aide de [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md), sinon null. |
 
 ## <a name="remarks"></a>Notes
-La `sys.dm_db_log_info` fonction de gestion dynamique remplace `DBCC LOGINFO` l’instruction.    
+La `sys.dm_db_log_info` fonction de gestion dynamique remplace l' `DBCC LOGINFO` instruction.    
  
 ## <a name="permissions"></a>Autorisations  
 Nécessite l' `VIEW DATABASE STATE` autorisation dans la base de données.  
@@ -110,8 +111,8 @@ GO
 ```
 
 ## <a name="see-also"></a>Voir aussi  
-[Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys. dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
+[Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

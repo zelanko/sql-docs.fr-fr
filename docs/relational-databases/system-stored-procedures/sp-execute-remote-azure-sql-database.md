@@ -1,4 +1,5 @@
 ---
+description: sp_execute_remote (Azure SQL Database)
 title: sp_execute_remote (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/01/2017
@@ -15,12 +16,12 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9d257f5b52c6dfea82868b69570f2655675bb7ca
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1642baedb44cc6eab4474616d03abd2f429f4276
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447149"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85720282"
   
  La procédure stockée fait partie de la fonctionnalité de requête élastique.  Consultez [Azure SQL Database vue d’ensemble des requêtes de base de données élastique](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/) et [requêtes de bases de données élastiques pour partitionnement (partitionnement horizontal)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-horizontal-partitioning/).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +51,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Chaîne Unicode qui contient une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou un lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit être précédée de **N**. Par exemple, la constante Unicode **N’sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)**.  
   
 > [!NOTE]  
->  \@stmt peut contenir des paramètres ayant la même forme qu’un nom de variable, par exemple :`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt peut contenir des paramètres ayant la même forme qu’un nom de variable, par exemple : `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Chaque paramètre inclus dans \@ stmt doit avoir une entrée correspondante dans la \@ liste de définitions de paramètres params et dans la liste des valeurs de paramètre.  
   
@@ -72,14 +73,14 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Remarques  
- `sp_execute_remote`les paramètres doivent être entrés dans l’ordre spécifique, comme décrit dans la section syntaxe ci-dessus. Si les paramètres sont entrés dans le désordre, un message d'erreur se produira.  
+## <a name="remarks"></a>Notes  
+ `sp_execute_remote` les paramètres doivent être entrés dans l’ordre spécifique, comme décrit dans la section syntaxe ci-dessus. Si les paramètres sont entrés dans le désordre, un message d'erreur se produira.  
   
- `sp_execute_remote`a le même comportement que [execute &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) en ce qui concerne les lots et l’étendue des noms. L’instruction ou le lot Transact-SQL dans le paramètre sp_execute_remote * \@ stmt* n’est pas compilé tant que l’instruction sp_execute_remote n’est pas exécutée.  
+ `sp_execute_remote` a le même comportement que [execute &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) en ce qui concerne les lots et l’étendue des noms. L’instruction ou le lot Transact-SQL dans le paramètre sp_execute_remote * \@ stmt* n’est pas compilé tant que l’instruction sp_execute_remote n’est pas exécutée.  
   
- `sp_execute_remote`Ajoute une colonne supplémentaire au jeu de résultats nommé « $ShardName » qui contient le nom de la base de données distante qui a produit la ligne.  
+ `sp_execute_remote` Ajoute une colonne supplémentaire au jeu de résultats nommé « $ShardName » qui contient le nom de la base de données distante qui a produit la ligne.  
   
- `sp_execute_remote`peut être utilisé de la même façon que [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` peut être utilisé de la même façon que [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
 ### <a name="simple-example"></a>Exemple simple  

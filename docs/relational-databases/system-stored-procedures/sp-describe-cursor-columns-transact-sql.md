@@ -1,4 +1,5 @@
 ---
+description: sp_describe_cursor_columns (Transact-SQL)
 title: sp_describe_cursor_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2fe6880bb3669639b92c8625b21f942f1b454bf9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3d16e5f12f10d744fa1faa6b7b7858f1363dca5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861434"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447250"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fournit un rapport des attributs des colonnes contenues dans le jeu de résultats d'un curseur côté serveur.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -89,7 +90,7 @@ sp_describe_cursor_columns
 |dbid|**int**|ID de la base de données contenant la table de base qui fournit la colonne. Si la colonne de l'ensemble de résultats a été créée à partir d'une expression, dbid est égal à -1.|  
 |dbname|**sysname**<br /><br /> (accepte les valeurs NULL)|Nom de la base de données contenant la table de base qui fournit la colonne. Si la colonne de l'ensemble de résultats a été créée à partir d'une expression, dbname a la valeur NULL.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La procédure sp_describe_cursor_columns décrit les attributs des colonnes de l'ensemble de résultats d'un curseur de serveur, tels que le nom et le type de données de chaque curseur. Utilisez sp_describe_cursor pour obtenir une description des attributs globaux du curseur de serveur. Utilisez sp_describe_cursor_tables pour générer un rapport sur les tables de base référencées par le curseur. Pour obtenir un rapport sur les curseurs côté serveur [!INCLUDE[tsql](../../includes/tsql-md.md)] visibles pour la connexion, utilisez sp_cursor_list.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -138,7 +139,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Curseurs](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DÉCLARER un curseur &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)   

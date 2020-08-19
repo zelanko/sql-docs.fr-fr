@@ -1,4 +1,5 @@
 ---
+description: sys. query_store_wait_stats (Transact-SQL)
 title: sys. query_store_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/19/2019
@@ -19,12 +20,12 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5af0f04d9fce1fbcb455590d0e68a79bd98bdd73
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 41f66150a3a5c604889dc29d96abaea6d0418c6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717622"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447838"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
@@ -46,7 +47,7 @@ ms.locfileid: "85717622"
 |**last_query_wait_time_ms**|**bigint**|Durée de la dernière attente pour le plan de requête dans l’intervalle d’agrégation et la catégorie d’attente (signalée en millisecondes).|
 |**min_query_wait_time_ms**|**bigint**|`CPU wait`Durée minimale pour le plan de requête dans l’intervalle d’agrégation et la catégorie d’attente (signalée en millisecondes).|
 |**max_query_wait_time_ms**|**bigint**|`CPU wait`Durée maximale pour le plan de requête dans l’intervalle d’agrégation et la catégorie d’attente (signalée en millisecondes).|
-|**stdev_query_wait_time_ms**|**float**|`Query wait`écart type de durée pour le plan de requête dans l’intervalle d’agrégation et la catégorie d’attente (indiqué en millisecondes).|
+|**stdev_query_wait_time_ms**|**float**|`Query wait` écart type de durée pour le plan de requête dans l’intervalle d’agrégation et la catégorie d’attente (indiqué en millisecondes).|
 
 ## <a name="wait-categories-mapping-table"></a>Table de mappage des catégories d’attente
 
@@ -54,10 +55,10 @@ ms.locfileid: "85717622"
   
 |Valeur entière|Catégorie d’attente|Les types d’attente incluent dans la catégorie|  
 |-----------------|---------------|-----------------|  
-|**0**|**Connue**|Unknown |  
+|**0**|**Unknown**|Unknown |  
 |**1**|**UC**|SOS_SCHEDULER_YIELD|
 |**2**|**Thread de travail**|THREADPOOL|
-|**3**|**Verrouillage**|LCK_M_%|
+|**3**|**Verrouiller**|LCK_M_%|
 |**4**|**Circuit**|LATCH_%|
 |**5**|**Verrou de mémoire tampon**|PAGELATCH_%|
 |**6**|**E/s de mémoire tampon**|PAGEIOLATCH_%|

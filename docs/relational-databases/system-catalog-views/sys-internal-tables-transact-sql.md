@@ -1,4 +1,5 @@
 ---
+description: sys.internal_tables (Transact-SQL)
 title: sys. internal_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 73be0af1fd81cfc415417ff2ff233bbfa5e6ca41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898911"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447930"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,12 +44,12 @@ ms.locfileid: "85898911"
 |**parent_id**|**int**|ID du parent, qu'il soit ou non de portée de schéma. En l'absence de parent, a pour valeur 0.<br /><br /> **queue_messages**  =  **object_id** de la file d’attente<br /><br /> **xml_index_nodes**  =  **object_id** de l’index XML<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** du catalogue de texte intégral<br /><br /> **fulltext_index_map**  =  **object_id** de l’index de recherche en texte intégral<br /><br /> **query_notification**ou **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** d’un index étendu, tel qu’un index spatial<br /><br /> **object_id** de la table pour laquelle le suivi de table est activé = **CHANGE_TRACKING**|  
 |**parent_minor_id**|**int**|ID mineur du parent.<br /><br /> **xml_index_nodes**  =  **index_id** de l’index XML<br /><br /> **extended_indexes**  =  **index_id** d’un index étendu, tel qu’un index spatial<br /><br /> 0 = **queue_messages**, **fulltext_catalog_freelist**, **fulltext_index_map**, **query_notification**, **service_broker_map**ou **CHANGE_TRACKING**|  
 |**lob_data_space_id**|**int**|Une valeur différente de zéro représente l'ID d'espace de données (groupe de fichiers ou schéma de partition) qui contient les données LOB de cette table.|  
-|**filestream_data_space_id**|**int**|Réservé pour un usage futur.|  
+|**filestream_data_space_id**|**int**|Réservé à un usage ultérieur.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les tables internes sont placées dans le même groupe de fichiers que l'entité parente. Vous pouvez utiliser la requête de catalogue présentée dans l'exemple F ci-dessous pour retourner le nombre de pages que les tables internes utilisent pour les données sur ligne, hors ligne et LOB.  
   
  Vous pouvez utiliser la procédure système [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) pour retourner des données d’utilisation de l’espace pour les tables internes. **sp_spaceused** signale l’espace de table interne des manières suivantes :  
@@ -60,7 +61,7 @@ ms.locfileid: "85898911"
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent comment interroger les métadonnées des tables internes à l'aide des affichages catalogue.  
   
-### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>A. Afficher les tables internes qui héritent des colonnes de l'affichage catalogue sys.objects  
+### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>R. Afficher les tables internes qui héritent des colonnes de l'affichage catalogue sys.objects  
   
 ```  
 SELECT * FROM sys.objects WHERE type = 'IT';  
@@ -174,7 +175,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_resource_governor_resource_pools (Transact-SQL)
 title: sys. dm_resource_governor_resource_pools (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
@@ -20,12 +21,12 @@ ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4bf49fd0d828bd4f287431f2b95c47e07315448
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f19c80cd75788a2bc0f5bad73e0eb0098f9a8315
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396720"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447531"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -76,7 +77,7 @@ ms.locfileid: "87396720"
 |write_io_stall_queued_ms|**bigint**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Durée totale (en millisecondes) entre l'arrivée des E/S d'écriture et leur émission. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Autrement dit, les paramètres du pool de ressources MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME sont 0.<br /><br /> Latence introduite par la gouvernance des ressources d'E/S.|  
 |io_issue_violations_total|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Total des violations d'émission d'E/S. Autrement dit, le nombre de fois où la fréquence d'émission d'E/S était inférieure à la fréquence réservée. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Autrement dit, les paramètres du pool de ressources MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME sont 0.|  
 |io_issue_delay_total_ms|**bigint**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Durée totale (en millisecondes) entre l'émission planifiée et l'émission réelle des E/S. Autorise la valeur NULL. Null si le pool de ressources n'est pas régi pour les E/S. Autrement dit, les paramètres du pool de ressources MIN_IOPS_PER_VOLUME et MAX_IOPS_PER_VOLUME sont 0.|  
-|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="remarks"></a>Notes  
  Les groupes de charges de travail et les pools de ressources du gouverneur de ressources respectent un mappage de type plusieurs-à-un. De nombreuses statistiques de pool de ressources sont donc dérivées des statistiques de groupe de charges de travail.  

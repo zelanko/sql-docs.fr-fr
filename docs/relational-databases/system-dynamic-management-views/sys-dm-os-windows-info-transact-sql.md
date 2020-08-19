@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_windows_info (Transact-SQL)
 title: sys. dm_os_windows_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26cf5253d95a1c716c3c2ecfc1be0d9f99897832
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 567da3021d443b2d8c6d6eeeca30401618c67360
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88447521"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,8 +35,8 @@ ms.locfileid: "85898724"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**windows_release**|**nvarchar(256)**|Pour Windows, retourne le numéro de version. Pour obtenir la liste des valeurs et des descriptions, consultez [version du système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). Ne peut pas avoir la valeur NULL.|  
-|**windows_service_pack_level**|**nvarchar(256)**| Pour Windows, retourne le nombre de Service Pack. Ne peut pas avoir la valeur NULL. |  
+|**windows_release**|**nvarchar (256)**|Pour Windows, retourne le numéro de version. Pour obtenir la liste des valeurs et des descriptions, consultez [version du système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). Ne peut pas avoir la valeur NULL.|  
+|**windows_service_pack_level**|**nvarchar (256)**| Pour Windows, retourne le nombre de Service Pack. Ne peut pas avoir la valeur NULL. |  
 |**windows_sku**|**int**|Pour Windows, retourne l’ID de référence (SKU) Windows. Pour obtenir la liste des ID et des descriptions des références SKU, consultez [fonction GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Accepte la valeur null. |  
 |**os_language_version**|**int**| Pour Windows, retourne l’identificateur de paramètres régionaux (LCID) Windows du système d’exploitation. Pour obtenir la liste des valeurs et des descriptions des LCID, consultez [ID de paramètres régionaux attribués par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur NULL.|  
   
