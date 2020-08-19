@@ -1,4 +1,5 @@
 ---
+description: Classe SqlErrorLogEvent
 title: Classe SqlErrorLogEvent
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37f5dfbdc8b6d962d6bff91491142b9190818bb9
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 133eb91aed4cff032afd1b83637d3e4d4efa2635
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460061"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ class SQLErrorLogEvent
 |Message|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Message d'événement.|  
 |ProcessInfo|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Informations sur l'ID du processus du serveur source (SPID) pour l'événement.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 | Type | Nom |
 | ---- | ---- |

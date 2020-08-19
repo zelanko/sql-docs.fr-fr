@@ -1,4 +1,5 @@
 ---
+description: Cast (expression SSIS)
 title: Cast (expression SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c10996317ce033b6d6437ff989de8d66d31f006
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9a958fcc49fb5991baa770bc1c9609ebd13876dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430631"
 ---
 # <a name="cast-ssis-expression"></a>Cast (expression SSIS)
 
@@ -55,13 +56,13 @@ ms.locfileid: "86917188"
   
  La conversion vers certains types de données nécessite des paramètres. Le tableau suivant décrit ces types de données et leurs paramètres.  
   
-|Type de données|Paramètre|Exemple|  
+|Type de données|Paramètre| Exemple|  
 |---------------|---------------|-------------|  
 |DT_STR|*charcount*<br /><br /> *codepage*|L'expression (DT_STR,30,1252) convertit 30 octets, ou 30 caractères codés sur un octet, vers le type de données DT_STR à l'aide de la page de codes 1252.|  
 |DT_WSTR|*Charcount*|L'expression (DT_WSTR,20) convertit 20 paires d'octets, ou 20 caractères Unicode, vers le type de données DT_WSTR.|  
 |DT_BYTES|*Bytecount*|L'expression (DT_BYTES,50) convertit 50 octets vers le type de données DT_BYTES.|  
-|DT_DECIMAL|*Mettre à l'échelle*|L'expression (DT_DECIMAL,2) convertit une valeur numérique dans le type de données DT_DECIMAL avec une échelle égale à 2.|  
-|DT_NUMERIC|*Précision*<br /><br /> *Mettre à l'échelle*|L'expression (DT_NUMERIC,10,3) convertit une valeur numérique dans le type de données DT_NUMERIC avec une précision de 10 et une échelle de 3.|  
+|DT_DECIMAL|*Mise à l’échelle*|L'expression (DT_DECIMAL,2) convertit une valeur numérique dans le type de données DT_DECIMAL avec une échelle égale à 2.|  
+|DT_NUMERIC|*Précision*<br /><br /> *Mise à l’échelle*|L'expression (DT_NUMERIC,10,3) convertit une valeur numérique dans le type de données DT_NUMERIC avec une précision de 10 et une échelle de 3.|  
 |DT_TEXT|*Codepage*|L'expression (DT_TEXT,1252) convertit une valeur vers le type de données DT_TEXT à l'aide de la page de codes 1252.|  
   
  Lorsque vous convertissez une chaîne vers un type de données DT_DATE ou vice versa, les paramètres régionaux de la transformation sont utilisés. Toutefois, la date se présente dans le format ISO AAAA-MM-JJJ, que les préférences des paramètres régionaux utilisent ou non le format ISO.  

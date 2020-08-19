@@ -1,4 +1,5 @@
 ---
+description: transformation de recherche floue
 title: Recherche floue, transformation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a9db9f2e015a75e4ad132c21bd770a27d70f487
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df26e437d7c03510f7e634693296a928696a96b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430681"
 ---
 # <a name="fuzzy-lookup-transformation"></a>transformation de recherche floue
 

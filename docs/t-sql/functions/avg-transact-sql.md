@@ -1,4 +1,5 @@
 ---
+description: AVG (Transact-SQL)
 title: AVG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
@@ -22,12 +23,12 @@ ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d0825b40f469e31f12c0fd9d3ebca91fd4d4c69
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 183cc509061439bdc2792e7e81ed0d8f1e847ca1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459843"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +72,7 @@ Le résultat évalué de l’*expression* détermine le type de retour.
 |Catégorie **money** et **smallmoney**|**money**|  
 |Catégorie **float** et **real**|**float**|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Si le type de données d’*expression* est un type de données alias, le type de retour est également du type de données alias. Cependant, si le type de données de base du type de données alias est promu, par exemple de **tinyint** à **int**, la valeur renvoyée prend le type de données promu et non pas le type de données alias.
   
 AVG() calcule la moyenne d'un jeu de valeurs en divisant la somme de ces valeurs par le nombre de valeurs non nulles. Si la somme dépasse la valeur maximale pour le type de données de la valeur renvoyée, AVG() retourne une erreur.

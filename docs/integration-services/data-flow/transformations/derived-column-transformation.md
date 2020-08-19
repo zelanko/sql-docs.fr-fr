@@ -1,4 +1,5 @@
 ---
+description: Transformation de colonne dérivée
 title: Colonne dérivée, transformation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 82ef2a3959f1f3ae0d18aca2e8049f5a30f4a91f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430691"
 ---
 # <a name="derived-column-transformation"></a>Transformation de colonne dérivée
 
@@ -98,7 +99,7 @@ ms.locfileid: "86919383"
   
  Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.  
   
- **Rubriques connexes :** [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;expression SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **Rubriques connexes :**[Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;expression SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **Type de données**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** évalue automatiquement l’expression et définit correctement le type de données. La valeur de cette colonne est en lecture seule. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
@@ -109,7 +110,7 @@ ms.locfileid: "86919383"
  **Précision**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** définit automatiquement la précision des données numériques en fonction du type de données. La valeur de cette colonne est en lecture seule.  
   
- **Mettre à l'échelle**  
+ **Mise à l’échelle**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** définit automatiquement l’échelle des données numériques en fonction du type de données. La valeur de cette colonne est en lecture seule.  
   
  **Page de codes**  

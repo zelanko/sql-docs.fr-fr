@@ -1,4 +1,5 @@
 ---
+description: Développement de types spécifiques de composants Script
 title: Développement de types spécifiques de composants Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfbbe959-6b4e-4b47-b9dd-bcc31929482d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 860a629af6962614c19b77ffaea277ee02fc3b04
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fc1942c156469def05a8cf9aaa12ac3e09a8167c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430441"
 ---
 # <a name="developing-specific-types-of-script-components"></a>Développement de types spécifiques de composants Script
 
@@ -37,10 +38,10 @@ ms.locfileid: "86923828"
  Pour obtenir des exemples supplémentaires du composant Script, consultez [Exemples supplémentaires du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Création d’une source à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
+ [Création d'une source à l'aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)  
  Explique et montre comment créer une source de flux de données en utilisant le composant Script.  
   
- [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
+ [Création d'une transformation synchrone à l'aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
  Explique et montre comment créer une transformation de flux de données à sorties synchrones en utilisant le composant Script. Ce type de transformation modifie des lignes de données en place lorsqu'elles franchissent le composant.  
   
  [Création d’une transformation asynchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  

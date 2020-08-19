@@ -1,4 +1,5 @@
 ---
+description: Création d'une liste pour la boucle Foreach à l'aide de la tâche de script
 title: Création d’une liste pour la boucle Foreach à l’aide de la tâche de script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9a1ac7a00a9f181f511b214a28ed020827575db1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: aabae9ce08729c5dab6a0ea57c5e75900c9aaff8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430401"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Création d'une liste pour la boucle Foreach à l'aide de la tâche de script
 
@@ -33,10 +34,10 @@ ms.locfileid: "86923805"
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- L’exemple suivant utilise des méthodes de l’espace de noms **System.IO** pour établir une liste de classeurs Excel sur l’ordinateur qui sont antérieurs ou postérieurs à un nombre de jours spécifié par l’utilisateur dans une variable. Il effectue une recherche récursive dans les répertoires du lecteur C pour trouver des fichiers dotés de l'extension .xls et examine la date de dernière modification de chaque fichier pour déterminer s'il appartient à la liste. Il ajoute les fichiers répondant aux critères à un objet **ArrayList** et enregistre cet objet dans une variable pour une utilisation ultérieure dans un conteneur de boucles Foreach. Le conteneur de boucles Foreach est configuré pour utiliser l'énumérateur Foreach à partir d'une variable.  
+ L’exemple suivant utilise des méthodes de l’espace de noms **System.IO** pour établir une liste de classeurs Excel sur l’ordinateur qui sont antérieurs ou postérieurs à un nombre de jours spécifié par l’utilisateur dans une variable. Il effectue une recherche récursive dans les répertoires du lecteur C pour trouver des fichiers dotés de l'extension .xls et examine la date de dernière modification de chaque fichier pour déterminer s'il appartient à la liste. Il ajoute les fichiers répondant aux critères à un objet **** ArrayList**** et enregistre cet objet dans une variable pour une utilisation ultérieure dans un conteneur de boucles Foreach. Le conteneur de boucles Foreach est configuré pour utiliser l'énumérateur Foreach à partir d'une variable.  
   
 > [!NOTE]  
->  La variable utilisée avec l’énumérateur Foreach From variable doit être de type **Object**. L'objet que vous placez dans la variable doit implémenter l'une des interfaces suivantes : **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** ou **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Un objet **Array** ou **ArrayList** est couramment utilisé. L’objet **ArrayList** nécessite une référence et une instruction **Imports** pour l’espace de noms **System.Collections**.  
+>  La variable utilisée avec l’énumérateur Foreach From variable doit être de type **Object**. L’objet que vous placez dans la variable doit implémenter l’une des interfaces suivantes : **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** ou **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Un objet **Array** ou **ArrayList** est couramment utilisé. L’objet **ArrayList** nécessite une référence et une instruction **Imports** pour l’espace de noms **System.Collections**.  
   
  Vous pouvez apprendre à manipuler cette tâche en attribuant différentes valeurs, positives et négatives, à la variable de package `FileAge`. Par exemple, vous pouvez entrer 5 pour rechercher les fichiers créés au cours des cinq derniers jours ou entrer -3 pour rechercher les fichiers créés il y a plus de trois jours. Cette tâche peut prendre une minute ou deux sur un lecteur contenant de nombreux dossiers à rechercher.  
   

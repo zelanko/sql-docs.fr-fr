@@ -1,4 +1,5 @@
 ---
+description: Extension de packages avec des objets personnalisés
 title: Extension de packages avec des objets personnalisés | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2c6aa25210cff5f5663c4684728caee1f01db01
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3837f3fe73a3ee9d099199e959d65afd1df4e95b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430571"
 ---
 # <a name="extending-packages-with-custom-objects"></a>Extension de packages avec des objets personnalisés
 
@@ -38,7 +39,7 @@ ms.locfileid: "86902549"
  [Génération, déploiement et débogage d’objets personnalisés](../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md)  
  Présente les méthodes les plus usuelles pour créer, déployer et tester les différents types d'objets personnalisés.  
   
- [Développement d’une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Développement d'une tâche personnalisée](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Décrit le processus de codage d'une tâche personnalisée.  
   
  [Développement d’un gestionnaire de connexions personnalisé](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  
@@ -61,7 +62,7 @@ ms.locfileid: "86902549"
  [Extension de packages avec des scripts](../../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Explique comment étendre le flux de contrôle à l'aide de la tâche de script, ou comment étendre le flux de données à l'aide du composant Script.  
   
- [Génération de packages par programmation](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
+ [Génération de packages par programme](../../integration-services/building-packages-programmatically/building-packages-programmatically.md)  
  Décrit comment créer, configurer, exécuter, charger, enregistrer et gérer des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] par programme.  
   
 ## <a name="see-also"></a>Voir aussi  

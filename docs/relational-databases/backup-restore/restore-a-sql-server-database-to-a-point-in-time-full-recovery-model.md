@@ -1,4 +1,5 @@
 ---
+description: Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
 title: Restaurer une base de données SQL Server jusqu’à une limite dans le temps (mode de récupération complète) | Microsoft Docs
 decription: Learn how to restore a database to a point in time in SQL Server using SQL Server Management Studio or Transact-SQL in the full or bulk-logged recovery models.
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f03b1f490e46fac62c42dea09e78e7fdf9c28acf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 984e57d309dbed6a2aeb29dcaa260ae8f07896c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88429101"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurer une base de données SQL Server jusqu'à une limite dans le temps (mode de récupération complète)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,13 +82,13 @@ ms.locfileid: "85717978"
   
          Après avoir ajouté les unités souhaitées à la zone de liste **Support de sauvegarde** , cliquez sur **OK** pour revenir à la page **Général** .  
   
-         Dans la zone de liste **Source : Unité : Base de données** , sélectionnez le nom de la base de données à restaurer.  
+         Dans la zone de liste **Source : Appareil : Base de données**, sélectionnez le nom de la base de données à restaurer.  
   
          **Remarque** Cette liste n'est disponible que lorsque **Unité** est sélectionné. Seules les bases de données qui ont des copies de sauvegarde sur l'unité sélectionnée seront disponibles.  
   
 5.  Dans la section **Destination** , la zone **Base de données** est automatiquement renseignée avec le nom de la base de données à restaurer. Pour changer le nom de la base de données, entrez le nouveau nom dans la zone **Base de données** .  
   
-6.  Cliquez sur **Chronologie** pour accéder à la boîte de dialogue **Chronologie de sauvegarde** .  
+6.  Cliquez sur **Chronologie** pour accéder à la boîte de dialogue **Chronologie de sauvegarde**.  
   
 7.  Dans la section **Restaurer sur** , cliquez sur **Date et heure spécifiques**.  
   
@@ -96,7 +97,7 @@ ms.locfileid: "85717978"
     > [!NOTE]  
     >  Utilisez la zone **Chronologie - Intervalle** pour modifier la durée affichée dans la chronologie.  
   
-9. Après avoir défini un point spécifique dans le temps, l'assistant de récupération de base de données garantit que seules les sauvegardes nécessaires à la restauration à un point précis dans le temps sont sélectionnées dans la colonne **Restaurer** de la grille **Jeux de sauvegarde à restaurer** . Ces sauvegardes sélectionnées constituent le plan de restauration recommandé pour votre limite de restauration dans le temps. Utilisez uniquement les sauvegardes sélectionnées pour votre opération de restauration jusqu'à une date et heure.  
+9. Après avoir défini un point spécifique dans le temps, l'assistant de récupération de base de données garantit que seules les sauvegardes nécessaires à la restauration à un point précis dans le temps sont sélectionnées dans la colonne **Restaurer** de la grille **Jeux de sauvegarde à restaurer**. Ces sauvegardes sélectionnées constituent le plan de restauration recommandé pour votre limite de restauration dans le temps. Utilisez uniquement les sauvegardes sélectionnées pour votre opération de restauration jusqu'à une date et heure.  
   
      Pour plus d’informations sur les colonnes de la grille **Jeux de sauvegarde à restaurer** , consultez [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md). Pour plus d’informations sur l’Assistant de récupération de base de données, consultez [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
@@ -155,7 +156,7 @@ ms.locfileid: "85717978"
   
 3.  Restaurez la dernière sauvegarde différentielle de base de données, si elle existe, sans récupérer la base de données (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre de sa création, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT **=** _time_ **,** RECOVERY).  
+4.  Appliquez chaque sauvegarde du journal des transactions dans l’ordre de sa création, en spécifiant l’heure à laquelle vous avez l’intention d’arrêter la restauration du journal (RESTORE DATABASE *database_name* FROM <backup_device> WITH STOPAT**=**_time_**,** RECOVERY).  
   
     > [!NOTE]  
     >  Options RECOVERY et STOPAT. Si la sauvegarde du journal des transactions ne contient pas l'heure demandée (par exemple, si l'heure spécifiée dépasse la dernière heure figurant dans le journal des transactions), un avertissement est émis et la base de données n'est pas récupérée.  

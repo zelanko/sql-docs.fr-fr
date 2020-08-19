@@ -1,4 +1,5 @@
 ---
+description: DBCC CHECKALLOC (Transact-SQL)
 title: DBCC CHECKALLOC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -26,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 3b85dbd8d97583b6895dfb61bf7d0f50197f0635
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: b4631e88e76aeb9657327d9dbe4d6300b36b70df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459954"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 
@@ -153,7 +154,7 @@ DBCC CHECKALLOC fournit aussi un résumé de l'allocation pour chaque index et p
 |ID de partition (Partition ID)|À usage interne uniquement|  
 |ID d'unité d'allocation|À usage interne uniquement|  
 |Données dans la ligne (In-row data)|Les pages contiennent des données de segment de mémoire ou d'index.|  
-|Données LOB (LOB data)|Les pages contiennent des données de type **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext**, **xml** et **image**.|  
+|Données LOB (LOB data)|Les pages contiennent des données de type **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** et **image**.|  
 |Données de dépassement de ligne (Row-overflow data)|Les pages contiennent des données de colonne de longueur variable qui ont été envoyées hors ligne.|  
   
 DBCC CHECKALLOC renvoie le jeu de résultats suivant (les valeurs peuvent varier), sauf lorsque ESTIMATEONLY ou NO_INFOMSGS est spécifié.

@@ -1,4 +1,5 @@
 ---
+description: Référence de méthodes de type de données hierarchyid
 title: hierarchyid (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dbbc15d64e2bc6ae3ad20689303e42712ffa17fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 367f467a7b4a4d497897adf1c56f8053600d0a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738222"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88459965"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Référence de méthodes de type de données hierarchyid
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,7 +36,7 @@ Une valeur du type de données **hierarchyid** représente une position dans une
 -   Extrêmement compact  
      Le nombre moyen de bits nécessaires pour représenter un nœud dans une arborescence avec *n* nœuds dépend de la sortance moyenne (nombre moyen d’enfants d’un nœud). Pour les petites sortances (de 0 à 7), la taille est d’environ 6\*logA*n* bits, où A est la sortance moyenne. Un nœud dans une hiérarchie d'organisation de 100 000 personnes avec une sortance moyenne de 6 niveaux prend approximativement 38 bits. Ce chiffre est arrondi à 40 bits, ou 5 octets, pour le stockage.  
 -   La comparaison est effectuée dans l'ordre à profondeur prioritaire  
-     Étant donné deux valeurs **hierarchyid** **a** et **b**, **a<b** signifie que a se situe avant b dans un parcours à profondeur prioritaire de l’arborescence. Les index sur les types de données **hierarchyid** sont dans l’ordre à profondeur prioritaire, et les nœuds proches les uns des autres dans un parcours à profondeur prioritaire sont stockés les uns à côté des autres. Par exemple, les enfants d'un enregistrement sont stockés à côté de cet enregistrement. Pour plus d’informations, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
+     Étant donné deux valeurs **hierarchyid****a** et **b**, **a<b** signifie que a se situe avant b dans un parcours à profondeur prioritaire de l’arborescence. Les index sur les types de données **hierarchyid** sont dans l’ordre à profondeur prioritaire, et les nœuds proches les uns des autres dans un parcours à profondeur prioritaire sont stockés les uns à côté des autres. Par exemple, les enfants d'un enregistrement sont stockés à côté de cet enregistrement. Pour plus d’informations, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).  
 -   Prise en charge des insertions et suppressions arbitraires  
      En utilisant la méthode [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) , il est toujours possible de générer un frère à droite d'un nœud donné, à gauche d'un nœud donné, ou entre les deux frères. La propriété de comparaison est maintenue lorsqu'un nombre arbitraire de nœuds est inséré ou supprimé dans la hiérarchie. La plupart des insertions et suppressions préservent la propriété de compacité. Toutefois, les insertions entre deux nœuds produiront des valeurs hierarchyid avec une représentation légèrement moins compacte.  
 -   L’encodage utilisé dans le type **hierarchyid** est limité à 892 octets. Par conséquent, les nœuds qui ont trop de niveaux dans leur représentation pour s’adapter à 892 octets ne peuvent pas être représentés par le type **hierarchyid**.  
@@ -55,11 +56,11 @@ Le type **hierarchyid** encode logiquement les informations sur un nœud unique 
   
 -   /0.1/0.2/  
   
-Les nœuds peuvent être insérés à tout emplacement. Les nœuds insérés après **/1/2/** mais avant **/1/3/** peuvent être représentés comme **/1/2.5/** . Les nœuds insérés avant 0 ont comme représentation logique un nombre négatif. Par exemple, un nœud placé avant **/1/1/** peut être représenté sous la forme **/1/-1/** . Les nœuds ne peuvent pas avoir de zéros non significatifs. Par exemple, **/1/1.1/** est valide, mais **/1/1.01/** ne l’est pas. Pour éviter des erreurs, insérez des nœuds à l’aide de la méthode [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
+Les nœuds peuvent être insérés à tout emplacement. Les nœuds insérés après **/1/2/** mais avant **/1/3/** peuvent être représentés comme **/1/2.5/**. Les nœuds insérés avant 0 ont comme représentation logique un nombre négatif. Par exemple, un nœud placé avant **/1/1/** peut être représenté sous la forme **/1/-1/**. Les nœuds ne peuvent pas avoir de zéros non significatifs. Par exemple, **/1/1.1/** est valide, mais **/1/1.01/** ne l’est pas. Pour éviter des erreurs, insérez des nœuds à l’aide de la méthode [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
   
-## <a name="data-type-conversion"></a>Conversion de type de données
+## <a name="data-type-conversion"></a>Conversion de types de données
 Le type de données **hierarchyid** peut être converti en d’autres types de données comme suit :
--   Utilisez la méthode [ToString()](../../t-sql/data-types/tostring-database-engine.md) pour convertir la valeur **hierarchyid** en représentation logique comme type de données **nvarchar(4000)** .  
+-   Utilisez la méthode [ToString()](../../t-sql/data-types/tostring-database-engine.md) pour convertir la valeur **hierarchyid** en représentation logique comme type de données **nvarchar(4000)**.  
 -   Utilisez [Read ()](../../t-sql/data-types/read-database-engine.md) et [Write ()](../../t-sql/data-types/write-database-engine.md) pour convertir **hierarchyid** en **varbinary**.  
 -   Pour transmettre des paramètres **hierarchyid** par SOAP, convertissez-les d’abord en chaînes.  
   

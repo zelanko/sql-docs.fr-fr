@@ -1,4 +1,5 @@
 ---
+description: sys.sysusers (Transact-SQL)
 title: Utilisateurs sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,12 +22,12 @@ ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae0f80f4d77e04906b60549270763d3f2b0881c1
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: f661bc590652958924892fdb083707c1c3d654b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393044"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490074"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87393044"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**uid**|**smallint**|ID d'utilisateur, unique dans cette base de données.<br /><br /> 1 = Propriétaire de la base de données<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
+|**codé**|**smallint**|ID d'utilisateur, unique dans cette base de données.<br /><br /> 1 = Propriétaire de la base de données<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
 |**statut**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|Nom d'utilisateur ou de groupe, unique dans cette base de données.|  
 |**sid**|**varbinary (85)**|Identificateur de sécurité pour cette entrée.|  
