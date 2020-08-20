@@ -1,4 +1,5 @@
 ---
+description: Destination de traitement de partition
 title: Destination de traitement de partition | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 50513545bf2737a8b331153c686acad7ebaf4bd2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ba6441215b1f1462195b83a99ce040da11d694fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916086"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457314"
 ---
 # <a name="partition-processing-destination"></a>Destination de traitement de partition
 
@@ -80,7 +81,7 @@ ms.locfileid: "86916086"
  **Méthode de traitement**  
  Sélectionnez la méthode de traitement. La valeur par défaut de cette option est **Complète**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Ajouter (incrémentiel)|Permet d'effectuer un traitement incrémentiel de la partition.|  
 |Complète|Permet d'effectuer un traitement complet de la partition.|  
@@ -118,7 +119,7 @@ ms.locfileid: "86916086"
  **Action pour l'erreur de clé**  
  Indiquez comment traiter les enregistrements dont les valeurs de clé ne sont pas acceptables.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Convertir la valeur de clé non acceptable en valeur inconnue (Unknown).|  
 |**DiscardRecord**|Ignorer l'enregistrement.|  
@@ -129,13 +130,13 @@ ms.locfileid: "86916086"
  **Arrêter en cas d'erreur**  
  Spécifiez que le traitement doit s'arrêter lorsqu'une erreur se produit.  
   
- **Nombre d'erreurs**  
+ **Nombre d’erreurs**  
  Spécifiez le nombre maximal d’erreurs au-delà duquel le traitement doit s’arrêter, si vous avez sélectionné **Arrêter en cas d’erreur**.  
   
  **Action pour l'erreur**  
  Indiquez l’action à appliquer lorsque le nombre maximal d’erreurs est atteint, si vous avez sélectionné **Arrêter en cas d’erreur**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**StopProcessing**|Arrêter le traitement.|  
 |**StopLogging**|Arrêter d'enregistrer les erreurs.|  
@@ -143,7 +144,7 @@ ms.locfileid: "86916086"
  **Clé introuvable**  
  Indiquez l'action à appliquer en cas d'erreur de clé introuvable. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -152,7 +153,7 @@ ms.locfileid: "86916086"
  **Clé dupliquée**  
  Indiquez l'action à appliquer en cas d'erreur de clé dupliquée. Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -161,7 +162,7 @@ ms.locfileid: "86916086"
  **Clé NULL convertie en clé inconnue**  
  Indiquez l'action à appliquer lorsqu'une clé NULL a été convertie en clé inconnue (Unknown). Par défaut, cette valeur est définie sur **IgnoreError**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  
@@ -170,7 +171,7 @@ ms.locfileid: "86916086"
  **Clé NULL non autorisée**  
  Indiquez l'action à appliquer si une clé NULL est trouvée alors que les clés NULL ne sont pas autorisées. Par défaut, cette valeur est définie sur **ReportAndContinue**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**IgnoreError**|Ignorer l'erreur et continuer le traitement.|  
 |**ReportAndContinue**|Signaler l'erreur et continuer le traitement.|  

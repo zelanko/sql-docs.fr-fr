@@ -1,4 +1,5 @@
 ---
+description: Nouveautés d’Integration Services dans SQL Server 2016
 title: Nouveauté d’Integration Services dans SQL Server 2016 | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a715409dddf2c2de19624f2f5f0b770e0202c9b8
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 386e58e63ee0f629baf5c9ad3009c678a1a966d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922315"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456871"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Nouveautés d’Integration Services dans SQL Server 2016
 
@@ -51,7 +52,7 @@ Ces nouvelles fonctionnalités nécessitent SQL Server Data Tools (SSDT) version
   
         -   [Déploiement incrémentiel de packages](#IncrementalDeployment)  
   
-        -   [Prise en charge de la fonctionnalité Always Encrypted dans le catalogue SSIS](#encrypted)  
+        -   [Prise en charge de la fonctionnalité de chiffrement intégral dans le catalogue SSIS](#encrypted)  
   
     -   Amélioration du débogage  
   
@@ -89,7 +90,7 @@ Ces nouvelles fonctionnalités nécessitent SQL Server Data Tools (SSDT) version
   
         -   [Prise en charge du système de fichiers Hadoop (HDFS)](#HDFS)  
   
-        -   [Prise en charge étendue pour Hadoop et HDFS](#more_hadoop)  
+        -   [Extension de la prise en charge pour Hadoop et HDFS](#more_hadoop)  
   
         -   [La destination du fichier HDFS prend désormais en charge le format de fichier ORC](#hdfsORC)  
   
@@ -145,7 +146,7 @@ Ces nouvelles fonctionnalités nécessitent SQL Server Data Tools (SSDT) version
   
         -   [Les tâches Analysis Services prennent en charge les modèles tabulaires](#ssasrc0)  
   
-        -   [Prise en charge de R Services intégré](#builtinR)  
+        -   [Prise en charge des services R intégrés](#builtinR)  
   
         -   [Sortie de validation XML détaillée dans la tâche XML](#ValidateXML)  
   
@@ -187,9 +188,9 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
 ####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> Prise en charge de la fonctionnalité Always Encrypted dans le catalogue SSIS  
  SSIS prend déjà en charge la fonctionnalité de chiffrement intégral dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez les billets de blog suivants.  
   
--   [SSIS with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
+-   [SSIS et le chiffrement intégral](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Lookup transformation with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
+-   [Transformation de recherche et chiffrement intégral](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
 ### <a name="better-debugging"></a>Amélioration du débogage
 
@@ -225,7 +226,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
   
  La méthode GetIdentificationStringByLineageID a été renommée <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Pour plus d’informations, consultez [Noms de colonnes pour les erreurs contenues dans le flux de données](#ErrorColumn).  
   
- Pour plus d’informations sur ce changement et sur l’amélioration de la colonne d’erreur, consultez la mise à jour du billet de blog suivant. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
+ Pour plus d’informations sur ce changement et sur l’amélioration de la colonne d’erreur, consultez la mise à jour du billet de blog suivant. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) [Améliorations de la colonne d’erreur pour le flux de données SSIS (mis à jour pour CTP3.3)]](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  (Dans RC0, cette méthode a été déplacée dans la nouvelle interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Pour plus d’informations, consultez [Nouvelle interface IDTSComponentMetaData130 dans l’API](#CMD130).)  
@@ -375,4 +376,4 @@ La dernière version du Feature Pack Azure inclut la tâche de chargement Azure 
 
 ## <a name="see-also"></a>Voir aussi  
  [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)

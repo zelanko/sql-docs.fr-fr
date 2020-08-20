@@ -1,4 +1,5 @@
 ---
+description: Nombres décimaux
 title: Chiffres décimaux | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4921a6162b6d711e657f223b5be5783dfa37bca8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c56d0d4cdd4c40c2174085d80618bbcc58af14e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456616"
 ---
 # <a name="decimal-digits"></a>Nombres décimaux
 Les *chiffres décimaux* des types de données decimal et numeric sont définis comme étant le nombre maximal de chiffres à droite de la virgule décimale, ou l’échelle des données. Pour les colonnes ou les paramètres de nombre à virgule flottante approximatifs, l’échelle n’est pas définie, car le nombre de chiffres à droite de la virgule décimale n’est pas fixe. Pour les données DateTime ou Interval qui contiennent un composant seconds, les chiffres décimaux sont définis en tant que nombre de chiffres à droite de la virgule décimale dans le composant seconds des données.  

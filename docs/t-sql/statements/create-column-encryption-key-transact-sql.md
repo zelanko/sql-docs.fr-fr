@@ -1,4 +1,5 @@
 ---
+description: CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 title: CREATE COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/15/2019
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 473d41dcc61113a331597a6de8f103517378bfdd
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9527007eb54e07747f3e6d12b9fdf98bc50ed3cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458796"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -74,8 +75,8 @@ BLOB de la valeur chiffrée de clé de chiffrement de colonne.
   
 > [!WARNING]  
 >  Ne passez jamais de valeurs de clé de chiffrement de colonne en texte clair dans cette instruction. Cela compromet l’avantage de cette fonctionnalité.  
-  
-## <a name="remarks"></a>Notes  
+
+## <a name="remarks"></a>Notes
 L’instruction `CREATE COLUMN ENCRYPTION KEY` doit inclure au moins une ou deux valeurs. Vous pouvez utiliser [ALTER COLUMN ENCRYPTION KEY (Transact-SQL)](alter-column-encryption-key-transact-sql.md) pour ajouter une seconde valeur ultérieurement. Vous pouvez également utiliser l’instruction `ALTER COLUMN ENCRYPTION KEY` pour supprimer une valeur.  
   
 En général, une clé de chiffrement de colonne est créée avec une seule valeur chiffrée. Dans certains cas, vous devez effectuer la rotation d’une clé principale de colonne pour remplacer la clé principale de colonne actuelle par la nouvelle clé principale de colonne. Quand vous devez effectuer la rotation de la clé, ajoutez une nouvelle valeur de la clé de chiffrement de colonne, chiffrée avec la nouvelle clé de chiffrement de colonne. Cette rotation vous permet de garantir que les applications clientes peuvent accéder aux données chiffrées avec la clé de chiffrement de colonne, tandis que la nouvelle clé principale de colonne est mise à la disposition des applications clientes. Un pilote avec Always Encrypted dans une application cliente qui n’a pas accès à la nouvelle clé principale utilisera la valeur de la clé de chiffrement de colonne chiffrée avec l’ancienne clé principale de colonne pour accéder aux données sensibles.  

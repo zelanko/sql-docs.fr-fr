@@ -1,4 +1,5 @@
 ---
+description: sys.database_event_session_targets (Azure SQL Database)
 title: sys. database_event_session_targets (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -11,12 +12,12 @@ ms.assetid: 38d775ee-1fe1-4820-88c6-02b2f875a66b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67bb763d2896ef2156c442d82c29440d2cf4451b
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 68b6b8bab06f78e3e04991b5f89cc34b6f497fc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460670"
 ---
 # <a name="sysdatabase_event_session_targets-azure-sql-database"></a>sys.database_event_session_targets (Azure SQL Database)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -38,10 +39,10 @@ ms.locfileid: "87472636"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette vue a les cardinalités de relation suivantes.  
   
-|À partir|À|Relation|  
+|Du|À|Relation|  
 |-|-|-|  
 |sys. database_event_session_targets. event_session_id|sys. database_event_sessions. event_session_id|Plusieurs-à-un|  
   

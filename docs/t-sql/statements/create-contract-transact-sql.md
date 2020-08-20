@@ -1,4 +1,5 @@
 ---
+description: CREATE CONTRACT (Transact-SQL)
 title: CREATE CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6fef1834b3e5b6afeda1df4c67e3403a6dd6d79
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 6f4b7360fa3429a621e364c27776c4f6a8f0a946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391724"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458738"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crée un nouveau contrat. Un contrat définit les types de messages utilisés dans une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)] et détermine quel côté de la conversation peut envoyer des messages de ce type. Chaque conversation observe un contrat. Le service initiateur spécifie le contrat associé à la conversation au démarrage de celle-ci. Le service cible spécifie les contrats pour lesquels il accepte des conversations.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -96,7 +97,7 @@ CREATE CONTRACT contract_name
  L'utilisateur exécutant l'instruction CREATE SERVICE doit disposer de l'autorisation REFERENCES sur tous les types de messages spécifiés.  
   
 ## <a name="examples"></a>Exemples  
- **A. Création d’un contrat**  
+ **A. Création d'un contrat**  
   
  L'exemple suivant crée un contrat de remboursement de frais basé sur trois types de messages.  
   

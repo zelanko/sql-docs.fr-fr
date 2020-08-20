@@ -1,4 +1,5 @@
 ---
+description: Mots réservés (Master Data Services)
 title: Mots réservés
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 5eff7f5f2db1d1b155b94818083ddad11f23890e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811451"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456711"
 ---
 # <a name="reserved-words-master-data-services"></a>Mots réservés (Master Data Services)
 
@@ -37,18 +38,18 @@ ms.locfileid: "85811451"
   
 -   [Attributs](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [Membres](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [Members](../master-data-services/reserved-words-master-data-services.md#members) (Membres)  
   
-##  <a name="models"></a><a name="models"></a>Axisymétriques  
+##  <a name="models"></a><a name="models"></a> Axisymétriques  
  Si vous créez un modèle dont le nom est défini sur **Nom** ou **Code**, ne sélectionnez pas **Créer une entité portant le même nom que le modèle** , car **Nom** ou **Code** ne peut pas être utilisé pour le nom d’une entité.  
   
-##  <a name="entities"></a><a name="entities"></a>Lesquelles  
+##  <a name="entities"></a><a name="entities"></a> Lesquelles  
  Pour les noms d'entité, vous ne pouvez pas utiliser **Name** ou **Code**.  
   
-##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Hiérarchies explicites  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a> Hiérarchies explicites  
  Pour les noms de hiérarchies explicites, vous ne pouvez pas utiliser **Name** ou **Code**.  
   
-##  <a name="attributes"></a><a name="attributes"></a>Attributs  
+##  <a name="attributes"></a><a name="attributes"></a> Attributs  
   
 -   **Identifiant**  
   
@@ -76,7 +77,7 @@ ms.locfileid: "85811451"
   
 -   **Version_ID**  
   
-##  <a name="members"></a><a name="members"></a>Membres  
+##  <a name="members"></a><a name="members"></a> Membres  
  Pour les membres, vous ne pouvez pas utiliser **MDMMemberStatus**, **MDMUnused**ou **ROOT** pour la valeur d’attribut **Code** .  
   
 ## <a name="see-also"></a>Voir aussi  

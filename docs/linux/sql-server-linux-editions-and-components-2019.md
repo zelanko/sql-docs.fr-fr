@@ -1,4 +1,5 @@
 ---
+description: Éditions et fonctionnalités prises en charge de SQL Server 2019 sur Linux
 title: Éditions et fonctionnalités prises en charge de SQL Server 2019 - Linux
 ms.date: 01/08/2020
 ms.prod: sql
@@ -24,12 +25,12 @@ helpviewer_keywords:
 author: VanMSFT
 ms.author: vanto
 ms.reviewer: mikeray
-ms.openlocfilehash: 66e354a23b88c2f6843b6180eabbff5b5a19f038
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: aca10f1cb7d6b3bef1cd44b58f2f68ba01d57a22
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456838"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>Éditions et fonctionnalités prises en charge de SQL Server 2019 sur Linux
 
@@ -79,7 +80,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
   
 ##  <a name="scale-limits"></a><a name="Cross-BoxScaleLimits"></a> Limites d’échelle  
   
-|Fonctionnalité|Entreprise|standard|Web|Express| 
+|Fonctionnalité|Entreprise|Standard|Web|Express| 
 |-------------|----------------|--------------|---------|------------------------|
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs| 
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs|
@@ -92,7 +93,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
  
 ##  <a name="rdbms-high-availability"></a><a name="RDBMSHA"></a> Haute disponibilité SGBDR  
   
-|Fonctionnalité|Entreprise|standard|Web|Express|  
+|Fonctionnalité|Entreprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
 |Copie des journaux de transaction|Oui|Oui|Oui|Non|  
 |Compression de sauvegarde|Oui|Oui|Non|Non| 
@@ -120,7 +121,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 ##  <a name="rdbms-scalability-and-performance"></a><a name="RDBMSSP"></a> Scalabilité et performances SGBDR  
   
-|Fonctionnalité|Entreprise|standard|Web|Express|  
+|Fonctionnalité|Entreprise|Standard|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------| 
 |Columnstore <sup>1</sup>|Oui|Oui|Oui|Oui|  
 |Fichiers binaires LOB dans les index columnstore cluster|Oui|Oui|Oui|Oui|  
@@ -145,7 +146,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 ##  <a name="rdbms-security"></a><a name="RDBMSS"></a> Sécurité SGBDR  
   
-|Fonctionnalité|Entreprise|standard|Web|Express|
+|Fonctionnalité|Entreprise|Standard|Web|Express|
 |-------------|----------------|--------------|---------|------------------------------------| 
 |Sécurité au niveau des lignes|Oui|Oui|Oui|Oui|  
 |Always Encrypted|Oui|Oui|Oui|Oui| 
@@ -159,7 +160,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 ##  <a name="rdbms-manageability"></a><a name="RDBMSM"></a> Simplicité de gestion SGBDR  
   
-|Fonctionnalité|Entreprise|standard|Web|Express|   
+|Fonctionnalité|Entreprise|Standard|Web|Express|   
 |-------------|----------------|--------------|---------|------------------------|  
 |Connexion administrateur dédiée|Oui|Oui|Oui|Oui avec indicateur de trace|   
 |Prise en charge de scripts PowerShell|Oui|Oui|Oui|Oui| 
@@ -178,7 +179,7 @@ L’édition Developer continue à prendre en charge seulement un client pour [
 
 ##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
-|Fonctionnalité|Entreprise|standard|Web|Express 
+|Fonctionnalité|Entreprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
 |JSON|Oui|Oui|Oui|Oui|   
 |Magasin des requêtes|Oui|Oui|Oui|Oui|   
@@ -203,7 +204,7 @@ Pour plus d’informations sur les fonctionnalités Integration Services (SSIS) 
 
 ##  <a name="spatial-and-location-services"></a><a name="SLS"></a> Services d’emplacement et spatiaux  
   
-|Nom de la fonctionnalité|Entreprise|standard|Web|Express|  
+|Nom de la fonctionnalité|Entreprise|Standard|Web|Express|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|
 |Index spatiaux|Oui|Oui|Oui|Oui|   
 |Types de données planaires et géodésiques|Oui|Oui|Oui|Oui| 

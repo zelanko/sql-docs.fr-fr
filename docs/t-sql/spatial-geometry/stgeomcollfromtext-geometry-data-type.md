@@ -1,4 +1,5 @@
 ---
+description: STGeomCollFromText (type de données geometry)
 title: STGeomCollFromText (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 0fd31568d26945bf27e73850f6dccfbd45df1701
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 8e9333f71bb601629b13b025fb0fdb9f81af58d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458962"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 
 ## <a name="arguments"></a>Arguments
  *geometrycollection_tagged_text*  
- Représentation WKT de l’instance **geometry** à retourner. *geometry_tagged_text* est une expression **nvarchar(max)** .  
+ Représentation WKT de l’instance **geometry** à retourner. *geometry_tagged_text* est une expression **nvarchar(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometry** à retourner.  
@@ -64,8 +65,8 @@ SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes géométriques statiques OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   
 

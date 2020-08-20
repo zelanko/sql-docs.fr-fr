@@ -1,4 +1,5 @@
 ---
+description: Génération de packages par programme
 title: Génération de packages par programmation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -10,12 +11,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18b1405699a93380447535a9f0f5f7ab7f94113a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c6b35aa78b98a681ae7312db2bd9a7b1fb18f482
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86905498"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457803"
 ---
 # <a name="building-packages-programmatically"></a>Génération de packages par programme
 
@@ -40,43 +41,43 @@ ms.locfileid: "86905498"
 >  Lorsque vous utilisez un package existant comme modèle et modifiez des colonnes existantes dans le flux de données, vous pourriez devoir supprimer les colonnes existantes et appeler la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> des composants affectés.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Création d’un package par programmation](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
+ [Création d'un package par programme](../../integration-services/building-packages-programmatically/creating-a-package-programmatically.md)  
  Explique comment créer un package par programme.  
   
  [Ajout de tâches par programmation](../../integration-services/building-packages-programmatically/adding-tasks-programmatically.md)  
  Explique comment ajouter des tâches au package.  
   
- [Connexion de tâches par programmation](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
+ [Connexion de tâches par programme](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
  Décrit comment contrôler l'exécution des conteneurs et des tâches dans un package en fonction du résultat de l'exécution d'une tâche ou d'un conteneur précédent.  
   
- [Ajout de connexions par programmation](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)  
+ [Ajout de connexions par programme](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)  
  Décrit comment ajouter des gestionnaires de connexions à un package.  
   
  [Utilisation de variables par programmation](../../integration-services/building-packages-programmatically/working-with-variables-programmatically.md)  
  Décrit comment ajouter et utiliser des variables pendant l'exécution d'un package.  
   
- [Gestion d’événements par programmation](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
+ [Gestion d'événements par programme](../../integration-services/building-packages-programmatically/handling-events-programmatically.md)  
  Décrit comment gérer des événements de package et de tâche.  
   
- [Activation de la journalisation par programmation](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
+ [Activation de la journalisation par programme](../../integration-services/building-packages-programmatically/enabling-logging-programmatically.md)  
  Décrit comment activer la journalisation d'un package ou d'une tâche et appliquer des filtres personnalisés à des événements de journal.  
   
  [Ajout de la tâche de flux de données par programmation](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
  Décrit comment ajouter et configurer la tâche de flux de données et ses composants.  
   
- [Découverte des composants de flux de données par programmation](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
+ [Découverte des composants de flux de données par programme](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
  Décrit comment détecter les composants installés sur l'ordinateur local.  
   
- [Ajout de composants de flux de données par programmation](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
+ [Ajout de composants de flux de données par programme](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
  Décrit comment ajouter un composant à une tâche de flux de données.  
   
- [Connexion de composants de flux de données par programmation](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
+ [Connexion de composants de flux de données par programme](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)  
  Décrit comment connecter deux composants de flux de données.  
   
- [Sélection de colonnes d’entrée par programmation](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
+ [Sélection de colonnes d'entrée par programme](../../integration-services/building-packages-programmatically/selecting-input-columns-programmatically.md)  
  Décrit comment sélectionner des colonnes d'entrée parmi celles fournies à un composant par les composants situés en amont du flux de données.  
   
- [Enregistrement d’un package par programmation](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
+ [Enregistrement d'un package par programme](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
  Explique comment enregistrer un package par programme.  
   
 ## <a name="reference"></a>Informations de référence  
@@ -90,7 +91,7 @@ ms.locfileid: "86905498"
  [Extension de packages avec des objets personnalisés](../../integration-services/extending-packages-custom-objects/extending-packages-with-custom-objects.md)  
  Explique comment créer des tâches personnalisées de programme, des composants de flux de données et d'autres objets de package à utiliser dans plusieurs packages.  
   
- [Exécution et gestion de packages par programmation](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
+ [Exécution et gestion de packages par programme](../../integration-services/run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  Explique comment énumérer, exécuter et gérer des packages et les dossiers dans lesquels ils sont stockés.  
   
 ## <a name="external-resources"></a>Ressources externes  

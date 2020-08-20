@@ -1,4 +1,5 @@
 ---
+description: Propriétés personnalisées de la destination de traitement de partition
 title: Propriétés personnalisées de la destination de traitement de partition | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e9bd6dff6e35b4fa78d69dc1c6703ca6a098f6c5
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 87f70b54a0f43252bd6ebc2f28b32371715760cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457325"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Propriétés personnalisées de la destination de traitement de partition
 
@@ -38,7 +39,7 @@ ms.locfileid: "86920408"
 |NullKeyConvertedToUnknown|Integer (énumération)|Quand UseDefaultConfiguration a la valeur **False**, valeur qui indique comment gérer les clés null converties en valeur inconnue. Les valeurs possibles sont **IgnoreError** (0), **ReportAndContinue** (1) et **ReportAndStop** (2). La valeur par défaut de cette propriété est **IgnoreError** (0).|  
 |NullKeyNotAllowed|Integer (énumération)|Quand UseDefaultConfiguration a la valeur **False**, valeur qui indique comment gérer les clés null non autorisées. Les valeurs possibles sont **IgnoreError** (0), **ReportAndContinue** (1) et **ReportAndStop** (2). La valeur par défaut de cette propriété est **ReportAndContinue** (1).|  
 |ProcessType|Integer (énumération)|Type de traitement de partition que la transformation utilise. Les valeurs possible sont **ProcessAdd** (1) (incrémentiel), **ProcessFull** (0) et **ProcessUpdate** (2).|  
-|UseDefaultConfiguration|Boolean|Valeur qui spécifie si la transformation utilise la configuration d'erreur par défaut. Si cette propriété a la valeur **False**, la transformation utilise les propriétés personnalisées de traitement des erreurs répertoriées dans ce tableau, notamment KeyDuplicate, KeyErrorAction, et ainsi de suite.|  
+|UseDefaultConfiguration|Booléen|Valeur qui spécifie si la transformation utilise la configuration d'erreur par défaut. Si cette propriété a la valeur **False**, la transformation utilise les propriétés personnalisées de traitement des erreurs répertoriées dans ce tableau, notamment KeyDuplicate, KeyErrorAction, et ainsi de suite.|  
   
  L'entrée et les colonnes d'entrée de la destination de traitement de partition ne disposent pas de propriétés personnalisées.  
   

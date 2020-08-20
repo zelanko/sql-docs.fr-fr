@@ -1,4 +1,5 @@
 ---
+description: Interrogation des procédures stockées étendues installées dans SQL Server
 title: Interrogation des procédures stockées étendues
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: e02348e6-dba6-438a-98b6-684244bb034d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8413f071cfb36f5cad9130d3e2b56327d9b3bf45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: edd5bb4fe5284552642a838ea2b5dcafef601061
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460815"
 ---
 # <a name="querying-extended-stored-procedures-installed-in-sql-server"></a>Interrogation des procédures stockées étendues installées dans SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

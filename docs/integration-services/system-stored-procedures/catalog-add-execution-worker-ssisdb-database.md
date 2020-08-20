@@ -1,4 +1,5 @@
 ---
+description: catalog.add_execution_worker (base de données SSISDB)
 title: catalog.add_execution_worker (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -11,12 +12,12 @@ ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
 author: chugugrace
 ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ffcd20f1895252cc09eca1fc87a055bd5c964a38
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 102277139885379f4c2f75c912756e09131ec546
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456992"
 ---
 # <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker (base de données SSISDB)
 
@@ -25,7 +26,7 @@ ms.locfileid: "86917632"
 
 [!INCLUDE[sqlserver2017](../../includes/applies-to-version/sqlserver2017.md)]
 
-Ajoute un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker à une instance d’exécution dans Scale-out.
+Ajoute un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker à une instance d’exécution dans Scale Out.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,7 +65,7 @@ ID d’agent de Worker d’un Scale Out Worker. *workeragent_id* est de type **u
 
 - L’ID d’agent de Worker n’est pas valide.
 
-- L’exécution n’a pas lieu dans Scale-out.
+- L’exécution n’a pas lieu dans Scale Out.
 
 ## <a name="see-also"></a>Voir aussi
 [Exécuter des packages dans Scale-out](~/integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md).

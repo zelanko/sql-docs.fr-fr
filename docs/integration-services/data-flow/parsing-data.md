@@ -1,4 +1,5 @@
 ---
+description: Analyse de données
 title: Analyse de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8893ea9d-634c-4309-b52c-6337222dcb39
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ee41fd4f9fa7074117f6e4a84307e8e31a10da84
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: eba3e72558433acab3ba1a0edc3cd921b15281bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457345"
 ---
 # <a name="parsing-data"></a>Analyse de données
 
@@ -44,7 +45,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
   
  Si le flux de données du package requiert une analyse des spécificités régionales, il est préférable d'utiliser l'analyse standard. Par exemple, l'analyse rapide ne reconnaît pas les données qui incluent des symboles décimaux comme la virgule, les formats de date autres que année-mois-jour ou encore les symboles de devises.  
   
- Les représentations tronquées qui laissent supposer une ou plusieurs parties de la date, comme un siècle, une année ou un mois, ne sont pas reconnues par l'analyse rapide. Par exemple, l’analyse rapide ne reconnaît pas le format ' **-AAMM**', qui indique une année et un mois dans un siècle implicite, ni le format ' **--MM**', qui spécifie un mois dans une année implicite. Cependant, certaines représentations avec une précision réduite sont reconnues. Ainsi, l'analyse rapide reconnaît le format 'hhmm', qui indique les heures et les minutes uniquement, et '**AAAA**', qui indique l'année uniquement.  
+ Les représentations tronquées qui laissent supposer une ou plusieurs parties de la date, comme un siècle, une année ou un mois, ne sont pas reconnues par l'analyse rapide. Par exemple, l’analyse rapide ne reconnaît pas le format '**-AAMM**', qui indique une année et un mois dans un siècle implicite, ni le format '**--MM**', qui spécifie un mois dans une année implicite. Cependant, certaines représentations avec une précision réduite sont reconnues. Ainsi, l'analyse rapide reconnaît le format 'hhmm', qui indique les heures et les minutes uniquement, et '**AAAA**', qui indique l'année uniquement.  
   
  L'analyse rapide est spécifiée au niveau de la colonne. Dans la source de fichier plat et la transformation de conversion de données, vous pouvez spécifier l'analyse rapide sur les colonnes de sortie. Les entrées et les sorties peuvent inclure des colonnes respectant des spécificités régionales et des colonnes n'en respectant pas.  
  
@@ -183,7 +184,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
 |Secondes|Ajout de 00.|  
 |Minutes|Ajouter 00:00.|  
 |Heure|Ajout de 00:00:00.|  
-|jour|Ajout de 01 pour le jour du mois.|  
+|Jour|Ajout de 01 pour le jour du mois.|  
 |Month|Ajout de 01 pour le mois de l'année.|  
   
  Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

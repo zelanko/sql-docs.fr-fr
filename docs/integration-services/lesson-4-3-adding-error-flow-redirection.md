@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 4-3 : Ajouter une redirection de flux d’erreurs'
 title: 'Étape 3 : Ajouter une redirection de flux d’erreurs | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 852a614576780e27512e5fb234fd0905ef41a9ca
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: daade3348f7384ed83365923bf94af7b211d6422
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457125"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Leçon 4-3 : Ajouter une redirection de flux d’erreurs
 
@@ -51,7 +52,7 @@ Par défaut, les deux colonnes supplémentaires d’une sortie d’erreur [!INCL
   
 8.  Dans la page **Entrées et sorties**, développez **Sortie 0**, sélectionnez **Colonnes de sortie**, puis **Ajouter une colonne**.  
   
-9. Dans la propriété **Name**, entrez *ErrorDescription* et attribuez à la propriété **DataType** la valeur **Unicode string [DT_WSTR]** .  
+9. Dans la propriété **Name**, entrez *ErrorDescription* et attribuez à la propriété **DataType** la valeur **Unicode string [DT_WSTR]**.  
   
 10. Dans la page **Script**, vérifiez que la propriété **LocaleID** a la valeur **Anglais (États-Unis)** .
   

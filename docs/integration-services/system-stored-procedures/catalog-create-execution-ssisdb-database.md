@@ -1,4 +1,5 @@
 ---
+description: catalog.create_execution (base de données SSISDB)
 title: catalog.create_execution (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 168491deaef52217dc47349718869e3b652d2099
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d0170a6b6a3733b54c24be1f06e91a6a60135faf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456934"
 ---
 # <a name="catalogcreate_execution-ssisdb-database"></a>catalog.create_execution (base de données SSISDB)
 
@@ -49,7 +50,7 @@ catalog.create_execution [ @folder_name = ] folder_name
  Nom du projet qui contient le package à exécuter. *project_name* est de type **nvarchar(128)** .  
   
  [@package_name =] *package_name*  
- Nom du package qui sera exécuté. *package_name* est de type **nvarchar(260)** .  
+ Nom du package qui sera exécuté. *package_name* est de type **nvarchar(260)**.  
   
  [@reference_id =] *reference_id*  
  Identificateur unique d'une référence environnementale. Ce paramètre est facultatif. *reference_id* est de type **bigint**.  
@@ -73,14 +74,14 @@ Ce paramètre est facultatif. S’il n’est pas spécifié, sa valeur est défi
  Retourne l'identificateur unique d'une instance d'exécution. *execution_id* est de type **bigint**.  
 
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Une exécution est utilisée pour spécifier les valeurs de paramètre qui sont utilisées par un package pendant une instance d'exécution unique du package.  
   
  Si une référence environnementale est spécifiée avec le paramètre *reference_id*, la procédure stockée remplit les paramètres du package et du projet avec les valeurs littérales ou les valeurs référencées des variables d’environnement correspondantes. Si la référence environnementale est spécifiée, les valeurs de paramètre par défaut sont utilisées pendant l'exécution du package. Pour déterminer exactement quelles valeurs sont utilisées pour une instance particulière d’exécution, utilisez la valeur du paramètre de sortie *execution_id* de cette procédure stockée et interrogez la vue [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
   
  Seuls les packages marqués comme packages de point d'entrée peuvent être spécifiés dans une exécution. Si un package qui n'est pas un point d'entrée est spécifié, l'exécution échoue.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant appelle catalog.create_execution pour créer une instance d’exécution pour le package Child1.dtsx, qui n’est pas dans Scale Out. Project1 Integration Services contient le package. L'exemple appelle catalog.set_execution_parameter_value afin de définir des valeurs pour les paramètres Parameter1, Parameter2 et LOGGING_LEVEL. L'exemple appelle catalog.start_execution pour démarrer une instance d'exécution.  
   
 ```sql  

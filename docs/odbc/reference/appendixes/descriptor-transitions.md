@@ -1,4 +1,5 @@
 ---
+description: Transitions de descripteur
 title: Transitions de descripteurs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ec5c26bdde8a0d470f2d93e753504bf1c51edcc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168df441e2e7e785f7dfc89894ec7aa9caf8207c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456595"
 ---
 # <a name="descriptor-transitions"></a>Transitions de descripteur
 Les descripteurs ODBC ont les trois États suivants.  

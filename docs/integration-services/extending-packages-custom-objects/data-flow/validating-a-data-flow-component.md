@@ -1,4 +1,5 @@
 ---
+description: Validation d'un composant de flux de données
 title: Validation d’un composant de flux de données | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c5092990f2600fc79ebea4759d71aee4e2cbefc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e50a3f642bc4ecc9782aea699f49e6403d98c23
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915393"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457173"
 ---
 # <a name="validating-a-data-flow-component"></a>Validation d'un composant de flux de données
 
@@ -35,7 +36,7 @@ ms.locfileid: "86915393"
 
   La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> de la classe de base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> est fournie pour empêcher l'exécution d'un composant qui n'est pas configuré correctement. Cette méthode vous permet de vérifier qu'un composant dispose du nombre d'objets d'entrée et de sortie attendu, que les valeurs des propriétés personnalisées du composant sont acceptables et que toutes les connexions nécessaires sont spécifiées. Elle vous permet également de vérifier que les colonnes dans les collections d'entrée et de sortie contiennent des types de données corrects et que le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> de chaque colonne est défini de manière appropriée pour le composant. L'implémentation de la classe de base contribue au processus de validation en contrôlant la collection de colonnes d'entrée du composant et en vérifiant que chaque colonne de la collection fait référence à une colonne dans le <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> du composant en amont.  
   
-## <a name="validate-method"></a>Méthode Validate  
+## <a name="validate-method"></a>Validate, méthode  
  La méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> est appelée de manière répétée lorsqu'un composant est modifié dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)]. Vous pouvez fournir des informations au concepteur et aux utilisateurs du composant par le biais de la valeur de retour de l'énumération <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus>, et en publiant des avertissements et des erreurs. L'énumération <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus> contient trois valeurs correspondant à différents stades de défaillance, et une quatrième, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISVALID>, qui indique si le composant est correctement configuré et prêt à être exécuté.  
   
  La valeur <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> indique qu'il existe une erreur dans <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> et que le composant peut réparer les erreurs. Si un composant rencontre une erreur de métadonnées qu'il peut réparer, il ne doit pas la corriger dans la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> et la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> ne doit pas être modifiée au cours de la validation. Au lieu de cela, la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> doit retourner <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> uniquement, et le composant doit réparer l'erreur lors d'un appel à la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A>, tel que décrit plus loin dans cette section.  

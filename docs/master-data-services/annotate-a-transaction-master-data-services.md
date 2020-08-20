@@ -1,4 +1,5 @@
 ---
+description: Annoter une transaction (Master Data Services)
 title: Annoter une transaction
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 140342398d35dfb7ad38940d0e2a2e7726e8375b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 90ca7f628206e54a284866eaae4a18c3dfe54094
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811864"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456848"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Annoter une transaction (Master Data Services)
 
@@ -66,7 +67,7 @@ ms.locfileid: "85811864"
   
 5.  Cliquez sur **OK**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Annotations &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
  [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   

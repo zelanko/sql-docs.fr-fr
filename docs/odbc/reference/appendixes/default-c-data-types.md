@@ -1,4 +1,5 @@
 ---
+description: Types de données C par défaut
 title: Types de données C par défaut | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fdb787580e1c79df805f468416ab8993a1d32a26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d0ed42971405ca23d5f69f47cbb6ac02e8e5675
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456605"
 ---
 # <a name="default-c-data-types"></a>Types de données C par défaut
 Si une application spécifie SQL_C_DEFAULT dans **SQLBindCol**, **SQLGetData**ou **SQLBindParameter**, le pilote part du principe que le type de données C de la sortie ou de la mémoire tampon d’entrée correspond au type de données SQL de la colonne ou du paramètre auquel la mémoire tampon est liée.  

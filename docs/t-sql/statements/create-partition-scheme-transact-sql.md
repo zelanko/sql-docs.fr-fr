@@ -1,4 +1,5 @@
 ---
+description: CREATE PARTITION SCHEME (Transact-SQL)
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/10/2017
@@ -28,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b13706909d12d4fb27e981008aeca9e0b3e8ac2a
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: dd662f06ceff6ac917e8c56b830f7dd1241084fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458791"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -73,7 +74,7 @@ AS PARTITION partition_function_name
   
  Si *partition_function_name* génère moins de partitions que de groupes de fichiers, le premier groupe de fichiers non affecté est marqué comme NEXT USED et un message d’information s’affiche en indiquant le nom du groupe de fichiers NEXT USED. Si la valeur ALL est spécifié, l’unique *file_group_name* conserve sa propriété NEXT USED pour ce *partition_function_name*. Le groupe de fichiers NEXT USED recevra une partition supplémentaire si une instruction ALTER PARTITION FUNCTION en crée une. Utilisez ALTER PARTITION SCHEME pour créer de nouveaux groupes de fichiers non affectés qui contiendront de nouvelles partitions.  
   
- Quand vous spécifiez le groupe de fichiers primaire dans *file_group_name* [ 1 **,** _...n_], PRIMARY doit être délimité, comme dans **[** PRIMARY **]** , car il s’agit d’un mot clé.  
+ Quand vous spécifiez le groupe de fichiers primaire dans *file_group_name* [ 1 **,**_...n_], PRIMARY doit être délimité, comme dans **[** PRIMARY **]**, car il s’agit d’un mot clé.  
   
  Seul PRIMARY est pris en charge pour [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]. Consultez l’exemple E ci-dessous. 
   

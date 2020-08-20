@@ -1,4 +1,5 @@
 ---
+description: ALTER MATERIALIZED VIEW (Transact-SQL)
 title: ALTER MATERIALIZED VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c9c9ae639a3dce3e697eded9f55af3485118506c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: bc7f7f07656f2dc187de013fcb56eada5a997b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395384"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458858"
 ---
 # <a name="alter-materialized-view-transact-sql"></a>ALTER MATERIALIZED VIEW (Transact-SQL)  
 
@@ -33,7 +34,7 @@ ms.locfileid: "87395384"
 
 Modifie un affichage matérialisé précédemment créé. ALTER VIEW n'affecte pas les procédures stockées ou déclencheurs dépendants et ne modifie pas les autorisations.  
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +58,7 @@ ALTER MATERIALIZED VIEW [ schema_name . ] view_name
 Reprend l’affichage matérialisé.
 
 *DÉSACTIVER*   
-Suspend la maintenance sur l’affichage matérialisé tout en conservant les métadonnées et les autorisations.  Toutes les requêtes par rapport à l’affichage matérialisé dans un état désactivé sur les tables sous-jacentes.
+Suspend la maintenance sur l’affichage matérialisé tout en conservant les métadonnées et les autorisations.Toutes les requêtes par rapport à l’affichage matérialisé dans un état désactivé sur les tables sous-jacentes.
   
 ## <a name="permissions"></a>Autorisations
 

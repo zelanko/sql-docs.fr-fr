@@ -1,4 +1,5 @@
 ---
+description: Séparateur de capture de données modifiées
 title: Séparateur de capture de données modifiées | Documents Microsoft
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2015303f77a3ae7ba4f77758432f51bd84f0b811
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 38ecdd11aa4527fee14b558deb05dcfe578f4d84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917145"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457398"
 ---
 # <a name="cdc-splitter"></a>Séparateur de capture de données modifiées
 
@@ -33,7 +34,7 @@ ms.locfileid: "86917145"
 |3|Update|Ligne avant la mise à jour (disponible uniquement en cas d’utilisation du mode de capture de données modifiées **Tout avec les anciennes valeurs** )|  
 |4|Update|Ligne après la mise à jour (suit avant la mise à jour)|  
 |5|Update|Ligne de fusion (disponible uniquement en cas d’utilisation du mode de capture de données modifiées **Net avec fusion** )|  
-|Autres|Error||  
+|Autre|Error||  
   
  Vous pouvez utiliser le séparateur pour vous connecter aux sorties INSERT, DELETE et UPDATE afin d'effectuer d'autres opérations de traitement.  
   

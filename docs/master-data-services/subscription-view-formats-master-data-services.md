@@ -1,4 +1,5 @@
 ---
+description: Formats de vue d'abonnement (Master Data Services)
 title: Formats de vue d'abonnement
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: ac58c9c1edfce6b02f48c31e220d37d842b18527
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812314"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456733"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Formats de vue d'abonnement (Master Data Services)
 

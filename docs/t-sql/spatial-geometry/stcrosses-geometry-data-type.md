@@ -1,4 +1,5 @@
 ---
+description: STCrosses (type de données geometry)
 title: STCrosses (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3e3fc065-555a-4bee-8b71-e92f3dc62a4f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: ec1a8795b6f54a9c4380ab42ddc2bfc341775556
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b7294db9b86f9a356fa7834b89642ec0b1653866
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458934"
 ---
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (type de données geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Retourne 1 si une instance **geometry** croise une autre instance **geometry**.
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Deux instances **geometry** se croisent si les deux conditions suivantes sont vraies :  
   
 -   L’intersection des deux instances **geometry** génère une géométrie dont les dimensions sont inférieures à la dimension maximale des instances **geometry** source.  

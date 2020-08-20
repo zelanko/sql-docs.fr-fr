@@ -1,4 +1,5 @@
 ---
+description: Taille d’affichage
 title: Taille d’affichage | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 578bf0cbdf2dd1dbd06dd4a248f4efa5eb839916
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 747c2076c528df8c312c9b3ed45e45a165299d59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456584"
 ---
 # <a name="display-size"></a>Taille d’affichage
 La taille d’affichage d’une colonne est le nombre maximal de caractères nécessaires pour afficher les données sous forme de caractère. Le tableau suivant définit la taille d’affichage pour chaque type de données SQL ODBC.  

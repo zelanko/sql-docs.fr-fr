@@ -1,4 +1,5 @@
 ---
+description: Transformations Integration Services
 title: Transformations Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ff200828c1204d15f648ec783fe720d86ac22dd1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1952a15280f2e1779ddc0c53828dd0801acb3827
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457261"
 ---
 # <a name="integration-services-transformations"></a>Transformations Integration Services
 
@@ -41,7 +42,7 @@ ms.locfileid: "86919245"
 |Transformation|Description|  
 |--------------------|-----------------|  
 |[Transformation de dimension à variation lente](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Transformation qui configure la mise à jour d'une dimension à variation lente.|  
-|[Transformation de regroupement probable](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Transformation qui normalise les valeurs en données de colonne.|  
+|[Transformation de regroupement approximatif](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Transformation qui normalise les valeurs en données de colonne.|  
 |[Transformation de recherche floue](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)|Transformation qui recherche des valeurs dans une table de référence au moyen d'une correspondance approximative.|  
 |[Transformation d'extraction de terme](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)|Transformation qui extrait des termes à partir du texte.|  
 |[Transformation de recherche de terme](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)|Transformation qui recherche des termes dans une table de référence et compte les termes extraits à partir du texte.|  

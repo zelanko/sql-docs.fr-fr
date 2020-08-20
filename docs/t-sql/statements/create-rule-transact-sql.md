@@ -1,4 +1,5 @@
 ---
+description: CREATE RULE (Transact-SQL)
 title: CREATE RULE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72029c32440feac5d69e015a060d92bd204ec4f6
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 2615c5d5d75191067d64d7c562f50b330dfdc830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458769"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -77,7 +78,7 @@ AS condition_expression
 ## <a name="remarks"></a>Notes  
  L'instruction CREATE RULE ne peut pas s'utiliser conjointement avec d'autres instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un même traitement. Les règles ne s'appliquent pas aux données qui existent déjà dans la base de données au moment de leur création et elles ne peuvent pas être liées aux types de données système.  
   
- Une règle ne peut être créée que dans la base de données actuelle. Après la création de la règle, exécutez **sp_bindrule** pour la lier à une colonne ou à un type de données alias. Une règle doit être compatible avec le type de données de la colonne. Par exemple, « \@value LIKE A% » ne peut pas servir de règle pour une colonne numérique. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
+ Une règle ne peut être créée que dans la base de données actuelle. Après la création de la règle, exécutez **sp_bindrule** pour la lier à une colonne ou à un type de données alias. Une règle doit être compatible avec le type de données de la colonne. Par exemple, « \@value LIKE A% » ne peut pas servir de règle pour une colonne numérique. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
   
  Délimitez les constantes de type caractère et date par des apostrophes droites (') et faites précéder les constantes binaires de 0x. Si la règle n’est pas compatible avec la colonne à laquelle elle est liée, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retourne un message d’erreur lors de l’insertion d’une valeur, mais pas au moment de la liaison de la règle.  
   

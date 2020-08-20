@@ -1,4 +1,5 @@
 ---
+description: (Modulo) (expression SSIS)
 title: (Modulo) (expression SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4065651c097d4cf9d2671ac486f294d7884b43a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 14ea6b261c63b06d5e6b3fbeb77822c0d3c6836f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457205"
 ---
 # <a name="modulo-ssis-expression"></a>(Modulo) (expression SSIS)
 
@@ -46,7 +47,7 @@ dividend % divisor
 ## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les valeurs des deux expressions doivent s'évaluer à des types de données entier signé ou non signé.  
   
  Si l'un des opérandes est NULL, le résultat est NULL.  
@@ -78,7 +79,7 @@ SalesQuota % 12
 @Value % 2 == 0? "even":"odd"  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

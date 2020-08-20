@@ -1,4 +1,5 @@
 ---
+description: Destination d’objet blob Azure
 title: Azure Blob Destination | Microsoft Docs
 ms.custom: ''
 ms.date: 07/25/2016
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3463ccc985330dedb399ccf3a9071681d2f4f302
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2f7db713ef6aa1c18c3506a842624bfd514c4807
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457499"
 ---
 # <a name="azure-blob-destination"></a>Destination d’objet blob Azure
 
@@ -31,7 +32,7 @@ ms.locfileid: "86918868"
   
  **Destination d’objet Blob Azure** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
-1.  Dans le champ **Gestionnaire de connexions Azure Storage** , spécifiez un gestionnaire de connexions Azure Storage existant ou créez-en un qui fera référence à un compte Azure Storage.  
+1.  Dans le champ **Gestionnaire de connexions du Stockage Azure**, spécifiez un gestionnaire de connexions du Stockage Azure existant ou créez-en un qui fera référence à un compte de Stockage Azure.  
   
 2.  Dans le champ **Nom du conteneur d’objets blob** , spécifiez le nom du conteneur d’objets blob qui contient les fichiers sources.  
   

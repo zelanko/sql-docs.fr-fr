@@ -1,4 +1,5 @@
 ---
+description: 'SSIS : comment créer un package ETL'
 title: SSIS Guide pratique pour créer un package ETL | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d0365939d33b1ef6e0a4c179cdedddb4c3981763
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f83cb45dc060bc2877cf316e4d19baa073a9e6e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457029"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS : comment créer un package ETL
 
@@ -41,12 +42,12 @@ Quand vous installez les exemples de données utilisés par le didacticiel, vous
 ## <a name="what-you-learn"></a>Contenu du didacticiel  
 Le meilleur moyen de se familiariser avec les nouveaux outils et les nouvelles commandes et fonctionnalités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est de les utiliser. Ce didacticiel vous guide dans le Concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer un package ETL simple qui inclut le bouclage, des configurations, la logique du flux des erreurs et la journalisation.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Ce tutoriel s’adresse aux utilisateurs qui sont familiers avec les principales opérations de base de données, mais qui ont une connaissance limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
 Pour exécuter ce tutoriel, les composants suivants doivent être installés :  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour installer SQL Server et SSIS, consultez [Installer Integration Services](install-windows/install-integration-services.md).
+-   Voir [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour installer SQL Server et SSIS, consultez [Installer Integration Services](install-windows/install-integration-services.md).
 
 -   L’exemple de base de données **AdventureWorksDW2012**. Pour télécharger la base de données **AdventureWorksDW2012**, téléchargez `AdventureWorksDW2012.bak` à partir des [exemples de bases de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) et restaurez la sauvegarde.  
 

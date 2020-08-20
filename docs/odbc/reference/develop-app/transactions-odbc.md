@@ -1,4 +1,5 @@
 ---
+description: Transactions dans ODBC
 title: ODBC de transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a40c34b2abeb346c7a718994ba2484bfc728e2b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c40c51fa2b0154d90d5ea08952266997d175e3e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456423"
 ---
 # <a name="transactions-odbc"></a>Transactions dans ODBC
 Une *transaction* est une unité de travail qui s’effectue comme une opération atomique unique ; autrement dit, l’opération réussit ou échoue dans son ensemble. Par exemple, envisagez de transférer de l’argent d’un compte bancaire vers un autre. Cela implique deux étapes : le retrait de l’argent du premier compte et sa remise dans la seconde. Il est important que les deux étapes se déroulent correctement. Il n’est pas acceptable qu’une étape réussisse et que l’autre échoue. Une base de données qui prend en charge les transactions est en mesure de le garantir.  

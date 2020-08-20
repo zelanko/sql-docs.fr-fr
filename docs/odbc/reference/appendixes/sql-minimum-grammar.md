@@ -1,4 +1,5 @@
 ---
+description: Grammaire minimale de SQL
 title: Grammaire minimale SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 20eee34feadb8e3140f25019ec6b0d036ff02e14
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07adcbb100fa28a941be4fdac6efabb445ffb9ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456562"
 ---
 # <a name="sql-minimum-grammar"></a>Grammaire minimale de SQL
 Cette section décrit la syntaxe SQL minimale qu’un pilote ODBC doit prendre en charge. La syntaxe décrite dans cette section est un sous-ensemble de la syntaxe de niveau d’entrée de SQL-92.  
@@ -85,7 +86,7 @@ Cette section décrit la syntaxe SQL minimale qu’un pilote ODBC doit prendre e
   
 -   [Éléments utilisés dans les instructions SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)  
   
--   [Prise en charge du type de données](../../../odbc/reference/appendixes/data-type-support.md)  
+-   [Prise en charge des types de données](../../../odbc/reference/appendixes/data-type-support.md)  
   
 -   [Types de données de paramètre](../../../odbc/reference/appendixes/parameter-data-types.md)  
   
