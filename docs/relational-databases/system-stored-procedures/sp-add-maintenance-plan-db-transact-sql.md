@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan_db (Transact-SQL)
 title: sp_add_maintenance_plan_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8b3f28d23925e76383b30a82e907394e05b2b7ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d8369e3cdd8ad7d7c943e715361cbd26d99bb00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879736"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474616"
 ---
 # <a name="sp_add_maintenance_plan_db-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85879736"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,9 +46,9 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @plan_id = ] 'plan_id'`Spécifie l’ID de plan du plan de maintenance. *plan_id* est de type **uniqueidentifier**et doit être un ID valide.  
+`[ @plan_id = ] 'plan_id'` Spécifie l’ID de plan du plan de maintenance. *plan_id* est de type **uniqueidentifier**et doit être un ID valide.  
   
-`[ @db_name = ] 'database_name'`Spécifie le nom de la base de données à ajouter au plan de maintenance. La base de données doit être créée ou exister au préalable, avant d'être ajoutée au plan. *database_name* est de type **sysname**.  
+`[ @db_name = ] 'database_name'` Spécifie le nom de la base de données à ajouter au plan de maintenance. La base de données doit être créée ou exister au préalable, avant d'être ajoutée au plan. *database_name* est de type **sysname**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

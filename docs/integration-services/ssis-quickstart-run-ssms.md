@@ -1,4 +1,5 @@
 ---
+description: Exécuter un package SSIS avec SQL Server Management Studio (SSMS)
 title: Exécuter un package SSIS avec SSMS | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e89ca342011010eebb330eb20319a2bf9a8d9ba
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d884f38d93d7e79094fd1e2074e92e37050ddfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477239"
 ---
 # <a name="run-an-ssis-package-with-sql-server-management-studio-ssms"></a>Exécuter un package SSIS avec SQL Server Management Studio (SSMS)
 
@@ -24,7 +25,7 @@ Ce guide de démarrage rapide montre comment utiliser SQL Server Management Stud
 
 SQL Server Management Studio est un environnement intégré pour la gestion des infrastructures SQL, de SQL Server à SQL Database. Pour plus d’informations sur SSMS, consultez [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Conditions préalables
 
 Avant de commencer, vérifiez que vous disposez de la dernière version de SQL Server Management Studio (SSMS). Pour télécharger SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
@@ -75,7 +76,7 @@ Utilisez SQL Server Management Studio pour établir une connexion au catalogue S
 
 2. Cliquez avec le bouton droit et sélectionnez **Exécuter**. La boîte de dialogue **Exécuter le package** s’ouvre.
 
-3.  Configurez l’exécution du package à l’aide des paramètres sous les onglets **Paramètres**, **Gestionnaires de connexions** et **Avancé** de la boîte de dialogue Exécuter le package.
+3.  Configurez l’exécution du package à l’aide des paramètres sous les onglets **Paramètres**, **Gestionnaires de connexions**et **Avancé** de la boîte de dialogue Exécuter le package .
 
 4.  Cliquez sur OK pour exécuter le package.
 

@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_dms_external_work (Transact-SQL)
 title: sys. dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,17 +13,17 @@ ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f87d950f4fe876e6b04e1df1f529d22126058113
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 8633a363aa6ba486be4113bdf4826f2dc2e1a579
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474801"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys. dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]vue système qui contient des informations sur toutes les étapes du service de déplacement des données (DMS) pour les opérations externes.  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] vue système qui contient des informations sur toutes les étapes du service de déplacement des données (DMS) pour les opérations externes.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
@@ -30,7 +31,7 @@ ms.locfileid: "86197132"
 |step_index|**int**|Étape de requête qui appelle ce Worker DMS.<br /><br /> request_id, step_index et dms_step_index forment la clé de cette vue.|Identique à step_index dans [sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Étape actuelle dans le plan DMS.<br /><br /> request_id, step_index et dms_step_index forment la clé de cette vue.|Identique à dms___step_index dans [sys. dm_pdw_dms_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Nœud qui exécute le processus de travail DMS.|Identique à node_id dans [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|Type|**nvarchar(60)**|Type d’opération externe en cours d’exécution par ce nœud.<br /><br /> Le FRACTIONNEment de fichier est une opération sur un fichier Hadoop externe qui a été fractionné en plusieurs petites opérations.|'FICHIER FRACTIONNÉ'|  
+|type|**nvarchar(60)**|Type d’opération externe en cours d’exécution par ce nœud.<br /><br /> Le FRACTIONNEment de fichier est une opération sur un fichier Hadoop externe qui a été fractionné en plusieurs petites opérations.|'FICHIER FRACTIONNÉ'|  
 |work_id|**int**|ID de fractionnement de fichier.|Supérieur ou égal à 0.<br /><br /> Unique par nœud de calcul.|  
 |input_name|**nvarchar(60)**|Nom de chaîne de l’entrée en cours de lecture.|Pour un fichier Hadoop, il s’agit du nom de fichier Hadoop.|  
 |read_location|**bigint**|Décalage de l’emplacement de lecture.||  
@@ -44,6 +45,6 @@ ms.locfileid: "86197132"
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section métadonnées dans la rubrique [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues système &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Vues système &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

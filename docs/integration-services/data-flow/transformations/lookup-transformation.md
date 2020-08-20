@@ -1,4 +1,5 @@
 ---
+description: Transformation de recherche
 title: Recherche, transformation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b1c65cf892c36f04ac0669d5e011c6c54c434c09
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c37948d8af3aac4b78055f50e29aeb88f238bab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477696"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
 
@@ -61,7 +62,7 @@ ms.locfileid: "86919277"
   
 -   DB2  
   
- La transformation de recherche essaie de réaliser une équijointure entre les valeurs de l'entrée de transformation et celles du dataset de référence. (Une équijointure signifie que chaque ligne de l'entrée de transformation doit correspondre à au moins une ligne du dataset de référence.) Si une équijointure n'est pas possible, la transformation de recherche effectue l'une des actions suivantes :  
+ La transformation de recherche essaie de réaliser une équijointure entre les valeurs de l'entrée de transformation et celles du dataset de référence. (Une équijointure signifie que chaque ligne de l'entrée de transformation doit correspondre à au moins une ligne du dataset de référence.) Si une équijointure n'est pas possible, la transformation de recherche effectue l'une des actions suivantes :  
   
 -   En l'absence d'entrée correspondante dans le dataset de référence, aucune jointure n'est réalisée. Par défaut, la transformation de recherche traite les lignes sans entrées correspondantes comme des erreurs. Toutefois, vous pouvez configurer la transformation de recherche pour rediriger ces lignes vers une sortie sans correspondance.  
   
@@ -134,11 +135,11 @@ ms.locfileid: "86919277"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Vidéo, [Guide pratique pour Implémenter une transformation de recherche en mode Cache complet](https://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
+-   Vidéo, [Procédure : implémenter une transformation de recherche en mode Cache complet](https://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
   
 -   Billet de blog, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bonnes pratiques pour l’utilisation des modes de cache de transformation de recherche), sur blogs.msdn.com  
   
--   Billet de blog, [Modèle de recherche : respect de la casse](https://go.microsoft.com/fwlink/?LinkId=157782), sur blogs.msdn.com  
+-   Billet de blog, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782)(Modèle de recherche : non-respect de la casse), sur blogs.msdn.com  
   
 -   Exemple, [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)(Transformation de recherche), sur msftisprodsamples.codeplex.com.  
   

@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLDriverConnect
 title: Fonction SQLDriverConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 88ec70d68b46beca97fd6b0d758e21aab5d4f4b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476142"
 ---
 # <a name="sqldriverconnect-function"></a>Fonction SQLDriverConnect
 **Conformité**  
@@ -82,7 +83,7 @@ SQLRETURN SQLDriverConnect(
  Entrée Longueur de la mémoire tampon **OutConnectionString* , en caractères.  
   
  *StringLength2Ptr*  
- Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à \*retourner dans *OutConnectionString*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength*, la chaîne de connexion terminée dans \* *OutConnectionString* est tronquée à *BufferLength* moins la longueur d’un caractère de fin null.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à retourner dans \* *OutConnectionString*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength*, la chaîne de connexion terminée dans \* *OutConnectionString* est tronquée à *BufferLength* moins la longueur d’un caractère de fin null.  
   
  *DriverCompletion*  
  Entrée Indicateur qui spécifie si le gestionnaire de pilotes ou le pilote doit demander des informations supplémentaires sur la connexion :  
@@ -100,17 +101,17 @@ SQLRETURN SQLDriverConnect(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01004|Données de chaîne, tronquées à droite|Le \* *OutConnectionString* de mémoire tampon n’est pas assez grand pour retourner la chaîne de connexion entière, donc la chaîne de connexion a été tronquée. La longueur de la chaîne de connexion non tronquée est retournée dans **StringLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01004|Données de chaîne, tronquées à droite|Le OutConnectionString de mémoire tampon \* *OutConnectionString* n’est pas assez grand pour retourner la chaîne de connexion entière, donc la chaîne de connexion a été tronquée. La longueur de la chaîne de connexion non tronquée est retournée dans **StringLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01S00|Attribut de chaîne de connexion non valide|Un mot clé d’attribut non valide a été spécifié dans la chaîne de connexion (*InConnectionString*), mais le pilote a pu se connecter à la source de données. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01S02 ne|Valeur d’option modifiée|Le pilote ne prenait pas en charge la valeur spécifiée pointée par l’argument *ValuePtr* dans **SQLSetConnectAttr** et substituait une valeur similaire. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01S08|Erreur lors de l’enregistrement du fichier DSN|La chaîne dans * \*InConnectionString* contenait un mot clé **FILEDSN** , mais le fichier. DSN n’a pas été enregistré. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01S09|Mot clé non valide|(DM) la chaîne dans * \*InConnectionString* contenait un mot clé **SaveFile** , mais pas un mot clé de **pilote** ou **FILEDSN** . (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S08|Erreur lors de l’enregistrement du fichier DSN|La chaîne dans * \* InConnectionString* contenait un mot clé **FILEDSN** , mais le fichier. DSN n’a pas été enregistré. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S09|Mot clé non valide|(DM) la chaîne dans * \* InConnectionString* contenait un mot clé **SaveFile** , mais pas un mot clé de **pilote** ou **FILEDSN** . (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |08001|Le client ne peut pas établir la connexion|Le pilote n’a pas pu établir une connexion avec la source de données.|  
 |08002|Nom de connexion en cours d’utilisation|(DM) le *ConnectionHandle* spécifié a déjà été utilisé pour établir une connexion avec une source de données, et la connexion était toujours ouverte.|  
 |08004|Le serveur a rejeté la connexion|La source de données a rejeté l’établissement de la connexion pour des raisons définies par l’implémentation.|  
 |08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote essayait de se connecter a échoué avant la fin du traitement de la fonction **SQLDriverConnect** .|  
 |28000|Spécification d’autorisation non valide|Soit l’identificateur d’utilisateur, soit la chaîne d’autorisation, ou les deux, comme spécifié dans la chaîne de connexion (*InConnectionString*), des restrictions non respectées sont définies par la source de données.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon szMessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* szMessageText* décrit l’erreur et sa cause.|  
 |HY000|Erreur générale : nom de source de fichier non valide|(DM) la chaîne dans **InConnectionString* contenait un mot clé FileDSN, mais le nom du fichier. DSN est introuvable.|  
 |HY000|Erreur générale : impossible de créer le tampon de fichier|(DM) la chaîne dans **InConnectionString* contenait un mot clé FileDSN, mais le fichier. DSN était illisible.|  
 |HY001|Erreur d’allocation de mémoire|Le gestionnaire de pilotes n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou la fin de la fonction **SQLDriverConnect** .<br /><br /> Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
@@ -134,7 +135,7 @@ SQLRETURN SQLDriverConnect(
 |IM009|Impossible de charger la DLL de traduction|Le pilote n’a pas pu charger la DLL de traduction spécifiée pour la source de données ou pour la connexion.|  
 |IM010|Le nom de la source de données est trop long|(DM) la valeur de l’attribut du mot clé DSN était supérieure à SQL_MAX_DSN_LENGTH caractères.|  
 |IM011|Le nom du pilote est trop long|(DM) la valeur de l’attribut du mot clé **Driver** était supérieure à 255 caractères.|  
-|IM012|Erreur de syntaxe du mot clé du pilote|(DM) la paire mot clé-valeur pour le mot clé **Driver** contenait une erreur de syntaxe.<br /><br /> (DM) la chaîne contenue dans * \*InConnectionString* contenait un mot clé **FILEDSN** , mais le fichier. DSN ne contenait pas de mot clé de **pilote** ou de mot clé **DSN** .|  
+|IM012|Erreur de syntaxe du mot clé du pilote|(DM) la paire mot clé-valeur pour le mot clé **Driver** contenait une erreur de syntaxe.<br /><br /> (DM) la chaîne contenue dans * \* InConnectionString* contenait un mot clé **FILEDSN** , mais le fichier. DSN ne contenait pas de mot clé de **pilote** ou de mot clé **DSN** .|  
 |IM014|Le nom de source de donnée spécifié contient une incompatibilité d’architecture entre le pilote et l’application|(DM) l’application 32 bits utilise un DSN se connectant à un pilote 64 bits ; ou vice versa.|  
 |IM015|Échec du SQLDriverConnect du pilote sur SQL_HANDLE_DBC_INFO_HANDLE|Si un pilote retourne SQL_ERROR, le gestionnaire de pilotes renverra SQL_ERROR à l’application et la connexion échouera.<br /><br /> Pour plus d’informations sur la SQL_HANDLE_DBC_INFO_TOKEN, consultez [développement de la reconnaissance des pools de connexions dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|L’interrogation est désactivée en mode de notification asynchrone|Chaque fois que le modèle de notification est utilisé, l’interrogation est désactivée.|  
@@ -146,7 +147,7 @@ SQLRETURN SQLDriverConnect(
   
  *Connection-String* :: = *Empty-String*[;] &#124; *attribut*[;] &#124; *attribut*; *chaîne de connexion*  
   
- *Empty-String* :: =*attribute* :: = *attribute-Keyword*=*attribute-value* &#124; Driver = [{]*attribute-value*[}]  
+ *Empty-String* :: =*attribute* :: = *attribute-Keyword* = *attribute-value* &#124; Driver = [{]*attribute-value*[}]  
   
  *attribute-Keyword* :: = DSN &#124; UID &#124; pwd &#124; *attribute-defined-Keyword*  
   
@@ -156,11 +157,11 @@ SQLRETURN SQLDriverConnect(
   
  où *Character-String* comporte zéro caractère ou plus ; l' *identificateur* comporte un ou plusieurs caractères ; *attribute-Keyword* ne respecte pas la casse ; *attribute-value* peut être sensible à la casse ; et la valeur du mot clé **DSN** ne se compose pas uniquement d’espaces blancs.  
   
- En raison de la grammaire des fichiers de chaîne de connexion et d’initialisation, les mots clés et les valeurs d’attribut qui contiennent les caractères **[]{}(),;? = \*! @** les accolades ne doivent pas être mises entre accolades. La valeur du mot clé **DSN** ne peut pas se composer uniquement d’espaces blancs et ne doit pas contenir d’espaces à gauche. En raison de la grammaire des informations système, les mots clés et les noms de sources de données\\ne peuvent pas contenir de barre oblique inverse ().  
+ En raison de la grammaire des fichiers de chaîne de connexion et d’initialisation, les mots clés et les valeurs d’attribut qui contiennent les caractères **[] {} (),;? \* = ! @** les accolades ne doivent pas être mises entre accolades. La valeur du mot clé **DSN** ne peut pas se composer uniquement d’espaces blancs et ne doit pas contenir d’espaces à gauche. En raison de la grammaire des informations système, les mots clés et les noms de sources de données ne peuvent pas contenir de barre oblique inverse ( \\ ).  
   
  Les applications n’ont pas besoin d’ajouter des accolades autour de la valeur d’attribut après le mot clé **Driver** , à moins que l’attribut contienne un point-virgule (;), auquel cas les accolades sont requises. Si la valeur d’attribut que le pilote reçoit comprend des accolades, le pilote ne doit pas les supprimer, mais il doit faire partie de la chaîne de connexion retournée.  
   
- Une valeur de chaîne de DSN ou de connexion placée entre{}accolades () contenant l’un des caractères **[]{}(),;? = \*! @** est passé intact au pilote. Toutefois, lorsque vous utilisez ces caractères dans un mot clé, le gestionnaire de pilotes retourne une erreur lors de l’utilisation de fichiers DSN, mais transmet la chaîne de connexion au pilote pour les chaînes de connexion standard. Évitez d’utiliser des accolades incorporées dans une valeur de mot clé.  
+ Une valeur de chaîne de DSN ou de connexion placée entre accolades ( {} ) contenant l’un des caractères **[] {} (),;? \* = ! @** est passé intact au pilote. Toutefois, lorsque vous utilisez ces caractères dans un mot clé, le gestionnaire de pilotes retourne une erreur lors de l’utilisation de fichiers DSN, mais transmet la chaîne de connexion au pilote pour les chaînes de connexion standard. Évitez d’utiliser des accolades incorporées dans une valeur de mot clé.  
   
  La chaîne de connexion peut inclure un nombre quelconque de mots clés définis par le pilote. Étant donné que le mot clé **Driver** n’utilise pas les informations des informations système, le pilote doit définir suffisamment de mots clés pour qu’un pilote puisse se connecter à une source de données en utilisant uniquement les informations contenues dans la chaîne de connexion. (Pour plus d’informations, consultez « Instructions relatives aux pilotes », plus loin dans cette section.) Le pilote définit les mots clés requis pour la connexion à la source de données.  
   
@@ -226,7 +227,7 @@ SQLRETURN SQLDriverConnect(
   
     -   Dans la nouvelle chaîne de connexion, le mot clé **FILEDSN** est éliminé.  
   
-4.  Charge le pilote en recherchant dans l’entrée de Registre HKEY_LOCAL_MACHINE \SOFTWARE\ODBC\ODBCINST. INI\\<nom\>du pilote \Driver. \<où le nom du pilote> est spécifié par le mot clé **Driver** .  
+4.  Charge le pilote en recherchant dans l’entrée de Registre HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI\\<nom du pilote \> \Driver. où \<Driver Name> est spécifié par le mot clé **Driver** .  
   
 5.  Transmet au pilote la nouvelle chaîne de connexion.  
   
@@ -258,11 +259,11 @@ SQLRETURN SQLDriverConnect(
   
 -   SQL_DRIVER_PROMPT : le pilote affiche une boîte de dialogue, en utilisant les valeurs de la chaîne de connexion et les informations système (le cas échéant) comme valeurs initiales. Lorsque l’utilisateur quitte la boîte de dialogue, le pilote se connecte à la source de données. Il construit également une chaîne de connexion à partir de la valeur du mot clé **DSN** ou **Driver** dans \* *InConnectionString* , ainsi que les informations retournées par la boîte de dialogue. Il place cette chaîne de connexion dans la mémoire tampon **OutConnectionString* .  
   
--   SQL_DRIVER_COMPLETE ou SQL_DRIVER_COMPLETE_REQUIRED : si la chaîne de connexion contient suffisamment d’informations et que ces informations sont correctes, le pilote se connecte à \*la source de données et copie *InConnectionString* vers \* *OutConnectionString*. Si des informations sont manquantes ou incorrectes, le pilote effectue les mêmes actions que lorsque *DriverCompletion* est SQL_DRIVER_PROMPT, sauf que si *DriverCompletion* est SQL_DRIVER_COMPLETE_REQUIRED, le pilote désactive les contrôles pour toute information non requise pour la connexion à la source de données.  
+-   SQL_DRIVER_COMPLETE ou SQL_DRIVER_COMPLETE_REQUIRED : si la chaîne de connexion contient suffisamment d’informations et que ces informations sont correctes, le pilote se connecte à la source de données et copie \* *InConnectionString* vers \* *OutConnectionString*. Si des informations sont manquantes ou incorrectes, le pilote effectue les mêmes actions que lorsque *DriverCompletion* est SQL_DRIVER_PROMPT, sauf que si *DriverCompletion* est SQL_DRIVER_COMPLETE_REQUIRED, le pilote désactive les contrôles pour toute information non requise pour la connexion à la source de données.  
   
--   SQL_DRIVER_NOPROMPT : si la chaîne de connexion contient suffisamment d’informations, le pilote se connecte à la \*source de données et copie *InConnectionString* vers \* *OutConnectionString*. Dans le cas contraire, le pilote retourne SQL_ERROR pour **SQLDriverConnect**.  
+-   SQL_DRIVER_NOPROMPT : si la chaîne de connexion contient suffisamment d’informations, le pilote se connecte à la source de données et copie \* *InConnectionString* vers \* *OutConnectionString*. Dans le cas contraire, le pilote retourne SQL_ERROR pour **SQLDriverConnect**.  
   
- En cas de connexion réussie à la source de données, le \*pilote définit également *StringLength2Ptr* sur la longueur de la chaîne de connexion de sortie qui est disponible pour retourner dans **OutConnectionString*.  
+ En cas de connexion réussie à la source de données, le pilote définit également \* *StringLength2Ptr* sur la longueur de la chaîne de connexion de sortie qui est disponible pour retourner dans **OutConnectionString*.  
   
  Si l’utilisateur annule une boîte de dialogue présentée par le gestionnaire de pilotes ou le pilote, **SQLDriverConnect** retourne SQL_NO_DATA.  
   
@@ -360,7 +361,7 @@ int main() {
 |---------------------------|---------|  
 |Allocation d’un descripteur|[SQLAllocHandle, fonction](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Découverte et énumération des valeurs requises pour se connecter à une source de données|[Fonction SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|Connexion à une source de données|[Fonction SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
+|Connexion à une source de données|[SQLConnect, fonction](../../../odbc/reference/syntax/sqlconnect-function.md)|  
 |Déconnexion d’une source de données|[SQLDisconnect, fonction](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
 |Renvoi des descriptions et des attributs des pilotes|[SQLDrivers, fonction](../../../odbc/reference/syntax/sqldrivers-function.md)|  
 |Libération d’un descripteur|[Fonction SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  

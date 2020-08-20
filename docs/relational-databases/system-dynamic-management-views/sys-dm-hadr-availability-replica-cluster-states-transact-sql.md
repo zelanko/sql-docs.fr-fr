@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 title: sys. dm_hadr_availability_replica_cluster_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d228cb59a2bd0bff98715e0ae273217c8b57b30
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b67e5b7fac99d7bde0bd6ae6f97fb286e4d334cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474831"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85764359"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Identificateur unique du réplica de disponibilité.|  
-|**replica_server_name**|**nvarchar(256)**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le réplica.|  
+|**replica_server_name**|**nvarchar (256)**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le réplica.|  
 |**group_id**|**uniqueidentifier**|Identificateur unique du groupe de disponibilité.|  
 |**join_state**|**tinyint**|0 = Non attachée<br /><br /> 1 = joint, autonome<br /><br /> 2 = Instance de cluster de basculement attachée|  
 |**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  

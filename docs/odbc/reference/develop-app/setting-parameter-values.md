@@ -1,4 +1,5 @@
 ---
+description: Définition de valeurs de paramètres
 title: Définition des valeurs des paramètres | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 923fd57f4308fb72aca2f829ccb9d7b884c12546
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af2992ea66601ec0ae4804e327863e6abb285d73
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299829"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476421"
 ---
 # <a name="setting-parameter-values"></a>Définition de valeurs de paramètres
 Pour définir la valeur d’un paramètre, l’application définit simplement la valeur de la variable liée au paramètre. Elle n’est pas importante lorsque cette valeur est définie, à condition qu’elle soit définie avant l’exécution de l’instruction. L’application peut définir la valeur avant ou après la liaison de la variable, et elle peut modifier la valeur autant de fois qu’elle le souhaite. Lorsque l’instruction est exécutée, le pilote récupère simplement la valeur actuelle de la variable. Cela s’avère particulièrement utile quand une instruction préparée est exécutée plusieurs fois. l’application définit de nouvelles valeurs pour une partie ou l’ensemble des variables chaque fois que l’instruction est exécutée. Pour obtenir un exemple, consultez [Exécution préparée](../../../odbc/reference/develop-app/prepared-execution-odbc.md), plus haut dans cette section.  

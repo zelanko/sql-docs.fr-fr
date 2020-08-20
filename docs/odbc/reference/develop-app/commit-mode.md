@@ -1,4 +1,5 @@
 ---
+description: Mode de validation
 title: Mode de validation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0bdff581ed20ffd2768f4ebd2a033476873dcfec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9e04e4dff8a5b4a5658aa5228f39e9926369c15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476791"
 ---
 # <a name="commit-mode"></a>Mode de validation
 Les transactions dans ODBC peuvent être dans l’un des deux modes : le mode de validation automatique ou le mode de validation manuelle.  

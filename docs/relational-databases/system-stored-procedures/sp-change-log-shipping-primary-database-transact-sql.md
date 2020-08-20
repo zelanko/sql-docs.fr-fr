@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_primary_database (Transact-SQL)
 title: sp_change_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 81a6a9fc318534df9f2ce9c2e89fb978fb15b260
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 070065ae6e621c5ea52bf4be50ac0cc99af089f3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474491"
 ---
 # <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie les paramètres de la base de données primaire.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,15 +51,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @database = ] 'database'`Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
+`[ @database = ] 'database'` Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
   
-`[ @backup_directory = ] 'backup_directory'`Est le chemin d’accès au dossier de sauvegarde sur le serveur principal. *backup_directory* est de type **nvarchar (500)**, sans valeur par défaut et ne peut pas être null.  
+`[ @backup_directory = ] 'backup_directory'` Est le chemin d’accès au dossier de sauvegarde sur le serveur principal. *backup_directory* est de type **nvarchar (500)**, sans valeur par défaut et ne peut pas être null.  
   
-`[ @backup_share = ] 'backup_share'`Est le chemin d’accès réseau au répertoire de sauvegarde sur le serveur principal. *backup_share* est de type **nvarchar (500)**, sans valeur par défaut et ne peut pas être null.  
+`[ @backup_share = ] 'backup_share'` Est le chemin d’accès réseau au répertoire de sauvegarde sur le serveur principal. *backup_share* est de type **nvarchar (500)**, sans valeur par défaut et ne peut pas être null.  
   
-`[ @backup_retention_period = ] 'backup_retention_period'`Durée, en minutes, de conservation du fichier de sauvegarde du journal dans le répertoire de sauvegarde sur le serveur principal. *backup_retention_period* est de **type int**, sans valeur par défaut et ne peut pas avoir la valeur null.  
+`[ @backup_retention_period = ] 'backup_retention_period'` Durée, en minutes, de conservation du fichier de sauvegarde du journal dans le répertoire de sauvegarde sur le serveur principal. *backup_retention_period* est de **type int**, sans valeur par défaut et ne peut pas avoir la valeur null.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`Mode de sécurité utilisé pour se connecter au serveur moniteur.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Mode de sécurité utilisé pour se connecter au serveur moniteur.  
   
  1 = Authentification Windows.  
   
@@ -66,15 +67,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *monitor_server_security_mode* est de type **bit** et ne peut pas être null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Nom d’utilisateur du compte utilisé pour accéder au serveur moniteur.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Nom d’utilisateur du compte utilisé pour accéder au serveur moniteur.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Mot de passe du compte utilisé pour accéder au serveur moniteur.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Mot de passe du compte utilisé pour accéder au serveur moniteur.  
   
-`[ @backup_threshold = ] 'backup_threshold'`Durée, en minutes, après la dernière sauvegarde avant qu’une erreur de *threshold_alert* ne soit générée. *backup_threshold* est de **type int**, avec une valeur par défaut de 60 minutes.  
+`[ @backup_threshold = ] 'backup_threshold'` Durée, en minutes, après la dernière sauvegarde avant qu’une erreur de *threshold_alert* ne soit générée. *backup_threshold* est de **type int**, avec une valeur par défaut de 60 minutes.  
   
-`[ @threshold_alert = ] 'threshold_alert'`Alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert* est de **type int** et ne peut pas avoir la valeur null.  
+`[ @threshold_alert = ] 'threshold_alert'` Alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert* est de **type int** et ne peut pas avoir la valeur null.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Spécifie si une alerte est déclenchée lorsque *backup_threshold* est dépassé.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Spécifie si une alerte est déclenchée lorsque *backup_threshold* est dépassé.  
   
  1 = Activé.  
   
@@ -82,15 +83,15 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  *threshold_alert_enabled* est de type **bit** et ne peut pas être null.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est de **type int**. La valeur 14420 est utilisée si aucun n’est spécifié.  
+`[ @history_retention_period = ] 'history_retention_period'` Durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est de **type int**. La valeur 14420 est utilisée si aucun n’est spécifié.  
   
-`[ @backup_compression = ] backup_compression_option`Spécifie si une configuration d’envoi de journaux utilise la [compression de sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ce paramètre est pris en charge uniquement dans le [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou une version ultérieure).  
+`[ @backup_compression = ] backup_compression_option` Spécifie si une configuration d’envoi de journaux utilise la [compression de sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ce paramètre est pris en charge uniquement dans le [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou une version ultérieure).  
   
  0 = Désactivées. Ne jamais compresser des sauvegardes de journal.  
   
  1 = Activé. Toujours compresser des sauvegardes de journal.  
   
- 2 = utiliser le paramètre de la [vue ou configurer l’option de configuration de serveur compression de la sauvegarde par défaut](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Il s’agit de la valeur par défaut.  
+ 2 = utiliser le paramètre de la [vue ou configurer l’option de configuration de serveur compression de la sauvegarde par défaut](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -129,7 +130,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
   
 ## <a name="see-also"></a>Voir aussi  
  [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

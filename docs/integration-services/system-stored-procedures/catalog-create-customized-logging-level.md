@@ -1,4 +1,5 @@
 ---
+description: catalog.create_customized_logging_level
 title: catalog.create_customized_logging_level | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7a3bff065a7a89a1e0708fc5a1d782979652cbd3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7aaf0fb0ccdd285944e5fceaba561bd626317121
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477119"
 ---
 # <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
 
@@ -39,12 +40,12 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  Nom du nouveau niveau de journalisation personnalisée.  
   
- *level_name* est de type **nvarchar(128)** .  
+ *level_name* est de type **nvarchar(128)**.  
   
  [ @level_description = ] *level_description*  
  Description du nouveau niveau de journalisation personnalisée.  
   
- *level_description* est de type **nvarchar(max)** .  
+ *level_description* est de type **nvarchar(max)**.  
   
  [ @profile_value = ] *profile_value*  
  Statistiques que le nouveau niveau de journalisation personnalisée doit journaliser.  
@@ -75,7 +76,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
   
  *level_id* est de type **bigint**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour combiner plusieurs valeurs dans Transact-SQL pour l’argument *profile_value* ou *events_value*, suivez cet exemple. Pour capturer les événements OnError (8) et DiagnosticEx (15), la formule permettant de calculer *events_value* est `2^8 + 2^15 = 33024`.  
   
 ## <a name="return-codes"></a>Codes de retour  

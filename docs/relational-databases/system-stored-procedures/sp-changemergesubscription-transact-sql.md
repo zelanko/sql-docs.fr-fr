@@ -1,4 +1,5 @@
 ---
+description: sp_changemergesubscription (Transact-SQL)
 title: sp_changemergesubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a51ae948e546d616e6fd17a5b37501f112907560
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 388d33f9d812534ecee54dac41cfe7ad852e139d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871856"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474453"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication à modifier. *publication* est de **type sysname**, avec NULL comme valeur par défaut. La publication doit déjà exister et respecter les règles applicables aux identificateurs.  
+`[ @publication = ] 'publication'` Nom de la publication à modifier. *publication* est de **type sysname**, avec NULL comme valeur par défaut. La publication doit déjà exister et respecter les règles applicables aux identificateurs.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné. *Subscriber* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber = ] 'subscriber'` Nom de l’abonné. *Subscriber* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Nom de la base de données d’abonnement. *subscriber_db*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @subscriber_db = ] 'subscriber_db'` Nom de la base de données d’abonnement. *subscriber_db*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @property = ] 'property'`Propriété à modifier pour la publication donnée. *Property* est de **type sysname**et peut prendre l’une des valeurs de la table.  
+`[ @property = ] 'property'` Propriété à modifier pour la publication donnée. *Property* est de **type sysname**et peut prendre l’une des valeurs de la table.  
   
-`[ @value = ] 'value'`Nouvelle valeur de la *propriété*spécifiée. la *valeur* est de type **nvarchar (255)** et peut prendre l’une des valeurs de la table.  
+`[ @value = ] 'value'` Nouvelle valeur de la *propriété*spécifiée. la *valeur* est de type **nvarchar (255)** et peut prendre l’une des valeurs de la table.  
   
 |Propriété|Valeur|Description|  
 |--------------|-----------|-----------------|  
@@ -75,7 +76,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_changemergesubscription** est utilisé dans la réplication de fusion.  
   
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  

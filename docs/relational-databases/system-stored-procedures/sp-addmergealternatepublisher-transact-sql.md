@@ -1,4 +1,5 @@
 ---
+description: sp_addmergealternatepublisher (Transact-SQL)
 title: sp_addmergealternatepublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6ef8e5152fb715172f6c04854e342c46b759f25
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11e06e0dacb97d7c52b34874d90a1398561cc7dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757974"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474511"
 ---
 # <a name="sp_addmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ajoute la possibilité pour un Abonné d'utiliser un partenaire de synchronisation alternatif. Les propriétés de publication doivent spécifier que les Abonnés peuvent opérer des synchronisations avec d'autres serveurs de publication. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,28 +46,28 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @alternate_publisher = ] 'alternate_synchronization_partner'`Nom du serveur de publication de remplacement. *alternate_synchronization_partner* est de **type sysname**, sans valeur par défaut.  
+`[ @alternate_publisher = ] 'alternate_synchronization_partner'` Nom du serveur de publication de remplacement. *alternate_synchronization_partner* est de **type sysname**, sans valeur par défaut.  
   
-`[ @alternate_publisher_db = ] 'alternate_publisher_db'`Nom de la base de données de publication sur le serveur de publication de remplacement. *alternate_publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @alternate_publisher_db = ] 'alternate_publisher_db'` Nom de la base de données de publication sur le serveur de publication de remplacement. *alternate_publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @alternate_publication = ] 'alternate_synchronization_partner'`Nom de la publication sur le partenaire de synchronisation de substitution. *alternate_synchronization_partner* est de **type sysname**, sans valeur par défaut.  
+`[ @alternate_publication = ] 'alternate_synchronization_partner'` Nom de la publication sur le partenaire de synchronisation de substitution. *alternate_synchronization_partner* est de **type sysname**, sans valeur par défaut.  
   
-`[ @alternate_distributor = ] 'alternate_distributor'`Nom du serveur de distribution pour le partenaire de synchronisation de substitution. *alternate_distributor* est de **type sysname**, sans valeur par défaut.  
+`[ @alternate_distributor = ] 'alternate_distributor'` Nom du serveur de distribution pour le partenaire de synchronisation de substitution. *alternate_distributor* est de **type sysname**, sans valeur par défaut.  
   
-`[ @friendly_name = ] 'friendly_name'`Nom complet permettant d’identifier l’Association du serveur de publication, de la publication et du serveur de distribution qui constitue un autre partenaire de synchronisation. *friendly_name* est de type **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @friendly_name = ] 'friendly_name'` Nom complet permettant d’identifier l’Association du serveur de publication, de la publication et du serveur de distribution qui constitue un autre partenaire de synchronisation. *friendly_name* est de type **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_addmergealternatepublisher** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

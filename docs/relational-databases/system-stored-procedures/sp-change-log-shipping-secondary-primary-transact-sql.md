@@ -1,4 +1,5 @@
 ---
+description: sp_change_log_shipping_secondary_primary (Transact-SQL)
 title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 94ee2f67f0f496a5dffc515c0145de127e823863
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b17019380bc65d1b3d2fcdb16352fe32477c6bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85872654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474489"
 ---
 # <a name="sp_change_log_shipping_secondary_primary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie les paramètres de la base de données secondaire.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,25 +48,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @primary_server = ] 'primary_server'`Nom de l’instance principale du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration de la copie des journaux de session. *primary_server* est de **type sysname** et ne peut pas avoir la valeur null.  
+`[ @primary_server = ] 'primary_server'` Nom de l’instance principale du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration de la copie des journaux de session. *primary_server* est de **type sysname** et ne peut pas avoir la valeur null.  
   
-`[ @primary_database = ] 'primary_database'`Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'` Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'`Répertoire où sont stockés les fichiers de sauvegarde du journal des transactions du serveur principal. *backup_source_directory* est de type **nvarchar (500)** et ne peut pas être null.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Répertoire où sont stockés les fichiers de sauvegarde du journal des transactions du serveur principal. *backup_source_directory* est de type **nvarchar (500)** et ne peut pas être null.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'`Répertoire sur le serveur secondaire sur lequel les fichiers de sauvegarde sont copiés. *backup_destination_directory* est de type **nvarchar (500)** et ne peut pas être null.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Répertoire sur le serveur secondaire sur lequel les fichiers de sauvegarde sont copiés. *backup_destination_directory* est de type **nvarchar (500)** et ne peut pas être null.  
   
-`[ @file_retention_period = ] 'file_retention_period'`Durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est de **type int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
+`[ @file_retention_period = ] 'file_retention_period'` Durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est de **type int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`Mode de sécurité utilisé pour se connecter au serveur moniteur.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Mode de sécurité utilisé pour se connecter au serveur moniteur.  
   
  1 = Authentification Windows ;  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification. *monitor_server_security_mode* est de type **bit** et ne peut pas être null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Nom d’utilisateur du compte utilisé pour accéder au serveur moniteur.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Nom d’utilisateur du compte utilisé pour accéder au serveur moniteur.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Mot de passe du compte utilisé pour accéder au serveur moniteur.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Mot de passe du compte utilisé pour accéder au serveur moniteur.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

@@ -1,4 +1,5 @@
 ---
+description: Transitions d’état
 title: Transitions d’État | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a480b7ff8953ef94f0efc4886a09731730a61b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 947be49fc0a77f94c1641bb7c735db3276b49f58
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299692"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476361"
 ---
 # <a name="state-transitions"></a>Transitions d’état
 ODBC définit des *États* discrets pour chaque environnement, chaque connexion et chaque instruction. Par exemple, l’environnement a trois États possibles : non alloué (dans lequel aucun environnement n’est alloué), alloué (dans lequel un environnement est alloué mais aucune connexion n’est allouée), et connexion (dans laquelle un environnement et une ou plusieurs connexions sont allouées). Les connexions ont sept États possibles ; les instructions ont 13 États possibles.  

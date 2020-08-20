@@ -1,4 +1,5 @@
 ---
+description: Protocole de flux de données standard
 title: Protocole de flux de données standard | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1d234d17-2927-4c98-9fae-550c1370f829
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e959170ea5df50786451acb6a574ea2765298af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9ad7c5e07e0fc5a59edc68fa6cbe70d7bd5fc76b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476193"
 ---
 # <a name="standard-data-stream-protocol"></a>Protocole de flux de données standard
 Un protocole de flux de données standard est un moyen d’accéder aux données dans des SGBD hétérogènes. En fait, un protocole de flux de données standard existe déjà :

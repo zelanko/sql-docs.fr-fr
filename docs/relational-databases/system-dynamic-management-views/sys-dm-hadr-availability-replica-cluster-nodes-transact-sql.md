@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 title: sys. dm_hadr_availability_replica_cluster_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: dbd7e416-badd-4332-a45c-438aa0145a99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af53caea682e698954af86b64349dd7b2b9e814c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7c4af3e4558741e0a138eabd169ed92253f1d4cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474845"
 ---
 # <a name="sysdm_hadr_availability_replica_cluster_nodes-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,9 +37,9 @@ ms.locfileid: "85648545"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**group_name**|**nvarchar(256)**|Nom du groupe de disponibilité.|  
-|**replica_server_name**|**nvarchar(256)**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le réplica.|  
-|**node_name**|**nvarchar(256)**|Nom du nœud de cluster.|  
+|**group_name**|**nvarchar (256)**|Nom du groupe de disponibilité.|  
+|**replica_server_name**|**nvarchar (256)**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge le réplica.|  
+|**node_name**|**nvarchar (256)**|Nom du nœud de cluster.|  
   
 ## <a name="security"></a>Sécurité  
   
@@ -47,6 +48,6 @@ ms.locfileid: "85648545"
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller les groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

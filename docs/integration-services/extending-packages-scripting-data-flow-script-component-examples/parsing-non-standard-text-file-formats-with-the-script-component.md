@@ -1,4 +1,5 @@
 ---
+description: Analyse de formats de fichiers texte non standard à l'aide du composant Script
 title: Analyse de formats de fichiers texte non standard à l’aide du composant Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: fba18c5524c0d46438bc36d4856c02b7c5af7b83
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ac791960040a0bceb46e129b2f48a8410e953258
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477275"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analyse de formats de fichiers texte non standard à l'aide du composant Script
 
@@ -29,7 +30,7 @@ ms.locfileid: "86919209"
 
   Lorsque vos données sources sont organisées dans un format non standard, il peut être plus pratique de consolider l'ensemble de la logique d'analyse en un seul script au lieu de chaîner plusieurs transformations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour parvenir au même résultat.  
   
- [Exemple 1 : analyse d’enregistrements délimités par des lignes](#example1)  
+ [Exemple 1 : Analyse d’enregistrements délimités par des lignes](#example1)  
   
  [Exemple 2 : fractionnement d’enregistrements parents et enfants](#example2)  
   
@@ -104,7 +105,7 @@ ms.locfileid: "86919209"
   
     -   LastName  
   
-    -   Intitulé  
+    -   Title  
   
     -   City  
   
@@ -191,7 +192,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Exemple 2 : fractionnement d’enregistrements parents et enfants  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Exemple 2 : Fractionnement d’enregistrements parents et enfants  
  Cet exemple montre comment analyser un fichier texte, dans lequel une ligne de séparateur précède une ligne d'enregistrement parente suivie d'un nombre indéfini de lignes d'enregistrement enfants, dans des tables de destination parentes et enfants correctement normalisées, à l'aide du composant Script. Cet exemple simple pourrait être facilement adapté aux fichiers sources qui utilisent plusieurs lignes ou colonnes pour chaque enregistrement parent et enfant, tant qu'il est possible d'identifier le début et la fin de chaque enregistrement.  
   
 > [!CAUTION]  

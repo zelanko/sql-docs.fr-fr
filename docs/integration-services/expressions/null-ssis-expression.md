@@ -1,4 +1,5 @@
 ---
+description: NULL (expression SSIS)
 title: NULL (expression SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 574c846d2fb002fe317ddc8e3000aeabbb5cf082
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a915824a474cf90f7c9764f6bd5938457511a51d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921383"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477523"
 ---
 # <a name="null-ssis-expression"></a>NULL (expression SSIS)
 
@@ -46,7 +47,7 @@ NULL(typespec)
   
  Des paramètres sont nécessaires pour demander une valeur NULL pour certains types de données. Le tableau suivant décrit ces types de données et leurs paramètres.  
   
-|Type de données|Paramètre|Exemple|  
+|Type de données|Paramètre| Exemple|  
 |---------------|---------------|-------------|  
 |DT_STR|*charcount*<br /><br /> *codepage*|L'expression (DT_STR,30,1252) convertit 30 caractères vers le type de données DT_STR à l'aide de la page de codes 1252.|  
 |DT_WSTR|*charcount*|L'expression (DT_WSTR,20) convertit 20 caractères vers le type de données DT_WSTR.|  

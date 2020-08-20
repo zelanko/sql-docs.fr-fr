@@ -1,4 +1,5 @@
 ---
+description: Envoi de données de type Long
 title: Envoi de données de type long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: aeeeb716aa2f9a72338f3aeb586dffce86f84069
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6a0ec1a7e8dc703d3e7a3ed5332d20e6539eafe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304180"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476461"
 ---
 # <a name="sending-long-data"></a>Envoi de données de type Long
 Les SGBD définissent des *données longues* sous forme de données binaires ou de caractères sur une certaine taille, par exemple 254 caractères. Il se peut qu’il ne soit pas possible de stocker l’intégralité d’un élément de données de type long en mémoire, par exemple lorsque l’élément représente un long document ou une image bitmap. Étant donné que ces données ne peuvent pas être stockées dans une seule mémoire tampon, la source de données les envoie au pilote en parties avec **SQLPutData** lorsque l’instruction est exécutée. Les paramètres pour lesquels les données sont envoyées au moment de l’exécution sont appelés *paramètres de données en*cours d’exécution.  

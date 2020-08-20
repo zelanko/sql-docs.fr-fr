@@ -1,4 +1,5 @@
 ---
+description: Fonction LocalDBCreateInstance
 title: LocalDBCreateInstance fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7e06c3c309b29f52d68b765210999469973331ce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9bf1d0f11ce3030ead3adb012211460227b8c17e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475901"
 ---
 # <a name="localdbcreateinstance-function"></a>Fonction LocalDBCreateInstance
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +98,7 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Une erreur inattendue s’est produite. Pour plus d'informations, consultez le journal des événements.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si une instance de LocalDB entièrement fonctionnelle portant le nom spécifié existe déjà et sa version est supérieure ou égale à la version demandée, le résultat est S_OK.  
   
  Dans les cas où une instance existante est endommagée, les appels suivants à la méthode d'API **LocalDBCreateInstance** échouent. Les instances endommagées doivent être corrigées manuellement ou être explicitement supprimées avant de pouvoir être réutilisées.  

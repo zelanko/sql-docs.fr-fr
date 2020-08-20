@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_exec_connections (Transact-SQL)
 title: sys. dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 74cfb2819cd462a2e3cf695cbb0daf92b4dac5a3
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 25b5edb0d1c89042b876fc0cefac278b867fb5ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474761"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -38,7 +39,7 @@ ms.locfileid: "87332380"
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-| À partir | À | Relation |
+| Du | À | Relation |
 | ---- | -- | ------------ |
 |dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|Un à un|  
 |dm_pdw_exec_requests. connection_id|dm_pdw_exec_connections. connection_id|Plusieurs-à-un|  

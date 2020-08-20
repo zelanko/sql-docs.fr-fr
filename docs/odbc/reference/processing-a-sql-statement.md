@@ -1,4 +1,5 @@
 ---
+description: Traitement d’une instruction SQL
 title: Traitement d’une instruction SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349a62034d598c1bfb44b891b91359d5ff184b7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4ce614f6dcf4c1fe0ab1e1c806b966b4267e7fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476216"
 ---
 # <a name="processing-a-sql-statement"></a>Traitement d’une instruction SQL
 Avant d’aborder les techniques d’utilisation de SQL par programme, il est nécessaire d’aborder la façon dont une instruction SQL est traitée. Les étapes impliquées sont communes aux trois techniques, bien que chaque technique les exécute à des moments différents. L’illustration suivante montre les étapes impliquées dans le traitement d’une instruction SQL, qui sont décrites dans le reste de cette section.  

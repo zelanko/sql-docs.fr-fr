@@ -1,4 +1,5 @@
 ---
+description: Curseurs de bloc, curseurs avec défilement et compatibilité descendante pour les applications ODBC 3.x
 title: Compatibilité des curseurs de bloc et de défilement pour ODBC 3. x | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c526eff6e19014c923f05ad91551a7d7c66f5294
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96645f91d52f4141aacf4f2e171ef809a639f73c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476831"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Curseurs de bloc, curseurs avec défilement et compatibilité descendante pour les applications ODBC 3.x
 L’existence de **SQLFetchScroll** et **SQLExtendedFetch** représente le premier fractionnement clair dans ODBC entre l’interface de programmation d’applications (API), qui est l’ensemble des fonctions que l’application appelle, et l’interface de fournisseur de services (SPI), qui est l’ensemble de fonctions implémentées par le pilote. Ce fractionnement est requis pour équilibrer l’exigence dans ODBC *3. x*, qui utilise **SQLFetchScroll**, pour aligner les normes et être compatible avec ODBC *2. x*, qui utilise **SQLExtendedFetch**.  

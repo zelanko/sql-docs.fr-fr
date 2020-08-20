@@ -1,4 +1,5 @@
 ---
+description: Curseurs avec défilement
 title: Curseurs de défilement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2762ffc7fa179fc6a68f92c23f92ca12803f5ab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c347dcb130a2f1f899f2e1b83ae28289ff0a923
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476481"
 ---
 # <a name="scrollable-cursors"></a>Curseurs avec défilement
 Dans les applications modernes basées sur l’écran, l’utilisateur fait défiler les données vers l’avant et vers l’arrière. Pour de telles applications, le retour à une ligne extraite précédemment pose problème. L’une des possibilités consiste à fermer et à rouvrir le curseur, puis à extraire les lignes jusqu’à ce que le curseur atteigne la ligne requise. Une autre possibilité consiste à lire le jeu de résultats, à le mettre en cache localement et à implémenter le défilement dans l’application. Les deux possibilités fonctionnent bien uniquement avec les petits jeux de résultats, et cette dernière possibilité est difficile à implémenter. Une meilleure solution consiste à utiliser un *curseur de défilement,* qui peut se déplacer vers l’avant et vers l’arrière dans le jeu de résultats.  

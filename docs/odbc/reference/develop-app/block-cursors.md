@@ -1,4 +1,5 @@
 ---
+description: Curseurs de bloc
 title: Curseurs de bloc | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa35888ef93da9648fe6422bdc35ebf9da3a0525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dece0e3ecfc5ef4f3116361a202cfa2d10863ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476821"
 ---
 # <a name="block-cursors"></a>Curseurs de bloc
 De nombreuses applications consacrent beaucoup de temps à l’acheminement des données sur le réseau. Une partie de ce temps est passée à placer les données sur le réseau et une partie de celle-ci est consacrée à la surcharge du réseau, telle que l’appel émis par le pilote pour demander une ligne de données. La dernière fois peut être réduite si l’application utilise efficacement des *curseurs* de *bloc* , ou *FAT* , qui peuvent retourner plusieurs lignes à la fois.  

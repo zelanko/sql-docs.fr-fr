@@ -1,4 +1,5 @@
 ---
+description: Mise à jour de données avec SQLSetPos
 title: Mise à jour des données avec SQLSetPos | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 16476a1e1007905f34ec2e70ce6032eb8d81fe7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eccc08e7af81b2b2b13dd50b2cfb0f5701174e70
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476281"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>Mise à jour de données avec SQLSetPos
 Les applications peuvent mettre à jour ou supprimer n’importe quelle ligne de l’ensemble de lignes avec **SQLSetPos**. L’appel de **SQLSetPos** est une alternative pratique à la construction et à l’exécution d’une instruction SQL. Il permet à un pilote ODBC de prendre en charge les mises à jour positionnées même lorsque la source de données ne prend pas en charge les instructions SQL positionnées. Il fait partie du paradigme d’obtention d’un accès complet à la base de données au moyen d’appels de fonction.  

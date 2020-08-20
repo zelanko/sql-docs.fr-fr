@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLFetchScroll
 title: SQLFetchScroll, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b6c65ef71f5c2cb9202ab788cac5e00357674f4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3c725e11c889765c18c2ff14625b6bde4705051
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476084"
 ---
 # <a name="sqlfetchscroll-function"></a>Fonction SQLFetchScroll
 **Conformité**  
@@ -104,7 +105,7 @@ SQLRETURN SQLFetchScroll(
 |24 000|État de curseur non valide|*StatementHandle* était dans un état d’exécution, mais aucun jeu de résultats n’a été associé à *StatementHandle*.|  
 |40001|Échec de la sérialisation|La transaction dans laquelle l’extraction a été exécutée a été interrompue pour empêcher un blocage.|  
 |40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. Ensuite, la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLFetchScroll** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) le *StatementHandle* spécifié n’était pas dans un état d’exécution. La fonction a été appelée sans appeler d’abord **SQLExecDirect**, **SQLExecute** ou une fonction de catalogue.<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) **SQLFetch** a été appelée pour *StatementHandle* après l’appel de **SQLExtendedFetch** et avant l’appel de **SQLFreeStmt** avec l’option SQL_CLOSE.|  
@@ -164,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |*Avant le début*|1|  
-|*CurrRowsetStart + RowsetSize*[1] * \<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1] * \< = LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Après la fin*|  
 |*Après la fin*|*Après la fin*|  
   
@@ -182,7 +183,7 @@ SQLRETURN SQLFetchScroll(
 |*Après end et LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*Après end et LastResultRow >= RowsetSize* <sup>[2]</sup>|*LastResultRow-RowsetSize + 1* <sup>[2]</sup>|  
   
- [1] **SQLFetchScroll** retourne SQLState 01S06 (tentative d’extraction avant que le jeu de résultats ait retourné le premier ensemble de lignes) et SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** retourne SQLState 01S06 (tentative d’extraction avant que le jeu de résultats ait retourné le premier ensemble de lignes) et SQL_SUCCESS_WITH_INFO.  
   
  [2] si la taille de l’ensemble de lignes a été modifiée depuis l’appel précédent à FETCH Rows, il s’agit de la nouvelle taille de l’ensemble de lignes.  
   
@@ -196,13 +197,13 @@ SQLRETURN SQLFetchScroll(
 |*CurrRowsetStart = 1 et FetchOffset < 0*|*Avant le début*|  
 |*CurrRowsetStart > 1 et CurrRowsetStart + FetchOffset < 1 et &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Avant le début*|  
 |*CurrRowsetStart > 1 et CurrRowsetStart + FetchOffset < 1 et &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
+|*1 <= CurrRowsetStart + FetchOffset \< = LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Après la fin*|  
 |*Après end et FetchOffset >= 0*|*Après la fin*|  
   
- [1] ***SQLFetchScroll*** retourne le même ensemble de lignes que s’il a été appelé avec FetchOrientation défini sur SQL_FETCH_ABSOLUTE. Pour plus d’informations, consultez la section « SQL_FETCH_ABSOLUTE ».  
+ [1]   ***SQLFetchScroll*** retourne le même ensemble de lignes que s’il a été appelé avec FetchOrientation défini sur SQL_FETCH_ABSOLUTE. Pour plus d’informations, consultez la section « SQL_FETCH_ABSOLUTE ».  
   
- [2] **SQLFetchScroll** retourne SQLState 01S06 (tentative d’extraction avant que le jeu de résultats ait retourné le premier ensemble de lignes) et SQL_SUCCESS_WITH_INFO.  
+ [2]   **SQLFetchScroll** retourne SQLState 01S06 (tentative d’extraction avant que le jeu de résultats ait retourné le premier ensemble de lignes) et SQL_SUCCESS_WITH_INFO.  
   
  [3] si la taille de l’ensemble de lignes a été modifiée depuis l’appel précédent à FETCH Rows, il s’agit de la nouvelle taille de l’ensemble de lignes.  
   
@@ -215,10 +216,10 @@ SQLRETURN SQLFetchScroll(
 |*FetchOffset < 0 et &#124; FetchOffset &#124; > LASTRESULTROW et &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Avant le début*|  
 |*FetchOffset < 0 et &#124; FetchOffset &#124; > LASTRESULTROW et &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Avant le début*|  
-|*1 <= FetchOffset \<= LastResultRow*|*FetchOffset*|  
+|*1 <= FetchOffset \< = LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Après la fin*|  
   
- [1] **SQLFetchScroll** retourne SQLState 01S06 (tentative d’extraction avant que le jeu de résultats ait retourné le premier ensemble de lignes) et SQL_SUCCESS_WITH_INFO.  
+ [1]   **SQLFetchScroll** retourne SQLState 01S06 (tentative d’extraction avant que le jeu de résultats ait retourné le premier ensemble de lignes) et SQL_SUCCESS_WITH_INFO.  
   
  [2] si la taille de l’ensemble de lignes a été modifiée depuis l’appel précédent à FETCH Rows, il s’agit de la nouvelle taille de l’ensemble de lignes.  
   
@@ -247,7 +248,7 @@ SQLRETURN SQLFetchScroll(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |*BookmarkRow + FetchOffset < 1*|*Avant le début*|  
-|*1 <= BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
+|*1 <= BookmarkRow + FetchOffset \< = LastResultRow*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*Après la fin*|  
   
  Pour plus d’informations sur les signets, consultez [signets (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md).  

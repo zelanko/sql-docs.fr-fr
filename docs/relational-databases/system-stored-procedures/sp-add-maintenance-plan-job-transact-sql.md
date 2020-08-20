@@ -1,4 +1,5 @@
 ---
+description: sp_add_maintenance_plan_job (Transact-SQL)
 title: sp_add_maintenance_plan_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7205855c-964f-4f55-bf75-39a55f6fe7bd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 89f9f2c1ac1982a1e86d0f48dbf7e1e0c9d26301
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 710a151e6e965b523b26a67e82814d4b23091aba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879700"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474617"
 ---
 # <a name="sp_add_maintenance_plan_job-transact-sql"></a>sp_add_maintenance_plan_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85879700"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,9 +45,9 @@ sp_add_maintenance_plan_job [ @plan_id = ] 'plan_id' , [ @job_id = ] 'job_id'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @plan_id = ] 'plan_id'`Spécifie l’ID du plan de maintenance. *plan_id* est de type **uniqueidentifier**et doit être un ID valide.  
+`[ @plan_id = ] 'plan_id'` Spécifie l’ID du plan de maintenance. *plan_id* est de type **uniqueidentifier**et doit être un ID valide.  
   
-`[ @job_id = ] 'job_id'`Spécifie l’ID du travail à associer au plan de maintenance. *job_id* est de type **uniqueidentifier**et doit être un ID valide. Pour créer un travail ou des travaux, exécutez **sp_add_job**ou utilisez SQL Server Management Studio.  
+`[ @job_id = ] 'job_id'` Spécifie l’ID du travail à associer au plan de maintenance. *job_id* est de type **uniqueidentifier**et doit être un ID valide. Pour créer un travail ou des travaux, exécutez **sp_add_job**ou utilisez SQL Server Management Studio.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

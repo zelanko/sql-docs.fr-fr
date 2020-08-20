@@ -1,4 +1,5 @@
 ---
+description: SHORTEST_PATH (Transact-SQL)
 title: Chemin d’accès le plus rapide (SQL Graph) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/01/2020
@@ -18,18 +19,19 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
-ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
+ms.openlocfilehash: a77835335aa2fe3e9b5d4436dcac07556e9a3c26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86032564"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475838"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   Spécifie une condition de recherche pour un graphique, qui est recherchée de manière récursive ou répétée. SHORTEST_PATH peut être utilisé dans une correspondance avec le nœud de graphique et les tables de bord, dans l’instruction SELECT. 
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="shortest-path"></a>Chemin d’accès le plus rapide
 La fonction SHORTEST_PATH vous permet de trouver :    
@@ -84,9 +86,9 @@ La fonction STRING_AGG prend une expression et un séparateur comme entrée et r
 ### <a name="last_value"></a>LAST_VALUE
 Pour projeter les attributs du dernier nœud du chemin parcouru, LAST_VALUE fonction d’agrégation peut être utilisée. Le fait de fournir un alias de table Edge comme entrée à cette fonction est une erreur, seuls les noms de tables de nœuds ou les alias peuvent être utilisés.
 
-**Dernier nœud**: le dernier nœud fait référence au nœud qui apparaît en dernier dans le chemin parcouru, quelle que soit la direction de la flèche dans le PRÉDICAT de correspondance. Par exemple : `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Ici, le dernier nœud du chemin d’accès est le dernier nœud P visité. 
+**Dernier nœud**: le dernier nœud fait référence au nœud qui apparaît en dernier dans le chemin parcouru, quelle que soit la direction de la flèche dans le PRÉDICAT de correspondance. Par exemple : `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Ici, le dernier nœud du chemin d’accès est le dernier nœud P visité. 
 
-Tandis que le dernier nœud est le dernier nième nœud dans le chemin d’accès du graphique de sortie pour ce modèle :`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Tandis que le dernier nœud est le dernier nième nœud dans le chemin d’accès du graphique de sortie pour ce modèle : `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Cette fonction retourne la somme des valeurs d’attribut node/Edge fournies ou de l’expression qui apparaissait dans le chemin parcouru.
@@ -107,7 +109,7 @@ Retourne la valeur minimale des valeurs d’attribut de nœud/de bord fournies o
 ### <a name="max"></a>MAX
 Retourne la valeur maximale des valeurs d’attribut de nœud/de bord fournies ou de l’expression qui apparaissaient dans le chemin parcouru.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
 shortest_path fonction ne peut être utilisée qu’à l’intérieur de MATCH.     
 LAST_NODE est pris en charge uniquement dans les shortest_path.     
 Recherche du chemin d’accès le plus faible pondéré, tous les chemins d’accès ou tous les chemins les plus courts ne sont pas pris en charge.         

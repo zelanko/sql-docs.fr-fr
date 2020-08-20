@@ -1,4 +1,5 @@
 ---
+description: Longueur du cycle produit
 title: Longueur du cycle de produit | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235146ffe1b4699f0064c5772407bcf40ae962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1484079a09d10864e0563db95208e926a959d6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306192"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476581"
 ---
 # <a name="length-of-the-product-cycle"></a>Longueur du cycle produit
 La dernière question à propos de l’interopérabilité est l’heure. Le développement d’une application interopérable prend généralement plus de temps que le développement d’un noninteroperable. En effet, l’application doit vérifier les fonctionnalités du SGBD, effectuer les mêmes tâches différemment pour différents SGBD, contourner les fonctionnalités prises en charge par certains SGBD, mais pas d’autres, etc.  

@@ -1,4 +1,5 @@
 ---
+description: Exécuter un package SSIS avec du code C# dans une application .NET
 title: Exécuter un projet SSIS avec du code .NET (C#) | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dbc0cfc7a5ef22487a22ade0f65cbf76ac78645c
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 03be806b29fa46c04b38bab822c848f96a0c516d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921823"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477207"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Exécuter un package SSIS avec du code C# dans une application .NET
 
@@ -24,7 +25,7 @@ Ce guide de démarrage rapide montre comment écrire du code C# pour se connecte
 
 Pour créer une application C#, vous pouvez utiliser Visual Studio, Visual Studio Code ou un autre outil de votre choix.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables
 
 Avant de commencer, vérifiez que Visual Studio ou Visual Studio Code est installé sur votre ordinateur. Téléchargez l’édition Community gratuite de Visual Studio, ou le logiciel Visual Studio Code gratuit, à partir de la page de [Téléchargements Visual Studio](https://www.visualstudio.com/downloads/).
 
@@ -44,7 +45,7 @@ Pour exécuter le package sur Azure SQL Database, obtenez les informations de co
 ## <a name="create-a-new-visual-studio-project"></a>Créer un projet Visual Studio
 
 1. Dans Visual Studio, choisissez **Fichier**, **Nouveau**, **Projet**. 
-2. Dans la boîte de dialogue **Nouveau projet**, développez **Visual C#** .
+2. Dans la boîte de dialogue **Nouveau projet**, développez **Visual C#**.
 3. Sélectionnez **Application console** et entrez *run_ssis_project* comme nom de projet.
 4. Cliquez sur **OK** pour créer et ouvrir le nouveau projet dans Visual Studio.
 
@@ -114,7 +115,7 @@ namespace run_ssis_package
 
 ## <a name="run-the-code"></a>Exécuter le code
 
-1. Pour exécuter l’application, appuyez sur **F5**.
+1. Pour exécuter l'application, appuyez sur **F5**.
 2. Vérifiez que le package s’est exécuté comme prévu, puis fermez la fenêtre d’application.
 
 ## <a name="next-steps"></a>Étapes suivantes

@@ -1,4 +1,5 @@
 ---
+description: Curseurs de jeu de clés
 title: Curseurs de jeu de clés | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 814fca7d48f50aab51b6b4f7e34835be8c412e9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c34432481eeafd6bed938dcd1275e33583d33cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476591"
 ---
 # <a name="keyset-driven-cursors"></a>Curseurs de jeu de clés
 Un curseur de jeu de clés se trouve entre un curseur statique et un curseur dynamique dans sa capacité à détecter des modifications. Comme un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et à l’ordre du jeu de résultats. À l’instar d’un curseur dynamique, il détecte les modifications apportées aux valeurs des lignes du jeu de résultats (selon le niveau d’isolation de la transaction, tel qu’il est défini par l’attribut de connexion SQL_ATTR_TXN_ISOLATION).  

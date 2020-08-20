@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 1-4 : Ajout de configurations au package'
 title: 'Étape 4 : Ajout de configurations au package | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e92ad2f9b330ef088423a10199cd22f64ff77920
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 052bb905c78839c644a5436da568667b6665b432
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477202"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Leçon 1-4 : Ajout de configurations au package
 
@@ -135,7 +136,7 @@ Vérifiez le modèle de déploiement actuel du projet et définissez-le si néce
 12. Dans la boîte de dialogue **Bibliothèque des configurations du package** , vérifiez que LoadXMLData EV Configuration est en haut de la liste et que LoadXMLData Configuration est second, puis cliquez sur **Fermer**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+[Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Configurations de package](../integration-services/packages/package-configurations.md)  

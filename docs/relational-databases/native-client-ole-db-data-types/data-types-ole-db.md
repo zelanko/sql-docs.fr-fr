@@ -1,4 +1,5 @@
 ---
+description: Types de données de SQL Server Native Client (OLE DB)
 title: Types de données (fournisseur Native Client OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1574b87bef2e231415b0c95a333c4b7107ca726
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b1f3d294bf1c504da0f5c90a46ff5e5e86d5c734
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475774"
 ---
 # <a name="sql-server-native-client-data-types-ole-db"></a>Types de données de SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "87245890"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Mappage de type de données dans les ensembles de lignes et les paramètres](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md)  
+-   [Mappage de types de données dans les ensembles de lignes et les paramètres](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-rowsets-and-parameters.md)  
   
--   [Mappage de type de données dans ITableDefinition](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md)  
+-   [Mappage de types de données dans ITableDefinition](../../relational-databases/native-client-ole-db-data-types/data-type-mapping-in-itabledefinition.md)  
   
 -   [Structure SSVARIANT](../../relational-databases/native-client-ole-db-data-types/ssvariant-structure.md)  
   

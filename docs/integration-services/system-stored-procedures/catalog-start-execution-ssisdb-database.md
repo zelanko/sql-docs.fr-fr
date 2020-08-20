@@ -1,4 +1,5 @@
 ---
+description: catalog.start_execution (base de données SSISDB)
 title: catalog.start_execution (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a8c645595d7ce8a6fd8506952b47cfd9d7139a4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f1a69ba2746d688f1d134546370514f826f9cee3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912768"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477112"
 ---
 # <a name="catalogstart_execution-ssisdb-database"></a>catalog.start_execution (base de données SSISDB)
 
@@ -39,13 +40,13 @@ catalog.start_execution [ @execution_id = ] execution_id [, [ @retry_count = ] r
  [@retry_count =] *retry_count*  
  Nombre de nouvelles tentatives en cas d’échec de l’exécution. Il prend effet uniquement si l’exécution a lieu dans Scale Out. Ce paramètre est facultatif. S’il n’est pas spécifié, sa valeur est définie sur 0. *retry_count* est de type **int**.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Une exécution est utilisée pour spécifier les valeurs de paramètre qui sont utilisées par un package pendant une instance d’exécution unique du package. Le projet correspondant peut être redéployé une fois une instance d'exécution créée et avant son démarrage. Dans ce cas, l’instance d’exécution référence un projet obsolète. Cette référence non valide provoque l’échec de la procédure stockée.  
   
 > [!NOTE]  
 >  Les exécutions peuvent être démarrées uniquement une fois. Pour démarrer une instance d’exécution, elle doit avoir l’état Created (valeur `1` dans la colonne **status** de la vue [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant appelle catalog.create_execution pour créer une instance d'exécution pour le package Child1.dtsx. Project1 Integration Services contient le package. L'exemple appelle catalog.set_execution_parameter_value afin de définir des valeurs pour les paramètres Parameter1, Parameter2 et LOGGING_LEVEL. L'exemple appelle catalog.start_execution pour démarrer une instance d'exécution.  
   
 ```sql

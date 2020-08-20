@@ -1,4 +1,5 @@
 ---
+description: Décalages des liaisons de paramètres
 title: Décalages de liaison de paramètre | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de67b230883f3cf8a582e73ce82e8c4bd7d21ad0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71b4958e77d01c613e33386ec1b2b21ed91f0a67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282488"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476541"
 ---
 # <a name="parameter-binding-offsets"></a>Décalages des liaisons de paramètres
 Une application peut spécifier qu’un décalage est ajouté aux adresses tampons de paramètre liées et aux adresses de mémoire tampon d’indicateur de longueur/indicateur correspondantes lorsque **SQLExecDirect** ou **SQLExecute** est appelé. Le résultat de ces ajouts détermine les adresses utilisées dans ces opérations.  

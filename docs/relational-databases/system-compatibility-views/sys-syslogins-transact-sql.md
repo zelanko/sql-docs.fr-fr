@@ -1,4 +1,5 @@
 ---
+description: sys.syslogins (Transact-SQL)
 title: Connexions sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb1fd5b8dcf9867cb61452534a742cc929a41396
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 075e78b9f8e765cad359a136e643f594ce6638b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475099"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "85891943"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -52,13 +53,13 @@ ms.locfileid: "85891943"
 |**name**|**sysname**|Nom de connexion de l’utilisateur.|  
 |**@**|**sysname**|Nom de la base de données par défaut de l'utilisateur lorsqu'une connexion est établie.|  
 |**mot de passe**|**nvarchar(128)**|Renvoie NULL.|  
-|**langue**|**sysname**|Langue par défaut de l'utilisateur.|  
+|**language**|**sysname**|Langue par défaut de l'utilisateur.|  
 |**denylogin**|**int**|1 = La connexion concerne un utilisateur ou un groupe [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et l'accès a été refusé.|  
 |**hasaccess**|**int**|1 = La connexion possède les droits d'accès au serveur.|  
 |**isntname**|**int**|1 = La connexion est un utilisateur ou un groupe Windows.<br /><br /> 0 = Il s'agit d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**isntgroup**|**int**|1 = La connexion est un groupe Windows.|  
 |**isntuser**|**int**|1 = La connexion est un utilisateur Windows.|  
-|**administrateur système**|**int**|1 = la connexion est membre du rôle de serveur **sysadmin** .|  
+|**sysadmin**|**int**|1 = la connexion est membre du rôle de serveur **sysadmin** .|  
 |**securityadmin**|**int**|1 = la connexion est membre du rôle de serveur **securityadmin** .|  
 |**serveradmin**|**int**|1 = la connexion est membre du rôle serveur fixe **ServerAdmin** .|  
 |**setupadmin**|**int**|1 = la connexion est membre du rôle serveur fixe **setupadmin** .|  

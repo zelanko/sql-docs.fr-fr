@@ -1,4 +1,5 @@
 ---
+description: Constantes énumérées dans des expressions de propriété
 title: Constantes énumérées dans des expressions de propriété | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c233d75beabca847937f85977acfd0e2230dc7c2
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 692e2e19b86b5d47d207c32c3024365675603c07
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922764"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477581"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes énumérées dans des expressions de propriété
 
@@ -41,7 +42,7 @@ ms.locfileid: "86922764"
   
  [Énumérateurs de boucles Foreach](#Foreach)  
   
- [Tâches :](#Tasks)  
+ [Tâches](#Tasks)  
   
  [Tâches du plan de maintenance](#MaintenancePlanTasks)  
   
@@ -335,7 +336,7 @@ ms.locfileid: "86922764"
 |Nom convivial dans ExistingData|Valeur numérique|  
 |-----------------------------------|-------------------|  
 |Replace|0|  
-|Ajouter|1|  
+|Ajouter (Append)|1|  
   
 ### <a name="web-service-task"></a>Tâche de service Web  
  Propriété **OutputType** : définie à l’aide de valeurs provenant de l’énumération **DTSOutputType**.  
@@ -423,7 +424,7 @@ ms.locfileid: "86922764"
 |Valider|0|  
 |XSLT|1|  
 |XPATH|2|  
-|Fusionner|3|  
+|Fusionner (Merge)|3|  
 |Diff|4|  
 |Correctif|5|  
   
@@ -477,7 +478,7 @@ ms.locfileid: "86922764"
 |------------------------------------------|-------------------|  
 |Auto|0|  
 |Rapide|1|  
-|Précise|2|  
+|Précis|2|  
   
 ##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Tâches du plan de maintenance  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut un ensemble de tâches qui effectuent des tâches SQL Server à utiliser dans des plans de maintenance et dans des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -510,7 +511,7 @@ ms.locfileid: "86922764"
 |Nom convivial dans ObjectType|Valeur numérique|  
 |---------------------------------|-------------------|  
 |Table de charge de travail|0|  
-|Affichage|1|  
+|Vue|1|  
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Tâche Sauvegarder la base de données  
@@ -525,7 +526,7 @@ ms.locfileid: "86922764"
   
 |Nom convivial dans ActionForExistingBackups|Valeur numérique|  
 |-----------------------------------------------|-------------------|  
-|Ajouter|0|  
+|Ajouter (Append)|0|  
 |Remplacer|1|  
   
  Propriété **BackupAction** : définie à l’aide de valeurs provenant de l’énumération **BackupTaskType**. Cette propriété définit avec la propriété **BackupIsIncremental** le type de sauvegarde que la tâche effectue.  
@@ -533,7 +534,7 @@ ms.locfileid: "86922764"
 |Nom convivial dans BackupTaskType|Valeur numérique|  
 |-------------------------------------|-------------------|  
 |Base de données|0|  
-|Fichiers|1|  
+|Files|1|  
 |Journal|2|  
   
  Propriété **BackupDevice** : définie à l’aide de valeurs provenant de l’énumération SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **DeviceType**.  
@@ -558,8 +559,8 @@ ms.locfileid: "86922764"
   
 |Nom convivial dans TimeUnitType|Valeur numérique|  
 |-----------------------------------|-------------------|  
-|jour|0|  
-|Week|1|  
+|Jour|0|  
+|Semaine|1|  
 |Month|2|  
 |Year|3|  
   
@@ -579,7 +580,7 @@ ms.locfileid: "86922764"
   
 |Nom convivial dans DTSForcedExecResult|Valeur numérique|  
 |------------------------------------------|-------------------|  
-|None|-1|  
+|Aucun|-1|  
 |Succès|0|  
 |Échec|1|  
 |Completion|2|  

@@ -1,4 +1,5 @@
 ---
+description: SQLExtendedFetch, fonction
 title: SQLExtendedFetch, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dc832e5a20b1d3c0a1ad63b3e2a070563de2b46d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac19d017baf4a3f0e873be64cd2eb812ca1b05e0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476109"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch, fonction
 **Conformité**  
@@ -92,7 +93,7 @@ SQLRETURN SQLExtendedFetch(
 |22015|Dépassement du champ d’intervalle|L’assignation d’un type SQL exact numérique ou Interval à un type C Interval a provoqué une perte de chiffres significatifs dans le champ de début.<br /><br /> Lors de l’extraction de données vers un type d’intervalle C, il n’existait aucune représentation de la valeur du type SQL dans le type d’intervalle C.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |22018|Valeur de caractère non valide pour la spécification de cast|Le type C était un type de données numérique exact ou approximatif, DateTime ou Interval ; le type SQL de la colonne était un type de données caractère ; et la valeur dans la colonne n’est pas un littéral valide du type C lié.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |24 000|État de curseur non valide|Le *StatementHandle* était dans un état d’exécution, mais aucun jeu de résultats n’a été associé à *StatementHandle*.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLError** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLError** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*, puis la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLExtendedFetch** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) le *StatementHandle* spécifié n’était pas dans un état d’exécution. La fonction a été appelée sans appeler d’abord **SQLExecDirect**, **SQLExecute**ou une fonction de catalogue.<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) **SQLExtendedFetch** a été appelé pour *StatementHandle* après l’appel de **SQLFetch** ou **SQLFetchScroll** et avant l’appel de **SQLFreeStmt** avec l’option SQL_CLOSE.<br /><br /> (DM) **SQLBulkOperations** a été appelé pour une instruction avant que **SQLFetch**, **SQLFetchScroll**ou **SQLExtendedFetch** n’ait été appelé, puis **SQLExtendedFetch** a été appelé avant l’appel de **SQLFreeStmt** avec l’option SQL_CLOSE.|  
@@ -109,7 +110,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>Commentaires  
  Le comportement de **SQLExtendedFetch** est identique à celui de **SQLFetchScroll**, avec les exceptions suivantes :  
   
--   **SQLExtendedFetch** et **SQLFetchScroll** utilisent des méthodes différentes pour retourner le nombre de lignes extraites. **SQLExtendedFetch** retourne le nombre de lignes extraites dans * \*RowCountPtr*; **SQLFetchScroll** retourne le nombre de lignes extraites directement dans la mémoire tampon vers laquelle pointe SQL_ATTR_ROWS_FETCHED_PTR. Pour plus d’informations, consultez l’argument *RowCountPtr* .  
+-   **SQLExtendedFetch** et **SQLFetchScroll** utilisent des méthodes différentes pour retourner le nombre de lignes extraites. **SQLExtendedFetch** retourne le nombre de lignes extraites dans * \* RowCountPtr*; **SQLFetchScroll** retourne le nombre de lignes extraites directement dans la mémoire tampon vers laquelle pointe SQL_ATTR_ROWS_FETCHED_PTR. Pour plus d’informations, consultez l’argument *RowCountPtr* .  
   
 -   **SQLExtendedFetch** et **SQLFetchScroll** retournent l’état de chaque ligne dans des tableaux différents. Pour plus d’informations, consultez l’argument *RowStatusArray* .  
   

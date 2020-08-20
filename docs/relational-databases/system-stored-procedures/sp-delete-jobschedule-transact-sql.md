@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobschedule (Transact-SQL)
 title: sp_delete_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a74d7235b1faa80c1fe65f80717c39e7944f343
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ee25a531baeaf96b4090f0cb0f165e6cd4c8d203
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474408"
 ---
 # <a name="sp_delete_jobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85864266"
  **sp_delete_jobschedule** n’est fourni qu’à des fins de compatibilité descendante.  
   
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Il est désormais possible de gérer la planification des travaux indépendamment des travaux. Pour supprimer une planification d’un travail, utilisez **sp_detach_schedule**. Pour supprimer une planification, utilisez **sp_delete_schedule**.  
   
 > **Remarque : sp_delete_jobschedule** ne prend pas en charge les planifications attachées à plusieurs travaux. Si un script existant appelle **sp_delete_jobschedule** pour supprimer une planification attachée à plusieurs travaux, la procédure retourne une erreur.  

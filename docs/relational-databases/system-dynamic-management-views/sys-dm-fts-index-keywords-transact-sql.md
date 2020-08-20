@@ -1,4 +1,5 @@
 ---
+description: sys.dm_fts_index_keywords (Transact-SQL)
 title: sys. dm_fts_index_keywords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3b95ce96f126249da124ea5830e7cc898fa9f8b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e57cb14d48f23235971b3adacb656277aa2d1626
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474942"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -60,7 +61,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 |**column_id**|**int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
 |**document_count**|**int**|Nombre de documents ou de lignes contenant le terme actuel.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les informations retournées par **sys. dm_fts_index_keywords** sont utiles pour la recherche des éléments suivants :  
   
 -   Si un mot clé fait partie de l'index de recherche en texte intégral.  
@@ -77,7 +78,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 >  Le **document_count** retourné par **sys. dm_fts_index_keywords** peut être moins précis pour un document spécifique que le nombre retourné par **sys. dm_fts_index_keywords_by_document** ou une requête **Contains** . Cette imprécision éventuelle est estimée inférieure à 1 %. Ce problème peut se produire si un **document_id** peut être compté deux fois lorsqu’il continue sur plusieurs lignes dans le fragment d’index, ou lorsqu’il apparaît plusieurs fois dans la même ligne. Pour obtenir un nombre plus précis pour un document spécifique, utilisez **sys. dm_fts_index_keywords_by_document** ou une requête **Contains** .  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
+ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
   

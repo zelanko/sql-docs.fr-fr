@@ -1,4 +1,5 @@
 ---
+description: SQLFetch, fonction
 title: SQLFetch, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bc7e2da6996d8d6b2ee66befdc90794efec5617b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f13aabcf19968873683bf12bcde5bb006422e260
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476097"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch, fonction
 **Conformité**  
@@ -73,9 +74,9 @@ SQLRETURN SQLFetch(
 |24 000|État de curseur non valide|*StatementHandle* était dans un état d’exécution, mais aucun jeu de résultats n’a été associé à *StatementHandle*.|  
 |40001|Échec de la sérialisation|La transaction dans laquelle l’extraction a été exécutée a été interrompue pour empêcher un blocage.|  
 |40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
-|HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction **SQLFetch** a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. La fonction **SQLFetch** a ensuite été appelée à nouveau sur le *StatementHandle*.<br /><br /> Ou bien, la fonction **SQLFetch** a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
+|HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction **SQLFetch** a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. La fonction **SQLFetch** a ensuite été appelée à nouveau sur le *StatementHandle*.<br /><br /> Ou bien, la fonction  **SQLFetch** a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLFetch** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) le *StatementHandle* spécifié n’était pas dans un état d’exécution. La fonction a été appelée sans appeler d’abord **SQLExecDirect**, **SQLExecute** ou une fonction de catalogue.<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) **SQLFetch** a été appelée pour *StatementHandle* après l’appel de **SQLExtendedFetch** et avant l’appel de **SQLFreeStmt** avec l’option SQL_CLOSE.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
 |HY090|Longueur de chaîne ou de mémoire tampon non valide|L’attribut d’instruction SQL_ATTR_USE_BOOKMARK a été défini sur SQL_UB_VARIABLE et la colonne 0 était liée à une mémoire tampon dont la longueur n’était pas égale à la longueur maximale du signet pour ce jeu de résultats. (Cette longueur est disponible dans le champ SQL_DESC_OCTET_LENGTH de la IRD et peut être obtenue en appelant **SQLDescribeCol**, **SQLColAttribute**ou **SQLGetDescField**.)|  
@@ -107,8 +108,8 @@ SQLRETURN SQLFetch(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |Avant le début|1|  
-|*CurrRowsetStart* \<CurrRowsetStart =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|Après la fin|  
+|*CurrRowsetStart* \< CurrRowsetStart =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart*  +  *RowsetSize*[2]|  
+|*CurrRowsetStart*  >  *LastResultRow-RowsetSize*[1]|Après la fin|  
 |Après la fin|Après la fin|  
   
  [1] si la taille de l’ensemble de lignes est modifiée entre les extractions, il s’agit de la taille de l’ensemble de lignes utilisée avec l’extraction précédente.  
@@ -132,9 +133,9 @@ SQLRETURN SQLFetch(
 |52 à 56|SQL_SUCCESS|57 à 61|5|  
 |91 à 95|SQL_SUCCESS|96 à 100|5|  
 |93 à 97|SQL_SUCCESS|de 98 à 100. Les lignes 4 et 5 du tableau d’état de ligne sont définies sur SQL_ROW_NOROW.|3|  
-|96 à 100|SQL_NO_DATA|Aucune.|0|  
-|99 à 100|SQL_NO_DATA|Aucune.|0|  
-|Après la fin|SQL_NO_DATA|Aucune.|0|  
+|96 à 100|SQL_NO_DATA|Aucun.|0|  
+|99 à 100|SQL_NO_DATA|Aucun.|0|  
+|Après la fin|SQL_NO_DATA|Aucun.|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>Retour de données dans des colonnes dépendantes  
  Comme **SQLFetch** retourne chaque ligne, il place les données pour chaque colonne liée dans la mémoire tampon liée à cette colonne. Si aucune colonne n’est liée, **SQLFetch** ne retourne aucune donnée, mais déplace le curseur de bloc vers l’avant. Les données peuvent toujours être récupérées à l’aide de **SQLGetData**. Si le curseur est un curseur multiligne (autrement dit, si le SQL_ATTR_ROW_ARRAY_SIZE est supérieur à 1), **SQLGetData** peut être appelé uniquement si SQL_GD_BLOCK est retourné lorsque **SQLGetInfo** est appelé avec un *infotype* de SQL_GETDATA_EXTENSIONS. (Pour plus d’informations, consultez [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).)  
@@ -191,7 +192,7 @@ SQLRETURN SQLFetch(
   
  [2] certains pilotes ne peuvent pas détecter les mises à jour des données et ne peuvent donc pas retourner cette valeur. Pour déterminer si un pilote peut détecter des mises à jour à des lignes récupérées à nouveau, une application appelle **SQLGetInfo** avec l’option SQL_ROW_UPDATES.  
   
- [3] **SQLFetch** peut retourner cette valeur uniquement lorsqu’elle est mélangée avec des appels à **SQLFetchScroll**. Cela est dû au fait que **SQLFetch** progresse dans le jeu de résultats et lorsqu’il est utilisé exclusivement, ne récupère pas les lignes. Comme aucune ligne n’est réextraite, **SQLFetch** ne détecte pas les modifications apportées aux lignes précédemment récupérées. Toutefois, si **SQLFetchScroll** positionne le curseur avant les lignes précédemment récupérées et que **SQLFetch** est utilisé pour extraire ces lignes, **SQLFetch** peut détecter toute modification apportée à ces lignes.  
+ [3]   **SQLFetch** peut retourner cette valeur uniquement lorsqu’elle est mélangée avec des appels à **SQLFetchScroll**. Cela est dû au fait que **SQLFetch** progresse dans le jeu de résultats et lorsqu’il est utilisé exclusivement, ne récupère pas les lignes. Comme aucune ligne n’est réextraite, **SQLFetch** ne détecte pas les modifications apportées aux lignes précédemment récupérées. Toutefois, si **SQLFetchScroll** positionne le curseur avant les lignes précédemment récupérées et que **SQLFetch** est utilisé pour extraire ces lignes, **SQLFetch** peut détecter toute modification apportée à ces lignes.  
   
  [4] retourné par SQLBulkOperations uniquement. Non défini par **SQLFetch** ou **SQLFetchScroll**.  
   

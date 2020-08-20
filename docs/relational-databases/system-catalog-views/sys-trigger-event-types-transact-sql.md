@@ -1,4 +1,5 @@
 ---
+description: sys.trigger_event_types (Transact-SQL)
 title: sys. trigger_event_types (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 81fb3ac8d7bf843b9d64e4f0f10cff6abd83b042
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03fe8a341d9ee1541eac716d94603cc2b2b209cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897695"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475189"
 ---
 # <a name="systrigger_event_types-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,14 +35,14 @@ ms.locfileid: "85897695"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**type**|**int**|Type d'événement ou groupe d'événements qui active un déclencheur.|  
-|**type_name**|**nvarchar (64)**|Nom d'un événement ou groupe d'événements. Cela peut être spécifié dans la clause FOR d’une instruction [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) .|  
+|**TYPE_NAME**|**nvarchar (64)**|Nom d'un événement ou groupe d'événements. Cela peut être spécifié dans la clause FOR d’une instruction [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) .|  
 |**parent_type**|**int**|Type de groupe d'événements qui est le parent de l'événement ou du groupe d'événements.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_resource_stats (base de données Azure SQL)
 title: sys. dm_db_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/27/2020
@@ -19,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 174c4e6c864dab1866326fdd69b5c588ec26b3b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 083a9d14803d0a8c4e34c43e338f58a0b44be5ea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738715"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88475018"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -55,7 +56,7 @@ ms.locfileid: "85738715"
 ## <a name="permissions"></a>Autorisations
  Cette vue nécessite l'autorisation VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
  Les données retournées par **sys. dm_db_resource_stats** sont exprimées sous la forme d’un pourcentage des limites maximales autorisées pour le niveau de service/niveau de performances que vous exécutez.
  
  Si la base de données a basculé vers un autre serveur dans les 60 dernières minutes, la vue ne retourne que les données pour la durée écoulée depuis le basculement.  

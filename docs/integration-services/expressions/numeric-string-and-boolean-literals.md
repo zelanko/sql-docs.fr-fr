@@ -1,4 +1,5 @@
 ---
+description: Littéraux numériques, booléens et de chaîne
 title: Littéraux (SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f8405bd4cb76470eb415dc058caff3931a6b4624
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2ae5d096a90d4e755a57842fb9fb242f7d863eee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918625"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477496"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Littéraux numériques, booléens et de chaîne
 
@@ -80,7 +81,7 @@ ms.locfileid: "86918625"
   
     |Suffixe|Type de résultat|  
     |------------|-----------------|  
-    |None|DT_I4|  
+    |Aucun|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  

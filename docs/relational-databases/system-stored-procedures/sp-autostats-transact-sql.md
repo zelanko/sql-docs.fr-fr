@@ -1,4 +1,5 @@
 ---
+description: sp_autostats (Transact-SQL)
 title: sp_autostats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 113b17db3bd06b8855b91bea2b67b96831b42ac1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474465"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85716159"
   
  Pour plus d’informations sur l’option AUTO_UPDATE_STATISTICS, consultez [options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) et [statistiques](../../relational-databases/statistics/statistics.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,9 +45,9 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tblname = ] 'table_or_indexed_view_name'`Nom de la table ou de la vue indexée sur laquelle afficher l’option AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* est de type **nvarchar (776)**, sans valeur par défaut.  
+`[ @tblname = ] 'table_or_indexed_view_name'` Nom de la table ou de la vue indexée sur laquelle afficher l’option AUTO_UPDATE_STATISTICS. *table_or_indexed_view_name* est de type **nvarchar (776)**, sans valeur par défaut.  
   
-`[ @flagc = ] 'stats_flag'`Met à jour l’option AUTO_UPDATE_STATISTICS avec l’une des valeurs suivantes :  
+`[ @flagc = ] 'stats_flag'` Met à jour l’option AUTO_UPDATE_STATISTICS avec l’une des valeurs suivantes :  
   
  **on** = on  
   
@@ -54,7 +55,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Lorsque *stats_flag* n’est pas spécifié, affichez le paramètre de AUTO_UPDATE_STATISTICS actuel. *stats_flag* est de type **varchar (10)**, avec NULL comme valeur par défaut.  
   
-`[ @indname = ] 'statistics_name'`Nom des statistiques à afficher ou à mettre à jour l’option AUTO_UPDATE_STATISTICS. Pour afficher les statistiques d'un index, vous pouvez utiliser le nom de l'index ; un index et son objet de statistiques correspondant portent le même nom.  
+`[ @indname = ] 'statistics_name'` Nom des statistiques à afficher ou à mettre à jour l’option AUTO_UPDATE_STATISTICS. Pour afficher les statistiques d'un index, vous pouvez utiliser le nom de l'index ; un index et son objet de statistiques correspondant portent le même nom.  
   
  *statistics_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
@@ -74,7 +75,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  Le jeu de résultats d’une table ou d’une vue indexée comprend les statistiques créées pour les index, les statistiques à une seule colonne générées avec l’option AUTO_CREATE_STATISTICS et les statistiques créées à l’aide de l’instruction [Create Statistics](../../t-sql/statements/create-statistics-transact-sql.md) .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si l'index spécifié est désactivé ou si la table spécifiée a un index cluster désactivé, un message d'erreur s'affiche.  
   
  AUTO_UPDATE_STATISTICS est toujours désactivé (OFF) pour les tables optimisées en mémoire.  
@@ -115,14 +116,14 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Portent](../../relational-databases/statistics/statistics.md)   
+ [Statistiques](../../relational-databases/statistics/statistics.md)   
  [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [CRÉER des statistiques &#40;&#41;Transact-SQL](../../t-sql/statements/create-statistics-transact-sql.md)   
+ [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [DROP STATISTICs &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
+ [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
- [METTRE à jour les statistiques &#40;&#41;Transact-SQL](../../t-sql/statements/update-statistics-transact-sql.md)   
+ [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

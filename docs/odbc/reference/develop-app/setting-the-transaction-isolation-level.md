@@ -1,4 +1,5 @@
 ---
+description: Définition du niveau d’isolation des transactions
 title: Définition du niveau d’isolation de la transaction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80401b276355a47469355cb6921d768d168398ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f871ef9e25cb5745987079a4d94272d2f430dfaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476411"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Définition du niveau d’isolation des transactions
 Pour définir le niveau d’isolation de la transaction, une application utilise l’attribut de connexion SQL_ATTR_TXN_ISOLATION. Si la source de données ne prend pas en charge le niveau d’isolation demandé, le pilote ou la source de données peut définir un niveau supérieur. Pour déterminer les niveaux d’isolation des transactions pris en charge par une source de données et le niveau d’isolation par défaut, une application appelle **SQLGetInfo** avec les options SQL_TXN_ISOLATION_OPTION et SQL_DEFAULT_TXN_ISOLATION, respectivement.  

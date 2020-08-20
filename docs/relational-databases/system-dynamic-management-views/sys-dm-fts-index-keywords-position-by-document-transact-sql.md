@@ -1,4 +1,5 @@
 ---
+description: sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
 title: sys. dm_fts_index_keywords_position_by_document (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 04cedd0df5552ee19f7fc98ecdd94ff2d9dc88fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b14ccbe7643ed56e18dc79b2a72e27867d63454
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474947"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +58,7 @@ OBJECT_ID('table_name')
 |document_id|**bigint**|ID de la ligne ou du document à partir duquel le terme actuel a été indexé en texte intégral. Cet ID correspond à la valeur de clé de texte intégral de cette ligne ou de ce document.|  
 |position|**int**|Position du mot clé dans le document.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la DMV pour identifier l’emplacement des mots indexés dans les documents indexés. Cette vue de gestion dynamique peut être utilisée pour résoudre les problèmes quand **sys. dm_fts_index_keywords_by_document** indique que les mots se trouvent dans l’index de recherche en texte intégral, mais quand vous exécutez une requête à l’aide de ces mots, le document n’est pas renvoyé.  
   
 ## <a name="permissions"></a>Autorisations  

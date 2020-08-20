@@ -1,4 +1,5 @@
 ---
+description: Comment les métadonnées sont-elles utilisées ?
 title: Comment les métadonnées sont-elles utilisées ? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbbba96fa2e99a2ccc0618f31e3b29e7d479f703
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca61677b0001ba4c39f81f80f6e3cbce26f27910
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300169"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476631"
 ---
 # <a name="how-is-metadata-used"></a>Comment les métadonnées sont-elles utilisées ?
 Les applications requièrent des métadonnées pour la plupart des opérations de jeu de résultats. Par exemple, l'application utilise le type de données d'une colonne pour déterminer le type de variable à lier à cette colonne. Elle utilise la longueur d’octet d’une colonne de caractères pour déterminer l’espace dont elle a besoin pour afficher les données de cette colonne. La façon dont une application détermine les métadonnées d'une colonne dépend du type de l'application.  

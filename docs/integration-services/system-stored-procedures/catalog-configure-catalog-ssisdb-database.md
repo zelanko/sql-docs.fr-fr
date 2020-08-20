@@ -1,4 +1,5 @@
 ---
+description: catalog.configure_catalog (base de données SSISDB)
 title: catalog.configure_catalog (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d2fedf409343225343bb03f61a8345a27eb68b0e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4506270730f8681315501e76ad1a338ff65b18c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477126"
 ---
 # <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (base de données SSISDB)
 
@@ -34,10 +35,10 @@ catalog.configure_catalog [ @property_name = ] property_name , [ @property_value
   
 ## <a name="arguments"></a>Arguments  
  [ @property_name = ] *property_name*  
- Nom de la propriété de catalogue. *property_name* est de type **nvarchar(255)** . Pour plus d’informations sur les propriétés disponibles, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ Nom de la propriété de catalogue. *property_name* est de type **nvarchar(255)**. Pour plus d’informations sur les propriétés disponibles, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
  [ @property_value = ] *property_value*  
- Valeur de la propriété de catalogue. *property_value* est de type **nvarchar(255)** . Pour plus d’informations sur les valeurs de propriété, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
+ Valeur de la propriété de catalogue. *property_value* est de type **nvarchar(255)**. Pour plus d’informations sur les valeurs de propriété, consultez [catalog.catalog_properties &#40;base de données SSISDB&#41;](../../integration-services/system-views/catalog-catalog-properties-ssisdb-database.md).  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

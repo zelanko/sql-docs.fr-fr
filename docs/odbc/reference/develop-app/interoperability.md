@@ -1,4 +1,5 @@
 ---
+description: Interopérabilité
 title: Interopérabilité | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31b20a696c601ff91c591e4c717f468beca34e36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a404ee6de56cbd8b5605eca640fdf0e065f16d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88476611"
 ---
 # <a name="interoperability"></a>Interopérabilité
 L' *interopérabilité* est la capacité d’une application unique à fonctionner avec de nombreux SGBD différents. La nécessité d’écrire des applications génériques et interopérables était l’un des principaux facteurs qui conduisent au développement d’ODBC. Toutefois, l’interopérabilité n’est pas un chemin d’accès simple, suivi de « non interopérable » à « entièrement interopérable ». Le chemin d’accès comporte de nombreuses branches, chacune nécessitant des compromis entre les fonctionnalités, la vitesse, la complexité du code et le temps de développement.  
