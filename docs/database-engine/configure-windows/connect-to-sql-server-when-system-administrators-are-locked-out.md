@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: eec9e95ccbc326d3d2f64d224cf11f3d059bb8f7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 801602c78193f9fc3fa9cdab40b98c3dc3dd42e0
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717084"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512315"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Se connecter à SQL Server lorsque les administrateurs système n'y ont plus accès 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +44,7 @@ Vous pouvez démarrer une instance de [!INCLUDE[ssNoVersion](../../includes/ssno
 
 Lorsque vous démarrez une instance en mode mono-utilisateur, arrêtez au préalable le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Dans le cas contraire, l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut se connecter en premier, en utilisant la seule connexion disponible au serveur et en vous empêchant de vous connecter.
 
-Il est également possible qu’une application cliente inconnue prenne la seule connexion disponible avant que vous puissiez vous connecter. Pour éviter ce problème, vous pouvez utiliser l’option `-m` suivie d’un nom d’application pour limiter les connexions à une connexion unique à partir de l’application spécifiée. Par exemple, démarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec `-m"sqlcmd"` limite les connexions à une connexion unique, laquelle doit s’identifier en tant que programme client **sqlcmd**. Pour établir une connexion par le biais de l'Éditeur de requêtes dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilisez `-m"Microsoft SQL Server Management Studio - Query"`.  
+Il est également possible qu’une application cliente inconnue prenne la seule connexion disponible avant que vous puissiez vous connecter. Pour éviter ce problème, vous pouvez utiliser l’option `-m` suivie d’un nom d’application pour limiter les connexions à une connexion unique à partir de l’application spécifiée. Par exemple, démarrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec `-mSQLCMD` limite les connexions à une connexion unique, laquelle doit s’identifier en tant que programme client **sqlcmd**. Pour établir une connexion par le biais de l'Éditeur de requêtes dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], utilisez `-m"Microsoft SQL Server Management Studio - Query"`.  
 
 
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ Le tableau suivant résume les différentes façons de démarrer votre instance 
 | Option | Description | Quand l’utiliser |
 |:---|:---|:---|
 |`-m` | Limite les connexions à une connexion unique | Quand aucun autre utilisateur ne tente de se connecter à l’instance ou si vous n’êtes pas sûr du nom de l’application que vous utilisez pour vous connecter à l’instance. |
-|`-m"sqlcmd"`| Limite les connexions à une connexion unique, laquelle doit s’identifier en tant que programme client **sqlcmd**| Lorsque vous envisagez de vous connecter à l’instance avec **sqlcmd** et que vous souhaitez empêcher d’autres applications d’utiliser la seule connexion disponible. |
+|`-mSQLCMD`| Limite les connexions à une connexion unique, laquelle doit s’identifier en tant que programme client **sqlcmd**| Lorsque vous envisagez de vous connecter à l’instance avec **sqlcmd** et que vous souhaitez empêcher d’autres applications d’utiliser la seule connexion disponible. |
 |`-m"Microsoft SQL Server Management Studio - Query"`| Limite les connexions à une connexion unique qui doit s’identifier en tant qu’application **Microsoft SQL Server Management Studio - Requête**.| Lorsque vous envisagez de vous connecter à l’instance avec l’Éditeur de requête dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et que vous souhaitez empêcher d’autres applications d’utiliser la seule connexion disponible. |
 |`-f`| Limite les connexions à une connexion unique et démarre l’instance dans une configuration minimale | Quand une autre configuration vous empêche de démarrer. |
 | &nbsp; | &nbsp; | &nbsp; |

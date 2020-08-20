@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6ad5bdd6b8fbf294a1c4f45a825910ec6a82af2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f746b454b18de7d88ca4c42d049eb058f671ba8e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452801"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512295"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Étape 2 : Initialiser la zone de liste principale
 Pour déclarer des objets record et Recordset globaux, insérez le code suivant dans le (général) (déclarations) de Form1 :  
@@ -46,7 +46,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Ce code instancie les objets record et Recordset globaux. L’objet record, `grec` , est ouvert avec une URL spécifiée comme ActiveConnection. Si l’URL existe, elle est ouverte ; s’il n’existe pas déjà, il est créé. Notez que vous devez remplacer « <https://servername/foldername/> » par une URL valide de votre environnement.  
+ Ce code instancie les objets record et Recordset globaux. L’objet record, `grec` , est ouvert avec une URL spécifiée comme ActiveConnection. Si l’URL existe, elle est ouverte ; s’il n’existe pas déjà, il est créé. Notez que vous devez remplacer `https://servername/foldername/` par une URL valide dans votre environnement.  
   
  L’objet Recordset, `grs` , est ouvert sur les enfants de l’enregistrement, `grec` . `lstMain`Est ensuite renseigné avec les noms de fichiers des ressources publiées sur l’URL.  
   

@@ -1,4 +1,5 @@
 ---
+description: Exemples de conversion de données C en SQL
 title: Exemples de conversion de données C en SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0e21654f183946675c63cee10a3c08754e1508f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65b0dd229139de060dd79132ee3ca7215906442a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500012"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>Exemples de conversion de données C en SQL
 Les exemples suivants illustrent la façon dont le pilote convertit les données C en données SQL :  

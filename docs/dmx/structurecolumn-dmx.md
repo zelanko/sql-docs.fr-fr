@@ -1,4 +1,5 @@
 ---
+description: StructureColumn (DMX)
 title: StructureColumn (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cb07dd463ddbbc15942ca6f62c4ccb708a8c5efd
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 43e02efd8594497ad4f3c02679a475531489141c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500765"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -43,7 +44,7 @@ StructureColumn('structure column name')
   
  Les résultats retournés à partir d’une requête à l’aide de la fonction **StructureColumn** sont affectés par la présence de filtres sur le modèle. Autrement dit, le filtre de modèle contrôle les cas inclus dans le modèle d'exploration de données. Par conséquent, une requête sur la colonne de structure retourne uniquement les cas qui sont utilisés dans le modèle d'exploration de données. Consultez la section Exemples de cette rubrique pour un exemple de code qui affiche l'effet des filtres de modèle d'exploration de données sur les tables de cas et une table imbriquée.  
   
- Pour plus d’informations sur l’utilisation de cette fonction dans une instruction DMX SELECT, consultez [SELECT FROM &#60;model&#62;. Les cas &#40;&#41;DMX](../dmx/select-from-model-cases-dmx.md) ou [SELECT dans &#60;&#62; de structure. CAS](../dmx/select-from-structure-cases.md).  
+ Pour plus d’informations sur l’utilisation de cette fonction dans une instruction DMX SELECT, consultez [SELECT FROM &#60;model&#62;. Les cas &#40;&#41;DMX ](../dmx/select-from-model-cases-dmx.md) ou [SELECT dans &#60;&#62; de structure. CAS](../dmx/select-from-structure-cases.md).  
   
 ## <a name="error-messages"></a>Messages d'erreur  
  L'erreur de sécurité suivante est déclenchée si l'utilisateur ne dispose pas d'autorisations d'extraction sur la structure d'exploration de données parent :  
@@ -137,7 +138,7 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40;&#41;DMX](../dmx/functions-dmx.md)   
- [Fonctions de prédiction générales &#40;&#41;DMX](../dmx/general-prediction-functions-dmx.md)  
+ [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
+ [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
   
   

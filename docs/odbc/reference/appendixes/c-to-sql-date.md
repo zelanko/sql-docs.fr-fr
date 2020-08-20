@@ -1,4 +1,5 @@
 ---
+description: 'C en SQL : Date'
 title: 'C en SQL : date | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa3df8aaee03472076b3241cb9bb60e2a307e28b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9d8bed4b16ee1c63134cdb9e1ae0b8303b0deb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298847"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500002"
 ---
 # <a name="c-to-sql-date"></a>C en SQL : Date
 L’identificateur pour le type de données de la date ODBC C est le suivant :  
@@ -39,6 +40,6 @@ L’identificateur pour le type de données de la date ODBC C est le suivant :
   
  Pour plus d’informations sur les valeurs qui sont valides dans une structure SQL_C_TYPE_DATE, consultez [types de données C](../../../odbc/reference/appendixes/c-data-types.md), plus haut dans cette annexe.  
   
- Lorsque les données de date C sont converties en données SQL de caractères, les données de caractères résultantes sont au format «*yyyy*-*mm*-*JJ*».  
+ Lorsque les données de date C sont converties en données SQL de caractères, les données de caractères résultantes sont au format «*yyyy* - *mm* - *JJ*».  
   
  Le pilote ignore la valeur de longueur/indicateur lors de la conversion de données à partir du type de données de date C et suppose que la taille de la mémoire tampon de données est égale à la taille du type de données C. La valeur de longueur/indicateur est passée dans l’argument *StrLen_Or_Ind* dans **SQLPutData** et dans la mémoire tampon spécifiée avec l’argument *StrLen_or_IndPtr* dans **SQLBindParameter**. La mémoire tampon de données est spécifiée avec l’argument *DataPtr* dans **SQLPutData** et l’argument *ParameterValuePtr* dans **SQLBindParameter**.

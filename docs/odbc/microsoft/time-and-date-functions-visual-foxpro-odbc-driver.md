@@ -1,4 +1,5 @@
 ---
+description: Fonctions d’heure et de date (pilote ODBC Visual FoxPro)
 title: Fonctions d’heure et de date (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 86260f8e7245bed15122d4dbfc4649131674e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d537411481a8bc6c9065e8e86c216c8c0637e565
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500072"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Fonctions d’heure et de date (pilote ODBC Visual FoxPro)
 Le tableau suivant répertorie les fonctions ODBC de date et d’heure prises en charge par le pilote ODBC Visual FoxPro. Lorsque la grammaire Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, l’équivalent Visual FoxPro est listé.  

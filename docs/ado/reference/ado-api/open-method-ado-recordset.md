@@ -1,4 +1,5 @@
 ---
+description: Open, méthode (objet Recordset ADO)
 title: Open, méthode (objet Recordset ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8a091a606cf3049c055794bc16cc51db78a40978
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: d8a4514e677b2b50effdadd2eac24c9f195a1f07
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762177"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512255"
 ---
 # <a name="open-method-ado-recordset"></a>Open, méthode (objet Recordset ADO)
 Ouvre un curseur sur un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -60,7 +61,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
   
  L’utilisation de la méthode **Open** sur un objet **Recordset** ouvre un curseur qui représente les enregistrements d’une table de base, les résultats d’une requête ou un **Recordset**précédemment enregistré.  
   
- Utilisez l’argument *source* facultatif pour spécifier une source de données à l’aide d’un des éléments suivants : une variable d’objet de **commande** , une instruction SQL, une procédure stockée, un nom de table, une URL ou un nom de chemin d’accès complet au fichier. Si *source* est un nom de chemin d’accès de fichier, il peut s’agir d’un chemin d’accès complet (« c:\dir\file.RST »), d’un chemin d’accès relatif («.. \File.RST ") ou une URL (" <https://files/file.rst> ").  
+ Utilisez l’argument *source* facultatif pour spécifier une source de données à l’aide d’un des éléments suivants : une variable d’objet de **commande** , une instruction SQL, une procédure stockée, un nom de table, une URL ou un nom de chemin d’accès complet au fichier. Si *source* est un nom de chemin d’accès de fichier, il peut s’agir d’un chemin d’accès complet (« c:\dir\file.RST »), d’un chemin d’accès relatif («.. \File.RST ") ou une URL ( `https://files/file.rst` ).  
   
  Il n’est pas judicieux d’utiliser l’argument *source* de la méthode **Open** pour exécuter une requête d’action qui ne retourne pas d’enregistrements, car il n’existe aucun moyen simple de déterminer si l’appel a réussi. Le **jeu d’enregistrements** renvoyé par une telle requête sera fermé. Pour exécuter une requête qui ne retourne pas d’enregistrements, telle qu’une instruction SQL INSERT, appelez la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) d’un objet **Command** ou la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) d’un objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) à la place.  
   

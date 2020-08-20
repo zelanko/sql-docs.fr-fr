@@ -1,4 +1,5 @@
 ---
+description: SetToStr (MDX)
 title: SetToStr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3965c3cc8ea2a2f2de292ca0c75e49c957e04f02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0317de06f3d68388fac5be752d26e27f0d373a89
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68036972"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500442"
 ---
 # <a name="settostr-mdx"></a>SetToStr (MDX)
 
@@ -32,7 +33,7 @@ SetToStr(Set_Expression)
  Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction permet de transférer une représentation de chaîne d'un jeu vers une fonction externe à des fins d'analyse. La chaîne retournée est placée entre accolades {}, chaque élément du jeu étant séparé par une virgule.  
+ Cette fonction permet de transférer une représentation de chaîne d'un jeu vers une fonction externe à des fins d'analyse. La chaîne retournée est placée entre accolades {} , chaque élément du jeu étant séparé par une virgule.  
   
 ## <a name="example"></a>Exemple  
  L'exemple ci-dessous retourne une chaîne contenant tous les membres de la hiérarchie d'attribut Geography.Country.  

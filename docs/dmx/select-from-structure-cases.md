@@ -1,4 +1,5 @@
 ---
+description: Sélectionnez à partir de la &lt; structure &gt; . PARFOIS
 title: Sélectionnez à partir de la &lt; structure &gt; . CAS | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500914"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Sélectionnez à partir de la &lt; structure &gt; . PARFOIS
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -39,21 +40,21 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Optionnel. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste d'expressions séparées par des virgules.  
   
  Une expression peut inclure des identificateurs de colonne, des fonctions définies par l'utilisateur et des fonctions VBA.  
   
- *arborescence*  
+ *structure*  
  Nom de la structure.  
   
  *expression de condition*  
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Optionnel. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  Si l'extraction est activée à la fois sur le modèle et sur la structure, les membres d'un rôle qui dispose d'autorisations d'extraction sur la structure d'exploration de données et le modèle d'exploration de données peuvent retourner des colonnes de structure qui n'étaient pas incluses dans le modèle en utilisant la syntaxe suivante :  
@@ -89,7 +90,7 @@ WHERE IsTestCase();
  Pour retourner les cas d'apprentissage, utilisez à la place la fonction `IsTrainingCase()`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SÉLECTIONNER &#40;&#41;DMX](../dmx/select-dmx.md)   
+ [SÉLECTIONNER &#40;&#41;DMX ](../dmx/select-dmx.md)   
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

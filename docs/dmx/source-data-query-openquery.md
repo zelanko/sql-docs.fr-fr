@@ -1,4 +1,5 @@
 ---
+description: '&lt;requête de données sources &gt; -OPENQUERY'
 title: OPENQUERY (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a075f314af0eb8ea2eb0bc941ada0bc38e22fec3
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fd654bf63cfbb961b6aaa3c6369358db25371846
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500864"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;requête de données sources &gt; -OPENQUERY
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -51,7 +52,7 @@ OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#60;&#62;de requête de données source](../dmx/source-data-query.md)   
+ [&#60;&#62;de requête de données source ](../dmx/source-data-query.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

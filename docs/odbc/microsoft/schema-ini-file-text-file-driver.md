@@ -1,4 +1,5 @@
 ---
+description: Fichier Schema.ini (pilote du fichier texte)
 title: Fichier Schema.ini (pilote de fichier texte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed041e43a211f58a34b4e2476d9e0b62ff5d162b
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 8b4bbebfa6eb184bf81cba4a9faf5e3200f428de
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500222"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Fichier Schema.ini (pilote du fichier texte)
 Lorsque le pilote de texte est utilisé, le format du fichier texte est déterminé à l’aide d’un fichier d’informations de schéma. Le fichier d’informations de schéma est toujours nommé Schema.ini et conservé toujours dans le même répertoire que la source de données texte. Le fichier d’informations de schéma fournit à l’IISAM des informations sur le format général du fichier, le nom de colonne et les informations sur le type de données, ainsi que plusieurs autres caractéristiques de données. Un fichier Schema.ini est toujours requis pour accéder aux données de longueur fixe. Vous devez utiliser un fichier de Schema.ini lorsque votre tableau de texte contient des données de type DateTime, Currency ou Decimal, ou à tout moment où vous souhaitez plus de contrôle sur la gestion des données dans la table.  
@@ -55,7 +56,7 @@ Lorsque le pilote de texte est utilisé, le format du fichier texte est détermi
 |----------------------|------------------|---------------------------------|  
 |**Délimité par des tabulations**|Les champs du fichier sont délimités par des tabulations.|Format = TabDelimited|  
 |**Délimité CSV**|Les champs du fichier sont délimités par des virgules (valeurs séparées par des virgules).|Format = CSVDelimited|  
-|**Délimité personnalisé**|Les champs du fichier sont délimités par n’importe quel caractère que vous choisissez d’entrer dans la boîte de dialogue. Tous les guillemets (") sont autorisés, y compris les guillemets doubles (").|Format = délimité (*caractère personnalisé*)<br /><br /> -ou-<br /><br /> Sans délimiteur spécifié :<br /><br /> Format = délimité ()|  
+|**Délimité personnalisé**|Les champs du fichier sont délimités par n’importe quel caractère que vous choisissez d’entrer dans la boîte de dialogue. Tous les guillemets (") sont autorisés, y compris les guillemets doubles (").|Format = délimité (*caractère personnalisé*)<br /><br /> - ou -<br /><br /> Sans délimiteur spécifié :<br /><br /> Format = délimité ()|  
 |**Longueur fixe**|Les champs du fichier ont une longueur fixe.|Format = multiple|  
   
 ## <a name="specifying-the-fields"></a>Spécification des champs  
@@ -93,7 +94,7 @@ Col2=CustomerName Text Width 30
 n=ColumnName type [Width] [#]  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le tableau suivant décrit chaque partie de l’entrée **col**_n_ .  
   
 |Paramètre|Description|  

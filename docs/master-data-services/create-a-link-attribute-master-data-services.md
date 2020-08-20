@@ -1,4 +1,5 @@
 ---
+description: Créer un attribut de lien (Master Data Services)
 title: Créer un attribut de lien
 ms.custom: ''
 ms.date: 03/15/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8b22b60f005ab7e982491685db0ff59dd2c73346
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 129cfe3eec5b99bc486e5a47cd7f90ac0733d13e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500673"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Créer un attribut de lien (Master Data Services)
 
@@ -45,7 +46,7 @@ ms.locfileid: "85813095"
 |------------|-----------------|  
 |Statut|État de l’attribut.<br /><br /> Lorsque vous cliquez sur enregistrer, l’image ![icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône de mise à jour de l’État") s’affiche, indiquant que l’attribut est en état de mise à jour.<br /><br /> Si des erreurs se produisent lors de la création ou de la modification d’un attribut, l’image ![icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") s’affiche.<br /><br /> Dans le cas contraire, l’État est OK et l’image ![icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
 |Nom|Nom de l'attribut.|  
-|Nom complet|Nom de l’attribut.|  
+|Nom d’affichage|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  
 |Types et propriétés|Informations sur le type et le type de données de l’attribut.|  

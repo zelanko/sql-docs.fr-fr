@@ -1,5 +1,6 @@
 ---
-title: Collections
+description: Collections (services de données de référence)
+title: Regroupements
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5aa1d1e0-b4e5-4897-8e74-01dcf418df73
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 50facd8d3b827776a371b3facd19c677c122d0ef
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 75036d4713000b05052c2094e7d8ba8d23c65f25
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811594"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500694"
 ---
 # <a name="collections-master-data-services"></a>Collections (services de données de référence)
 

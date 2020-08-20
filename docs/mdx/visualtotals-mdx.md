@@ -1,4 +1,5 @@
 ---
+description: VisualTotals (MDX)
 title: VisualTotals (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c1e85f4384c322938f5e7937c32bcd116acdda2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125841"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500422"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals (MDX)
 
@@ -40,7 +41,7 @@ VisualTotals(Set_Expression[,Pattern])
 > [!NOTE]  
 >  L’application de la fonction **VisualTotals** à des membres de dimension qui ne sont pas associés à une mesure ou qui se trouvent sous la granularité du groupe de mesures entraîne le remplacement des valeurs par la valeur null.  
   
- *Pattern*, qui est facultatif, spécifie le format de l’étiquette des totaux. Le *modèle* requiert un astérisque (*) comme caractère de substitution pour le membre parent et le reste du texte dans la chaîne apparaît dans le résultat concaténé avec le nom du parent. Pour afficher un astérisque littéral, utilisez deux astérisques (\*\*).  
+ *Pattern*, qui est facultatif, spécifie le format de l’étiquette des totaux. Le *modèle* requiert un astérisque (*) comme caractère de substitution pour le membre parent et le reste du texte dans la chaîne apparaît dans le résultat concaténé avec le nom du parent. Pour afficher un astérisque littéral, utilisez deux astérisques ( \* \* ).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous retourne la valeur visible du troisième trimestre de l'année civile 2001 sur la base de l'unique descendant spécifié, soit le mois de juillet.  

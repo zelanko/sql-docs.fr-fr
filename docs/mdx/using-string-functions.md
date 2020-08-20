@@ -1,4 +1,5 @@
 ---
+description: Utilisation des fonctions de chaîne
 title: Utilisation des fonctions de chaîne | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2160662a5e8fe9e89e133e053cca820fc60a66e9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500482"
 ---
 # <a name="using-string-functions"></a>Utilisation des fonctions de chaîne
 
@@ -101,11 +102,11 @@ ms.locfileid: "68037995"
 >  Les fonctions **StrToMember** et **StrToSet** doivent être utilisées avec précaution. Elles peuvent entraîner des performances médiocres de requête si elles sont utilisées dans des définitions de calcul.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Générer &#40;&#41;MDX](../mdx/generate-mdx.md)   
- [Nom &#40;&#41;MDX](../mdx/name-mdx.md)   
- [UniqueName &#40;&#41;MDX](../mdx/uniquename-mdx.md)   
+ [Générer &#40;&#41;MDX ](../mdx/generate-mdx.md)   
+ [Nom &#40;&#41;MDX ](../mdx/name-mdx.md)   
+ [UniqueName &#40;&#41;MDX ](../mdx/uniquename-mdx.md)   
  [Fonctions &#40;syntaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [Utilisation de procédures stockées &#40;&#41;MDX](../mdx/using-stored-procedures-mdx.md)   
+ [Utilisation de procédures stockées &#40;&#41;MDX ](../mdx/using-stored-procedures-mdx.md)   
  [StrToMember&#41;MDX &#40;](../mdx/strtomember-mdx.md)   
  [StrToSet&#41;MDX &#40;](../mdx/strtoset-mdx.md)  
   

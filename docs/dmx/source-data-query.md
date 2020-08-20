@@ -1,4 +1,5 @@
 ---
+description: '&lt;requête de données sources&gt;'
 title: '&lt;requête de données source &gt; | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: fedb3472755a8147e10aef046c7a7fc435b356cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970277"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500762"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;requête de données sources&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "86970277"
 ## <a name="query-types"></a>Types de requêtes  
  Les trois méthodes les plus courantes pour spécifier les données source sont :  
   
- [&#41;&#40;DMX OPENQUERY](../dmx/source-data-query-openquery.md)  
+ [&#41;&#40;DMX OPENQUERY ](../dmx/source-data-query-openquery.md)  
  Cette instruction interroge des données qui sont externes à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], en utilisant une source de données existante.  
   
  Alors que **OPENQUERY** est similaire dans la fonction à **OpenRowset**, **OPENQUERY** présente les avantages suivants :  
@@ -32,10 +33,10 @@ ms.locfileid: "86970277"
   
 -   L'administrateur a davantage de contrôle sur le mode d'accès aux données sur le serveur. Par exemple, il peut déterminer les fournisseurs à charger dans le serveur et les données externes accessibles.  
   
- [OPENROWSET &#40;&#41;DMX](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;&#41;DMX ](../dmx/source-data-query-openrowset.md)  
  Cette instruction interroge des données qui sont externes à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], en utilisant une source de données existante.  
   
- [FORME &#40;&#41;DMX](../dmx/source-data-query-shape.md)  
+ [FORME &#40;&#41;DMX ](../dmx/source-data-query-shape.md)  
  Cette instruction interroge plusieurs sources de données pour créer une table imbriquée. À l’aide de **Shape**, vous pouvez combiner des données de plusieurs sources en une seule table hiérarchique. Ceci vous permet de bénéficier de la capacité de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d'imbriquer les tables en incorporant une table dans une autre.  
   
  Pour spécifier les données source, vous pouvez également utiliser les options suivantes :   

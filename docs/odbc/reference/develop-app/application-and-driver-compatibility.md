@@ -1,4 +1,5 @@
 ---
+description: Compatibilité des applications et des pilotes
 title: Compatibilité des applications et des pilotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0d803c2ad63d19ddd21d620233148dad7f7ca420
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65880e421e3afc43c24a434c2f1e136412c42f9f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499961"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilité des applications et des pilotes
 Les applications et le pilote ODBC sont répartis en plusieurs catégories, en plus de leur version. Certaines de ces applications sont incompatibles avec certains pilotes ; dans d’autres cas, le type de l’application ou du pilote peut avoir un impact sur les problèmes de compatibilité descendante entre eux.  

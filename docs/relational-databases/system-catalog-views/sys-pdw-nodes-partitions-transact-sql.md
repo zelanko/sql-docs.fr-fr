@@ -13,12 +13,12 @@ ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b13e5da130d7b122f9b79e1996ea3fdb0792e25a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f015d17f401cb2457d3e5cf657ce85342c1628e
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475383"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646269"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -28,8 +28,8 @@ ms.locfileid: "88475383"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|ID de la partition. Unique dans une base de données.|  
-|object_id|**int**|ID de l’objet auquel cette partition appartient. Chaque table ou vue comporte au moins une partition.|  
-|index_id|**int**|ID de l’index dans l’objet auquel cette partition appartient.|  
+|object_id|**int**|ID de l'objet auquel cette partition appartient. Chaque table ou vue comporte au moins une partition.|  
+|index_id|**int**|ID de l'index de l'objet auquel cette partition appartient.|  
 |partition_number|**int**|Numéro de partition de base 1 dans l’index ou le segment de mémoire propriétaire. Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , la valeur de cette colonne est 1.|  
 |hobt_id|**bigint**|ID de la segment de mémoire ou arbre B (B-tree) de données (HoBT) qui contient les lignes de cette partition.|  
 |rows|**bigint**|Nombre approximatif de lignes dans cette partition. |  
@@ -69,6 +69,9 @@ JOIN sys.objects AS o
 WHERE o.name = 'myTable'  
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
+
+>[!TIP]
+> Pour améliorer les performances dans Synapse SQL, envisagez d’utiliser **sys. pdw_permanent_table_mappings** au lieu de **sys. pdw_table_mappings** sur des tables utilisateur permanentes. Pour plus d’informations, consultez **[sys. pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** .
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  

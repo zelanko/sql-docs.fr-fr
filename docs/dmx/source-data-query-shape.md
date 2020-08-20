@@ -1,4 +1,5 @@
 ---
+description: '&lt;requête de données source &gt; -forme'
 title: FORME (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4d5d93d4236b3cf86719c416ba87517401e4b4f5
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 16fff086514facbb8197d8d6f27b72b81f67c2e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88500777"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;requête de données source &gt; -forme
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -71,7 +72,7 @@ SHAPE {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#60;&#62;de requête de données source](../dmx/source-data-query.md)   
+ [&#60;&#62;de requête de données source ](../dmx/source-data-query.md)   
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
