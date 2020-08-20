@@ -1,4 +1,5 @@
 ---
+description: sp_revoke_login_from_proxy (Transact-SQL)
 title: sp_revoke_login_from_proxy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0819dbe8c2b4f76e638c09861d83ddb37e76da31
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 39857bce8c0fc50c1773709d70e7e477b669b282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899230"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473841"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime l'accès à un proxy pour un principal de sécurité.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +43,16 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, du rôle de serveur ou du rôle de base de données **msdb** pour lequel supprimer l’accès. *Name* est de type **nvarchar (256)** et n’a pas de valeur par défaut.  
+`[ @name = ] 'name'` Nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, du rôle de serveur ou du rôle de base de données **msdb** pour lequel supprimer l’accès. *Name* est de type **nvarchar (256)** et n’a pas de valeur par défaut.  
   
-`[ @proxy_id = ] id`ID du proxy pour lequel supprimer l’accès. L' *ID* ou le *proxy_name* doivent être spécifiés, mais ils ne peuvent pas être spécifiés. L' *ID* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @proxy_id = ] id` ID du proxy pour lequel supprimer l’accès. L' *ID* ou le *proxy_name* doivent être spécifiés, mais ils ne peuvent pas être spécifiés. L' *ID* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @proxy_name = ] 'proxy_name'`Nom du proxy pour lequel supprimer l’accès. L' *ID* ou le *proxy_name* doivent être spécifiés, mais ils ne peuvent pas être spécifiés. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @proxy_name = ] 'proxy_name'` Nom du proxy pour lequel supprimer l’accès. L' *ID* ou le *proxy_name* doivent être spécifiés, mais ils ne peuvent pas être spécifiés. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les travaux appartenant à la connexion qui fait référence à ce proxy ne pourront pas s'exécuter.  
   
 ## <a name="permissions"></a>Autorisations  

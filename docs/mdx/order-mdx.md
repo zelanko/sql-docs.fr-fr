@@ -1,4 +1,5 @@
 ---
+description: Order (MDX)
 title: Ordre (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4db745ea01a56d68fe259ebb2fffb5aae250abd4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471741"
 ---
 # <a name="order-mdx"></a>Order (MDX)
 
@@ -50,7 +51,7 @@ Order(Set_Expression, String_Expression
  Si la fonction **Order** est utilisée avec un ensemble où deux hiérarchies ou plus sont jointure croisée et que l’indicateur **desc** est utilisé, seuls les membres de la dernière hiérarchie du jeu sont triés. Il s'agit là d'une différence par rapport à Analysis Services 2000 où toutes les hiérarchies du jeu étaient triées.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne, à partir du cube **Adventure Works** , le nombre de commandes Reseller pour tous les trimestres calendaires de la hiérarchie Calendar sur la dimension Date. La fonction **Order** réorganise le jeu pour l’axe Rows. La fonction **Order** trie le jeu par `[Reseller Order Count]` dans l’ordre hiérarchique décroissant, comme déterminé `[Calendar]` par la hiérarchie.  
+ L’exemple suivant retourne, à partir du cube **Adventure Works** , le nombre de commandes Reseller pour tous les trimestres calendaires de la hiérarchie Calendar sur la dimension Date. La fonction **Order** réorganise le jeu pour l’axe Rows. La fonction **Order** trie le jeu par `[Reseller Order Count]` dans l’ordre hiérarchique décroissant, comme déterminé par la `[Calendar]` hiérarchie.  
   
  `SELECT`  
   

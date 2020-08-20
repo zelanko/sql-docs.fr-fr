@@ -1,4 +1,5 @@
 ---
+description: 'Didacticiel : Utiliser le service Stockage Blob Azure avec SQL Server 2016'
 title: 'Didacticiel : Utiliser le service Stockage Blob Azure avec SQL Server 2016'
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020
@@ -14,12 +15,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4e8d09fd7af7501427490178ef7cc9624b7e98a1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: baf78116ef5d200246a0da7f4f8ce5c8686d2426
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247266"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472940"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Didacticiel : Utiliser le service Stockage Blob Azure avec SQL Server 2016
 
@@ -30,7 +31,7 @@ La prise en charge de l’intégration SQL Server pour le service Stockage Blob 
 
 Ce didacticiel vous montre comment utiliser des fichiers de données SQL Server dans le service Stockage Blob Microsoft Azure en plusieurs parties. Chaque partie porte sur une tâche spécifique et les différentes parties doivent être traitées dans l’ordre. Tout d’abord, vous allez apprendre à créer un conteneur de stockage d’objets Blob avec une stratégie d’accès stockée et une signature d’accès partagé. Ensuite, vous découvrirez comment créer des informations d’identification SQL Server pour intégrer SQL Server au stockage Blob Azure. Ensuite, vous sauvegarderez une base de données dans l’espace de stockage d’objets Blob et la restaurerez dans une machine virtuelle Azure. Vous utiliserez ensuite la sauvegarde du journal des transactions d’instantanés de fichiers SQL Server 2016 pour effectuer une restauration à un point dans le temps et dans une base de données. Enfin, pour illustrer les sauvegardes d’instantanés de fichiers et leur utilisation, le didacticiel vous montrera comment utiliser des fonctions et procédures stockées système de métadonnées.
   
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour suivre ce didacticiel, vous devez connaître les concepts de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la syntaxe T-SQL. Pour utiliser ce tutoriel, vous avez besoin d'un compte de stockage Azure, de SQL Server Management Studio (SSMS), d'un accès à une instance de SQL Server sur site, d'un accès à une machine virtuelle Azure exécutant SQL Server 2016 et d’une base de données AdventureWorks2016. Par ailleurs, le compte utilisé pour émettre les commandes BACKUP et RESTORE doit figurer dans le rôle de base de données **db_backupoperator** avec les autorisations **modifier les informations d’identification**. 
 
@@ -481,9 +482,9 @@ Pour supprimer le groupe de ressources, exécutez le code powershell suivant :
 ## <a name="see-also"></a>Voir aussi
 
 [Fichiers de données SQL Server dans Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Sauvegardes sous forme d’instantanés de fichier pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [Sauvegarde de SQL Server sur une URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
-[Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
+[Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [Créer un conteneur](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Obtenir la liste de contrôle d’accès du conteneur](https://msdn.microsoft.com/library/azure/dd179469.aspx)

@@ -1,4 +1,5 @@
 ---
+description: Types de données pris en charge (pilote ODBC pour Oracle)
 title: Types de données pris en charge (pilote ODBC pour Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 313254a3a117984d666d7c7be7e506386ae34e3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d53cdb9a270149866b2a480496f39adcb20e4d56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301114"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471511"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Types de données pris en charge (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -28,21 +29,21 @@ ms.locfileid: "81301114"
   
 |Type de données|Oracle 7,3|Oracle8|  
 |---------------|----------------|-------------|  
-|BFILE|n/a|Non prise en charge|  
-|BLOB|n/a|Non prise en charge|  
-|CHAR|Pris en charge|Pris en charge|  
-|CLOB|n/a|Non prise en charge|  
-|DATE|Pris en charge|Pris en charge|  
-|FLOAT|Pris en charge|Pris en charge|  
-|INTEGER|Pris en charge|Pris en charge|  
-|LONG|Pris en charge|Pris en charge|  
-|LONG RAW|Pris en charge|Pris en charge|  
-|NCHAR|n/a|Non prise en charge|  
-|NCLOB|n/a|Non prise en charge|  
-|NUMBER|Pris en charge|Pris en charge|  
-|NVARCHAR2|n/a|Non prise en charge|  
-|RAW|Pris en charge|Pris en charge|  
-|VARCHAR2|Pris en charge|Pris en charge|  
+|BFILE|n/a|Non pris en charge|  
+|BLOB|n/a|Non pris en charge|  
+|CHAR|Prise en charge|Prise en charge|  
+|CLOB|n/a|Non pris en charge|  
+|DATE|Prise en charge|Prise en charge|  
+|FLOAT|Prise en charge|Prise en charge|  
+|INTEGER|Prise en charge|Prise en charge|  
+|LONG|Prise en charge|Prise en charge|  
+|LONG RAW|Prise en charge|Prise en charge|  
+|NCHAR|n/a|Non pris en charge|  
+|NCLOB|n/a|Non pris en charge|  
+|NUMBER|Prise en charge|Prise en charge|  
+|NVARCHAR2|n/a|Non pris en charge|  
+|RAW|Prise en charge|Prise en charge|  
+|VARCHAR2|Prise en charge|Prise en charge|  
 |MLSLABEL|Non pris en charge.|Non pris en charge.|  
   
 > [!NOTE]  

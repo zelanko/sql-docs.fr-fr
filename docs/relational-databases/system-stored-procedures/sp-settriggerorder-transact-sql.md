@@ -1,4 +1,5 @@
 ---
+description: sp_settriggerorder (Transact-SQL)
 title: sp_settriggerorder (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f222261c21ecb96f3599b20917a441898e3325e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 564e38166cd26ea1fff2bc5154fea115e21b3131
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473794"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Spécifie les déclencheurs AFTER activés en premier ou en dernier. L'ordre d'exécution des déclencheurs AFTER activés entre les premier et dernier déclencheurs est indéfini.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,20 +44,20 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @triggername = ] '[ _triggerschema.] _triggername'`Nom du déclencheur et du schéma auquel il appartient, le cas échéant, dont l’ordre doit être défini ou modifié. [_triggerschema_**.**] *triggername* est de **type sysname**. Si le nom ne correspond pas à un déclencheur ou si le nom correspond à un déclencheur INSTEAD OF, la procédure retourne une erreur. *triggerschema* ne peut pas être spécifié pour les déclencheurs DDL ou Logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Nom du déclencheur et du schéma auquel il appartient, le cas échéant, dont l’ordre doit être défini ou modifié. [_triggerschema_**.**] *triggername* est de **type sysname**. Si le nom ne correspond pas à un déclencheur ou si le nom correspond à un déclencheur INSTEAD OF, la procédure retourne une erreur. *triggerschema* ne peut pas être spécifié pour les déclencheurs DDL ou Logon.  
   
-`[ @order = ] 'value'`Paramètre de la nouvelle commande du déclencheur. la *valeur* est de type **varchar (10)** et peut prendre l’une des valeurs suivantes.  
+`[ @order = ] 'value'` Paramètre de la nouvelle commande du déclencheur. la *valeur* est de type **varchar (10)** et peut prendre l’une des valeurs suivantes.  
   
 > [!IMPORTANT]  
 >  Le **premier** et le **dernier** déclencheur doivent être deux déclencheurs différents.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**First**|Le déclencheur est activé en premier.|  
-|**Famille**|Le déclencheur est activé en dernier.|  
+|**Première**|Le déclencheur est activé en premier.|  
+|**Dernière**|Le déclencheur est activé en dernier.|  
 |**Aucun**|L'ordre d'activation du déclencheur n'est pas défini.|  
   
-`[ @stmttype = ] 'statement_type'`Spécifie l’instruction SQL qui déclenche le déclencheur. *statement_type* est de type **varchar (50)** et peut être insertion, mise à jour, suppression, ouverture de session ou n’importe quel [!INCLUDE[tsql](../../includes/tsql-md.md)] événement d’instruction listé dans des [événements DDL](../../relational-databases/triggers/ddl-events.md). Les groupes d'événements ne peuvent pas être spécifiés.  
+`[ @stmttype = ] 'statement_type'` Spécifie l’instruction SQL qui déclenche le déclencheur. *statement_type* est de type **varchar (50)** et peut être insertion, mise à jour, suppression, ouverture de session ou n’importe quel [!INCLUDE[tsql](../../includes/tsql-md.md)] événement d’instruction listé dans des [événements DDL](../../relational-databases/triggers/ddl-events.md). Les groupes d'événements ne peuvent pas être spécifiés.  
   
  Un déclencheur peut être désigné comme **premier** ou **dernier** déclencheur pour un type d’instruction uniquement après que ce déclencheur a été défini en tant que déclencheur pour ce type d’instruction. Par exemple, le déclencheur **TR1** peut être désigné en **premier** pour l’insertion sur la table **T1** si **TR1** est défini en tant que déclencheur INSERT. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne une erreur si **TR1**, qui a été défini uniquement comme déclencheur d’insertion, est défini en tant que déclencheur **First**ou **Last**pour une instruction Update. Pour plus d'informations, consultez la section Notes.  
   
@@ -125,7 +126,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   

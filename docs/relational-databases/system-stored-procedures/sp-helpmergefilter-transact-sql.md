@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergefilter (Transact-SQL)
 title: sp_helpmergefilter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc32ca9d211ea818c8a0febdd5dda2e46b1b7fcf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7051213a6543a1dc964fe011f95f48d15cd788ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893585"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474008"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur les filtres de fusion. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,11 +40,11 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**, avec la valeur par défaut **%** , qui renvoie les noms de tous les articles.  
+`[ @article = ] 'article'` Nom de l’article. *article* est de **type sysname**, avec la valeur par défaut **%** , qui renvoie les noms de tous les articles.  
   
-`[ @filtername = ] 'filtername'`Nom du filtre sur lequel les informations doivent être retournées. *FilterName* est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les filtres définis sur l’article ou la publication.  
+`[ @filtername = ] 'filtername'` Nom du filtre sur lequel les informations doivent être retournées. *FilterName* est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les filtres définis sur l’article ou la publication.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -64,7 +65,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpmergefilter** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

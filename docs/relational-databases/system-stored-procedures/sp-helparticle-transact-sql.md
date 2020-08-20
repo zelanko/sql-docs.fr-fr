@@ -1,4 +1,5 @@
 ---
+description: sp_helparticle (Transact-SQL)
 title: sp_helparticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ca400eb6fc015acff452ca4ae6a7658a05145f8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634229"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474151"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Affiche des informations sur un article. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication. Dans le cas des serveurs de publication Oracle, cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,18 +42,18 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @article = ] 'article'`Nom d’un article de la publication. *article* est de **type sysname**, avec la valeur par défaut **%** . Si *l’article* n’est pas fourni, des informations sur tous les Articles de la publication spécifiée sont retournées.  
+`[ @article = ] 'article'` Nom d’un article de la publication. *article* est de **type sysname**, avec la valeur par défaut **%** . Si *l’article* n’est pas fourni, des informations sur tous les Articles de la publication spécifiée sont retournées.  
   
-`[ @returnfilter = ] returnfilter`Spécifie si la clause de filtre doit être retournée. *returnfilter* est de **bits**, avec **1**comme valeur par défaut, qui retourne la clause de filtre.  
+`[ @returnfilter = ] returnfilter` Spécifie si la clause de filtre doit être retournée. *returnfilter* est de **bits**, avec **1**comme valeur par défaut, qui retourne la clause de filtre.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être spécifié lors de la demande d’informations sur un article publié par un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
   
-`[ @found = ] found OUTPUT`À usage interne uniquement.  
+`[ @found = ] found OUTPUT` À usage interne uniquement.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -92,7 +93,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helparticle** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: sp_update_targetservergroup (Transact-SQL)
 title: sp_update_targetservergroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16cd7c339a476875ee3f3a7319ddaf57f0d69711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6aa33876376560cfc90cbf7ab03a69fcf94fa6a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891268"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473523"
 ---
 # <a name="sp_update_targetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie le nom du groupe du serveur cible indiqué.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,9 +42,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'current_name'`Nom du groupe de serveurs cibles. *current_name* est de **type sysname**, sans valeur par défaut.  
+`[ @name = ] 'current_name'` Nom du groupe de serveurs cibles. *current_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @new_name = ] 'new_name'`Nouveau nom du groupe de serveurs cibles. *new_name* est de **type sysname**, sans valeur par défaut.  
+`[ @new_name = ] 'new_name'` Nouveau nom du groupe de serveurs cibles. *new_name* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -51,7 +52,7 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, les utilisateurs doivent disposer du rôle serveur fixe **sysadmin** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_update_targetservergroup** doit être exécuté à partir de la base de données **msdb** .  
   
 ## <a name="examples"></a>Exemples  

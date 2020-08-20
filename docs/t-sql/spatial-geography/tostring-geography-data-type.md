@@ -1,4 +1,5 @@
 ---
+description: ToString (type de données geography)
 title: ToString (type de données geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1bec7db7fd26068276ff481619c57c99948a73c1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 491c548960fde425b8f2c021d69dce94b95a7b21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472578"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "86555751"
   
  Type de retour CLR : **SqlString**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode retourne la chaîne « Null » lorsqu'elle est appelée sur des instances Null. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le jeu de résultats possibles sur le serveur a été étendu aux instances **FullGlobe**. Cette méthode retourne la même valeur que `AsTextZM()`.  
   
  Cette méthode n'est pas précise.  

@@ -1,4 +1,5 @@
 ---
+description: sysdbmaintplan_history (Transact-SQL)
 title: sysdbmaintplan_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec49500e94a22e8ab91513fa9436cd6d21bf7959
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f5871f6acc8e4df58223e1568b0a253a7e62c42d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881425"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473147"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "85881425"
 |**database_name**|**sysname**|Nom de la base de données associée au plan de maintenance de base de données.|  
 |**server_name**|**sysname**|Nom système.|  
 |**activity**|**nvarchar(128)**|Activité réalisée par le plan de maintenance de la base de données (par exemple, sauvegarde du journal des transactions).|  
-|**réussi**|**bit**|**0** = succès **1** = échec|  
+|**succeeded**|**bit**|**0** = succès **1** = échec|  
 |**heure-fin**|**datetime**|Heure de la fin de l'exécution de l'action.|  
 |**duration**|**int**|Durée nécessaire à l'exécution de l'action du plan de maintenance de la base de données.|  
 |**heure-début**|**datetime**|Heure de début de l'action.|  

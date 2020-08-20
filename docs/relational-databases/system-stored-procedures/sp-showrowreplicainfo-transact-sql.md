@@ -1,4 +1,5 @@
 ---
+description: sp_showrowreplicainfo (Transact-SQL)
 title: sp_showrowreplicainfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a734045bc253e71e8663314f785b8630b32b383a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 09ab29ef7e164aa89d99d4e34ffd1e71fc4a18a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473752"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche des informations concernant une ligne d'une table utilisée en tant qu'article dans une réplication de fusion. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @ownername = ] 'ownername'`Nom du propriétaire de la table. *OwnerName* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est utile pour différencier les tables si une base de données contient plusieurs tables du même nom, chacune de ces tables ayant un propriétaire différent.  
+`[ @ownername = ] 'ownername'` Nom du propriétaire de la table. *OwnerName* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est utile pour différencier les tables si une base de données contient plusieurs tables du même nom, chacune de ces tables ayant un propriétaire différent.  
   
-`[ @tablename = ] 'tablename'`Nom de la table qui contient la ligne pour laquelle les informations sont retournées. *TableName* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @tablename = ] 'tablename'` Nom de la table qui contient la ligne pour laquelle les informations sont retournées. *TableName* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @rowguid = ] rowguid`Identificateur unique de la ligne. *rowguid* est de type **uniqueidentifier**et n’a pas de valeur par défaut.  
+`[ @rowguid = ] rowguid` Identificateur unique de la ligne. *rowguid* est de type **uniqueidentifier**et n’a pas de valeur par défaut.  
   
-`[ @show = ] 'show'`Détermine la quantité d’informations à retourner dans le jeu de résultats. *Show* est de type **nvarchar (20),** avec les deux valeurs par défaut. Si la **ligne**est, seules les informations de version de ligne sont retournées. Si les **colonnes**sont, seules les informations de version de colonne sont retournées. Dans **les deux**cas, les informations de ligne et de colonne sont retournées.  
+`[ @show = ] 'show'` Détermine la quantité d’informations à retourner dans le jeu de résultats. *Show* est de type **nvarchar (20),** avec les deux valeurs par défaut. Si la **ligne**est, seules les informations de version de ligne sont retournées. Si les **colonnes**sont, seules les informations de version de colonne sont retournées. Dans **les deux**cas, les informations de ligne et de colonne sont retournées.  
   
 ## <a name="result-sets-for-row-information"></a>Ensemble de résultats pour les informations de ligne  
   
@@ -56,7 +57,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nom de la base de données qui a effectué cette entrée.|  
 |**db_nickname**|**binary(6)**|Surnom de la base de données qui a effectué cette entrée.|  
 |**version**|**int**|Version de l'entrée.|  
-|**current_state**|**nvarchar (9)**|Retourne des informations sur l'état actuel de la ligne.<br /><br /> les données de ligne **y** représentent l’état actuel de la ligne.<br /><br /> les données de **n** lignes ne représentent pas l’état actuel de la ligne.<br /><br /> **\<n/a>**-Non applicable.<br /><br /> **\<unknown>**-Impossible de déterminer l’état actuel.|  
+|**current_state**|**nvarchar (9)**|Retourne des informations sur l'état actuel de la ligne.<br /><br /> les données de ligne **y** représentent l’état actuel de la ligne.<br /><br /> les données de **n** lignes ne représentent pas l’état actuel de la ligne.<br /><br /> **\<n/a>** -Non applicable.<br /><br /> **\<unknown>** -Impossible de déterminer l’état actuel.|  
 |**rowversion_table**|**nchar (17)**|Indique si les versions de ligne sont stockées dans la table [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) ou dans la table [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**Commentaire**|**nvarchar(255)**|Informations supplémentaires concernant l'entrée de version de cette ligne. En général, ce champ est vide.|  
   
@@ -74,7 +75,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>Ensemble de résultats pour la ligne et la colonne  
  Si la valeur **both** est choisie pour *Show*, les jeux de résultats de ligne et de colonne sont retournés.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_showrowreplicainfo** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

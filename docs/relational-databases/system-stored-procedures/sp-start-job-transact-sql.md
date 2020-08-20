@@ -1,4 +1,5 @@
 ---
+description: sp_start_job (Transact-SQL)
 title: sp_start_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 506fde9c77a0a78ef36bc4a89933ccdbe6a5f45d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fcf38d9b430943669a17e0ab1dd449eb4c75a18b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473728"
 ---
 # <a name="sp_start_job-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ordonne à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent d'exécuter immédiatement un travail.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +46,15 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_name = ] 'job_name'`Nom du travail à démarrer. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail à démarrer. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @job_id = ] job_id`Numéro d’identification du travail à démarrer. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail à démarrer. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'`Serveur cible sur lequel le travail doit être démarré. *SERVER_NAME* est de type **nvarchar (128)**, avec NULL comme valeur par défaut. *SERVER_NAME* doit être l’un des serveurs cibles auxquels le travail est actuellement ciblé.  
+`[ @server_name = ] 'server_name'` Serveur cible sur lequel le travail doit être démarré. *SERVER_NAME* est de type **nvarchar (128)**, avec NULL comme valeur par défaut. *SERVER_NAME* doit être l’un des serveurs cibles auxquels le travail est actuellement ciblé.  
   
-`[ @step_name = ] 'step_name'`Nom de l’étape à laquelle commencer l’exécution du travail. S'applique uniquement aux travaux locaux. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @step_name = ] 'step_name'` Nom de l’étape à laquelle commencer l’exécution du travail. S'applique uniquement aux travaux locaux. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 `[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

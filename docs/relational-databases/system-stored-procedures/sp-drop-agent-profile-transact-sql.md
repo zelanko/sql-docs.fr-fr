@@ -1,4 +1,5 @@
 ---
+description: sp_drop_agent_profile (Transact-SQL)
 title: sp_drop_agent_profile (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94687e1da630f4bd8bfa153e5bcd16d316b68d74
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d69f685fce04f3a4355fae3dab31900cde4a1c56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85860409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474327"
 ---
 # <a name="sp_drop_agent_profile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un profil de la table **MSagent_profiles** . Cette procédure stockée est exécutée sur n’importe quelle base de données du serveur de distribution.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +38,12 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id`ID du profil à supprimer. *profile_id* est de **type int**, sans valeur par défaut.  
+`[ @profile_id = ] profile_id` ID du profil à supprimer. *profile_id* est de **type int**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_drop_agent_profile** est utilisé dans tous les types de réplications.  
   
  Les paramètres du profil donné sont également supprimés de la table **MSagent_parameters** .  

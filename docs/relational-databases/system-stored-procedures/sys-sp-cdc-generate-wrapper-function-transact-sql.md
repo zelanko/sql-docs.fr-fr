@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 title: sys. sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68dbfaed63677a7d64c489646592fe35745ff3b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7f54e99cd49c487dba0f008661da8a01d4efb837
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891126"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473434"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Génère des scripts qui permettent de créer des fonctions wrapper pour les fonctions de requête de capture de données modifiées disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'API prise en charge dans les wrappers générés permet de spécifier l'intervalle de requête en tant qu'intervalle datetime. La fonction peut ainsi être utilisée dans de nombreuses applications d'entreposage, y compris celles que développent les concepteurs de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui utilisent la technologie de capture de données modifiées pour déterminer la charge incrémentielle.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -72,7 +73,7 @@ sys.sp_cdc_generate_wrapper_function
 |**function_name**|**nvarchar (145)**|Nom de la fonction générée.|  
 |**create_script**|**nvarchar(max)**|Script qui crée la fonction wrapper de l'instance de capture.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le script qui crée la fonction permettant d'encapsuler la requête all-changes pour une instance de capture est toujours généré. Si l'instance de capture prend en charge des requêtes net-changes, le script permettant de générer un wrapper pour cette requête est également généré.  
   
 ## <a name="examples"></a>Exemples  
@@ -104,7 +105,7 @@ DEALLOCATE #hfunctions;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de capture de données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [Capture de données modifiées &#40;&#41;SSIS](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
+ [Procédures stockées de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+ [Capture de données modifiées &#40;&#41;SSIS ](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

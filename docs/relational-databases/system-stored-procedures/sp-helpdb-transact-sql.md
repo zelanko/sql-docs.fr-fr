@@ -1,4 +1,5 @@
 ---
+description: sp_helpdb (Transact-SQL)
 title: sp_helpdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c94db417a7257d38f5b607854beeeb5663c30ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899573"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474131"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche des informations sur une base de données précise ou sur toutes les bases de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'name'`Nom de la base de données pour laquelle les informations sont signalées. *Name* est de **type sysname**, sans valeur par défaut. Si le *nom* n’est pas spécifié, **sp_helpdb** des rapports sur toutes les bases de données de l’affichage catalogue **sys. databases** .  
+`[ @dbname = ] 'name'` Nom de la base de données pour laquelle les informations sont signalées. *Name* est de **type sysname**, sans valeur par défaut. Si le *nom* n’est pas spécifié, **sp_helpdb** des rapports sur toutes les bases de données de l’affichage catalogue **sys. databases** .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -63,13 +64,13 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**nchar(128)**|Nom de fichier logique.|  
 |**combinaison**|**smallint**|ID de fichier.|  
 |**extension**|**nchar (260)**|Nom de fichier du système d'exploitation (nom de fichier physique).|  
-|**filegroup**|**nvarchar(128)**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Il s'agit d'un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
+|**fichiers**|**nvarchar(128)**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Il s'agit d'un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
 |**size**|**nvarchar (18)**|Taille du fichier exprimée en mégaoctets.|  
 |**MaxSize**|**nvarchar (18)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
 |**future**|**nvarchar (18)**|Incrément de croissance du fichier. Cela indique la quantité d’espace ajoutée au fichier chaque fois que de l’espace supplémentaire est nécessaire.|  
 |**syntaxe**|**varchar (9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **« données uniquement »** et, pour le fichier journal, la valeur est **« Journal uniquement »**.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La colonne **État** dans le jeu de résultats indique les options qui ont été activées dans la base de données. Toutes les options de base de données ne sont pas signalées par la colonne **État** . Pour afficher la liste complète des paramètres d’option de base de données actuels, utilisez l’affichage catalogue **sys. databases** .  
   
 ## <a name="permissions"></a>Autorisations  
@@ -99,8 +100,8 @@ GO
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys. FileGroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

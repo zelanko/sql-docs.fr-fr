@@ -1,4 +1,5 @@
 ---
+description: GRANT - Autorisations sur Service Broker (Transact-SQL)
 title: Autorisations GRANT dans Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 72cc7e6fa6d87afe2fcce8ea6c695117d140af79
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 350787ea11245db4bbd720c9bbbcc97403c90231
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484345"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472198"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT - Autorisations sur Service Broker (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Accorde des autorisations à un contrat Service Broker, un type de message, une liaison distante, un itinéraire ou un service.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,19 +58,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Spécifie une autorisation qu'il est possible d'accorder sur un élément sécurisable Service Broker.  Voir ci-dessous.  
   
- CONTRACT **::** _contract_name_  
+ CONTRACT **::**_contract_name_  
  Indique le contrat sur lequel l'autorisation est accordée. Le qualificateur d’étendue « ::» est obligatoire.  
   
- MESSAGE TYPE **::** _message_type_name_  
+ MESSAGE TYPE **::**_message_type_name_  
  Spécifie le type de message sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- REMOTE SERVICE BINDING **::** _remote_binding_name_  
+ REMOTE SERVICE BINDING **::**_remote_binding_name_  
  Spécifie la liaison de service distant sur laquelle l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- ROUTE **::** _route_name_  
+ ROUTE **::**_route_name_  
  Indique l'itinéraire sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- SERVICE **::** _service_name_  
+ SERVICE **::**_service_name_  
  Indique le service sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  

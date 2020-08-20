@@ -1,4 +1,5 @@
 ---
+description: sp_helptrigger (Transact-SQL)
 title: sp_helptrigger (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 546e980aeb021f57a0267d1f668f7acd181b4dcf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e79a0a06b812fedd98ed558c17f00d026bae8ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473967"
 ---
 # <a name="sp_helptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne le ou les types de déclencheurs DML définis sur la table spécifiée de la base de données actuelle. sp_helptrigger ne peut pas être utilisé avec des déclencheurs DDL. Interrogez plutôt l’affichage catalogue des [procédures stockées système](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,9 +42,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tabname = ] 'table'`Nom de la table dans la base de données active pour laquelle les informations de déclencheur doivent être retournées. *table* est de type **nvarchar (776)**, sans valeur par défaut.  
+`[ @tabname = ] 'table'` Nom de la table dans la base de données active pour laquelle les informations de déclencheur doivent être retournées. *table* est de type **nvarchar (776)**, sans valeur par défaut.  
   
-`[ @triggertype = ] 'type'`Type du déclencheur DML pour lequel des informations doivent être retournées. le *type* est **char (6)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @triggertype = ] 'type'` Type du déclencheur DML pour lequel des informations doivent être retournées. le *type* est **char (6)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  

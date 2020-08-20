@@ -1,4 +1,5 @@
 ---
+description: Ajouter des colonnes à une table (moteur de base de données)
 title: Ajouter des colonnes à une table (moteur de base de données)| Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
@@ -15,12 +16,12 @@ ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0212f7615feb36b9c9f14d0a07e28445fac5597
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: ad7cb3cdba7b9b20a28362b8570cc6e2fc0b04d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473071"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Ajouter des colonnes à une table (moteur de base de données)
 
@@ -52,12 +53,12 @@ Requiert une autorisation ALTER sur la table.
    Il s’agit d’une valeur obligatoire, qui est utilisée comme valeur par défaut si vous n’en choisissez pas.
 
    > [!NOTE]
-   > Vous pouvez modifier la valeur par défaut dans la boîte de dialogue **Options** située sous **Outils de base de données**.
+   >  Vous pouvez modifier la valeur par défaut dans la boîte de dialogue **Options** située sous **Outils de base de données**.
 
 5. Continuez à définir éventuellement d'autres propriétés des colonnes dans l'onglet **Propriétés des Colonnes** .
 
     > [!NOTE]
-    > Les valeurs par défaut des propriétés des colonnes sont ajoutées lorsque vous créez une nouvelle colonne, mais vous pouvez les modifier sous l’onglet **Propriétés de la colonne** .
+    >  Les valeurs par défaut des propriétés des colonnes sont ajoutées lorsque vous créez une nouvelle colonne, mais vous pouvez les modifier dans l'onglet **Propriétés de la colonne** .
 
 6. Quand vous avez fini d’ajouter des colonnes, dans le menu **Fichier**, choisissez **Enregistrer** _nom de la table_.
   

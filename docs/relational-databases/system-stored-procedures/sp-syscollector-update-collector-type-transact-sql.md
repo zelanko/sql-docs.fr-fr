@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collector_type (Transact-SQL)
 title: sp_syscollector_update_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f315b95b100315691d1ace30a3fe3bb2e9788d27
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 477fb448d91939933cea7132ad8b532de7a162e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892794"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473578"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Met à jour un type de collecteur pour un élément de collecte. Le nom et le GUID d'un type de collecteur étant fournis, met à jour la configuration du type de collecteur, y compris le package de collection et de téléchargement, le schéma de paramètres et le schéma du formateur de paramètres.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,15 +45,15 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @collector_type_uid = ] 'collector_type_uid'`GUID du type de collecteur. *collector_type_uid* est de type **uniqueidentifier**et, s’il a la valeur null, il sera automatiquement créé et retourné comme sortie.  
+`[ @collector_type_uid = ] 'collector_type_uid'` GUID du type de collecteur. *collector_type_uid* est de type **uniqueidentifier**et, s’il a la valeur null, il sera automatiquement créé et retourné comme sortie.  
   
-`[ @name = ] 'name'`Nom du type de collecteur. *Name* est de **type sysname** et doit être spécifié.  
+`[ @name = ] 'name'` Nom du type de collecteur. *Name* est de **type sysname** et doit être spécifié.  
   
-`[ @parameter_schema = ] 'parameter_schema'`Est le schéma XML pour ce type de collecteur. *parameter_schema* est du **code XML** et peut être requis par certains types de collecteurs. S'il n'est pas requis, cet argument peut avoir la valeur NULL.  
+`[ @parameter_schema = ] 'parameter_schema'` Est le schéma XML pour ce type de collecteur. *parameter_schema* est du **code XML** et peut être requis par certains types de collecteurs. S'il n'est pas requis, cet argument peut avoir la valeur NULL.  
   
-`[ @collection_package_id = ] collection_package_id`Identificateur unique local qui pointe vers le [!INCLUDE[ssIS](../../includes/ssis-md.md)] package de collection utilisé par le jeu d’éléments de collecte. *collection_package_id* est **uniqueidentifer** et est obligatoire. Pour obtenir la valeur de *collection_package_id*, interrogez la vue système dbo.syscollector_collector_types dans la base de données msdb.  
+`[ @collection_package_id = ] collection_package_id` Identificateur unique local qui pointe vers le [!INCLUDE[ssIS](../../includes/ssis-md.md)] package de collection utilisé par le jeu d’éléments de collecte. *collection_package_id* est **uniqueidentifer** et est obligatoire. Pour obtenir la valeur de *collection_package_id*, interrogez la vue système dbo.syscollector_collector_types dans la base de données msdb.  
   
-`[ @upload_package_id = ] upload_package_id`Identificateur unique local qui pointe vers le [!INCLUDE[ssIS](../../includes/ssis-md.md)] package de téléchargement utilisé par le jeu d’éléments de collecte. *upload_package_id* est de type **uniqueidentifier** et est requis. Pour obtenir la valeur de *upload_package_id*, interrogez la vue système dbo.syscollector_collector_types dans la base de données msdb.  
+`[ @upload_package_id = ] upload_package_id` Identificateur unique local qui pointe vers le [!INCLUDE[ssIS](../../includes/ssis-md.md)] package de téléchargement utilisé par le jeu d’éléments de collecte. *upload_package_id* est de type **uniqueidentifier** et est requis. Pour obtenir la valeur de *upload_package_id*, interrogez la vue système dbo.syscollector_collector_types dans la base de données msdb.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -101,7 +102,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)  
   
   

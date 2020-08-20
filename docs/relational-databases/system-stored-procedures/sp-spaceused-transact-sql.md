@@ -1,4 +1,5 @@
 ---
+description: sp_spaceused (Transact-SQL)
 title: sp_spaceused (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
@@ -18,19 +19,19 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91b38115cfcd9f688187fc7663e3da8c90d3d457
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4b07a4f8ece975662127797f6f25ecd19ecc759c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173081"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473790"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Affiche le nombre de lignes, l'espace disque réservé et l'espace disque utilisé par une table, une vue indexée ou une file d'attente [!INCLUDE[ssSB](../../includes/sssb-md.md)] de la base de données active, ou affiche l'espace disque réservé et utilisé par l'ensemble de la base de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,11 +53,11 @@ Pour [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] et [!INCLUDE[sspdw-md](../
 Si *nom_d’nom_d* 'n’est pas spécifié, les résultats sont retournés pour l’ensemble de la base de données.  
 *nomobj* est de type **nvarchar (776)**, avec NULL comme valeur par défaut.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]et [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] prennent uniquement en charge les objets de base de données et de table.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] et [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] prennent uniquement en charge les objets de base de données et de table.
   
-`[ @updateusage = ] 'updateusage'`Indique que DBCC UPDATEUSAGE doit être exécuté pour mettre à jour les informations sur l’utilisation de l’espace. Quand *nomobj* n’est pas spécifié, l’instruction est exécutée sur l’ensemble de la base de données ; dans le cas contraire, l’instruction est exécutée sur *nomobj*. Les valeurs peuvent être **true** ou **false**. *UPDATEUSAGE* est de type **varchar (5)**, avec **false**comme valeur par défaut.  
+`[ @updateusage = ] 'updateusage'` Indique que DBCC UPDATEUSAGE doit être exécuté pour mettre à jour les informations sur l’utilisation de l’espace. Quand *nomobj* n’est pas spécifié, l’instruction est exécutée sur l’ensemble de la base de données ; dans le cas contraire, l’instruction est exécutée sur *nomobj*. Les valeurs peuvent être **true** ou **false**. *UPDATEUSAGE* est de type **varchar (5)**, avec **false**comme valeur par défaut.  
   
-`[ @mode = ] 'mode'`Indique l’étendue des résultats. Pour une table ou une base de données étirée, le paramètre *mode* vous permet d’inclure ou d’exclure la partie distante de l’objet. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+`[ @mode = ] 'mode'` Indique l’étendue des résultats. Pour une table ou une base de données étirée, le paramètre *mode* vous permet d’inclure ou d’exclure la partie distante de l’objet. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  L’argument *mode* peut avoir les valeurs suivantes :  
   
@@ -68,7 +69,7 @@ Si *nom_d’nom_d* 'n’est pas spécifié, les résultats sont retournés pour 
   
  le *mode* est **varchar (11)**, avec **n’All**comme valeur par défaut.  
   
-`[ @oneresultset = ] oneresultset`Indique s’il faut retourner un seul jeu de résultats. L’argument *oneresultset* peut avoir les valeurs suivantes :  
+`[ @oneresultset = ] oneresultset` Indique s’il faut retourner un seul jeu de résultats. L’argument *oneresultset* peut avoir les valeurs suivantes :  
   
 |Valeur|Description|  
 |-----------|-----------------|  

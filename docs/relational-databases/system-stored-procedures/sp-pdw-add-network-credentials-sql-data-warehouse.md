@@ -1,4 +1,5 @@
 ---
+description: sp_pdw_add_network_credentials (SQL Data Warehouse)
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4a6f551012a744d8659e0f3a4cee83b1fd39fbdf
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 47782250a0acf14ce0e8b63a2b631acfce9b3583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173220"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473987"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -36,7 +37,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="arguments"></a>Arguments  
  '*target_server_name*'  
- Spécifie le nom d’hôte ou l’adresse IP du serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]accédera à ce serveur à l’aide des informations d’identification de nom d’utilisateur et de mot de passe transmises à cette procédure stockée.  
+ Spécifie le nom d’hôte ou l’adresse IP du serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] accédera à ce serveur à l’aide des informations d’identification de nom d’utilisateur et de mot de passe transmises à cette procédure stockée.  
   
  Pour vous connecter via le réseau InfiniBand, utilisez l’adresse IP InfiniBand du serveur cible.  
   
@@ -65,7 +66,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-add-credentials-for-performing-a-database-backup"></a>R. Ajouter des informations d’identification pour effectuer une sauvegarde de base de données  
- L’exemple suivant associe les informations d’identification de nom d’utilisateur et de mot de passe pour l’utilisateur de domaine seattle\david à un serveur cible qui a l’adresse IP 10.172.63.255. L’utilisateur seattle\david dispose d’autorisations de lecture/écriture sur le serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]stocke ces informations d’identification et les utilise pour lire et écrire dans et à partir du serveur cible, si nécessaire pour les opérations de sauvegarde et de restauration.  
+ L’exemple suivant associe les informations d’identification de nom d’utilisateur et de mot de passe pour l’utilisateur de domaine seattle\david à un serveur cible qui a l’adresse IP 10.172.63.255. L’utilisateur seattle\david dispose d’autorisations de lecture/écriture sur le serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] stocke ces informations d’identification et les utilise pour lire et écrire dans et à partir du serveur cible, si nécessaire pour les opérations de sauvegarde et de restauration.  
   
 ```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  

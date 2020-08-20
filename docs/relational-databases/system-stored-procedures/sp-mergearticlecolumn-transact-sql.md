@@ -1,4 +1,5 @@
 ---
+description: sp_mergearticlecolumn (Transact-SQL)
 title: sp_mergearticlecolumn (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ccc8cb8b4f9390d7453287c584e1f30dfdb15683
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1036539564811e25be7764a3afb1106e05b1f37
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899336"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473968"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Partitionne une publication de fusion verticalement. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,26 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *Publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *Publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @article = ] 'article'`Nom de l’article dans la publication. *article* est de **type sysname**et n’a pas de valeur par défaut.  
+`[ @article = ] 'article'` Nom de l’article dans la publication. *article* est de **type sysname**et n’a pas de valeur par défaut.  
   
-`[ @column = ] 'column'`Identifie les colonnes sur lesquelles la partition verticale doit être créée. *Column* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est spécifiée et que `@operation = N'add'`, toutes les colonnes de la table source sont ajoutées à l'article par défaut. la *colonne* ne peut pas être NULL lorsque l' *opération* est définie sur **Drop**. Pour exclure des colonnes d’un article, exécutez **sp_mergearticlecolumn** et spécifiez la *colonne* et `@operation = N'drop'` pour chaque colonne à supprimer de l' *article*spécifié.  
+`[ @column = ] 'column'` Identifie les colonnes sur lesquelles la partition verticale doit être créée. *Column* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est spécifiée et que `@operation = N'add'`, toutes les colonnes de la table source sont ajoutées à l'article par défaut. la *colonne* ne peut pas être NULL lorsque l' *opération* est définie sur **Drop**. Pour exclure des colonnes d’un article, exécutez **sp_mergearticlecolumn** et spécifiez la *colonne* et `@operation = N'drop'` pour chaque colonne à supprimer de l' *article*spécifié.  
   
-`[ @operation = ] 'operation'`État de la réplication. *operation* est de type **nvarchar (4)**, avec Add comme valeur par défaut. **Ajouter** marque la colonne pour la réplication. **Drop** efface la colonne.  
+`[ @operation = ] 'operation'` État de la réplication. *operation* est de type **nvarchar (4)**, avec Add comme valeur par défaut. **Ajouter** marque la colonne pour la réplication. **Drop** efface la colonne.  
   
-`[ @schema_replication = ] 'schema_replication'`Spécifie qu’une modification de schéma sera propagée lors de l’exécution du Agent de fusion. *schema_replication* est de type **nvarchar (5)**, avec false comme valeur par défaut.  
+`[ @schema_replication = ] 'schema_replication'` Spécifie qu’une modification de schéma sera propagée lors de l’exécution du Agent de fusion. *schema_replication* est de type **nvarchar (5)**, avec false comme valeur par défaut.  
   
 > [!NOTE]  
 >  Seule la **valeur false** est prise en charge pour *schema_replication*.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Active ou désactive la possibilité d’invalider un instantané. *force_invalidate_snapshot* est un **bit**, avec **0**comme valeur par défaut.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Active ou désactive la possibilité d’invalider un instantané. *force_invalidate_snapshot* est un **bit**, avec **0**comme valeur par défaut.  
   
  **0** indique que les modifications apportées à l’article de fusion n’entraînent pas la non-validité de l’instantané.  
   
  **1** indique que les modifications apportées à l’article de fusion peuvent entraîner la non-validité de l’instantané et, si tel est le cas, la valeur **1** accorde l’autorisation de se produire pour le nouvel instantané.  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_`Active ou désactive la possibilité d’avoir l’abonnement réinitialiser. *force_reinit_subscription* est un bit avec **0**comme valeur par défaut.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Active ou désactive la possibilité d’avoir l’abonnement réinitialiser. *force_reinit_subscription* est un bit avec **0**comme valeur par défaut.  
   
  **0** indique que les modifications apportées à l’article de fusion n’entraînent pas la réinitialisation de l’abonnement.  
   
@@ -71,7 +72,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_mergearticlecolumn** est utilisé dans la réplication de fusion.  
   
  La colonne d'identité ne peut pas être supprimée de l'article si la gestion automatique des plages d'identité est utilisée. Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -87,9 +88,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_mergearticlecolumn**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir et modifier un filtre de jointure entre des Articles de fusion](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Définir et modifier un filtre de jointure entre des articles de fusion](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Définir et modifier un filtre de lignes paramétrable pour un article de fusion](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
- [Filtrer les données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
+ [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

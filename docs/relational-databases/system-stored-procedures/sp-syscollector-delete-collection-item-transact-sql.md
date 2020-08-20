@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_collection_item (Transact-SQL)
 title: sp_syscollector_delete_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0753ed820012d0bbae1fb263b7881aad663ee45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bdb7e5d54cd9e9edacf13e99c4a9b95cc9938cca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473648"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un élément de collecte d’un jeu d’éléments de collecte.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +51,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  sp_syscollector_delete_collection_item doit être exécuté dans le contexte de la base de données système msdb. Il est impossible de supprimer des éléments de collecte de jeux d'éléments de collecte système.  
   
  Le jeu d'éléments de collecte qui contient l'élément de collecte est arrêté puis redémarré au cours de cette opération.  

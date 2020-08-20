@@ -1,4 +1,5 @@
 ---
+description: UnionAggregate (type de données geometry)
 title: UnionAggregate (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc7929cc-55ca-4a2c-a4b9-f5452f95bde8
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1f518b22b4d7aaaf6e100a4f10c91d463d80e495
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 832c49b68150be650885176b301ecd772cac82e2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472407"
 ---
 # <a name="unionaggregate-geometry-data-type"></a>UnionAggregate (type de données geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ UnionAggregate ( geometry_operand )
 ## <a name="exceptions"></a>Exceptions  
  Lève un `FormatException` en présence de valeurs d'entrée qui ne sont pas valides. Consultez [STIsValid &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La méthode retourne **null** quand l’entrée est vide ou que ses SRID sont différents. Consultez [Identificateurs de référence spatiale &#40;SRID&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
  La méthode ignore les entrées **null**.  
@@ -70,8 +71,8 @@ UnionAggregate ( geometry_operand )
  FROM @Geom;
 ``` 
   
-## <a name="see-also"></a>Voir aussi  
- [Méthodes geometry statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
+## <a name="see-also"></a> Voir aussi  
+ [Méthodes de géométrie statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   
   
 

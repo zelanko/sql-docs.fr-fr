@@ -1,4 +1,5 @@
 ---
+description: DROP EXTERNAL DATA SOURCE (Transact-SQL)
 title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,19 +14,19 @@ ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a1ea2729261ee6ecbe5659286aed03c2a2a2527
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 46d9296cfaf667682de241d052b41711d084a835
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472274"
 ---
 # <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Supprime une source de données externe PolyBase.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
 ## <a name="metadata"></a>Métadonnées  
  Pour afficher la liste des sources de données externes, utilisez la vue système sys.external_data_sources.  
   
-```  
+```sql  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
@@ -59,7 +60,7 @@ SELECT * FROM sys.external_data_sources;
   
 ### <a name="a-using-basic-syntax"></a>R. Utilisation de la syntaxe de base  
   
-```  
+```sql  
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   

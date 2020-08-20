@@ -1,4 +1,5 @@
 ---
+description: sp_showpendingchanges (Transact-SQL)
 title: sp_showpendingchanges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f6d22fb18989022676eb06751d583383a14d783
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 324f3d5b8b1e70d41e276fd0b0f909b27a937e81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881497"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473762"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne un jeu de résultats affichant les modifications en attente de réplication. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication et sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  Cette procédure fournit un nombre approximatif des modifications apportées ainsi que les lignes concernées par ces modifications. Par exemple, la procédure récupère les informations du serveur de publication ou de l'abonné, mais pas à la fois en même temps. Les informations stockées à l'autre nœud peuvent engendrer un plus petit jeu de modifications à synchroniser que les estimations de procédure.  
@@ -43,13 +44,13 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @destination_server = ] 'destination_server'`Nom du serveur sur lequel les modifications répliquées sont appliquées. *destination_server* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @destination_server = ] 'destination_server'` Nom du serveur sur lequel les modifications répliquées sont appliquées. *destination_server* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque la *publication* est spécifiée, les résultats sont limités uniquement à la publication spécifiée.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque la *publication* est spécifiée, les résultats sont limités uniquement à la publication spécifiée.  
   
-`[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *l’article* est spécifié, les résultats sont limités uniquement à l’article spécifié.  
+`[ @article = ] 'article'` Nom de l’article. *article* est de **type sysname**, avec NULL comme valeur par défaut. Lorsque *l’article* est spécifié, les résultats sont limités uniquement à l’article spécifié.  
   
-`[ @show_rows = ] 'show_rows'`Spécifie si le jeu de résultats contient des informations plus spécifiques sur les modifications en attente, avec **0**comme valeur par défaut. Si la valeur **1** est spécifiée, le jeu de résultats contient les colonnes is_delete et rowguid.  
+`[ @show_rows = ] 'show_rows'` Spécifie si le jeu de résultats contient des informations plus spécifiques sur les modifications en attente, avec **0**comme valeur par défaut. Si la valeur **1** est spécifiée, le jeu de résultats contient les colonnes is_delete et rowguid.  
   
 ## <a name="result-set"></a>Jeu de résultats  
   
@@ -68,7 +69,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  sp_showpendingchanges est utilisée pour la réplication de fusion.  
   
  sp_showpendingchanges est utilisée pour le dépannage de la réplication de fusion.  

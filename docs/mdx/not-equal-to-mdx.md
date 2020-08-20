@@ -1,5 +1,6 @@
 ---
-title: '&lt;&gt;(Différent de) (MDX) | Microsoft Docs'
+description: '&lt;&gt; (Différent de) MDX'
+title: '&lt;&gt; (Différent de) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +9,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 032505ee0714bc10baa698b1a229e5456710c81d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c2651c7d542ac0a8707c20e8b32f4ba33ac7b54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68088321"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471791"
 ---
-# <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt;(Différent de) MDX
+# <a name="ltgt-not-equal-to-mdx"></a>&lt;&gt; (Différent de) MDX
 
 
   Exécute une opération de comparaison qui détermine si la valeur d'une expression MDX est différente de la valeur d'une autre expression MDX.  
@@ -41,6 +42,6 @@ MDX_Expression <> MDX_Expression
 -   NULL si l'un ou l'autre ou les deux paramètres ont une valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

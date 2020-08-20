@@ -1,4 +1,5 @@
 ---
+description: sp_delete_operator (Transact-SQL)
 title: sp_delete_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c584dceb9306d6a74575b548bfd9d8548acb47a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 22fcae3edb3d882826e80bdb7a359726eac930fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474320"
 ---
 # <a name="sp_delete_operator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un opérateur.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,9 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom de l’opérateur à supprimer. *Name* est de **type sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Nom de l’opérateur à supprimer. *Name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @reassign_to_operator = ] 'reassign_operator'`Nom de l’opérateur auquel les alertes de l’opérateur spécifié peuvent être réaffectées. *reassign_operator* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @reassign_to_operator = ] 'reassign_operator'` Nom de l’opérateur auquel les alertes de l’opérateur spécifié peuvent être réaffectées. *reassign_operator* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

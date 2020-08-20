@@ -1,4 +1,5 @@
 ---
+description: sysssislog (Transact-SQL)
 title: sysssislog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 264f6495c12a350983af22c1bef325278238a514
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9aef51cb3297cd83b68fa42c71dcd993fb418830
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473098"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85889263"
   Contient une ligne pour chaque entrée du journal générée par les packages ou par leurs tâches et conteneurs lors de l'exécution. Cette table est créée dans la base de données msdb lorsque vous installez [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si vous configurez la journalisation dans une autre base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], une table sysssislog de ce format est créée dans la base de données spécifiée.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]écrit les entrées de journalisation dans cette table **uniquement** lorsque les packages utilisent le module fournisseur d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] écrit les entrées de journalisation dans cette table **uniquement** lorsque les packages utilisent le module fournisseur d’informations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
 |Nom de la colonne|Type de données|Description|  

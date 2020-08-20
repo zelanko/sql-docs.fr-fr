@@ -1,4 +1,5 @@
 ---
+description: Modèle de curseur pris en charge (pilote ODBC Visual FoxPro)
 title: Modèle de curseur pris en charge (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf3400f24e20a8fa864404612bf07ea44efce49e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 789d55a894e66c87fc5773856375757947835b35
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471531"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modèle de curseur pris en charge (pilote ODBC Visual FoxPro)
 Le pilote ODBC Visual FoxPro prend en charge les curseurs de *bloc* (*rowset*) et *statiques* . Les curseurs statiques sont pris en charge pour tous les pilotes conformes à la compatibilité ODBC de niveau 1. Le pilote ne prend pas en charge les curseurs dynamiques, pilotés par jeu de clés ou mixtes (keyset et Dynamic).  

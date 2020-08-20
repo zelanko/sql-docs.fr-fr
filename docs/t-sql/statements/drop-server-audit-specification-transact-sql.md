@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: DROP SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 76635b80-5c05-4d01-a4e2-8277cd09251b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: efc601ad16aecab902cc44f7d91be6f528b0e5cc
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 891600fe47bd334a3806da2fd26d637568a5dd13
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485467"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472271"
 ---
 # <a name="drop-server-audit-specification-transact-sql"></a>DROP SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Supprime un objet de spécification d'audit de serveur à l'aide de la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +48,7 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Nom d'un objet de spécification d'audit de serveur existant.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  DROP SERVER AUDIT SPECIFICATION supprime les métadonnées pour la spécification d'audit, mais pas les données d'audit collectées avant l'exécution de la commande DROP. Pour que leur suppression soit possible, vous devez définir l’état d’une spécification de l’audit du serveur sur OFF à l’aide d’ALTER SERVER AUDIT SPECIFICATION.  
   
 ## <a name="permissions"></a>Autorisations  

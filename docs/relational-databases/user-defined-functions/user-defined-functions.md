@@ -1,4 +1,5 @@
 ---
+description: Fonctions définies par l'utilisateur
 title: Fonctions définies par l’utilisateur | Microsoft Docs
 ms.custom: ''
 ms.date: 08/05/2016
@@ -16,12 +17,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8deea6a37a8aca7791d84d9d32d9735525305913
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7abbff8fbf88ccca3a0226b651da11f0825436b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247248"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472916"
 ---
 # <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -218,11 +219,11 @@ Les types d'instructions valides dans une fonction sont les suivants :
 |-|-|    
 |Décrit comment créer une fonction Transact-SQL définie par l'utilisateur.|[Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Décrit comment créer une fonction CLR.|[Créer des fonctions CLR](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
-|Décrit comment créer une fonction d'agrégation définie par l'utilisateur.|[Créer des agrégats définis par l’utilisateur](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
-|Décrit comment modifier une fonction Transact-SQL définie par l'utilisateur.|[Modifier des fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
+|Décrit comment créer une fonction d'agrégation définie par l'utilisateur.|[Créer des agrégats définis par l'utilisateur](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  
+|Décrit comment modifier une fonction Transact-SQL définie par l'utilisateur.|[Modifier les fonctions définies par l'utilisateur](../../relational-databases/user-defined-functions/modify-user-defined-functions.md)|  
 |Décrit comment supprimer une fonction définie par l'utilisateur.|[Supprimer des fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/delete-user-defined-functions.md)|  
 |Décrit comment exécuter une fonction définie par l'utilisateur.|[Exécuter des fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)|  
-|Décrit comment renommer une fonction définie par l'utilisateur.|[Renommer des fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
+|Décrit comment renommer une fonction définie par l'utilisateur.|[Renommer des fonctions définies par l'utilisateur](../../relational-databases/user-defined-functions/rename-user-defined-functions.md)|  
 |Décrit comment afficher la définition d'une fonction définie par l'utilisateur.|[Afficher des fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   

@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 3-2 : Exécution de l’Assistant Installation de package'
 title: 'Étape 2 : Exécution de l’Assistant Installation de package | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea753e6d74ae5073936cbb98bc0eed716f224dd7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f30bc07edc2d6d513eb9078e1758caf99a2822cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472048"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Leçon 3-2 : Exécution de l’Assistant Installation de package
 
@@ -50,7 +51,7 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
   
 9. Dans la page Sélectionner le dossier d’installation, cliquez sur **Parcourir**.  
   
-10. Dans la boîte de dialogue **Rechercher un dossier** , développez **Poste de travail** et cliquez sur **Disque local (C:)** .  
+10. Dans la boîte de dialogue **Rechercher un dossier** , développez **Poste de travail** et cliquez sur **Disque local (C:)**.  
   
 11. Cliquez sur **Créer un nouveau dossier** et remplacez le nom par défaut du nouveau dossier, **Nouveau dossier**, par **DeploymentTutorialInstall**.  
   

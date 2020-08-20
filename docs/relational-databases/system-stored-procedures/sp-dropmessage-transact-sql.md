@@ -1,4 +1,5 @@
 ---
+description: sp_dropmessage (Transact-SQL)
 title: sp_dropmessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8c9ac233cdc71d8886224182c2c3b91cd871450
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c95708903063b4fade98e3d45e29e184e93efd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881790"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474232"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un message d’erreur défini par l’utilisateur spécifié d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Les messages définis par l’utilisateur peuvent être affichés à l’aide de l’affichage catalogue **sys. messages** .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,9 +41,9 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @msgnum = ] message_number`Numéro du message à supprimer. *message_number* doit être un message défini par l’utilisateur dont le numéro de message est supérieur à 50000. *message_number* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @msgnum = ] message_number` Numéro du message à supprimer. *message_number* doit être un message défini par l’utilisateur dont le numéro de message est supérieur à 50000. *message_number* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @lang = ] 'language'`Langue du message à supprimer. Si **All** est spécifié, toutes les versions linguistiques de *message_number* sont supprimées. *Language* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @lang = ] 'language'` Langue du message à supprimer. Si **All** est spécifié, toutes les versions linguistiques de *message_number* sont supprimées. *Language* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -53,7 +54,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance aux rôles serveur fixes **sysadmin** et **ServerAdmin** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Sauf si **tout** est spécifié pour la *langue*, toutes les versions localisées d’un message doivent être supprimées avant de pouvoir supprimer la version en anglais des États-Unis du message.  
   
 ## <a name="examples"></a>Exemples  

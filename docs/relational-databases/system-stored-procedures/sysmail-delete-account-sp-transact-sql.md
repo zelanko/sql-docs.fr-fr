@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_account_sp (Transact-SQL)
 title: sysmail_delete_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b49f1b42a1484ca5449c3e65e274a3626b62809
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 749aee08d548f3658c5cfba3e44e4cbf4667f6b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473391"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Supprime un compte SMTP de messagerie de base de données. Vous pouvez aussi utiliser l'Assistant Configuration de la messagerie de base de données pour supprimer un compte.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,9 +40,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @account_id = ] account_id`Numéro d’identification du compte à supprimer. *account_id* est de **type int**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
+`[ @account_id = ] account_id` Numéro d’identification du compte à supprimer. *account_id* est de **type int**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
   
-`[ @account_name = ] 'account_name'`Nom du compte à supprimer. *account_name* est de **type sysname**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
+`[ @account_name = ] 'account_name'` Nom du compte à supprimer. *account_name* est de **type sysname**, sans valeur par défaut. *Account_id* ou *account_name* doivent être spécifiés.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

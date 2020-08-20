@@ -1,4 +1,5 @@
 ---
+description: Modifier des contraintes uniques
 title: Modifier des contraintes uniques | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2016
@@ -16,12 +17,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca363d76f8c2bc624ad0e8889d10f2dd4883685e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5df4a0e197a55262afb57382ad1145194b66d3db
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473034"
 ---
 # <a name="modify-unique-constraints"></a>Modifier des contraintes uniques
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -55,13 +56,13 @@ ms.locfileid: "86007107"
   
 2.  Dans le menu **Concepteur de tables**, cliquez sur **Index/Clés...** .  
   
-3.  Dans la boîte de dialogue **Index/Clés** , sous **Index ou clé unique/primaire sélectionné(e)** , sélectionnez la contrainte que vous souhaitez modifier.  
+3.  Dans la boîte de dialogue **Index/Clés** , sous **Index ou clé unique/primaire sélectionné(e)**, sélectionnez la contrainte que vous souhaitez modifier.  
   
 4.  Effectuez l'une des actions décrites dans le tableau suivant :  
   
     |À|Procédez comme suit|  
     |--------|------------------------|  
-    |Changer les colonnes auxquelles la contrainte est associée|1) Dans la grille en dessous de **(Général)** , cliquez sur **Colonnes**, puis sur le bouton de sélection **(...)** , à droite de la propriété.<br /><br /> 2) Dans la boîte de dialogue **Colonnes d’index** , spécifiez la nouvelle colonne, l’ordre de tri, ou les deux, pour l’index.|  
+    |Changer les colonnes auxquelles la contrainte est associée|1) Dans la grille en dessous de **(Général)**, cliquez sur **Colonnes**, puis sur le bouton de sélection **(...)**, à droite de la propriété.<br /><br /> 2) Dans la boîte de dialogue **Colonnes d’index** , spécifiez la nouvelle colonne, l’ordre de tri, ou les deux, pour l’index.|  
     |Renommer la contrainte|Dans la grille sous **Identité**, tapez un nouveau nom dans la zone **Nom** . Assurez-vous que le nouveau nom n’existe pas déjà dans la liste **Index ou clé unique/primaire sélectionné(e)** .|  
     |Définir l'option clustered|Dans la grille sous **Concepteur de tables**, sélectionnez **Créer sous forme de cluster** et sélectionnez Oui dans la liste déroulante pour créer un index cluster, ou Non pour créer un index non-cluster. Il ne peut exister qu'un seul index cluster par table. Si un index cluster existe dans la table, vous devez effacer ce paramètre sur l'index d'origine.|  
     |Définir un taux de remplissage|Dans la grille sous **Concepteur de tables**, développez la catégorie **Spécification du remplissage** et tapez un entier compris entre 0 et 100 dans la zone **Facteur de remplissage** .|  

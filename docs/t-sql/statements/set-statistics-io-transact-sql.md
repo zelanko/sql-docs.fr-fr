@@ -1,4 +1,5 @@
 ---
+description: SET STATISTICS IO (Transact-SQL)
 title: SET STATISTICS IO (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/10/2016
@@ -25,19 +26,19 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84d113230152bdade11192db086f44911028a474
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 25b6b222e68325e75d4be8ae10cae6e95ff408e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765688"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472196"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Force [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à afficher des informations sur la quantité d’activité générée sur le disque par les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +47,9 @@ ms.locfileid: "85765688"
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Notes
  Si l’option STATISTICS IO est activée, les informations statistiques sont affichées et, si l’option est désactivée, ces informations ne sont pas affichées.   
   
  Une fois l’option activée, toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] retournent les informations statistiques jusqu’à ce que l’option soit désactivée.  
@@ -60,9 +63,9 @@ SET STATISTICS IO { ON | OFF }
 |**Lectures logiques**|Nombre de pages lues à partir du cache de données.|  
 |**Lectures physiques**|Nombre de pages lues depuis le disque.|  
 |**Lectures anticipées**|Nombre de pages placées dans le cache pour la requête.|  
-|**Lectures logiques LOB**|Nombre de pages lues à partir du cache de données. Inclut les pages d’index columnstore, **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** et **varbinary(max)** .|  
-|**Lectures physiques LOB**|Nombre de pages lues depuis le disque. Inclut les pages d’index columnstore, **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** et **varbinary(max)** .|  
-|**Lectures anticipées LOB**|Nombre de pages placées dans le cache pour la requête. Inclut les pages d’index columnstore, **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** et **varbinary(max)** .|
+|**Lectures logiques LOB**|Nombre de pages lues à partir du cache de données. Inclut les pages d’index columnstore, **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** et **varbinary(max)**.|  
+|**Lectures physiques LOB**|Nombre de pages lues depuis le disque. Inclut les pages d’index columnstore, **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** et **varbinary(max)**.|  
+|**Lectures anticipées LOB**|Nombre de pages placées dans le cache pour la requête. Inclut les pages d’index columnstore, **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** et **varbinary(max)**.|
 
  L'option SET STATISTICS IO est définie lors de l'exécution, et non pas durant l'analyse.
 

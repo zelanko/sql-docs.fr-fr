@@ -1,4 +1,5 @@
 ---
+description: Paramètres globaux (éditeur) (AccessToSQL)
 title: Paramètres globaux (éditeur) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 16bcd1255e1094412d8ff48917bab145aae19632
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0d603037d791002ebbdee50dcb7c90e99fdd8e68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472549"
 ---
 # <a name="global-settings-editor-accesstosql"></a>Paramètres globaux (éditeur) (AccessToSQL)
 Utilisez la page éditeur de la boîte de dialogue **paramètres globaux** pour spécifier les paramètres des fenêtres de l’éditeur de code.  

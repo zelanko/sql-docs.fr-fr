@@ -1,4 +1,5 @@
 ---
+description: ALTER ASYMMETRIC KEY (Transact-SQL)
 title: ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.date: 04/12/2017
 ms.prod: sql
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 958e95d6-fbe6-43e8-abbd-ccedbac2dbac
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 596002d6c5440ec9896c5122aa78da4ca085506d
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0e911a6680545e1b9d1b018e257bf191abd0edd0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472354"
 ---
 # <a name="alter-asymmetric-key-transact-sql"></a>ALTER ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Permet de modifier les propriétés d'une clé asymétrique.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,7 +69,7 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
  DECRYPTION BY PASSWORD **='***oldPassword***'**  
  Spécifie l'ancien mot de passe au moyen duquel la clé privée est actuellement protégée. Cette option n'est pas requise si la clé privée est chiffrée à l'aide de la clé principale de base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si aucune clé principale de base de données n'existe, l'option ENCRYPTION BY PASSWORD est requise et l'opération échouera si aucun mot de passe n'est fourni. Pour plus d’informations sur la création d’une clé principale de base de données, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
   
  Vous pouvez utiliser ALTER ASYMMETRIC KEY pour modifier la protection de la clé privée en spécifiant des options PRIVATE KEY, comme l'illustre le tableau ci-dessous.  

@@ -1,4 +1,5 @@
 ---
+description: sp_detach_db (Transact-SQL)
 title: sp_detach_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/30/2015
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee5261834a0eeb11b4f7f6a21ab5110c0d42fd48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 66f3e4543e3090d3a2bb0fee7179abaf2e017503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861116"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474298"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85861116"
 > [!IMPORTANT]  
 >  Pour détacher une base de données répliquée, celle-ci ne doit pas être publiée. Pour plus d'informations, consultez la section « Notes », plus loin dans cette rubrique.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,13 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'database_name'`Nom de la base de données à détacher. *database_name* est une valeur de **type sysname** , avec NULL comme valeur par défaut.  
+`[ @dbname = ] 'database_name'` Nom de la base de données à détacher. *database_name* est une valeur de **type sysname** , avec NULL comme valeur par défaut.  
   
-`[ @skipchecks = ] 'skipchecks'`Spécifie si les statistiques de mise à jour doivent être ignorées ou exécutées. *option skipchecks* est une valeur **nvarchar (10)** , avec NULL comme valeur par défaut. Pour ignorer UPDATE STATISTICs, spécifiez **true**. Pour exécuter explicitement UPDATE STATISTICs, spécifiez **false**.  
+`[ @skipchecks = ] 'skipchecks'` Spécifie si les statistiques de mise à jour doivent être ignorées ou exécutées. *option skipchecks* est une valeur **nvarchar (10)** , avec NULL comme valeur par défaut. Pour ignorer UPDATE STATISTICs, spécifiez **true**. Pour exécuter explicitement UPDATE STATISTICs, spécifiez **false**.  
   
  Par défaut, UPDATE STATISTICS est exécuté pour mettre à jour les informations relatives aux données des tables et des index. L'exécution de UPDATE STATISTICS est utile pour les bases de données qui doivent être placées sur des supports en lecture seule.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Spécifie que le fichier d’index de recherche en texte intégral associé à la base de données en cours de détachement ne sera pas supprimé pendant l’opération de détachement de la base de données. *Keepfulltextindexfile* est une valeur **nvarchar (10)** avec **true**comme valeur par défaut. Si *keepfulltextindexfile* a la **valeur false**, tous les fichiers d’index de recherche en texte intégral associés à la base de données et les métadonnées de l’index de recherche en texte intégral sont supprimés, sauf si la base de données est en lecture seule. Si la valeur est NULL ou **true**, les métadonnées associées au texte intégral sont conservées.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Spécifie que le fichier d’index de recherche en texte intégral associé à la base de données en cours de détachement ne sera pas supprimé pendant l’opération de détachement de la base de données. *Keepfulltextindexfile* est une valeur **nvarchar (10)** avec **true**comme valeur par défaut. Si *keepfulltextindexfile* a la **valeur false**, tous les fichiers d’index de recherche en texte intégral associés à la base de données et les métadonnées de l’index de recherche en texte intégral sont supprimés, sauf si la base de données est en lecture seule. Si la valeur est NULL ou **true**, les métadonnées associées au texte intégral sont conservées.  
   
 > [!IMPORTANT]
 >  Le paramètre ** \@ keepfulltextindexfile** sera supprimé dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Évitez d'utiliser ce paramètre dans de nouveaux travaux de développement, et modifiez dès que possible les applications qui utilisent actuellement ce paramètre.  
@@ -134,7 +135,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
     , @keepfulltextindexfile='true';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   

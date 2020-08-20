@@ -1,4 +1,5 @@
 ---
+description: PeriodsToDate (MDX)
 title: PeriodsToDate (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 812cd16a7d6b7a17d4f2f12098f22e32cf0d3363
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b18fe4d90a8a0c56424c5e0a7f3607ceea0eae4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055632"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471701"
 ---
 # <a name="periodstodate-mdx"></a>PeriodsToDate (MDX)
 
@@ -85,7 +86,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [&#40;&#41;MDX](../mdx/topcount-mdx.md)   
+ [&#40;&#41;MDX ](../mdx/topcount-mdx.md)   
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

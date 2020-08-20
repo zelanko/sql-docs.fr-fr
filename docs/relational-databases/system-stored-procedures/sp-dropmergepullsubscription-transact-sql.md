@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepullsubscription (Transact-SQL)
 title: sp_dropmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84fbed9341d01c8fe7d1c2d4e57df16aa027711a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dab181e38d9c072f5e25dc8db490a7538bbe615
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881802"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474252"
 ---
 # <a name="sp_dropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un abonnement de fusion par extraction de données (pull). Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,18 +41,18 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire. Spécifiez la valeur **All** pour supprimer les abonnements à toutes les publications  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire. Spécifiez la valeur **All** pour supprimer les abonnements à toutes les publications  
   
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher*est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher*est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db*est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données du serveur de publication. *publisher_db*est de **type sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
   
-`[ @reserved = ] 'reserved'`Est réservé pour une utilisation ultérieure. la valeur *réservée* est de **bit**, avec **0**comme valeur par défaut.  
+`[ @reserved = ] 'reserved'` Est réservé pour une utilisation ultérieure. la valeur *réservée* est de **bit**, avec **0**comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_dropmergepullsubscription** est utilisé dans la réplication de fusion.  
   
  **sp_dropmergepullsubscription** supprime le agent de fusion pour cet abonnement par extraction de fusion, bien que le agent de fusion ne soit pas créé dans **sp_addmergepullsubscription**.  

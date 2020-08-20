@@ -1,4 +1,5 @@
 ---
+description: Fonctions de l’API du niveau principal (pilote ODBC pour Oracle)
 title: Fonctions d’API de niveau principal (pilote ODBC pour Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 19751bb6d0556b117d0a73967d4db00c408733ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0940dd9fbabc02a5fd384208b2dcd4803f4f24a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281019"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471651"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau principal (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -40,7 +41,7 @@ ms.locfileid: "81281019"
 |**SQLDescribeCol**|Retourne le nom, le type, la précision, l’échelle et la possibilité de valeur null de la colonne de résultat donnée. **Remarque : SQLDescribeCol** signale des colonnes calculées comme SQL_VARCHAR.|  
 |**SQLDisconnect**|Ferme une connexion. Si le regroupement de connexions est activé pour un environnement partagé et qu’une application appelle **SQLDisconnect** sur une connexion dans cet environnement, la connexion est retournée au pool de connexions et est toujours disponible pour d’autres composants utilisant le même environnement partagé.|  
 |**SQLError**|Retourne des informations d’erreur ou d’État sur la dernière erreur. Le pilote gère une pile ou une liste d’erreurs qui peuvent être retournées pour les arguments *HSTMT*, *hdbc*et *henv* , en fonction de la façon dont l’appel à **SQLError** est effectué. La file d’attente d’erreurs est vidée après chaque instruction. Récupère généralement un message d’erreur Oracle et est vide.|  
-|**SQLExecDirect**|Exécute une nouvelle instruction SQL qui n’est pas préparée. Le pilote utilise les valeurs actuelles des variables de marqueur de paramètre si des paramètres existent dans l’instruction. Si vos noms de table, de vue ou de champ contiennent des espaces, mettez les noms entre guillemets. Par exemple, si votre base de données contient une table nommée *My table* et le champ *My*Field, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma table\`. \`Mon champ1\`,; \`Ma table\`. \`Mon champ2\` de \`ma table\`|  
+|**SQLExecDirect**|Exécute une nouvelle instruction SQL qui n’est pas préparée. Le pilote utilise les valeurs actuelles des variables de marqueur de paramètre si des paramètres existent dans l’instruction. Si vos noms de table, de vue ou de champ contiennent des espaces, mettez les noms entre guillemets. Par exemple, si votre base de données contient une table nommée *My table* et le champ *My*Field, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \` ma table \` . \`Mon champ1 \` ,; \` Ma table \` . \` Mon champ2 \` de \` ma table\`|  
 |**SQLExecute**|Exécute une instruction SQL préparée (une instruction déjà préparée par **SQLPrepare**). Le pilote utilise les valeurs actuelles des variables de marqueur de paramètre si des paramètres existent dans l’instruction.|  
 |**SQLFetch**|Récupère une ligne d’un jeu de résultats dans les emplacements spécifiés par les appels précédents à **SQLBindCol**. Prépare le pilote pour un appel à **SQLGetData** pour les colonnes indépendantes.|  
 |**Sqlfreeconnect,**|Libère un handle de connexion et libère toute la mémoire allouée pour le descripteur.|  
@@ -48,7 +49,7 @@ ms.locfileid: "81281019"
 |**SQLFreeStmt**|Arrête le traitement associé à un HSTMT spécifique, ferme tous les curseurs ouverts associés à hstmt, ignore les résultats en attente et libère éventuellement toutes les ressources associées au descripteur d’instruction.|  
 |**SQLGetCursorName**|Retourne le nom du curseur associé au HSTMT donné.|  
 |**SQLNumResultCols**|Retourne le nombre de colonnes dans un curseur de jeu de résultats.|  
-|**SQLPrepare**|Prépare une instruction SQL en planifiant l’optimisation et l’exécution de l’instruction. L’instruction SQL est compilée pour être exécutée par **SQLExecDirect**.<br /><br /> Si vos noms de table, de vue ou de champ contiennent des espaces, mettez les noms entre guillemets. Par exemple, si votre base de données contient une table nommée *My table* et le champ *My*Field, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \`ma table\`. \`Mon champ\` de \`ma table\`<br /><br /> Pour plus d’informations sur l’utilisation de jeux de résultats contenant des tableaux en tant que paramètres formels, consultez [renvoi de paramètres de tableau à partir de procédures stockées](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
+|**SQLPrepare**|Prépare une instruction SQL en planifiant l’optimisation et l’exécution de l’instruction. L’instruction SQL est compilée pour être exécutée par **SQLExecDirect**.<br /><br /> Si vos noms de table, de vue ou de champ contiennent des espaces, mettez les noms entre guillemets. Par exemple, si votre base de données contient une table nommée *My table* et le champ *My*Field, placez chaque élément de l’identificateur comme suit :<br /><br /> Sélectionnez \` ma table \` . \` Mon champ \` de \` ma table\`<br /><br /> Pour plus d’informations sur l’utilisation de jeux de résultats contenant des tableaux en tant que paramètres formels, consultez [renvoi de paramètres de tableau à partir de procédures stockées](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
 |**SQLRowCount**|Oracle ne permet pas de déterminer le nombre de lignes dans un jeu de résultats tant que vous n’avez pas récupéré la dernière ligne, de sorte qu’elle retourne-1.|  
 |**SQLSetCursorName**|Associe un nom de curseur à un descripteur d’instruction actif, *HSTMT*.|  
 |**SQLSetParam,**|Remplacé par SQLBindParameter dans ODBC 2. *x*.|  

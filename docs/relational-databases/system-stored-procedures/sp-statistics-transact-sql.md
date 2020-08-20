@@ -1,4 +1,5 @@
 ---
+description: sp_statistics (Transact-SQL)
 title: sp_statistics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34d4b7763fd35b2012a90240a4d27fa27018f828
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: bd5a7fa747241cfbfa767219894ba937a63ce7c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173097"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473722"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne la liste de tous les index et statistiques d'une table ou d'une vue indexée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,19 +47,19 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_name = ] 'table_name'`Spécifie la table utilisée pour retourner les informations de catalogue. *table_name* est de **type sysname**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge.  
+`[ @table_name = ] 'table_name'` Spécifie la table utilisée pour retourner les informations de catalogue. *table_name* est de **type sysname**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge.  
   
-`[ @table_owner = ] 'owner'`Nom du propriétaire de la table utilisée pour retourner les informations de catalogue. *TABLE_OWNER* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
+`[ @table_owner = ] 'owner'` Nom du propriétaire de la table utilisée pour retourner les informations de catalogue. *TABLE_OWNER* est de **type sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
  Si, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les index de la table sont retournés. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas de table portant le *nom*spécifié, cette procédure recherche une table portant le *nom* spécifié, détenue par le propriétaire de la base de données. Si cette table existe, ses index sont retournés.  
   
-`[ @table_qualifier = ] 'qualifier'`Nom du qualificateur de la table. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+`[ @table_qualifier = ] 'qualifier'` Nom du qualificateur de la table. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
-`[ @index_name = ] 'index_name'`Nom de l’index. *index_name* est de **type sysname**, avec% comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ @index_name = ] 'index_name'` Nom de l’index. *index_name* est de **type sysname**, avec% comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @is_unique = ] 'is_unique'`Indique si seuls les index uniques (si **Y**) doivent être retournés. *is_unique* est de **type char (1)**, avec **N**comme valeur par défaut.  
+`[ @is_unique = ] 'is_unique'` Indique si seuls les index uniques (si **Y**) doivent être retournés. *is_unique* est de **type char (1)**, avec **N**comme valeur par défaut.  
   
-`[ @accuracy = ] 'accuracy'`Niveau de cardinalité et de précision de la page pour les statistiques. la *précision* est **char (1)**, avec **Q**comme valeur par défaut. Spécifiez **E** pour vous assurer que les statistiques sont mises à jour afin que la cardinalité et les pages soient exactes.  
+`[ @accuracy = ] 'accuracy'` Niveau de cardinalité et de précision de la page pour les statistiques. la *précision* est **char (1)**, avec **Q**comme valeur par défaut. Spécifiez **E** pour vous assurer que les statistiques sont mises à jour afin que la cardinalité et les pages soient exactes.  
   
  La valeur **E** (SQL_ENSURE) demande au pilote de récupérer de manière inconditionnelle les statistiques.  
   
@@ -97,7 +98,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
-## <a name="example-sssdwfull-and-sspdw"></a>Exemple : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-sssdwfull-and-sspdw"></a>Exemple : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant retourne des informations sur la `DimEmployee` table.  
   
 ```sql  
@@ -107,7 +108,7 @@ EXEC sp_statistics DimEmployee;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procédures stockées de catalogue &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

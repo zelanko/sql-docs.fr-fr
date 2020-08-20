@@ -1,4 +1,5 @@
 ---
+description: sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 title: sys. sp_xtp_merge_checkpoint_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/28/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60f180eabadcbd4605b958ed3b631a5b4f38b838
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 9bd9412dd63c8fa167fde614992b255508eea6b3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442648"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473374"
 ---
 # <a name="syssp_xtp_merge_checkpoint_files-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -56,7 +57,7 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  Limite supérieure (bigint) des transactions pour un fichier de données, comme indiqué dans [sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). Une erreur est générée pour une valeur transactionId non valide.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- Aucun  
+ None  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
  None  
@@ -64,11 +65,11 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
 ## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin et au rôle de base de données fixe db_owner.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Fusionne tous les fichiers de données et delta dans la plage valide pour générer un seul fichier de données et delta. Cette procédure ne respecte pas la stratégie de fusion.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

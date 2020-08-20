@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_profileaccount_sp (Transact-SQL)
 title: sysmail_update_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: af6578c98acfdd9fe5dea664ecea4cf21aa74f85
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ccfcd3627627dd2fca78ba02b74f89f2bea07116
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473345"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Met à jour le numéro de séquence d'un compte dans un profil de messagerie de base de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,15 +43,15 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id`ID de profil du profil à mettre à jour. *profile_id* est de **type int**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
+`[ @profile_id = ] profile_id` ID de profil du profil à mettre à jour. *profile_id* est de **type int**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
   
-`[ @profile_name = ] 'profile_name'`Nom de profil du profil à mettre à jour. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
+`[ @profile_name = ] 'profile_name'` Nom de profil du profil à mettre à jour. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
   
-`[ @account_id = ] account_id`ID de compte à mettre à jour. *account_id* est de **type int**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
+`[ @account_id = ] account_id` ID de compte à mettre à jour. *account_id* est de **type int**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
   
-`[ @account_name = ] 'account_name'`Nom du compte à mettre à jour. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
+`[ @account_name = ] 'account_name'` Nom du compte à mettre à jour. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
   
-`[ @sequence_number = ] sequence_number`Nouveau numéro de séquence du compte. *sequence_number* est de **type int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
+`[ @sequence_number = ] sequence_number` Nouveau numéro de séquence du compte. *sequence_number* est de **type int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

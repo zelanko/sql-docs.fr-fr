@@ -1,4 +1,5 @@
 ---
+description: log_shipping_monitor_error_detail (Transact-SQL)
 title: log_shipping_monitor_error_detail (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1abbc89dcd085d65f2b44aab54d731f17184b9a7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25c1187b463a52c4f5340356c23b77430ef0123f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473256"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85890186"
 |**source**|**nvarchar**|Source du message d'erreur ou de l'événement.|  
 |**help_url**|**nvarchar**|URL, si elle est disponible, qui permet de consulter des informations complémentaires à propos de l'erreur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette table contient le détail des erreurs des agents de copie des journaux de transaction. Chaque erreur est enregistrée sous la forme d'une séquence d'exceptions. Il peut y avoir plusieurs erreurs (séquences) pour chaque session d'agent.  
   
  En plus d’être stockées sur le serveur moniteur distant, les informations relatives au serveur principal sont stockées sur le serveur principal dans la table **log_shipping_monitor_error_detail** , et les informations relatives à un serveur secondaire sont également stockées sur le serveur secondaire dans sa table **log_shipping_monitor_error_detail** .  

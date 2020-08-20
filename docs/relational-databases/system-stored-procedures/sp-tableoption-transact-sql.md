@@ -1,4 +1,5 @@
 ---
+description: sp_tableoption (Transact-SQL)
 title: sp_tableoption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/11/2017
@@ -18,12 +19,12 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 06655c8dd684ca89d6e67b065d3943ee57f752fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473561"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85718681"
 >  La fonctionnalité text in row sera supprimée dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour stocker des données de valeur élevée, nous vous recommandons d’utiliser les types de données **varchar (max)**, **nvarchar (max)** et **varbinary (max)** .  
   
 
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -68,7 +69,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou numéro d'erreur (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La procédure sp_tableoption peut être utilisée uniquement pour définir les valeurs des options des tables définies par l'utilisateur. Pour afficher les propriétés d’une table, utilisez OBJECTPROPERTY ou Query sys. tables.  
   
  L'option text in row de sp_tableoption peut être activée ou désactivée uniquement pour les tables qui contiennent des colonnes de texte. Si la table ne contient pas de colonne de texte, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur.  
@@ -79,7 +80,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   l'option text in row est activée ;  
   
--   La longueur de la chaîne est plus petite que la limite spécifiée dans@OptionValue  
+-   La longueur de la chaîne est plus petite que la limite spécifiée dans @OptionValue  
   
 -   l'espace disque disponible s'avère suffisant dans la ligne de données.  
   
@@ -134,9 +135,9 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
+ [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

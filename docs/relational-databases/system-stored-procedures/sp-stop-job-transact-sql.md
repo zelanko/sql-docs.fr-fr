@@ -1,4 +1,5 @@
 ---
+description: sp_stop_job (Transact-SQL)
 title: sp_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7be2717c1f98291c0ce60b25e4290c20d23a86ae
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2314cec4cbb66893eb77ed6c8b025355c319de71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892991"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473678"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85892991"
   Demande à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent d'arrêter l'exécution d'un travail.  
 
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,16 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_name = ] 'job_name'`Nom du travail à arrêter. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail à arrêter. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @job_id = ] job_id`Numéro d’identification du travail à arrêter. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail à arrêter. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @originating_server = ] 'master_server'`Nom du serveur maître. Si ce nom est spécifié, tous les travaux multiserveurs sont arrêtés. *master_server* est de type **nvarchar (128)**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement lors de l’appel de **sp_stop_job** sur un serveur cible.  
+`[ @originating_server = ] 'master_server'` Nom du serveur maître. Si ce nom est spécifié, tous les travaux multiserveurs sont arrêtés. *master_server* est de type **nvarchar (128)**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement lors de l’appel de **sp_stop_job** sur un serveur cible.  
   
 > [!NOTE]  
 >  Seul un des trois premiers paramètres peut être précisé.  
   
-`[ @server_name = ] 'target_server'`Nom du serveur cible spécifique sur lequel arrêter un travail multiserveur. *target_server* est de type **nvarchar (128)**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement lors de l’appel de **sp_stop_job** sur un serveur maître pour un travail multiserveur.  
+`[ @server_name = ] 'target_server'` Nom du serveur cible spécifique sur lequel arrêter un travail multiserveur. *target_server* est de type **nvarchar (128)**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement lors de l’appel de **sp_stop_job** sur un serveur maître pour un travail multiserveur.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

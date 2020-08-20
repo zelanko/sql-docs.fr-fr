@@ -1,4 +1,5 @@
 ---
+description: sp_delete_maintenance_plan_db (Transact-SQL)
 title: sp_delete_maintenance_plan_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 114240ad0916a664e95dbc980093b857ecd500a6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9997758701897aa5fa37afb85cac053e22b0e5c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474366"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "85862853"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,9 +49,9 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @plan_id = ] 'plan\_id'`Spécifie l’ID du plan de maintenance. *plan_id* est de type **uniqueidentifier**.  
+`[ @plan_id = ] 'plan\_id'` Spécifie l’ID du plan de maintenance. *plan_id* est de type **uniqueidentifier**.  
   
-`[ @db_name = ] 'database\_name'`Spécifie le nom de la base de données à supprimer du plan de maintenance. *database_name* est de type **sysname**.  
+`[ @db_name = ] 'database\_name'` Spécifie le nom de la base de données à supprimer du plan de maintenance. *database_name* est de type **sysname**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

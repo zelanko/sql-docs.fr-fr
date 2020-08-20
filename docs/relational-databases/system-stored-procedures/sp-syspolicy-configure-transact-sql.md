@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_configure (Transact-SQL)
 title: sp_syspolicy_configure (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 70c10922-9345-4190-ba69-808a43f760da
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd11fa935dadc2ed7332275f3f6c66613cc831af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 820952e0829014efc3669759dabf5d1dfc208d91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892748"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473577"
 ---
 # <a name="sp_syspolicy_configure-transact-sql"></a>sp_syspolicy_configure (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Configure des paramètres pour la Gestion basée sur des stratégies, tels que l'activation, ou non, de cette dernière.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +41,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Est le nom du paramètre que vous souhaitez configurer. *Name* est de **type sysname**, est obligatoire et ne peut pas avoir la valeur null ou être une chaîne vide.  
+`[ @name = ] 'name'` Est le nom du paramètre que vous souhaitez configurer. *Name* est de **type sysname**, est obligatoire et ne peut pas avoir la valeur null ou être une chaîne vide.  
   
  le *nom* peut être l’une des valeurs suivantes :  
   
@@ -50,7 +51,7 @@ sp_syspolicy_configure [ @name = ] 'name'
   
 -   'LogOnSuccess' - Spécifie si la Gestion basée sur des stratégies consigne les évaluations de stratégies réussies.  
   
-`[ @value = ] value`Valeur associée à la valeur spécifiée pour le *nom*. la *valeur* est **sql_variant**et est obligatoire.  
+`[ @value = ] value` Valeur associée à la valeur spécifiée pour le *nom*. la *valeur* est **sql_variant**et est obligatoire.  
   
 -   Si vous spécifiez « Enabled » comme *nom*, vous pouvez utiliser l’une des valeurs suivantes :  
   
@@ -69,7 +70,7 @@ sp_syspolicy_configure [ @name = ] 'name'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_configure dans le contexte de la base de données système msdb.  
   
  Pour afficher les valeurs actuelles de ces paramètres, interrogez la vue système msdb.dbo.syspolicy_configuration.  

@@ -1,4 +1,5 @@
 ---
+description: sp_setsubscriptionxactseqno (Transact-SQL)
 title: sp_setsubscriptionxactseqno (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc63f645fe2c825e0c8dac27cbf5aeb138123c0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881540"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473785"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85881540"
 > [!CAUTION]  
 >  Si vous n'utilisez pas correctement cette procédure stockée ou si vous spécifiez une valeur de numéro d'enregistrement incorrecte, l'Agent de distribution annule les modifications appliquées au niveau de l'Abonné ou ignore toutes les modifications restantes.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +44,13 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut. Pour un serveur de publication non SQL Server, *publisher_db* est le nom de la base de données de distribution.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut. Pour un serveur de publication non SQL Server, *publisher_db* est le nom de la base de données de distribution.  
   
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut. Lorsque le Agent de distribution est partagé par plusieurs publications, vous devez spécifier la valeur ALL pour la *publication*.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut. Lorsque le Agent de distribution est partagé par plusieurs publications, vous devez spécifier la valeur ALL pour la *publication*.  
   
-`[ @xact_seqno = ] xact_seqno`LSN de la transaction suivante sur le serveur de distribution à appliquer à l’abonné. *xact_seqno* est de type **varbinary (16)**, sans valeur par défaut.  
+`[ @xact_seqno = ] xact_seqno` LSN de la transaction suivante sur le serveur de distribution à appliquer à l’abonné. *xact_seqno* est de type **varbinary (16)**, sans valeur par défaut.  
   
 ## <a name="result-set"></a>Jeu de résultats  
   
@@ -62,12 +63,12 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_setsubscriptionxactseqno** est utilisé dans la réplication transactionnelle.  
   
  **sp_setsubscriptionxactseqno** ne peut pas être utilisé dans une topologie de réplication transactionnelle d’égal à égal.  
   
- **sp_setsubscriptionxactseqno** peut être utilisé pour ignorer une transaction spécifique qui provoque une erreur lorsque s’applique à l’abonné. En cas de défaillance et après l’arrêt du Agent de distribution, appelez [sp_helpsubscriptionerrors &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) sur le serveur de distribution pour récupérer la valeur xact_seqno de la transaction qui a échoué, puis appelez **sp_setsubscriptionxactseqno**, en transmettant cette valeur pour *xact_seqno*. Ainsi, seules les commandes consécutives à ce numéro séquentiel d'enregistrement sont traitées.  
+ **sp_setsubscriptionxactseqno** peut être utilisé pour ignorer une transaction spécifique qui provoque une erreur lorsque s’applique à l’abonné. En cas de défaillance et après l’arrêt du Agent de distribution, appelez [sp_helpsubscriptionerrors &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) sur le serveur de distribution pour récupérer la valeur xact_seqno de la transaction qui a échoué, puis appelez **sp_setsubscriptionxactseqno**, en transmettant cette valeur pour *xact_seqno*. Ainsi, seules les commandes consécutives à ce numéro séquentiel d'enregistrement sont traitées.  
   
  Affectez la valeur **0** à *xact_seqno* pour remettre à l’abonné toutes les commandes en attente dans la base de données de distribution.  
   

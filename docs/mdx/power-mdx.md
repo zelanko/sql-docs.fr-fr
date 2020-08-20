@@ -1,4 +1,5 @@
 ---
+description: ^ (Puissance) (MDX)
 title: ^ (Puissance) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9b1ebeaca9e81103d2038d6f7a34fe9221cc68f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 683b1390a0322dc06e3601b0e6675b203c18d7c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471681"
 ---
 # <a name="-power-mdx"></a>^ (Puissance) (MDX)
 
@@ -38,6 +39,6 @@ Numeric_Expression ^ Numeric_Expression
  Les deux expressions doivent être de même type de données, ou l'une des expressions doit pouvoir être implicitement convertie dans le type de données de l'autre expression. Si une expression donne comme résultat une valeur NULL, l'opérateur retourne une valeur NULL.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des opérateurs MDX &#40;&#41;MDX](../mdx/mdx-operator-reference-mdx.md)  
+ [Référence des opérateurs MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_validatelogins (Transact-SQL)
 title: sp_validatelogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8299e334ff3219c41a3a4adfcc29f238d0ed81b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b3237ed7a7d585e128b678772ec6d3a010fe3d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473435"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permet de signaler des informations sur les utilisateurs et les groupes Windows qui sont mappés sur des principaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais qui n'existent plus dans l'environnement Windows.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +49,7 @@ sp_validatelogins
 |**SID**|**varbinary (85)**|Identificateur de sécurité de l'utilisateur ou groupe Windows.|  
 |**NT Login**|**sysname**|Nom de l’utilisateur ou du groupe Windows.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si le principal orphelin au niveau serveur possède un utilisateur de base de données, celui-ci doit être supprimé pour que le principal de serveur orphelin puisse être supprimé. Pour supprimer un utilisateur de base de données, utilisez [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Si le principal au niveau serveur possède des éléments sécurisables dans la base de données, la propriété des éléments sécurisables doit être transférée ou ils doivent être supprimés. Pour transférer la propriété des éléments sécurisables de base de données, utilisez [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  Pour supprimer les mappages aux utilisateurs et groupes Windows qui n’existent plus, utilisez [Drop login](../../t-sql/statements/drop-login-transact-sql.md).  
@@ -65,8 +66,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)  

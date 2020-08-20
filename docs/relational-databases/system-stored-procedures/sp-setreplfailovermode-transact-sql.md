@@ -1,4 +1,5 @@
 ---
+description: sp_setreplfailovermode (Transact-SQL)
 title: sp_setreplfailovermode (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf4ad48531567972d8fc9b1916d6c5f56bb28f68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b5f75b17d54b5e119970af1bad9e12eaecf067d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881506"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88473824"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permet de configurer le mode de basculement des abonnements activés pour la mise à jour immédiate avec possibilité de basculement vers la mise à jour en attente. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné. Pour plus d’informations sur les modes de basculement, consultez [abonnements pouvant être mis à jour pour la réplication transactionnelle](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,13 +42,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut. La publication doit déjà exister.  
+`[ @publisher = ] 'publisher'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut. La publication doit déjà exister.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @failover_mode = ] 'failover_mode'`Mode de basculement de l’abonnement. *failover_mode* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
+`[ @failover_mode = ] 'failover_mode'` Mode de basculement de l’abonnement. *failover_mode* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -55,14 +56,14 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 |**en attente**|Les modifications de données sont stockées dans une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file d’attente.|  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Message Queuing est déconseillé et n’est plus pris en charge.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing est déconseillé et n’est plus pris en charge.  
   
-`[ @override = ] override`À usage interne uniquement.  
+`[ @override = ] override` À usage interne uniquement.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_setreplfailovermode** est utilisé dans la réplication d’instantané ou dans la réplication transactionnelle pour laquelle les abonnements sont activés, que ce soit pour la mise à jour en attente avec basculement vers une mise à jour immédiate, ou pour une mise à jour immédiate avec basculement vers la mise à jour en attente.  
   
 ## <a name="permissions"></a>Autorisations  

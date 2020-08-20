@@ -1,4 +1,5 @@
 ---
+description: sp_help_schedule (Transact-SQL)
 title: sp_help_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f0539e4281d58744b18a4f9ca522c52952032c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 516314123b6555f7e079471b88384e586bdc5cba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88474201"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contient des informations sur les planifications.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +44,13 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @schedule_id = ] id`Identificateur de la planification à répertorier. *schedule_name* est de **type int**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
+`[ @schedule_id = ] id` Identificateur de la planification à répertorier. *schedule_name* est de **type int**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
   
-`[ @schedule_name = ] 'schedule_name'`Nom de la planification à répertorier. *schedule_name* est de **type sysname**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
+`[ @schedule_name = ] 'schedule_name'` Nom de la planification à répertorier. *schedule_name* est de **type sysname**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
   
-`[ @attached_schedules_only = ] attached_schedules_only ]`Spécifie s’il faut afficher uniquement les planifications auxquelles un travail est attaché. *attached_schedules_only* est de **bit**, avec **0**comme valeur par défaut. Lorsque *attached_schedules_only* a la **valeur 0**, toutes les planifications sont affichées. Lorsque *attached_schedules_only* a la valeur **1**, le jeu de résultats contient uniquement les planifications attachées à un travail.  
+`[ @attached_schedules_only = ] attached_schedules_only ]` Spécifie s’il faut afficher uniquement les planifications auxquelles un travail est attaché. *attached_schedules_only* est de **bit**, avec **0**comme valeur par défaut. Lorsque *attached_schedules_only* a la **valeur 0**, toutes les planifications sont affichées. Lorsque *attached_schedules_only* a la valeur **1**, le jeu de résultats contient uniquement les planifications attachées à un travail.  
   
-`[ @include_description = ] include_description`Spécifie s’il faut inclure les descriptions dans le jeu de résultats. *include_description* est de **bit**, avec **0**comme valeur par défaut. Lorsque *include_description* a la **valeur 0**, la *schedule_description* colonne du jeu de résultats contient un espace réservé. Lorsque *include_description* a la valeur **1**, la description de la planification est incluse dans le jeu de résultats.  
+`[ @include_description = ] include_description` Spécifie s’il faut inclure les descriptions dans le jeu de résultats. *include_description* est de **bit**, avec **0**comme valeur par défaut. Lorsque *include_description* a la **valeur 0**, la *schedule_description* colonne du jeu de résultats contient un espace réservé. Lorsque *include_description* a la valeur **1**, la description de la planification est incluse dans le jeu de résultats.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -62,7 +63,7 @@ sp_help_schedule
 |**schedule_id**|**int**|Numéro d'identificateur de la planification.|  
 |**schedule_uid**|**uniqueidentifier**|Identificateur de la planification.|  
 |**schedule_name**|**sysname**|Nom de la planification.|  
-|**désactivé**|**int**|Indique si la planification est activée (**1**) ou désactivée (**0**).|  
+|**activé**|**int**|Indique si la planification est activée (**1**) ou désactivée (**0**).|  
 |**freq_type**|**int**|Valeur indiquant quand le travail doit être exécuté.<br /><br /> **1** = une fois<br /><br /> **4** = tous les jours<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuelle, par rapport au **freq_interval**<br /><br /> **64** = exécution au démarrage du service SQLServerAgent.|  
 |**freq_interval**|**int**|Jours d’exécution du travail. La valeur dépend de la valeur de **freq_type**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**int**|Unités pour **freq_subday_interval**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -77,7 +78,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Description en anglais de la planification (sur demande).|  
 |**job_count**|**int**|Renvoie le nombre de travaux auxquels la planification fait référence.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Quand aucun paramètre n’est fourni, **sp_help_schedule** répertorie les informations de toutes les planifications de l’instance.  
   
 ## <a name="permissions"></a>Autorisations  

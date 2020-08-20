@@ -1,4 +1,5 @@
 ---
+description: Versions de FoxPro prises en charge
 title: Versions prises en charge de FoxPro | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 400a3a29bebd5fbd8c19bef1e3d027549394595e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e964b4a8627ed3190efd63bbbc908c2282b15fee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81286179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471481"
 ---
 # <a name="supported-versions-of-foxpro"></a>Versions de FoxPro prises en charge
 Vous pouvez utiliser le pilote ODBC de Microsoft® Visual FoxPro® pour accéder aux données stockées dans des tables FoxPro. Les versions suivantes des données FoxPro sont prises en charge :  

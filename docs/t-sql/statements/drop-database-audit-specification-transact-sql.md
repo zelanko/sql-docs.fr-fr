@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 title: DROP DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ebf969293f515a38c1721abb4f08c94c8ac7eb32
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: e4abd76d2f2fb4b2036036e165ec8f075003fc21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472299"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un objet de spécification d'audit de base de données à l'aide de la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +47,7 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Nom d'un objet de spécification d'audit existant.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  DROP DATABASE AUDIT SPECIFICATION supprime les métadonnées pour la spécification d'audit, mais pas les données d'audit recueillies avant l'exécution de la commande DROP. Vous devez définir l’état d’une spécification d’audit de base de données sur OFF à l’aide de `ALTER DATABASE AUDIT SPECIFICATION` pour que cette spécification puisse être supprimée.  
   
 ## <a name="permissions"></a>Autorisations  
