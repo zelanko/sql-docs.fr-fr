@@ -1,4 +1,5 @@
 ---
+description: sp_grant_proxy_to_subsystem (Transact-SQL)
 title: sp_grant_proxy_to_subsystem (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2d772c66af8dfbab805124e4a07d26243865330a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 964bab1ac95d80d05f16fa8b538f1ecd5f15352c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469398"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85891850"
 
   Accorde à un proxy le droit d'accéder à un sous-système.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,11 +42,11 @@ sp_grant_proxy_to_subsystem
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @proxy_id = ] id`Numéro d’identification du proxy auquel accorder l’accès. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut. *Proxy_id* ou *proxy_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
+`[ @proxy_id = ] id` Numéro d’identification du proxy auquel accorder l’accès. *Proxy_id* est de **type int**, avec NULL comme valeur par défaut. *Proxy_id* ou *proxy_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @proxy_name = ] 'proxy_name'`Nom du proxy pour lequel l’accès doit être accordé. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut. *Proxy_id* ou *proxy_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
+`[ @proxy_name = ] 'proxy_name'` Nom du proxy pour lequel l’accès doit être accordé. *Proxy_name* est de **type sysname**, avec NULL comme valeur par défaut. *Proxy_id* ou *proxy_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @subsystem_id = ] id`Numéro d’identification du sous-système auquel accorder l’accès. *Subsystem_id* est de **type int**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
+`[ @subsystem_id = ] id` Numéro d’identification du sous-système auquel accorder l’accès. *Subsystem_id* est de **type int**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -62,7 +63,7 @@ sp_grant_proxy_to_subsystem
 |**12**|script PowerShell|  
 | &nbsp; | &nbsp; |
   
-`[ @subsystem_name = ] 'subsystem_name'`Nom du sous-système auquel accorder l’accès. **Subsystem_name** est de **type sysname**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
+`[ @subsystem_name = ] 'subsystem_name'` Nom du sous-système auquel accorder l’accès. **Subsystem_name** est de **type sysname**, avec NULL comme valeur par défaut. *Subsystem_id* ou *subsystem_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -75,11 +76,11 @@ sp_grant_proxy_to_subsystem
 |**QueueReader**|Agent de lecture de la file d'attente de réplication|  
 |**ANALYSISQUERY**|Requête Analysis Services|  
 |**ANALYSISCOMMAND**|Commandes Analysis Services|  
-|**DTS**|Exécution de package SSIS|  
+|**Dts**|Exécution de package SSIS|  
 |**PowerShell**|script PowerShell|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Autoriser un proxy à accéder à un sous-système ne modifie pas les autorisations pour le principal spécifié dans le proxy.  
   
 ## <a name="permissions"></a>Autorisations  

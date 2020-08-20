@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_columns_cursor (Transact-SQL)
 title: sp_help_fulltext_columns_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1ed545d31cd5f05fa8360d2cf73a88787f98df45
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dff9f4ea5fb2eda11da2144114cde959197c3723
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469373"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85901471"
   Utilise un curseur pour retourner les colonnes marquées pour l'indexation de texte intégral.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez plutôt l’affichage catalogue [sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt l’affichage catalogue [sys. fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +45,11 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @cursor_return = ] @cursor_variable OUTPUT`Variable de sortie de type **Cursor**. Le curseur résultant est en lecture seule, dynamique et autorise les défilements.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` Variable de sortie de type **Cursor**. Le curseur résultant est en lecture seule, dynamique et autorise les défilements.  
   
-`[ @table_name = ] 'table_name'`Nom de la table en une ou deux parties pour laquelle les informations d’index de recherche en texte intégral sont demandées. *table_name* est de type **nvarchar (517)**, avec NULL comme valeur par défaut. Si *table_name* est omis, les informations sur les colonnes d’index de recherche en texte intégral sont récupérées pour chaque table indexée de texte intégral.  
+`[ @table_name = ] 'table_name'` Nom de la table en une ou deux parties pour laquelle les informations d’index de recherche en texte intégral sont demandées. *table_name* est de type **nvarchar (517)**, avec NULL comme valeur par défaut. Si *table_name* est omis, les informations sur les colonnes d’index de recherche en texte intégral sont récupérées pour chaque table indexée de texte intégral.  
   
-`[ @column_name = ] 'column_name'`Nom de la colonne pour laquelle les métadonnées de l’index de recherche en texte intégral sont souhaitées. *column_name* est de **type sysname** avec NULL comme valeur par défaut. Si *column_name* est omis ou si a la valeur null, des informations sur les colonnes de texte intégral sont retournées pour chaque colonne indexée de texte intégral pour *table_name*. Si *table_name* est également omis ou a la valeur null, des informations sur les colonnes d’index de recherche en texte intégral sont retournées pour chaque colonne indexée de texte intégral pour toutes les tables de la base de données.  
+`[ @column_name = ] 'column_name'` Nom de la colonne pour laquelle les métadonnées de l’index de recherche en texte intégral sont souhaitées. *column_name* est de **type sysname** avec NULL comme valeur par défaut. Si *column_name* est omis ou si a la valeur null, des informations sur les colonnes de texte intégral sont retournées pour chaque colonne indexée de texte intégral pour *table_name*. Si *table_name* est également omis ou a la valeur null, des informations sur les colonnes d’index de recherche en texte intégral sont retournées pour chaque colonne indexée de texte intégral pour toutes les tables de la base de données.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou 1 (échec)  
@@ -88,7 +89,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [COLUMNPROPERTY &#40;&#41;Transact-SQL](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [COLUMNPROPERTY &#40;&#41;Transact-SQL ](../../t-sql/functions/columnproperty-transact-sql.md)   
  [sp_fulltext_column &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-column-transact-sql.md)   
  [sp_help_fulltext_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-columns-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

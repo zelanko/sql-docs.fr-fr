@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_catalog (Transact-SQL)
 title: sp_fulltext_catalog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 892b0e24bb76625b5d245a7314d368c0e0dc0cf2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469524"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -31,9 +32,9 @@ ms.locfileid: "85771083"
   Permet de créer ou de supprimer un catalogue de texte intégral, et de démarrer ou d'arrêter l'indexation d'un catalogue. Plusieurs catalogues de texte intégral peuvent être créés pour chaque base de données.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)et [DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md), [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)et [DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md) à la place.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,9 +46,9 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @ftcat = ] 'fulltext_catalog_name'`Nom du catalogue de texte intégral. Les noms de catalogues doivent être uniques dans chaque base de données. *fulltext_catalog_name* est de **type sysname**.  
+`[ @ftcat = ] 'fulltext_catalog_name'` Nom du catalogue de texte intégral. Les noms de catalogues doivent être uniques dans chaque base de données. *fulltext_catalog_name* est de **type sysname**.  
   
-`[ @action = ] 'action'`Action à exécuter. *action* est de type **varchar (20)** et peut prendre l’une des valeurs suivantes.  
+`[ @action = ] 'action'` Action à exécuter. *action* est de type **varchar (20)** et peut prendre l’une des valeurs suivantes.  
   
 > [!NOTE]  
 >  En fonction de vos besoins, vous pouvez créer, supprimer et modifier des catalogues de texte intégral. Toutefois, il vaut mieux éviter de procéder à des modifications de schéma sur plusieurs catalogues à la fois. Ces actions peuvent être effectuées à l’aide de la procédure stockée **sp_fulltext_table** , qui est la méthode recommandée.  
@@ -61,7 +62,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**Stop**|Arrête un remplissage d’index pour *fulltext_catalog_name*. Une erreur est affichée si le catalogue n'existe pas. Aucun avertissement n'est affiché si l'alimentation était déjà arrêtée.|  
 |**Recréation**|Reconstruit *fulltext_catalog_name*. Dans ce cas, le catalogue existant est supprimé et un autre catalogue est créé à sa place. Toutes les tables qui comportent des références d'indexation de texte intégral sont associées au nouveau catalogue. La reconstruction redéfinit les métadonnées de texte intégral des tables système de la base de données.<br /><br /> Si le suivi des modifications est désactivé (OFF), la reconstruction ne déclenche pas de réalimentation du catalogue de texte intégral récemment créé. Dans ce cas, pour repeupler, exécutez **sp_fulltext_catalog** avec l’action **start_full** ou **start_incremental** .|  
   
-`[ @path = ] 'root_directory'`Répertoire racine (pas le chemin d’accès physique complet) pour une action de **création** . *root_directory* est de type **nvarchar (100)** et sa valeur par défaut est null, ce qui indique l’utilisation de l’emplacement par défaut spécifié lors de l’installation. Il s’agit du sous-répertoire Ftdata dans le répertoire MSSQL. par exemple, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. Le répertoire racine spécifié doit se trouver sur un lecteur du même ordinateur, ne pas être désigné seulement par une lettre de lecteur et ne pas être un chemin d'accès relatif. Les disques réseau et amovibles, les disquettes et chemins UNC ne sont pas pris en charge. Les catalogues de texte intégral doivent être créés sur un lecteur de disque local associé à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @path = ] 'root_directory'` Répertoire racine (pas le chemin d’accès physique complet) pour une action de **création** . *root_directory* est de type **nvarchar (100)** et sa valeur par défaut est null, ce qui indique l’utilisation de l’emplacement par défaut spécifié lors de l’installation. Il s’agit du sous-répertoire Ftdata dans le répertoire MSSQL. par exemple, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. Le répertoire racine spécifié doit se trouver sur un lecteur du même ordinateur, ne pas être désigné seulement par une lettre de lecteur et ne pas être un chemin d'accès relatif. Les disques réseau et amovibles, les disquettes et chemins UNC ne sont pas pris en charge. Les catalogues de texte intégral doivent être créés sur un lecteur de disque local associé à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  le ** \@ chemin d’accès** est valide uniquement quand l' *action* est **créer**. Pour les actions autres que **Create** (**Stop**, **Rebuild**, etc.), ** \@ path** doit avoir la valeur null ou être omis.  
   
@@ -138,7 +139,7 @@ GO
  [sp_fulltext_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Recherche en texte intégral](../../relational-databases/search/full-text-search.md)  
   
   

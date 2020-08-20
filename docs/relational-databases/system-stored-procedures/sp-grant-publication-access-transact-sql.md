@@ -1,4 +1,5 @@
 ---
+description: sp_grant_publication_access (Transact-SQL)
 title: sp_grant_publication_access (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 319f61f1cf1587117b4f8205b208c4f3e7deb6be
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5078173bfdf8ea079c0fa553c64a6235b101cdc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469359"
 ---
 # <a name="sp_grant_publication_access-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 
@@ -28,7 +29,7 @@ ms.locfileid: "85891835"
 
   Ajoute une connexion à la liste d'accès de la publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,16 +39,16 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication à laquelle accéder. **«***publication***»** est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication à laquelle accéder. **«***publication***»** est de **type sysname**, sans valeur par défaut.  
   
-`[ @login = ] 'login'`ID de connexion. **«***login***»** est de **type sysname**, sans valeur par défaut.  
+`[ @login = ] 'login'` ID de connexion. **«***login***»** est de **type sysname**, sans valeur par défaut.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_grant_publication_access** est utilisé dans les réplications d’instantané, transactionnelles et de fusion.  
   
  Cette procédure stockée peut être appelée de façon répétitive.  

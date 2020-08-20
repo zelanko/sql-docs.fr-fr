@@ -1,4 +1,5 @@
 ---
+description: sp_fulltext_pendingchanges (Transact-SQL)
 title: sp_fulltext_pendingchanges (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,19 +19,19 @@ ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86792b69e9bdd00c41c9ed5582046aee634d533
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d91423e81a8597fcf7cccb30a11d47482ea9964
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469448"
 ---
 # <a name="sp_fulltext_pendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne les modifications non traitées (par exemple les insertions, mises à jour et suppressions en attente) pour une table spécifiée qui utilise le suivi des modifications.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,9 +56,9 @@ sp_fulltext_pendingchanges table_id
  <sup>* Le type de données de la clé est identique à celui de la colonne clé de texte intégral dans la table de base.</sup>  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
+ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  S'il n'y a pas de modification à traiter, un ensemble de lignes vide est renvoyé.  
   
  Les requêtes de recherche en texte intégral ne retournent pas de ligne avec une valeur **Status** égale à 0. Cela est dû au fait que la ligne a été supprimée de la table de base et attend d'être supprimée de l'index de texte intégral.  

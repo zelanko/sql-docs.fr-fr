@@ -1,4 +1,5 @@
 ---
+description: LIKE (Transact-SQL)
 title: LIKE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -31,12 +32,12 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37cf0c961903707f86ec838c45d5935e72d72402
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f8886fbf2a94df7fd338572f2156e66ee6fc50ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922951"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467666"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,7 +71,7 @@ match_expression [ NOT ] LIKE pattern
  *pattern*  
  Chaîne de caractères spécifique à rechercher dans *match_expression*. Peut inclure les caractères génériques valides suivants. *pattern* peut faire au maximum 8 000 octets.  
   
-|Caractère générique|Description|Exemple|  
+|Caractère générique|Description| Exemple|  
 |------------------------|-----------------|-------------|  
 |%|Toute chaîne de zéro caractère ou plus.|WHERE title LIKE '%computer%' trouve tous les titres de livres comportant le terme « computer ».|  
 |_ (souligné)|N'importe quel caractère.|WHERE au_fname LIKE '_ean' trouve tous les prénoms en quatre lettres terminant par « ean » (Dean, Sean, etc.).|  
@@ -86,7 +87,7 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Valeur des résultats  
  LIKE renvoie TRUE si *match_expression* correspond au *pattern* spécifié.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Dans le cadre de la comparaison de chaînes avec LIKE, tous les caractères de la chaîne modèle ont une signification, espaces de début et de fin compris. Dans le cas d’une comparaison qui retourne toutes les lignes contenant une chaîne LIKE « abc  » (abc suivi d'un seul espace), une ligne dont la valeur dans cette colonne serait « abc » (abc sans espace) ne serait pas retournée. Les espaces à droite dont le profil correspond à l'expression ne sont pas pris en compte. Si vous demandez une comparaison qui renvoie toutes les lignes contenant une chaîne LIKE « abc » (abc sans espace), toutes les lignes commençant par la chaîne « abc », qu'elles contiennent ou non des espaces à droite, seront renvoyées.  
   
  Une comparaison LIKE de chaînes suivant un modèle contenant des données **char** et **varchar** risque d’échouer en raison du mode de stockage des différents types de données. L’exemple suivant transmet une variable **char** locale à une procédure stockée, puis utilise des critères spéciaux pour trouver tous les employés dont le nom commence par le jeu de caractères donné.  
@@ -200,7 +201,7 @@ GO
   
  Un modèle LIKE qui ne contient aucun caractère après un caractère d'échappement n'est pas valide ; le mot clé LIKE retourne alors la valeur FALSE. Si le caractère se trouvant après un caractère d'échappement n'est pas un caractère générique, le caractère d'échappement est ignoré et le caractère suivant est traité comme un caractère normal dans le modèle. Il s'agit notamment des caractères génériques suivants : symbole de pourcentage (%), trait de soulignement (_) et crochet gauche ([) lorsqu'ils sont placés entre deux crochets ([ ]). Les caractères d'échappement peuvent être utilisés à l'intérieur de doubles crochets ([ ]), notamment pour l'accent circonflexe (^), le trait d'union (-) et le crochet (]) droit.  
   
- 0x0000 (**char(0)** ) est un caractère non défini dans les classements Windows, qui n’est pas utilisable avec LIKE.  
+ 0x0000 (**char(0)**) est un caractère non défini dans les classements Windows, qui n’est pas utilisable avec LIKE.  
   
 ## <a name="examples"></a>Exemples  
   

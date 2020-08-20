@@ -1,4 +1,5 @@
 ---
+description: STATS_DATE (Transact-SQL)
 title: STATS_DATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
@@ -22,12 +23,12 @@ ms.assetid: f9ec3101-1e41-489d-b519-496a0d6089fb
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69f5b2a658ab40f180c4a1aafbc71f4dc7a264bf
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 1bc07124925f28ea0114a95ec5a60319bd2112bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467826"
 ---
 # <a name="stats_date-transact-sql"></a>STATS_DATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "87112640"
   
  Pour plus d’informations sur la mise à jour de statistiques, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +57,7 @@ STATS_DATE ( object_id , stats_id )
 ## <a name="return-types"></a>Types de retour  
  Renvoie **datetime** en cas de réussite. Renvoie **NULL** si un objet blob de statistiques n’a pas été créé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les fonctions système peuvent être utilisées dans la liste de sélection, dans la clause WHERE et partout où une expression peut être utilisée.  
  
  La date de mise à jour des statistiques est stockée dans l’[objet blob de statistiques](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) avec l’[histogramme](../../relational-databases/statistics/statistics.md#histogram) et le [vecteur de densité](../../relational-databases/statistics/statistics.md#density), et non dans les métadonnées. Quand aucune donnée n’est lue pour générer des données de statistiques, l’objet blob de statistiques n’est pas créé et la date n’est pas disponible. C’est le cas pour les statistiques filtrées pour lesquelles le prédicat ne renvoie aucune ligne, ou pour les nouvelles tables vides.

@@ -1,4 +1,5 @@
 ---
+description: TYPEPROPERTY (Transact-SQL)
 title: TYPEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,19 +21,19 @@ ms.assetid: bc311c80-bac5-46ab-a5c8-68b1c6bbf24a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a504fb547e89a348d1fe6b5f6168f81fd0d7656
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 455f736f73d2b4ba6c5e798b3cd9d8376ee4217b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467712"
 ---
 # <a name="typeproperty-transact-sql"></a>TYPEPROPERTY (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Renvoie des informations sur un type de données.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,11 +52,11 @@ TYPEPROPERTY (type , property)
   
 |Propriété|Description|Valeur retournée|  
 |--------------|-----------------|--------------------|  
-|**AllowsNull**|Type de données autorisant les valeurs NULL.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Type de données introuvable.|  
+|**AllowsNull**|Type de données autorisant les valeurs NULL.|1 = Vrai<br /><br /> 0 = Faux<br /><br /> NULL = Type de données introuvable.|  
 |**OwnerId**|Propriétaire du type.<br /><br /> Remarque : Le propriétaire du schéma n’est pas nécessairement le propriétaire du type.|Non NULL = ID utilisateur de base de données du propriétaire du type.<br /><br /> NULL = Type non pris en charge, ou ID de type non valide.|  
 |**Précision**|Précision du type de données.|Nombre de chiffres ou de caractères.<br /><br /> -1 = **xml** ou type de données de valeur de grande taille<br /><br /> NULL = Type de données introuvable.|  
-|**Mettre à l'échelle**|Échelle du type de données.|Nombre de décimales pour le type de données.<br /><br /> NULL = Le type de données n’est pas **numeric** ou est introuvable.|  
-|**UsesAnsiTrim**|Le paramètre de remplissage ANSI était activé lors de la création du type de données.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Type de données introuvable ou différent d'un type de données binaire ou chaîne.|  
+|**Mise à l’échelle**|Échelle du type de données.|Nombre de décimales pour le type de données.<br /><br /> NULL = Le type de données n’est pas **numeric** ou est introuvable.|  
+|**UsesAnsiTrim**|Le paramètre de remplissage ANSI était activé lors de la création du type de données.|1 = Vrai<br /><br /> 0 = Faux<br /><br /> NULL = Type de données introuvable ou différent d'un type de données binaire ou chaîne.|  
   
 ## <a name="return-types"></a>Types de retour  
  **int**  

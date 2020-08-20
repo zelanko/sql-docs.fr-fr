@@ -1,4 +1,5 @@
 ---
+description: '% (Reste) (Transact-SQL)'
 title: '% (Reste) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/15/2017
@@ -25,19 +26,19 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3912a363d90006e31e6d600c5fa983fc6ae6b939
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: a3c5c380472013176cdbe7ff745c588107d216b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395660"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467631"
 ---
 # <a name="-modulus-transact-sql"></a>% (Reste) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Renvoie le reste d'un nombre divisé par un autre.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,7 +58,7 @@ dividend % divisor
 ## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous pouvez utiliser l’opérateur arithmétique modulo dans la liste de sélection de l’instruction SELECT, avec toute combinaison de noms de colonnes, de constantes numériques ou toute expression valide de l’un des types de données des catégories entier et monétaire, ou bien du type **numeric**.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,4 +1,5 @@
 ---
+description: SIGNBYCERT (Transact-SQL)
 title: SIGNBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -23,19 +24,19 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1c0705a6057842b80f7e9bf59412f0a64af30ae
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 32fa18577753641583ff5b6c12d864da0f0e36af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112302"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467879"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Signe du texte avec un certificat et renvoie la signature.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,16 +51,16 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  *certificate_ID*  
  ID d'un certificat de la base de données active. *certificate_ID* est de type **int**.  
   
- *\@cleartext*  
+ *\@texte clair*  
  Variable de type **nvarchar**, **char**, **varchar** ou **nchar** qui contient des données qui seront signées.  
   
  **'** *password* **'**  
- Mot de passe avec lequel la clé privée du certificat a été chiffrée. *password* est de type **nvarchar(128)** .  
+ Mot de passe avec lequel la clé privée du certificat a été chiffrée. *password* est de type **nvarchar(128)**.  
   
 ## <a name="return-types"></a>Types de retour  
  **varbinary** d’une taille maximale de 8 000 octets.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Nécessite l'autorisation CONTROL sur le certificat.  
   
 ## <a name="examples"></a>Exemples  

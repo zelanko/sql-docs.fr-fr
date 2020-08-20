@@ -1,4 +1,5 @@
 ---
+description: sp_helpdynamicsnapshot_job (Transact-SQL)
 title: sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a155e7031a78cac6dcea4ca380f7b496d59170f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 61e72b03e3bc6adff3a9e3d0858a8a2bdb4b5805
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733219"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469291"
 ---
 # <a name="sp_helpdynamicsnapshot_job-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Renvoie des informations sur les travaux d'un Agent qui génèrent des instantanés filtrés. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,15 +46,15 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les travaux d’instantané de données filtrées qui correspondent aux *dynamic_snapshot_jobid*et *dynamic_snapshot_jobname*spécifiés pour toutes les publications.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les travaux d’instantané de données filtrées qui correspondent aux *dynamic_snapshot_jobid*et *dynamic_snapshot_jobname*spécifiés pour toutes les publications.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nom d’un travail d’instantané de données filtrées. *dynamic_snapshot_jobname*est de **type sysname**, avec **%** ', par défaut, qui retourne toutes les tâches dynamiques pour une publication avec le *dynamic_snapshot_jobid*spécifié. Si aucun nom de travail n'est défini explicitement lors de la création du travail, le nom du travail a le format suivant :  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Nom d’un travail d’instantané de données filtrées. *dynamic_snapshot_jobname*est de **type sysname**, avec **%** ', par défaut, qui retourne toutes les tâches dynamiques pour une publication avec le *dynamic_snapshot_jobid*spécifié. Si aucun nom de travail n'est défini explicitement lors de la création du travail, le nom du travail a le format suivant :  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`Identificateur d’un travail d’instantané de données filtrées. *dynamic_snapshot_jobid*est de type **uniqueidentifier**, avec NULL comme valeur par défaut, qui retourne tous les travaux d’instantané correspondant à la *dynamic_snapshot_jobname*spécifiée.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Identificateur d’un travail d’instantané de données filtrées. *dynamic_snapshot_jobid*est de type **uniqueidentifier**, avec NULL comme valeur par défaut, qui retourne tous les travaux d’instantané correspondant à la *dynamic_snapshot_jobname*spécifiée.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -79,7 +80,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpdynamicsnapshot_job** est utilisé dans la réplication de fusion.  
   
  Si toutes les valeurs par défaut des paramètres sont utilisées, les informations sur tous les travaux d'instantané de données partitionnées pour l'ensemble de la base de données de publication sont renvoyées.  

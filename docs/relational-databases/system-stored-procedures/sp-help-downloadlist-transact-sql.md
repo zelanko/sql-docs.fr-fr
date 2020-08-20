@@ -1,4 +1,5 @@
 ---
+description: sp_help_downloadlist (Transact-SQL)
 title: sp_help_downloadlist (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc658776dddbf79362e3ab4c90ba052abb193e63
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469389"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Répertorie toutes les lignes de la table système **sysdownloadlist** pour le travail fourni, ou toutes les lignes si aucun travail n’est spécifié.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,14 +47,14 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id`Numéro d’identification du travail pour lequel des informations doivent être retournées. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail pour lequel des informations doivent être retournées. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @operation = ] 'operation'`Opération valide pour le travail spécifié. *operation* est de type **varchar (64)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @operation = ] 'operation'` Opération valide pour le travail spécifié. *operation* est de type **varchar (64)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -67,17 +68,17 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|Opération de serveur qui commande au serveur cible de synchroniser son horloge système avec le domaine multiserveur. Cette opération étant coûteuse, il est préférable de l'exécuter le plus rarement possible.|  
 |**UPDATE**|Opération de travail qui met à jour uniquement les informations **sysjobs** pour un travail, pas les étapes de travail ou les planifications. Est appelé automatiquement par **sp_update_job**.|  
   
-`[ @object_type = ] 'object_type'`Type de l’objet pour le travail spécifié. *object_type* est de type **varchar (64)**, avec NULL comme valeur par défaut. *object_type* peut être un travail ou un serveur. Pour plus d’informations sur les valeurs de *object_type*valides, consultez [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Type de l’objet pour le travail spécifié. *object_type* est de type **varchar (64)**, avec NULL comme valeur par défaut. *object_type* peut être un travail ou un serveur. Pour plus d’informations sur les valeurs de *object_type*valides, consultez [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
-`[ @object_name = ] 'object_name'`Nom de l’objet. *object_name* est de **type sysname**, avec NULL comme valeur par défaut. Si *object_type* est job, *object_name*est le nom du travail. Si *object_type*est serveur, *object_name*est le nom du serveur.  
+`[ @object_name = ] 'object_name'` Nom de l’objet. *object_name* est de **type sysname**, avec NULL comme valeur par défaut. Si *object_type* est job, *object_name*est le nom du travail. Si *object_type*est serveur, *object_name*est le nom du serveur.  
   
-`[ @target_server = ] 'target_server'`Nom du serveur cible. *target_server* est de type **nvarchar (128)**, avec NULL comme valeur par défaut.  
+`[ @target_server = ] 'target_server'` Nom du serveur cible. *target_server* est de type **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
-`[ @has_error = ] has_error`Indique si le travail doit accuser réception d’erreurs. *has_error* est de **type tinyint**, avec NULL comme valeur par défaut, ce qui indique qu’aucune erreur ne doit être confirmée. **1** indique que toutes les erreurs doivent être confirmées.  
+`[ @has_error = ] has_error` Indique si le travail doit accuser réception d’erreurs. *has_error* est de **type tinyint**, avec NULL comme valeur par défaut, ce qui indique qu’aucune erreur ne doit être confirmée. **1** indique que toutes les erreurs doivent être confirmées.  
   
-`[ @status = ] status`État du travail. *Status* est de **type tinyint**, avec NULL comme valeur par défaut.  
+`[ @status = ] status` État du travail. *Status* est de **type tinyint**, avec NULL comme valeur par défaut.  
   
-`[ @date_posted = ] date_posted`La date et l’heure auxquelles toutes les entrées effectuées à la date et à l’heure spécifiées doivent être incluses dans le jeu de résultats. *date_posted* est de **type DateTime**, avec NULL comme valeur par défaut.  
+`[ @date_posted = ] date_posted` La date et l’heure auxquelles toutes les entrées effectuées à la date et à l’heure spécifiées doivent être incluses dans le jeu de résultats. *date_posted* est de **type DateTime**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

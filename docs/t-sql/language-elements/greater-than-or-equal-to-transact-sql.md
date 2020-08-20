@@ -1,4 +1,5 @@
 ---
+description: '&gt;= (Supérieur ou égal à) (Transact-SQL)'
 title: '&gt;= (Supérieur ou égal à) (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/13/2017
@@ -24,19 +25,19 @@ ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f76874ea201a280386091f4d827b0a2a19332a9a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d8774e928cb7487cd05132242aad0d678e8d6240
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923327"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467654"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (Supérieur ou égal à) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Compare deux expressions avec l'opérateur de comparaison supérieur ou égal à.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,9 +52,9 @@ expression >= expression
  Toute [expression](../../t-sql/language-elements/expressions-transact-sql.md) valide. Les deux expressions doivent avoir des types de données implicitement convertibles. La conversion dépend des règles de [priorité des types de données](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Types des résultats  
- Boolean  
+ Booléen  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque vous comparez des expressions de valeur non NULL, le résultat est TRUE si l'opérande de gauche a une valeur supérieure ou égale à celui de droite ; si tel n'est pas le cas, le résultat est FALSE.  
   
  Contrairement à l’opérateur de comparaison = (égalité), le résultat de la comparaison >= de deux valeurs NULL ne dépend pas du paramètre ANSI_NULLS.  

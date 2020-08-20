@@ -1,4 +1,5 @@
 ---
+description: sp_helpdistributor (Transact-SQL)
 title: sp_helpdistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cb2b1fb97504b50f2c26ddbfe26f67888f507328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eac0d50069eb6148efedecaa8f2359f4a56eed2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469301"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Répertorie des informations sur le serveur de distribution, la base de données de distribution, le répertoire de travail et le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte d’utilisateur de l’agent. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur n'importe quelle base de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,31 +50,31 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @distributor = ] 'distributor' OUTPUT`Nom du serveur de distribution. Distributor est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distributor = ] 'distributor' OUTPUT` Nom du serveur de distribution. Distributor est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT`Nom de la base de données de distribution. *distribdb* est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distribdb = ] 'distribdb' OUTPUT` Nom de la base de données de distribution. *distribdb* est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @directory = ] 'directory' OUTPUT`Est le répertoire de travail. *Directory* est de type **nvarchar (255)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @directory = ] 'directory' OUTPUT` Est le répertoire de travail. *Directory* est de type **nvarchar (255)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @account = ] 'account' OUTPUT`Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte d’utilisateur Windows. *Account*est de type **nvarchar (255)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @account = ] 'account' OUTPUT` Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte d’utilisateur Windows. *Account*est de type **nvarchar (255)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @min_distretention = ] _min_distretentionOUTPUT`Période de rétention minimale de la distribution, en heures. *min_distretention* est de **type int**, avec **-1**comme valeur par défaut.  
+`[ @min_distretention = ] _min_distretentionOUTPUT` Période de rétention minimale de la distribution, en heures. *min_distretention* est de **type int**, avec **-1**comme valeur par défaut.  
   
-`[ @max_distretention = ] _max_distretentionOUTPUT`Période de rétention maximale de la distribution, en heures. *max_distretention* est de **type int**, avec **-1**comme valeur par défaut.  
+`[ @max_distretention = ] _max_distretentionOUTPUT` Période de rétention maximale de la distribution, en heures. *max_distretention* est de **type int**, avec **-1**comme valeur par défaut.  
   
-`[ @history_retention = ] _history_retentionOUTPUT`Période de rétention de l’historique, en heures. *history_retention* est de **type int**, avec **-1**comme valeur par défaut.  
+`[ @history_retention = ] _history_retentionOUTPUT` Période de rétention de l’historique, en heures. *history_retention* est de **type int**, avec **-1**comme valeur par défaut.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT`Nom de l’agent de nettoyage de l’historique. *history_cleanupagent* est de type **nvarchar (100)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Nom de l’agent de nettoyage de l’historique. *history_cleanupagent* est de type **nvarchar (100)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT`Nom de l’agent de nettoyage de distribution. *distrib_cleanupagent* est de type **nvarchar (100)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Nom de l’agent de nettoyage de distribution. *distrib_cleanupagent* est de type **nvarchar (100)**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @local = ] 'local'`Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit récupérer les valeurs du serveur local. *local* est de type **nvarchar (5)**, avec NULL comme valeur par défaut.  
+`[ @local = ] 'local'` Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit récupérer les valeurs du serveur local. *local* est de type **nvarchar (5)**, avec NULL comme valeur par défaut.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT`Nom du serveur qui émet des appels de procédure distante. *rpcsrvname* est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` Nom du serveur qui émet des appels de procédure distante. *rpcsrvname* est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT`Type de serveur de publication du serveur de publication. *publisher_type* est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` Type de serveur de publication du serveur de publication. *publisher_type* est de **type sysname**, avec **%** la valeur par défaut, qui est la seule valeur qui retourne un jeu de résultats.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -95,7 +96,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpdistributor** est utilisé dans tous les types de réplications.  
   
  Si un ou plusieurs paramètres de sortie sont spécifiés lors de l’exécution de **sp_helpdistributor**, tous les paramètres de sortie définis sur null reçoivent des valeurs à la sortie et aucun jeu de résultats n’est retourné. Si aucun paramètre de sortie n'est spécifié, un ensemble de résultats est retourné.  
@@ -127,7 +128,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Afficher et modifier les propriétés du serveur de distribution et du serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  
   

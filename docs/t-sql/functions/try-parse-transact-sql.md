@@ -1,4 +1,5 @@
 ---
+description: TRY_PARSE (Transact-SQL)
 title: TRY_PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 184cebde63a58c399f5719c3d07c0846a3163f9a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: f8df055fa3d40a8d31d25ad9917d86a86363335c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87523131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467729"
 ---
 # <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Retourne le résultat d'une expression, traduit en type de données demandé, ou NULL si la conversion échoue dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez TRY_PARSE uniquement pour effectuer une conversion d'une chaîne en un type date/heure ou numérique.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +59,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 ## <a name="return-types"></a>Types de retour  
  Retourne le résultat de l'expression, traduit en type de données demandé, ou NULL si la conversion échoue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez TRY_PARSE uniquement pour effectuer une conversion d'une chaîne en un type date/heure ou numérique. Pour les conversions de type général, continuez à utiliser CAST ou CONVERT. N'oubliez pas qu'il existe une certaine surcharge des performances lors de l'analyse de la valeur de chaîne.  
   
  TRY_PARSE repose sur la présence du CLR (Common Langage Runtime) .NET Framework.  
@@ -75,7 +76,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Numérique|int|Int32|NumberStyles.Number|  
 |Numérique|SMALLINT|Int16|NumberStyles.Number|  
 |Numérique|TINYINT|Byte|NumberStyles.Number|  
-|Numérique|Décimal|Decimal|NumberStyles.Number|  
+|Numérique|Décimal|Décimal|NumberStyles.Number|  
 |Numérique|numeric|Decimal|NumberStyles.Number|  
 |Numérique|float|Double|NumberStyles.Float|  
 |Numérique|real|Unique|NumberStyles.Float|  
