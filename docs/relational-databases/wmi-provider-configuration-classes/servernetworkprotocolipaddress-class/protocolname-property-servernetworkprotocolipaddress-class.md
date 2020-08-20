@@ -1,4 +1,5 @@
 ---
+description: Propriété ProtocolName (classe ServerNetworkProtocolIPAddress)
 title: Propriété ProtocolName (ServerNetworkProtocolIPAddress)
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 993a955cd4ba30ceaf5c9b73d07eba343b534282
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e773e974bd5b0b1bfb89442c4fe4592003b44139
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880852"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488390"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>Propriété ProtocolName (classe ServerNetworkProtocolIPAddress)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nom du protocole réseau serveur qui référence l'adresse IP.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,7 +43,7 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le nom du protocole réseau serveur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

@@ -1,4 +1,5 @@
 ---
+description: Exportation d’un inventaire des accès (AccessToSQL)
 title: Exportation d’un inventaire des accès (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7d7a87d45807c749477da7a7158f3a63fc56ec4b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 112452e9e6c31810dbf26d9aa1e7b36959c192d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934017"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488332"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportation d’un inventaire des accès (AccessToSQL)
 Si vous disposez de plusieurs bases de données Access et que vous n’êtes pas certain de celles à migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez exporter un inventaire de toutes les bases de données Access dans un projet. Vous pouvez ensuite examiner et interroger les métadonnées d’inventaire pour déterminer les bases de données et les objets de ces bases de données à migrer. Cet inventaire vous permet de trouver rapidement des réponses aux questions, telles que les suivantes :  
@@ -90,7 +91,7 @@ Pour plus d’informations sur la création de projets, consultez [création et 
   
     Vous pouvez utiliser les boutons **Sélectionner tout** et **Effacer tout** en haut de la liste pour sélectionner ou effacer toutes les bases de données. Vous pouvez également maintenir la touche CTRL enfoncée pour sélectionner plusieurs lignes ou maintenir la touche Maj enfoncée pour sélectionner une plage de lignes.  
   
-7.  Cliquez sur **Next**.  
+7.  Cliquez sur **Suivant**.  
   
 8.  Dans la page vérifier, cliquez sur **Terminer**.  
   

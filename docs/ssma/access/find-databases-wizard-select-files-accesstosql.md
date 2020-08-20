@@ -1,4 +1,5 @@
 ---
+description: Assistant Rechercher des bases de données (sélectionner des fichiers) (AccessToSQL)
 title: Assistant Rechercher des bases de données (sélectionner des fichiers) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 3cd166f0e85a4a9a58a43feca8e1f3ba4fc211b7
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2b1aeed74dc475d3e14130ace1772ce5f604d63b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938714"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488322"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Assistant Rechercher des bases de données (sélectionner des fichiers) (AccessToSQL)
 La page Sélectionner des fichiers de l’Assistant Rechercher des bases de données répertorie les fichiers qui ont été trouvés lors de la recherche. Pour sélectionner un fichier à ajouter à SSMA, sélectionnez la ligne qui contient le nom de fichier. Lorsque vous avez terminé de sélectionner des fichiers, cliquez sur **suivant** pour afficher la page vérifier la sélection.  
@@ -47,7 +48,7 @@ Taille de la base de données, en octets.
 **Créé le**  
 Date et heure de création de la base de données.  
   
-**Port**  
+**Modifié le**  
 Date et heure de la dernière mise à jour de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
