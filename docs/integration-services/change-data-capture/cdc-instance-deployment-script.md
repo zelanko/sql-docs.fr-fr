@@ -1,4 +1,5 @@
 ---
+description: Script de déploiement d'instance CDC
 title: Script de déploiement d’instance CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34e5b1872c23d28a59ae0a9ac762c470fc297ee0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b53daf02f3fae88f2ab9dd17e7be14373a774d45
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921182"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484743"
 ---
 # <a name="cdc-instance-deployment-script"></a>Script de déploiement d'instance CDC
 
@@ -37,10 +38,10 @@ ms.locfileid: "86921182"
  **Enregistrer sous**  
  Enregistre le script dans un fichier texte que vous pouvez enregistrer dans n'importe quel emplacement de votre choix. Vous pouvez copier le fichier script vers tout autre serveur en vue de l'exécuter.  
   
- **Copy**  
+ **Copier**  
  Copie le script dans le Presse-papiers. Vous pouvez ensuite coller le script dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou dans un éditeur de texte pour exécuter des scripts ultérieurement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Préparer SQL Server pour CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
+ [Préparer SQL Server pour la capture de données modifiées](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

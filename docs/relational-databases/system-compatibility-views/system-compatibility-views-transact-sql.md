@@ -1,4 +1,5 @@
 ---
+description: Vues de compatibilité système (Transact-SQL)
 title: Vues de compatibilité système (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9eb123194e6ea69a6260f9eed4f02a07a9e819ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3eb92654dfb25a0e66d2e071040e487e6a404366
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85652209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482033"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Vues de compatibilité système (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,23 +46,23 @@ ms.locfileid: "85652209"
 |**UserType**|**syscolumns**|**sys.columns**|  
 |**memberuid**|**sysmembers**|**sys.database_role_members**|  
 |**groupuid**|**sysmembers**|**sys.database_role_members**|  
-|**uid**|**sysobjects**|**sys.objects**|  
-|**uid**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
+|**codé**|**sysobjects**|**sys.objects**|  
+|**codé**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**fournisseur**|**sysprotects**|**sys.database_permissions**<br /><br /> **sys.server_permissions**|  
 |**xusertype**|**systypes**|**sys.types**|  
-|**uid**|**systypes**|**sys.types**|  
-|**uid**|**sysusers**|**sys.database_principals**|  
+|**codé**|**systypes**|**sys.types**|  
+|**codé**|**sysusers**|**sys.database_principals**|  
 |**altuid**|**sysusers**|**sys.database_principals**|  
 |**gid**|**sysusers**|**sys.database_principals**|  
-|**uid**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
-|**uid**|**sysprocesses**|**sys.dm_exec_requests**|  
+|**codé**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
+|**codé**|**sysprocesses**|**sys.dm_exec_requests**|  
   
  Lorsqu’elles sont référencées dans une base de données utilisateur, les tables système qui ont été annoncées comme dépréciées dans SQL Server 2000 (telles que **syslanguages** ou **syscacheobjects**) sont maintenant liées à la vue de compatibilité principale dans le schéma **sys** . Les tables SQL Server 2000 étant déconseillées depuis plusieurs versions, cette modification n'est pas considérée comme une modification avec rupture.  
   
  Exemple : si un utilisateur crée une table utilisateur nommée **syslanguages** dans une base de données utilisateur, dans SQL Server 2008, l’instruction `SELECT * from dbo.syslanguages;` de cette base de données retourne les valeurs de la table utilisateur. À compter de SQL Server 2012, cette pratique renverra des données à partir de la vue système **sys.syslangues**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Mappage de tables système à des vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

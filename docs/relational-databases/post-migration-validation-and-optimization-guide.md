@@ -1,4 +1,5 @@
 ---
+description: Guide de validation et d’optimisation post-migration
 title: Guide de validation et d’optimisation post-migration | Microsoft Docs
 ms.date: 01/09/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 72af408a25ecc085d60fd18e25243cd71c42c337
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914430"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482482"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
 
@@ -31,7 +32,7 @@ Voici quelques-uns des scénarios de performance courants rencontrés après la 
 
 ## <a name="query-regressions-due-to-change-in-ce-version"></a><a name="CEUpgrade"></a> Régression des requêtes en raison d’un changement de version CE
 
-**S’applique à :** migration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+**S’applique à : migration de ** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 Quand vous migrez d’une ancienne version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (ou une version ultérieure) et que vous passez au tout dernier [niveau de compatibilité de la base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), il est possible que les performances d’une charge de travail fassent l’objet d’une régression.
 
@@ -169,4 +170,4 @@ Les fonctions table retournent un type de données de table qui peut représente
 [Fonctions définies par l'utilisateur](../relational-databases/user-defined-functions/user-defined-functions.md)  
 [Variables de table et estimations de lignes - Partie 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
 [Variables de table et estimations de lignes - Partie 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
-[Mise en cache et réutilisation du plan d’exécution](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)
+[Mise en mémoire cache et réutilisation du plan d'exécution](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

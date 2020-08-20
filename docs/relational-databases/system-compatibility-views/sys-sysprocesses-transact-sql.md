@@ -1,4 +1,5 @@
 ---
+description: sys.sysprocesses (Transact-SQL)
 title: Processus de sys.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f195a452ffde16d7de821841367e259a686578f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89e9bf9ab596e24148851f68ffa30515079fb51f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899772"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482072"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -71,7 +72,7 @@ ms.locfileid: "85899772"
 |request_id|**int**|ID de la demande. Utilisé pour identifier les requêtes qui s'exécutent dans une session spécifique.|
 |page_resource |**Binary(8** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Représentation hexadécimale sur 8 octets de la ressource de page si la `waitresource` colonne contient une page. |  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si un utilisateur dispose de l'autorisation VIEW SERVER STATE sur le serveur, il voit toutes les sessions en cours d'exécution dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; sinon, il ne voit que la session actuelle.  
   
 ## <a name="see-also"></a>Voir aussi  

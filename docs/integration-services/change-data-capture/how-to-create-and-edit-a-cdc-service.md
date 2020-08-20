@@ -1,4 +1,5 @@
 ---
+description: 'Procédure : créer et modifier un service de capture de données modifiées'
 title: Guide pratique pour créer et modifier un service CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 55f486b3023eac8c91779079d118f74728f88b63
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6c0ecefc040d07405e700ee879b2220ff820e0cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484637"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>Procédure : créer et modifier un service de capture de données modifiées
 
@@ -66,6 +67,6 @@ ms.locfileid: "86921575"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur de capture de données modifiées pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [Créer et modifier un service CDC Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+ [Créer et modifier un service de capture de données modifiées Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

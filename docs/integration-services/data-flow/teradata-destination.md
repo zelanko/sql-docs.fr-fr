@@ -1,4 +1,5 @@
 ---
+description: Destination Teradata
 title: Destination Teradata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2091999bce0fbacb99083239a7eb209fa8939505
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: caa6cc656e37f4718e06c9af010b458dfa1b738d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484506"
 ---
 # <a name="teradata-destination"></a>Destination Teradata
 
@@ -81,31 +82,31 @@ Le tableau suivant décrit les propriétés personnalisées de la destination Te
 
 |Nom de la propriété|Type de données|Description|
 |:-|:-|:-|
-|AlwaysDropErrorTable|Boolean|La valeur par défaut est **False**. Supprimer toutes les tables d’erreurs si **True**, même en cas d’échec de lecture de la destination Teradata.|
-|ArraySupport|Boolean|La valeur par défaut est **True**. Les groupes DML utilisent ArraySupport si **True**. Applicable uniquement à TPT Stream. Cette propriété apparaît dans l’**Éditeur avancé**.|
-|Mémoires tampons|Integer|Nombre de mémoires tampon de requête à augmenter, la valeur peut être comprise entre 2 et 64. Applicable uniquement à TPT Stream. Cette propriété apparaît dans l’**Éditeur avancé**.|
-|BufferMode|Boolean|La valeur par défaut est **True**. Doit être **True** si la fonctionnalité PutBuffer est utilisée. Cette propriété apparaît dans l’**Éditeur avancé**.|
-|BufferSize|Integer|Taille de la mémoire tampon de sortie (en ko) utilisée pour l'envoi des paquets de chargement. La valeur par défaut est 1024. Applicable uniquement à TPT Load. Cette propriété apparaît dans l’**Éditeur avancé**.|
-|DataEncryption|Boolean|La valeur par défaut est **False**. Un chiffrement de sécurité complet est utilisé si **True**.|
+|AlwaysDropErrorTable|Booléen|La valeur par défaut est **False**. Supprimer toutes les tables d’erreurs si **True**, même en cas d’échec de lecture de la destination Teradata.|
+|ArraySupport|Booléen|La valeur par défaut est **True**. Les groupes DML utilisent ArraySupport si **True**. Applicable uniquement à TPT Stream. Cette propriété apparaît dans l’**Éditeur avancé**.|
+|Mémoires tampons|Entier|Nombre de mémoires tampon de requête à augmenter, la valeur peut être comprise entre 2 et 64. Applicable uniquement à TPT Stream. Cette propriété apparaît dans l’**Éditeur avancé**.|
+|BufferMode|Booléen|La valeur par défaut est **True**. Doit être **True** si la fonctionnalité PutBuffer est utilisée. Cette propriété apparaît dans l’**Éditeur avancé**.|
+|BufferSize|Entier|Taille de la mémoire tampon de sortie (en ko) utilisée pour l'envoi des paquets de chargement. La valeur par défaut est 1024. Applicable uniquement à TPT Load. Cette propriété apparaît dans l’**Éditeur avancé**.|
+|DataEncryption|Booléen|La valeur par défaut est **False**. Un chiffrement de sécurité complet est utilisé si **True**.|
 |DefaultCodePage|Integer|Page de codes à utiliser quand la source de données n’a pas d’informations de page de codes. <br>**Remarque** : Cette propriété apparaît dans l’**Éditeur avancé**.|
-|DetailedTracingLevel|Entier (énumération)|Sélectionnez l’une des options suivantes pour le suivi avancé : <br> **Off** : Aucune journalisation avancée. <br> **Général** : Une journalisation du traçage général des activités spécifiques au pilote est effectuée. <br> **CLI** : Une journalisation du traçage des activités spécifiques à CLIv2 est effectuée. <br> **Méthode de notification** : Une journalisation du traçage des activités spécifiques à la fonctionnalité de notification est effectuée. <br> **Bibliothèque commune**  : une journalisation du traçage des activités de la bibliothèque opcommon est effectuée. <br> **Tout** : Une journalisation du traçage de toutes les activités susmentionnées est effectuée. <br> Le fichier journal du traçage avancé est défini dans la propriété **DetailedTracingFile**. <br> La propriété **DetailedTracingFile** doit être définie si l'option n'est pas Off. <br> Cette propriété apparaît dans l’**Éditeur avancé**.|
-|DetailedTracingFile|String|Chemin du fichier journal généré automatiquement lorsque **DetailedTracingLevel** n'est pas **Off**. Cette propriété apparaît dans l’**Éditeur avancé**.|
-|DiscardLargeRow|Boolean|La valeur par défaut est **False**. Ignorer les grandes lignes (supérieures à 64 ko) si **True**|
-|ErrorTableName|String|Nom de la table d’erreurs. Utilise par défaut le nom de la table cible|
-|ExtendedStringColumnsAllocation|Boolean|**Maximal Transfer Character Allocation Factor** est utilisé si **True**. <br> Cette valeur doit être définie sur **True** si la propriété **Export Width Table ID** de la base de données Teradata est définie sur **Maximal Defaults**. <br> La valeur par défaut est **False**.|
-|FastLoad|Boolean|Utiliser le chargement rapide si **True**. La valeur par défaut est **false**. Vous pouvez aussi définir cette propriété dans l’[Éditeur de destination Teradata (page Gestionnaire de connexions)](#teradata-destination-editor-connection-manager-page).|
-|MaxErrors|Integer|Nombre d’erreurs qui peuvent se produire avant l’arrêt du flux de données. La valeur par défaut est **0**, ce qui signifie qu’il n’y a aucune limite quant au nombre d’erreurs.<br> Si **Rediriger le flux** est sélectionné dans la page **Gestion des erreurs**. Avant que la limite du nombre d’erreurs soit atteinte, toutes les erreurs sont retournées dans la sortie d’erreur. Pour plus d’informations, consultez [Éditeur de destination Teradata (page Sortie d’erreur)](#teradata-destination-editor-error-output-page).|
-|MaxSessions|Integer|Nombre maximal de sessions connectées. Cette valeur doit être supérieure à 1. La valeur par défaut est une session pour chaque AMP disponible.|
-|MinSessions|Integer|Nombre minimal de sessions connectées. Cette valeur doit être supérieure à 1. La valeur par défaut est une session pour chaque AMP disponible.|
-|Pack|Integer|Nombre d’instructions à empaqueter dans une requête à instructions multiples. La valeur par défaut est 20, la valeur maximale autorisée est 2400. Applicable uniquement à TPT Stream. Cette propriété apparaît dans l’**Éditeur avancé**.|
-|PackMaximum|Boolean|Déterminer dynamiquement le facteur d’empaquetage maximal pour la tâche de flux actuelle si **True**. Applicable uniquement à TPT Stream. Cette propriété apparaît dans l’**Éditeur avancé**.|
+|DetailedTracingLevel|Entier (énumération)|Sélectionnez l’une des options suivantes pour le suivi avancé : <br> **Off** : Aucune journalisation avancée. <br> **Général** : Une journalisation du traçage général des activités spécifiques au pilote est effectuée. <br> **CLI** : Une journalisation du traçage des activités spécifiques à CLIv2 est effectuée. <br> **Méthode de notification** : Une journalisation du traçage des activités spécifiques à la fonctionnalité de notification est effectuée. <br> **Bibliothèque commune ** : une journalisation du traçage des activités de la bibliothèque opcommon est effectuée. <br> **Tout** : Une journalisation du traçage de toutes les activités susmentionnées est effectuée. <br> Le fichier journal du traçage avancé est défini dans la propriété **DetailedTracingFile**. <br> La propriété **DetailedTracingFile** doit être définie si l'option n'est pas Off. <br> Cette propriété apparaît dans l’**Éditeur avancé**.|
+|DetailedTracingFile|Chaîne|Chemin du fichier journal généré automatiquement lorsque **DetailedTracingLevel** n'est pas **Off**. Cette propriété apparaît dans l’**Éditeur avancé**.|
+|DiscardLargeRow|Booléen|La valeur par défaut est **False**. Ignorer les grandes lignes (supérieures à 64 ko) si **True**|
+|ErrorTableName|Chaîne|Nom de la table d’erreurs. Utilise par défaut le nom de la table cible|
+|ExtendedStringColumnsAllocation|Booléen|**Maximal Transfer Character Allocation Factor** est utilisé si **True**. <br> Cette valeur doit être définie sur **True** si la propriété **Export Width Table ID** de la base de données Teradata est définie sur **Maximal Defaults**. <br> La valeur par défaut est **False**.|
+|FastLoad|Booléen|Utiliser le chargement rapide si **True**. La valeur par défaut est **false**. Vous pouvez aussi définir cette propriété dans l’[Éditeur de destination Teradata (page Gestionnaire de connexions)](#teradata-destination-editor-connection-manager-page).|
+|MaxErrors|Entier|Nombre d’erreurs qui peuvent se produire avant l’arrêt du flux de données. La valeur par défaut est **0**, ce qui signifie qu’il n’y a aucune limite quant au nombre d’erreurs.<br> Si **Rediriger le flux** est sélectionné dans la page **Gestion des erreurs**. Avant que la limite du nombre d’erreurs soit atteinte, toutes les erreurs sont retournées dans la sortie d’erreur. Pour plus d’informations, consultez [Éditeur de destination Teradata (page Sortie d’erreur)](#teradata-destination-editor-error-output-page).|
+|MaxSessions|Entier|Nombre maximal de sessions connectées. Cette valeur doit être supérieure à 1. La valeur par défaut est une session pour chaque AMP disponible.|
+|MinSessions|Entier|Nombre minimal de sessions connectées. Cette valeur doit être supérieure à 1. La valeur par défaut est une session pour chaque AMP disponible.|
+|Pack|Entier|Nombre d’instructions à empaqueter dans une requête à instructions multiples. La valeur par défaut est 20, la valeur maximale autorisée est 2400. Applicable uniquement à TPT Stream. Cette propriété apparaît dans l’**Éditeur avancé**.|
+|PackMaximum|Booléen|Déterminer dynamiquement le facteur d’empaquetage maximal pour la tâche de flux actuelle si **True**. Applicable uniquement à TPT Stream. Cette propriété apparaît dans l’**Éditeur avancé**.|
 |QueryBandSessInfo|Varchar|Expression de bande de requête définie par l'utilisateur et basée sur une session, permettant la gouvernance et le contrôle de la rétrofacturation. Cette propriété doit être au format chaîne de connexion. Cette propriété apparaît dans l’**Éditeur avancé**.|
 |ReplicationOveride|Integer (énumération)|Options : <br> **Par défaut** : Aucune instruction SET SESSION OVERRIDE REPLICATION n’est envoyée à la base de données. Les paramètres par défaut de la base de données sont utilisés. <br> **Le** : Les contrôles normaux du service de réplication sont remplacés. <br> **Off** : Les contrôles normaux du service de réplication sont utilisés. <br> Cette propriété s'applique uniquement à TPT Stream. <br> Cette propriété apparaît dans l’**Éditeur avancé**.|
-|Robust|Boolean|Une logique de redémarrage Robust est utilisée pour les opérations de récupération et de redémarrage si **True**. Cette propriété s'applique uniquement à **TPT Stream**. Cette propriété apparaît dans l’**Éditeur avancé**.|
+|Robust|Booléen|Une logique de redémarrage Robust est utilisée pour les opérations de récupération et de redémarrage si **True**. Cette propriété s'applique uniquement à **TPT Stream**. Cette propriété apparaît dans l’**Éditeur avancé**.|
 |TableName|String|Nom de la table contenant les données en cours d’utilisation.|
-|TenacityHours|Integer|Nombre d’heures pendant lesquelles le pilote TPT tente de se connecter lorsque le nombre maximal d’opérations de chargement/exportation est déjà en cours d’exécution. La valeur par défaut est 4 heures. Cette propriété apparaît dans l’**Éditeur avancé**|
-|TenacitySleep|Integer|Nombre de minutes pendant lesquelles le pilote TPT s’interrompt avant de tenter de se connecter lorsque la limite est atteinte. La limite est définie par les propriétés **MaxSessions** et **TenacityHours**. La valeur par défaut est six minutes. Cette propriété apparaît dans l’**Éditeur avancé**|
-|UnicodePassThrough|Boolean|Off (valeur par défaut) : Désactiver la transmission directe Unicode. <br>On : Activer la transmission directe Unicode.|
+|TenacityHours|Entier|Nombre d’heures pendant lesquelles le pilote TPT tente de se connecter lorsque le nombre maximal d’opérations de chargement/exportation est déjà en cours d’exécution. La valeur par défaut est 4 heures. Cette propriété apparaît dans l’**Éditeur avancé**|
+|TenacitySleep|Entier|Nombre de minutes pendant lesquelles le pilote TPT s’interrompt avant de tenter de se connecter lorsque la limite est atteinte. La limite est définie par les propriétés **MaxSessions** et **TenacityHours**. La valeur par défaut est six minutes. Cette propriété apparaît dans l’**Éditeur avancé**|
+|UnicodePassThrough|Booléen|Off (valeur par défaut) : Désactiver la transmission directe Unicode. <br>On : Activer la transmission directe Unicode.|
 
 ## <a name="configuring-the-teradata-destination"></a>Configuration de la destination Teradata
 

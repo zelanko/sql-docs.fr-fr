@@ -1,4 +1,5 @@
 ---
+description: Propriété PropertyName (classe SqlServiceAdvancedProperty)
 title: PropertyName, propriété (SqlServiceAdvancedProperty)
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: e51d3475-e998-47f3-837b-4b4bd7635dcb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf217949ef987c26c81ca034a098ebe4182a52de
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f87b32c302793ff9e35c95c43f4e55a22211a10f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485060"
 ---
 # <a name="propertyname-property-sqlserviceadvancedproperty-class"></a>Propriété PropertyName (classe SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient ou définit le nom d'une propriété avancée.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,7 +43,7 @@ object.PropertyName [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le nom de la propriété avancée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

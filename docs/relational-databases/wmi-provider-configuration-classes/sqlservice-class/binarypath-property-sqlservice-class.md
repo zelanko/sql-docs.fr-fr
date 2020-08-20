@@ -1,4 +1,5 @@
 ---
+description: Propriété BinaryPath (classe SqlService)
 title: Propriété BinaryPath (classe SqlService)
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9c4d21dc11edce50cbff32161a7f30f460d7cb4f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e03d2ff47b9cb65a4a4bd0c5eff259c3379b22e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485114"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>Propriété BinaryPath (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le chemin d'accès binaire au service.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -41,7 +42,7 @@ object.BinaryPath [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le chemin d'accès binaire du service.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

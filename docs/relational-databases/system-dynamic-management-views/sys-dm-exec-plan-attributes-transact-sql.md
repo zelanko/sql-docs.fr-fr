@@ -1,4 +1,5 @@
 ---
+description: sys.dm_exec_plan_attributes (Transact-SQL)
 title: sys. dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46c41c4bf06082e36df1ea48165520afbc4a3210
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481974"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -81,9 +82,9 @@ Dans le tableau ci-dessus, l' **attribut** peut avoir les valeurs suivantes :
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="set-options"></a>Définir les options  
  Les copies du même plan compilé peuvent différer uniquement par la valeur figurant dans la colonne **set_options** . Cela signifie que des connexions différentes font appel à différents jeux d'options SET pour la même requête. L'utilisation de différents jeux d'option n'est pas souhaitable généralement car elle est source de complications supplémentaires, d'une réutilisation insuffisante du plan et d'une augmentation du cache du plan en raison de la présence de plusieurs copies dans le cache.  
@@ -111,7 +112,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
 |DATEFORMAT|32 768|  
 |LanguageID|65536|  
 |UPON<br /><br /> Indique que l'option de base de données PARAMETERIZATION avait pour valeur FORCED lorsque le plan a été compilé.|131 072|  
-|ROWCOUNT|**S’applique à :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] À[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262 144|  
+|ROWCOUNT|**S’applique à :** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] À [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262 144|  
   
 ## <a name="cursors"></a>Curseurs  
  Les curseurs inactifs sont mis en cache dans un plan compilé pour que la mémoire utilisée pour stocker le curseur soit réutilisée par des utilisateurs simultanés des curseurs. Par exemple, supposez qu'un lot déclare et utilise un curseur sans le désallouer. Si deux utilisateurs exécutent le même lot, il y aura deux curseurs actifs. Une fois les curseurs désalloués (éventuellement dans des lots différents), la mémoire utilisée pour stocker le curseur est mise en cache et n'est pas libérée. Cette liste des curseurs inactifs est conservée dans le plan compilé. À la prochaine exécution du lot par un utilisateur, la mémoire de curseur en cache est réutilisée et initialisée correctement comme curseur actif.  
@@ -167,9 +168,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

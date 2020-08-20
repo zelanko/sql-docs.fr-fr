@@ -1,4 +1,5 @@
 ---
+description: Développement d'un gestionnaire de connexions personnalisé
 title: Développement d’un gestionnaire de connexions personnalisé | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b12f6d4259625e43fa0839963020921d7ad7ff0b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ad61fc88b68d2df7fb04839ef0f8fc3978a05e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484249"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Développement d'un gestionnaire de connexions personnalisé
 
@@ -40,13 +41,13 @@ ms.locfileid: "86920005"
 ## <a name="in-this-section"></a>Dans cette section  
  Cette section décrit comment créer, configurer et coder un gestionnaire de connexions personnalisé et son interface utilisateur personnalisée facultative. Les extraits de code présentés dans cette section sont tirés de l'exemple de gestionnaire de connexions personnalisé SQL Server.  
   
- [Création d’un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)  
+ [Création d'un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)  
  Explique comment créer les classes d'un projet de gestionnaire de connexions personnalisé.  
   
- [Codage d’un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
+ [Codage d'un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
  Décrit comment implémenter un gestionnaire de connexions personnalisé en remplaçant les méthodes et propriétés de la classe de base.  
   
- [Développement d’une interface utilisateur pour un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [Développement d'une interface utilisateur pour un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
  Explique comment implémenter la classe d'interface utilisateur et le formulaire servant à configurer le gestionnaire de connexions personnalisé.  
   
 ## <a name="related-sections"></a>Sections connexes  
@@ -66,7 +67,7 @@ ms.locfileid: "86920005"
 ### <a name="information-about-other-custom-objects"></a>Informations sur les autres objets personnalisés  
  Pour plus d’informations sur les autres types d’objets personnalisés que vous pouvez créer dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consultez les rubriques suivantes :  
   
- [Développement d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Développement d'une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Explique comment programmer des tâches personnalisées.  
   
  [Développement d’un module fournisseur d’informations personnalisé](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  

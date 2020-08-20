@@ -1,4 +1,5 @@
 ---
+description: Type d’abonnement
 title: Type d’abonnement | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,14 +14,14 @@ ms.assetid: 9a50f588-ee45-4a87-826f-372ff0798587
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: c8b31b962fed5f250f2c16c74736a1a2061341fd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7816e2d4b0094b502979811fa25c42c9c447ffc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729350"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482272"
 ---
-# <a name="subscription-type"></a>Type d'abonnement
+# <a name="subscription-type"></a>Type d’abonnement
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   La réplication de fusion propose deux types d’abonnements : l’abonnement serveur et l’abonnement client (connus dans les versions précédentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous les noms respectifs d’abonnement global et d’abonnement local). Les abonnés disposant d'un abonnement serveur peuvent :  
   

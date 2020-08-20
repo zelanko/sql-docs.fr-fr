@@ -1,4 +1,5 @@
 ---
+description: catalog.create_environment (base de données SSISDB)
 title: catalog.create_environment (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: 66367092-9f6e-40e6-90bd-81efb078ab70
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d7d856d9a90e86c4e1fe188a7526312500b4e3d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 3657b4d171dd3cef40fbde37c8a13dceaebd0b20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484106"
 ---
 # <a name="catalogcreate_environment-ssisdb-database"></a>catalog.create_environment (base de données SSISDB)
 
@@ -42,7 +43,7 @@ catalog.create_environment [ @folder_name = ] folder_name
  Nom de l’environnement. *environment_name* est de type **nvarchar(128)** .  
   
  [@environment_description=] *environment_description*  
- Description facultative de l'environnement. *environment_description* est de type **nvarchar(1024)** .  
+ Description facultative de l'environnement. *environment_description* est de type **nvarchar(1024)**.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
@@ -68,7 +69,7 @@ catalog.create_environment [ @folder_name = ] folder_name
   
 -   Un environnement qui a le même nom existe déjà dans le dossier spécifié  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le nom de l'environnement doit être unique dans le dossier.  
   
   

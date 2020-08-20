@@ -1,4 +1,5 @@
 ---
+description: Capture de données modifiées-sys. dm_cdc_errors
 title: sys. dm_cdc_errors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2322ed6f6f8a732a6bffd0f75946764c52e04265
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b34623ac9b7732faff5b1f29e6a154dddf79dd78
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894754"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482031"
 ---
 # <a name="change-data-capture---sysdm_cdc_errors"></a>Capture de données modifiées-sys. dm_cdc_errors
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85894754"
 |**begin_lsn**|**nvarchar (23)**|Valeur LSN de départ de la transaction en cours de traitement lorsque l'erreur s'est produite.<br /><br /> 0 = l'erreur ne s'est pas produite dans une session d'analyse du journal.|  
 |**sequence_value**|**nvarchar (23)**|Valeur LSN des lignes en cours de traitement lorsque l'erreur s'est produite.<br /><br /> 0 = l'erreur ne s'est pas produite dans une session d'analyse du journal.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sys. dm_cdc_errors** contient des informations d’erreur pour les sessions 32 précédentes.  
   
 ## <a name="permissions"></a>Autorisations  

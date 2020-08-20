@@ -1,4 +1,5 @@
 ---
+description: Créer des tables et des index partitionnés
 title: Créer des tables et des index partitionnés | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -29,12 +30,12 @@ ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147a5490d2940caebc9184e8049e7c430959b081
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a22807e98d887504cb1700e7bc3497984b699059
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787546"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482530"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Créer des tables et des index partitionnés
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -111,13 +112,13 @@ ms.locfileid: "85787546"
   
 #### <a name="to-create-a-partitioned-table"></a>Pour créer une table partitionnée  
   
-1.  Cliquez avec le bouton droit sur la table à partitionner, pointez sur **Stockage**, puis cliquez sur **Créer une partition...** .  
+1.  Cliquez avec le bouton droit sur la table à partitionner, pointez sur **Stockage**, puis cliquez sur **Créer une partition...**.  
   
 2.  Dans l' **Assistant Création de partition**, sur la page **Assistant Création de partition** , cliquez sur **Suivant**.  
   
 3.  Sur la page **Sélectionner une colonne de partitionnement** , dans la grille **Colonnes de partitionnement disponibles** , sélectionnez la colonne sur laquelle vous souhaitez partitionner votre table. Seules les colonnes dont le type de données peut être utilisé pour partitionner des données seront affichées dans la grille **Colonnes de partitionnement disponibles** . Si vous sélectionnez une colonne calculée comme colonne de partitionnement, celle-ci doit être désignée en tant que colonne persistante.  
   
-     Le degré avec lequel vous pouvez regrouper les données de façon logique déterminent les options dont vous disposez pour définir la colonne de partitionnement et la plage de valeurs. Par exemple, vous pouvez choisir de diviser vos données en regroupements logiques par mois ou trimestres d'une année. Les requêtes que vous projetez d'exécuter sur vos données détermineront si ce regroupement logique est adéquat pour gérer vos partitions de table. Tous les types de données sont utilisables comme colonnes de partitionnement, à l’exception de **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , des types de données d’alias ou des types de données CLR définis par l’utilisateur.  
+     Le degré avec lequel vous pouvez regrouper les données de façon logique déterminent les options dont vous disposez pour définir la colonne de partitionnement et la plage de valeurs. Par exemple, vous pouvez choisir de diviser vos données en regroupements logiques par mois ou trimestres d'une année. Les requêtes que vous projetez d'exécuter sur vos données détermineront si ce regroupement logique est adéquat pour gérer vos partitions de table. Tous les types de données sont utilisables comme colonnes de partitionnement, à l’exception de **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, des types de données d’alias ou des types de données CLR définis par l’utilisateur.  
   
      Les options supplémentaires suivantes sont disponibles sur cette page :  
   

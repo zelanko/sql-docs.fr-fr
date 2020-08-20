@@ -1,4 +1,5 @@
 ---
+description: Mise à jour de lignes par signet avec SQLBulkOperations
 title: Mise à jour de lignes par signet avec SQLBulkOperations | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9c755297e8beadad92b5be81d78ca534bb96ecae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9981136d546d53b131cff0d71edcdeab5b2e650c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283197"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482872"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>Mise à jour de lignes par signet avec SQLBulkOperations
 Lors de la mise à jour d’une ligne par signet, **SQLBulkOperations** permet à la source de données de mettre à jour une ou plusieurs lignes de la table. Les lignes sont identifiées par le signet dans une colonne de signets liée. La ligne est mise à jour à l’aide des données des mémoires tampons d’application pour chaque colonne liée (sauf lorsque la valeur de la mémoire tampon de longueur/d’indicateur d’une colonne est SQL_COLUMN_IGNORE). Les colonnes indépendantes ne seront pas mises à jour.  

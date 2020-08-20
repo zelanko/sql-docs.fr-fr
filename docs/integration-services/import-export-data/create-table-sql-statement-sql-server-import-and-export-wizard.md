@@ -1,4 +1,5 @@
 ---
+description: Instruction SQL de création de table (Assistant Importation et Exportation SQL Server)
 title: Instruction SQL de création de table (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/16/2017
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b877689bbccb0ea4ab206e403b54d15ce189fb79
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7854a8121c16d263da900ffc3f8475a4fe4dddff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922395"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484127"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Instruction SQL de création de table (Assistant Importation et Exportation SQL Server)
 
@@ -55,7 +56,7 @@ Pour plus d’informations sur l’instruction CREATE TABLE et sa syntaxe, consu
 
 Pour plus d’informations sur la syntaxe, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Pour plus d’informations sur FILESTREAM, consultez [Objets binaires volumineux &#40;Objet BLOB&#41; Données &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
-## <a name="whats-next"></a>Quelle est l’étape suivante ?  
+## <a name="whats-next"></a>Et ensuite ?  
  Une fois que vous avez passé en revue et personnalisé les options de la commande CREATE TABLE, cliquez sur **OK**. La boîte de dialogue **Instruction SQL de création de table** vous renvoie alors à la boîte de dialogue **Mappages de colonnes** . Pour plus d’informations, consultez [Mappages de colonnes](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
  
  ## <a name="see-also"></a>Voir aussi

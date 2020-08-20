@@ -1,4 +1,5 @@
 ---
+description: Développement d'un composant de flux de données personnalisé
 title: Développement d’un composant de flux de données personnalisé | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d29e650bb3dc812b4b64f3bb0c336d094adf1e8d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: e47c1f8efed8920a32eac7625ab15deb6e9c167b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921235"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484217"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Développement d'un composant de flux de données personnalisé
 
@@ -33,40 +34,40 @@ ms.locfileid: "86921235"
   La tâche de flux de données comprend des composants qui se connectent à diverses sources de données et qui transforment et acheminent ces données à haut débit. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit un modèle objet extensible qui permet aux développeurs de créer des sources, des transformations et des destinations personnalisées que vous pouvez utiliser dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et dans des packages déployés. Cette section contient des rubriques qui vous guideront afin de développer des composants de flux de données personnalisés.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Création d’un composant de flux de données personnalisé](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
+ [Création d'un composant de flux de données personnalisé](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
  Décrit les étapes initiales permettant de créer un composant de flux de données personnalisé.  
   
- [Méthodes de conception d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
+ [Méthodes de conception d'un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
  Décrit les méthodes de conception à implémenter dans un composant de flux de données personnalisé.  
   
- [Méthodes d’exécution d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
+ [Méthodes d'exécution d'un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/run-time-methods-of-a-data-flow-component.md)  
  Décrit les méthodes d'exécution à implémenter dans un composant de flux de données personnalisé.  
   
- [Plan d’exécution et allocation de mémoire tampon](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
+ [Plan d'exécution et allocation de mémoire tampon](../../../integration-services/extending-packages-custom-objects/data-flow/execution-plan-and-buffer-allocation.md)  
  Décrit le plan d'exécution du flux de données et l'allocation des tampons de données.  
   
  [Utilisation de types de données dans le flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)  
  Explique comment le flux mappe les types de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] aux types de données managées .NET Framework.  
   
- [Validation d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
+ [Validation d'un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md)  
  Explique les méthodes utilisées pour valider la configuration du composant et reconfigurer les métadonnées du composant.  
   
  [Implémentation des métadonnées externes](../../../integration-services/extending-packages-custom-objects/data-flow/implementing-external-metadata.md)  
  Explique comment utiliser des colonnes de métadonnées externes pour la validation des données.  
   
- [Déclenchement et définition d’événements dans un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
+ [Déclenchement et définition d'événements dans un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/raising-and-defining-events-in-a-data-flow-component.md)  
  Explique comment déclencher des événements prédéfinis et personnalisés.  
   
- [Enregistrement et définition d’entrées de journal dans un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
+ [Enregistrement et définition d'entrées de journal dans un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/logging-and-defining-log-entries-in-a-data-flow-component.md)  
  Explique comment créer et écrire des entrées de journal personnalisées.  
   
- [Utilisation de sorties d’erreur dans un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
+ [Utilisation de sorties d'erreur dans un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
  Explique comment rediriger des lignes d'erreur vers une autre sortie.  
   
- [Mise à niveau de la version d’un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  
+ [Mise à niveau de la version d'un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/upgrading-the-version-of-a-data-flow-component.md)  
  Explique comment mettre à jour les métadonnées de composant enregistrées lorsqu'une nouvelle version de votre composant est utilisée pour la première fois.  
   
- [Développement d’une interface utilisateur pour un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
+ [Développement d'une interface utilisateur pour un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
  Explique comment implémenter un éditeur personnalisé pour un composant.  
   
  [Développement de types spécifiques de composants de flux de données](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
@@ -102,7 +103,7 @@ ms.locfileid: "86921235"
 ### <a name="information-about-other-custom-objects"></a>Informations sur les autres objets personnalisés  
  Pour plus d’informations sur les autres types d’objets personnalisés que vous pouvez créer dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], consultez les rubriques suivantes :  
   
- [Développement d’une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
+ [Développement d'une tâche personnalisée](../../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)  
  Explique comment programmer des tâches personnalisées.  
   
  [Développement d’un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md)  

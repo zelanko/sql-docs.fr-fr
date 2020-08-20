@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_stats_histogram (Transact-SQL)
 title: sys. dm_db_stats_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35f9272b3b11e5c29fe0e2f9068ad458bd5becfa
-ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.openlocfilehash: 783a7033e9db323ea774b4456c2159670104fecb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88046877"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482002"
 ---
 # <a name="sysdm_db_stats_histogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 
@@ -62,7 +63,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |Nombre estimé de lignes ayant une valeur de colonne distincte dans une étape d'histogramme, à l'exception de la limite supérieure. |
 |average_range_rows |**real** |Nombre moyen de lignes avec des valeurs de colonnes dupliquées dans une étape d’histogramme, à l’exception de la limite supérieure ( `RANGE_ROWS / DISTINCT_RANGE_ROWS` pour `DISTINCT_RANGE_ROWS > 0` ). |
   
- ## <a name="remarks"></a>Remarques  
+ ## <a name="remarks"></a>Notes  
  
  Le ResultSet pour `sys.dm_db_stats_histogram` retourne des informations semblables à `DBCC SHOW_STATISTICS WITH HISTOGRAM` et comprend également `object_id` , `stats_id` et `step_number` .
 

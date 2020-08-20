@@ -1,4 +1,5 @@
 ---
+description: Connexion à la source Teradata
 title: Connexion à la source Teradata | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16c534788803c2c29fc36817fb63e112c8c84b1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912335"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484478"
 ---
 # <a name="connect-to-the-teradata-source"></a>Connexion à la source Teradata
 
@@ -43,25 +44,25 @@ Les propriétés personnalisées de la source Teradata sont répertoriées dans 
 |Nom de la propriété|Type de données|Description|
 |:-|:-|:-|
 |AccessMode|Integer (énumération)|Mode utilisé pour accéder à la base de données. Les valeurs possibles sont *Nom de la table* et *Commande SQL*. La valeur par défaut est *Nom de la table*.|
-|BlockSize|Integer|Taille de bloc, en octets, utilisée lors du retour de données au client. La valeur par défaut est 1048576 (1 Mo). La valeur minimale est 256 octets. La valeur maximale est 16775168 octets.<br> Cette propriété apparaît dans le volet **Éditeur avancé**.|
-|BufferMaxSize|Integer|Taille totale maximale du tampon de données renvoyé par la fonction GetBuffer. Cette taille doit être suffisamment grande pour contenir au moins une ligne de données, y compris l'en-tête de la ligne, la ligne de données proprement dite et le code de fin de la mémoire tampon. La taille maximale totale par défaut du tampon de données est de 16 775 552 octets. <br>Pour plus d'informations, voir [Exporter des données d'une base de données Teradata en utilisant GetBuffer](https://docs.teradata.com/reader/TvVKKmxaBAoyETJZD8zz_g/oaxiwNJmnCa6UctY4k498w).|
-|BufferMode|Boolean|La valeur par défaut est *True*. La valeur doit être *True* si la fonctionnalité PutBuffer est utilisée. Cette propriété apparaît dans le volet **Éditeur avancé**.|
-|DataEncryption|Boolean|La valeur par défaut est *False*. Un chiffrement de sécurité complet est utilisé si la valeur est *True*.|
+|BlockSize|Entier|Taille de bloc, en octets, utilisée lors du retour de données au client. La valeur par défaut est 1048576 (1 Mo). La valeur minimale est 256 octets. La valeur maximale est 16775168 octets.<br> Cette propriété apparaît dans le volet **Éditeur avancé**.|
+|BufferMaxSize|Entier|Taille totale maximale du tampon de données renvoyé par la fonction GetBuffer. Cette taille doit être suffisamment grande pour contenir au moins une ligne de données, y compris l'en-tête de la ligne, la ligne de données proprement dite et le code de fin de la mémoire tampon. La taille maximale totale par défaut du tampon de données est de 16 775 552 octets. <br>Pour plus d'informations, voir [Exporter des données d'une base de données Teradata en utilisant GetBuffer](https://docs.teradata.com/reader/TvVKKmxaBAoyETJZD8zz_g/oaxiwNJmnCa6UctY4k498w).|
+|BufferMode|Booléen|La valeur par défaut est *True*. La valeur doit être *True* si la fonctionnalité PutBuffer est utilisée. Cette propriété apparaît dans le volet **Éditeur avancé**.|
+|DataEncryption|Booléen|La valeur par défaut est *False*. Un chiffrement de sécurité complet est utilisé si la valeur est *True*.|
 |DefaultCodePage|Integer|Page de codes à utiliser quand la source de données n’a pas d’informations de page de codes. Cette propriété apparaît dans le volet **Éditeur avancé**.|
-|DetailedTracingLevel|Integer (énumération)|Sélectionnez l’une des options suivantes pour le suivi avancé : <br> *Off* : Aucune journalisation avancée. <br> *Général* : Une journalisation du traçage général des activités spécifiques au pilote est effectuée. <br> *CLI* : Une journalisation du traçage des activités spécifiques à CLIv2 est effectuée. <br> *Méthode de notification* : Une journalisation du traçage des activités spécifiques à la fonctionnalité de notification est effectuée. <br> *Bibliothèque commune*  : une journalisation du traçage des activités de la bibliothèque opcommon est effectuée. <br> *Tout* : Tout le traçage des activités précédentes est consigné. <br> Le fichier journal du traçage avancé est défini dans la propriété `DetailedTracingFile`. <br> La propriété `DetailedTracingFile` doit être définie si l'option n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
-|DetailedTracingFile|String|Chemin du fichier journal généré automatiquement lorsque *DetailedTracingLevel* n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
-|DiscardLargeRow|Boolean|La valeur par défaut est *False*. Ignorer les grandes lignes (supérieures à 64 ko) si la valeur est *true*.|
-|ExtendedStringColumnsAllocation|Boolean|*Maximal Transfer Character Allocation Factor* est utilisé si la valeur est *True*. <br> Cette valeur doit être définie sur *True* si la propriété `Export Width Table ID` de la base de données Teradata est définie sur *Maximal Defaults*. <br> La valeur par défaut est *False*.|
-|JobMaxRowSize|Integer|Taille de ligne maximale prise en charge. Cette valeur est requise si `DiscardLargeRow` est *True*.<br>Valeurs valides : <br>*64* (valeur par défaut) : Longueurs de lignes à 2 octets prises en charge. <br>*1024* : Longueurs de lignes à 4 octets prises en charge.|
-|MaxSessions|Integer|Nombre maximal de sessions connectées. Cette valeur doit être supérieure à 1. La valeur par défaut est une session pour chaque Access Module Processor (AMP) disponible.|
-|MinSessions|Integer|Nombre minimal de sessions connectées. Cette valeur doit être supérieure à 1. La valeur par défaut est une session pour chaque AMP disponible.|
+|DetailedTracingLevel|Integer (énumération)|Sélectionnez l’une des options suivantes pour le suivi avancé : <br> *Off* : Aucune journalisation avancée. <br> *Général* : Une journalisation du traçage général des activités spécifiques au pilote est effectuée. <br> *CLI* : Une journalisation du traçage des activités spécifiques à CLIv2 est effectuée. <br> *Méthode de notification* : Une journalisation du traçage des activités spécifiques à la fonctionnalité de notification est effectuée. <br> *Bibliothèque commune * : une journalisation du traçage des activités de la bibliothèque opcommon est effectuée. <br> *Tout* : Tout le traçage des activités précédentes est consigné. <br> Le fichier journal du traçage avancé est défini dans la propriété `DetailedTracingFile`. <br> La propriété `DetailedTracingFile` doit être définie si l'option n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
+|DetailedTracingFile|Chaîne|Chemin du fichier journal généré automatiquement lorsque *DetailedTracingLevel* n'est pas *Off*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
+|DiscardLargeRow|Booléen|La valeur par défaut est *False*. Ignorer les grandes lignes (supérieures à 64 ko) si la valeur est *true*.|
+|ExtendedStringColumnsAllocation|Booléen|*Maximal Transfer Character Allocation Factor* est utilisé si la valeur est *True*. <br> Cette valeur doit être définie sur *True* si la propriété `Export Width Table ID` de la base de données Teradata est définie sur *Maximal Defaults*. <br> La valeur par défaut est *False*.|
+|JobMaxRowSize|Entier|Taille de ligne maximale prise en charge. Cette valeur est requise si `DiscardLargeRow` est *True*.<br>Valeurs valides : <br>*64* (valeur par défaut) : Longueurs de lignes à 2 octets prises en charge. <br>*1024* : Longueurs de lignes à 4 octets prises en charge.|
+|MaxSessions|Entier|Nombre maximal de sessions connectées. Cette valeur doit être supérieure à 1. La valeur par défaut est une session pour chaque Access Module Processor (AMP) disponible.|
+|MinSessions|Entier|Nombre minimal de sessions connectées. Cette valeur doit être supérieure à 1. La valeur par défaut est une session pour chaque AMP disponible.|
 |QueryBandSessInfo|Varchar|Expression de bande de requête définie par l'utilisateur, basée sur une session, dans un format de chaîne de connexion. Vous utilisez cette propriété pour la gouvernance et le contrôle de la rétrofacturation. Cette propriété apparaît dans le volet **Éditeur avancé**.|
 |SpoolMode|Varchar|Les valeurs autorisées sont : <br>*Spool* : Utiliser la valeur par défaut *Spool*. <br> *NoSpool* : Ne pas utiliser *Spool*. Cette valeur n'est valide que si le serveur de base de données (DBS) prend en charge *NoSpool*. <br>  *NoSpoolOnly* : N’utiliser *Spool* dans aucun cas. La tâche sera interrompue par une erreur si le DBS ne prend pas en charge le service *NoSpool*.|
 |SqlCommand|String|Commande SQL à exécuter lorsque la valeur `AccessMode` est *Commande SQL*.|
 |TableName|String|Nom de la table contenant les données à utiliser quand `AccessMode` a la valeur *Nom de la table*.|
-|TenacityHours|Integer|Nombre d’heures pendant lesquelles le pilote TPT tente de se connecter lorsque le nombre maximal d’opérations de chargement/exportation est déjà en cours d’exécution. La valeur par défaut est *4 heures*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
-|TenacitySleep|Integer|Nombre de minutes pendant lesquelles le pilote TPT s’interrompt avant de tenter de se connecter lorsque la limite est atteinte. La limite est définie par les propriétés `MaxSessions` et `TenacityHours`. La valeur par défaut est 6 minutes. Cette propriété apparaît dans le volet **Éditeur avancé**.|
-|UnicodePassThrough|Boolean|*Off* (valeur par défaut) : Désactiver la transmission directe Unicode. <br>*Le* : Activer la transmission directe Unicode.|
+|TenacityHours|Entier|Nombre d’heures pendant lesquelles le pilote TPT tente de se connecter lorsque le nombre maximal d’opérations de chargement/exportation est déjà en cours d’exécution. La valeur par défaut est *4 heures*. Cette propriété apparaît dans le volet **Éditeur avancé**.|
+|TenacitySleep|Entier|Nombre de minutes pendant lesquelles le pilote TPT s’interrompt avant de tenter de se connecter lorsque la limite est atteinte. La limite est définie par les propriétés `MaxSessions` et `TenacityHours`. La valeur par défaut est 6 minutes. Cette propriété apparaît dans le volet **Éditeur avancé**.|
+|UnicodePassThrough|Booléen|*Off* (valeur par défaut) : Désactiver la transmission directe Unicode. <br>*Le* : Activer la transmission directe Unicode.|
 
 ## <a name="configure-the-teradata-source"></a>Configurer la source Teradata
 

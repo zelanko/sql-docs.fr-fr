@@ -1,4 +1,5 @@
 ---
+description: Création d'un gestionnaire de connexions personnalisé
 title: Création d’un gestionnaire de connexions personnalisé | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c137a62711ad824772b1845776cd383b3ee235ce
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 55eafedfd05ce1dde2468bfda62b515057ea4bb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484256"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Création d'un gestionnaire de connexions personnalisé
 
@@ -79,6 +80,6 @@ ConnectionManagerBase
   
 ## <a name="see-also"></a>Voir aussi  
  [Codage d’un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
- [Développement d’une interface utilisateur pour un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
+ [Développement d'une interface utilisateur pour un gestionnaire de connexions personnalisé](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   

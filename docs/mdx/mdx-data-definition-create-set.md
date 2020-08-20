@@ -1,4 +1,5 @@
 ---
+description: Définition de données MDX - CREATE SET
 title: Instruction CREATe SET (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f8d522f7832a280aa8b280bbe912640b566974a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893741"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88483883"
 ---
 # <a name="mdx-data-definition---create-set"></a>Définition de données MDX - CREATE SET
 
@@ -92,15 +93,15 @@ SELECT [Core Products] ON 0
  Indique que le jeu n'est pas visible pour les utilisateurs qui interrogent le cube.  
   
 ## <a name="standard-properties"></a>Propriétés standard  
- Chaque jeu possède un jeu de propriétés par défaut. Lorsqu’une application cliente est connectée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les propriétés par défaut sont prises en charge ou disponibles pour être prises en charge, comme l’administrateur le choisit.  
+ Chaque jeu possède un jeu de propriétés par défaut. Lorsqu’une application cliente est connectée à [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , les propriétés par défaut sont prises en charge ou disponibles pour être prises en charge, comme l’administrateur le choisit.  
   
 |Identificateur de propriété|Signification|  
 |-------------------------|-------------|  
 |CAPTION|Chaîne que l'application cliente utilise pour la légende du jeu.|  
-|DISPLAY_FOLDER|Chaîne qui identifie le chemin d'accès du dossier d'affichage que l'application cliente utilise pour afficher le jeu. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barre oblique\\inverse () est le séparateur de niveau. Pour attribuer différents dossiers d'affichage à un jeu défini, utilisez un point-virgule (;) pour les séparer.|  
+|DISPLAY_FOLDER|Chaîne qui identifie le chemin d'accès du dossier d'affichage que l'application cliente utilise pour afficher le jeu. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barre oblique inverse ( \\ ) est le séparateur de niveau. Pour attribuer différents dossiers d'affichage à un jeu défini, utilisez un point-virgule (;) pour les séparer.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instruction DROP SET &#40;&#41;MDX](../mdx/mdx-data-definition-drop-set.md)   
- [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instruction DROP SET &#40;&#41;MDX ](../mdx/mdx-data-definition-drop-set.md)   
+ [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

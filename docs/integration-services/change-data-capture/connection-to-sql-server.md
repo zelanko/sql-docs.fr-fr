@@ -1,4 +1,5 @@
 ---
+description: Connexion à SQL Server
 title: Connexion à SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d8e8bce65061ac4cb9b0d4ea9829ab24a92da40
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f45b001faf8f290d36ef8239945a844f78af46fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916247"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484625"
 ---
 # <a name="connection-to-sql-server"></a>Connexion à SQL Server
 
@@ -31,7 +32,7 @@ ms.locfileid: "86916247"
 ### <a name="server-name"></a>Nom du serveur  
  Tapez le nom du serveur où se trouve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-### <a name="authentication"></a>Authentication  
+### <a name="authentication"></a>Authentification  
  Sélectionnez l’un des suivants :  
   
 -   Authentification Windows  
@@ -50,6 +51,6 @@ ms.locfileid: "86916247"
 -   **Avancé**: Cliquez sur **Avancé** et tapez toutes les propriétés de connexion supplémentaires dans la boîte de dialogue Propriétés avancées de connexion, si nécessaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Autorisations de connexion SQL Server nécessaires pour le service CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
+ [Autorisations de connexion SQL Server requises pour le service de capture de données modifiées](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
   

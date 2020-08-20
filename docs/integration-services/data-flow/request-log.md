@@ -1,4 +1,5 @@
 ---
+description: Journal des requêtes
 title: Journal des requêtes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c0a129bd8985180a9094b8846e685c0d4025313
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fe85b46fcdcfdb398993dc073f69a8c31aa08742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922746"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484563"
 ---
 # <a name="request-log"></a>Journal des requêtes
 
@@ -55,10 +56,10 @@ ms.locfileid: "86922746"
 |Valeur|Description|  
 |-----------|-----------------|  
 |S|Message de réussite.|  
-|E|Message d’erreur|  
+|E|Message d'erreur|  
 |W|Message d'avertissement.|  
 |I|Message d’information.|  
-|Un|L'opération a été abandonnée.|  
+|A|L'opération a été abandonnée.|  
   
  **Message**  
  Affiche le texte du message associé à l'événement journalisé.  

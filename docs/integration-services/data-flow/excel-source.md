@@ -1,4 +1,5 @@
 ---
+description: Source Excel
 title: Source Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 90d9d2a7607d61b6eb777dce37950408f3376cf4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9664786703f0d9b81ce2a939bd422ea41a2fd8f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913238"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484575"
 ---
 # <a name="excel-source"></a>Source Excel
 
@@ -57,7 +58,7 @@ ms.locfileid: "86913238"
   
 -   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propriétés personnalisées d’Excel](../../integration-services/data-flow/excel-custom-properties.md)  
+-   [Propriétés personnalisées d'Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Pour plus d’informations sur le bouclage dans un groupe de fichiers Excel, consultez [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   

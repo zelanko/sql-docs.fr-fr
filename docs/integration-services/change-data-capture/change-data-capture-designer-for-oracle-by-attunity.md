@@ -1,4 +1,5 @@
 ---
+description: Concepteur de capture de données modifiées pour Oracle par Attunity
 title: Change Data Capture Designer pour Oracle d’Attunity | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4b2bcc1153aa1e90d38a7aedf83d176d34294cd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b8f93db32602579feaff3a3230739f6fa2621fd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484713"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Concepteur de capture de données modifiées pour Oracle par Attunity
 
@@ -36,30 +37,30 @@ ms.locfileid: "86918664"
   
 ## <a name="in-this-documentation"></a>Dans cette documentation  
   
--   [Présentation de la console du concepteur CDC](../../integration-services/change-data-capture/the-cdc-designer-console-introduction.md)  
+-   [Présentation de la console du concepteur de capture de données modifiées](../../integration-services/change-data-capture/the-cdc-designer-console-introduction.md)  
   
--   [Types de données des instances CDC Oracle](../../integration-services/change-data-capture/oracle-cdc-instance-data-types.md)  
+-   [Types de données d'instance Oracle CDC](../../integration-services/change-data-capture/oracle-cdc-instance-data-types.md)  
   
 -   [Gestion des erreurs](../../integration-services/change-data-capture/error-handling.md)  
   
 -   [Instance CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
--   [Bases de données CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
+-   [Bases de données de capture de données modifiées Oracle](../../integration-services/change-data-capture/the-oracle-cdc-databases.md)  
   
--   [Informations de référence sur l’aide (F1) du concepteur CDC pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
+-   [Aide sur le concepteur de capture de données modifiées pour Oracle par Attunity via la touche F1](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md)  
   
--   [Guide des procédures pour le concepteur CDC pour Oracle par Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
+-   [Concepteur de capture de données modifiées pour Oracle par Attunity : rubrique Procédures](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-how-to-guide.md)  
   
--   [Connexion SQL Server pour la création d’une instance](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+-   [Connexion SQL Server pour la création d'une instance](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
--   [Propriétés avancées des connexions](../../integration-services/change-data-capture/advanced-connection-properties.md)  
+-   [Propriétés avancées de connexion](../../integration-services/change-data-capture/advanced-connection-properties.md)  
   
--   [Informations d’identification Oracle pour l’exécution d’un script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+-   [Informations d'identification Oracle pour l'exécution d'un script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
 -   [Script de journalisation supplémentaire Oracle](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)  
   
 -   [Script de déploiement d’instance CDC](../../integration-services/change-data-capture/cdc-instance-deployment-script.md)  
   
--   [Autorisations de connexion SQL Server nécessaires pour le concepteur CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+-   [Autorisations de connexion SQL Server requises pour le concepteur CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

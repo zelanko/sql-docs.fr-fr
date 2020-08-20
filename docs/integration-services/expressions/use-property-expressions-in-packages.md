@@ -1,4 +1,5 @@
 ---
+description: Expressions de propriété dans des packages
 title: Utiliser des expressions de propriété dans des packages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c02dfe0e479873b50399a2dfcdbe8ae20a984f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8d0df4ebde316b640314f37788ccc39475fd8686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484368"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
 
@@ -96,7 +97,7 @@ ms.locfileid: "86922276"
  Les expressions de propriété sont chargées après le chargement des configurations de package. Par exemple, les variables sont d'abord mises à jour par leurs configurations, puis les expressions de propriété qui utilisent les variables sont évaluées et chargées. Cela signifie que les expressions de propriété utilisent toujours les valeurs de variables qui sont définies par des configurations.  
   
 > [!NOTE]  
->  Vous ne pouvez pas utiliser l’option **Set** de l’utilitaire **dtexec** pour remplir une expression de propriété.  
+>   Vous ne pouvez pas utiliser l’option **Set** de l’utilitaire **dtexec** pour remplir une expression de propriété.  
   
  Le tableau suivant indique à quel moment les expressions de propriété d' [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont évaluées et chargées.  
   
