@@ -20,14 +20,16 @@ helpviewer_keywords:
 author: josack
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da47c1b31551abd538adca6a447ac57a3fc429ff
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3da92fb6d489bd8ca09c65e267f67dca75d8c01a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005194"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646399"
 ---
 # <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>sys. dm_exec_query_optimizer_memory_gateways (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Retourne l’état actuel des sémaphores de ressource utilisés pour limiter l’optimisation des requêtes simultanées.
 
@@ -49,7 +51,7 @@ SQL Server nécessite l’autorisation VIEW SERVER STATE sur le serveur.
 Azure SQL Database nécessite l’autorisation VIEW DATABASE STATE dans la base de données.
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
 SQL Server utilise une approche de passerelle à plusieurs niveaux pour limiter le nombre de compilations simultanées autorisées.  Trois passerelles sont utilisées, y compris petite, moyenne et grande. Les passerelles permettent d’éviter l’épuisement des ressources mémoire globales par une plus grande mémoire de compilation nécessitant des consommateurs.
 
 L’attente d’une passerelle entraîne une compilation différée. En plus des retards dans la compilation, les demandes limitées sont associées à une accumulation RESOURCE_SEMAPHORE_QUERY_COMPILE type d’attente. Le RESOURCE_SEMAPHORE_QUERY_COMPILE type d’attente peut indiquer que les requêtes utilisent une grande quantité de mémoire pour la compilation et que la mémoire est épuisée, ou que la mémoire disponible est insuffisante dans son ensemble, toutefois, les unités disponibles dans une passerelle spécifique sont épuisées. La sortie de **sys. dm_exec_query_optimizer_memory_gateways** peut être utilisée pour dépanner des scénarios où la mémoire était insuffisante pour compiler un plan d’exécution de requête.  
@@ -68,7 +70,7 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 ```  
 
 ## <a name="see-also"></a>Voir aussi  
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique relatives aux exécutions &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
 [Comment utiliser la commande DBCC MEMORYSTATUS pour surveiller l’utilisation de la mémoire sur SQL Server 2005](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005) 
  La [compilation de requêtes volumineuses attend sur RESOURCE_SEMAPHORE_QUERY_COMPILE dans SQL Server 2014](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)

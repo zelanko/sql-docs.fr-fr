@@ -19,15 +19,16 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35bf38e3c6ac85fe27af595571785f8d34a6f0d4
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469581"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646489"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Analyse l’instruction spécifiée [!INCLUDE[tsql](../../includes/tsql-md.md)] et ses paramètres pour déterminer les paramètres qui correspondent aux colonnes de base de données qui sont protégées à l’aide de la fonctionnalité Always Encrypted. Retourne les métadonnées de chiffrement pour les paramètres qui correspondent aux colonnes chiffrées.  
   
@@ -66,7 +67,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|ID de la ligne dans le jeu de résultats.|  
 |**database_id**|**int**|ID de la base de données.|  
 |**column_encryption_key_id**|**int**|ID de la clé de chiffrement de colonne. Remarque : cet ID désigne une ligne dans la vue de catalogue [sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Réservé à un usage ultérieur. Actuellement, contient toujours 1.|  
+|**column_encryption_key_version**|**int**|Réservé pour un usage futur. Actuellement, contient toujours 1.|  
 |**column_encryption_key_metadata_version**|**Binary(8**|Horodateur représentant l’heure de création de la clé de chiffrement de colonne.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|Valeur chiffrée de la clé de chiffrement de colonne.|  
 |**column_master_key_store_provider_name**|**sysname**|Nom du fournisseur du magasin de clés qui contient la clé principale de colonne, qui a été utilisé pour produire la valeur chiffrée de la clé de chiffrement de colonne.|  
@@ -156,7 +157,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |parameter_ordinal|parameter_name|column_encryption_algorithm|column_encryption_type|  
 |------------------------|---------------------|-----------------------------------|------------------------------|  
-|1|\@C1|1|1|  
+|1|\@c1|1|1|  
   
  (Les résultats continuent.)  
   
