@@ -1,4 +1,5 @@
 ---
+description: bcp_bind
 title: bcp_bind | Microsoft Docs
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -18,11 +19,12 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29422a0dba80f9092221616c128b69f5579cb900
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 7cbf8a5d7fa207b7be9eb2e6359766064dbef343
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009133"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455917"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
@@ -120,7 +122,7 @@ bcp_bind(hdbc, szName, 0,
 
 Le paramètre *eDataType* est énuméré par les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jetons de type de données dans sqlncli. h, et non par les énumérateurs de type de données C ODBC. Par exemple, vous pouvez spécifier un entier à deux octets, type ODBC SQL_C_SHORT, à l'aide du type SQLINT2 propre à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]a introduit la prise en charge des jetons de type de données SQLXML et SQLUDT dans le paramètre **_eDataType_** .  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit la prise en charge des jetons de type de données SQLXML et SQLUDT dans le paramètre **_eDataType_** .  
 
 Le tableau suivant répertorie les types de données énumérées valides et les types de données ODBC C correspondants.
 
@@ -172,7 +174,7 @@ Le tableau suivant répertorie les types de données énumérées valides et les
 
  SUCCEED ou FAIL.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Notes
 
 Utilisez **bcp_bind** pour une façon rapide et efficace de copier des données à partir d’une variable de programme dans une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 

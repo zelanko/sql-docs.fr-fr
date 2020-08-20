@@ -1,4 +1,5 @@
 ---
+description: Audit Server Operation (classe d'événements)
 title: Audit Server Operation, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 6cc3dbb9-817e-4329-9f45-c3adcff3b511
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26a5d250c36cf95fd0a5b6497299e2494281d3e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a7863db40c910960935ffb9c2cb90c996fbdc131
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756071"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88456122"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe d'événements **Audit Server Operation** se produit lorsque des opérations d'audit de sécurité sont utilisées, telles que la modification des paramètres, des ressources, de l'accès externe ou de l'autorisation.  
+   La classe d’événements **Audit Server Operation** se produit quand des opérations d’audit de sécurité sont utilisées, telles que la modification des paramètres, des ressources, de l’accès externe ou de l’autorisation.  
   
 ## <a name="audit-server-operation-event-class-data-columns"></a>Colonnes de données de la classe d'événements Audit Server Operation  
   

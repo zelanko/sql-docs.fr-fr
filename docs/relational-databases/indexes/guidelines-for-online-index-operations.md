@@ -1,4 +1,5 @@
 ---
+description: Instructions pour les opérations d’index en ligne
 title: Instructions pour les opérations d’index en ligne | Microsoft Docs
 ms.custom: ''
 ms.date: 11/12/2019
@@ -18,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4dde42d927732e0209fed114e6d8d50451ab6379
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce049f8c597526187ccce8ba7fdb498d8280cf1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455940"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d’index en ligne
 
@@ -130,7 +131,7 @@ ELEVATE_ONLINE et ELEVATE_RESUMABLE s’appliquent uniquement aux instructions D
 
 ## <a name="related-content"></a>Contenu connexe
 
-- [Fonctionnement des opérations d’index en ligne](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Fonctionnement des opérations d'index en ligne](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)  
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
