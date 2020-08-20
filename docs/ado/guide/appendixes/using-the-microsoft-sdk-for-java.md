@@ -1,4 +1,5 @@
 ---
+description: Utilisation du SDK Microsoft pour Java
 title: Utilisation du kit de développement logiciel (SDK) Microsoft pour Java | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761557"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453971"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Utilisation du SDK Microsoft pour Java
 
@@ -27,7 +28,7 @@ ms.locfileid: "82761557"
 
 Le kit de développement logiciel (SDK) Microsoft pour Java est le kit de développement de l’environnement Microsoft Internet Explorer. Des outils, des informations et des exemples sont fournis pour vous aider à développer des programmes et des applets Java basés sur JDK 1,1 et sur la machine virtuelle Microsoft Win32 (Microsoft VM). Le kit de développement logiciel (SDK) Microsoft pour Java n’est pas lié à Microsoft Visual J++. Pour télécharger ce kit de développement logiciel (SDK), cliquez ici.  
   
- L’utilitaire JActiveX. exe génère des classes à partir d’une bibliothèque de types, mais ne peut être appelé que sur la ligne de commande. Cette fonctionnalité n’est pas intégrée à l’environnement de développement Visual J++. Contrairement aux classes générées par l’Assistant bibliothèque de types Java, vous pouvez effectuer un pas à pas détaillé dans les wrappers de classe créés par le kit de développement logiciel (SDK). Cela est utile pour déboguer la façon dont votre code utilise les classes wrapper ADO.  
+ L’utilitaire Jactivex.exe génère des classes à partir d’une bibliothèque de types, mais ne peut être appelé que sur la ligne de commande. Cette fonctionnalité n’est pas intégrée à l’environnement de développement Visual J++. Contrairement aux classes générées par l’Assistant bibliothèque de types Java, vous pouvez effectuer un pas à pas détaillé dans les wrappers de classe créés par le kit de développement logiciel (SDK). Cela est utile pour déboguer la façon dont votre code utilise les classes wrapper ADO.  
   
  Ce mécanisme lit la bibliothèque de types ADO et génère des classes que vous pouvez instancier dans votre application. Il génère ces classes à l’emplacement suivant : \\<répertoire Windows \> \Java\trustlib\msado15.  
   

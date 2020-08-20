@@ -1,4 +1,5 @@
 ---
+description: Présentation de Microsoft OLE DB simple Provider
 title: Fournisseur Microsoft OLE DB simple | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6e36648fe42024502316d65e3cf27412b907ffc2
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454021"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Présentation de Microsoft OLE DB simple Provider
 Le fournisseur Microsoft OLE DB simple (OSP) permet à ADO d’accéder à toutes les données pour lesquelles un fournisseur a été écrit à l’aide de [OLE DB boîte à outils OSP (simple Provider)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Les fournisseurs simples sont destinés à accéder aux sources de données qui nécessitent uniquement une prise en charge fondamentale de la OLE DB, telles que les tableaux en mémoire ou les documents XML.
@@ -50,9 +51,9 @@ MSDAOSP
 |**Source de données**|Spécifie le nom d'un serveur.|
 
 ## <a name="xml-document-example"></a>Exemple de document XML
- Le OLE DB fournisseur simple (OSP) dans MDAC 2,7 ou version ultérieure et Windows DAC (Windows Data Access Components) a été amélioré pour prendre en charge l’ouverture de **jeux d’enregistrements** ADO hiérarchiques sur des fichiers XML arbitraires. Ces fichiers XML peuvent contenir le schéma de persistance ADO XML, mais ce n’est pas obligatoire. Cela a été implémenté en connectant l’OSP à la **dll msxml2.** par conséquent, **msxml2. dll** ou version ultérieure est requis.
+ Le OLE DB fournisseur simple (OSP) dans MDAC 2,7 ou version ultérieure et Windows DAC (Windows Data Access Components) a été amélioré pour prendre en charge l’ouverture de **jeux d’enregistrements** ADO hiérarchiques sur des fichiers XML arbitraires. Ces fichiers XML peuvent contenir le schéma de persistance ADO XML, mais ce n’est pas obligatoire. Cela a été implémenté en connectant l’OSP au **MSXML2.DLL**; par conséquent, **MSXML2.DLL** ou version ultérieure est requis.
 
- Le fichier **portfolio. xml** utilisé dans l’exemple suivant contient l’arborescence suivante :
+ Le fichier **portfolio.xml** utilisé dans l’exemple suivant contient l’arborescence suivante :
 
 ```console
 Portfolio

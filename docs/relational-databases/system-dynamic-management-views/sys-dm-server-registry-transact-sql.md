@@ -1,4 +1,5 @@
 ---
+description: sys.dm_server_registry (Transact-SQL)
 title: sys. dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e4de0271647e20a56942e17b8ba52520d1a169f0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 89e74d60a8b3ea72881aec2c9230f1cd296ea301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898631"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454824"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,8 +33,8 @@ ms.locfileid: "85898631"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|registry_key|**nvarchar(256)**|Nom de la clé de Registre. Autorise la valeur NULL.|  
-|value_name|**nvarchar(256)**|Nom de la valeur de la clé. Il s’agit de l’élément affiché dans la colonne **nom** de l’éditeur du Registre. Autorise la valeur NULL.|  
+|registry_key|**nvarchar (256)**|Nom de la clé de Registre. Autorise la valeur NULL.|  
+|value_name|**nvarchar (256)**|Nom de la valeur de la clé. Il s’agit de l’élément affiché dans la colonne **nom** de l’éditeur du Registre. Autorise la valeur NULL.|  
 |value_data|**sql_variant**|Valeur des données de la clé. Il s’agit de la valeur affichée dans la colonne de **données** de l’éditeur du Registre pour une entrée donnée. Autorise la valeur NULL.|  
   
 ## <a name="security"></a>Sécurité  

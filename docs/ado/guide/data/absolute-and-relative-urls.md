@@ -1,4 +1,5 @@
 ---
+description: URL absolues et relatives
 title: URL absolues et relatives | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453911"
 ---
 # <a name="absolute-and-relative-urls"></a>URL absolues et relatives
 Une URL spécifie l’emplacement d’une cible stockée sur un ordinateur local ou en réseau. La cible peut être un fichier, un répertoire, une page HTML, une image, un programme, et ainsi de suite.  
@@ -32,10 +33,10 @@ Une URL spécifie l’emplacement d’une cible stockée sur un ordinateur local
   
  Une URL relative se compose généralement du *chemin d’accès*et, éventuellement, de la *ressource*, mais pas d’un *schéma* ou d’un *serveur*. Les tableaux suivants définissent les parties individuelles du format d’URL complet.  
   
- *scheme*  
+ *mode*  
  Spécifie le mode d’accès à la *ressource* .  
   
- *serveurs*  
+ *server*  
  Spécifie le nom de l’ordinateur sur lequel se trouve la *ressource* .  
   
  *path*  
@@ -64,7 +65,7 @@ Une URL spécifie l’emplacement d’une cible stockée sur un ordinateur local
   
  Une URL relative peut être spécifiée dans le paramètre *CommandText* ou *source* . L’URL relative ne représente pas en fait une commande, telle qu’une commande SQL. Il spécifie simplement les paramètres. Le contexte de la connexion active doit être une URL absolue et le paramètre d' *option* doit avoir la valeur **adCmdTableDirect**.  
   
- Par exemple, l’exemple de code suivant montre comment ouvrir un **jeu d’enregistrements** sur le fichier Readme25. txt du répertoire Winnt/system32 :  
+ Par exemple, l’exemple de code suivant montre comment ouvrir un **Recordset** sur le fichier Readme25.txt du répertoire Winnt/system32 :  
   
 ```  
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

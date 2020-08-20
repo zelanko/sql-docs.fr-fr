@@ -1,4 +1,5 @@
 ---
+description: Informations de référence sur les erreurs ADO
 title: Référence des erreurs ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ec9df42f3aee56d06883478e365fffcb71790d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453861"
 ---
 # <a name="ado-errors"></a>Erreurs ADO
 La constante **ErrorValueEnum** décrit les valeurs d’erreur ADO. Pour obtenir la liste complète de ces constantes énumérées, y compris les valeurs, consultez l' [annexe B : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). Cette section examine certaines des erreurs les plus intéressantes et explique certaines situations spécifiques qui peuvent les déclencher, ou des solutions pour résoudre le problème. La constante **ErrorValueEnum** et le nombre décimal positif bref sont répertoriés.
@@ -53,8 +54,8 @@ La constante **ErrorValueEnum** décrit les valeurs d’erreur ADO. Pour obtenir
 |**3714**|**adErrInvalidTransaction**|La coordination de la transaction n’est pas valide ou n’a pas démarré.|
 |**3715**|**adErrNotExecuting**|Impossible d’effectuer l’opération pendant qu’elle n’est pas exécutée.|
 |**3716**|**adErrUnsafeOperation**|Les paramètres de sécurité de cet ordinateur interdisent l’accès à une source de données d’un autre domaine.|
-|**3717**|**adWrnSecurityDialog**|À usage interne uniquement. N’utilisez pas. (L’entrée a été incluse pour des raisons d’exhaustivité. Cette erreur ne doit pas apparaître dans votre code.)|
-|**3718**|**adWrnSecurityDialogHeader**|À usage interne uniquement. N’utilisez pas. (Entrée incluse pour des raisons d’exhaustivité. Cette erreur ne doit pas apparaître dans votre code.)|
+|**3717**|**adWrnSecurityDialog**|Uniquement réservé à un usage interne. N’utilisez pas. (L’entrée a été incluse pour des raisons d’exhaustivité. Cette erreur ne doit pas apparaître dans votre code.)|
+|**3718**|**adWrnSecurityDialogHeader**|Uniquement réservé à un usage interne. N’utilisez pas. (Entrée incluse pour des raisons d’exhaustivité. Cette erreur ne doit pas apparaître dans votre code.)|
 |**3719**|**adErrIntegrityViolation**|La valeur des données est en conflit avec les contraintes d’intégrité du champ. Une nouvelle valeur pour un **champ** provoquerait une clé dupliquée. Une valeur qui forme un côté d’une relation entre deux enregistrements peut ne pas pouvoir être mise à jour.|
 |**3720**|**adErrPermissionDenied**|Les autorisations insuffisantes empêchent l’écriture dans le champ. L’utilisateur nommé dans la chaîne de connexion ne dispose pas des autorisations appropriées pour écrire dans un **champ**.|
 |**3721**|**adErrDataOverflow**|La valeur des données est trop grande pour être représentée par le type de données du champ. Une valeur numérique qui est trop grande pour le champ prévu a été assignée. Par exemple, une valeur d’entier long a été assignée à un champ de type entier Short.|

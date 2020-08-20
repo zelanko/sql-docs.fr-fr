@@ -1,4 +1,5 @@
 ---
+description: STTouches (type de données geometry)
 title: STTouches (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 40363a9c7f3f7a59f5da35930990c16eedf753f8
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 792ea213b39a8b38787c1ed674aa03fc084ea591
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454295"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Retourne 1 si une instance **geometry** touche spatialement une autre instance 
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Deux instances **geometry** se touchent si leurs ensembles de points se croisent, mais que leurs intérieurs ne se croisent pas.  
   
  Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas.  

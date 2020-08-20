@@ -1,4 +1,5 @@
 ---
+description: sys.servers (Transact-SQL)
 title: sys. Servers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/16/2020
@@ -20,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4ebbcdb8fa1f13d7c0d40c4ac66ac1d3453dffb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f588f0c472432cc4dc68819d32ee57cf65a59358
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455191"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,11 +38,11 @@ ms.locfileid: "85894936"
 |**server_id**|**int**|ID local du serveur lié.|  
 |**name**|**sysname**|Lorsque **server_id** = 0, la valeur retournée est le nom du serveur.<br /><br /> Lorsque **server_id** > 0, la valeur retournée est le nom local du serveur lié.|  
 |**production**|**sysname**|Nom de produit du serveur lié. La valeur « SQL Server » indique une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**moteur**|**sysname**|Nom du fournisseur OLE DB permettant de se connecter au serveur lié.<br /><br />À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , la valeur « sqlncli » est mappée au [pilote Microsoft OLE DB pour SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) par défaut. Dans les versions antérieures, la valeur « SQLNCLI » est mappée au [fournisseur de OLE DB SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
+|**provider**|**sysname**|Nom du fournisseur OLE DB permettant de se connecter au serveur lié.<br /><br />À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , la valeur « sqlncli » est mappée au [pilote Microsoft OLE DB pour SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) par défaut. Dans les versions antérieures, la valeur « SQLNCLI » est mappée au [fournisseur de OLE DB SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Propriété de connexion à la source de données OLE DB.|  
 |**location**|**nvarchar(4000)**|Propriété de connexion de l'emplacement OLE DB. NULL si aucun.|  
 |**provider_string**|**nvarchar(4000)**|Propriété de connexion à la chaîne du fournisseur OLE DB.<br /><br /> A la valeur NULL, sauf si l’appelant dispose de l' `ALTER ANY LINKED SERVER` autorisation.|  
-|**Catalogue**|**sysname**|Propriété de connexion du catalogue OLE DB. NULL si aucun.|  
+|**catalog**|**sysname**|Propriété de connexion du catalogue OLE DB. NULL si aucun.|  
 |**connect_timeout**|**int**|Délai d'expiration de la connexion en secondes, 0 si aucun.|  
 |**query_timeout**|**int**|Délai d'expiration de la requête en secondes, 0 si aucun.|  
 |**is_linked**|**bit**|0 = est un serveur de style ancien ajouté à l’aide de **sp_addserver**, avec différents comportements de RPC et de transaction distribuée.<br /><br /> 1 = Serveur lié standard.|  
@@ -74,7 +75,7 @@ ms.locfileid: "85894936"
 - Appartenance au rôle de serveur fixe **setupadmin** ou **sysadmin**  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Affichages catalogue des serveurs liés &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  

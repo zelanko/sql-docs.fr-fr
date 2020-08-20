@@ -1,4 +1,5 @@
 ---
+description: STOverlaps (type de données geometry)
 title: STOverlaps (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1dc18a4aaabb04cb0fc200b1158ff865203caf72
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d92e984fb803cc8b15c58f4b137df2dd51e83f9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554944"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454240"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Retourne 1 si une instance **geometry** chevauche une autre instance **geometry
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Deux instances **geometry** se chevauchent si la région qui représente leur intersection a la même dimension que les instances, et si elle n’équivaut à aucune de ces instances.  
   
  `STOverlaps()` retourne toujours 0 si les points d’intersection des instances **geometry** ne correspondent pas à la même dimension.  

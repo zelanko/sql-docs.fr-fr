@@ -1,4 +1,5 @@
 ---
+description: Utilisation des extensions Visual C++
 title: Utilisation des extensions de Visual C++ | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a051329efa32a155cc368d3d01c38b40593b8898
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6ca7d66c7748658c5ba720b8664d824551da47bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761547"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453981"
 ---
 # <a name="visual-c-extensions"></a>Extensions de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>Interface IADORecordBinding
@@ -113,14 +114,14 @@ Update(CADORecordBinding *binding)
 |Paramètre|Description|
 |---------------|-----------------|
 |*Classe*|Classe dans laquelle les entrées de liaison et les variables C/C++ sont définies.|
-|*Formations*|Nombre ordinal, en comptant de un, du champ **Recordset** correspondant à votre variable C/C++.|
+|*Ordinal*|Nombre ordinal, en comptant de un, du champ **Recordset** correspondant à votre variable C/C++.|
 |*DataType*|Type de données ADO équivalent de la variable C/C++ (consultez [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) pour obtenir la liste des types de données valides). La valeur du champ **Recordset** est convertie dans ce type de données si nécessaire.|
-|*Mémoire tampon*|Nom de la variable C/C++ dans laquelle le champ du **Recordset** sera stocké.|
+|*Buffer*|Nom de la variable C/C++ dans laquelle le champ du **Recordset** sera stocké.|
 |*Taille*|Taille maximale, en octets, de la *mémoire tampon*. Si *buffer* contient une chaîne de longueur variable, autorisez l’espace pour un zéro de fin.|
 |*État*|Nom d’une variable qui indique si le contenu de la *mémoire tampon* est valide et si la conversion du champ en *type de données* a réussi.<br /><br /> Les deux valeurs les plus importantes pour cette variable sont **adFldOK**, ce qui signifie que la conversion a réussi ; et **adFldNull**, ce qui signifie que la valeur du champ serait un variant de type VT_NULL et non simplement vide.<br /><br /> Les valeurs possibles de l' *État* sont répertoriées dans le tableau suivant, « valeurs d’État ».|
-|*Modification*|Indicateur booléen ; Si la valeur est TRUE, le champ ADO est autorisé à mettre à jour le champ **Recordset** correspondant avec la valeur contenue dans *buffer*.<br /><br /> Définissez le paramètre de *modification* BOOLÉENNE sur true pour permettre à ADO de mettre à jour le champ lié, et false si vous souhaitez examiner le champ, mais pas le modifier.|
+|*Modify*|Indicateur booléen ; Si la valeur est TRUE, le champ ADO est autorisé à mettre à jour le champ **Recordset** correspondant avec la valeur contenue dans *buffer*.<br /><br /> Définissez le paramètre de *modification* BOOLÉENNE sur true pour permettre à ADO de mettre à jour le champ lié, et false si vous souhaitez examiner le champ, mais pas le modifier.|
 |*Précision*|Nombre de chiffres qui peuvent être représentés dans une variable numérique.|
-|*Mettre à l’échelle*|Nombre de décimales dans une variable numérique.|
+|*Mise à l’échelle*|Nombre de décimales dans une variable numérique.|
 |*Longueur*|Nom d’une variable de 4 octets qui doit contenir la longueur réelle des données dans la *mémoire tampon*.|
 
 ## <a name="status-values"></a>Valeurs d'état
@@ -128,7 +129,7 @@ Update(CADORecordBinding *binding)
 
  Lors de la définition des données, l' *État* peut être défini sur **adFldNull** pour indiquer que le champ **Recordset** doit avoir la valeur null.
 
-|Constant|Valeur|Description|
+|Constante|Valeur|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Une valeur de champ non null a été retournée.|
 |**adFldBadAccessor**|1|La liaison n’est pas valide.|

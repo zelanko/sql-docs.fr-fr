@@ -1,4 +1,5 @@
 ---
+description: Utilisation d’ADO avec les langages de script
 title: Utilisation d’ADO avec les langages de script | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71057caed6d28a2923e1c3735e10d20fccc9217d
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6decee7fddc4748a7d0931ab671f66b11161cc9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761567"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453991"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Utilisation d’ADO avec les langages de script
 Dans un environnement de script, ADO vous permet d’exposer des données par le biais de scripts côté serveur. Dans ce scénario, ADO, le fournisseur de OLE DB sous-jacent qu’il utilise et tous les autres composants nécessaires pour référencer un magasin de données donné sont installés sur un serveur exécutant Internet Information Services (IIS). À l’aide des pages d’Active Server (ASP), ADO est un composant référencé dans un script qui peut générer du code HTML, par exemple. Ce contenu HTML peut être transmis via HTTP à un navigateur Web client. En utilisant des scripts, la page Web peut renvoyer des actions au script côté serveur, ce qui vous permet de mettre à jour, parcourir ou afficher des données spécifiques.  
@@ -27,28 +28,28 @@ Dans un environnement de script, ADO vous permet d’exposer des données par le
   
 |Object|Sécurisé pour l’écriture de scripts ?|  
 |------------|-------------------------|  
-|Connexion ADO|Yes|  
-|Commande ADO|No|  
-|Paramètre ADO|No|  
-|Recordset ADO|Yes|  
-|Enregistrement ADO|Yes|  
-|Flux ADO|Yes|  
-|Erreur ADO|No|  
-|Catalogue ADOX|No|  
-|CellSet, CellSet|No|  
-|DataControl RDS|Yes|  
-|RDS DataSpace|Yes|  
-|Objet RDS DataFactory|No|  
+|Connexion ADO|Oui|  
+|Commande ADO|Non|  
+|Paramètre ADO|Non|  
+|Recordset ADO|Oui|  
+|Enregistrement ADO|Oui|  
+|Flux ADO|Oui|  
+|Erreur ADO|Non|  
+|Catalogue ADOX|Non|  
+|CellSet, CellSet|Non|  
+|DataControl RDS|Oui|  
+|RDS DataSpace|Oui|  
+|Objet RDS DataFactory|Non|  
   
  Le tableau suivant répertorie les fournisseurs inclus avec Windows DAC/MDAC, et indique s’ils sont sûrs pour l’écriture de scripts.  
   
 |Fournisseur|Sécurisé pour l’écriture de scripts ?|  
 |--------------|-------------------------|  
-|Forme|Yes|  
-|Persist|Yes|  
-|Remote|Yes|  
-|Fournisseur OLE DB pour SQL Server (SQLOLEDB)|No|  
-|Fournisseur OLE DB pour ODBC (MSDASQL)|No|  
+|Forme|Oui|  
+|Conserver|Oui|  
+|Remote|Oui|  
+|Fournisseur OLE DB pour SQL Server (SQLOLEDB)|Non|  
+|Fournisseur OLE DB pour ODBC (MSDASQL)|Non|  
   
 ## <a name="odbc-data-sources"></a>Sources de données ODBC  
  L’une des différences notables entre le script et le non-script ADO est la source de données ODBC, si elle est utilisée. Pour les applications sans script, vous pouvez créer un DSN utilisateur dans l’administrateur de la source de données ODBC. Pour les scripts qui s’exécutent sous IIS, vous devez créer un DSN système. dans le cas contraire, vos scripts ne reconnaîtront pas la source de données que vous avez créée. Cela s’applique à toute application de script ADO qui utilise le fournisseur Microsoft OLE DB pour ODBC par le biais de Microsoft IIS.  

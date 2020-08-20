@@ -1,4 +1,5 @@
 ---
+description: Programmation ADO Visual C++
 title: Visual C++ la programmation ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ae93db522b465b85feefe85cd94df4be3d29f062
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82761527"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88453951"
 ---
 # <a name="visual-c-ado-programming"></a>Programmation ADO Visual C++
 Les informations de référence sur l’API ADO décrivent les fonctionnalités de l’interface de programmation d’applications (API) ADO à l’aide d’une syntaxe similaire à celle de Microsoft Visual Basic. Bien que le public visé soit l’un de tous les utilisateurs, les programmeurs ADO utilisent différents langages, tels que Visual Basic, Visual C++ (avec et sans la directive **#import** ) et Visual J++ (avec le package de classe ADO/WFC).  
@@ -35,7 +36,7 @@ Les informations de référence sur l’API ADO décrivent les fonctionnalités 
  Les sections suivantes résument les détails des programmeurs C et C++ à l’aide d’ADO et de la directive **#import** . Elle se concentre sur les types de données spécifiques à COM (**Variant**, **BSTR**et **SAFEARRAY**) et la gestion des erreurs (_com_error).  
   
 ## <a name="using-the-import-compiler-directive"></a>Utilisation de la directive de compilateur #import  
- La directive du compilateur **#import** Visual C++ simplifie l’utilisation des méthodes et des propriétés ADO. La directive prend le nom d’un fichier contenant une bibliothèque de types, tel que le fichier ADO. dll (Msado15. dll), et génère des fichiers d’en-tête contenant des déclarations typedef, des pointeurs intelligents pour les interfaces et des constantes énumérées. Chaque interface est encapsulée, ou encapsulée, dans une classe.  
+ La directive du compilateur **#import** Visual C++ simplifie l’utilisation des méthodes et des propriétés ADO. La directive prend le nom d’un fichier qui contient une bibliothèque de types, comme ADO. dll (Msado15.dll), et génère des fichiers d’en-tête contenant des déclarations typedef, des pointeurs intelligents pour les interfaces et des constantes énumérées. Chaque interface est encapsulée, ou encapsulée, dans une classe.  
   
  Pour chaque opération dans une classe (autrement dit, un appel de méthode ou de propriété), il existe une déclaration permettant d’appeler l’opération directement (c’est-à-dire la forme « brute » de l’opération), ainsi qu’une déclaration d’appel de l’opération brute et de lever une erreur COM si l’exécution de l’opération a échoué. Si l’opération est une propriété, il existe généralement une directive de compilateur qui crée une syntaxe alternative pour l’opération dont la syntaxe est comme Visual Basic.  
   
@@ -222,7 +223,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- -ou-  
+ - ou -  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -241,14 +242,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- -ou-  
+ - ou -  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- -ou-  
+ - ou -  
   
 ```cpp
 _RecordsetPtr  rs;  

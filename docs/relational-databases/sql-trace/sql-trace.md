@@ -1,4 +1,5 @@
 ---
+description: Trace SQL
 title: Trace SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7368f8e10c38008836d86d7dea14d2ab8add4a93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750926"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455325"
 ---
 # <a name="sql-trace"></a>Trace SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ Les termes suivants décrivent les concepts fondamentaux de Trace SQL.
  **Classe d’événements**  
  Type d'événement pouvant être tracé. La classe d'événements contient toutes les colonnes de données qu'un événement peut signaler.  
   
- **Catégorie d’événement**  
+ **Catégorie d'événements**  
  Groupe de classes d'événements liées.  
   
  **Trace** (nom)  
@@ -148,10 +149,10 @@ La trace SQL utilise les colonnes de données du résultat de la trace pour déc
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Explique comment créer et exécuter des traces à l'aide de procédures stockées Transact-SQL.|[Créer et exécuter des traces à l’aide de procédures stockées Transact-SQL](../../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
-|Explique comment créer des traces manuelles à l'aide de procédures stockées sur une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|[Créer des traces manuelles à l’aide de procédures stockées](../../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md)|  
+|Explique comment créer et exécuter des traces à l'aide de procédures stockées Transact-SQL.|[Créer et exécuter des traces à l'aide de procédures stockées Transact-SQL.](../../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md)|  
+|Explique comment créer des traces manuelles à l'aide de procédures stockées sur une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|[Créer des traces manuelles à l'aide de procédures stockées](../../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md)|  
 |Explique comment enregistrer les résultats de trace dans le fichier où les résultats de trace sont écrits.|[Enregistrer les résultats de trace dans un fichier](../../relational-databases/sql-trace/save-trace-results-to-a-file.md)|  
-|Explique comment améliorer l’accès aux données de trace à l’aide de l’espace disponible dans le répertoire **temp** .|[Améliorer l’accès aux données de trace](../../relational-databases/sql-trace/improve-access-to-trace-data.md)|  
+|Explique comment améliorer l’accès aux données de trace à l’aide de l’espace disponible dans le répertoire **temp** .|[Améliorer l'accès aux données de trace](../../relational-databases/sql-trace/improve-access-to-trace-data.md)|  
 |Explique comment utiliser des procédures stockées pour créer une trace.|[Créer une trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)|  
 |Explique comment utiliser des procédures stockées pour créer un filtre qui n'extrait que les informations requises lors d'un événement en cours de traçage.|[Définir un filtre de trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md)|  
 |Explique comment utiliser des procédures stockées pour modifier une trace existante.|[Modifier une trace existante &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)|  

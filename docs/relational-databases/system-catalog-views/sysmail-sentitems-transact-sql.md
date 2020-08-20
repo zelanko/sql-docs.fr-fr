@@ -1,4 +1,5 @@
 ---
+description: sysmail_sentitems (Transact-SQL)
 title: sysmail_sentitems (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 382be73e4047c1d75b5ab95d1b3959cb05af68c0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 968dc27761440c7fb74b7be330d843d9cbf35459
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455117"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,14 +39,14 @@ ms.locfileid: "85901184"
 |**destinataire**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
 |**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
 |**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
-|**Objet**|**nvarchar (510)**|Ligne d'objet du message.|  
+|**subject**|**nvarchar (510)**|Ligne d'objet du message.|  
 |**body**|**varchar(max)**|le corps du message.|  
 |**body_format**|**varchar (20)**|Format du corps du message. Les valeurs possibles sont **Text** et **HTML**.|  
 |**importance**|**varchar (6)**|Paramètre d' **importance** du message.|  
 |**sensibilité**|**varchar (12)**|Paramètre de **sensibilité** du message.|  
 |**file_attachments**|**varchar(max)**|Liste des noms de fichiers joints au message électronique (délimitée par des points-virgules).|  
 |**attachment_encoding**|**varchar (20)**|Type de pièce jointe.|  
-|**requête**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
+|**query**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
 |**execute_query_database**|**sysname**|Contexte de base de données dans lequel le programme de messagerie a exécuté la requête.|  
 |**attach_query_result_as_file**|**bit**|Lorsque la valeur est 0, les résultats de la requête ont été inclus dans le corps du message électronique, après le contenu du corps. Lorsque la valeur est 1, les résultats ont été renvoyés sous forme de pièce jointe.|  
 |**query_result_header**|**bit**|Lorsque la valeur est 1, cela signifie que les résultats de la requête contenaient des en-têtes de colonne. Lorsque la valeur est 0, cela signifie que les résultats de la requête ne contenaient pas d'en-têtes de colonne.|  
@@ -61,7 +62,7 @@ ms.locfileid: "85901184"
 |**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  En cas de dépannage de la messagerie de base de données, cette vue peut vous aider à identifier la nature du problème en vous montrant les attributs des messages qui ont été correctement envoyés. La messagerie de base de données marque les messages comme envoyés ('sent') lorsqu'ils sont soumis avec succès à un serveur de messagerie SMTP. En principe, le message est reçu en l'espace de quelques minutes, mais il peut être retardé en raison de problèmes avec le serveur SMTP. La messagerie de base de données marque le message comme envoyé lorsque celui-ci est accepté par le serveur de messagerie SMTP. Les erreurs qui se produisent sur le serveur de messagerie SMTP, par exemple lorsque le message ne peut pas être remis à l'adresse de messagerie du destinataire, ne sont pas renvoyées à la messagerie de base de données. Ces messages sont donc considérés comme envoyés, bien qu'ils n'aient pas été remis. Vous devez résoudre ce type d'erreur sur le serveur SMTP. Le serveur de messagerie SMTP peut également envoyer un avis de non remise à l'adresse de réponse d'un compte de messagerie de base de données.  
   
 ## <a name="permissions"></a>Autorisations  

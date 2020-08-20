@@ -1,4 +1,5 @@
 ---
+description: STBuffer (type de données geometry)
 title: STBuffer (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: b461b711ba7e91e4c29a362523b3ebb4a1228004
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454251"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  `STBuffer()` calcule une mémoire tampon de la même manière que [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), en spécifiant *tolerance* = distance \* 0,001, et *relative* = **false**.  
   
  Quand *distance* > 0, une instance **Polygon** ou **MultiPolygon** est retournée.  

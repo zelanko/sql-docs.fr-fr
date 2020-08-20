@@ -1,4 +1,5 @@
 ---
+description: Enregistrer les résultats de trace dans un fichier
 title: Enregistrer les résultats de trace dans un fichier | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 74f80667-62f3-4e14-bb1a-f0c2b6ef3402
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 056c31859fcd9eb70bb0ccf7d3ec86c3ffdcc070
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5b60bea4633abcef041ad516aef972875884282
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750948"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455341"
 ---
 # <a name="save-trace-results-to-a-file"></a>Enregistrer les résultats de trace dans un fichier
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

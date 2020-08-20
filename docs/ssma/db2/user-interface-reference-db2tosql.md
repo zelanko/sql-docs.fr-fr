@@ -1,4 +1,5 @@
 ---
+description: Informations de référence sur l’interface utilisateur (DB2ToSQL)
 title: Informations de référence sur l’interface utilisateur (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c01e871490f5362e610339c6626252c700eea3f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa7ecb8749fb0b5a6f9a105393e3cb20a41456a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454161"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Informations de référence sur l’interface utilisateur (DB2ToSQL)
 Cette section contient des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistant Migration (SSMA) pour DB2.  

@@ -1,4 +1,5 @@
 ---
+description: sys. masked_columns (Transact-SQL)
 title: sys. masked_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/25/2016
@@ -18,11 +19,12 @@ ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bdd6815ab43d8bb36877038485774a8d61714e36
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 28946de442b72309f3284338e6f426c655a4d0f8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004815"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455249"
 ---
 # <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -38,7 +40,7 @@ ms.locfileid: "86004815"
 |is_masked|**bit**|Indique si la colonne est masquée. 1 indique masqué.|  
 |masking_function|**nvarchar(4000)**|Fonction de masquage de la colonne.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
  Cette vue retourne des informations sur les tables pour lesquelles l’utilisateur dispose d’autorisations sur la table ou si l’utilisateur dispose de l’autorisation VIEW ANY DEFINITION.  

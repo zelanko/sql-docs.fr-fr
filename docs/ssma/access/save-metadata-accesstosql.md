@@ -1,4 +1,5 @@
 ---
+description: Enregistrer les métadonnées (AccessToSQL)
 title: Enregistrer les métadonnées (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7f0f9b22d571e4ac89fcd0db464a1e79ae91a28b
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 49114b457535d46785571e16c3b27889b6bf2365
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933913"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454244"
 ---
 # <a name="save-metadata-accesstosql"></a>Enregistrer les métadonnées (AccessToSQL)
 La boîte de dialogue **enregistrer les métadonnées** vous invite à charger les métadonnées dans votre projet SSMA avant de l’enregistrer. Cela vous permet d’avoir un fichier projet complet que vous pouvez utiliser en mode hors connexion et l’envoyer à d’autres personnes, telles que le personnel du support technique.  

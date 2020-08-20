@@ -1,4 +1,5 @@
 ---
+description: Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO)
 title: Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cc8c8f099e703433f57e9d8ff463e229213503be
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454111"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Présentation du fournisseur de persistance Microsoft OLE DB
 Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un fichier et de restaurer ultérieurement cet objet **Recordset** à partir du fichier. Les informations de schéma, les données et les modifications en attente sont conservées.
@@ -41,7 +42,7 @@ Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un ob
 |E_BADSTREAM|Le format du fichier ouvert n’est pas valide (autrement dit, le format n’est pas ADTG ou XML).|
 |E_CANTPERSISTROWSET|L’objet **Recordset** enregistré possède des caractéristiques qui empêchent son stockage.|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
  Le fournisseur de persistance Microsoft OLE DB n’expose aucune propriété dynamique.
 
  Actuellement, seuls les objets **Recordset** hiérarchiques paramétrables ne peuvent pas être enregistrés.

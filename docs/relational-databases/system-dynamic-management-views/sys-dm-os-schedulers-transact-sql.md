@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_schedulers (Transact-SQL)
 title: sys. dm_os_schedulers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,11 +21,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ee5f6aca36766edd915b4b1b53c54a83c6b5a63
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2d89c460dd3e69e3fe0020463be750e9528de951
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454911"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +42,7 @@ ms.locfileid: "86012043"
 |parent_node_id|**int**|Identificateur du nœud auquel le planificateur appartient. On parle également de nœud parent. Il s'agit d'un nœud NUMA (Nonuniform Memory Access). N'accepte pas la valeur NULL.|  
 |scheduler_id|**int**|ID du planificateur. Tous les planificateurs utilisés pour exécuter des requêtes régulières ont des numéros d'identificateur inférieurs à 1 048 576. Les planificateurs qui sont identifiés par un numéro supérieur ou égal à 1 048 576 sont utilisés en interne par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple le planificateur de connexions administrateur dédiées. N'accepte pas la valeur NULL.|  
 |cpu_id|**smallint**|ID de l'UC assigné au planificateur.<br /><br /> N'accepte pas la valeur NULL.<br /><br /> **Remarque :** 255 n’indique pas d’affinité comme c’était le cas dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Pour plus d’informations sur l’affinité, consultez [sys. dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) .|  
-|status|**nvarchar(60)**|Indique l'état du planificateur. Peut avoir l’une des valeurs suivantes :<br /><br /> -EN LIGNE MASQUÉ<br />-HORS CONNEXION CACHÉE<br />-VISIBLE EN LIGNE<br />-VISIBLE HORS CONNEXION<br />-VISIBLE EN LIGNE (DAC)<br />-HOT_ADDED<br /><br /> N'accepte pas la valeur NULL.<br /><br /> Les planificateurs MASQUÉs sont utilisés pour traiter les demandes internes à [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Les planificateurs VISIBLE servent à traiter les requêtes des utilisateurs.<br /><br /> Les planificateurs OFFLINE se mappent avec des processeurs qui sont déconnectés dans le masque d'affinité et qui ne sont, par conséquent, pas utilisés pour traiter des requêtes. Les planificateurs ONLINE se mappent avec des processeurs qui sont connectés dans le masque d'affinité et qui sont disponibles pour traiter des threads.<br /><br /> DAC indique que le planificateur s'exécute sous une connexion administrateur dédiée (DAC, Dedicated Administrator Connection).<br /><br /> HOT ADDED indique que les planificateurs ont été ajoutés en réponse à un événement d'ajout d'un processeur à chaud.|  
+|status|**nvarchar(60)**|Indique l'état du planificateur. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> -EN LIGNE MASQUÉ<br />-HORS CONNEXION CACHÉE<br />-VISIBLE EN LIGNE<br />-VISIBLE HORS CONNEXION<br />-VISIBLE EN LIGNE (DAC)<br />-HOT_ADDED<br /><br /> N'accepte pas la valeur NULL.<br /><br /> Les planificateurs MASQUÉs sont utilisés pour traiter les demandes internes à [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Les planificateurs VISIBLE servent à traiter les requêtes des utilisateurs.<br /><br /> Les planificateurs OFFLINE se mappent avec des processeurs qui sont déconnectés dans le masque d'affinité et qui ne sont, par conséquent, pas utilisés pour traiter des requêtes. Les planificateurs ONLINE se mappent avec des processeurs qui sont connectés dans le masque d'affinité et qui sont disponibles pour traiter des threads.<br /><br /> DAC indique que le planificateur s'exécute sous une connexion administrateur dédiée (DAC, Dedicated Administrator Connection).<br /><br /> HOT ADDED indique que les planificateurs ont été ajoutés en réponse à un événement d'ajout d'un processeur à chaud.|  
 |is_online|**bit**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour utiliser uniquement certains des processeurs disponibles sur le serveur, cette configuration peut indiquer que certains planificateurs sont associés à des processeurs non inclus dans le masque d'affinité. Dans ce cas, cette colonne retourne la valeur 0. Cette valeur signifie que le planificateur n'est pas utilisé pour traiter des requêtes ou des lots.<br /><br /> N'accepte pas la valeur NULL.|  
 |is_idle|**bit**|1 = Le planificateur est inactif. Aucun processus de travail n'est actuellement en cours d'exécution. N'accepte pas la valeur NULL.|  
 |preemptive_switches_count|**int**|Nombre de fois où les processus de travail opérant sur ce planificateur sont passés en mode préemptif.<br /><br /> Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif.|  
@@ -60,15 +62,15 @@ ms.locfileid: "86012043"
 |memory_object_address|**varbinary (8)**|Adresse mémoire de l'objet mémoire du planificateur. Cette colonne n'accepte pas la valeur NULL.|  
 |task_memory_object_address|**varbinary (8)**|Adresse mémoire de l'objet mémoire de la tâche. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys. dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expose le quantum de planificateur utilisé par SQLOS.|  
-| total_cpu_usage_ms |**bigint**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures <br><br> PROCESSEUR total consommé par ce planificateur comme indiqué par les Workers non préemptif. N'accepte pas la valeur NULL.|
-|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Indique que la limitation basée sur l' [objectif de niveau de service](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)est toujours 0 pour les versions non-Azure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Autorise la valeur NULL.|
-|total_scheduler_delay_ms|**bigint**|**S’applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures <br><br> Le délai entre un thread de travail qui bascule et un autre qui bascule. Peut être dû au fait que les Workers préemptif retardent la planification du travail non préemptif suivant, ou en raison des threads de planification du système d’exploitation provenant d’autres processus. N'accepte pas la valeur NULL.|
-|ideal_workers_limit|**int**|**S’applique à**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures <br><br> Le nombre de Workers doit idéalement être sur le planificateur. Si les threads de travail actuels dépassent la limite en raison d’une charge de tâche déséquilibrée, une fois qu’ils sont inactifs, ils sont tronqués. N'accepte pas la valeur NULL.|
-|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+| total_cpu_usage_ms |**bigint**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et ultérieur <br><br> PROCESSEUR total consommé par ce planificateur comme indiqué par les Workers non préemptif. N'accepte pas la valeur NULL.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Indique que la limitation basée sur l' [objectif de niveau de service](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective)est toujours 0 pour les versions non-Azure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Autorise la valeur NULL.|
+|total_scheduler_delay_ms|**bigint**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et ultérieur <br><br> Le délai entre un thread de travail qui bascule et un autre qui bascule. Peut être dû au fait que les Workers préemptif retardent la planification du travail non préemptif suivant, ou en raison des threads de planification du système d’exploitation provenant d’autres processus. N'accepte pas la valeur NULL.|
+|ideal_workers_limit|**int**|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et ultérieur <br><br> Le nombre de Workers doit idéalement être sur le planificateur. Si les threads de travail actuels dépassent la limite en raison d’une charge de tâche déséquilibrée, une fois qu’ils sont inactifs, ils sont tronqués. N'accepte pas la valeur NULL.|
+|pdw_node_id|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
 ## <a name="examples"></a>Exemples  
   
@@ -136,7 +138,7 @@ active_workers_count work_queue_count
   
 -   Le planificateur `255` représentant la connexion administrateur dédiée (DAC) est associé à `3` processus de travail. Ces derniers sont affectés au démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et ne changent pas. Ils sont utilisés pour traiter les requêtes à l'aide de la connexion administrateur dédiée uniquement. Les deux tâches sur ce planificateur représentent un gestionnaire de connexions et un processus de travail inactif.  
   
--   `active_workers_count`représente tous les threads de travail qui ont des tâches associées et qui s’exécutent en mode non préemptif. Certaines tâches, comme les écouteurs de réseau, s'exécutent en mode de planification préemptive.  
+-   `active_workers_count` représente tous les threads de travail qui ont des tâches associées et qui s’exécutent en mode non préemptif. Certaines tâches, comme les écouteurs de réseau, s'exécutent en mode de planification préemptive.  
   
 -   Les planificateurs masqués ne traitent pas les demandes utilisateur standard. Le planificateur DAC constitue l'exception. Ce planificateur DAC possède un thread pour traiter les demandes.  
   

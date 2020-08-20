@@ -1,4 +1,5 @@
 ---
+description: Vue d'ensemble (objets SMO)
 title: Vue d’ensemble (SMO) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
@@ -11,11 +12,12 @@ ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ecc29d8e2fabe6c67db5e45833c45dd74d47bb3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f567277dd128095222633c0694412fd477bc623b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455529"
 ---
 # <a name="overview-smo"></a>Vue d'ensemble (objets SMO)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -77,7 +79,7 @@ ms.locfileid: "86012325"
   
  Les objets d'instance SMO forment une hiérarchie qui représente la hiérarchie d'un serveur de base de données. Au sommet de cette hiérarchie se situent les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], suivies des bases de données, puis des tables, des colonnes, des déclencheurs et ainsi de suite. S'il est logique qu'il existe une relation un-à-plusieurs entre un parent et ses enfants, comme une table constituée d'une ou plusieurs colonnes, il est alors logique que l'enfant soit représenté par une collection d'objets. Sinon, l'enfant est simplement représenté par un objet.  
   
- **Classes d'utilitaire**  
+ **Classes utilitaires**  
   
  Les classes utilitaires représentent un groupe d'objets créés explicitement pour effectuer des tâches spécifiques. Elles ont été divisées en différentes hiérarchies d'objets selon leur fonction :  
   
@@ -102,7 +104,7 @@ ms.locfileid: "86012325"
   
  L'exécution par capture vous permet de capturer des lots [!INCLUDE[tsql](../../includes/tsql-md.md)] qui devraient être exécutés. Le programmeur SMO peut ainsi différer le script, le stocker en vue de l'exécuter ultérieurement ou fournir un aperçu à l'utilisateur final. Par exemple, les instructions **create database**, **create table**et **create index** peuvent être envoyées dans un lot, puis être exécutées en trois étapes séquentielles. Cette fonctionnalité est contrôlée par l'utilisateur à l'aide de l'objet <xref:Microsoft.SqlServer.Management.Smo.Server.%23ctor%2A>.  
   
- **WMI Provider**  
+ **Fournisseur WMI**  
   
  Les objets du fournisseur WMI sont encapsulés par SMO. Le programmeur SMO dispose ainsi d'un modèle objet simple fort similaire aux classes SMO, sans qu'il ait besoin de comprendre le modèle de programmation représenté par l'espace de noms et les détails du fournisseur WMI de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le fournisseur WMI vous permet de configurer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les alias, de même que les bibliothèques réseau client et serveur.  
   

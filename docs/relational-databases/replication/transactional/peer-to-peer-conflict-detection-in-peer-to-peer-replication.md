@@ -1,4 +1,5 @@
 ---
+description: Égal à égal - Détection de conflit dans la réplication d’égal à égal
 title: Détection de conflit dans la réplication d’égal à égal | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: da4d35ec8647ba799986cc696a89718870dfb253
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: eacc75c7f2a5a5ba7993e7f3d574b749b86acd2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88455553"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>Égal à égal - Détection de conflit dans la réplication d’égal à égal
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
