@@ -1,4 +1,5 @@
 ---
+description: Variables système
 title: Variables système | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b1644491562c1d564a3df08da1b52eb69e947
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912705"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495309"
 ---
 # <a name="system-variables"></a>Variables système
 
@@ -44,11 +45,11 @@ ms.locfileid: "86912705"
 |**CreatorName**|String|Nom de la personne qui a créé le package.|  
 |**ExecutionInstanceGUID**|String|Identificateur unique de l'instance exécutée d'un package.|  
 |**FailedConfigurations**|String|Noms des configurations de package ayant échoué.|  
-|**IgnoreConfigurationsOnLoad**|Boolean|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
-|**InteractiveMode**|Boolean|Indique si le package est exécuté en mode interactif. Si un package s’exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cette propriété a la valeur **True**. Si un package s’exécute par le biais de l’utilitaire de ligne de commande **DTExec** , la propriété a la valeur **False**.|  
+|**IgnoreConfigurationsOnLoad**|Booléen|Indique si les configurations de package doivent être ignorées lors du chargement du package.|  
+|**InteractiveMode**|Booléen|Indique si le package est exécuté en mode interactif. Si un package s’exécute dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , cette propriété a la valeur **True**. Si un package s’exécute par le biais de l’utilitaire de ligne de commande **DTExec** , la propriété a la valeur **False**.|  
 |**LocaleId**|Int32|Paramètre régional utilisé par le package.|  
 |**MachineName**|String|Nom de l'ordinateur sur lequel s'exécute le package.|  
-|**OfflineMode**|Boolean|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
+|**OfflineMode**|Booléen|Indique si le package est en mode hors connexion. Le mode hors connexion n'acquiert pas de connexions à des sources de données.|  
 |**PackageID**|String|Identificateur unique du package.|  
 |**PackageName**|String|Nom du package.|  
 |**StartTime**|DateTime|Heure de début d'exécution du package.|  
@@ -83,17 +84,17 @@ ms.locfileid: "86912705"
   
 |Variable système|Type de données|Description|Gestionnaire d'événements|  
 |---------------------|---------------|-----------------|-------------------|  
-|**Annuler**|Boolean|Indique si l'exécution du gestionnaire d'événements s'arrête lorsqu'une erreur, un avertissement ou une annulation de requête se produit.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnWarning<br /><br /> Gestionnaire d'événements OnQueryCancel|  
+|**Annuler**|Booléen|Indique si l'exécution du gestionnaire d'événements s'arrête lorsqu'une erreur, un avertissement ou une annulation de requête se produit.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnWarning<br /><br /> Gestionnaire d'événements OnQueryCancel|  
 |**ErrorCode**|Int32|Identificateur de l'erreur.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnInformation<br /><br /> Gestionnaire d'événements OnWarning|  
 |**ErrorDescription**|String|Description de l'erreur.|Gestionnaire d'événements OnError<br /><br /> Gestionnaire d'événements OnInformation<br /><br /> Gestionnaire d'événements OnWarning|  
-|**ExecutionStatus**|Boolean|État de l'exécution en cours.|Gestionnaire d'événements OnExecStatusChanged|  
+|**ExecutionStatus**|Booléen|État de l'exécution en cours.|Gestionnaire d'événements OnExecStatusChanged|  
 |**ExecutionValue**|DBNull|Valeur de l'exécution.|Gestionnaire d'événements OnTaskFailed|  
 |**LocaleId**|Int32|Paramètre régional utilisé par le gestionnaire d'événements.|Tous les gestionnaires d'événements|  
 |**PercentComplete**|Int32|Pourcentage de travail terminé.|Gestionnaire d'événements OnProgress|  
 |**ProgressCountHigh**|Int32|Partie supérieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressCountLow**|Int32|Partie inférieure d'une valeur 64 bits qui indique le nombre total d'opérations traitées par l'événement OnProgress.|Gestionnaire d'événements OnProgress|  
 |**ProgressDescription**|String|Description de la progression.|Gestionnaire d'événements OnProgress|  
-|**Propagate**|Boolean|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : la valeur de la variable **Propagate** est ignorée lors de la validation du package. Si vous affectez la valeur **Propagate** à **False** dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
+|**Propagate**|Booléen|Indique si l'événement est propagé à un gestionnaire d'événements de niveau supérieur.<br /><br /> Remarque : la valeur de la variable **Propagate** est ignorée lors de la validation du package. Si vous affectez la valeur **Propagate** à **False** dans un package enfant, cela n'empêche pas la propagation d'un événement à un package parent.|Tous les gestionnaires d'événements|  
 |**SourceDescription**|String|Description de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |**SourceID**|String|Identificateur unique de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  
 |**SourceName**|String|Nom de l'exécutable dans le gestionnaire d'événements qui a déclenché l'événement.|Tous les gestionnaires d'événements|  

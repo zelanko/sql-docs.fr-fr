@@ -1,4 +1,5 @@
 ---
+description: catalog.effective_object_permissions (base de données SSISDB)
 title: catalog.effective_object_permissions (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: af72db9d78859f9065673aa145bc4b763199b298
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 4af26b86804bd8717bfd3772442980483fbd2d69
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495287"
 ---
 # <a name="catalogeffective_object_permissions-ssisdb-database"></a>catalog.effective_object_permissions (base de données SSISDB)
 
@@ -42,7 +43,7 @@ ms.locfileid: "86912671"
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Permet au principal de lire des informations considérées comme faisant partie de l'objet, telles que les propriétés. Il n'autorise pas le principal à énumérer ou à lire le contenu d'autres objets contenus dans l'objet.|Dossier, projet, environnement, opération|  
 |`2`|MODIFY|Permet au principal de modifier des informations considérées comme faisant partie de l'objet, telles que les propriétés. Il ne permet pas au principal de modifier d'autres objets contenus dans l'objet.|Dossier, projet, environnement, opération|  
-|`3`|Exécutez|Permet au principal d'exécuter tous les packages dans le projet.|Projet|  
+|`3`|Exécutez|Permet au principal d'exécuter tous les packages dans le projet.|Project|  
 |`4`|MANAGE_PERMISSIONS|Permet au principal d'affecter des autorisations aux objets.|Dossier, projet, environnement, opération|  
 |`100`|CREATE_OBJECTS|Permet au principal de créer des objets dans le dossier.|Dossier|  
 |`101`|READ_OBJECTS|Permet au principal de lire tous les objets dans le dossier.|Dossier|  

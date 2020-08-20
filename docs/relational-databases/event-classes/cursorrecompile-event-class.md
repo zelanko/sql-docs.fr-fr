@@ -1,4 +1,5 @@
 ---
+description: CursorRecompile (classe d'événements)
 title: CursorRecompile, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39da2d65e56199a78204bb5ab1cc95e07c4a7014
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 133b996f217e0435a7b8a16f680e81311bb392c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719866"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494379"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe d’événements **CursorRecompile** décrit les événements de recompilation de curseur qui interviennent dans les curseurs de l’API. Les événements de recompilation de curseur surviennent quand le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] recompile un curseur Transact-SQL en raison d’une modification de schéma.  
+   La classe d’événements **CursorRecompile** décrit les événements de recompilation de curseur qui interviennent dans les curseurs de l’API. Les événements de recompilation de curseur surviennent quand le [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] recompile un curseur Transact-SQL en raison d’une modification de schéma.  
   
  Incluez la classe d’événements **CursorRecompile** dans les traces qui enregistrent les performances des curseurs. Lorsque la classe d’événements **CursorRecompile** est incluse dans une trace, la quantité de surcharge induite dépend de la fréquence d’utilisation des curseurs sur la base de données pendant le suivi. Si les curseurs sont fortement utilisés, la trace peut dégrader notablement les performances.  
   

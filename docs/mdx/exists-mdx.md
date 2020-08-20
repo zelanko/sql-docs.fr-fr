@@ -1,4 +1,5 @@
 ---
+description: Exists (MDX)
 title: Exists (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2cef1cfb95319cbe0aff827cb251ff7e2317c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893608"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494912"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
   Retourne l'ensemble des tuples du premier jeu spécifié qui coexistent avec un ou plusieurs tuples du deuxième jeu spécifié. Cette fonction effectue manuellement ce que l'auto-existence réalise de manière automatique. Pour plus d’informations sur la fonction auto Exists, consultez [concepts clés dans MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
- Si le nom \<de groupe de mesures facultatif> est fourni, la fonction retourne des tuples qui existent avec un ou plusieurs tuples du deuxième jeu et les tuples qui ont des lignes associées dans la table de faits du groupe de mesures spécifié.  
+ Si le facultatif \<Measure Group Name> est fourni, la fonction retourne des tuples qui existent avec un ou plusieurs tuples du deuxième jeu et les tuples qui ont des lignes associées dans la table de faits du groupe de mesures spécifié.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -93,10 +94,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX &#40;&#41;MDX](../mdx/mdx-function-reference-mdx.md)   
- [Crossjoin &#40;&#41;MDX](../mdx/crossjoin-mdx.md)   
+ [Référence des fonctions MDX &#40;&#41;MDX ](../mdx/mdx-function-reference-mdx.md)   
+ [Crossjoin &#40;&#41;MDX ](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin&#41;MDX &#40;](../mdx/nonemptycrossjoin-mdx.md)   
- [&#41;MDX &#40;non vide](../mdx/nonempty-mdx.md)   
- [&#40;&#41;MDX de IsEmpty](../mdx/isempty-mdx.md)  
+ [&#41;MDX &#40;non vide ](../mdx/nonempty-mdx.md)   
+ [&#40;&#41;MDX de IsEmpty ](../mdx/isempty-mdx.md)  
   
   

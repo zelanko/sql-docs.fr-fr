@@ -1,4 +1,5 @@
 ---
+description: Tâche Réorganiser l'index (Plan de maintenance)
 title: Tâche Réorganiser l’index (Plan de maintenance) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c6615df0fafc2190eece4aa74c7bf36e57a2d80a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3af62a68c6aeb36f6527afc66744ad8c2f66947f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494167"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>Tâche Réorganiser l'index (Plan de maintenance)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Utilisez la boîte de dialogue **Tâche Réorganiser l’index** pour réordonner les pages d’index dans un ordre qui rend les recherches plus efficaces. Cette tâche utilise l'instruction `ALTER INDEX REORGANIZE` avec des bases de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+   Utilisez la boîte de dialogue **Tâche Réorganiser l’index** pour réordonner les pages d’index dans un ordre qui rend les recherches plus efficaces. Cette tâche utilise l'instruction `ALTER INDEX REORGANIZE` avec des bases de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 ## <a name="options"></a>Options  
  **Connection**  
@@ -85,10 +86,10 @@ ms.locfileid: "85715357"
  Spécifiez le mode d'authentification sur le serveur.  
   
  **Utiliser la sécurité intégrée à Windows NT**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] avec l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Permet de se connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option n'est pas disponible.  
+ Permet de se connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option n'est pas disponible.  
   
  **Nom d'utilisateur**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  

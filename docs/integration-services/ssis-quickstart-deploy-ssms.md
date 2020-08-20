@@ -1,4 +1,5 @@
 ---
+description: Déployer un projet SSIS avec SQL Server Management Studio (SSMS)
 title: Déployer un projet SSIS avec SSMS | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: quickstart
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52cd26f15dc6c6be1568bc174d0d4658e75af1dd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 57a1c38bff7d5b302de595226a74ea66ba4f80ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921906"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495468"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Déployer un projet SSIS avec SQL Server Management Studio (SSMS)
 
@@ -24,7 +25,7 @@ Ce guide de démarrage rapide montre comment utiliser SQL Server Management Stud
 
 SQL Server Management Studio est un environnement intégré pour la gestion des infrastructures SQL, de SQL Server à SQL Database. Pour plus d’informations sur SSMS, consultez [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Avant de commencer, vérifiez que vous disposez de la dernière version de SQL Server Management Studio. Pour télécharger SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 

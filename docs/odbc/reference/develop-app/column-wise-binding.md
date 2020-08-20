@@ -1,4 +1,5 @@
 ---
+description: Liaison selon les colonnes
 title: Liaison selon les colonnes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 538f225de2e08adcd7fea8a27edea35dc4b4e17f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9c2793695dce4487a58ee138a0a620f3bc05550
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494679"
 ---
 # <a name="column-wise-binding"></a>Liaison selon les colonnes
 Lors de l’utilisation d’une liaison selon les colonnes, une application lie un ou deux, ou dans certains cas, trois tableaux à chaque colonne pour laquelle les données doivent être retournées. Le premier tableau contient les valeurs de données, tandis que le second tableau contient des mémoires tampons de longueur/indicateur. Les indicateurs et les valeurs de longueur peuvent être stockés dans des mémoires tampons distinctes en affectant des valeurs différentes aux champs SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR descripteur ; Si c’est le cas, un troisième tableau est lié. Chaque tableau contient autant d’éléments qu’il y a de lignes dans l’ensemble de lignes.  

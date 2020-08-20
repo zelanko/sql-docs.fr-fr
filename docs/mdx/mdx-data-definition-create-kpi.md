@@ -1,4 +1,5 @@
 ---
+description: Définition de données MDX - CREATE KPI
 title: Instruction CREATe KPI (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1840ebe0dec014a2b768a8571249b103de6552d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68098399"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494852"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Définition de données MDX - CREATE KPI
 
@@ -58,10 +59,10 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|Expression MDX valide qui retourne un membre dans la dimension de temps. CURRENT_TIME_MEMBER définit le point de référence pour toutes les fonctions d'heure relative.|  
 |PARENT_KPI|Chaîne qui spécifie le nom de l'indicateur de performance clé parent.|  
 |CAPTION|Chaîne que l'application cliente utilise à titre de légende de l'indicateur de performance clé.|  
-|DISPLAY_FOLDER|Chaîne qui spécifie le chemin d'accès au dossier d'affichage dans lequel l'application cliente doit afficher l'indicateur de performance clé. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barre oblique\\inverse () est le séparateur de niveau. Pour fournir plusieurs dossiers d’affichage pour un membre défini, utilisez un point-virgule (;) pour séparer les dossiers|  
+|DISPLAY_FOLDER|Chaîne qui spécifie le chemin d'accès au dossier d'affichage dans lequel l'application cliente doit afficher l'indicateur de performance clé. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la barre oblique inverse ( \\ ) est le séparateur de niveau. Pour fournir plusieurs dossiers d’affichage pour un membre défini, utilisez un point-virgule (;) pour séparer les dossiers|  
 |ASSOCIATED_MEASURE_GROUP|Chaîne qui spécifie le nom du groupe de mesures auquel tous les calculs MDX doivent faire référence.|  
   
- Les valeurs des propriétés GOAL, STATUS et TREND sont des expressions MDX qui doivent être comprises entre -1 et 1. Toutefois, c'est l'application cliente qui définit la plage de valeurs réelle pour ces propriétés. Lorsque vous utilisez les outils et les clients fournis [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] par pour parcourir les indicateurs de performance clés, les valeurs inférieures à-1 sont traitées comme-1 et les valeurs supérieures à 1 sont traitées comme 1.  
+ Les valeurs des propriétés GOAL, STATUS et TREND sont des expressions MDX qui doivent être comprises entre -1 et 1. Toutefois, c'est l'application cliente qui définit la plage de valeurs réelle pour ces propriétés. Lorsque vous utilisez les outils et les clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour parcourir les indicateurs de performance clés, les valeurs inférieures à-1 sont traitées comme-1 et les valeurs supérieures à 1 sont traitées comme 1.  
   
  STATUS_GRAPHIC et TREND_GRAPHIC sont des valeurs de chaîne que l'application cliente utilise pour identifier le bon ensemble d'images à afficher. Ces chaînes définissent également le comportement de la fonction d'affichage, à savoir le nombre d'états à afficher (il s'agit généralement d'un nombre impair) et les images à utiliser pour chacun d'eux.  
   
@@ -76,19 +77,19 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 > [!NOTE]  
 >  Pour certains graphiques, comme la jauge inversée ou la flèche d'état inversée, la plage est inversée. Autrement dit, -1 signifie bon et 1 signifie mauvais.  
   
- Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], le nom du graphique d'indicateur de performance clé détermine si le graphique possède trois ou cinq états. Le tableau suivant répertorie l’utilisation, le nom et le nombre d' [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] États qui sont associés à ses graphiques Kpi.  
+ Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], le nom du graphique d'indicateur de performance clé détermine si le graphique possède trois ou cinq états. Le tableau suivant répertorie l’utilisation, le nom et le nombre d’États qui sont [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] associés à ses graphiques Kpi.  
   
 |Utilisation du graphique|Nom du graphique d'indicateur de performance clé|Nombre d'états|  
 |--------------------|-------------------------|----------------------|  
-|État|Formes|3|  
-|État|Feu de circulation|3|  
-|État|Panneaux de signalisation|3|  
-|État|Jauge|3|  
-|État|Jauge inversée|5|  
-|État|Thermomètre|3|  
-|État|Cylindre|3|  
-|État|Visages|3|  
-|État|Flèche de variance|3|  
+|Statut|Formes|3|  
+|Statut|Feu de circulation|3|  
+|Statut|Panneaux de signalisation|3|  
+|Statut|Jauge|3|  
+|Statut|Jauge inversée|5|  
+|Statut|Thermomètre|3|  
+|Statut|Cylindre|3|  
+|Statut|Visages|3|  
+|Statut|Flèche de variance|3|  
 |Tendance|Flèche standard|3|  
 |Tendance|Flèche d'état|3|  
 |Tendance|Flèche d'état inversée|5|  
@@ -96,6 +97,6 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction DROP KPI &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
- [Instructions de définition de données MDX &#40;&#41;MDX](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

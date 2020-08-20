@@ -1,4 +1,5 @@
 ---
+description: Mémoires tampons
 title: Mémoires tampons | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c49e83e12463665f86f8cc15dc595e6ba2c506f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1c82927c122197249b02a2d327364e68bd851a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306284"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494779"
 ---
 # <a name="buffers"></a>Mémoires tampons
 Une mémoire tampon est une partie de la mémoire d’application utilisée pour passer des données entre l’application et le pilote. Par exemple, les mémoires tampons d’application peuvent être associées à des colonnes de jeu de résultats, ou *liées à* celles-ci, avec **SQLBindCol**. À mesure que chaque ligne est extraite, les données sont retournées pour chaque colonne dans ces mémoires tampons. Les *mémoires tampons d’entrée* sont utilisées pour transmettre les données de l’application au pilote ; les *mémoires tampons de sortie* sont utilisées pour retourner les données du pilote à l’application.  

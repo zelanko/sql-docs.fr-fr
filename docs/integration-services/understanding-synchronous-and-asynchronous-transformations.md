@@ -1,4 +1,5 @@
 ---
+description: Présentation des transformations synchrones et asynchrones
 title: Présentation des transformations synchrones et asynchrones | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1c2748384a8ea4901a21ffa94498da5405043227
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 849f01ba00bddd67ca2de2c16b6953cff9b06c36
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913712"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495150"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Présentation des transformations synchrones et asynchrones
 
@@ -56,6 +57,6 @@ ms.locfileid: "86913712"
  [Création d’une transformation synchrone à l’aide du composant Script](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
  [Création d’une transformation asynchrone à l’aide du composant Script](../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)   
  [Développement d’un composant de transformation personnalisé à sorties synchrones](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)   
- [Développement d’un composant de transformation personnalisé avec des sorties asynchrones](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
+ [Développement d'un composant de transformation personnalisé à sorties asynchrones](../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
   
   

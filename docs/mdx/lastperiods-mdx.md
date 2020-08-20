@@ -1,4 +1,5 @@
 ---
+description: LastPeriods (MDX)
 title: LastPeriods (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60e8adf1dba453fb536f95a4fa113e16f6950f62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494882"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
 

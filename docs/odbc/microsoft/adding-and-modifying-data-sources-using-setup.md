@@ -1,4 +1,5 @@
 ---
+description: Ajout et modification de sources de données via la configuration
 title: Ajout et modification de sources de données à l’aide du programme d’installation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae76abc902e4687e5d9891871d7d5d60598b3abc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8592c01897e691cdb6702c4efdfca6054655a793
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281409"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494739"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Ajout et modification de sources de données via la configuration
 > [!IMPORTANT]  
@@ -57,7 +58,7 @@ ms.locfileid: "81281409"
   
 1.  Cliquez sur options apporter plus de spécifications sur l’installation du pilote ODBC pour Oracle :  
   
-    -   **Traduction** -cliquez sur Sélectionner pour choisir un convertisseur de données chargé. La valeur par \<défaut est aucun> de traduction.  
+    -   **Traduction** -cliquez sur Sélectionner pour choisir un convertisseur de données chargé. La valeur par défaut est \<No Translator>.  
   
     -   **Performances** -la case à cocher inclure les notes dans les fonctions de catalogue spécifie si le pilote retourne des colonnes de remarques pour le jeu de résultats [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) . Le pilote ODBC pour Oracle fournit un accès plus rapide lorsque cette valeur n’est pas définie.  
   

@@ -1,4 +1,5 @@
 ---
+description: catalog.get_project (base de données SSISDB)
 title: catalog.get_project (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: f263c9e4-a7db-4888-a458-70ae99b1f729
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c9cf4af9eb84c725b8807329713a3cd62e42558a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d26de0736fc41d3b39f0f6c3e149b044c538ba41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913006"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495386"
 ---
 # <a name="catalogget_project-ssisdb-database"></a>catalog.get_project (base de données SSISDB)
 
@@ -34,16 +35,16 @@ catalog.get_project [ @folder_name = ] folder_name , [ @project_name = ] project
   
 ## <a name="arguments"></a>Arguments  
  [ @folder_name = ] *folder_name*  
- Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)** .  
+ Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
- Nom du projet. *project_name* est de type **nvarchar(128)** .  
+ Nom du projet. *project_name* est de type **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Le flux binaire du projet est retourné sous forme de **varbinary(MAX)** . Aucun résultat n'est retourné si le dossier ou le projet est introuvable.  
+ Le flux binaire du projet est retourné sous forme de **varbinary(MAX)**. Aucun résultat n'est retourné si le dossier ou le projet est introuvable.  
   
 ## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  

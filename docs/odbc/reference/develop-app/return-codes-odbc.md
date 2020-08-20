@@ -1,4 +1,5 @@
 ---
+description: Codes de retour dans ODBC
 title: Codes de retour ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15e434025ed1201ca61371c2fb88e70143e131a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79a06ad170f747c3841c42eadef0288af6fef39a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494635"
 ---
 # <a name="return-codes-odbc"></a>Codes de retour dans ODBC
 Chaque fonction dans ODBC retourne un code, connu sous le nom de « *Code de retour »,* qui indique le succès ou l’échec global de la fonction. La logique du programme repose en général sur des codes de retour.  

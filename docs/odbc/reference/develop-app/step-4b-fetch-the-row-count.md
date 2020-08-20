@@ -1,4 +1,5 @@
 ---
+description: 'Étape 4b : Extraire le nombre de lignes'
 title: 'Étape 4b : extraire le nombre de lignes | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3af481b1-d694-446e-948d-e3a5edcad050
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 31ccbd15ae435165ea007fa9f3c0505c1dcc5aa0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1eab5e1e1bf7eba70e2d84b36349e2f982a0b14c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302960"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494602"
 ---
 # <a name="step-4b-fetch-the-row-count"></a>Étape 4b : Extraire le nombre de lignes
 L’étape suivante consiste à extraire le nombre de lignes, comme indiqué dans l’illustration suivante.  

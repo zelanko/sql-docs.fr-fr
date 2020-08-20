@@ -1,4 +1,5 @@
 ---
+description: SQL dynamique
 title: SQL dynamique | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fa4ac69602761f7c2a8d28e56db76bbfc39fc753
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: de711543748a91015a9aa0d4cb8aadb011744306
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494580"
 ---
 # <a name="dynamic-sql"></a>SQL dynamique
 Bien que SQL statique fonctionne bien dans de nombreux cas, il existe une classe d’applications dans laquelle l’accès aux données ne peut pas être déterminé à l’avance. Par exemple, supposons qu’une feuille de calcul permette à un utilisateur d’entrer une requête, que la feuille de calcul envoie ensuite au SGBD pour récupérer des données. Le contenu de cette requête ne peut évidemment pas être connu du programmeur lors de l’écriture du programme de feuille de calcul.  

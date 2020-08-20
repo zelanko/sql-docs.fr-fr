@@ -1,4 +1,5 @@
 ---
+description: Tâche Notifier l'opérateur (Plan de maintenance)
 title: Tâche Notifier l’opérateur (Plan de maintenance) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fd22da4ecbbef25ac02fb5c937307f4ccc1919a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee74eddbefbb808692ba7974a21b8c3b06fb4c4f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755731"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494165"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Tâche Notifier l'opérateur (Plan de maintenance)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Utilisez la boîte de dialogue **Tâche Notifier l’opérateur** pour ajouter une notification automatique à ce plan de maintenance. Pour utiliser cette tâche, la messagerie de base de données doit être activée et correctement configurée avec MSDB comme base de données hôte de messagerie, et vous devez disposer d’un opérateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent avec une adresse de messagerie valide.  
+   Utilisez la boîte de dialogue **Tâche Notifier l’opérateur** pour ajouter une notification automatique à ce plan de maintenance. Pour utiliser cette tâche, la messagerie de base de données doit être activée et correctement configurée avec MSDB comme base de données hôte de messagerie, et vous devez disposer d’un opérateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent avec une adresse de messagerie valide.  
   
  Cette tâche utilise la procédure stockée sp_notify_operator.  
   
@@ -63,10 +64,10 @@ ms.locfileid: "85755731"
  Spécifiez le mode d'authentification sur le serveur.  
   
  **Utiliser la sécurité intégrée à Windows NT**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] avec l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
+ Permet de se connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l’authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Utiliser un nom d'utilisateur et un mot de passe spécifiques**  
- Permet de se connecter à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option n'est pas disponible.  
+ Permet de se connecter à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette option n'est pas disponible.  
   
  **Nom d'utilisateur**  
  Fournit le nom d'utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à utiliser pour l'authentification. Cette option n'est pas disponible.  

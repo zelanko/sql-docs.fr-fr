@@ -1,4 +1,5 @@
 ---
+description: catalog.grant_permission (base de données SSISDB)
 title: catalog.grant_permission (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4eb835fb8f5d81d5c15ecc0bf3c6911c2dfb05ef
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 19ad48a806db4f1877ac71f38d71be8f0d2dadc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495406"
 ---
 # <a name="cataloggrant_permission-ssisdb-database"></a>catalog.grant_permission (base de données SSISDB)
 
@@ -85,7 +86,7 @@ Cette procédure ne peut pas être appelée par des connexions authentifiées pa
 |----------------------------|---------------------|----------------------------|-----------------------------|  
 |`1`|READ|Permet au principal de lire des informations considérées comme faisant partie de l'objet, telles que les propriétés. Il n'autorise pas le principal à énumérer ou à lire le contenu d'autres objets contenus dans l'objet.|Dossier, projet, environnement, opération|  
 |`2`|MODIFY|Permet au principal de modifier des informations considérées comme faisant partie de l'objet, telles que les propriétés. Il ne permet pas au principal de modifier d'autres objets contenus dans l'objet.|Dossier, projet, environnement, opération|  
-|`3`|Exécutez|Permet au principal d'exécuter tous les packages dans le projet.|Projet|  
+|`3`|Exécutez|Permet au principal d'exécuter tous les packages dans le projet.|Project|  
 |`4`|MANAGE_PERMISSIONS|Permet au principal d'affecter des autorisations aux objets.|Dossier, projet, environnement, opération|  
 |`100`|CREATE_OBJECTS|Permet au principal de créer des objets dans le dossier.|Dossier|  
 |`101`|READ_OBJECTS|Permet au principal de lire tous les objets dans le dossier.|Dossier|  

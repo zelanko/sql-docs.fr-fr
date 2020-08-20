@@ -1,4 +1,5 @@
 ---
+description: Gérer la collecte de données
 title: Gérer la collecte de données | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2016
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7e63c3bd8f95e8edf20b51f22ee828636f7160b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1056cfe7d80bdf97c97c344d3b9f3dfc4dc6fdcd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758134"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494642"
 ---
 # <a name="manage-data-collection"></a>Gérer la collecte de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85758134"
   
 -   [Configurer l’entrepôt de données de gestion &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)  
   
--   [Configurer les propriétés d’un collecteur de données](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)  
+-   [Configurer les propriétés d'un collecteur de données](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)  
   
 -   [Activer ou désactiver la collecte de données](../../relational-databases/data-collection/enable-or-disable-data-collection.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Sous-clés de spécification de source de données
 title: Sous-clés de spécification de source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 281377c307f3f3750e87bf5dc988beb7660067af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fabfd07779f74945bf647d20075de0cc057710b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494564"
 ---
 # <a name="data-source-specification-subkeys"></a>Sous-clés de spécification de source de données
 Chaque source de données figurant dans la sous-clé de sources de données ODBC possède sa propre sous-clé. Cette sous-clé porte le même nom que la valeur correspondante dans la sous-clé de sources de données ODBC. Les valeurs sous cette sous-clé doivent répertorier la DLL du pilote et peuvent répertorier une description de la source de données. Si le pilote prend en charge les traducteurs, les valeurs peuvent répertorier le nom d’un convertisseur par défaut, la DLL de traduction par défaut et l’option de traduction par défaut. Les valeurs peuvent également répertorier d’autres informations requises par le pilote pour la connexion à la source de données. Par exemple, le pilote peut nécessiter un nom de serveur, un nom de base de données ou un nom de schéma.  
@@ -28,7 +29,7 @@ Chaque source de données figurant dans la sous-clé de sources de données ODBC
   
 |Nom|Type de données|Données|  
 |----------|---------------|----------|  
-|Description|REG_SZ|*descriptive*|  
+|Description|REG_SZ|*description*|  
 |Pilote|REG_SZ|*Driver-DLL-Path*|  
 |TranslationDLL|REG_SZ|*Traducteur-DLL-chemin*|  
 |TranslationName|REG_SZ|*Traducteur-nom*|  

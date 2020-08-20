@@ -1,4 +1,5 @@
 ---
+description: Classe d'événements CursorImplicitConversion
 title: CursorImplicitConversion, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,16 +13,16 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f10d8be98d0eda99da5873f6b8e4799d64d01bb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b7821fed8b960d98c2ef070ef21103b0d727207
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88494431"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>Classe d'événements CursorImplicitConversion
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe d’événements **CursorImplicitConversion** décrit des événements de conversions implicites de curseur qui se produisent dans les interfaces de programmation d’applications (API) ou les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] . Les événements de conversions implicites de curseur se produisent lorsque [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] exécute une instruction Transact-SQL non prise en charge par les curseurs côté serveur du type demandé. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] renvoie une erreur indiquant que le type du curseur a changé.  
+   La classe d’événements **CursorImplicitConversion** décrit des événements de conversions implicites de curseur qui se produisent dans les interfaces de programmation d’applications (API) ou les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les événements de conversions implicites de curseur se produisent lorsque [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] exécute une instruction Transact-SQL non prise en charge par les curseurs côté serveur du type demandé. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] renvoie une erreur indiquant que le type du curseur a changé.  
   
  La classe d’événements **CursorImplicitConversion** s’intègre aux traces chargées d’enregistrer les performances des curseurs.  
   
