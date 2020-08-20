@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setevent (Transact-SQL)
 title: sp_trace_setevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f96efdec6878691c4c3b3a3efbeb1cd2d6324f3d
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 9f176957bb975ee08ac6ef508a187b189a6123b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472665"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480957"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,9 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @traceid = ] trace_id`ID de la trace à modifier. *trace_id* est de **type int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace.  
+`[ @traceid = ] trace_id` ID de la trace à modifier. *trace_id* est de **type int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace.  
   
-`[ @eventid = ] event_id`ID de l’événement à activer. *event_id* est de **type int**, sans valeur par défaut.  
+`[ @eventid = ] event_id` ID de l’événement à activer. *event_id* est de **type int**, sans valeur par défaut.  
   
  Ce tableau répertorie les événements qui peuvent être ajoutés ou supprimés d'une trace.  
   
@@ -236,7 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Indique que SQL Server n'a pas pu produire un plan d'exécution pour une requête ou un lot qui contenait un repère de plan. SQL Server a tenté de générer un plan d'exécution pour cette requête ou ce lot sans appliquer le repère de plan. Un repère de plan non valide peut être à l'origine de ce problème. Vous pouvez valider le repère de plan à l'aide de la fonction système sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
-`[ @columnid = ] column_id`ID de la colonne à ajouter pour l’événement. *column_id* est de **type int**, sans valeur par défaut.  
+`[ @columnid = ] column_id` ID de la colonne à ajouter pour l’événement. *column_id* est de **type int**, sans valeur par défaut.  
   
  Le tableau suivant répertorie les colonnes qui peuvent être ajoutées pour un événement.  
   
@@ -302,7 +303,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |58|**OwnerID**|Type de l'objet qui possède le verrou. Pour les événements de verrou uniquement.|  
 |59|**ParentName**|Nom du schéma dans lequel se trouve l'objet.|  
 |60|**IsSystem**|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> **1** = système<br /><br /> **0** = utilisateur.|  
-|61|**Décalage**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|  
+|61|**Offset**|Décalage de départ de l'instruction dans la procédure stockée ou le lot.|  
 |62|**SourceDatabaseID**|ID de la base de données dans laquelle existe la source de l'objet.|  
 |63|**SqlHandle**|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être passée à **sys. dm_exec_sql_text ()** pour récupérer le texte SQL associé.|  
 |64|**SessionLoginName**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de **Login1** et que vous exécutez une instruction en tant que **Login2**, **SessionLoginName** affiche **Login1**, tandis que **LoginName** affiche **Login2**. Cette colonne de données affiche les noms de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|  
@@ -316,7 +317,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Le tableau suivant illustre l’interaction entre ** \@ on** et ** \@ ColumnID**.  
   
-|\@sur|\@columnid|Résultat|  
+|\@sur|\@columnid|Résultats|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|Événement activé (ON).<br /><br /> Toutes les colonnes sont effacées.|  
 ||NOT NULL|La colonne est activée (ON) pour l'événement spécifié.|  
@@ -338,7 +339,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|Mémoire insuffisante. Renvoyé lorsqu'il n'y a pas assez de mémoire pour exécuter l'action spécifiée.|  
 |16|La fonction n'est pas valide pour cette trace.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_trace_setevent** effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues disponibles dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilisez **sp_trace_setevent** à la place de ce qui suit :  
   
 -   **xp_trace_addnewqueue**  
@@ -358,7 +359,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>Voir aussi  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Informations de référence sur la classe d’événements SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Trace SQL](../../relational-databases/sql-trace/sql-trace.md)  

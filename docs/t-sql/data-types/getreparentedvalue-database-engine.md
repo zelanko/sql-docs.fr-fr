@@ -1,4 +1,5 @@
 ---
+description: GetReparentedValue (moteur de base de données)
 title: GetReparentedValue (moteur de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5a1b6700c10a73a2b3f0ab59dbad7f0a5d2c435c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: b0381cc90ff6a69c8d8cd91d9ce141e8a13707c4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479877"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (moteur de base de données)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -55,7 +56,7 @@ Type **hierarchyid** qui représente le nœud. Remplacez la section _oldRoot_ du
   
 **Type de retour CLR : SqlHierarchyId**
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Utilisé pour modifier l’arborescence en déplaçant des nœuds de _oldRoot_ vers _newRoot_. GetReparentedValue est utilisé pour déplacer un nœud de hiérarchie vers un nouvel emplacement de la hiérarchie. Le type de données **hierarchyid** représente mais n’applique pas la structure hiérarchique. Les utilisateurs doivent s'assurer que la structure hierarchyid convient au nouvel emplacement. Un index unique sur le type de données **hierarchyid** peut éviter la duplication des entrées. Pour obtenir un exemple de déplacement d’une sous-arborescence entière, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Exemples  

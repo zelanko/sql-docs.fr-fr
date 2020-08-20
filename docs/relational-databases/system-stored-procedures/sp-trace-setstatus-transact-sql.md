@@ -1,4 +1,5 @@
 ---
+description: sp_trace_setstatus (Transact-SQL)
 title: sp_trace_setstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16c47007b5b6b2d31f4cc575e9ad2b8b50526a4a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 464bf489f8e0d62ea0096b917b29d1bcc099c811
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480926"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85891406"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt des événements étendus.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @traceid = ] trace_id`ID de la trace à modifier. *trace_id* est de **type int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace. Pour plus d’informations sur la récupération des *trace_id*, consultez [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+`[ @traceid = ] trace_id` ID de la trace à modifier. *trace_id* est de **type int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur pour identifier, modifier et contrôler la trace. Pour plus d’informations sur la récupération des *trace_id*, consultez [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
-`[ @status = ] status`Spécifie l’action à implémenter sur la trace. *Status* est de **type int**, sans valeur par défaut.  
+`[ @status = ] status` Spécifie l’action à implémenter sur la trace. *Status* est de **type int**, sans valeur par défaut.  
   
  Le tableau ci-après répertorie les états qui peuvent être spécifiés.  
   
@@ -62,7 +63,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 |Code de retour|Description|  
 |-----------------|-----------------|  
-|**0**|Aucune erreur.|  
+|**0**|Pas d'erreur.|  
 |**1**|Erreur inconnue.|  
 |**8**|L'état spécifié n'est pas valide.|  
 |**9**|Le descripteur de trace spécifié n'est pas valide.|  
@@ -70,7 +71,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  Si la trace est déjà dans l’état spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne **0**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les paramètres de toutes les procédures stockées trace SQL (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
   
  Pour obtenir un exemple d’utilisation de procédures stockées de trace, consultez [Créer une trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  

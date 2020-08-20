@@ -1,4 +1,5 @@
 ---
+description: MSqreader_history (Transact-SQL)
 title: MSqreader_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8ee889df3e29f486c12393870858fa0af2ea6546
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 64e6041c37c70359c645f1a0f6027503b185772c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480781"
 ---
 # <a name="msqreader_history-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "85889551"
 |**transaction_status**|**int**|État de la transaction.|  
 |**transactions_processed**|**int**|Nombre total de transactions traitées pendant la session.|  
 |**commands_processed**|**int**|Nombre total de commandes traitées pendant la session.|  
-|**delivery_rate**|**float (53)**|Nombre moyen de commandes transmises par seconde.|  
-|**transaction_rate**|**float (53)**|Taux des transactions traitées.|  
+|**delivery_rate**|**float(53)**|Nombre moyen de commandes transmises par seconde.|  
+|**transaction_rate**|**float(53)**|Taux des transactions traitées.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**SubscriberDB**|**sysname**|Nom de la base de données d’abonnement.|  
 |**error_id**|**int**|Si la valeur est différente de zéro, le nombre représente un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message d’erreur.|  
 |**timestamp**|**timestamp**|Colonne timestamp de cette table.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

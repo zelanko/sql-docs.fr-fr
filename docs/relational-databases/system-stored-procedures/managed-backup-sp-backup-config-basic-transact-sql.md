@@ -1,4 +1,5 @@
 ---
+description: managed_backup.sp_backup_config_basic (Transact-SQL)
 title: managed_backup. sp_backup_config_basic (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67ed480e1d34e688413cd7242bd25501dcd3074a
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 90ca851e5056b5c592b5cab67fc695f598b67ed1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481671"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86052935"
 > [!NOTE]  
 >  Cette procédure peut être appelée seule pour créer une configuration de sauvegarde managée de base. Toutefois, si vous envisagez d’ajouter des fonctionnalités avancées ou un calendrier personnalisé, commencez par configurer ces paramètres à l’aide de [managed_backup. sp_backup_config_advanced &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md) et [managed_backup. sp_backup_config_schedule &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md) avant d’activer la sauvegarde managée avec cette procédure.  
    
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_config_basic
     ,[@retention_days = ] 'retention_period_in_days'    ,[@credential_name = ] 'sql_credential_name'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a> Arguments  
  @enable_backup  
  Activez ou désactivez la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la base de données spécifiée. @enable_backupEst un **bit**. Paramètre requis lors de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] la configuration de pour la première instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si vous modifiez une configuration existante [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , ce paramètre est facultatif. Dans ce cas, toutes les valeurs de configuration non spécifiées conservent leurs valeurs existantes.  
   
@@ -61,7 +63,7 @@ EXEC managed_backup.sp_backup_config_basic
  Période de rétention en jours des fichiers de sauvegarde. @storage_urlEst de type int. Il s’agit d’un paramètre obligatoire quand vous configurez [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] pour la première fois sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lors de la modification de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] configuration, ce paramètre est facultatif. S'il n'est pas spécifié, les valeurs de configuration existantes sont retenues.  
   
  @credential_name  
- Nom des informations d’identification SQL utilisées pour l’authentification auprès du compte de stockage Azure. @credentail_nameest de **type sysname**. Lorsque cette valeur est spécifiée, la sauvegarde est stockée dans un objet blob de pages. Si ce paramètre a la valeur NULL, la sauvegarde est stockée en tant qu’objet blob de blocs. La sauvegarde vers l’objet blob de pages est dépréciée. il est donc préférable d’utiliser la nouvelle fonctionnalité de sauvegarde des objets BLOB de blocs. Lorsqu'il est utilisé pour modifier la configuration de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], ce paramètre est facultatif. S’il n’est pas spécifié, les valeurs de configuration existantes sont conservées.  
+ Nom des informations d’identification SQL utilisées pour l’authentification auprès du compte de stockage Azure. @credentail_name est de **type sysname**. Lorsque cette valeur est spécifiée, la sauvegarde est stockée dans un objet blob de pages. Si ce paramètre a la valeur NULL, la sauvegarde est stockée en tant qu’objet blob de blocs. La sauvegarde vers l’objet blob de pages est dépréciée. il est donc préférable d’utiliser la nouvelle fonctionnalité de sauvegarde des objets BLOB de blocs. Lorsqu'il est utilisé pour modifier la configuration de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], ce paramètre est facultatif. S’il n’est pas spécifié, les valeurs de configuration existantes sont conservées.  
   
 > [!WARNING]
 >  Le paramètre ** \@ credential_name** n’est pas pris en charge pour l’instant. Seule la sauvegarde sur un objet blob de blocs est prise en charge, ce qui requiert la valeur NULL pour ce paramètre.  

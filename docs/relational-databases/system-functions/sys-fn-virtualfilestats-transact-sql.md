@@ -1,4 +1,5 @@
 ---
+description: sys.fn_virtualfilestats (Transact-SQL)
 title: sys. fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
@@ -21,19 +22,19 @@ ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b805e9db3c9a5472f78cffd24624cf0a26a463dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fedf4b7412578bb73a717d1646f29ac1471b14ef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481788"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne des statistiques sur les entrées/sorties (E/S) des fichiers de base de données, notamment sur les fichiers journaux. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ces informations sont également disponibles à partir de la vue de gestion dynamique [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) .  
 
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +55,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|ID de la base de données.|  
-|**Combinaison**|**smallint**|ID de fichier.|  
+|**FileId**|**smallint**|ID de fichier.|  
 |**Confirmé**|**bigint**|Horodateur de prélèvement des données de base de données **int** dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] . |  
 |**NumberReads**|**bigint**|Nombre de lectures effectuées sur le fichier.|  
 |**BytesRead**|**bigint**|Nombre d'octets lus sur le fichier|  
@@ -66,7 +67,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**FileHandle**|**bigint**|Valeur du handle de fichier.|  
 |**BytesOnDisk**|**bigint**|Taille physique du fichier sur le disque (en octets).<br /><br /> Pour les fichiers de base de données, il s’agit de la même valeur que la **taille** dans **sys. database_files**, mais est exprimé en octets plutôt que sous forme de pages.<br /><br /> Dans le cas des fichiers partiellement alloués d'instantané de base de données, il s'agit de l'espace qu'utilise le système d'exploitation pour ceux-ci.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **fn_virtualfilestats** est une fonction table système qui fournit des informations statistiques, telles que le nombre total d’e/s effectuées sur un fichier. Cette fonction vous permet d'enregistrer et de suivre la durée d'attente de l'utilisateur avant de pouvoir lire ou écrire dans un fichier. Cette fonction permet également d'identifier les fichiers dont l'activité est intense au niveau des entrées/sorties (E/S).  
   
 ## <a name="permissions"></a>Autorisations  
@@ -104,7 +105,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
  [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

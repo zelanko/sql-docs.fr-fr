@@ -1,4 +1,5 @@
 ---
+description: sp_trace_generateevent (Transact-SQL)
 title: sp_trace_generateevent (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 00952b8059aed7325fdeab449bbb29e302a0373f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ebb89cf26de4d5f9dd8020c71d0870f038242b98
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891423"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480999"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85891423"
 >**Remarque :**  Cette procédure stockée n’est **pas** déconseillée. Toutes les autres procédures stockées liées à la trace sont déconseillées.  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,23 +45,23 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @eventid = ] event_id`ID de l’événement à activer. *event_id* est de **type int**, sans valeur par défaut. L’ID doit être l’un des numéros d’événements compris entre 82 et 91, qui représentent des événements définis par l’utilisateur tels que définis avec [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` ID de l’événement à activer. *event_id* est de **type int**, sans valeur par défaut. L’ID doit être l’un des numéros d’événements compris entre 82 et 91, qui représentent des événements définis par l’utilisateur tels que définis avec [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
-`[ @userinfo = ] 'user_info'`Chaîne facultative définie par l’utilisateur qui identifie la raison de l’événement. *user_info* est de type **nvarchar (128)**, avec NULL comme valeur par défaut.  
+`[ @userinfo = ] 'user_info'` Chaîne facultative définie par l’utilisateur qui identifie la raison de l’événement. *user_info* est de type **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
-`[ @userdata = ] user_data`Données facultatives spécifiées par l’utilisateur pour l’événement. *user_data* est de type **varbinary (8000)**, avec NULL comme valeur par défaut.  
+`[ @userdata = ] user_data` Données facultatives spécifiées par l’utilisateur pour l’événement. *user_data* est de type **varbinary (8000)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  Le tableau suivant décrit les valeurs de code que les utilisateurs peuvent recevoir à la fin de l'exécution de la procédure stockée.  
   
 |Code de retour|Description|  
 |-----------------|-----------------|  
-|**0**|Aucune erreur.|  
+|**0**|Pas d'erreur.|  
 |**1**|Erreur inconnue.|  
 |**3**|L'événement spécifié n'est pas valide. L'événement peut ne pas exister ou être inapproprié pour la procédure stockée.|  
 |**13**|Mémoire insuffisante. Renvoyé lorsqu'il n'y a pas assez de mémoire pour exécuter l'action spécifiée.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_trace_generateevent** effectue un grand nombre des actions précédemment exécutées par les procédures stockées étendues **xp_trace_ \* ** . Utilisez **sp_trace_generateevent** au lieu de **xp_trace_generate_event**.  
   
  Seuls les numéros d’identification des événements définis par l’utilisateur peuvent être utilisés avec **sp_trace_generateevent**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur si d'autres numéros d'identification des événements sont utilisés.  

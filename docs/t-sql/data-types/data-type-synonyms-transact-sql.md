@@ -1,4 +1,5 @@
 ---
+description: Synonymes des types de données (Transact-SQL)
 title: Synonymes des types de données (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/23/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a9e988529cc5a59786504be8566e55a4449a5ee6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f689cdae7253c43ca39c06dc09953c4db02d0def
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85732863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479937"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Synonymes des types de données (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,17 +35,17 @@ Les synonymes des types de données sont inclus dans [!INCLUDE[ssNoVersion](../.
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(** _n_ **)**|**char(n)**|  
-|**character varying(** _n_ **)**|**varchar(n)**|  
+|**character(**_n_**)**|**char(n)**|  
+|**character varying(**_n_**)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
 |**float**[ **(** _n_ **)** ] for _n_ = 1-7|**real**|  
 |**float**[ **(** _n_ **)** ] for _n_ = 8-15|**float**|  
-|**entier**|**int**|  
-|**national character(** _n_ **)**|**nchar(n)**|  
-|**national char(** _n_ **)**|**nchar(n)**|  
-|**national character varying(** _n_ **)**|**nvarchar(n)**|  
-|**national char varying(** _n_ **)**|**nvarchar(n)**|  
+|**integer**|**int**|  
+|**national character(**_n_**)**|**nchar(n)**|  
+|**national char(**_n_**)**|**nchar(n)**|  
+|**national character varying(**_n_**)**|**nvarchar(n)**|  
+|**national char varying(**_n_**)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
@@ -62,7 +63,7 @@ Vous pouvez, par exemple, créer une table en spécifiant `national character va
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol` reçoit un type de données **nvarchar(10)** et toutes les fonctions de métadonnées ultérieures signalent la colonne comme étant **nvarchar(10)** . Les fonctions de métadonnées ne les signaleront jamais comme colonne **national character varying(10)** .
+`VarCharCol` reçoit un type de données **nvarchar(10)** et toutes les fonctions de métadonnées ultérieures signalent la colonne comme étant **nvarchar(10)**. Les fonctions de métadonnées ne les signaleront jamais comme colonne **national character varying(10)**.
   
 ## <a name="see-also"></a>Voir aussi
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

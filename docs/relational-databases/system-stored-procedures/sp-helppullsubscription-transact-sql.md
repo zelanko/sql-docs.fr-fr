@@ -1,4 +1,5 @@
 ---
+description: sp_helppullsubscription (Transact-SQL)
 title: sp_helppullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3b12ffb31836bfde3cb29cf240dbfc5d9da66eac
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 163cd14235fd5364f42c8e9a722341c96a03290f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481157"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Affiche des informations relatives à un ou plusieurs abonnements de l'Abonné. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur distant. *Publisher* est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations pour tous les serveurs de publication.  
+`[ @publisher = ] 'publisher'` Nom du serveur distant. *Publisher* est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations pour tous les serveurs de publication.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les bases de données du serveur de publication.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les bases de données du serveur de publication.  
   
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les publications. Si ce paramètre est égal à ALL, seuls les abonnements par extraction avec independent_agent = **0** sont retournés.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les publications. Si ce paramètre est égal à ALL, seuls les abonnements par extraction avec independent_agent = **0** sont retournés.  
   
-`[ @show_push = ] 'show_push'`Indique si tous les abonnements par envoi de notification doivent être retournés. *show_push*est de type **nvarchar (5)**, avec false comme valeur par défaut, qui ne retourne pas d’abonnements par envoi de notification.  
+`[ @show_push = ] 'show_push'` Indique si tous les abonnements par envoi de notification doivent être retournés. *show_push*est de type **nvarchar (5)**, avec false comme valeur par défaut, qui ne retourne pas d’abonnements par envoi de notification.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -96,7 +97,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helppullsubscription** est utilisé dans la réplication transactionnelle et d’instantané.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: '&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)'
 title: '@@LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 09/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: aa8f92f7820954a6bc59e3843f2ba62f80ffe9b0
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9e52cf67e220c6ff9a1b15b837ad037e2be83679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479637"
 ---
 # <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,9 +44,9 @@ ms.locfileid: "87110881"
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="return-types"></a>Types de retour
- **entier**  
+ **integer**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  SET LOCK_TIMEOUT permet à une application de définir le délai maximal pendant lequel une instruction doit attendre une ressource bloquée. Si l'attente d'une instruction dépasse la valeur du paramètre LOCK_TIMEOUT, l'instruction bloquée est automatiquement annulée, et un message d'erreur est renvoyé à l'application.  
   
  @@LOCK_TIMEOUT renvoie la valeur -1 si la fonction SET LOCK_TIMEOUT n’a pas encore été exécutée au cours de la session actuelle.  

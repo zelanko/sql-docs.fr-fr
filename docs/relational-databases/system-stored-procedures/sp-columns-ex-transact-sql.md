@@ -1,4 +1,5 @@
 ---
+description: sp_columns_ex (Transact-SQL)
 title: sp_columns_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77608294b06025d5c265e67f71f9b0b228732729
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 48e8146386cdbeb3ea88ecfd5f23027537c048c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871108"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481453"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie les informations de colonne, à raison d'une ligne par colonne, pour les tables du serveur lié spécifiées. **sp_columns_ex** retourne les informations de colonne uniquement pour la colonne spécifique si la *colonne* est spécifiée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,17 +45,17 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_server = ] 'table_server'`Nom du serveur lié pour lequel les informations de colonne doivent être retournées. *table_server* est de **type sysname**, sans valeur par défaut.  
+`[ @table_server = ] 'table_server'` Nom du serveur lié pour lequel les informations de colonne doivent être retournées. *table_server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @table_name = ] 'table_name'`Nom de la table pour laquelle les informations de colonne doivent être retournées. *table_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_name = ] 'table_name'` Nom de la table pour laquelle les informations de colonne doivent être retournées. *table_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @table_schema = ] 'table_schema'`Nom de schéma de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_SCHEMA* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_schema = ] 'table_schema'` Nom de schéma de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_SCHEMA* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @table_catalog = ] 'table_catalog'`Nom du catalogue de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_CATALOG* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_catalog = ] 'table_catalog'` Nom du catalogue de la table pour laquelle les informations de colonne doivent être retournées. *TABLE_CATALOG* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @column_name = ] 'column'`Nom de la colonne de base de données pour laquelle des informations doivent être fournies. *Column* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @column_name = ] 'column'` Nom de la colonne de base de données pour laquelle des informations doivent être fournies. *Column* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @ODBCVer = ] 'ODBCVer'`Est la version de ODBC en cours d’utilisation. *ODBCVer* est de **type int**, avec 2 comme valeur par défaut. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Consultez la spécification ODBC SQLColumns pour connaître les différences de comportement entre les versions 2 et 3.  
+`[ @ODBCVer = ] 'ODBCVer'` Est la version de ODBC en cours d’utilisation. *ODBCVer* est de **type int**, avec 2 comme valeur par défaut. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Consultez la spécification ODBC SQLColumns pour connaître les différences de comportement entre les versions 2 et 3.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  None  
@@ -85,7 +86,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  Pour plus d'informations, consultez la documentation de Microsoft ODBC.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_columns_ex** est exécuté en interrogeant l’ensemble de lignes COLUMNS de l’interface **IDBSchemaRowset** du fournisseur OLE DB correspondant à *table_server*. Les paramètres *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*et *Column* sont passés à cette interface pour limiter les lignes retournées.  
   
  **sp_columns_ex** retourne un jeu de résultats vide si le fournisseur de OLE DB du serveur lié spécifié ne prend pas en charge l’ensemble de lignes COLUMNS de l’interface **IDBSchemaRowset** .  
@@ -93,7 +94,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_columns_ex** suit la configuration requise pour les identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Exemples  

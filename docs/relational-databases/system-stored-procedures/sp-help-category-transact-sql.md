@@ -1,4 +1,5 @@
 ---
+description: sp_help_category (Transact-SQL)
 title: sp_help_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0db25b095536c06e03c87b3bc21dacc5f8c7d0f9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901521"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481256"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fournit des informations sur les classes de travaux, d'alertes ou d'opérateurs spécifiées.  
    
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'`Classe sur laquelle des informations sont demandées. la classe est de *type* **varchar (8)**, avec **Job**comme valeur par défaut. la *classe* peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'` Classe sur laquelle des informations sont demandées. la classe est de *type* **varchar (8)**, avec **Job**comme valeur par défaut. la *classe* peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -50,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**NOTIFICATION**|Fournit des informations sur une catégorie d'alertes.|  
 |**AND**|Fournit des informations sur une catégorie d'opérateurs.|  
   
-`[ @type = ] 'type'`Type de catégorie pour laquelle les informations sont demandées. le *type* est **varchar (12)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Type de catégorie pour laquelle les informations sont demandées. le *type* est **varchar (12)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -58,9 +59,9 @@ sp_help_category [ [ @class = ] 'class' ]
 |**MULTISERVER**|Catégorie de travaux multiserveur.|  
 |**NONE**|Catégorie pour une classe autre que **Job**.|  
   
-`[ @name = ] 'name'`Nom de la catégorie pour laquelle les informations sont demandées. *Name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @name = ] 'name'` Nom de la catégorie pour laquelle les informations sont demandées. *Name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @suffix = ] suffix`Spécifie si la colonne **category_type** dans le jeu de résultats est un ID ou un nom. le *suffixe* est de **bit**, avec **0**comme valeur par défaut. **1** affiche la **category_type** sous la forme d’un nom et **0** l’affiche comme ID.  
+`[ @suffix = ] suffix` Spécifie si la colonne **category_type** dans le jeu de résultats est un ID ou un nom. le *suffixe* est de **bit**, avec **0**comme valeur par défaut. **1** affiche la **category_type** sous la forme d’un nom et **0** l’affiche comme ID.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -82,7 +83,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Type de catégorie : Un serveur **local**, **plusieurs serveurs**ou **aucun**|  
 |**name**|**sysname**|Nom de la catégorie|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_category** doit être exécuté à partir de la base de données **msdb** .  
   
  Si aucun paramètre n'est spécifié, le jeu de résultats fournit des informations sur toutes les catégories de travaux.  

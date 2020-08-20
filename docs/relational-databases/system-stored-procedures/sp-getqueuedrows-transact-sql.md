@@ -1,4 +1,5 @@
 ---
+description: sp_getqueuedrows (Transact-SQL)
 title: sp_getqueuedrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57e4551743a535c78e33b4682f8ea19132bc75a9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6948964a224d0dfe1d36324971608e649ec45d4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881587"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481255"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Extrait, de l'Abonné, les lignes pour lesquelles il existe des mises à jour dans la file d'attente. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,11 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tablename = ] 'tablename'`Nom de la table. *TableName* est de **type sysname**, sans valeur par défaut. La table doit faire partie d'un abonnement en file d'attente.  
+`[ @tablename = ] 'tablename'` Nom de la table. *TableName* est de **type sysname**, sans valeur par défaut. La table doit faire partie d'un abonnement en file d'attente.  
   
-`[ @owner = ] 'owner'`Est le propriétaire de l’abonnement. *owner* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @owner = ] 'owner'` Est le propriétaire de l’abonnement. *owner* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @tranid = ] 'transaction_id'`Autorise le filtrage de la sortie par l’ID de transaction. *transaction_id* est de type **nvarchar (70)**, avec NULL comme valeur par défaut. Si cet argument est défini, l'identificateur de transaction associé à la commande placée en file d'attente est affiché. Si la valeur est NULL, toutes les commandes figurant dans la file d'attente sont affichées.  
+`[ @tranid = ] 'transaction_id'` Autorise le filtrage de la sortie par l’ID de transaction. *transaction_id* est de type **nvarchar (70)**, avec NULL comme valeur par défaut. Si cet argument est défini, l'identificateur de transaction associé à la commande placée en file d'attente est affiché. Si la valeur est NULL, toutes les commandes figurant dans la file d'attente sont affichées.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -58,7 +59,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |**table column1...n**||Valeur de chaque colonne de la table spécifiée dans *TableName*.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Cette colonne permet d'assurer le suivi des modifications apportées aux données répliquées et de détecter les conflits sur le serveur de publication. Cette colonne est automatiquement ajoutée à la table.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_getqueuedrows** est utilisé sur les abonnés participant à la mise à jour en attente.  
   
  **sp_getqueuedrows** recherche les lignes d’une table donnée sur une base de données d’abonnement qui ont participé à une mise à jour en file d’attente, mais qui n’ont pas encore été résolues par l’agent de lecture de la file d’attente.  
@@ -67,7 +68,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
  **sp_getqueuedrows** nécessite des autorisations SELECT sur la table spécifiée dans *TableName*.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Abonnements pouvant être mis à jour pour la réplication transactionnelle](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Détection et résolution des conflits de mise à jour en attente](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

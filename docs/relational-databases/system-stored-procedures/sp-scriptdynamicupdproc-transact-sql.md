@@ -1,4 +1,5 @@
 ---
+description: sp_scriptdynamicupdproc (Transact-SQL)
 title: sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c6d6639f22963c1b058a1b9a20ed5758c00c417
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 381e2b7ad6c8b463cb410b6d40a6cd6c6b3addec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481123"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Génère l’instruction CREATE PROCEDURE qui crée une procédure stockée de mise à jour dynamique. L'instruction UPDATE dans la procédure stockée personnalisée est créée dynamiquement en fonction de la syntaxe MCALL qui indique les colonnes devant être modifiées. Utilisez cette procédure stockée si le nombre d’index dans la table d’abonnement augmente et si le nombre de colonnes modifiées est limité. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,12 +38,12 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @artid = ] artid`Est l’ID de l’article. *artid* est de **type int**, sans valeur par défaut.  
+`[ @artid = ] artid` Est l’ID de l’article. *artid* est de **type int**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne un jeu de résultats qui se compose d’une seule colonne **nvarchar (4000)** . L'ensemble de résultats forme l’instruction CREATE PROCEDURE complète qui permet de créer la procédure stockée personnalisée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_scriptdynamicupdproc** est utilisé dans la réplication transactionnelle. La logique de script MCALL par défaut inclut toutes les colonnes dans l'instruction UPDATE et utilise une image bitmap pour déterminer les colonnes qui ont changé. Si une colonne n'a pas changé, elle est rétablie, ce qui ne cause généralement aucun problème. Si la colonne est indexée, un traitement supplémentaire intervient. L'approche dynamique inclut uniquement les colonnes qui ont changé, ce qui fournit une chaîne UPDATE optimale. Toutefois, un traitement supplémentaire a lieu pendant la phase d’exécution lors de la génération de l’instruction UPDATE dynamique. Nous vous recommandons de tester les approches dynamique et statique, puis d'opter pour la meilleure solution.  
   
 ## <a name="permissions"></a>Autorisations  

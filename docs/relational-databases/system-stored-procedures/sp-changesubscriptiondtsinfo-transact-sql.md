@@ -1,4 +1,5 @@
 ---
+description: sp_changesubscriptiondtsinfo (Transact-SQL)
 title: sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d721bf729d99a60a32693ddbe609cfcee01ba701
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 296eb0e4d6cb9aa838c32851d29125358bde0e29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771362"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481458"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie les propriétés de package DTS (Data Transformation Services) d'un abonnement. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,21 +41,21 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id`ID du travail de l’Agent de distribution pour l’abonnement par émission de type push. *job_id* est de type **varbinary (16)**, sans valeur par défaut. Pour Rechercher l’ID de tâche de distribution, exécutez **sp_helpsubscription** ou **sp_helppullsubscription**.  
+`[ @job_id = ] job_id` ID du travail de l’Agent de distribution pour l’abonnement par émission de type push. *job_id* est de type **varbinary (16)**, sans valeur par défaut. Pour Rechercher l’ID de tâche de distribution, exécutez **sp_helpsubscription** ou **sp_helppullsubscription**.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Spécifie le nom du package DTS. *dts_package_name* est de **type sysname**, avec NULL comme valeur par défaut. Par exemple, pour spécifier un package nommé **DTSPub_Package**, vous devez spécifier `@dts_package_name = N'DTSPub_Package'` .  
+`[ @dts_package_name = ] 'dts_package_name'` Spécifie le nom du package DTS. *dts_package_name* est de **type sysname**, avec NULL comme valeur par défaut. Par exemple, pour spécifier un package nommé **DTSPub_Package**, vous devez spécifier `@dts_package_name = N'DTSPub_Package'` .  
   
-`[ @dts_package_password = ] 'dts_package_password'`Spécifie le mot de passe du package. *dts_package_password* est de **type sysname** , avec NULL comme valeur par défaut, qui spécifie que la propriété de mot de passe doit rester inchangée.  
+`[ @dts_package_password = ] 'dts_package_password'` Spécifie le mot de passe du package. *dts_package_password* est de **type sysname** , avec NULL comme valeur par défaut, qui spécifie que la propriété de mot de passe doit rester inchangée.  
   
 > [!NOTE]  
 >  Un package DTS doit avoir un mot de passe.  
   
-`[ @dts_package_location = ] 'dts_package_location'`Spécifie l’emplacement du package. *dts_package_location* est de type **nvarchar (12)**, avec NULL comme valeur par défaut, qui spécifie que l’emplacement du package doit rester inchangé. L’emplacement du package peut être remplacé par **Distributor** ou **Subscriber**.  
+`[ @dts_package_location = ] 'dts_package_location'` Spécifie l’emplacement du package. *dts_package_location* est de type **nvarchar (12)**, avec NULL comme valeur par défaut, qui spécifie que l’emplacement du package doit rester inchangé. L’emplacement du package peut être remplacé par **Distributor** ou **Subscriber**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_changesubscriptiondtsinfo** est utilisé pour la réplication d’instantané et la réplication transactionnelle qui sont des abonnements par émission de type push uniquement.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: rowversion (Transact-SQL)
 title: rowversion (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/22/2017
@@ -26,24 +27,24 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f2962d457ce079bd0ec2164f9fdd2a982b983f14
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 087e3e1d67bce5d8f46f03cdb1cad05578b39b46
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85638138"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479885"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Type de données présentant des nombres binaires uniques automatiquement générés à l'intérieur d'une base de données. **rowversion** est généralement utilisé comme mécanisme de marquage de version des lignes de tables. La taille de stockage est de 8 octets. Le type de données **rowversion** est seulement un numéro à incrémentation et ne permet pas de conserver une date ni une heure. Pour enregistrer une date ou une heure, utilisez le type de données **datetime2**.
+Type de données présentant des nombres binaires uniques automatiquement générés à l'intérieur d'une base de données. **rowversion** est généralement utilisé comme mécanisme de marquage de version des lignes de tables. La taille de stockage est égale à 8 octets. Le type de données **rowversion** est seulement un numéro à incrémentation et ne permet pas de conserver une date ni une heure. Pour enregistrer une date ou une heure, utilisez le type de données **datetime2**.
   
 ## <a name="remarks"></a>Notes  
 Chaque base de données dispose d’un compteur qui est incrémenté chaque fois qu’une opération d’insertion ou de mise à jour est effectuée dans une table contenant une colonne **rowversion** dans la base de données. Ce compteur est la base de données rowversion. Il suit une heure relative au sein d'une base de données, et non pas une heure réelle qui peut être associée à une horloge. Une table ne peut comporter qu’une seule colonne **rowversion**. Chaque fois qu’une ligne associée à une colonne **rowversion** est modifiée ou insérée, la valeur incrémentée rowversion de la base de données est insérée dans la colonne **rowversion**. Cette propriété fait de la colonne **rowversion** un candidat peu valable pour les clés, en particulier les clés primaires. En effet, toute mise à jour apportée à la ligne a pour effet de changer la valeur rowversion, et par conséquent de modifier la valeur de la clé. Si la colonne se trouve dans une clé primaire, l'ancienne valeur de clé n'est plus valide et les clés étrangères faisant référence à l'ancienne valeur ne sont plus valides. Si la table est référencée dans un curseur dynamique, toutes les mises à jour modifient la position des lignes dans le curseur. Si la colonne est une clé d'index, toutes les mises à jour apportées à la ligne de données génèrent également des mises à jour de l'index.  La valeur **rowversion** est incrémentée avec toute instruction de mise à jour, même si aucune valeur de ligne n’est modifiée. (Par exemple, si la valeur d’une colonne est égale à 5 et qu’une instruction de mise à jour définit la valeur 5, cette action est considérée comme une mise à jour même si aucune modification n’a été apportée et la valeur **rowversion** est incrémentée.)
   
 **timestamp** est le synonyme du type de données **rowversion** et est soumis au comportement des synonymes des types de données. Dans les instructions DDL, utilisez **rowversion** au lieu de **timestamp** autant que possible. Pour plus d’informations, consultez [Synonymes des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
   
-Le type de données [!INCLUDE[tsql](../../includes/tsql-md.md)]timestamp**de** est différent du type de données **timestamp** défini dans la norme ISO.
+Le type de données  **timestamp** de [!INCLUDE[tsql](../../includes/tsql-md.md)] est différent du type de données **timestamp** défini dans la norme ISO.
   
 > [!NOTE]  
 >  La syntaxe **timestamp** est dépréciée. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -63,7 +64,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
 > [!NOTE]  
 >  Des valeurs **rowversion** en double peuvent être générées quand l’instruction SELECT INTO est utilisée et qu’elle contient une colonne **rowversion** dans la liste SELECT. Nous vous déconseillons d’utiliser **rowversion** de cette façon.  
   
-Une colonne **rowversion** qui n’accepte pas la valeur Null est sémantiquement équivalente à une colonne **binary(8)** . Une colonne **rowversion** qui accepte la valeur Null est sémantiquement équivalente à une colonne **varbinary(8)** .
+Une colonne **rowversion** qui n’accepte pas la valeur Null est sémantiquement équivalente à une colonne **binary(8)**. Une colonne **rowversion** qui accepte la valeur Null est sémantiquement équivalente à une colonne **varbinary(8)**.
   
 La colonne **rowversion** d’une ligne permet de déterminer facilement si une instruction de mise à jour a été exécutée sur la ligne depuis la dernière fois qu’elle a été lue. Si une instruction de mise à jour est exécutée sur la ligne, la valeur rowversion est mise à jour. Si aucune instruction de mise à jour n’est exécutée sur la ligne, la valeur rowversion est la même que la dernière fois qu’elle a été lue. Pour retourner la valeur rowversion actuelle pour une base de données, utilisez [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   

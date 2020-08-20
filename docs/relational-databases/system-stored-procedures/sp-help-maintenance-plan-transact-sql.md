@@ -1,4 +1,5 @@
 ---
+description: sp_help_maintenance_plan (Transact-SQL)
 title: sp_help_maintenance_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a14767d15891ae970269feda6e712bf490ff5420
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85a2f93384dbca55e26a38933ab9afd730da9f76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481203"
 ---
 # <a name="sp_help_maintenance_plan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85893617"
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +45,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @plan_id = ] 'plan\_id'`Spécifie l’ID de plan du plan de maintenance. *plan_id* est de type **uniqueidentifier**. La valeur par défaut est NULL.  
+`[ @plan_id = ] 'plan\_id'` Spécifie l’ID de plan du plan de maintenance. *plan_id* est de type **uniqueidentifier**. La valeur par défaut est NULL.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  None  
@@ -80,7 +81,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|Identificateur de tous les travaux associés au plan de maintenance. *job_id* est de type **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_maintenance_plan** se trouve dans la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

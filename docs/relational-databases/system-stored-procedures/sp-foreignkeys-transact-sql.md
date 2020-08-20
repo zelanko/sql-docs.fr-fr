@@ -1,4 +1,5 @@
 ---
+description: sp_foreignkeys (Transact-SQL)
 title: sp_foreignkeys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04df50dc8378dc346079c807f8e517f1e6bbecdd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f7d3fe93965bcfcb516e79452b6725940c1e68c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481284"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne les clés étrangères faisant référence aux clés primaires de la table du serveur lié.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,19 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_server = ] 'table_server'`Nom du serveur lié pour lequel les informations de table doivent être retournées. *table_server* est de **type sysname**, sans valeur par défaut.  
+`[ @table_server = ] 'table_server'` Nom du serveur lié pour lequel les informations de table doivent être retournées. *table_server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @pktab_name = ] 'pktab_name'`Nom de la table avec une clé primaire. *pktab_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @pktab_name = ] 'pktab_name'` Nom de la table avec une clé primaire. *pktab_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @pktab_schema = ] 'pktab_schema'`Nom du schéma avec une clé primaire. *pktab_schema*est de **type sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom du propriétaire.  
+`[ @pktab_schema = ] 'pktab_schema'` Nom du schéma avec une clé primaire. *pktab_schema*est de **type sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom du propriétaire.  
   
-`[ @pktab_catalog = ] 'pktab_catalog'`Nom du catalogue contenant une clé primaire. *pktab_catalog*est de **type sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom de la base de données.  
+`[ @pktab_catalog = ] 'pktab_catalog'` Nom du catalogue contenant une clé primaire. *pktab_catalog*est de **type sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom de la base de données.  
   
-`[ @fktab_name = ] 'fktab_name'`Nom de la table avec une clé étrangère. *fktab_name*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @fktab_name = ] 'fktab_name'` Nom de la table avec une clé étrangère. *fktab_name*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @fktab_schema = ] 'fktab_schema'`Nom du schéma avec une clé étrangère. *fktab_schema*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @fktab_schema = ] 'fktab_schema'` Nom du schéma avec une clé étrangère. *fktab_schema*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @fktab_catalog = ] 'fktab_catalog'`Nom du catalogue avec une clé étrangère. *fktab_catalog*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @fktab_catalog = ] 'fktab_catalog'` Nom du catalogue avec une clé étrangère. *fktab_catalog*est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  None  
@@ -84,7 +85,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  Dans le jeu de résultats, les colonnes FK_NAME et PK_NAME retournent toujours une valeur NULL.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_foreignkeys** interroge l’ensemble de lignes foreign_keys de l’interface **IDBSchemaRowset** du fournisseur OLE DB qui correspond à *table_server*. Les paramètres *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*et *Column* sont passés à cette interface pour limiter les lignes retournées.  
   
 ## <a name="permissions"></a>Autorisations  

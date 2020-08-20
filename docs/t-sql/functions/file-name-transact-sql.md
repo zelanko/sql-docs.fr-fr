@@ -1,4 +1,5 @@
 ---
+description: FILE_NAME (Transact-SQL)
 title: FILE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 68b298aa-ce47-4af5-b59f-9a1b46d48326
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f47e9c58921cbbf473295e62cc78f9bbd99f714
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 4f6a8a9625582bd40b988f787bfdd6201bb2b747
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112450"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479688"
 ---
 # <a name="file_name-transact-sql"></a>FILE_NAME (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +55,7 @@ Numéro d’identification du fichier dont `FILE_NAME` retournera le nom. *file_
 ## <a name="return-types"></a>Types de retour  
 **nvarchar(128)**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 *file_ID* correspond à la colonne file_id tirée de l’affichage catalogue sys.master_files ou sys.database_files.  
   
 ## <a name="examples"></a>Exemples  

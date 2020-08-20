@@ -1,4 +1,5 @@
 ---
+description: sp_deletemergeconflictrow (Transact-SQL)
 title: sp_deletemergeconflictrow (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ab3528c496722877310c13d073158bd20969bc4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d65a0b2b039d94ca425bb6e93a067e8fcc0ddd2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85861777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481326"
 ---
 # <a name="sp_deletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime des lignes d’une table de conflits ou le [MSmerge_conflicts_info &#40;table Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) . Cette procédure stockée est exécutée dans n'importe quelle base de données de l'ordinateur sur lequel la table de conflits est stockée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,23 +42,23 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @conflict_table = ] 'conflict_table'`Nom de la table de conflits. *conflict_table* est de **type sysname**, avec la valeur par défaut **%** . Si le *conflict_table* est spécifié comme null ou **%** , il est supposé qu’il s’agit d’un conflit de suppression et que la ligne qui correspond à *rowguid* et à *origin_datasource* et à *source_object* est supprimée de la table [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
+`[ @conflict_table = ] 'conflict_table'` Nom de la table de conflits. *conflict_table* est de **type sysname**, avec la valeur par défaut **%** . Si le *conflict_table* est spécifié comme null ou **%** , il est supposé qu’il s’agit d’un conflit de suppression et que la ligne qui correspond à *rowguid* et à *origin_datasource* et à *source_object* est supprimée de la table [MSmerge_conflicts_info &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) .  
   
-`[ @source_object = ] 'source_object'`Nom de la table source. *source_object* est de type **nvarchar (386)**, avec NULL comme valeur par défaut.  
+`[ @source_object = ] 'source_object'` Nom de la table source. *source_object* est de type **nvarchar (386)**, avec NULL comme valeur par défaut.  
   
-`[ @rowguid = ] 'rowguid'`Identificateur de ligne pour le conflit de suppression. *rowguid* est de type **uniqueidentifier**et n’a pas de valeur par défaut.  
+`[ @rowguid = ] 'rowguid'` Identificateur de ligne pour le conflit de suppression. *rowguid* est de type **uniqueidentifier**et n’a pas de valeur par défaut.  
   
-`[ @origin_datasource = ] 'origin_datasource'`Est l’origine du conflit. *origin_datasource* est de type **varchar (255)**, sans valeur par défaut.  
+`[ @origin_datasource = ] 'origin_datasource'` Est l’origine du conflit. *origin_datasource* est de type **varchar (255)**, sans valeur par défaut.  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'`Indicateur qui spécifie que le *conflict_table* doit être supprimé si est vide. *drop_table_if_empty* est de type **varchar (10)**, avec false comme valeur par défaut.  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` Indicateur qui spécifie que le *conflict_table* doit être supprimé si est vide. *drop_table_if_empty* est de type **varchar (10)**, avec false comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_deletemergeconflictrow** est utilisé dans la réplication de fusion.  
   
- [MSmerge_conflicts_info &#40;table&#41;Transact-SQL](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) est une table système et n’est pas supprimée de la base de données, même si elle est vide.  
+ [MSmerge_conflicts_info &#40;table&#41;Transact-SQL ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) est une table système et n’est pas supprimée de la base de données, même si elle est vide.  
   
 ## <a name="permissions"></a>Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** peuvent exécuter **sp_deletemergeconflictrow**.  

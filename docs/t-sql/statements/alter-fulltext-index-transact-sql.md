@@ -1,4 +1,5 @@
 ---
+description: ALTER FULLTEXT INDEX (Transact-SQL)
 title: ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fa8594033c004bed2f37204d9de96a75bcfb83f3
-ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
+ms.openlocfilehash: 0f8b215f3e90822fe285b93274b7d93a7e1ee8b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86301839"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479141"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifie les propriétés d’un index de recherche en texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -92,7 +93,7 @@ ALTER FULLTEXT INDEX ON table_name
  Spécifie que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne conservera pas de liste des modifications apportées aux données indexées.  
   
  ADD | DROP *column_name*  
- Spécifie les colonnes à ajouter ou à supprimer de l'index de texte intégral. Les colonnes doivent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)** .  
+ Spécifie les colonnes à ajouter ou à supprimer de l'index de texte intégral. Les colonnes doivent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
   
  Utilisez la clause DROP uniquement sur les colonnes pour lesquelles l'indexation de texte intégral a été activée.  
   
@@ -129,7 +130,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  Crée les index de ressemblance de documents et d'expressions clés supplémentaires qui font partie de l'indexation sémantique statistique. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
- [ **,** _...n_]  
+ [ **,**_...n_]  
  Indique que plusieurs colonnes peuvent être spécifiées pour les clauses ADD, ALTER ou DROP. Si vous spécifiez plusieurs colonnes, séparez-les par des virgules.  
   
  WITH NO POPULATION  
@@ -257,7 +258,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      Cette instruction provoque un remplissage complet, ce qui correspond au comportement par défaut.  Toutefois, avant de commencer ce remplissage, le moteur d'indexation et de recherche en texte intégral tronque automatiquement l'index.  
   
-### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Scénario B : désactivation de la liste de propriétés de recherche et association ultérieure de l’index à toute liste de propriétés de recherche  
+### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>Scénario B : désactivation de la liste de propriétés de recherche et association ultérieure de l'index à toute liste de propriétés de recherche  
   
 1.  Un index de recherche en texte intégral est créé sur `table_1` avec une liste de propriétés de recherche `spl_1`, suivi d’un remplissage complet automatique (comportement par défaut) :  
   

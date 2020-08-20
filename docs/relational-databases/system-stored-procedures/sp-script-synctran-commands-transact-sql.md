@@ -1,4 +1,5 @@
 ---
+description: sp_script_synctran_commands (Transact-SQL)
 title: sp_script_synctran_commands (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 697cba4e04483e28fe0099096916391057c1568a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8e49e8cd0155ca5266e9953628799a132c7f7608
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899210"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481071"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Génère un script qui contient les appels de **sp_addsynctrigger** à appliquer aux abonnés pour les abonnements pouvant être mis à jour. Il existe un appel de **sp_addsynctrigger** pour chaque article de la publication. Le script généré contient également les appels de **sp_addqueued_artinfo** qui créent la table **MSsubsciption_articles** nécessaire pour traiter les publications mises en file d’attente. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,9 +39,9 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication à écrire. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication à écrire. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @article = ] 'article'`Nom de l’article pour lequel générer un script. *article* est de **type sysname**, avec **All**comme valeur par défaut, qui spécifie que tous les articles font l’objets d’un script.  
+`[ @article = ] 'article'` Nom de l’article pour lequel générer un script. *article* est de **type sysname**, avec **All**comme valeur par défaut, qui spécifie que tous les articles font l’objets d’un script.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -48,7 +49,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ## <a name="results-set"></a>Ensemble de résultats  
  **sp_script_synctran_commands** retourne un jeu de résultats qui se compose d’une seule colonne **nvarchar (4000)** . Le jeu de résultats forme les scripts complets nécessaires à la création des appels **sp_addsynctrigger** et **sp_addqueued_artinfo** à appliquer aux abonnés.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_script_synctran_commands** est utilisé dans la réplication transactionnelle et d’instantané.  
   
  **sp_addqueued_artinfo** est utilisé pour les abonnements pouvant être mis à jour en file d’attente.  

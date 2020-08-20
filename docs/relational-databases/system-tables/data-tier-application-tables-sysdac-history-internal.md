@@ -1,4 +1,5 @@
 ---
+description: Tables d’applications de la couche Données - sysdac_history_internal
 title: sysdac_history_internal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5095dbc6dae56a8e8ebf534cdd196b3785b43bf
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: f77fee435a076b4d4f6b8a56dc028c55fd3a623f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480844"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tables d’applications de la couche Données - sysdac_history_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "87123020"
 |**dac_object_type**|**tinyint**|Identificateur du type d'objet affecté par l'action :<br /><br /> **0** = dacpac<br /><br /> **1** = connexion<br /><br /> **2** = base de données|  
 |**dac_object_type_name**|**varchar (8)**|Nom du type d'objet affecté par l'action :<br /><br /> **dacpac** = instance DAC<br /><br /> **connexion**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code qui identifie l'état actuel de l'action :<br /><br /> **0** = en attente<br /><br /> **1** = réussite<br /><br /> **2** = échec|  
-|**action_status_name**|**varchar (11)**|État actuel de l'action :<br /><br /> **instance**<br /><br /> **fructueux**<br /><br /> **Échec**|  
+|**action_status_name**|**varchar (11)**|État actuel de l'action :<br /><br /> **instance**<br /><br /> **fructueux**<br /><br /> **incident**|  
 |**Obligatoire**|**bit**|Utilisé par lors de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] restauration d’une opération DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nom de l'objet avant la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
 |**dac_object_name_posttran**|**sysname**|Nom de l'objet après la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  

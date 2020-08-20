@@ -1,4 +1,5 @@
 ---
+description: sp_addapprole (Transact-SQL)
 title: sp_addapprole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4c3420396f1a8149a7c5811f1c7422a6fb960f13
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fa68e8b0d965fae3a1c27f5ca2705bc003d7b616
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481545"
 ---
 # <a name="sp_addapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85877903"
   Ajoute un rôle d'application à la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [Create application Role](../../t-sql/statements/create-application-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [Create application Role](../../t-sql/statements/create-application-role-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,11 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rolename = ] 'role'`Nom du nouveau rôle d’application. *role* est de **type sysname**, sans valeur par défaut. le *rôle* doit être un identificateur valide et ne peut pas déjà exister dans la base de données actuelle.  
+`[ @rolename = ] 'role'` Nom du nouveau rôle d’application. *role* est de **type sysname**, sans valeur par défaut. le *rôle* doit être un identificateur valide et ne peut pas déjà exister dans la base de données actuelle.  
   
  Les rôles d'application peuvent contenir de 1 à 128 caractères, y compris les lettres, les symboles et les nombres. Les noms de rôles ne peuvent pas contenir de barre oblique inverse ( \\ ) ni de valeur null ou de chaîne vide (' ').  
   
-`[ @password = ] 'password'`Mot de passe requis pour activer le rôle d’application. *Password* est de **type sysname**, sans valeur par défaut. le *mot de passe* ne peut pas être null.  
+`[ @password = ] 'password'` Mot de passe requis pour activer le rôle d’application. *Password* est de **type sysname**, sans valeur par défaut. le *mot de passe* ne peut pas être null.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

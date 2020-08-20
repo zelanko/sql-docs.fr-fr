@@ -1,4 +1,5 @@
 ---
+description: sp_validname (Transact-SQL)
 title: sp_validname (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86b1c7ec67a19e18dcc5daa6d14e55acc9b34c64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b448493ada2d6ec5d1073f194053463b463807b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722981"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480951"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Vérifie la validité des noms d'identificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutes les données non binaires et non null, y compris les données Unicode qui peuvent être stockées à l’aide des types de données **nchar**, **nvarchar**ou **ntext** , sont acceptées comme caractères valides pour les noms d’identificateurs.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,9 +42,9 @@ sp_validname [@name =] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom des [identificateurs](../../relational-databases/databases/database-identifiers.md) dont la validité doit être vérifiée. *Name* est de **type sysname**, sans valeur par défaut. le *nom* ne peut pas être null, ne peut pas être une chaîne vide et ne peut pas contenir un caractère zéro binaire.  
+`[ @name = ] 'name'` Nom des [identificateurs](../../relational-databases/databases/database-identifiers.md) dont la validité doit être vérifiée. *Name* est de **type sysname**, sans valeur par défaut. le *nom* ne peut pas être null, ne peut pas être une chaîne vide et ne peut pas contenir un caractère zéro binaire.  
   
-`[ @raise_error = ] raise_error`Spécifie s’il faut générer une erreur. *raise_error* est de **bits**, avec 1 comme valeur par défaut. Cette valeur signifie que les erreurs seront affichées. 0 ne génère aucun message d'erreur.  
+`[ @raise_error = ] raise_error` Spécifie s’il faut générer une erreur. *raise_error* est de **bits**, avec 1 comme valeur par défaut. Cette valeur signifie que les erreurs seront affichées. 0 ne génère aucun message d'erreur.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

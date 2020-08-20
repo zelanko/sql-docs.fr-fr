@@ -1,4 +1,5 @@
 ---
+description: sp_add_category (Transact-SQL)
 title: sp_add_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 323a86b4efbaa63d8858341c68908e30258d4889
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 40ce855f929a19f9dbcd757b0e1ea8774fbe2cb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481685"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ajoute la catégorie spécifiée de travaux, alertes ou opérateurs au serveur. Pour une autre méthode, consultez [créer une catégorie de travaux à l’aide de SQL Server Management Studio](/sql/ssms/agent/create-a-job-category).
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  > [!IMPORTANT]  
  > Dans [Azure SQL Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server agent ne sont pas prises en charge actuellement. Pour plus d’informations, consultez différences entre SQL [Managed instance T-SQL dans SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
@@ -45,7 +46,7 @@ sp_add_category
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'`Classe de la catégorie à ajouter. la classe est de *type* **varchar (8)** avec une valeur par défaut Job et peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'` Classe de la catégorie à ajouter. la classe est de *type* **varchar (8)** avec une valeur par défaut Job et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -53,7 +54,7 @@ sp_add_category
 |ALERT|Ajoute une catégorie d'alertes.|  
 |OPERATOR|Ajoute une catégorie d'opérateurs.|  
   
-`[ @type = ] 'type'`Type de catégorie à ajouter. le *type* est **varchar (12)**, avec une valeur par défaut **locale**, et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Type de catégorie à ajouter. le *type* est **varchar (12)**, avec une valeur par défaut **locale**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -61,7 +62,7 @@ sp_add_category
 |MULTI-SERVEUR|Catégorie de travaux multiserveurs.|  
 |Aucune|Catégorie d’une classe autre que JOB **.**|  
   
-`[ @name = ] 'name'`Nom de la catégorie à ajouter. Le nom doit être unique dans la classe spécifiée. *Name* est de **type sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Nom de la catégorie à ajouter. Le nom doit être unique dans la classe spécifiée. *Name* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -93,7 +94,7 @@ GO
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [Travaux dedbo.sys&#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [ Travaux dedbo.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

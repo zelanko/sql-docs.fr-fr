@@ -1,4 +1,5 @@
 ---
+description: sp_add_targetsvrgrp_member (Transact-SQL)
 title: sp_add_targetsvrgrp_member (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 5021ed5b-acca-4f8b-b9db-18733059c359
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f18af2207069ab3a4d8b8a05c9c0a5b7a3fe6deb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 347f9581db7da96d93d69a25625af1bc40260f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878241"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481571"
 ---
 # <a name="sp_add_targetsvrgrp_member-transact-sql"></a>sp_add_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute le serveur cible spécifié au groupe de serveurs cibles spécifié.  
    
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,9 +40,9 @@ sp_add_targetsvrgrp_member [ @group_name = ] 'group_name' , [ @server_name = ] '
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @group_name = ] 'group_name'`Nom du groupe. *group_name* est de **type sysname**, sans valeur par défaut.  
+`[ @group_name = ] 'group_name'` Nom du groupe. *group_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @server_name = ] 'server_name'`Nom du serveur qui doit être ajouté au groupe spécifié. *SERVER_NAME* est de type **nvarchar (30)**, sans valeur par défaut.  
+`[ @server_name = ] 'server_name'` Nom du serveur qui doit être ajouté au groupe spécifié. *SERVER_NAME* est de type **nvarchar (30)**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

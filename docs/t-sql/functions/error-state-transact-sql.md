@@ -1,5 +1,6 @@
 ---
-title: ERROR_STATE (Transact-SQL) | Microsoft Docs
+description: ERROR_STATE (Transact-SQL)
+title: ERROR_STATE (Transact-SQL)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -23,14 +24,15 @@ ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56e08b872179ba09c130326b957f2c86b4b8c0db
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9426f7d3717a32a473628ea82e789c4e8fd580fe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87393965"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479741"
 ---
 # <a name="error_state-transact-sql"></a>ERROR_STATE (Transact-SQL)
+
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Retourne le numéro d’état de l’erreur qui a provoqué l’exécution du bloc CATCH d’une construction TRY...CATCH.  
@@ -43,7 +45,9 @@ ms.locfileid: "87393965"
 ERROR_STATE ( )  
 ```  
   
-## <a name="return-types"></a>Types de retour  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Types de retour
  **int**  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -52,7 +56,7 @@ ERROR_STATE ( )
  Retourne NULL si l'appel a lieu en dehors de l'étendue d'un bloc CATCH.  
   
 ## <a name="remarks"></a>Notes  
- Certains messages d’erreur peuvent apparaître en de multiples endroits du code du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'erreur « 1105 » par exemple, peut être provoquée par différentes conditions. Chaque condition qui génère l'erreur attribue un code d'état unique.  
+ Certains messages d'erreur peuvent apparaître en de multiples endroits du code du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'erreur « 1105 » par exemple, peut être provoquée par différentes conditions. Chaque condition qui génère l'erreur attribue un code d'état unique.  
   
  Lorsque vous consultez des bases de données de problèmes connus, telles que la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame-md.md)], vous pouvez utiliser le numéro d'état pour voir si le problème enregistré est identique à l'erreur que vous avez rencontrée. Par exemple, si un article de la Base de connaissances traite de l'erreur 1105 avec un état 2 et que l'erreur 1105 reçue était associée à un état 3, votre erreur avait probablement une autre cause que celle mentionnée dans l'article.  
   

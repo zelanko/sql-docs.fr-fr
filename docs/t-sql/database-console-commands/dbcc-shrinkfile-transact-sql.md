@@ -1,4 +1,5 @@
 ---
+description: DBCC SHRINKFILE (Transact-SQL)
 title: DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -29,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 32ce225096e6a232c824a9fc360cb2c3a282f4b2
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479781"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -133,7 +134,7 @@ Prenez en compte les informations suivantes lorsque vous envisagez de réduire u
 
 -   Réduisez plusieurs fichiers dans la même base de données de manière séquentielle plutôt que simultanément. La contention sur les tables système peut entraîner des blocages et des délais.  
   
-## <a name="troubleshooting"></a>Dépannage  
+## <a name="troubleshooting"></a>Résolution des problèmes  
 Cette section décrit comment diagnostiquer et corriger les problèmes qui peuvent se produire lors de l'exécution de la commande DBCC SHRINKFILE.
   
 ### <a name="the-file-doesnt-shrink"></a>Le fichier ne se réduit pas

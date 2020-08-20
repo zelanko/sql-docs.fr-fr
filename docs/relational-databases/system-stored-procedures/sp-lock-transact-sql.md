@@ -1,4 +1,5 @@
 ---
+description: sp_lock (Transact-SQL)
 title: sp_lock (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5cb05c50ce37434161c04bf26083990b319fafc3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f8fee809f67de959c7d168ceaac2016b5cddddd9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481142"
 ---
 # <a name="sp_lock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85899391"
   Affiche des informations sur les verrous.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Pour obtenir des informations sur les verrous dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , utilisez la vue de gestion dynamique [sys. dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) .  
+> [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Pour obtenir des informations sur les verrous dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , utilisez la vue de gestion dynamique [sys. dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +45,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 ## <a name="arguments"></a>Arguments  
 `[ @spid1 = ] 'session ID1'`[!INCLUDE[ssDE](../../includes/ssde-md.md)]Numéro d’ID de session de **sys. dm_exec_sessions** pour lequel l’utilisateur souhaite verrouiller les informations. la *session ID1* est de **type int** avec NULL comme valeur par défaut. Exécutez **sp_who** pour obtenir des informations sur les processus de la session. Si la *session ID1* n’est pas spécifiée, des informations sur tous les verrous s’affichent.  
   
-`[ @spid2 = ] 'session ID2'`Est un autre [!INCLUDE[ssDE](../../includes/ssde-md.md)] numéro d’ID de session de **sys. dm_exec_sessions** qui peut avoir un verrou en même temps que la *session ID1* et sur lequel l’utilisateur souhaite également obtenir des informations. la *session ID2* est de **type int** avec NULL comme valeur par défaut.  
+`[ @spid2 = ] 'session ID2'` Est un autre [!INCLUDE[ssDE](../../includes/ssde-md.md)] numéro d’ID de session de **sys. dm_exec_sessions** qui peut avoir un verrou en même temps que la *session ID1* et sur lequel l’utilisateur souhaite également obtenir des informations. la *session ID2* est de **type int** avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès)  
@@ -54,7 +55,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**SPID**|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]Numéro d’ID de session du processus demandant le verrou.|  
+|**spid**|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]Numéro d’ID de session du processus demandant le verrou.|  
 |**dbid**|**smallint**|Numéro d'identification de la base de données qui contient le verrou. Vous pouvez utiliser la fonction DB_NAME() pour identifier la base de données.|  
 |**ID**|**int**|Numéro d'identification de l'objet sur lequel le verrou est maintenu. Vous pouvez utiliser la fonction OBJECT_NAME() dans la base de données associée pour identifier l'objet. La valeur 99 indique l'existence d'un verrou sur l'une des pages système utilisées pour enregistrer l'allocation des pages dans une base de données.|  
 |**IndId**|**smallint**|Numéro d'identification de l'index sur lequel le verrou est maintenu.|  
@@ -63,7 +64,7 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 |**Mode**|**nvarchar(8)**|Le mode de verrou est demandé. Valeurs possibles :<br /><br /> NULL = aucun accès n'est accordé à la ressource. Sert d'espace réservé.<br /><br /> Sch-S = stabilité du schéma. Garantit que l'élément d'un schéma, tel qu'une table ou un index, n'est pas supprimé alors qu'une session contient un verrou de stabilité du schéma sur l'élément du schéma.<br /><br /> Sch-M = modification du schéma. Doit être détenu par toute session destinée à modifier le schéma de la ressource spécifiée. Garantit qu'aucune autre session ne fait référence à l'objet indiqué.<br /><br /> S = partage. La session détenant le verrou peut disposer d'un accès partagé à la ressource.<br /><br /> U = mise à jour. Indique qu'un verrouillage de mise à jour a été posé sur des ressources qui peuvent finalement être mises à jour. Utilisé pour éviter les formes courantes de blocages qui se produisent lorsque plusieurs sessions verrouillent des ressources en vue d'une mise à jour éventuelle.<br /><br /> X = exclusif. La session détenant le verrou peut disposer d'un accès exclusif à la ressource.<br /><br /> IS = partage intentionnel. Indique l'intention de placer des verrous S sur certaines ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> IU = mise à jour intentionnelle. Indique l'intention de placer des verrous U sur certaines ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> IX = exclusion intentionnelle. Indique l'intention de placer des verrous X sur certaines ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> SIU = mise à jour intentionnelle partagée. Signale des accès partagés à une ressource dans le but de poser des verrous de mise à jour sur les ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> SIX = partage intentionnel exclusif. Signale des accès partagés à une ressource dans le but de poser des verrous exclusifs sur les ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> UIX = mise à jour exclusive intentionnelle. Signale un verrou de mise à jour sur une ressource dans le but de poser des verrous exclusifs sur les ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> BU = mise à jour en bloc. Utilisé par les opérations en bloc.<br /><br /> RangeS_S = verrou de groupes de clés partagés et de ressources partagées. Indique une analyse de plage sérialisable.<br /><br /> RangeS_U = verrou de groupes de clés partagés et de ressources de mise à jour. Indique une analyse de mise à jour sérialisable.<br /><br /> RangeI_N = insérer le verrou de groupes de clés et de ressources NULL. Utilisé pour tester les étendues avant l'insertion d'une nouvelle clé dans un index.<br /><br /> RangeI_S = verrou de conversion de groupes de clés. Créé par une superposition des verrous RangeI_N et S.<br /><br /> RangeI_U = verrou de conversion de groupes de clés créé par une superposition des verrous RangeI_N et U.<br /><br /> RangeI_X = verrou de conversion de groupes de clés créé par une superposition des verrous RangeI_N et X.<br /><br /> RangeX_S = verrou de conversion de groupes de clés créé par une superposition des verrous RangeI_N et RangeS_S.<br /><br /> RangeX_U = verrou de conversion de groupes de clés créé par une superposition des verrous RangeI_N et RangeS_U.<br /><br /> RangeX_X = verrou de groupes de clés exclusifs et de ressources exclusives. Verrou de conversion utilisé lors de la mise à jour d'une clé dans une étendue.|  
 |**État**|**nvarchar(5**|État de la demande de verrouillage :<br /><br /> CNVRT : le verrou est converti depuis un autre mode, mais la conversion est bloquée par un autre processus qui maintient un verrou dont le mode est en conflit.<br /><br /> GRANT : un verrou a été obtenu.<br /><br /> WAIT : le verrou est bloqué par un autre processus qui maintient un verrou dont le mode est en conflit.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les utilisateurs peuvent contrôler le verrouillage des opérations de lecture en utilisant :  
   
 -   SET TRANSACTION ISOLATION LEVEL pour spécifier le niveau de verrouillage d'une session. Pour plus d’instructions sur la syntaxe et les restrictions, consultez [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
@@ -98,12 +99,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
+ [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
  [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
  [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)   
  [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys. dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md)  
   

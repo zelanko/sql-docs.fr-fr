@@ -1,4 +1,5 @@
 ---
+description: sp_deletetracertokenhistory (Transact-SQL)
 title: sp_deletetracertokenhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26a9c4a3001d2a5b4f5709311e23c0023307ce92
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4912611e79e4d6d3431cce7facb04af06a206211
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692808"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481329"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-Supprime les enregistrements de jeton de suivi du [MStracer_tokens &#40;Transact-sql&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) et MStracer_history &#40;tables système&#41;[Transact-SQL](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données de distribution du serveur de distribution.
+Supprime les enregistrements de jeton de suivi du [MStracer_tokens &#40;Transact-sql&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) et MStracer_history &#40;tables système&#41;[Transact-SQL ](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données de distribution du serveur de distribution.
 
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,7 +68,7 @@ Nom de la base de données de publication. Le type de données est **sysname**. 
 
 **0** (succès) ou **1** (échec)
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 **sp_deletetracertokenhistory** est utilisé dans la réplication transactionnelle.  
 
@@ -75,7 +76,7 @@ Une erreur se produit si vous spécifiez les paramètres *tracer_id* et *cutoff_
 
 Si vous n’exécutez pas **sp_deletetracertokenhistory** pour supprimer les métadonnées de jeton de suivi, elles seront supprimées lors du nettoyage régulier de l’historique.
 
-Les ID de jeton de suivi peuvent être déterminés en exécutant [sp_helptracertokens &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) ou en interrogeant le [MStracer_tokens &#40;table système&#41;Transact-SQL](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
+Les ID de jeton de suivi peuvent être déterminés en exécutant [sp_helptracertokens &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) ou en interrogeant le [MStracer_tokens &#40;table système&#41;Transact-SQL ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) .
 
 ## <a name="permissions"></a>Autorisations
 

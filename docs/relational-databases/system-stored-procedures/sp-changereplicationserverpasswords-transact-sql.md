@@ -1,4 +1,5 @@
 ---
+description: sp_changereplicationserverpasswords (Transact-SQL)
 title: sp_changereplicationserverpasswords (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d3f992fefc04de89fcfa9e077d01641fa538ea40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d0e07afbf3837768ac2b57e3dfaa7d0c8c0d0af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771406"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481469"
 ---
 # <a name="sp_changereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie les mots de passe stockés pour le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte Windows ou la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion utilisée par les agents de réplication lors de la connexion aux serveurs dans une topologie de réplication. En temps normal, vous devriez modifier un mot de passe pour chacun des Agents en cours d'exécution sur un serveur, même s'ils utilisent tous la même connexion ou le même compte. Cette procédure stockée vous permet de modifier le mot de passe pour toutes les instances d'une connexion ou d'un compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donnés utilisés par tous les Agents de réplication exécutés sur un serveur. Cette procédure stockée est exécutée sur la base de données master de n'importe quel serveur de la topologie de réplication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,20 +41,20 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @login_type = ] login_type`Type d’authentification pour les informations d’identification fournies. *LOGIN_TYPE* est de **type tinyint**, sans valeur par défaut.  
+`[ @login_type = ] login_type` Type d’authentification pour les informations d’identification fournies. *LOGIN_TYPE* est de **type tinyint**, sans valeur par défaut.  
   
  **1** = authentification intégrée de Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentification  
   
-`[ @login = ] 'login'`Nom du compte Windows ou de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion en cours de modification. *login* est de type **nvarchar (257)**, sans valeur par défaut  
+`[ @login = ] 'login'` Nom du compte Windows ou de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion en cours de modification. *login* est de type **nvarchar (257)**, sans valeur par défaut  
   
-`[ @password = ] 'password'`Nouveau mot de passe à stocker pour la *connexion*spécifiée. *Password* est de **type sysname**, sans valeur par défaut.  
+`[ @password = ] 'password'` Nouveau mot de passe à stocker pour la *connexion*spécifiée. *Password* est de **type sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
 >  Après avoir modifié un mot de passe de réplication, vous devez arrêter puis redémarrer chaque Agent qui utilise ce mot de passe afin que les modifications apportées prennent effet.  
   
-`[ @server = ] 'server'`Connexion serveur pour laquelle le mot de passe stocké est en cours de modification. *Server* est de **type sysname**et peut prendre l’une des valeurs suivantes :  
+`[ @server = ] 'server'` Connexion serveur pour laquelle le mot de passe stocké est en cours de modification. *Server* est de **type sysname**et peut prendre l’une des valeurs suivantes :  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -65,7 +66,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_changereplicationserverpasswords** est utilisé avec tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  

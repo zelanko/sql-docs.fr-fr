@@ -1,4 +1,5 @@
 ---
+description: sp_cursor (Transact-SQL)
 title: sp_cursor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 75a3d3f6c38b6d63ad8127966cba118f4c3455dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481364"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85869689"
 |-|  
 |**S’applique à**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -98,7 +99,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Codet de retour  
  Lors de l’utilisation d’un RPC, une opération de suppression ou de mise à jour positionnée avec un numéro de tampon 0 retourne un message terminé avec un nombre de *lignes* égal à 0 (échec) ou 1 (réussite) pour chaque ligne du tampon d’extraction.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="optype-parameter"></a>Paramètre optype  
  À l’exception des combinaisons de la fonction SETPOSITION et de la mise à jour, de la suppression, de l’actualisation ou du verrouillage ; ou absolu avec UPDATE ou DELETE, les valeurs *optype* s’excluent mutuellement.  

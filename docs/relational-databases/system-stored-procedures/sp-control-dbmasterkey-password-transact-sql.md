@@ -1,4 +1,5 @@
 ---
+description: sp_control_dbmasterkey_password (Transact-SQL)
 title: sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/09/2020
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08b749ad756a47ed991acd1ad0ea1d533bbb770c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85870624"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481437"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Permet d'ajouter et de supprimer des informations d'identification contenant le mot de passe requis pour ouvrir la clé principale d'une base de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,7 +53,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action= N’drop'  
  Indique que des informations d'identification seront supprimées de la banque d'informations d'identification pour la base de données spécifiée. La valeur passée à @action est **nvarchar**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert la clé principale d'une base de données pour chiffrer ou déchiffrer une clé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de déchiffrer la clé principale de base de données à l'aide de la clé principale de service de l'instance. Si le déchiffrement échoue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recherche dans la banque d'informations d'identification les informations d'identification de clé principale qui possèdent le même GUID de famille que la base de données pour laquelle la clé principale est requise. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente ensuite de déchiffrer la clé principale de base de données avec toutes les informations d'identification correspondantes, jusqu'à ce que le déchiffrement réussisse ou qu'il ne reste plus d'informations d'identification.  
   
 > [!CAUTION]  
@@ -77,7 +78,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  **Problème potentiel de compatibilité descendante :** Actuellement, la procédure stockée ne vérifie pas si une clé principale existe. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une version ultérieure, la clé principale doit exister et le mot de passe utilisé dans la procédure stockée **sp_control_dbmasterkey_password** doit être le même mot de passe que l’un des mots de passe utilisés pour chiffrer la clé principale de base de données.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
+ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
   
@@ -101,9 +102,9 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer une base de données miroir chiffrée](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys. Credential &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Informations d’identification &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  
   
   

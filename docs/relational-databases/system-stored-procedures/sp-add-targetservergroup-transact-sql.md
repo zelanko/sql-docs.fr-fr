@@ -1,4 +1,5 @@
 ---
+description: sp_add_targetservergroup (Transact-SQL)
 title: sp_add_targetservergroup (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 550f09426f294ecef58398a2bd3b5f03028e0eef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c0c4d50b224de77f4bc794227b583dea6aa5f512
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85878566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481581"
 ---
 # <a name="sp_add_targetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute le groupe de serveurs spécifié.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom du groupe de serveurs à créer. *Name* est de **type sysname**, sans valeur par défaut. le *nom* ne peut pas contenir de virgules.  
+`[ @name = ] 'name'` Nom du groupe de serveurs à créer. *Name* est de **type sysname**, sans valeur par défaut. le *nom* ne peut pas contenir de virgules.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

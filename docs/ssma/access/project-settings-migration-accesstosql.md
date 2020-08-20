@@ -1,4 +1,5 @@
 ---
+description: Paramètres du projet (migration) (AccessToSQL)
 title: Paramètres du projet (migration) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 973a957f3c2c758aaf83116d9cba1cc8f50a3adc
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 94bd5cc9a8cb0db9079db981ec50a5fa6af7b20c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937750"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480526"
 ---
 # <a name="project-settings-migration-accesstosql"></a>Paramètres du projet (migration) (AccessToSQL)
 Les paramètres du projet de migration vous permettent de configurer la façon dont les données sont migrées vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
@@ -77,7 +78,7 @@ Spécifie si SSMA verrouille des tables lorsqu’il ajoute des données aux tabl
 **Remplacer les dates non prises en charge**  
 Spécifie si SSMA doit corriger les dates d’accès antérieures à la date du DateTime la plus ancienne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (01 janvier 1753).  
   
--   Pour conserver les valeurs de date actuelles, sélectionnez **ne rien faire**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]n’accepte pas les dates antérieures au 1er janvier 1753 dans une colonne DateTime. Si vous utilisez des dates antérieures, vous devez convertir les valeurs DateTime en valeurs de caractères.  
+-   Pour conserver les valeurs de date actuelles, sélectionnez **ne rien faire**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’accepte pas les dates antérieures au 1er janvier 1753 dans une colonne DateTime. Si vous utilisez des dates antérieures, vous devez convertir les valeurs DateTime en valeurs de caractères.  
   
 -   Pour convertir les dates antérieures au 1er janvier 1753 en NULL, sélectionnez **remplacer par null**.  
   

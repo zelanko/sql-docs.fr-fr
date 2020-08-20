@@ -1,4 +1,5 @@
 ---
+description: Tables d’applications de la couche Données - sysdac_instances_internal
 title: sysdac_instances_internal (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98b33a43eeb52ca99c50235e5c3865c79cd92125
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5677f92a5a7cb4a74b72bb45d058ad4c198442fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890566"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480818"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Tables d’applications de la couche Données - sysdac_instances_internal
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,14 +41,14 @@ ms.locfileid: "85890566"
 |date_created|**datetime**|Date et heure de création de l'instance DAC.|  
 |created_by|**sysname**|Connexion qui a créé l'instance DAC|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L’accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant d’autorisations pour se connecter à la base de données Master.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe sysadmin.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Applications de la couche données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
+ [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)  
   
   

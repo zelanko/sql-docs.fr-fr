@@ -1,4 +1,5 @@
 ---
+description: sp_help_operator (Transact-SQL)
 title: sp_help_operator (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a8ce38772655172a9c5e22d3dfdba9cb7fd8f4b5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d86d691c33fdfc09ce60d3ef7059c823527f9494
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891718"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481206"
 ---
 # <a name="sp_help_operator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85891718"
   Fournit des informations sur les opérateurs définis pour le serveur.  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @operator_name = ] 'operator_name'`Nom de l’opérateur. *operator_name* est de **type sysname**. Si *operator_name* n’est pas spécifié, des informations sur tous les opérateurs sont retournées.  
+`[ @operator_name = ] 'operator_name'` Nom de l’opérateur. *operator_name* est de **type sysname**. Si *operator_name* n’est pas spécifié, des informations sur tous les opérateurs sont retournées.  
   
-`[ @operator_id = ] operator_id`Numéro d’identification de l’opérateur pour lequel des informations sont demandées. *operator_id*est de **type int**, avec NULL comme valeur par défaut.  
+`[ @operator_id = ] operator_id` Numéro d’identification de l’opérateur pour lequel des informations sont demandées. *operator_id*est de **type int**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Operator_id* ou *operator_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
@@ -58,7 +59,7 @@ sp_help_operator
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Numéro d'identification de l'opérateur.|  
 |**name**|**sysname**|Nom de l’opérateur.|  
-|**désactivé**|**tinyint**|L'opérateur est disponible pour recevoir des notifications :<br /><br /> **1** = Oui<br /><br /> **0** = non|  
+|**activé**|**tinyint**|L'opérateur est disponible pour recevoir des notifications :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**email_address**|**nvarchar(100**|Adresse de messagerie de l'opérateur.|  
 |**last_email_date**|**int**|Date de la dernière notification envoyée par courrier électronique à l'opérateur.|  
 |**last_email_time**|**int**|Heure de la dernière notification envoyée par courrier électronique à l'opérateur.|  
@@ -77,7 +78,7 @@ sp_help_operator
 |**last_netsend_time**|**int**|Heure de la dernière notification envoyée à l'opérateur via le réseau.|  
 |**category_name**|**sysname**|Nom de la catégorie à laquelle appartient cet opérateur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_operator** doit être exécuté à partir de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

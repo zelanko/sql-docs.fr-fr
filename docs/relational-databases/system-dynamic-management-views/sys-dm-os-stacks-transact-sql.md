@@ -1,4 +1,5 @@
 ---
+description: sys.dm_os_stacks (Transact-SQL)
 title: sys. dm_os_stacks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
@@ -20,12 +21,12 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 869ebff08a3bb20ea531f3a1bdcdf59eafdcdceb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a91347a94f5623e9a3bb7b430eca9dae2ff6fcf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481892"
 ---
 # <a name="sysdm_os_stacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,13 +43,13 @@ ms.locfileid: "85718751"
 |**frame_index**|**int**|Chaque ligne représente un appel de fonction qui, lorsqu’il est trié par ordre croissant d’index de frames pour une **stack_address**particulière, retourne la pile des appels complète. N'accepte pas la valeur NULL.|  
 |**frame_address**|**varbinary (8)**|Adresse de l'appel de la fonction. N'accepte pas la valeur NULL.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sys. dm_os_stacks** nécessite que les symboles du serveur et des autres composants soient présents sur le serveur pour afficher correctement les informations.  
   
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
 
 ## <a name="see-also"></a>Voir aussi  

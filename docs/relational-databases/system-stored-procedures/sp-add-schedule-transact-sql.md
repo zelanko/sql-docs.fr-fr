@@ -1,4 +1,5 @@
 ---
+description: sp_add_schedule (Transact-SQL)
 title: sp_add_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d4ee3f039613865aab68860f93ab74279068a7da
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: aed71a51ab9852272c16e193367c12df77bb76a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481591"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée une planification qui peut être utilisée par un nombre illimité de travaux.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,11 +55,11 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @schedule_name = ] 'schedule_name'`Nom de la planification. *schedule_name* est de **type sysname**, sans valeur par défaut.  
+`[ @schedule_name = ] 'schedule_name'` Nom de la planification. *schedule_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @enabled = ] enabled`Indique l’état actuel de la planification. *Enabled* est de **type tinyint**, avec **1** comme valeur par défaut (activé). Si la **valeur est 0**, la planification n’est pas activée. Si la planification n'est pas activée, aucun travail n'est exécuté dans cette dernière.  
+`[ @enabled = ] enabled` Indique l’état actuel de la planification. *Enabled* est de **type tinyint**, avec **1** comme valeur par défaut (activé). Si la **valeur est 0**, la planification n’est pas activée. Si la planification n'est pas activée, aucun travail n'est exécuté dans cette dernière.  
   
-`[ @freq_type = ] freq_type`Valeur indiquant quand une tâche doit être exécutée. *freq_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @freq_type = ] freq_type` Valeur indiquant quand une tâche doit être exécutée. *freq_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -70,7 +71,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64**|Exécuter au démarrage du service de l’agent SQL|  
 |**128**|Exécuter lorsque l’ordinateur est inactif (non pris en charge dans [Azure SQL Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
-`[ @freq_interval = ] freq_interval`Jours d’exécution d’un travail. *freq_interval* est de **type int**, avec **1**comme valeur par défaut et dépend de la valeur de *freq_type*.  
+`[ @freq_interval = ] freq_interval` Jours d’exécution d’un travail. *freq_interval* est de **type int**, avec **1**comme valeur par défaut et dépend de la valeur de *freq_type*.  
   
 |Valeur de *freq_type*|Effet sur *freq_interval*|  
 |---------------------------|--------------------------------|  
@@ -82,7 +83,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**64** (au démarrage du service SQLServerAgent)|*freq_interval* n’est pas utilisé.|  
 |**128**|*freq_interval* n’est pas utilisé.|  
   
-`[ @freq_subday_type = ] freq_subday_type`Spécifie les unités pour *freq_subday_interval*. *freq_subday_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @freq_subday_type = ] freq_subday_type` Spécifie les unités pour *freq_subday_interval*. *freq_subday_type* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description (unité)|  
 |-----------|--------------------------|  
@@ -91,37 +92,37 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|Minutes|  
 |**0x8**|Heures|  
   
-`[ @freq_subday_interval = ] freq_subday_interval`Nombre de *freq_subday_type* périodes entre chaque exécution d’un travail. *freq_subday_interval* est de **type int**, avec **0**comme valeur par défaut. Remarque : l'intervalle doit être supérieur à 10 secondes. *freq_subday_interval* est ignoré dans les cas où *freq_subday_type* est égal à **1**.  
+`[ @freq_subday_interval = ] freq_subday_interval` Nombre de *freq_subday_type* périodes entre chaque exécution d’un travail. *freq_subday_interval* est de **type int**, avec **0**comme valeur par défaut. Remarque : l'intervalle doit être supérieur à 10 secondes. *freq_subday_interval* est ignoré dans les cas où *freq_subday_type* est égal à **1**.  
   
-`[ @freq_relative_interval = ] freq_relative_interval`L’occurrence d’un travail de *freq_interval* par mois, si *freq_interval* est de 32 (mensuel relatif). *freq_relative_interval* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes. *freq_relative_interval* est ignorée dans les cas où *freq_type* n’est pas égal à 32.  
+`[ @freq_relative_interval = ] freq_relative_interval` L’occurrence d’un travail de *freq_interval* par mois, si *freq_interval* est de 32 (mensuel relatif). *freq_relative_interval* est de **type int**, avec **0**comme valeur par défaut et peut prendre l’une des valeurs suivantes. *freq_relative_interval* est ignorée dans les cas où *freq_type* n’est pas égal à 32.  
   
 |Valeur|Description (unité)|  
 |-----------|--------------------------|  
-|**1**|First|  
+|**1**|Premier|  
 |**2**|Seconde|  
 |**4**|Third|  
 |**8**|Quatrième|  
 |**16**|Dernier|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor`Nombre de semaines ou de mois entre l’exécution planifiée d’un travail. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**ou **32**. *freq_recurrence_factor* est de **type int**, avec **0**comme valeur par défaut.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` Nombre de semaines ou de mois entre l’exécution planifiée d’un travail. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**ou **32**. *freq_recurrence_factor* est de **type int**, avec **0**comme valeur par défaut.  
   
-`[ @active_start_date = ] active_start_date`Date à laquelle l’exécution d’un travail peut commencer. *active_start_date* est de **type int**, avec NULL comme valeur par défaut, qui indique la date du jour. La date est au format AAAAMMJJ. Si *active_start_date* n’a pas la valeur null, la date doit être supérieure ou égale à 19900101.  
+`[ @active_start_date = ] active_start_date` Date à laquelle l’exécution d’un travail peut commencer. *active_start_date* est de **type int**, avec NULL comme valeur par défaut, qui indique la date du jour. La date est au format AAAAMMJJ. Si *active_start_date* n’a pas la valeur null, la date doit être supérieure ou égale à 19900101.  
   
  Après avoir créé la planification, examinez la date de début et assurez-vous qu'elle est correcte. Pour plus d’informations, consultez la section « planification de la date de début » dans [créer et attacher des planifications à des travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
  Pour les planifications hebdomadaires ou mensuelles, l'agent ignore si active_start_date se situe dans le passé, et utilise à la place la date actuelle. Lorsqu'une planification de l'agent SQL est créée à l'aide de sp_add_schedule, il existe une option pour spécifier le paramètre active_start_date, qui correspond à la date à laquelle l'exécution du travail commencera. Si le type de planification est hebdomadaire ou mensuel et que le paramètre active_start_date est défini à une date située dans le passé, le paramètre active_start_date est ignoré et la date actuelle est utilisée pour active_start_date.  
   
-`[ @active_end_date = ] active_end_date`Date à laquelle l’exécution d’un travail peut être arrêtée. *active_end_date* est de **type int**, avec **99991231**comme valeur par défaut, qui indique le 31 décembre 9999. La mise en forme est la suivante : AAAAMMJJ.  
+`[ @active_end_date = ] active_end_date` Date à laquelle l’exécution d’un travail peut être arrêtée. *active_end_date* est de **type int**, avec **99991231**comme valeur par défaut, qui indique le 31 décembre 9999. La mise en forme est la suivante : AAAAMMJJ.  
   
-`[ @active_start_time = ] active_start_time`Heure à partir de n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution d’un travail. *active_start_time* est de **type int**, avec **000000**comme valeur par défaut, qui indique 12:00:00 sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @active_start_time = ] active_start_time` Heure à partir de n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution d’un travail. *active_start_time* est de **type int**, avec **000000**comme valeur par défaut, qui indique 12:00:00 sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
-`[ @active_end_time = ] active_end_time`L’heure de n’importe quel jour entre *active_start_date* et *active_end_date* pour terminer l’exécution d’un travail. *active_end_time* est de **type int**, avec **235959**comme valeur par défaut, qui indique 11:59:59 P.M. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @active_end_time = ] active_end_time` L’heure de n’importe quel jour entre *active_start_date* et *active_end_date* pour terminer l’exécution d’un travail. *active_end_time* est de **type int**, avec **235959**comme valeur par défaut, qui indique 11:59:59 P.M. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
-`[ @owner_login_name = ] 'owner_login_name'`Nom du principal de serveur qui possède la planification. *owner_login_name* est de **type sysname**, avec NULL comme valeur par défaut, qui indique que la planification appartient au créateur.  
+`[ @owner_login_name = ] 'owner_login_name'` Nom du principal de serveur qui possède la planification. *owner_login_name* est de **type sysname**, avec NULL comme valeur par défaut, qui indique que la planification appartient au créateur.  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT`Identificateur unique de la planification. *schedule_uid* est une variable de type **uniqueidentifier**.  
+`[ @schedule_uid = ] _schedule_uidOUTPUT` Identificateur unique de la planification. *schedule_uid* est une variable de type **uniqueidentifier**.  
   
-`[ @schedule_id = ] _schedule_idOUTPUT`Identificateur de la planification. *schedule_id* est une variable de type **int**.  
+`[ @schedule_id = ] _schedule_idOUTPUT` Identificateur de la planification. *schedule_id* est une variable de type **int**.  
   
 `[ @originating_server = ] server_name` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

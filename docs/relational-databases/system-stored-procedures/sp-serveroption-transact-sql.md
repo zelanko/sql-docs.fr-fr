@@ -1,4 +1,5 @@
 ---
+description: sp_serveroption (Transact-SQL)
 title: sp_serveroption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/11/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ddaed4baff5685f4ebf7bf4083c9264c895cdd32
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c9235c9307c679d80aa869990c6f43ca5ef301dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893208"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481033"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85893208"
   Définit les options de serveur pour les serveurs distants et les serveurs liés.  
   
  
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ sp_serveroption [@server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @server = ] 'server'`Nom du serveur pour lequel l’option doit être définie. *server* est de type **sysname**et n'a pas de valeur par défaut.  
+`[ @server = ] 'server'` Nom du serveur pour lequel l’option doit être définie. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
-`[ @optname = ] 'option_name'`Option à définir pour le serveur spécifié. *option_name* est de type **varchar (** 35 **)**, sans valeur par défaut. *option_name* peut prendre l’une des valeurs suivantes.  
+`[ @optname = ] 'option_name'` Option à définir pour le serveur spécifié. *option_name* est de type **varchar (** 35 **)**, sans valeur par défaut. *option_name* peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -63,7 +64,7 @@ sp_serveroption [@server = ] 'server'
 |**utiliser le classement distant**|Détermine si le classement d'une colonne distante ou d'un serveur local doit être utilisé.<br /><br /> Si la **valeur est true**, le classement des colonnes distantes est utilisé pour les sources de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données, et le classement spécifié dans **collation Name** est utilisé pour les sources de données non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Si la **valeur est false**, les requêtes distribuées utilisent toujours le classement par défaut du serveur local, tandis que le **nom de classement** et le classement des colonnes distantes sont ignorés. La valeur par défaut est **false**. (La valeur **false** est compatible avec la sémantique de classement utilisée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.)|  
 |**remote proc transaction promotion**|Cette option permet de protéger les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Lorsque cette option a la valeur TRUE (ou ON), l'appel d'une procédure stockée distante démarre une transaction distribuée et inscrit la transaction avec MS DTC. L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelant la procédure stockée distante constitue l'élément créateur de la transaction et qui contrôle l'exécution jusqu'à son terme. Si une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION est ensuite émise pour la connexion, le serveur de contrôle demande à MS DTC de gérer l'achèvement de la transaction distribuée sur tous les ordinateurs concernés.<br /><br /> Une fois qu'une transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] a démarré, des appels de procédures stockées distantes peuvent être effectués envers d'autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été définies en tant que serveurs liés. Les serveurs liés sont tous inscrits dans la transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] et MS DTC garantit que la transaction est exécutée jusqu'à son terme sur chaque serveur lié.<br /><br /> Si cette option a la valeur FALSE (ou OFF), une transaction locale ne sera pas promue en transaction distribuée lors de l'exécution d'un appel de procédure distante sur un serveur lié.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, la transaction est déjà une transaction distribuée, cette option n'a pas effet. L'appel de procédure sur le serveur lié s'exécutera sous la même transaction distribuée.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, aucune transaction n'est active dans la connexion, cette option n'a pas effet. La procédure s'exécute ensuite sur le serveur lié sans transactions actives.<br /><br /> La valeur par défaut de cette option est TRUE (ou ON).|  
   
-`[ @optvalue = ] 'option_value'`Spécifie si le *option_name* doit être activé (**true** ou **on**) ou désactivé (**false** ou **off**). *option_value* est de type **varchar (** 10 **)**, sans valeur par défaut.  
+`[ @optvalue = ] 'option_value'` Spécifie si le *option_name* doit être activé (**true** ou **on**) ou désactivé (**false** ou **off**). *option_value* est de type **varchar (** 10 **)**, sans valeur par défaut.  
   
  *option_value* peut être un entier non négatif pour les options **délai de connexion** et **délai d’expiration** de la requête. Pour l’option **nom du classement** , *option_value* peut être un nom de classement ou une valeur null.  
   

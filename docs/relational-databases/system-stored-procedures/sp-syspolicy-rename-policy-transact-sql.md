@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_policy (Transact-SQL)
 title: sp_syspolicy_rename_policy (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e157090ba5fb9b6c3c9da7fb88d0aa0612d2f727
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782128b1d41f94c63f4e9de22e618378c4ec6e6a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88481010"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85892690"
   Renomme une stratégie existante dans la Gestion basée sur des stratégies.  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,16 +42,16 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom de la stratégie que vous souhaitez renommer. *Name* est de **type sysname**et doit être spécifié si *policy_id* a la valeur null.  
+`[ @name = ] 'name'` Nom de la stratégie que vous souhaitez renommer. *Name* est de **type sysname**et doit être spécifié si *policy_id* a la valeur null.  
   
-`[ @policy_id = ] policy_id`Est l’identificateur de la stratégie que vous souhaitez renommer. *policy_id* est de **type int**et doit être spécifié si *Name* a la valeur null.  
+`[ @policy_id = ] policy_id` Est l’identificateur de la stratégie que vous souhaitez renommer. *policy_id* est de **type int**et doit être spécifié si *Name* a la valeur null.  
   
-`[ @new_name = ] 'new_name'`Nouveau nom de la stratégie. *new_name* est de **type sysname**et est obligatoire. Ne peut pas avoir la valeur NULL ou être une chaîne vide.  
+`[ @new_name = ] 'new_name'` Nouveau nom de la stratégie. *new_name* est de **type sysname**et est obligatoire. Ne peut pas avoir la valeur NULL ou être une chaîne vide.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_rename_policy dans le contexte de la base de données système msdb.  
   
  Vous devez spécifier une valeur pour *Name* ou *policy_id*. Les deux ne peuvent pas être NULL. Pour obtenir ces valeurs, interrogez la vue système msdb.dbo.syspolicy_policies.  
