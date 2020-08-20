@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLConnect
 title: Fonction SQLConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab0a31845efeb484c554a9c9cf1afeaeab1a8bea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 714bc6f69a72609ee266effff71f1898d62ec7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301215"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461201"
 ---
 # <a name="sqlconnect-function"></a>Fonction SQLConnect
 **Conformité**  
@@ -57,7 +58,7 @@ SQLRETURN SQLConnect(
  *NameLength1*  
  Entrée Longueur de **ServerName* en caractères.  
   
- *Nom d’utilisateur*  
+ *UserName*  
  Entrée Identificateur de l’utilisateur.  
   
  *NameLength2*  
@@ -84,7 +85,7 @@ SQLRETURN SQLConnect(
 |08004|Le serveur a rejeté la connexion|La source de données a rejeté l’établissement de la connexion pour des raisons définies par l’implémentation.|  
 |08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote essayait de se connecter a échoué avant la fin du traitement de la fonction.|  
 |28000|Spécification d’autorisation non valide|La valeur spécifiée pour l’argument *nom d’utilisateur* ou la valeur spécifiée pour l' *authentification* de l’argument n’a pas respecté les restrictions définies par la source de données.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|(DM) le gestionnaire de pilotes n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *ConnectionHandle*. La fonction **SQLConnect** a été appelée, et avant la fin de l’exécution, la [fonction SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) a été appelée sur le *ConnectionHandle*, puis la fonction **SQLConnect** a été appelée à nouveau sur le *ConnectionHandle*.<br /><br /> Ou bien, la fonction **SQLConnect** a été appelée et avant la fin de l’exécution, **SQLCancelHandle** a été appelé sur le *ConnectionHandle* à partir d’un thread différent dans une application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *ConnectionHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.|  
@@ -100,7 +101,7 @@ SQLRETURN SQLConnect(
 |IM005|Échec du SQLAllocHandle du pilote sur SQL_HANDLE_DBC|(DM) au cours de **SQLConnect**, le gestionnaire de pilotes a appelé la fonction **SQLAllocHandle** du pilote avec un *comme HandleType* de SQL_HANDLE_DBC et le pilote a renvoyé une erreur.|  
 |IM006|Échec de SQLSetConnectAttr du pilote|Au cours de **SQLConnect**, le gestionnaire de pilotes a appelé la fonction **SQLSetConnectAttr** du pilote et le pilote a renvoyé une erreur. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |IM009|Impossible de se connecter à la DLL de traduction|Le pilote n’a pas pu se connecter à la DLL de traduction spécifiée pour la source de données.|  
-|IM010|Le nom de la source de données est trop long|Le nom du * \*serveur* (DM) est plus long que SQL_MAX_DSN_LENGTH caractères.|  
+|IM010|Le nom de la source de données est trop long|Le nom du * \* serveur* (DM) est plus long que SQL_MAX_DSN_LENGTH caractères.|  
 |IM014|Le nom de source de donnée spécifié contient une incompatibilité d’architecture entre le pilote et l’application|(DM) l’application 32 bits utilise un DSN se connectant à un pilote 64 bits ; ou vice versa.|  
 |IM015|Échec de SQLConnect sur SQL_HANDLE_DBC_INFO_HANDLE du pilote|Si un pilote retourne SQL_ERROR, le gestionnaire de pilotes renverra SQL_ERROR à l’application et la connexion échouera.<br /><br /> Pour plus d’informations sur la SQL_HANDLE_DBC_INFO_TOKEN, consultez [développement de la reconnaissance des pools de connexions dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
 |IM017|L’interrogation est désactivée en mode de notification asynchrone|Chaque fois que le modèle de notification est utilisé, l’interrogation est désactivée.|  
@@ -252,7 +253,7 @@ int main() {
 |Allocation d’un descripteur|[SQLAllocHandle, fonction](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Découverte et énumération des valeurs requises pour se connecter à une source de données|[Fonction SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |Déconnexion d’une source de données|[SQLDisconnect, fonction](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|Connexion à une source de données à l’aide d’une chaîne de connexion ou d’une boîte de dialogue|[Fonction SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Connexion à une source de données à l’aide d’une chaîne de connexion ou d’une boîte de dialogue|[SQLDriverConnect, fonction](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Renvoi du paramètre d’un attribut de connexion|[Fonction SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
 |Définition d’un attribut de connexion|[Fonction SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   

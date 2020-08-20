@@ -1,4 +1,5 @@
 ---
+description: Choix d’une grammaire SQL
 title: Choix d’une grammaire SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ca9911d3c88f2f540ff1332d77a2e1ebc6a4942
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7936631c830d65d58e69d6cd77a728dfd8e664b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461581"
 ---
 # <a name="choosing-an-sql-grammar"></a>Choix d’une grammaire SQL
 La première décision à prendre lors de la construction d’instructions SQL est la grammaire à utiliser. En plus des grammaires disponibles dans les divers organismes de normalisation, tels que Open Group, ANSI et ISO, presque tous les fournisseurs SGBD définissent leur propre grammaire, chacun d’entre eux variant légèrement de la norme.  

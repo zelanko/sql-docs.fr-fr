@@ -1,4 +1,5 @@
 ---
+description: Nouveau projet (SSMA) (MySQLToSQL)
 title: Nouveau projet (SSMA) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 1d1e6b634fbb5c131e7f9e7ffdce1c374ca40162
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 7c8136b85de92fa4b7019ac8b9320aba4b3fdd06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935298"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463351"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Nouveau projet (SSMA) (MySQLToSQL)
 Utilisez la boîte de dialogue **nouveau projet** pour créer un nouveau projet SSMA. Pour accéder à la boîte de dialogue **nouveau projet** , dans le menu **fichier** , cliquez sur **nouveau projet**.  
@@ -24,7 +25,7 @@ Utilisez la boîte de dialogue **nouveau projet** pour créer un nouveau projet 
   
 Entrez le nom du projet. SSMA va ajouter l’extension de fichier.  
   
-**Emplacement**  
+**Lieu**  
   
 Entrez ou accédez au dossier ou à l’emplacement réseau pour enregistrer le projet.  
   
@@ -38,7 +39,7 @@ Sélectionnez l’une des versions de la base de données cible dans la liste ci
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   

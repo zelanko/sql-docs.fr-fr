@@ -1,4 +1,5 @@
 ---
+description: Présentation de Data Quality Services
 title: Présentation de Data Quality Services
 ms.date: 03/05/2012
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0564da5fc907db5f684f96b716ad1cb39ef007ce
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 46a95e0cdd54360a91aa56cfde86be6fff8d0c40
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901610"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462095"
 ---
 # <a name="introduction-to-data-quality-services"></a>Présentation de Data Quality Services
 
@@ -24,7 +25,7 @@ ms.locfileid: "85901610"
 
   La solution de qualité des données fournie par [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permet aux gestionnaires de données et aux professionnels de l'informatique de préserver la qualité de leurs données et de s'assurer que ces dernières sont adaptées à leur utilisation professionnelle. DQS est une solution reposant sur des connaissances qui offre des méthodes interactives et assistées par ordinateur pour gérer l'intégrité et la qualité de vos sources de données. DQS vous permet de découvrir, de générer et de gérer les connaissances relatives à vos données. Vous pouvez ensuite utiliser ces connaissances pour procéder au nettoyage, à la mise en correspondance et au profilage des données. Vous pouvez également tirer parti des services en nuage de fournisseurs de données de référence dans un projet de qualité des données DQS.  
   
-##  <a name="the-business-need-for-dqs"></a><a name="BusinessNeed"></a>Les besoins de l’entreprise pour DQS  
+##  <a name="the-business-need-for-dqs"></a><a name="BusinessNeed"></a> Les besoins de l’entreprise pour DQS  
  Des données incorrectes peuvent provenir d'erreurs de saisie utilisateur, d'une altération dans la transmission ou le stockage, de définitions incompatibles dans le dictionnaire de données ou d'autres problèmes de traitement et de qualité des données. L'agrégation de données issues de différentes sources qui utilisent différents standards de données peut se solder par des données incohérentes, tout comme l'application d'une règle arbitraire ou le remplacement des données d'historique. Des données incorrectes ont une incidence sur la capacité d'une entreprise à effectuer ses fonctions métier et à fournir des services à ses clients, ce qui peut entraîner une perte de crédibilité et de revenu, le mécontentement de la clientèle et des problèmes de conformité. Souvent, les systèmes automatisés ne fonctionnent pas avec des données incorrectes et ces dernières sont à l'origine d'une perte de temps et d'énergie pour les personnes chargées des corrections manuelles. Des données incorrectes peuvent causer des dégâts importants en termes d'analyse de données, de création de rapports, d'exploration de données et de stockage.  
   
  Des données de qualité supérieure sont essentielles à la rentabilité des entreprises et des institutions. Les organisations de toutes tailles peuvent utiliser DQS pour améliorer la valeur informative de leurs données afin que celles-ci soient mieux adaptées à l'usage prévu. Une solution de qualité des données peut améliorer la fiabilité, l'accessibilité et la réutilisabilité des données. Elle peut améliorer exhaustivité, l'exactitude, la conformité et la cohérence de vos données, résolvant ainsi les problèmes dus à des données incorrectes dans les charges de travail de business intelligence ou d'entrepôt de données, ainsi que dans les systèmes opérationnels OLTP.  

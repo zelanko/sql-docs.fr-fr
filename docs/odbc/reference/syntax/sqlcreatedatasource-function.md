@@ -1,4 +1,5 @@
 ---
+description: SQLCreateDataSource, fonction
 title: SQLCreateDataSource fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 94dc0d6d6f3b5bc96ae41aecda5b46f119cff85c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb65e0906e7b69666dd04824f9c4d0819837d2b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461211"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource, fonction
 **Conformité**  
@@ -53,7 +54,7 @@ BOOL SQLCreateDataSource(
  **SQLCreateDataSource** retourne la valeur true si la source de données est créée. Sinon, elle retourne FALSe.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **SQLCreateDataSource** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Quand **SQLCreateDataSource** retourne false, une valeur * \* pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les valeurs * \* pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  

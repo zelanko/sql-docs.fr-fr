@@ -1,4 +1,5 @@
 ---
+description: Récupération des paramètres de sortie à l’aide de SQLGetData
 title: Récupération des paramètres de sortie à l’aide de SQLGetData | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8c96a3f9fc81d081ce16fe8e75746aafe8962fd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a31cb6baa015e2a90977d0112e770ce66fa8e62f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294589"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461381"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Récupération des paramètres de sortie à l’aide de SQLGetData
 Avant ODBC 3,8, une application pouvait uniquement récupérer les paramètres de sortie d’une requête avec une mémoire tampon de sortie liée. Toutefois, il est difficile d’allouer une mémoire tampon très importante lorsque la taille de la valeur de paramètre est très importante (par exemple, une grande image). ODBC 3,8 introduit une nouvelle méthode pour récupérer les paramètres de sortie en plusieurs parties. Une application peut maintenant appeler **SQLGetData** avec une mémoire tampon de petite taille plusieurs fois pour récupérer une valeur de paramètre élevée. Cela est similaire à la récupération de données de grande colonne.  
@@ -37,7 +38,7 @@ Avant ODBC 3,8, une application pouvait uniquement récupérer les paramètres d
   
 3.  Appelez **SQLParamData** pour obtenir le paramètre qui est disponible pour la récupération. **SQLParamData** renverra SQL_PARAM_DATA_AVAILABLE avec le jeton du premier paramètre disponible, qui est défini dans **SQLBindParameter** (étape 1). Le jeton est retourné dans la mémoire tampon vers laquelle pointe le *ValuePtrPtr* .  
   
-4.  Appelez **SQLGetData** avec l’argument *col*_OR\_*Param_Num* défini sur le paramètre ordinal pour récupérer les données du premier paramètre disponible. Si **SQLGetData** retourne SQL_SUCCESS_WITH_INFO et SQLSTATE 01004 (données tronquées) et que le type est une longueur variable sur le client et le serveur, il y a plus de données à récupérer à partir du premier paramètre disponible. Vous pouvez continuer à appeler **SQLGetData** jusqu’à ce qu’il retourne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO avec une valeur **SQLSTATE**différente.  
+4.  Appelez **SQLGetData** avec l’argument *col*_OR \_ *Param_Num* défini sur le paramètre ordinal pour récupérer les données du premier paramètre disponible. Si **SQLGetData** retourne SQL_SUCCESS_WITH_INFO et SQLSTATE 01004 (données tronquées) et que le type est une longueur variable sur le client et le serveur, il y a plus de données à récupérer à partir du premier paramètre disponible. Vous pouvez continuer à appeler **SQLGetData** jusqu’à ce qu’il retourne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO avec une valeur **SQLSTATE**différente.  
   
 5.  Répétez les étapes 3 et 4 pour récupérer le paramètre actuel.  
   
@@ -75,13 +76,13 @@ Avant ODBC 3,8, une application pouvait uniquement récupérer les paramètres d
   
  Une fois que **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** retourne SQL_PARAM_DATA_AVAILABLE, une erreur de séquence de fonction se produit si une application appelle une fonction qui ne figure pas dans la liste suivante :  
   
--   **SQLAllocHandle** / **SQLAllocHandleStd**  
+-   **SQLAllocHandle**  /  **SQLAllocHandleStd**  
   
--   **SQLDataSources** / **SQLDrivers**  
+-   **SQLDataSources**  /  **SQLDrivers**  
   
--   **SQLGetInfo** / **SQLGetFunctions** SQLGetInfo  
+-   **SQLGetInfo**  /  **SQLGetFunctions**  
   
--   **SQLGetConnectAttr** / **SQLGetEnvAttr**SQLGetEnvAttr / **SQLGetDescField**SQLGetDescField / **SQLGetDescRec**  
+-   **SQLGetConnectAttr**  /  **SQLGetEnvAttr**  /  **SQLGetDescField**  /  **SQLGetDescRec**  
   
 -   **SQLNumParams**  
   
@@ -93,7 +94,7 @@ Avant ODBC 3,8, une application pouvait uniquement récupérer les paramètres d
   
 -   **SQLMoreResults**  
   
--   **SQLGetDiagField** / **SQLGetDiagRec**  
+-   **SQLGetDiagField**  /  **SQLGetDiagRec**  
   
 -   **SQLCancel**  
   

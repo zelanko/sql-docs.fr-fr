@@ -1,4 +1,5 @@
 ---
+description: SQLFetchScroll (bibliothèque de curseurs)
 title: SQLFetchScroll (bibliothèque de curseurs) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e5573b8afc49afec8b7afa4fc52590e7a6a9e2fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9783e2e0e7e5030aef0173a67cf8a4eac416242f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302050"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461651"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -61,7 +62,7 @@ ms.locfileid: "81302050"
 |Type de curseur|Types d’extraction|  
 |-----------------|-----------------|  
 |Curseur avant uniquement|SQL_FETCH_NEXT|  
-|Statique|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
+|statique|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
   
 ## <a name="errors"></a>Erreurs  
  Lorsque **SQLFetchScroll** est appelé et que l’un des appels à **SQLFetch** retourne SQL_ERROR, la bibliothèque de curseurs se poursuit comme suit. Une fois ces étapes terminées, la bibliothèque de curseurs continue le traitement.  

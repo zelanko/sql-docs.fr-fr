@@ -1,4 +1,5 @@
 ---
+description: Ancestors (MDX)
 title: Ancêtres (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92f15f20c872fbe63db09a55356b5d1e35ff0d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017099"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461681"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  Cette fonction retourne le jeu de tous les ancêtres d'un membre spécifié à un niveau ou une distance spécifiée du membre. Avec [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], le jeu retourné se compose toujours d’un seul membre. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] il ne prend pas en charge plusieurs parents pour un seul membre.  
+  Cette fonction retourne le jeu de tous les ancêtres d'un membre spécifié à un niveau ou une distance spécifiée du membre. Avec [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , le jeu retourné se compose toujours d’un seul membre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . il ne prend pas en charge plusieurs parents pour un seul membre.  
   
 ## <a name="syntax"></a>Syntaxe  
   

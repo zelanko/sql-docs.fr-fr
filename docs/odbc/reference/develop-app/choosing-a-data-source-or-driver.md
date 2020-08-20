@@ -1,4 +1,5 @@
 ---
+description: Choix d’une source de données ou d’un pilote
 title: Choix d’une source de données ou d’un pilote | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b10aafad95463f56ec0f5a029eac59a02cff003b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 215e249fe354396239118394d4e792ced67bc82d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303370"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461601"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Choix d’une source de données ou d’un pilote
 La source de données ou le pilote utilisé par une application est parfois codé en dur dans l’application. Par exemple, une application personnalisée écrite par un département MIS pour transférer des données d’une source de données vers une autre doit contenir les noms de ces sources de données. l’application ne fonctionnera pas avec d’autres sources de données. Un autre exemple est une application verticale, telle que celle utilisée pour l’entrée de commande. Une telle application utilise toujours la même source de données, qui a un schéma prédéfini connu par l’application.  

@@ -1,4 +1,5 @@
 ---
+description: SQLDrivers, fonction
 title: SQLDrivers fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2496e7cd5f2abe0831c72484bed374d7aa1513ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9abe7502b7efcfba695bd58081752342504378ab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461161"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers, fonction
 **Conformité**  
@@ -64,7 +65,7 @@ SQLRETURN SQLDrivers(
  Entrée Longueur de la mémoire tampon **DriverDescription* , en caractères.  
   
  *DescriptionLengthPtr*  
- Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à \*retourner dans *DriverDescription*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength1*, la description du pilote dans \* *DriverDescription* est tronquée à *BufferLength1* moins la longueur d’un caractère de fin null.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à retourner dans \* *DriverDescription*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength1*, la description du pilote dans \* *DriverDescription* est tronquée à *BufferLength1* moins la longueur d’un caractère de fin null.  
   
  *DriverAttributes*  
  Sortie Pointeur vers une mémoire tampon dans laquelle retourner la liste des paires de valeurs d’attribut de pilote (consultez « Comments »).  
@@ -72,10 +73,10 @@ SQLRETURN SQLDrivers(
  Si *DriverAttributes* a la valeur null, *AttributesLengthPtr* retourne toujours le nombre total d’octets (à l’exception du caractère de fin null pour les données de type caractère) disponibles pour retourner dans la mémoire tampon vers laquelle pointe *DriverAttributes*.  
   
  *BufferLength2*  
- Entrée Longueur de la \*mémoire tampon *DriverAttributes* , en caractères. Si la valeur * \*DriverDescription* est une chaîne Unicode (lors de l’appel de **SQLDriversW**), l’argument *BufferLength* doit être un nombre pair.  
+ Entrée Longueur de la \* mémoire tampon *DriverAttributes* , en caractères. Si la valeur * \* DriverDescription* est une chaîne Unicode (lors de l’appel de **SQLDriversW**), l’argument *BufferLength* doit être un nombre pair.  
   
  *AttributesLengthPtr*  
- Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total d’octets (à l’exclusion de l’octet de fin null) disponibles \*à retourner dans *DriverAttributes*. Si le nombre d’octets disponibles à retourner est supérieur ou égal à *BufferLength2*, la liste des paires de valeurs d’attributs \*dans *DriverAttributes* est tronquée à *BufferLength2* moins la longueur du caractère de fin null.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total d’octets (à l’exclusion de l’octet de fin null) disponibles à retourner dans \* *DriverAttributes*. Si le nombre d’octets disponibles à retourner est supérieur ou égal à *BufferLength2*, la liste des paires de valeurs d’attributs dans \* *DriverAttributes* est tronquée à *BufferLength2* moins la longueur du caractère de fin null.  
   
 ## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -86,8 +87,8 @@ SQLRETURN SQLDrivers(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au gestionnaire de pilotes (DM). (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01004|Données de chaîne, tronquées à droite|(DM) la mémoire \*tampon *DriverDescription* n’était pas suffisamment grande pour retourner la description complète du pilote. Par conséquent, la description a été tronquée. La longueur de la description complète du pilote est retournée dans \* *DescriptionLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) la mémoire \*tampon *DriverAttributes* n’était pas suffisamment grande pour retourner la liste complète des paires valeur-attribut. Par conséquent, la liste a été tronquée. La longueur de la liste non tronquée des paires valeur d’attribut est retournée dans **AttributesLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|01004|Données de chaîne, tronquées à droite|(DM) la mémoire tampon \* *DriverDescription* n’était pas suffisamment grande pour retourner la description complète du pilote. Par conséquent, la description a été tronquée. La longueur de la description complète du pilote est retournée dans \* *DescriptionLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) la mémoire tampon \* *DriverAttributes* n’était pas suffisamment grande pour retourner la liste complète des paires valeur-attribut. Par conséquent, la liste a été tronquée. La longueur de la liste non tronquée des paires valeur d’attribut est retournée dans **AttributesLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|(DM) le gestionnaire de pilotes n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
@@ -96,7 +97,7 @@ SQLRETURN SQLDrivers(
 |HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLDrivers** retourne la description du pilote dans \*la mémoire tampon *DriverDescription* . Elle retourne des informations supplémentaires sur le pilote dans \*la mémoire tampon *DriverAttributes* sous la forme d’une liste de paires mot clé-valeur. Tous les mots clés figurant dans les informations système pour les pilotes sont renvoyés pour tous les pilotes, à l’exception de **CreateDSN**, qui est utilisé pour demander la création de sources de données et est donc facultatif. Chaque paire se termine par un octet NULL, et la liste complète se termine par un octet Null (autrement dit, deux octets de valeur null marquent la fin de la liste). Par exemple, un pilote basé sur des fichiers utilisant la syntaxe C peut retourner la liste d’attributs suivante (« \ 0 » représente un caractère null) :  
+ **SQLDrivers** retourne la description du pilote dans la \* mémoire tampon *DriverDescription* . Elle retourne des informations supplémentaires sur le pilote dans la \* mémoire tampon *DriverAttributes* sous la forme d’une liste de paires mot clé-valeur. Tous les mots clés figurant dans les informations système pour les pilotes sont renvoyés pour tous les pilotes, à l’exception de **CreateDSN**, qui est utilisé pour demander la création de sources de données et est donc facultatif. Chaque paire se termine par un octet NULL, et la liste complète se termine par un octet Null (autrement dit, deux octets de valeur null marquent la fin de la liste). Par exemple, un pilote basé sur des fichiers utilisant la syntaxe C peut retourner la liste d’attributs suivante (« \ 0 » représente un caractère null) :  
   
 ```  
 FileUsage=1\0FileExtns=*.dbf\0\0  
@@ -117,9 +118,9 @@ FileUsage=1\0FileExtns=*.dbf\0\0
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Détection et affichage des valeurs requises pour se connecter à une source de données|[Fonction SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|Connexion à une source de données|[Fonction SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
+|Connexion à une source de données|[SQLConnect, fonction](../../../odbc/reference/syntax/sqlconnect-function.md)|  
 |Retour de noms de sources de données|[SQLDataSources, fonction](../../../odbc/reference/syntax/sqldatasources-function.md)|  
-|Connexion à une source de données à l’aide d’une chaîne de connexion ou d’une boîte de dialogue|[Fonction SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Connexion à une source de données à l’aide d’une chaîne de connexion ou d’une boîte de dialogue|[SQLDriverConnect, fonction](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

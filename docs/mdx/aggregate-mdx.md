@@ -1,4 +1,5 @@
 ---
+description: Aggregate (MDX)
 title: Aggregate (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1e3f00ffbf662422f162d493a585d3972518431
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017170"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461692"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -42,7 +43,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Opérateur d'agrégation|Résultats|  
 |--------------------------|------------|  
 |SUM|Retourne la somme des valeurs dans le jeu.|  
-|Count|Retourne le nombre de valeurs dans le jeu.|  
+|Nombre|Retourne le nombre de valeurs dans le jeu.|  
 |Max|Retourne la valeur maximale dans le jeu.|  
 |Min|Retourne la valeur minimale dans le jeu.|  
 |Fonctions d'agrégation semi-additives|Retourne le calcul du comportement semi-additif dans le jeu après projection de la forme sur l'axe temporel.|  
@@ -122,11 +123,11 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [PeriodsToDate &#40;&#41;MDX](../mdx/periodstodate-mdx.md)   
+ [PeriodsToDate &#40;&#41;MDX ](../mdx/periodstodate-mdx.md)   
  [&#41;MDX &#40;](../mdx/children-mdx.md)   
  [Hierarchize&#41;MDX &#40;](../mdx/hierarchize-mdx.md)   
- [Nombre &#40;défini&#41; &#40;&#41;MDX](../mdx/count-set-mdx.md)   
- [Filtre &#40;&#41;MDX](../mdx/filter-mdx.md)   
+ [Nombre &#40;défini&#41; &#40;&#41;MDX ](../mdx/count-set-mdx.md)   
+ [Filtre &#40;&#41;MDX ](../mdx/filter-mdx.md)   
  [AddCalculatedMembers&#41;MDX &#40;](../mdx/addcalculatedmembers-mdx.md)   
  [DrilldownLevel&#41;MDX &#40;](../mdx/drilldownlevel-mdx.md)   
  [Propriétés &#40;MDX&#41;](../mdx/properties-mdx.md)   

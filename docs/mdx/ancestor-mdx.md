@@ -1,4 +1,5 @@
 ---
+description: Ancestor (MDX)
 title: Ancêtre (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 385206d4a94362831e0949bafe5a11c1ce48d7bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e08a0f281a9e48c3416bb00f6ee47322d554d9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461661"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 
@@ -45,7 +46,7 @@ Ancestor(Member_Expression, Distance)
  Avec la fonction **Ancestor** , vous fournissez la fonction avec une expression de membre MDX, puis vous fournissez soit une expression MDX d’un niveau qui est un ancêtre du membre, soit une expression numérique qui représente le nombre de niveaux au-dessus de ce membre. Avec ces informations, la fonction **ancêtres** retourne le membre ancêtre à ce niveau.  
   
 > [!NOTE]  
->  Pour retourner un jeu contenant le membre ancêtre, au lieu du membre ancêtre uniquement, utilisez la fonction [ancêtres &#40;&#41;MDX](../mdx/ancestors-mdx.md) .  
+>  Pour retourner un jeu contenant le membre ancêtre, au lieu du membre ancêtre uniquement, utilisez la fonction [ancêtres &#40;&#41;MDX ](../mdx/ancestors-mdx.md) .  
   
  Si une expression de niveau est spécifiée, la fonction **Ancestor** retourne l’ancêtre du membre spécifié au niveau spécifié. Si le membre spécifié n'apparaît pas dans la même hiérarchie en tant que niveau spécifié, la fonction retourne une erreur.  
   

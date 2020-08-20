@@ -1,4 +1,5 @@
 ---
+description: Erreurs et lots
 title: Erreurs et lots | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36a402686a695a08748df24a7b40a228d7a2ca7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e5cdf4d394ffa1c17173aedc4485b6979cf371e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461491"
 ---
 # <a name="errors-and-batches"></a>Erreurs et lots
 Lorsqu’une erreur se produit lors de l’exécution d’un lot d’instructions SQL, l’un des quatre résultats suivants est possible. (Chaque résultat possible est spécifique à la source de données et peut même dépendre des instructions incluses dans le lot).  

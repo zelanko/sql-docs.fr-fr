@@ -1,4 +1,5 @@
 ---
+description: Créer un profil de messagerie de base de données
 title: Créer un profil de messagerie de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -14,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 466fa0d08af2fa91aefa4d206037080a5aa8f0b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3ee012fe4bcd7fa1cd98c51f537035fc6148938
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737606"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461125"
 ---
 # <a name="create-a-database-mail-profile"></a>Créer un profil de messagerie de base de données
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  Utilisez l' **Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des profils privés et publics de messagerie de base de données. Pour plus d’informations sur les profils de messagerie, consultez [Profil de messagerie de base de données](database-mail-configuration-objects.md).
+   Utilisez **l’Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des profils privés et publics de messagerie de base de données. Pour plus d’informations sur les profils de messagerie, consultez [Profil de messagerie de base de données](database-mail-configuration-objects.md).
   
--   **Avant de commencer :** [Prérequis](#Prerequisites), [Sécurité](#Security)  
+-   **Avant de commencer :** [Configuration requise](#Prerequisites), [Sécurité](#Security)  
   
--   **Pour créer un profil privé Database Mail en utilisant :**  [ Assistant Configuration de Database Mail](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **Pour créer un profil privé de messagerie de base de données en utilisant :**  [Assistant Configuration de la messagerie de base de données](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **Pour créer un profil public Database Mail en utilisant :**  [ Assistant Configuration de Database Mail](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **Pour créer un profil public de messagerie de base de données en utilisant :**  [Assistant Configuration de la messagerie de base de données](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   

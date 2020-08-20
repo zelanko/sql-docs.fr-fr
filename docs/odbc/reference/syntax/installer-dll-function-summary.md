@@ -1,4 +1,5 @@
 ---
+description: Récapitulatif des fonctions de la DLL d’installation
 title: Résumé de la fonction DLL du programme d’installation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ddaf20334a84833433961a49e17724d354945c5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3666808659abb29a1f5a1eb1e8be62e8cf0507f6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461231"
 ---
 # <a name="installer-dll-function-summary"></a>Récapitulatif des fonctions de la DLL d’installation
 Le tableau suivant décrit les fonctions de la DLL du programme d’installation. Pour plus d’informations sur la syntaxe et la sémantique de chaque fonction, consultez Référence de l' [API dll du programme d’installation](../../../odbc/reference/syntax/installer-dll-api-reference-function.md).  
@@ -37,14 +38,14 @@ Le tableau suivant décrit les fonctions de la DLL du programme d’installation
 ||[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|Supprime le traducteur des informations système.|  
 |Configuration des sources de données|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|Appelle la DLL d’installation spécifique au pilote.|  
 ||[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|Affiche une boîte de dialogue pour ajouter une source de données.|  
-||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Récupère le mode de configuration qui indique où l’entrée ODBC. ini qui répertorie les valeurs DSN se trouve dans les informations système.|  
+||[SQLGetConfigMode](../../../odbc/reference/syntax/sqlgetconfigmode-function.md)|Récupère le mode de configuration qui indique où l’entrée de Odbc.ini répertoriant les valeurs DSN se trouve dans les informations système.|  
 ||[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|Écrit une valeur dans les informations système.|  
 ||[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|Affiche une boîte de dialogue pour sélectionner un traducteur.|  
 ||[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|Affiche une boîte de dialogue pour configurer les sources de données et les pilotes.|  
 ||[SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md)|Lit les informations à partir de sources de données de fichier.|  
 ||[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|Supprime la source de données par défaut.|  
 ||[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|Supprime une source de données.|  
-||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Définit le mode de configuration qui indique où l’entrée ODBC. ini qui répertorie les valeurs DSN se trouve dans les informations système.|  
+||[SQLSetConfigMode](../../../odbc/reference/syntax/sqlsetconfigmode-function.md)|Définit le mode de configuration qui indique où l’entrée de Odbc.ini répertoriant les valeurs DSN se trouve dans les informations système.|  
 ||[SQLValidDSN](../../../odbc/reference/syntax/sqlvaliddsn-function.md)|Vérifie la longueur et la validité du nom de la source de données.|  
 ||[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|Ajoute une source de données.|  
 ||[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|Écrit des informations dans les sources de données de fichier.|  

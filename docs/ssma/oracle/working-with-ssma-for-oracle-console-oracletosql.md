@@ -1,4 +1,5 @@
 ---
+description: Utilisation de la console SSMA pour Oracle (OracleToSQL)
 title: Utilisation de la console SSMA pour Oracle (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,15 +11,15 @@ ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d99fb680e6b2ca9b8ce044d8f8c322c6bce06cec
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: c0a49116d5f48d2f832cb4c647934951373efaea
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463212"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>Utilisation de la console SSMA pour Oracle (OracleToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]La version Assistant Migration (SSMA) pour Oracle est désormais accessible par le biais d’une application console à partir de la ligne de commande. Les fichiers de script constituent l’entrée de l’application pour l’exécution des commandes. En tant qu’application console, SSMA permet l’interfaçage au niveau du script, réduit le cycle de migration et met à l’échelle l’effort de migration.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] La version Assistant Migration (SSMA) pour Oracle est désormais accessible par le biais d’une application console à partir de la ligne de commande. Les fichiers de script constituent l’entrée de l’application pour l’exécution des commandes. En tant qu’application console, SSMA permet l’interfaçage au niveau du script, réduit le cycle de migration et met à l’échelle l’effort de migration.  
   
 Cette section décrit la procédure de migration de la base de données Oracle à l’aide de l’application de console SSMA.  
   
@@ -34,7 +35,7 @@ Les sujets abordés dans cette section sont les suivants :
 |[Exécution de la console SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)|Décrit les commandes du fichier de script pour exécuter l’application console SSMA.|  
 |[Utilisation des exemples de fichiers de script de console &#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)|Décrit la façon de personnaliser facilement les scripts qui ont été fournis dans les exemples de fichiers en même temps que le produit.|  
 |[Gestion des mots de passe &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md)|Décrit le chiffrement et le déchiffrement de mot de passe, ainsi que l’importation/exportation d’informations de mot de passe.|  
-|[Génération de rapports &#40;&#41;OracleToSQL](../../ssma/oracle/generating-reports-oracletosql.md)|Répertorie les commandes permettant de générer des rapports.|  
+|[Génération de rapports &#40;&#41;OracleToSQL ](../../ssma/oracle/generating-reports-oracletosql.md)|Répertorie les commandes permettant de générer des rapports.|  
 |[Résolution des problèmes &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|Fournit de brèves informations sur la résolution des problèmes de migration.|  
   
 ## <a name="see-also"></a>Voir aussi  

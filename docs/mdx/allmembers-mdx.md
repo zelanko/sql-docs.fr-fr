@@ -1,4 +1,5 @@
 ---
+description: AllMembers (MDX)
 title: AllMembers (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 770d66941af9b42be3c7b26f7e04a60d2a95cac2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba70d4ad8b301cbd8af2fd76ce058f2dab2e4a4c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017153"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461671"
 ---
 # <a name="allmembers-mdx"></a>AllMembers (MDX)
 
@@ -48,7 +49,7 @@ Level_Expression.AllMembers
 >  La fonction **AllMembers** est sémantiquement similaire à la fonction [AddCalculatedMembers (MDX)](../mdx/addcalculatedmembers-mdx.md) .  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne tous les membres de la`Date].[Calendar Year]` hiérarchie d’attribut [sur l’axe des colonnes, y compris les membres calculés et l’ensemble de `[Product].[Model Name]` tous les enfants de la hiérarchie d’attribut sur l’axe des lignes du cube **Adventure Works** .  
+ L’exemple suivant retourne tous les membres de la `Date].[Calendar Year]` hiérarchie d’attribut [sur l’axe des colonnes, y compris les membres calculés et l’ensemble de tous les enfants de la `[Product].[Model Name]` hiérarchie d’attribut sur l’axe des lignes du cube **Adventure Works** .  
   
 ```  
 SELECT  
@@ -58,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
- L’exemple suivant retourne tous les membres de la dimension **Measures** sur l’axe des colonnes, y compris tous les membres calculés et l’ensemble de `[Product].[Model Name]` tous les enfants de la hiérarchie d’attribut sur l’axe des lignes du cube **Adventure Works** .  
+ L’exemple suivant retourne tous les membres de la dimension **Measures** sur l’axe des colonnes, y compris tous les membres calculés et l’ensemble de tous les enfants de la `[Product].[Model Name]` hiérarchie d’attribut sur l’axe des lignes du cube **Adventure Works** .  
   
 ```  
 SELECT  

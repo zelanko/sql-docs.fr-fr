@@ -1,4 +1,5 @@
 ---
+description: SQLGetDiagRec, fonction
 title: Fonction SQLGetDiagRec | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 39069526e254903509ddfef00b7bd4844f3d9e10
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7f141891292fb80d53ba06e03329b66cbc8b826e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285379"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461012"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec, fonction
 **Conformité**  
@@ -85,7 +86,7 @@ SQLRETURN SQLGetDiagRec(
  Entrée Longueur de la mémoire tampon **MessageText* en caractères. Il n’y a pas de longueur maximale du texte du message de diagnostic.  
   
  *TextLengthPtr*  
- Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (sans compter le nombre de caractères requis pour le caractère de fin null) pouvant être retourné dans * \*MessageText*. Si le nombre de caractères disponibles à retourner est supérieur à *BufferLength*, le texte du message de diagnostic dans * \*MessageText* est tronqué à *BufferLength* moins la longueur d’un caractère de fin null.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (sans compter le nombre de caractères requis pour le caractère de fin null) pouvant être retourné dans * \* MessageText*. Si le nombre de caractères disponibles à retourner est supérieur à *BufferLength*, le texte du message de diagnostic dans * \* MessageText* est tronqué à *BufferLength* moins la longueur d’un caractère de fin null.  
   
 ## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -95,7 +96,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_SUCCESS : la fonction a retourné des informations de diagnostic.  
   
--   SQL_SUCCESS_WITH_INFO : le \*tampon *MessageText* est trop petit pour contenir le message de diagnostic demandé. Aucun enregistrement de diagnostic n’a été généré. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, qui est écrit dans **StringLengthPtr*.  
+-   SQL_SUCCESS_WITH_INFO : le \* tampon *MessageText* est trop petit pour contenir le message de diagnostic demandé. Aucun enregistrement de diagnostic n’a été généré. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, qui est écrit dans **StringLengthPtr*.  
   
 -   SQL_INVALID_HANDLE : le handle indiqué par *comme HandleType* et *handle* n’est pas un handle valide.  
   

@@ -1,4 +1,5 @@
 ---
+description: Récupération des résultats (de base)
 title: Récupération des résultats (de base) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7d01bf92fcee07940e449a2fb4bbac4f0fe6ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43064703e7ee448de89396135fa610e972e2679
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461361"
 ---
 # <a name="retrieving-results-basic"></a>Récupération des résultats (de base)
 Un *jeu de résultats* est un ensemble de lignes sur la source de données qui correspond à certains critères. Il s’agit d’une table conceptuelle qui résulte d’une requête et qui est disponible pour une application sous forme de tableau. Les instructions **Select** , les fonctions de catalogue et certaines procédures créent des jeux de résultats. Dans l’exemple suivant, la première instruction SQL crée un jeu de résultats contenant toutes les lignes et toutes les colonnes de la table Orders, et la deuxième instruction SQL crée un jeu de résultats contenant les colonnes OrderID, SalesPerson et Status pour les lignes de la table Orders dans lesquelles l’État est OPEN :  
@@ -47,6 +48,6 @@ SELECT * FROM Orders WHERE 1 = 2
   
 -   [Liaison de colonnes](../../../odbc/reference/develop-app/binding-columns.md)  
   
--   [Extraction de données](../../../odbc/reference/develop-app/fetching-data.md)  
+-   [Récupération de données](../../../odbc/reference/develop-app/fetching-data.md)  
   
 -   [Fermeture du curseur](../../../odbc/reference/develop-app/closing-the-cursor.md)

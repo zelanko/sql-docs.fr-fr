@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 2-1 : Génération de l’utilitaire de déploiement'
 title: 'Étape 1 : Génération de l’utilitaire de déploiement | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 47d98801dd722f1727a7cdf3a982bf63cbd9974e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: bf91bcb1f0f9db399980c7650ae9b7491c47c78a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461960"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Leçon 2-1 : Génération de l’utilitaire de déploiement
 
@@ -65,7 +66,7 @@ Avant de générer l'utilitaire de déploiement, vous devez modifier les propri�
 5.  Dans le menu **Fichier** , cliquez sur **Quitter**. Si vous êtes invité à enregistrer les modifications apportées aux éléments du didacticiel de déploiement, cliquez sur **Oui**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 2 : Vérification du bundle de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+[Étape 2 : Vérification de l’application de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Créer un utilitaire de déploiement](../integration-services/packages/create-a-deployment-utility.md)  

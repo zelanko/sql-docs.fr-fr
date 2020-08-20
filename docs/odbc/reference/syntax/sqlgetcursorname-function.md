@@ -1,4 +1,5 @@
 ---
+description: SQLGetCursorName Function
 title: SQLGetCursorName, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 06/12/2020
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
+ms.openlocfilehash: 454a6630afb565381b8dfc457c5c34a1194ccf63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461101"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName Function
 **Conformité**  
@@ -65,7 +66,7 @@ SQLRETURN SQLGetCursorName(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLGetCursorName** retourne soit SQL_ERROR, soit SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_STMT et un *handle* de *StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLGetCursorName** et les explique dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Erreur|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Données de chaîne, tronquées à droite|Le \* *CursorName* de mémoire tampon n’est pas assez grand pour retourner le nom de curseur entier, donc le nom de curseur a été tronqué. La longueur du nom de curseur non tronqué est retournée dans **NameLengthPtr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  

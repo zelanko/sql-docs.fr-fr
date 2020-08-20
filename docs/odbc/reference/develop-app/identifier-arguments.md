@@ -1,4 +1,5 @@
 ---
+description: Arguments d’identificateur
 title: Arguments des identificateurs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6831eab30daebe37baecebe3ed7053537d7de8f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24efb295c9c27dbfc5edc2b1d7a46d6ca166e2c9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461450"
 ---
 # <a name="identifier-arguments"></a>Arguments d’identificateur
 Si une chaîne dans un argument d’identificateur est entre guillemets, le pilote supprime les espaces de début et de fin et traite littéralement la chaîne entre guillemets. Si la chaîne n’est pas entre guillemets, le pilote supprime les espaces à droite et plie la chaîne en majuscules. La définition d’un argument d’identificateur sur un pointeur null retourne SQL_ERROR et SQLSTATE HY009 (utilisation non valide du pointeur null), à moins que l’argument ne soit un nom de catalogue et que les catalogues ne soient pas pris en charge.  

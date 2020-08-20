@@ -1,4 +1,5 @@
 ---
+description: Créer un membre consolidé (Master Data Services)
 title: Créer un membre consolidé
 ms.custom: ''
 ms.date: 04/01/2016
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 598c1b12168919ecd90324aa4c581ef8c994b348
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 4465fa105492cd691f474664748a4b3aca0a4f3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461900"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Créer un membre consolidé (Master Data Services)
 
@@ -48,7 +49,7 @@ ms.locfileid: "85812400"
   
 6.  Dans le volet gauche, sélectionnez le nœud racine ou le membre consolidé sous lequel vous souhaitez créer un membre consolidé.  
   
-7.  Cliquez sur **Ajouter**.  
+7.  Cliquez sur **Add**.  
   
 8.  Dans le volet de droite, remplissez les champs.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85812400"
   
 10. Cliquez sur **OK**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer une hiérarchie explicite &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Créer un membre feuille &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
  [Membres &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   

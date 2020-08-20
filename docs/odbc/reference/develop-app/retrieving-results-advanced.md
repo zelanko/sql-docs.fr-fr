@@ -1,4 +1,5 @@
 ---
+description: Récupération des résultats (avancée)
 title: Récupération des résultats (avancé) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ca02b4ff911c8edff06b38d5341eeaa288cc194c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12f5c2ddd1e04b1aef96b7ef1544db9b58a9a58e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294639"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461371"
 ---
 # <a name="retrieving-results-advanced"></a>Récupération des résultats (avancée)
 Une application peut spécifier qu’un décalage est ajouté aux adresses de tampons de données liées et les adresses de tampon de longueur/indicateur correspondantes lors de l’appel de **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**ou **SQLSetPos** . Les résultats de ces ajouts déterminent les adresses utilisées dans ces opérations.  

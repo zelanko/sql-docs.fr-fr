@@ -1,4 +1,5 @@
 ---
+description: 'Leçon 1 : Créer un projet et un package de base avec SSIS'
 title: 'Leçon 1 : Créer un projet et un package de base avec SSIS | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/03/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aeeac3c8033bfde5a528dd791e7b23b4f9973e1f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 428295430a2abb50738742db088b9573a7bf35a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917304"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461987"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Leçon 1 : Créer un projet et un package de base avec SSIS
 
@@ -88,7 +89,7 @@ Notre analyse du format des données sources et de destination indique que des r
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
 Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Créer un projet Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Étape 1 : Créer un projet Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
 -   [Étape 2 : Ajouter et configurer un gestionnaire de connexions de fichiers plats](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   

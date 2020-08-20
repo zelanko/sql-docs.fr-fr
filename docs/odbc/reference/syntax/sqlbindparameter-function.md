@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLBindParameter
 title: SQLBindParameter, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 02f50862bcfb0295c7f098afc6856c91e0249f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6866f7c35dbf38f25cf854368053ffd46c74baa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301359"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461221"
 ---
 # <a name="sqlbindparameter-function"></a>Fonction SQLBindParameter
 
@@ -136,13 +137,13 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_PARAM_INPUT. Le paramètre marque un paramètre dans une instruction SQL qui n’appelle pas de procédure, telle qu’une instruction **Insert** , ou il marque un paramètre d’entrée dans une procédure. Par exemple, les paramètres dans les **valeurs d’insertion into Employee ( ?, ?, ?)** sont des paramètres d’entrée, tandis que les paramètres de **{call AddEmp ( ?, ?, ?)}** peuvent être, mais pas nécessairement, des paramètres d’entrée.  
   
-     Lorsque l’instruction est exécutée, le pilote envoie des données pour le paramètre à la source de données ; la \*mémoire tampon *ParameterValuePtr* doit contenir une valeur d’entrée valide, ou la mémoire tampon **StrLen_or_IndPtr* doit contenir SQL_NULL_DATA, SQL_DATA_AT_EXEC ou le résultat de la macro SQL_LEN_DATA_AT_EXEC.  
+     Lorsque l’instruction est exécutée, le pilote envoie des données pour le paramètre à la source de données ; la \* mémoire tampon *ParameterValuePtr* doit contenir une valeur d’entrée valide, ou la mémoire tampon **StrLen_or_IndPtr* doit contenir SQL_NULL_DATA, SQL_DATA_AT_EXEC ou le résultat de la macro SQL_LEN_DATA_AT_EXEC.  
   
      Si une application ne peut pas déterminer le type d’un paramètre dans un appel de procédure, elle définit *InputOutputType* sur SQL_PARAM_INPUT ; Si la source de données retourne une valeur pour le paramètre, le pilote l’ignore.  
   
 -   SQL_PARAM_INPUT_OUTPUT. Le paramètre marque un paramètre d’entrée/sortie dans une procédure. Par exemple, le paramètre de **{Call GetEmpDept ( ?)}** est un paramètre d’entrée/sortie qui accepte le nom d’un employé et renvoie le nom du service de l’employé.  
   
-     Lorsque l’instruction est exécutée, le pilote envoie des données pour le paramètre à la source de données ; la \*mémoire tampon *ParameterValuePtr* doit contenir une valeur d’entrée valide, \*ou la mémoire tampon de *StrLen_or_IndPtr* doit contenir SQL_NULL_DATA, SQL_DATA_AT_EXEC ou le résultat de la macro SQL_LEN_DATA_AT_EXEC. Une fois l’instruction exécutée, le pilote retourne des données pour le paramètre à l’application ; Si la source de données ne retourne pas de valeur pour un paramètre d’entrée/sortie, le pilote définit la mémoire tampon **StrLen_or_IndPtr* sur SQL_NULL_DATA.  
+     Lorsque l’instruction est exécutée, le pilote envoie des données pour le paramètre à la source de données ; la \* mémoire tampon *ParameterValuePtr* doit contenir une valeur d’entrée valide, ou la \* mémoire tampon de *StrLen_or_IndPtr* doit contenir SQL_NULL_DATA, SQL_DATA_AT_EXEC ou le résultat de la macro SQL_LEN_DATA_AT_EXEC. Une fois l’instruction exécutée, le pilote retourne des données pour le paramètre à l’application ; Si la source de données ne retourne pas de valeur pour un paramètre d’entrée/sortie, le pilote définit la mémoire tampon **StrLen_or_IndPtr* sur SQL_NULL_DATA.  
   
     > [!NOTE]  
     >  Quand une application ODBC 1,0 appelle **SQLSetParam,** dans un pilote ODBC 2,0, le gestionnaire de pilotes convertit ce en un appel de **SQLBindParameter** dans lequel l’argument *InputOutputType* est défini sur SQL_PARAM_INPUT_OUTPUT.  
@@ -216,23 +217,23 @@ SQLRETURN SQLBindParameter(
   
 ## <a name="parametervalueptr-argument"></a>Argument ParameterValuePtr
 
- L’argument *ParameterValuePtr* pointe vers une mémoire tampon qui, lorsque **SQLExecute** ou **SQLExecDirect** est appelé, contient les données réelles du paramètre. Les données doivent être au format spécifié par l’argument *ValueType* . Cet argument définit le champ SQL_DESC_DATA_PTR du APD. Une application peut définir l’argument *ParameterValuePtr* sur un pointeur null, à condition que * \*StrLen_or_IndPtr* soit SQL_NULL_DATA ou SQL_DATA_AT_EXEC. (Cela s’applique uniquement aux paramètres d’entrée ou d’entrée/sortie.)  
+ L’argument *ParameterValuePtr* pointe vers une mémoire tampon qui, lorsque **SQLExecute** ou **SQLExecDirect** est appelé, contient les données réelles du paramètre. Les données doivent être au format spécifié par l’argument *ValueType* . Cet argument définit le champ SQL_DESC_DATA_PTR du APD. Une application peut définir l’argument *ParameterValuePtr* sur un pointeur null, à condition que * \* StrLen_or_IndPtr* soit SQL_NULL_DATA ou SQL_DATA_AT_EXEC. (Cela s’applique uniquement aux paramètres d’entrée ou d’entrée/sortie.)  
   
  Si \* *StrLen_or_IndPtr* est le résultat de la macro SQL_LEN_DATA_AT_EXEC (*longueur*) ou SQL_DATA_AT_EXEC, *ParameterValuePtr* est une valeur de pointeur définie par l’application qui est associée au paramètre. Elle est retournée à l’application via **SQLParamData**. Par exemple, *ParameterValuePtr* peut être un jeton non nul, tel qu’un numéro de paramètre, un pointeur vers des données ou un pointeur vers une structure que l’application a utilisée pour lier les paramètres d’entrée. Toutefois, Notez que si le paramètre est un paramètre d’entrée/sortie, *ParameterValuePtr* doit être un pointeur vers une mémoire tampon dans laquelle la valeur de sortie sera stockée. Si la valeur de l’attribut d’instruction SQL_ATTR_PARAMSET_SIZE est supérieure à 1, l’application peut utiliser la valeur désignée par l’attribut d’instruction SQL_ATTR_PARAMS_PROCESSED_PTR avec l’argument *ParameterValuePtr* . Par exemple, *ParameterValuePtr* peut pointer vers un tableau de valeurs et l’application peut utiliser la valeur pointée par SQL_ATTR_PARAMS_PROCESSED_PTR pour récupérer la valeur correcte du tableau. Pour plus d’informations, consultez « transmission des valeurs de paramètres » plus loin dans cette section.  
   
- Si l’argument *InputOutputType* est SQL_PARAM_INPUT_OUTPUT ou SQL_PARAM_OUTPUT, *ParameterValuePtr* pointe vers une mémoire tampon dans laquelle le pilote retourne la valeur de sortie. Si la procédure retourne un ou plusieurs jeux de résultats, \*il n’est pas garanti que la mémoire tampon *ParameterValuePtr* soit définie tant que tous les jeux de résultats/nombre de lignes n’ont pas été traités. Si la mémoire tampon n’est pas définie tant que le traitement n’est pas terminé, les paramètres de sortie et les valeurs de retour ne sont pas disponibles tant que **SQLMoreResults** n’a pas retourné SQL_NO_DATA. L’appel de **SQLCloseCursor** ou **SQLFreeStmt** avec une option de SQL_CLOSE entraîne la suppression de ces valeurs.  
+ Si l’argument *InputOutputType* est SQL_PARAM_INPUT_OUTPUT ou SQL_PARAM_OUTPUT, *ParameterValuePtr* pointe vers une mémoire tampon dans laquelle le pilote retourne la valeur de sortie. Si la procédure retourne un ou plusieurs jeux de résultats, il n' \* est pas garanti que la mémoire tampon *ParameterValuePtr* soit définie tant que tous les jeux de résultats/nombre de lignes n’ont pas été traités. Si la mémoire tampon n’est pas définie tant que le traitement n’est pas terminé, les paramètres de sortie et les valeurs de retour ne sont pas disponibles tant que **SQLMoreResults** n’a pas retourné SQL_NO_DATA. L’appel de **SQLCloseCursor** ou **SQLFreeStmt** avec une option de SQL_CLOSE entraîne la suppression de ces valeurs.  
   
  Si la valeur de l’attribut d’instruction SQL_ATTR_PARAMSET_SIZE est supérieure à 1, *ParameterValuePtr* pointe vers un tableau. Une instruction SQL unique traite le tableau complet des valeurs d’entrée pour un paramètre d’entrée ou d’entrée/sortie et retourne un tableau de valeurs de sortie pour un paramètre d’entrée/sortie ou de sortie.  
   
 ## <a name="bufferlength-argument"></a>Argument BufferLength
 
- Pour les données de type caractère et binaire, l’argument *BufferLength* spécifie la \*longueur de la mémoire tampon *ParameterValuePtr* (s’il s’agit d’un élément unique) ou la \*longueur d’un élément dans le tableau *ParameterValuePtr* (si la valeur de l’attribut d’instruction SQL_ATTR_PARAMSET_SIZE est supérieure à 1). Cet argument définit le champ d’enregistrement SQL_DESC_OCTET_LENGTH du APD. Si l’application spécifie plusieurs valeurs, *BufferLength* est utilisé pour déterminer l’emplacement des valeurs dans le tableau **ParameterValuePtr* , à la fois en entrée et en sortie. Pour les paramètres d’entrée/sortie et de sortie, il est utilisé pour déterminer s’il faut tronquer les données C binaires et de caractères lors de la sortie :  
+ Pour les données de type caractère et binaire, l’argument *BufferLength* spécifie la longueur de la \* mémoire tampon *ParameterValuePtr* (s’il s’agit d’un élément unique) ou la longueur d’un élément dans le \* tableau *ParameterValuePtr* (si la valeur de l’attribut d’instruction SQL_ATTR_PARAMSET_SIZE est supérieure à 1). Cet argument définit le champ d’enregistrement SQL_DESC_OCTET_LENGTH du APD. Si l’application spécifie plusieurs valeurs, *BufferLength* est utilisé pour déterminer l’emplacement des valeurs dans le tableau **ParameterValuePtr* , à la fois en entrée et en sortie. Pour les paramètres d’entrée/sortie et de sortie, il est utilisé pour déterminer s’il faut tronquer les données C binaires et de caractères lors de la sortie :  
   
--   Pour les données de type caractère C, si le nombre d’octets disponibles à retourner est supérieur ou égal à *BufferLength*, les \*données de *ParameterValuePtr* sont tronquées à *BufferLength* moins la longueur d’un caractère de fin null et le pilote se termine par un caractère null.  
+-   Pour les données de type caractère C, si le nombre d’octets disponibles à retourner est supérieur ou égal à *BufferLength*, les données de \* *ParameterValuePtr* sont tronquées à *BufferLength* moins la longueur d’un caractère de fin null et le pilote se termine par un caractère null.  
   
--   Pour les données C binaires, si le nombre d’octets disponibles à retourner est supérieur à *BufferLength*, les \*données de *ParameterValuePtr* sont tronquées à *BufferLength* octets.  
+-   Pour les données C binaires, si le nombre d’octets disponibles à retourner est supérieur à *BufferLength*, les données de \* *ParameterValuePtr* sont tronquées à *BufferLength* octets.  
   
- Pour tous les autres types de données C, l’argument *BufferLength* est ignoré. La longueur de la \*mémoire tampon *ParameterValuePtr* (s’il s’agit d’un élément unique) ou la longueur d’un \*élément dans le tableau *ParameterValuePtr* (si l’application appelle **SQLSetStmtAttr** avec un argument d' *attribut* de SQL_ATTR_PARAMSET_SIZE pour spécifier plusieurs valeurs pour chaque paramètre) est supposé être la longueur du type de données C.  
+ Pour tous les autres types de données C, l’argument *BufferLength* est ignoré. La longueur de la \* mémoire tampon *ParameterValuePtr* (s’il s’agit d’un élément unique) ou la longueur d’un élément dans le \* *tableau ParameterValuePtr* (si l’application appelle **SQLSetStmtAttr** avec un argument d' *attribut* de SQL_ATTR_PARAMSET_SIZE pour spécifier plusieurs valeurs pour chaque paramètre) est supposé être la longueur du type de données C.  
   
  Pour les paramètres de sortie ou d’entrée/sortie diffusés en continu, l’argument *BufferLength* est ignoré, car la longueur de la mémoire tampon est spécifiée dans **SQLGetData**.  
   
@@ -252,7 +253,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_NULL_DATA. La valeur du paramètre est NULL.  
   
--   SQL_DEFAULT_PARAM. Une procédure consiste à utiliser la valeur par défaut d’un paramètre, au lieu d’une valeur extraite de l’application. Cette valeur est valide uniquement dans une procédure appelée dans la syntaxe canonique ODBC, puis uniquement si l’argument *InputOutputType* est SQL_PARAM_INPUT, SQL_PARAM_INPUT_OUTPUT ou SQL_PARAM_INPUT_OUTPUT_STREAM. Lorsque \* *StrLen_or_IndPtr* est SQL_DEFAULT_PARAM, les arguments *ValueType*, *ParameterType*, *Column*, *DecimalDigits*, *BufferLength*et *ParameterValuePtr* sont ignorés pour les paramètres d’entrée et sont utilisés uniquement pour définir la valeur du paramètre de sortie pour les paramètres d’entrée/sortie.  
+-   SQL_DEFAULT_PARAM. Une procédure consiste à utiliser la valeur par défaut d’un paramètre, au lieu d’une valeur extraite de l’application. Cette valeur est valide uniquement dans une procédure appelée dans la syntaxe canonique ODBC, puis uniquement si l’argument *InputOutputType* est SQL_PARAM_INPUT, SQL_PARAM_INPUT_OUTPUT ou SQL_PARAM_INPUT_OUTPUT_STREAM. Lorsque \* *StrLen_or_IndPtr* est SQL_DEFAULT_PARAM, les *arguments ValueType*, *ParameterType*, *Column*, *DecimalDigits*, *BufferLength*et *ParameterValuePtr* sont ignorés pour les paramètres d’entrée et sont utilisés uniquement pour définir la valeur du paramètre de sortie pour les paramètres d’entrée/sortie.  
   
 -   Résultat de la macro SQL_LEN_DATA_AT_EXEC (*longueur*). Les données du paramètre sont envoyées avec **SQLPutData**. Si l’argument *ParameterType* est SQL_LONGVARBINARY, SQL_LONGVARCHAR ou un type de données long, spécifique à la source de données, et que le pilote retourne « Y » pour le type d’informations SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo**, *Length* est le nombre d’octets de données à envoyer pour le paramètre. dans le cas contraire, la *longueur* doit être une valeur non négative et est ignorée. Pour plus d’informations, consultez « transmission des valeurs de paramètres », plus loin dans cette section.  
   
@@ -265,21 +266,21 @@ SQLRETURN SQLBindParameter(
 > [!NOTE]  
 >  Les développeurs d’applications sont fortement déconseillés de spécifier un pointeur null pour *StrLen_or_IndPtr* lorsque le type de données du paramètre est SQL_C_BINARY. Pour vous assurer qu’un pilote ne tronque pas de manière inattendue SQL_C_BINARY données, *StrLen_or_IndPtr* doit contenir un pointeur vers une valeur de longueur valide.  
   
- Si l’argument *InputOutputType* est SQL_PARAM_INPUT_OUTPUT, SQL_PARAM_OUTPUT, SQL_PARAM_INPUT_OUTPUT_STREAM ou SQL_PARAM_OUTPUT_STREAM, *StrLen_or_IndPtr* pointe vers une mémoire tampon dans laquelle le pilote retourne SQL_NULL_DATA, le nombre d’octets disponibles à retourner dans \* *ParameterValuePtr* (à l’exception de l’octet de fin null des données caractère), ou SQL_NO_TOTAL (si le nombre d’octets disponibles à retourner ne peut pas être déterminé). Si la procédure retourne un ou plusieurs jeux de résultats, la définition de la mémoire tampon **StrLen_or_IndPtr* n’est pas garantie tant que tous les résultats n’ont pas été récupérés.  
+ Si l’argument *InputOutputType* est SQL_PARAM_INPUT_OUTPUT, SQL_PARAM_OUTPUT, SQL_PARAM_INPUT_OUTPUT_STREAM ou SQL_PARAM_OUTPUT_STREAM, *StrLen_or_IndPtr* pointe vers une mémoire tampon dans laquelle le pilote retourne SQL_NULL_DATA, le nombre d’octets disponibles à retourner dans \* *ParameterValuePtr* (à l’exception de l’octet de fin NULL des données caractère), ou SQL_NO_TOTAL (si le nombre d’octets disponibles à retourner ne peut pas être déterminé). Si la procédure retourne un ou plusieurs jeux de résultats, la définition de la mémoire tampon **StrLen_or_IndPtr* n’est pas garantie tant que tous les résultats n’ont pas été récupérés.  
   
  Si la valeur de l’attribut d’instruction SQL_ATTR_PARAMSET_SIZE est supérieure à 1, *StrLen_or_IndPtr* pointe vers un tableau de valeurs sqllen. Il peut s’agir de l’une des valeurs répertoriées plus haut dans cette section et qui sont traitées avec une seule instruction SQL.  
   
 ## <a name="passing-parameter-values"></a>Passage de valeurs de paramètre
 
- Une application peut passer la valeur d’un paramètre dans la \*mémoire tampon *ParameterValuePtr* ou avec un ou plusieurs appels à **SQLPutData**. Les paramètres dont les données sont transmises avec **SQLPutData** sont appelés paramètres de *données en* cours d’exécution. Ils sont généralement utilisés pour envoyer des données pour les paramètres SQL_LONGVARBINARY et SQL_LONGVARCHAR et peuvent être mélangés à d’autres paramètres.  
+ Une application peut passer la valeur d’un paramètre dans la \* mémoire tampon *ParameterValuePtr* ou avec un ou plusieurs appels à **SQLPutData**. Les paramètres dont les données sont transmises avec **SQLPutData** sont appelés paramètres de *données en* cours d’exécution. Ils sont généralement utilisés pour envoyer des données pour les paramètres SQL_LONGVARBINARY et SQL_LONGVARCHAR et peuvent être mélangés à d’autres paramètres.  
   
  Pour passer des valeurs de paramètre, une application exécute la séquence d’étapes suivante :  
   
 1.  Appelle **SQLBindParameter** pour chaque paramètre afin de lier les mémoires tampons pour la valeur du paramètre (argument*ParameterValuePtr* ) et la longueur/l’indicateur (argument*StrLen_or_IndPtr* ). Pour les paramètres de données en cours d’exécution, *ParameterValuePtr* est une valeur de pointeur définie par l’application, telle qu’un numéro de paramètre ou un pointeur vers des données. La valeur est retournée ultérieurement et peut être utilisée pour identifier le paramètre.  
   
-2.  Place des valeurs pour les paramètres d’entrée et d’entrée \*/sortie dans les tampons *ParameterValuePtr* et **StrLen_or_IndPtr* :  
+2.  Place des valeurs pour les paramètres d’entrée et d’entrée/sortie dans les \* tampons *ParameterValuePtr* et **StrLen_or_IndPtr* :  
   
-    -   Pour les paramètres normaux, l’application place la valeur de paramètre \*dans la mémoire tampon *ParameterValuePtr* et la longueur de cette valeur dans la mémoire tampon **StrLen_or_IndPtr* . Pour plus d’informations, consultez [définition des valeurs des paramètres](../../../odbc/reference/develop-app/setting-parameter-values.md).  
+    -   Pour les paramètres normaux, l’application place la valeur de paramètre dans la \* mémoire tampon *ParameterValuePtr* et la longueur de cette valeur dans la mémoire tampon **StrLen_or_IndPtr* . Pour plus d’informations, consultez [définition des valeurs des paramètres](../../../odbc/reference/develop-app/setting-parameter-values.md).  
   
     -   Pour les paramètres de données en cours d’exécution, l’application place le résultat de la macro SQL_LEN_DATA_AT_EXEC (*longueur*) (lors de l’appel d’un pilote ODBC 2,0) dans la mémoire tampon **StrLen_or_IndPtr* .  
   
@@ -294,7 +295,7 @@ SQLRETURN SQLBindParameter(
     > [!NOTE]  
     >  Bien que les paramètres de données en cours d’exécution ressemblent aux colonnes de données en cours d’exécution, la valeur retournée par **SQLParamData** est différente pour chaque. Les paramètres de données en cours d’exécution sont des paramètres dans une instruction SQL pour laquelle des données sont envoyées avec **SQLPutData** lorsque l’instruction est exécutée avec **SQLExecDirect** ou **SQLExecute**. Elles sont liées à **SQLBindParameter**. La valeur retournée par **SQLParamData** est une valeur de pointeur passée à **SQLBindParameter** dans l’argument *ParameterValuePtr* . Les colonnes de données en cours d’exécution sont des colonnes d’un ensemble de lignes pour lesquelles des données sont envoyées avec **SQLPutData** lorsqu’une ligne est mise à jour ou ajoutée avec **SQLBulkOperations** ou mise à jour avec **SQLSetPos**. Elles sont liées à **SQLBindCol**. La valeur retournée par **SQLParamData** est l’adresse de la ligne dans la mémoire tampon **TargetValuePtr* (définie par un appel à **SQLBindCol**) qui est en cours de traitement.  
   
-5.  Appelle **SQLPutData** une ou plusieurs fois pour envoyer des données pour le paramètre. Plusieurs appels sont nécessaires si la valeur des données est supérieure à la \*mémoire tampon *ParameterValuePtr* spécifiée dans **SQLPutData**; plusieurs appels à **SQLPutData** pour le même paramètre sont autorisés uniquement lors de l’envoi de données de caractères c à une colonne avec un type de données caractère, binaire ou spécifique à la source de données, ou lors de l’envoi de données binaires c à une colonne avec un type de données caractère, binaire ou spécifique à la source de données.  
+5.  Appelle **SQLPutData** une ou plusieurs fois pour envoyer des données pour le paramètre. Plusieurs appels sont nécessaires si la valeur des données est supérieure à la \* mémoire tampon *ParameterValuePtr* spécifiée dans **SQLPutData**; plusieurs appels à **SQLPutData** pour le même paramètre sont autorisés uniquement lors de l’envoi de données de caractères c à une colonne avec un type de données caractère, binaire ou spécifique à la source de données, ou lors de l’envoi de données binaires c à une colonne avec un type de données caractère, binaire  
   
 6.  Appelle à nouveau **SQLParamData** pour signaler que toutes les données ont été envoyées pour le paramètre.  
   
@@ -302,7 +303,7 @@ SQLRETURN SQLBindParameter(
   
     -   S’il n’y a plus de paramètres de données en cours d’exécution, le processus est terminé. Si l’instruction a été exécutée avec succès, **SQLParamData** retourne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO ; Si l’exécution a échoué, elle retourne SQL_ERROR. À ce stade, **SQLParamData** peut retourner tout SQLSTATE pouvant être retourné par la fonction utilisée pour exécuter l’instruction (**SQLExecDirect** ou **SQLExecute**).  
   
-         Les valeurs de sortie de tous les paramètres d’entrée/sortie ou de \*sortie sont disponibles dans les tampons *ParameterValuePtr* et **StrLen_or_IndPtr* une fois que l’application a récupéré tous les jeux de résultats générés par l’instruction.  
+         Les valeurs de sortie de tous les paramètres d’entrée/sortie ou de sortie sont disponibles dans les \* tampons *ParameterValuePtr* et **StrLen_or_IndPtr* une fois que l’application a récupéré tous les jeux de résultats générés par l’instruction.  
   
  L’appel de **SQLExecute** ou de **SQLExecDirect** place l’instruction dans un état de SQL_NEED_DATA. À ce stade, l’application peut appeler uniquement **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **SQLParamData**ou **SQLPutData** avec l’instruction ou le *handle de connexion* associé à l’instruction. Si elle appelle une autre fonction avec l’instruction ou la connexion associée à l’instruction, la fonction retourne SQLSTATE HY010 (erreur de séquence de fonction). L’instruction conserve l’État SQL_NEED_DATA lorsque **SQLParamData** ou **SQLPutData** retourne une erreur, **SQLParamData** retourne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO, ou l’instruction est annulée.  
   
@@ -495,7 +496,7 @@ SQLRETURN SQLBindParameter(
   
 |Appeler par l’application ODBC 1,0|Appel à ODBC 3. pilote *x*|  
 |----------------------------------|-------------------------------|  
-|SQLSetParam, (StatementHandle, ParameterNumber, ValueType, ParameterType, LengthPrecision, ParameterScale, ParameterValuePtr, StrLen_or_IndPtr);|SQLBindParameter (StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType, *Column*, *DecimalDigits*, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr);|  
+|SQLSetParam, (StatementHandle, ParameterNumber, ValueType, ParameterType, LengthPrecision, ParameterScale, ParameterValuePtr, StrLen_or_IndPtr);|SQLBindParameter (StatementHandle, ParameterNumber, SQL_PARAM_INPUT_OUTPUT, ValueType, ParameterType,      *Column*,      *DecimalDigits*, ParameterValuePtr, SQL_SETPARAM_VALUE_MAX, StrLen_or_IndPtr);|  
   
 ## <a name="code-example"></a>Exemple de code  
  Dans l’exemple suivant, une application prépare une instruction SQL pour insérer des données dans la table ORDERs. Pour chaque paramètre de l’instruction, l’application appelle **SQLBindParameter** pour spécifier le type de données C ODBC et le type de données SQL du paramètre, et pour lier une mémoire tampon à chaque paramètre. Pour chaque ligne de données, l’application assigne des valeurs de données à chaque paramètre et appelle **SQLExecute** pour exécuter l’instruction.  

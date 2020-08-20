@@ -1,4 +1,5 @@
 ---
+description: Gérer une base de connaissances
 title: Gérer une base de connaissances
 ms.date: 06/04/2013
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2f445f4c076497db3c41947e3105440de9025175
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5676a182615dfa7ddf23dcda1841a6530467a8c0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882752"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462081"
 ---
 # <a name="manage-a-knowledge-base"></a>Gérer une base de connaissances
 
@@ -32,7 +33,7 @@ ms.locfileid: "85882752"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour ouvrir une base de connaissances.  
   
-##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a>Gérer une base de connaissances  
+##  <a name="manage-a-knowledge-base"></a><a name="Manage"></a> Gérer une base de connaissances  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   

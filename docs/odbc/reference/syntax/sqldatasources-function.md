@@ -1,4 +1,5 @@
 ---
+description: SQLDataSources, fonction
 title: SQLDataSources fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b56a6c25e54897e67beaf39d3b7797ac45391d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcf57779916b7a9d3189a5ce37b8603e5da5cb74
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461181"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources, fonction
 **Conformité**  
@@ -68,7 +69,7 @@ SQLRETURN SQLDataSources(
  Entrée Longueur de la mémoire tampon du*serveur* *, en caractères ; Cela ne doit pas être plus long que SQL_MAX_DSN_LENGTH plus le caractère de fin null.  
   
  *NameLength1Ptr*  
- Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à \*retourner dans *ServerName*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength1*, le nom de la source de \*données dans *ServerName* est tronqué à *BufferLength1* moins la longueur d’un caractère de fin null.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à retourner dans \* *ServerName*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength1*, le nom de la source de données dans \* *ServerName* est tronqué à *BufferLength1* moins la longueur d’un caractère de fin null.  
   
  *Description*  
  Sortie Pointeur vers une mémoire tampon dans laquelle retourner la description du pilote associé à la source de données. Par exemple, dBASE ou SQL Server.  
@@ -79,7 +80,7 @@ SQLRETURN SQLDataSources(
  Entrée Longueur en caractères de la mémoire tampon de*Description* *.  
   
  *NameLength2Ptr*  
- Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à \*retourner dans la *Description*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength2*, la description du pilote dans \* *Description* est tronquée à *BufferLength2* moins la longueur d’un caractère de fin null.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à retourner dans la \* *Description*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *BufferLength2*, la description du pilote dans \* *Description* est tronquée à *BufferLength2* moins la longueur d’un caractère de fin null.  
   
 ## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -90,8 +91,8 @@ SQLRETURN SQLDataSources(
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au gestionnaire de pilotes (DM). (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01004|Données de chaîne, tronquées à droite|(DM) la mémoire \*tampon *ServerName* n’était pas suffisamment grande pour retourner le nom complet de la source de données. Par conséquent, le nom a été tronqué. La longueur de l’intégralité du nom de la source de \*données est retournée dans *NameLength1Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) la \* *Description* de la mémoire tampon n’est pas assez grande pour retourner la description complète du pilote. Par conséquent, la description a été tronquée. La longueur de la description de la source de données non tronquée est retournée dans **NameLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erreur générale|(DM) une erreur s’est produite pour laquelle il n’existait pas de SQLSTATE spécifique et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|01004|Données de chaîne, tronquées à droite|(DM) la mémoire tampon \* *ServerName* n’était pas suffisamment grande pour retourner le nom complet de la source de données. Par conséquent, le nom a été tronqué. La longueur de l’intégralité du nom de la source de données est retournée dans \* *NameLength1Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) la description de la mémoire tampon \* *Description* n’est pas assez grande pour retourner la description complète du pilote. Par conséquent, la description a été tronquée. La longueur de la description de la source de données non tronquée est retournée dans **NameLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|HY000|Erreur générale|(DM) une erreur s’est produite pour laquelle il n’existait pas de SQLSTATE spécifique et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|(DM) le gestionnaire de pilotes n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
@@ -113,8 +114,8 @@ SQLRETURN SQLDataSources(
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Détection et affichage des valeurs requises pour se connecter à une source de données|[Fonction SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
-|Connexion à une source de données|[Fonction SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Connexion à une source de données à l’aide d’une chaîne de connexion ou d’une boîte de dialogue|[Fonction SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Connexion à une source de données|[SQLConnect, fonction](../../../odbc/reference/syntax/sqlconnect-function.md)|  
+|Connexion à une source de données à l’aide d’une chaîne de connexion ou d’une boîte de dialogue|[SQLDriverConnect, fonction](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
 |Renvoi des descriptions et des attributs des pilotes|[SQLDrivers, fonction](../../../odbc/reference/syntax/sqldrivers-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

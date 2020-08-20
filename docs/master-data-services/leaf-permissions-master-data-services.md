@@ -1,4 +1,5 @@
 ---
+description: Autorisations de feuille (services de données de référence)
 title: Autorisations feuille
 ms.custom: ''
 ms.date: 03/15/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a50723727690307492d3d16cb3671e762dec401f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461743"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorisations de feuille (services de données de référence)
 
@@ -39,9 +40,9 @@ ms.locfileid: "85813295"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lecture**|L’utilisateur peut lire les membres feuille et les attributs.|  
+|**Lire**|L’utilisateur peut lire les membres feuille et les attributs.|  
 |**Créer**|L’utilisateur peut créer des membres feuille et affecter des valeurs d’attribut lors de la création.|  
-|**Update**|L’utilisateur peut mettre à jour les membres feuille et les attributs.|  
+|**Mettre à jour**|L’utilisateur peut mettre à jour les membres feuille et les attributs.|  
 |**Supprimer**|L’utilisateur peut supprimer des membres feuille.|  
 |**Deny**|Refusez tout accès aux membres feuille.|  
   
@@ -52,9 +53,9 @@ ms.locfileid: "85813295"
   
 |Autorisation|Description|  
 |----------------|-----------------|  
-|**Lecture**|L’utilisateur peut lire des attributs.|  
+|**Lire**|L’utilisateur peut lire des attributs.|  
 |**Créer**|L’utilisateur peut attribuer des valeurs lorsqu’il crée des membres.|  
-|**Update**|L’utilisateur peut mettre à jour des attributs.|  
+|**Mettre à jour**|L’utilisateur peut mettre à jour des attributs.|  
 |**Supprimer**|Aucun effet.|  
 |**Deny**|L'attribut n'est pas affiché.<br /><br /> Remarque : vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
@@ -63,8 +64,8 @@ ms.locfileid: "85813295"
   
 |Nom|Code|Subcategory (Mise à jour)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5}VTT|  
-|Mountain-100|BK-M201|{5}VTT|  
+|Mountain-100|BK-M101|{5} VTT|  
+|Mountain-100|BK-M201|{5} VTT|  
   
  Dans l' **Explorateur**, vous pouvez mettre à jour toute valeur d'attribut de la colonne Subcategory. Si vous n'avez pas d'autorisation sur un attribut, l'attribut n'est pas affiché.  
   

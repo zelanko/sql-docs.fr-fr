@@ -1,4 +1,5 @@
 ---
+description: Contrôle d’accès concurrentiel
 title: Contrôle d’accès concurrentiel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8afba3b3b8c8fee1307473c790186d509b37d982
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e47308cc0224ef73689a3b82d1ab4186fd0c823a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461551"
 ---
 # <a name="concurrency-control"></a>Contrôle d’accès concurrentiel
 La *concurrence* est la capacité de deux transactions à utiliser les mêmes données en même temps, et l’isolation des transactions augmente généralement la concurrence. Cela est dû au fait que l’isolation des transactions est généralement implémentée par le verrouillage des lignes, et lorsque davantage de lignes sont verrouillées, moins de transactions peuvent être effectuées sans être bloquées au moins temporairement par une ligne verrouillée. Bien que la concurrence réduite soit généralement acceptée en tant que compromis pour les niveaux d’isolation de transactions les plus élevés nécessaires au maintien de l’intégrité de la base de données, cela peut devenir un problème dans les applications interactives avec une forte activité de lecture/écriture qui utilise des curseurs.  

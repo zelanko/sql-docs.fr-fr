@@ -1,4 +1,5 @@
 ---
+description: Mappage des fonctions de remplacement pour la compatibilité descendante des applications
 title: Mappage des fonctions de remplacement pour la compatibilité des applications-ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b18669fe9b6edbd39859166e382ad18d1b04a99a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7cba29b0dda2b0d4533444fd3fa8b83eaaeae7a9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301089"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461411"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mappage des fonctions de remplacement pour la compatibilité descendante des applications
 Une application ODBC *3. x* utilisant le gestionnaire de pilotes ODBC *3. x* fonctionnera sur un pilote ODBC *2. x* tant qu’aucune nouvelle fonctionnalité ne sera utilisée. Les modifications de fonctionnalités et de comportements en double affectent cependant la manière dont l’application ODBC *3. x* fonctionne sur un pilote ODBC *2. x* . Lorsque vous utilisez un pilote ODBC *2. x* , le gestionnaire de pilotes mappe les fonctions ODBC *3. x* suivantes, qui ont remplacé une ou plusieurs fonctions ODBC *2. x* dans les fonctions ODBC *2. x* correspondantes.  

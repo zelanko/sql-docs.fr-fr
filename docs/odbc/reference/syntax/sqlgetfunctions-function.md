@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLGetFunctions
 title: SQLGetFunctions fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 15537b28ff2bae8a4fcd3e7be82426eb53aa83a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 396c677c6052176240afaa86e02c5f52ba4739b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285329"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460982"
 ---
 # <a name="sqlgetfunctions-function"></a>Fonction SQLGetFunctions
 **Conformité**  
@@ -72,7 +73,7 @@ SQLRETURN SQLGetFunctions(
 |--------|-----|-----------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM) **SQLGetFunctions** a été appelé avant **SQLConnect**, **SQLBrowseConnect**ou **SQLDriverConnect**.<br /><br /> (DM) **SQLBrowseConnect** a été appelé pour *ConnectionHandle* et a retourné SQL_NEED_DATA. Cette fonction a été appelée avant que **SQLBrowseConnect** retourne SQL_SUCCESS_WITH_INFO ou SQL_SUCCESS.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *ConnectionHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
@@ -137,7 +138,7 @@ SQLRETURN SQLGetFunctions(
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **SQLCancelHandle** sera renvoyé comme pris en charge uniquement si le pilote prend en charge à la fois **SQLCancel** et **SQLCancelHandle**. Si **SQLCancel** est pris en charge mais que **SQLCancelHandle** n’est pas, l’application peut toujours appeler **SQLCancelHandle** sur un descripteur d’instruction, car elle est mappée à **SQLCancel**.  
+ [2]   **SQLCancelHandle** sera renvoyé comme pris en charge uniquement si le pilote prend en charge à la fois **SQLCancel** et **SQLCancelHandle**. Si **SQLCancel** est pris en charge mais que **SQLCancelHandle** n’est pas, l’application peut toujours appeler **SQLCancelHandle** sur un descripteur d’instruction, car elle est mappée à **SQLCancel**.  
   
 ## <a name="sql_func_exists-macro"></a>Macro SQL_FUNC_EXISTS  
  La macro SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) est utilisée pour déterminer la prise en charge de ODBC 3 *. x* ou des fonctions antérieures après l’appel de **SQLGetFunctions** avec un argument *FunctionID* de SQL_API_ODBC3_ALL_FUNCTIONS. L’application appelle SQL_FUNC_EXISTS avec l’argument *SupportedPtr* défini sur le *SupportedPtr* passé dans *SQLGetFunctions*, et avec l’argument *FunctionID* défini sur la **#define** pour la fonction. SQL_FUNC_EXISTS retourne SQL_TRUE si la fonction est prise en charge, et SQL_FALSE dans le cas contraire.  

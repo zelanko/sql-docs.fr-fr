@@ -1,4 +1,5 @@
 ---
+description: Mappage des types d’informations Attributes1 du curseur
 title: Mappage des types d’informations du curseur Attributes1 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d70cf0a93a6c6160faeb0afe991b2adfff11b8f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcd4c1eaa6ddd2e6db4f2634cc22d3148e7977cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301042"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461401"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Mappage des types d’informations Attributes1 du curseur
 Quand ODBC 3. *x* l’application appelle **SQLGetInfo** dans un pilote ODBC 2 *. x* avec le type d’informations SQL_XXXX_CURSOR_ATTRIBUTES1 (pour les curseurs dynamiques, avant uniquement, avec pilote de jeu de clés ou statiques), le paramètre des bits retournés par le gestionnaire de pilotes dépend de ce que fait ODBC 2. *x* retourne le pilote ODBC 2 correspondant. *x* types d’informations. Les bits sont définis comme indiqué dans le tableau suivant.  

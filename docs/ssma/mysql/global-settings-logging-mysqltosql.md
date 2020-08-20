@@ -1,4 +1,5 @@
 ---
+description: Paramètres globaux (Journalisation) (MySQLToSQL)
 title: Paramètres globaux (journalisation) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 0540a39f4e9d6d3a2cdaa3f89f69dbdc0c2533ab
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4a830bf0a4a5dc3ec0a0d3e2a724b0c02517f995
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463445"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Paramètres globaux (Journalisation) (MySQLToSQL)
 Utilisez la boîte de dialogue **paramètres globaux** pour spécifier les paramètres de journalisation pour SSMA. En règle générale, vous pouvez modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  

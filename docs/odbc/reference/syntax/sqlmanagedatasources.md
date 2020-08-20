@@ -1,4 +1,5 @@
 ---
+description: SQLManageDataSources
 title: SQLManageDataSources | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b572a861af3479e1543be9fda9598cc7e25d36c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81f4616cb04d5d17cca687843d28efa1027ff65f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460972"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformité**  
@@ -49,7 +50,7 @@ BOOL SQLManageDataSources(
  **SQLManageDataSources** retourne la valeur false si *HWND* n’est pas un handle de fenêtre valide. Sinon, elle retourne TRUE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **SQLManageDataSources** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Quand **SQLManageDataSources** retourne false, une valeur * \* pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les valeurs * \* pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
@@ -93,7 +94,7 @@ BOOL SQLManageDataSources(
   
  Un nom de source de données système est inscrit dans l’entrée HKEY_LOCAL_MACHINE dans les informations système plutôt que dans l’entrée HKEY_CURRENT_USER. Elle n’est pas liée à un utilisateur qui se connecte avec son nom d’utilisateur et son mot de passe particuliers, mais elle peut être utilisée par n’importe quel utilisateur de cet ordinateur ou par un service de système automatique. Le DSN système est, toutefois, lié à un ordinateur. Il ne prend pas en charge la possibilité d’utiliser des noms d’accès distant entre les ordinateurs. Les noms de sources de données système sont enregistrés comme suit dans les informations système :  
   
- HKEY_LOCAL_MACHINE ODBC ODBC. ini du logiciel  
+ Odbc.ini ODBC DES LOGICIELS HKEY_LOCAL_MACHINE  
   
 ## <a name="file-dsns"></a>Fichiers DSN  
  Une source de données de fichier n’a pas de nom de source de données, comme la source de données d’une machine, et n’est pas inscrite auprès d’un utilisateur ou d’un ordinateur. Les informations de connexion pour cette source de données sont contenues dans un fichier. DSN qui peut être copié sur n’importe quel ordinateur. Une source de données de fichier peut être partagée, auquel cas le fichier. DSN réside sur un réseau et peut être utilisé simultanément par plusieurs utilisateurs sur le réseau tant que le pilote approprié est installé sur l’utilisateur. Il est également possible de ne pas partager une source de données de fichier, auquel cas elle peut être utilisée uniquement sur un seul ordinateur.  

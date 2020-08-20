@@ -1,4 +1,5 @@
 ---
+description: SQLCopyDesc, fonction
 title: SQLCopyDesc fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef1fa5b319e8d72d5b70e6f2010e493eec6f844a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ede6d52614c1c35cdc28f6d85e8b3be61235b4ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301226"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461191"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc, fonction
 **Conformité**  
@@ -64,14 +65,14 @@ SQLRETURN SQLCopyDesc(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY007|L’instruction associée n’est pas préparée|*SourceDescHandle* a été associé à un IRD et le descripteur d’instruction associé n’était pas dans l’État prepared ou Executed.|  
 |HY010|Erreur de séquence de fonction|(DM) le handle de descripteur dans *SourceDescHandle* ou *TargetDescHandle* a été associé à un *StatementHandle* pour lequel une fonction d’exécution asynchrone (pas celui-ci) a été appelée et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) le handle de descripteur dans *SourceDescHandle* ou *TargetDescHandle* a été associé à un *StatementHandle* pour lequel **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *SourceDescHandle* ou *TargetDescHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLCopyDesc** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour l’un des descripteurs d’instruction associés à *SourceDescHandle* ou *TargetDescHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.|  
 |HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
 |HY016|Impossible de modifier un descripteur de ligne d’implémentation|*TargetDescHandle* a été associé à un IRD.|  
 |HY021|Informations de descripteur incohérentes|Les informations de descripteur vérifiées pendant une vérification de cohérence n’étaient pas cohérentes. Pour plus d’informations, consultez « vérifications de cohérence » dans **SQLSetDescField**.|  
-|HY092|Identificateur d’attribut/option non valide|L’appel à **SQLCopyDesc** invite un appel à **SQLSetDescField**, mais * \*ValuePtr* n’était pas valide pour l’argument *FieldIdentifier* sur *TargetDescHandle*.|  
+|HY092|Identificateur d’attribut/option non valide|L’appel à **SQLCopyDesc** invite un appel à **SQLSetDescField**, mais * \* ValuePtr* n’était pas valide pour l’argument *FieldIdentifier* sur *TargetDescHandle*.|  
 |HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote associé à *SourceDescHandle* ou *TargetDescHandle* ne prend pas en charge la fonction.|  

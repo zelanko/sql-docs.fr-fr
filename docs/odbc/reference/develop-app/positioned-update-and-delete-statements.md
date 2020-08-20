@@ -1,4 +1,5 @@
 ---
+description: Instructions de mise à jour et de suppression positionnées
 title: Instructions Update et DELETE positionnées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6e5316bee7057b30eace326b3ca82b30b75741fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bd100ac674aedf8dfd652c3d48e0f2dea1226019
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88461391"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Instructions de mise à jour et de suppression positionnées
 Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un jeu de résultats avec une instruction UPDATE ou DELETE positionnée. Les instructions Update et DELETE positionnées sont prises en charge par certaines sources de données, mais pas toutes. Pour déterminer si une source de données prend en charge les instructions Update et DELETE positionnées, une application appelle **SQLGetInfo** avec le SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 ou SQL_STATIC_CURSOR_ATTRIBUTES1 *infotype* (selon le type du curseur). Notez que la bibliothèque de curseurs ODBC simule les instructions Update et DELETE positionnées.  
@@ -41,7 +42,7 @@ Les applications peuvent mettre à jour ou supprimer la ligne actuelle dans un j
   
  **Set** *Column-identifier* **=** {*expression* &#124; **null**}  
   
- [**,** *identificateur de colonne* **=** {*expression* &#124; **null**}]...  
+ [**,** *Column-identifier* **=** {*expression* &#124; **null**}] ...  
   
  **Où Current de** *Cursor-Name*  
   

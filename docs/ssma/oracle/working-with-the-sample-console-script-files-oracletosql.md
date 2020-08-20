@@ -1,4 +1,5 @@
 ---
+description: Utilisation des exemples de fichiers de script de console (OracleToSQL)
 title: Utilisation des exemples de fichiers de script de console (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -14,12 +15,12 @@ ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: b5be39914c13b647f9a3f4b70a6371b9c5b40749
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f7b9fa46fcd5b24b5427c4ba7a359ac37565f724
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87932500"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463181"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>Utilisation des exemples de fichiers de script de console (OracleToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence et l’utilisation de l’utilisateur. Cette section décrit la façon de personnaliser facilement ces scripts en fonction des besoins de l’utilisateur final.  
@@ -82,7 +83,7 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     **Attribut**  
   
-    -   `source-schema:`Spécifie la base de données source qui nécessite d’être convertie.  
+    -   `source-schema:` Spécifie la base de données source qui nécessite d’être convertie.  
   
     -   `sql-server-schema`: Spécifie la base de données cible à migrer vers  
   
@@ -96,7 +97,7 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     **Attribut**  
   
-    `object-name`: Spécifiez le nom de la base de données ou de l’objet source qui doit être converti. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le`object-name`  
+    `object-name`: Spécifiez le nom de la base de données ou de l’objet source qui doit être converti. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le `object-name`  
   
     **Nom de la commande**  
   
@@ -108,7 +109,7 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     **Attribut**  
   
-    `object-name:`Spécifiez le nom de la base de données ou de l’objet SQL Server qui doit être créé. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le`object-name`  
+    `object-name:` Spécifiez le nom de la base de données ou de l’objet SQL Server qui doit être créé. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le `object-name`  
   
     **Nom de la commande**  
   
@@ -120,10 +121,10 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     **Attribut**  
   
-    `object-name:`Spécifie le nom de la base de données/des tables source dont la migration doit être effectuée. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le`object-name`  
+    `object-name:` Spécifie le nom de la base de données/des tables source dont la migration doit être effectuée. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le `object-name`  
   
 ## <a name="see-also"></a>Voir aussi  
 [Création de fichiers de valeurs de variables &#40;OracleToSQL&#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md)  
 [Création des fichiers de connexion au serveur &#40;OracleToSQL&#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md)  
-[Génération de rapports &#40;&#41;OracleToSQL](../../ssma/oracle/generating-reports-oracletosql.md)  
+[Génération de rapports &#40;&#41;OracleToSQL ](../../ssma/oracle/generating-reports-oracletosql.md)  
   
