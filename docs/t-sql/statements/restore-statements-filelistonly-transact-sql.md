@@ -1,4 +1,5 @@
 ---
+description: Instructions RESTORE - REWINDONLY (Transact-SQL)
 title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
@@ -22,12 +23,12 @@ ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a81543096bb698bfba3ab7561ca65de73914692d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: f72bc6a3a67f73fc7ab44e94514f7db7b6a905a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478761"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Instructions RESTORE - REWINDONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -38,7 +39,7 @@ ms.locfileid: "81635728"
 > [!NOTE]  
 >  Pour une description des arguments, consultez [Arguments RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -92,7 +93,7 @@ FROM <backup_device>
 |PhysicalName|**nvarchar(260)**|Nom physique ou nom système du fichier.|  
 |Type|**char(1)**|Type de fichier (l’un des suivants) :<br /><br /> **L** = Fichier journal Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **D** = Fichier de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **F** = Catalogue de texte intégral<br /><br /> **S** = FileStream, FileTable ou conteneur [!INCLUDE[hek_2](../../includes/hek-2-md.md)]|  
 |FileGroupName|**nvarchar(128)** NULL|Nom du groupe de fichiers contenant le fichier.|  
-|Size|**numeric(20,0)**|Taille actuelle en octets.|  
+|Taille|**numeric(20,0)**|Taille actuelle en octets.|  
 |MaxSize|**numeric(20,0)**|Taille maximale autorisée en octets.|  
 |FileID|**bigint**|Identificateur de fichier, unique dans la base de données.|  
 |CreateLSN|**numeric(25,0)**|Numéro séquentiel dans le journal auquel le fichier a été créé.|  

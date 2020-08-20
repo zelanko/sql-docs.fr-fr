@@ -1,4 +1,5 @@
 ---
+description: Configurer les sorties à l'aide de l'Assistant Dimension à variation lente
 title: Configurer les sorties à l’aide de l’Assistant Dimension à variation lente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7120a86d04a21f448d423719fa7d963658a2774a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 09e71583c11366ca4aa7356b923b8d0f576081f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922448"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477760"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurer les sorties à l'aide de l'Assistant Dimension à variation lente
 

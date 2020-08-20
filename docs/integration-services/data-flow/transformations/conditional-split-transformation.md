@@ -1,4 +1,5 @@
 ---
+description: transformation de fractionnement conditionnel
 title: Fractionnement conditionnel, transformation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477764"
 ---
 # <a name="conditional-split-transformation"></a>transformation de fractionnement conditionnel
 
@@ -79,7 +80,7 @@ ms.locfileid: "86923203"
 >  La transformation de fractionnement conditionnel dirige chaque ligne d'entrée vers une seule sortie. Si vous entrez plusieurs conditions, la transformation envoie chaque ligne à la première sortie pour laquelle la condition est remplie et ne tient pas compte des conditions suivantes pour cette ligne. Si vous devez évaluer successivement plusieurs conditions, vous devrez peut-être enchaîner plusieurs transformations de fractionnement conditionnel dans le flux de données.  
   
 ### <a name="options"></a>Options  
- **Order**  
+ **Commande**  
  Sélectionnez une ligne et utilisez les touches de direction à droite pour modifier l'ordre dans lequel les expressions sont évaluées.  
   
  **Nom de sortie**  
@@ -90,7 +91,7 @@ ms.locfileid: "86923203"
   
  Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.  
   
- **Rubriques connexes :**  [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;expression SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **Rubriques connexes :**  [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;Expression SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md), et [Fonctions &#40;Expression SSIS&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **Nom de sortie par défaut**  
  Tapez un nom pour la sortie par défaut ou utilisez le nom par défaut.  

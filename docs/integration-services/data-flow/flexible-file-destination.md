@@ -1,4 +1,5 @@
 ---
+description: Destination de fichier flexible
 title: Flexible File Destination | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2019
@@ -12,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9c5e53ba85af16c65161857d9f93c50e5105fa50
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 72bc4d08685f411cb07194234e37f20e5bdbaac4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477813"
 ---
 # <a name="flexible-file-destination"></a>Destination de fichier flexible
 
@@ -63,7 +64,7 @@ Après avoir spécifié les informations de connexion, basculez vers la page **C
 Pour que la **connexion de test** fonctionne (soit le stockage d’objets blob, soit Data Lake Storage Gen2), le principal de service doit disposer au moins du rôle **Lecteur des données Blob du stockage** pour le compte de stockage.
 Cette opération s’effectue à l’aide de [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
-Pour le stockage d’objets blob, l’autorisation d’écriture est accordée en affectant au moins le rôle **Contributeur aux données Blob du stockage** .
+Pour le stockage d’objets blob, l’autorisation d’écriture est accordée en affectant au moins le rôle **Contributeur aux données Blob du stockage **.
 
 Pour Data Lake Storage Gen2, l’autorisation est déterminée à la fois par RBAC et par des [listes des contrôles d’accès (ACL)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
 Faites attention à ce que les listes de contrôle d’accès soient configurées à l’aide de l’ID d’objet (OID) du principal de service pour l’inscription d’application, comme indiqué [ici](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).

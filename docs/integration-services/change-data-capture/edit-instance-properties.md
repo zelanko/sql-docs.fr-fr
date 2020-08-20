@@ -1,4 +1,5 @@
 ---
+description: Modifier les propriétés d'instance
 title: Modifier les propriétés d’instance | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 69eff5afd66fb7167d894e116e5a5b1f21bf9b81
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 926ee3afb3828419a6863e99f27f529d4dcc1bab
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478078"
 ---
 # <a name="edit-instance-properties"></a>Modifier les propriétés d'instance
 
@@ -24,13 +25,13 @@ ms.locfileid: "86921675"
 
   Utilisez l'éditeur de propriétés pour apporter des modifications à l'instance CDC après avoir créé les configurations initiales. Vous pouvez effectuer les opérations suivantes dans l'éditeur de propriétés.  
   
--   [Modifier les propriétés d’une base de données Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
+-   [Modifier les propriétés d'une base de données Oracle](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
   
 -   [Modifier des tables](../../integration-services/change-data-capture/edit-tables.md)  
   
--   [Ajouter des tables à une instance CDC](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
+-   [Ajouter des tables à une instance de capture de données modifiées](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
--   [Modifier les propriétés d’une table](../../integration-services/change-data-capture/edit-the-table-properties.md)  
+-   [Modifier les propriétés d'une table](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
 -   [Examiner et générer des scripts de journalisation supplémentaires](../../integration-services/change-data-capture/review-and-generate-supplemental-logging-scripts.md)  
   

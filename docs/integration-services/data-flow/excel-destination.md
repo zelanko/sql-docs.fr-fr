@@ -1,4 +1,5 @@
 ---
+description: Destination Excel
 title: Destination Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 399d5c52a2224dbd3d61832f5ec078d5b7339566
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2abf3c8a09ead6369a5201a2d582623f05bc2f79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914895"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477848"
 ---
 # <a name="excel-destination"></a>Destination Excel
 
@@ -55,7 +56,7 @@ ms.locfileid: "86914895"
   
 -   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Propriétés personnalisées d’Excel](../../integration-services/data-flow/excel-custom-properties.md)  
+-   [Propriétés personnalisées d'Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   

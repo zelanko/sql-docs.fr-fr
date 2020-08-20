@@ -1,4 +1,5 @@
 ---
+description: DROP INDEX (Transact-SQL)
 title: DROP INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -32,12 +33,12 @@ ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f35c835eb8165bf0c9985a2bea322f8f30d64b6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 231684d3b0db7b6175c6865452ae3fb2551595d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483837"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478868"
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -273,7 +274,7 @@ Lorsqu'un index cluster est supprimé HORS CONNEXION, seuls les niveaux supérie
 ### <a name="a-dropping-an-index"></a>R. Suppression d'un index  
  L’exemple suivant supprime l’index `IX_ProductVendor_VendorID` sur la table `ProductVendor` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 DROP INDEX IX_ProductVendor_BusinessEntityID   
     ON Purchasing.ProductVendor;  
 GO  
@@ -282,7 +283,7 @@ GO
 ### <a name="b-dropping-multiple-indexes"></a>B. Suppression de plusieurs index  
  L'exemple suivant supprime deux index en une seule transaction dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 DROP INDEX  
     IX_PurchaseOrderHeader_EmployeeID ON Purchasing.PurchaseOrderHeader,  
     IX_Address_StateProvinceID ON Person.Address;  
@@ -294,7 +295,7 @@ GO
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
-```  
+```sql  
 DROP INDEX AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
     ON Production.BillOfMaterials WITH (ONLINE = ON, MAXDOP = 2);  
 GO  
@@ -305,7 +306,7 @@ GO
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
-```  
+```sql  
 --Create a clustered index on the PRIMARY filegroup if the index does not exist.  
 CREATE UNIQUE CLUSTERED INDEX  
     AK_BillOfMaterials_ProductAssemblyID_ComponentID_StartDate   
@@ -358,7 +359,7 @@ GO
   
  L'exemple suivant supprime un index cluster avec une contrainte PRIMARY KEY en supprimant la contrainte. La table `ProductCostHistory` ne comporte aucune contrainte FOREIGN KEY. Si cela avait été le cas, ces contraintes auraient d'abord dû être supprimées.  
   
-```  
+```sql  
 -- Set ONLINE = OFF to execute this example on editions other than Enterprise Edition.  
 ALTER TABLE Production.TransactionHistoryArchive  
 DROP CONSTRAINT PK_TransactionHistoryArchive_TransactionID  
@@ -368,7 +369,7 @@ WITH (ONLINE = ON);
 ### <a name="f-dropping-an-xml-index"></a>F. Suppression d'un index XML  
  L'exemple suivant supprime un index XML dans la table `ProductModel` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 DROP INDEX PXML_ProductModel_CatalogDescription   
     ON Production.ProductModel;  
 ```  
@@ -378,7 +379,7 @@ DROP INDEX PXML_ProductModel_CatalogDescription
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
-```  
+```sql  
 DROP INDEX PK_MyClusteredIndex   
     ON dbo.MyTable   
     WITH (MOVE TO MyPartitionScheme,  

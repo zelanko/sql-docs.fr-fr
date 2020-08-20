@@ -1,4 +1,5 @@
 ---
+description: Gestionnaire de connexions du cache
 title: Gestionnaire de connexions du cache | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21cc4725f69d35043734da6d9210bac0a6b65e4d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c546eee3e6dfe71d3e554f28c467407fc5baea16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920825"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477938"
 ---
 # <a name="cache-connection-manager"></a>Gestionnaire de connexions du cache
 
@@ -124,7 +125,7 @@ ms.locfileid: "86920825"
  **Précision**  
  Spécifie la précision pour certains types de données de colonne. La précision est le nombre de chiffres qui composent un nombre. Si le type de données le permet, vous pouvez mettre à jour **Précision**.  
   
- **Mettre à l'échelle**  
+ **Mise à l’échelle**  
  Spécifie l'échelle pour certains types de données de colonne. L'échelle est le nombre de chiffres à droite du séparateur décimal dans un nombre. Si le type de données le permet, vous pouvez mettre à jour **Échelle**.  
   
  **Page de codes**  

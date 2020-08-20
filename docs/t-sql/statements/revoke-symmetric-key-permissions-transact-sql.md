@@ -1,4 +1,5 @@
 ---
+description: REVOKE – révocation d'autorisations de clé symétrique (Transact-SQL)
 title: REVOKE - Révoquer des autorisations sur une clé symétrique (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e83d4ecebc9100112f27a813d38c587fe5bc35de
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: ac402c441a0640eb565e41697e89f6ab68a60df1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88478684"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de clé symétrique (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +76,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  { TO | FROM } \<*database_principal*>  
  Spécifie le principal pour lequel l'autorisation est révoquée.  
   
- AS \<database_principal> Spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
+ AS \<database_principal> spécifie un principal dont le principal qui exécute cette requête dérive son droit de révoquer l’autorisation.  
   
  *Database_user*  
  Spécifie un utilisateur de base de données.  

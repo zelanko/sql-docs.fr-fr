@@ -1,4 +1,5 @@
 ---
+description: transformation de conversion de données
 title: Conversion de données, transformation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e43b29fadf9c4fe36775616a8ddf7a82a29eae4e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cdd281be64879d56ec8c81eacc52ea3631fe0867
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477711"
 ---
 # <a name="data-conversion-transformation"></a>transformation de conversion de données
 
@@ -33,7 +34,7 @@ ms.locfileid: "86912306"
   
  Cette transformation permet à un package de réaliser les types de conversions de données suivants :  
   
--   Modifier le type de données. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
+-   Changer le type de données. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
     > [!NOTE]  
     >  Si vous convertissez des données en un type de données date ou datetime, la date de la colonne de sortie est exprimée dans le format ISO, bien que la préférence des paramètres régionaux puisse spécifier un format différent.  
@@ -80,7 +81,7 @@ ms.locfileid: "86912306"
  **Précision**  
  Définissez la précision des données numériques.  
   
- **Mettre à l'échelle**  
+ **Mise à l’échelle**  
  Définissez l'échelle des données numériques.  
   
  **Page de codes**  
