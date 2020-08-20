@@ -1,4 +1,5 @@
 ---
+description: STCurveN (type de données geometry)
 title: STCurveN (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7905da990bf06b79641f19823f954abe201139ad
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: e182b7c5670bd86e0d684d1d8caaea563a2ff456
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555064"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467383"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (type de données geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Retourne la courbe spécifiée à partir d’une instance **geometry** qui est *
 ## <a name="exceptions"></a>Exceptions  
  Si *curve_index* < 1, `ArgumentOutOfRangeException` est levé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **NULL** est retourné dans l’une des situations suivantes :  
   
 -   L’instance **geometry** est déclarée, mais pas instanciée  

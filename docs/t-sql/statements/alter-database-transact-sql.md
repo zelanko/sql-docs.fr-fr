@@ -1,4 +1,5 @@
 ---
+description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2020
@@ -26,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c45877355d5cb47b8c9ba4ee86784c17d30a816
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 553d84c62dfb9de6bc1bd18cde7b09965bfdf0d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467331"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -452,7 +453,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) Spécifie la ta
 |500 Go|N/A|√|√|√ (D)|√|
 |750 Go|N/A|√|√|√|√|
 |1 024 Go|N/A|√|√|√|√ (D)|
-|À partir de 1 024 Go jusqu’à 4 096 Go par incréments de 256 Go*|N/A|NON APPLICABLE|NON APPLICABLE|N/A|√|
+|À partir de 1 024 Go jusqu’à 4 096 Go par incréments de 256 Go*|NON APPLICABLE|NON APPLICABLE|N/A|N/A|√|
 
 \* P11 et P15 autorisent MAXSIZE jusqu’à 4 To, 1 024 Go étant la taille par défaut. P11 et P15 peuvent utiliser jusqu’à 4 To de stockage inclus sans frais supplémentaires. Au niveau Premium, une valeur MAXSIZE supérieure à 1 To est actuellement disponible dans les régions suivantes : USA Est 2, USA Ouest, US Gov Virginie, Europe Ouest, Allemagne Centre, Asie Sud-Est, Japon Est, Australie Est, Canada Centre et Canada Est. Pour plus d’informations sur les limitations des ressources du modèle DTU, consultez [Limites des ressources DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -538,13 +539,13 @@ La valeur MAXSIZE pour le modèle DTU, si elle est spécifiée, doit être une v
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Taille maximale des données (Go)|3 072|3 072|3 072|4096|4096|4096|4096|
 
-**Vital pour l’entreprise - calcul provisionné - série M (partie 1)**
+**Critique pour l’entreprise - calcul provisionné - série M (partie 1)**
 
 |MAXSIZE|BC_M_8|BC_M_10|BC_M_12|BC_M_14|BC_M_16|BC_M_18|
 |:----- | -------: | -------: | -------: | -------: | -------: | -------: |
 |Taille maximale des données (Go)|512|640|768|896|1 024|1152|
 
-**Vital pour l’entreprise - calcul provisionné - série M (partie 2)**
+**Critique pour l’entreprise - calcul provisionné - série M (partie 2)**
 
 |MAXSIZE|BC_M_20|BC_M_24|BC_M_32|BC_M_64|BC_M_128|
 |:----- | -------: | -------: | -------: | -------: | -------: |

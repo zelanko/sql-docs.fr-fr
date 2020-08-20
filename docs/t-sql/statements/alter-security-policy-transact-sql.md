@@ -1,4 +1,5 @@
 ---
+description: ALTER SECURITY POLICY (Transact-SQL)
 title: ALTER SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0696b96e83aac5ca66b43d38c11adceab702c10f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: d8267b7583827dce34e46c8f3605912fe72ea72b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467291"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -88,7 +89,7 @@ Indique que la stratégie de sécurité ne doit pas être exécutée quand un ag
 table_schema_name.table_name  
 Est la table cible pour le prédicat de sécurité appliqué. Plusieurs stratégies de sécurité désactivées peuvent cibler une même table, mais une seule peut être activée à un moment donné.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Notes
 L'instruction ALTER SECURITY POLICY fait partie de l'étendue d'une transaction. Si la transaction est restaurée, l'instruction l'est également.  
   
 Quand vous utilisez des fonctions de prédicat avec des tables optimisées en mémoire, les stratégies de sécurité doivent inclure **SCHEMABINDING** et utiliser l’indicateur de compilation **WITH NATIVE_COMPILATION**. L’argument SCHEMABINDING ne peut pas être modifié avec l’instruction ALTER, car elle s’applique à tous les prédicats. Pour changer la liaison de schéma, vous devez supprimer et recréer la stratégie de sécurité.  

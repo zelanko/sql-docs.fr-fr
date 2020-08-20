@@ -1,4 +1,5 @@
 ---
+description: OPEN (Transact-SQL)
 title: OPEN (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 73199a9dba314f845c8dbb4268da0cc4fd0f4af4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 478c8c846f075c6d9a9705e978a53236a65e3536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919903"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467584"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Ouvre un curseur côté serveur [!INCLUDE[tsql](../../includes/tsql-md.md)] et remplit ce dernier en exécutant l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifiée dans l’instruction DECLARE CURSOR ou SET *cursor_variable*.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +55,7 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  *cursor_variable_name*  
  Nom d'une variable de curseur faisant référence à un curseur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si le curseur est déclaré avec l'option INSENSITIVE ou STATIC, OPEN crée une table temporaire pour recueillir l'ensemble de résultats. OPEN échoue si la longueur d'une ligne de l'ensemble de résultats est supérieure à la longueur de ligne maximale des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le curseur est déclaré avec l'option KEYSET, OPEN crée une table temporaire pour recueillir le jeu de clés. Les tables temporaires sont stockées dans tempdb.  
   
  Après avoir ouvert un curseur, utilisez la fonction @@CURSOR_ROWS pour recevoir le nombre de lignes éligibles dans le dernier curseur ouvert.  

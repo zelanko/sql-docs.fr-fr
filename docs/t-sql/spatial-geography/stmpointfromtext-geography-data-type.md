@@ -1,4 +1,5 @@
 ---
+description: STMPointFromText (type de données geography)
 title: STMPointFromText (type de données geography) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/30/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe91a9f5-8de6-464e-88db-00650eae79b0
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: d62eedfd8b1457bbd0352f5593ee956a1b4e63c1
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: d7b06ff31cd94422abfbbc559e569cfb2f610eae
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467431"
 ---
 # <a name="stmpointfromtext-geography-data-type"></a>STMPointFromText (type de données geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
 
 ## <a name="arguments"></a>Arguments
  *multipoint_tagged_text*  
- Représentation WKT de l’instance **geographyMultiPoint** à retourner. *multipoint_tagged_text* est une expression **nvarchar(max)** .  
+ Représentation WKT de l’instance **geographyMultiPoint** à retourner. *multipoint_tagged_text* est une expression **nvarchar(max)**.  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyMultiPoint** à retourner.  
@@ -52,7 +53,7 @@ STMPointFromText ( 'multipoint_tagged_text', SRID )
   
  Type OGC : **MultiPoint**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -64,7 +65,7 @@ SET @g = geography::STMPointFromText('MULTIPOINT(-122.360 47.656, -122.343 47.65
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

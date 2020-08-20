@@ -1,4 +1,5 @@
 ---
+description: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 title: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,19 +23,19 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 10d3716351aecc982ad060cd9795c029401a48a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: b1a12f2c53409148854b806f1141bf46acad8a4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392817"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467252"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crée un fournisseur de services de chiffrement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un fournisseur EKM (Extensible Key Management).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,9 +52,9 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Nom du fournisseur EKM (Extensible Key Management)  
   
  *path_of_DLL*  
- Chemin d'accès du fichier .dll qui implémente l'interface [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] EKM. Quand vous utilisez le **connecteur SQL Server pour Microsoft Azure Key Vault** l’emplacement par défaut est **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** .  
+ Chemin d'accès du fichier .dll qui implémente l'interface [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] EKM. Quand vous utilisez le **connecteur SQL Server pour Microsoft Azure Key Vault** l’emplacement par défaut est **'C:\Program Files\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Toutes les clés créées par un fournisseur référenceront ce dernier par son GUID. Le GUID est conservé dans toutes les versions de la DLL.  
   
  La DLL qui implémente l'interface SQLEKM doit être signée numériquement à l'aide de n'importe quel certificat. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vérifiera la signature. La vérification inclut sa chaîne de certificats, dont la racine doit être installée à l’emplacement **Autorités de certification racines de confiance** sur un système Windows. Si la signature n’est pas vérifiée correctement, l’instruction CREATE CRYPTOGRAPHIC PROVIDER échoue. Pour plus d’informations sur les certificats et les chaînes de certificats, consultez [Certificats et clés asymétriques SQL Server](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  

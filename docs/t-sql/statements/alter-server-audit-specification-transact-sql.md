@@ -1,4 +1,5 @@
 ---
+description: ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 title: ALTER SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3b955c95df0af36bac4f249aab547310d46a6220
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: fd2163114fb0b2ad6d21ca2ed827db160819c8ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467270"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie un objet de spécification d'audit de serveur à l'aide de la fonctionnalité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +63,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Active ou désactive la collecte d'enregistrements d'audit pour cette spécification d'audit.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous devez définir l’état d’une spécification d’audit sur OFF afin de pouvoir modifier cette dernière. Si ALTER SERVER AUDIT SPECIFICATION est exécuté alors qu'une spécification d'audit est activée avec des options autres que STATE=OFF, vous recevez un message d'erreur.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE (SQL Graph)
 title: CREATE TABLE (SQL Graph) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2019
@@ -32,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06a5284d057467ad687a503af0f70be8b01c2154
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0653d3be257c77ab0eba1410104818d72c810c77
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483792"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467191"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -47,7 +48,7 @@ Crée une table graphique SQL en tant que table `NODE` ou `EDGE`.
 > [!NOTE]   
 >  Pour plus d’informations sur les instructions Transact-SQL standard, consultez [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -124,7 +125,7 @@ Ce document répertorie uniquement les arguments appartenant à un graphe SQL. P
  ON {partition_scheme | filegroup | "default"}    
  Peut également être spécifié dans une contrainte PRIMARY KEY ou UNIQUE. Ces contraintes créent des index. Si le groupe de fichiers est spécifié, l’index est stocké dans le groupe de fichiers nommé. Si "default" est spécifié, ou si ON n’est pas spécifié du tout, l’index est stocké dans le même groupe de fichiers que la table. Si la contrainte PRIMARY KEY ou UNIQUE crée un index cluster, les pages de données de la table sont stockées dans le même groupe de fichiers que l'index. Si CLUSTERED est spécifié ou la contrainte crée un index cluster d’une autre manière, et qu’une valeur partition_scheme est spécifiée qui diffère des valeurs partition_scheme ou le groupe de fichiers de la définition de table, ou vice versa, seule la définition de la contrainte sera honorée et l’autre sera ignorée.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Le création d’une table temporaire en tant que nœud ou table d’arêtes n’est pas prise en charge.  
 
 Le création d’une table de nœuds ou d’arêtes temporelle n’est pas prise en charge.

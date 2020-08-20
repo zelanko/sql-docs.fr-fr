@@ -1,4 +1,5 @@
 ---
+description: ALTER PROCEDURE (Transact-SQL)
 title: ALTER PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
@@ -23,12 +24,12 @@ ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676696f50495ab042bbaf38bf9b6fd1ce374d3a7
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: dab3f3be63f0430a776fcaeb2d1c0d65f117f511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381263"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467405"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "86381263"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -57,7 +58,7 @@ AS { [ BEGIN ] sql_statement [;] [ ...n ] [ END ] }
     [ EXECUTE AS Clause ]  
 ```  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server CLR Stored Procedure  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name [ ; number ]   
@@ -69,7 +70,7 @@ AS { EXTERNAL NAME assembly_name.class_name.method_name }
 [;]  
 ```  
   
-```sql  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 ALTER { PROC | PROCEDURE } [schema_name.] procedure_name  
@@ -148,7 +149,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
- Précise la méthode d’un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour créer une référence à une procédure stockée CLR. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister en tant que classe dans l’assembly. Si la classe a un nom qualifié par un espace de noms, utilisez un point ( **.** ) pour séparer les parties de l’espace de noms. Le nom de la classe doit figurer entre crochets ( **[]** ) ou entre guillemets doubles ( **""** ). La méthode spécifiée doit être une méthode statique de la classe.  
+ Précise la méthode d’un assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pour créer une référence à une procédure stockée CLR. *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit exister en tant que classe dans l’assembly. Si la classe a un nom qualifié par un espace de noms, utilisez un point (**.**) pour séparer les parties de l’espace de noms. Le nom de la classe doit figurer entre crochets (**[]**) ou entre guillemets doubles (**""**). La méthode spécifiée doit être une méthode statique de la classe.  
   
  Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas exécuter du code CLR. Vous pouvez créer, modifier et supprimer des objets d’une base de données qui font référence à des modules CLR (Common Language Runtime) ; cependant, vous ne pouvez pas exécuter ces références dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tant que vous n’avez pas activé l’[option CLR enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md). Pour activer cette option, utilisez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -172,8 +173,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée la procédure stockée `uspVendorAllInfo`. Cette procédure retourne le nom de tous les fournisseurs de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], les produits qu'ils vendent, leurs conditions de crédit et leur disponibilité. Lorsque cette procédure est créée, elle est ensuite modifiée pour renvoyer un jeu de résultats différent.  
   
-```  
-  
+```sql
 IF OBJECT_ID ( 'Purchasing.uspVendorAllInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE Purchasing.uspVendorAllInfo;  
 GO  
@@ -190,17 +190,16 @@ AS
     INNER JOIN Production.Product p  
       ON pv.ProductID = p.ProductID   
     ORDER BY v.Name ASC;  
-GO  
-  
+GO    
 ```  
   
  L'exemple suivant modifie la procédure stockée `uspVendorAllInfo`. Il supprime la clause EXECUTE AS CALLER et modifie le corps de la procédure pour qu'elle retourne uniquement les fournisseurs qui proposent le produit spécifié. Les fonctions `LEFT` et `CASE` personnalisent l'affichage du jeu de résultats.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER PROCEDURE Purchasing.uspVendorAllInfo  
-    @Product varchar(25)   
+    @Product VARCHAR(25)   
 AS  
     SET NOCOUNT ON;  
     SELECT LEFT(v.Name, 25) AS Vendor, LEFT(p.Name, 25) AS 'Product name',   
@@ -224,7 +223,6 @@ AS
     WHERE p.Name LIKE @Product  
     ORDER BY v.Name ASC;  
 GO  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

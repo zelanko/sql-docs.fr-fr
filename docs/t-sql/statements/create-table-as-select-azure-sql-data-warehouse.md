@@ -1,4 +1,5 @@
 ---
+description: CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 title: CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/07/2016
@@ -11,12 +12,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: a3d851f7b9f2b1d6414d5c29d79983655a13fd3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279515"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467197"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -175,29 +176,29 @@ Supposons que vous avez créé cette table en utilisant le type de distribution 
 ```sql
 CREATE TABLE FactInternetSales
 (
-    ProductKey int NOT NULL,
-    OrderDateKey int NOT NULL,
-    DueDateKey int NOT NULL,
-    ShipDateKey int NOT NULL,
-    CustomerKey int NOT NULL,
-    PromotionKey int NOT NULL,
-    CurrencyKey int NOT NULL,
-    SalesTerritoryKey int NOT NULL,
-    SalesOrderNumber nvarchar(20) NOT NULL,
-    SalesOrderLineNumber tinyint NOT NULL,
-    RevisionNumber tinyint NOT NULL,
-    OrderQuantity smallint NOT NULL,
-    UnitPrice money NOT NULL,
-    ExtendedAmount money NOT NULL,
-    UnitPriceDiscountPct float NOT NULL,
-    DiscountAmount float NOT NULL,
-    ProductStandardCost money NOT NULL,
-    TotalProductCost money NOT NULL,
-    SalesAmount money NOT NULL,
-    TaxAmt money NOT NULL,
-    Freight money NOT NULL,
-    CarrierTrackingNumber nvarchar(25),
-    CustomerPONumber nvarchar(25)
+    ProductKey INT NOT NULL,
+    OrderDateKey INT NOT NULL,
+    DueDateKey INT NOT NULL,
+    ShipDateKey INT NOT NULL,
+    CustomerKey INT NOT NULL,
+    PromotionKey INT NOT NULL,
+    CurrencyKey INT NOT NULL,
+    SalesTerritoryKey INT NOT NULL,
+    SalesOrderNumber NVARCHAR(20) NOT NULL,
+    SalesOrderLineNumber TINYINT NOT NULL,
+    RevisionNumber TINYINT NOT NULL,
+    OrderQuantity SMALLINT NOT NULL,
+    UnitPrice MONEY NOT NULL,
+    ExtendedAmount MONEY NOT NULL,
+    UnitPriceDiscountPct FLOAT NOT NULL,
+    DiscountAmount FLOAT NOT NULL,
+    ProductStandardCost MONEY NOT NULL,
+    TotalProductCost MONEY NOT NULL,
+    SalesAmount MONEY NOT NULL,
+    TaxAmt MONEY NOT NULL,
+    Freight MONEY NOT NULL,
+    CarrierTrackingNumber NVARCHAR(25),
+    CustomerPONumber NVARCHAR(25)
 );
 ```
 
@@ -242,11 +243,11 @@ S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
 Cet exemple utilise CTAS pour modifier des types de données, la possibilité de valeur NULL et le classement pour plusieurs colonnes de la table DimCustomer2.  
   
-```  
+```sql  
 -- Original table 
 CREATE TABLE [dbo].[DimCustomer2] (  
-    [CustomerKey] int NOT NULL,  
-    [GeographyKey] int NULL,  
+    [CustomerKey] INT NOT NULL,  
+    [GeographyKey] INT NULL,  
     [CustomerAlternateKey] nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL  
 )  
 WITH (CLUSTERED COLUMNSTORE INDEX, DISTRIBUTION = HASH([CustomerKey]));  
@@ -270,15 +271,15 @@ FROM [dbo].[DimCustomer2]
   
 -- Resulting table 
 CREATE TABLE [dbo].[test] (
-    [CustomerKeyNoChange] int NOT NULL, 
-    [CustomerKeyChangeNullable] int NULL, 
-    [CustomerKeyChangeDataTypeNullable] decimal(10, 2) NULL, 
-    [CustomerKeyChangeDataTypeNotNullable] decimal(10, 2) NOT NULL, 
-    [GeographyKeyNoChange] int NULL, 
-    [GeographyKeyChangeNotNullable] int NOT NULL, 
-    [CustomerAlternateKeyNoChange] nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL, 
-    [CustomerAlternateKeyNullable] nvarchar(15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL, 
-    [CustomerAlternateKeyChangeCollation] nvarchar(15) COLLATE Latin1_General_CS_AS_KS_WS NOT NULL
+    [CustomerKeyNoChange] INT NOT NULL, 
+    [CustomerKeyChangeNullable] INT NULL, 
+    [CustomerKeyChangeDataTypeNullable] DECIMAL(10, 2) NULL, 
+    [CustomerKeyChangeDataTypeNotNullable] DECIMAL(10, 2) NOT NULL, 
+    [GeographyKeyNoChange] INT NULL, 
+    [GeographyKeyChangeNotNullable] INT NOT NULL, 
+    [CustomerAlternateKeyNoChange] NVARCHAR(15) COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL, 
+    [CustomerAlternateKeyNullable] NVARCHAR(15) COLLATE SQL_Latin1_General_CP1_CI_AS NULL, 
+    [CustomerAlternateKeyChangeCollation] NVARCHAR(15) COLLATE Latin1_General_CS_AS_KS_WS NOT NULL
 )
 WITH (DISTRIBUTION = ROUND_ROBIN);
 ```
@@ -307,7 +308,7 @@ Dans la plupart des cas, il n’est pas nécessaire de transformer une table de 
 
 Cet exemple utilise l’exemple de base de données AdventureWorks. Pour charger la version SQL Data Warehouse, consultez [Charger des exemples de données dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-sample-databases/)
  
-```
+```sql
 -- DimSalesTerritory is hash-distributed.
 -- Copy it to a round-robin table.
 CREATE TABLE [dbo].[myTable]   
@@ -324,11 +325,10 @@ RENAME OBJECT [dbo].[DimSalesTerritory] to [DimSalesTerritory_old];
 RENAME OBJECT [dbo].[myTable] TO [DimSalesTerritory];
 
 DROP TABLE [dbo].[DimSalesTerritory_old];
-
 ```  
 Ensuite, reconvertissez-la en table de hachage distribuée.
 
-```
+```sql
 -- You just made DimSalesTerritory a round-robin table.
 -- Change it back to the original hash-distributed table. 
 CREATE TABLE [dbo].[myTable]   
@@ -354,7 +354,7 @@ S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
 Cet exemple vaut pour la conversion de tables round robin ou de hachage distribuées en table répliquée. Cet exemple précis va encore plus loin que la méthode précédente de modification du type de distribution.  DimSalesTerritory étant une dimension et probablement une table de plus petite taille, vous pouvez choisir de la recréer sous forme de table répliquée pour éviter que des données soient déplacées au moment de la joindre à d’autres tables. 
 
-```
+```sql
 -- DimSalesTerritory is hash-distributed.
 -- Copy it to a replicated table.
 CREATE TABLE [dbo].[myTable]   
@@ -378,7 +378,7 @@ S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 
 L’exemple suivant crée une table distribuée de type round robin nommée `myTable (c, ln)`. La nouvelle table contient seulement deux colonnes. Elle utilise les alias des colonnes dans l’instruction SELECT à la place des noms des colonnes.  
   
-```  
+```sql  
 CREATE TABLE myTable  
 WITH   
   (   
@@ -386,8 +386,7 @@ WITH
     DISTRIBUTION = ROUND_ROBIN  
   )  
 AS SELECT CustomerKey AS c, LastName AS ln  
-    FROM dimCustomer;  
-  
+    FROM dimCustomer; 
 ```  
 
 <a name="examples-query-hints-bk"></a>
@@ -401,7 +400,7 @@ S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
   
 Cette requête présente la syntaxe de base pour utiliser un indicateur de jointure de requête avec l’instruction CTAS. Une fois la requête envoyée, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] applique la stratégie de jointure hachée au moment de générer le plan de requête pour chaque distribution individuelle. Pour plus d’informations sur l’indicateur de requête de jointure hachée, consultez [Clause OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
-```  
+```sql  
 CREATE TABLE dbo.FactInternetSalesNew  
 WITH   
   (   
@@ -426,13 +425,13 @@ Pour importer des données à partir d’une table externe, utilisez simplement 
   
  L’exemple suivant définit une table externe parmi des données situées dans un compte de stockage Blob Azure. Il utilise ensuite CREATE TABLE AS SELECT pour effectuer une sélection dans la table externe. Les données sont alors importées à partir de fichiers délimités par du texte dans le stockage Blob Azure, puis stockées dans une nouvelle table [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
-```  
+```sql  
 --Use your own processes to create the text-delimited files on Azure blob storage.  
 --Create the external table called ClickStream.  
 CREATE EXTERNAL TABLE ClickStreamExt (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
+    url VARCHAR(50),  
+    event_date DATE,  
+    user_IP VARCHAR(50)  
 )  
 WITH (  
     LOCATION='/logs/clickstream/2015/',  
@@ -461,12 +460,12 @@ Pour importer des données à partir d’une table externe, utilisez simplement 
   
  L’exemple suivant définit une table externe sur un cluster Hadoop. Il utilise ensuite CREATE TABLE AS SELECT pour effectuer une sélection dans la table externe. Les données sont alors importées à partir de fichiers délimités par du texte Hadoop, puis stockées dans une nouvelle table [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-```  
+```sql  
 -- Create the external table called ClickStream.  
 CREATE EXTERNAL TABLE ClickStreamExt (   
-    url varchar(50),  
-    event_date date,  
-    user_IP varchar(50)  
+    url VARCHAR(50),  
+    event_date DATE,  
+    user_IP VARCHAR(50)  
 )  
 WITH (  
     LOCATION = 'hdfs://MyHadoop:5000/tpch1GB/employee.tbl',  
@@ -538,8 +537,8 @@ Vous devez mettre à jour cette table :
 ```sql
 CREATE TABLE [dbo].[AnnualCategorySales]
 (   [EnglishProductCategoryName]    NVARCHAR(50)    NOT NULL
-,   [CalendarYear]                  SMALLINT        NOT NULL
-,   [TotalSalesAmount]              MONEY           NOT NULL
+,   [CalendarYear]          SMALLINT    NOT NULL
+,   [TotalSalesAmount]      MONEY       NOT NULL
 )
 WITH
 (
@@ -684,8 +683,8 @@ S’applique à : Azure SQL Data Warehouse et Parallel Data Warehouse
 Au moment de migrer du code SQL Server vers SQL Data Warehouse, il se peut que vous rencontriez un modèle de codage de ce type :
 
 ```sql
-DECLARE @d decimal(7,2) = 85.455
-,       @f float(24)    = 85.455
+DECLARE @d DECIMAL(7,2) = 85.455
+,       @f FLOAT(24)    = 85.455
 
 CREATE TABLE result
 (result DECIMAL(7,2) NOT NULL
@@ -702,8 +701,8 @@ Vous pourriez penser instinctivement que ce code doit être migré vers CTAS, et
 Le code suivant NE produit PAS le même résultat :
 
 ```sql
-DECLARE @d decimal(7,2) = 85.455
-,       @f float(24)    = 85.455
+DECLARE @d DECIMAL(7,2) = 85.455
+,       @f FLOAT(24)    = 85.455
 ;
 
 CREATE TABLE ctas_r
@@ -740,8 +739,8 @@ Pour éviter ce type de problème, vous devez définir explicitement la conversi
 L’exemple ci-dessous montre comment corriger le code :
 
 ```sql
-DECLARE @d decimal(7,2) = 85.455
-,       @f float(24)    = 85.455
+DECLARE @d DECIMAL(7,2) = 85.455
+,       @f FLOAT(24)    = 85.455
 
 CREATE TABLE ctas_r
 WITH (DISTRIBUTION = ROUND_ROBIN)

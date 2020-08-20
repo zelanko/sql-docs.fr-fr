@@ -1,4 +1,5 @@
 ---
+description: ALTER SEARCH PROPERTY LIST (Transact-SQL)
 title: ALTER SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/10/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 840ae1f66eb9bbc8d578a677f743df679d08eb83
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: b4a16ec827c742bd99cbc543c57c4e3c7b13c247
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380992"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467306"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -109,7 +110,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  Supprime la propriété spécifiée de la liste de propriétés spécifiée par *list_name*. La suppression d'une propriété annule son inscription ; elle ne peut donc plus faire l'objet d'une recherche.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Chaque index de recherche en texte intégral ne peut avoir qu'une seule liste de propriétés de recherche.  
   
  Pour permettre l'interrogation sur une propriété de recherche donnée, vous devez l'ajouter à la liste des propriétés de recherche de l'index de recherche en texte intégral, puis remplir à nouveau l'index.  
@@ -219,6 +220,6 @@ DROP 'Comments' ;
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
- [Rechercher des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
+ [Recherche des GUID du jeu de propriétés et des ID d'entier de propriétés pour les propriétés de recherche](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
   
   
