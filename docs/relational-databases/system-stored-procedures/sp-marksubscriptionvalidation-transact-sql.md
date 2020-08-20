@@ -1,4 +1,5 @@
 ---
+description: sp_marksubscriptionvalidation (Transact-SQL)
 title: sp_marksubscriptionvalidation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c440247433404c520559d6609bd4690b425ddd43
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1046bf396112309e17752088969c9556b50ae1cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464143"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Marque la transaction actuellement ouverte comme transaction de validation de niveau abonnement pour l'abonné spécifié. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné. *Subscriber* est de type sysname, sans valeur par défaut.  
+`[ @subscriber = ] 'subscriber'` Nom de l’abonné. *Subscriber* est de type sysname, sans valeur par défaut.  
   
-`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **type sysname**, sans valeur par défaut.  
+`[ @destination_db = ] 'destination_db'` Nom de la base de données de destination. *destination_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être utilisé pour une publication qui appartient à un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -54,7 +55,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_marksubscriptionvalidation** est utilisé dans la réplication transactionnelle.  
   
  **sp_marksubscriptionvalidation** ne prend pas en charge les abonnés non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -100,7 +101,7 @@ commit tran
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Valider des données répliquées](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   
   

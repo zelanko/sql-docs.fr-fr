@@ -1,4 +1,5 @@
 ---
+description: Propriétés des colonnes de table (SQL Server Management Studio)
 title: Propriétés des colonnes de table (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -15,12 +16,12 @@ ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cb7e20e8f310b6cb6786c2d4cc1a62409dc81c6
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: c5792d13fc9fcfff9ffeadaf5aadee948f6060e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396998"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463813"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriétés des colonnes de table (SQL Server Management Studio)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "87396998"
 > [!NOTE]  
 >  Si la table est publiée pour réplication, vous devez apporter vos modifications au schéma à l’aide de l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)][ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO (SQL Server Management Objects). Lorsque les modifications sont apportées au diagramme à l’aide du Concepteur de tables ou du Concepteur de diagrammes de base de données, celui-ci tente d’abandonner la table et de la recréer. Toutefois, il est impossible d'abandonner les objets publiés, par conséquent les modifications du schéma échoueront.  
   
- **Généralités**  
+ **Général**  
  Peut être développée pour afficher **Nom**, **Autoriser les valeurs NULL**, **Type de données**, **Valeur ou liaison par défaut**, **Longueur**, **Précision**et **Échelle**.  
   
  **Nom**  
@@ -48,7 +49,7 @@ ms.locfileid: "87396998"
  **Longueur**  
  Affiche le nombre de caractères autorisés pour les types de données texte. Cette propriété est uniquement disponible pour les types de données basés sur les caractères.  
   
- **Mettre à l'échelle**  
+ **Mise à l’échelle**  
  Affiche le nombre maximal de chiffres autorisé à droite de la virgule décimale pour les valeurs de cette colonne. Cette propriété affiche **0** pour les types de données non numériques.  
   
  **Précision**  
@@ -64,7 +65,7 @@ ms.locfileid: "87396998"
  Affiche les informations sur une colonne calculée. La valeur affichée pour la propriété est identique à celle de la propriété enfant **Formule** et affiche la formule pour la colonne calculée.  
   
 > [!NOTE]  
->  Pour modifier la valeur affichée pour la propriété **Spécification de la colonne calculée** , vous devez la développer et modifier la propriété enfant **Formula** .  
+>   Pour modifier la valeur affichée pour la propriété **Spécification de la colonne calculée** , vous devez la développer et modifier la propriété enfant **Formula** .  
   
 -   **Formule** Affiche la formule de la colonne calculée. Pour modifier cette propriété, tapez la nouvelle valeur directement.  
   
@@ -108,7 +109,7 @@ ms.locfileid: "87396998"
  Indique si et comment cette colonne applique l'unicité sur ses valeurs. La valeur de cette propriété indique si cette colonne est une colonne d'identité ou non, et si elle est identique à la valeur de la propriété enfant **Est d'identité**.  
   
 > [!NOTE]  
->  Pour modifier la valeur affichée pour la propriété **Spécification du compteur** , vous devez la développer et modifier la propriété enfant **Est d’identité** .  
+>   Pour modifier la valeur affichée pour la propriété **Spécification du compteur** , vous devez la développer et modifier la propriété enfant **Est d'identité** .  
   
 -   **Est une identité** Indique si cette colonne est une colonne d'identité ou non. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   

@@ -1,4 +1,5 @@
 ---
+description: Table Properties - SSMS
 title: Propriétés de la table - SSMS | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e476076084e23d3381f08a2e10dc130bee25b93
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1cc8c79f0a8020d4301e6bc8653f2d3fcf600149
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463774"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -149,7 +150,7 @@ ms.locfileid: "87928670"
  Quantité d'espace occupée par les index dans la table, en mégaoctets. Cette valeur n'inclut pas l'utilisation de l'espace des index XML pour la table. Si les index XML appartiennent à la table, utilisez plutôt [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   
  **Nombre de lignes**  
- Nombre de lignes dans la table.  
+ Nombre de lignes du tableau.  
   
  **Espace de données**  
  Quantité d'espace occupée par les données dans la table, en mégaoctets.  

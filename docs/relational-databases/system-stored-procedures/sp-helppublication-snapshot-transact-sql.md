@@ -1,4 +1,5 @@
 ---
+description: sp_helppublication_snapshot (Transact-SQL)
 title: sp_helppublication_snapshot (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1dc48a88bd9a180b7cb0ce65a24c607b80cd6a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e6d350d42a057177ef488d581dd247e93eb9e29d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725762"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464194"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retourne des informations sur l'Agent d'instantané d'une publication donnée. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,9 +39,9 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être utilisé lors de l’ajout d’un article à un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  
@@ -72,7 +73,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_publication_snapshot** est utilisé dans tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  

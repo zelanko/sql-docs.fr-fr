@@ -1,4 +1,5 @@
 ---
+description: sp_xml_preparedocument (Transact-SQL)
 title: sp_xml_preparedocument (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1232f5eb7917606d7f7e88c912be163d13de33ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48a414d4987d5b10349c6c4b2babe2d964875cb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463949"
 ---
 # <a name="sp_xml_preparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85767484"
 > [!NOTE]  
 >  **sp_xml_preparedocument** limite le nombre d’éléments qui peuvent être ouverts à un moment donné à 256.  
 
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,7 +67,7 @@ OUTPUT
  Document XML initial. L'analyseur MSXML analyse ce document XML. *XmlText* est un paramètre de texte **: char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** ou **XML**. Lorsque la valeur est NULL (valeur par défaut), une représentation interne d'un document XML vide est créée.  
   
 > [!NOTE]  
->  **sp_xml_preparedocument** peut uniquement traiter du texte ou du XML non typé. Si une valeur d'instance à utiliser en entrée est déjà du XML typé, commencez par la convertir en une nouvelle instance XML non typée ou en une chaîne, puis passez cette valeur en entrée. Pour plus d’informations, consultez [comparer du XML typé et du XML](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)non typé.  
+>  **sp_xml_preparedocument** peut uniquement traiter du texte ou du XML non typé. Si une valeur d'instance à utiliser en entrée est déjà du XML typé, commencez par la convertir en une nouvelle instance XML non typée ou en une chaîne, puis passez cette valeur en entrée. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
  [ *xpath_namespaces* ]  
  Spécifie les déclarations d'espaces de noms utilisées dans les expressions XPath de ligne et de colonne sous OPENXML. *xpath_namespaces* est un paramètre de texte **: char**, **nchar**, **varchar**, **nvarchar**, **Text**, **ntext** ou **XML**.  

@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_category (Transact-SQL)
 title: sp_syspolicy_delete_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: e09d0d50-94d5-48fd-b284-445ddea6dfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 83d08b5261d6657a2bddbf494eb6f5e9ade3b065
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fb0df2c440f1198dfe18d4615ab9e8962d93a37e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892728"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463976"
 ---
 # <a name="sp_syspolicy_delete_policy_category-transact-sql"></a>sp_syspolicy_delete_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime une catégorie de stratégie de la Gestion basée sur des stratégies.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,14 +40,14 @@ sp_syspolicy_delete_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom de la catégorie de stratégie. *Name* est de **type sysname**et doit être spécifié si *policy_category_id* a la valeur null.  
+`[ @name = ] 'name'` Nom de la catégorie de stratégie. *Name* est de **type sysname**et doit être spécifié si *policy_category_id* a la valeur null.  
   
-`[ @policy_category_id = ] policy_category_id`Identificateur de la catégorie de stratégie. *policy_category_id* est de **type int**et doit être spécifié si *Name* a la valeur null.  
+`[ @policy_category_id = ] policy_category_id` Identificateur de la catégorie de stratégie. *policy_category_id* est de **type int**et doit être spécifié si *Name* a la valeur null.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_delete_policy_category dans le contexte de la base de données système msdb.  
   
  Vous devez spécifier une valeur pour *Name* ou pour *policy_category_id*. Les deux ne peuvent pas être NULL. Pour obtenir ces valeurs, interrogez la vue système msdb.dbo.syspolicy_policy_categories.  

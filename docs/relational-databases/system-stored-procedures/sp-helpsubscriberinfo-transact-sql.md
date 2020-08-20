@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscriberinfo (Transact-SQL)
 title: sp_helpsubscriberinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d843ff86e221a3e007d68f6f6d130f4fceb82f3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db23a3861e20627a829006c22d74a368acfb349f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756652"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464161"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Affiche des informations relatives à un Abonné. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,9 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné. *Subscriber* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations.  
+`[ @subscriber = ] 'subscriber'` Nom de l’abonné. *Subscriber* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations.  
   
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**et sa valeur par défaut est le nom du serveur actuel.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher* est de **type sysname**et sa valeur par défaut est le nom du serveur actuel.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être spécifié, sauf s’il s’agit d’un serveur de publication Oracle.  
@@ -85,7 +86,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpsubscriberinfo** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

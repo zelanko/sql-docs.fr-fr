@@ -1,4 +1,5 @@
 ---
+description: sp_refresh_log_shipping_monitor (Transact-SQL)
 title: sp_refresh_log_shipping_monitor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 93abffe797a4507c9d3329f864e09753ca1f1da0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6125ac4a916ff9d19777644a9db5fd853c045290
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464068"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure stockée actualise les tables de moniteurs distants avec les dernières informations provenant d'un serveur principal ou secondaire spécifique pour l'Agent de copie des journaux de transaction. La procédure est appelée sur le serveur principal ou secondaire.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,9 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @agent_id = ] 'agent_id'`ID principal de la sauvegarde ou ID secondaire pour la copie ou la restauration. *agent_id* est de type **uniqueidentifier** et ne peut pas être null.  
+`[ @agent_id = ] 'agent_id'` ID principal de la sauvegarde ou ID secondaire pour la copie ou la restauration. *agent_id* est de type **uniqueidentifier** et ne peut pas être null.  
   
-`[ @agent_type = ] 'agent_type'`Type du travail d’envoi de journaux.  
+`[ @agent_type = ] 'agent_type'` Type du travail d’envoi de journaux.  
   
  0 = Sauvegarde.  
   
@@ -55,9 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* est de **type tinyint** et ne peut pas avoir la valeur null.  
   
-`[ @database = ] 'database'`Base de données primaire ou secondaire utilisée par la journalisation par les agents de sauvegarde ou de restauration.  
+`[ @database = ] 'database'` Base de données primaire ou secondaire utilisée par la journalisation par les agents de sauvegarde ou de restauration.  
   
-`[ @mode ] n`Spécifie s’il faut actualiser les données d’analyse ou les nettoyer. Le type de données de *m* est tinyint et les valeurs prises en charge sont les suivantes :  
+`[ @mode ] n` Spécifie s’il faut actualiser les données d’analyse ou les nettoyer. Le type de données de *m* est tinyint et les valeurs prises en charge sont les suivantes :  
   
  1 = actualisation (Il s'agit de la valeur par défaut.)  
   
@@ -69,7 +70,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_refresh_log_shipping_monitor** actualise les tables **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**et **log_shipping_monitor_error_detail** avec les informations de session qui n’ont pas encore été transférées. Vous pouvez ainsi synchroniser le serveur moniteur avec un serveur principal ou secondaire lorsque sa dernière synchronisation remonte à un certain temps et vous pouvez si nécessaire y nettoyer les informations de moniteur.  
   
  **sp_refresh_log_shipping_monitor** doit être exécuté à partir de la base de données **Master** sur le serveur principal ou secondaire.  

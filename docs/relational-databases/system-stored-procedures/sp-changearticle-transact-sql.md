@@ -1,4 +1,5 @@
 ---
+description: sp_changearticle (Transact-SQL)
 title: sp_changearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 46afab7da64374922f20e5736c2a3d31217056b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977539"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464467"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie les propriétés d'un article dans une publication transactionnelle ou d'instantané. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,13 +44,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication qui contient l’article. *publication* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication qui contient l’article. *publication* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @article = ] 'article'`Nom de l’article dont la propriété doit être modifiée. *article* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @article = ] 'article'` Nom de l’article dont la propriété doit être modifiée. *article* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @property = ] 'property'`Est une propriété d’article à modifier. la *propriété* est **de type nvarchar (100)**.  
+`[ @property = ] 'property'` Est une propriété d’article à modifier. la *propriété* est **de type nvarchar (100)**.  
   
-`[ @value = ] 'value'`Nouvelle valeur de la propriété de l’article. la *valeur* est **de type nvarchar (255)**.  
+`[ @value = ] 'value'` Nouvelle valeur de la propriété de l’article. la *valeur* est **de type nvarchar (255)**.  
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
@@ -68,7 +69,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**ins_cmd**||Instruction INSERT à exécuter ; à défaut, elle sera élaborée à partir du journal.|  
 |**pre_creation_cmd**||Définit une commande de précréation pouvant supprimer, effacer ou tronquer la table de destination avant l'application de la synchronisation.|  
 ||**Aucune**|N'utilise pas de commande.|  
-||**Déplacez**|Supprime la table de destination.|  
+||**drop**|Supprime la table de destination.|  
 ||**delete**|Détruit la table de destination.|  
 ||**truncate**|Tronque la table de destination.|  
 |**pub_identity_range**||Contrôle la taille des plages d'identité affectées à l'abonné. Non pris en charge pour la réplication d'égal à égal.|  
@@ -141,7 +142,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**upd_cmd**||Instruction UPDATE à exécuter ; à défaut, elle sera élaborée à partir du journal.|  
 |NULL|NULL|Renvoie une liste de propriétés d'articles modifiables.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *force_invalidate_snapshot* est un **bit**, avec **0**comme valeur par défaut.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *force_invalidate_snapshot* est un **bit**, avec **0**comme valeur par défaut.  
   
  **0** indique que les modifications apportées à l’article n’entraînent pas la non-validité de l’instantané. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
   
@@ -149,7 +150,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Consultez la section Remarques pour connaître les propriétés dont la modification nécessite la génération d'un nouvel instantané.  
   
-`[ @force_reinit_subscription = ]force_reinit_subscription_`Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *force_reinit_subscription* est un **bit** avec **0**comme valeur par défaut.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *force_reinit_subscription* est un **bit** avec **0**comme valeur par défaut.  
   
  **0** indique que les modifications apportées à l’article n’entraînent pas la réinitialisation de l’abonnement. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
   
@@ -157,7 +158,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Voir la section Remarques pour connaître les propriétés dont la modification requiert la réinitialisation de tous les abonnements existants.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être utilisé lors de la modification des propriétés d’un article sur un serveur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication.  

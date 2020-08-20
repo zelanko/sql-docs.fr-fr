@@ -1,4 +1,5 @@
 ---
+description: sp_dropmergepublication (Transact-SQL)
 title: sp_dropmergepublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9b2b36484d34396ed573f4b06bd1feb5b0f83b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0a28a81d897f9319495963b0f9d049502fe8c7d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881826"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464340"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime une publication de fusion et l'Agent d'instantané qui lui est associé. Tous les abonnements doivent être supprimés avant de supprimer une publication de fusion. Les articles de la publication sont supprimés automatiquement. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,18 +41,18 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication à supprimer. *publication* est de **type sysname**, sans valeur par défaut. Si **tout**est le cas, toutes les publications de fusion existantes sont supprimées, ainsi que le travail agent d’instantané qui leur est associé. Si vous spécifiez une valeur particulière pour la *publication*, seule la publication et le travail de agent d’instantané associé sont supprimés.  
+`[ @publication = ] 'publication'` Nom de la publication à supprimer. *publication* est de **type sysname**, sans valeur par défaut. Si **tout**est le cas, toutes les publications de fusion existantes sont supprimées, ainsi que le travail agent d’instantané qui leur est associé. Si vous spécifiez une valeur particulière pour la *publication*, seule la publication et le travail de agent d’instantané associé sont supprimés.  
   
-`[ @ignore_distributor = ] ignore_distributor`Permet de supprimer une publication sans effectuer de tâches de nettoyage sur le serveur de distribution. *ignore_distributor* est de **bit**, avec **0**comme valeur par défaut. Ce paramètre est également utilisé lors de la réinstallation du serveur de distribution.  
+`[ @ignore_distributor = ] ignore_distributor` Permet de supprimer une publication sans effectuer de tâches de nettoyage sur le serveur de distribution. *ignore_distributor* est de **bit**, avec **0**comme valeur par défaut. Ce paramètre est également utilisé lors de la réinstallation du serveur de distribution.  
   
-`[ @reserved = ] reserved`Est réservé pour une utilisation ultérieure. la valeur *réservée* est de **bit**, avec **0**comme valeur par défaut.  
+`[ @reserved = ] reserved` Est réservé pour une utilisation ultérieure. la valeur *réservée* est de **bit**, avec **0**comme valeur par défaut.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata`À usage interne uniquement.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` À usage interne uniquement.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_dropmergepublication** est utilisé dans la réplication de fusion.  
   
  **sp_dropmergepublication** supprime de manière récursive tous les articles associés à une publication, puis supprime la publication elle-même. Une publication ne peut être supprimée si elle fait l'objet d'un ou de plusieurs abonnements. Pour plus d’informations sur la suppression des abonnements, consultez [supprimer un abonnement par émission](../../relational-databases/replication/delete-a-push-subscription.md) de données et [supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md).  

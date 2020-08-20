@@ -1,4 +1,5 @@
 ---
+description: Modifier le mappage de type (DB2ToSQL)
 title: Modifier le mappage de type (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5dc6cd8939dbc7d5d42417b06c938c9ae8d3f7e8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 3e31f1422415a14c4e1fb497ff56806feeb9439e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463532"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Modifier le mappage de type (DB2ToSQL)
 La boîte de dialogue **modifier le mappage de type** vous permet de spécifier la manière dont les types sont mappés entre les objets de base de données source et de destination.  
@@ -44,6 +45,6 @@ Sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type 
   
 Si le type de données est de longueur variable, le champ suivant s’affiche sous **type de cible**:  
   
-**Remplacer par**  
+**Replace with**  
 Spécifiez la longueur cible pour ce mappage. Par exemple, pour le type de données **nvarchar** , vous pouvez entrer 20 pour spécifier que le type de données source spécifié doit être mappé à **nvarchar (20)**.  
   

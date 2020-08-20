@@ -1,4 +1,5 @@
 ---
+description: Actualiser à partir de la base de données (DB2ToSQL)
 title: Actualiser à partir de la base de données (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2efc0667bd69e43cfe3d3246c0622fad18ff21e3
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 973f3aae444b27be93b675d16c9b9a73d8fac518
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463476"
 ---
 # <a name="refresh-from-database-db2tosql"></a>Actualiser à partir de la base de données (DB2ToSQL)
 La boîte **de dialogue actualiser à partir de la base de données** vous permet de sélectionner les objets à actualiser à partir de la base de données DB2. Les lignes de la boîte de dialogue sont codées par couleur en fonction de l’état des métadonnées :  

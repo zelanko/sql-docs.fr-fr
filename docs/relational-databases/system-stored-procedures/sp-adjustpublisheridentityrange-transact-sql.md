@@ -1,4 +1,5 @@
 ---
+description: sp_adjustpublisheridentityrange (Transact-SQL)
 title: sp_adjustpublisheridentityrange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac449d2437184695c4d5957fea0788ce40a176ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9315025143c31d6fc1ef76aab4e70578e251694d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464591"
 ---
 # <a name="sp_adjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ajuste la plage d'identités sur une publication et réaffecte de nouvelles plages en fonction de la valeur de seuil définie pour la publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +40,16 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication dans laquelle de nouvelles plages d’identité sont réallouées. *publication* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication dans laquelle de nouvelles plages d’identité sont réallouées. *publication* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @table_name = ] 'table_name'`Nom de la table dans laquelle de nouvelles plages d’identité sont réallouées. *table_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_name = ] 'table_name'` Nom de la table dans laquelle de nouvelles plages d’identité sont réallouées. *table_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @table_owner = ] 'table_owner'`Propriétaire de la table sur le serveur de publication. *TABLE_OWNER* est de **type sysname**, avec NULL comme valeur par défaut. Si *TABLE_OWNER* n’est pas spécifié, le nom de l’utilisateur actuel est utilisé.  
+`[ @table_owner = ] 'table_owner'` Propriétaire de la table sur le serveur de publication. *TABLE_OWNER* est de **type sysname**, avec NULL comme valeur par défaut. Si *TABLE_OWNER* n’est pas spécifié, le nom de l’utilisateur actuel est utilisé.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_adjustpublisheridentityrange** est utilisé dans tous les types de réplications.  
   
  Lorsque le paramètre d'affectation automatique de plage d'identités est activé pour une publication, l'Agent de distribution ou de fusion est responsable de l'ajustement automatique de la plage d'identités en fonction de la valeur de seuil de la publication. Toutefois, si, pour une raison quelconque, le Agent de distribution ou le Agent de fusion n’a pas été exécuté pendant un certain temps, et que la ressource de plage d’identité a été consommée de manière intensive jusqu’au point de seuil, les utilisateurs peuvent appeler **sp_adjustpublisheridentityrange** pour allouer une nouvelle plage de valeurs à un serveur de publication.  

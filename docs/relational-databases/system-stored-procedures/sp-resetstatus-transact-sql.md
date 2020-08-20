@@ -1,4 +1,5 @@
 ---
+description: sp_resetstatus (Transact-SQL)
 title: sp_resetstatus (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34808ef5647512e7e17d5c9a04dc99ea89cd5637
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7b933535fb9c1d4cf06fa52be6ccf6dbba61ff2d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464019"
 ---
 # <a name="sp_resetstatus-transact-sql"></a>sp_resetstatus (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85899259"
   Réinitialise l'état d'une base de données suspecte.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -64,7 +65,7 @@ EXEC sp_resetstatus 'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

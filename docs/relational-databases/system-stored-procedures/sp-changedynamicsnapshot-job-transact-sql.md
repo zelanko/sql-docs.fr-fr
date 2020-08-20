@@ -1,4 +1,5 @@
 ---
+description: sp_changedynamicsnapshot_job (Transact-SQL)
 title: sp_changedynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e506e2846de3d106cfc6e4eccd7519d428da4f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 73406c2860dbff4dfb5f6488a2195a9f00be4bc6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771520"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464446"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Modifie le travail de l'Agent qui crée l'instantané d'un abonnement vers une publication avec un filtre de lignes paramétrable. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,13 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'`Nom du travail d’instantané en cours de modification. *dynamic_snapshot_jobname*est de **type sysname**, avec N'% 'comme valeur par défaut. Si *dynamic_snapshot_jobid* est spécifié, vous devez utiliser la valeur par défaut pour *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Nom du travail d’instantané en cours de modification. *dynamic_snapshot_jobname*est de **type sysname**, avec N'% 'comme valeur par défaut. Si *dynamic_snapshot_jobid* est spécifié, vous devez utiliser la valeur par défaut pour *dynamic_snapshot_jobname*.  
   
-`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'`ID du travail d’instantané en cours de modification. *dynamic_snapshot_jobid* est de type **uniqueidentifier**, avec NULL comme valeur par défaut. Si *dynamic_snapshot_jobname*est spécifié, vous devez utiliser la valeur par défaut pour *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` ID du travail d’instantané en cours de modification. *dynamic_snapshot_jobid* est de type **uniqueidentifier**, avec NULL comme valeur par défaut. Si *dynamic_snapshot_jobname*est spécifié, vous devez utiliser la valeur par défaut pour *dynamic_snapshot_jobid*.  
   
-`[ @frequency_type = ] frequency_type`Fréquence de planification de l’agent. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_type = ] frequency_type` Fréquence de planification de l’agent. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -71,7 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Périodique|  
 |NULL (par défaut)||  
   
-`[ @frequency_interval = ] frequency_interval`Jours d’exécution de l’agent. *frequency_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_interval = ] frequency_interval` Jours d’exécution de l’agent. *frequency_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -87,7 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
   
-`[ @frequency_subday = ] frequency_subday`Fréquence de replanification au cours de la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_subday = ] frequency_subday` Fréquence de replanification au cours de la période définie. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -97,32 +98,32 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Heure|  
 |NULL (par défaut)||  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Date à laquelle le Agent de fusion s’exécute. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Date à laquelle le Agent de fusion s’exécute. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (mensuelle relative). *frequency_relative_interval* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**1**|Premier|  
 |**2**|Seconde|  
-|**4**|Troisième|  
+|**4**|Third|  
 |**8**|Quatrième|  
 |**16**|Dernier|  
 |NULL (par défaut)||  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @active_start_date = ] active_start_date`Date à laquelle le Agent de fusion est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @active_start_date = ] active_start_date` Date à laquelle le Agent de fusion est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @active_end_date = ] active_end_date`Date à laquelle le Agent de fusion cesse d’être planifié, au format AAAAMMJJ. *active_end_date* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @active_end_date = ] active_end_date` Date à laquelle le Agent de fusion cesse d’être planifié, au format AAAAMMJJ. *active_end_date* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`Heure de la journée à laquelle le Agent de fusion est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Heure de la journée à laquelle le Agent de fusion est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`Heure de la journée à laquelle le Agent de fusion cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Heure de la journée à laquelle le Agent de fusion cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, avec NULL comme valeur par défaut.  
   
 `[ @job_login = ] 'job_login'`[!INCLUDE[msCoName](../../includes/msconame-md.md)]Compte Windows sous lequel le agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_login* est de type **nvarchar (257)**, avec NULL comme valeur par défaut.  
   
-`[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel le Agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_password* est de type **nvarchar (257)**, avec NULL comme valeur par défaut.  
+`[ @job_password = ] 'job_password'` Mot de passe du compte Windows sous lequel le Agent d’instantané s’exécute lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_password* est de type **nvarchar (257)**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
@@ -130,7 +131,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_changedynamicsnapshot_job** est utilisé dans la réplication de fusion pour les publications avec des filtres de lignes paramétrables.  
   
  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  

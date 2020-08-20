@@ -1,4 +1,5 @@
 ---
+description: sp_OAGetErrorInfo (Transact-SQL)
 title: sp_OAGetErrorInfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d190bf442b7c6e629058f6679291ff75ca64e5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7336be191ea34fcf36b8221b2a1698ae179fa980
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464096"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Obtient des informations d'erreur OLE Automation.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +78,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**HelpFile**|**nvarchar (NN)**|Fichier d'aide pour la source.|  
 |**HelpID**|**int**|ID du contexte de l'aide dans le fichier source d'aide.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Chaque appel à une procédure stockée OLE Automation (à l’exception de **sp_OAGetErrorInfo**) réinitialise les informations d’erreur ; par conséquent, **sp_OAGetErrorInfo** obtient des informations d’erreur uniquement pour l’appel de procédure stockée OLE Automation le plus récent. Notez que dans la mesure où **sp_OAGetErrorInfo** ne réinitialise pas les informations d’erreur, il peut être appelé plusieurs fois pour recevoir les mêmes informations d’erreur.  
   
  Le tableau suivant donne la liste des erreurs OLE Automation et leurs causes courantes.  
@@ -95,7 +96,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  Pour plus d’informations sur le traitement des codes de retour HRESULT, consultez [codes de retour OLE Automation et informations sur les erreurs](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** ou l’autorisation EXECUTE directement sur cette procédure stockée. `Ole Automation Procedures`la configuration doit être **activée** pour pouvoir utiliser toute procédure système liée à OLE Automation.  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** ou l’autorisation EXECUTE directement sur cette procédure stockée. `Ole Automation Procedures` la configuration doit être **activée** pour pouvoir utiliser toute procédure système liée à OLE Automation.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant affiche des informations d'erreur OLE Automation.  

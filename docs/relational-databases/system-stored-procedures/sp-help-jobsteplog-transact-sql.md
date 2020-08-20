@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobsteplog (Transact-SQL)
 title: sp_help_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ef843202631d632b2a3712554cf67c9eca0878e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c3659e9f82da6d735bb8d5c53d6a182d4fa14d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464250"
 ---
 # <a name="sp_help_jobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85891801"
   Retourne les métadonnées relatives à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Journal d’étapes de travail de l’agent spécifique. **sp_help_jobsteplog** ne retourne pas le journal réel.  
 
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,16 +43,16 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] 'job_id'`Numéro d’identification du travail pour lequel retourner les informations du journal d’étapes de travail. *job_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] 'job_id'` Numéro d’identification du travail pour lequel retourner les informations du journal d’étapes de travail. *job_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @step_id = ] step_id`Numéro d’identification de l’étape du travail. S'il n'est pas inclus, toutes les étapes du travail sont englobées. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id` Numéro d’identification de l’étape du travail. S'il n'est pas inclus, toutes les étapes du travail sont englobées. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @step_name = ] 'step_name'`Nom de l’étape du travail. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @step_name = ] 'step_name'` Nom de l’étape du travail. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -70,7 +71,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|Taille du journal d'étapes du travail, en mégaoctets (Mo).|  
 |**Sign**|**nvarchar(max)**|Sortie du journal d'étapes du travail.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_jobsteplog** se trouve dans la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

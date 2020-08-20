@@ -1,4 +1,5 @@
 ---
+description: Création de fichiers de valeurs de variables (DB2ToSQL)
 title: Création de fichiers de valeurs de variables (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 122f3fbe-46a0-40df-ac3b-d43bf33d96ba
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: f5a1b2fe01fd9800ee9d56e3a01f9861bfb3a046
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 69753bb7f8b873ebdd74a8c18262034557844c55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463489"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Création de fichiers de valeurs de variables (DB2ToSQL)
 Le fichier de valeurs de variable est un fichier XML comprenant les valeurs de paramètres des commandes, telles que le nom du serveur source ou de destination qui changent fréquemment d’une migration de serveur à une autre. En cas de migration d’un grand nombre de bases de données, plusieurs fichiers de variables pour stocker la valeur de chaque serveur source sont créés et référencés dans un fichier de script principal avec le commutateur **-v** à la ligne de commande. Cela permet de conserver des valeurs statiques dans quelques fichiers de script avec les valeurs des variables dans plusieurs fichiers de variables.  

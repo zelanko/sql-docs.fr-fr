@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_secondary_primary (Transact-SQL)
 title: sp_add_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1768b25ccb4f0e4ad2e75f3d667123d082dd4237
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e1123bfa1ce465989322c3b76a48da96c1fed7f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879782"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464625"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Initialise les informations liées au serveur principal, ajoute des liens de surveillance local et distant, et crée des travaux de copie et de restauration sur le serveur secondaire pour la base de données primaire spécifiée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,23 +54,23 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @primary_server = ] 'primary_server'`Nom de l’instance principale du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration de la copie des journaux de session. *primary_server* est de **type sysname** et ne peut pas avoir la valeur null.  
+`[ @primary_server = ] 'primary_server'` Nom de l’instance principale du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration de la copie des journaux de session. *primary_server* est de **type sysname** et ne peut pas avoir la valeur null.  
   
-`[ @primary_database = ] 'primary_database'`Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'` Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
   
-`[ @backup_source_directory = ] 'backup_source_directory'`Répertoire où sont stockés les fichiers de sauvegarde du journal des transactions du serveur principal. *backup_source_directory* est de type **nvarchar (500)** et ne peut pas être null.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Répertoire où sont stockés les fichiers de sauvegarde du journal des transactions du serveur principal. *backup_source_directory* est de type **nvarchar (500)** et ne peut pas être null.  
   
-`[ @backup_destination_directory = ] 'backup_destination_directory'`Répertoire sur le serveur secondaire sur lequel les fichiers de sauvegarde sont copiés. *backup_destination_directory* est de type **nvarchar (500)** et ne peut pas être null.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Répertoire sur le serveur secondaire sur lequel les fichiers de sauvegarde sont copiés. *backup_destination_directory* est de type **nvarchar (500)** et ne peut pas être null.  
   
-`[ @copy_job_name = ] 'copy_job_name'`Nom à utiliser pour le travail de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent en cours de création pour copier les sauvegardes du journal des transactions sur le serveur secondaire. *copy_job_name* est de **type sysname** et ne peut pas avoir la valeur null.  
+`[ @copy_job_name = ] 'copy_job_name'` Nom à utiliser pour le travail de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent en cours de création pour copier les sauvegardes du journal des transactions sur le serveur secondaire. *copy_job_name* est de **type sysname** et ne peut pas avoir la valeur null.  
   
-`[ @restore_job_name = ] 'restore_job_name'`Nom du travail de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent sur le serveur secondaire qui restaure les sauvegardes dans la base de données secondaire. *restore_job_name* est de **type sysname** et ne peut pas avoir la valeur null.  
+`[ @restore_job_name = ] 'restore_job_name'` Nom du travail de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agent sur le serveur secondaire qui restaure les sauvegardes dans la base de données secondaire. *restore_job_name* est de **type sysname** et ne peut pas avoir la valeur null.  
   
-`[ @file_retention_period = ] 'file_retention_period'`Durée, en minutes, pendant laquelle un fichier de sauvegarde est conservé sur le serveur secondaire dans le chemin d’accès spécifié par le @backup_destination_directory paramètre avant d’être supprimé. *history_retention_period* est de **type int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
+`[ @file_retention_period = ] 'file_retention_period'` Durée, en minutes, pendant laquelle un fichier de sauvegarde est conservé sur le serveur secondaire dans le chemin d’accès spécifié par le @backup_destination_directory paramètre avant d’être supprimé. *history_retention_period* est de **type int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
   
-`[ @monitor_server = ] 'monitor_server'`Nom du serveur moniteur. *Monitor_server* est de **type sysname**, sans valeur par défaut et ne peut pas avoir la valeur null.  
+`[ @monitor_server = ] 'monitor_server'` Nom du serveur moniteur. *Monitor_server* est de **type sysname**, sans valeur par défaut et ne peut pas avoir la valeur null.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`Mode de sécurité utilisé pour se connecter au serveur moniteur.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Mode de sécurité utilisé pour se connecter au serveur moniteur.  
   
  1 = Authentification Windows.  
   
@@ -77,15 +78,15 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* est de type **bit** et ne peut pas être null.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'`Nom d’utilisateur du compte utilisé pour accéder au serveur moniteur.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Nom d’utilisateur du compte utilisé pour accéder au serveur moniteur.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'`Mot de passe du compte utilisé pour accéder au serveur moniteur.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Mot de passe du compte utilisé pour accéder au serveur moniteur.  
   
-`[ @copy_job_id = ] 'copy_job_id' OUTPUT`ID associé au travail de copie sur le serveur secondaire. *copy_job_id* est de type **uniqueidentifier** et ne peut pas être null.  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` ID associé au travail de copie sur le serveur secondaire. *copy_job_id* est de type **uniqueidentifier** et ne peut pas être null.  
   
-`[ @restore_job_id = ] 'restore_job_id' OUTPUT`ID associé au travail de restauration sur le serveur secondaire. *restore_job_id* est de type **uniqueidentifier** et ne peut pas être null.  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` ID associé au travail de restauration sur le serveur secondaire. *restore_job_id* est de type **uniqueidentifier** et ne peut pas être null.  
   
-`[ @secondary_id = ] 'secondary_id' OUTPUT`ID du serveur secondaire dans la configuration de la copie des journaux de session. *secondary_id* est de type **uniqueidentifier** et ne peut pas être null.  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` ID du serveur secondaire dans la configuration de la copie des journaux de session. *secondary_id* est de type **uniqueidentifier** et ne peut pas être null.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

@@ -1,4 +1,5 @@
 ---
+description: sp_reinitsubscription (Transact-SQL)
 title: sp_reinitsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8bc377c269eeb6034ebbe0e5753f2605464ecd8a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b6aad3d76fca41075bd022eac703ce7d1a112bc1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645783"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464046"
 ---
 # <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Marque l'abonnement pour la réinitialisation. Cette procédure stockée est exécutée sur le serveur de publication pour les abonnements par envoi de données (push).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,29 +45,29 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec All comme valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, avec All comme valeur par défaut.  
   
-`[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**, avec All comme valeur par défaut. Pour une publication avec mise à jour immédiate, *l’article* doit être **All**; dans le cas contraire, la procédure stockée ignore la publication et signale une erreur.  
+`[ @article = ] 'article'` Nom de l’article. *article* est de **type sysname**, avec All comme valeur par défaut. Pour une publication avec mise à jour immédiate, *l’article* doit être **All**; dans le cas contraire, la procédure stockée ignore la publication et signale une erreur.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné. *Subscriber* est de **type sysname**, sans valeur par défaut.  
+`[ @subscriber = ] 'subscriber'` Nom de l’abonné. *Subscriber* est de **type sysname**, sans valeur par défaut.  
   
-`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **type sysname**, avec All comme valeur par défaut.  
+`[ @destination_db = ] 'destination_db'` Nom de la base de données de destination. *destination_db* est de **type sysname**, avec All comme valeur par défaut.  
   
-`[ @for_schema_change = ] 'for_schema_change'`Indique si la réinitialisation se produit à la suite d’une modification de schéma au niveau de la base de données de publication. *for_schema_change* est de **bit**, avec 0 comme valeur par défaut. Si la **valeur est 0**, les abonnements actifs pour les publications qui autorisent la mise à jour immédiate sont réactivés tant que la publication entière, et pas seulement certains de ses articles, sont réinitialisées. Ceci implique que la réinitialisation est effectuée à la suite de modifications du schéma. Si la condition est **1**, les abonnements actifs ne sont pas réactivés tant que le agent d’instantané n’est pas exécuté.  
+`[ @for_schema_change = ] 'for_schema_change'` Indique si la réinitialisation se produit à la suite d’une modification de schéma au niveau de la base de données de publication. *for_schema_change* est de **bit**, avec 0 comme valeur par défaut. Si la **valeur est 0**, les abonnements actifs pour les publications qui autorisent la mise à jour immédiate sont réactivés tant que la publication entière, et pas seulement certains de ses articles, sont réinitialisées. Ceci implique que la réinitialisation est effectuée à la suite de modifications du schéma. Si la condition est **1**, les abonnements actifs ne sont pas réactivés tant que le agent d’instantané n’est pas exécuté.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être utilisé pour les serveurs de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @ignore_distributor_failure = ] ignore_distributor_failure`Autorise la réinitialisation même si le serveur de distribution n’existe pas ou est hors connexion. *ignore_distributor_failure* est de **bit**, avec 0 comme valeur par défaut. Si la **valeur est 0**, la réinitialisation échoue si le serveur de distribution n’existe pas ou est hors connexion.  
+`[ @ignore_distributor_failure = ] ignore_distributor_failure` Autorise la réinitialisation même si le serveur de distribution n’existe pas ou est hors connexion. *ignore_distributor_failure* est de **bit**, avec 0 comme valeur par défaut. Si la **valeur est 0**, la réinitialisation échoue si le serveur de distribution n’existe pas ou est hors connexion.  
   
-`[ @invalidate_snapshot = ] invalidate_snapshot`Invalide l’instantané existant de la publication. *invalidate_snapshot* est de **bit**, avec 0 comme valeur par défaut. Si la variable est **1**, un nouvel instantané est généré pour la publication.  
+`[ @invalidate_snapshot = ] invalidate_snapshot` Invalide l’instantané existant de la publication. *invalidate_snapshot* est de **bit**, avec 0 comme valeur par défaut. Si la variable est **1**, un nouvel instantané est généré pour la publication.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_reinitsubscription** est utilisé dans la réplication transactionnelle.  
   
  **sp_reinitsubscription** n’est pas pris en charge pour la réplication transactionnelle d’égal à égal.  
@@ -93,7 +94,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="see-also"></a>Voir aussi  
  [Réinitialiser un abonnement](../../relational-databases/replication/reinitialize-a-subscription.md)   
- [Réinitialiser les abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
+ [Réinitialiser des abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

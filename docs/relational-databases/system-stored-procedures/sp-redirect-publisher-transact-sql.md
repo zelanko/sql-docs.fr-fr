@@ -1,4 +1,5 @@
 ---
+description: sp_redirect_publisher (Transact-SQL)
 title: sp_redirect_publisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 54a53c3e1678215ad2eb1410a00da4904d0f84e7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7b3a2a07d2b1ca9d8b6d8cd35d3cf2361c50e36b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734306"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464074"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Spécifie un serveur de publication redirigé pour une paire serveur de publication/base de données existante. Si la base de données du serveur de publication appartient à un groupe de disponibilité Always On, le serveur de publication Redirigé est le nom de l’écouteur de groupe de disponibilité associé au groupe de disponibilité.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,11 +41,11 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @original_publisher = ] 'original_publisher'`Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a initialement publié la base de données. *original_publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @original_publisher = ] 'original_publisher'` Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a initialement publié la base de données. *original_publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données en cours de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données en cours de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @redirected_publisher = ] 'redirected_publisher'`Nom de l’écouteur du groupe de disponibilité associé au groupe de disponibilité qui sera le nouveau serveur de publication. *redirected_publisher* est de **type sysname**, sans valeur par défaut. Lorsque l'écouteur du groupe de disponibilité est configuré sur un port non défini par défaut, spécifiez le numéro de port avec le nom d'écouteur, par exemple `'Listenername,51433'`  
+`[ @redirected_publisher = ] 'redirected_publisher'` Nom de l’écouteur du groupe de disponibilité associé au groupe de disponibilité qui sera le nouveau serveur de publication. *redirected_publisher* est de **type sysname**, sans valeur par défaut. Lorsque l'écouteur du groupe de disponibilité est configuré sur un port non défini par défaut, spécifiez le numéro de port avec le nom d'écouteur, par exemple `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -61,7 +62,7 @@ sp_redirect_publisher
  L’appelant doit être membre du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** pour la base de données de distribution, ou être membre d’une liste d’accès à une publication pour une publication définie associée à la base de données du serveur de publication.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Procédures stockées de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  

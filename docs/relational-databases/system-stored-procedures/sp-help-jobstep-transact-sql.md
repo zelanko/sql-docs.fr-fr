@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobstep (Transact-SQL)
 title: sp_help_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 560ab640738ef89d22917bf03e8d6553029eb646
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5ef8fab59553fd203129852961ac33d59498467d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464267"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur les étapes d'un travail utilisé par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour procéder à des actions automatisées.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,18 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] 'job_id'`Numéro d’identification du travail pour lequel renvoyer des informations sur le travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] 'job_id'` Numéro d’identification du travail pour lequel renvoyer des informations sur le travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @step_id = ] step_id`Numéro d’identification de l’étape du travail. S'il n'est pas inclus, toutes les étapes du travail sont englobées. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id` Numéro d’identification de l’étape du travail. S'il n'est pas inclus, toutes les étapes du travail sont englobées. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @step_name = ] 'step_name'`Nom de l’étape du travail. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @step_name = ] 'step_name'` Nom de l’étape du travail. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @suffix = ] suffix`Indicateur spécifiant si une description de texte est ajoutée à la colonne **Flags** dans la sortie. le *suffixe*est de **bit**, avec **0**comme valeur par défaut. Si le *suffixe* est **1**, une description est ajoutée.  
+`[ @suffix = ] suffix` Indicateur spécifiant si une description de texte est ajoutée à la colonne **Flags** dans la sortie. le *suffixe*est de **bit**, avec **0**comme valeur par défaut. Si le *suffixe* est **1**, une description est ajoutée.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -86,7 +87,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Heure de début de la dernière exécution de l'étape.|  
 |**proxy_id**|**int**|Proxy pour les étapes du travail.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_jobstep** se trouve dans la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

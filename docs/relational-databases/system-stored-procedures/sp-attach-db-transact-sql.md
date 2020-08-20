@@ -1,4 +1,5 @@
 ---
+description: sp_attach_db (Transact-SQL)
 title: sp_attach_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 896a4791d1b04de37f57496fd8ff71961a54f7ab
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 62f7ed238899f6fe99c10f2c3c558e5e16af2e49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464521"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85874614"
   Attache une base de données à un serveur.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Nous vous recommandons d’utiliser CREATe DATABASE *database_name* pour Attach à la place. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser CREATe DATABASE *database_name* pour Attach à la place. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 > [!NOTE]  
 >  Pour reconstruire plusieurs fichiers journaux lorsqu’un ou plusieurs d’entre eux ont un nouvel emplacement, utilisez CREATe DATABASE *database_name* pour ATTACH_REBUILD_LOG.  
@@ -47,9 +48,9 @@ sp_attach_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbnam_ '`Nom de la base de données à attacher au serveur. Le nom doit être unique. *dbname* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @dbname = ] 'dbnam_ '` Nom de la base de données à attacher au serveur. Le nom doit être unique. *dbname* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @filename1 = ] 'filename_n'`Nom physique, y compris le chemin d’accès, d’un fichier de base de données. *filename_n* est de type **nvarchar (260)**, avec NULL comme valeur par défaut. Jusqu'à 16 noms de fichier peuvent être spécifiés. Les noms de paramètres commencent à ** \@ NomFichier1** et sont incrémentés à ** \@ filename16**. La liste des noms de fichiers doit comprendre au moins le fichier primaire. Le fichier primaire contient les tables système pointant vers d'autres fichiers dans la base de données. Elle doit aussi comprendre tous les fichiers qui ont été déplacés après que la base de données fut détachée.  
+`[ @filename1 = ] 'filename_n'` Nom physique, y compris le chemin d’accès, d’un fichier de base de données. *filename_n* est de type **nvarchar (260)**, avec NULL comme valeur par défaut. Jusqu'à 16 noms de fichier peuvent être spécifiés. Les noms de paramètres commencent à ** \@ NomFichier1** et sont incrémentés à ** \@ filename16**. La liste des noms de fichiers doit comprendre au moins le fichier primaire. Le fichier primaire contient les tables système pointant vers d'autres fichiers dans la base de données. Elle doit aussi comprendre tous les fichiers qui ont été déplacés après que la base de données fut détachée.  
   
 > [!NOTE]  
 >  Cet argument crée un mappage vers le paramètre FILENAME de l'instruction CREATE DATABASE. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

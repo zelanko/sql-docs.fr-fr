@@ -1,4 +1,5 @@
 ---
+description: sp_query_store_unforce_plan (Transact-SQL)
 title: sp_query_store_unforce_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
@@ -21,18 +22,19 @@ ms.assetid: a52f91d0-ff1e-46ad-ba36-b32d9623c9ab
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c6af13e434fcf7fdc4c1738f71c76f092a0ed71d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b85e3a49faad133e52eab6ab542ec195dc4d58b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012616"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464106"
 ---
 # <a name="sp_query_store_unforce_plan-transact-sql"></a>sp_query_store_unforce_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Permet de ne pas forcer un plan précédemment forcé pour une requête particulière.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,9 +43,9 @@ sp_query_store_unforce_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @query_id = ] query_id`ID de la requête. *query_id* est de type **bigint**, sans valeur par défaut.  
+`[ @query_id = ] query_id` ID de la requête. *query_id* est de type **bigint**, sans valeur par défaut.  
   
-`[ @plan_id = ] plan_id`ID du plan de requête qui ne sera plus appliqué. *plan_id* est de type **bigint**, sans valeur par défaut.  
+`[ @plan_id = ] plan_id` ID du plan de requête qui ne sera plus appliqué. *plan_id* est de type **bigint**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

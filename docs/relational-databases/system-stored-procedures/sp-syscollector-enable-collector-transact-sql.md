@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_enable_collector (Transact-SQL)
 title: sp_syscollector_enable_collector (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49ba4abf13978e16dc4a868843d23348dd38e64f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3c7563b12214f52f1c89428f50a50dbd021cd467
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892893"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464021"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Active le collecteur de données. Comme il n'existe qu'un seul collecteur de données par serveur, aucun paramètre n'est requis.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +46,7 @@ dbo.sp_syscollector_enable_collector
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Prend pour valeur par défaut le collecteur de données sur le serveur.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -61,7 +62,7 @@ EXEC dbo.sp_syscollector_enable_collector;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)  
   
   

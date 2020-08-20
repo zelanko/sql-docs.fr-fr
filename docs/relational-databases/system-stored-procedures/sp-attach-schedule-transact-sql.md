@@ -1,4 +1,5 @@
 ---
+description: sp_attach_schedule (Transact-SQL)
 title: sp_attach_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8108bdad26c02b02ae2e88b1780fada126e2c797
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874366"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464479"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Définit la planification d'un travail.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,21 +43,21 @@ sp_attach_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id`Numéro d’identification du travail auquel la planification est ajoutée. *job_id*est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail auquel la planification est ajoutée. *job_id*est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail auquel la planification est ajoutée. *job_name*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail auquel la planification est ajoutée. *job_name*est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @schedule_id = ] schedule_id`Numéro d’identification de la planification à définir pour le travail. *schedule_id*est de **type int**, avec NULL comme valeur par défaut.  
+`[ @schedule_id = ] schedule_id` Numéro d’identification de la planification à définir pour le travail. *schedule_id*est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @schedule_name = ] 'schedule_name'`Nom de la planification à définir pour le travail. *schedule_name*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @schedule_name = ] 'schedule_name'` Nom de la planification à définir pour le travail. *schedule_name*est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Schedule_id* ou *schedule_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La planification et le travail doivent avoir le même propriétaire.  
   
  Une planification peut être définie pour plusieurs travaux. Un travail peut être exécuté dans plusieurs planifications.  

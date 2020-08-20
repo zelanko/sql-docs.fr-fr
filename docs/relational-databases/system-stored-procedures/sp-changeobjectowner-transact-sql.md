@@ -1,4 +1,5 @@
 ---
+description: sp_changeobjectowner (Transact-SQL)
 title: sp_changeobjectowner (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: df232018259055697bb6624ee96a8fc980b3bef3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e96c93be7b21deb0966e0a48f5fde3258501ac6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871743"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464421"
 ---
 # <a name="sp_changeobjectowner-transact-sql"></a>sp_changeobjectowner (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,12 +31,12 @@ ms.locfileid: "85871743"
   Modifie le propriétaire d'un objet dans la base de données active.  
   
 > [!IMPORTANT]
->  Cette procédure stockée fonctionne uniquement avec les objets disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER Schema](../../t-sql/statements/alter-schema-transact-sql.md) ou [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** modifie à la fois le schéma et le propriétaire. Pour maintenir la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette procédure stockée modifie les propriétaires d'objet uniquement si les schémas, dont les noms sont identiques aux noms d'utilisateur de base de données, appartiennent à la fois au propriétaire actuel et au nouveau propriétaire.  
+>  Cette procédure stockée fonctionne uniquement avec les objets disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [ALTER Schema](../../t-sql/statements/alter-schema-transact-sql.md) ou [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) . **sp_changeobjectowner** modifie à la fois le schéma et le propriétaire. Pour maintenir la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette procédure stockée modifie les propriétaires d'objet uniquement si les schémas, dont les noms sont identiques aux noms d'utilisateur de base de données, appartiennent à la fois au propriétaire actuel et au nouveau propriétaire.  
 > 
 > [!IMPORTANT]
 >  Une nouvelle autorisation a été ajoutée à cette procédure stockée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,9 +46,9 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'object'`Nom d’une table, d’une vue, d’une fonction définie par l’utilisateur ou d’une procédure stockée existante dans la base de données active. l' *objet* est de type **nvarchar (776)**, sans valeur par défaut. l' *objet* peut être qualifié avec le propriétaire de l’objet existant, sous la forme _existing_owner_**.** _objet_ si le schéma et son propriétaire ont le même nom.  
+`[ @objname = ] 'object'` Nom d’une table, d’une vue, d’une fonction définie par l’utilisateur ou d’une procédure stockée existante dans la base de données active. l' *objet* est de type **nvarchar (776)**, sans valeur par défaut. l' *objet* peut être qualifié avec le propriétaire de l’objet existant, sous la forme _existing_owner_**.** _objet_ si le schéma et son propriétaire ont le même nom.  
   
-`[ @newowner = ] 'owner_ '`Nom du compte de sécurité qui sera le nouveau propriétaire de l’objet. *owner* est de **type sysname**, sans valeur par défaut. le *propriétaire* doit être un utilisateur de base de données, un rôle de serveur, une [!INCLUDE[msCoName](../../includes/msconame-md.md)] connexion Windows ou un groupe Windows valide ayant accès à la base de données actuelle. Un utilisateur de base de données est créé si le nouveau propriétaire est un utilisateur Windows ou un groupe Windows pour lequel il n'existe pas de principal de base de données correspondant.  
+`[ @newowner = ] 'owner_ '` Nom du compte de sécurité qui sera le nouveau propriétaire de l’objet. *owner* est de **type sysname**, sans valeur par défaut. le *propriétaire* doit être un utilisateur de base de données, un rôle de serveur, une [!INCLUDE[msCoName](../../includes/msconame-md.md)] connexion Windows ou un groupe Windows valide ayant accès à la base de données actuelle. Un utilisateur de base de données est créé si le nouveau propriétaire est un utilisateur Windows ou un groupe Windows pour lequel il n'existe pas de principal de base de données correspondant.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -71,7 +72,7 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER AUTHORIZation &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sp_changedbowner &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

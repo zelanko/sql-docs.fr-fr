@@ -1,4 +1,5 @@
 ---
+description: sp_dropuser (Transact-SQL)
 title: sp_dropuser (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4270edfcdacf94d354c0079e48c10a201a3e5a6b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7456ae7c2350f8d7c7e5aa145b44b2267f22f4fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881760"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464301"
 ---
 # <a name="sp_dropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85881760"
   Supprime un utilisateur de base de données de la base de données active. **sp_dropuser** assure la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [DROP USER](../../t-sql/statements/drop-user-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name_in_db = ] 'user'`Nom de l’utilisateur à supprimer. *User* est de **type sysname**, sans valeur par défaut. l' *utilisateur* doit exister dans la base de données active. Lorsque vous spécifiez une connexion Windows, utilisez le nom sous lequel la base de données connaît cette connexion.  
+`[ @name_in_db = ] 'user'` Nom de l’utilisateur à supprimer. *User* est de **type sysname**, sans valeur par défaut. l' *utilisateur* doit exister dans la base de données active. Lorsque vous spécifiez une connexion Windows, utilisez le nom sous lequel la base de données connaît cette connexion.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -70,7 +71,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   

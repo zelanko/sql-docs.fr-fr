@@ -1,4 +1,5 @@
 ---
+description: Propriété FlagValue (classe ServerSettingsGeneralFlag)
 title: Propriété FlagValue (ServerSettingsGeneralFlag)
 ms.custom: seo-lt-2019
 ms.date: 03/06/2017
@@ -17,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98619c6531d77749e067d4a2f43a69707fcdc800
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9602d0c524b8c71be5969c7e1f95978c48d04090
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880711"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463562"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>Propriété FlagValue (classe ServerSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient la valeur de l'indicateur.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -42,7 +43,7 @@ object.FlagValue [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur booléenne qui spécifie la valeur de l'indicateur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="see-also"></a>Voir aussi  
  [Configuration des bibliothèques réseau et des protocoles réseau du serveur](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

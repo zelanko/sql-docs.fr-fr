@@ -1,4 +1,5 @@
 ---
+description: sp_cursorexecute (Transact-SQL)
 title: sp_cursorexecute (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 800e70591e4ebb508bd5edd6426d43bdc3a16987
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5e712c8fd485a91c3dfcc7b65c5f7c0fb76b15b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464390"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crée et remplit un curseur basé sur le plan d'exécution créé par sp_cursorprepare. Cette procédure, couplée avec sp_cursorprepare, a la même fonction que sp_cursoropen, mais est fractionnée en deux phases. sp_cursorexecute est appelée en spécifiant ID = 4 dans un paquet tabular data stream (TDS).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -84,7 +85,7 @@ sp_cursorexecute prepared_handle, cursor
 |-1|Nombre de lignes inconnues.|  
 |-n|Un remplissage asynchrone est appliqué.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Paramètres scrollopt et ccopt  
  *scrollopt* et *ccopt* sont utiles lorsque les plans mis en cache sont anticipés pour le cache du serveur, ce qui signifie que le handle préparé qui identifie l’instruction doit être recompilé. Les valeurs des paramètres *scrollopt* et *ccopt* doivent correspondre à celles envoyées dans la demande d’origine à sp_cursorprepare.  

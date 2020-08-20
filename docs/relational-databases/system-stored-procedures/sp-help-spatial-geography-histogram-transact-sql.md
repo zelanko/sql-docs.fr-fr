@@ -1,4 +1,5 @@
 ---
+description: sp_help_spatial_geography_histogram (Transact-SQL)
 title: sp_help_spatial_geography_histogram (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1713bb208fd556b23776fcfc2871879e6aa0d79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790353"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464238"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,15 +41,15 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tabname = ] 'tabname'`Nom qualifié ou non qualifié de la table pour laquelle l’index spatial a été spécifié.  
+`[ @tabname = ] 'tabname'` Nom qualifié ou non qualifié de la table pour laquelle l’index spatial a été spécifié.  
   
  Les guillemets ne sont nécessaires que si une une table qualifiée est spécifiée. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *tabname* est de **type sysname**, sans valeur par défaut.  
   
-`[ @colname = ] 'columnname'`Nom de la colonne spatiale spécifiée. *ColumnName* est de **type sysname**et n’a pas de valeur par défaut.  
+`[ @colname = ] 'columnname'` Nom de la colonne spatiale spécifiée. *ColumnName* est de **type sysname**et n’a pas de valeur par défaut.  
   
-`[ @resolution = ] 'resolution'`Résolution du cadre englobant. Les valeurs possibles sont comprises entre 10 et 5000. la *résolution* est de **type tinyint**, sans valeur par défaut.  
+`[ @resolution = ] 'resolution'` Résolution du cadre englobant. Les valeurs possibles sont comprises entre 10 et 5000. la *résolution* est de **type tinyint**, sans valeur par défaut.  
   
-`[ @sample = ] 'sample'`Pourcentage de la table utilisée. Les valeurs valides sont comprises entre 0 et 100. *TABLESAMPLE* est de **type float**. La valeur par défaut est 100.  
+`[ @sample = ] 'sample'` Pourcentage de la table utilisée. Les valeurs valides sont comprises entre 0 et 100. *TABLESAMPLE* est de **type float**. La valeur par défaut est 100.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Une valeur de table est retournée. La grille suivante décrit le contenu de colonne de la table.  
@@ -62,7 +63,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Autorisations  
  L’utilisateur doit être membre du rôle **public** . Nécessite une autorisation READ ACCESS sur le serveur et l'objet.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'onglet spatial SSMS affiche une représentation graphique des résultats. Vous pouvez interroger les résultats dans la fenêtre spatiale afin d'obtenir un nombre approximatif d'éléments de résultat.  
   
 > [!NOTE]  
@@ -71,7 +72,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  Le cadre englobant pour le type **Geography** est le monde entier.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant appelle **sp_help_spatial_geography_histogram** sur la `Person.Address` table dans la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données.  
+ L’exemple suivant appelle  **sp_help_spatial_geography_histogram** sur la `Person.Address` table dans la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de données.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

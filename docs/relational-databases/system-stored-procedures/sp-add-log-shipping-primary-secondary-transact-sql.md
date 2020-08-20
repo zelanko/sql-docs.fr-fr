@@ -1,4 +1,5 @@
 ---
+description: sp_add_log_shipping_primary_secondary (Transact-SQL)
 title: sp_add_log_shipping_primary_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 575656d0fb80328b65c72735d0a4c5b9e1a8a59e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68e63391d03d97aee8474a7aac95ebdfc09b04b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85879804"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464676"
 ---
 # <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure stockée ajoute une entrée pour une base de données secondaire sur le serveur principal.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,11 +43,11 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @primary_database = ] 'primary_database'`Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'` Nom de la base de données sur le serveur principal. *primary_database* est de **type sysname**, sans valeur par défaut.  
   
-`[ @secondary_server = ] 'secondary_server',`Nom du serveur secondaire. *secondary_server* est de **type sysname**, sans valeur par défaut.  
+`[ @secondary_server = ] 'secondary_server',` Nom du serveur secondaire. *secondary_server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @secondary_database = ] 'secondary_database'`Nom de la base de données secondaire. *secondary_database* est de **type sysname**, sans valeur par défaut.  
+`[ @secondary_database = ] 'secondary_database'` Nom de la base de données secondaire. *secondary_database* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

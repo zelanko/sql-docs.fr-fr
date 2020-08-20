@@ -1,4 +1,5 @@
 ---
+description: Connexion à SQL Server (DB2eToSQL)
 title: Connexion à SQL Server (DB2eToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d04d44abe758ffb15e57944a624ac5b7a87546d4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0e8c231223beea2d29e3af06527fdcf1627e381e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933940"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463537"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>Connexion à SQL Server (DB2eToSQL)
 Pour migrer des bases de données DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou Azure SQL Database vous devez vous connecter à l’une de ces instances cibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Quand vous vous connectez, SSMA obtient les métadonnées relatives à toutes les bases de données dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche les métadonnées de la base de données dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. SSMA stocke des informations sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous êtes connecté, mais ne stocke pas les mots de passe.  
@@ -28,7 +29,7 @@ Le compte utilisé pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ss
   
 -   Pour convertir des objets DB2 en [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe, pour mettre à jour des métadonnées à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou pour enregistrer la syntaxe convertie dans des scripts, le compte doit avoir l’autorisation de se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Pour charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le compte doit être membre du rôle de serveur **sysadmin** . Cela est nécessaire pour installer les assemblys CLR.  
+-   Pour charger des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le compte doit être membre du rôle de serveur   **sysadmin** . Cela est nécessaire pour installer les assemblys CLR.  
   
 -   Pour migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le compte doit être membre du rôle de serveur **sysadmin** . Cela est nécessaire pour exécuter les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] packages de migration de données de l’agent.  
   
@@ -78,11 +79,11 @@ Lorsque vous définissez les propriétés de connexion, vous spécifiez égaleme
   
 -   Vous pouvez vous connecter aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 lorsque le projet créé est SQL Server 2012.  
   
-|TYPE de projet et VERSION du serveur cible|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version : 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 <br />(Version : 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version : 13. x)|Azure SQL Database|  
+|TYPE de projet et VERSION du serveur cible|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version : 11. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version : 12. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version : 13. x)|Azure SQL Database|  
 |-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|Oui|Oui|Oui||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014||Oui|Oui||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014|||Oui||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||Oui|Oui||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014|||Oui||  
 |Azure SQL Database||||Oui|  
   
 > [!IMPORTANT]  

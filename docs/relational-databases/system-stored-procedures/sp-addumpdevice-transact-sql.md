@@ -1,4 +1,5 @@
 ---
+description: sp_addumpdevice (Transact-SQL)
 title: sp_addumpdevice (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 840214a807ff37eedcc024125fc4902587afa05c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 91343fe93ad66b4e89e1e0190f5a46be23142f6c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85875900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464662"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
-**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Ajoute une unité de sauvegarde à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,16 +48,16 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @devtype = ] 'device_type'`Type de l’unité de sauvegarde. *device_type* est de type **varchar (20)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @devtype = ] 'device_type'` Type de l’unité de sauvegarde. *device_type* est de type **varchar (20)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**libérer**|Fichier de disque dur comme unité de sauvegarde.|  
 |**déroule**|Tout périphérique à bandes géré par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Remarque : La prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
   
-`[ @logicalname = ] 'logical_name'`Nom logique de l’unité de sauvegarde utilisée dans les instructions BACKUP et Restore. *logical_name* est de **type sysname**, sans valeur par défaut et ne peut pas avoir la valeur null.  
+`[ @logicalname = ] 'logical_name'` Nom logique de l’unité de sauvegarde utilisée dans les instructions BACKUP et Restore. *logical_name* est de **type sysname**, sans valeur par défaut et ne peut pas avoir la valeur null.  
   
-`[ @physicalname = ] 'physical_name'`Nom physique de l’unité de sauvegarde. Les noms physiques doivent respecter les règles en vigueur pour les noms de fichiers du système d'exploitation ou les conventions d'affectation des noms pour les unités réseau, et doivent comprendre un chemin d'accès complet. *physical_name* est de type **nvarchar (260)**, sans valeur par défaut, et ne peut pas être null.  
+`[ @physicalname = ] 'physical_name'` Nom physique de l’unité de sauvegarde. Les noms physiques doivent respecter les règles en vigueur pour les noms de fichiers du système d'exploitation ou les conventions d'affectation des noms pour les unités réseau, et doivent comprendre un chemin d'accès complet. *physical_name* est de type **nvarchar (260)**, sans valeur par défaut, et ne peut pas être null.  
   
  Lorsque vous créez une unité de sauvegarde sur un site de réseau distant, assurez-vous que le nom sous lequel le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a été démarré est capable d'assurer les opérations d'écriture sur l'ordinateur distant.  
   
@@ -65,9 +66,9 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 > [!NOTE]  
 >  Cette procédure entre le nom physique spécifié dans le catalogue, mais elle ne tente pas de créer l'unité ou d'y accéder.  
   
-`[ @cntrltype = ] 'controller_type'`Périmé. S'il est spécifié, ce paramètre est ignoré. Il est conservé uniquement pour des raisons de compatibilité descendante. Les nouvelles utilisations de **sp_addumpdevice** doivent omettre ce paramètre.  
+`[ @cntrltype = ] 'controller_type'` Périmé. S'il est spécifié, ce paramètre est ignoré. Il est conservé uniquement pour des raisons de compatibilité descendante. Les nouvelles utilisations de **sp_addumpdevice** doivent omettre ce paramètre.  
   
-`[ @devstatus = ] 'device_status'`Périmé. S'il est spécifié, ce paramètre est ignoré. Il est conservé uniquement pour des raisons de compatibilité descendante. Les nouvelles utilisations de **sp_addumpdevice** doivent omettre ce paramètre.  
+`[ @devstatus = ] 'device_status'` Périmé. S'il est spécifié, ce paramètre est ignoré. Il est conservé uniquement pour des raisons de compatibilité descendante. Les nouvelles utilisations de **sp_addumpdevice** doivent omettre ce paramètre.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -138,7 +139,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Définir une unité de sauvegarde logique pour un fichier de disque &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

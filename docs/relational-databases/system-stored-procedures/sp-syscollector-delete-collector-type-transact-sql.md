@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_delete_collector_type (Transact-SQL)
 title: sp_syscollector_delete_collector_type (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c24011a274b362a6b8267b7559d2641a4f1c6aa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a5e24b7cce5992df21e11edf5aff4202abb67f0b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892922"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464014"
 ---
 # <a name="sp_syscollector_delete_collector_type-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime la définition d'un type de collecteur.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,14 +42,14 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @collector_type_uid = ] 'collector_type_uid'`GUID du type de collecteur. *collector_type_uid* est de type **uniqueidentifier** et doit avoir une valeur si *Name* est null.  
+`[ @collector_type_uid = ] 'collector_type_uid'` GUID du type de collecteur. *collector_type_uid* est de type **uniqueidentifier** et doit avoir une valeur si *Name* est null.  
   
-`[ @name = ] 'name'`Nom du type de collecteur. *Name* est de **type sysname** et doit avoir une valeur si *collector_type_uid* a la valeur null.  
+`[ @name = ] 'name'` Nom du type de collecteur. *Name* est de **type sysname** et doit avoir une valeur si *collector_type_uid* a la valeur null.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  *Collector_type_uid* ou le *nom* doit avoir une valeur, les deux ne peuvent pas être null.  
   
  Cette procédure lèvera une erreur si les éléments de ce type de collection existent.  
@@ -66,7 +67,7 @@ EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)  
   
   

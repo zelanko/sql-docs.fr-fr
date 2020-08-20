@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_scan (Transact-SQL)
 title: sys. sp_cdc_scan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 558a2fd9ff62baa3448609eb42e5f31883fbac53
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0ad39bba5f8a3fbee5bcecde3e41ad9a7f7f4442
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891066"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463931"
 ---
 # <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exécute l'opération d'analyse du journal de la capture de données modifiées.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,13 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @maxtrans = ] max_trans`Nombre maximal de transactions à traiter dans chaque cycle d’analyse. *max_trans* est de **type int** avec 500 comme valeur par défaut.  
+`[ @maxtrans = ] max_trans` Nombre maximal de transactions à traiter dans chaque cycle d’analyse. *max_trans* est de **type int** avec 500 comme valeur par défaut.  
   
-`[ @maxscans = ] max_scans`Nombre maximal de cycles d’analyse à exécuter afin d’extraire toutes les lignes du journal. *max_scans* est de **type int** avec 10 comme valeur par défaut.  
+`[ @maxscans = ] max_scans` Nombre maximal de cycles d’analyse à exécuter afin d’extraire toutes les lignes du journal. *max_scans* est de **type int** avec 10 comme valeur par défaut.  
   
-`[ @continuous = ] continuous`Indique si la procédure stockée doit se terminer après l’exécution d’un cycle d’analyse unique (0) ou s’exécuter en continu, ce qui interrompt l’exécution de l’opération spécifiée par *polling_interval* avant de réexécuter le cycle d’analyse (1). *Continuous* est de **type tinyint** , avec 0 comme valeur par défaut.  
+`[ @continuous = ] continuous` Indique si la procédure stockée doit se terminer après l’exécution d’un cycle d’analyse unique (0) ou s’exécuter en continu, ce qui interrompt l’exécution de l’opération spécifiée par *polling_interval* avant de réexécuter le cycle d’analyse (1). *Continuous* est de **type tinyint** , avec 0 comme valeur par défaut.  
   
-`[ @pollinginterval = ] polling_interval`Nombre de secondes entre les cycles d’analyse du journal. *polling_interval* est de type **bigint** , avec 0 comme valeur par défaut.  
+`[ @pollinginterval = ] polling_interval` Nombre de secondes entre les cycles d’analyse du journal. *polling_interval* est de type **bigint** , avec 0 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

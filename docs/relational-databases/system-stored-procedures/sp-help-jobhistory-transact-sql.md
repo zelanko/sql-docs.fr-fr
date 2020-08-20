@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobhistory (Transact-SQL)
 title: sp_help_jobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a04d651467b8ccff057d3dcec0cb824edae73b12
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf0766388b50fabfe3a0571b5cf4e86ab7e15520
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893693"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464279"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fournit des informations sur les travaux pour les serveurs dans le domaine d'administration multiserveur.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,27 +54,27 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id`Numéro d’identification du travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @step_id = ] step_id`Numéro d’identification de l’étape. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id` Numéro d’identification de l’étape. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @sql_message_id = ] sql_message_id`Numéro d’identification du message d’erreur retourné par Microsoft SQL Server lors de l’exécution du travail. *sql_message_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @sql_message_id = ] sql_message_id` Numéro d’identification du message d’erreur retourné par Microsoft SQL Server lors de l’exécution du travail. *sql_message_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @sql_severity = ] sql_severity`Niveau de gravité du message d’erreur retourné par SQL Server lors de l’exécution du travail. *sql_severity* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @sql_severity = ] sql_severity` Niveau de gravité du message d’erreur retourné par SQL Server lors de l’exécution du travail. *sql_severity* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @start_run_date = ] start_run_date`Date à laquelle le travail a été démarré. *start_run_date*est de **type int**, avec NULL comme valeur par défaut. *start_run_date* doit être entré au format AAAAMMJJ, où yyyy est une année à quatre caractères, mm est un nom de mois à deux caractères et JJ est un nom de jour à deux caractères.  
+`[ @start_run_date = ] start_run_date` Date à laquelle le travail a été démarré. *start_run_date*est de **type int**, avec NULL comme valeur par défaut. *start_run_date* doit être entré au format AAAAMMJJ, où yyyy est une année à quatre caractères, mm est un nom de mois à deux caractères et JJ est un nom de jour à deux caractères.  
   
-`[ @end_run_date = ] end_run_date`Date à laquelle le travail a été effectué. *end_run_date* est de **type int**, avec NULL comme valeur par défaut. *end_run_date*doit être entré au format AAAAMMJJ, où yyyy est une année à quatre chiffres, mm est un nom de mois à deux caractères et JJ est un nom de jour à deux caractères.  
+`[ @end_run_date = ] end_run_date` Date à laquelle le travail a été effectué. *end_run_date* est de **type int**, avec NULL comme valeur par défaut. *end_run_date*doit être entré au format AAAAMMJJ, où yyyy est une année à quatre chiffres, mm est un nom de mois à deux caractères et JJ est un nom de jour à deux caractères.  
   
-`[ @start_run_time = ] start_run_time`Heure à laquelle le travail a été démarré. *start_run_time* est de **type int**, avec NULL comme valeur par défaut. *start_run_time*doit être entré au format HHMMSS, où hh représente une heure sur deux caractères du jour, mm est une minute du jour à deux caractères et SS est une seconde du jour à deux caractères.  
+`[ @start_run_time = ] start_run_time` Heure à laquelle le travail a été démarré. *start_run_time* est de **type int**, avec NULL comme valeur par défaut. *start_run_time*doit être entré au format HHMMSS, où hh représente une heure sur deux caractères du jour, mm est une minute du jour à deux caractères et SS est une seconde du jour à deux caractères.  
   
-`[ @end_run_time = ] end_run_time`Heure à laquelle le travail a terminé son exécution. *end_run_time* est de **type int**, avec NULL comme valeur par défaut. *end_run_time*doit être entré au format HHMMSS, où hh représente une heure sur deux caractères du jour, mm est une minute du jour à deux caractères et SS est une seconde du jour à deux caractères.  
+`[ @end_run_time = ] end_run_time` Heure à laquelle le travail a terminé son exécution. *end_run_time* est de **type int**, avec NULL comme valeur par défaut. *end_run_time*doit être entré au format HHMMSS, où hh représente une heure sur deux caractères du jour, mm est une minute du jour à deux caractères et SS est une seconde du jour à deux caractères.  
   
-`[ @minimum_run_duration = ] minimum_run_duration`Durée minimale pour la fin du travail. *minimum_run_duration* est de **type int**, avec NULL comme valeur par défaut. *minimum_run_duration*doit être entré au format HHMMSS, où hh représente une heure sur deux caractères du jour, mm est une minute du jour à deux caractères et SS est une seconde du jour à deux caractères.  
+`[ @minimum_run_duration = ] minimum_run_duration` Durée minimale pour la fin du travail. *minimum_run_duration* est de **type int**, avec NULL comme valeur par défaut. *minimum_run_duration*doit être entré au format HHMMSS, où hh représente une heure sur deux caractères du jour, mm est une minute du jour à deux caractères et SS est une seconde du jour à deux caractères.  
   
-`[ @run_status = ] run_status`État d’exécution du travail. *run_status* est de **type int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @run_status = ] run_status` État d’exécution du travail. *run_status* est de **type int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -84,13 +85,13 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|Message en cours|  
 |**5**|Unknown|  
   
-`[ @minimum_retries = ] minimum_retries`Nombre minimal de tentatives d’exécution d’un travail. *minimum_retries* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @minimum_retries = ] minimum_retries` Nombre minimal de tentatives d’exécution d’un travail. *minimum_retries* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @oldest_first = ] oldest_first`Indique s’il faut d’abord présenter la sortie avec les travaux les plus anciens. *oldest_first* est de **type int**, avec **0**comme valeur par défaut, qui présente les travaux les plus récents en premier. **1** présente en premier les travaux les plus anciens.  
+`[ @oldest_first = ] oldest_first` Indique s’il faut d’abord présenter la sortie avec les travaux les plus anciens. *oldest_first* est de **type int**, avec **0**comme valeur par défaut, qui présente les travaux les plus récents en premier. **1** présente en premier les travaux les plus anciens.  
   
-`[ @server = ] 'server'`Nom du serveur sur lequel le travail a été effectué. *Server* est de type **nvarchar (30)**, avec NULL comme valeur par défaut.  
+`[ @server = ] 'server'` Nom du serveur sur lequel le travail a été effectué. *Server* est de type **nvarchar (30)**, avec NULL comme valeur par défaut.  
   
-`[ @mode = ] 'mode'`Indique si SQL Server imprime toutes les colonnes dans le jeu de résultats (**Full**) ou un résumé des colonnes. *mode* est de type **varchar (7)**, avec **Summary**comme valeur par défaut.  
+`[ @mode = ] 'mode'` Indique si SQL Server imprime toutes les colonnes dans le jeu de résultats (**Full**) ou un résumé des colonnes. *mode* est de type **varchar (7)**, avec **Summary**comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -118,7 +119,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Nombre de reprises de l'étape (0 pour un historique d'étape).|  
 |**server**|**nvarchar(30)**|Serveur sur lequel est exécutée l'étape ou le travail. Est toujours (**local**).|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_jobhistory** retourne un rapport avec l’historique des tâches planifiées spécifiées. Si aucun paramètre n'est précisé, le rapport contient l'historique de tous les travaux planifiés.  
   
 ## <a name="permissions"></a>Autorisations  

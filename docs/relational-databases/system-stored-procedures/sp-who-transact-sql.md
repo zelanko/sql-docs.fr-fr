@@ -1,4 +1,5 @@
 ---
+description: sp_who (Transact-SQL)
 title: sp_who (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bfcf04c0f6dd7455bac9beaa65b29eb1b2a8f9cc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a3d3af35b9d886e41d43e0c480c49a7e593e00f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463973"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fournit des informations sur les utilisateurs, les sessions et les processus actuels dans une instance du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Les informations peuvent être filtrées afin de retourner uniquement les processus qui ne sont pas inactifs, ou qui appartiennent à un utilisateur ou à une session spécifique.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login' | session ID | 'ACTIVE'`Est utilisé pour filtrer le jeu de résultats.  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'` Est utilisé pour filtrer le jeu de résultats.  
   
  *login* est de **type sysname** et identifie les processus appartenant à une connexion particulière.  
   
@@ -57,19 +58,19 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
 |Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
-|**SPID**|**smallint**|ID de la session.|  
+|**spid**|**smallint**|ID de la session.|  
 |**ecid**|**smallint**|ID du contexte d'exécution d'un thread donné associé à un ID de session spécifique.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, où 0 représente toujours le thread principal ou parent et {1, 2, 3,... *n*} représente les sous-threads.|  
-|**statut**|**nchar(30)**|État du processus Les valeurs possibles sont les suivantes :<br /><br /> **dormant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réinitialise la session.<br /><br /> **en cours d’exécution**. La session exécute un ou plusieurs traitements. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **arrière-plan**. La session exécute une tâche en arrière-plan, telle qu'une détection de blocage.<br /><br /> **restauration**. Un processus d'annulation est en cours dans la session.<br /><br /> **en attente**. La session attend qu'un thread de travail soit disponible.<br /><br /> **exécutable**. La tâche de la session figure dans la file d'attente exécutable d'un planificateur lors de l'attente de l'obtention d'un quantum.<br /><br /> **spinloop**. La tâche de la session attend qu'un verrouillage total de l'UC se libère.<br /><br /> **suspendu**. La session attend la fin d'un événement, tel qu'une E/S.|  
+|**statut**|**nchar(30)**|État du processus Les valeurs possibles sont les suivantes :<br /><br /> **dormant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réinitialise la session.<br /><br /> **en cours d’exécution**. La session exécute un ou plusieurs traitements. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **arrière-plan**. La session exécute une tâche en arrière-plan, telle qu'une détection de blocage.<br /><br /> **restauration**. Un processus d'annulation est en cours dans la session.<br /><br /> **en attente**. La session attend qu'un thread de travail soit disponible.<br /><br /> **runnable**. La tâche de la session figure dans la file d'attente exécutable d'un planificateur lors de l'attente de l'obtention d'un quantum.<br /><br /> **spinloop**. La tâche de la session attend qu'un verrouillage total de l'UC se libère.<br /><br /> **suspendu**. La session attend la fin d'un événement, tel qu'une E/S.|  
 |**loginame**|**nchar(128)**|Nom de connexion associé à ce processus particulier|  
 |**hostname**|**nchar(128)**|Nom de l'hôte ou de l'ordinateur pour chaque processus|  
 |**blk**|**Char (5)**|ID de session du processus bloquant, s'il en existe un. Dans les autres cas, cette colonne a la valeur NULL.<br /><br /> Lorsqu'une transaction associée à un ID de session spécifié est bloquée par une transaction distribuée orpheline, cette colonne renvoie la valeur « -2 » pour la transaction orpheline qui bloque.|  
 |**@**|**nchar(128)**|Base de données dont se sert le processus|  
-|**cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]commande ( [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction, [!INCLUDE[ssDE](../../includes/ssde-md.md)] processus interne, etc.) en cours d’exécution pour le processus. Dans SQL Server 2019, le type de données a changé en **nchar (26)**.|  
+|**cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] commande ( [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction, [!INCLUDE[ssDE](../../includes/ssde-md.md)] processus interne, etc.) en cours d’exécution pour le processus. Dans SQL Server 2019, le type de données a changé en **nchar (26)**.|  
 |**request_id**|**int**|ID des demandes s'exécutant dans une session spécifique|  
   
  En cas de traitement parallèle, des sous-threads sont créés pour l'lD de session spécifique. Le thread principal est indiqué sous la forme `spid = <xxx>` et `ecid =0`. Les autres sous-threads ont le même `spid = <xxx>` , mais avec **ECID** > 0.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un processus bloquant, qui peut disposer d'un verrou exclusif, est un processus qui conserve les ressources dont un autre processus a besoin.  
   
  Toutes les transactions distribuées orphelines reçoivent la valeur d'ID de session « -2 ». Les transactions distribuées orphelines sont des transactions distribuées qui ne sont associées à aucun ID de session. Pour plus d’informations, consultez [Utiliser les transactions marquées pour récupérer des bases de données associées uniformément &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
@@ -121,7 +122,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [Processus desys.sys&#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [ Processus desys.sys&#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
