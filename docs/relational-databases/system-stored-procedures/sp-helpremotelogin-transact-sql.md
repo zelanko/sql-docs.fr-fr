@@ -1,4 +1,5 @@
 ---
+description: sp_helpremotelogin (Transact-SQL)
 title: sp_helpremotelogin (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d912271e1f772ed0161b6c97977917d525b7d771
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 93d907cec14712af625867a14537060e33b3f09b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489267"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85899514"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Utilisez des serveurs liés et des procédures stockées de serveur lié à la place.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -61,7 +62,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |remote_user_name|**sysname**|Connexion sur le serveur distant qui est mappée à local_user_name.|  
 |options|**sysname**|Trusted = La connexion distante n'a pas à fournir de mot de passe lors de la connexion au serveur local à partir du serveur distant.<br /><br /> Untrusted (ou vide) = La connexion distante doit fournir un mot de passe lors de la connexion au serveur local à partir du serveur distant.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez sp_helpserver pour afficher la liste des noms des serveurs distants définis sur le serveur local.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: sp_addmergearticle (Transact-SQL)
 title: sp_addmergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee3ac3901c09ab4a0f73803d00a2e4651af51df7
-ms.sourcegitcommit: 68c1dbc465898e20ec95f98cc2f14a8c9cd166a7
+ms.openlocfilehash: ef60a3770d579358d561d98648d4bc7a54309555
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88051118"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489702"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ajoute un article à une publication de fusion existante. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -73,13 +74,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication qui contient l’article. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication qui contient l’article. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @article = ] 'article'`Nom de l’article. Le nom doit être unique dans la publication. *article* est de **type sysname**et n’a pas de valeur par défaut. l' *article* doit se trouver sur l’ordinateur local exécutant [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et doit respecter les règles applicables aux identificateurs.  
+`[ @article = ] 'article'` Nom de l’article. Le nom doit être unique dans la publication. *article* est de **type sysname**et n’a pas de valeur par défaut. l' *article* doit se trouver sur l’ordinateur local exécutant [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et doit respecter les règles applicables aux identificateurs.  
   
-`[ @source_object = ] 'source_object'`Objet de base de données à publier. *source_object* est de **type sysname**, sans valeur par défaut. Pour plus d’informations sur les types d’objets qui peuvent être publiés à l’aide de la réplication de fusion, consultez [publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+`[ @source_object = ] 'source_object'` Objet de base de données à publier. *source_object* est de **type sysname**, sans valeur par défaut. Pour plus d’informations sur les types d’objets qui peuvent être publiés à l’aide de la réplication de fusion, consultez [publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
-`[ @type = ] 'type'`Est le type d’article. *type* est de type **sysname**, avec **table**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Est le type d’article. *type* est de type **sysname**, avec **table**comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -90,16 +91,16 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**schéma de synonyme uniquement**|Synonyme avec schéma uniquement.|  
 |**view schema only**|Vue avec schéma uniquement.|  
   
-`[ @description = ] 'description'`Est une description de l’article. *Description* est de type **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'` Est une description de l’article. *Description* est de type **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
-`[ @column_tracking = ] 'column_tracking'`Est le paramètre pour le suivi au niveau des colonnes. *column_tracking* est de type **nvarchar (10)**, avec false comme valeur par défaut. **true**active le suivi de colonne. **false** désactive le suivi des colonnes et conserve la détection des conflits au niveau de la ligne. Si la table est déjà publiée dans d'autres publications de fusion, vous devez utiliser la même valeur de suivi de colonne que celle des articles existants basés sur cette table. Ce paramètre concerne uniquement les articles de table.  
+`[ @column_tracking = ] 'column_tracking'` Est le paramètre pour le suivi au niveau des colonnes. *column_tracking* est de type **nvarchar (10)**, avec false comme valeur par défaut. **true**active le suivi de colonne. **false** désactive le suivi des colonnes et conserve la détection des conflits au niveau de la ligne. Si la table est déjà publiée dans d'autres publications de fusion, vous devez utiliser la même valeur de suivi de colonne que celle des articles existants basés sur cette table. Ce paramètre concerne uniquement les articles de table.  
   
 > [!NOTE]  
 >  Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l'article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
   
-`[ @status = ] 'status'`État de l’article. *Status* est de type **nvarchar (10)**, avec **unsyncd**comme valeur par défaut. S’il est **actif**, le script de traitement initial qui permet de publier la table est exécuté. En cas de non **synchronisation**, le script de traitement initial permettant de publier la table est exécuté lors de la prochaine exécution du agent d’instantané.  
+`[ @status = ] 'status'` État de l’article. *Status* est de type **nvarchar (10)**, avec **unsyncd**comme valeur par défaut. S’il est **actif**, le script de traitement initial qui permet de publier la table est exécuté. En cas de non **synchronisation**, le script de traitement initial permettant de publier la table est exécuté lors de la prochaine exécution du agent d’instantané.  
   
-`[ @pre_creation_cmd = ] 'pre_creation_cmd'`Spécifie ce que le système doit faire si la table existe sur l’abonné lors de l’application de l’instantané. *pre_creation_cmd* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Spécifie ce que le système doit faire si la table existe sur l’abonné lors de l’application de l’instantané. *pre_creation_cmd* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -108,12 +109,12 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**Drop** (valeur par défaut)|Supprime la table avant de la recréer. Requis pour prendre en charge les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés.|  
 |**truncate**|Tronque la table de destination.|  
   
-`[ @creation_script = ] 'creation_script'`Chemin d’accès et nom d’un script de schéma d’article facultatif utilisé pour créer l’article dans la base de données d’abonnement. *creation_script* est de type **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @creation_script = ] 'creation_script'` Chemin d’accès et nom d’un script de schéma d’article facultatif utilisé pour créer l’article dans la base de données d’abonnement. *creation_script* est de type **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Les scripts de création ne sont pas exécutés sur les Abonnés [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-`[ @schema_option = ] schema_option`Bitmap de l’option de génération de schéma pour l’article donné. *schema_option* est de **type binaire (8)** et peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs de ces valeurs.  
+`[ @schema_option = ] schema_option` Bitmap de l’option de génération de schéma pour l’article donné. *schema_option* est de **type binaire (8)** et peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs de ces valeurs.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -162,55 +163,55 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Le paramètre *schema_option* affecte uniquement les options de réplication pour l’instantané initial. Une fois que le schéma initial a été généré par le Agent d’instantané et appliqué sur l’abonné, la réplication des modifications de schéma de publication sur l’abonné se produit en fonction des règles de réplication de modification de schéma et du paramètre de *replicate_ddl* spécifié dans [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
-`[ @subset_filterclause = ] 'subset_filterclause'`Est une clause WHERE spécifiant le filtrage horizontal d’un article de table sans le mot WHERE inclus. *subset_filterclause* est de type **nvarchar (1000)**, avec une chaîne vide comme valeur par défaut.  
+`[ @subset_filterclause = ] 'subset_filterclause'` Est une clause WHERE spécifiant le filtrage horizontal d’un article de table sans le mot WHERE inclus. *subset_filterclause* est de type **nvarchar (1000)**, avec une chaîne vide comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Pour des raisons de performances, il est recommandé de ne pas appliquer de fonctions aux noms de colonnes dans les clauses de filtres de lignes paramétrables, comme `LEFT([MyColumn]) = SUSER_SNAME()`. Si vous utilisez [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) dans une clause de filtre et que vous remplacez la valeur de HOST_NAME, vous devrez peut-être convertir les types de données à l’aide de [Convert](../../t-sql/functions/cast-and-convert-transact-sql.md). Pour plus d’informations sur les meilleures pratiques pour ce cas, consultez la section « substitution de la valeur HOST_NAME () » dans [filtres de lignes paramétrables](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-`[ @article_resolver = ] 'article_resolver'`Est le programme de résolution basé sur COM utilisé pour résoudre les conflits sur l’article de table ou l’assembly .NET Framework appelé pour exécuter une logique métier personnalisée sur l’article de table. *article_resolver* est de type **varchar (255)**, avec NULL comme valeur par défaut. Les valeurs disponibles pour ce paramètre sont répertoriées dans la liste des outils de résolution personnalisés [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Si la valeur fournie ne correspond pas à l'un des outils de résolution [!INCLUDE[msCoName](../../includes/msconame-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l'outil de résolution spécifié et non celui qui est fourni par le système. Utilisez **sp_enumcustomresolvers** pour énumérer la liste des programmes de résolution personnalisés disponibles. Pour plus d’informations, consultez [exécuter la logique métier pendant la synchronisation de fusion](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md) et [détection et résolution avancées des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+`[ @article_resolver = ] 'article_resolver'` Est le programme de résolution basé sur COM utilisé pour résoudre les conflits sur l’article de table ou l’assembly .NET Framework appelé pour exécuter une logique métier personnalisée sur l’article de table. *article_resolver* est de type **varchar (255)**, avec NULL comme valeur par défaut. Les valeurs disponibles pour ce paramètre sont répertoriées dans la liste des outils de résolution personnalisés [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Si la valeur fournie ne correspond pas à l'un des outils de résolution [!INCLUDE[msCoName](../../includes/msconame-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise l'outil de résolution spécifié et non celui qui est fourni par le système. Utilisez **sp_enumcustomresolvers** pour énumérer la liste des programmes de résolution personnalisés disponibles. Pour plus d’informations, consultez [exécuter la logique métier pendant la synchronisation de fusion](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md) et [détection et résolution avancées des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
-`[ @resolver_info = ] 'resolver_info'`Est utilisé pour spécifier des informations supplémentaires requises par un programme de résolution personnalisé. Certains outils de résolution [!INCLUDE[msCoName](../../includes/msconame-md.md)] nécessitent une colonne en guise d'entrée. *resolver_info* est de type **nvarchar (255)**, avec NULL comme valeur par défaut. Pour plus d’informations, consultez [Programmes de résolution COM Microsoft](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+`[ @resolver_info = ] 'resolver_info'` Est utilisé pour spécifier des informations supplémentaires requises par un programme de résolution personnalisé. Certains outils de résolution [!INCLUDE[msCoName](../../includes/msconame-md.md)] nécessitent une colonne en guise d'entrée. *resolver_info* est de type **nvarchar (255)**, avec NULL comme valeur par défaut. Pour plus d’informations, consultez [Programmes de résolution COM Microsoft](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
-`[ @source_owner = ] 'source_owner'`Nom du propriétaire du *source_object*. *source_owner* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est affectée à l'argument, l'utilisateur actuel est supposé être le propriétaire.  
+`[ @source_owner = ] 'source_owner'` Nom du propriétaire du *source_object*. *source_owner* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est affectée à l'argument, l'utilisateur actuel est supposé être le propriétaire.  
   
-`[ @destination_owner = ] 'destination_owner'`Propriétaire de l’objet dans la base de données d’abonnement, s’il ne s’agit pas de « dbo ». *destination_owner* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est affectée à l'argument, « dbo » est supposé être le propriétaire.  
+`[ @destination_owner = ] 'destination_owner'` Propriétaire de l’objet dans la base de données d’abonnement, s’il ne s’agit pas de « dbo ». *destination_owner* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est affectée à l'argument, « dbo » est supposé être le propriétaire.  
   
-`[ @vertical_partition = ] 'column_filter'`Active et désactive le filtrage de colonne sur un article de table. *vertical_partition* est de type **nvarchar (5),** avec false comme valeur par défaut.  
+`[ @vertical_partition = ] 'column_filter'` Active et désactive le filtrage de colonne sur un article de table. *vertical_partition* est de type **nvarchar (5),** avec false comme valeur par défaut.  
   
  **false** indique qu’il n’y a pas de filtrage vertical et publie toutes les colonnes.  
   
  **true** efface toutes les colonnes, à l’exception des colonnes de clé primaire et rowguid déclarées. Les colonnes sont ajoutées à l’aide de **sp_mergearticlecolumn**.  
   
-`[ @auto_identity_range = ] 'automatic_identity_range'`Active et désactive la gestion automatique des plages d’identité pour cet article de table sur une publication au moment de sa création. *auto_identity_range* est de type **nvarchar (5)**, avec false comme valeur par défaut. **true** active la gestion automatique des plages d’identité, tandis que **false** la désactive.  
+`[ @auto_identity_range = ] 'automatic_identity_range'` Active et désactive la gestion automatique des plages d’identité pour cet article de table sur une publication au moment de sa création. *auto_identity_range* est de type **nvarchar (5)**, avec false comme valeur par défaut. **true** active la gestion automatique des plages d’identité, tandis que **false** la désactive.  
   
 > [!NOTE]  
 >  *auto_identity_range* est déconseillé et n’est fourni qu’à des fins de compatibilité descendante. Vous devez utiliser *identityrangemanagementoption* pour spécifier les options de gestion des plages d’identité. Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-`[ @pub_identity_range = ] pub_identity_range`Contrôle la taille de la plage d’identité allouée à un abonné avec un abonnement serveur lorsque la gestion automatique des plages d’identité est utilisée. Cette plage d'identité est réservée à un Abonné de republication qui peut l'allouer à ses propres Abonnés. *pub_identity_range* est de type **bigint**, avec NULL comme valeur par défaut. Vous devez spécifier ce paramètre si *identityrangemanagementoption* est **auto** ou si *auto_identity_range* a la **valeur true**.  
+`[ @pub_identity_range = ] pub_identity_range` Contrôle la taille de la plage d’identité allouée à un abonné avec un abonnement serveur lorsque la gestion automatique des plages d’identité est utilisée. Cette plage d'identité est réservée à un Abonné de republication qui peut l'allouer à ses propres Abonnés. *pub_identity_range* est de type **bigint**, avec NULL comme valeur par défaut. Vous devez spécifier ce paramètre si *identityrangemanagementoption* est **auto** ou si *auto_identity_range* a la **valeur true**.  
   
-`[ @identity_range = ] identity_range`Contrôle la taille de la plage d’identité allouée à la fois au serveur de publication et à l’abonné lorsque la gestion automatique des plages d’identité est utilisée. *identity_range* est de type **bigint**, avec NULL comme valeur par défaut. Vous devez spécifier ce paramètre si *identityrangemanagementoption* est **auto** ou si *auto_identity_range* a la **valeur true**.  
+`[ @identity_range = ] identity_range` Contrôle la taille de la plage d’identité allouée à la fois au serveur de publication et à l’abonné lorsque la gestion automatique des plages d’identité est utilisée. *identity_range* est de type **bigint**, avec NULL comme valeur par défaut. Vous devez spécifier ce paramètre si *identityrangemanagementoption* est **auto** ou si *auto_identity_range* a la **valeur true**.  
   
 > [!NOTE]  
 >  *identity_range* contrôle la taille de la plage d’identité lors de la republication des abonnés à l’aide de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @threshold = ] threshold`Valeur de pourcentage qui contrôle le moment où l’Agent de fusion affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans *seuil* est utilisé, la agent de fusion crée une nouvelle plage d’identité. *Threshold* est de **type int**, avec NULL comme valeur par défaut. Vous devez spécifier ce paramètre si *identityrangemanagementoption* est **auto** ou si *auto_identity_range* a la **valeur true**.  
+`[ @threshold = ] threshold` Valeur de pourcentage qui contrôle le moment où l’Agent de fusion affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans *seuil* est utilisé, la agent de fusion crée une nouvelle plage d’identité. *Threshold* est de **type int**, avec NULL comme valeur par défaut. Vous devez spécifier ce paramètre si *identityrangemanagementoption* est **auto** ou si *auto_identity_range* a la **valeur true**.  
   
-`[ @verify_resolver_signature = ] verify_resolver_signature`Spécifie si une signature numérique est vérifiée avant d’utiliser un programme de résolution dans la réplication de fusion. *verify_resolver_signature* est de **type int**, avec 1 comme valeur par défaut.  
+`[ @verify_resolver_signature = ] verify_resolver_signature` Spécifie si une signature numérique est vérifiée avant d’utiliser un programme de résolution dans la réplication de fusion. *verify_resolver_signature* est de **type int**, avec 1 comme valeur par défaut.  
   
  **0** indique que la signature ne sera pas vérifiée.  
   
  **1** indique que la signature sera vérifiée pour déterminer si elle provient d’une source approuvée.  
   
-`[ @destination_object = ] 'destination_object'`Nom de l’objet dans la base de données d’abonnement. *destination_object* est de **type sysname**, avec la valeur par défaut qui se trouve dans ** \@ source_object**. Ce paramètre ne peut être spécifié que si l'article est un article de schéma exclusivement, tel que le sont les procédures stockées, vues et fonctions définies par l'utilisateur. Si l’article spécifié est un article de table, la valeur de * \@ source_object* remplace la valeur de *destination_object*.  
+`[ @destination_object = ] 'destination_object'` Nom de l’objet dans la base de données d’abonnement. *destination_object* est de **type sysname**, avec la valeur par défaut qui se trouve dans ** \@ source_object**. Ce paramètre ne peut être spécifié que si l'article est un article de schéma exclusivement, tel que le sont les procédures stockées, vues et fonctions définies par l'utilisateur. Si l’article spécifié est un article de table, la valeur de * \@ source_object* remplace la valeur de *destination_object*.  
   
-`[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`Active ou désactive l’utilisation du programme de résolution interactif sur un article. *allow_interactive_resolver* est de type **nvarchar (5)**, avec false comme valeur par défaut. la **valeur true** active l’utilisation du programme de résolution interactif sur l’article. **false** le désactive.  
+`[ @allow_interactive_resolver = ] 'allow_interactive_resolver'` Active ou désactive l’utilisation du programme de résolution interactif sur un article. *allow_interactive_resolver* est de type **nvarchar (5)**, avec false comme valeur par défaut. la **valeur true** active l’utilisation du programme de résolution interactif sur l’article. **false** le désactive.  
   
 > [!NOTE]  
 >  L'outil de résolution interactif n'est pas pris en charge par les Abonnés [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-`[ @fast_multicol_updateproc = ] 'fast_multicol_updateproc'`Ce paramètre est déconseillé et conservé pour la compatibilité descendante des scripts.  
+`[ @fast_multicol_updateproc = ] 'fast_multicol_updateproc'` Ce paramètre est déconseillé et conservé pour la compatibilité descendante des scripts.  
   
-`[ @check_permissions = ] check_permissions`Est une bitmap des autorisations au niveau de la table qui sont vérifiées lorsque l’Agent de fusion applique les modifications au serveur de publication. Si la connexion d'accès/le compte d'utilisateur du serveur de publication utilisé par le processus de fusion ne possède pas les autorisations de table appropriées, les modifications non valides sont enregistrées en tant que conflits. *check_permissions* est de **type int**et peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes.  
+`[ @check_permissions = ] check_permissions` Est une bitmap des autorisations au niveau de la table qui sont vérifiées lorsque l’Agent de fusion applique les modifications au serveur de publication. Si la connexion d'accès/le compte d'utilisateur du serveur de publication utilisé par le processus de fusion ne possède pas les autorisations de table appropriées, les modifications non valides sont enregistrées en tant que conflits. *check_permissions* est de **type int**et peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -219,21 +220,21 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x20**|Les autorisations sont vérifiées sur le serveur de publication avant que les opérations de mise à jour exécutées sur l'Abonné puissent être téléchargées.|  
 |**0x40**|Les autorisations sont vérifiées sur le serveur de publication avant que les opérations de suppression exécutées sur l'Abonné puissent être téléchargées.|  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *force_invalidate_snapshot* est un **bit**, avec 0 comme valeur par défaut.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *force_invalidate_snapshot* est un **bit**, avec 0 comme valeur par défaut.  
   
  **0** indique que l’ajout d’un article n’entraîne pas la non-validité de l’instantané. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
   
  **1** indique que l’ajout d’un article peut entraîner la non-validité de l’instantané et, s’il existe des abonnements nécessitant un nouvel instantané, accorde l’autorisation de marquer l’instantané existant comme obsolète et de générer un nouvel instantané. *force_invalidate_snapshot* a la valeur **1** lors de l’ajout d’un article à une publication avec un instantané existant.  
   
-`[ @published_in_tran_pub = ] 'published_in_tran_pub'`Indique qu’un article d’une publication de fusion est également publié dans une publication transactionnelle. *published_in_tran_pub* est de type **nvarchar (5)**, avec false comme valeur par défaut. la **valeur true** indique que l’article est également publié dans une publication transactionnelle.  
+`[ @published_in_tran_pub = ] 'published_in_tran_pub'` Indique qu’un article d’une publication de fusion est également publié dans une publication transactionnelle. *published_in_tran_pub* est de type **nvarchar (5)**, avec false comme valeur par défaut. la **valeur true** indique que l’article est également publié dans une publication transactionnelle.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription`Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *force_reinit_subscription* est un **bit**, avec 0 comme valeur par défaut.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *force_reinit_subscription* est un **bit**, avec 0 comme valeur par défaut.  
   
  **0** indique que l’ajout d’un article n’entraîne pas la réinitialisation de l’abonnement. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
   
  **1** signifie que les modifications apportées à l’article de fusion entraînent la réinitialisation des abonnements existants et autorise la réinitialisation de l’abonnement. *force_reinit_subscription* a la valeur **1** lorsque *subset_filterclause* spécifie un filtre de lignes paramétrable.  
   
-`[ @logical_record_level_conflict_detection = ] 'logical_record_level_conflict_detection'`Spécifie le niveau de détection de conflit pour un article qui est membre d’un enregistrement logique. *logical_record_level_conflict_detection* est de type **nvarchar (5)**, avec false comme valeur par défaut.  
+`[ @logical_record_level_conflict_detection = ] 'logical_record_level_conflict_detection'` Spécifie le niveau de détection de conflit pour un article qui est membre d’un enregistrement logique. *logical_record_level_conflict_detection* est de type **nvarchar (5)**, avec false comme valeur par défaut.  
   
  la **valeur true** indique qu’un conflit est détecté si des modifications sont effectuées n’importe où dans l’enregistrement logique.  
   
@@ -242,7 +243,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Étant donné que les enregistrements logiques ne sont pas pris en charge par les [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés, vous devez spécifier la valeur **false** pour *logical_record_level_conflict_detection* pour prendre en charge ces abonnés.  
   
-`[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'`Spécifie le niveau de résolution de conflit pour un article qui est membre d’un enregistrement logique. *logical_record_level_conflict_resolution* est de type **nvarchar (5)**, avec false comme valeur par défaut.  
+`[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'` Spécifie le niveau de résolution de conflit pour un article qui est membre d’un enregistrement logique. *logical_record_level_conflict_resolution* est de type **nvarchar (5)**, avec false comme valeur par défaut.  
   
  la **valeur true** indique que la totalité de l’enregistrement logique gagnant remplace l’enregistrement logique perdant.  
   
@@ -251,7 +252,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Étant donné que les enregistrements logiques ne sont pas pris en charge par les [!INCLUDE[ssEW](../../includes/ssew-md.md)] abonnés, vous devez spécifier la valeur **false** pour *logical_record_level_conflict_resolution* pour prendre en charge ces abonnés.  
   
-`[ @partition_options = ] partition_options`Définit la façon dont les données de l’article sont partitionnées, ce qui permet d’optimiser les performances lorsque toutes les lignes appartiennent à une seule partition ou à un seul abonnement. *partition_options* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
+`[ @partition_options = ] partition_options` Définit la façon dont les données de l’article sont partitionnées, ce qui permet d’optimiser les performances lorsque toutes les lignes appartiennent à une seule partition ou à un seul abonnement. *partition_options* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -263,9 +264,9 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Si la table source d’un article est déjà publiée dans une autre publication, la valeur de *partition_options* doit être la même pour les deux articles.  
   
-`[ @processing_order = ] processing_order`Indique l’ordre de traitement des articles dans une publication de fusion. *processing_order* est de **type int**, avec 0 comme valeur par défaut. **0** indique que l’article n’est pas ordonné, et toute autre valeur représente la valeur ordinale de l’ordre de traitement pour cet article. Les articles sont traités à partir de la valeur la plus faible vers la valeur la plus élevée. Si deux articles ont la même valeur, l’ordre de traitement est déterminé par l’ordre du surnom de l’article dans la table système [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) . Pour plus d’informations, consultez [Spécifier les propriétés de la réplication de fusion](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
+`[ @processing_order = ] processing_order` Indique l’ordre de traitement des articles dans une publication de fusion. *processing_order* est de **type int**, avec 0 comme valeur par défaut. **0** indique que l’article n’est pas ordonné, et toute autre valeur représente la valeur ordinale de l’ordre de traitement pour cet article. Les articles sont traités à partir de la valeur la plus faible vers la valeur la plus élevée. Si deux articles ont la même valeur, l’ordre de traitement est déterminé par l’ordre du surnom de l’article dans la table système [sysmergearticles](../../relational-databases/system-tables/sysmergearticles-transact-sql.md) . Pour plus d’informations, consultez [Spécifier les propriétés de la réplication de fusion](../../relational-databases/replication/merge/specify-merge-replication-properties.md).  
   
-`[ @subscriber_upload_options = ] subscriber_upload_options`Définit des restrictions sur les mises à jour effectuées sur un abonné avec un abonnement client. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
+`[ @subscriber_upload_options = ] subscriber_upload_options` Définit des restrictions sur les mises à jour effectuées sur un abonné avec un abonnement client. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* est de **type tinyint**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -278,18 +279,18 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Si la table source d’un article est déjà publiée dans une autre publication, la valeur de *subscriber_upload_options* doit être la même pour les deux articles.  
   
-`[ @identityrangemanagementoption = ] identityrangemanagementoption`Spécifie comment la gestion des plages d’identité est gérée pour l’article. *identityrangemanagementoption* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` Spécifie comment la gestion des plages d’identité est gérée pour l’article. *identityrangemanagementoption* est de type **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
 |**Aucune**|Désactive la gestion des plages d’identité.|  
 |**Manuelle**|Marque la colonne d'identité en utilisant NOT FOR REPLICATION pour activer la gestion manuelle des plages d'identité.|  
-|**Auto**|Spécifie la gestion automatique des plages d'identité.|  
+|**auto**|Spécifie la gestion automatique des plages d'identité.|  
 |NULL (valeur par défaut)|La valeur par défaut est **None**lorsque la valeur de *auto_identity_range* n’est pas **true**.|  
   
  Pour la compatibilité descendante, lorsque la valeur de *identityrangemanagementoption* est null, la valeur de *auto_identity_range* est vérifiée. Toutefois, lorsque la valeur de *identityrangemanagementoption* n’est pas null, la valeur de *auto_identity_range* est ignorée. Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
-`[ @delete_tracking = ] 'delete_tracking'`Indique si les suppressions sont répliquées. *delete_tracking* est de type **nvarchar (5)**, avec true comme valeur par défaut. **false** indique que les suppressions ne sont pas répliquées et **true** indique que les suppressions sont répliquées, ce qui correspond au comportement habituel pour la réplication de fusion. Lorsque *delete_tracking* a la valeur **false**, les lignes supprimées sur l’abonné doivent être supprimées manuellement sur le serveur de publication, et les lignes supprimées sur le serveur de publication doivent être supprimées manuellement sur l’abonné.  
+`[ @delete_tracking = ] 'delete_tracking'` Indique si les suppressions sont répliquées. *delete_tracking* est de type **nvarchar (5)**, avec true comme valeur par défaut. **false** indique que les suppressions ne sont pas répliquées et **true** indique que les suppressions sont répliquées, ce qui correspond au comportement habituel pour la réplication de fusion. Lorsque *delete_tracking* a la valeur **false**, les lignes supprimées sur l’abonné doivent être supprimées manuellement sur le serveur de publication, et les lignes supprimées sur le serveur de publication doivent être supprimées manuellement sur l’abonné.  
   
 > [!IMPORTANT]  
 >  L’affectation de la **valeur false** à *delete_tracking* entraîne une non-convergence. Si la table source d’un article est déjà publiée dans une autre publication, la valeur de *delete_tracking* doit être la même pour les deux articles.  
@@ -297,12 +298,12 @@ sp_addmergearticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  les options de *delete_tracking* ne peuvent pas être définies à l’aide de l' **Assistant Nouvelle publication** ou de la boîte de dialogue Propriétés de la **publication** .  
   
-`[ @compensate_for_errors = ] 'compensate_for_errors'`Indique si des actions de compensation sont effectuées lorsque des erreurs sont rencontrées pendant la synchronisation. *compensate_for_errors i*s **nvarchar (5)**, avec false comme valeur par défaut. Quand la valeur est **true**, les modifications qui ne peuvent pas être appliquées sur un abonné ou un serveur de publication pendant la synchronisation entraînent toujours des actions de compensation pour annuler la modification. Toutefois, un abonné configuré de façon incorrecte qui génère une erreur peut entraîner l’annulation des modifications apportées aux autres abonnés et aux serveurs de publication. la **valeur false** désactive ces actions de compensation. Toutefois, les erreurs sont toujours enregistrées comme avec la compensation, et les fusions suivantes continuent à tenter d’appliquer les modifications jusqu’à la réussite.  
+`[ @compensate_for_errors = ] 'compensate_for_errors'` Indique si des actions de compensation sont effectuées lorsque des erreurs sont rencontrées pendant la synchronisation. *compensate_for_errors i*s **nvarchar (5)**, avec false comme valeur par défaut. Quand la valeur est **true**, les modifications qui ne peuvent pas être appliquées sur un abonné ou un serveur de publication pendant la synchronisation entraînent toujours des actions de compensation pour annuler la modification. Toutefois, un abonné configuré de façon incorrecte qui génère une erreur peut entraîner l’annulation des modifications apportées aux autres abonnés et aux serveurs de publication. la **valeur false** désactive ces actions de compensation. Toutefois, les erreurs sont toujours enregistrées comme avec la compensation, et les fusions suivantes continuent à tenter d’appliquer les modifications jusqu’à la réussite.  
   
 > [!IMPORTANT]  
 >  Bien que les données des lignes affectées puissent sembler être hors de convergence, dès que vous résolvez une erreur, des modifications peuvent être appliquées et les données convergent. Si la table source d’un article est déjà publiée dans une autre publication, la valeur de *compensate_for_errors* doit être la même pour les deux articles.  
   
-`[ @stream_blob_columns = ] 'stream_blob_columns'`Spécifie qu’une optimisation de flux de données doit être utilisée lors de la réplication de colonnes d’objets binaires volumineux. *stream_blob_columns* est de type **nvarchar (5)**, avec false comme valeur par défaut. **true** signifie que l’optimisation sera tentée. *stream_blob_columns* a la valeur true lorsque FileStream est activé. Cela permet la réplication des données FILESTREAM dans le but d'optimiser et de réduire l'utilisation de la mémoire. Pour forcer les Articles de la table FILESTREAM à ne pas utiliser le streaming d’objets BLOB, utilisez **sp_changemergearticle** pour affecter la valeur false à *stream_blob_columns* .  
+`[ @stream_blob_columns = ] 'stream_blob_columns'` Spécifie qu’une optimisation de flux de données doit être utilisée lors de la réplication de colonnes d’objets binaires volumineux. *stream_blob_columns* est de type **nvarchar (5)**, avec false comme valeur par défaut. **true** signifie que l’optimisation sera tentée. *stream_blob_columns* a la valeur true lorsque FileStream est activé. Cela permet la réplication des données FILESTREAM dans le but d'optimiser et de réduire l'utilisation de la mémoire. Pour forcer les Articles de la table FILESTREAM à ne pas utiliser le streaming d’objets BLOB, utilisez **sp_changemergearticle** pour affecter la valeur false à *stream_blob_columns* .  
   
 > [!IMPORTANT]  
 >  L'activation de cette optimisation de mémoire peut réduire les performances de l'Agent de fusion pendant la synchronisation. Cette option ne doit être utilisée que lors de la réplication de colonnes contenant des mégaoctets de données.  

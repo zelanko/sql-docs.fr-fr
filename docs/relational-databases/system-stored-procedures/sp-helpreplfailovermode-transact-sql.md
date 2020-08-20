@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplfailovermode (Transact-SQL)
 title: sp_helpreplfailovermode (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 846057680d9f97d5fc1e1bb2683a720a63f71585
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5503291dc5011366ab6fe3b4a2d60b0a1310ba79
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899789"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489283"
 ---
 # <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche le mode de basculement actuel d'un abonnement. Cette procédure stockée est exécutée au niveau de l'Abonné, sur n'importe quelle base de données. Pour plus d’informations sur les modes de basculement, consultez [abonnements pouvant être mis à jour pour la réplication transactionnelle](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,15 +42,15 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur de publication qui participe à la mise à jour de cet abonné. *Publisher* est de **type sysname**, sans valeur par défaut. Le serveur de publication doit déjà être configuré pour la publication.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication qui participe à la mise à jour de cet abonné. *Publisher* est de **type sysname**, sans valeur par défaut. Le serveur de publication doit déjà être configuré pour la publication.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'`Nom de la publication qui participe à la mise à jour de cet abonné. *publication*est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication qui participe à la mise à jour de cet abonné. *publication*est de **type sysname**, sans valeur par défaut.  
   
-`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`Retourne la valeur entière du mode de basculement et est un paramètre de **sortie** . *failover_mode_id* est de **type tinyint** , avec **0**comme valeur par défaut. Elle retourne **0** pour la mise à jour immédiate et **1** pour la mise à jour en file d’attente.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Retourne la valeur entière du mode de basculement et est un paramètre de **sortie** . *failover_mode_id* est de **type tinyint** , avec **0**comme valeur par défaut. Elle retourne **0** pour la mise à jour immédiate et **1** pour la mise à jour en file d’attente.  
   
-`[ @failover_mode = ] 'failover_mode' OUTPUT`Retourne le mode dans lequel les modifications de données sont effectuées sur l’abonné. *failover_mode* est de type **nvarchar (10),** avec NULL comme valeur par défaut. Est un paramètre de **sortie** .  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` Retourne le mode dans lequel les modifications de données sont effectuées sur l’abonné. *failover_mode* est de type **nvarchar (10),** avec NULL comme valeur par défaut. Est un paramètre de **sortie** .  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -59,7 +60,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpreplfailovermode** est utilisé dans la réplication d’instantané ou dans la réplication transactionnelle pour laquelle les abonnements sont activés pour la mise à jour immédiate avec mise à jour en file d’attente comme basculement en cas d’échec.  
   
 ## <a name="permissions"></a>Autorisations  

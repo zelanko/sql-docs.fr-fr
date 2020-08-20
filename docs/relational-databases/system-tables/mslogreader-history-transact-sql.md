@@ -1,4 +1,5 @@
 ---
+description: MSlogreader_history (Transact-SQL)
 title: MSlogreader_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6c4d3b61eb3031060674c248be4effd03766f1f7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c792ab21d4fb59df13f0cc86a2d81558b2c506a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488769"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ ms.locfileid: "85889924"
 |**updateable_row**|**bit**|Défini sur **1** si la ligne de l’historique peut être remplacée.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

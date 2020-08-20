@@ -1,4 +1,5 @@
 ---
+description: sp_cursoropen (Transact-SQL)
 title: sp_cursoropen (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eedb738c9bd1a940f2875d182077edd3b939870b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1faec2f41d2396102b4ee675f2dac40be4b9b216
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85868870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489493"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ouvre un curseur. sp_cursoropen définit l’instruction SQL associée au curseur et aux options de curseur, puis remplit le curseur. sp_cursoropen équivaut à la combinaison des [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions DECLARE_CURSOR et Open. Cette procédure est appelée en spécifiant ID = 2 dans un paquet TDS (Tabular Data Stream).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -147,7 +148,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Si la procédure sp_cursoropen s’exécute correctement, les paramètres de retour RPC et un jeu de résultats avec des informations de format de colonne TDS (0xA0 & messages 0xA1) sont envoyés. En cas d'échec, un ou plusieurs messages d'erreur TDS sont envoyés. Dans les deux cas, aucune donnée de ligne n’est retournée et le nombre de messages *terminés* est égal à zéro. Si vous utilisez une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à 7.0, 0xa0, 0xa1 (standard pour les instructions SELECT) sont retournés avec les flux de jetons 0xa5 et 0xa4. Si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, 0x81 est retourné (standard pour les instructions SELECT) avec les flux de jetons 0xa5 et 0xa4.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="stmt-parameter"></a>Paramètre stmt  
  Si *stmt* spécifie l’exécution d’une procédure stockée, les paramètres d’entrée peuvent être définis en tant que constantes dans le cadre de la chaîne *stmt* , ou spécifiés en tant qu’arguments *boundparam* . Les variables déclarées peuvent être passées comme paramètres liés de cette façon.  

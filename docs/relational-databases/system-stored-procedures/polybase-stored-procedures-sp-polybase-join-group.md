@@ -1,4 +1,5 @@
 ---
+description: sp_polybase_join_group (Transact-SQL)
 title: sp_polybase_join_group | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2016
@@ -14,20 +15,21 @@ helpviewer_keywords:
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc4a9d78289f6d3fdf3272c6581d9baab586122f
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 6e9e76c30adf6ec3ec241c5f5bc8589802a2cad0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052713"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489681"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Ajoute une instance de SQL Server en tant que nœud de calcul à un groupe Polybase pour le calcul avec montée en puissance parallèle.  
   
- La fonctionnalité [Polybase](../../relational-databases/polybase/polybase-guide.md) doit être installée sur l’instance SQL Server.  Polybase permet l’intégration de sources de données non SQL Server, telles que Hadoop et le stockage d’objets BLOB Azure. Voir aussi [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
+ La fonctionnalité  [Polybase](../../relational-databases/polybase/polybase-guide.md) doit être installée sur l’instance SQL Server.  Polybase permet l’intégration de sources de données non SQL Server, telles que Hadoop et le stockage d’objets BLOB Azure. Voir aussi [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +56,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Après l’exécution de la procédure stockée, arrêtez le moteur Polybase et redémarrez le service Mouvement de données PolyBase sur l’ordinateur. Pour vérifier l’exécution de la DMV suivante sur le nœud principal : **sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Exemple  

@@ -1,4 +1,5 @@
 ---
+description: sys.sp_drop_trusted_assembly (Transact-SQL)
 title: sys. sp_drop_trusted_assembly (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
@@ -20,19 +21,19 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3c1747fee1e23e0f68a7bcf1744f40e80786b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625938"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489027"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Supprime un assembly de la liste des assemblys approuvés sur le serveur.
 
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
 ## <a name="syntax"></a>Syntaxe
@@ -46,7 +47,7 @@ sp_drop_trusted_assembly
 [ @hash =] '*valeur*'  
 SHA2_512 valeur de hachage de l’assembly à supprimer de la liste des assemblys approuvés pour le serveur. Les assemblys de confiance peuvent être chargés lorsque la sécurité CLR stricte est activée, même si l’assembly n’est pas signé ou si la base de données n’est pas marquée comme digne de confiance.
 
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 
 Cette procédure supprime un assembly de [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 

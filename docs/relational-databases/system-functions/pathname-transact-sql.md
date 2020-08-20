@@ -1,4 +1,5 @@
 ---
+description: PathName (Transact-SQL)
 title: PathName (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 348069dcab86747bccd179f85fd343e5c9d2c47f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fc5b4b67074c85aef7d5d6d0f7c889a02cbb047d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489719"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne le chemin d'accès d'un objet blob FILESTREAM. L’API OpenSqlFilestream utilise ce chemin d’accès pour retourner un handle qu’une application peut utiliser pour travailler avec les données BLOB à l’aide des API Win32. PathName est en lecture seule.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,10 +70,10 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-type"></a>Type de retour  
  **nvarchar(max)**  
   
-## <a name="return-value"></a>Valeur renvoyée  
+## <a name="return-value"></a>Valeur de retour  
  La valeur retournée est le chemin d'accès logique complet ou NETBIOS de l'objet blob. PathName ne retourne pas d'adresse IP. Une valeur NULL est retournée lorsque l'objet blob FILESTREAM n'a pas été créé.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La colonne ROWGUID doit être visible dans toute requête qui appelle PathName.  
   
  Un objet blob FILESTREAM peut être créé uniquement à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -148,7 +149,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Large Object binaire &#40;objet BLOB&#41; données &#40;SQL Server](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Objets binaires volumineux &#40;Objet BLOB&#41; Données &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Accéder à des données FILESTREAM avec OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

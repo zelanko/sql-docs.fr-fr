@@ -1,4 +1,5 @@
 ---
+description: sp_describe_undeclared_parameters (Transact-SQL)
 title: sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/24/2018
@@ -18,19 +19,19 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 2c40ef34ffcde3f7a1d02f6ba45963bd83df841a
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: b93ecf05c0a4b48417240db1b9bf22e1104149a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522543"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489445"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   Retourne un jeu de résultats qui contient des métadonnées sur les paramètres non déclarés dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot. Considère chaque paramètre utilisé dans le lot ** \@ tsql** , mais non déclaré dans les ** \@ paramètres**. Le jeu de résultats retourné contient une ligne pour chaque paramètre de ce genre, avec les informations de type déduites pour ce paramètre. La procédure retourne un jeu de résultats vide si le lot d’entrée ** \@ tsql** n’a pas de paramètres, à l’exception de ceux déclarés dans ** \@ params**.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +46,7 @@ sp_describe_undeclared_parameters
 > Pour utiliser cette procédure stockée dans Azure Synapse Analytics (anciennement SQL DW), le niveau de compatibilité d’une base de données doit être supérieur à 10. 
 
 ## <a name="arguments"></a>Arguments  
-`[ \@tsql = ] 'Transact-SQL\_batch'`Une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être de type **nvarchar (**_n_**)** ou **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être de type **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
 `[ \@params = ] N'parameters'`\@params fournit une chaîne de déclaration pour les paramètres du [!INCLUDE[tsql](../../includes/tsql-md.md)] lot, de la même façon que sp_executesql fonctionne. Les *paramètres* peuvent être de type **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
@@ -87,7 +88,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|À usage interne uniquement.|  
 |**suggested_tds_length**|**int NOT NULL**|À usage interne uniquement.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_describe_undeclared_parameters** retourne toujours le statut de retour égal à zéro.  
   
  Le cas d'utilisation le plus courant est celui d'une application qui reçoit une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] pouvant contenir des paramètres et devant les traiter d'une certaine façon. Il peut s'agir, par exemple, d'une interface utilisateur (telle qu'ODBCTest ou RowsetViewer) où l'utilisateur fournit une requête avec une syntaxe de paramètre ODBC. L'application doit découvrir dynamiquement le nombre de paramètres et inviter l'utilisateur à fournir chacun d'eux.  

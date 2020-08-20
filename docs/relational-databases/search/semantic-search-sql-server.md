@@ -1,4 +1,5 @@
 ---
+description: Recherche sémantique (SQL Server)
 title: Recherche sémantique (SQL Server) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,16 +15,16 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 4ef517636a0bc1f727f2dc6a59093af773007cc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8da5b57c26ad2b99ab11b058b9d3362ff48569e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490535"
 ---
 # <a name="semantic-search-sql-server"></a>Recherche sémantique (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-La recherche sémantique statistique donne un éclairage sur des documents non structurés stockés dans des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en extrayant et en indexant des *expressions clés*statistiquement pertinentes. Elle utilise ensuite ces expressions clés pour identifier et indexer des *documents similaires ou connexes*.  
+La recherche sémantique statistique donne un éclairage sur des documents non structurés stockés dans des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en extrayant et en indexant des *expressions clés* statistiquement pertinentes. Elle utilise ensuite ces expressions clés pour identifier et indexer des *documents similaires ou connexes*.  
   
 ##  <a name="what-can-you-do-with-semantic-search"></a><a name="whatcanido"></a> À quoi sert une recherche sémantique ?  
  La recherche sémantique s'appuie sur la fonctionnalité de recherche en texte intégral existante dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais permet de nouveaux scénarios qui vont au-delà des recherches par mot clé. Tandis que la recherche en texte intégral vous permet d’interroger des *mots* dans un document, la recherche sémantique porte sur la *signification* du document. Les solutions désormais possibles incluent l'extraction automatique de balises, la découverte de contenu connexe et la navigation hiérarchique à travers du contenu similaire. Par exemple, vous pouvez interroger l'index d'expressions clés afin de générer la taxonomie d'une organisation ou d'un corpus de documents. Ou encore interroger l'index de ressemblance de document pour identifier des curriculum vitae qui correspondent à une description de poste.  

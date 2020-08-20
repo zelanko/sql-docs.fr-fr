@@ -1,4 +1,5 @@
 ---
+description: sp_markpendingschemachange (Transact-SQL)
 title: sp_markpendingschemachange (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01100309-7bef-4154-85bf-f18489577e37
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cea2f7c8f9ce6040f4335428e2c5e97b52a3e591
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b9e62684057772d18a78694de67928073bc10c8a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899357"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489223"
 ---
 # <a name="sp_markpendingschemachange-transact-sql"></a>sp_markpendingschemachange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,16 +41,16 @@ sp_markpendingschemachange [@publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @schemaversion = ] schemaversion`Identifie une modification de schéma en attente. *SchemaVersion* est de **type int**, avec **0**comme valeur par défaut. Utilisez [sp_enumeratependingschemachanges &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) pour répertorier les modifications de schéma en attente pour la publication.  
+`[ @schemaversion = ] schemaversion` Identifie une modification de schéma en attente. *SchemaVersion* est de **type int**, avec **0**comme valeur par défaut. Utilisez [sp_enumeratependingschemachanges &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md) pour répertorier les modifications de schéma en attente pour la publication.  
   
-`[ @status = ] 'status'`Indique si une modification de schéma en attente sera ignorée. l' *État* est **nvarchar (10)** et sa valeur par défaut est **actif**. Si la valeur de l' *État* est **ignorée**, la modification de schéma sélectionnée n’est pas répliquée.  
+`[ @status = ] 'status'` Indique si une modification de schéma en attente sera ignorée. l' *État* est **nvarchar (10)** et sa valeur par défaut est **actif**. Si la valeur de l' *État* est **ignorée**, la modification de schéma sélectionnée n’est pas répliquée.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_markpendingschemachange** est utilisé avec la réplication de fusion.  
   
  **sp_markpendingschemachange** est une procédure stockée destinée à la prise en charge de la réplication de fusion et ne doit être utilisée que lorsque d’autres actions correctives, telles que la réinitialisation, n’ont pas pu corriger la situation ou sont trop coûteuses en termes de performances.  

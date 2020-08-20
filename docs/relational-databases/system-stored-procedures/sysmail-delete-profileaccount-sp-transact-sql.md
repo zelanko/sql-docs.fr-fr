@@ -1,4 +1,5 @@
 ---
+description: sysmail_delete_profileaccount_sp (Transact-SQL)
 title: sysmail_delete_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27568d450bed5a937931164ed1c04cd09d0b7c2f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5d24b5ac22b944fde36f9588036c78698b570ad8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890935"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488992"
 ---
 # <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un compte d'un profil de messagerie de base de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id`ID de profil du profil à supprimer. *profile_id* est de **type int**, avec NULL comme valeur par défaut. La *profile_id* ou la *profile_name* peut être spécifiée.  
+`[ @profile_id = ] profile_id` ID de profil du profil à supprimer. *profile_id* est de **type int**, avec NULL comme valeur par défaut. La *profile_id* ou la *profile_name* peut être spécifiée.  
   
-`[ @profile_name = ] 'profile_name'`Nom de profil du profil à supprimer. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. La *profile_id* ou la *profile_name* peut être spécifiée.  
+`[ @profile_name = ] 'profile_name'` Nom de profil du profil à supprimer. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. La *profile_id* ou la *profile_name* peut être spécifiée.  
   
-`[ @account_id = ] account_id`ID de compte à supprimer. *account_id* est de **type int**, avec NULL comme valeur par défaut. La *account_id* ou la *account_name* peut être spécifiée.  
+`[ @account_id = ] account_id` ID de compte à supprimer. *account_id* est de **type int**, avec NULL comme valeur par défaut. La *account_id* ou la *account_name* peut être spécifiée.  
   
-`[ @account_name = ] 'account_name'`Nom du compte à supprimer. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. La *account_id* ou la *account_name* peut être spécifiée.  
+`[ @account_name = ] 'account_name'` Nom du compte à supprimer. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. La *account_id* ou la *account_name* peut être spécifiée.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

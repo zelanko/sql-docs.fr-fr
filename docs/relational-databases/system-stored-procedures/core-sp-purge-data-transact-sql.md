@@ -1,4 +1,5 @@
 ---
+description: core.sp_purge_data (Transact-SQL)
 title: Core. sp_purge_data (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0b7432238a3bedc85f6f9d971299fa7de2705df8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d2ab402b1641e72225bf579d5b0aa5a21b345637
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489761"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime des données de l'entrepôt de données de gestion en fonction d'une stratégie de rétention. Cette procédure est exécutée quotidiennement par le travail de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mdw_purge_data contre l'entrepôt de données de gestion associé à l'instance spécifiée. Vous pouvez utiliser cette procédure stockée pour effectuer une suppression à la demande des données dans l'entrepôt de données de gestion.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,7 +64,7 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette procédure sélectionne des lignes dans la vue core.snapshots qui sont éligibles pour la suppression en fonction d'une période de rétention. Toutes les lignes éligibles pour la suppression sont supprimées de la table core.snapshots_internal. La suppression des lignes précédentes déclenche une action de suppression en cascade dans toutes les tables de l'entrepôt de données de gestion. Cette opération est effectuée en utilisant la clause ON DELETE CASCADE, qui est définie pour toutes les tables stockant des données collectées.  
   
  Chaque instantané et ses données associées sont supprimés dans une transaction explicite, puis validés. Par conséquent, si l’opération de vidage est arrêtée manuellement ou si la valeur spécifiée pour @duration est dépassée, seules les données non validées sont conservées. Ces données peuvent être supprimées lors de la prochaine exécution du travail.  
@@ -108,7 +109,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procédures stockées du collecteur de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

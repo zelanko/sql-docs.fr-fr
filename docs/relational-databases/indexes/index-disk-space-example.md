@@ -1,4 +1,5 @@
 ---
+description: Exemple d'espace disque d'un index
 title: Exemple d’espace disque d’un index | Microsoft Docs
 ms.custom: ''
 ms.date: 03/02/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1d85fecce4c5b97154312922ed96f988754f88e0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d12125849b83fb6701b18bd3d7c46b9d9b9828a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85668282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490962"
 ---
 # <a name="index-disk-space-example"></a>Exemple d'espace disque d'un index
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -120,8 +121,8 @@ ms.locfileid: "85668282"
  Cet exemple ne tient pas compte de l’espace disque temporaire supplémentaire éventuellement requis dans **tempdb** pour les enregistrements de versions créés par des opérations de mise à jour utilisateur et de suppression simultanées.  
   
 ## <a name="related-content"></a>Contenu associé  
- [Espace disque nécessaire pour les opérations DDL d’index](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
+ [Espace disque nécessaire pour les opérations DDL d'index](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
- [Espace disque du journal des transactions pour les opérations d’index](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
+ [Espace disque du journal des transactions pour les opérations d'index](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   
   

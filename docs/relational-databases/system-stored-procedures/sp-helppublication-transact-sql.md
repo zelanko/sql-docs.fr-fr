@@ -1,4 +1,5 @@
 ---
+description: sp_helppublication (Transact-SQL)
 title: sp_helppublication (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/18/2019
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dd5452439cc3467cc840ac11dd9ce3cf880a4ce8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729216"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489302"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Renvoie des informations sur une publication. Pour une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication, cette procédure stockée est exécutée sur la base de données de publication du serveur de publication. Pour une publication Oracle, cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,11 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication à afficher. *publication* est de type sysname, avec la valeur par défaut **%** , qui retourne des informations sur toutes les publications.  
+`[ @publication = ] 'publication'` Nom de la publication à afficher. *publication* est de type sysname, avec la valeur par défaut **%** , qui retourne des informations sur toutes les publications.  
   
-`[ @found = ] 'found' OUTPUT`Indicateur qui signale le retour de lignes. *valeur*de **type int** et paramètre de sortie, avec la valeur par défaut **23456**. **1** indique que la publication est trouvée. **0** indique que la publication est introuvable.  
+`[ @found = ] 'found' OUTPUT` Indicateur qui signale le retour de lignes. *valeur*de **type int** et paramètre de sortie, avec la valeur par défaut **23456**. **1** indique que la publication est trouvée. **0** indique que la publication est introuvable.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de type sysname, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un serveur de publication non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de type sysname, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être spécifié lors de la demande d’informations de publication à partir d’un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -104,7 +105,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  sp_helppublication est utilisé dans la réplication transactionnelle et d'instantané.  
   
  sp_helppublication renvoie des informations sur toutes les publications dont l'utilisateur qui exécute cette procédure est propriétaire.  

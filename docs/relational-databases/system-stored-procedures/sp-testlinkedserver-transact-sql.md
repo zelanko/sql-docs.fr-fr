@@ -1,4 +1,5 @@
 ---
+description: sp_testlinkedserver (Transact-SQL)
 title: sp_testlinkedserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 01ae2d33ab38b5a3f2720b817a036cd152f2c47f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ecd825b69ad3c78171ec8cb22a0b49488a6b9cd5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892613"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489072"
 ---
 # <a name="sp_testlinkedserver-transact-sql"></a>sp_testlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Teste la connexion à un serveur lié. Si le test échoue, la procédure lève une exception avec la raison de l'échec.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_testlinkedserver [ @servername ] = servername
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @servername = ]servername`Nom du serveur lié. *ServerName* est de **type sysname**, sans valeur par défaut.  
+`[ @servername = ]servername` Nom du serveur lié. *ServerName* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  None  

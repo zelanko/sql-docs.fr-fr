@@ -1,4 +1,5 @@
 ---
+description: Modifier des contraintes de validation
 title: Modifier des contraintes de validation | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2017
@@ -16,12 +17,12 @@ ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea5ecb64640df674d0f55d7347c1e8cb2d78d3ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 024897c426ed1bee082a75f44365698274424977
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488557"
 ---
 # <a name="modify-check-constraints"></a>Modifier des contraintes de validation
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,7 +54,7 @@ ms.locfileid: "85786070"
   
 1.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table contenant la contrainte de validation, puis sélectionnez **Conception**.  
   
-2.  Dans le menu **Concepteur de tables** , cliquez sur **Vérifier les contraintes...** .  
+2.  Dans le menu **Concepteur de tables** , cliquez sur **Vérifier les contraintes...**.  
   
 3.  Sélectionnez dans la liste **Contrainte de validation sélectionnée** de la boîte de dialogue **Contraintes de validation**la la contrainte que vous souhaitez modifier.  
   

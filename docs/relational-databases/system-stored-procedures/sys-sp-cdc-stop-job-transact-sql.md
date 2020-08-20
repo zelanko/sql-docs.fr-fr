@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_stop_job (Transact-SQL)
 title: sys. sp_cdc_stop_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a42ace7fc657f0f8637c2e5316c2c952917df7d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d4049a54624868862faaf36b2d392836ce115c1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891032"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489052"
 ---
 # <a name="syssp_cdc_stop_job-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Arrête un nettoyage de capture de données modifiées ou un travail de capture pour la base de données actuelle.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +42,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ [ @job_type = ] 'job_type_' ]`Type de travail à ajouter. *job_type* est de type **nvarchar (20)** avec **capture**comme valeur par défaut. Les entrées valides sont **capture** et **Cleanup**.  
+`[ [ @job_type = ] 'job_type_' ]` Type de travail à ajouter. *job_type* est de type **nvarchar (20)** avec **capture**comme valeur par défaut. Les entrées valides sont **capture** et **Cleanup**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

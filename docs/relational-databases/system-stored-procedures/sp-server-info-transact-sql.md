@@ -1,4 +1,5 @@
 ---
+description: sp_server_info (Transact-SQL)
 title: sp_server_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 09a7f0e7b0496d3f38ca31bc4a1df369133bb548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783727"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489133"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -30,7 +31,7 @@ ms.locfileid: "85783727"
 
   Retourne une liste de noms d'attributs et de valeurs correspondantes pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la passerelle de base de données ou la source de données sous-jacente.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +41,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @attribute_id = ] 'attribute_id'`Est l’ID d’entier de l’attribut. *attribute_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @attribute_id = ] 'attribute_id'` Est l’ID d’entier de l’attribut. *attribute_id* est de **type int**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  None  
@@ -53,7 +54,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nom de l'attribut.|  
 |**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Valeur actuelle de l'attribut.|  
   
- Le tableau suivant décrit ces attributs. [!INCLUDE[msCoName](../../includes/msconame-md.md)]Les bibliothèques clientes ODBC utilisent actuellement les attributs **1**, **2**, **18**, **22**et **500** au moment de la connexion.  
+ Le tableau suivant décrit ces attributs. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Les bibliothèques clientes ODBC utilisent actuellement les attributs **1**, **2**, **18**, **22**et **500** au moment de la connexion.  
   
 |ATTRIBUTE_ID|Description de ATTRIBUTE_NAME|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -87,14 +88,14 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> Spécifie si les procédures stockées peuvent être exécutées par des fonctions de procédures stockées distantes figurant dans la bibliothèque de bases de données.|O|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Spécifie la version actuelle des procédures stockées de catalogue.|Numéro de version actuelle|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_server_info** retourne un sous-ensemble des informations fournies par **SQLGetInfo** dans ODBC.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procédures stockées de catalogue &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

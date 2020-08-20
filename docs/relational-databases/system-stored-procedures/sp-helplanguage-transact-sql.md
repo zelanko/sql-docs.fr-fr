@@ -1,4 +1,5 @@
 ---
+description: sp_helplanguage (Transact-SQL)
 title: sp_helplanguage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,19 +20,19 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72f2e867c8139045b107cbb99871742c26440ee4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489327"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Affiche des informations sur une langue de remplacement particulière ou sur toutes les langues dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,7 +42,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @language = ] 'language'`Nom de l’autre langue pour laquelle afficher des informations. *Language* est de **type sysname**, avec NULL comme valeur par défaut. Si la *langue* est spécifiée, les informations relatives à la langue spécifiée sont retournées. Si la langue n’est pas spécifiée, des informations sur toutes les langues de la vue de compatibilité des **languessys.sys** sont retournées.  
+`[ @language = ] 'language'` Nom de l’autre langue pour laquelle afficher des informations. *Language* est de **type sysname**, avec NULL comme valeur par défaut. Si la *langue* est spécifiée, les informations relatives à la langue spécifiée sont retournées. Si la langue n’est pas spécifiée, des informations sur toutes les langues de la vue de compatibilité des ** languessys.sys** sont retournées.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -58,7 +59,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**alias**|**sysname**|Nom de remplacement de la langue.|  
 |**months**|**nvarchar(372)**|Noms des mois.|  
 |**mois courts**|**nvarchar(132)**|Abréviations des noms des mois.|  
-|**précédant**|**nvarchar(217)**|Noms des jours.|  
+|**days**|**nvarchar(217)**|Noms des jours.|  
 |**lcid**|**int**|ID de paramètres régionaux Windows pour la langue.|  
 |**msglangid**|**smallint**|ID du groupe de messages du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   

@@ -1,4 +1,5 @@
 ---
+description: sp_cursorprepexec (Transact-SQL)
 title: sp_cursorprepexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/20/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e82a82df5f532df05ad0f04a14c95b24850484bd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d1a6cbd32485e006ead529f4d8b1afeca3e0e7af
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489392"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +54,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Utilisez une chaîne **ntext** comme valeur d’entrée lorsque *stmt* est paramétré et que la valeur de PARAMETERIZED_STMT *scrollopt* est on.  
   
- *gestion*  
+ *instruction*  
  Définit le jeu de résultats de curseur. Le paramètre d' *instruction* est obligatoire et appelle une valeur d’entrée **ntext**, **nchar**ou **nvarchar** .  
   
 > [!NOTE]  
@@ -86,7 +87,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x80000|STATIC_ACCEPTABLE|  
 |0x100000|FAST_FORWARD_ACCEPTABLE|  
   
- En raison de la possibilité que l’option demandée ne soit pas appropriée pour le curseur défini par * \< stmt>*, ce paramètre sert à la fois d’entrée et de sortie. Dans de tels cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte un type approprié et modifie cette valeur.  
+ En raison de la possibilité que l’option demandée ne soit pas appropriée pour le curseur défini par *\<stmt>* , ce paramètre sert à la fois d’entrée et de sortie. Dans de tels cas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affecte un type approprié et modifie cette valeur.  
   
  *ccopt*  
  Option de contrôle en matière d'accès concurrentiel. *ccopt* est un paramètre facultatif qui requiert l’une des valeurs d’entrée **int** suivantes.  

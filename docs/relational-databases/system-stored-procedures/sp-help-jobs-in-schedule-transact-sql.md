@@ -1,4 +1,5 @@
 ---
+description: sp_help_jobs_in_schedule (Transact-SQL)
 title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55dbd9d513383fc4ed299dd56be5022b68f68bac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2c314f209e1b020598d1a0ab2ef946f2494ca989
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893653"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489367"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur les travaux auxquels une planification particulière est attachée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,9 +42,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @schedule_id = ] schedule_id`Identificateur de la planification pour laquelle répertorier les informations. *schedule_id* est de **type int**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
+`[ @schedule_id = ] schedule_id` Identificateur de la planification pour laquelle répertorier les informations. *schedule_id* est de **type int**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
   
-`[ @schedule_name = ] 'schedule_name'`Nom de la planification pour laquelle répertorier les informations. *schedule_name* est de **type sysname**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
+`[ @schedule_name = ] 'schedule_name'` Nom de la planification pour laquelle répertorier les informations. *schedule_name* est de **type sysname**, sans valeur par défaut. *Schedule_id* ou *schedule_name* peuvent être spécifiés.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
@@ -56,7 +57,7 @@ sp_help_jobs_in_schedule
 |**job_id**|**uniqueidentifier**|ID unique du travail.|  
 |**originating_server**|**nvarchar(30)**|Nom du serveur d'origine du travail|  
 |**name**|**sysname**|Nom du travail.|  
-|**désactivé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
+|**activé**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
 |**description**|**nvarchar(512)**|Description du travail.|  
 |**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
 |**category**|**sysname**|Catégorie de travail.|  
@@ -86,7 +87,7 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Nombre de serveurs cibles d'un travail.|  
 |**type**|**int**|Type du travail :<br /><br /> **1** = travail local.<br /><br /> **2** = travail multiserveur.<br /><br /> **0** = le travail n’a pas de serveurs cibles.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette procédure affiche des informations sur les travaux attachés à la planification spécifiée.  
   
 ## <a name="permissions"></a>Autorisations  

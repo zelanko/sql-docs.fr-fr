@@ -1,4 +1,5 @@
 ---
+description: sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 title: sys. dm_hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c7924044720c001951ac80e303ac8fe19fc3e489
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6e12ac1d979d1acfab0614bad27ae2f937245870
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718767"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489836"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

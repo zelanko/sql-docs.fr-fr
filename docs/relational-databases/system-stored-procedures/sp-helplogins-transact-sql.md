@@ -1,4 +1,5 @@
 ---
+description: sp_helplogins (Transact-SQL)
 title: sp_helplogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f88a0248d6e3afbfb3b654bd56de01cecfc7f872
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68a90477996c9782722e1a9c0b50f82fd5cf408e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891686"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489332"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fournit des informations sur les connexions et les utilisateurs associés dans chaque base de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @LoginNamePattern = ] 'login'`Nom de connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. la *connexion* doit exister si elle est spécifiée. Si la *connexion* n’est pas spécifiée, des informations sur toutes les connexions sont retournées.  
+`[ @LoginNamePattern = ] 'login'` Nom de connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. la *connexion* doit exister si elle est spécifiée. Si la *connexion* n’est pas spécifiée, des informations sur toutes les connexions sont retournées.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -62,10 +63,10 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nom de connexion.|  
 |**@**|**sysname**|Base de données par défaut utilisée par **LoginName** lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Nom d’utilisateur**|**sysname**|Compte d’utilisateur auquel **LoginName** est mappé dans **dbname**et les rôles dont **LoginName** est membre dans **dbname**.|  
+|**UserName**|**sysname**|Compte d’utilisateur auquel **LoginName** est mappé dans **dbname**et les rôles dont **LoginName** est membre dans **dbname**.|  
 |**UserOrAlias**|**Char (8)**|MemberOf = **username** est un rôle.<br /><br /> User = **username** est un compte d’utilisateur.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Avant de supprimer une connexion, utilisez **sp_helplogins** pour identifier les comptes d’utilisateur mappés à la connexion.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -100,7 +101,7 @@ John        pubs     John       User
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

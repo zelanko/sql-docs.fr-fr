@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_account_sp (Transact-SQL)
 title: sysmail_help_account_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 9f6995ca068efacff419ddad4f99435234d3228b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122690"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488974"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Répertorie les informations (à l'exception des mots de passe) relatifs aux comptes de messagerie de base de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,9 +40,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @account_id = ] account_id`ID du compte pour lequel répertorier les informations. *account_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @account_id = ] account_id` ID du compte pour lequel répertorier les informations. *account_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @account_name = ] 'account_name'`Nom du compte pour lequel répertorier les informations. *account_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @account_name = ] 'account_name'` Nom du compte pour lequel répertorier les informations. *account_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

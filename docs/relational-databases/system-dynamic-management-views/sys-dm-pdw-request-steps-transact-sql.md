@@ -1,4 +1,5 @@
 ---
+description: sys. dm_pdw_request_steps (Transact-SQL)
 title: sys. dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
@@ -12,12 +13,12 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e9dd970cebd1f25b953e7a5fe21c8ea8c60bde
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 4144e068354d43e2e8a5f9ea5bd6af7ad40a0e6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196201"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489734"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "86196201"
 |end_time|**datetime**|Heure à laquelle cette étape s’est terminée, a été annulée ou a échoué.|Inférieure ou égale à l’heure actuelle et supérieure ou égale à start_time. Affectez la valeur NULL pour les étapes en cours d’exécution ou en attente.|  
 |total_elapsed_time|**int**|Durée totale d’exécution de l’étape de la requête, en millisecondes.|Entre 0 et la différence entre end_time et start_time. 0 pour les étapes en file d’attente.<br /><br /> Si total_elapsed_time dépasse la valeur maximale d’un entier, total_elapsed_time sera toujours la valeur maximale. Cette condition génère l’avertissement « la valeur maximale a été dépassée ».<br /><br /> La valeur maximale en millisecondes est équivalente à 24,8 jours.|  
 |row_count|**bigint**|Nombre total de lignes modifiées ou retournées par cette demande.|Nombre de lignes affectées par l’étape.  Supérieur ou égal à zéro pour les étapes de l’opération de données.  -1 pour les étapes qui ne fonctionnent pas sur les données.|  
-|.|**nvarchar(4000)**|Contient le texte complet de la commande de cette étape.|Toute chaîne de demande valide pour une étape. NULL lorsque l’opération est du type MetaDataCreateOperation. Tronqué si plus de 4000 caractères.|  
+|command|**nvarchar(4000)**|Contient le texte complet de la commande de cette étape.|Toute chaîne de demande valide pour une étape. NULL lorsque l’opération est du type MetaDataCreateOperation. Tronqué si plus de 4000 caractères.|  
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section valeurs maximales de la vue système dans les valeurs minimale et maximale de la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   

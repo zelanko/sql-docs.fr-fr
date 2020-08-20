@@ -1,4 +1,5 @@
 ---
+description: sp_syscollector_update_collection_item (Transact-SQL)
 title: sp_syscollector_update_collection_item (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: efbdc613c641482df6b4dfe88a7f132124276578
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bf31cc498e140070b97f76593a8ce675ebd804ac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892809"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489088"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85892809"
   Permet de modifier les propriétés d'un élément de collecte défini par l'utilisateur ou de le renommer.  
   
  
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -66,7 +67,7 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou 1 (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si le jeu d'éléments de collecte est défini en mode non mis en cache, la modification de la fréquence est ignorée car ce mode provoque l'exécution de la collecte et du téléchargement des données selon la planification spécifiée pour le jeu d'éléments de collecte. Pour afficher l'état du jeu d'éléments de collecte, exécutez la requête suivante. Remplacez `<collection_item_id>` par l'ID de l'élément de collecte à mettre à jour.  
   
 ```  
@@ -91,7 +92,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>Exemples  
  Les exemples suivants sont basés sur l’élément de collecte créé dans l’exemple défini dans [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
   
-### <a name="a-changing-the-collection-frequency"></a>A. Modification de la fréquence de collecte  
+### <a name="a-changing-the-collection-frequency"></a>R. Modification de la fréquence de collecte  
  L'exemple suivant modifie la fréquence de collecte pour l'élément de collecte spécifié.  
   
 ```  
@@ -138,7 +139,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  

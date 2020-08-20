@@ -1,4 +1,5 @@
 ---
+description: sp_OACreate (Transact-SQL)
 title: sp_OACreate (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 74daa037fab18fc2ddb4126f8cf5f33e9d4e5159
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e28f5bcd2f539ae9ab457c2ab14ed7aee6121b7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489222"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crée une instance d'un objet OLE.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *progid*  
+ *ProgID*  
  Identificateur de programme (ProgID) de l'objet OLE à créer. Cette chaîne de caractères décrit la classe de l’objet OLE et se présente sous la forme : **'**_OLEComponent_**.** _Objet_**'**  
   
  *OLEComponent* est le nom du composant du serveur OLE Automation, et *Object* est le nom de l’objet OLE. L’objet OLE spécifié doit être valide et doit prendre en charge l’interface **IDispatch** .  
@@ -77,13 +78,13 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Pour plus d’informations sur les codes de retour HRESULT, consultez [codes de retour OLE Automation et informations sur les erreurs](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si les procédures OLE Automation sont activées, un appel à **sp_OACreate** démarrera l’environnement d’exécution partagé OLE Automation. Pour plus d’informations sur l’activation de l’automatisation OLE, consultez [procédures OLE Automation (option de configuration de serveur)](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md).  
   
  L'objet OLE créé est automatiquement détruit à la fin du lot d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** ou l’autorisation EXECUTE directement sur cette procédure stockée. `Ole Automation Procedures`la configuration doit être **activée** pour pouvoir utiliser toute procédure système liée à OLE Automation.  
+ Requiert l’appartenance au rôle serveur fixe **sysadmin** ou l’autorisation EXECUTE directement sur cette procédure stockée. `Ole Automation Procedures` la configuration doit être **activée** pour pouvoir utiliser toute procédure système liée à OLE Automation.  
   
 ## <a name="examples"></a>Exemples  
   

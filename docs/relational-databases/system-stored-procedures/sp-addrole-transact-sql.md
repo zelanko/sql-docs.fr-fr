@@ -1,4 +1,5 @@
 ---
+description: sp_addrole (Transact-SQL)
 title: sp_addrole (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f364de4eb2760c5beeae17360fb84ffd52fd7181
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 245e617a9756e276bc06907a6f1592ec5383e69e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876738"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489565"
 ---
 # <a name="sp_addrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85876738"
 > [!IMPORTANT]
 >  **sp_addrole** est inclus pour la compatibilité avec les versions antérieures de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et peut ne pas être pris en charge dans une version ultérieure. Utilisez à la place [CREATE ROLE](../../t-sql/statements/create-role-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rolename = ] 'role'`Nom du nouveau rôle de base de données. *role* est de **type sysname**et n’a pas de valeur par défaut. le *rôle* doit être un identificateur valide (ID) et ne doit pas déjà exister dans la base de données actuelle.  
+`[ @rolename = ] 'role'` Nom du nouveau rôle de base de données. *role* est de **type sysname**et n’a pas de valeur par défaut. le *rôle* doit être un identificateur valide (ID) et ne doit pas déjà exister dans la base de données actuelle.  
   
-`[ @ownername = ] 'owner'`Propriétaire du nouveau rôle de base de données. *owner* est de **type sysname**et sa valeur par défaut est l’utilisateur actuel. le *propriétaire* doit être un rôle de base de données ou un utilisateur de base de données dans la base de données actuelle.  
+`[ @ownername = ] 'owner'` Propriétaire du nouveau rôle de base de données. *owner* est de **type sysname**et sa valeur par défaut est l’utilisateur actuel. le *propriétaire* doit être un rôle de base de données ou un utilisateur de base de données dans la base de données actuelle.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -70,8 +71,8 @@ EXEC sp_addrole 'Managers';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  
   
   

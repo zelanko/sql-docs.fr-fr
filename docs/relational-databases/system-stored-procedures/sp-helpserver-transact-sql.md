@@ -1,4 +1,5 @@
 ---
+description: sp_helpserver (Transact-SQL)
 title: sp_helpserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1870b2e58871eacde9a65fa42bf75285b2630311
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899476"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489263"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Fournit des informations sur un serveur distant, sur un serveur de réplication particulier ou sur tous les serveurs des deux types. Fournit le nom du serveur, le nom réseau du serveur, l'état de réplication du serveur, le numéro d'identification du serveur et le nom du classement. Fournit également les valeurs des délais d'expiration pour les connexions ou les requêtes des serveurs liés.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,9 +42,9 @@ sp_helpserver [ [ @server = ] 'server' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @server = ] 'server'`Est le serveur sur lequel les informations sont signalées. Si le *serveur* n’est pas spécifié, génère des rapports sur tous les serveurs de **master.sys. serveurs**. *Server* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @server = ] 'server'` Est le serveur sur lequel les informations sont signalées. Si le *serveur* n’est pas spécifié, génère des rapports sur tous les serveurs de **master.sys. serveurs**. *Server* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @optname = ] 'option'`Est l’option qui décrit le serveur. l' *option* est de type **varchar (** 35 **)**, avec NULL comme valeur par défaut et doit prendre l’une des valeurs suivantes.  
+`[ @optname = ] 'option'` Est l’option qui décrit le serveur. l' *option* est de type **varchar (** 35 **)**, avec NULL comme valeur par défaut et doit prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -59,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**système**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**utiliser le classement distant**|Le classement d'une colonne distante est utilisé à la place de celui du serveur local.|  
   
-`[ @show_topology = ] 'show_topology'`Relation entre le serveur spécifié et d’autres serveurs. *show_topology* est de type **varchar (** 1 **)**, avec NULL comme valeur par défaut. Si *show_topology* n’est pas égal à **t** ou a la valeur null, **sp_helpserver** retourne les colonnes listées dans la section ensembles de résultats. Si *show_topology* est égal à **t**, en plus des colonnes listées dans les jeux de résultats, **sp_helpserver** retourne également les informations **topx** et **Topy** .  
+`[ @show_topology = ] 'show_topology'` Relation entre le serveur spécifié et d’autres serveurs. *show_topology* est de type **varchar (** 1 **)**, avec NULL comme valeur par défaut. Si *show_topology* n’est pas égal à **t** ou a la valeur null, **sp_helpserver** retourne les colonnes listées dans la section ensembles de résultats. Si *show_topology* est égal à **t**, en plus des colonnes listées dans les jeux de résultats, **sp_helpserver** retourne également les informations **topx** et **Topy** .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou 1 (échec).  
@@ -76,7 +77,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Valeur du délai d'expiration de la connexion au serveur lié.|  
 |**query_timeout**|**int**|Valeur du délai d'expiration des requêtes sur le serveur lié.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un même serveur peut avoir plusieurs états.  
   
 ## <a name="permissions"></a>Autorisations  

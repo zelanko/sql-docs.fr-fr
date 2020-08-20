@@ -1,4 +1,5 @@
 ---
+description: '&lt;table conflict_ Schema &gt; _ &lt; &gt; (Transact-SQL)'
 title: '&lt;table conflict_ Schema &gt; _ &lt; &gt; (Transact-SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/15/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 72e364d451a78726c1ac98c42659db9c8f6034b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a4a378eeef86204f87ce8eaa13a442752636c066
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890580"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488891"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>&lt;table conflict_ Schema &gt; _ &lt; &gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +40,8 @@ ms.locfileid: "85890580"
 |__$conflict_type|**int**|Type de conflit qui s'est produit, qui peut être l'une des valeurs suivantes :<br /><br /> 1 : Une mise à jour a échoué parce que la ligne locale a été modifiée par une autre mise à jour ou elle a été supprimée puis réinsérée.<br /><br /> 2 : Une mise à jour a échoué parce que la ligne locale a déjà été supprimée.<br /><br /> 3 : Une suppression a échoué parce que la ligne locale a été modifiée par une autre mise à jour ou elle a été supprimée puis réinsérée.<br /><br /> 4 : Une suppression a échoué parce que la ligne locale a déjà été supprimée.<br /><br /> 5 : Une insertion a échoué parce que la ligne locale a déjà été insérée ou a été insérée puis mise à jour.|  
 |__$is_winner|**bit**|Indique si la ligne dans cette table était le vainqueur du conflit, ce qui signifie qu'elle a été appliquée au nœud local.|  
 |__$pre_version|**varbinary (32)**|Version de la base de données d'où provient la modification conflictuelle.|  
-|__$reason_code|**int**|Code de résolution du conflit. Peut avoir l’une des valeurs suivantes :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Pour plus d’informations, consultez **_ _ $ reason_text**.|  
-|__$reason_text|**nvarchar (720)**|Résolution du conflit. Peut avoir l’une des valeurs suivantes :<br /><br /> Résolu (1)<br /><br /> Non résolu (2)<br /><br /> Inconnu (0)|  
+|__$reason_code|**int**|Code de résolution du conflit. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> <br /><br /> Pour plus d’informations, consultez **_ _ $ reason_text**.|  
+|__$reason_text|**nvarchar (720)**|Résolution du conflit. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> Résolu (1)<br /><br /> Non résolu (2)<br /><br /> Inconnu (0)|  
 |__$update_bitmap|**varbinary (** *n* **)**. La taille varie en fonction du contenu.|Bitmap qui indique quelles colonnes ont été mises à jour en cas de conflit mise à jour-mise à jour.|  
 |__$inserted_date|**datetime**|Date et heure d'insertion de la ligne en conflit dans cette table.|  
 |__$row_id|**timestamp**|Valeur de version associée à la ligne source du conflit.|  
@@ -48,7 +49,7 @@ ms.locfileid: "85890580"
 |\<base table column names>|\<base table column types>|La table en conflit contient une colonne pour chaque colonne dans la table de base.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

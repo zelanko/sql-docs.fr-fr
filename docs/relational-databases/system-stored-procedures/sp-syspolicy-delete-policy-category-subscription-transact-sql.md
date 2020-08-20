@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 title: sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 75390e920074059885ace32333426eb2fa642c49
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 151e33da35c4761ee6b16b13f75a7b1ae1963558
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892744"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489071"
 ---
 # <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un abonnement aux catégories de stratégies pour une base de données spécifique.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,12 +40,12 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`Identificateur de l’abonnement à la catégorie de stratégie. *policy_category_subscription_id* est de **type int**.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Identificateur de l’abonnement à la catégorie de stratégie. *policy_category_subscription_id* est de **type int**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_delete_policy_category_subscription dans le contexte de la base de données système msdb.  
   
  Vous ne pouvez pas supprimer un abonnement aux catégories de stratégies quand l'abonnement est autorisé.  

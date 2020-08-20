@@ -1,4 +1,5 @@
 ---
+description: sp_addmessage (Transact-SQL)
 title: sp_addmessage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: adf32fad3c233023529d362cd7382ca6376b3cee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86a7c1c41cf9b745efea8b2368d5120f0b03d3ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85877387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489566"
 ---
 # <a name="sp_addmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stocke un nouveau message d’erreur défini par l’utilisateur dans une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Les messages stockés à l’aide de **sp_addmessage** peuvent être affichés à l’aide de l’affichage catalogue **sys. messages** .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,20 +43,20 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @msgnum = ] msg_id`ID du message. *msg_id* est de **type int** avec NULL comme valeur par défaut. *msg_id* pour les messages d’erreur définis par l’utilisateur peut être un entier compris entre 50 001 et 2 147 483 647. La combinaison des *msg_id* et de la *langue* doit être unique ; une erreur est retournée si l’ID existe déjà pour la langue spécifiée.  
+`[ @msgnum = ] msg_id` ID du message. *msg_id* est de **type int** avec NULL comme valeur par défaut. *msg_id* pour les messages d’erreur définis par l’utilisateur peut être un entier compris entre 50 001 et 2 147 483 647. La combinaison des *msg_id* et de la *langue* doit être unique ; une erreur est retournée si l’ID existe déjà pour la langue spécifiée.  
   
-`[ @severity = ]severity`Niveau de gravité de l’erreur. la *gravité* est de type **smallint** avec NULL comme valeur par défaut. Les niveaux valides vont de 1 à 25. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md).  
+`[ @severity = ]severity` Niveau de gravité de l’erreur. la *gravité* est de type **smallint** avec NULL comme valeur par défaut. Les niveaux valides vont de 1 à 25. Pour plus d’informations sur les niveaux de gravité, consultez [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md).  
   
-`[ @msgtext = ] 'msg'`Texte du message d’erreur. *MSG* est de type **nvarchar (255),** avec NULL comme valeur par défaut.  
+`[ @msgtext = ] 'msg'` Texte du message d’erreur. *MSG* est de type **nvarchar (255),** avec NULL comme valeur par défaut.  
   
-`[ @lang = ] 'language'`Langue de ce message. *Language* est de **type sysname** , avec NULL comme valeur par défaut. Étant donné que plusieurs langues peuvent être installées sur le même serveur, *Language* spécifie la langue dans laquelle chaque message est écrit. Lorsque la *langue* est omise, la langue est la langue par défaut de la session.  
+`[ @lang = ] 'language'` Langue de ce message. *Language* est de **type sysname** , avec NULL comme valeur par défaut. Étant donné que plusieurs langues peuvent être installées sur le même serveur, *Language* spécifie la langue dans laquelle chaque message est écrit. Lorsque la *langue* est omise, la langue est la langue par défaut de la session.  
   
-`[ @with_log = ] { 'TRUE' | 'FALSE' }`Indique si le message doit être écrit dans le journal des applications Windows lorsqu’il se produit. ** \@ WITH_LOG** est de type **varchar (5),** avec false comme valeur par défaut. Si sa valeur est TRUE, l'erreur est automatiquement écrite dans le journal des applications Windows. Si sa valeur est FALSE, l'erreur n'est pas automatiquement écrite dans le journal des applications Windows ; c'est la façon dont elle a été déclenchée qui détermine si l'erreur sera ou non écrite dans le journal. Seuls les membres du rôle de serveur **sysadmin** peuvent utiliser cette option.  
+`[ @with_log = ] { 'TRUE' | 'FALSE' }` Indique si le message doit être écrit dans le journal des applications Windows lorsqu’il se produit. ** \@ WITH_LOG** est de type **varchar (5),** avec false comme valeur par défaut. Si sa valeur est TRUE, l'erreur est automatiquement écrite dans le journal des applications Windows. Si sa valeur est FALSE, l'erreur n'est pas automatiquement écrite dans le journal des applications Windows ; c'est la façon dont elle a été déclenchée qui détermine si l'erreur sera ou non écrite dans le journal. Seuls les membres du rôle de serveur **sysadmin** peuvent utiliser cette option.  
   
 > [!NOTE]  
 >  Si un message est écrit dans le journal des applications Windows, il est également écrit dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fichier journal des erreurs.  
   
-`[ @replace = ] 'replace'`S’il est spécifié comme chaîne de *remplacement*, un message d’erreur existant est remplacé par un nouveau texte de message et un niveau de gravité. *Replace* est de type **varchar (7)** avec NULL comme valeur par défaut. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un message en anglais des États-Unis, le niveau de gravité est remplacé pour tous les messages dans toutes les autres langues qui ont le même *msg_id*.  
+`[ @replace = ] 'replace'` S’il est spécifié comme chaîne de *remplacement*, un message d’erreur existant est remplacé par un nouveau texte de message et un niveau de gravité. *Replace* est de type **varchar (7)** avec NULL comme valeur par défaut. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un message en anglais des États-Unis, le niveau de gravité est remplacé pour tous les messages dans toutes les autres langues qui ont le même *msg_id*.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

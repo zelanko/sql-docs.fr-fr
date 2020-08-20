@@ -1,4 +1,5 @@
 ---
+description: Concepts liés à Replication Management Objects
 title: Concepts liés à Replication Management Objects | Microsoft Docs
 ms.custom: ''
 ms.date: 11/08/2017
@@ -21,12 +22,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8a2e6f065c29956873d48ada5e7add52a0528784
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95b4db25e874d4afe51ea47d5def4b316990c056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915835"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490636"
 ---
 # <a name="replication-management-objects-concepts"></a>Concepts liés à Replication Management Objects
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -68,7 +69,7 @@ ms.locfileid: "86915835"
   
 2.  Dans le menu **Fichier**, cliquez sur **Nouveau projet**. La boîte de dialogue **Nouveau projet** apparaît.  
   
-3.  Dans la boîte de dialogue **Types de projets**, sélectionnez **Projets Visual C#** . Dans le volet **Modèles**, sélectionnez **Application Windows**.  
+3.  Dans la boîte de dialogue **Types de projets**, sélectionnez **Projets Visual C#**. Dans le volet **Modèles**, sélectionnez **Application Windows**.  
   
 4.  (Facultatif) Dans la zone **Nom**, tapez le nom de la nouvelle application.  
   
@@ -186,7 +187,7 @@ ms.locfileid: "86915835"
 ### <a name="enabling-tls-12-support-for-rmo-components"></a>Activation de la prise en charge de TLS 1.2 pour les composants RMO 
  Vous pouvez activer la prise en charge de TLS 1.2 pour les composants RMO sur Windows 2012 et versions antérieures en installant la mise à jour [KB 3140245](https://support.microsoft.com/help/3140245) et en créant des clés de Registre, comme indiqué dans l’article. Sur Windows 2012 R2 et versions ultérieures, seules doivent être créées les clés de Registre telles qu’indiquées dans l’article ci-dessus.
  
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Cet exemple illustre la mise en cache des modifications de propriété. Les modifications apportées aux attributs d'une publication transactionnelle sont mises en cache tant qu'elles n'ont pas été envoyées explicitement au serveur.  
   
  [!code-cs[HowTo#rmo_ChangeTranPub_cached](../../../relational-databases/replication/codesnippet/csharp/rmohowto/rmotestevelope.cs#rmo_changetranpub_cached)]  

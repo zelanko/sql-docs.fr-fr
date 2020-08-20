@@ -1,4 +1,5 @@
 ---
+description: sp_addmergepartition (Transact-SQL)
 title: sp_addmergepartition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a4f4743efbd0ee3b7a57cb4fab02c98a2680a870
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1bf10e593c23b4f31f418df45e9ad0fe03dbdcdf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489637"
 ---
 # <a name="sp_addmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée une partition filtrée dynamiquement pour un abonnement qui est filtrée par les valeurs de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) ou [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) au niveau de l’abonné. Cette procédure stockée, exécutée sur le serveur de publication dans la base de données en cours de publication, est utilisée pour générer manuellement des partitions.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +40,16 @@ sp_addmergepartition [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Publication de fusion sur laquelle la partition est créée. *publication* est de **type sysname**, sans valeur par défaut. Si *SUSER_SNAME* est spécifié, la valeur du *nom d’hôte* doit être null.  
+`[ @publication = ] 'publication'` Publication de fusion sur laquelle la partition est créée. *publication* est de **type sysname**, sans valeur par défaut. Si *SUSER_SNAME* est spécifié, la valeur du *nom d’hôte* doit être null.  
   
-`[ @suser_sname = ] 'suser_sname'`Valeur utilisée lors de la création de la partition pour un abonnement filtré par la valeur de la fonction [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) sur l’abonné. *SUSER_SNAME* est de **type sysname**, sans valeur par défaut.  
+`[ @suser_sname = ] 'suser_sname'` Valeur utilisée lors de la création de la partition pour un abonnement filtré par la valeur de la fonction [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) sur l’abonné. *SUSER_SNAME* est de **type sysname**, sans valeur par défaut.  
   
-`[ @host_name = ] 'host_name'`Valeur utilisée lors de la création de la partition pour un abonnement filtré par la valeur de la fonction [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) sur l’abonné. *HOST_NAME* est de **type sysname**, sans valeur par défaut.  
+`[ @host_name = ] 'host_name'` Valeur utilisée lors de la création de la partition pour un abonnement filtré par la valeur de la fonction [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) sur l’abonné. *HOST_NAME* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_addmergepartition** est utilisé dans la réplication de fusion.  
   
 ## <a name="example"></a>Exemple  

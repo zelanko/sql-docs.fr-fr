@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_principalprofile_sp (Transact-SQL)
 title: sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dac2c362e2aac2b09969ba7193e44b06facebb51
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e3c8085bdbdf45deac3fe6190bbad263e4d7d5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891021"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489036"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Accorde l’autorisation à un principal de base de données msdb d’utiliser un profil de Database Mail. Le principal de la base de données doit être mappé à un utilisateur d’authentification SQL Server, un utilisateur Windows ou un groupe Windows.
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,20 +42,20 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @principal_id = ] principal_id`ID de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association. *principal_id* est de **type int**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doivent être spécifiés. Une *principal_id* de **0** fait de ce profil un profil public, en accordant l’accès à tous les principaux de la base de données.  
+`[ @principal_id = ] principal_id` ID de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association. *principal_id* est de **type int**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doivent être spécifiés. Une *principal_id* de **0** fait de ce profil un profil public, en accordant l’accès à tous les principaux de la base de données.  
   
-`[ @principal_name = ] 'principal_name'`Nom de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association. *principal_name* est de **type sysname**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doivent être spécifiés. Une *principal_name* de **« public »** fait de ce profil un profil public, en accordant l’accès à tous les principaux de la base de données.  
+`[ @principal_name = ] 'principal_name'` Nom de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association. *principal_name* est de **type sysname**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doivent être spécifiés. Une *principal_name* de **« public »** fait de ce profil un profil public, en accordant l’accès à tous les principaux de la base de données.  
   
-`[ @profile_id = ] profile_id`ID du profil pour l’Association. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
+`[ @profile_id = ] profile_id` ID du profil pour l’Association. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @profile_name = ] 'profile_name'`Nom du profil pour l’Association. *profile_name* est de **type sysname**, sans valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
+`[ @profile_name = ] 'profile_name'` Nom du profil pour l’Association. *profile_name* est de **type sysname**, sans valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @is_default = ] is_default`Spécifie si ce profil est le profil par défaut pour le principal. Un principal ne peut avoir qu'un seul profil par défaut. *is_default* est de **bits**, sans valeur par défaut.  
+`[ @is_default = ] is_default` Spécifie si ce profil est le profil par défaut pour le principal. Un principal ne peut avoir qu'un seul profil par défaut. *is_default* est de **bits**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour rendre un profil public, spécifiez un ** \@ principal_id** de **0** ou un ** \@ principal_name** de **public**. Un profil public est disponible pour tous les utilisateurs de la base de données **msdb** , bien que les utilisateurs doivent également être membres de **DatabaseMailUserRole** pour exécuter **sp_send_dbmail**.  
   
  Un utilisateur de base de données ne peut avoir plus d'un seul profil par défaut. Lorsque ** \@ is_default** a la valeur «**1**» et que l’utilisateur est déjà associé à un ou plusieurs profils, le profil spécifié devient le profil par défaut de l’utilisateur. L'ancien profil par défaut est toujours associé à l'utilisateur, mais n'est plus le profil par défaut.  

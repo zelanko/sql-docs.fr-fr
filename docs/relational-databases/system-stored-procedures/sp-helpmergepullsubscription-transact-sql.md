@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergepullsubscription (Transact-SQL)
 title: sp_helpmergepullsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db4ae46a9436ceb960a32764a95467116ce537e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899519"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489315"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur des abonnements par extraction de données (pull) existant sur l'Abonné. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,13 +41,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argument  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** . Si la *publication* est **%** , les informations sur toutes les publications de fusion et tous les abonnements de la base de données actuelle sont retournées.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** . Si la *publication* est **%** , les informations sur toutes les publications de fusion et tous les abonnements de la base de données actuelle sont retournées.  
   
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher*est de **type sysname**, avec la valeur par défaut **%** .  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher*est de **type sysname**, avec la valeur par défaut **%** .  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db*est de **type sysname**, avec la valeur par défaut **%** .  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données du serveur de publication. *publisher_db*est de **type sysname**, avec la valeur par défaut **%** .  
   
-`[ @subscription_type = ] 'subscription_type'`Indique s’il faut afficher les abonnements par extraction. *subscription_type*est de type **nvarchar (10)**, avec **« pull »** comme valeur par défaut. Les valeurs valides sont **'push'**, **'pull'** ou **'both'**.  
+`[ @subscription_type = ] 'subscription_type'` Indique s’il faut afficher les abonnements par extraction. *subscription_type*est de type **nvarchar (10)**, avec **« pull »** comme valeur par défaut. Les valeurs valides sont **'push'**, **'pull'** ou **'both'**.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -101,7 +102,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpmergepullsubscription** est utilisé dans la réplication de fusion. Dans le jeu de résultats, la date retournée dans **last_updated** est au format *AAAAMMJJ hh : mm : SS. fff*.  
   
 ## <a name="permissions"></a>Autorisations  

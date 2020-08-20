@@ -1,4 +1,5 @@
 ---
+description: sp_help_log_shipping_monitor_secondary (Transact-SQL)
 title: sp_help_log_shipping_monitor_secondary (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bfdf2e7f08f9fc5c5ef602188c6c291b53de6063
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e9bfac5c9cbb8594667f33a3abcc0a3a7561b49d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489352"
 ---
 # <a name="sp_help_log_shipping_monitor_secondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85891779"
   Retourne des informations sur une base de données secondaire à partir des tables du moniteur.  
   
  
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @secondary_server = ] 'secondary_server'`Nom du serveur secondaire. *secondary_server* est de **type sysname**, sans valeur par défaut.  
+`[ @secondary_server = ] 'secondary_server'` Nom du serveur secondaire. *secondary_server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @secondary_database = ] 'secondary_database'`Nom de la base de données secondaire. *secondary_database* est de **type sysname**, sans valeur par défaut.  
+`[ @secondary_database = ] 'secondary_database'` Nom de la base de données secondaire. *secondary_database* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -69,7 +70,7 @@ sp_help_log_shipping_monitor_secondary
 |**last_restored_date_utc**|Date et heure de la dernière opération de restauration sur la base de données secondaire, au format UTC (Coordinated Universal Time).|  
 |**history_retention_period**|Durée de conservation (en minutes) des enregistrements historiques d'envoi des journaux pour une base de données secondaire donnée avant leur suppression.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_log_shipping_monitor_secondary** doit être exécuté à partir de la base de données **Master** sur le serveur moniteur.  
   
 ## <a name="permissions"></a>Autorisations  

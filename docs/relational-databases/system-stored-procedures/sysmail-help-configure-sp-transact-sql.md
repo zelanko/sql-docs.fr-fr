@@ -1,4 +1,5 @@
 ---
+description: sysmail_help_configure_sp (Transact-SQL)
 title: sysmail_help_configure_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 307b1a1259210890d0b21abdc7a26f0e321e49b3
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c030fbc4ee2c329f8c13e525c07961794b28608e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122689"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488955"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Affiche les paramètres de configuration pour la messagerie de base de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @parameter_name = ] 'parameter_name'`Nom du paramètre de configuration à récupérer. Lorsqu’il est spécifié, la valeur du paramètre de configuration est retournée dans le paramètre de sortie ** \@ parameter_value** . Quand aucun ** \@ parameter_name** n’est spécifié, cette procédure stockée retourne un jeu de résultats contenant tous les paramètres de configuration Database mail de l’instance.  
+`[ @parameter_name = ] 'parameter_name'` Nom du paramètre de configuration à récupérer. Lorsqu’il est spécifié, la valeur du paramètre de configuration est retournée dans le paramètre de sortie ** \@ parameter_value** . Quand aucun ** \@ parameter_name** n’est spécifié, cette procédure stockée retourne un jeu de résultats contenant tous les paramètres de configuration Database mail de l’instance.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

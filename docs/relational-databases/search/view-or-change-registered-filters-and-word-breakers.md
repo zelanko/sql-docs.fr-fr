@@ -1,4 +1,5 @@
 ---
+description: Afficher ou modifier des filtres et des analyseurs lexicaux inscrits
 title: Afficher ou modifier des filtres et des analyseurs lexicaux inscrits
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: fbce0c7f823f33ca9f52c66bd3f3299b31b7d277
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f261aeafc9ae6010f02a8f4cff4cb14168e81303
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85628799"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490512"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Afficher ou modifier des filtres et des analyseurs lexicaux inscrits
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

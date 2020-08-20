@@ -1,4 +1,5 @@
 ---
+description: sp_helpsrvrolemember (Transact-SQL)
 title: sp_helpsrvrolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 559a88809e903c56221088e811b1b04875f3849a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: be34b5879a21824e5e0b92fbe3187fce039d6ffa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489244"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur les membres d'un rôle serveur fixe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @srvrolename = ] 'role'`Nom d’un rôle serveur fixe. *role* est de **type sysname**, avec NULL comme valeur par défaut. Si le *rôle*n’est pas spécifié, le jeu de résultats contient des informations sur tous les rôles serveur fixes.  
+`[ @srvrolename = ] 'role'` Nom d’un rôle serveur fixe. *role* est de **type sysname**, avec NULL comme valeur par défaut. Si le *rôle*n’est pas spécifié, le jeu de résultats contient des informations sur tous les rôles serveur fixes.  
   
  le *rôle* peut être l’une des valeurs suivantes.  
   
@@ -65,7 +66,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |MemberName|**sysname**|Nom d'un membre de ServerRole|  
 |MemberSID|**varbinary (85)**|ID de sécurité de MemberName|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez sp_helprolemember pour afficher les membres d'un rôle de base de données.  
   
  Toutes les connexions sont membres du public. sp_helpsrvrolemember ne reconnaît pas le rôle public car, en interne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’implémente pas public en tant que rôle.  
@@ -87,8 +88,8 @@ EXEC sp_helpsrvrolemember 'sysadmin';
 ## <a name="see-also"></a>Voir aussi  
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   
   

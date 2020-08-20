@@ -1,4 +1,5 @@
 ---
+description: sp_create_removable (Transact-SQL)
 title: sp_create_removable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 454b077e39a8ff1c17c3a742bb7acd00e8e719f8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b004ff5c004d51bcd0af402fc081f96745d9b9ad
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85869881"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489498"
 ---
 # <a name="sp_create_removable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85869881"
   Cette procédure crée une base de données sur un support amovible. Elle crée trois fichiers minimum (un pour les tables de catalogue système, un pour le journal des transactions et un ou plus pour les tables de données) et place la base de données sur ces fichiers.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Nous vous recommandons d’utiliser [Create Database](../../t-sql/statements/create-database-sql-server-transact-sql.md) à la place.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser [Create Database](../../t-sql/statements/create-database-sql-server-transact-sql.md) à la place.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,27 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbname'`Nom de la base de données à créer pour une utilisation sur un support amovible. *dbname* est de **type sysname**.  
+`[ @dbname = ] 'dbname'` Nom de la base de données à créer pour une utilisation sur un support amovible. *dbname* est de **type sysname**.  
   
-`[ @syslogical = ] 'syslogical'`Nom logique du fichier qui contient les tables du catalogue système. *syslogal* est de **type sysname**.  
+`[ @syslogical = ] 'syslogical'` Nom logique du fichier qui contient les tables du catalogue système. *syslogal* est de **type sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'`Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables du catalogue système. *sysphysical* est **de type nvarchar (260)**.  
+`[ @sysphysical = ] 'sysphysical'` Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables du catalogue système. *sysphysical* est **de type nvarchar (260)**.  
   
-`[ @syssize = ] syssize`Taille, en mégaoctets, du fichier contenant les tables du catalogue système. *syssize* est de **type int**. La valeur minimale de *syssize* est 1.  
+`[ @syssize = ] syssize` Taille, en mégaoctets, du fichier contenant les tables du catalogue système. *syssize* est de **type int**. La valeur minimale de *syssize* est 1.  
   
-`[ @loglogical = ] 'loglogical'`Nom logique du fichier qui contient le journal des transactions. *loglogical* est de **type sysname**.  
+`[ @loglogical = ] 'loglogical'` Nom logique du fichier qui contient le journal des transactions. *loglogical* est de **type sysname**.  
   
-`[ @logphysical = ] 'logphysical'`Nom physique. Il comprend un chemin d'accès complet du fichier contenant le journal des transactions. *logphysical* est **de type nvarchar (260)**.  
+`[ @logphysical = ] 'logphysical'` Nom physique. Il comprend un chemin d'accès complet du fichier contenant le journal des transactions. *logphysical* est **de type nvarchar (260)**.  
   
-`[ @logsize = ] logsize`Taille, en mégaoctets, du fichier qui contient le journal des transactions. la *journalisation* est de **type int**. La valeur de la taille minimale de la *journalisation* est 1.  
+`[ @logsize = ] logsize` Taille, en mégaoctets, du fichier qui contient le journal des transactions. la *journalisation* est de **type int**. La valeur de la taille minimale de la *journalisation* est 1.  
   
-`[ @datalogical1 = ] 'datalogical'`Nom logique d’un fichier qui contient les tables de données. *datalogical* est de **type sysname**.  
+`[ @datalogical1 = ] 'datalogical'` Nom logique d’un fichier qui contient les tables de données. *datalogical* est de **type sysname**.  
   
  Il doit exister entre 1 et 16 fichiers de données. Habituellement, plusieurs fichiers de données sont créés lorsqu'il est prévu que la base de données soit volumineuse et qu'elle doive être distribuée sur plusieurs disques.  
   
-`[ @dataphysical1 = ] 'dataphysical'`Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables de données. *dataphysical* est **de type nvarchar (260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables de données. *dataphysical* est **de type nvarchar (260)**.  
   
-`[ @datasize1 = ] 'datasize'`Taille, en mégaoctets, d’un fichier qui contient des tables de données. *DataSize* est de **type int**. La valeur de *DataSize* minimale est 1.  
+`[ @datasize1 = ] 'datasize'` Taille, en mégaoctets, d’un fichier qui contient des tables de données. *DataSize* est de **type int**. La valeur de *DataSize* minimale est 1.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

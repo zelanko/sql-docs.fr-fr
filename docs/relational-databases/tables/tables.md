@@ -1,4 +1,5 @@
 ---
+description: Tables
 title: Tables | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2019
@@ -14,12 +15,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdb7bb3ef617d244e1e58f7c74cece3d47b87b72
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 588b33d51a2a3814c3be8ddf3b083050df856c41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396878"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488596"
 ---
 # <a name="tables"></a>Tables
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
@@ -85,14 +86,14 @@ Les tableaux larges ont les conséquences suivantes sur les performances :
 |Explique comment créer une table qui contient une partie ou la totalité des colonnes d'une table existante.|[Dupliquer des tables](../../relational-databases/tables/duplicate-tables.md)|
 |Explique comment renommer une table.|[Renommer des tables &#40;moteur de base de données&#41;](../../relational-databases/tables/rename-tables-database-engine.md)|
 |Explique comment afficher les propriétés de la table.|[Afficher la définition de table](../../relational-databases/tables/view-the-table-definition.md)|
-|Explique comment déterminer si d'autres objets, tels qu'une vue ou une procédure stockée, dépendent d'une table.|[Afficher les dépendances d’une table](../../relational-databases/tables/view-the-dependencies-of-a-table.md)|
+|Explique comment déterminer si d'autres objets, tels qu'une vue ou une procédure stockée, dépendent d'une table.|[Afficher les dépendances d'une table](../../relational-databases/tables/view-the-dependencies-of-a-table.md)|
 
  Le tableau suivant fournit des liens vers les tâches couramment associées à la création ou à la modification de colonnes dans une table. 
 
 |Tâches de colonne|Rubrique|
 |------------------|-----------|
 |Explique comment ajouter des colonnes à une table existante.|[Ajouter des colonnes à une table &#40;moteur de base de données&#41;](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)|
-|Explique comment supprimer des colonnes d'une table.|[Supprimer des colonnes d’une table](../../relational-databases/tables/delete-columns-from-a-table.md)|
+|Explique comment supprimer des colonnes d'une table.|[Supprimer des colonnes d'une table](../../relational-databases/tables/delete-columns-from-a-table.md)|
 |Explique comment modifier le nom d'une colonne.|[Renommer des colonnes &#40;moteur de base de données&#41;](../../relational-databases/tables/rename-columns-database-engine.md)|
 |Explique comment copier des colonnes d'une table vers une autre, en copiant uniquement la définition de la colonne ou la définition et les données.|[Copier des colonnes d’une table vers une autre &#40;moteur de base de données&#41;](../../relational-databases/tables/copy-columns-from-one-table-to-another-database-engine.md)|
 |Explique comment modifier une définition de colonne, en modifiant le type de données ou une autre propriété.|[Modifier des colonnes &#40;moteur de base de données&#41;](../../relational-databases/tables/modify-columns-database-engine.md)|

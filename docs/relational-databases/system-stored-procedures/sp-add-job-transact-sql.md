@@ -1,4 +1,5 @@
 ---
+description: sp_add_job (Transact-SQL)
 title: sp_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf9351455ffa21978821590e06edaa93e7f70405
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 76503d17117e6a6dd0787539d96c6e16f3a0bfd6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87865347"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489666"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ajoute une nouvelle tâche exécutée par le service SQL Agent.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
  > Dans [Azure SQL Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server agent ne sont pas prises en charge actuellement. Pour plus d’informations, consultez différences entre SQL [Managed instance T-SQL dans SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) .
@@ -57,21 +58,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_name = ] 'job_name'`Nom du travail. Le nom doit être unique et ne peut pas contenir le caractère de pourcentage ( **%** ). *job_name*est de type **nvarchar (128)**, sans valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail. Le nom doit être unique et ne peut pas contenir le caractère de pourcentage ( **%** ). *job_name*est de type **nvarchar (128)**, sans valeur par défaut.  
   
-`[ @enabled = ] enabled`Indique l’état de la tâche ajoutée. *Enabled*est de **type tinyint**, avec 1 comme valeur par défaut (activé). Si la **valeur est 0**, le travail n’est pas activé et ne s’exécute pas en fonction de sa planification. Toutefois, elle peut être exécutée manuellement.  
+`[ @enabled = ] enabled` Indique l’état de la tâche ajoutée. *Enabled*est de **type tinyint**, avec 1 comme valeur par défaut (activé). Si la **valeur est 0**, le travail n’est pas activé et ne s’exécute pas en fonction de sa planification. Toutefois, elle peut être exécutée manuellement.  
   
-`[ @description = ] 'description'`Description du travail. *Description* est de type **nvarchar (512)**, avec NULL comme valeur par défaut. Si *Description* est omis, « aucune description n’est disponible » est utilisé.  
+`[ @description = ] 'description'` Description du travail. *Description* est de type **nvarchar (512)**, avec NULL comme valeur par défaut. Si *Description* est omis, « aucune description n’est disponible » est utilisé.  
   
-`[ @start_step_id = ] step_id`Numéro d’identification de la première étape à exécuter pour le travail. *step_id*est de **type int**, avec 1 comme valeur par défaut.  
+`[ @start_step_id = ] step_id` Numéro d’identification de la première étape à exécuter pour le travail. *step_id*est de **type int**, avec 1 comme valeur par défaut.  
   
-`[ @category_name = ] 'category'`Catégorie du travail. *Category*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @category_name = ] 'category'` Catégorie du travail. *Category*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @category_id = ] category_id`Mécanisme indépendant du langage permettant de spécifier une catégorie de travaux. *category_id*est de **type int**, avec NULL comme valeur par défaut.  
+`[ @category_id = ] category_id` Mécanisme indépendant du langage permettant de spécifier une catégorie de travaux. *category_id*est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @owner_login_name = ] 'login'`Nom de la connexion propriétaire du travail. *login*est de **type sysname**, avec NULL comme valeur par défaut, qui est interprété comme le nom de connexion actuel. Seuls les membres du rôle serveur fixe **sysadmin** peuvent définir ou modifier la valeur de ** \@ owner_login_name**. Si les utilisateurs qui ne sont pas membres du rôle **sysadmin** définissent ou modifient la valeur de ** \@ owner_login_name**, l’exécution de cette procédure stockée échoue et une erreur est retournée.  
+`[ @owner_login_name = ] 'login'` Nom de la connexion propriétaire du travail. *login*est de **type sysname**, avec NULL comme valeur par défaut, qui est interprété comme le nom de connexion actuel. Seuls les membres du rôle serveur fixe **sysadmin** peuvent définir ou modifier la valeur de ** \@ owner_login_name**. Si les utilisateurs qui ne sont pas membres du rôle **sysadmin** définissent ou modifient la valeur de ** \@ owner_login_name**, l’exécution de cette procédure stockée échoue et une erreur est retournée.  
   
-`[ @notify_level_eventlog = ] eventlog_level`Valeur indiquant le moment auquel une entrée doit être placée dans le journal des applications Microsoft Windows pour ce travail. *eventlog_level*est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @notify_level_eventlog = ] eventlog_level` Valeur indiquant le moment auquel une entrée doit être placée dans le journal des applications Microsoft Windows pour ce travail. *eventlog_level*est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -80,24 +81,24 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (par défaut)|Si échec|  
 |**3**|Toujours|  
   
-`[ @notify_level_email = ] email_level`Valeur qui indique quand envoyer un message électronique à la fin de ce travail. *email_level*est de **type int**, avec **0**comme valeur par défaut, qui indique Never. *email_level*utilise les mêmes valeurs que *eventlog_level*.  
+`[ @notify_level_email = ] email_level` Valeur qui indique quand envoyer un message électronique à la fin de ce travail. *email_level*est de **type int**, avec **0**comme valeur par défaut, qui indique Never. *email_level*utilise les mêmes valeurs que *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level`Valeur qui indique à quel moment envoyer un message réseau à la fin de ce travail. *netsend_level*est de **type int**, avec **0**comme valeur par défaut, qui indique Never. *netsend_level* utilise les mêmes valeurs que *eventlog_level*.  
+`[ @notify_level_netsend = ] netsend_level` Valeur qui indique à quel moment envoyer un message réseau à la fin de ce travail. *netsend_level*est de **type int**, avec **0**comme valeur par défaut, qui indique Never. *netsend_level* utilise les mêmes valeurs que *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level`Valeur qui indique à quel moment envoyer une page à la fin de ce travail. *page_level*est de **type int**, avec **0**comme valeur par défaut, qui indique Never. *page_level*utilise les mêmes valeurs que *eventlog_level*.  
+`[ @notify_level_page = ] page_level` Valeur qui indique à quel moment envoyer une page à la fin de ce travail. *page_level*est de **type int**, avec **0**comme valeur par défaut, qui indique Never. *page_level*utilise les mêmes valeurs que *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'email_name'`Nom de messagerie électronique de la personne à laquelle envoyer un message électronique lorsque *email_level* est atteint. *email_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @notify_email_operator_name = ] 'email_name'` Nom de messagerie électronique de la personne à laquelle envoyer un message électronique lorsque *email_level* est atteint. *email_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_name'`Nom de l’opérateur auquel le message réseau est envoyé à l’achèvement de ce travail. *netsend_name*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` Nom de l’opérateur auquel le message réseau est envoyé à l’achèvement de ce travail. *netsend_name*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @notify_page_operator_name = ] 'page_name'`Nom de la personne à paginer à la fin de ce travail. *page_name*est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @notify_page_operator_name = ] 'page_name'` Nom de la personne à paginer à la fin de ce travail. *page_name*est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @delete_level = ] delete_level`Valeur qui indique à quel moment supprimer le travail. *delete_value*est de **type int**, avec 0 comme valeur par défaut, ce qui signifie Never. *delete_level*utilise les mêmes valeurs que *eventlog_level*.  
+`[ @delete_level = ] delete_level` Valeur qui indique à quel moment supprimer le travail. *delete_value*est de **type int**, avec 0 comme valeur par défaut, ce qui signifie Never. *delete_level*utilise les mêmes valeurs que *eventlog_level*.  
   
 > [!NOTE]  
 >  Lorsque *delete_level* est **3**, le travail n’est exécuté qu’une seule fois, quelle que soit la planification définie pour le travail. De plus, si un travail est supprimé, son historique est également supprimé.  
   
-`[ @job_id = ] _job_idOUTPUT`Numéro d’identification du travail affecté au travail, si celui-ci a été créé avec succès. *job_id*est une variable de sortie de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] _job_idOUTPUT` Numéro d’identification du travail affecté au travail, si celui-ci a été créé avec succès. *job_id*est une variable de sortie de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

@@ -1,4 +1,5 @@
 ---
+description: sp_help_agent_default (Transact-SQL)
 title: sp_help_agent_default (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f92f64fe005bb49dd919f77e25931d5af025a8ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad0ae89b2cc2b09222fea863a008104e43ccfd15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757874"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489464"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Récupère l'ID de la configuration par défaut du type d'Agent passé en paramètre. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,9 +39,9 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] _profile_idOUTPUT`ID de la configuration par défaut pour le type d’agent. *profile_id* est de **type int**, sans valeur par défaut. *profile_id* est également un paramètre de sortie et retourne l’ID de la configuration par défaut pour le type d’agent.  
+`[ @profile_id = ] _profile_idOUTPUT` ID de la configuration par défaut pour le type d’agent. *profile_id* est de **type int**, sans valeur par défaut. *profile_id* est également un paramètre de sortie et retourne l’ID de la configuration par défaut pour le type d’agent.  
   
-`[ @agent_type = ] 'agent_type'`Type d’agent. *agent_type* est de **type int**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
+`[ @agent_type = ] 'agent_type'` Type d’agent. *agent_type* est de **type int**, sans valeur par défaut, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -53,7 +54,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_help_agent_default** est utilisé dans tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  

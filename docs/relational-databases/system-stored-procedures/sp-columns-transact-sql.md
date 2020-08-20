@@ -1,4 +1,5 @@
 ---
+description: MSdbms (Transact-SQL)
 title: sp_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2016
@@ -18,19 +19,19 @@ ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ac9e5647193899335af494ac87f8ecdafe6390d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5dec6803d57bbb67286dc7b9ceb1b573644c2863
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180278"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489552"
 ---
 # <a name="sp_columns-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne des informations de colonne pour les objets spécifiés qui peuvent être interrogés dans l'environnement actuel.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,17 +46,17 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ \@table_name = ] object`Nom de l’objet utilisé pour retourner les informations de catalogue. l' *objet* peut être une table, une vue ou un autre objet qui a des colonnes telles que des fonctions table. l' *objet* est de type **nvarchar (384)**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ \@table_name = ] object` Nom de l’objet utilisé pour retourner les informations de catalogue. l' *objet* peut être une table, une vue ou un autre objet qui a des colonnes telles que des fonctions table. l' *objet* est de type **nvarchar (384)**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ \@table_owner = ] owner`Propriétaire de l’objet utilisé pour retourner les informations de catalogue. *owner* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité d’objet par défaut du SGBD sous-jacent s’appliquent.  
+`[ \@table_owner = ] owner` Propriétaire de l’objet utilisé pour retourner les informations de catalogue. *owner* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité d’objet par défaut du SGBD sous-jacent s’appliquent.  
   
  Si l'utilisateur actuel est propriétaire d'un objet portant le nom spécifié, les colonnes de cet objet sont retournées. Si *owner* n’est pas spécifié et que l’utilisateur actuel ne possède pas d’objet avec l' *objet*spécifié, **sp_columns** recherche un objet avec l' *objet* spécifié détenu par le propriétaire de la base de données. S'il en existe un, les colonnes de cet objet sont retournées.  
   
-`[ \@table_qualifier = ] qualifier`Nom du qualificateur de l’objet. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms d’objets en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
+`[ \@table_qualifier = ] qualifier` Nom du qualificateur de l’objet. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms d’objets en trois parties (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
   
-`[ \@column_name = ] column`Est une colonne unique et est utilisée lorsqu’une seule colonne d’informations de catalogue est souhaitée. la *colonne* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. Si la *colonne* n’est pas spécifiée, toutes les colonnes sont retournées. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *colonne* représente le nom de colonne tel qu’il figure dans la table **syscolumns** . La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard de SQL-92 (caractères génériques % et _).  
+`[ \@column_name = ] column` Est une colonne unique et est utilisée lorsqu’une seule colonne d’informations de catalogue est souhaitée. la *colonne* est de type **nvarchar (384)**, avec NULL comme valeur par défaut. Si la *colonne* n’est pas spécifiée, toutes les colonnes sont retournées. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , *colonne* représente le nom de colonne tel qu’il figure dans la table **syscolumns** . La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard de SQL-92 (caractères génériques % et _).  
   
-`[ \@ODBCVer = ] ODBCVer`Est la version de ODBC en cours d’utilisation. *ODBCVer* est de **type int**, avec 2 comme valeur par défaut. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Pour connaître les différences de comportement entre les versions 2 et 3, consultez la spécification ODBC **SQLColumns** .  
+`[ \@ODBCVer = ] ODBCVer` Est la version de ODBC en cours d’utilisation. *ODBCVer* est de **type int**, avec 2 comme valeur par défaut. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Pour connaître les différences de comportement entre les versions 2 et 3, consultez la spécification ODBC **SQLColumns** .  
   
 ## <a name="return-code-values"></a>Codet de retour  
  None  
@@ -115,7 +116,7 @@ EXEC sp_columns @table_name = N'DimEmployee',
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-transact-sql.md)   
- [Procédures stockées de catalogue &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procédures stockées de catalogue &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sp_dbmmonitorhelpalert (Transact-SQL)
 title: sp_dbmmonitorhelpalert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,19 +19,19 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab1a8338a25394b3a750e09e0b0da6c6099c97ee
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 942696e1d05ac149780ca226d4a6ba500a3aa11c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865853"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489415"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur des seuils d'avertissement sur une ou l'ensemble des métriques de performances clés du moniteur de mise en miroir de bases de données.  
  
-  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -69,7 +70,7 @@ sp_dbmmonitorhelpalert database_name
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|Le tableau ci-dessous répertorie la valeur de **alert_id** pour chaque mesure de performance et l’unité de mesure de la métrique affichée dans le jeu de résultats **sp_dbmmonitorresults** :|  
 |**threshold**|**int**|Valeur de seuil de l'avertissement. Si une valeur supérieure à ce seuil est renvoyée lorsque l'état des mises en miroir est mis à jour, une entrée est insérée dans le journal des événements Windows. Cette valeur est exprimée en Ko, minutes ou millisecondes, suivant l'avertissement. Si le seuil n'est pas actuellement défini, la valeur est NULL.<br /><br /> **Remarque :** Pour afficher les valeurs actuelles, exécutez la procédure stockée [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
-|**désactivé**|**bit**|0 = L'événement est désactivé.<br /><br /> 1 = L'événement est activé.<br /><br /> **Remarque :** La période de rétention est toujours activée.|  
+|**activé**|**bit**|0 = L'événement est désactivé.<br /><br /> 1 = L'événement est activé.<br /><br /> **Remarque :** La période de rétention est toujours activée.|  
   
 |Valeur|Mesure de performance|Unité|  
 |-----------|------------------------|----------|  
@@ -80,7 +81,7 @@ sp_dbmmonitorhelpalert database_name
 |5|Période de rétention|Heures|  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
+ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne une ligne qui indique si un avertissement est activé sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] pour la mesure de performance de la plus ancienne transaction non envoyée.  

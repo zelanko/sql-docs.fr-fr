@@ -1,4 +1,5 @@
 ---
+description: sp_post_msx_operation (Transact-SQL)
 title: sp_post_msx_operation (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36759d2c90e29c0a019d8bd294a0c7e621c8d468
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: da3d1e8bd762f31a7592d90957c3a8680c29dbfb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489197"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Insère des opérations (lignes) dans la table système **sysdownloadlist** pour les serveurs cibles à télécharger et exécuter.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +46,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @operation = ] 'operation'`Type d’opération de l’opération publiée. *operation*est de type **varchar (64)**, sans valeur par défaut. Les opérations valides dépendent de *object_type*.  
+`[ @operation = ] 'operation'` Type d’opération de l’opération publiée. *operation*est de type **varchar (64)**, sans valeur par défaut. Les opérations valides dépendent de *object_type*.  
   
 |Type d'objet|Opération|  
 |-----------------|---------------|  
@@ -53,15 +54,15 @@ sp_post_msx_operation
 |**SERVEURS**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**PROGRAMMATEUR**|INSERT<br /><br /> UPDATE<br /><br /> Suppression|  
   
-`[ @object_type = ] 'object'`Type d’objet pour lequel une opération doit être publiée. Les types valides sont **Job**, **Server**et **Schedule**. l' *objet* est de type **varchar (64)**, avec **Job**comme valeur par défaut.  
+`[ @object_type = ] 'object'` Type d’objet pour lequel une opération doit être publiée. Les types valides sont **Job**, **Server**et **Schedule**. l' *objet* est de type **varchar (64)**, avec **Job**comme valeur par défaut.  
   
-`[ @job_id = ] job_id`Numéro d’identification du travail auquel l’opération s’applique. *job_id* est de type **uniqueidentifier**, sans valeur par défaut. **0x00** indique tous les travaux. Si l' *objet* est **serveur**, *job_id*n’est pas nécessaire.  
+`[ @job_id = ] job_id` Numéro d’identification du travail auquel l’opération s’applique. *job_id* est de type **uniqueidentifier**, sans valeur par défaut. **0x00** indique tous les travaux. Si l' *objet* est **serveur**, *job_id*n’est pas nécessaire.  
   
-`[ @specific_target_server = ] 'target_server'`Nom du serveur cible pour lequel l’opération spécifiée s’applique. Si *job_id* est spécifié, mais que *target_server* n’est pas spécifié, les opérations sont publiées pour tous les serveurs de travail du travail. *target_server* est de type **nvarchar (30)**, avec NULL comme valeur par défaut.  
+`[ @specific_target_server = ] 'target_server'` Nom du serveur cible pour lequel l’opération spécifiée s’applique. Si *job_id* est spécifié, mais que *target_server* n’est pas spécifié, les opérations sont publiées pour tous les serveurs de travail du travail. *target_server* est de type **nvarchar (30)**, avec NULL comme valeur par défaut.  
   
-`[ @value = ] value`Intervalle d’interrogation, en secondes. *value* est de type **int**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement si l' *opération* est **Set-Poll**.  
+`[ @value = ] value` Intervalle d’interrogation, en secondes. *value* est de type **int**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement si l' *opération* est **Set-Poll**.  
   
-`[ @schedule_uid = ] schedule_uid`Identificateur unique de la planification à laquelle l’opération s’applique. *schedule_uid* est de type **uniqueidentifier**, sans valeur par défaut.  
+`[ @schedule_uid = ] schedule_uid` Identificateur unique de la planification à laquelle l’opération s’applique. *schedule_uid* est de type **uniqueidentifier**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

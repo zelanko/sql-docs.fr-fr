@@ -1,4 +1,5 @@
 ---
+description: sp_create_plan_guide (Transact-SQL)
 title: sp_create_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc0818b0406aaa322a9fc28563f54c06b88c732c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0595885b12cc70d5634058eeb9650ee323921ba5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489529"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crée un repère de plan permettant d'associer des indicateurs de requête ou des plans de requête réels à des requêtes d'une base de données. Pour plus d'informations sur les repères de plan, consultez [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -56,7 +57,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@ stmt =] N'*statement_text*'  
  Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] permettant de créer un repère de plan. Lorsque l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimiseur de requête reconnaît une requête qui correspond à *statement_text*, *plan_guide_name* prend effet. Pour que la création d’un repère de plan aboutisse, *statement_text* doit apparaître dans le contexte spécifié par les \@ paramètres type, \@ module_or_batch et \@ params.  
   
- *statement_text* doit être fourni de manière à permettre à l’optimiseur de requête de le faire correspondre à l’instruction correspondante fournie dans le lot ou le module identifié par \@ module_or_batch et les \@ paramètres. Pour plus d'informations, consultez la section « Remarques ». La taille de *statement_text* est limitée uniquement par la mémoire disponible du serveur.  
+ *statement_text* doit être fourni de manière à permettre à l’optimiseur de requête de le faire correspondre à l’instruction correspondante fournie dans le lot ou le module identifié par \@ module_or_batch et les \@ paramètres. Pour plus d'informations, consultez la section « Notes ». La taille de *statement_text* est limitée uniquement par la mémoire disponible du serveur.  
   
  [ \@ type =] N' {objet | SQL | MODÈLE}»  
  Type de l’entité dans laquelle *statement_text* apparaît. Cela spécifie le contexte pour la correspondance de *statement_text* avec *plan_guide_name*.  
@@ -65,7 +66,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Indique *statement_text* apparaît dans le contexte d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée, d’une fonction scalaire, d’une fonction table à instructions multiples ou [!INCLUDE[tsql](../../includes/tsql-md.md)] d’un déclencheur DML dans la base de données active.  
   
  SQL  
- Indique *statement_text* apparaît dans le contexte d’une instruction ou d’un lot autonome pouvant être soumis à par le biais d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mécanisme quelconque. [!INCLUDE[tsql](../../includes/tsql-md.md)]les instructions soumises par des objets common language runtime (CLR) ou des procédures stockées étendues, ou à l’aide de EXEC N'*sql_string*', sont traitées comme des lots sur le serveur et, par conséquent, doivent être identifiées en tant que \@ type **=** 'SQL'. Si SQL est spécifié, le paramétrage de l’indicateur de requête {FORCEd | SIMPLE} ne peut pas être spécifié dans le \@ paramètre hints.  
+ Indique *statement_text* apparaît dans le contexte d’une instruction ou d’un lot autonome pouvant être soumis à par le biais d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mécanisme quelconque. [!INCLUDE[tsql](../../includes/tsql-md.md)] les instructions soumises par des objets common language runtime (CLR) ou des procédures stockées étendues, ou à l’aide de EXEC N'*sql_string*', sont traitées comme des lots sur le serveur et, par conséquent, doivent être identifiées en tant que \@ type **=** 'SQL'. Si SQL est spécifié, le paramétrage de l’indicateur de requête {FORCEd | SIMPLE} ne peut pas être spécifié dans le \@ paramètre hints.  
   
  TEMPLATE  
  Indique que le repère de plan s’applique à toute requête paramétrée dans le formulaire indiqué dans *statement_text*. Si TEMPLATE est spécifié, seul le paramétrage {FORCEd | SIMPLE} l’indicateur de requête peut être spécifié dans le \@ paramètre hints. Pour plus d’informations sur les repères de plan TEMPLATE, consultez [spécifier le comportement du paramétrage de requête à l’aide de repères de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
@@ -98,7 +99,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  NULL  
  Indique qu'aucun indicateur existant spécifié dans la clause OPTION de la requête n'est appliqué à la requête. Pour plus d’informations, consultez [clause OPTION &#40;&#41;Transact-SQL ](../../t-sql/queries/option-clause-transact-sql.md).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les arguments de sp_create_plan_guide doivent être indiqués dans l'ordre affiché. Quand vous fournissez des valeurs pour les paramètres de **sp_create_plan_guide**, tous les noms de paramètres doivent être spécifiés explicitement, ou aucun nom ne doit être spécifié. Par exemple, si ** \@ Name =** est spécifié, ** \@ stmt =** , ** \@ type =**, et ainsi de suite, doivent également être spécifiés. De même, si ** \@ Name =** est omis et que seule la valeur de paramètre est fournie, les noms de paramètres restants doivent également être omis, et seules leurs valeurs sont fournies. Les noms d'arguments sont utilisés à des fins descriptives uniquement, pour une meilleure compréhension de la syntaxe. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas que le nom de paramètre spécifié correspond au nom du paramètre à l'emplacement où le nom est utilisé.  
   
  Vous pouvez créer plusieurs repères de plan OBJECT ou SQL pour la même requête et le même lot ou module. Toutefois, un seul repère de plan peut être activé à un moment donné.  
@@ -327,11 +328,11 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Repères de plan](../../relational-databases/performance/plan-guides.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
- [sys. plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys. dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sys. fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   

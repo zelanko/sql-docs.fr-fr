@@ -1,4 +1,5 @@
 ---
+description: sysmail_add_profileaccount_sp (Transact-SQL)
 title: sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3de6a0b8ed5cbabd37cfa18f3b107c90121fe459
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a393c3902d8ee9c5af45a10358fbb9fa371af18e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891000"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488993"
 ---
 # <a name="sysmail_add_profileaccount_sp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute un compte de messagerie de base de données à un profil de messagerie de base de données. Exécutez **sysmail_add_profileaccount_sp** une fois qu’un compte de base de données a été créé avec [sysmail_add_account_sp &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-account-sp-transact-sql.md), et qu’un profil de base de données est créé avec [sysmail_add_profile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profile-sp-transact-sql.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,20 +42,20 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_id = ] profile_id`ID de profil auquel ajouter le compte. *profile_id* est de **type int**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
+`[ @profile_id = ] profile_id` ID de profil auquel ajouter le compte. *profile_id* est de **type int**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
   
-`[ @profile_name = ] 'profile_name'`Nom du profil auquel ajouter le compte. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
+`[ @profile_name = ] 'profile_name'` Nom du profil auquel ajouter le compte. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *profile_id* ou le *profile_name* doit être spécifié.  
   
-`[ @account_id = ] account_id`ID de compte à ajouter au profil. *account_id* est de **type int**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
+`[ @account_id = ] account_id` ID de compte à ajouter au profil. *account_id* est de **type int**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
   
-`[ @account_name = ] 'account_name'`Nom du compte à ajouter au profil. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
+`[ @account_name = ] 'account_name'` Nom du compte à ajouter au profil. *account_name* est de **type sysname**, avec NULL comme valeur par défaut. Le *account_id* ou le *account_name* doit être spécifié.  
   
-`[ @sequence_number = ] sequence_number`Numéro de séquence du compte dans le profil. *sequence_number* est de **type int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
+`[ @sequence_number = ] sequence_number` Numéro de séquence du compte dans le profil. *sequence_number* est de **type int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le profil et le compte doivent déjà exister. Sinon, la procédure stockée retourne une erreur.  
   
  Notez que cette procédure stockée ne modifie pas le numéro de séquence d'un compte qui est déjà associé au profil spécifié. Pour plus d’informations sur la mise à jour du numéro de séquence d’un compte, consultez [sysmail_update_profileaccount_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md).  

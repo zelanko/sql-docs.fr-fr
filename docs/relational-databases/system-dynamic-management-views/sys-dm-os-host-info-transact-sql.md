@@ -1,4 +1,5 @@
 ---
+description: sys. dm_os_host_info (Transact-SQL)
 title: sys. dm_os_host_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/10/2017
@@ -19,12 +20,12 @@ ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a504416014d9e3a0cb25972ab624fc720a26bef3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb99e12c75a3f10ca88dc7668d194840f360be2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754165"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489822"
 ---
 # <a name="sysdm_os_host_info-transact-sql"></a>sys. dm_os_host_info (Transact-SQL)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -33,14 +34,14 @@ Retourne une ligne qui affiche les informations sur la version du système d’e
   
 |Nom de la colonne |Type de données |Description |  
 |-----------------|---------------|-----------------|  
-|**host_platform** |**nvarchar(256)** |Type de système d’exploitation : Windows ou Linux |
-|**host_distribution** |**nvarchar(256)** |Description du système d’exploitation. |
-|**host_release**|**nvarchar(256)**|Version du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (numéro de version). Pour obtenir la liste des valeurs et des descriptions, consultez [version du système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Pour Linux, retourne une chaîne vide. |  
-|**host_service_pack_level**|**nvarchar(256)**|Niveau du Service Pack du système d'exploitation Windows. <br> Pour Linux, retourne une chaîne vide. |  
+|**host_platform** |**nvarchar (256)** |Type de système d’exploitation : Windows ou Linux |
+|**host_distribution** |**nvarchar (256)** |Description du système d’exploitation. |
+|**host_release**|**nvarchar (256)**|Version du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (numéro de version). Pour obtenir la liste des valeurs et des descriptions, consultez [version du système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Pour Linux, retourne une chaîne vide. |  
+|**host_service_pack_level**|**nvarchar (256)**|Niveau du Service Pack du système d'exploitation Windows. <br> Pour Linux, retourne une chaîne vide. |  
 |**host_sku**|**int**|ID de référence (SKU) Windows. Pour obtenir la liste des ID et des descriptions des références SKU, consultez [fonction GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Autorise la valeur NULL. <br> Pour Linux, retourne la valeur NULL. |  
 |**os_language_version**|**int**|Identificateur des paramètres régionaux (LCID) du système d'exploitation. Pour obtenir la liste des valeurs et des descriptions des LCID, consultez [ID de paramètres régionaux attribués par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur null.|  
 
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 Cette vue est similaire à [sys. dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), qui ajoute des colonnes pour différencier Windows et Linux.
   
 ## <a name="security"></a>Sécurité  

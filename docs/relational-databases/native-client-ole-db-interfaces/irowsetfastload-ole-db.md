@@ -1,4 +1,5 @@
 ---
+description: IRowsetFastLoad (Native Client OLE DB Provider)
 title: IRowsetFastLoad (Native Client OLE DB Provider) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,17 +15,17 @@ ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c38cd2ea900da079ffe6e9aac75ce967abc4ffee
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 12fc563df7f8206da10417871bd6a76842694ec1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490839"
 ---
 # <a name="irowsetfastload-native-client-ole-db-provider"></a>IRowsetFastLoad (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  L’interface **IRowsetFastLoad** expose la prise en charge des opérations de copie en bloc basées sur mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les consommateurs de fournisseurs OLE DB Native Client utilisent l’interface pour ajouter rapidement des données à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table existante.  
+  L’interface **IRowsetFastLoad** expose la prise en charge des opérations de copie en bloc basées sur mémoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les consommateurs de fournisseurs OLE DB Native Client utilisent l’interface pour ajouter rapidement des données à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table existante.  
   
  Si vous affectez la valeur VARIANT_TRUE à SSPROP_ENABLEFASTLOAD pour une session, vous ne pouvez pas lire les données des ensembles de lignes retournés ultérieurement à partir de cette session. Lorsque SSPROP_ENABLEFASTLOAD a la valeur VARIANT_TRUE, tous les ensembles de lignes créés sur la session sont du type IRowsetFastLoad. Les ensembles de lignes IRowsetFastLoad ne prennent pas en charge la fonctionnalité de récupération (fetch) des ensembles de lignes. Par conséquent, les données issues de ces ensembles de lignes ne peuvent pas être lues.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "87243920"
   
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
- [Copier des données en bloc à l’aide de IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)   
+ [Copier des données en bloc avec IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)   
  [Envoyer des données BLOB vers SQL SERVER en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
   

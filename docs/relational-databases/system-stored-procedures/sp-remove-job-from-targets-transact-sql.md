@@ -1,4 +1,5 @@
 ---
+description: sp_remove_job_from_targets (Transact-SQL)
 title: sp_remove_job_from_targets (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de4d2686066e10f1eb9f80862241d1d1a47cf6b7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d40f7d8812fe83648871bedbb3538202f5c519a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891494"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88489144"
 ---
 # <a name="sp_remove_job_from_targets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime le travail spécifié des serveurs cibles ou des groupes de serveurs cibles donnés.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,13 +43,13 @@ sp_remove_job_from_targets [ @job_id = ] job_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id`Numéro d’identification du travail à partir duquel supprimer les serveurs cibles ou les groupes de serveurs cibles spécifiés. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail à partir duquel supprimer les serveurs cibles ou les groupes de serveurs cibles spécifiés. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail à partir duquel supprimer les serveurs cibles ou les groupes de serveurs cibles spécifiés. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail à partir duquel supprimer les serveurs cibles ou les groupes de serveurs cibles spécifiés. *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @target_server_groups = ] 'target_server_groups'`Liste séparée par des virgules des groupes de serveurs cibles à supprimer du travail spécifié. *target_server_groups* est de type **nvarchar (1024)**, avec NULL comme valeur par défaut.  
+`[ @target_server_groups = ] 'target_server_groups'` Liste séparée par des virgules des groupes de serveurs cibles à supprimer du travail spécifié. *target_server_groups* est de type **nvarchar (1024)**, avec NULL comme valeur par défaut.  
   
-`[ @target_servers = ] 'target_servers'`Liste séparée par des virgules des serveurs cibles à supprimer du travail spécifié. *target_servers* est de type **nvarchar (1024)**, avec NULL comme valeur par défaut.  
+`[ @target_servers = ] 'target_servers'` Liste séparée par des virgules des serveurs cibles à supprimer du travail spécifié. *target_servers* est de type **nvarchar (1024)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

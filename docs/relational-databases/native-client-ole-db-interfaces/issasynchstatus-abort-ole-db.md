@@ -1,4 +1,5 @@
 ---
+description: 'ISSAsynchStatus :: Abort (fournisseur Native Client OLE DB)'
 title: 'ISSAsynchStatus :: Abort (fournisseur Native Client OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
@@ -16,12 +17,12 @@ ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a713f210c04032d9b24d90c59ad1088b1a1cd0d8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f159a85e4dd60706402c08931f0350e9f7efaf67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246925"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88490884"
 ---
 # <a name="issasynchstatusabort-native-client-ole-db-provider"></a>ISSAsynchStatus :: Abort (fournisseur Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  **ISSAsynchStatus::Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize::Initialize** n'a pas été appelé ou ne s'est pas terminé.  
   
- **ISSAsynchStatus :: Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize :: Initialize** a été appelé, mais il a été annulé par la suite avant l’initialisation ou a dépassé le délai d’attente. L’objet source de données n’est toujours pas initialisé.  
+ **ISSAsynchStatus::Abort** a été appelé sur un objet source de données sur lequel **IDBInitialize::Initialize** a été appelé mais a été par la suite annulé avant l'initialisation ou a dépassé le délai d'attente. L'objet source de données n'est pas encore initialisé.  
   
  **ISSAsynchStatus::Abort** a été appelé sur un ensemble de lignes sur lequel **ITransaction::Commit** ou **ITransaction::Abort** a été appelé précédemment, et l'ensemble de lignes n'a pas survécu à la validation ou à l'abandon et se trouve dans un état passif.  
   
@@ -77,6 +78,6 @@ HRESULT Abort(
  Le fait d'appeler **ISSAsynchStatus::Abort** et de passer une valeur pour *eOperation* autre que DBASYNCHOP_OPEN retourne S_OK. Cela ne signifie pas pour autant que l'opération est terminée ou annulée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution d'opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
+ [Exécution d’opérations asynchrones](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  
   
   
