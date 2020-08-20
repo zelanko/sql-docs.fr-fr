@@ -1,4 +1,5 @@
 ---
+description: Paramètres de base de données secondaire
 title: Paramètres de base de données secondaire | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d6db17f4c7930e03e65412c9addaef5340ec4645
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759011"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471121"
 ---
 # <a name="secondary-database-settings"></a>Paramètres de base de données secondaire
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "85759011"
  Si vous cliquez sur le bouton **Options de restauration** et décidez d'utiliser les dossiers par défaut, il est recommandé de fermer la boîte de dialogue **Options de restauration** . Si vous souhaitez utiliser les emplacements par défaut alors que vous avez déjà indiqué des emplacements autres que ceux-ci, cliquez de nouveau sur **Options de restauration** , effacez le contenu des zones de texte et cliquez sur OK.  
   
  **Oui, restaurer une sauvegarde existante de la base de données primaire dans la base de données secondaire**  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilisera une sauvegarde existante de la base de données primaire pour initialiser la base de données secondaire. Tapez l'emplacement de cette sauvegarde dans la zone **Fichier de sauvegarde** . Si vous avez spécifié le nom d'une nouvelle base de données dans la zone Base de données secondaire, la base de données sera créée dans le cadre de l'opération de restauration.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilisera une sauvegarde existante de la base de données primaire pour initialiser la base de données secondaire. Tapez l'emplacement de cette sauvegarde dans la zone **Fichier de sauvegarde**. Si vous avez spécifié le nom d'une nouvelle base de données dans la zone Base de données secondaire, la base de données sera créée dans le cadre de l'opération de restauration.  
   
  **Fichier de sauvegarde**  
  Tapez le chemin d’accès et le nom de fichier de la sauvegarde complète de la base de données qu’il faut utiliser pour initialiser la base de données secondaire si vous avez choisi **Oui, restaurer une sauvegarde existante de la base de données primaire dans la base de données secondaire**.  
@@ -75,7 +76,7 @@ ms.locfileid: "85759011"
  Affiche le nom du travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour copier les fichiers de sauvegarde du journal des transactions du serveur primaire vers le serveur secondaire. Lors de la création de ce travail, vous pouvez modifier son nom en le tapant dans cette zone.  
   
  **Planification**  
- Affiche la planification actuelle du travail Agent SQL Server utilisé pour copier les fichiers de sauvegarde du journal des transactions du serveur primaire vers le serveur secondaire. Vous pouvez la modifier en cliquant sur **Planification…** .  
+ Affiche la planification actuelle du travail Agent SQL Server utilisé pour copier les fichiers de sauvegarde du journal des transactions du serveur primaire vers le serveur secondaire. Vous pouvez la modifier en cliquant sur **Planification…**.  
   
  **Planification…**  
  Modifiez les paramètres du travail Agent SQL Server utilisé pour copier les sauvegardes du journal des transactions du serveur primaire vers le serveur secondaire.  
@@ -108,7 +109,7 @@ ms.locfileid: "85759011"
  Affiche le nom du travail Agent SQL Server utilisé pour restaurer les fichiers de sauvegarde du journal des transactions dans la base de données secondaire. Lors de la création de ce travail, vous pouvez modifier son nom en le tapant dans cette zone.  
   
  **Planification**  
- Affiche la planification actuelle du travail Agent SQL Server utilisé pour restaurer les fichiers de sauvegarde du journal des transactions dans la base de données secondaire. Vous pouvez la modifier en cliquant sur **Planification…** .  
+ Affiche la planification actuelle du travail Agent SQL Server utilisé pour restaurer les fichiers de sauvegarde du journal des transactions dans la base de données secondaire. Vous pouvez la modifier en cliquant sur **Planification…**.  
   
  **Planification…**  
  Modifiez les paramètres de planification associés au travail de restauration de l'Agent SQL Server.  

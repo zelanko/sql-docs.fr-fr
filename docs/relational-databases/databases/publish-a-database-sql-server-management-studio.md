@@ -1,4 +1,5 @@
 ---
+description: Publier une base de données (SQL Server Management Studio)
 title: Publier une base de données (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4e865731f65b58ab47bbab9a169917f377fa8cd9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 503fe13d4f2d24c1795993bea84f2e04fb4ba0e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728412"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471169"
 ---
 # <a name="publish-a-database-sql-server-management-studio"></a>Publier une base de données (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Vous pouvez utiliser l' **Assistant Générer et publier des scripts** pour publier une base de données entière ou des objets de base de données individuels sur un fournisseur d'hébergement Web.  
+   Vous pouvez utiliser **l’Assistant Générer et publier des scripts** pour publier une base de données entière ou des objets de base de données individuels sur un fournisseur d’hébergement web.  
   
 > [!NOTE]  
 >  Les fonctionnalités décrites dans cette rubrique étaient fournies par l'Assistant Publication de base de données. La fonctionnalité de publication a été ajoutée à l'Assistant Générer et publier des scripts, et l'Assistant Publication de base de données a été supprimé.  
@@ -41,7 +42,7 @@ ms.locfileid: "85728412"
   
     2.  Pour spécifier des options d'édition avancées, sélectionnez le bouton **Avancé** dans la section **Publier sur le service Web** .  
   
-4.  Dans la page **Résumé** , vérifiez vos sélections. Cliquez sur **Précédent** pour modifier vos sélections. Cliquez sur **Suivant** pour publier les objets que vous avez sélectionnés.  
+4.  Dans la page **Résumé**, vérifiez vos sélections. Cliquez sur **Précédent** pour modifier vos sélections. Cliquez sur **Suivant** pour publier les objets que vous avez sélectionnés.  
   
 5.  Dans la page **Enregistrer ou publier des scripts** , surveillez la progression de la publication.  
 
