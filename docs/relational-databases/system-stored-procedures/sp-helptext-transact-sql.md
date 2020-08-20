@@ -1,4 +1,5 @@
 ---
+description: sp_helptext (Transact-SQL)
 title: sp_helptext (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ae5b287b7740566681da141ecc2225426a7e6c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d8b8d14449a266022506c13c1c2b1cd6c5fad5b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493180"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Affiche la définition d'une règle définie par l'utilisateur, d'une procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)] par défaut et non chiffrée, d'une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur, d'un déclencheur, d'une colonne calculée, d'une contrainte CHECK, d'une vue ou d'un objet système tel qu'une procédure stockée système.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,9 +41,9 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'name'`Nom qualifié ou non qualifié d’un objet défini par l’utilisateur et ayant une portée de schéma. Les guillemets ne sont nécessaires que si un objet qualifié est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. Cet objet doit exister dans la base de données active. *Name* est de type **nvarchar (776)**, sans valeur par défaut.  
+`[ @objname = ] 'name'` Nom qualifié ou non qualifié d’un objet défini par l’utilisateur et ayant une portée de schéma. Les guillemets ne sont nécessaires que si un objet qualifié est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. Cet objet doit exister dans la base de données active. *Name* est de type **nvarchar (776)**, sans valeur par défaut.  
   
-`[ @columnname = ] 'computed_column_name'`Nom de la colonne calculée pour laquelle afficher les informations de définition. La table qui contient la colonne doit être spécifiée en tant que *nom*. *column_name* est de **type sysname**, sans valeur par défaut.  
+`[ @columnname = ] 'computed_column_name'` Nom de la colonne calculée pour laquelle afficher les informations de définition. La table qui contient la colonne doit être spécifiée en tant que *nom*. *column_name* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -51,13 +52,13 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**Texte**|**nvarchar(255)**|Définition de l'objet|  
+|**Text**|**nvarchar(255)**|Définition de l'objet|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  sp_helptext affiche la définition utilisée pour créer un objet dans plusieurs lignes. Chaque ligne contient 255 caractères de la définition [!INCLUDE[tsql](../../includes/tsql-md.md)]. La définition se trouve dans la colonne de **définition** de l’affichage catalogue [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle **public** . Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION.  
+ Nécessite l'appartenance au rôle **public** . Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION.  
   
 ## <a name="examples"></a>Exemples  
   

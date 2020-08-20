@@ -1,4 +1,5 @@
 ---
+description: sp_replrestart (Transact-SQL)
 title: sp_replrestart (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 51ef0fa1c24cd8bfb8ee6eaeab06c856601faee7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aebe6c9dd60c697cd986dfc1412430821230130d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640039"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493091"
 ---
 # <a name="sp_replrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85640039"
 > [!IMPORTANT]  
 >  **sp_replrestart** est une procédure stockée de réplication interne qui ne doit être utilisée que lors de la restauration d’une base de données publiée dans une topologie de réplication transactionnelle, comme indiqué dans la rubrique [stratégies de sauvegarde et de restauration de la réplication transactionnelle et d’instantané](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ sp_replrestart
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_replrestart** est utilisé lorsque la valeur du numéro séquentiel dans le journal (LSN) la plus élevée sur le serveur de distribution ne correspond pas à la valeur LSN la plus élevée sur le serveur de publication.  
   
 ## <a name="permissions"></a>Autorisations  

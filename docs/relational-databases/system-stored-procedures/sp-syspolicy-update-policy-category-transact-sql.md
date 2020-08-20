@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_update_policy_category (Transact-SQL)
 title: sp_syspolicy_update_policy_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 6b6413c2-7a3b-4eff-91d9-5db2011869d6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 097b18fcaa15d0e6581c3e50389eb0c48b983ba5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 911dfde6ac3cb10ec67e788f7d8937e44ca6727e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891428"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492954"
 ---
 # <a name="sp_syspolicy_update_policy_category-transact-sql"></a>sp_syspolicy_update_policy_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Met à jour la configuration d'une catégorie de stratégie pour qu'elle autorise, ou non, des abonnements à la base de données. Si l'abonnement est autorisé, la catégorie de stratégie s'applique à toutes les bases de données.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,11 +41,11 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom de la catégorie de stratégie. *Name* est de **type sysname**et doit être spécifié si *policy_category_id* a la valeur null.  
+`[ @name = ] 'name'` Nom de la catégorie de stratégie. *Name* est de **type sysname**et doit être spécifié si *policy_category_id* a la valeur null.  
   
-`[ @policy_category_id = ] policy_category_id`Identificateur de la catégorie de stratégie. *policy_category_id* est de **type int**et doit être spécifié si *Name* a la valeur null.  
+`[ @policy_category_id = ] policy_category_id` Identificateur de la catégorie de stratégie. *policy_category_id* est de **type int**et doit être spécifié si *Name* a la valeur null.  
   
-`[ @mandate_database_subscriptions = ] mandate_database_subscriptions`Détermine si l’abonnement à la base de données est autorisé pour la catégorie de stratégie. *mandate_database_subscriptions* est une valeur de **bit** , avec NULL comme valeur par défaut. Vous pouvez utiliser l'une des valeurs suivantes :  
+`[ @mandate_database_subscriptions = ] mandate_database_subscriptions` Détermine si l’abonnement à la base de données est autorisé pour la catégorie de stratégie. *mandate_database_subscriptions* est une valeur de **bit** , avec NULL comme valeur par défaut. Vous pouvez utiliser l'une des valeurs suivantes :  
   
 -   0 = Non autorisé  
   
@@ -53,7 +54,7 @@ sp_syspolicy_update_policy_category { [ @name = ] 'name' | [ @policy_category_id
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_update_policy_category dans le contexte de la base de données système msdb.  
   
  Vous devez spécifier une valeur pour le *nom* ou pour *policy_category_id*. Les deux ne peuvent pas être NULL. Pour obtenir ces valeurs, interrogez la vue système msdb.dbo.syspolicy_policy_categories.  

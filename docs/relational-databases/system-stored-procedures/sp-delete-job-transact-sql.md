@@ -1,4 +1,5 @@
 ---
+description: sp_delete_job (Transact-SQL)
 title: sp_delete_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8e4abbb2620931f8d58ced30ae4658a9c0d15bb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f11bf53f9663893c2d678e7a7af904b70b4fc1cc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864107"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493337"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un travail.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,20 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] job_id`Numéro d’identification du travail à supprimer. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail à supprimer. *job_id* est de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail à supprimer. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail à supprimer. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *Job_id* ou *job_name*doit être spécifié ; les deux ne peuvent pas être spécifiés.  
   
-`[ @originating_server = ] 'server'`Pour une utilisation interne.  
+`[ @originating_server = ] 'server'` Pour une utilisation interne.  
   
-`[ @delete_history = ] delete_history`Spécifie s’il faut supprimer l’historique du travail. *delete_history* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_history* est **1**, l’historique des travaux du travail est supprimé. Lorsque *delete_history* a la **valeur 0**, l’historique des travaux n’est pas supprimé.  
+`[ @delete_history = ] delete_history` Spécifie s’il faut supprimer l’historique du travail. *delete_history* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_history* est **1**, l’historique des travaux du travail est supprimé. Lorsque *delete_history* a la **valeur 0**, l’historique des travaux n’est pas supprimé.  
   
  Notez que lorsqu’un travail est supprimé et que l’historique n’est pas supprimé, les informations d’historique du travail ne s’affichent pas dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] historique des travaux de l’interface graphique de l’agent, mais les informations se trouvent toujours dans la table **sysjobhistory** de la base de données **msdb** .  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule`Spécifie s’il faut supprimer les planifications attachées à ce travail s’ils ne sont attachés à aucun autre travail. *delete_unused_schedule* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_unused_schedule* a la valeur **1**, les planifications associées à ce travail sont supprimées si aucune autre tâche ne fait référence à la planification. Lorsque *delete_unused_schedule* a la **valeur 0**, les planifications ne sont pas supprimées.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Spécifie s’il faut supprimer les planifications attachées à ce travail s’ils ne sont attachés à aucun autre travail. *delete_unused_schedule* est de **bits**, avec **1**comme valeur par défaut. Lorsque *delete_unused_schedule* a la valeur **1**, les planifications associées à ce travail sont supprimées si aucune autre tâche ne fait référence à la planification. Lorsque *delete_unused_schedule* a la **valeur 0**, les planifications ne sont pas supprimées.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

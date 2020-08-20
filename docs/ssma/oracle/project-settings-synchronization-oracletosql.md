@@ -1,4 +1,5 @@
 ---
+description: Paramètres du projet (Synchronisation) (OracleToSQL)
 title: Paramètres du projet (synchronisation) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 697bf746f438d45731e78c0c39d28677c3be6ddd
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 6b27143bca2e5b2a2ef9d844fc5f2fc8208734a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87933203"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492374"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Paramètres du projet (Synchronisation) (OracleToSQL)
 La page synchronisation de la boîte de dialogue **paramètres du projet** contient des paramètres qui personnalisent la manière dont SSMA charge et actualise les objets de base de données, tels que les tables et les procédures stockées, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

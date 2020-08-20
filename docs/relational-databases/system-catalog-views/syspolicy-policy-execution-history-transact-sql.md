@@ -1,4 +1,5 @@
 ---
+description: syspolicy_policy_execution_history (Transact-SQL)
 title: syspolicy_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9e6f8200b1c49bfe5e4977dc1e8f093537fc950e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 499f67e29a9d6a4205dd04acc325bf10bc917fc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493810"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85900575"
 |exception_message|**nvarchar(max)**|Message généré par l'exception si celle-ci se produit.|  
 |exception|**nvarchar(max)**|Description de l'exception si celle-ci se produit.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La vue [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) contient des détails connexes sur les cibles de la stratégie et les expressions de condition testées.  
   
 ## <a name="permissions"></a>Autorisations  

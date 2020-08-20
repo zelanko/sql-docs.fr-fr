@@ -1,4 +1,5 @@
 ---
+description: sp_query_store_force_plan (Transact-SQL)
 title: sp_query_store_force_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
@@ -21,12 +22,12 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6aeea1c726e190945095b478e960266908019e0b
-ms.sourcegitcommit: 95be98587f6a3730ca75a77676dd952c45e4f53a
+ms.openlocfilehash: 3aa708d4af93449e2efe3d26cb9b92496c497942
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88046805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493052"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "88046805"
   
  Lorsqu’un plan est forcé pour une requête donnée, chaque fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu’il rencontre une requête, il tente de forcer le plan dans l’optimiseur de requête. Si le forçage de plan échoue, un événement étendu est déclenché et l’optimiseur de requête est invité à optimiser de manière normale.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,9 +45,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @query_id = ] query_id`ID de la requête. *query_id* est de type **bigint**, sans valeur par défaut.  
+`[ @query_id = ] query_id` ID de la requête. *query_id* est de type **bigint**, sans valeur par défaut.  
   
-`[ @plan_id = ] plan_id`ID du plan de requête à forcer. *plan_id* est de type **bigint**, sans valeur par défaut.  
+`[ @plan_id = ] plan_id` ID du plan de requête à forcer. *plan_id* est de type **bigint**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

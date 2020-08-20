@@ -1,4 +1,5 @@
 ---
+description: sp_help_fulltext_system_components (Transact-SQL)
 title: sp_help_fulltext_system_components (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,19 +19,19 @@ ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6239ac1bb413d2291b94e7ac05b445c770e5f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0686017e612b5d9d7d2c1f932321a965b7f1448a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493203"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Retourne des informations sur les analyseurs lexicaux, le filtre et les gestionnaires de protocoles. **sp_help_fulltext_system_components** retourne également une liste d’identificateurs de bases de données et de catalogues de texte intégral qui ont utilisé le composant spécifié.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +46,7 @@ sp_help_fulltext_system_components
  'all'  
  Retourne des informations pour tous les composants de recherche en texte intégral.  
   
-`[ @component_type = ] component_type`Spécifie le type de composant. *component_type* peut prendre l’une des valeurs suivantes :  
+`[ @component_type = ] component_type` Spécifie le type de composant. *component_type* peut prendre l’une des valeurs suivantes :  
   
 -   **analyseur lexical**  
   
@@ -57,7 +58,7 @@ sp_help_fulltext_system_components
   
  Si vous spécifiez un chemin d'accès complet, *param* doit également être spécifié avec le chemin d'accès complet à la bibliothèque de liens dynamiques (DLL) du composant, sans quoi un message d'erreur est retourné.  
   
-`[ @param = ] param`Selon le type de composant, il s’agit de l’un des éléments suivants : un identificateur de paramètres régionaux (LCID), l’extension de fichier avec le préfixe « . », le nom complet du composant du gestionnaire de protocole ou le chemin d’accès complet à la DLL du composant.  
+`[ @param = ] param` Selon le type de composant, il s’agit de l’un des éléments suivants : un identificateur de paramètres régionaux (LCID), l’extension de fichier avec le préfixe « . », le nom complet du composant du gestionnaire de protocole ou le chemin d’accès complet à la DLL du composant.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (succès) ou 1 (échec)  
@@ -70,7 +71,7 @@ sp_help_fulltext_system_components
 |**componenttype**|**sysname**|Type de composant. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> Filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
 |**componentname**|**sysname**|Nom du composant.|  
 |**clsid**|**uniqueidentifier**|Identificateur de classe du composant.|  
-|**FullPath**|**nvarchar(256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre du rôle serveur fixe **ServerAdmin** .|  
+|**FullPath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre du rôle serveur fixe **ServerAdmin** .|  
 |**version**|**nvarchar(30)**|Numéro de version du composant.|  
 |**fécule**|**sysname**|Nom du fabricant du composant.|  
   
@@ -84,7 +85,7 @@ sp_help_fulltext_system_components
 ## <a name="permissions"></a>Autorisations  
  Requiert l’appartenance au rôle **public** ; Toutefois, les utilisateurs peuvent uniquement afficher des informations sur les catalogues de texte intégral pour lesquels ils disposent de l’autorisation VIEW DEFINITION. Seuls les membres du rôle de serveur fixe **serveradmin** peuvent voir les valeurs de la colonne **fullpath** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette méthode est particulièrement importante lors de la préparation d'une mise à niveau. Exécutez la procédure stockée dans une base de données spécifique et utilisez le résultat afin de déterminer si un catalogue sera affecté par la mise à niveau.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,4 +1,5 @@
 ---
+description: Types de descripteurs
 title: Types de descripteurs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9a6c7b55194eb61c1a909ced2296e4ad2050b674
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ef6bcaa737e26a4a3125e980f6f6bf3c3cff070
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491344"
 ---
 # <a name="types-of-descriptors"></a>Types de descripteurs
 Un descripteur est utilisé pour décrire l’un des éléments suivants :  

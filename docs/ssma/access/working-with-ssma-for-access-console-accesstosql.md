@@ -1,4 +1,5 @@
 ---
+description: Utilisation de SSMA pour accéder à la console (AccessToSQL)
 title: Utilisation de la console SSMA pour Access (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -10,12 +11,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: d46435bcf975036fc92926f50651dd5eff7c8080
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2bab82a2fe9cc10b100cc49a4f18c1aa0bfaacff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937301"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492502"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Utilisation de SSMA pour accéder à la console (AccessToSQL)
 Assistant Migration Microsoft SQL Server (SSMA) pour l’accès est désormais accessible par le biais d’une application console à partir de la ligne de commande. Les fichiers de script constituent l’entrée de l’application pour l’exécution des commandes. En tant qu’application console, SSMA permet l’interfaçage au niveau du script, réduit le cycle de migration et met à l’échelle l’effort de migration.  
@@ -34,7 +35,7 @@ Les sujets abordés dans cette section sont les suivants :
 |[Exécution de la console SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)|Décrit les commandes du fichier de script pour exécuter l’application console SSMA.|  
 |[Utilisation de l’exemple de script de console FilesExecuting la console SSMA &#40;AccessToSQL&#41;](../../ssma/access/working-sample-console-script-filesexecuting-ssma-console-accesstosql.md)|Décrit la façon de personnaliser facilement les scripts qui ont été fournis dans les exemples de fichiers en même temps que le produit.|  
 |[Gestion des mots de passe &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md)|Décrit le chiffrement et le déchiffrement de mot de passe, ainsi que l’importation/exportation d’informations de mot de passe.|  
-|[Génération de rapports &#40;&#41;AccessToSQL](../../ssma/access/generating-reports-accesstosql.md)|Répertorie les commandes permettant de générer des rapports.|  
+|[Génération de rapports &#40;&#41;AccessToSQL ](../../ssma/access/generating-reports-accesstosql.md)|Répertorie les commandes permettant de générer des rapports.|  
 |[Résolution des problèmes &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Fournit de brèves informations sur la résolution des problèmes de migration.|  
   
 ## <a name="see-also"></a>Voir aussi  

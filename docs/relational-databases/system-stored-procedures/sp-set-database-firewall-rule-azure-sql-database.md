@@ -1,4 +1,5 @@
 ---
+description: sp_set_database_firewall_rule (Azure SQL Database)
 title: sp_set_database_firewall_rule
 titleSuffix: Azure SQL Database
 ms.date: 08/04/2017
@@ -21,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 48feafe5dddf3bf2e14e52146ceb99f282f8990f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b43c386f803c1d9fea8a1e7645d1764ece3a7eef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720174"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493032"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -44,18 +45,18 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] [N]'name'`Nom utilisé pour décrire et distinguer le paramètre de pare-feu au niveau de la base de données. *Name* est de type **nvarchar (128)** sans valeur par défaut. L’identificateur Unicode `N` est facultatif pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] . 
+`[ @name = ] [N]'name'` Nom utilisé pour décrire et distinguer le paramètre de pare-feu au niveau de la base de données. *Name* est de type **nvarchar (128)** sans valeur par défaut. L’identificateur Unicode `N` est facultatif pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] . 
   
-`[ @start_ip_address = ] 'start_ip_address'`Adresse IP la plus basse dans la plage du paramètre de pare-feu au niveau de la base de données. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`. *start_ip_address* est de type **varchar (50)** sans valeur par défaut.  
+`[ @start_ip_address = ] 'start_ip_address'` Adresse IP la plus basse dans la plage du paramètre de pare-feu au niveau de la base de données. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`. *start_ip_address* est de type **varchar (50)** sans valeur par défaut.  
   
-`[ @end_ip_address = ] 'end_ip_address'`Adresse IP la plus élevée dans la plage du paramètre de pare-feu au niveau de la base de données. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`. *end_ip_address* est de type **varchar (50)** sans valeur par défaut.  
+`[ @end_ip_address = ] 'end_ip_address'` Adresse IP la plus élevée dans la plage du paramètre de pare-feu au niveau de la base de données. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`. *end_ip_address* est de type **varchar (50)** sans valeur par défaut.  
   
  Le tableau suivant montre les arguments et les options pris en charge dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .  
   
 > [!NOTE]  
 >  Les tentatives de connexion Azure sont autorisées lorsque ce champ et le champ *start_ip_address* est égal à `0.0.0.0` .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les noms des paramètres de pare-feu au niveau base de données doivent être uniques. Si le nom du paramètre de pare-feu au niveau base de données spécifié pour la procédure stockée existe déjà dans le tableau des paramètres de pare-feu au niveau base de données, les adresses IP de début et de fin sont mises à jour. Sinon, un nouveau paramètre de pare-feu au niveau base de données est créé.  
   
  Lorsque vous ajoutez un paramètre de pare-feu au niveau de la base de données alors que les adresses IP de début et de fin sont égales à `0.0.0.0` , vous activez l’accès à votre base de données sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur à partir de n’importe quelle ressource Azure. Spécifiez une valeur pour le paramètre de *nom* qui vous aidera à vous souvenir de la fonction du paramètre de pare-feu.  

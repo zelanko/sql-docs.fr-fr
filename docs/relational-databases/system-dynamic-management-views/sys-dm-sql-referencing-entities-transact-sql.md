@@ -1,4 +1,5 @@
 ---
+description: sys.dm_sql_referencing_entities (Transact-SQL)
 title: sys. dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 03848d99d6af31e1ceb04e10f97af26fac58011f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943058"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493580"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,15 +61,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- `schema_name.referenced_entity_name`Nom de l’entité référencée.  
+ `schema_name.referenced_entity_name` Nom de l’entité référencée.  
   
  `schema_name` est requis, sauf lorsque la classe référencée est PARTITION_FUNCTION.  
   
- `schema_name.referenced_entity_name`est **de type nvarchar (517)**.  
+ `schema_name.referenced_entity_name` est **de type nvarchar (517)**.  
   
- `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`Est la classe de l’entité référencée. Une seule classe peut être spécifiée par instruction.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }` Est la classe de l’entité référencée. Une seule classe peut être spécifiée par instruction.  
   
- `<referenced_class>`est de type **nvarchar**(60).  
+ `<referenced_class>` est de type **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -99,7 +100,7 @@ sys.dm_sql_referencing_entities (
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table|Oui*|Oui|  
+|Table de charge de travail|Oui*|Oui|  
 |Vue|Oui|Oui|  
 |Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
 |Procédure stockée CLR|Non|Oui|  
@@ -116,7 +117,7 @@ sys.dm_sql_referencing_entities (
 |Collection de schémas XML|Non|Oui|  
 |Fonction de partition|Non|Oui|  
   
- \*Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
+ \* Une table est suivie en tant qu’entité de référence uniquement lorsqu’elle fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, un type défini par l’utilisateur ou une collection de schémas XML dans la définition d’une colonne calculée, d’une contrainte CHECK ou d’une contrainte default.  
   
  ** Les procédures stockées numérotées avec une valeur entière supérieure à 1 ne sont pas suivies en tant qu'entité de référence ou référencée.  
   

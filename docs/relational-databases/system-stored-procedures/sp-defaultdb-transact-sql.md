@@ -1,4 +1,5 @@
 ---
+description: sp_defaultdb (Transact-SQL)
 title: sp_defaultdb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c153f9de2f5f1db662c851926a83d51ed4b8b515
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 649f107e29f68d03e47daa07251a2da40a4c2e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493350"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85865132"
   Modifie la base de données par défaut pour une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @loginame = ] 'login'`Nom de la connexion. *login* est de **type sysname**, sans valeur par défaut. la *connexion* peut être une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion existante ou un utilisateur ou un groupe Windows. Si la connexion de l'utilisateur ou du groupe Windows n'existe pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle est automatiquement ajoutée.  
+`[ @loginame = ] 'login'` Nom de la connexion. *login* est de **type sysname**, sans valeur par défaut. la *connexion* peut être une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion existante ou un utilisateur ou un groupe Windows. Si la connexion de l'utilisateur ou du groupe Windows n'existe pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle est automatiquement ajoutée.  
   
-`[ @defdb = ] 'database'`Nom de la nouvelle base de données par défaut. *Database est de* **type sysname**, sans valeur par défaut. la *base de données* doit déjà exister.  
+`[ @defdb = ] 'database'` Nom de la nouvelle base de données par défaut. *Database est de* **type sysname**, sans valeur par défaut. la *base de données* doit déjà exister.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -65,7 +66,7 @@ EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   

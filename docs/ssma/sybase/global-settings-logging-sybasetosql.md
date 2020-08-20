@@ -1,4 +1,5 @@
 ---
+description: Paramètres globaux (Journalisation) (SybaseToSQL)
 title: Paramètres globaux (journalisation) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 10a0b901a8e3681e4d74eccbe31e74119ad1ad6e
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: bc71ae0d44048d656bfba1a81ba19b9cb0ee0269
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931614"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492264"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Paramètres globaux (Journalisation) (SybaseToSQL)
 Utilisez la boîte de dialogue **paramètres globaux** pour spécifier les paramètres de journalisation pour SSMA. En règle générale, vous pouvez modifier ces paramètres uniquement lorsque vous travaillez avec le support technique.  

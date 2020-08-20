@@ -1,4 +1,5 @@
 ---
+description: sp_delete_category (Transact-SQL)
 title: sp_delete_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6962e4bb4387cad22e16d62176ced10ad8e82205
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1d3441ae51bd674f41cce42fe17393bbcb6983df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493335"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85864348"
   Supprime la catégorie spécifiée de travaux, alertes ou opérateurs du serveur courant.  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'`Classe de la catégorie. la classe est de *type* **varchar (8)**, sans valeur par défaut et doit avoir l’une des valeurs suivantes.  
+`[ @class = ] 'class'` Classe de la catégorie. la classe est de *type* **varchar (8)**, sans valeur par défaut et doit avoir l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -48,7 +49,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**NOTIFICATION**|Supprime une catégorie d'alertes.|  
 |**AND**|Supprime une catégorie d'opérateurs.|  
   
-`[ @name = ] 'name'`Nom de la catégorie à supprimer. *Name* est de **type sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Nom de la catégorie à supprimer. *Name* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

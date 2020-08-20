@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_wait_stats (Azure SQL Database)
 title: sys. dm_db_wait_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c8932754b69fab7086f0eb6a98d979e93669daff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493746"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85677582"
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 -   Cette vue de gestion dynamique affiche des données uniquement pour la base de données active.  
   
@@ -62,7 +63,7 @@ ms.locfileid: "85677582"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
-##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Types d’attente  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a> Types d’attente  
  Resource waits  
  Les attentes de ressource se produisent lorsque des demandes de travail accèdent à une ressource qui n'est pas disponible parce qu'elle est en cours d'utilisation par un autre travail ou qu'elle n'est pas encore disponible. Ces attentes sont par exemple des attentes de verrous, de verrous internes, de réseau et d'E/S de disque. Les attentes de verrou (interne ou externe) sont des attentes sur des objets de synchronisation.  
   

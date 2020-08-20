@@ -1,4 +1,5 @@
 ---
+description: sp_adddistributor (Transact-SQL)
 title: sp_adddistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2020
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: af202181425b751d684d833946a52df036633afb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a1aa8f5a5ebd86c8ce1ea53d5ba8cf454d17f5e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760231"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493501"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée une entrée dans la table [sys.sys](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) Servers (le cas échéant), marque l’entrée de serveur en tant que serveur de distribution et stocke les informations de propriété. Cette procédure stockée est exécutée sur la base de données master du serveur de distribution pour enregistrer et marquer le serveur en tant que serveur de distribution. Dans le cas d'un serveur de distribution distant, la procédure stockée est également exécutée sur le serveur de publication à partir de la base de données master.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,14 +43,14 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @distributor = ] 'distributor'`Nom du serveur de distribution. *Distributor* est de **type sysname**, sans valeur par défaut. Ce paramètre est uniquement utilisé lors de la configuration d'un serveur de distribution distant. Elle ajoute des entrées pour les propriétés du serveur de distribution dans la base de données **msdb. Table MSdistributor** .  
+`[ @distributor = ] 'distributor'` Nom du serveur de distribution. *Distributor* est de **type sysname**, sans valeur par défaut. Ce paramètre est uniquement utilisé lors de la configuration d'un serveur de distribution distant. Elle ajoute des entrées pour les propriétés du serveur de distribution dans la base de données **msdb. Table MSdistributor** .  
 
 > [!NOTE]
 > Le nom du serveur peut être spécifié sous la forme `<Hostname>,<PortNumber>` . Vous devrez peut-être spécifier le numéro de port de votre connexion lorsque SQL Server est déployé sur Linux ou Windows avec un port personnalisé, et que le service Browser est désactivé.
 
-`[ @heartbeat_interval = ] heartbeat_interval`Nombre maximal de minutes pendant lesquelles un agent peut se connecter sans enregistrer de message de progression. *heartbeat_interval* est de **type int**, avec une valeur par défaut de 10 minutes. Un travail de l'Agent SQL Server est créé et s'exécute pendant cet intervalle de temps pour contrôler l'état des agents de réplication en cours d'exécution.  
+`[ @heartbeat_interval = ] heartbeat_interval` Nombre maximal de minutes pendant lesquelles un agent peut se connecter sans enregistrer de message de progression. *heartbeat_interval* est de **type int**, avec une valeur par défaut de 10 minutes. Un travail de l'Agent SQL Server est créé et s'exécute pendant cet intervalle de temps pour contrôler l'état des agents de réplication en cours d'exécution.  
   
-`[ @password = ] 'password']`Mot de passe de la connexion **distributor_admin** . *Password* est de **type sysname**, avec NULL comme valeur par défaut. Si le mot de passe est NULL ou est une chaîne vide, une valeur aléatoire est redéfinie pour lui. Le mot de passe doit être configuré lors de l'ajout du premier serveur de distribution distant. **distributor_admin** connexion et le *mot de passe* sont stockés pour l’entrée de serveur lié utilisée pour une connexion RPC du serveur de *distribution* , y compris les connexions locales. Si le serveur de *distribution* est local, le mot de passe de **distributor_admin** est défini sur une nouvelle valeur. Pour les serveurs de publication disposant d’un serveur de distribution distant, la même valeur de *mot de passe* doit être spécifiée lors de l’exécution de **sp_adddistributor** sur le serveur de publication et le serveur de distribution. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) peut être utilisé pour modifier le mot de passe du serveur de distribution.  
+`[ @password = ] 'password']` Mot de passe de la connexion **distributor_admin** . *Password* est de **type sysname**, avec NULL comme valeur par défaut. Si le mot de passe est NULL ou est une chaîne vide, une valeur aléatoire est redéfinie pour lui. Le mot de passe doit être configuré lors de l'ajout du premier serveur de distribution distant. **distributor_admin** connexion et le *mot de passe* sont stockés pour l’entrée de serveur lié utilisée pour une connexion RPC du serveur de *distribution* , y compris les connexions locales. Si le serveur de *distribution* est local, le mot de passe de **distributor_admin** est défini sur une nouvelle valeur. Pour les serveurs de publication disposant d’un serveur de distribution distant, la même valeur de *mot de passe* doit être spécifiée lors de l’exécution de **sp_adddistributor** sur le serveur de publication et le serveur de distribution. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) peut être utilisé pour modifier le mot de passe du serveur de distribution.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
@@ -73,7 +74,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)  
   
   

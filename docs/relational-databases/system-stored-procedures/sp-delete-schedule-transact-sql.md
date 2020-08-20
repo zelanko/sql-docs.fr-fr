@@ -1,4 +1,5 @@
 ---
+description: sp_delete_schedule (Transact-SQL)
 title: sp_delete_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8fe6f851ffb3ab15781d5a2ffbbcaca3bf15829f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0746a5039d27cb03edd379b5dee9b69525125156
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862796"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493297"
 ---
 # <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime une planification.  
  
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,15 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @schedule_id = ] schedule_id`Numéro d’identification de la planification à supprimer. *schedule_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @schedule_id = ] schedule_id` Numéro d’identification de la planification à supprimer. *schedule_id* est de **type int**, avec NULL comme valeur par défaut.  
   
 > **Remarque :** *Schedule_id* ou *schedule_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @schedule_name = ] 'schedule_name'`Nom de la planification à supprimer. *schedule_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @schedule_name = ] 'schedule_name'` Nom de la planification à supprimer. *schedule_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > **Remarque :** *Schedule_id* ou *schedule_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @force_delete = ] force_delete`Spécifie si la procédure doit échouer si la planification est attachée à un travail. *Force_delete* est de bit, avec **0**comme valeur par défaut. Lorsque *force_delete* a la **valeur 0**, la procédure stockée échoue si la planification est attachée à un travail. Lorsque *force_delete* a la valeur **1**, la planification est supprimée, que la planification soit jointe ou non à un travail.  
+`[ @force_delete = ] force_delete` Spécifie si la procédure doit échouer si la planification est attachée à un travail. *Force_delete* est de bit, avec **0**comme valeur par défaut. Lorsque *force_delete* a la **valeur 0**, la procédure stockée échoue si la planification est attachée à un travail. Lorsque *force_delete* a la valeur **1**, la planification est supprimée, que la planification soit jointe ou non à un travail.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

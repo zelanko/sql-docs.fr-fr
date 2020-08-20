@@ -1,4 +1,5 @@
 ---
+description: Arguments et propriétés de procédures stockées d'index spatial
 title: Arguments et propriétés des procédures stockées d’index spatial | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3001731959da3b253ee10f43c333b0c2a8b85380
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9525434eb17f33700f819ef45a8be4392bbfd69a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492871"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Procédures stockées d’index spatial-arguments et propriétés
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette rubrique documente les arguments et propriétés pour les procédures stockées d'index spatial.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
  Pour la syntaxe de procédures stockées d'index spatial spécifiques, consultez les rubriques suivantes :  
@@ -40,13 +41,13 @@ ms.locfileid: "85626592"
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tabname = ] 'tabname'`Nom qualifié ou non qualifié de la table pour laquelle l’index spatial a été spécifié.  
+`[ @tabname = ] 'tabname'` Nom qualifié ou non qualifié de la table pour laquelle l’index spatial a été spécifié.  
   
  Les guillemets ne sont nécessaires que si une une table qualifiée est spécifiée. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *tabname* est de type **nvarchar**(776), sans valeur par défaut.  
   
-`[ @indexname = ] 'indexname'`Nom de l’index spatial spécifié. *IndexName* est de **type sysname** et n’a pas de valeur par défaut.  
+`[ @indexname = ] 'indexname'` Nom de l’index spatial spécifié. *IndexName* est de **type sysname** et n’a pas de valeur par défaut.  
   
-`[ @verboseoutput = ] 'verboseoutput'`Plage de noms et de valeurs de propriété à retourner.  
+`[ @verboseoutput = ] 'verboseoutput'` Plage de noms et de valeurs de propriété à retourner.  
   
  0 = propriétés principales  
   
@@ -54,9 +55,9 @@ ms.locfileid: "85626592"
   
  *verboseoutput* est de **type tinyint** et n’a pas de valeur par défaut.  
   
-`[ @query_sample = ] 'query_sample'`Est un exemple de requête représentative qui peut être utilisé pour tester l’utilité de l’index. Il peut s'agir d'un objet représentatif ou d'une fenêtre de requête. *query_sample* est une **géométrie** sans valeur par défaut.  
+`[ @query_sample = ] 'query_sample'` Est un exemple de requête représentative qui peut être utilisé pour tester l’utilité de l’index. Il peut s'agir d'un objet représentatif ou d'une fenêtre de requête. *query_sample* est une **géométrie** sans valeur par défaut.  
   
-`[ @xml_output = ] 'xml_output'`Paramètre de sortie qui retourne le jeu de résultats dans un fragment XML. *xml_output* est de **XML** sans valeur par défaut.  
+`[ @xml_output = ] 'xml_output'` Paramètre de sortie qui retourne le jeu de résultats dans un fragment XML. *xml_output* est de **XML** sans valeur par défaut.  
   
 ## <a name="properties"></a>Propriétés  
  Définissez ** \@ verboseoutput** = 0 pour retourner les propriétés principales, comme indiqué dans le tableau ci-dessous. ** \@ verboseoutput** > 0 pour retourner toutes les propriétés de l’index spatial.  
@@ -300,7 +301,7 @@ ms.locfileid: "85626592"
 ## <a name="permissions"></a>Autorisations  
  L’utilisateur doit être membre du rôle **public** . Nécessite une autorisation READ ACCESS sur le serveur et l'objet. Cela s'applique à toutes les procédures stockées de l'index spatial.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les propriétés qui contiennent des valeurs NULL ne sont pas incluses dans le jeu de retour.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLForeignKeys
 title: SQLForeignKeys fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5f2769fb378a5ee989fb6a0351537edb3de03469
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 802153837d53c6886b44511fbdffe6efa6b83281
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491302"
 ---
 # <a name="sqlforeignkeys-function"></a>Fonction SQLForeignKeys
 **Conformité**  
@@ -124,7 +125,7 @@ SQLRETURN SQLForeignKeys(
 |24 000|État de curseur non valide|Un curseur a été ouvert sur *StatementHandle*, et **SQLFetch** ou **SQLFetchScroll** ont été appelés. Cette erreur est retournée par le gestionnaire de pilotes si **SQLFetch** ou **SQLFetchScroll** n’a pas retourné SQL_NO_DATA, et est retourné par le pilote si **sqlfetch** ou **SQLFetchScroll** a retourné SQL_NO_DATA.<br /><br /> Un curseur a été ouvert sur le *StatementHandle*, mais **SQLFetch** ou **SQLFetchScroll** n’a pas été appelé.|  
 |40001|Échec de la sérialisation|La transaction a été restaurée en raison d’un blocage de ressource avec une autre transaction.|  
 |40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*, puis la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY009|Utilisation non valide d’un pointeur null|(DM) les arguments *PKTableName* et *FKTableName* ont tous deux des pointeurs null.<br /><br /> L’attribut d’instruction SQL_ATTR_METADATA_ID a été défini sur SQL_TRUE, l’argument *FKCatalogName* ou *PKCatalogName* était un pointeur null, et l' *infotype* SQL_CATALOG_NAME retourne que les noms de catalogue sont pris en charge.<br /><br /> (DM) l’attribut d’instruction SQL_ATTR_METADATA_ID a été défini sur SQL_TRUE, et l’argument *FKSchemaName*, *PKSchemaName*, *FKTableName*ou *PKTableName* était un pointeur null.|  
@@ -148,7 +149,7 @@ SQLRETURN SQLForeignKeys(
   
  Si \* *FKTableName* contient un nom de table, **SQLForeignKeys** retourne un jeu de résultats qui contient toutes les clés étrangères de la table spécifiée qui pointent vers les clés primaires d’autres tables, et les clés primaires dans les autres tables auxquelles ils font référence. La liste de clés étrangères dans la table spécifiée ne contient pas de clés étrangères qui font référence à des contraintes uniques dans d’autres tables.  
   
- Si \* *PKTableName* et \* *FKTableName* contiennent des noms de tables **, SQLForeignKeys** retourne les clés étrangères dans la table spécifiée \*dans *FKTableName* qui font référence à la clé primaire de la table spécifiée dans **PKTableName*. Ce doit être une clé au plus.  
+ Si \* *PKTableName* et \* *FKTableName* contiennent des noms de tables, **SQLForeignKeys** retourne les clés étrangères dans la table spécifiée dans \* *FKTableName* qui font référence à la clé primaire de la table spécifiée dans **PKTableName*. Ce doit être une clé au plus.  
   
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation générale, les arguments et les données renvoyées des fonctions de catalogue ODBC, consultez [fonctions de catalogue](../../../odbc/reference/develop-app/catalog-functions.md).  

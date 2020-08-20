@@ -1,4 +1,5 @@
 ---
+description: Configurer le chiffrement de colonne à l’aide d’Always Encrypted avec PowerShell
 title: Configurer le chiffrement de colonne à l’aide d’Always Encrypted avec PowerShell | Microsoft Docs
 ms.custom: ''
 ms.date: 10/31/2019
@@ -11,12 +12,12 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d89ff5d6ef855cce31e4cbde02f5a45a2131d2e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 623986a7ff2adaa7b2769090c2d94a8e9ebf2e83
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765083"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493806"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Configurer le chiffrement de colonne à l’aide d’Always Encrypted avec PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -31,7 +32,7 @@ Cet article fournit les étapes de définition de la configuration d’Always En
 ::: moniker-end
 Pour plus d’informations sur la prise en charge d’Always Encrypted dans le module SqlServer PowerShell, consultez [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Conditions préalables
 
 Pour définir la configuration de chiffrement cible, vous devez vérifier ce qui suit :
 - Une clé de chiffrement de colonne est configurée dans la base de données (si vous chiffrez ou rechiffrez une colonne). Pour plus d’informations, consultez [Configurer des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md).

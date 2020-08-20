@@ -1,4 +1,5 @@
 ---
+description: sp_certify_removable (Transact-SQL)
 title: sp_certify_removable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1ba13cd3ae77a13e329c39fea22a9ee9550ed47
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9f5bf1f0fd8a73948c2cc85937af4bc4c5ec7ffc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85873161"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493412"
 ---
 # <a name="sp_certify_removable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85873161"
 > **IMPORTANT** [! INCLUez à la place[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) .  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,9 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbname'`Spécifie la base de données à vérifier. *dbname* est de **type sysname**.  
+`[ @dbname = ] 'dbname'` Spécifie la base de données à vérifier. *dbname* est de **type sysname**.  
   
-`[ @autofix = ] 'auto'`Donne la propriété de la base de données et de tous les objets de base de données à l’administrateur système, et supprime les utilisateurs de base de données créés par l’utilisateur et les autorisations non définies par défaut. *auto* est de type **nvarchar (4)**, avec NULL comme valeur par défaut.  
+`[ @autofix = ] 'auto'` Donne la propriété de la base de données et de tous les objets de base de données à l’administrateur système, et supprime les utilisateurs de base de données créés par l’utilisateur et les autorisations non définies par défaut. *auto* est de type **nvarchar (4)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  

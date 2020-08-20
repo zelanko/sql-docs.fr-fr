@@ -1,4 +1,5 @@
 ---
+description: sys.dm_cryptographic_provider_properties (Transact-SQL)
 title: sys. dm_cryptographic_provider_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c588e2c87783bfaeaf09b70350ec00c50c3b1f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 562c2884b0eda3488b436c1007c188ec7c64425b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493786"
 ---
 # <a name="sysdm_cryptographic_provider_properties-transact-sql"></a>sys.dm_cryptographic_provider_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "85894582"
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|Numéro d'identification du fournisseur de services de chiffrement.|  
 |guid|**uniqueidentifier**|GUID unique du fournisseur.|  
-|provider_version|**nvarchar(256)**|Version du fournisseur au format'*AA.bb.CCCC.DD*'.|  
-|sqlcrypt_version|**nvarchar(256)**|Version principale de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API de chiffrement au format'*AA.bb.CCCC.DD*'.|  
+|provider_version|**nvarchar (256)**|Version du fournisseur au format'*AA.bb.CCCC.DD*'.|  
+|sqlcrypt_version|**nvarchar (256)**|Version principale de l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] API de chiffrement au format'*AA.bb.CCCC.DD*'.|  
 |friendly_name|**nvarchar(2048)**|Nom fourni par le fournisseur.|  
-|authentication_type|**nvarchar(256)**|WINDOWS, de base ou autre.|  
+|authentication_type|**nvarchar (256)**|WINDOWS, de base ou autre.|  
 |symmetric_key_support|**tinyint**|0 (non pris en charge)<br /><br /> 1 (pris en charge)|  
 |symmetric_key_export|**tinyint**|0 (non pris en charge)<br /><br /> 1 (pris en charge)|  
 |symmetric_key_import|**tinyint**|0 (non pris en charge)<br /><br /> 1 (pris en charge)|  
@@ -48,14 +49,14 @@ ms.locfileid: "85894582"
 |symmetric_key_import|**tinyint**|0 (non pris en charge)<br /><br /> 1 (pris en charge)|  
 |symmetric_key_persistance|**tinyint**|0 (non pris en charge)<br /><br /> 1 (pris en charge)|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La vue sys.dm_cryptographic_provider_properties est visible au public.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [Gestion de clés extensible &#40;&#41;EKM](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
- [CRÉER un fournisseur de services de CHIFFREment &#40;&#41;Transact-SQL](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
+ [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [Fonctions et vues de gestion dynamique relatives à la sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

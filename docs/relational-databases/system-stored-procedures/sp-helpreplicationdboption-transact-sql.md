@@ -1,4 +1,5 @@
 ---
+description: sp_helpreplicationdboption (Transact-SQL)
 title: sp_helpreplicationdboption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8a09f31e6dca74e00248cb13801d9c5acec11bb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493142"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Indique si les bases de données du serveur de publication sont activées pour la réplication. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de publication. *Non pris en charge pour les serveurs de publication Oracle.*  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,9 +40,9 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbname'`Nom de la base de données. *dbname* est de **type sysname**, avec la valeur par défaut **%** . Si **%** la valeur est, le jeu de résultats contient toutes les bases de données sur le serveur de publication, dans le cas contraire, seules les informations sur la base de données spécifiée sont retournées. Aucune information n'est retournée sur les bases de données pour lesquelles l'utilisateur ne possède pas les autorisations appropriées, comme décrit ci-dessous.  
+`[ @dbname = ] 'dbname'` Nom de la base de données. *dbname* est de **type sysname**, avec la valeur par défaut **%** . Si **%** la valeur est, le jeu de résultats contient toutes les bases de données sur le serveur de publication, dans le cas contraire, seules les informations sur la base de données spécifiée sont retournées. Aucune information n'est retournée sur les bases de données pour lesquelles l'utilisateur ne possède pas les autorisations appropriées, comme décrit ci-dessous.  
   
-`[ @type = ] 'type'`Limite le jeu de résultats à contenir uniquement les bases de données sur lesquelles la valeur de *type* d’option de réplication spécifiée a été activée. *type* est de type **sysname**et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Limite le jeu de résultats à contenir uniquement les bases de données sur lesquelles la valeur de *type* d’option de réplication spécifiée a été activée. *type* est de type **sysname**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -49,7 +50,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |**publication de fusion**|Réplication de fusion autorisée.|  
 |**réplication autorisée** (par défaut)|Réplication autorisée, qu'elle soit transactionnelle ou de fusion.|  
   
-`[ @reserved = ] reserved`Spécifie si les informations sur les publications et les abonnements existants sont retournées. la valeur *réservée* est de **bit**, avec 0 comme valeur par défaut. Si la valeur est **1**, le jeu de résultats inclut des informations indiquant si la base de données spécifiée a des publications ou des abonnements existants.  
+`[ @reserved = ] reserved` Spécifie si les informations sur les publications et les abonnements existants sont retournées. la valeur *réservée* est de **bit**, avec 0 comme valeur par défaut. Si la valeur est **1**, le jeu de résultats inclut des informations indiquant si la base de données spécifiée a des publications ou des abonnements existants.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -67,7 +68,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpreplicationdboption** est utilisé dans les réplications d’instantané, transactionnelles et de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: l'Agent de lecture du journal ;
 title: Agent de lecture du journal | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -15,16 +16,16 @@ ms.assetid: 300a3c46-0e48-4334-99c0-9ee690d2ef4f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0a2cadea4f97dbfdec98b57c901605d49b29de0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3225f7f90521357d0db312ea8cbd1c3272267337
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493933"
 ---
 # <a name="log-reader-agent"></a>l'Agent de lecture du journal ;
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  La boîte de dialogue **Agent de lecture du journal** affiche des informations détaillées sur l'Agent de lecture du journal, notamment l'état, l'historique, les messages d'information et messages d'erreur.  
+   La boîte de dialogue **Agent de lecture du journal** affiche des informations détaillées sur l’Agent de lecture du journal, notamment l’état, l’historique, les messages d’information et messages d’erreur.  
   
 ## <a name="options"></a>Options  
  Dans le menu **Affichage** , sélectionnez les sessions de l'Agent de lecture du journal à afficher. Sélectionnez ensuite une session particulière dans la grille étiquetée **Sessions de l'Agent de lecture du journal**. Des informations détaillées sur cette session s'affichent dans la grille étiquetée **Actions dans la session sélectionnée**. Si la session sélectionnée s'est terminée sur une erreur, la zone de texte étiquetée **Détails de l'erreur ou message de la session sélectionnée** s'affiche également.  
@@ -35,7 +36,7 @@ ms.locfileid: "85727243"
  **État**  
  État de l'Agent de lecture du journal. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
 -   Nouvelle tentative de la commande qui a échoué  
   

@@ -1,4 +1,5 @@
 ---
+description: Catégorie d'événements Erreurs et avertissements (moteur de base de données)
 title: Catégorie d'événement Erreurs et avertissements
 ms.date: 06/03/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: d31361a5512a93620d6ae2fbab34ff918a0837ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8243110252460d8838897139903f306937caf57f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491106"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Catégorie d'événements Erreurs et avertissements (moteur de base de données)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La catégorie d’événements **Erreurs et avertissements** contient des événements généraux d’erreurs et d’avertissements.  
+   La catégorie d’événements **Erreurs et avertissements** contient des événements généraux d’erreurs et d’avertissements.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -31,7 +32,7 @@ ms.locfileid: "85716939"
 |-----------|-----------------|  
 |[Attention, classe d’événements](../../relational-databases/event-classes/attention-event-class.md)|Indique qu’un événement **Attention** s’est produit.|  
 |[Background Job Error, classe d’événements](../../relational-databases/event-classes/background-job-error-event-class.md)|Indique qu'un travail en arrière-plan s'est terminé anormalement.|  
-|[Bitmap Warning, classe d’événements](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Indique que le filtrage Bitmap a été désactivé dans une requête.|  
+|[Bitmap Warning, classe d'événements](../../relational-databases/event-classes/bitmap-warning-event-class.md)|Indique que le filtrage Bitmap a été désactivé dans une requête.|  
 |[Blocked Process Report, classe d’événements](../../relational-databases/event-classes/blocked-process-report-event-class.md)|Indique qu'une tâche a été bloquée plus longtemps qu'une période spécifiée.|  
 |[CPU Threshold Exceeded, classe d’événements](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)|Indique que Resource Governor détecte une requête qui dépasse le seuil de l'UC spécifié.|  
 |[ErrorLog, classe d’événements](../../relational-databases/event-classes/errorlog-event-class.md)|Indique que les événements d'erreurs ont été enregistrés dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

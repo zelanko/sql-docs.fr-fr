@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_add_job (Transact-SQL)
 title: sys. sp_cdc_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53bc390e3e95ac49554826ad6ed96b8c4138ca10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e301fe1ef2251a5c5814074864ccf566791ccc8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88172898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492891"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crée un travail de nettoyage ou de capture de données modifiées dans la base de données active.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,19 +49,19 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_type = ] 'job\_type'`Type de travail à ajouter. *job_type* est de type **nvarchar (20)** et ne peut pas être null. Les entrées valides sont **'capture'** et **'cleanup'**.  
+`[ @job_type = ] 'job\_type'` Type de travail à ajouter. *job_type* est de type **nvarchar (20)** et ne peut pas être null. Les entrées valides sont **'capture'** et **'cleanup'**.  
   
-`[ @start_job = ] start_job`Indicateur qui spécifie si le travail doit être démarré immédiatement après son ajout. *START_JOB* est de **bits** avec 1 comme valeur par défaut.  
+`[ @start_job = ] start_job` Indicateur qui spécifie si le travail doit être démarré immédiatement après son ajout. *START_JOB* est de **bits** avec 1 comme valeur par défaut.  
   
-`[ @maxtrans ] = max_trans`Nombre maximal de transactions à traiter dans chaque cycle d’analyse. *max_trans* est de **type int** avec 500 comme valeur par défaut. Si elle est spécifiée, la valeur doit être un entier positif.  
+`[ @maxtrans ] = max_trans` Nombre maximal de transactions à traiter dans chaque cycle d’analyse. *max_trans* est de **type int** avec 500 comme valeur par défaut. Si elle est spécifiée, la valeur doit être un entier positif.  
   
  *max_trans* est valide uniquement pour les travaux de capture.  
   
-`[ @maxscans ] = max\_scans_`Nombre maximal de cycles d’analyse à exécuter afin d’extraire toutes les lignes du journal. *max_scans* est de **type int** avec 10 comme valeur par défaut.  
+`[ @maxscans ] = max\_scans_` Nombre maximal de cycles d’analyse à exécuter afin d’extraire toutes les lignes du journal. *max_scans* est de **type int** avec 10 comme valeur par défaut.  
   
  *max_scan* est valide uniquement pour les travaux de capture.  
   
-`[ @continuous ] = continuous_`Indique si le travail de capture doit s’exécuter en continu (1) ou s’exécuter une seule fois (0). *Continuous* est de **bits** avec 1 comme valeur par défaut.  
+`[ @continuous ] = continuous_` Indique si le travail de capture doit s’exécuter en continu (1) ou s’exécuter une seule fois (0). *Continuous* est de **bits** avec 1 comme valeur par défaut.  
   
  Lorsque *Continuous* = 1, la tâche de [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) analyse le journal et traite les transactions jusqu’à (*max_trans* \* *max_scans*). Il attend ensuite le nombre de secondes spécifié dans *polling_interval* avant de commencer la prochaine analyse du journal.  
   
@@ -68,15 +69,15 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *Continuous* est valide uniquement pour les travaux de capture.  
   
-`[ @pollinginterval ] = polling\_interval_`Nombre de secondes entre les cycles d’analyse du journal. *polling_interval* est de type **bigint** avec 5 comme valeur par défaut.  
+`[ @pollinginterval ] = polling\_interval_` Nombre de secondes entre les cycles d’analyse du journal. *polling_interval* est de type **bigint** avec 5 comme valeur par défaut.  
   
  *polling_interval* est valide uniquement pour les travaux de capture quand *Continuous* a la valeur 1. S’il est spécifié, la valeur doit être supérieure ou égale à 0 et inférieure à 24 heures (max : 86399 secondes). Si une valeur de 0 est spécifiée, il n'y a aucune attente entre les analyses de journal.  
   
-`[ @retention ] = retention_`Nombre de minutes pendant lesquelles les lignes de données modifiées doivent être conservées dans les tables de modifications. la *rétention* est de type **bigint** et sa valeur par défaut est 4320 (72 heures). La valeur maximale est égale à 52494800 (100 ans). Si elle est spécifiée, la valeur doit être un entier positif.  
+`[ @retention ] = retention_` Nombre de minutes pendant lesquelles les lignes de données modifiées doivent être conservées dans les tables de modifications. la *rétention* est de type **bigint** et sa valeur par défaut est 4320 (72 heures). La valeur maximale est égale à 52494800 (100 ans). Si elle est spécifiée, la valeur doit être un entier positif.  
   
  la *rétention* est valide uniquement pour les travaux de nettoyage.  
   
-`[ @threshold = ] 'delete\_threshold'`Nombre maximal d’entrées qui peuvent être supprimées à l’aide d’une instruction unique lors du nettoyage. *delete_threshold* est de type **bigint** avec 5000 comme valeur par défaut.  
+`[ @threshold = ] 'delete\_threshold'` Nombre maximal d’entrées qui peuvent être supprimées à l’aide d’une instruction unique lors du nettoyage. *delete_threshold* est de type **bigint** avec 5000 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

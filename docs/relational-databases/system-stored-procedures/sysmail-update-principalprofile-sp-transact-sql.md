@@ -1,4 +1,5 @@
 ---
+description: sysmail_update_principalprofile_sp (Transact-SQL)
 title: sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bdfeab82f6964abb5e48758cb4b8adba096e5b4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bba3f6ca7046825f4bdd13e062b67b554b636405
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492814"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Met à jour les informations d'une association entre un principal et un profil.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,15 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @principal_id = ] principal_id`ID de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association à modifier. *principal_id* est de **type int**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doivent être spécifiés.  
+`[ @principal_id = ] principal_id` ID de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association à modifier. *principal_id* est de **type int**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* doivent être spécifiés.  
   
-`[ @principal_name = ] 'principal_name'`Nom de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association à mettre à jour. *principal_name* est de **type sysname**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* peuvent être spécifiés.  
+`[ @principal_name = ] 'principal_name'` Nom de l’utilisateur ou du rôle de base de données dans la base de données **msdb** pour l’Association à mettre à jour. *principal_name* est de **type sysname**, avec NULL comme valeur par défaut. *Principal_id* ou *principal_name* peuvent être spécifiés.  
   
-`[ @profile_id = ] profile_id`ID du profil pour l’Association à modifier. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
+`[ @profile_id = ] profile_id` ID du profil pour l’Association à modifier. *profile_id* est de **type int**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @profile_name = ] 'profile_name'`Nom du profil pour l’Association à modifier. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
+`[ @profile_name = ] 'profile_name'` Nom du profil pour l’Association à modifier. *profile_name* est de **type sysname**, avec NULL comme valeur par défaut. *Profile_id* ou *profile_name* doivent être spécifiés.  
   
-`[ @is_default = ] 'is_default'`Indique si ce profil est le profil par défaut de l’utilisateur de base de données. Un utilisateur de base de données ne peut avoir plus d'un seul profil par défaut. *is_default* est de **bits**, sans valeur par défaut.  
+`[ @is_default = ] 'is_default'` Indique si ce profil est le profil par défaut de l’utilisateur de base de données. Un utilisateur de base de données ne peut avoir plus d'un seul profil par défaut. *is_default* est de **bits**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

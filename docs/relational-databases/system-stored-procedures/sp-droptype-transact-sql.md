@@ -1,4 +1,5 @@
 ---
+description: sp_droptype (Transact-SQL)
 title: sp_droptype (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f6417edeacfd9462e5619e2844d4a162976d038b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a20b3522e7e477af826e17d7fb654e3cd99220a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493259"
 ---
 # <a name="sp_droptype-transact-sql"></a>sp_droptype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un type de données alias de **systypes**.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @typename = ] 'type'`Nom d’un type de données alias dont vous êtes propriétaire. *type* **sysname**, sans valeur par défaut.  
+`[ @typename = ] 'type'` Nom d’un type de données alias dont vous êtes propriétaire. *type* **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-type"></a>Type des codes renvoyés  
  0 (réussite) ou 1 (échec)  

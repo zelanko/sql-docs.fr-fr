@@ -1,4 +1,5 @@
 ---
+description: Descendants (MDX)
 title: Descendants (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b883d1ce73a7259b285748e5a66f283a7d830424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67999989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491438"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 
@@ -61,7 +62,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  Si une expression d’ensemble est spécifiée, la fonction **descendants** est résolue individuellement pour chaque membre du jeu, et l’ensemble est de nouveau créé. En d’autres termes, la syntaxe utilisée pour la fonction **descendants** est fonctionnellement équivalente à la fonction MDX [generate](../mdx/generate-mdx.md) .  
   
- Si aucun niveau ou distance n’est spécifié, la valeur par défaut du niveau utilisé par la fonction est déterminée en appelant la fonction [Level](../mdx/level-mdx.md) ( \<<membre>>. Level) pour le membre spécifié (si un membre est spécifié) ou en appelant la fonction **Level** pour chaque membre du jeu spécifié (si un jeu est spécifié). Si aucune expression de niveau, distance ou aucun indicateur n'est spécifié, la fonction s'exécute comme si la syntaxe suivante était employée :  
+ Si aucun niveau ou distance n’est spécifié, la valeur par défaut du niveau utilisé par la fonction est déterminée en appelant la fonction [Level](../mdx/level-mdx.md) (<\<Member>>. Level) pour le membre spécifié (si un membre est spécifié) ou en appelant la fonction **Level** pour chaque membre du jeu spécifié (si un jeu est spécifié). Si aucune expression de niveau, distance ou aucun indicateur n'est spécifié, la fonction s'exécute comme si la syntaxe suivante était employée :  
   
  `Descendants`  
   
@@ -123,7 +124,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- L’exemple suivant retourne la moyenne quotidienne de la `Measures.[Gross Profit Margin]` mesure, calculée sur les jours de chaque mois de l’année fiscale 2003, à partir du cube **Adventure Works** . La fonction **descendants** retourne un jeu de jours déterminé à partir du membre actuel de `[Date].[Fiscal]` la hiérarchie.  
+ L’exemple suivant retourne la moyenne quotidienne de la `Measures.[Gross Profit Margin]` mesure, calculée sur les jours de chaque mois de l’année fiscale 2003, à partir du cube **Adventure Works** . La fonction **descendants** retourne un jeu de jours déterminé à partir du membre actuel de la `[Date].[Fiscal]` hiérarchie.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  

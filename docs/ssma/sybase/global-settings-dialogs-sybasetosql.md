@@ -1,4 +1,5 @@
 ---
+description: Paramètres globaux (boîtes de dialogue) (SybaseToSQL)
 title: Paramètres globaux (boîtes de dialogue) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e11452b7-ba94-4367-a745-5ccf1764acec
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4dc7bf9bf6b8f2e20fb8254a3a27ca2e293a0174
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 5f9ddd2c746acc7b10f893e6ac167e030c9cf689
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87931460"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492205"
 ---
 # <a name="global-settings-dialogs--sybasetosql"></a>Paramètres globaux (boîtes de dialogue) (SybaseToSQL)
 Utilisez la page boîtes de dialogue de la boîte de dialogue **paramètres globaux** pour spécifier les paramètres d’action et d’avertissement de l’utilisateur par défaut pour SSMA.  

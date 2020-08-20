@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 title: sp_syspolicy_update_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fde97529258f8f413a50db1933a95c1842f20c1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 78f2b47d687c695c50710d045e99494ac61598b8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891445"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492976"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Met à jour un abonnement aux catégories de stratégies pour une base de données spécifiée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,20 +43,20 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`Est l’identificateur de l’abonnement à la catégorie de stratégie que vous souhaitez mettre à jour. *policy_category_subscription_id* est de **type int**et est obligatoire.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Est l’identificateur de l’abonnement à la catégorie de stratégie que vous souhaitez mettre à jour. *policy_category_subscription_id* est de **type int**et est obligatoire.  
   
-`[ @target_type = ] 'target_type'`Type de cible de l’abonnement aux catégories. *target_type* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @target_type = ] 'target_type'` Type de cible de l’abonnement aux catégories. *target_type* est de **type sysname**, avec NULL comme valeur par défaut.  
   
  Si vous spécifiez *target_type*, la valeur doit être définie sur « Database ».  
   
-`[ @target_object = ] 'target_object'`Nom de la base de données qui s’abonnera à la catégorie de stratégie. *target_object* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @target_object = ] 'target_object'` Nom de la base de données qui s’abonnera à la catégorie de stratégie. *target_object* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @policy_category = ] 'policy_category'`Nom de la catégorie de stratégie à laquelle vous souhaitez que la base de données s’abonne. *policy_category* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @policy_category = ] 'policy_category'` Nom de la catégorie de stratégie à laquelle vous souhaitez que la base de données s’abonne. *policy_category* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_update_policy_category_subscription dans le contexte de la base de données système msdb.  
   
  Pour obtenir des valeurs pour *policy_category_subscription_id* et pour *policy_category*, vous pouvez utiliser la requête suivante :  

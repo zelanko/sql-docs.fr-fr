@@ -1,4 +1,5 @@
 ---
+description: Informations sur le serveur de publication, Agents
 title: Informations sur le serveur de publication, Agents | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
@@ -13,16 +14,16 @@ ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1430ec2b8ea281beeece3edbb6ef8be1dac75fef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97c971a25a10c232f3ae9301caa45bb6b2123acb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728276"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493894"
 ---
 # <a name="publisher-information-agents"></a>Informations sur le serveur de publication, Agents
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
-  L'onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication :  
+   L’onglet **Agents** affiche des informations sur les agents et les travaux de maintenance associés au serveur de publication :  
   
 -   Agent d'instantané, affiché pour toutes les publications  
   
@@ -65,7 +66,7 @@ ms.locfileid: "85728276"
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
 -   Recommencer  
   
@@ -98,7 +99,7 @@ ms.locfileid: "85728276"
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
 -   Recommencer  
   
@@ -137,7 +138,7 @@ ms.locfileid: "85728276"
  **État**  
  État de l'Agent. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
 -   Recommencer  
   
@@ -176,7 +177,7 @@ ms.locfileid: "85728276"
  **État**  
  État de chaque travail. La liste ci-dessous indique les valeurs d'état possibles :  
   
--   Error  
+-   Erreur  
   
 -   Recommencer  
   

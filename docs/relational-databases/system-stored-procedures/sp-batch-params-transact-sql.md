@@ -1,4 +1,5 @@
 ---
+description: sp_batch_params (Transact-SQL)
 title: sp_batch_params (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 135937bbdac930d3ee90259c7e5b0f4faaab098f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ceb162fa058f1dd46eea196929586b8e31f4152c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85874140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493468"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne un ensemble de lignes qui contient des informations sur les paramètres inclus dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot. **sp_batch_params** analyse uniquement le lot spécifié et retourne des informations sur les valeurs de paramètre incorporées. N'exécute pas le traitement et ne modifie pas l'environnement d'exécution.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tsqlbatch = ] 'tsqlbatch'`Est une chaîne Unicode qui contient une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou un lot pour lequel vous souhaitez obtenir des informations sur les paramètres. *TSqlBatch* est de type **nvarchar (max)** ou implicitement convertible en **nvarchar (max)**.  
+`[ @tsqlbatch = ] 'tsqlbatch'` Est une chaîne Unicode qui contient une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou un lot pour lequel vous souhaitez obtenir des informations sur les paramètres. *TSqlBatch* est de type **nvarchar (max)** ou implicitement convertible en **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  None  
@@ -52,12 +53,12 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**COLUMN_TYPE**|**smallint**|Ce champ retourne l'une des valeurs suivantes :<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> Cette colonne a toujours pour valeur 0.|  
 |**DATA_TYPE**|**smallint**|Type de données du paramètre (code d'entier d'un type de données ODBC). Si ce type de données ne peut pas être mappé à un type ISO, la valeur est NULL. Le nom du type de données natif est retourné dans la colonne **type_name** . Cette valeur est toujours NULL.|  
 |**TYPE_NAME**|**sysname**|Représentation sous forme de chaîne du type de données tel qu'il est présenté par le SGBD sous-jacent. Cette valeur est NULL.|  
-|**PRÉCISION**|**int**|Nombre de chiffres significatifs. La valeur de retour de la colonne **PRECISION** est en base 10.|  
+|**PRECISION**|**int**|Nombre de chiffres significatifs. La valeur de retour de la colonne **PRECISION** est en base 10.|  
 |**LENGTH**|**int**|Taille de transfert des données. Cette valeur est NULL.|  
 |**ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal. Cette valeur est NULL.|  
-|**DICAUX**|**smallint**|Base des types numériques. Cette valeur est NULL.|  
+|**RADIX**|**smallint**|Base des types numériques. Cette valeur est NULL.|  
 |**NULLABLE**|**smallint**|Précise la possibilité de valeur nulle.<br /><br /> 1 = le type de données du paramètre peut être créé de manière à autoriser les valeurs NULL.<br /><br /> 0 = les valeurs NULL ne sont pas autorisées.<br /><br /> Cette valeur est NULL.|  
-|**SQL_DATA_TYPE**|**smallint**|Valeur du type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] telle qu'elle apparaît dans le champ TYPE du descripteur. Cette colonne est la même que la colonne **data_type** , à l’exception des types de données **DateTime** et ISO **Interval** . Cette colonne renvoie toujours une valeur. Cette valeur est NULL.|  
+|**SQL_DATA_TYPE**|**smallint**|Valeur du type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] telle qu'elle apparaît dans le champ TYPE du descripteur. Cette colonne est la même que la colonne **DATA_TYPE**, excepté pour les types de données **datetime** et **interval** ISO. Cette colonne renvoie toujours une valeur. Cette valeur est NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|Sous-code d' **intervalle** **DateTime** ou ISO si la valeur de **SQL_DATA_TYPE** est SQL_DATETIME ou SQL_INTERVAL. Pour les types de données autres que **datetime** et **interval** ISO, cette colonne prend la valeur Null. Cette valeur est NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Longueur maximale en octets d’un paramètre de type de données **binaire** ou **caractère** . Pour tous les autres types de données, cette colonne retourne une valeur NULL. Cette valeur est toujours NULL.|  
 |**ORDINAL_POSITION**|**int**|Numéro d'ordre du paramètre dans le traitement. Si le nom du paramètre est répété plusieurs fois, cette colonne indique la position de la première occurrence. Le premier paramètre occupe la position 1. Cette colonne renvoie toujours une valeur.|  

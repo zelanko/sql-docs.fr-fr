@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLFreeHandle
 title: SQLFreeHandle, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b136dec98a19676aa67c78615d8fe931f62aafa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e90be541b73e0a5fefb7a082bad27f29c3a6d2a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491270"
 ---
 # <a name="sqlfreehandle-function"></a>Fonction SQLFreeHandle
 **Conformité**  
@@ -77,7 +78,7 @@ SQLRETURN SQLFreeHandle(
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY010|Erreur de séquence de fonction|(DM) l’argument *comme HandleType* a été SQL_HANDLE_ENV, et au moins une connexion était dans un État alloué ou connecté. **SQLDisconnect** et **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_DBC doivent être appelés pour chaque connexion avant d’appeler **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_ENV.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_DBC, et la fonction a été appelée avant l’appel de **SQLDisconnect** pour la connexion.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_DBC. Une fonction d’exécution asynchrone a été appelée avec un *handle* et la fonction était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé avec le descripteur d’instruction et retournés SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_STMT. Une fonction d’exécution asynchrone a été appelée sur le descripteur d’instruction ou sur le handle de connexion associé et la fonction était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_DESC. Une fonction d’exécution asynchrone a été appelée sur le handle de connexion associé ; et la fonction était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) tous les descripteurs subsidiaires et autres ressources n’ont pas été libérés avant l’appel de **SQLFreeHandle** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour l’un des descripteurs d’instruction associés au *Handle* et *comme HandleType* a été défini sur SQL_HANDLE_STMT ou SQL_HANDLE_DESC a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.|  
 |HY013|Erreur de gestion de la mémoire|L’argument *comme HandleType* a été SQL_HANDLE_STMT ou SQL_HANDLE_DESC, et l’appel de fonction n’a pas pu être traité parce que les objets mémoire sous-jacents n’ont pas pu être accédés, probablement en raison de conditions de mémoire insuffisante.|  

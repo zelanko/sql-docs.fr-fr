@@ -1,4 +1,5 @@
 ---
+description: sp_dbremove (Transact-SQL)
 title: sp_dbremove (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea4bc440b6a06c8133fe2ebd618f4838478322f4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac926a35cb7e1c15460bdb5afa7bee3ad3bbc205
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85865405"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493391"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "85865405"
   Supprime une base de données et tous les fichiers qui y sont associés.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Nous vous recommandons d’utiliser à la place [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Nous vous recommandons d’utiliser à la place [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'database'`Nom de la base de données à supprimer. *Database est de* **type sysname**, avec NULL comme valeur par défaut.  
+`[ @dbname = ] 'database'` Nom de la base de données à supprimer. *Database est de* **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @dropdev = ] 'dropdev'`Est un indicateur fourni pour la compatibilité descendante uniquement et est actuellement ignoré. *dropdev* a la valeur **dropdev**.  
+`[ @dropdev = ] 'dropdev'` Est un indicateur fourni pour la compatibilité descendante uniquement et est actuellement ignoré. *dropdev* a la valeur **dropdev**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -53,7 +54,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
  None  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
+ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous supprime une base de données nommée `sales` et tous les fichiers qui y sont associés.  
@@ -62,7 +63,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 EXEC sp_dbremove sales;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   

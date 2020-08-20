@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_missing_index_columns (Transact-SQL)
 title: sys. dm_db_missing_index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -21,12 +22,12 @@ ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23574f5bf194ca0d3bdc6b301cdb17b7be933ecd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3f09e272586753e4b47666290c8635f9276980ec
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718828"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493730"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +57,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |**column_name**|**sysname**|Nom de la colonne de la table.|  
 |**column_usage**|**varchar (20)**|Indique la manière dont la colonne est utilisée par la requête. Les valeurs possibles et leurs descriptions sont les suivantes :<br /><br /> ÉGALITÉ : la colonne contribue à un prédicat qui exprime l’égalité, au format suivant : <br />                        *table. colonne*  =  *constant_value*<br /><br /> Inégalité : la colonne contribue à un prédicat qui exprime l’inégalité, par exemple, un prédicat de la forme : *table. Column*  >  *constant_value*. Tout opérateur de comparaison autre que "=" exprime l'inégalité.<br /><br /> INCLUDe : la colonne n’est pas utilisée pour évaluer un prédicat, mais est utilisée pour une autre raison, par exemple, pour couvrir une requête.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les informations retournées par **sys.dm_db_missing_index_columns** sont mises à jour lorsqu'une requête est optimisée par l'optimiseur de requête, et elles ne sont pas conservées de manière permanente. Les informations sur les index manquants sont simplement conservées jusqu'au redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les administrateurs de base de données doivent effectuer régulièrement des copies de sauvegarde des informations sur les index manquants s'ils souhaitent les conserver après le recyclage du serveur.  
   
 ## <a name="transaction-consistency"></a>Cohérence transactionnelle  

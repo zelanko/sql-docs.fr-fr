@@ -1,4 +1,5 @@
 ---
+description: sp_delete_database_backuphistory (Transact-SQL)
 title: sp_delete_database_backuphistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4d1600578197545628c1b43fb80787f6565ba7c8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8a820a9a1da8a3938835f02a68d481b5f88790d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864368"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88493318"
 ---
 # <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime les informations sur la base de données spécifiée dans les tables d'historique de sauvegarde et de restauration.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @database_name = ] database_name`Spécifie le nom de la base de données impliquée dans les opérations de sauvegarde et de restauration. *database_name* est de **type sysname**, sans valeur par défaut.  
+`[ @database_name = ] database_name` Spécifie le nom de la base de données impliquée dans les opérations de sauvegarde et de restauration. *database_name* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -69,7 +70,7 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 -   [restorehistory](../../relational-databases/system-tables/restorehistory-transact-sql.md)  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert l’appartenance au rôle serveur fixe **sysadmin** .  
+ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime toutes les entrées relatives à la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] dans les tables d'historique de sauvegarde et de restauration.  

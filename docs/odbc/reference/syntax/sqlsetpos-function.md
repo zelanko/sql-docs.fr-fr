@@ -1,4 +1,5 @@
 ---
+description: SQLSetPos, fonction
 title: SQLSetPos, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: abeb377b614619e8c6359db7ae1d5b388cf2dd82
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 55741fba1dca898e087f4a992dfd7affbf3bcfcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491229"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos, fonction
 **Conformité**  
@@ -80,7 +81,7 @@ SQLRETURN SQLSetPos(
   
  Pour tous les SQLSTATEs qui peuvent retourner des SQL_SUCCESS_WITH_INFO ou des SQL_ERROR (à l’exception de 01xxx SQLSTATEs), SQL_SUCCESS_WITH_INFO est retourné si une erreur se produit sur une ou plusieurs lignes, mais pas toutes, sur les lignes d’une opération multiligne, et SQL_ERROR est retournée si une erreur se produit sur une opération à une seule ligne.  
   
-|SQLSTATE|Erreur|Description|  
+|SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01001|Conflit d’opération de curseur|L’argument *operation* était SQL_DELETE ou SQL_UPDATE et aucune ligne ou plus d’une ligne n’a été supprimée ou mise à jour. (Pour plus d’informations sur les mises à jour de plusieurs lignes, consultez la description de l' *attribut* SQL_ATTR_SIMULATE_CURSOR dans **SQLSetStmtAttr**.) (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> L’argument *operation* était SQL_DELETE ou SQL_UPDATE, et l’opération a échoué en raison d’un accès concurrentiel optimiste. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  

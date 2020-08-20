@@ -1,4 +1,5 @@
 ---
+description: MSreplication_monitordata (Transact-SQL)
 title: MSreplication_monitordata (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49dd84629222b170740a99f95e33b114d9707044
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 544a21ee17d30eff7d249c7597b2b579a894194e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889453"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492721"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "85889453"
 |**job_id**|**uniqueidentifier**|GUID du travail d'Agent de réplication.|  
 |**statut**|**int**|État de l'Agent de réplication, qui peut prendre l'une des valeurs suivantes :<br /><br /> **1** = démarré<br /><br /> **2** = réussite<br /><br /> **3** = en cours<br /><br /> **4** = inactif<br /><br /> **5** = nouvelle tentative<br /><br /> **6** = échec|  
 |**isagentrunningnow**|**bit**|Indicateur qui indique si le travail de l’agent est en cours d’exécution, où la valeur **1** signifie que le travail est en cours d’exécution.|  
-|**tres**|**int**|Avertissement de seuil généré par un abonnement, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration : un abonnement à une publication transactionnelle a dépassé la période de rétention au-delà du seuil autorisé, en pourcentage de la période de rétention.<br /><br /> **2** = latence : le temps nécessaire à la réplication des données d’un serveur de publication transactionnel vers l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration : un abonnement à une publication de fusion a dépassé la période de rétention au-delà du seuil autorisé, en pourcentage de la période de rétention. 8 = durée d'exécution rapide de la fusion ; la durée de la réalisation de la synchronisation d'un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau lente ou d’accès à distance.<br /><br /> **32** = mergefastrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau lente ou d’accès à distance.|  
+|**warning**|**int**|Avertissement de seuil généré par un abonnement, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration : un abonnement à une publication transactionnelle a dépassé la période de rétention au-delà du seuil autorisé, en pourcentage de la période de rétention.<br /><br /> **2** = latence : le temps nécessaire à la réplication des données d’un serveur de publication transactionnel vers l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration : un abonnement à une publication de fusion a dépassé la période de rétention au-delà du seuil autorisé, en pourcentage de la période de rétention. 8 = durée d'exécution rapide de la fusion ; la durée de la réalisation de la synchronisation d'un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau lente ou d’accès à distance.<br /><br /> **32** = mergefastrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau lente ou d’accès à distance.|  
 |**last_distsync**|**datetime**|Date et heure de la dernière exécution de la Agent de distribution.|  
 |**agentstoptime**|**datetime**|Date et heure auxquelles l'Agent s'est arrêté.|  
 |**distdb**|**sysname**|Nom de la base de données de distribution de l'abonnement.|  
@@ -60,14 +61,14 @@ ms.locfileid: "85889453"
 |**average_runspeedPerf**|**int**|Durée de synchronisation moyenne pour la publication de fusion|  
 |**mergePerformance**|**int**|Performances de la dernière synchronisation comparées à toutes les synchronisations de l'abonnement, calculées en divisant la vitesse de transmission de la dernière synchronisation par la moyenne de toutes les vitesses de transmission antérieures.|  
 |**mergelatestsessionrunduration**|**int**|Durée de l'exécution la plus récente de l'Agent de fusion.|  
-|**mergelatestsessionrunspeed**|**float (53)**|Vitesse de transmission de l'exécution la plus récente de l'Agent de fusion.|  
+|**mergelatestsessionrunspeed**|**float(53)**|Vitesse de transmission de l'exécution la plus récente de l'Agent de fusion.|  
 |**mergelatestsessionconnectiontype**|**int**|Connexion utilisée pour la session la plus récente de l'Agent de fusion, qui peut prendre l'une des valeurs suivantes :<br /><br /> **1** = réseau local (LAN)<br /><br /> **2** = connexion d’accès réseau à distance|  
 |**retention_period_unit**|**tinyint**|Définit l'unité de rétention, qui peut prendre l'une des valeurs suivantes :<br /><br /> **1** = semaine<br /><br /> **2** = mois<br /><br /> **3** = année|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Surveiller la réplication par programmation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
- [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vues de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Vues de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_replmonitorhelpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
  [sp_replmonitorhelppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
  [sp_replmonitorhelppublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   

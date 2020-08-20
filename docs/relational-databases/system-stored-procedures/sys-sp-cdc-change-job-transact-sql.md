@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_change_job (Transact-SQL)
 title: sys. sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 54d6e50e6c29ab29d48143ed9a12c4bb0591d769
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b63f79d4c02d133fd2429de65b9414abe22e8c0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492904"
 ---
 # <a name="syssp_cdc_change_job-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie la configuration d'un travail de capture ou de nettoyage de capture de données modifiées dans la base de données actuelle. Pour afficher la configuration actuelle d’un travail, interrogez la table [dbo. cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) , ou utilisez [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,17 +48,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_type = ] 'job_type'`Type de travail à modifier. *job_type* est de type **nvarchar (20)** avec « capture » comme valeur par défaut. Les entrées valides sont 'capture' et 'cleanup'.  
+`[ @job_type = ] 'job_type'` Type de travail à modifier. *job_type* est de type **nvarchar (20)** avec « capture » comme valeur par défaut. Les entrées valides sont 'capture' et 'cleanup'.  
   
-`[ @maxtrans ] = max_trans_`Nombre maximal de transactions à traiter dans chaque cycle d’analyse. *max_trans* est de **type int** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. Si elle est spécifiée, la valeur doit être un entier positif.  
+`[ @maxtrans ] = max_trans_` Nombre maximal de transactions à traiter dans chaque cycle d’analyse. *max_trans* est de **type int** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. Si elle est spécifiée, la valeur doit être un entier positif.  
   
  *max_trans* est valide uniquement pour les travaux de capture.  
   
-`[ @maxscans ] = max_scans_`Nombre maximal de cycles d’analyse à exécuter afin d’extraire toutes les lignes du journal. *max_scans* est de **type int** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
+`[ @maxscans ] = max_scans_` Nombre maximal de cycles d’analyse à exécuter afin d’extraire toutes les lignes du journal. *max_scans* est de **type int** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
   
  *max_scan* est valide uniquement pour les travaux de capture.  
   
-`[ @continuous ] = continuous_`Indique si le travail de capture doit s’exécuter en continu (1) ou s’exécuter une seule fois (0). *Continuous* est de type **bit** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
+`[ @continuous ] = continuous_` Indique si le travail de capture doit s’exécuter en continu (1) ou s’exécuter une seule fois (0). *Continuous* est de type **bit** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
   
  Lorsque *Continuous* = 1, la tâche de [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) analyse le journal et traite les transactions jusqu’à (*max_trans* \* *max_scans*). Il attend ensuite le nombre de secondes spécifié dans *polling_interval* avant de commencer la prochaine analyse du journal.  
   
@@ -69,15 +70,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *Continuous* est valide uniquement pour les travaux de capture.  
   
-`[ @pollinginterval ] = polling_interval_`Nombre de secondes entre les cycles d’analyse du journal. *polling_interval* est de type **bigint** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
+`[ @pollinginterval ] = polling_interval_` Nombre de secondes entre les cycles d’analyse du journal. *polling_interval* est de type **bigint** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
   
  *polling_interval* est valide uniquement pour les travaux de capture quand *Continuous* a la valeur 1.  
   
-`[ @retention ] = retention_`Nombre de minutes pendant lesquelles les lignes modifiées doivent être conservées dans les tables de modifications. *Retention* est de type **bigint** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. La valeur maximale est égale à 52494800 (100 ans). Si elle est spécifiée, la valeur doit être un entier positif.  
+`[ @retention ] = retention_` Nombre de minutes pendant lesquelles les lignes modifiées doivent être conservées dans les tables de modifications. *Retention* est de type **bigint** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. La valeur maximale est égale à 52494800 (100 ans). Si elle est spécifiée, la valeur doit être un entier positif.  
   
  la *rétention* est valide uniquement pour les travaux de nettoyage.  
   
-`[ @threshold = ] 'delete threshold'`Nombre maximal d’entrées qui peuvent être supprimées à l’aide d’une instruction unique lors du nettoyage. le *seuil de suppression* est de type **bigint** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. le *seuil de suppression* est valide uniquement pour les travaux de nettoyage.  
+`[ @threshold = ] 'delete threshold'` Nombre maximal d’entrées qui peuvent être supprimées à l’aide d’une instruction unique lors du nettoyage. le *seuil de suppression* est de type **bigint** , avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. le *seuil de suppression* est valide uniquement pour les travaux de nettoyage.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

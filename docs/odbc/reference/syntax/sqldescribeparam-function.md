@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLDescribeParam
 title: SQLDescribeParam, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c55668bb565bd383d170e7bf331630bf8b6adef1
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 0e6209f4e3145e55dfd94a9ff1375013ae5c7a85
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246598"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491312"
 ---
 # <a name="sqldescribeparam-function"></a>Fonction SQLDescribeParam
 **Conformité**  
@@ -78,7 +79,7 @@ SQLRETURN SQLDescribeParam(
   
 -   SQL_NULLABLE_UNKNOWN : le pilote ne peut pas déterminer si le paramètre autorise les valeurs NULL.  
   
-## <a name="returns"></a>Retourne  
+## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
