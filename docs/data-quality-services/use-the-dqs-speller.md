@@ -1,4 +1,5 @@
 ---
+description: Utiliser le vérificateur d'orthographe DQS
 title: Utiliser le vérificateur d'orthographe DQS
 ms.date: 11/08/2011
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ca84d1706641c15d7043e96ead0013fef3ed606a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 5da3a38baa2038f923df5365b4eacb0bc60dcea0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466624"
 ---
 # <a name="use-the-dqs-speller"></a>Utiliser le vérificateur d'orthographe DQS
 
@@ -40,7 +41,7 @@ ms.locfileid: "85883293"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exécuter le vérificateur d'orthographe.  
   
-##  <a name="enable-the-speller"></a><a name="Enable"></a>Activer le vérificateur d’orthographe  
+##  <a name="enable-the-speller"></a><a name="Enable"></a> Activer le vérificateur d’orthographe  
   
 1.  Pour activer le vérificateur d'orthographe dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], ouvrez la base de connaissances dans l'activité **Gestion de l'arborescence du domaine** , sélectionnez le domaine souhaité, puis cliquez sur **Activer le vérificateur d'orthographe** dans la page **Propriétés du domaine** . Dans **Langue**, sélectionnez la langue à utiliser avec le vérificateur d'orthographe.  
   

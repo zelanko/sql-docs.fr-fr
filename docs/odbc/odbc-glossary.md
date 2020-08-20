@@ -1,4 +1,5 @@
 ---
+description: Glossaire ODBC
 title: Glossaire ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac454a8c57fe6e2f12724440dc37c3a1953e4c85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57b08d48944ee288b4eba849917828b6fe1d4396
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466251"
 ---
 # <a name="odbc-glossary"></a>Glossaire ODBC
 ## <a name="a"></a>Un  
@@ -28,7 +29,7 @@ ms.locfileid: "81302900"
  **fonction d’agrégation**  
  Fonction qui génère une valeur unique à partir d’un groupe de valeurs, souvent utilisée avec les clauses **Group by** et **having** . Les fonctions d’agrégation incluent **AVG**, **Count**, **Max**, **min**et **Sum**. Également appelées *fonctions set*. *Voir aussi* fonction scalaire.  
   
- **CARACTÈRES**  
+ **ANSI**  
  American National Standards Institute. L’API ODBC est basée sur l’interface au niveau de l’appel ANSI.  
   
  **APD**  
@@ -68,7 +69,7 @@ ms.locfileid: "81302900"
  **curseur de bloc**  
  Curseur permettant l’extraction de plusieurs lignes de données à la fois.  
   
- **buffer**  
+ **mémoire tampon**  
  Une partie de la mémoire d’application utilisée pour passer des données entre l’application et le pilote. Les mémoires tampons sont souvent des paires : une *mémoire tampon de données* et une *mémoire tampon de longueur de données*.  
   
  **byte**  
@@ -78,7 +79,7 @@ ms.locfileid: "81302900"
  **Type de données C**  
  Le type de données d’une variable dans un programme C, dans ce cas l’application.  
   
- **Catalogue**  
+ **catalog**  
  Ensemble des tables système dans une base de données qui décrivent la forme de la base de données. Également connu sous le nom de *dictionnaire de données*ou de *schéma* .  
   
  **fonction de catalogue**  
@@ -90,7 +91,7 @@ ms.locfileid: "81302900"
  **client/serveur**  
  Stratégie d’accès à la base de données dans laquelle un ou plusieurs clients accèdent aux données via un serveur. Les clients implémentent généralement l’interface utilisateur pendant que le serveur contrôle l’accès aux bases de données.  
   
- **chronique**  
+ **column**  
  Conteneur pour un seul élément d’information dans une ligne. Également connu sous le nom de *champ*.  
   
  **valider**  
@@ -269,7 +270,7 @@ ms.locfileid: "81302900"
  Curseur de défilement qui détecte les lignes mises à jour et supprimées à l’aide d’un jeu de clés.  
   
 ## <a name="l"></a>L  
- **opérateur**  
+ **literal**  
  Représentation sous forme de caractère d’une valeur de données réelle dans une instruction SQL.  
   
  **Verr**  
@@ -333,7 +334,7 @@ ms.locfileid: "81302900"
  **Tableau d’état des paramètres**  
  Tableau qui contient l’état d’un paramètre après un appel à **SQLExecDirect** ou **SQLExecute**.  
   
- **accès concurrentiel pessimiste**  
+ **l’accès concurrentiel pessimiste ;**  
  Stratégie d’implémentation de la sérialisation, dans laquelle les lignes sont verrouillées de sorte que les autres transactions ne puissent pas les modifier. *Voir aussi* accès concurrentiel optimiste *et* sérialisation.  
   
  **opération positionnée**  
@@ -361,7 +362,7 @@ ms.locfileid: "81302900"
  **qualificateur**  
  Base de données qui contient une ou plusieurs tables.  
   
- **requête**  
+ **query**  
  Instruction SQL. Parfois utilisé pour signifier une instruction **Select** .  
   
  **identificateur entre guillemets**  
@@ -453,7 +454,7 @@ ms.locfileid: "81302900"
  **transition d’État**  
  Déplacement d’un élément d’un État à un autre. ODBC définit des transitions d’État rigoureuses pour les environnements, les connexions et les instructions.  
   
- **gestion**  
+ **instruction**  
  Conteneur pour toutes les informations relatives à une instruction SQL. Les instructions ne doivent pas être confondues avec des instructions SQL.  
   
  **descripteur d’instruction**  
@@ -475,7 +476,7 @@ ms.locfileid: "81302900"
  **thunking**  
  La conversion d’adresses 16 bits en adresses 32 bits, ou vice versa, lorsque les applications 16 bits sont utilisées avec les pilotes ODBC 32 bits.  
   
- **libellé**  
+ **transaction**  
  Une unité atomique de travail. Le travail dans une transaction doit être entièrement effectué. Si une partie de la transaction échoue, la transaction entière échoue.  
   
  **isolation des transactions**  
@@ -490,7 +491,7 @@ ms.locfileid: "81302900"
  **DLL d’installation du traducteur**  
  DLL qui contient des fonctions d’installation et de configuration spécifiques au convertisseur.  
   
- **validation en deux temps**  
+ **validation en deux phases**  
  Processus de validation d’une transaction distribuée en deux phases. Dans la première phase, le processeur de transactions vérifie que toutes les parties de la transaction peuvent être validées. Dans la deuxième phase, toutes les parties de la transaction sont validées. Si une partie de la transaction indique, dans la première phase, qu’elle ne peut pas être validée, la deuxième phase ne se produit pas. ODBC ne prend pas en charge les validations en deux phases.  
   
  **indicateur de type**  

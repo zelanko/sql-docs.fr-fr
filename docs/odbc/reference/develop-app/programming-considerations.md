@@ -1,4 +1,5 @@
 ---
+description: Éléments de programmation à prendre en considération
 title: Considérations sur la programmation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 497869e26ac9bcc3267d620e2c67b4b1aaee991c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282179"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465691"
 ---
 # <a name="programming-considerations"></a>Éléments de programmation à prendre en considération
 Cette section présente brièvement un certain nombre de sujets relatifs à l’écriture d’applications et de pilotes ODBC.  
   
  Cette section contient les rubriques suivantes :  
   
--   [Multithreading](../../../odbc/reference/develop-app/multithreading.md)  
+-   [Traitement multithread](../../../odbc/reference/develop-app/multithreading.md)  
   
 -   [Alignment](../../../odbc/reference/develop-app/alignment.md)  
   

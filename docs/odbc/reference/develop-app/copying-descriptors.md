@@ -1,4 +1,5 @@
 ---
+description: Copie de descripteurs
 title: Copie des descripteurs | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2e2e5897afc3673a21396e256df04d25008c8cdf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90f3acb5ccb479ba5c1d1eb4c405a486f7032f3f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301668"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465864"
 ---
 # <a name="copying-descriptors"></a>Copie de descripteurs
 La fonction **SQLCopyDesc** est appelée pour copier les champs d’un descripteur vers un autre descripteur. Les champs peuvent être copiés uniquement vers un descripteur d’application ou un IPD, mais pas vers un IRD. Les champs peuvent être copiés à partir de n’importe quel type de descripteur. Seuls les champs définis pour les descripteurs source et cible sont copiés. **SQLCopyDesc** ne copie pas le champ SQL_DESC_ALLOC_TYPE, car le type d’allocation d’un descripteur ne peut pas être modifié. Les champs copiés remplacent les champs existants.  

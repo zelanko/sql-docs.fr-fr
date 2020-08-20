@@ -1,4 +1,5 @@
 ---
+description: Longueur des données, longueur de la mémoire tampon et troncation
 title: Longueur des données, longueur de la mémoire tampon et troncation | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2e7b8d1e60cd83594509c2ab5cbc24e04546eca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9a9651f39c1ff4d2c6dc9b691453fb5354c9e1a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305227"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465831"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>Longueur des données, longueur de la mémoire tampon et troncation
 La *longueur des données* est la longueur en octets des données, car elles sont stockées dans la mémoire tampon de données de l’application, et non dans la mesure où elles sont stockées dans la source de données. Cette distinction est importante, car les données sont souvent stockées dans des types différents dans la mémoire tampon de données que dans la source de données. Ainsi, pour les données envoyées à la source de données, il s’agit de la longueur d’octet des données avant la conversion vers le type de la source de données. Pour les données récupérées à partir de la source de données, il s’agit de la longueur d’octet des données après la conversion en type de tampon de données et avant la fin de la troncation.  

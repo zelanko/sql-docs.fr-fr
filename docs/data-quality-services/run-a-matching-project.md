@@ -1,4 +1,5 @@
 ---
+description: Exécuter un projet de correspondance
 title: Exécuter un projet de correspondance
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0a8a71349a5948c4ac162b82bd92d3b022446cb0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8f1d75abc4a4e7f5221c500c211e915fa51bd49b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466667"
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
 
@@ -43,7 +44,7 @@ ms.locfileid: "85883330"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exécuter un projet de correspondance.  
   
-##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a>Première étape : démarrage d’un projet de correspondance  
+##  <a name="first-step-starting-a-matching-project"></a><a name="StartingaMatchingProject"></a> Première étape : démarrage d’un projet de correspondance  
  Vous effectuez l'activité de correspondance dans un projet de qualité des données que vous créez dans l'application cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -75,7 +76,7 @@ ms.locfileid: "85883330"
     > [!NOTE]  
     >  Cliquez sur **Fermer** pour enregistrer l'étape du projet de correspondance et revenir à la page d'accueil de DQS. La prochaine fois que vous ouvrirez ce projet, il démarrera à partir de la même étape. Cliquez sur **Annuler** pour mettre fin à l'activité de correspondance, auquel cas vous perdrez votre travail, et revenir à la page d'accueil de DQS.  
   
-##  <a name="matching-stage"></a><a name="MatchingStage"></a>Étape de correspondance  
+##  <a name="matching-stage"></a><a name="MatchingStage"></a> Étape de correspondance  
  Dans cette étape, vous exécutez un processus de correspondance assisté par ordinateur qui vous indique le nombre de correspondances trouvées dans les données sources selon les règles de correspondance. Ce processus génère une table de résultats de correspondance qui affiche les clusters que DQS a identifiés, chaque enregistrement dans le cluster avec son ID d'enregistrement et son score de correspondance, et l'enregistrement de début initial pour le cluster. L'enregistrement de début du cluster est sélectionné de manière aléatoire. Vous déterminez l'enregistrement survivant en sélectionnant la règle de survivance à la page **Exporter** lorsque vous exécutez le projet de correspondance. Chaque ligne supplémentaire dans un cluster est considérée comme une correspondance ; son score de correspondance (comparé à l'enregistrement de début) est fourni dans la table de résultats. Le numéro de cluster est identique à l'ID d'enregistrement pour l'enregistrement de début dans le cluster.  
   
  Dans les résultats de correspondance, vous pouvez filtrer sur les données souhaitées et rejeter les correspondances dont vous ne voulez pas. Vous pouvez afficher des données de profilage pour le processus de correspondance dans son ensemble, des détails sur les règles de correspondance qui sont appliquées et des statistiques sur les résultats de correspondance en général. Le processus de correspondance peut identifier les clusters avec ou sans chevauchement et, s'il est exécuté plusieurs fois, peut être exécuté sur des données récemment copiées de la source et réindexées, ou sur les anciennes données.  
@@ -104,7 +105,7 @@ ms.locfileid: "85883330"
   
 12. Cliquez sur **Suivant** pour passer à l'étape de survivance et d'exportation.  
   
-##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a>Phase de survie et d’exportation  
+##  <a name="survivorship-and-exporting-stage"></a><a name="SurvivorshipandExportStage"></a> Phase de survie et d’exportation  
  Dans le processus de survivance, Data Quality Services détermine un enregistrement survivant pour chaque cluster, qui remplace les autres enregistrements correspondant dans le cluster. Il exporte ensuite les résultats de correspondance et/ou de survivance vers une table dans la base de données SQL Server, un fichier .csv ou un fichier Excel.  
   
  La survivance est facultative. Vous pouvez exporter les résultats sans exécuter la survivance, auquel cas DQS utilise l'enregistrement pivot qui a été indiqué dans l'analyse de correspondance. Si plusieurs enregistrements dans un cluster sont conformes à la règle de survivance, le processus de survivance sélectionne l'ID d'enregistrement le plus bas parmi les enregistrements en conflit pour être le survivant. Vous pouvez exporter des survivants vers divers fichiers ou tables en utilisant différentes règles de survivance.  
@@ -166,10 +167,10 @@ ms.locfileid: "85883330"
     > [!NOTE]  
     >  Si vous avez terminé un projet de correspondance et l'utilisez de nouveau, il utilise la base de connaissances en place lorsqu'il a été publié. Il n'utilise aucune modification que vous avez apportée à la base de connaissances depuis que vous avez terminé le projet. Pour utiliser ces modifications, ou une nouvelle base de connaissances, vous devez créer un projet de correspondance. En revanche, si vous avez créé, mais pas fini, un projet de correspondance, toutes les modifications que vous avez publiées dans la stratégie de correspondance sont utilisées si vous exécutez une correspondance dans le projet.  
   
-##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a>Suivi : après l’exécution d’un projet de correspondance  
+##  <a name="follow-up-after-running-a-matching-project"></a><a name="FollowUp"></a> Suivi : après l’exécution d’un projet de correspondance  
  Après avoir exécuté un projet de correspondance, vous pouvez modifier la stratégie de correspondance dans la base de connaissances, puis créer et exécuter un autre projet de correspondance basé sur la stratégie de correspondance mise à jour. Pour plus d’informations, consultez [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a>Onglets générateur de profils et résultats  
+##  <a name="profiler-and-results-tabs"></a><a name="Profiler"></a> Onglets générateur de profils et résultats  
  Les onglets Générateur de profils et Résultats contiennent des statistiques pour le processus de correspondance.  
   
 ### <a name="profiler-tab"></a>Onglet Générateur de profils  

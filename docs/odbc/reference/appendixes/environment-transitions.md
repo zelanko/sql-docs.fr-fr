@@ -1,4 +1,5 @@
 ---
+description: Transitions d’environnement
 title: Transitions d’environnement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ebfb5475d24d5fc70c4cb46a666b2573066565a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cb4366a044f42440eb70934b9f853947e4f3224
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283299"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466229"
 ---
 # <a name="environment-transitions"></a>Transitions d’environnement
 Les environnements ODBC présentent les trois États suivants.  

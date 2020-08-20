@@ -1,4 +1,5 @@
 ---
+description: Appels de fonctions scalaires
 title: Appels de fonction scalaires | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 349599a51b2996f419e6c8656a71bc9e30146542
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b6d0f77adaf6284bceac126b3539121cbdb174ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304260"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465587"
 ---
 # <a name="scalar-function-calls"></a>Appels de fonctions scalaires
 Les fonctions scalaires retournent une valeur pour chaque ligne. Par exemple, la fonction scalaire valeur absolue prend une colonne numérique comme argument et retourne la valeur absolue de chaque valeur de la colonne. La séquence d’échappement pour l’appel d’une fonction scalaire est  

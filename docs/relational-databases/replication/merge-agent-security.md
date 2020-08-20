@@ -1,4 +1,5 @@
 ---
+description: Sécurité de l'agent de fusion
 title: Sécurité de l’agent de fusion | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 894c9d7cddb6473cc063863a3f39d7c48f7be00f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6d571e5b41937947e0c6d03e5d1a84fe0dc88e8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775295"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465268"
 ---
 # <a name="merge-agent-security"></a>Sécurité de l'agent de fusion
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  La boîte de dialogue **Sécurité de l'agent de fusion** vous permet de spécifier le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent de fusion doit s'exécuter. L'Agent de fusion s'exécute sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Ce compte Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
+   La boîte de dialogue **Sécurité de l’agent de fusion** vous permet de spécifier le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l’Agent de fusion doit s’exécuter. L'Agent de fusion s'exécute sur le serveur de distribution pour les abonnements envoyés et sur l'Abonné pour les abonnements extraits. Ce compte Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
   
 -   Si la boîte de dialogue est ouverte à partir de l'Assistant Nouvel abonnement, elle vous propose ainsi en plus d'indiquer le contexte dans lequel l'agent de fusion établit les connexions avec l'Abonné (dans le cas d'abonnements envoyés au serveur) ou avec le serveur de publication et le serveur de distribution (dans le cas d'abonnements extraits du serveur). La connexion peut s’établir via un compte Windows ou un compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez.  
   
--   Si la boîte de dialogue est ouverte à partir de celle intitulée **Propriétés de l'abonnement** , vous devez indiquer le contexte dans lequel l'agent de fusion établit les connexions en cliquant sur le bouton des propriétés ( **...** ) de la ligne **Connexion de l'Abonné** ou **Connexion du serveur de publication** . Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et la procédure indiquant comment [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+-   Si la boîte de dialogue est ouverte à partir de celle intitulée **Propriétés de l'abonnement** , vous devez indiquer le contexte dans lequel l'agent de fusion établit les connexions en cliquant sur le bouton des propriétés (**...**) de la ligne **Connexion de l'Abonné** ou **Connexion du serveur de publication** . Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et la procédure indiquant comment [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  Tous les comptes doivent être valides, le mot de passe correct étant spécifié pour chaque compte. Les comptes et les mots de passe ne sont pas validés tant qu'un agent ne s'exécute pas.  
   

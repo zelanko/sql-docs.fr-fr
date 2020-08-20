@@ -1,4 +1,5 @@
 ---
+description: Demande des informations de connexion à l’utilisateur
 title: Invite l’utilisateur à fournir des informations de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b0f120a1076f14f5e67d506e52a446e0a3d4713
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f52e0d120fb150fe58b850107847d7ef5df20e7c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282082"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465711"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Demande des informations de connexion à l’utilisateur
 Si l’application utilise **SQLConnect** et doit inviter l’utilisateur à fournir des informations de connexion, telles qu’un nom d’utilisateur et un mot de passe, elle doit le faire lui-même. Bien que cela permette à l’application de contrôler son apparence, elle peut forcer l’application à contenir du code propre au pilote. Cela se produit lorsque l’application doit inviter l’utilisateur à fournir des informations de connexion spécifiques au pilote. Cela présente une situation impossible pour les applications génériques, qui sont conçues pour fonctionner avec tous les pilotes, y compris les pilotes qui n’existent pas lors de l’écriture de l’application.  

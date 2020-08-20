@@ -1,4 +1,5 @@
 ---
+description: sys.fn_trace_gettable (Transact-SQL)
 title: sys. fn_trace_gettable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d1bc18704b4f2b239fe590184d58289d66b35fc
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 85ffb20fb0ead23c8027ab9b4ba45f906fe8c097
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898287"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464740"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85898287"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt des événements étendus.  
    
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,7 +50,7 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  Spécifie le nombre de fichiers de substitution à lire. Ce nombre comprend le fichier initial spécifié dans *filename*. *number_files* est un **entier**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si *number_files* est spécifié en tant que **valeur par défaut**, **fn_trace_gettable** lit tous les fichiers de substitution jusqu’à ce qu’il atteigne la fin de la trace. **fn_trace_gettable** retourne une table avec toutes les colonnes valides pour la trace spécifiée. Pour plus d’informations, consultez [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  Sachez que la fonction fn_trace_gettable ne chargera pas les fichiers de substitution (lorsque cette option est spécifiée à l’aide de l’argument *number_files* ) où le nom du fichier de trace d’origine se termine par un trait de soulignement et une valeur numérique. (Cela ne s’applique pas au trait de soulignement et au nombre qui sont automatiquement ajoutés lors du basculement d’un fichier.) En guise de solution de contournement, vous pouvez renommer les fichiers de trace pour supprimer les traits de soulignement dans le nom de fichier d’origine. Par exemple, si le fichier d’origine se nomme **Trace_Oct_5. trc** et que le fichier de substitution se nomme **Trace_Oct_5_1. trc**, vous pouvez renommer les fichiers en **TraceOct5. trc** et **TraceOct5_1. trc**.  

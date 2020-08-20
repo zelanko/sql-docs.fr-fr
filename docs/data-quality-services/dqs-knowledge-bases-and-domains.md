@@ -1,4 +1,5 @@
 ---
+description: Bases de connaissances et domaines DQS
 title: Bases de connaissances et domaines DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e27c84f54901bb66e2d934af661c3aac20aea384
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362490"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466777"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de connaissances et domaines DQS
 
@@ -69,7 +70,7 @@ ms.locfileid: "87362490"
   
  Toutefois, vous pouvez contrôler la casse des valeurs que vous exportez dans les résultats de nettoyage. Pour cela, vous devez définir la propriété de domaine **Mettre en forme la sortie vers** (consultez [Définir des propriétés de domaine](../data-quality-services/set-domain-properties.md)) et activer la case à cocher **Normaliser la sortie** quand vous exportez les résultats de nettoyage (consultez [Nettoyer des données à l’aide de la base de connaissances DQS &#40;interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)).  
   
-##  <a name="domain-management"></a><a name="Domains"></a>Gestion de domaine  
+##  <a name="domain-management"></a><a name="Domains"></a> Gestion de domaine  
  La gestion des domaines permet au gestionnaire de données de modifier et d'enrichir de manière interactive les métadonnées générées par l'activité découverte des connaissances assistée par ordinateur. Chaque modification que vous apportez est appliquée à un domaine de la base de connaissances. Dans l'activité de gestion de domaines, vous pouvez effectuer les opérations suivantes :  
   
 -   Créer un domaine. Le nouveau domaine peut être lié à ou copié à partir d'un champ existant.  
@@ -138,7 +139,7 @@ ms.locfileid: "87362490"
   
  La correspondance peut être effectuée sur les domaines uniques qui constituent le champ composite, mais pas sur le champ composite proprement dit.  
   
-##  <a name="data-matching"></a><a name="Matching"></a>Correspondance de données  
+##  <a name="data-matching"></a><a name="Matching"></a> Correspondance de données  
  En plus d'apporter des modifications manuelles à une base de connaissances par le biais de la gestion de domaines, vous pouvez ajouter des connaissances correspondantes à une base de connaissances. Afin de préparer DQS pour le processus de déduplication de données, vous devez créer une stratégie de correspondance que DQS utilisera pour calculer la probabilité d'une correspondance. La stratégie comprend une ou plusieurs règles de correspondance créées par le gestionnaire de données pour identifier la manière dont DQS doit comparer les lignes de données. Le gestionnaire de données détermine les champs de données de la ligne qui doivent être comparés, ainsi que la pondération de chaque champ dans la comparaison. Le gestionnaire de données détermine également quel doit être le niveau de probabilité pour qu'une valeur soit considérée comme une correspondance. DQS ajoute les règles de correspondance à la base de connaissances pour les utiliser lors de l'activité de correspondance dans le projet de qualité des données.  
   
  Pour plus d'informations sur la base de connaissances et la mise en correspondance des données, consultez [Correspondance de données](../data-quality-services/data-matching.md).  

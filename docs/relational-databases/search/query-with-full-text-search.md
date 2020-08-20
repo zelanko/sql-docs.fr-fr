@@ -1,4 +1,5 @@
 ---
+description: Exécuter une requête avec une recherche en texte intégral
 title: Exécuter une requête avec une recherche en texte intégral | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 59e3c8713aac6648d7419e405d424b8b4080030a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: abc6f54441e4cf4baaaede6cf9e4766daac607a0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85629243"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464981"
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -305,7 +306,7 @@ En revanche, FREETEXT et FREETEXTTABLE traitent les termes booléens comme des m
   
  Pour plus d’informations sur la façon de combiner CONTAINS avec d’autres prédicats qui utilisent les opérateurs logiques AND, OR et NOT, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
-### <a name="example"></a>Exemple  
+### <a name="example"></a> Exemple  
  L’exemple suivant utilise le prédicat CONTAINS pour rechercher les descriptions dont l’ID de description n’est pas égal à 5 et la description contient les mots « Aluminum » et « spindle ». La condition de recherche utilise l'opérateur booléen AND. Cet exemple utilise la table ProductDescription de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql  

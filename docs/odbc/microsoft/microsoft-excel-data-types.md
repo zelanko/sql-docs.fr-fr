@@ -1,4 +1,5 @@
 ---
+description: Types de données Microsoft Excel
 title: Types de données Microsoft Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8574985e10e5aaa3ae5431af7ee1245643e20b60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3e54ece7962fc5b56e4b9fcc17123ac7ad3c9e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283769"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466431"
 ---
 # <a name="microsoft-excel-data-types"></a>Types de données Microsoft Excel
 Le tableau suivant montre comment les types de données du pilote Microsoft Excel sont mappés aux types de données ODBC SQL. Le pilote Microsoft Excel attribue ces types de données aux colonnes des tableaux Microsoft Excel en fonction des données de la colonne.  
   
 |Type de données Microsoft Excel|Type de données ODBC|  
 |-------------------------------|--------------------|  
-|Monétaire (Currency)|SQL_NUMERIC|  
+|DEVISE|SQL_NUMERIC|  
 |DATETIME|SQL_TIMESTAMP|  
 |LOGICAL|SQL_BIT|  
 |NUMBER|SQL_DOUBLE|  

@@ -1,4 +1,5 @@
 ---
+description: Mappage de types de données (ODBC)
 title: Mappage de types de données (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,11 +21,12 @@ ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c68381c68a70ef72cf10481f05584aa25098773
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a2cd0786cac3976bcb280422f177d19d8f86a3c7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004666"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465301"
 ---
 # <a name="mapping-data-types-odbc"></a>Mappage de types de données (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

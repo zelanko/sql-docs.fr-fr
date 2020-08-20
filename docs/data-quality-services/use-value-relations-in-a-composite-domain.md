@@ -1,4 +1,5 @@
 ---
+description: Utiliser les relations de valeur dans un domaine composite
 title: Utiliser les relations de valeur dans un domaine composite
 ms.date: 11/22/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e9876e5a232174c387fb46cf4f3b2012f1435dc2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67d6d4743fc373afd0ac008a72c7d97751b8ac29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883297"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466584"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Utiliser les relations de valeur dans un domaine composite
 
@@ -34,7 +35,7 @@ ms.locfileid: "85883297"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour afficher les relations de valeur dans un domaine composite.  
   
-##  <a name="view-value-relations"></a><a name="Use"></a>Afficher les relations de valeur  
+##  <a name="view-value-relations"></a><a name="Use"></a> Afficher les relations de valeur  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -51,7 +52,7 @@ ms.locfileid: "85883297"
   
 6.  Vous ne pouvez pas modifier l'une des valeurs de la table. Si vous avez exécuté d'autres opérations, cliquez sur **Terminer** pour terminer l'activité de gestion de domaine. Sinon, cliquez sur **Annuler**.  
   
-##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a>Suivi : après l’affichage des relations de valeur  
+##  <a name="follow-up-after-viewing-value-relations"></a><a name="FollowUp"></a> Suivi : après l’affichage des relations de valeur  
  Après avoir affiché les relations de valeur, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
   

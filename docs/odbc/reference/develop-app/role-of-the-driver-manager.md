@@ -1,4 +1,5 @@
 ---
+description: Rôle du gestionnaire de pilotes
 title: Rôle du gestionnaire de pilotes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ee3d704ea43125c3cd912a4e67d90bf5d50c733e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f974fe6436173b55f39aced45cc38312221cffaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465656"
 ---
 # <a name="role-of-the-driver-manager"></a>Rôle du gestionnaire de pilotes
 Le gestionnaire de pilotes détermine l’ordre final dans lequel retourner les enregistrements d’État qu’il génère. En particulier, il détermine quel enregistrement a le rang le plus élevé et doit être retourné en premier. Le pilote est chargé de classer les enregistrements d’État qu’il génère. Si les enregistrements d’État sont publiés à la fois par le gestionnaire de pilotes et par le pilote, le gestionnaire de pilotes est chargé de les classer. Pour plus d’informations, consultez [séquence des enregistrements d’État](../../../odbc/reference/develop-app/sequence-of-status-records.md).  

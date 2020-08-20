@@ -1,4 +1,5 @@
 ---
+description: Children (MDX)
 title: Enfants (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a37bc27564baf9d75e10af78fb477ea08be092e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68016800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466511"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
@@ -42,7 +43,7 @@ SELECT [Geography].[Geography].[Country].&[United States].Children ON 0
 FROM [Adventure Works]  
 ```  
   
- L’exemple suivant retourne tous les membres de la dimension **Measures** sur l’axe des colonnes, y compris tous les membres calculés et l’ensemble de `[Product].[Model Name]` tous les enfants de la hiérarchie d’attribut sur l’axe des lignes du cube **Adventure Works** .  
+ L’exemple suivant retourne tous les membres de la dimension **Measures** sur l’axe des colonnes, y compris tous les membres calculés et l’ensemble de tous les enfants de la `[Product].[Model Name]` hiérarchie d’attribut sur l’axe des lignes du cube **Adventure Works** .  
   
 ```  
 SELECT  

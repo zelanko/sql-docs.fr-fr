@@ -1,4 +1,5 @@
 ---
+description: Tableau d’état des lignes
 title: Tableau d’état de ligne | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 60dead23fe0051c05698e094f37ddad96b2b337d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8067aaf8724a6634d165d53743cbd0ef2015f6bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465632"
 ---
 # <a name="row-status-array"></a>Tableau d’état des lignes
 En plus des données, **SQLFetch** et **SQLFetchScroll** peuvent retourner un tableau qui indique l’état de chaque ligne de l’ensemble de lignes. Ce tableau est spécifié à l’aide de l’attribut d’instruction SQL_ATTR_ROW_STATUS_PTR. Ce tableau est alloué par l’application et doit avoir autant d’éléments que spécifiés par l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE. Les valeurs du tableau sont définies par **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**et **SQLSetPos.** Les valeurs décrivent l’état de la ligne et indiquent si cet État a changé depuis sa dernière extraction.  

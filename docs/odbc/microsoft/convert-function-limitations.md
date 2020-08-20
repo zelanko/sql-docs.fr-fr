@@ -1,4 +1,5 @@
 ---
+description: CONVERT, fonction - limitations
 title: Limitations relatives aux fonctions CONVERT | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 63f4258e737327ae11f03a96cfef3cdecf133e53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56c1d9704026511f68e76260bb4495acf1a872bf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281029"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466461"
 ---
 # <a name="convert-function-limitations"></a>CONVERT, fonction - limitations
 Les échecs de conversion de type entraînent la définition de la colonne affectée sur la valeur NULL.  

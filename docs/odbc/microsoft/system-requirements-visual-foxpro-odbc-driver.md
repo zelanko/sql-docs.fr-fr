@@ -1,4 +1,5 @@
 ---
+description: Configuration système requise (pilote ODBC Visual FoxPro)
 title: Configuration système requise (pilote ODBC Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d02681709edb3a22144469df7c9abbda34e6e083
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d48f5ddf105d8ecc315387c0c42c3cb84c104bda
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301440"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466321"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Configuration système requise (pilote ODBC Visual FoxPro)
 La configuration système requise pour l’installation fournit le système d’exploitation et l’espace disque minimum nécessaires à l’installation correcte du pilote. Une fois que vous avez installé le pilote, vous pouvez sélectionner le logiciel d’application spécifique que vous souhaitez utiliser pour accéder aux données Visual FoxPro.  

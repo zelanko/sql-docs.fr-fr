@@ -1,4 +1,5 @@
 ---
+description: Identificateurs et descripteurs des types de données
 title: Identificateurs et descripteurs des types de données | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2019
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f65bc86213f99112daf17c67a4ca522490d32149
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dce52118099ff4be572231e7f44f28a4cfca5ea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466219"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Identificateurs et descripteurs des types de données
 Les types de données répertoriés dans les sections types de données [SQL](../../../odbc/reference/appendixes/sql-data-types.md) et [types de données C](../../../odbc/reference/appendixes/c-data-types.md) plus haut dans cette annexe sont des types de données « concis » : chaque identificateur fait référence à un type de données unique. Il existe une correspondance un-à-un entre l’identificateur et le type de données. Toutefois, dans tous les cas, les descripteurs n’utilisent pas une seule valeur pour identifier les types de données. Dans certains cas, ils utilisent un type de données « verbose » et un sous-code de type. Pour tous les types de données à l’exception des types de données DateTime et Interval, l’identificateur de type détaillé est identique à l’identificateur de type concis et la valeur de SQL_DESC_DATETIME_INTERVAL_CODE est égale à 0. Toutefois, pour les types de données DateTime et Interval, un type détaillé (SQL_DATETIME ou SQL_INTERVAL) est stocké dans SQL_DESC_TYPE, un type concis est stocké dans SQL_DESC_CONCISE_TYPE, et un sous-code pour chaque type concis est stocké dans SQL_DESC_DATETIME_INTERVAL_CODE. La définition de l’un de ces champs affecte les autres. Pour plus d’informations sur ces champs, consultez la description de la fonction [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) .  

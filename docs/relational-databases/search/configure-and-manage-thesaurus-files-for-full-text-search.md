@@ -1,4 +1,5 @@
 ---
+description: Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
 title: Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
 ms.date: 07/01/2020
 ms.prod: sql
@@ -14,16 +15,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d713b4eb49a527f2cbbbf871cce9d01d4449443d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897995"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465068"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-Les requêtes de recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent rechercher des synonymes des termes spécifiés par l’utilisateur grâce à un *dictionnaire des synonymes* pour la recherche en texte intégral. Chaque dictionnaire des synonymes définit un jeu de synonymes pour une langue spécifique. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les requêtes de recherche en texte intégral  peuvent rechercher des synonymes des termes spécifiés par l’utilisateur grâce à un *dictionnaire des synonymes* pour la recherche en texte intégral. Chaque dictionnaire des synonymes définit un jeu de synonymes pour une langue spécifique. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données.
 
 La mise en correspondance avec le dictionnaire des synonymes intervient pour toutes les requêtes [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) et [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) et pour toutes les requêtes [CONTAINS](../../t-sql/queries/contains-transact-sql.md) et [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) qui spécifient la clause `FORMSOF THESAURUS`.
   
@@ -170,7 +171,7 @@ and
   
 Le paramètre de signes diacritiques d’un dictionnaire des synonymes est spécifié dans un élément `<diacritics_sensitive>` unique. Cet élément contient une valeur entière qui contrôle le respect des accents, comme suit :  
   
-|Paramètre de signes diacritiques|Valeur|XML|  
+|Paramètre de signes diacritiques|Value|XML|  
 |------------------------|-----------|---------|  
 |ne respectent pas les accents|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |respectent les accents|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

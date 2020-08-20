@@ -1,4 +1,5 @@
 ---
+description: Ajouter un élément de collecte à un jeu d'éléments de collecte (Transact-SQL)
 title: Ajouter un élément de collecte à un jeu d’éléments de collecte (T-SQL)
 ms.date: 06/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 3fc722a36601315dac08e6b497d89737fb2f4d33
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ef2d09b1ce912f73d03d3e25f8dac0169e57f8c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465476"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>Ajouter un élément de collecte à un jeu d'éléments de collecte (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -1,4 +1,5 @@
 ---
+description: Effectuer une découverte des connaissances
 title: Effectuer une découverte des connaissances
 ms.date: 06/04/2013
 ms.prod: sql
@@ -14,12 +15,12 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9f1d6865a4c432694201c9b5a666fff3fd46d117
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65bde5805bbe3e768b56094d165b385d01f68439
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883403"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466753"
 ---
 # <a name="perform-knowledge-discovery"></a>Effectuer une découverte des connaissances
 
@@ -39,7 +40,7 @@ ms.locfileid: "85883403"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une base de connaissances.  
   
-##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a>Première étape : démarrer la découverte des connaissances  
+##  <a name="first-step-start-knowledge-discovery"></a><a name="FirstStep"></a> Première étape : démarrer la découverte des connaissances  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -202,7 +203,7 @@ ms.locfileid: "85883403"
   
     -   Cliquez sur **Précédent** pour revenir à la page **Découverte** . Après avoir cliqué sur **Fermer**, cliquez sur **Découverte des connaissances** dans l'écran **Ouvrir la base de connaissances** pour effectuer l'activité de gestion de l'arborescence du domaine, accédez à l'écran **Gestion de la base de connaissances : Gestion des termes de domaine** , cliquez sur **Terminer**, puis sur **Oui** pour publier la base de connaissances ou sur **Non** pour enregistrer le travail dans la base de connaissances et quitter.  
   
-##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a>Suivi : après l’exécution de la découverte des connaissances  
+##  <a name="follow-up-after-performing-knowledge-discovery"></a><a name="FollowUp"></a> Suivi : après l’exécution de la découverte des connaissances  
  Après avoir ajouté les connaissances à la base des connaissance dans le processus de découverte des connaissances assisté par ordinateur, vous pouvez utiliser la base de connaissances pour un projet immédiat de nettoyage ou vous pouvez exécuter la gestion des domaines avant d'effectuer le nettoyage. Pour plus d’informations sur le nettoyage des données ou la gestion des domaines, consultez [Nettoyage des données](../data-quality-services/data-cleansing.md) ou [Gestion d’un domaine](../data-quality-services/managing-a-domain.md).  
   
 ##  <a name="the-meaning-of-correct-error-and-invalid-values"></a><a name="Meaning"></a> Signification des valeurs correctes, erronées et non valides  
@@ -233,7 +234,7 @@ ms.locfileid: "85883403"
   
 -   Cliquez sur le bouton **Afficher/Masquer le panneau d'historique des modifications de valeurs du domaine** pour afficher un message d'aperçu en bas de la table de valeurs qui affiche les modifications apportées récemment à la collection des valeurs du domaine.  
   
-##  <a name="profiler-statistics"></a><a name="Profiler"></a>Statistiques du profileur  
+##  <a name="profiler-statistics"></a><a name="Profiler"></a> Statistiques du profileur  
  L'onglet Générateur de profils fournit des statistiques qui indiquent la qualité des données source. Ces statistiques ne mesurent pas la qualité de la base de connaissances. Le profilage dans la découverte des connaissances fournit des informations sur l'achèvement et l'unicité. Le profilage dans la découverte des connaissances ne mesure pas la précision. Le profilage de la gestion des connaissances vous aide à évaluer jusqu'à quel point auquel la source de données est valide pour créer et améliorer la connaissance dans une base de connaissances.  
   
  L'onglet **Générateur de profils** fournit les statistiques suivantes pour le processus de découverte, par champ et par domaine :  

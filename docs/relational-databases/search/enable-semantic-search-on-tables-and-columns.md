@@ -1,4 +1,5 @@
 ---
+description: Activer la recherche sémantique sur les tables et les colonnes
 title: Activer la recherche sémantique sur les tables et les colonnes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 49691cea038a121ac27bdea729e3646e3375889f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c891b2089225de1560a8371440524846b7a96163
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730204"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465011"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -170,7 +171,7 @@ ALTER FULLTEXT INDEX
 GO  
 ```  
   
-Pour supprimer à la fois l'indexation plein texte et l'indexation sémantique à partir d'une colonne, appelez l'instruction **ALTER FULLTEXT INDEX** avec l'option **ALTER COLUMN** _column\_name_**DROP**.  
+Pour supprimer à la fois l'indexation plein texte et l'indexation sémantique à partir d'une colonne, appelez l'instruction **ALTER FULLTEXT INDEX** avec l'option **ALTER COLUMN**_ column\_name_**DROP**.  
   
 ```sql  
 USE database_name  
@@ -256,7 +257,7 @@ GO
   
  Les langues suivantes sont prises en charge pour l'indexation sémantique. Cette liste représente la sortie de l’affichage catalogue [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md), classée par LCID.  
   
-|Langage|LCID|  
+|Language|LCID|  
 |--------------|----------|  
 |Allemand|1031|  
 |Anglais (US)|1033|  
@@ -274,7 +275,7 @@ GO
   
  Si le type de document que vous souhaitez indexer ne figure pas dans la liste des types pris en charge, vous devrez peut-être rechercher, télécharger et installer des filtres supplémentaires. Pour plus d’informations, consultez [Afficher ou modifier des filtres et des analyseurs lexicaux inscrits](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> Meilleure pratique : créer un groupe de fichiers distinct pour les index sémantiques et de recherche en texte intégral  
+##  <a name="best-practice-consider-creating-a-separate-filegroup-for-the-full-text-and-semantic-indexes"></a><a name="BestPracticeFilegroup"></a> Bonne pratique : Créer un groupe de fichiers distinct pour les index sémantiques et de recherche en texte intégral  
  Créez un groupe de fichiers séparé pour les index sémantiques et de recherche en texte intégral si l'allocation d'espace disque pose problème. Les index sémantiques sont créés dans le même groupe de fichiers que l'index de recherche en texte intégral. Un index sémantique entièrement rempli peut contenir un grand nombre de données.  
  
 ##  <a name="issue-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a> Problème : La recherche sur une colonne spécifique ne retourne aucun résultat  

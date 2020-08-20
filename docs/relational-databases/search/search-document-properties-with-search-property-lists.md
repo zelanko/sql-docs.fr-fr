@@ -1,4 +1,5 @@
 ---
+description: Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
 title: Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
 ms.date: 03/06/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: daead13f4a3069966d1ede9aa677c47c8a784099
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 4938844b0014745dd50060b0e1da43b4e574a20e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464962"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Rechercher les propriétés du document à l’aide des listes de propriétés de recherche
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -154,7 +155,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Pour associer une liste de propriétés de recherche à un index de recherche en texte intégral à l'aide de Management Studio**  
   
- Spécifiez une valeur pour **Liste de propriétés de recherche** dans la page **Général** de la boîte de dialogue **Propriétés d’index de recherche en texte intégral** .  
+ Spécifiez une valeur pour **Liste de propriétés de recherche** dans la page **Général** de la boîte de dialogue **Propriétés d'index de recherche en texte intégral**.  
   
 ##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a> Interrogation des propriétés de recherche avec CONTAINS  
  La syntaxe [CONTAINS](../../t-sql/queries/contains-transact-sql.md) de base pour une requête de texte intégral avec étendue aux propriétés se présente comme suit :  
@@ -195,7 +196,7 @@ GO
   
 5.  Cliquez avec le bouton droit sur la liste de propriétés, puis sélectionnez **Propriétés**.  
   
-6.  Dans la boîte de dialogue **Éditeur de liste de propriétés de recherche** , utilisez la grille des propriétés pour ajouter ou supprimer des propriétés de recherche :  
+6.  Dans la boîte de dialogue **Éditeur de liste de propriétés de recherche**, utilisez la grille des propriétés pour ajouter ou supprimer des propriétés de recherche :  
   
     1.  Pour supprimer une propriété de document, cliquez sur l'en-tête de ligne à gauche de la propriété et appuyez sur DEL.  
   

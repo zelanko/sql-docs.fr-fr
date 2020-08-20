@@ -1,4 +1,5 @@
 ---
+description: Conformité de l’interface principale
 title: Conformité de l’interface principale | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 886ded1cd79b35488c0d47df3dbd8055dc6a8016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ca38e2b616c39839cfe813dad984f7eba3796a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302131"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465841"
 ---
 # <a name="core-interface-conformance"></a>Conformité de l’interface principale
 Tous les pilotes ODBC doivent présenter la conformité de l’interface au niveau du noyau. Étant donné que les fonctionnalités du niveau principal sont celles requises par la plupart des applications interopérables génériques, le pilote peut fonctionner avec ces applications. Les fonctionnalités du niveau principal correspondent également aux fonctionnalités définies dans la spécification de l’interface CLI ISO et aux fonctionnalités non facultatives définies dans la spécification de l’interface CLI de groupe ouverte. Un pilote ODBC conforme à l’interface de niveau principal permet à l’application d’effectuer toutes les opérations suivantes :  

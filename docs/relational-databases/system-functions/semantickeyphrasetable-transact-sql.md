@@ -1,4 +1,5 @@
 ---
+description: semantickeyphrasetable (Transact-SQL)
 title: semantickeyphrasetable (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3782b8139b84d87a30ac575476f5535173cdc66a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8026760d93132e3a18b51145bc1802e416bc0934
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85662581"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464791"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85662581"
   
  Cette fonction d'ensemble de lignes peut uniquement être référencée dans la clause FROM d'une instruction SELECT comme tout nom de table standard.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +45,7 @@ SEMANTICKEYPHRASETABLE
     )  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a> Arguments  
  **table**  
  Nom d'une table dont l'indexation sémantique et de texte intégral est activée.  
   
@@ -91,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>Exemples  
   
-###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>Exemple 1 : Rechercher les expressions clés de niveau supérieur dans un document spécifique  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a> Exemple 1 : Rechercher les expressions clés de niveau supérieur dans un document spécifique  
  L’exemple suivant extrait les 10 expressions clés de niveau supérieur du document spécifié par la variable @DocumentId dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks. La variable @DocumentId représente une valeur de la colonne clé de l’index de recherche en texte intégral. La fonction **SEMANTICKEYPHRASETABLE** récupère efficacement ces résultats en utilisant une recherche d'index au lieu d'une analyse de table. Cet exemple suppose que la colonne est configurée pour l'indexation de texte intégral et sémantique.  
   
 ```sql  
@@ -106,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>Exemple 2 : Rechercher les documents de niveau supérieur qui contiennent une expression clé spécifique  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a> Exemple 2 : Rechercher les documents de niveau supérieur qui contiennent une expression clé spécifique  
  L’exemple suivant récupère les 25 premiers documents qui contiennent l’expression clé « bracket » dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks. Cet exemple suppose que la colonne est configurée pour l'indexation de texte intégral et sémantique.  
   
 ```sql  

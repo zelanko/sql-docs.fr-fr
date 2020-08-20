@@ -1,4 +1,5 @@
 ---
+description: 'Fonctions d’agrégation : count'
 title: Fonction count (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f1b56d549d00fb0b76c530a5274adb6a9c82c80c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6691ca005de2ceec1de0408e358544292c58704d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88467181"
 ---
 # <a name="aggregate-functions---count"></a>Fonctions d’agrégation : count
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -38,13 +39,13 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  Éléments à compter.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Retourne 0 si *$arg* est une séquence vide.  
   
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. Utilisation de la fonction XQuery count() pour déterminer le nombre de sites de production impliqués dans la fabrication d'un modèle de produit  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>R. Utilisation de la fonction XQuery count() pour déterminer le nombre de sites de production impliqués dans la fabrication d'un modèle de produit  
  La requête suivante détermine le nombre de sites de production impliqués dans la fabrication d'un modèle de produit (ProductModelID=7).  
   
 ```  

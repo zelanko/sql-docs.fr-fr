@@ -1,4 +1,5 @@
 ---
+description: Rédiger des instructions Transact-SQL internationales
 title: Rédiger des instructions Transact-SQL internationales | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2019
@@ -18,12 +19,12 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72b2d6056d3a48d21804d02677867a9757f4f671
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8192fcd7d657c5842dfd60fcca36fec3e945413d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003937"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465517"
 ---
 # <a name="write-international-transact-sql-statements"></a>Rédiger des instructions Transact-SQL internationales
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,10 +36,10 @@ ms.locfileid: "86003937"
 
     Cela évite les problèmes de conversion de la page de codes. Pour d’autres considérations, consultez [Différences de stockage entre UTF-8 et UTF-16](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).  
 
--   À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], remplacez toutes les utilisations des types de données **char**, **varchar** et **text** par **nchar**, **nvarchar** et **nvarchar(max)** . Si vous utilisez un classement activé avec [caractère supplémentaire](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), les données sont encodées au format UTF-16. L’utilisation d’un classement sans caractère supplémentaire génère des données encodées en UCS-2. Cela évite les problèmes de conversion de la page de codes. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], remplacez toutes les utilisations des types de données **char**, **varchar** et **text** par **nchar**, **nvarchar** et **nvarchar(max)**. Si vous utilisez un classement activé avec [caractère supplémentaire](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters), les données sont encodées au format UTF-16. L’utilisation d’un classement sans caractère supplémentaire génère des données encodées en UCS-2. Cela évite les problèmes de conversion de la page de codes. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md). 
 
     > [!IMPORTANT]
-    > Le type de données **texte** est déconseillé et ne doit pas être utilisé dans les nouveaux travaux de développement. Envisagez de convertir les données **texte** en données **varchar (max)** .
+    > Le type de données **texte** est déconseillé et ne doit pas être utilisé dans les nouveaux travaux de développement. Envisagez de convertir les données **texte** en données **varchar (max)**.
   
 -   Lors des comparaisons et opérations sur les mois et jours de la semaine, utilisez la partie numérique de la date plutôt que les chaînes de noms. Selon les paramètres de langue, des noms de mois et de jours de la semaine différents sont retournés. Par exemple, `DATENAME(MONTH,GETDATE())` retourne `May` quand la langue est définie sur Anglais (États-Unis), `Mai` pour l’allemand et `mai` pour le français. Utilisez à la place une fonction comme [DATEPART](../../t-sql/functions/datepart-transact-sql.md) qui utilise le numéro du mois plutôt que son nom. Utilisez les noms DATEPART lorsque vous générez des ensembles de résultats qui seront affichés par un utilisateur, car les noms de date sont souvent plus clairs qu'une représentation numérique. Pour autant, ne codez aucun élément logique dépendant des noms affichés d’une langue spécifique.  
   

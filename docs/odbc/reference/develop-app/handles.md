@@ -1,4 +1,5 @@
 ---
+description: Poignées
 title: Handles | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 713c2a71ec195b75d682b97239413e98d07b5861
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e9d2445dbbd676e8d48be519c1649d550fd89c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465761"
 ---
 # <a name="handles"></a>Poignées
 Les handles sont des valeurs 32 bits opaques qui identifient un élément particulier ; dans ODBC, cet élément peut être un environnement, une connexion, une instruction ou un descripteur. Lorsque l’application appelle **SQLAllocHandle**, le gestionnaire de pilotes ou le pilote crée un nouvel élément du type spécifié et retourne son descripteur à l’application. L’application utilise ensuite le descripteur pour identifier cet élément lors de l’appel de fonctions ODBC. Le gestionnaire de pilotes et le pilote utilisent le descripteur pour rechercher des informations sur l’élément.  

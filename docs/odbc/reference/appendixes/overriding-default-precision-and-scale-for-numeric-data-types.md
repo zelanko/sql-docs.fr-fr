@@ -1,4 +1,5 @@
 ---
+description: Remplacement de la précision et de l’échelle par défaut pour les types de données numériques
 title: Substitution de la précision et de l’échelle par défaut pour les types de données numériques | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 365c5f69d21dd3a4ad8e89805d81f1b3b0c9dcba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 798e607ff6584bde27791a29e4b20aeb1d7bb3cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303590"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466081"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>Remplacement de la précision et de l’échelle par défaut pour les types de données numériques
 Lorsque le champ SQL_DESC_TYPE d’un ARD est défini sur SQL_C_NUMERIC, en appelant **SQLBindCol** ou **SQLSetDescField**, le champ SQL_DESC_SCALE dans ARD est défini sur 0 et le champ SQL_DESC_PRECISION est défini sur une précision par défaut définie par le pilote. Cela est également vrai lorsque le champ SQL_DESC_TYPE dans un APD est défini sur SQL_C_NUMERIC, en appelant **SQLBindParameter** ou **SQLSetDescField**. Cela est vrai pour les paramètres d’entrée, d’entrée/sortie ou de sortie.  

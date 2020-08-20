@@ -1,4 +1,5 @@
 ---
+description: SELECT, commande SQL
 title: Commande SELECT-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 640189a5a31d0c21642b037e906bd6361690a9a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b5fb0e3d38a2e5594cacf77b116844bcce219d7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300939"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466421"
 ---
 # <a name="select---sql-command"></a>SELECT, commande SQL
 Récupère des données d’une ou plusieurs tables.  
@@ -113,7 +114,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
 -   Si vous incluez deux tables dans une requête et que vous ne spécifiez pas de condition de jointure, chaque enregistrement de la première table est joint à chaque enregistrement de la seconde table à condition que les conditions de filtre soient remplies. Une telle requête peut produire des résultats longs.  
   
--   Soyez prudent lors de la jointure de tables avec des champs vides, car Visual FoxPro correspond à des champs vides. Par exemple, si vous rejoignez le client. ZIP et facture. ZIP et si le client contient 100 codes postaux vides et que la facture contient 400 codes postaux vides, le résultat de la requête contient 40 000 enregistrements supplémentaires résultant des champs vides. Utilisez la fonction **Empty ()** pour éliminer les enregistrements vides du résultat de la requête.  
+-   Soyez prudent lors de la jointure de tables avec des champs vides, car Visual FoxPro correspond à des champs vides. Par exemple, si vous vous joignez à CUSTOMER.ZIP et INVOICE.ZIP et si le client contient 100 codes postaux vides et que la facture contient 400 codes postaux vides, le résultat de la requête contient 40 000 enregistrements supplémentaires résultant des champs vides. Utilisez la fonction **Empty ()** pour éliminer les enregistrements vides du résultat de la requête.  
   
 -   Vous devez utiliser l’opérateur AND pour connecter plusieurs conditions de jointure. Chaque condition de jointure se présente sous la forme suivante :  
   

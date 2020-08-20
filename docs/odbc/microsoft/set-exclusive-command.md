@@ -1,4 +1,5 @@
 ---
+description: SET EXCLUSIVE, commande
 title: SET EXCLUSIVE, commande | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d140c4be3ab850547ac82f9b954e7313b008dbf0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413c9188decc9011c2816b692b1fb4b6112ec45b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300859"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466351"
 ---
 # <a name="set-exclusive-command"></a>SET EXCLUSIVE, commande
 Spécifie si les fichiers de table sont ouverts pour une utilisation exclusive ou partagée sur un réseau.  

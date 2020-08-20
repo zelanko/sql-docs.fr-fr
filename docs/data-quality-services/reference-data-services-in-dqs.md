@@ -1,4 +1,5 @@
 ---
+description: Services de données de référence dans DQS
 title: Services de données de référence dans DQS
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ecae6543a0a83084bbabb141339464d56b36c753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e382be5f109efff9a0a08eb434017334fe54d2c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883361"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466732"
 ---
 # <a name="reference-data-services-in-dqs"></a>Services de données de référence dans DQS
 
@@ -32,7 +33,7 @@ ms.locfileid: "85883361"
   
 -   Prend en charge l’utilisation de données de référence provenant de la place de marché Azure et directement de fournisseurs de données de référence tiers.  
   
-##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>Utilisation de données de référence à partir de la place de marché Azure  
+##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a> Utilisation de données de référence à partir de la place de marché Azure  
  DQS prend en charge l’utilisation de données de référence de la place de marché Azure pour permettre aux fournisseurs de contenu de fournir des services de données de référence via Marketplace. Marketplace est un service Microsoft qui fournit un canal de remise et de marché unique permettant d'obtenir des données et des applications de haute qualité sous la forme de services en nuage. Pour plus d’informations sur Marketplace, consultez [en savoir plus sur les place de marché Microsoft Azure](https://azuremarketplace.microsoft.com/about) ( https://azuremarketplace.microsoft.com/about) .
   
  L'intégration transparente entre la Place de marché et DQS simplifie les étapes associées à la découverte, l'exploration et l'acquisition d'informations pour des projets de qualité des données à partir de DQS. Les données sont utilisées à partir de DQS, et permettent aux utilisateurs de DQS d'atteindre une haute qualité de données en rassemblant de façon innovante DQS, Marketplace et des fournisseurs de services de données de référence.  

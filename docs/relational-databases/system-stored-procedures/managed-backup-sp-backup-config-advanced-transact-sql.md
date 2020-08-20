@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_config_advanced (Transact-SQL)
 title: managed_backup. sp_backup_config_advanced (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,18 +21,19 @@ helpviewer_keywords:
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 786028df8e421580b5a994175223d21a20d44f41
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: d092851d710de96e9c1b06d2866183a7dfac01bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053505"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464691"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Configure les paramètres avancés pour [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +46,7 @@ EXEC managed_backup.sp_backup_config_advanced
     ,[@local_cache_path = ] 'NOT AVAILABLE'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a> Arguments  
  @database_name  
  Nom de la base de données pour activer la sauvegarde managée sur une base de données spécifique. Si la valeur est NULL ou *, cette sauvegarde managée s’applique à toutes les bases de données sur le serveur.  
   
@@ -69,7 +71,7 @@ EXEC managed_backup.sp_backup_config_advanced
  @encryptor_name  
  Nom d'un certificat ou d'une clé asymétrique qui existe, utilisé pour chiffrer la sauvegarde. @encryptor_nameEst de **type sysname**. Si vous utilisez une clé asymétrique, elle doit être configurée avec la gestion de clés extensible (EKM). Ce paramètre est facultatif si vous spécifiez NO_ENCRYPTION pour le @encryption_algorithm paramètre.  
   
- Pour plus d’informations, consultez [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Pour plus d’informations, consultez [gestion de clés Extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  @local_cache_path  
  Ce paramètre n’est pas encore pris en charge.  

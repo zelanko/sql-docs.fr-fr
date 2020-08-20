@@ -1,4 +1,5 @@
 ---
+description: Interroger des données spatiales au sujet du plus proche voisin
 title: Interroger des données spatiales au sujet du plus proche voisin | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97e87d6590e9a8a79575e51d0a35f5e882ea21a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e53b816b25c991e7dafb891a0006b256979cb298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464923"
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Interroger des données spatiales au sujet du plus proche voisin
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,11 +72,11 @@ SELECT TOP ( number )
 7.  Toutes les lignes pour lesquelles `STDistance` retourne **NULL** doivent être éliminées par filtrage.  
   
 > [!WARNING]  
->  Les méthodes qui prennent les types de données **geography** ou **geometry** comme arguments retournent **NULL** si les SRID ne sont pas les mêmes pour les types.  
+>   Les méthodes qui prennent les types de données **geography** ou **geometry** comme arguments retourneront **NULL** si les SRID ne sont pas les mêmes pour les types.  
   
  Il est recommandé d'utiliser les nouveaux pavages d'index spatial pour les index utilisés dans les requêtes Plus proche voisin. Pour plus d’informations sur les pavages d’index spatial, consultez [Données spatiales &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple de code suivant montre une requête Plus proche voisin qui peut utiliser un index spatial. L'exemple utilise la table `Person.Address` dans la base de données `AdventureWorks2016` .  
   
 ```sql  
@@ -89,7 +90,7 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  Créez un index spatial sur la colonne SpatialLocation pour voir comment une requête Plus proche voisin utilise un index spatial. Pour plus d'informations sur la création d'index spatiaux, consultez [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple de code suivant montre une requête Plus proche voisin qui ne peut pas utiliser un index spatial.  
   
 ```sql  

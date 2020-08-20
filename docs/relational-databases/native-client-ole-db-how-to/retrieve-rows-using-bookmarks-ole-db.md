@@ -1,4 +1,5 @@
 ---
+description: Récupérer des lignes à l’aide de signets (fournisseur Native Client OLE DB)
 title: Récupérer des lignes à l’aide de signets (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1aee0ddd1324660c5b3fcdfd10ffa9c831d4f237
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 4436f28610b465b896db8c269da3677af60c20a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247013"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465281"
 ---
 # <a name="retrieve-rows-using-bookmarks-native-client-ole-db-provider"></a>Récupérer des lignes à l’aide de signets (fournisseur Native Client OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "87247013"
   Le consommateur attribue au champ **dwFlag** de la structure de liaison la valeur DBCOLUMNSINFO_ISBOOKMARK pour indiquer que la colonne est utilisée comme signet. Le consommateur définit également la propriété d'ensemble de lignes DBPROP_BOOKMARKS avec la valeur VARIANT_TRUE. Cela permet à la colonne 0 d'être présente dans l'ensemble de lignes. **IRowsetLocate::GetRowsAt** est ensuite utilisé pour extraire les lignes, en commençant par la ligne spécifiée par un offset à partir d'un signet.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>Pour extraire des lignes à l'aide de signets  
   
@@ -48,7 +49,7 @@ ms.locfileid: "87247013"
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, remplacez la chaîne de connexion L "(local)" par L "(local) \\ \name", où nom est l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez le code C++ suivant. Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion L« (local) » par L« (local)\\\nom », où le nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

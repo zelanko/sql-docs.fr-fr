@@ -1,4 +1,5 @@
 ---
+description: Vérification de la cohérence
 title: Vérification de la cohérence | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: edd946ca865cd9d8d2edff2c7bedbb3b2629c97c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad1ffe0cb7819447a3819d73cd6605347b756ede
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465901"
 ---
 # <a name="consistency-check"></a>Vérification de la cohérence
 Une vérification de cohérence est effectuée automatiquement par le pilote chaque fois qu’une application définit le champ SQL_DESC_DATA_PTR du APD, ARD ou IPD. Chaque fois que ce champ est défini, le pilote vérifie que la valeur du champ SQL_DESC_TYPE et les valeurs applicables au champ SQL_DESC_TYPE dans le même enregistrement sont valides et cohérentes.  

@@ -1,4 +1,5 @@
 ---
+description: sys.assemblies (Transact-SQL)
 title: sys. Assemblies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ ms.assetid: e321753f-293f-42ab-b225-d118713df40b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5b430767a7ded990b440c3f22b68c2bfab2573a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 2e239ea7b5f91261fb58577071d42ec52957979a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88464861"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87394831"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Nom de l’assembly. Unique dans la base de données.|  
+|**name**|**sysname**|Nom de l'assembly. Unique dans la base de données.|  
 |**principal_id**|**int**|Identificateur du principal qui est propriétaire de cet assembly.|  
 |**assembly_id**|**int**|Numéro d'identification de l'assembly Unique dans une base de données.|  
 |**clr_name**|**nvarchar(4000)**|Chaîne canonique qui encode le nom simple, le numéro de version, les paramètres régionaux, la clé publique, et l'architecture de l'assembly. Cette valeur identifie de façon univoque l'assembly du côté CLR (Common Language Runtime).|  

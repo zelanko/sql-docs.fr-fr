@@ -1,4 +1,5 @@
 ---
+description: Construction d’instructions SQL interopérables
 title: Construction d’instructions SQL interopérables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: acdb0f360242c4c9953804cb768214b0a78251dd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282513"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88465881"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Construction d’instructions SQL interopérables
 Comme mentionné dans les sections précédentes, les applications interopérables doivent utiliser la syntaxe ODBC SQL. Toutefois, au-delà de cette grammaire, un certain nombre de problèmes supplémentaires sont rencontrés par les applications interopérables. Par exemple, que fait une application si elle souhaite utiliser une fonctionnalité, telle que les jointures externes, qui n’est pas prise en charge par toutes les sources de données ?  
