@@ -1,4 +1,5 @@
 ---
+description: sp_helpsubscription (Transact-SQL)
 title: sp_helpsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43951ff65e904bcb0802f84793f9f2101bfd14e9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b1bd6fc81b1af824ded4b193fe34455035edbd56
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736942"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485910"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Affiche des informations sur les abonnements associés à une publication, un article, un Abonné ou un ensemble d'abonnements particuliers. Cette procédure stockée est exécutée sur la base de données de publication d'un serveur de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,21 +43,21 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication associée. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour ce serveur.  
+`[ @publication = ] 'publication'` Nom de la publication associée. *publication* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour ce serveur.  
   
-`[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour les publications et les abonnés sélectionnés. Si la valeur est **All**, une seule entrée est retournée pour l’abonnement complet sur une publication.  
+`[ @article = ] 'article'` Nom de l’article. *article* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour les publications et les abonnés sélectionnés. Si la valeur est **All**, une seule entrée est retournée pour l’abonnement complet sur une publication.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné sur lequel les informations d’abonnement sont obtenues. *Subscriber* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour les publications et les articles sélectionnés.  
+`[ @subscriber = ] 'subscriber'` Nom de l’abonné sur lequel les informations d’abonnement sont obtenues. *Subscriber* est de **type sysname**, avec la valeur par défaut **%** , qui retourne toutes les informations d’abonnement pour les publications et les articles sélectionnés.  
   
-`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **type sysname**, avec la valeur par défaut **%** .  
+`[ @destination_db = ] 'destination_db'` Nom de la base de données de destination. *destination_db* est de **type sysname**, avec la valeur par défaut **%** .  
   
-`[ @found = ] 'found'OUTPUT`Indicateur qui signale le retour de lignes. *valeur*de **type int** et paramètre de sortie, avec la valeur par défaut 23456.  
+`[ @found = ] 'found'OUTPUT` Indicateur qui signale le retour de lignes. *valeur*de **type int** et paramètre de sortie, avec la valeur par défaut 23456.  
   
  **1** indique que la publication est trouvée.  
   
  **0** indique que la publication est introuvable.  
   
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**et sa valeur par défaut est le nom du serveur actuel.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher* est de **type sysname**et sa valeur par défaut est le nom du serveur actuel.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être spécifié, sauf s’il s’agit d’un serveur de publication Oracle.  
@@ -72,11 +73,11 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**État de l’abonnement**|**tinyint**|État de l'abonnement :<br /><br /> **0** = inactif<br /><br /> **1** = abonné<br /><br /> **2** = actif|  
 |**type de synchronisation**|**tinyint**|Type de synchronisation d'abonnement :<br /><br /> **1** = automatique<br /><br /> **2** = aucun|  
 |**type d’abonnement**|**int**|Type d'abonnement :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
-|**full subscription**|**bit**|Indique si l'abonnement concerne tous les articles de la publication :<br /><br /> **0** = non<br /><br /> **1** = Oui|  
+|**full subscription**|**bit**|Indique si l'abonnement concerne tous les articles de la publication :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
 |**nom de l’abonnement**|**nvarchar(255)**|Nom de l'abonnement.|  
 |**mode de mise à jour**|**int**|**0** = lecture seule<br /><br /> **1** = abonnement avec mise à jour immédiate|  
 |**distribution job id**|**Binary(16**|ID du travail de l'Agent de distribution.|  
-|**loopback_detection**|**bit**|La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **0** = renvoie.<br /><br /> **1** = n’est pas renvoyé.<br /><br /> Utilisé avec la réplication transactionnelle bidirectionnelle. Pour plus d’informations, consultez [réplication transactionnelle bidirectionnelle](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|**loopback_detection**|**bit**|La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **0** = renvoie.<br /><br /> **1** = n’est pas renvoyé.<br /><br /> Utilisé avec la réplication transactionnelle bidirectionnelle. Pour plus d’informations, voir [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |**offload_enabled**|**bit**|Indique si l'exécution du déchargement d'un Agent de réplication est configurée pour être exécuté sur l'Abonné.<br /><br /> Si la **valeur est 0**, l’agent est exécuté sur le serveur de publication.<br /><br /> Si la condition est **1**, l’agent est exécuté sur l’abonné.|  
 |**offload_server**|**sysname**|Nom du serveur activé pour l'activation d'Agent à distance. Si la valeur est NULL, le offload_server actuel listé dans [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) table est utilisé.|  
 |**dts_package_name**|**sysname**|Spécifie le nom du package DTS (Data Transformation Services).|  
@@ -97,7 +98,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpsubscription** est utilisé dans la réplication transactionnelle et d’instantané.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLProcedures
 title: SQLProcedures, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4c8b8a9f22f6005d1af811e56485299bad3a425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c4e44a708f96883891d44d629fdd3c945eb283a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487145"
 ---
 # <a name="sqlprocedures-function"></a>Fonction SQLProcedures
 **Conformité**  
@@ -51,7 +52,7 @@ SQLRETURN SQLProcedures(
  *StatementHandle*  
  Entrée Descripteur d’instruction.  
   
- *Nomcatalogue*  
+ *CatalogName*  
  Entrée Catalogue de procédures. Si un pilote prend en charge des catalogues pour certaines tables, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, une chaîne vide ("") dénote les tables qui n’ont pas de catalogues. *Nomcatalogue* ne peut pas contenir un modèle de recherche de chaînes.  
   
  Si l’attribut d’instruction SQL_ATTR_METADATA_ID est défini sur SQL_TRUE, *nomcatalogue* est traité comme un identificateur et sa casse n’est pas significative. S’il est SQL_FALSE, *nomcatalogue* est un argument ordinaire ; Il est traité littéralement et sa casse est importante. Pour plus d’informations, consultez [arguments dans les fonctions de catalogue](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -88,7 +89,7 @@ SQLRETURN SQLProcedures(
 |24 000|État de curseur non valide|Un curseur a été ouvert sur *StatementHandle*, et **SQLFetch** ou **SQLFetchScroll** ont été appelés. Cette erreur est retournée par le gestionnaire de pilotes si **SQLFetch** ou **SQLFetchScroll** n’a pas retourné SQL_NO_DATA, et est retourné par le pilote si **sqlfetch** ou **SQLFetchScroll** a retourné SQL_NO_DATA.<br /><br /> Un curseur a été ouvert sur le *StatementHandle*, mais **SQLFetch** ou **SQLFetchScroll** n’a pas été appelé.|  
 |40001|Échec de la sérialisation|La transaction a été restaurée en raison d’un blocage de ressource avec une autre transaction.|  
 |40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. Ensuite, la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY009|Utilisation non valide d’un pointeur null|L’attribut de l’instruction SQL_ATTR_METADATA_ID a été défini sur SQL_TRUE, l’argument *nomcatalogue* était un pointeur null, et l' *infotype* SQL_CATALOG_NAME retourne que les noms de catalogue sont pris en charge.<br /><br /> (DM) l’attribut d’instruction SQL_ATTR_METADATA_ID a été défini sur SQL_TRUE et l’argument *SchemaName* ou *procname* était un pointeur null.|  
@@ -130,9 +131,9 @@ SQLRETURN SQLProcedures(
 |PROCEDURE_CAT (ODBC 2,0)|1|Varchar|Identificateur du catalogue de procédures ; NULL s’il n’est pas applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines procédures, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, il renvoie une chaîne vide ("") pour les procédures qui n’ont pas de catalogues.|  
 |PROCEDURE_SCHEM (ODBC 2,0)|2|Varchar|Identificateur du schéma de procédure ; NULL s’il n’est pas applicable à la source de données. Si un pilote prend en charge des schémas pour certaines procédures, mais pas pour d’autres, par exemple lorsque le pilote récupère des données à partir de différents SGBD, il retourne une chaîne vide ("") pour les procédures qui n’ont pas de schémas.|  
 |PROCEDURE_NAME (ODBC 2,0)|3|Varchar non NULL|Identificateur de la procédure.|  
-|NUM_INPUT_PARAMS (ODBC 2,0)|4|NON APPLICABLE|Réservé pour un usage futur. Les applications ne doivent pas s’appuyer sur les données retournées dans ces colonnes de résultats.|  
-|NUM_OUTPUT_PARAMS (ODBC 2,0)|5|NON APPLICABLE|Réservé pour un usage futur. Les applications ne doivent pas s’appuyer sur les données retournées dans ces colonnes de résultats.|  
-|NUM_RESULT_SETS (ODBC 2,0)|6|NON APPLICABLE|Réservé pour un usage futur. Les applications ne doivent pas s’appuyer sur les données retournées dans ces colonnes de résultats.|  
+|NUM_INPUT_PARAMS (ODBC 2,0)|4|N/A|Réservé à un usage ultérieur. Les applications ne doivent pas s’appuyer sur les données retournées dans ces colonnes de résultats.|  
+|NUM_OUTPUT_PARAMS (ODBC 2,0)|5|N/A|Réservé à un usage ultérieur. Les applications ne doivent pas s’appuyer sur les données retournées dans ces colonnes de résultats.|  
+|NUM_RESULT_SETS (ODBC 2,0)|6|N/A|Réservé à un usage ultérieur. Les applications ne doivent pas s’appuyer sur les données retournées dans ces colonnes de résultats.|  
 |REMARQUES (ODBC 2,0)|7|Varchar|Description de la procédure.|  
 |PROCEDURE_TYPE (ODBC 2,0)|8|Smallint|Définit le type de la procédure :<br /><br /> SQL_PT_UNKNOWN : il n’est pas possible de déterminer si la procédure retourne une valeur.<br /><br /> SQL_PT_PROCEDURE : l’objet retourné est une procédure ; autrement dit, il n’a pas de valeur de retour.<br /><br /> SQL_PT_FUNCTION : l’objet retourné est une fonction ; autrement dit, il a une valeur de retour.|  
   

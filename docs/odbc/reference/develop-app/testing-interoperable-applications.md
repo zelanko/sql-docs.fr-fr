@@ -1,4 +1,5 @@
 ---
+description: Test des applications interopérables
 title: Test des applications interopérables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c1d43c7aad2501591c497475f6c250ac33712aa7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feebbe5914e9da1e414f5c77a1a69bc0a6e0e7b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487522"
 ---
 # <a name="testing-interoperable-applications"></a>Test des applications interopérables
 Le test des applications interopérables est au mieux une activité fastidieuse et au pire, car de nouveaux pilotes apparaissent continuellement sur le marché. Toutefois, un degré raisonnable de test est possible. Les applications dont l’interopérabilité est limitée ou faible ne doivent être testées que par rapport aux pilotes qu’ils sont assurés de prendre en charge. Toutefois, ils doivent être entièrement testés sur ces pilotes.  

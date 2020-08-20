@@ -1,4 +1,5 @@
 ---
+description: Afficher un rapport de jeu d'éléments de collecte (SQL Server Management Studio)
 title: Afficher un rapport de jeu d’éléments de collecte (SSMS)
 ms.custom: ''
 ms.date: 03/01/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 161fbacb2edc8d73d69bbc501e255ce657f6208c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5132dc4b782cb9af8e5e096ae35f57d8266a27c8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715522"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487197"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Afficher un rapport de jeu d'éléments de collecte (SQL Server Management Studio)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,7 +53,7 @@ ms.locfileid: "85715522"
  Entrez une heure de début pour les données du rapport ou spécifiez-la en cliquant sur les flèches.  
   
  **Durée**  
- Spécifiez la plage de temps à inclure dans le rapport. La valeur par défaut est 240 minutes. Les valeurs possibles pour la sélection sont 15 minutes, 60 minutes, 240 minutes (4 heures), 720 minutes (12 heures) et 1440 minutes (24 heures).  
+ Spécifiez la plage de temps à inclure dans le rapport. La valeur par défaut est 240 minutes. Les valeurs possibles pour la sélection sont 15 minutes, 60 minutes, 240 minutes (4 heures), 720 minutes (12 heures) et 1440 minutes (24 heures).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   

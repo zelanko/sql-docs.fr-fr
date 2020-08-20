@@ -1,4 +1,5 @@
 ---
+description: sp_helppeerresponses (Transact-SQL)
 title: sp_helppeerresponses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b6e6ed76873abba0988045a1c336b4a34fb5d48
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9c1570b01ca8ae3d62303e64760dbc8664981bcb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893534"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485920"
 ---
 # <a name="sp_helppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne toutes les réponses à une demande d’état spécifique reçue d’un participant dans une topologie de réplication d’égal à égal, où la demande a été lancée en exécutant [sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) dans une base de données publiée dans la topologie. Cette procédure stockée est exécutée sur la base de données de publication d'un serveur de publication participant à une topologie de réplication d'égal à égal. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +38,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @request_id = ] request_id`ID d’une demande d’état spécifique. *request_id* est de **type int**, sans valeur par défaut.  
+`[ @request_id = ] request_id` ID d’une demande d’état spécifique. *request_id* est de **type int**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -51,7 +52,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helppeerresponses** est utilisé dans la réplication transactionnelle d’égal à égal.  
   
  **sp_helppeerresponses** procédure est utilisée lors de la restauration d’une base de données publiée dans une topologie d’égal à égal.  

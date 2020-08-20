@@ -1,4 +1,5 @@
 ---
+description: Créer un domaine
 title: Créer un domaine
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 529f0233f95a4f2ee123b2cc3c6974e4f5e6faf4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3a97b28ed41f71fe73c1184bdea28870beecd1f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887994"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487895"
 ---
 # <a name="create-a-domain"></a>Créer un domaine
 
@@ -48,7 +49,7 @@ ms.locfileid: "85887994"
   
 5.  Dans la table **Mappages** , sélectionnez une colonne source dans la liste déroulante de la colonne **Colonne source** d'une ligne vide. Si aucun domaine correspondant n'existe, cliquez sur l'icône **Créer un domaine** .  
   
-##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>Créer un domaine dans l’activité de gestion des domaines  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a> Créer un domaine dans l’activité de gestion des domaines  
   
 1.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Ouvrir la base de connaissances** , puis sélectionnez une base de connaissances ou cliquez sur **Nouvelle Base de connaissances** et entrez les propriétés de la base de connaissances.  
   
@@ -56,7 +57,7 @@ ms.locfileid: "85887994"
   
 3.  Dans la page **Gestion de l'arborescence du domaine** , cliquez sur l'icône **Créer un domaine** au-dessus de la liste des domaines.  
   
-##  <a name="set-domain-properties"></a><a name="Properties"></a>Définir les propriétés du domaine  
+##  <a name="set-domain-properties"></a><a name="Properties"></a> Définir les propriétés du domaine  
   
 1.  Dans la boîte de dialogue **Créer un domaine** , entrez un nom qui est unique dans la base de connaissances et une description limitée à 256 caractères.  
   

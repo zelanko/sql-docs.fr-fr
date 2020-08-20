@@ -1,4 +1,5 @@
 ---
+description: Fonction SQLPrepare
 title: Fonction SQLPrepare | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e9aedd665df2a943627207902d592d597c503c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3b5d68aae8033b0710ee052b001c7942eb1f7d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306880"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487185"
 ---
 # <a name="sqlprepare-function"></a>Fonction SQLPrepare
 **Conformité**  
@@ -80,7 +81,7 @@ SQLRETURN SQLPrepare(
 |42S12|Index introuvable|\**StatementText* contenait une instruction **Drop index** et le nom d’index spécifié n’existait pas.|  
 |42S21|La colonne existe déjà|\**StatementText* contenait une instruction **ALTER TABLE** , et la colonne spécifiée dans la clause **Add** n’est pas unique ou identifie une colonne existante dans la table de base.|  
 |42S22|Colonne introuvable|\**StatementText* contenait une instruction **Create index** , et un ou plusieurs des noms de colonnes spécifiés dans la liste des colonnes n’existaient pas.<br /><br /> \**StatementText* contenait une instruction **Grant** ou **Revoke** , et un nom de colonne spécifié n’existait pas.<br /><br /> \**StatementText* contenait une instruction **Select**, **Delete**, **Insert**ou **Update** , et un nom de colonne spécifié n’existait pas.<br /><br /> \**StatementText* contenait une instruction **Create table** et une colonne spécifiée dans une contrainte (référençant une table autre que celle en cours de création) n’existait pas.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*, puis la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY009|Utilisation non valide d’un pointeur null|(DM) *StatementText* était un pointeur null.|  

@@ -1,4 +1,5 @@
 ---
+description: Service Integration Services (Service SSIS)
 title: Service Integration Services (Service SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e3ec1d9e9721ff050ea9196322c3e8a81aba7f
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922018"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487702"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
 
@@ -77,7 +78,7 @@ ms.locfileid: "86922018"
   
  Vous ne pouvez installer qu'une seule instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un ordinateur. Le service n'est pas spécifique à une instance particulière du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Vous vous connectez au service en utilisant le nom de l'ordinateur sur lequel il s'exécute.  
   
- Vous pouvez gérer le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide de l’un des composants logiciels enfichables Microsoft Management Console (MMC) suivants : Gestionnaire de configuration ou Services SQL Server. Avant de pouvoir gérer des packages dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vérifier que le service a démarré.  
+ Vous pouvez gérer le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide de l’un des composants logiciels enfichables MMC (Microsoft Management Console) suivants : Gestionnaire de configuration SQL Server ou Services. Avant de pouvoir gérer des packages dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vérifier que le service a démarré.  
   
  Par défaut, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui est installée au même moment que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Si une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas installée au même moment, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance locale par défaut du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour gérer des packages stockés dans une instance nommée ou une instance distante du [!INCLUDE[ssDE](../../includes/ssde-md.md)]ou dans plusieurs instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)], vous devez modifier le fichier de configuration du service.
   
@@ -165,7 +166,7 @@ ms.locfileid: "86922018"
 
 ### <a name="event-logged-when-permissions-are-missing"></a>Événement journalisé en l’absence d’autorisations
 
-Si le compte de service de l’agent SQL Server n’a pas le modèle DCOM (Distributed Component Object Model) Integration Services **[Autorisations de lancement et d’activation]** , l’événement suivant est ajouté aux journaux des événements système quand l’agent SQL Server exécute les travaux du package SSIS :
+Si le compte de service de l’agent SQL Server n’a pas le modèle DCOM (Distributed Component Object Model) Integration Services **[Autorisations de lancement et d’activation]**, l’événement suivant est ajouté aux journaux des événements système quand l’agent SQL Server exécute les travaux du package SSIS :
 
 ```
 Log Name: System

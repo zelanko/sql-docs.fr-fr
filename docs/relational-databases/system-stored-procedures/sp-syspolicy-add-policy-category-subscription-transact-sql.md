@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 title: sp_syspolicy_add_policy_category_subscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 99e27db247ca38897b65ef73c38e3eb48e1f1358
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ba22b7025aa30216d94804440fec2c86eea5fc09
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485657"
 ---
 # <a name="sp_syspolicy_add_policy_category_subscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ajoute un abonnement aux catégories de stratégies à la base de données spécifiée.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,20 +43,20 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @target_type = ] 'target_type'`Type de cible de l’abonnement aux catégories. *target_type* est de **type sysname**, est obligatoire et doit avoir la valeur’Database'.  
+`[ @target_type = ] 'target_type'` Type de cible de l’abonnement aux catégories. *target_type* est de **type sysname**, est obligatoire et doit avoir la valeur’Database'.  
   
-`[ @target_object = ] 'target_object'`Nom de la base de données qui s’abonnera à la catégorie. *target_object* est de **type sysname**et est obligatoire.  
+`[ @target_object = ] 'target_object'` Nom de la base de données qui s’abonnera à la catégorie. *target_object* est de **type sysname**et est obligatoire.  
   
-`[ @policy_category = ] 'policy_category'`Nom de la catégorie de stratégie à laquelle s’abonner. *policy_category* est de **type sysname**et est obligatoire.  
+`[ @policy_category = ] 'policy_category'` Nom de la catégorie de stratégie à laquelle s’abonner. *policy_category* est de **type sysname**et est obligatoire.  
   
  Pour obtenir des valeurs pour *policy_category*, interrogez la vue système msdb.dbo.syspolicy_policy_categories.  
   
-`[ @policy_category_subscription_id = ] policy_category_subscription_id`Identificateur de l’abonnement aux catégories. *policy_category_subscription_id* est de **type int**et est retourné en tant que output.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Identificateur de l’abonnement aux catégories. *policy_category_subscription_id* est de **type int**et est retourné en tant que output.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_add_policy_category_subscription dans le contexte de la base de données système msdb.  
   
  Si vous spécifiez une catégorie de stratégie qui n'existe pas, une nouvelle catégorie de stratégie est créée et l'abonnement est autorisé pour toutes les bases de données lorsque vous exécutez la procédure stockée. Si vous supprimez l’abonnement autorisé pour la nouvelle catégorie, il ne s’appliquera qu’à la base de données que vous avez spécifiée en tant que *target_object*. Pour plus d’informations sur la modification d’un paramètre d’abonnement autorisé, consultez [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md).  

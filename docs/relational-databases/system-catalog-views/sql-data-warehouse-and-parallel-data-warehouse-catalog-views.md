@@ -1,4 +1,5 @@
 ---
+description: Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse
 title: Affichages catalogue
 titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: 10/29/2019
@@ -12,12 +13,12 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 258c08acbccc80a90a03b70f5f586960aa763f02
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 8682f7d5549389ff98d20862ce86f6d177b3116e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86197300"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486509"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse
 
@@ -25,7 +26,7 @@ ms.locfileid: "86197300"
 
  Cette rubrique répertorie [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] les [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] affichages catalogue et.  
   
-## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] affichages catalogue  
+## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] affichages catalogue  
  Les affichages catalogue suivants s’appliquent à [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] :  
   
  [sys. pdw_column_distribution_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
@@ -60,7 +61,7 @@ ms.locfileid: "86197300"
   
  [sys. pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Affichages catalogue
+## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Affichages catalogue
 
  Les affichages catalogue suivants s’appliquent [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] uniquement à :
 
@@ -77,7 +78,7 @@ ms.locfileid: "86197300"
  [sys. workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
 
 
-## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Affichages catalogue
+## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Affichages catalogue
 
  Les affichages catalogue suivants s’appliquent [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] uniquement à :
 

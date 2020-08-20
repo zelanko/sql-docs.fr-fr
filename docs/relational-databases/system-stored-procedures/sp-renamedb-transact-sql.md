@@ -1,4 +1,5 @@
 ---
+description: sp_renamedb (Transact-SQL)
 title: sp_renamedb (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a947bd670e57660f1f523c56f7422a28eacc39e0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bbf6e245c580a54d68ddaba146bc26050f4264ba
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891481"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485763"
 ---
 # <a name="sp_renamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "85891481"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] À la place, utilisez ALTER DATABASE MODIFY NAME. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,9 +43,9 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'old_name'`Nom actuel de la base de données. *old_name* est de **type sysname**, sans valeur par défaut.  
+`[ @dbname = ] 'old_name'` Nom actuel de la base de données. *old_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @newname = ] 'new_name'`Nouveau nom de la base de données. *new_name* doit respecter les règles applicables aux identificateurs. *new_name* est de **type sysname**, sans valeur par défaut.  
+`[ @newname = ] 'new_name'` Nouveau nom de la base de données. *new_name* doit respecter les règles applicables aux identificateurs. *new_name* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  

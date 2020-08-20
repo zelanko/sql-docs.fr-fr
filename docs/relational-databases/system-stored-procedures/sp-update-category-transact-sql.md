@@ -1,4 +1,5 @@
 ---
+description: sp_update_category (Transact-SQL)
 title: sp_update_category (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4eaf2fe7fd4b1ee613bec30dbf6967eaeab8b51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891349"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485572"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie le nom d'une catégorie.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'`Classe de la catégorie à mettre à jour. la classe est de *type* **varchar (8)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'` Classe de la catégorie à mettre à jour. la classe est de *type* **varchar (8)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -50,14 +51,14 @@ sp_update_category
 |**ATTENTE**|Met à jour une catégorie de travail.|  
 |**AND**|Met à jour une catégorie d'opérateur.|  
   
-`[ @name = ] 'old_name'`Nom actuel de la catégorie. *old_name*est de **type sysname**, sans valeur par défaut.  
+`[ @name = ] 'old_name'` Nom actuel de la catégorie. *old_name*est de **type sysname**, sans valeur par défaut.  
   
-`[ @new_name = ] 'new_name'`Nouveau nom de la catégorie. *new_name*est de **type sysname**, sans valeur par défaut.  
+`[ @new_name = ] 'new_name'` Nouveau nom de la catégorie. *new_name*est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_update_category** doit être exécuté à partir de la base de données **msdb** .  
   
 ## <a name="permissions"></a>Autorisations  

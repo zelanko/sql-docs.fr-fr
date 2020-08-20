@@ -1,4 +1,5 @@
 ---
+description: Application Data Quality Client
 title: Application Data Quality Client
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 88deed9104d231b666a1ab3e6dfd72da94ad1465
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9442b966c7a7b5679e685fe330b52807c46af35f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899124"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487813"
 ---
 # <a name="data-quality-client-application"></a>Application Data Quality Client
 
@@ -38,7 +39,7 @@ ms.locfileid: "85899124"
 |Description du contenu|Rubrique|  
 |-------------------------|-----------|  
 |Décrit l'utilisation des bases de connaissances et des domaines dans DQS.|[Bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)|  
-|Décrit la procédure de nettoyage de vos données dans DQS.|[Data Cleansing](../data-quality-services/data-cleansing.md)|  
+|Décrit la procédure de nettoyage de vos données dans DQS.|[Nettoyage des données](../data-quality-services/data-cleansing.md)|  
 |Décrit la procédure de mise en correspondance dans DQS.|[Correspondance de données](../data-quality-services/data-matching.md)|  
 |Décrit les procédures d'administration de DQS.|[administration de dqs](../data-quality-services/dqs-administration.md)|  
   

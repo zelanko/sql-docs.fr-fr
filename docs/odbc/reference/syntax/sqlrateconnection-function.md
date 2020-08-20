@@ -1,4 +1,5 @@
 ---
+description: SQLRateConnection, fonction
 title: SQLRateConnection fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d29033460a7f89fc4a8b1c371a4d32bdf94a2a05
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc6b217e8d9e06c4ab011d15cfe016dfefc91d76
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288879"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487120"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection, fonction
 **Conformité**  

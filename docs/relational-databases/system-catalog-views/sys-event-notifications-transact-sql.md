@@ -1,4 +1,5 @@
 ---
+description: sys.event_notifications (Transact-SQL)
 title: sys. event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,12 +21,12 @@ ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44f10a61c79feea046b59c78e608022acfc77136
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 100faecd43b0a76bea9aa11aa8bdff3055aa7f5f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752908"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486385"
 ---
 # <a name="sysevent_notifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "85752908"
 |**parent_id**|**int**|ID non NULL de l'objet parent<br /><br /> 0 = La classe parent est la base de données.|  
 |**create_date**|**datetime**|Date de création.|  
 |**modify_date**|**datetime**|Est toujours égal à **create_date**.|  
-|**service_name**|**nvarchar(256)**|Nom du service cible auquel la notification est envoyée.|  
+|**service_name**|**nvarchar (256)**|Nom du service cible auquel la notification est envoyée.|  
 |**broker_instance**|**nvarchar(128)**|Instance du broker auquel la notification est envoyée.|  
 |**principal_id**|**int**|ID du principal de base de données propriétaire de cette notification d'événement|  
 |**creator_sid**|**varbinary (85)**|SID de la connexion qui a créé la notification d'événement.<br /><br /> A la valeur NULL si l'option FAN_IN n'est pas spécifiée.|  
@@ -50,7 +51,7 @@ ms.locfileid: "85752908"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Vues de catalogue d’objets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

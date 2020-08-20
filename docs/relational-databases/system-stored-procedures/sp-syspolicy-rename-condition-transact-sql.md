@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_rename_condition (Transact-SQL)
 title: sp_syspolicy_rename_condition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 11f3abeff6d66e4a4a60c9e35d8eec0d742f753a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1df9ab11c50340b75d51481822f4a8925df34a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892721"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485623"
 ---
 # <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renomme une condition existante dans la Gestion basée sur des stratégies.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,16 +41,16 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom de la condition que vous souhaitez renommer. *Name* est de **type sysname**et doit être spécifié si *condition_id* a la valeur null.  
+`[ @name = ] 'name'` Nom de la condition que vous souhaitez renommer. *Name* est de **type sysname**et doit être spécifié si *condition_id* a la valeur null.  
   
-`[ @condition_id = ] condition_id`Est l’identificateur de la condition que vous souhaitez renommer. *condition_id* est de **type int**et doit être spécifié si *Name* a la valeur null.  
+`[ @condition_id = ] condition_id` Est l’identificateur de la condition que vous souhaitez renommer. *condition_id* est de **type int**et doit être spécifié si *Name* a la valeur null.  
   
-`[ @new_name = ] 'new_name'`Nouveau nom de la condition. *new_name* est de **type sysname**et est obligatoire. Ne peut pas avoir la valeur NULL ou être une chaîne vide.  
+`[ @new_name = ] 'new_name'` Nouveau nom de la condition. *new_name* est de **type sysname**et est obligatoire. Ne peut pas avoir la valeur NULL ou être une chaîne vide.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_rename_condition dans le contexte de la base de données système msdb.  
   
  Vous devez spécifier une valeur pour *Name* ou *condition_id*. Les deux ne peuvent pas être NULL. Pour obtenir ces valeurs, interrogez la vue msdb.dbo.syspolicy_conditions.  

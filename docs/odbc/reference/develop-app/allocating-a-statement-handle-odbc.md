@@ -1,4 +1,5 @@
 ---
+description: Allocation d’un handle d’instruction dans ODBC
 title: Allocation d’un handle d’instruction ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf9a15bc4622b15afa9838327edd90383a812270
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 624490beee55c7fa37346087fc85b560904f6b93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288429"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487542"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>Allocation d’un handle d’instruction dans ODBC
 Pour que l’application puisse exécuter une instruction, elle doit allouer un descripteur d’instruction comme suit :  

@@ -1,4 +1,5 @@
 ---
+description: Extraire une DAC d'une base de données
 title: Extraire une DAC d’une base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2016
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d4c45a6b720fde31618f384bcc2df2cceacc4102
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 52d895380cb76a094b46787b1cbc16cfac6ce39f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781682"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487166"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraire une DAC d'une base de données
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -75,7 +76,7 @@ ms.locfileid: "85781682"
 ###  <a name="select-data-page"></a><a name="SelectData"></a> Select data page  
 Sélectionnez les données de référence que vous voulez inclure dans votre fichier de package d’application de la couche Données (DAC). L'inclusion de données dans votre package DAC est facultative. Le package DAC inclura déjà le schéma de tous les objets de base de données pris en charge, ainsi que les objets d'instance relatifs à votre base de données.  
   
- Vous pouvez inclure jusqu'à 10 Mo de données de référence dans votre fichier de package DAC. Toutefois, pour que les tables soient inclues dans la DAC, elles ne doivent pas contenir de types de données d’objet BLOB tels que **image** ou **varchar(max)** . Pour extraire des quantités de données plus importantes pour le transfert vers une autre base de données, utilisez SQL Server Integration Services, l'utilitaire de copie en bloc ou l'un des nombreuses autres techniques de migration des données.  
+ Vous pouvez inclure jusqu'à 10 Mo de données de référence dans votre fichier de package DAC. Toutefois, pour que les tables soient inclues dans la DAC, elles ne doivent pas contenir de types de données d’objet BLOB tels que **image** ou **varchar(max)**. Pour extraire des quantités de données plus importantes pour le transfert vers une autre base de données, utilisez SQL Server Integration Services, l'utilitaire de copie en bloc ou l'un des nombreuses autres techniques de migration des données.  
   
  **Table de base de données** - Cochez la case en regard des tables de base de données qui contiennent les données que vous souhaitez inclure dans votre package DAC. Vous pouvez sélectionner jusqu'à dix tables qui ont 10 000 lignes au maximum.  
   

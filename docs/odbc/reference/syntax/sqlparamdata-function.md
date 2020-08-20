@@ -1,4 +1,5 @@
 ---
+description: SQLParamData, fonction
 title: SQLParamData, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ed149e125e3231d670c6ddbd4569ff5ccee5c15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d44b3bd5017e5ef5cebb40c9bbbaccdde7368bbf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487252"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData, fonction
 **Conformité**  
@@ -63,7 +64,7 @@ SQLRETURN SQLParamData(
 |22026|Chaîne de données ou longueur non correspondante|Le type d’informations SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** était « Y », et moins de données ont été envoyées pour un paramètre long (le type de données était SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un long type de données spécifique à la source de données) que celui spécifié avec l’argument *StrLen_or_IndPtr* dans **SQLBindParameter**.<br /><br /> Le type d’informations SQL_NEED_LONG_DATA_LEN dans **SQLGetInfo** était « Y », et moins de données ont été envoyées pour une longue colonne (le type de données était SQL_LONGVARCHAR, SQL_LONGVARBINARY ou un type de données long spécifique à la source de données) que celui spécifié dans la mémoire tampon de longueur correspondant à une colonne dans une ligne de données qui a été ajoutée ou mise à jour avec **SQLBulkOperations** ou mis à jour avec **SQLSetPos**|  
 |40001|Échec de la sérialisation|La transaction a été restaurée en raison d’un blocage de ressource avec une autre transaction.|  
 |40003|Saisie semi-automatique des instructions inconnue|La connexion associée a échoué pendant l’exécution de cette fonction et l’état de la transaction ne peut pas être déterminé.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*; la fonction a ensuite été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
 |HY010|Erreur de séquence de fonction|(DM) l’appel de fonction précédent n’était pas un appel à **SQLExecDirect**, à **SQLExecute**, à **SQLBulkOperations**ou à **SQLSetPos** où le code de retour était SQL_NEED_DATA, ou l’appel de fonction précédent était un appel à **SQLPutData**.<br /><br /> L’appel de fonction précédent était un appel à **SQLParamData**.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLParamData** .<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et a retourné SQL_NEED_DATA. **SQLCancel** a été appelé avant l’envoi des données pour l’ensemble des colonnes ou des paramètres de données en cours d’exécution.|  
@@ -79,9 +80,9 @@ SQLRETURN SQLParamData(
 ## <a name="comments"></a>Commentaires  
  **SQLParamData** peut être appelé pour fournir des données en cours d’exécution pour deux utilisations : les données de paramètre qui seront utilisées dans un appel à **SQLExecute** ou **SQLExecDirect**, ou les données de colonne qui seront utilisées lorsqu’une ligne est mise à jour ou ajoutée par un appel à **SQLBulkOperations** ou mises à jour par un appel à **SQLSetPos**. Au moment de l’exécution, **SQLParamData** retourne à l’application un indicateur des données requises par le pilote.  
   
- Quand une application appelle **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos**, le pilote retourne SQL_NEED_DATA s’il a besoin de données en cours d’exécution. Une application appelle ensuite **SQLParamData** pour déterminer les données à envoyer. Si le pilote nécessite des données de paramètre, le pilote renvoie * \** dans la mémoire tampon de sortie ValuePtrPtr la valeur que l’application place dans la mémoire tampon de l’ensemble de lignes. L’application peut utiliser cette valeur pour déterminer les données de paramètre demandées par le pilote. Si le pilote nécessite des données de colonne, le pilote renvoie * \** dans la mémoire tampon ValuePtrPtr l’adresse à laquelle la colonne a été initialement liée, comme suit :  
+ Quand une application appelle **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos**, le pilote retourne SQL_NEED_DATA s’il a besoin de données en cours d’exécution. Une application appelle ensuite **SQLParamData** pour déterminer les données à envoyer. Si le pilote nécessite des données de paramètre, le pilote renvoie dans la mémoire tampon de sortie * \* ValuePtrPtr* la valeur que l’application place dans la mémoire tampon de l’ensemble de lignes. L’application peut utiliser cette valeur pour déterminer les données de paramètre demandées par le pilote. Si le pilote nécessite des données de colonne, le pilote renvoie dans la mémoire tampon * \* ValuePtrPtr* l’adresse à laquelle la colonne a été initialement liée, comme suit :  
   
- *Bound Address* + *Décalage de liaison* d’adresse liée + ((*numéro de ligne* -1) x taille de l' *élément*)  
+ *Adresse liée*  +  *Décalage de liaison* + ((*numéro de ligne* -1) x taille de l' *élément*)  
   
  où les variables sont définies comme indiqué dans le tableau suivant.  
   
@@ -89,12 +90,12 @@ SQLRETURN SQLParamData(
 |--------------|-----------------|  
 |*Adresse liée*|Adresse spécifiée avec l’argument *TargetValuePtr* dans **SQLBindCol**.|  
 |*Décalage de liaison*|Valeur stockée à l’adresse spécifiée avec l’attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR.|  
-|*Row Number*|Numéro de base 1 de la ligne dans l’ensemble de lignes. Pour les extractions sur une seule ligne, il s’agit de la valeur par défaut 1.|  
+|*Numéro de ligne*|Numéro de base 1 de la ligne dans l’ensemble de lignes. Pour les extractions sur une seule ligne, il s’agit de la valeur par défaut 1.|  
 |*Taille de l’élément*|Valeur de l’attribut d’instruction SQL_ATTR_ROW_BIND_TYPE pour les tampons de données et de longueur/d’indicateur.|  
   
  Elle retourne également SQL_NEED_DATA, qui est un indicateur pour l’application qu’elle doit appeler **SQLPutData** pour envoyer les données.  
   
- L’application appelle **SQLPutData** autant de fois que nécessaire pour envoyer les données de données en cours d’exécution pour la colonne ou le paramètre. Une fois que toutes les données ont été envoyées pour la colonne ou le paramètre, l’application appelle **SQLParamData** à nouveau. Si **SQLParamData** retourne à nouveau SQL_NEED_DATA, les données doivent être envoyées pour un autre paramètre ou une autre colonne. Par conséquent, l’application appelle **SQLPutData**. Si toutes les données en cours d’exécution ont été envoyées pour tous les paramètres ou colonnes, **SQLParamData** retourne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO, la valeur de * \*ValuePtrPtr* n’est pas définie, et l’instruction SQL peut être exécutée ou l’appel **SQLBulkOperations** ou **SQLSetPos** peut être traité.  
+ L’application appelle **SQLPutData** autant de fois que nécessaire pour envoyer les données de données en cours d’exécution pour la colonne ou le paramètre. Une fois que toutes les données ont été envoyées pour la colonne ou le paramètre, l’application appelle **SQLParamData** à nouveau. Si **SQLParamData** retourne à nouveau SQL_NEED_DATA, les données doivent être envoyées pour un autre paramètre ou une autre colonne. Par conséquent, l’application appelle **SQLPutData**. Si toutes les données en cours d’exécution ont été envoyées pour tous les paramètres ou colonnes, **SQLParamData** retourne SQL_SUCCESS ou SQL_SUCCESS_WITH_INFO, la valeur de * \* ValuePtrPtr* n’est pas définie, et l’instruction SQL peut être exécutée ou l’appel **SQLBulkOperations** ou **SQLSetPos** peut être traité.  
   
  Si **SQLParamData** fournit des données de paramètre pour une instruction UPDATE ou DELETE recherchée qui n’affecte aucune ligne de la source de données, l’appel à **SQLParamData** retourne SQL_NO_DATA.  
   

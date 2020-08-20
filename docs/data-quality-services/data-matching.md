@@ -1,4 +1,5 @@
 ---
+description: Correspondance de données
 title: Correspondance de données
 ms.date: 10/01/2012
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: faa4c6066af0d7c516434176817d8c7f49672be5
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 5f4fad318bfb0755848e1af3fd7d21b9bc421f47
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363043"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487832"
 ---
 # <a name="data-matching"></a>Correspondance de données
 

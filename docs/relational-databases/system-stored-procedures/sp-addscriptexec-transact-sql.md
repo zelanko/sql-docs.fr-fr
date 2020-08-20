@@ -1,4 +1,5 @@
 ---
+description: sp_addscriptexec (Transact-SQL)
 title: sp_addscriptexec (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7907f085cedfeb6a5dfc8be70c9a7eff67dc37b0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a133709a8fbaaabd58a9ad00d7298bf34317b0cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486322"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Publie un script SQL (fichier .sql) sur tous les Abonnés d'une publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,17 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @scriptfile = ] 'scriptfile'`Est le chemin d’accès complet au fichier de script SQL. *scriptfile* est de type **nvarchar (4000)**, sans valeur par défaut.  
+`[ @scriptfile = ] 'scriptfile'` Est le chemin d’accès complet au fichier de script SQL. *scriptfile* est de type **nvarchar (4000)**, sans valeur par défaut.  
   
-`[ @skiperror = ] 'skiperror'`Indique si le Agent de distribution ou Agent de fusion doit s’arrêter lorsqu’une erreur se produit pendant le traitement du script. *SkipError* est de valeur de **bit**, avec 0 comme valeur par défaut.  
+`[ @skiperror = ] 'skiperror'` Indique si le Agent de distribution ou Agent de fusion doit s’arrêter lorsqu’une erreur se produit pendant le traitement du script. *SkipError* est de valeur de **bit**, avec 0 comme valeur par défaut.  
   
  **0** = l’agent va s’arrêter.  
   
  **1** = l’agent continue le script et ignore l’erreur.  
   
-`[ @publisher = ] 'publisher'`Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un serveur de publication non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  l' *éditeur* ne doit pas être utilisé lors de la publication à partir d’un serveur de publication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

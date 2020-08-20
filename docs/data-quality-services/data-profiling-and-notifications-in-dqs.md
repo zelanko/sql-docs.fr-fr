@@ -1,4 +1,5 @@
 ---
+description: Profilage des données et notifications dans DQS
 title: Profilage des données et notifications dans DQS
 ms.date: 04/01/2020
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: af0464a307d77531c5d11624dc86a836ddf77711
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4857ba951d86551e95f81075d77bc1d0d9be928a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882551"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487819"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Profilage des données et notifications dans DQS
 
@@ -74,7 +75,7 @@ ms.locfileid: "85882551"
   
 -   [Exécuter un projet de correspondance](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a>Profilage des données dans l’analyse des activités  
+##  <a name="profiling-data-in-activity-monitoring"></a><a name="Monitoring"></a> Profilage des données dans l’analyse des activités  
  Les informations de profilage pour les activités de découverte des connaissances, de stratégie de correspondance, de correspondance et de nettoyage sont disponibles non seulement dans les pages d’activité du client de qualité des données, mais également dans l’analyse des activités. L'analyse des activités vous fournit une vue d'ensemble des activités en cours et passées. Outre les propriétés et les processus de calcul connexes des activités, vous pouvez afficher les informations de profilage générées pour chaque activité à un emplacement. Vous sélectionnez une activité dans la table des activités pour afficher les résultats de profilage dans une table ci-dessous. Vous pouvez également exporter les résultats de profilage. Pour plus d’informations, consultez [DQS Administration](../data-quality-services/dqs-administration.md).  
   
 ##  <a name="notifications"></a><a name="Notifications"></a> Notifications  

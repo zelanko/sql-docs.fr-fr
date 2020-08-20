@@ -1,4 +1,5 @@
 ---
+description: sp_replmonitorhelpsubscription (Transact-SQL)
 title: sp_replmonitorhelpsubscription (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9597e7a3512307367568ee14800fcbf69a3045f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485666"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Renvoie des informations sur l'état actuel d'abonnements appartenant à une ou plusieurs publications du serveur de publication, et retourne une ligne pour chaque abonnement retourné. Cette procédure stockée, utilisée pour surveiller la réplication, est exécutée sur la base de données du serveur de distribution.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,13 +45,13 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur de publication dont l’État est en cours d’analyse. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut. Si la **valeur est null**, les informations sont retournées pour tous les serveurs de publication qui utilisent le serveur de distribution.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication dont l’État est en cours d’analyse. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut. Si la **valeur est null**, les informations sont retournées pour tous les serveurs de publication qui utilisent le serveur de distribution.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données publiée. *publisher_db* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, les informations retournées concernent toutes les bases de données publiées situées sur le serveur de publication.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données publiée. *publisher_db* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, les informations retournées concernent toutes les bases de données publiées situées sur le serveur de publication.  
   
-`[ @publication = ] 'publication'`Nom de la publication en cours d’analyse. *publication* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication en cours d’analyse. *publication* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @publication_type = ] publication_type`Si le type de publication. *publication_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @publication_type = ] publication_type` Si le type de publication. *publication_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -59,7 +60,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**2**|Publication de fusion.|  
 |NULL (par défaut)|La réplication tente de déterminer le type de publication.|  
   
-`[ @mode = ] mode`Mode de filtrage à utiliser pour retourner les informations de surveillance d’abonnement. le *mode* est **int**et peut prendre l’une des valeurs suivantes.  
+`[ @mode = ] mode` Mode de filtrage à utiliser pour retourner les informations de surveillance d’abonnement. le *mode* est **int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -72,24 +73,24 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**6**|Retourne uniquement les abonnements en cours de synchronisation.|  
 |**7**|Retourne uniquement les abonnements qui ne sont pas en cours de synchronisation.|  
   
-`[ @topnum = ] topnum`Limite le jeu de résultats au nombre d’abonnements spécifié au début des données retournées. *topnum* est de **type int**, sans valeur par défaut.  
+`[ @topnum = ] topnum` Limite le jeu de résultats au nombre d’abonnements spécifié au début des données retournées. *topnum* est de **type int**, sans valeur par défaut.  
   
-`[ @exclude_anonymous = ] exclude_anonymous`Indique si les abonnements extraits anonymes sont exclus du jeu de résultats. *exclude_anonymous* est de **bit**, avec **0**comme valeur par défaut ; la valeur **1** signifie que les abonnements anonymes sont exclus et la valeur **0** indique qu’ils sont inclus.  
+`[ @exclude_anonymous = ] exclude_anonymous` Indique si les abonnements extraits anonymes sont exclus du jeu de résultats. *exclude_anonymous* est de **bit**, avec **0**comme valeur par défaut ; la valeur **1** signifie que les abonnements anonymes sont exclus et la valeur **0** indique qu’ils sont inclus.  
   
-`[ @refreshpolicy = ] refreshpolicy`À usage interne uniquement.  
+`[ @refreshpolicy = ] refreshpolicy` À usage interne uniquement.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**statut**|**int**|Examine l'état de tous les agents de réplication associés à la publication, puis retourne l'état le plus élevé dans l'ordre suivant :<br /><br /> **6** = échec<br /><br /> **5** = nouvelle tentative<br /><br /> **2** = arrêté<br /><br /> **4** = inactif<br /><br /> **3** = en cours<br /><br /> **1** = démarré|  
-|**tres**|**int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration : un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **2** = latence : le temps nécessaire à la réplication des données d’un serveur de publication transactionnel vers l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration-un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **8** = mergefastrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau lente ou d’accès à distance.<br /><br /> **32** = mergefastrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau lente ou d’accès à distance.|  
+|**warning**|**int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration : un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **2** = latence : le temps nécessaire à la réplication des données d’un serveur de publication transactionnel vers l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration-un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de la période de rétention.<br /><br /> **8** = mergefastrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration-le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, sur une connexion réseau lente ou d’accès à distance.<br /><br /> **32** = mergefastrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed-la vitesse de transmission des lignes pendant la synchronisation d’un abonnement de fusion n’a pas réussi à maintenir le taux de seuil, en lignes par seconde, sur une connexion réseau lente ou d’accès à distance.|  
 |**côté**|**sysname**|Nom de l'Abonné.|  
 |**subscriber_db**|**sysname**|Nom de la base de données utilisée pour l'abonnement.|  
 |**publisher_db**|**sysname**|Nom de la base de données de publication.|  
 |**édition**|**sysname**|Nom d'une publication.|  
 |**publication_type**|**int**|Type de publication, qui peut prendre l’une des valeurs suivantes :<br /><br /> **0** = publication transactionnelle<br /><br /> **1** = publication d’instantané<br /><br /> **2** = publication de fusion|  
-|**subtype**|**int**|Type d'abonnement, qui peut prendre l'une des valeurs suivantes :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
+|**sous-type**|**int**|Type d'abonnement, qui peut prendre l'une des valeurs suivantes :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
 |**latence**|**int**|Latence maximale, en secondes, des modifications de données propagées par l'Agent de lecture du journal ou l'Agent de distribution pour une publication transactionnelle.|  
 |**latencythreshold**|**int**|Latence maximale de la publication transactionnelle au-delà de laquelle un avertissement est déclenché.|  
 |**agentnotrunning**|**int**|Durée, en heures, pendant laquelle l'Agent n'a pas été exécuté.|  
@@ -116,7 +117,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_replmonitorhelpsubscription** est utilisé avec tous les types de réplications.  
   
  **sp_replmonitorhelpsubscription** commande le jeu de résultats en fonction de la gravité de l’état de l’abonnement, qui est déterminée par la valeur de *monitorranking*. Par exemple, les lignes de tous les abonnements se trouvant dans un état d'erreur précèdent les lignes des abonnements se trouvant dans un état d'avertissement.  

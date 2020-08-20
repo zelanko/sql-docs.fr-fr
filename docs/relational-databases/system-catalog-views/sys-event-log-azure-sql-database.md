@@ -1,4 +1,5 @@
 ---
+description: sys.event_log (Azure SQL Database)
 title: sys. event_log (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
@@ -20,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd3db96c34d6a6ca8f6f08fc76fac73a4c4d79a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784924"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486402"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -52,7 +53,7 @@ ms.locfileid: "85784924"
 |**description**|**nvarchar(max)**|Description détaillée de l'événement.<br /><br /> Pour une liste des valeurs possibles, consultez [Types d'événements](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes).|  
 |**additional_data**|**XML**|*Remarque : cette valeur est toujours NULL pour Azure SQL Database v12. Consultez la section [exemples](#Deadlock) pour savoir comment récupérer des événements de blocage pour v12.*<br /><br /> Pour les événements **Deadlock** , cette colonne contient le graphique de blocage. Pour les autres types d'événements, cette colonne renvoie la valeur NULL. |  
   
-##  <a name="event-types"></a><a name="EventTypes"></a>Types d’événements
+##  <a name="event-types"></a><a name="EventTypes"></a> Types d’événements
 
  Les événements enregistrés par chaque ligne de cette vue sont identifiés par une catégorie (**event_category**), un type d’événement (**event_type**) et un sous-type (**event_subtype**). Le tableau suivant répertorie les types d'événements regroupés dans cette vue.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "85784924"
 
  Les utilisateurs autorisés à accéder à la base de données **Master** disposent d’un accès en lecture seule à cette vue.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ### <a name="event-aggregation"></a>Agrégation d'événements
 
@@ -148,7 +149,7 @@ WHERE event_type = 'deadlock'
     AND database_name = 'Database1';  
 ```
 
-<a name="Deadlock"></a>La requête suivante retourne tous les événements de blocage pour la base de données Database1 (s’applique uniquement à Azure SQL Database V12).  
+<a name="Deadlock"></a> La requête suivante retourne tous les événements de blocage pour la base de données Database1 (s’applique uniquement à Azure SQL Database V12).  
 
 ```sql
 WITH CTE AS (  

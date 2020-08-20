@@ -1,4 +1,5 @@
 ---
+description: sys.sp_cdc_help_change_data_capture (Transact-SQL)
 title: sys. sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -21,19 +22,19 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7935bc8e0472b90d22a93190f5af81c8e5910e67
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7b0fa1b0e6219ebfef9f281eec8e8503e22f0b2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891093"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485545"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la configuration de capture de données modifiées pour chaque table activée pour la capture de données modifiées dans la base de données actuelle. Jusqu'à deux lignes peuvent être retournées pour chaque table source, une ligne pour chaque instance de capture. La capture des modifications de données n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -82,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Liste des colonnes d'index utilisées pour identifier de façon unique des lignes dans la table source.|  
 |captured_column_list|**nvarchar(max)**|Liste des colonnes sources capturées.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si *source_schema* et *source_name* par défaut la valeur null, ou si la valeur null est explicitement définie, cette procédure stockée retourne des informations pour toutes les instances de capture de base de données pour lesquelles l’appelant a un accès SELECT. Lorsque *source_schema* et *source_name* n’ont pas la valeur null, seules les informations sur la table nommée activée spécifique sont retournées.  
   
 ## <a name="permissions"></a>Autorisations  

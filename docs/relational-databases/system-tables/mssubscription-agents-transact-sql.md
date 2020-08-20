@@ -1,4 +1,5 @@
 ---
+description: MSsubscription_agents (Transact-SQL)
 title: MSsubscription_agents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7b70a0b6356a4b9a862c2a89178068ef6ec2c4af
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f28a46ccebb0f01aaeed07fe2c27776aec0534dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85889348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485472"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +40,7 @@ ms.locfileid: "85889348"
 |**queue_id**|**sysname**|ID de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] file d’attente de messages sur le serveur de publication. *queue_id* est défini sur **SQL** pour la mise à jour en file d’attente basée sur SQL.|  
 |**update_mode**|**tinyint**|Type de mise à jour :<br /><br /> **0** = lecture seule.<br /><br /> **1** = mise à jour immédiate.<br /><br /> **2** = mise à jour en file d’attente à l’aide de Message Queuing.<br /><br /> **3** = mise à jour immédiate avec mise à jour en file d’attente comme basculement à l’aide de Message Queuing.<br /><br /> **4** = mise à jour en file d’attente à l’aide de SQL Server file d’attente.<br /><br /> **5** = mise à jour immédiate avec basculement de mise à jour en file d’attente à l’aide de SQL Server file d’attente.|  
 |**failover_mode**|**bit**|Si un type de basculement de mise à jour a été sélectionné, ce paramètre représente le type de basculement choisi :<br /><br /> **0** = mise à jour immédiate en cours d’utilisation. Le basculement n'est pas activé.<br /><br /> **1** = mise à jour en file d’attente utilisée. Le basculement est activé. La file d’attente utilisée pour le basculement est spécifiée dans la valeur *update_mode* .|  
-|**SPID**|**int**|ID de processus système de la connexion utilisée par l'Agent de distribution en cours d'exécution ou récemment exécuté.|  
+|**spid**|**int**|ID de processus système de la connexion utilisée par l'Agent de distribution en cours d'exécution ou récemment exécuté.|  
 |**login_time**|**datetime**|Date et heure de la connexion de l'Agent de distribution en cours d'exécution ou récemment exécutée.|  
 |**allow_subscription_copy**|**bit**|Indique si la possibilité de copier la base de données d'abonnement est autorisée.|  
 |**attach_state**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -50,8 +51,8 @@ ms.locfileid: "85889348"
 |**queue_server**|**sysname**|À usage interne uniquement|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Vues de réplication &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tables de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Vues de réplication &#40;&#41;Transact-SQL ](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)  
   
   

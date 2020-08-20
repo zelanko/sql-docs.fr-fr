@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_backup_config_schedule (Transact-SQL)
 title: managed_backup. sp_backup_config_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/20/2020
@@ -20,18 +21,19 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 04e152b8ae15e4e0a810fb5ed945b4c8c69afe5b
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 23f1f96ff6d41412e8606e67aacfdc42d9afabc4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486302"
 ---
 # <a name="managed_backupsp_backup_config_schedule-transact-sql"></a>managed_backup. sp_backup_config_schedule (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Configure les options de planification automatisées ou personnalisées pour [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
     
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,7 +48,7 @@ EXEC managed_backup.sp_backup_config_schedule
     ,[@log_backup_freq = ] 'frequency of log backup'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a> Arguments  
  @database_name  
  Nom de la base de données pour activer la sauvegarde managée sur une base de données spécifique. Si la valeur est NULL ou *, cette sauvegarde managée s’applique à toutes les bases de données sur le serveur.  
   
@@ -66,7 +68,7 @@ EXEC managed_backup.sp_backup_config_schedule
  Durée de la fenêtre de temps de sauvegarde. Notez qu’il n’y a aucune garantie que les sauvegardes seront effectuées pendant la fenêtre de temps définie par @backup_begin_time et @backup_duration . Les opérations de sauvegarde démarrées dans cette fenêtre de temps mais qui dépassent la durée de la fenêtre ne sont pas annulées.  
   
  @log_backup_freq  
- Cela détermine la fréquence des sauvegardes du journal des transactions. Ces sauvegardes se produisent à intervalles réguliers plutôt qu’en fonction de la planification spécifiée pour les sauvegardes de base de données. @log_backup_freqpeut être en minutes ou en heures et être `0:00` valide, ce qui indique l’absence de sauvegardes du journal. La désactivation des sauvegardes de journaux ne conviendrait que pour les bases de données avec un mode de récupération simple.  
+ Cela détermine la fréquence des sauvegardes du journal des transactions. Ces sauvegardes se produisent à intervalles réguliers plutôt qu’en fonction de la planification spécifiée pour les sauvegardes de base de données. @log_backup_freq peut être en minutes ou en heures et être `0:00` valide, ce qui indique l’absence de sauvegardes du journal. La désactivation des sauvegardes de journaux ne conviendrait que pour les bases de données avec un mode de récupération simple.  
   
 > [!NOTE]  
 >  Si le mode de récupération passe de simple à Full, vous devez reconfigurer le log_backup_freq de `0:00` à une valeur différente de zéro.  

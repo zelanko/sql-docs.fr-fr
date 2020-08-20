@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_set_config_history_retention (Transact-SQL)
 title: sp_syspolicy_set_config_history_retention (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e718d545e6aeba709578f1857be81e8603a11b1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8b33adfbe57765cf52b3b3572bf30b263999e773
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892664"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485615"
 ---
 # <a name="sp_syspolicy_set_config_history_retention-transact-sql"></a>sp_syspolicy_set_config_history_retention (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Spécifie le nombre de jours pendant lesquels l'historique des évaluations de stratégies doit être conservé pour la Gestion basée sur des stratégies.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,12 +40,12 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @value = ] value`Nombre de jours de conservation de l’historique de la gestion basée sur des stratégies. la *valeur* est **SQLVARIANT**.  
+`[ @value = ] value` Nombre de jours de conservation de l’historique de la gestion basée sur des stratégies. la *valeur* est **SQLVARIANT**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_set_config_history_retention dans le contexte de la base de données système msdb.  
   
  Si la *valeur* est définie sur 0, l’historique n’est pas supprimé automatiquement.  

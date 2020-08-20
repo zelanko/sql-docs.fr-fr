@@ -1,4 +1,5 @@
 ---
+description: sys. fn_all_changes_ &lt; capture_instance &gt; (Transact-SQL)
 title: sys. fn_all_changes_ &lt; capture_instance &gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
@@ -20,19 +21,19 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e091db783b29a767a5f1f762dbbc037a878ce8a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898472"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486330"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_ &lt; capture_instance &gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Wrappers pour les fonctions de requête de **toutes les modifications** . Les scripts requis pour créer ces fonctions sont générés par la procédure stockée sys.sp_cdc_generate_wrapper_function.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -87,11 +88,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|Numéro LSN de validation de la transaction associée à la modification. Toutes les modifications validées dans la même transaction partagent le même numéro LSN de validation.|  
 |__CDC_SEQVAL|**binary(10)**|Valeur de classement utilisée pour classer les modifications de ligne dans une transaction.|  
-|\<columns from @column_list>|**diffère**|Colonnes identifiées dans l’argument *column_list* pour sp_cdc_generate_wrapper_function quand elle est appelée pour générer le script qui crée la fonction wrapper.|  
+|\<columns from @column_list>|**varie**|Colonnes identifiées dans l’argument *column_list* pour sp_cdc_generate_wrapper_function quand elle est appelée pour générer le script qui crée la fonction wrapper.|  
 |__CDC_OPERATION|**nvarchar (2)**|Code d'opération qui indique l'opération requise pour appliquer la ligne à l'environnement cible. Elle varie en fonction de la valeur de l’argument *row_filter_option* fourni dans l’appel :<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - opération de suppression<br /><br /> 'I' - opération d'insertion<br /><br /> 'UN' – opération de mise à jour (nouvelles valeurs)<br /><br /> *row_filter_option* = 'All Update Old'<br /><br /> 'D' - opération de suppression<br /><br /> 'I' - opération d'insertion<br /><br /> 'UN' – opération de mise à jour (nouvelles valeurs)<br /><br /> 'UO' – opération de mise à jour (anciennes valeurs)|  
 |\<columns from @update_flag_list>|**bit**|Un indicateur binaire est nommé en ajoutant _uflag au nom de la colonne. L’indicateur a toujours la valeur NULL lorsque \_ _CDC_OPERATION est’d', 'I', de’UO'. Lorsque \_ _CDC_OPERATION est’un', il prend la valeur 1 si la mise à jour a produit une modification apportée à la colonne correspondante. Sinon, il prend la valeur 0.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La fonction fn_all_changes_<capture_instance> sert de wrapper pour la fonction de requête de capture de données modifiées. fn_cdc_get_all_changes_<capture_instance>. La procédure stockée sys.sp_cdc_generate_wrapper sert à générer le script de création du wrapper.  
   
  Les fonctions wrapper ne sont pas créées automatiquement. Vous devez effectuer deux opérations pour créer des fonctions wrapper :  

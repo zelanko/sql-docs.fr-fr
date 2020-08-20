@@ -1,4 +1,5 @@
 ---
+description: Embedded SQL
 title: Embedded SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9ad6fd2753d026f026d72a7aa8f68d5d48ce03cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b52c5a87d1df03460a833a27fcb5523b80cd1f4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306672"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487412"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 La première technique pour envoyer des instructions SQL au SGBD est Embedded SQL. Étant donné que SQL n’utilise pas de variables et d’instructions de contrôle de workflow, il est souvent utilisé comme sous-langage de base de données qui peut être ajouté à un programme écrit dans un langage de programmation conventionnel, tel que C ou COBOL. Il s’agit d’une idée centrale d’Embedded SQL : placer des instructions SQL dans un programme écrit dans un langage de programmation hôte. Brièvement, les techniques suivantes sont utilisées pour incorporer des instructions SQL dans un langage hôte :  

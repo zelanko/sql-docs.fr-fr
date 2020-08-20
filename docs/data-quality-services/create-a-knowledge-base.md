@@ -1,4 +1,5 @@
 ---
+description: Créer une base de connaissances
 title: Créer une base de connaissances
 ms.date: 06/04/2013
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: aa740172957e3f0ba08812e298db5621ba43e890
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1dd8e0379d25b231de873ccfd1529284e62f0f1d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887984"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487902"
 ---
 # <a name="create-a-knowledge-base"></a>Créer une base de connaissances
 
@@ -35,7 +36,7 @@ ms.locfileid: "85887984"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer une base de connaissances.  
   
-##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a>Créer une base de connaissances  
+##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a> Créer une base de connaissances  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -61,7 +62,7 @@ ms.locfileid: "85887984"
   
 6.  Cliquez sur **Créer**.  
   
-##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a>Suivi : après avoir créé une base de connaissances  
+##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a> Suivi : après avoir créé une base de connaissances  
  Après avoir créé une base de connaissances, vous voyez s'afficher un Assistant qui vous permet d'effectuer la découverte des connaissances, un Assistant qui vous permet de créer une stratégie de correspondance, ou des pages pour exécuter la gestion des domaines. Pour plus d’informations sur la découverte des connaissances, la gestion de domaine ou la stratégie de correspondance, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
   

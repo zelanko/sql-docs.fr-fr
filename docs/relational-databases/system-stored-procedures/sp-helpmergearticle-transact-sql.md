@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergearticle (Transact-SQL)
 title: sp_helpmergearticle (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 814ed354c296d1f9860b3abf92a7208cdecdacf7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ec07e77bcc2dbf3c0503e348b509848880705424
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485960"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations sur un article. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données d'abonnement d'un Abonné de republication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,9 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication sur laquelle les informations doivent être récupérées. *publication*est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les Articles de fusion contenus dans toutes les publications de la base de données active.  
+`[ @publication = ] 'publication'` Nom de la publication sur laquelle les informations doivent être récupérées. *publication*est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les Articles de fusion contenus dans toutes les publications de la base de données active.  
   
-`[ @article = ] 'article'`Nom de l’article pour lequel des informations doivent être retournées. *article*est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les Articles de fusion de la publication donnée.  
+`[ @article = ] 'article'` Nom de l’article pour lequel des informations doivent être retournées. *article*est de **type sysname**, avec la valeur par défaut **%** , qui retourne des informations sur tous les Articles de fusion de la publication donnée.  
   
 ## <a name="result-set"></a>Jeu de résultats  
   
@@ -87,7 +88,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpmergearticle** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

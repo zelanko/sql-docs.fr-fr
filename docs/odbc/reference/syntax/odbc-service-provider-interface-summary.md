@@ -1,4 +1,5 @@
 ---
+description: Récapitulatif sur l’interface SPI ODBC
 title: Résumé de l’interface du fournisseur de services ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2f7e459cc7b89106bf1b7ebcd49c699d43da9f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00d15d33fba1e697eebbe6a640c4f8a4d8eadea7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298896"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487342"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>Récapitulatif sur l’interface SPI ODBC
 Le tableau suivant décrit les fonctions de l’interface du fournisseur de service ODBC. Pour plus d’informations sur la syntaxe et la sémantique de chaque fonction, consultez Référence de l' [interface SPI (Service Provider Interface) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md).  

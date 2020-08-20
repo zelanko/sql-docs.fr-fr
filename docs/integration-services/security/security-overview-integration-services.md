@@ -1,4 +1,5 @@
 ---
+description: Vue d'ensemble de la sécurité (Integration Services)
 title: Vue d’ensemble de la sécurité (Integration Services) | Microsoft Docs
 ms.custom: security
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b4abc0de87f8dc11fbbd1d66b32b2eb9a0f6f2b9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922016"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487682"
 ---
 # <a name="security-overview-integration-services"></a>Vue d'ensemble de la sécurité (Integration Services)
 
@@ -123,7 +124,7 @@ ms.locfileid: "86922016"
  Pour plus d’informations, consultez [Configurations de package](../../integration-services/packages/package-configurations.md), [Créer des configurations de package](../../integration-services/packages/create-package-configurations.md)et [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### <a name="checkpoint-files"></a>fichiers de point de contrôle  
- De même, si le fichier de point de contrôle utilisé par le package contient des informations sensibles, vous devez utiliser une liste de contrôle d'accès pour sécuriser l'emplacement ou le dossier de stockage du fichier. Les fichiers de points de contrôle contiennent des informations d'état relatives à la progression du package, ainsi que les valeurs actuelles de certaines variables. Par exemple, le package peut inclure une variable personnalisée qui contient un numéro de téléphone. Pour plus d’informations, consultez [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+ De même, si le fichier de point de contrôle utilisé par le package contient des informations sensibles, vous devez utiliser une liste de contrôle d'accès pour sécuriser l'emplacement ou le dossier de stockage du fichier. Les fichiers de points de contrôle contiennent des informations d'état relatives à la progression du package, ainsi que les valeurs actuelles de certaines variables. Par exemple, le package peut inclure une variable personnalisée qui contient un numéro de téléphone. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ### <a name="log-files"></a>Fichiers journaux  
  Les entrées de journaux qui sont écrites dans le système de fichiers doivent également être sécurisées au moyen d'une liste de contrôle d'accès. Elles peuvent aussi être stockées dans des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et protégées par la sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les entrées de journaux peuvent inclure des informations sensibles. Par exemple, si le package contient une tâche d'exécution SQL qui construit une instruction SQL faisant référence à un numéro de téléphone, l'entrée de journal de l'instruction SQL inclut le numéro de téléphone. L'instruction SQL peut également révéler des informations confidentielles relatives à des noms de tables et de colonnes dans des bases de données. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -138,12 +139,12 @@ ms.locfileid: "86922016"
 ## <a name="related-tasks"></a>Tâches associées  
  La liste suivante contient des liens vers les rubriques qui indiquent comment effectuer une tâche particulière relative à la sécurité.  
   
--   [Créer un rôle défini par l’utilisateur](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
+-   [Créer un rôle défini par l'utilisateur](../../integration-services/security/integration-services-roles-ssis-service.md#create)  
   
--   [Affecter un rôle de lecture et d’écriture à un package](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
+-   [Affecter un rôle de lecture et d'écriture à un package](../../integration-services/security/integration-services-roles-ssis-service.md#assign)  
   
 -   [Implémenter une stratégie de signature en définissant une valeur du Registre](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#registry)  
   
--   [Signer un package à l’aide d’un certificat numérique](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
+-   [Signer un package à l'aide d'un certificat numérique](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Définir ou changer le niveau de protection des packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [Définir ou modifier le niveau de protection des packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  

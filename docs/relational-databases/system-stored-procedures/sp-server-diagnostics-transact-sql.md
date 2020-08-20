@@ -1,4 +1,5 @@
 ---
+description: sp_server_diagnostics (Transact-SQL)
 title: sp_server_diagnostics (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/14/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2bd308f79e9ef4a49e91509400e8d4938cd4473
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485659"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ Capture des données de diagnostics et des informations d'intégrité à propos 
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures).  
   
-![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +41,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @repeat_interval = ] 'repeat_interval_in_seconds'`Indique l’intervalle de temps pendant lequel la procédure stockée s’exécutera à plusieurs reprises pour envoyer des informations d’intégrité.  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'` Indique l’intervalle de temps pendant lequel la procédure stockée s’exécutera à plusieurs reprises pour envoyer des informations d’intégrité.  
   
  *repeat_interval_in_seconds* est de **type int** avec 0 comme valeur par défaut. Les valeurs de paramètre valides sont 0, ou toute valeur égale à ou supérieure à 5. La procédure stockée doit s'exécuter au moins 5 secondes pour retourner des données complètes. La valeur minimale pour que la procédure stockée s'exécute en mode de répétition est de 5 secondes.  
   
@@ -79,12 +80,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: Collecte les données pour le groupe de disponibilité spécifié (si component_type = "Always On : AvailabilityGroup").  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 Du point de vue d'un échec, les composant system, resource et query_processing seront exploités pour la détection de pannes, tandis que les composants io_subsystem et events le seront uniquement à des fins de diagnostics.  
   
 Le tableau suivant mappe les composants à leurs états d'intégrité associés.  
   
-|Components|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
+|Composants|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |système|x|x|x||  
 |resource|x|x|x||  
@@ -241,6 +242,6 @@ go
 ``` 
   
 ## <a name="see-also"></a>Voir aussi  
- [Stratégie de basculement pour les instances de cluster de basculement](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

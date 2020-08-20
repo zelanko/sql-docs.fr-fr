@@ -1,4 +1,5 @@
 ---
+description: Créer un domaine lié
 title: Créer un domaine lié
 ms.date: 11/08/2011
 ms.prod: sql
@@ -11,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 68c8fe492dfe05945b670b137b0d2f427d82d486
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887959"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487862"
 ---
 # <a name="create-a-linked-domain"></a>Créer un domaine lié
 
@@ -45,7 +46,7 @@ ms.locfileid: "85887959"
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine lié.  
   
-##  <a name="create-a-linked-domain"></a><a name="Create"></a>Créer un domaine lié  
+##  <a name="create-a-linked-domain"></a><a name="Create"></a> Créer un domaine lié  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Exécutez l’Application Data Quality client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -64,7 +65,7 @@ ms.locfileid: "85887959"
   
 7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a>Mapper deux champs à des domaines liés  
+##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Mapper deux champs à des domaines liés  
   
 1.  Ouvrez une base de connaissances dans l'activité de découverte des connaissances, puis mappez la base de connaissances à la base de données et à la table ou à la vue.  
   
@@ -74,10 +75,10 @@ ms.locfileid: "85887959"
   
 4.  Dans la boîte de dialogue Créer un domaine, entrez un nom de domaine et une description, puis cliquez sur OK.  
   
-##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a>Suivi : après avoir créé un domaine lié  
+##  <a name="follow-up-after-creating-a-linked-domain"></a><a name="FollowUp"></a> Suivi : après avoir créé un domaine lié  
  Après avoir créé un domaine lié, vous pouvez effectuer d'autres tâches de gestion de l'arborescence du domaine sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a>Comportement d’un domaine lié  
+##  <a name="behavior-of-a-linked-domain"></a><a name="Behavior"></a> Comportement d’un domaine lié  
  Vous pouvez modifier les paramètres d'un domaine lié comme suit :  
   
 -   Vous pouvez modifier le nom et la description d'un domaine lié.  

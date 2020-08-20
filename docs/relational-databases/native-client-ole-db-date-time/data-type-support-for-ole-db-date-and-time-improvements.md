@@ -1,4 +1,5 @@
 ---
+description: Prise en charge des types de données pour les améliorations de date et d’heure (fournisseur Native Client OLE DB)
 title: Prise en charge des types de données pour les améliorations de date et d’heure (fournisseur Native Client OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a39a9c4d99ed94db0d70575f0047698b1a15074
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 741906e1673d5ac8fe5b88e4d546ee1807667063
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245831"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486740"
 ---
 # <a name="sql-server-native-client-data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge du type de données SQL Server Native Client pour les améliorations de la date et de l’heure OLE DB
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "87245831"
   
  Les implémentations pour les structs OLE DB existants suivants ont été modifiées afin de prendre en charge les nouveaux types de données de date et d'heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutefois, les définitions n'ont pas changé.  
   
--   DBTYPE_DATE (Ceci est un type DATE Automation. Elle est représentée en interne en tant que **double**. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 et la partie fractionnaire correspond à la fraction d'un jour. Ce type a une précision de 1 seconde et a donc une échelle effective de 0.)  
+-   DBTYPE_DATE (Ceci est un type DATE Automation. Il est représenté en interne sous la forme d’un **double**. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 et la partie fractionnaire correspond à la fraction d'un jour. Ce type a une précision de 1 seconde et a donc une échelle effective de 0.)  
   
 -   DBTYPE_DBDATE  
   

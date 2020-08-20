@@ -1,4 +1,5 @@
 ---
+description: Récapitulatif des fonctions ODBC
 title: Résumé de la fonction ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c10cc7880cf941a1490f963e21e8b44bc91db215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 50a0b9146acd71f87b4dd65bbdd34c67725e9948
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298920"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487372"
 ---
 # <a name="odbc-function-summary"></a>Récapitulatif des fonctions ODBC
 Le tableau suivant répertorie les fonctions ODBC, regroupées par type de tâche, et comprend la désignation de conformité, ainsi qu’une brève description de l’objectif de chaque fonction. Pour plus d’informations sur les désignations de conformité, consultez [ODBC et l’interface de commande standard](../../../odbc/reference/odbc-and-the-standard-cli.md). Pour plus d’informations sur la syntaxe et la sémantique de chaque fonction, consultez [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  

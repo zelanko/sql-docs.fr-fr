@@ -1,4 +1,5 @@
 ---
+description: administration de dqs
 title: administration de dqs
 ms.date: 10/01/2012
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3ad4fb8f24ca51741c21fead975a1c745f661b87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1874867b02aea521e44ff6ee0af4d8cfdfb57298
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888103"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487782"
 ---
 # <a name="dqs-administration"></a>administration de dqs
 
@@ -60,7 +61,7 @@ ms.locfileid: "85888103"
 > [!NOTE]  
 >  L'écran **Configuration** est accessible uniquement aux utilisateurs disposant du rôle dqs_administrator sur la base de données DQS_MAIN.  
   
-##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Activités d’administration en dehors de Data Quality Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a> Activités d’administration en dehors de Data Quality Client  
  Ces opérations sont effectuées en dehors de Data Quality Client :  
   
 -   **Sauvegarder et restaurer des bases de données DQS**: les opérations de sauvegarde et de restauration des bases de données DQS sont identiques à celles utilisées pour toute base de données SQL Server, à l'exception de quelques spécificités applicables à DQS.  

@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveDriver, fonction
 title: SQLRemoveDriver fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 205c5b46e5f6cea195094f7a50e81d7509927d1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 503fadfae168a2fc7259cd0507b283563d681bf7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303930"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487067"
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver, fonction
 **Conformité**  
  Version introduite : ODBC 3,0  
   
  **Résumé**  
- **SQLRemoveDriver** modifie ou supprime les informations relatives au pilote de l’entrée Odbcinst. ini dans les informations système.  
+ **SQLRemoveDriver** modifie ou supprime les informations relatives au pilote de l’entrée Odbcinst.ini dans les informations système.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,7 +46,7 @@ BOOL SQLRemoveDriver(
   
 ## <a name="arguments"></a>Arguments  
  *lpszDriver*  
- Entrée Nom du pilote tel qu’il est enregistré dans la clé Odbcinst. ini des informations système.  
+ Entrée Nom du pilote inscrit dans la clé Odbcinst.ini des informations système.  
   
  *fRemoveDSN*  
  Entrée Les valeurs valides sont les suivantes :  
@@ -59,7 +60,7 @@ BOOL SQLRemoveDriver(
  La fonction retourne TRUE si elle réussit, FALSe en cas d’échec. Si aucune entrée n’existe dans les informations système lorsque cette fonction est appelée, la fonction retourne FALSe.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **SQLRemoveDriver** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Quand **SQLRemoveDriver** retourne false, une valeur * \* pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les valeurs * \* pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  

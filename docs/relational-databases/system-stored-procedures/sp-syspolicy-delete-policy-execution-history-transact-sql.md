@@ -1,4 +1,5 @@
 ---
+description: sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 title: sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: fe651af9-267e-45ec-b4e7-4b0698fb1be3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cbee07cd02ca423a633133546130615bcb1d60c1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99a17425f74b1ae2f5db7c4a6002e27ca7780f21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892716"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485619"
 ---
 # <a name="sp_syspolicy_delete_policy_execution_history-transact-sql"></a>sp_syspolicy_delete_policy_execution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime l'historique d'exécution pour les stratégies dans la Gestion basée sur des stratégies. Vous pouvez utiliser cette procédure stockée pour supprimer l'historique d'exécution pour une stratégie particulière ou pour toutes les stratégies, et pour supprimer l'historique d'exécution avant une date spécifique.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,14 +41,14 @@ sp_syspolicy_delete_policy_execution_history [ @policy_id = ] policy_id ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @policy_id = ] policy_id`Identificateur de la stratégie pour laquelle vous voulez supprimer l’historique d’exécution. *policy_id* est de **type int**et est obligatoire. Sa valeur peut être NULL.  
+`[ @policy_id = ] policy_id` Identificateur de la stratégie pour laquelle vous voulez supprimer l’historique d’exécution. *policy_id* est de **type int**et est obligatoire. Sa valeur peut être NULL.  
   
-`[ @oldest_date = ] 'oldest_date'`Date la plus ancienne pour laquelle vous souhaitez conserver l’historique d’exécution de la stratégie. Tout historique d'exécution antérieur à cette date est supprimé. *oldest_date* est de **type DateTime**et est obligatoire. Sa valeur peut être NULL.  
+`[ @oldest_date = ] 'oldest_date'` Date la plus ancienne pour laquelle vous souhaitez conserver l’historique d’exécution de la stratégie. Tout historique d'exécution antérieur à cette date est supprimé. *oldest_date* est de **type DateTime**et est obligatoire. Sa valeur peut être NULL.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous devez exécuter sp_syspolicy_delete_policy_execution_history dans le contexte de la base de données système msdb.  
   
  Pour obtenir des valeurs pour *policy_id*, et pour afficher les dates de l’historique d’exécution, vous pouvez utiliser la requête suivante :  

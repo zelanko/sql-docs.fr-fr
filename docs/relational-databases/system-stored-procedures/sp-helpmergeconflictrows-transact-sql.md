@@ -1,4 +1,5 @@
 ---
+description: sp_helpmergeconflictrows (Transact-SQL)
 title: sp_helpmergeconflictrows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85a5ad519f836288a98dd6327fc7ca8a15c0cf70
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4c66dc9c8ac6cc21d74cbf2a6474ad74a2cffba1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893571"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485942"
 ---
 # <a name="sp_helpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie les lignes de la table de conflits spécifiée. Cette procédure stockée est exécutée sur l'ordinateur qui héberge la table de conflits.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,15 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** . Si la publication est spécifiée, tous les conflits qualifiés par la publication sont renvoyés. Par exemple, si la table **MSmerge_conflict_Customers** contient des lignes conflictuelles pour les publications **wa** et **ca** , le passage d’un nom de publication **ca** récupère les conflits qui se rapportent à la publication de l' **autorité de certification** .  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, avec la valeur par défaut **%** . Si la publication est spécifiée, tous les conflits qualifiés par la publication sont renvoyés. Par exemple, si la table **MSmerge_conflict_Customers** contient des lignes conflictuelles pour les publications **wa** et **ca** , le passage d’un nom de publication **ca** récupère les conflits qui se rapportent à la publication de l' **autorité de certification** .  
   
-`[ @conflict_table = ] 'conflict_table'`Nom de la table de conflits. *conflict_table* est de **type sysname**, sans valeur par défaut. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les tables de conflits sont nommées en utilisant les noms de format avec **MSmerge_conflict \_ _ \_ article de publication_**, avec une table pour chaque article publié.  
+`[ @conflict_table = ] 'conflict_table'` Nom de la table de conflits. *conflict_table* est de **type sysname**, sans valeur par défaut. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les tables de conflits sont nommées en utilisant les noms de format avec **MSmerge_conflict \_ _ \_ article de publication_**, avec une table pour chaque article publié.  
   
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données du serveur de publication. *publisher_db* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @logical_record_conflicts = ] logical_record_conflicts`Indique si le jeu de résultats contient des informations sur les conflits d’enregistrements logiques. *logical_record_conflicts* est de **type int**, avec 0 comme valeur par défaut. **1** signifie que des informations sur les conflits d’enregistrements logiques sont retournées.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` Indique si le jeu de résultats contient des informations sur les conflits d’enregistrements logiques. *logical_record_conflicts* est de **type int**, avec 0 comme valeur par défaut. **1** signifie que des informations sur les conflits d’enregistrements logiques sont retournées.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_helpmergeconflictrows** retourne un jeu de résultats composé de la structure de la table de base et de ces colonnes supplémentaires.  
@@ -66,7 +67,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_helpmergeconflictrows** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

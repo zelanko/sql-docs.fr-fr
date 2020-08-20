@@ -1,4 +1,5 @@
 ---
+description: DLL de traçage
 title: DLL de trace | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5ab99bd3-cdc3-4e2c-8827-932d1fcb6e00
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e1f9dc57415ad9865ca1b2ad02487b62a93f18f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1791b72b5f7e836fba05275f87bd57948a273775
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81298069"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487502"
 ---
 # <a name="trace-dll"></a>DLL de traçage
 La DLL qui effectue le suivi est l’un des composants ODBC Core. La DLL de suivi est actuellement fournie en tant qu’exemple de DLL dans le composant ODBC du SDK Windows et a été précédemment incluse dans le kit de développement logiciel (SDK) Microsoft Data Access Components (MDAC). Par conséquent, l’entrée de Registre, l’interface et l’exemple de code de la DLL de trace sont disponibles. Cette DLL peut être remplacée par une DLL de trace générée par un utilisateur ODBC ou un fournisseur tiers. Un nom différent de la DLL de trace d’origine doit être attribué à une DLL de trace personnalisée. Les dll de trace doivent être installées dans le répertoire système ou ne pas se charger. Les chaînes de connexion ne sont pas transmises à la DLL de trace par le gestionnaire de pilotes.  

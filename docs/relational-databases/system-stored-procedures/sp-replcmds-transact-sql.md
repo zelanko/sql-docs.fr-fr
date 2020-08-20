@@ -1,4 +1,5 @@
 ---
+description: sp_replcmds (Transact-SQL)
 title: sp_replcmds (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dde94b7383bd6d043972bc8ad496e0b40165e206
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645650"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88485749"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85645650"
 > [!IMPORTANT]  
 >  La procédure **sp_replcmds** doit être exécutée uniquement pour résoudre les problèmes de réplication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +41,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @maxtrans = ] maxtrans`Nombre de transactions à propos desquelles retourner des informations. *maxtrans* est de **type int**, avec **1**comme valeur par défaut, qui spécifie la prochaine transaction en attente de distribution.  
+`[ @maxtrans = ] maxtrans` Nombre de transactions à propos desquelles retourner des informations. *maxtrans* est de **type int**, avec **1**comme valeur par défaut, qui spécifie la prochaine transaction en attente de distribution.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -61,7 +62,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**originator_db_version**|**int**|Version de la base de données d'origine de la transaction.|  
 |**originator_lsn**|**varbinary(16)**|Identifie le numéro séquentiel dans le journal (LSN) de la commande dans la publication d'origine.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_replcmds** est utilisé par le processus de lecture du journal dans la réplication transactionnelle.  
   
  La réplication traite le premier client qui exécute **sp_replcmds** dans une base de données donnée en tant que lecteur de journal.  

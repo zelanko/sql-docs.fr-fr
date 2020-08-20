@@ -1,4 +1,5 @@
 ---
+description: SQLPoolConnect, fonction
 title: SQLPoolConnect fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5045fe47683529f858b01e69f6af696e2821ca4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30e2ce61baf861551e51773aea7ce6dcaf020cf6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306900"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487218"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect, fonction
 **Conformité**  
@@ -54,7 +55,7 @@ SQLRETURN  SQLPoolConnect(
  Entrée Longueur de la mémoire tampon **wszOutConnectString* , en caractères.  
   
  *cchConnectStringLen*  
- Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à \*retourner dans *wszOutConnectString*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *cchConnectStringBuffer*, la chaîne de connexion terminée dans \* *wszOutConnectString* est tronquée à *cchConnectStringBuffer* moins la longueur d’un caractère de fin null.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre total de caractères (à l’exception du caractère de fin null) disponibles à retourner dans \* *wszOutConnectString*. Si le nombre de caractères disponibles à retourner est supérieur ou égal à *cchConnectStringBuffer*, la chaîne de connexion terminée dans \* *wszOutConnectString* est tronquée à *cchConnectStringBuffer* moins la longueur d’un caractère de fin null.  
   
 ## <a name="returns"></a>Retours  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  

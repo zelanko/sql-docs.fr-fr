@@ -1,4 +1,5 @@
 ---
+description: Créer une règle de domaine
 title: Créer une règle de domaine
 ms.date: 11/08/2011
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e77d3966476bba662f864cb2f81dbbfa983d4740
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900456"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487932"
 ---
 # <a name="create-a-domain-rule"></a>Créer une règle de domaine
 
@@ -72,7 +73,7 @@ ms.locfileid: "85900456"
   
 16. Poursuivez jusqu'à la procédure de test ci-dessous.  
   
-##  <a name="test-domain-rules"></a><a name="Test"></a>Tester les règles de domaine  
+##  <a name="test-domain-rules"></a><a name="Test"></a> Tester les règles de domaine  
   
 1.  L'une des règles étant sélectionnée, cliquez sur l'icône d' **Exécuter la règle de domaine sélectionnée sur des données de test** .  
   
@@ -88,7 +89,7 @@ ms.locfileid: "85900456"
   
 7.  Poursuivez jusqu'à la procédure d'application ci-dessous.  
   
-##  <a name="apply-domain-rules"></a><a name="Apply"></a>Appliquer les règles de domaine  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a> Appliquer les règles de domaine  
   
 1.  Cliquez sur **Appliquer toutes les règles** pour appliquer les règles aux valeurs du domaine. Quand vous cliquez sur **Appliquer toutes les règles**, un message s'affiche et indique le nombre de valeurs de certains états qui seront affectées par la règle. Cliquez sur **Oui** si vous souhaitez toujours appliquer la règle ou sur **Non** dans le cas contraire. Si vous cliquez sur **Oui**, cliquez sur **OK** pour fermer la fenêtre des résultats.  
   
@@ -99,10 +100,10 @@ ms.locfileid: "85900456"
   
 3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>Suivi : après la création d’une règle de domaine  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Suivi : après la création d’une règle de domaine  
  Après avoir créé une règle de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>Conditions de règle de domaine  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a> Conditions de règle de domaine  
  La table ci-dessous décrit les conditions qui peuvent être appliquées dans la règle de domaine et propose un exemple pour montrer comment les conditions peuvent être appliquées.  
   
  Lorsqu'une règle de domaine est appliquée et qu'une valeur de domaine ne respecte pas la règle, la valeur est indiquée comme Non valide. Une valeur indiquée comme Non valide sera modifiée en Correcte si la règle qui la rend non valide est supprimée ou désactivée, ou que la règle a été modifiée de telle sorte que la valeur ne respecte plus la règle. Si vous avez désigné manuellement une valeur comme non valide (sous l'onglet Valeurs de domaine de l'activité Gestion de l'arborescence du domaine) et qu'une règle que la valeur ne respecte pas a été supprimée, désactivée ou changée, la valeur toujours sera indiquée comme Non valide, selon la désignation manuelle.  

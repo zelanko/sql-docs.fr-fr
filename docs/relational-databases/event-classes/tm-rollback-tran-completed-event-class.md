@@ -1,4 +1,5 @@
 ---
+description: "TM : Rollback Tran Completed (classe d'événements)"
 title: 'TM: Rollback Tran Completed, classe d’événements | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,14 +13,14 @@ ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c62caf73029c60d6a683ca36333e14518de450c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 729a602d76f55f3a8218aa341ca94d545a3f3f91
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88486954"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed, classe d'événements
+# <a name="tm-rollback-tran-completed-event-class"></a>TM : Rollback Tran Completed (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   La classe d'événements TM: Rollback Tran Completed indique qu'une demande ROLLBACK TRANSACTION a été exécutée. La demande a été envoyée à partir du client via l'interface de gestion des transactions. La colonne EventSubClass indique si une nouvelle transaction va être démarrée après l'annulation de la transaction en cours.  
   

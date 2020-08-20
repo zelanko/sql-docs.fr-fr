@@ -1,4 +1,5 @@
 ---
+description: SQLAllocHandle, fonction
 title: Fonction SQLAllocHandle | Microsoft Docs
 ms.custom: ''
 ms.date: 07/18/2019
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 178e3fad1ec062dd7f812125da66b7e21a7a4f4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9488e5d8d627feac2877878cc2d10a52ec15e4e6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81290209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487292"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle, fonction
 **Conformité**  
@@ -77,7 +78,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>Erreurs d’allocation du handle d’environnement  
  L’allocation d’environnement se produit à la fois dans le gestionnaire de pilotes et dans chaque pilote. L’erreur retournée par **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV dépend du niveau dans lequel l’erreur s’est produite.  
   
- Si le gestionnaire de pilotes ne peut pas allouer de mémoire pour * \*OutputHandlePtr* quand **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV est appelé, ou si l’application fournit un pointeur null pour *OutputHandlePtr*, **SQLAllocHandle** retourne SQL_ERROR. Le gestionnaire de pilotes définit **OutputHandlePtr* sur SQL_NULL_HENV (sauf si l’application a fourni un pointeur null, qui retourne SQL_ERROR). Il n’existe aucun descripteur avec lequel associer des informations de diagnostic supplémentaires.  
+ Si le gestionnaire de pilotes ne peut pas allouer de mémoire pour * \* OutputHandlePtr* quand **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV est appelé, ou si l’application fournit un pointeur null pour *OutputHandlePtr*, **SQLAllocHandle** retourne SQL_ERROR. Le gestionnaire de pilotes définit **OutputHandlePtr* sur SQL_NULL_HENV (sauf si l’application a fourni un pointeur null, qui retourne SQL_ERROR). Il n’existe aucun descripteur avec lequel associer des informations de diagnostic supplémentaires.  
   
  Le gestionnaire de pilotes n’appelle pas la fonction d’allocation de handle d’environnement au niveau du pilote tant que l’application n’a pas appelé **SQLConnect**, **SQLBrowseConnect**ou **SQLDriverConnect**. Si une erreur se produit dans la fonction **SQLAllocHandle** au niveau du pilote, la fonction **SQLConnect**, **SQLBrowseConnect**ou **SQLDriverConnect** au niveau du gestionnaire de pilotes retourne SQL_ERROR. La structure de données de diagnostic contient SQLSTATE IM004 (échec **SQLAllocHandle** du pilote). L’erreur est retournée sur un handle de connexion.  
   
@@ -107,10 +108,10 @@ SQLRETURN SQLAllocHandle(
   
  Plusieurs identificateurs d’environnement, de connexion ou d’instruction peuvent être alloués par une application à la fois si plusieurs allocations sont prises en charge par le pilote. Dans ODBC, aucune limite n’est définie sur le nombre de handles d’environnement, de connexion, d’instruction ou de descripteur qui peuvent être alloués à un moment donné. Les pilotes peuvent imposer une limite au nombre d’un certain type de descripteur pouvant être alloué à la fois ; Pour plus d’informations, consultez la documentation du pilote.  
   
- Si l’application appelle **SQLAllocHandle** avec * \*OutputHandlePtr* défini sur un environnement, une connexion, une instruction ou un handle de descripteur qui existe déjà, le pilote remplace les informations *associées au*descripteur, sauf si l’application utilise le regroupement de connexions (voir « allocation d’un attribut d’environnement pour le regroupement de connexions » plus loin dans cette section). Le gestionnaire de pilotes ne vérifie pas si le *handle* entré dans * \*OutputHandlePtr* est déjà utilisé, ni ne vérifie le contenu précédent d’un descripteur avant de le remplacer.  
+ Si l’application appelle **SQLAllocHandle** avec * \* OutputHandlePtr* défini sur un environnement, une connexion, une instruction ou un handle de descripteur qui existe déjà, le pilote remplace les informations *associées au*descripteur, sauf si l’application utilise le regroupement de connexions (voir « allocation d’un attribut d’environnement pour le regroupement de connexions » plus loin dans cette section). Le gestionnaire de pilotes ne vérifie pas si le *handle* entré dans * \* OutputHandlePtr* est déjà utilisé, ni ne vérifie le contenu précédent d’un descripteur avant de le remplacer.  
   
 > [!NOTE]  
->  Il s’agit d’une programmation d’application ODBC incorrecte pour appeler **SQLAllocHandle** deux fois avec la même variable d’application définie pour * \*OutputHandlePtr* sans appeler **SQLFreeHandle** pour libérer le handle avant de le réallouer. Le remplacement des handles ODBC de telle manière peut entraîner des erreurs ou des comportements incohérents dans la partie des pilotes ODBC.  
+>  Il s’agit d’une programmation d’application ODBC incorrecte pour appeler **SQLAllocHandle** deux fois avec la même variable d’application définie pour * \* OutputHandlePtr* sans appeler **SQLFreeHandle** pour libérer le handle avant de le réallouer. Le remplacement des handles ODBC de telle manière peut entraîner des erreurs ou des comportements incohérents dans la partie des pilotes ODBC.  
   
  Sur les systèmes d’exploitation qui prennent en charge plusieurs threads, les applications peuvent utiliser le même environnement, la même connexion, la même instruction ou le même handle de descripteur sur des threads différents. Les pilotes doivent donc prendre en charge l’accès multithread sécurisé à ces informations ; une façon d’y parvenir, par exemple, consiste à utiliser une section critique ou un sémaphore. Pour plus d’informations sur les threads, consultez [Multithreading](../../../odbc/reference/develop-app/multithreading.md).  
   
@@ -127,7 +128,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-an-environment-handle"></a>Allocation d'un handle d'environnement  
  Un handle d’environnement permet d’accéder à des informations globales, telles que des handles de connexion valides et des handles de connexion actifs. Pour obtenir des informations générales sur les handles d’environnement, consultez [Handles d’environnement](../../../odbc/reference/develop-app/environment-handles.md).  
   
- Pour demander un handle d’environnement, une application appelle **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV et un *InputHandle* de SQL_NULL_HANDLE. Le pilote alloue de la mémoire pour les informations d’environnement et transmet la valeur du descripteur associé * \** dans l’argument OutputHandlePtr. L’application transmet la * \*valeur OutputHandle* dans tous les appels suivants qui requièrent un argument de handle d’environnement. Pour plus d’informations, consultez [allocation du handle d’environnement](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
+ Pour demander un handle d’environnement, une application appelle **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV et un *InputHandle* de SQL_NULL_HANDLE. Le pilote alloue de la mémoire pour les informations d’environnement et transmet la valeur du descripteur associé dans l’argument * \* OutputHandlePtr* . L’application transmet la valeur * \* OutputHandle* dans tous les appels suivants qui requièrent un argument de handle d’environnement. Pour plus d’informations, consultez [allocation du handle d’environnement](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
   
  Dans le cadre d’un handle d’environnement du gestionnaire de pilotes, s’il existe déjà un handle d’environnement de pilote, **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_ENV n’est pas appelé dans ce pilote lorsqu’une connexion est établie, uniquement **sqlallochandle** avec un *comme HandleType* de SQL_HANDLE_DBC. Si le descripteur d’environnement d’un pilote n’existe pas sous le descripteur d’environnement du gestionnaire de pilotes, SQLAllocHandle avec un comme HandleType de SQL_HANDLE_ENV et SQLAllocHandle avec un comme HandleType de SQL_HANDLE_DBC sont appelés dans le pilote lorsque le premier descripteur de connexion de l’environnement est connecté au pilote.  
   
@@ -147,7 +148,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-connection-handle"></a>Allocation d'un handle de connexion  
  Un descripteur de connexion permet d’accéder à des informations telles que les handles d’instruction et de descripteur valides sur la connexion et si une transaction est actuellement ouverte. Pour obtenir des informations générales sur les handles de connexion, consultez [Handles de connexion](../../../odbc/reference/develop-app/connection-handles.md).  
   
- Pour demander un handle de connexion, une application appelle **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_DBC. L’argument *InputHandle* est défini sur le handle d’environnement qui a été retourné par l’appel à **SQLAllocHandle** qui a alloué ce handle. Le pilote alloue de la mémoire pour les informations de connexion et transmet à nouveau la valeur du handle associé dans * \*OutputHandlePtr*. L’application transmet la * \*valeur OutputHandlePtr* dans tous les appels suivants qui requièrent un handle de connexion. Pour plus d’informations, consultez [allocation d’un handle de connexion](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
+ Pour demander un handle de connexion, une application appelle **SQLAllocHandle** avec un *comme HandleType* de SQL_HANDLE_DBC. L’argument *InputHandle* est défini sur le handle d’environnement qui a été retourné par l’appel à **SQLAllocHandle** qui a alloué ce handle. Le pilote alloue de la mémoire pour les informations de connexion et transmet à nouveau la valeur du handle associé dans * \* OutputHandlePtr*. L’application transmet la valeur * \* OutputHandlePtr* dans tous les appels suivants qui requièrent un handle de connexion. Pour plus d’informations, consultez [allocation d’un handle de connexion](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md).  
   
  Le gestionnaire de pilotes traite la fonction **SQLAllocHandle** et appelle la fonction **SQLAllocHandle** du pilote lorsque l’application appelle **SQLConnect**, **SQLBrowseConnect**ou **SQLDriverConnect**. (Pour plus d’informations, consultez [fonction SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).)  
   
@@ -160,7 +161,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-statement-handle"></a>Allocation d'un descripteur d'instruction  
  Un descripteur d’instruction fournit l’accès aux informations de l’instruction, telles que les messages d’erreur, le nom du curseur et les informations d’État pour le traitement des instructions SQL. Pour obtenir des informations générales sur les descripteurs d’instruction, consultez [Handles d’instruction](../../../odbc/reference/develop-app/statement-handles.md).  
   
- Pour demander un descripteur d’instruction, une application se connecte à une source de données, puis appelle **SQLAllocHandle** avant d’envoyer des instructions SQL. Dans cet appel, *comme HandleType* doit être défini sur SQL_HANDLE_STMT et *InputHandle* doit être défini sur le handle de connexion qui a été retourné par l’appel à **SQLAllocHandle** qui a alloué ce handle. Le pilote alloue de la mémoire pour les informations de l’instruction, associe le descripteur d’instruction à la connexion spécifiée et repasse la valeur du handle associé dans * \*OutputHandlePtr*. L’application transmet la * \*valeur OutputHandlePtr* dans tous les appels suivants qui requièrent un descripteur d’instruction. Pour plus d’informations, consultez [allocation d’un descripteur d’instruction](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
+ Pour demander un descripteur d’instruction, une application se connecte à une source de données, puis appelle **SQLAllocHandle** avant d’envoyer des instructions SQL. Dans cet appel, *comme HandleType* doit être défini sur SQL_HANDLE_STMT et *InputHandle* doit être défini sur le handle de connexion qui a été retourné par l’appel à **SQLAllocHandle** qui a alloué ce handle. Le pilote alloue de la mémoire pour les informations de l’instruction, associe le descripteur d’instruction à la connexion spécifiée et repasse la valeur du handle associé dans * \* OutputHandlePtr*. L’application transmet la valeur * \* OutputHandlePtr* dans tous les appels suivants qui requièrent un descripteur d’instruction. Pour plus d’informations, consultez [allocation d’un descripteur d’instruction](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md).  
   
  Lorsque le descripteur d’instruction est alloué, le pilote alloue automatiquement un ensemble de quatre descripteurs et assigne les handles de ces descripteurs aux attributs d’instruction SQL_ATTR_APP_ROW_DESC, SQL_ATTR_APP_PARAM_DESC, SQL_ATTR_IMP_ROW_DESC et SQL_ATTR_IMP_PARAM_DESC. Celles-ci sont appelées descripteurs alloués de *manière implicite* . Pour allouer explicitement un descripteur d’application, consultez la section « allocation d’un handle de descripteur ».  
   
