@@ -1,4 +1,5 @@
 ---
+description: SQLGetInfo, prise en charge
 title: Prise en charge de SQLGetInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a21c035a14814f51d4344894ef253b2cc844f4c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cff18a23c7d8c4526fc86904d75375ed5aaaf5a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307800"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471230"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo, prise en charge
 Quand ODBC 2. *x* appelle **SQLGetInfo** sur un pilote ODBC 3 *. x* , les arguments d' *infotype* dans le tableau suivant doivent être pris en charge.  
   
 |*TypeInfo*|Retours|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2,0) **Remarque :** ce type d’information n’est pas déconseillé ; les masques de la colonne à droite sont déconseillés.|Un masque de SQLINTEGER destinée qui énumère les clauses de l’instruction **ALTER TABLE** prise en charge par la source de données.<br /><br /> Les masques de détours suivants sont utilisés pour déterminer quelles clauses sont prises en charge :<br /><br /> SQL_AT_DROP_COLUMN = la possibilité de supprimer des colonnes est prise en charge. La définition de ce résultat en cascade ou en mode restreint est définie par le pilote. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = la possibilité d’ajouter plusieurs colonnes dans une seule instruction ALTER TABLE est prise en charge. Ce bit n’est pas combiné avec d’autres bits de SQL_AT_ADD_COLUMN_XXX ou SQL_AT_CONSTRAINT_XXX bits. (ODBC 2,0)|  
+|SQL_ALTER_TABLE (ODBC 2,0) **Remarque :**  ce type d’information n’est pas déconseillé ; les masques de la colonne à droite sont déconseillés.|Un masque de SQLINTEGER destinée qui énumère les clauses de l’instruction **ALTER TABLE** prise en charge par la source de données.<br /><br /> Les masques de détours suivants sont utilisés pour déterminer quelles clauses sont prises en charge :<br /><br /> SQL_AT_DROP_COLUMN = la possibilité de supprimer des colonnes est prise en charge. La définition de ce résultat en cascade ou en mode restreint est définie par le pilote. (ODBC 2,0)<br /><br /> SQL_AT_ADD_COLUMN = la possibilité d’ajouter plusieurs colonnes dans une seule instruction ALTER TABLE est prise en charge. Ce bit n’est pas combiné avec d’autres bits de SQL_AT_ADD_COLUMN_XXX ou SQL_AT_CONSTRAINT_XXX bits. (ODBC 2,0)|  
 |SQL_FETCH_DIRECTION (ODBC 1,0)<br /><br /> Le type d’informations a été introduit dans ODBC 1,0 ; Chaque masque de masque est étiqueté avec la version dans laquelle il a été introduit.|Masque de SQLINTEGER destinée qui énumère les options de direction de récupération prises en charge.<br /><br /> Les masques de transparence suivants sont utilisés conjointement avec l’indicateur pour déterminer les options prises en charge :<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1,0) SQL_FD_FETCH_FIRST (ODBC 1,0) SQL_FD_FETCH_LAST (ODBC 1,0) SQL_FD_FETCH_PRIOR (ODBC 1,0) SQL_FD_FETCH_ABSOLUTE (ODBC 1,0) SQL_FD_FETCH_RELATIVE (ODBC 1,0) SQL_FD_FETCH_BOOKMARK (ODBC 2,0)|  
 |SQL_LOCK_TYPES (ODBC 2,0)|Un masque de SQLINTEGER destinée qui énumère les types de verrous pris en charge pour l’argument de *troupeau* dans **SQLSetPos**.<br /><br /> Les masques de transparence suivants sont utilisés conjointement avec l’indicateur pour déterminer les types de verrous pris en charge :<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1,0)|Valeur SQLSMALLINT indiquant le niveau de conformité ODBC.<br /><br /> SQL_OAC_NONE = aucun<br /><br /> SQL_OAC_LEVEL1 = niveau 1 pris en charge<br /><br /> SQL_OAC_LEVEL2 = niveau 2 pris en charge|  

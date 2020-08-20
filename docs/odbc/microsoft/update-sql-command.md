@@ -1,4 +1,5 @@
 ---
+description: UPDATE, commande SQL
 title: Commande UPDATE-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 818811c18ed52cef5bdb1c4d97f947bb86e67422
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6aa25f786448a14da47321c0f5ce1825716c03d2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307640"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88471409"
 ---
 # <a name="update---sql-command"></a>UPDATE, commande SQL
 Met à jour des enregistrements dans une table avec de nouvelles valeurs.  
@@ -40,7 +41,7 @@ SET Column_Name1 = eExpression1
   
  *DatabaseName1!* Spécifie le nom d’une base de données autre que la base de données spécifiée avec la source de données contenant la table. Vous devez inclure le nom de la base de données contenant la table si celle-ci n’est pas la base de données actuelle. Insérez le délimiteur du point d’exclamation ( !) après le nom de la base de données et avant le nom de la table.  
   
- Set *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ Set *Column_Name1* =  *eExpression1*[, *Column_Name2* =  *eExpression2*  
  Spécifie les colonnes mises à jour et leurs nouvelles valeurs. Si vous omettez la clause WHERE, chaque ligne de la colonne est mise à jour avec la même valeur.  
   
  WHERE *FilterCondition1*[et &#124; ou *FilterCondition2*...]  
