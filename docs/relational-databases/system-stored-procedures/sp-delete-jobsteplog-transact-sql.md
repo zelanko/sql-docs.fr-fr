@@ -1,4 +1,5 @@
 ---
+description: sp_delete_jobsteplog (Transact-SQL)
 title: sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b1ae68a2c09ca79917288381db0a0f9c92d4e33c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 4b50fb6987fe43e78ae205f620fffa06750172a1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85863675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469633"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85863675"
   Supprime tous les journaux d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont spécifiés via les arguments. Utilisez cette procédure stockée pour tenir à jour la table **sysjobstepslogs** dans la base de données **msdb** .  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,21 +44,21 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_id = ] 'job_id'`Numéro d’identification du travail qui contient le journal d’étapes de travail à supprimer. *job_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] 'job_id'` Numéro d’identification du travail qui contient le journal d’étapes de travail à supprimer. *job_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @job_name = ] 'job_name'`Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail. *job_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > **Remarque :** *Job_id* ou *job_name* doivent être spécifiés, mais ne peuvent pas être spécifiés.  
   
-`[ @step_id = ] step_id`Numéro d’identification de l’étape du travail pour laquelle le journal d’étapes de travail doit être supprimé. Si ce n’est pas le cas, tous les journaux d’étapes de travail du travail sont supprimés, sauf si ** \@ older_than** ou ** \@ larger_than** sont spécifiés. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id` Numéro d’identification de l’étape du travail pour laquelle le journal d’étapes de travail doit être supprimé. Si ce n’est pas le cas, tous les journaux d’étapes de travail du travail sont supprimés, sauf si ** \@ older_than** ou ** \@ larger_than** sont spécifiés. *step_id* est de **type int**, avec NULL comme valeur par défaut.  
   
-`[ @step_name = ] 'step_name'`Nom de l’étape du travail pour laquelle le journal d’étapes de travail doit être supprimé. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @step_name = ] 'step_name'` Nom de l’étape du travail pour laquelle le journal d’étapes de travail doit être supprimé. *step_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
 > **Remarque :** *Step_id* ou *step_name* peuvent être spécifiés, mais ils ne peuvent pas être spécifiés.  
   
-`[ @older_than = ] 'date'`Date et heure du journal d’étapes de travail le plus ancien que vous souhaitez conserver. Tous les journaux d'étapes de travail antérieurs à cette date/heure sont supprimés. *Date* est de **type DateTime**, avec NULL comme valeur par défaut. ** \@ Older_than** et ** \@ larger_than** peuvent être spécifiés.  
+`[ @older_than = ] 'date'` Date et heure du journal d’étapes de travail le plus ancien que vous souhaitez conserver. Tous les journaux d'étapes de travail antérieurs à cette date/heure sont supprimés. *Date* est de **type DateTime**, avec NULL comme valeur par défaut. ** \@ Older_than** et ** \@ larger_than** peuvent être spécifiés.  
   
-`[ @larger_than = ] 'size_in_bytes'`Taille en octets du journal d’étapes de travail le plus volumineux que vous souhaitez conserver. Tous les journaux d'étapes de travail dont la taille est supérieure à celle spécifiée sont supprimés. ** \@ Larger_than** et ** \@ older_than** peuvent être spécifiés.  
+`[ @larger_than = ] 'size_in_bytes'` Taille en octets du journal d’étapes de travail le plus volumineux que vous souhaitez conserver. Tous les journaux d'étapes de travail dont la taille est supérieure à celle spécifiée sont supprimés. ** \@ Larger_than** et ** \@ older_than** peuvent être spécifiés.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

@@ -1,4 +1,5 @@
 ---
+description: sp_describe_first_result_set (Transact-SQL)
 title: sp_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2018
@@ -18,12 +19,12 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 451884c5055ee0be3ceeb95f4fe3c9dddb388bc0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469608"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,13 +43,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ \@tsql = ] 'Transact-SQL_batch'`Une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être de type **nvarchar (***n***)** ou **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être de type **nvarchar (***n***)** ou **nvarchar (max)**.  
   
 `[ \@params = ] N'parameters'`\@params fournit une chaîne de déclaration pour les paramètres du [!INCLUDE[tsql](../../includes/tsql-md.md)] lot, qui est similaire à sp_executesql. Les paramètres peuvent être de type **nvarchar (n)** ou **nvarchar (max)**.  
   
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique des définitions de paramètres supplémentaires. Chaque paramètre spécifié dans l’instruction doit être défini dans \@ params. Si l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans l’instruction ne contient pas de paramètres, \@ params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
-`[ \@browse_information_mode = ] tinyint`Spécifie si des colonnes clés supplémentaires et des informations de table source sont retournées. Si la valeur 1 est définie, chaque requête est analysée comme si elle incluait une option FOR BROWSE sur la requête. Des colonnes clés supplémentaires et les informations de table source sont retournées.  
+`[ \@browse_information_mode = ] tinyint` Spécifie si des colonnes clés supplémentaires et des informations de table source sont retournées. Si la valeur 1 est définie, chaque requête est analysée comme si elle incluait une option FOR BROWSE sur la requête. Des colonnes clés supplémentaires et les informations de table source sont retournées.  
   
 -   Si la valeur est 0, aucune information n'est retournée.  
   

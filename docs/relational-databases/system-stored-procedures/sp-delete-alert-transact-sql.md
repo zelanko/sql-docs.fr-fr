@@ -1,4 +1,5 @@
 ---
+description: sp_delete_alert (Transact-SQL)
 title: sp_delete_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ef855e02ce472f06b7cd1364a5030bd0adbeeb5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 782d6f748521c6c0d1279fe3d29b843f93d2811f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85864805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469636"
 ---
 # <a name="sp_delete_alert-transact-sql"></a>sp_delete_alert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime une alerte.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +40,7 @@ sp_delete_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'`Nom de l’alerte. *Name* est de **type sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Nom de l’alerte. *Name* est de **type sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

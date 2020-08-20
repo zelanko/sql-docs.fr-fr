@@ -1,4 +1,5 @@
 ---
+description: Assistant Nouvel abonnement (références de l'interface utilisateur)
 title: Assistant Nouvel abonnement (références de l’interface utilisateur) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 01e2797b760c8fd5a31b05cd5a16f02df889ca20
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 3e4bef2f1c7d5ff091e1efb6978fb6ebef0794ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110510"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470141"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Assistant Nouvel abonnement (références de l'interface utilisateur)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,7 +29,7 @@ Cette section fournit des informations sur les pages suivantes de l'Assistant No
   
 -   [Abonnés](../../relational-databases/replication/subscribers.md)  
   
--   [Ajouter un abonné non SQL Server](../../relational-databases/replication/add-non-sql-server-subscriber.md)  
+-   [Ajouter un Abonné non-SQL Server](../../relational-databases/replication/add-non-sql-server-subscriber.md)  
   
 -   Sécurité de l’agent [&#60;nom_agent&#62;](../../relational-databases/replication/agentname-agent-security.md)  
   
@@ -38,7 +39,7 @@ Cette section fournit des informations sur les pages suivantes de l'Assistant No
   
 -   [Initialiser les abonnements](../../relational-databases/replication/initialize-subscriptions.md)  
   
--   [Informations sur le serveur web](../../relational-databases/replication/web-server-information.md)  
+-   [Informations sur le serveur Web](../../relational-databases/replication/web-server-information.md)  
   
 -   [Type d’abonnement](../../relational-databases/replication/subscription-type.md)  
   

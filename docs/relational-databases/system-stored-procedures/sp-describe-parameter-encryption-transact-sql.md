@@ -1,4 +1,5 @@
 ---
+description: sp_describe_parameter_encryption (Transact-SQL)
 title: sp_describe_parameter_encryption (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
@@ -18,11 +19,12 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d3f4b5dd2d6c63688046eda4a8b752bc10b9c943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998952"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469581"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
@@ -47,7 +49,7 @@ sp_describe_parameter_encryption
   
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] _batch. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique des définitions de paramètres supplémentaires. Chaque paramètre spécifié dans l’instruction doit être défini dans * \@ params*. Si l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot dans l’instruction ne contient pas de paramètres, * \@ params* n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
-## <a name="return-value"></a>Valeur renvoyée  
+## <a name="return-value"></a>Valeur de retour  
  0 indique une réussite. Tout autre indicateur indique un échec.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -64,7 +66,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|ID de la ligne dans le jeu de résultats.|  
 |**database_id**|**int**|ID de la base de données.|  
 |**column_encryption_key_id**|**int**|ID de la clé de chiffrement de colonne. Remarque : cet ID désigne une ligne dans la vue de catalogue [sys. column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) .|  
-|**column_encryption_key_version**|**int**|Réservé pour un usage futur. Actuellement, contient toujours 1.|  
+|**column_encryption_key_version**|**int**|Réservé à un usage ultérieur. Actuellement, contient toujours 1.|  
 |**column_encryption_key_metadata_version**|**Binary(8**|Horodateur représentant l’heure de création de la clé de chiffrement de colonne.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|Valeur chiffrée de la clé de chiffrement de colonne.|  
 |**column_master_key_store_provider_name**|**sysname**|Nom du fournisseur du magasin de clés qui contient la clé principale de colonne, qui a été utilisé pour produire la valeur chiffrée de la clé de chiffrement de colonne.|  
@@ -82,7 +84,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Code de la ligne dans le premier jeu de résultats. La ligne référencée décrit la clé de chiffrement de colonne configurée pour la colonne, le paramètre correspond à.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Numéro de version de l’algorithme de normalisation de type.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote client, prenant en charge Always Encrypted, appelle automatiquement **sp_describe_parameter_encryption** pour récupérer les métadonnées de chiffrement pour les requêtes paramétrables, émises par l’application. Par la suite, le pilote utilise les métadonnées de chiffrement pour chiffrer les valeurs des paramètres qui correspondent aux colonnes de base de données protégées par Always Encrypted et substitue les valeurs de paramètre de texte en clair, soumises par l’application, aux valeurs de paramètre chiffrées, avant d’envoyer la requête au moteur de base de données.  
   
 ## <a name="permissions"></a>Autorisations  

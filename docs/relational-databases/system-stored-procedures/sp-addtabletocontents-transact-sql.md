@@ -1,4 +1,5 @@
 ---
+description: sp_addtabletocontents (Transact-SQL)
 title: sp_addtabletocontents (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 928d601fe544432b669b84b8d8a819405bcfbc7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d0363795187e586a7a37481505240b74690aa425
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85876041"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469760"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Insère des références dans les tables de suivi de fusion pour toutes les lignes d'une table source qui ne sont pas actuellement incluses dans les tables de suivi. Utilisez cette option si vous avez chargé en masse une grande quantité de données à l’aide de **BCP**, ce qui n’entraîne pas l’activation des déclencheurs de suivi de fusion. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,16 +40,16 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_name = ] 'table_name'`Nom de la table. *table_name* est de **type sysname**, sans valeur par défaut.  
+`[ @table_name = ] 'table_name'` Nom de la table. *table_name* est de **type sysname**, sans valeur par défaut.  
   
-`[ @owner_name = ] 'owner_name'`Nom du propriétaire de la table. *owner_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @owner_name = ] 'owner_name'` Nom du propriétaire de la table. *owner_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @filter_clause = ] 'filter_clause'`Spécifie une clause de filtre qui contrôle les lignes des données récemment chargées à ajouter aux tables de suivi de fusion. *filter_clause* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. Si *filter_clause* a la **valeur null**, toutes les lignes chargées en bloc sont ajoutées.  
+`[ @filter_clause = ] 'filter_clause'` Spécifie une clause de filtre qui contrôle les lignes des données récemment chargées à ajouter aux tables de suivi de fusion. *filter_clause* est de type **nvarchar (4000)**, avec NULL comme valeur par défaut. Si *filter_clause* a la **valeur null**, toutes les lignes chargées en bloc sont ajoutées.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_addtabletocontents** est utilisé uniquement dans la réplication de fusion.  
   
  Les lignes de la *table_name* sont référencées par leur **ROWGUIDCOL** et les références sont ajoutées aux tables de suivi de fusion. **sp_addtabletocontents** doit être utilisé après la copie en bloc de données dans une table qui est publiée à l’aide de la réplication de fusion. La procédure stockée commence le suivi des lignes qui ont été copiées et garantit que les nouvelles lignes seront incluses lors de la prochaine synchronisation.  

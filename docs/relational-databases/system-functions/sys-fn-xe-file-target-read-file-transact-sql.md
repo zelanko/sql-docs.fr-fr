@@ -1,4 +1,5 @@
 ---
+description: sys.fn_xe_file_target_read_file (Transact-SQL)
 title: sys. fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/22/2017
@@ -22,12 +23,12 @@ ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b4ee24b0ee74540a967c713579365c68aa849dd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9edd7d5181979beb5bbbc0e4069aac31d9b302bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469835"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,9 +36,9 @@ ms.locfileid: "85738565"
   Lit des fichiers créés par la cible de fichier asynchrone d'événements étendus. Au format XML, un événement par ligne est retourné.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] acceptent les résultats de trace générés au format Xel et Xem. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Les événements étendus prennent uniquement en charge les résultats de trace au format XEL. Nous vous recommandons d'utiliser SQL Server Management Studio pour lire les résultats de trace au format XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] acceptent les résultats de trace générés au format Xel et Xem. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Les événements étendus prennent uniquement en charge les résultats de trace au format XEL. Nous vous recommandons d'utiliser SQL Server Management Studio pour lire les résultats de trace au format XEL.    
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +55,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
  Chemin d’accès au fichier de métadonnées qui correspond aux fichiers spécifiés par l’argument *path* . *mdpath* est **de type nvarchar (260)**. Il n'y a pas de valeur par défaut. À compter de SQL Server 2016, ce paramètre peut être spécifié comme null.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ne nécessite pas le paramètre *mdpath* . Toutefois, celui-ci est conservé pour la compatibilité descendante des fichiers journaux générés dans les versions antérieures de SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ne nécessite pas le paramètre *mdpath* . Toutefois, celui-ci est conservé pour la compatibilité descendante des fichiers journaux générés dans les versions antérieures de SQL Server.  
   
  *initial_file_name*  
  Premier fichier à lire à partir du *chemin d’accès*. *initial_file_name* est **de type nvarchar (260)**. Il n'y a pas de valeur par défaut. Si **null** est spécifié en tant qu’argument, tous les fichiers trouvés dans le *chemin d’accès* sont lus.  
@@ -71,14 +72,14 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|GUID du module d'événements. N'accepte pas la valeur NULL.|  
 |package_guid|**uniqueidentifier**|GUID du package d'événement. N'accepte pas la valeur NULL.|  
-|object_name|**nvarchar(256)**|Nom de l’événement. N'accepte pas la valeur NULL.|  
+|object_name|**nvarchar (256)**|Nom de l’événement. N'accepte pas la valeur NULL.|  
 |event_data|**nvarchar(max)**|Contenu de l'événement, au format XML. N'accepte pas la valeur NULL.|  
 |file_name|**nvarchar(260)**|Nom du fichier qui contient l'événement. N'accepte pas la valeur NULL.|  
 |file_offset|**bigint**|Offset du bloc dans le fichier qui contient l'événement. N'accepte pas la valeur NULL.|  
 |timestamp_utc|**datetime2**|**S’applique à** : [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] et versions ultérieures et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Date et heure (fuseau horaire UTC) de l’événement. N'accepte pas la valeur NULL.|  
 
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La lecture de jeux de résultats volumineux en exécutant **sys. fn_xe_file_target_read_file** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] peut entraîner une erreur. Utilisez les **résultats** en mode fichier (**Ctrl + Maj + F**) pour exporter de grands jeux de résultats dans un fichier et lisez le fichier avec un autre outil à la place.  
   
 ## <a name="permissions"></a>Autorisations  

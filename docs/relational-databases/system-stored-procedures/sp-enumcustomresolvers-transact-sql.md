@@ -1,4 +1,5 @@
 ---
+description: sp_enumcustomresolvers (Transact-SQL)
 title: sp_enumcustomresolvers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ecff860e5dc101cc02b3e5fd7b97569510a8cf68
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2579e1d099d0543b1ed8d14bccef877bb892c64e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85891898"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469497"
 ---
 # <a name="sp_enumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la liste de tous les gestionnaires de logique métier et résolveurs personnalisés disponibles inscrits sur le serveur de distribution. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +38,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @distributor = ] 'distributor'`Nom du serveur de distribution où se trouve le programme de résolution personnalisé. *Distributor* est de **type sysname**, avec NULL comme valeur par défaut. *Ce paramètre est déconseillé et sera supprimé dans une future version.*  
+`[ @distributor = ] 'distributor'` Nom du serveur de distribution où se trouve le programme de résolution personnalisé. *Distributor* est de **type sysname**, avec NULL comme valeur par défaut. *Ce paramètre est déconseillé et sera supprimé dans une future version.*  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -52,7 +53,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_enumcustomresolvers** est utilisé dans la réplication de fusion.  
   
 ## <a name="permissions"></a>Autorisations  

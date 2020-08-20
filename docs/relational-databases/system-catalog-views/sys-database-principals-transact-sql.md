@@ -1,4 +1,5 @@
 ---
+description: sys.database_principals (Transact-SQL)
 title: sys. database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
@@ -20,11 +21,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8773d6a3a8b65520fad6342477300f8818e9ac4d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b5f5069c17300f6559181f0cd0a4038f7b2e3651
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011964"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469964"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +51,7 @@ ms.locfileid: "86011964"
 |**default_language_lcid**|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Signifie le LCID par défaut de ce principal.|  
 |**allow_encrypted_value_modifications**|**bit**|**S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Supprime les contrôles de métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc. Cela permet à l’utilisateur de copier en bloc des données chiffrées à l’aide de Always Encrypted, entre des tables ou des bases de données, sans déchiffrer les données. La valeur par défaut est OFF. |      
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  Les propriétés *PasswordLastSetTime* sont disponibles sur toutes les configurations prises en charge de SQL Server, mais les autres propriétés sont uniquement disponibles lorsque SQL Server s’exécute sur Windows Server 2003 ou version ultérieure et que CHECK_POLICY et CHECK_EXPIRATION sont activés. Pour plus d’informations, consultez [stratégie de mot de passe](../../relational-databases/security/password-policy.md) .
 Les valeurs de la principal_id peuvent être réutilisées dans le cas où les principaux ont été supprimés et qu’il n’est donc pas garanti qu’elles soient toujours plus nombreuses.
   
@@ -122,7 +124,7 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>Voir aussi  
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Utilisateurs de base de données à relation contenant-contenu-rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
  [Connexion à SQL Database avec l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  

@@ -1,4 +1,5 @@
 ---
+description: sp_column_privileges_ex (Transact-SQL)
 title: sp_column_privileges_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ec17e4482a07d90ccf65e98f6697cc6b12e5fac1
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d9d6eee0a85444171ae24d7ac991fb90a451f5d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85871030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469750"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne les privilèges de colonne de la table spécifiée sur le serveur lié spécifié.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,15 +44,15 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_server = ] 'table_server'`Nom du serveur lié pour lequel des informations doivent être retournées. *table_server* est de **type sysname**, sans valeur par défaut.  
+`[ @table_server = ] 'table_server'` Nom du serveur lié pour lequel des informations doivent être retournées. *table_server* est de **type sysname**, sans valeur par défaut.  
   
-`[ @table_name = ] 'table_name'`Nom de la table qui contient la colonne spécifiée. *table_name* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_name = ] 'table_name'` Nom de la table qui contient la colonne spécifiée. *table_name* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @table_schema = ] 'table_schema'`Est le schéma de la table. *TABLE_SCHEMA* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_schema = ] 'table_schema'` Est le schéma de la table. *TABLE_SCHEMA* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @table_catalog = ] 'table_catalog'`Nom de la base de données dans laquelle réside le *table_name* spécifié. *TABLE_CATALOG* est de **type sysname**, avec NULL comme valeur par défaut.  
+`[ @table_catalog = ] 'table_catalog'` Nom de la base de données dans laquelle réside le *table_name* spécifié. *TABLE_CATALOG* est de **type sysname**, avec NULL comme valeur par défaut.  
   
-`[ @column_name = ] 'column_name'`Nom de la colonne pour laquelle des informations de privilège doivent être fournies. *column_name* est de **type sysname**, avec NULL comme valeur par défaut (tous communs).  
+`[ @column_name = ] 'column_name'` Nom de la colonne pour laquelle des informations de privilège doivent être fournies. *column_name* est de **type sysname**, avec NULL comme valeur par défaut (tous communs).  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Le tableau suivant présente les colonnes du jeu de résultats. Les résultats retournés sont triés par **TABLE_QUALIFIER**, **TABLE_OWNER**, **table_name**, **column_name**et **privilège**.  
@@ -62,7 +63,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de la base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de la table. Ce champ retourne toujours une valeur.|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **table_name** retournée. Ce champ retourne toujours une valeur.|  
-|**GRANTOR**|**sysname**|Nom d’utilisateur de base de données qui a accordé des autorisations sur cet **column_name** au **bénéficiaire**mentionné. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne est toujours identique à la **TABLE_OWNER**. Ce champ retourne toujours une valeur.<br /><br /> La colonne **GRANTOR** peut être soit le propriétaire de la base de données (**TABLE_OWNER**), soit une personne à laquelle le propriétaire de la base de données a accordé des autorisations à l’aide de la clause with Grant option de l’instruction GRANT.|  
+|**FOURNISSEUR**|**sysname**|Nom d’utilisateur de base de données qui a accordé des autorisations sur cet **column_name** au **bénéficiaire**mentionné. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cette colonne est toujours identique à la **TABLE_OWNER**. Ce champ retourne toujours une valeur.<br /><br /> La colonne **GRANTOR** peut être soit le propriétaire de la base de données (**TABLE_OWNER**), soit une personne à laquelle le propriétaire de la base de données a accordé des autorisations à l’aide de la clause with Grant option de l’instruction GRANT.|  
 |**GRANTEE**|**sysname**|Nom d’utilisateur de base de données auquel des autorisations ont été accordées sur cette **column_name** par le fournisseur de **la liste.** Ce champ retourne toujours une valeur.|  
 |**LIMITÉS**|**varchar (** 32 **)**|L'une des autorisations sur les colonnes disponibles. Les autorisations relatives aux colonnes peuvent prendre l'une des valeurs suivantes (ou d'autres valeurs prises en charge par la source des données si leur implémentation est définie) :<br /><br /> SELECT = **GRANTEE** peut récupérer des données pour les colonnes.<br /><br /> INSERT = **GRANTEE** peut fournir des données pour cette colonne lorsque de nouvelles lignes sont insérées (par le **bénéficiaire**) dans la table.<br /><br /> UPDATE = **GRANTEE** peut modifier des données existantes dans la colonne.<br /><br /> REFERENCEs = **GRANTEE** peut faire référence à une colonne d’une table étrangère dans une relation clé primaire/clé étrangère. Les relations clé primaire/clé étrangère sont définies grâce à des contraintes portant sur les tables.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Indique si le **bénéficiaire** est autorisé à accorder des autorisations à d’autres utilisateurs (souvent appelés autorisations « accorder avec Grant »). Les valeurs possibles sont YES, NO ou NULL. Une valeur inconnue ou NULL renvoie à une source de données où le « droit d'accorder » ne s'applique pas.|  

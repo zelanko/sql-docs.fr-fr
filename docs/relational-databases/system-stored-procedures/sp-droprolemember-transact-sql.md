@@ -1,4 +1,5 @@
 ---
+description: sp_droprolemember (Transact-SQL)
 title: sp_droprolemember (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -18,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ffff6387f2129c2e3bdb2af726e6b87e665554e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1bbd0dfdeedb0954bb82f97dae6419a9a7f2d852
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180078"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469550"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -32,9 +33,9 @@ ms.locfileid: "88180078"
   Supprime un compte de sécurité d'un rôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la base de données active.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilisez à la place [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) .  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
 
@@ -53,9 +54,9 @@ sp_droprolemember 'role' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rolename = ] 'role'`Nom du rôle à partir duquel le membre est supprimé. *role* est de **type sysname**, sans valeur par défaut. le *rôle* doit exister dans la base de données actuelle.  
+`[ @rolename = ] 'role'` Nom du rôle à partir duquel le membre est supprimé. *role* est de **type sysname**, sans valeur par défaut. le *rôle* doit exister dans la base de données actuelle.  
   
-`[ @membername = ] 'security_account'`Nom du compte de sécurité supprimé du rôle. *security_account* est de **type sysname**, sans valeur par défaut. *security_account* peut être un utilisateur de base de données, un autre rôle de base de données, une connexion Windows ou un groupe Windows. *security_account* doit exister dans la base de données active.  
+`[ @membername = ] 'security_account'` Nom du compte de sécurité supprimé du rôle. *security_account* est de **type sysname**, sans valeur par défaut. *security_account* peut être un utilisateur de base de données, un autre rôle de base de données, une connexion Windows ou un groupe Windows. *security_account* doit exister dans la base de données active.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  0 (réussite) ou 1 (échec)  
@@ -85,7 +86,7 @@ EXEC sp_droprolemember 'Sales', 'JonB'
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées de sécurité &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Procédures stockées de sécurité &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)   
  [sp_dropsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

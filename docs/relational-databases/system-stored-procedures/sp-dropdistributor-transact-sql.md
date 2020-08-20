@@ -1,4 +1,5 @@
 ---
+description: sp_dropdistributor (Transact-SQL)
 title: sp_dropdistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdd3c733d93fa803906523d7150b4377e6f28666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 404ef0654abde8b9d41659d7dd25bf80ac5b3bb3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469569"
 ---
 # <a name="sp_dropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Désinstalle le serveur de distribution. Cette procédure stockée est exécutée sur n'importe quelle base de données du serveur de distribution, à l'exception de la base de données de distribution.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,13 +39,13 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @no_checks = ] no_checks`Indique s’il faut vérifier les objets dépendants avant de supprimer le serveur de distribution. *no_checks* est de **bit**, avec 0 comme valeur par défaut.  
+`[ @no_checks = ] no_checks` Indique s’il faut vérifier les objets dépendants avant de supprimer le serveur de distribution. *no_checks* est de **bit**, avec 0 comme valeur par défaut.  
   
  Si la **valeur est 0**, **sp_dropdistributor** s’assure que tous les objets de publication et de distribution en plus du serveur de distribution ont été supprimés.  
   
  Si la valeur est **1**, **sp_dropdistributor** supprime tous les objets de publication et de distribution avant de désinstaller le serveur de distribution.  
   
-`[ @ignore_distributor = ] ignore_distributor`Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est de **bit**, avec **0**comme valeur par défaut.  
+`[ @ignore_distributor = ] ignore_distributor` Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est de **bit**, avec **0**comme valeur par défaut.  
   
  Si la **valeur est 0**, **sp_dropdistributor** se connecte au serveur de distribution et supprime tous les objets de réplication. Si **sp_dropdistributor** ne parvient pas à se connecter au serveur de distribution, la procédure stockée échoue.  
   
@@ -53,7 +54,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_dropdistributor** est utilisé dans tous les types de réplications.  
   
  Si d’autres objets de publication ou de distribution existent sur le serveur, **sp_dropdistributor** échoue, sauf si ** \@ no_checks** a la valeur **1**.  

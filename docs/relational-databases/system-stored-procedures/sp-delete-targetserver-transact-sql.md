@@ -1,4 +1,5 @@
 ---
+description: sp_delete_targetserver (Transact-SQL)
 title: sp_delete_targetserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4489e34ec83bd3981e464e72cb8e72885fcc994f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 290da3e982e98287305e2e9f277037fea0e8f86a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862194"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469603"
 ---
 # <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime le serveur spécifié de la liste des serveurs cibles disponibles.  
    
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,11 +42,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @server_name = ] 'server'`Nom du serveur à supprimer en tant que serveur cible disponible. *Server* est de type **nvarchar (30)**, sans valeur par défaut.  
+`[ @server_name = ] 'server'` Nom du serveur à supprimer en tant que serveur cible disponible. *Server* est de type **nvarchar (30)**, sans valeur par défaut.  
   
-`[ @clear_downloadlist = ] clear_downloadlist`Spécifie s’il faut effacer la liste de téléchargement du serveur cible. *clear_downloadlist* est de type **bit**, avec **1**comme valeur par défaut. Lorsque *clear_downloadlist* est **1**, la procédure efface la liste de téléchargement du serveur avant de supprimer le serveur. Lorsque *clear_downloadlist* a la **valeur 0**, la liste de téléchargement n’est pas effacée.  
+`[ @clear_downloadlist = ] clear_downloadlist` Spécifie s’il faut effacer la liste de téléchargement du serveur cible. *clear_downloadlist* est de type **bit**, avec **1**comme valeur par défaut. Lorsque *clear_downloadlist* est **1**, la procédure efface la liste de téléchargement du serveur avant de supprimer le serveur. Lorsque *clear_downloadlist* a la **valeur 0**, la liste de téléchargement n’est pas effacée.  
   
-`[ @post_defection = ] post_defection`Spécifie s’il faut poster une instruction de désinscription sur le serveur cible. *post_defection* est de type **bit**, avec 1 comme valeur par défaut. Lorsque *post_defection* a la valeur **1**, la procédure publie une instruction de désinscription sur le serveur cible avant de supprimer le serveur. Lorsque *post_defection* a la **valeur 0**, la procédure ne publie pas d’instruction de désinscription sur le serveur cible.  
+`[ @post_defection = ] post_defection` Spécifie s’il faut poster une instruction de désinscription sur le serveur cible. *post_defection* est de type **bit**, avec 1 comme valeur par défaut. Lorsque *post_defection* a la valeur **1**, la procédure publie une instruction de désinscription sur le serveur cible avant de supprimer le serveur. Lorsque *post_defection* a la **valeur 0**, la procédure ne publie pas d’instruction de désinscription sur le serveur cible.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

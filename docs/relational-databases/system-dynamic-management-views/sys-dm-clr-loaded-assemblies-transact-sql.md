@@ -1,4 +1,5 @@
 ---
+description: sys.dm_clr_loaded_assemblies (Transact-SQL)
 title: sys. dm_clr_loaded_assemblies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eb2a7ffc194741e546e10261711af3f78b697a77
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 777dfc663eb076446e70455fb5b07f013300189c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894619"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469840"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,8 +43,8 @@ ms.locfileid: "85894619"
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
-## <a name="remarks"></a>Remarques  
- La vue **dm_clr_loaded_assemblies. appdomain_address** a une relation plusieurs-à-un avec **dm_clr_appdomains. appdomain_address**. La vue **dm_clr_loaded_assemblies. assembly_id** a une relation un-à-plusieurs avec **sys. assemblies. assembly_id**.  
+## <a name="remarks"></a>Notes  
+ La vue **dm_clr_loaded_assemblies. appdomain_address** a une relation plusieurs-à-un avec  **dm_clr_appdomains. appdomain_address**. La vue **dm_clr_loaded_assemblies. assembly_id** a une relation un-à-plusieurs avec **sys. assemblies. assembly_id**.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant montre comment afficher les détails de tous les assemblys de la base de données active qui sont chargés.  

@@ -1,4 +1,5 @@
 ---
+description: Construction d'instructions SQL pour les curseurs
 title: Construction d’instructions SQL pour les curseurs | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32dea8c43c1ad1e10f245cd806edb783a3153dd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a67f2a7ed3d01ee3a98356efc4c15cf2865ee154
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88470389"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Construction d'instructions SQL pour les curseurs
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +67,7 @@ ms.locfileid: "86001439"
   
  Les instructions SQL qui n'appartiennent à aucune des catégories précitées peuvent être exécutées avec tout paramètre d'attribut d'instruction ; elles fonctionnent aussi bien avec un jeu de résultats par défaut qu'avec un curseur côté serveur.  
   
-## <a name="errors"></a>Errors  
+## <a name="errors"></a>Erreurs  
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 et versions ultérieures, toute tentative d'exécution d'une instruction qui produit plusieurs jeux de résultats génère SQL_SUCCESS_WITH INFO et le message suivant :  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: sp_delete_notification (Transact-SQL)
 title: sp_delete_notification (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05682482a720bbf14a17497299676ac6a0cc23d4
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 65a8442c4f957cda4db9c33e0988ba5dca05ca88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85862636"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469617"
 ---
 # <a name="sp_delete_notification-transact-sql"></a>sp_delete_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime une définition de notification de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour une alerte et un opérateur spécifiques.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,9 +42,9 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @alert_name = ] 'alert'`Nom de l’alerte. *alerte* est de **type sysname**, sans valeur par défaut.  
+`[ @alert_name = ] 'alert'` Nom de l’alerte. *alerte* est de **type sysname**, sans valeur par défaut.  
   
-`[ @operator_name = ] 'operator'`Nom de l’opérateur. l' *opérateur* est de **type sysname**et n’a pas de valeur par défaut.  
+`[ @operator_name = ] 'operator'` Nom de l’opérateur. l' *opérateur* est de **type sysname**et n’a pas de valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  

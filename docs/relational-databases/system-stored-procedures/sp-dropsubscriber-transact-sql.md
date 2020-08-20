@@ -1,4 +1,5 @@
 ---
+description: sp_dropsubscriber (Transact-SQL)
 title: sp_dropsubscriber (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 093c04b63b9b99a777f7b20af70ea06677b0c917
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84fd3594b0c8926df6f3575b8c2e899246897503
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727202"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469495"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "85727202"
 > [!IMPORTANT]  
 >  Cette procédure stockée est désormais déconseillée. Vous n'avez donc plus besoin d'enregistrer un Abonné de façon explicite auprès du serveur de publication.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné à supprimer. *Subscriber* est de **type sysname**, sans valeur par défaut.  
+`[ @subscriber = ] 'subscriber'` Nom de l’abonné à supprimer. *Subscriber* est de **type sysname**, sans valeur par défaut.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -51,7 +52,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_dropsubscriber** est utilisé dans tous les types de réplications.  
   
  Cette procédure stockée supprime la **sous** -option Server et supprime le mappage de connexion à distance de l’administrateur système pour **repl_subscriber**.  

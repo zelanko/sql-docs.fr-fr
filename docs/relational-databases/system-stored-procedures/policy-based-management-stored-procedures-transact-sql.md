@@ -1,4 +1,5 @@
 ---
+description: Procédures stockées de Gestion basée sur des stratégies (Transact-SQL)
 title: Procédures stockées de gestion basée sur des stratégies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a8e08f63bc4bb039436c94f0fb678ace795927a
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 1811a67ac9eceb3e6f1fd14d27de2b7d04e07684
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977516"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88469803"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Procédures stockées de Gestion basée sur des stratégies (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]prend en charge les procédures stockées système suivantes qui sont utilisées pour la gestion basée sur des stratégies.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures stockées système suivantes qui sont utilisées pour la gestion basée sur des stratégies.  
   
 > [!IMPORTANT]  
 >  Seules les procédures stockées de Gestion basée sur des stratégies documentées dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont prises en charge. Les procédures stockées non documentées sont utilisées par des composants internes de la Gestion basée sur des stratégies et ne doivent pas être utilisées pour administrer la Gestion basée sur des stratégies.  
