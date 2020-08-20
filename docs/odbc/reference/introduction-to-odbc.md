@@ -1,4 +1,5 @@
 ---
+description: Présentation d’ODBC
 title: Présentation d’ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0a92e671169fa375169a37ca01e1d55729167b1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d164acb4621c0298fe8821255941e0ccf1d4c25f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81295969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499702"
 ---
 # <a name="introduction-to-odbc"></a>Présentation d’ODBC
 Cette section fournit un bref historique des langage SQL et ODBC, et inclut des informations conceptuelles sur l’interface ODBC.  

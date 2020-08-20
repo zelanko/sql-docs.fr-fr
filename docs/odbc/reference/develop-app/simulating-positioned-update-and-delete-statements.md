@@ -1,4 +1,5 @@
 ---
+description: Simulation d’instructions de mise à jour et de suppression positionnées
 title: Simulation des instructions Update et DELETE positionnées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e1eb498a99180d145147e67c8955eeb7a0027024
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06f6faad1b5b6cb83616575ea8732cac98b88ed0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301990"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499812"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulation d’instructions de mise à jour et de suppression positionnées
 Si la source de données ne prend pas en charge les instructions Update et DELETE positionnées, le pilote peut les simuler. Par exemple, la bibliothèque de curseurs ODBC simule les instructions Update et DELETE positionnées. La stratégie générale de simulation des instructions de mise à jour et de suppression positionnées consiste à convertir les instructions positionnées en recherches. Pour ce faire, remplacez la clause **Where Current of** par une clause **Where** recherchée qui identifie la ligne actuelle.  

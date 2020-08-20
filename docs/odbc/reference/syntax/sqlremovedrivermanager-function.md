@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveDriverManager, fonction
 title: SQLRemoveDriverManager fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c94765dfe76bc5a1ef188328a6fe27e96671efb1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: db880d031e803d5778c2af9b2bea08b6ed590e3d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363132"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499622"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager, fonction
 **Conformité**  
@@ -45,7 +46,7 @@ BOOL SQLRemoveDriverManager(
  *pdwUsageCount*  
  Sortie Nombre d’utilisations du gestionnaire de pilotes après l’appel de cette fonction.  
   
-## <a name="returns"></a>Retourne  
+## <a name="returns"></a>Retours  
  La fonction retourne TRUE si elle réussit, FALSe en cas d’échec. Si aucune entrée n’existe dans les informations système lorsque cette fonction est appelée, la fonction retourne FALSe.  
   
 ## <a name="diagnostics"></a>Diagnostics  

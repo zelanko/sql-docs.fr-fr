@@ -1,4 +1,5 @@
 ---
+description: Définir les options d'index
 title: Définir les options d’index | Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
@@ -25,12 +26,12 @@ ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f365e59f615c532ae168bacafe690d66501eea4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1427a47837063db4fd617c8489d99a3ab7927d15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659354"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499379"
 ---
 # <a name="set-index-options"></a>Définir les options d'index
 
@@ -57,7 +58,7 @@ Cette rubrique explique comment modifier les propriétés d'un index dans [!INCL
 ### <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitations et restrictions
 
 - Les options suivantes sont immédiatement appliquées à l’index à l’aide de la clause SET de l’instruction ALTER INDEX : ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY, et STATISTICS_NORECOMPUTE.
-- Les options suivantes peuvent toutefois être définies lorsque vous reconstruisez un index à l’aide de l’instruction ALTER INDEX REBUILD ou CREATE INDEX WITH DROP_EXISTING : PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP et DROP_EXISTING (CREATE INDEX uniquement).
+- Les options suivantes peuvent être définies lorsque vous reconstruisez un index à l'aide de ALTER INDEX REBUILD ou de CREATE INDEX WITH DROP_EXISTING : PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP, and DROP_EXISTING (CREATE INDEX uniquement).
 
 ### <a name="security"></a><a name="Security"></a> Sécurité
 

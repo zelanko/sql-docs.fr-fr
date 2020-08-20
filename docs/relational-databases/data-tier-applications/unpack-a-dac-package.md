@@ -1,4 +1,5 @@
 ---
+description: Décompresser un package DAC
 title: Décompresser un package DAC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3cecfc696bda97e046acd80eb3e285e8da2a04de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dee530c223890a51ab255d319db9a7772e0ce686
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781646"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499829"
 ---
 # <a name="unpack-a-dac-package"></a>Décompresser un package DAC
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85781646"
   
 1.  **Avant de commencer :**  [Sécurité](#Security)  
   
-2.  **Pour décompresser une DAC, à l’aide de la**  [boîte de dialogue Décompresser une application de la couche Données](#UnpackDACDial), [Examen du contenu d’un package DAC](#ExamDACPack)  
+2.  **Pour décompresser une DAC, à l'aide de la boîte de dialogue**  [Décompresser une application de la couche Données](#UnpackDACDial), [Examen du contenu d'un package DAC](#ExamDACPack)  
 
 ##  <a name="security"></a><a name="Security"></a> Sécurité  
  Nous vous recommandons de ne pas déployer un package DAC provenant de sources inconnues ou non approuvées. Ces DAC peuvent contenir du code malveillant susceptible d'exécuter un code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma. Avant d'utiliser une DAC provenant d'une source inconnue ou non approuvée, déployez-la sur une instance de test isolée du [!INCLUDE[ssDE](../../includes/ssde-md.md)], décompressez la DAC et examinez le code, par exemple les procédures stockées ou autre code défini par l'utilisateur.  

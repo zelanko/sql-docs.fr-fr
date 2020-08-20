@@ -1,4 +1,5 @@
 ---
+description: SQLSetConnectInfo, fonction
 title: SQLSetConnectInfo fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b575e0d09f87ad21e1190b8081b6604349a98263
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0ee3480678d228e26b16cc99e7df8955d45ade9e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499544"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo, fonction
 **Conformité**  
@@ -50,7 +51,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength1*  
  Entrée Longueur de **ServerName* en caractères.  
   
- *Nom d’utilisateur*  
+ *UserName*  
  Entrée Identificateur de l’utilisateur.  
   
  *NameLength2*  

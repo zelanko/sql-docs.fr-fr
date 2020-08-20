@@ -1,4 +1,5 @@
 ---
+description: bcp_collen
 title: bcp_collen | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,11 +19,12 @@ ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6974984de32a49c684c2b3da784cb4df2abcd3fb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 33c0505109bebaba31e98c463cbb92b339af7e21
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499248"
 ---
 # <a name="bcp_collen"></a>bcp_collen
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,7 +54,7 @@ RETCODE bcp_collen (
 ## <a name="returns"></a>Retours  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  La fonction **bcp_collen** vous permet de modifier la longueur de données dans la variable de programme pour une colonne particulière lors de la copie de données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
  Initialement, la longueur de données est déterminée quand [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) est appelé. Si la longueur de données change entre des appels à **bcp_sendrow** et qu'aucun préfixe de longueur ou terminateur n'est en cours d'utilisation, vous pouvez appeler **bcp_collen** pour réinitialiser la longueur. L'appel suivant à **bcp_sendrow** utilise la longueur définie par l'appel à **bcp_collen**.  

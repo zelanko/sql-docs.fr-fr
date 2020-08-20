@@ -1,4 +1,5 @@
 ---
+description: SQLSetCursorName, fonction
 title: SQLSetCursorName fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6a3bcd07a39401d49be04d141e50c671179efb16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a7deee4ecb37225260f011d4944e992f16d94e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81287339"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499488"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName, fonction
 **Conformité**  
@@ -66,7 +67,7 @@ SQLRETURN SQLSetCursorName(
 |24 000|État de curseur non valide|L’instruction correspondant à *StatementHandle* se trouvait déjà dans un état d’exécution ou positionné sur un curseur.|  
 |34000|Nom de curseur non valide|Le nom de curseur spécifié dans **CursorName* n’était pas valide, car il a dépassé la longueur maximale définie par le pilote, ou il a démarré avec « SQLCUR » ou « SQL_CUR ».|  
 |3C000|Nom de curseur dupliqué|Le nom de curseur spécifié dans **CursorName* existe déjà.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans * \** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans la mémoire tampon * \* MessageText* décrit l’erreur et sa cause.|  
 |HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
 |HY009|Utilisation non valide d’un pointeur null|(DM) l’argument *CursorName* était un pointeur null.|  
 |HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction aynchronous était toujours en cours d’exécution lors de l’appel de la fonction **SQLSetCursorName** .<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  

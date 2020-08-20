@@ -1,4 +1,5 @@
 ---
+description: Niveaux de conformité SQL
 title: Niveaux de conformité SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 875330ac78588566b4b1c212f7a65d2841127a61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 525cda9094213e6decf30643c23a7db623511e14
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301380"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499802"
 ---
 # <a name="sql-conformance-levels"></a>Niveaux de conformité SQL
 Le niveau de grammaire SQL-92 pris en charge par un pilote est indiqué par la valeur retournée par un appel à **SQLGetInfo** avec le type d’informations SQL_SQL_CONFORMANCE. Cela indique si le pilote est conforme aux niveaux d’entrée, de transition FIPS, intermédiaire ou complète définis dans SQL-92.  

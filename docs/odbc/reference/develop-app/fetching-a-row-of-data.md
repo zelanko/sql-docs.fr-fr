@@ -1,4 +1,5 @@
 ---
+description: Extraction d’une ligne de données
 title: Extraction d’une ligne de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a702f561b756d5305020df9f015d3ea4b444caa6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71ced7d7df30f1bb4f784317b76f7b42553951df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499889"
 ---
 # <a name="fetching-a-row-of-data"></a>Extraction d’une ligne de données
 Pour extraire une ligne de données, une application appelle **SQLFetch**. **SQLFetch** peut être appelée avec n’importe quel type de curseur, mais ne déplace le curseur de l’ensemble de lignes que dans une direction avant uniquement. **SQLFetch** avance le curseur à la ligne suivante et retourne les données pour toutes les colonnes qui étaient liées avec des appels à **SQLBindCol**. Lorsque le curseur atteint la fin du jeu de résultats, **SQLFetch** retourne SQL_NO_DATA. Pour obtenir des exemples d’appel de **SQLFetch**, consultez [utilisation de SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md).  

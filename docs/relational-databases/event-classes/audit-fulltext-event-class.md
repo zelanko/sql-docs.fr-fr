@@ -1,4 +1,5 @@
 ---
+description: Audit Fulltext, classe d'événements
 title: Audit Fulltext, classe d’événements | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,16 +11,16 @@ ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8bab0dc383ba6d427656cddf14b0ab253d6b313
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 51cc9e52574085e6d751098bac6f545e88cac467
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85630030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499476"
 ---
 # <a name="audit-fulltext-event-class"></a>Audit Fulltext, classe d'événements
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
-  La classe d’événements **Audit Fulltext** se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte au processus de démon de filtre de texte intégral et communique avec lui.  
+   La classe d’événements **Audit Fulltext** se produit quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connecte au processus de démon de filtre de texte intégral et communique avec lui.  
   
 ## <a name="audit-fulltext-event-class-data-columns"></a>Colonnes de données de la classe d'événements Audit Fulltext  
   

@@ -1,4 +1,5 @@
 ---
+description: Liaison des colonnes d’un ensemble de résultats
 title: Colonnes de l’ensemble de résultats de liaison | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 558ceb79d42d82477b70a028395de82cc023c170
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6a228de81deb5cdfdaa62ee7940185b14bcaef8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306360"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499942"
 ---
 # <a name="binding-result-set-columns"></a>Liaison des colonnes d’un ensemble de résultats
 Les applications peuvent lier autant de colonnes que vous le souhaitez dans le jeu de résultats, y compris la liaison d’aucune colonne. Lorsqu’une ligne de données est extraite, le pilote retourne les données des colonnes liées à l’application. Le fait que l’application lie toutes les colonnes du jeu de résultats dépend de l’application. Par exemple, les applications qui génèrent des rapports ont généralement un format fixe ; de telles applications créent un jeu de résultats contenant toutes les colonnes utilisées dans le rapport, puis lient et récupèrent les données pour toutes ces colonnes. Les applications qui affichent des écrans pleins de données permettent parfois à l’utilisateur de choisir les colonnes à afficher ; de telles applications créent un jeu de résultats contenant toutes les colonnes que l’utilisateur peut souhaiter, mais qui lient et récupère les données uniquement pour les colonnes choisies par l’utilisateur.  

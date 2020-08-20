@@ -1,4 +1,5 @@
 ---
+description: Exécution de procédures
 title: Exécution des procédures | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a796c615d7dfdec11a9acb90ab4b5129cf69717
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4a5f790a0e79e313924e9408f9338483931691c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305710"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499910"
 ---
 # <a name="executing-procedures"></a>Exécution de procédures
 ODBC définit une séquence d’échappement standard pour l’exécution des procédures. Pour obtenir la syntaxe de cette séquence et un exemple de code qui l’utilise, consultez [appels de procédure](../../../odbc/reference/develop-app/procedure-calls.md).  

@@ -1,4 +1,5 @@
 ---
+description: SQLSetConfigMode, fonction
 title: SQLSetConfigMode fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c36da48fa1493f61131d23a07f7a820b67ebac82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5aab5274403a654362c5732d8ec3f6eccae3be96
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81293279"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499582"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode, fonction
 **Conformité**  
  Version introduite : ODBC 3,0  
   
  **Résumé**  
- **SQLSetConfigMode** définit le mode de configuration qui indique où l’entrée ODBC. ini qui répertorie les valeurs DSN se trouve dans les informations système.  
+ **SQLSetConfigMode** définit le mode de configuration qui indique où l’entrée de Odbc.ini répertoriant les valeurs DSN se trouve dans les informations système.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -55,14 +56,14 @@ BOOL SQLSetConfigMode(
  La fonction retourne TRUE si elle réussit, FALSe en cas d’échec.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **SQLSetConfigMode** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Quand **SQLSetConfigMode** retourne false, une valeur * \* pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les valeurs * \* pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|Séquence de paramètres non valide|L’argument *wConfigMode* ne contenait pas ODBC_USER_DSN, ODBC_SYSTEM_DSN ou ODBC_BOTH_DSN.|  
   
 ## <a name="comments"></a>Commentaires  
- Cette fonction est utilisée pour définir l’emplacement où l’entrée ODBC. ini qui répertorie les valeurs DSN se trouve dans les informations système. Si *wConfigMode* est ODBC_USER_DSN, le DSN est un DSN utilisateur et la fonction lit à partir de l’entrée ODBC. ini dans HKEY_CURRENT_USER. S’il est ODBC_SYSTEM_DSN, le DSN est un DSN système et la fonction lit à partir de l’entrée ODBC. ini dans HKEY_LOCAL_MACHINE. S’il est ODBC_BOTH_DSN, HKEY_CURRENT_USER est essayé et, en cas d’échec, HKEY_LOCAL_MACHINE est utilisé.  
+ Cette fonction est utilisée pour définir où l’entrée de Odbc.ini répertoriant les valeurs DSN se trouve dans les informations système. Si *wConfigMode* est ODBC_USER_DSN, le DSN est un DSN utilisateur et la fonction lit à partir de l’entrée de Odbc.ini dans HKEY_CURRENT_USER. S’il est ODBC_SYSTEM_DSN, le DSN est un DSN système et la fonction lit à partir de l’entrée de Odbc.ini dans HKEY_LOCAL_MACHINE. S’il est ODBC_BOTH_DSN, HKEY_CURRENT_USER est essayé et, en cas d’échec, HKEY_LOCAL_MACHINE est utilisé.  
   
  Cette fonction n’affecte pas **SQLCreateDataSource** et **SQLDriverConnect**. Le mode de configuration doit être défini lorsqu’un pilote lit à partir du registre en appelant **SQLGetPrivateProfileString** ou écrit dans le registre en appelant **SQLWritePrivateProfileString**. Les appels à **SQLGetPrivateProfileString** et **SQLWritePrivateProfileString** utilisent le mode de configuration pour savoir quelle partie du Registre utiliser.  
   

@@ -1,4 +1,5 @@
 ---
+description: SQLRemoveDSNFromIni, fonction
 title: SQLRemoveDSNFromIni fonction) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 848e82741954ab24941d5d519699292727ca25d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f49646881539d7c90c057633e7151b31cfe52b52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301798"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499612"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni, fonction
 **Conformité**  
@@ -46,10 +47,10 @@ BOOL SQLRemoveDSNFromIni(
  Entrée Nom de la source de données à supprimer.  
   
 ## <a name="returns"></a>Retours  
- La fonction retourne la valeur TRUE si elle supprime la source de données ou si la source de données n’était pas dans le fichier ODBC. ini. Elle retourne FALSe s’il ne parvient pas à supprimer la source de données.  
+ La fonction retourne la valeur TRUE si elle supprime la source de données ou si la source de données n’était pas dans le fichier Odbc.ini. Elle retourne FALSe s’il ne parvient pas à supprimer la source de données.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Quand **SQLRemoveDSNFromIni** retourne false, une valeur * \*pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie * \** les valeurs pfErrorCode qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
+ Quand **SQLRemoveDSNFromIni** retourne false, une valeur * \* pfErrorCode* associée peut être obtenue en appelant **SQLInstallerError**. Le tableau suivant répertorie les valeurs * \* pfErrorCode* qui peuvent être retournées par **SQLInstallerError** et les explique dans le contexte de cette fonction.  
   
 |*\*pfErrorCode*|Error|Description|  
 |---------------------|-----------|-----------------|  

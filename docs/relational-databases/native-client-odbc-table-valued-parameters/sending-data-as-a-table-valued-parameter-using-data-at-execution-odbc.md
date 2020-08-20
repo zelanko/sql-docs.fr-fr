@@ -1,4 +1,5 @@
 ---
+description: Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
 title: Paramètre table, données en cours d’exécution (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,11 +14,12 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ce5d61838ac40d350cda5a7d436fac6979f513f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998397"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499129"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +34,7 @@ ms.locfileid: "85998397"
   
  Lorsque SQLPutData est appelé pour une valeur de table, *DataPtr* est utilisé pour le nombre de lignes disponibles (dans cet exemple, toujours 1). *StrLen_or_IndPtr* doit toujours être égal à 0. Lorsque toutes les lignes de la valeur de table ont été passées, SQLPutData est appelé avec une valeur *DataPtr* de 0.  
   
-## <a name="prerequisite"></a>Configuration requise  
+## <a name="prerequisite"></a>Prérequis  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
   
 ```sql

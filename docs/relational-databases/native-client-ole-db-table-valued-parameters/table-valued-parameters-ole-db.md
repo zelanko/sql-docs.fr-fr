@@ -1,4 +1,5 @@
 ---
+description: Paramètres table en SQL Server Native Client (OLE DB)
 title: Paramètres table (fournisseur Native Client OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 40fe9932ca65af3087b8bcccc569adc2e0451952
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 6e13837ce1d00ae9ea7c113cb64aa9c068a12400
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87331870"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88499042"
 ---
 # <a name="table-valued-parameters--in-sql-server-native-client-ole-db"></a>Paramètres table en SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +34,9 @@ ms.locfileid: "87331870"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Création d'un ensemble de lignes de paramètre table](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)  
+-   [Création d’un ensemble de lignes de paramètres table](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)  
   
--   [Découverte du type de paramètre table](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-type-discovery.md)  
+-   [Détection des types de paramètres table](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameter-type-discovery.md)  
   
 -   [Exécution de commandes contenant des paramètres table](../../relational-databases/native-client-ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters.md)  
   
@@ -43,7 +44,7 @@ ms.locfileid: "87331870"
   
 -   [Ensembles de lignes de schéma modifiés pour les paramètres table OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/schema-rowsets-changed-for-ole-db-table-valued-parameters.md)  
   
--   [Prise en charge du type de paramètre table OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)  
+-   [Prise en charge des types de paramètre table OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)  
   
 -   [Prise en charge des types de paramètre table OLE DB &#40;méthodes&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)  
   
