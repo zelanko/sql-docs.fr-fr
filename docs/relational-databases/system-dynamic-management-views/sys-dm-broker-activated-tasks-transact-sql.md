@@ -1,4 +1,5 @@
 ---
+description: sys.dm_broker_activated_tasks (Transact-SQL)
 title: sys. dm_broker_activated_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 99e8e606ecddc6b57549947a1c72ba8115262bef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a09275a9b000ab673e187fdb2e1a47d35c1e548
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893967"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498374"
 ---
 # <a name="sysdm_broker_activated_tasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "85893967"
 
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**SPID**|**int**|ID de la session de la procédure stockée activée. Accepte la valeur NULL.|  
+|**spid**|**int**|ID de la session de la procédure stockée activée. Accepte la valeur NULL.|  
 |**database_id**|**smallint**|ID de la base de données dans laquelle la file d'attente est définie. Accepte la valeur NULL.|  
 |**queue_id**|**int**|ID de l'objet de la file d'attente pour lequel la procédure stockée a été activée. Accepte la valeur NULL.|  
 |**procedure_name**|**nvarchar (650)**|Nom de la procédure stockée activée. Accepte la valeur NULL.|  
@@ -47,12 +48,12 @@ ms.locfileid: "85893967"
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|À partir|À|Relation|  
+|Du|À|Relation|  
 |----------|--------|------------------|  
 |dm_broker_activated_tasks.spid|dm_exec_sessions.session_id|Un à un|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   

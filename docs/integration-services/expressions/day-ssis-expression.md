@@ -1,4 +1,5 @@
 ---
+description: DAY (expression SSIS)
 title: DAY (expression SSIS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d8447187-49df-45b7-a98e-142ad44fd3e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9b170928624565d8dc1f80cea93eed4473db3e5e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: dff99f077b9260f6bb41fe39661ad831404b4f65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495627"
 ---
 # <a name="day-ssis-expression"></a>DAY (expression SSIS)
 
@@ -41,7 +42,7 @@ DAY(date)
 ## <a name="result-types"></a>Types des résultats  
  DT_I4  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La fonction DAY renvoie un résultat NULL si l'argument est NULL.  
   
  Un littéral de date doit être explicitement converti dans l'un des types de données date. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  

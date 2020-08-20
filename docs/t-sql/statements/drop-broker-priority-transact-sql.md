@@ -1,4 +1,5 @@
 ---
+description: DROP BROKER PRIORITY (Transact-SQL)
 title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 09ee6c5b-af94-4a4b-a0e2-f9eac50e43aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 29f990193e9082bf9fc75135d05743c43de84693
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1159080251f5f3706f83d6351525c93db892e3d9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484708"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496758"
 ---
 # <a name="drop-broker-priority-transact-sql"></a>DROP BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +46,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  Spécifie le nom de la priorité de conversation à supprimer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque vous supprimez une priorité de conversation, toutes les conversations existantes continuent de fonctionner avec les niveaux de priorité qui leur ont été attribués par la priorité de conversation.  
   
 ## <a name="permissions"></a>Autorisations  

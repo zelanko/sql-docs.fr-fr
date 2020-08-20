@@ -1,4 +1,5 @@
 ---
+description: SET ANSI_PADDING (Transact-SQL)
 title: SET ANSI_PADDING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/04/2017
@@ -24,12 +25,12 @@ ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29ae3ce5c5398a6ac8006f8b3af7ceb0477576fb
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: be98a76b74f9c4b9882c55de8b18ea045a1be85c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396518"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496496"
 ---
 # <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -52,7 +53,9 @@ SET ANSI_PADDING { ON | OFF }
 SET ANSI_PADDING ON
 ```
 
-## <a name="remarks"></a>Notes  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Notes
  Les colonnes définies avec les types de données **char**, **varchar**, **binaire** et **varbinary** ont une taille définie.  
   
  Cette valeur affecte uniquement la définition de nouvelles colonnes. Une fois la colonne créée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les valeurs en fonction du paramètre en vigueur lors de la création de la colonne. Les colonnes existantes ne sont pas affectées par toute modification ultérieure du paramètre.  
@@ -74,7 +77,7 @@ ANSI_PADDING doit être activé (valeur ON) lors de la création ou de la modifi
   
 La valeur par défaut de SET ANSI_PADDING est ON. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent automatiquement la valeur ON à ANSI_PADDING lors de la connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, ou encore dans les propriétés de connexion OLE DB définies dans l'application avant la connexion. Dans le cas d'applications DB-Library, SET ANSI_PADDING prend par défaut la valeur OFF.  
   
- La valeur de SET ANSI_PADDING n’affecte pas les types de données **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)** , **varchar(max)** et **nvarchar(max)** . Le comportement par défaut est toujours celui de l'option SET ANSI_PADDING ON. Les espaces et les zéros à droite ne sont donc pas tronqués.  
+ La valeur de SET ANSI_PADDING n’affecte pas les types de données **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)**, **varchar(max)** et **nvarchar(max)**. Le comportement par défaut est toujours celui de l'option SET ANSI_PADDING ON. Les espaces et les zéros à droite ne sont donc pas tronqués.  
   
 Quand ANSI_DEFAULTS a la valeur ON, l’option ANSI_PADDING est activée.  
   

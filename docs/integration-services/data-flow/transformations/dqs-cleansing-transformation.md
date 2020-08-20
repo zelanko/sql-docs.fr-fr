@@ -1,4 +1,5 @@
 ---
+description: Transformation de nettoyage DQS
 title: Nettoyage DQS, transformation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d02041dfedd882502a0440909b52fab86337b22
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ce6e3f36d8216f08493933798cdab558274e0cb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86919372"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495697"
 ---
 # <a name="dqs-cleansing-transformation"></a>Transformation de nettoyage DQS
 
@@ -105,7 +106,7 @@ ms.locfileid: "86919372"
   
  Les valeurs suivantes sont valides :  
   
--   **Composant défaillant**, qui indique que la transformation a échoué et que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services. Il s’agit de la valeur par défaut.  
+-   **Composant défaillant**, qui indique que la transformation a échoué et que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services. Valeur par défaut.  
   
 -   **Réacheminer la ligne**, qui indique que les données d’entrée ne sont pas insérées dans la base de données Data Quality Services et qu’elles sont redirigées vers la sortie d’erreur.  
   
@@ -141,7 +142,7 @@ ms.locfileid: "86919372"
  **Confidence**  
  Indique s'il faut inclure le niveau de confiance pour les données corrigées. Le niveau de confiance indique le degré de certitude de DQS pour la correction ou la suggestion. Pour plus d’informations sur les niveaux de confiance, consultez [Nettoyage de données](../../../data-quality-services/data-cleansing.md).  
   
- **Reason**  
+ **Motif**  
  Indique s'il faut inclure la raison de la correction des données.  
   
  **Données ajoutées**  
@@ -163,5 +164,5 @@ ms.locfileid: "86919372"
   
 2.  Cliquez avec le bouton droit dans la zone des connexions, cliquez sur **Nouvelle connexion**, puis cliquez sur **DQS**.  
   
-3.  Cliquez sur **Ajouter**.  
+3.  Cliquez sur **Add**.  
   

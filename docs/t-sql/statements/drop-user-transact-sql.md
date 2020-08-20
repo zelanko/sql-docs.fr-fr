@@ -1,4 +1,5 @@
 ---
+description: DROP USER (Transact-SQL)
 title: DROP USER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/12/2017
@@ -23,12 +24,12 @@ ms.assetid: d6e0e21a-7568-4321-b6d6-bcfba183a719
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4effac94327209caafa7f0506efd318c846461d8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 26c3f98d2b8279d13911e37ca373044fef0c609b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481537"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496779"
 ---
 # <a name="drop-user-transact-sql"></a>DROP USER (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +63,7 @@ DROP USER user_name
  *user_name*  
  Spécifie le nom qui identifie l'utilisateur dans cette base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous ne pouvez pas supprimer de la base de données des utilisateurs qui possèdent des éléments sécurisables. Avant de supprimer un utilisateur de base de données propriétaire d'éléments sécurisables, vous devez supprimer ou transférer la propriété de ces éléments sécurisables.  
   
  Vous ne pouvez pas supprimer l'utilisateur invité, mais vous pouvez le désactiver en révoquant son autorisation CONNECT. Pour ce faire, vous devez exécuter REVOKE CONNECT FROM GUEST dans toute base de données autre que la base master ou tempdb.  

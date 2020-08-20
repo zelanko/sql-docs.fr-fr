@@ -1,4 +1,5 @@
 ---
+description: Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
 title: Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 661f4a95e7904fbec1147d0fd6a372b64a09d76e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920391"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495642"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
 
@@ -34,7 +35,7 @@ Si vous devez importer un fichier texte dans SQL Server et que vous n’avez pas
  
 Page|Recommandation  |Type  
 ----|---------|---------
-**Généralités**|Assurez-vous de mettre à jour les options de la section **Format**.|Recommandé    
+**Général**|Assurez-vous de mettre à jour les options de la section **Format**.|Recommandé    
 **Colonnes**|Veillez à contrôler les délimiteurs de colonnes et de lignes (pour un fichier délimité), ou de marquer les colonnes (pour un fichier de largeur fixe).|Recommandé
 **Avancée**|Si vous le souhaitez, vérifiez les types de données ainsi que d’autres propriétés attribuées par défaut aux colonnes.|Facultatif
 **Préversion**|Le cas échéant, prévisualisez un échantillon de données en utilisant les paramètres que vous avez spécifiés.|Facultatif
@@ -204,7 +205,7 @@ Dans la capture d’écran, remarquez que les données de la colonne **id**, qui
  **Configurez les propriétés de chaque colonne**  
  Dans le volet gauche, sélectionnez une colonne pour afficher ses propriétés dans celui de droite. Le tableau suivant fournit une description des propriétés de colonne. Certaines de ces propriétés sont configurables uniquement pour quelques formats de fichier plat et des colonnes de certains types de données.  
   
-|Propriété|Description|  
+|Property|Description|  
 |--------------|-----------------|  
 |**Nom**|Précisez un nom de colonne descriptif. Si vous n’entrez aucun nom, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée automatiquement un nom au format Colonne 0, Colonne 1, et ainsi de suite.|
 |**ColumnDelimiter**|Sélectionnez un délimiteur de colonnes dans la liste des séparateurs de colonnes disponibles. Veillez à choisir un caractère de séparation qu'il est peu probable de rencontrer dans le texte. Cette valeur est ignorée dans le cas des colonnes à largeur fixe.<br /><br /> **{CR}{LF}** . Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.<br /><br /> **{CR}** . Les colonnes sont séparées par un retour chariot.<br /><br /> **{LF}** . Les colonnes sont séparées par un saut de ligne.<br /><br /> **Point-virgule {;}** . Les colonnes sont séparées par un point-virgule.<br /><br /> **Deux-points {:}** . Les colonnes sont séparées par un deux-points.<br /><br /> **Virgule {,}** . Les colonnes sont séparées par une virgule.<br /><br /> **Tabulation {t}** . Les colonnes sont séparées par une tabulation.<br /><br /> **Barre verticale {&#124;}** . Les colonnes sont séparées par une barre verticale.|
@@ -219,7 +220,7 @@ Dans la capture d’écran, remarquez que les données de la colonne **id**, qui
 **Nouveau**  
  Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce **nouveau** bouton ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Ajouter une colonne**|Ajoute une colonne à la fin de la liste.|  
 |**Insérer avant**|Insère une nouvelle colonne avant la colonne sélectionnée.|  

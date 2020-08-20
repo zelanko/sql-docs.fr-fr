@@ -1,4 +1,5 @@
 ---
+description: DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 title: DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
@@ -19,12 +20,12 @@ ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f30162b95e48d36a3ce5a556557b0170ae65e6c
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 9ee76d78af88b8831db9db44489d6fcf5caa74e5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396989"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496807"
 ---
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "87396989"
 > [!IMPORTANT]  
 >  La sauvegarde du certificat qui protégeait la clé de chiffrement de la base de données doit être conservée même si le chiffrement n'est plus activé sur une base de données. Même si la base de données n'est plus chiffrée, des parties du journal des transactions peuvent toujours être protégées, et le certificat peut être nécessaire pour certaines opérations tant que la sauvegarde complète de la base de données n'a pas été effectuée.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,7 +43,9 @@ ms.locfileid: "87396989"
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
-## <a name="remarks"></a>Notes  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Notes
  Si la base de données est chiffrée, vous devez d'abord supprimer le chiffrement de la base de données en exécutant l'instruction ALTER DATABASE. Attendez la fin du déchiffrement avant de supprimer la clé de chiffrement de base de données. Pour plus d’informations sur l’instruction ALTER DATABASE, consultez [ALTER DATABASE SET (Options) &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Pour voir l’état de la base de données, utilisez la vue de gestion dynamique [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: IsValidDetailed (type de données geometry)
 title: IsValidDetailed (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: a1aa6995864aa4407c0c7c71611ddf9da65acfc7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: f57155c8724d8cb27aaf06eaf491e11298ad61c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555119"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497034"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (type de données geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +41,7 @@ Retourne un message qui peut aider à identifier les problèmes concernant un ob
   
  Type de retour CLR : **string**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le tableau suivant contient les valeurs de retour possibles :  
   
 |Valeur retournée|Description|  
@@ -64,7 +65,7 @@ Retourne un message qui peut aider à identifier les problèmes concernant un ob
 |24416|Non valide, car dans la courbe {0}, le bord qui commence au point {1} est soit une ligne, soit un arc dégénéré avec des points de terminaison antipodaux.|  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant d’un objet spatial non valide illustre le comportement de la méthode **IsValidDetailed()** .  
+ L’exemple suivant d’un objet spatial non valide illustre le comportement de la méthode **IsValidDetailed()**.  
   
 ```sql  
 DECLARE @p GEOMETRY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  
@@ -73,7 +74,7 @@ SELECT @p.IsValidDetailed()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Méthodes étendues sur les instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

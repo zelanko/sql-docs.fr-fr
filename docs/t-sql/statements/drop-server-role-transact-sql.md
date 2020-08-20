@@ -1,4 +1,5 @@
 ---
+description: DROP SERVER ROLE (Transact-SQL)
 title: DROP SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -19,12 +20,12 @@ ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40e9be1315ee89990d6cfec8dc5e6ac7042bdbc5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496732"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -45,7 +46,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  Spécifie le rôle de serveur défini par l'utilisateur à supprimer du serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les rôles de serveur définis par l'utilisateur qui possèdent leurs propres éléments sécurisables ne peuvent pas être supprimés du serveur. Pour supprimer un rôle de serveur défini par l'utilisateur qui possède des éléments sécurisables, vous devez tout d'abord transférer la propriété de ces éléments ou supprimer ces derniers.  
   
  Les rôles de serveur définis par l'utilisateur qui comportent des membres ne peuvent pas être supprimés. Pour supprimer un rôle serveur défini par l’utilisateur qui comporte des membres, vous devez d’abord supprimer les membres du rôle à l’aide de l’instruction [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  

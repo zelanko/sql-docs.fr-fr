@@ -1,4 +1,5 @@
 ---
+description: Modifier les propriétés avancées
 title: Modifier les propriétés avancées | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 124682b94fd3512141c267ed43b93b45c1eb77a3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7946dcea0153c57b685c0f773d312080a9147569
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496215"
 ---
 # <a name="edit-the-advanced-properties"></a>Modifier les propriétés avancées
 
@@ -39,6 +40,6 @@ ms.locfileid: "86921647"
   
 ## <a name="see-also"></a>Voir aussi  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [Guide pratique pour modifier les propriétés d’une instance CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
+ [Procédure : modifier les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
   

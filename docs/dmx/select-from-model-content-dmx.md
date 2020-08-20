@@ -1,4 +1,5 @@
 ---
+description: Sélectionnez à partir du &lt; modèle &gt; . CONTENU (DMX)
 title: Sélectionnez à partir du &lt; modèle &gt; . CONTENU (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970597"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496283"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Sélectionnez à partir du &lt; modèle &gt; . CONTENU (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Optionnel. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste de colonnes séparées par des virgules, dérivées de l'ensemble de lignes du schéma Content.  
@@ -40,10 +41,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Identificateur du modèle  
   
  *expression de condition*  
- Optionnel. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Optionnel. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  **Select from** _\<model>_ **. **L’instruction content retourne le contenu qui est spécifique à chaque algorithme. Imaginons par exemple que vous souhaitez utiliser les descriptions de toutes les règles d'un modèle de règles d'association dans une application personnalisée. Vous pouvez utiliser une **sélection à partir de \<model> . Instruction CONTENT** pour retourner des valeurs dans la colonne NODE_RULE du modèle.  
@@ -143,7 +144,7 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SÉLECTIONNER &#40;&#41;DMX](../dmx/select-dmx.md)   
+ [SÉLECTIONNER &#40;&#41;DMX ](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

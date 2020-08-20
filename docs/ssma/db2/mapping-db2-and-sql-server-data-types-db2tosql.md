@@ -1,4 +1,5 @@
 ---
+description: Mappage des types de données DB2 et SQL Server (DB2ToSQL)
 title: Mappage des types de données DB2 et SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 50320d85d957e71d317f263d820d4fca5a079547
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 0579a5c477b9933b9937c1f003d3c7bbc056eae6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87936886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497788"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mappage des types de données DB2 et SQL Server (DB2ToSQL)
 Les types de base de données DB2 diffèrent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données. Lorsque vous convertissez des objets de base de données DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous devez spécifier comment mapper les types de données de DB2 à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  
@@ -74,7 +75,7 @@ La procédure suivante montre comment mapper des types de données au niveau du 
   
     4.  Sous **type de cible**, sélectionnez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données cible.  
   
-        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur des données dans la zone **remplacer par** , puis[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+        Certains types nécessitent une longueur de type de données cible. Si nécessaire, entrez la nouvelle longueur des données dans la zone **remplacer par** , puis [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 4.  Pour supprimer un mappage de type de données personnalisé, procédez comme suit :  
   

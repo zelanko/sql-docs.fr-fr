@@ -1,4 +1,5 @@
 ---
+description: 'Procédure : gérer un service de capture de données modifiées local'
 title: Guide pratique pour gérer un service CDC local | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 488ff9dc4cbe33881e7c7c9bf80d4a5d347507d7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1d103c224088d2dfa22fe1d8dcb36306177aac54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916550"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496175"
 ---
 # <a name="how-to-manage-a-local-cdc-service"></a>Procédure : gérer un service de capture de données modifiées local
 
@@ -61,6 +62,6 @@ ms.locfileid: "86916550"
          Vous pouvez également cliquer avec le bouton droit sur le service de capture de données modifiées où vous souhaitez modifier les propriétés et sélectionner **Propriétés**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer un service CDC Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Gérer un Service de capture de données modifiées Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

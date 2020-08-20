@@ -1,4 +1,5 @@
 ---
+description: Propriétés personnalisées ADO NET
 title: Propriétés personnalisées ADO NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f05fbdb725e2304e7f30dce7a6801bb8300e4c9
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a44bc28763df210a16a7376408ff342b91ac6d9c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923213"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495939"
 ---
 # <a name="ado-net-custom-properties"></a>Propriétés personnalisées ADO NET
 
@@ -32,7 +33,7 @@ ms.locfileid: "86923213"
 |-------------------|---------------|-----------------|  
 |CommandTimeout|String|Valeur qui spécifie le nombre de secondes accordées comme délai d'exécution de la commande SQL. La valeur égale à 0 indique que la commande n'arrive jamais à expiration.|  
 |SqlCommand|String|Instruction SQL que la source ADO NET utilise pour extraire des données.<br /><br /> Lorsque le package se charge, vous pouvez mettre à jour cette propriété de manière dynamique avec l'instruction SQL que la source ADO NET utilisera. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md) et [Expressions de propriété dans des packages](../../integration-services/expressions/use-property-expressions-in-packages.md).|  
-|AllowImplicitStringConversion|Boolean|Valeur qui indique si les cas de figure suivants se présentent :<br /><br /> -Il n’y a aucune génération d’erreur de validation s’il existe une discordance entre les types de métadonnées externes et les types de colonnes de sortie qui sont des chaînes (DT_WSTR ou DT_NTEXT).<br /><br /> -Il y a une conversion implicite des types de métadonnées externes vers le type de données String que la colonne de sortie utilise.<br /><br /> <br /><br /> La valeur par défaut est TRUE.<br /><br /> Pour plus d’informations, consultez [Source ADO NET](../../integration-services/data-flow/ado-net-source.md).|  
+|AllowImplicitStringConversion|Booléen|Valeur qui indique si les cas de figure suivants se présentent :<br /><br /> -Il n’y a aucune génération d’erreur de validation s’il existe une discordance entre les types de métadonnées externes et les types de colonnes de sortie qui sont des chaînes (DT_WSTR ou DT_NTEXT).<br /><br /> -Il y a une conversion implicite des types de métadonnées externes vers le type de données String que la colonne de sortie utilise.<br /><br /> <br /><br /> La valeur par défaut est TRUE.<br /><br /> Pour plus d’informations, consultez [Source ADO NET](../../integration-services/data-flow/ado-net-source.md).|  
   
  La sortie et les colonnes de sortie de la source ADO NET ne disposent pas de propriétés personnalisées.  
   

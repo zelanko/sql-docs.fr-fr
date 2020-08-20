@@ -1,4 +1,5 @@
 ---
+description: DROP VIEW (Transact-SQL)
 title: DROP VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/11/2018
@@ -23,12 +24,12 @@ ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 81d3db058663274babb0eae1e16306e2197ad2a8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 31a1fa86f6d56d5a6b9b45ec096289bcd07301a7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483740"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496802"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,7 +66,7 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
  *view_name*  
  Nom de la vue à supprimer  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque vous supprimez une vue, sa définition et d'autres informations la concernant sont supprimées du catalogue système. Toutes les autorisations pour la vue sont également supprimées.  
   
  Toute vue d'une table qui est supprimée au moyen de DROP TABLE doit être supprimée de manière explicite à l'aide de DROP VIEW.  

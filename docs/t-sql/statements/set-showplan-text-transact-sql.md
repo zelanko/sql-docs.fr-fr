@@ -1,4 +1,5 @@
 ---
+description: SET SHOWPLAN_TEXT (Transact-SQL)
 title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -26,19 +27,19 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4bad95475a55257a9f65bfc84b673b58c7e8ed47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe517575d1f02ed558912b0964463aeec0569b6b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765698"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496373"
 ---
 # <a name="set-showplan_text-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Empêche Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)]. Au lieu de cela, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des informations détaillées sur l'exécution des instructions.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +48,9 @@ ms.locfileid: "85765698"
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="remarks"></a>Notes
  La définition de SET SHOWPLAN_TEXT s'effectue au moment de l'exécution, et non pas durant l'analyse.  
   
  Si SET SHOWPLAN_TEXT est activé (ON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des informations sur l'exécution de chaque instruction [!INCLUDE[tsql](../../includes/tsql-md.md)], sans toutefois l'exécuter. Une fois cette option activée, des informations sur le plan d'exécution de toutes les instructions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivantes sont retournées jusqu'à sa désactivation (OFF). Si, par exemple, une instruction CREATE TABLE est exécutée alors que l'option SET SHOWPLAN_TEXT est activée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d'erreur d'une instruction SELECT ultérieure se rapportant à cette même table, lequel informe l'utilisateur qu'elle n'existe pas. Par conséquent, les prochaines références à cette table échoueront. Lorsque l'option SET SHOWPLAN_TEXT est désactivée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute les instructions sans créer de rapport contenant des informations sur le plan d'exécution.  

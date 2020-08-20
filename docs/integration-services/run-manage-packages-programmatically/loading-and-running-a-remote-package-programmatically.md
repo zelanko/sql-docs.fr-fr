@@ -1,4 +1,5 @@
 ---
+description: Chargement et exécution d'un package distant par programme
 title: Chargement et exécution d’un package distant par programmation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 64a9702fd642f40e96f0ac0d017b3ddc132502c0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6db12047bd1a8228f6576989e8331b9611bb0742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913328"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495557"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Chargement et exécution d'un package distant par programme
 
@@ -425,6 +426,6 @@ namespace LaunchSSISPackageSvcTestCS
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des différences entre l’exécution locale et l’exécution distante](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Chargement et exécution d’un package local par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
- [Chargement de la sortie d’un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
+ [Chargement de la sortie d'un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sys.dm_clr_properties (Transact-SQL)
 title: sys. dm_clr_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
@@ -20,11 +21,12 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 7db1f2a88248f01929326f02cf19cd42ac5a5e6f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091860"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498389"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -67,13 +69,13 @@ ms.locfileid: "86091860"
   
  L' **État du CLR arrêté** est uniquement visible lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’arrêt.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les propriétés et les valeurs de cette vue peuvent changer dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en raison des améliorations apportées à la fonctionnalité d’intégration du CLR.  
   
 ## <a name="permissions"></a>Autorisations  
   
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
 
 ## <a name="examples"></a>Exemples  
  L'exemple suivant récupère des informations sur le CLR hébergé :  
@@ -84,7 +86,7 @@ FROM sys.dm_clr_properties;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées au Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: SEND (Transact-SQL)
 title: SEND (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: b6e66aeb-1714-4c2b-b7c2-d386d77b0d46
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 56352f68927d82e1c7df0110168a6a4aff14d0c7
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: bed4098228eb381f4785da87bf8d7fc2c2c4095b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484036"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496527"
 ---
 # <a name="send-transact-sql"></a>SEND (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,9 +60,9 @@ MESSAGE TYPE *message_type_name*
 Spécifie le type du message envoyé. Ce type de message doit être inclus dans les contrats de service qu'utilisent ces conversations. Ces contrats doivent autoriser l'envoi de ce type de message depuis cette partie de la conversation. Par exemple, les services cibles des conversations ne peuvent envoyer que les messages spécifiés dans le contrat comme SENT BY TARGET ou SENT BY ANY. Si cette clause est omise, le message est du type DEFAULT.  
   
 *message_body_expression*  
-Fournit une expression représentant le corps du message. *message_body_expression* est facultatif. Toutefois, si *message_body_expression* est présent, le type d’expression doit pouvoir être converti vers le type **varbinary(max)** . Cette expression ne peut pas avoir la valeur NULL. Si cette clause est omise, le corps du message est vide.  
+Fournit une expression représentant le corps du message. *message_body_expression* est facultatif. Toutefois, si *message_body_expression* est présent, le type d’expression doit pouvoir être converti vers le type **varbinary(max)**. Cette expression ne peut pas avoir la valeur NULL. Si cette clause est omise, le corps du message est vide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 > [!IMPORTANT]  
 >  Si l’instruction SEND n’est pas la première instruction d’un traitement ou d’une procédure stockée, celle qui précède doit se terminer par un point-virgule (;).  
@@ -98,7 +99,7 @@ L’instruction SEND n’est pas valide dans une fonction définie par l’utili
 Pour envoyer un message, l'utilisateur actuel doit avoir l'autorisation RECEIVE sur la file d'attente de chaque service qui envoie le message.  
   
 ## <a name="examples"></a>Exemples  
-L'exemple ci-dessous illustre le début d'un dialogue et l'envoi d'un message XML dans le cadre du dialogue. Pour envoyer le message, l’exemple convertit l’objet xml au format **varbinary(max)** .  
+L'exemple ci-dessous illustre le début d'un dialogue et l'envoi d'un message XML dans le cadre du dialogue. Pour envoyer le message, l’exemple convertit l’objet xml au format **varbinary(max)**.  
   
 ```sql
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

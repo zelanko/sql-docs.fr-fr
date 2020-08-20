@@ -1,4 +1,5 @@
 ---
+description: sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 title: sys.dm_db_objects_impacted_on_version_change
 titleSuffix: Azure SQL Database
 ms.date: 03/03/2017
@@ -20,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: c0b26edb80b254ca6c7d3b161e618d2a6ad5849f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718785"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498332"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -60,14 +61,14 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ### <a name="how-to-update-impacted-objects"></a>Procédure : mettre à jour les objets affectés  
  Les étapes ordonnées suivantes décrivent l'action corrective à entreprendre après la mise à niveau Service Release de juin.  
   
 |JSON|Objet affecté|Action corrective|  
 |-----------|---------------------|-----------------------|  
-|1|**Index**|Reconstruisez tout index identifié par **sys. dm_db_objects_impacted_on_version_change** par exemple :`ALTER INDEX ALL ON <table> REBUILD`<br />ou<br />`ALTER TABLE <table> REBUILD`|  
+|1|**Index**|Reconstruisez tout index identifié par **sys. dm_db_objects_impacted_on_version_change** par exemple :  `ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
 |2|**Object**|Toutes les contraintes identifiées par **sys.dm_db_objects_impacted_on_version_change** doivent être revalidées lorsque les données de géométrie et de géographie de la table sous-jacente ont été recalculées. Pour les contraintes, revalidez l'aide de ALTER TABLE. <br />Par exemple : <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />or<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

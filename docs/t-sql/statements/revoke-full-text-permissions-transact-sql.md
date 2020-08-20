@@ -1,4 +1,5 @@
 ---
+description: REVOKE - Autorisations relatives au texte intégral (Transact-SQL)
 title: REVOKE - Autorisations relatives au texte intégral (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1c127761678432295e1e41bb84581df52f7252d5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a4f331b478aeb81ef7ceed5777928b4f82898b0f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496582"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE - Autorisations relatives au texte intégral (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -108,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="fulltext-catalog-permissions"></a>Autorisations FULLTEXT CATALOG  
  Un catalogue de texte intégral est un élément sécurisable au niveau base de données contenu dans la base de données parente dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer pour un catalogue de texte intégral sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  

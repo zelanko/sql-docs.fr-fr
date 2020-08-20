@@ -1,4 +1,5 @@
 ---
+description: Formulaire de profil rapide de table simple (tâche de profilage des données)
 title: Formulaire de profil rapide de table simple (tâche de profilage des données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9da9e33020b89074eb42751eaba89d22e251ef69
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b974db6df0f18a8063201f9e83ec905b87267301
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920979"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495957"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Formulaire de profil rapide de table simple (tâche de profilage des données)
 
@@ -53,7 +54,7 @@ ms.locfileid: "86920979"
 |**pour au moins N colonnes comme colonnes déterminantes**|Sélectionnez le nombre maximal de colonnes à tester dans les combinaisons possibles comme colonnes déterminantes. La valeur par défaut est 1. La valeur maximale est 1000. Par exemple, la valeur 2 teste les combinaisons dans lesquelles les combinaisons d'une colonne ou de deux colonnes sont les colonnes déterminantes d'une autre colonne (dépendante).|  
   
 > [!NOTE]  
->  Le type de profil d’inclusion de valeur n’est pas disponible à partir du **formulaire de profil rapide de table simple**.  
+>   Le type de profil d'inclusion de valeur n'est pas disponible à partir du **formulaire de profil rapide de table simple**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditeur de tâche de profilage de données &#40;page Général&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   

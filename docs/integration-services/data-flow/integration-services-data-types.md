@@ -1,4 +1,5 @@
 ---
+description: Types de données d'Integration Services
 title: Types de données d’Integration Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ffa03bda518d3b30119cca0534a070f2140712fc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 504c89f7c3c150451e9bf59e1f6c0b7984eb1a1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86904849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495869"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
 
@@ -56,8 +57,8 @@ ms.locfileid: "86904849"
 |DT_I4|Entier signé de 4 octets.|  
 |DT_I8|Entier signé de 8 octets.|  
 |DT_NUMERIC|Valeur numérique exacte avec une précision et une échelle fixes. Ce type de données est un entier non signé de 16 octets avec un signe séparé, une échelle comprise entre 0 et 38 et une précision maximale de 38.|  
-|DT_R4|Valeur en virgule flottante simple précision.|  
-|DT_R8|Valeur en virgule flottante double précision.|  
+|DT_R4|Valeur à virgule flottante simple précision.|  
+|DT_R8|Valeur à virgule flottante double précision.|  
 |DT_STR|Chaîne de caractères [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS se terminant par une valeur Null, d’une longueur maximale de 8 000 caractères. (Si une valeur de colonne contient des indicateurs de fin Null, la chaîne apparaît tronquée dès la première valeur Null.)|  
 |DT_UI1|Entier non signé de 1 octet.|  
 |DT_UI2|Entier non signé de 2 octets.|  
@@ -239,10 +240,10 @@ ms.locfileid: "86904849"
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Court||SMALLINT|SMALLINT|  
-|DT_I4|int|int|Long||INTEGER|INTEGER|  
+|DT_I4|int|int|Long||INTEGER|ENTIER|  
 |DT_I8|bigint|bigint|||bigint|bigint|  
-|DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Unique||real|real|  
+|DT_NUMERIC|decimal, numeric|decimal, numeric|Décimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
+|DT_R4|real|real|Unique||real|RÉEL|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||VarChar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  

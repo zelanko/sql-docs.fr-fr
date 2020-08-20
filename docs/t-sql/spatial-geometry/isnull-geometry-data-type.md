@@ -1,4 +1,5 @@
 ---
+description: IsNull (type de données geometry)
 title: IsNull (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 7cb1cccba4c880fd2e92d707e51c8c4e324fba9c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 02e8775089f6e8112452ff2a0ff780bc9a848f31
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86555649"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497042"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,14 +42,14 @@ Le type d’une instance **geometry** a une valeur Null. Retourne 0 si l'instanc
   
  Type CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  `IsNull` permet de tester si une instance **geometry** a une valeur Null. `IsNull` retourne 0 si l’instance n’est pas NULL, mais NULL si l’instance est NULL.  
   
  Cette méthode est utilisée principalement par l'infrastructure SQL Server ; il n'est pas recommandé d'utiliser `IsNull` pour tester si une instance est Null.  
   
 
 ## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Méthodes étendues sur les instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

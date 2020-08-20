@@ -1,4 +1,5 @@
 ---
+description: Gestionnaire de connexions OData
 title: Gestionnaire de connexions OData | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 - sql13.dts.designer.odataconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 788aaa50e7bf083a91a4c919708e0677fc190476
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 37ebb31c408d20708d6398be95a30883cceb04d4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472435"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496096"
 ---
 # <a name="odata-connection-manager"></a>Gestionnaire de connexions OData
 
@@ -61,7 +62,7 @@ Pour vous connecter à Microsoft Dynamics AX Online ou Microsoft Dynamics CRM On
 ## <a name="odata-connection-manager-properties"></a>Propriétés du gestionnaire de connexions OData  
  Le tableau suivant répertorie les propriétés du gestionnaire de connexions OData.  
   
-|Propriété|Description|  
+|Property|Description|  
 |-|-|  
 |Url|URL vers le document de service.|  
 |UserName|Nom d’utilisateur à utiliser pour l’authentification, si nécessaire.|  
@@ -80,7 +81,7 @@ Pour vous connecter à Microsoft Dynamics AX Online ou Microsoft Dynamics CRM On
   
  **Authentification**  
 Sélectionnez l’une des options suivantes :
--   **Authentification Windows** Pour l’accès anonyme, sélectionnez cette option.
+-   **Authentification Windows**. Pour l’accès anonyme, sélectionnez cette option.
 -   **Authentification de base** 
 -   **Microsoft Dynamics AX Online** pour Dynamics AX Online
 -   **Microsoft Dynamics CRM Online** pour Dynamics CRM Online

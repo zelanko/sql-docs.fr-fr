@@ -1,4 +1,5 @@
 ---
+description: sys.dm_tran_locks (Transact-SQL)
 title: sys. dm_tran_locks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
@@ -20,11 +21,12 @@ ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3e453de669cc69373b8e3fc1fc76a1056721bec
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bce5288ed4861cb1b090c851179739ea12d9ee71
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000255"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498357"
 ---
 # <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +43,7 @@ ms.locfileid: "86000255"
 |**resource_type**|**nvarchar(60)**|Représente le type de ressource. Il peut s'agir de l'une des valeurs suivantes : DATABASE, FILE, OBJECT, PAGE, KEY, EXTENT, RID, APPLICATION, METADATA, HOBT ou ALLOCATION_UNIT.|  
 |**resource_subtype**|**nvarchar(60)**|Représente un sous-type de **resource_type**. D'un point de vue technique, il est possible d'acquérir un verrou avec sous-type sans conserver un verrou sans sous-type du type parent. Les différents sous-types n'entrent pas en conflit entre eux ou avec le type parent sans sous-type. Toutes les ressources ne comportent pas de sous-types.|  
 |**resource_database_id**|**int**|ID de la base de données dans laquelle cette ressource s'applique. L'ID de la base de données définit l'étendue de toutes les ressources gérées par le gestionnaire de verrous.|  
-|**resource_description**|**nvarchar(256)**|Description de la ressource qui contient uniquement les informations non disponibles dans d'autres colonnes de ressources.|  
+|**resource_description**|**nvarchar (256)**|Description de la ressource qui contient uniquement les informations non disponibles dans d'autres colonnes de ressources.|  
 |**resource_associated_entity_id**|**bigint**|ID de l'entité dans une base de données à laquelle une ressource est associée. Selon le type de ressource, il peut s'agir d'un ID d'objet, d'un ID Hobt ou d'un ID d'unité d'allocation.|  
 |**resource_lock_partition**|**Int**|ID de la partition de verrou pour une ressource de verrou partitionnée. La valeur pour les ressources de verrou non partitionnées est 0.|  
 |**request_mode**|**nvarchar(60)**|Mode de la demande. Pour les demandes autorisées, il s'agit du mode autorisé ; pour les demandes en attente, il s'agit du mode demandé. <br /><br /> NULL = aucun accès n'est accordé à la ressource. Sert d'espace réservé.<br /><br /> SCH-S (stabilité du schéma) = garantit qu’un élément de schéma, tel qu’une table ou un index, n’est pas supprimé pendant qu’une session maintient un verrou de stabilité de schéma sur l’élément de schéma.<br /><br /> SCH-M (modification du schéma) = doit être détenu par une session qui souhaite modifier le schéma de la ressource spécifiée. Garantit qu'aucune autre session ne fait référence à l'objet indiqué.<br /><br /> S (partagé) = la session Holding dispose d’un accès partagé à la ressource.<br /><br /> U (mise à jour) = indique un verrou de mise à jour acquis sur les ressources qui peuvent finalement être mises à jour. Utilisé pour empêcher l'occurrence d'une forme de blocage courante qui apparaît lorsque plusieurs sessions verrouillent les ressources pour une mise à jour potentielle ultérieure.<br /><br /> X (exclusif) = la session Holding dispose d’un accès exclusif à la ressource.<br /><br /> IS (Intent partagé) = indique l’intention de placer des verrous sur certaines ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> IU (mise à jour intentionnelle) = indique l’intention de placer des verrous U sur certaines ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> IX (Intent exclusif) = indique l’intention de placer des verrous X sur certaines ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> SIU (Shared Intent Update) = indique un accès partagé à une ressource dans le but d’acquérir des verrous de mise à jour sur les ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> SIX (mode partagé Intent exclusif) = indique un accès partagé à une ressource dans le but d’acquérir des verrous exclusifs sur les ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> UIX (mise à jour intentionnelle exclusive) = indique qu’un verrou de mise à jour est bloqué sur une ressource dans le but d’acquérir des verrous exclusifs sur les ressources subordonnées dans la hiérarchie de verrouillage.<br /><br /> BU = utilisé par les opérations en bloc.<br /><br /> RangeS_S (verrou de plage de clés partagé et de ressource partagée) = indique une analyse de plage sérialisable.<br /><br /> RangeS_U (Shared Key-Range et Update Resource Lock) = indique une analyse de mise à jour sérialisable.<br /><br /> RangeI_N (insérer un verrou de ressource de plage de clés et de ressource null) = utilisé pour tester des plages avant d’insérer une nouvelle clé dans un index.<br /><br /> RangeI_S = verrou de conversion d’étendues de clés, créé par un chevauchement de RangeI_N et de verrous S.<br /><br /> RangeI_U = verrou de conversion d’étendues de clés, créé par un chevauchement de RangeI_N et de verrous U.<br /><br /> RangeI_X = verrou de conversion d’étendues de clés, créé par un chevauchement de RangeI_N et de verrous X.<br /><br /> RangeX_S = verrou de conversion d’étendues de clés, créé par un chevauchement de RangeI_N et de RangeS_S. RangeS_S.<br /><br /> RangeX_U = verrou de conversion d’étendues de clés, créé par un chevauchement de RangeI_N et de verrous de RangeS_U.<br /><br /> RangeX_X (verrou de plage de clés et de ressources exclusives exclusives) = il s’agit d’un verrou de conversion utilisé lors de la mise à jour d’une clé dans une plage.|  
@@ -57,13 +59,13 @@ ms.locfileid: "86000255"
 |**request_owner_guid**|**uniqueidentifier**|GUID du propriétaire spécifique de cette demande. Cette valeur est utilisée uniquement par une transaction distribuée dans laquelle la valeur correspond au GUID MS DTC de cette transaction.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Cette valeur représente l'ID de l'espace de verrouillage du demandeur. Cet ID détermine si deux demandeurs sont mutuellement compatibles et s'il est possible de leur accorder des verrous dans des modes conflictuels.|  
 |**lock_owner_address**|**varbinary (8)**|Adresse mémoire de la structure des données internes utilisées pour suivre cette demande. Cette colonne peut être jointe à la colonne **resource_address** dans **sys.dm_os_waiting_tasks**.|  
-|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
+|**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="permissions"></a>Autorisations
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Notes  
  Un état de demande autorisée indique qu'un verrou a été accordé au demandeur sur une ressource. Une demande en attente indique que la demande n'est pas encore autorisée. La colonne **request_status** retourne les types de demandes en attente suivants :  
   
 -   Une demande de conversion indique que le demandeur a déjà reçu l'autorisation pour la ressource et attend l'autorisation de mise à jour de la demande initiale.  
@@ -88,7 +90,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
   
  Les transactions distribuées non associées à un ID de session sont des transactions orphelines. L'ID de session -2 leur est attribué. Pour plus d’informations, consultez [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
 
-## <a name="locks"></a><a name="locks"></a>Verrous
+## <a name="locks"></a><a name="locks"></a> Verrous
 Des verrous sont placés sur les ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , telles que les lignes lues ou modifiées lors d'une transaction, pour empêcher d'autres transactions d'utiliser simultanément les ressources. Par exemple, si un verrou exclusif (X) est mis en place dans une ligne de table par une transaction, aucune autre transaction ne peut modifier cette ligne jusqu'à ce que le verrou soit débloqué. Un nombre minimal de verrous favorise la concurrence, ce qui peut améliorer les performances. 
 
 ## <a name="resource-details"></a>Détails des ressources  
@@ -385,6 +387,6 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
 [sys. dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)      
-[Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
+[Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)     
 [Fonctions et vues de gestion dynamique liées aux transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)      
 [SQL Server, objet Locks](../../relational-databases/performance-monitor/sql-server-locks-object.md)      

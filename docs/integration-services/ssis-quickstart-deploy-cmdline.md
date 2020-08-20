@@ -1,4 +1,5 @@
 ---
+description: Déployer un projet SSIS à partir de l’invite de commandes avec ISDeploymentWizard.exe
 title: Déployer un projet SSIS à partir de l’invite de commandes | Microsoft Docs
 ms.date: 05/21/2018
 ms.topic: conceptual
@@ -8,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 949a073a9e31afd0e203dc4c9f3b497c2551504b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 127df7b347f1c421d3714fc8be2f92dfc6f05e52
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921918"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495473"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Déployer un projet SSIS à partir de l’invite de commandes avec ISDeploymentWizard.exe
 
@@ -24,7 +25,7 @@ Ce guide de démarrage rapide montre comment déployer un projet SSIS à partir 
 
 Pour plus d’informations sur l’Assistant Déploiement d’Integration Services, consultez [Assistant Déploiement d’Integration Services](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 La validation décrite dans cet article pour le déploiement sur Azure SQL Database nécessite SQL Server Data Tools (SSDT) version 17.4 ou ultérieure. Pour obtenir la dernière version de SSDT, consultez [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
 

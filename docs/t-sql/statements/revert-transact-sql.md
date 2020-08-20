@@ -1,4 +1,5 @@
 ---
+description: REVERT (Transact-SQL)
 title: REVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -23,12 +24,12 @@ ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 82fe397e6709617af5aa7f92db170e25ccd9b8d9
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 1ac73076f7528b8c7fcb329540211cce9eee891e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485400"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496667"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]   
@@ -51,7 +52,7 @@ REVERT
  WITH COOKIE = @*varbinary_variable*  
  Spécifie le cookie créé dans une instruction [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) autonome correspondante. *\@varbinary_variable* est **varbinary(100)** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  REVERT peut figurer dans un module tel qu'une procédure stockée ou une fonction définie par l'utilisateur, mais aussi en tant qu'instruction autonome. À l'intérieur d'un module, REVERT s'applique uniquement aux instructions EXECUTE AS définies dans le module. Par exemple, la procédure stockée suivante exécute une instruction `EXECUTE AS` suivie d'une instruction `REVERT`.  
   
 ```  

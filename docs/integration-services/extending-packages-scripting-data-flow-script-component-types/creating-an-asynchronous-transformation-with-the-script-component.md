@@ -1,4 +1,5 @@
 ---
+description: Création d'une transformation asynchrone à l'aide du composant Script
 title: Création d’une transformation asynchrone à l’aide du composant Script | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 980300f1deee55be9d8c7977bf813108bcfd1e80
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 05d28638ebb8981c0ccce4e6bb38ab7179565d00
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923845"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495609"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Création d'une transformation asynchrone à l'aide du composant Script
 
@@ -72,7 +73,7 @@ ms.locfileid: "86923845"
  Pour plus d’informations sur la page **Entrées et sorties** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Entrées et sorties&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Ajout de variables  
- S’il existe des variables dont vous souhaitez utiliser les valeurs dans votre script, vous pouvez les ajouter dans les champs de propriété ReadOnlyVariables et ReadWriteVariables de la page **Script** de l’**Éditeur de transformation de script**.  
+ S'il existe des variables dont vous souhaitez utiliser les valeurs dans votre script, vous pouvez les ajouter dans les champs de propriété ReadOnlyVariables et ReadWriteVariables dans la page **Script** de l' **Éditeur de transformation de script**.  
   
  Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection ( **...** ) en regard des champs de propriété **ReadOnlyVariables** et **ReadWriteVariables**, puis en sélectionnant les variables dans la boîte de dialogue **Sélectionner des variables**.  
   
@@ -106,7 +107,7 @@ ms.locfileid: "86923845"
 > [!NOTE]  
 >  Si vous développez un composant de flux de données personnalisé entièrement nouveau, il est important de remplacer la méthode PrimeOutput pour mettre en cache les références aux mémoires tampons de sortie afin de pouvoir ajouter des lignes de données aux mémoires tampons ultérieurement. Dans le composant Script, cette opération n’est pas nécessaire car vous disposez d’une classe générée automatiquement qui représente chaque mémoire tampon de sortie dans l’élément de projet **BufferWrapper**.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  Cet exemple présente le code personnalisé requis dans la classe ScriptMain pour créer un composant de transformation asynchrone.  
   
 > [!NOTE]  
@@ -236,6 +237,6 @@ public class ScriptMain:
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md)   
  [Création d’une transformation synchrone à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
- [Développement d’un composant de transformation personnalisé avec des sorties asynchrones](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
+ [Développement d'un composant de transformation personnalisé à sorties asynchrones](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md)  
   
   

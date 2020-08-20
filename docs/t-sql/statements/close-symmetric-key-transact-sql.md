@@ -1,4 +1,5 @@
 ---
+description: CLOSE SYMMETRIC KEY (Transact-SQL)
 title: CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/15/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f14d291cf70bcefb13404805aa717f2087695ce6
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: b279b48adb0a72060d9e7700c57f25782eb83587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380892"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496912"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +49,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
  *KEY_NAME*  
  Nom de la clé symétrique à fermer.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les clés symétriques ouvertes sont liées à la session et non au contexte de sécurité. Une clé ouverte est disponible tant qu'elle n'a pas été explicitement fermée ou que la session n'a pas été arrêtée. CLOSE ALL SYMMETRIC KEYS ferme toutes les clés principales de base de données qui ont été ouvertes pendant la session actuelle à l’aide de l’instruction [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md).  Des informations relatives aux clés ouvertes sont consultables dans la vue de catalogue [sys.openkeys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-openkeys-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  

@@ -1,4 +1,5 @@
 ---
+description: Présentation des différences entre l'exécution locale et l'exécution distante
 title: Présentation des différences entre l’exécution locale et l’exécution distante | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c30d054c5a0c0e9a51d1799e919ba235c6a928fa
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7e9ed7d79855fdef0dfc64d37367ee7b8bc919ee
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495512"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>Présentation des différences entre l'exécution locale et l'exécution distante
 
@@ -34,17 +35,17 @@ ms.locfileid: "86913275"
   
  Pour plus d'informations sur le chargement et l'exécution d'un package enregistré, consultez :  
   
--   [Chargement et exécution d’un package local par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)  
+-   [Chargement et exécution d'un package local par programme](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)  
   
--   [Chargement et exécution d’un package distant par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
+-   [Chargement et exécution d'un package distant par programme](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
   
  Pour plus d'informations sur l'exécution d'un package et le chargement de sa sortie dans un programme personnalisé, consultez :  
   
--   [Chargement de la sortie d’un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
+-   [Chargement de la sortie d'un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Chargement et exécution d’un package local par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Chargement et exécution d’un package distant par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
- [Chargement de la sortie d’un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
+ [Chargement de la sortie d'un package local](../../integration-services/run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   

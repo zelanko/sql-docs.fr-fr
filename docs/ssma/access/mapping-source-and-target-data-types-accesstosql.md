@@ -1,4 +1,5 @@
 ---
+description: Mappage des types de données source et cible (AccessToSQL)
 title: Mappage des types de données source et cible (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c67cb826d5a5dce7c142cba3ded468b851cef337
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87938218"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497846"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mappage des types de données source et cible (AccessToSQL)
 Les types de base de données Access diffèrent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données. Lorsque vous convertissez des objets de base de données Access en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous devez spécifier comment mapper les types de données de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les procédures suivantes.  

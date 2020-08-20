@@ -1,4 +1,5 @@
 ---
+description: Utilisation des exemples de fichiers de script de console (SybaseToSQL)
 title: Utilisation des exemples de fichiers de script de console (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef221118-b442-4ca6-9409-6ee1d9f8d948
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7db44b317ee91044748519b93c7cdc175c96a94d
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 072073fae690812ed2a51cb74073eea95552392a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934468"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497606"
 ---
 # <a name="working-with-the-sample-console-script-files-sybasetosql"></a>Utilisation des exemples de fichiers de script de console (SybaseToSQL)
 Quelques exemples de fichiers ont été fournis avec le produit pour la référence et l’utilisation de l’utilisateur. Cette section décrit la façon de personnaliser facilement ces scripts en fonction des besoins de l’utilisateur final.  
@@ -81,7 +82,7 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     **Attribut**  
   
-    -   `source-schema:`Spécifie la base de données source qui nécessite d’être convertie.  
+    -   `source-schema:` Spécifie la base de données source qui nécessite d’être convertie.  
   
     -   `sql-server-schema`: Spécifie la base de données cible à migrer vers  
   
@@ -95,7 +96,7 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     **Attribut**  
   
-    `object-name`: Spécifiez le nom de la base de données ou de l’objet source qui doit être converti. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le`object-name`  
+    `object-name`: Spécifiez le nom de la base de données ou de l’objet source qui doit être converti. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le `object-name`  
   
     **Nom de la commande**  
   
@@ -107,7 +108,7 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     **Attribut**  
   
-    `object-name:`Spécifiez le nom de la base de données ou de l’objet SQL Server qui doit être créé. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le`object-name`  
+    `object-name:` Spécifiez le nom de la base de données ou de l’objet SQL Server qui doit être créé. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le `object-name`  
   
     **Nom de la commande**  
   
@@ -119,10 +120,10 @@ Les exemples de fichiers de script de console suivants couvrant différents scé
   
     **Attribut**  
   
-    `object-name:`Spécifie le nom de la base de données/des tables source dont la migration doit être effectuée. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le`object-name`  
+    `object-name:` Spécifie le nom de la base de données/des tables source dont la migration doit être effectuée. Assurez-vous que le correspondant `object-type` est modifié en fonction du type d’objet spécifié dans le `object-name`  
   
 ## <a name="see-also"></a>Voir aussi  
 [Création de fichiers de valeurs de variables &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-variable-value-files-sybasetosql.md)  
 [Création des fichiers de connexion au serveur &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-the-server-connection-files-sybasetosql.md)  
-[Génération de rapports &#40;&#41;SybaseToSQL](../../ssma/sybase/generating-reports-sybasetosql.md)  
+[Génération de rapports &#40;&#41;SybaseToSQL ](../../ssma/sybase/generating-reports-sybasetosql.md)  
   

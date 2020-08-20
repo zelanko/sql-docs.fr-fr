@@ -1,4 +1,5 @@
 ---
+description: GRANT – octroi d'autorisations d'objet système (Transact-SQL)
 title: GRANT - Octroyer des autorisations sur un objet système (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 329ff28afd0aa96ba7fde0058c4cdfb179d61db3
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0f3df51eec3f0b2e1c084a1fb373c8b1595f8c15
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485411"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496695"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT – octroi d'autorisations d'objet système (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +50,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Spécifie le principal auquel l'autorisation est accordée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette instruction permet d'accorder des autorisations sur des procédures stockées, procédures stockées étendues, fonctions table, fonctions scalaires, vues, affichages catalogue, vues de compatibilité, vues INFORMATION_SCHEMA, vues de gestion dynamique et tables système installées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chacun de ces objets système existe sous la forme d'un enregistrement unique dans la base de données des ressources du serveur (mssqlsystemresource). La base de données des ressources est en lecture seule. Un lien à l'objet est exposé comme un enregistrement dans le schéma sys de chaque base de données. L'autorisation d'exécuter ou de sélectionner un objet système peut être accordée, refusée ou révoquée.  
   
  L'octroi de l'autorisation d'exécuter ou de sélectionner un objet n'implique pas nécessairement toutes les autorisations requises pour utiliser l'objet. La plupart des objets effectuent des opérations qui nécessitent des autorisations supplémentaires. Par exemple, un utilisateur auquel est accordée l'autorisation EXECUTE sur sp_addlinkedserver ne peut pas créer un serveur lié, à moins que l'utilisateur soit également membre du rôle de serveur fixe sysadmin.  

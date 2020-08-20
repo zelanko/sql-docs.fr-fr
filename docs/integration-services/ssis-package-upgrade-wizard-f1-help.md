@@ -1,4 +1,5 @@
 ---
+description: Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
 title: Aide sur l’Assistant Mise à niveau de packages SSIS via la touche F1 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -18,12 +19,12 @@ f1_keywords:
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0bd61166df6d257c6088b1e62c2c5b262207f958
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9e47bae183dc2d0e790a6f0cb6be207d30cd4834
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921947"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495518"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Aide sur l'Assistant Mise à niveau de packages SSIS via la touche F1
 
@@ -34,7 +35,7 @@ ms.locfileid: "86921947"
   
  **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
   
--   [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
 
 ## <a name="ssis-upgrade-wizard"></a>Assistant Mise à niveau de SSIS
   
@@ -93,7 +94,7 @@ ms.locfileid: "86921947"
 >  Cette page est disponible uniquement quand vous exécutez l’Assistant Mise à niveau de packages [!INCLUDE[ssIS](../includes/ssis-md.md)] à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ou de l’invite de commandes.  
  
 ### <a name="static-options"></a>Options statiques  
- **Enregistrer à l’emplacement source**  
+ **Enregistrer à l'emplacement source**  
  Enregistrez les packages mis à niveau dans le même emplacement que celui spécifié dans la page **Sélectionner l’emplacement source** de l’Assistant.  
   
  Si vous voulez que l’Assistant sauvegarde les packages d’origine quand ils sont stockés dans le système de fichiers, sélectionnez l’option **Enregistrer à l’emplacement source** . Pour plus d’informations, consultez [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
@@ -143,7 +144,7 @@ ms.locfileid: "86921947"
   
  **Pour exécuter l'Assistant Mise à niveau de packages SSIS**  
   
--   [Mettre à niveau des packages Integration Services à l’aide de l’Assistant Mise à niveau de packages SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
+-   [Mettre à niveau des packages Integration Services à l'aide de l'Assistant Mise à niveau de packages SSIS](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
 ### <a name="options"></a>Options  
  **Mettre à jour les chaînes de connexion pour l'utilisation des nouveaux noms de fournisseurs**  

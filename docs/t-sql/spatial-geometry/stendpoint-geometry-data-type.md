@@ -1,4 +1,5 @@
 ---
+description: STEndpoint (type de données geometry)
 title: STEndpoint (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1ca874a25d97359e4d61beac101f3b4d88cdefae
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 1ec856db5c9f528135393bdb968ac35de4e94f2e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86554999"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497022"
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -45,7 +46,7 @@ Retourne le point de terminaison d’une instance **geometry**.
   
  Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  `STEndPoint()` équivaut à [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()).  
   
  Cette méthode retourne une valeur Null si elle est appelée sur une instance **geometry** vide.  

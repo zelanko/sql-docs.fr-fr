@@ -1,4 +1,5 @@
 ---
+description: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 title: CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
@@ -19,19 +20,19 @@ ms.assetid: 649b370b-da54-4915-919d-1b597a39d505
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 948b2b1e9ee9a8827322cf05fcb2f812d925de93
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c774b419283ea0d4799ef89c8628095424f169bd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734431"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498177"
 ---
 # <a name="change_tracking_is_column_in_mask-transact-sql"></a>CHANGE_TRACKING_IS_COLUMN_IN_MASK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Interprète la valeur SYS_CHANGE_COLUMNS retournée par la fonction CHANGETABLE (CHANGEs...). Cela permet à une application de déterminer si la colonne spécifiée est incluse dans les valeurs retournées pour SYS_CHANGE_COLUMNS.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,12 +54,12 @@ CHANGE_TRACKING_IS_COLUMN_IN_MASK ( column_id , change_columns )
 ## <a name="return-values"></a>Valeurs de retour  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK retourne les valeurs suivantes.  
   
-|Valeur renvoyée|Description|  
+|Valeur retournée|Description|  
 |------------------|-----------------|  
 |0|La colonne spécifiée ne figure pas dans la liste *change_columns* .|  
 |1|La colonne spécifiée se trouve dans la liste *change_columns* .|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  CHANGE_TRACKING_IS_COLUMN_IN_MASK n’effectue aucune vérification pour valider la valeur de *column_id* ou si le paramètre *change_columns* a été obtenu à partir de la table à partir de laquelle le *column_id* a été obtenu.  
   
 ## <a name="examples"></a>Exemples  
@@ -71,7 +72,7 @@ SET @SalaryChanged = CHANGE_TRACKING_IS_COLUMN_IN_MASK
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions Change Tracking &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
+ [Fonctions de suivi des modifications &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
   

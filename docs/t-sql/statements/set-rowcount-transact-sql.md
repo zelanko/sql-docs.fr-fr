@@ -1,4 +1,5 @@
 ---
+description: SET ROWCOUNT (Transact-SQL)
 title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
@@ -27,19 +28,19 @@ ms.assetid: c6966fb7-6421-47ef-98f3-82351f2f6bdc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91739df2125005e123f2d9acd19c71682111f9a8
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c77fbff703cbb22828285ba33b3b1916f6b6b98d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484020"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496420"
 ---
 # <a name="set-rowcount-transact-sql"></a>SET ROWCOUNT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Demande à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'arrêter l'exécution de la requête après avoir renvoyé le nombre de lignes spécifié.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

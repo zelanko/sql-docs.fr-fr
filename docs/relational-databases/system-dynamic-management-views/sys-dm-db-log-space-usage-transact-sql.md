@@ -1,4 +1,5 @@
 ---
+description: sys. dm_db_log_space_usage (Transact-SQL)
 title: sys. dm_db_log_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/29/2017
@@ -20,12 +21,12 @@ ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dd64b703561b4572ccef54cbab27a711ed783f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62bb7d8d5aef48e8516ce74721b38f3c7003c6b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786307"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498364"
 ---
 # <a name="sysdm_db_log_space_usage-transact-sql"></a>sys. dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,13 +42,13 @@ Retourne des informations sur l’utilisation de l’espace pour le journal des 
 |total_log_size_in_bytes |**bigint** |Taille du journal  |
 |used_log_space_in_bytes |**bigint** |Taille occupée du journal  |     
 |used_log_space_in_percent |**real** |Taille occupée du journal sous la forme d’un pourcentage de la taille totale du journal |
-|log_space_in_bytes_since_last_backup |**bigint** |Quantité d’espace utilisée depuis la dernière sauvegarde du journal <br />**S’applique à :** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] via [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] , [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|
+|log_space_in_bytes_since_last_backup |**bigint** |Quantité d’espace utilisée depuis la dernière sauvegarde du journal <br />**S’applique à :** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] via [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] ,  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|
     
   
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l' **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .   
   
 ## <a name="examples"></a>Exemples  
   
@@ -63,12 +64,12 @@ FROM sys.dm_db_log_space_usage;
 ```
   
 ## <a name="see-also"></a>Voir aussi  
-[Vues et fonctions de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys. dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)    
 [sys. dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
 [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
-[sys. dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
+[sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
 [sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) 
 
 

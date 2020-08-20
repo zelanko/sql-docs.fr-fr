@@ -1,4 +1,5 @@
 ---
+description: 'Procédure : préparer SQL Server pour la capture de données modifiées'
 title: Guide pratique pour préparer SQL Server pour CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 34e6284b25d8aaf119ed7077e9304fefd590a9f4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 6f445a638f07ff6f524fc624f63cbc9bd6b29750
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916549"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496199"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>Procédure : préparer SQL Server pour la capture de données modifiées
 
@@ -43,6 +44,6 @@ ms.locfileid: "86916549"
  **Remarque**: Vous pouvez cliquer sur **Afficher le script** pour afficher une version en lecture seule du script d’installation. Un administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut copier ce script dans la console de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en vue de le modifier et de l'exécuter, si nécessaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Préparer SQL Server pour CDC](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
+ [Préparer SQL Server pour la capture de données modifiées](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

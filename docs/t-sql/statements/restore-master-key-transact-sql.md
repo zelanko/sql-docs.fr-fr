@@ -1,4 +1,5 @@
 ---
+description: RESTORE MASTER KEY (Transact-SQL)
 title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -25,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 101b4a941f355891a7e7e6aa9578998f2d8efc4c
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0f5b32d1caa0562f5a5fd226387c21ec029982a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483572"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496652"
 ---
 # <a name="restore-master-key-transact-sql"></a>RESTORE MASTER KEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,7 +65,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  Indique que le processus RESTORE doit continuer, même si la clé principale de base de données en cours n'est pas ouverte ou si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas déchiffrer certaines clés privées chiffrées au moyen de cette clé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Une fois la clé principale restaurée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déchiffre toutes les clés chiffrées au moyen de la clé principale active, puis chiffre ces clés au moyen de la clé principale restaurée. Cette opération gourmande en ressources doit être planifiée au cours d'une période de faible demande. Si la clé principale de base de données en cours n'est pas ouverte ou ne peut pas être ouverte, ou si une clé chiffrée à l'aide de cette clé principale ne peut pas être déchiffrée, l'opération de restauration échoue.  
   
  Utilisez l'option FORCE seulement si la clé principale ne peut pas être récupérée ou si le déchiffrement échoue. Les données chiffrées uniquement à l'aide d'une clé irrécupérable sont perdues.  

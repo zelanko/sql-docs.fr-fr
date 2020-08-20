@@ -1,4 +1,5 @@
 ---
+description: Destination de fichier brut
 title: Destination de fichier brut | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -20,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93b992e9931c2e62f359beeca98d7d53e46a95eb
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 9cf51661228dcb9b6dd5e42ff900b3770b540898
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916040"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495777"
 ---
 # <a name="raw-file-destination"></a>Destination de fichier brut
 
@@ -61,7 +62,7 @@ ms.locfileid: "86916040"
   
 |Option|Description|  
 |------------|-----------------|  
-|Ajouter|Ajoute les données à un fichier existant. Les métadonnées des données ajoutées doivent correspondre au format de fichier.|  
+|Ajouter (Append)|Ajoute les données à un fichier existant. Les métadonnées des données ajoutées doivent correspondre au format de fichier.|  
 |Toujours créer|Crée toujours un nouveau fichier.|  
 |Créer une fois|Crée un nouveau fichier. Si le fichier existe, le composant échoue.|  
 |Tronquer et ajouter|Tronque un fichier existant, puis écrit les données dans le fichier. Les métadonnées des données ajoutées doivent correspondre au format de fichier.|  

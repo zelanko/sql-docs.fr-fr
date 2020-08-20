@@ -1,4 +1,5 @@
 ---
+description: REVOKE - Révoquer des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL)
 title: REVOKE - Révoquer des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
@@ -19,12 +20,12 @@ ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0469f4f03430433135c827bb8f6e6fa9ed5dcc4a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 8bc8760b678391b2bee7cf96d6e1b0e1e0c317a6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496574"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE - Révoquer des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL)
 [!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
@@ -103,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les informations d’identification délimitées à la base de données sont des éléments sécurisables au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être révoquées sur des informations d’identification délimitées à la base de données sont indiquées ci-dessous, avec les autorisations plus générales qui les incluent implicitement.  
   
 |Autorisation sur des informations d’identification délimitées à la base de données|Implicite avec l’autorisation sur les informations d’identification délimitées à la base de données|Impliquée par une autorisation de base de données|  

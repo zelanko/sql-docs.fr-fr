@@ -1,4 +1,5 @@
 ---
+description: Chargement des objets de base de données convertis dans SQL Server (DB2ToSQL)
 title: Chargement des objets de base de données convertis dans SQL Server (DB2ToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f55d80669863bf0a968d3a6c415b863a311e9
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: ddd074654a12d6eb837b9e9fc9a152c7ec1e75b9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87937098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497766"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Chargement des objets de base de données convertis dans SQL Server (DB2ToSQL)
 Après avoir converti les schémas DB2 en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez charger les objets de base de données résultants dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez faire en sorte que SSMA crée les objets, ou vous pouvez générer un script pour les objets et exécuter les scripts vous-même. En outre, SSMA vous permet de mettre à jour les métadonnées cibles avec le contenu réel de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données.  
@@ -42,7 +43,7 @@ Pour utiliser SSMA pour créer des [!INCLUDE[ssNoVersion](../../includes/ssnover
   
 3.  Une fois que vous avez sélectionné les objets à traiter dans l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, cliquez avec le bouton droit sur **bases de données**, puis cliquez sur **synchroniser avec la base de données**.  
   
-    Vous pouvez également synchroniser des objets individuels ou des catégories d’objets en cliquant avec le bouton droit sur l’objet ou son dossier parent, puis en cliquant sur **synchroniser avec la base de données**.  
+    Vous pouvez également synchroniser des objets individuels ou des catégories d’objets en cliquant avec le bouton droit sur l’objet ou son dossier parent, puis en cliquant sur  **synchroniser avec la base de données**.  
   
     Ensuite, SSMA affiche la boîte **de dialogue synchroniser avec la base de données** , où vous pouvez voir deux groupes d’éléments. Sur le côté gauche, SSMA affiche les objets de base de données sélectionnés représentés dans une arborescence. Sur le côté droit, vous pouvez voir une arborescence qui représente les mêmes objets dans les métadonnées SSMA. Vous pouvez développer l’arborescence en cliquant sur le bouton « + » de droite ou de gauche. La direction de la synchronisation est indiquée dans la colonne action placée entre les deux arbres.  
   
@@ -89,7 +90,7 @@ Vous pouvez exécuter un script ou des instructions individuelles dans [!INCLUDE
   
 1.  Dans le menu [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Fichier** , pointez sur **Ouvrir**, puis cliquez sur **Fichier**.  
   
-2.  Dans la boîte de dialogue **ouvrir** , sélectionnez votre fichier de script, puis[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+2.  Dans la boîte de dialogue **ouvrir** , sélectionnez votre fichier de script, puis [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Pour exécuter le script complet, appuyez sur la touche **F5** .  
   

@@ -1,4 +1,5 @@
 ---
+description: cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 title: CDC. fn_cdc_get_net_changes_ &lt; capture_instance &gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a9e801649cceee2aacdda530fa47c53db500bad6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 731effd8310521308f9097323d10fcc57bcb9921
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898514"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498205"
 ---
 # <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "85898514"
   
  Cette fonction d'énumération est créée lorsqu'une table source est activée pour la capture des données modifiées et que le suivi net est spécifié. Pour activer le suivi net, la table source doit avoir une clé primaire ou un index unique. Le nom de fonction est dérivé et utilise le format CDC. fn_cdc_get_net_changes_*capture_instance*, où *capture_instance* est la valeur spécifiée pour l’instance de capture lorsque la table source a été activée pour la capture de données modifiées. Pour plus d’informations, consultez [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -88,7 +89,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données. Lorsque l'appelant n'a pas l'autorisation de consulter les données sources, la fonction retourne l'erreur 208 (nom d'objet non valide).  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si la plage spécifiée de numéro séquentiel dans le journal ne se situe pas dans la chronologie de suivi des modifications pour l'instance de capture, la fonction retourne l'erreur 208 (nom d'objet non valide).
 
  En cas de modification de l’identificateur unique d’une ligne, fn_cdc_get_net_changes affiche la commande de mise à jour initiale avec une commande DELETE, puis INSERT à la place.  Ce comportement est nécessaire pour effectuer le suivi de la clé à la fois avant et après la modification.

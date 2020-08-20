@@ -1,4 +1,5 @@
 ---
+description: Connexion à Oracle
 title: Connexion à Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9be5e4b3652dec337583123e0232ce9b1442af73
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c628f77c74c16bd196a496e7cacf27a0f2904e12
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923986"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496257"
 ---
 # <a name="connect-to-oracle"></a>Connexion à Oracle
 
@@ -35,6 +36,6 @@ ms.locfileid: "86923986"
 -   **Authentification Oracle**: si vous sélectionnez cette option, vous devez taper le **Nom d'utilisateur** et le **Mot de passe** de l'utilisateur dans la base de données Oracle à laquelle vous êtes connecté.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des tables à une instance CDC](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
+ [Ajouter des tables à une instance de capture de données modifiées](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)  
   
   

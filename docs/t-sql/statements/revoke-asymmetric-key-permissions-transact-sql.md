@@ -1,4 +1,5 @@
 ---
+description: REVOKE (Autorisations de clé asymétrique) (Transact-SQL)
 title: REVOKE - Révoquer des autorisations sur une clé asymétrique (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a79d209646fdc6dc51961ee838863383b17148d6
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 54c17df591c9e4364d2efa037e6072fa4024dce6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485351"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496622"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE (Autorisations de clé asymétrique) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -100,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
   
 -   Utilisateur de la base de données non associé à un principal de serveur  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Une clé asymétrique est un élément sécurisable au niveau base de données contenu dans la base de données parente dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être révoquées sur une clé asymétrique sont énumérées ci-dessous, ainsi que les autorisations plus générales qui les incluent par implication.  
   
 |Autorisation de clé asymétrique|Impliquée par une autorisation de clé asymétrique|Impliquée par une autorisation de base de données|  

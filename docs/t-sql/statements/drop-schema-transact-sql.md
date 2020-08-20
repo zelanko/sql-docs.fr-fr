@@ -1,4 +1,5 @@
 ---
+description: DROP SCHEMA (Transact-SQL)
 title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -22,23 +23,23 @@ ms.assetid: 874aa29e-c8ad-41e4-a672-900fdc58f1f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bd04321eba4f590a20e61be24fb3756ad92277d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: f70e5b4c355414a284aaf6db1d64c7ed182cd35a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86481733"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496832"
 ---
 # <a name="drop-schema-transact-sql"></a>DROP SCHEMA (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Permet de supprimer un schéma de la base de données.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP SCHEMA  [ IF EXISTS ] schema_name  
@@ -66,7 +67,7 @@ DROP SCHEMA schema_name
   
  Des informations sur les schémas sont consultables dans la vue de catalogue [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md).  
   
- **Caution** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **Attention** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le schéma ou l'autorisation ALTER ANY SCHEMA sur la base de données.  
@@ -74,9 +75,9 @@ DROP SCHEMA schema_name
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous commence avec une instruction `CREATE SCHEMA` unique. L'instruction crée le schéma `Sprockets`, qui est la propriété de `Krishna`, et une table `Sprockets.NineProngs`, puis accorde l'autorisation `SELECT` à `Anibal` et refuse l'autorisation `SELECT` à `Hung-Fu`.  
   
-```  
+```sql  
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
-    CREATE TABLE NineProngs (source int, cost int, partnumber int)  
+    CREATE TABLE NineProngs (source INT, cost INT, partnumber INT)  
     GRANT SELECT TO Anibal   
     DENY SELECT TO [Hung-Fu];  
 GO  
@@ -84,7 +85,7 @@ GO
   
  Les instructions ci-dessous permettent de supprimer le schéma. Notez que vous devez commencer par supprimer la table que contient le schéma.  
   
-```  
+```sql  
 DROP TABLE Sprockets.NineProngs;  
 DROP SCHEMA Sprockets;  
 GO  

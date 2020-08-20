@@ -1,4 +1,5 @@
 ---
+description: InstanceOf (type de données geometry)
 title: InstanceOf (type de données geometry) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/03/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 33752578feb12ce8471e9f7bf01b6138e2e8b8e7
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 5b79e0d67f11258afb8cf7aeebbfc4d52b9f4907
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552834"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497047"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +48,7 @@ Chaîne **nvarchar(4000)** spécifiant l’un des 15 types exposés dans la hié
   
  Type de retour CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  L’entrée de la méthode doit être l’un des types suivants : **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** ou **MultiPoint**. Cette méthode lève **ArgumentException** si d’autres chaînes sont utilisées en entrée.  
   
 ## <a name="examples"></a>Exemples  
@@ -60,7 +61,7 @@ SELECT @g.InstanceOf('GEOMETRYCOLLECTION');
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthodes étendues sur des instances geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
+ [Méthodes étendues sur les instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   
 

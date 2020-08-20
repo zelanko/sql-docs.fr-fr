@@ -1,4 +1,5 @@
 ---
+description: managed_backup. sp_set_parameter (Transact-SQL)
 title: managed_backup. sp_set_parameter (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -20,11 +21,12 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3eab417e1d959c990e53aca3119546a73a3e1aad
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 8341c09305f6e02317d5b49a9e8239d18213b242
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052912"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498072"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -34,7 +36,7 @@ ms.locfileid: "86052912"
  Les paramètres disponibles sont associés à la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Ces paramètres sont utilisés pour définir les notifications par courrier électronique, activer les événements étendus et activer la stratégie définie par l'utilisateur en fonction des stratégies de gestion. Vous devez spécifier les paires nom/valeur des paramètres.  
 
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,27 +46,27 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Arguments  
+##  <a name="arguments"></a><a name="Arguments"></a> Arguments  
  @parameter_name  
- Nom du paramètre à créer dont vous souhaitez définir la valeur. @parameter_nameest de type NVARCHAR (128). Les noms de paramètres disponibles sont **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**et **StorageOperationDebugXevent**.  
+ Nom du paramètre à créer dont vous souhaitez définir la valeur. @parameter_name est de type NVARCHAR (128). Les noms de paramètres disponibles sont **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **FileRetentionDebugXevent**et **StorageOperationDebugXevent**.  
   
  @parameter_value  
- Valeur du paramètre que vous souhaitez définir. @parameterla valeur est de type NVARCHAR (128).  Voici les paires nom/valeur autorisées pour les paramètres :  
+ Valeur du paramètre que vous souhaitez définir. @parameter la valeur est de type NVARCHAR (128).  Voici les paires nom/valeur autorisées pour les paramètres :  
   
--   @parameter_name= 'SSMBackup2WANotificationEmailIds' : @parameter_value = 'email'  
+-   @parameter_name = 'SSMBackup2WANotificationEmailIds' : @parameter_value  = 'email'  
   
--   @parameter_name= 'SSMBackup2WAEnableUserDefinedPolicy' : @parameter_value = {'true' | « false »}  
+-   @parameter_name = 'SSMBackup2WAEnableUserDefinedPolicy' : @parameter_value  = {'true' | « false »}  
   
--   @parameter_name= 'SSMBackup2WADebugXevent' : @parameter_value = {'true' | « false »}  
+-   @parameter_name = 'SSMBackup2WADebugXevent' : @parameter_value  = {'true' | « false »}  
   
--   @parameter_name= 'FileRetentionDebugXevent' : @parameter_value = {'true' | « false »}  
+-   @parameter_name = 'FileRetentionDebugXevent' : @parameter_value  = {'true' | « false »}  
   
--   @parameter_name= 'StorageOperationDebugXevent' = {'true' | « false »}  
+-   @parameter_name = 'StorageOperationDebugXevent' = {'true' | « false »}  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="best-practices"></a>Bonnes pratiques  
+## <a name="best-practices"></a>Meilleures pratiques  
  Section facultative qui décrit les meilleures pratiques que l'utilisateur doit connaître pour l'exécution de l'instruction ou de la routine.  
   
 ## <a name="security"></a>Sécurité  

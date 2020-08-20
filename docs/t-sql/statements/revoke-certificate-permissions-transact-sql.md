@@ -1,4 +1,5 @@
 ---
+description: REVOKE (Autorisations de certificat) (Transact-SQL)
 title: REVOKE - Révoquer des autorisations sur un certificat (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: df89574197ffdb038e4aa5cfe7505c5e4dd751e5
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 81641dd0849580169e95a696abd04e68138bcf0a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496612"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE (Autorisations de certificat) (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -100,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un certificat est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être révoquées sur un certificat sont énumérées ci-dessous, ainsi que les autorisations plus générales qui les incluent par implication.  
   
 |Autorisation de certificat|Découlant de l'autorisation de certificat|Impliquée par une autorisation de base de données|  

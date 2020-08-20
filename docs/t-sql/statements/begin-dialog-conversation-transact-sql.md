@@ -1,4 +1,5 @@
 ---
+description: BEGIN DIALOG CONVERSATION (Transact-SQL)
 title: BEGIN DIALOG CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -30,19 +31,19 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 980563b7aa2b8a169f271a40f97f1f49295e7a84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380842"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496941"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Commence un dialogue entre deux services. Un dialogue est une conversation qui fournit les messages exactement dans l'ordre entre deux services.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -71,12 +72,12 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  Spécifie le service qui initie le dialogue. Le nom spécifié doit être le nom d'un service de la base de données active. La file d'attente spécifiée pour le service initiateur reçoit les messages retournés par le service cible et les messages créés par Service Broker pour cette conversation.  
   
  TO SERVICE **'** _target_service_name_ **'**  
- Spécifie le service cible avec lequel le dialogue doit être initialisé. *target_service_name* est de type **nvarchar(256)** . [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *target_service_name*. La comparaison est donc sensible à la casse et ne tient pas compte du classement actuel.  
+ Spécifie le service cible avec lequel le dialogue doit être initialisé. *target_service_name* est de type **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *target_service_name*. La comparaison est donc sensible à la casse et ne tient pas compte du classement actuel.  
   
  *service_broker_guid*  
  Spécifie la base de données qui héberge le service cible. Quand plusieurs bases de données hébergent une instance du service cible, vous pouvez communiquer avec une base de données spécifique en spécifiant un *service_broker_guid*.  
   
- *service_broker_guid* est de type **nvarchar(128)** . Pour rechercher la chaîne *service_broker_guid* pour une base de données, exécutez la requête ci-dessous dans la base de données :  
+ *service_broker_guid* est de type **nvarchar(128)**. Pour rechercher la chaîne *service_broker_guid* pour une base de données, exécutez la requête ci-dessous dans la base de données :  
   
 ```  
 SELECT service_broker_guid  
@@ -108,7 +109,7 @@ WHERE database_id = DB_ID() ;
 > [!NOTE]  
 >  Les messages échangés avec les services dans la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sont jamais chiffrés. Cependant, la clé principale de base de données et les certificats nécessaires au chiffrement sont requis pour les conversations qui utilisent le chiffrement si les services de la conversation se trouvent dans des bases de données distinctes. Cela permet la poursuite des conversations dans le cas où une des bases de données est déplacée vers une autre instance au cours de la conversation.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Tous les messages font partie intégrante d'une conversation. Par conséquent, un service initiateur doit commencer une conversation avec le service cible avant d'envoyer un message à ce dernier. Les informations spécifiées dans l'instruction BEGIN DIALOG CONVERSATION sont identiques à celles spécifiées dans l'adresse d'une lettre ; [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise ces informations pour remettre les messages au service approprié. Le service spécifié dans la clause TO SERVICE est l'adresse à laquelle les messages sont envoyés. Le service spécifié dans la clause FROM SERVICE est l'adresse de l'expéditeur utilisée pour les messages de réponse.  
   
  La cible d'une conversation n'a pas besoin d'appeler l'instruction BEGIN DIALOG CONVERSATION. [!INCLUDE[ssSB](../../includes/sssb-md.md)] crée une conversation dans la base de données cible lorsque le premier message de la conversation est reçu de l'initiateur.  

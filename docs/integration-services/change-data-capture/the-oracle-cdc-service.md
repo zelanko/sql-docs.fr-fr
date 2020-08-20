@@ -1,4 +1,5 @@
 ---
+description: Service de capture de données modifiées Oracle
 title: Oracle CDC Service| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 95dc655d8c1ac23df7cbb058cba2c5c7f4e41419
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38a8f0ac868968015ead8031a0a5aad37b89078
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913977"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496126"
 ---
 # <a name="the-oracle-cdc-service"></a>Service de capture de données modifiées Oracle
 
@@ -75,7 +76,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  Si un algorithme différent est utilisé, cette clé peut être supprimée et une nouvelle portant le même nom et chiffrée par le même mot de passe peut être créée.  
   
- Le mot de passe de la clé asymétrique est le principal mot de passe qui est enregistré dans le Registre sous le chemin **HKLM\Software\Microsoft\XDBCDCSVC\\<nom_service>** . Cette clé est accessible uniquement aux administrateurs locaux et au compte de service Windows de capture de données modifiées Oracle. La clé contient une valeur binaire chiffrée **AsymmetricKeyPassword** qui a stocké le mot de passe de la clé asymétrique. L'accès à cette clé de Registre est requis pour pouvoir accéder aux informations d'identification d'exploration de données de journaux Oracle.  
+ Le mot de passe de la clé asymétrique est le principal mot de passe qui est enregistré dans le Registre sous le chemin **HKLM\Software\Microsoft\XDBCDCSVC\\<nom_service>**. Cette clé est accessible uniquement aux administrateurs locaux et au compte de service Windows de capture de données modifiées Oracle. La clé contient une valeur binaire chiffrée **AsymmetricKeyPassword** qui a stocké le mot de passe de la clé asymétrique. L'accès à cette clé de Registre est requis pour pouvoir accéder aux informations d'identification d'exploration de données de journaux Oracle.  
   
  Pour utiliser la clause ENCRYPTION BY PASSWORD, le mot de passe doit satisfaire aux critères de la stratégie de mot de passe Windows de l'ordinateur qui exécute l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette opération s'effectue en sélectionnant le mot de passe de la clé asymétrique d'après cette stratégie.  
   
@@ -90,14 +91,14 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
 -   [Prise en charge de la haute disponibilité](../../integration-services/change-data-capture/high-availability-support.md)  
   
--   [Autorisations de connexion SQL Server nécessaires pour le service CDC](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
+-   [Autorisations de connexion SQL Server requises pour le service de capture de données modifiées](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
--   [Rôles d’utilisateur](../../integration-services/change-data-capture/user-roles.md)  
+-   [Rôles d'utilisateur](../../integration-services/change-data-capture/user-roles.md)  
   
--   [Utilisation du service CDC Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
+-   [Utilisation du service de capture de données modifiées Oracle](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédure : gérer un service de capture de données modifiées local](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)   
- [Gérer un service CDC Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
+ [Gérer un Service de capture de données modifiées Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

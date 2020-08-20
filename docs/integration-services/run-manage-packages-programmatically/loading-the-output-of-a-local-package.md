@@ -1,4 +1,5 @@
 ---
+description: Chargement de la sortie d'un package local
 title: Chargement de la sortie d’un package local | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 98699c4297907a5a05710af231d065f5a42fd94d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f53a5bc1707e8f806d766a611b7792ab056d6f54
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913330"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495548"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Chargement de la sortie d'un package local
 
@@ -67,7 +68,7 @@ ms.locfileid: "86913330"
   
 8.  Fermez le DataReader et les objets de connexion.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L'exemple suivant exécute un package qui calcule une valeur d'agrégation unique et qui enregistre cette valeur dans une destination DataReader, puis qui lit cette valeur depuis le DataReader et qui l'affiche dans une zone de texte sur un Windows Form.  
   
  L'utilisation de paramètres n'est pas requise lors du chargement de la sortie d'un package dans une application cliente. Si vous ne souhaitez pas utiliser un paramètre, vous pouvez omettre l’utilisation de la variable dans l’espace de noms **DtsClient**, ainsi que le code qui utilise l’objet **DtsDataParameter**.  
@@ -303,6 +304,6 @@ namespace DtsClientWParamCS
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des différences entre l’exécution locale et l’exécution distante](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Chargement et exécution d’un package local par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
- [Chargement et exécution d’un package distant par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
+ [Chargement et exécution d'un package distant par programme](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)  
   
   

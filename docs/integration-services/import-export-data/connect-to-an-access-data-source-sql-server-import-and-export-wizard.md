@@ -1,4 +1,5 @@
 ---
+description: Se connecter à une source de données Access (Assistant Importation et Exportation SQL Server)
 title: Se connecter à une source de données Access (Assistant Importation et Exportation SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/20/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79c994357b7d57f138bc022b6f4b3cdf3963111b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 80d04346e20567d546b2ea73b361f1a1fff2c694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913183"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495575"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données Access (Assistant Importation et Exportation SQL Server)
 
@@ -54,7 +55,7 @@ Spécifiez le chemin et le nom de fichier du fichier Access. Par exemple, **C:\\
  **Parcourir**  
  Permet de rechercher le fichier de la base de données à l’aide de la boîte de dialogue **Ouvrir**.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
 Si un fichier de groupe de travail est associé à la base de données, fournissez un nom d’utilisateur valide.  
   
  **Mot de passe**  

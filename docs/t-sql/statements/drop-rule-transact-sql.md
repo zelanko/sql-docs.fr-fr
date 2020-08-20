@@ -1,4 +1,5 @@
 ---
+description: DROP RULE (Transact-SQL)
 title: DROP RULE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/11/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4692f23e97da03de8698c48fa1f04049e64cef36
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 45e23207d73aa6f366de330c4a0ed7c7c9aa04f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485471"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496783"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "86485471"
 > [!IMPORTANT]
 >  La fonction DROP RULE sera supprimée dans la prochaine version de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez de l’utiliser dans tout nouveau travail de développement et prévoyez la modification des applications qui s’en servent actuellement. À la place, utilisez des contraintes CHECK que vous pouvez créer à l’aide du mot clé CHECK de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md). Pour plus d’informations, consultez [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

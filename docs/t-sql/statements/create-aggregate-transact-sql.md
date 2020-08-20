@@ -1,4 +1,5 @@
 ---
+description: CREATE AGGREGATE (Transact-SQL)
 title: CREATE AGGREGATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2235751cc4c198a39a3e3c368f4d07f5451dedd7
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 46cca1e2e955b96a11d9be648f3f7ac7f042995b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496902"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -83,7 +84,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *assembly_name* [ **.** _class_name_ ]  
  Spécifie l'assembly à lier à la fonction d'agrégation définie par l'utilisateur et, éventuellement, le nom du schéma auquel appartient l'assembly et le nom de la classe d'assembly qui met en œuvre l'agrégation définie par l'utilisateur. L'assembly doit avoir été déjà créé dans la base de données à l'aide de l'instruction CREATE ASSEMBLY. Le paramètre *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit correspondre au nom d’une classe qui existe dans l’assembly. *class_name* peut être un nom qualifié par l’espace de noms, si le langage de programmation utilisé pour écrire la classe utilise des espaces de noms, comme C#. Si le paramètre *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique à *aggregate_name*.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Par défaut, la possibilité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter du code CLR est désactivée. Vous pouvez créer, modifier et supprimer des objets de base de données qui font référence à des modules de code managé. Cependant, le code de ces modules ne s’exécute pas dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sauf si l’[option clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) est activée à l’aide de l’argument [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  La classe de l’assembly référencé dans *assembly_name* et ses méthodes doivent répondre à toutes les exigences en matière d’implémentation d’une fonction d’agrégation définie par l’utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Agrégats CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  

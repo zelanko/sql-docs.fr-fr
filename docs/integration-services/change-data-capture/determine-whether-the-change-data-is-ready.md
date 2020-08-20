@@ -1,4 +1,5 @@
 ---
+description: Déterminer si les données modifiées sont prêtes
 title: Déterminer si les données modifiées sont prêtes | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c396f85d05203a9a2c01825adb94bd0cd2ae910e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 95a2a3a5ec29f8b467cbd637e13be3aced203f41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921685"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496219"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Déterminer si les données modifiées sont prêtes
 
@@ -90,7 +91,7 @@ ms.locfileid: "86921685"
   
  Dans la table suivante, la première colonne montre les valeurs retournées de la tâche d'exécution SQL par l'exemple de requête Transact-SQL. La deuxième colonne montre comment les autres composants répondent à ces valeurs.  
   
-|Valeur de retour|Signification|response|  
+|Valeur de retour|Signification|Réponse|  
 |------------------|-------------|--------------|  
 |0|Indique que les données modifiées ne sont pas prêtes.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées postérieur au point de fin de l'intervalle sélectionné.|L'exécution se poursuit avec le composant qui implémente un délai. Le contrôle retourne ensuite au conteneur de boucles For qui continue à vérifier la tâche d'exécution SQL tant que la valeur retournée est 0.|  
 |1|Peut indiquer que les données modifiées n'ont pas été capturées pour l'intervalle complet ou qu'elles ont été supprimées. Cela est traité comme une condition d'erreur.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées antérieur au point de départ de l'intervalle sélectionné.|L'exécution se poursuit avec le composant facultatif qui enregistre l'erreur.|  
@@ -338,6 +339,6 @@ ms.locfileid: "86921685"
 ## <a name="next-step"></a>étape suivante  
  Après avoir déterminé que les données modifiées sont prêtes, l'étape suivante consiste à préparer la recherche des données modifiées.  
   
- **Rubrique suivante :** [Préparer la recherche des données modifiées](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
+ **Rubrique suivante :** [Préparer la recherche des données modifiées](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  
   
   

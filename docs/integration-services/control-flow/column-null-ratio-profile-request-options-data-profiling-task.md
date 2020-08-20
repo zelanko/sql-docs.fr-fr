@@ -1,4 +1,5 @@
 ---
+description: Options Demande de profil de ratio de colonne Null (tâche de profilage des données)
 title: Options Demande de profil de ratio de colonne Null (tâche de profilage des données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 470fcd41ed1605374ee3a5c4d5bb69b8b44c0c0d
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 7f25cb279d26355461f622587aa56f9e0ef4ac1e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496015"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Options Demande de profil de ratio de colonne Null (tâche de profilage des données)
 
@@ -36,7 +37,7 @@ ms.locfileid: "86923968"
   
 -   **Données**, qui incluent les options **TableOrView** et **Column**  
   
--   **Généralités**  
+-   **Général**  
   
 ### <a name="data-options"></a>Options de données  
  **ConnectionManager**  

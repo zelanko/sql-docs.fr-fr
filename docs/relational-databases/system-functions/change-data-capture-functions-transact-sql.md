@@ -1,4 +1,5 @@
 ---
+description: Fonctions de capture de données modifiées (Transact-SQL)
 title: Fonctions de capture de données modifiées (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4f32f9e69b49faeeef0c20b1d8c9d6d2e84d6618
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 466ee70540b93e50e1dea62be5beab6599d5bfb5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498180"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>Fonctions de capture de données modifiées (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -75,8 +76,8 @@ ms.locfileid: "87243390"
 :::row-end:::
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables de capture de données modifiées &#40;&#41;Transact-SQL](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [Procédures stockées de capture de données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+ [Tables de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
+ [Procédures stockées de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

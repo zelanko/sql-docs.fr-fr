@@ -1,4 +1,5 @@
 ---
+description: Modes SQL (MySQLToSQL)
 title: Modes SQL (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 4bc4b59984cc9e2e1f7a6c358f24e3fc0d2e86be
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 8d0631b35d2631e04cfad5c509d6084ba0a30aaf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87935098"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497716"
 ---
 # <a name="sql-modes-mysqltosql"></a>Modes SQL (MySQLToSQL)
 SSMA pour MySQL peut fonctionner dans différents modes SQL et peut appliquer ces modes différemment pour différents clients.  
@@ -27,7 +28,7 @@ Les modes définissent la syntaxe SQL que MySQL doit prendre en charge, ainsi qu
   
 -   Grille des modes SQL dans les bases de données catégorie, base de données, catégorie de table, catégorie d’instructions, catégories de vues, table, vue, fonctions, procédures, UDF et niveau d’objet d’événement contient les colonnes suivantes : **nom du mode SQL**, **modes SQL hérités**et **modes SQL effectifs**.  
   
--   La grille des modes SQL au niveau des procédures stockées, des fonctions stockées et des déclencheurs contient les colonnes suivantes : **nom du mode SQL**, **modes SQL d’origine**et **modes SQL effectifs**.  
+-   La grille des modes SQL au niveau des procédures stockées, des fonctions stockées et des déclencheurs contient les colonnes suivantes : **nom du mode SQL**,  **modes SQL d’origine**et **modes SQL effectifs**.  
   
 > [!NOTE]  
 > Les modes de groupe sont affichés en gras, sous la colonne « nom du mode SQL ».  

@@ -1,4 +1,5 @@
 ---
+description: Tâche de contrôle de capture de données modifiées
 title: Contrôle de capture de données modifiées, tâche | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e5097ad2987dfbcc3301b35666ba6245a7559b63
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 685ac46fd80e92d115dcf8aed3c49abb1ac9d144
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923096"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496037"
 ---
 # <a name="cdc-control-task"></a>Tâche de contrôle de capture de données modifiées
 
@@ -148,12 +149,12 @@ ms.locfileid: "86923096"
  Ces informations sont disponibles uniquement si vous avez sélectionné **Persistance d'état automatique** et il s'agit d'un paramètre obligatoire.  
   
  **Table à utiliser pour stocker l'état**  
- Tapez le nom de la table d'état à utiliser pour stocker l'état CDC. La table spécifiée doit être composée de deux colonnes appelées **name** et **state** avec le type de données **varchar (256)** .  
+ Tapez le nom de la table d'état à utiliser pour stocker l'état CDC. La table spécifiée doit être composée de deux colonnes appelées **name** et **state** avec le type de données **varchar (256)**.  
   
  Vous pouvez éventuellement sélectionner **Nouveau** pour obtenir un script SQL qui génère une nouvelle table d'état avec les colonnes requises. Lorsque **Persistance d'état automatique** est sélectionné, le développeur doit créer une table d'état en fonction des spécifications ci-dessus.  
   
  Ces informations sont disponibles uniquement si vous avez sélectionné **Persistance d'état automatique** et il s'agit d'un paramètre obligatoire.  
   
- **Nom d'état**  
+ **Nom de l’état**  
  Entrez le nom à associer à l'état CDC persistant. La charge complète et les packages CDC qui fonctionnent avec le même contexte CDC auront un nom d'état commun. Ce nom est utilisé pour surveiller la ligne d'état dans la table d'état.  
   

@@ -1,4 +1,5 @@
 ---
+description: END CONVERSATION (Transact-SQL)
 title: END CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2017
@@ -24,19 +25,19 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16fa18b79361cf6d448d7d75b63208e882ac0b36
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 76784d22919fc492c715ffa876c825e14794a511
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485187"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496713"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Met fin à un côté d'une conversation existante.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,12 +60,12 @@ END CONVERSATION conversation_handle
  Est le code d’erreur. *failure_code* est de type **int**. Le code d’échec est un code défini par l’utilisateur qui est inclus dans le message d’erreur envoyé à l’autre côté de la conversation. Le code d'échec doit être supérieur à 0.  
   
  DESCRIPTION =*failure_text*  
- Est le message d’erreur. *failure_text* est de type **nvarchar(3000)** . Le texte d'échec est un texte défini par l'utilisateur qui est inclus dans le message d'erreur envoyé à l'autre côté de la conversation.  
+ Est le message d’erreur. *failure_text* est de type **nvarchar(3000)**. Le texte d'échec est un texte défini par l'utilisateur qui est inclus dans le message d'erreur envoyé à l'autre côté de la conversation.  
   
  WITH CLEANUP  
  Supprime tous les messages et les entrées d'affichage catalogue pour un côté d'une conversation qui ne peut pas se terminer normalement. L'autre côté de la conversation n'est pas notifié du nettoyage. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprime le point de terminaison, tous les messages de la conversation dans la file d’attente de transmission, ainsi que tous les messages pour la conversation dans la file d’attente du service. Les administrateurs peuvent utiliser cette option pour supprimer des conversations qui ne peuvent pas se terminer normalement. Si, par exemple, le service distant a été supprimé définitivement, un administrateur peut utiliser WITH CLEANUP pour supprimer les conversations avec ce service. N’utilisez pas WITH CLEANUP dans le code d’une application [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Si END CONVERSATION WITH CLEANUP est exécuté avant que le point de terminaison de réception n'accuse réception d'un message, le point de terminaison d'envoi renverra le message. Cela peut éventuellement entraîner la réexécution du dialogue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Mettre fin à une conversation verrouille le groupe de conversations auquel appartient le *conversation_handle* fourni. Lorsqu'une conversation se termine, [!INCLUDE[ssSB](../../includes/sssb-md.md)] supprime tous les messages qui la concernent de la file d'attente du service.  
   
  Une fois qu'une conversation est terminée, aucune application ne peut plus envoyer ni recevoir des messages pour cette conversation. Les deux participants d'une conversation doivent appeler END CONVERSATION pour achever la conversation. Si [!INCLUDE[ssSB](../../includes/sssb-md.md)] n'a pas reçu de message de fin de dialogue ou de message d'erreur de la part de l'autre participant de la conversation, [!INCLUDE[ssSB](../../includes/sssb-md.md)] avertit l'autre participant que la conversation est terminée. Dans ce cas, bien que le handle de conversation ne soit plus valide, le point de terminaison de la conversation reste actif jusqu'à ce que l'instance qui héberge le service distant accuse réception du message.  

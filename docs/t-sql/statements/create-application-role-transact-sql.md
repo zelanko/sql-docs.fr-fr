@@ -1,4 +1,5 @@
 ---
+description: CREATE APPLICATION ROLE (Transact-SQL)
 title: CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8f5b67b73f4be4d8403600821ddd35843c65f2b5
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: da64f4dfa4c6013a8aba2928236db09004db8f1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391774"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496952"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -57,7 +58,7 @@ CREATE APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA **=** _schéma\_nom_  
  Indique le premier schéma dans lequel le serveur doit effectuer des recherches lorsqu'il résout les noms des objets pour ce rôle. Si DEFAULT_SCHEMA n'est pas défini, le rôle d'application utilise DBO comme schéma par défaut. *schema_name* peut être un schéma qui n’existe pas dans la base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 > [!IMPORTANT]  
 >  La complexité des mots de passe est vérifiée lors de la définition des mots de passe des rôles d'application. Les applications qui appellent des rôles d'application doivent stocker leurs mots de passe. Les mots de passe des rôles d'application doivent toujours être stockés sous forme chiffrée.  

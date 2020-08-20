@@ -1,4 +1,5 @@
 ---
+description: Destination SAP BW
 title: Destination SAP BW | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 79523f9e589ff24c909442024430317dd531c2e4
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 1b1398c6884fd154d4f142f10a6d14844a3e7875
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86917850"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88495781"
 ---
 # <a name="sap-bw-destination"></a>Destination SAP BW
 
@@ -45,9 +46,9 @@ ms.locfileid: "86917850"
   
 1.  Créer un nouveau système source :  
   
-    1.  Sélectionnez le type **« Interfaces BAPI intermédiaires/tierces »** .  
+    1.  Sélectionnez le type **« Interfaces BAPI intermédiaires/tierces »**.  
   
-    2.  Pour **Type de communication avec le système cible**, sélectionnez **Non-Unicode (Paramètres MDMP inactifs)** .  
+    2.  Pour **Type de communication avec le système cible**, sélectionnez **Non-Unicode (Paramètres MDMP inactifs)**.  
   
     3.  Attribuez un ID de programme approprié.  
   
@@ -119,6 +120,6 @@ ms.locfileid: "86917850"
 -   [Créer un InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
+ [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

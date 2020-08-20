@@ -1,4 +1,5 @@
 ---
+description: Gestionnaire de connexions HTTP
 title: Gestionnaire de connexions HTTP | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ef8b2df4b24f50f600683a5c6e9bb815208970cc
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cd88a7f40787ecc33d99fe0c749c477f23b526a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918545"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88496129"
 ---
 # <a name="http-connection-manager"></a>Gestionnaire de connexions HTTP
 
@@ -72,7 +73,7 @@ ms.locfileid: "86918545"
  **Utiliser les informations d'identification**  
  Spécifiez si vous voulez que le gestionnaire de connexions HTTP utilise les informations d'identification de sécurité de l'utilisateur pour l'authentification.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
  **Mot de passe**  
@@ -114,7 +115,7 @@ ms.locfileid: "86918545"
  **Utiliser les informations d'identification**  
  Indiquez si vous voulez que le gestionnaire de connexions HTTP utilise les informations d'identification de sécurité pour le serveur proxy.  
   
- **Nom d'utilisateur**  
+ **Nom d’utilisateur**  
  Si le gestionnaire de connexions HTTP utilise des informations d'identification, vous devez spécifier un nom d'utilisateur, un mot de passe et un domaine.  
   
  **Mot de passe**  
