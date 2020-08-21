@@ -1,8 +1,8 @@
 ---
-description: Fonction SQLDriverConnect
 title: Fonction SQLDriverConnect | Microsoft Docs
+description: La fonction SQLDriverConnect fait partie de l’API ODBC standard et cette documentation de référence fournit des informations sur sa syntaxe.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/20/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -20,32 +20,20 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6abdafe0a01d5c8182c5427c45545930c84e08e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9ff73c570e607f687ff8293587b8dbcef551926
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476142"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745899"
 ---
 # <a name="sqldriverconnect-function"></a>Fonction SQLDriverConnect
 **Conformité**  
  Version introduite : ODBC 1,0 conforme aux normes : ODBC  
   
  **Résumé**  
- **SQLDriverConnect** est une alternative à **SQLConnect**. Il prend en charge des sources de données qui requièrent plus d’informations de connexion que les trois arguments de **SQLConnect**, des boîtes de dialogue pour inviter l’utilisateur à fournir toutes les informations de connexion, ainsi que les sources de données qui ne sont pas définies dans les informations système.  
-  
- **SQLDriverConnect** fournit les attributs de connexion suivants :  
-  
--   Établissez une connexion à l’aide d’une chaîne de connexion qui contient le nom de la source de données, un ou plusieurs ID d’utilisateur, un ou plusieurs mots de passe et d’autres informations requises par la source de données.  
-  
--   Établissez une connexion à l’aide d’une chaîne de connexion partielle ou de l’absence d’informations supplémentaires. dans ce cas, le gestionnaire de pilotes et le pilote peuvent inviter l’utilisateur à entrer les informations de connexion.  
-  
--   Établissez une connexion à une source de données qui n’est pas définie dans les informations système. Si l’application fournit une chaîne de connexion partielle, le pilote peut demander des informations de connexion à l’utilisateur.  
-  
--   Établissez une connexion à une source de données à l’aide d’une chaîne de connexion construite à partir des informations contenues dans un fichier. DSN.  
-  
- Après l’établissement d’une connexion, **SQLDriverConnect** retourne la chaîne de connexion terminée. L’application peut utiliser cette chaîne pour les demandes de connexion suivantes. Pour plus d’informations, consultez [connexion avec SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
-  
+ **SQLDriverConnect** est une alternative à **SQLConnect**. Il prend en charge des sources de données qui requièrent plus d’informations de connexion que les trois arguments de **SQLConnect**, des boîtes de dialogue pour inviter l’utilisateur à fournir toutes les informations de connexion, ainsi que les sources de données qui ne sont pas définies dans les informations système. Pour plus d’informations, consultez [connexion avec SQLDriverConnect](../develop-app/connecting-with-sqldriverconnect.md).  
+
 ## <a name="syntax"></a>Syntaxe  
   
 ```cpp  
@@ -98,7 +86,7 @@ SQLRETURN SQLDriverConnect(
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLDriverConnect** retourne soit SQL_ERROR, soit SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *FHandleType* de SQL_HANDLE_DBC et un *hHandle* de *ConnectionHandle*. Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLDriverConnect** et les explique dans le contexte de cette fonction. la notation « (DM) » précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|Erreur|Description|  
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Données de chaîne, tronquées à droite|Le OutConnectionString de mémoire tampon \* *OutConnectionString* n’est pas assez grand pour retourner la chaîne de connexion entière, donc la chaîne de connexion a été tronquée. La longueur de la chaîne de connexion non tronquée est retournée dans **StringLength2Ptr*. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
