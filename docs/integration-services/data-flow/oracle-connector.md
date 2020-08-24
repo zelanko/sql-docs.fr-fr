@@ -1,4 +1,5 @@
 ---
+description: Connecteur Microsoft pour Oracle
 title: Connecteur Microsoft pour Oracle | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2019
@@ -9,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef8ccdfc30c772548cff4caa816ef1a582c8823
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a5bb5631a398e398b45b84a0ee70b51f49c90988
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430751"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Connecteur Microsoft pour Oracle
 
@@ -55,6 +56,10 @@ Pour exécuter un package SSIS ciblant SQL Server 2017 (et les versions antéri
 - [SQL Server 2016 : Connecteur Microsoft Version 4.0 pour Oracle par Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014 : Connecteur Microsoft Version 3.0 pour Oracle par Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012 : Connecteur Microsoft Version 2.0 pour Oracle par Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## <a name="limitations-and-known-issues"></a>Limitations et problèmes connus
+
+- Les vues ne sont pas répertoriées sous la source Oracle *Nom de la table ou de la vue*. Pour contourner le problème, utilisez la commande SQL et effectuez une sélection * à partir de la vue, ou définissez le nom de la vue sur la propriété [Oracle Source].[TableName] dans Éditeur avancé.
 
 ## <a name="uninstallation"></a>Désinstallation
 

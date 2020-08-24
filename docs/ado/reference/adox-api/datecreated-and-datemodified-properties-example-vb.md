@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 51400e11416ff7a8e7a336a815e4a11d8033d316
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bab3ba9d4cff5036e6024c7c13c3ba8404a7987
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440181"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770768"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated et DateModified, exemples de propriétés (VB)
-Cet exemple illustre les propriétés [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) en ajoutant une nouvelle [colonne](../../../ado/reference/adox-api/column-object-adox.md) à une [table](../../../ado/reference/adox-api/table-object-adox.md) existante et en créant une nouvelle **table**. La procédure DateOutput est requise pour que cet exemple s’exécute.  
+Cet exemple illustre les propriétés [DateCreated](./datecreated-property-adox.md) et [DateModified](./datemodified-property-adox.md) en ajoutant une nouvelle [colonne](./column-object-adox.md) à une [table](./table-object-adox.md) existante et en créant une nouvelle **table**. La procédure DateOutput est requise pour que cet exemple s’exécute.  
   
 ```  
 ' BeginDateCreatedVB  
@@ -96,9 +96,9 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DateCreated, propriété (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified, propriété (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [PROCEDURE, objet (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [View, objet (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [DateCreated, propriété (ADOX)](./datecreated-property-adox.md)   
+ [DateModified, propriété (ADOX)](./datemodified-property-adox.md)   
+ [PROCEDURE, objet (ADOX)](./procedure-object-adox.md)   
+ [Procedures, collection (ADOX)](./procedures-collection-adox.md)   
+ [View, objet (ADOX)](./view-object-adox.md)   
+ [Views, collection (ADOX)](./views-collection-adox.md)

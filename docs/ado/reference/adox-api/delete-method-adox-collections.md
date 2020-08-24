@@ -31,12 +31,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7345337ab35f4154fd9dc53f749e04dba96dad48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f239978dc9d71af81c74de452fefe16efe95d1bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440111"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770628"
 ---
 # <a name="delete-method-adox-collections"></a>Delete, méthode (collections ADOX)
 Supprime un objet d’une collection.  
@@ -55,27 +55,27 @@ Collection.Delete Name
 ## <a name="remarks"></a>Notes  
  Une erreur se produit si le *nom* n’existe pas dans la collection.  
   
- Pour les collections de [tables](../../../ado/reference/adox-api/tables-collection-adox.md) et d' [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) , une erreur se produit si le fournisseur ne prend pas en charge la suppression de tables ou d’utilisateurs, respectivement. Pour les collections de [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) et de [vues](../../../ado/reference/adox-api/views-collection-adox.md) , la **suppression** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  
+ Pour les collections de [tables](./tables-collection-adox.md) et d' [utilisateurs](./users-collection-adox.md) , une erreur se produit si le fournisseur ne prend pas en charge la suppression de tables ou d’utilisateurs, respectivement. Pour les collections de [procédures](./procedures-collection-adox.md) et de [vues](./views-collection-adox.md) , la **suppression** échoue si le fournisseur ne prend pas en charge les commandes persistantes.  
   
 ## <a name="applies-to"></a>S'applique à  
 
 :::row:::
     :::column:::
-        [Columns, collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
-        [Groups, collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
-        [Indexes, collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Columns, collection (ADOX)](./columns-collection-adox.md)  
+        [Groups, collection (ADOX)](./groups-collection-adox.md)  
+        [Indexes, collection (ADOX)](./indexes-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Keys, collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
-        [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
-        [Tables, collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Keys, collection (ADOX)](./keys-collection-adox.md)  
+        [Procedures, collection (ADOX)](./procedures-collection-adox.md)  
+        [Tables, collection (ADOX)](./tables-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
-        [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+        [Users, collection (ADOX)](./users-collection-adox.md)  
+        [Views, collection (ADOX)](./views-collection-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [Procedures, exemple de méthode Delete (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Views, exemple de méthode Delete (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)
+ [Procedures, exemple de méthode Delete (VB)](./procedures-delete-method-example-vb.md)   
+ [Views, exemple de méthode Delete (VB)](./views-delete-method-example-vb.md)

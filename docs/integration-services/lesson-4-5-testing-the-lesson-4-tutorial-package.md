@@ -1,4 +1,5 @@
 ---
+description: 'Étape 5 : Tester le package du tutoriel de la leçon 4'
 title: 'Étape 5 : Tester le package du tutoriel de la leçon 4 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/07/2019
@@ -10,12 +11,12 @@ ms.topic: tutorial
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c209aea67a04d7f602ec2015bdb3e7535c9bc8dd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: ccd458d09c43a97693c620b9498ad1d593751905
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916863"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88457130"
 ---
 # <a name="lesson-4-5-test-the-lesson-4-package"></a>Leçon 4-5 : Tester le package de la leçon 4
 
@@ -49,7 +50,7 @@ Avant de tester le package, vérifiez que le flux de contrôle et le flux de don
   
 ## <a name="view-the-contents-of-the-erroroutputtxt-file"></a>Voir le contenu du fichier ErrorOutput.txt  
   
-Dans le Bloc-notes ou un autre éditeur de texte, ouvrez le fichier **ErrorOutput.txt**. L'ordre par défaut des colonnes est le suivant : AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
+Dans le Bloc-notes ou un autre éditeur de texte, ouvrez le fichier **ErrorOutput.txt**. L'ordre par défaut des colonnes est le suivant : AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
  
 Toutes les lignes du fichier contiennent la valeur CurrencyID non appariée « BAD », la valeur ErrorCode -1071607778, la valeur ErrorColumn 0 et la valeur ErrorDescription dévoilant le message « Aucune correspondance de ligne trouvée au cours de la recherche ». La valeur d’ErrorColumn est 0, car l’erreur n’est pas spécifique à une colonne, mais liée à l’échec de l’opération de recherche.
   

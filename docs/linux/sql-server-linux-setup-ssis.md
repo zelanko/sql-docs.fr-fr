@@ -1,6 +1,6 @@
 ---
 title: Installer SQL Server Integration Services sur Linux
-description: Cet article explique comment installer SQL Server Integration Services (SSIS) sur Linux.
+description: Cet article explique comment installer SQL Server Integration Services (SSIS) sur Linux. Vous pouvez installer SSIS sur Ubuntu 16.04 et Red Hat Enterprise Linux.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 681ba70f94819d9e7d4f129cfaf409a968e80bca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a8ec33ad6d3c2bfc9c8f3adab2acad2fdb74ce0d
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882522"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088769"
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Installer SQL Server Integration Services (SSIS) sur Linux
 
@@ -217,7 +217,7 @@ sudo SSIS_PID=Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup
 | Variable d’environnement | Description |
 |---|---|
 | ACCEPT_EULA | Accepte les termes du contrat de licence SQL Server lorsqu’il est défini sur n’importe quelle valeur comme « Y ».|
-| SSIS_PID | Définit l’édition SQL Server ou la clé de produit (Product key). Les valeurs possibles sont les suivantes :<ul><li>Évaluation</li><li>Développeur</li><li>Express</li><li>Web</li><li>standard</li><li>Entreprise</li><li>Une clé de produit (Product Key)</li></ul>Si vous spécifiez une clé de produit, celle-ci doit se présenter sous la forme *#####* - *#####* - *#####* - *#####* - *#####* , où *#* est une lettre ou un nombre.  |
+| SSIS_PID | Définit l’édition SQL Server ou la clé de produit (Product key). Les valeurs possibles sont les suivantes :<ul><li>Évaluation</li><li>Développeur</li><li>Express</li><li>Web</li><li>Standard</li><li>Enterprise</li><li>Une clé de produit (Product Key)</li></ul>Si vous spécifiez une clé de produit, celle-ci doit se présenter sous la forme *#####* - *#####* - *#####* - *#####* - *#####* , où *#* est une lettre ou un nombre.  |
 | | |
 
 ## <a name="next-steps"></a>Étapes suivantes

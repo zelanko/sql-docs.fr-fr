@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c37f18f8bcaa3d0c1f78b3ddb8d0c6413fe7277
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3804925eb893b656d555419ab81753ff464f41bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452391"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758769"
 ---
 # <a name="working-with-multidimensional-data"></a>Utilisation de données multidimensionnelles
 Un jeu de *cellules* est le résultat d’une requête sur des données multidimensionnelles. Il se compose d’une collection d’axes, généralement pas plus de quatre axes et en général seulement de deux ou trois. Un *axe* est une collection de membres d’une ou de plusieurs dimensions, qui est utilisée pour rechercher ou filtrer des valeurs spécifiques dans un cube.  
@@ -29,7 +29,7 @@ Un jeu de *cellules* est le résultat d’une requête sur des données multidim
   
  Une *cellule* est un objet positionné à l’intersection des coordonnées de l’axe. Plusieurs éléments d’information sont associés à chaque cellule, y compris les données elles-mêmes, une chaîne mise en forme (forme affichable des données de cellule) et la valeur ordinale de la cellule. (Chaque cellule est une valeur ordinale unique dans l’CellSet. La valeur ordinale de la première cellule de l’CellSet est égale à zéro, tandis que la cellule la plus à gauche de la deuxième ligne d’un CellSet avec huit colonnes a une valeur ordinale de huit.  
   
- Par exemple, un cube présente les six dimensions suivantes (Notez que ce schéma de cube diffère légèrement de l’exemple donné dans [vue d’ensemble des schémas et des données multidimensionnels](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)) :  
+ Par exemple, un cube présente les six dimensions suivantes (Notez que ce schéma de cube diffère légèrement de l’exemple donné dans [vue d’ensemble des schémas et des données multidimensionnels](./overview-of-multidimensional-schemas-and-data.md)) :  
   
 -   Salesperson  
   
@@ -41,7 +41,7 @@ Un jeu de *cellules* est le résultat d’une requête sur des données multidim
   
 -   Measures-Sales, PercentChange, BudgetedSales  
   
--   Produits  
+-   Products  
   
  L’ensemble de cellules suivant représente les ventes de 1991 pour tous les produits :  
   
@@ -76,11 +76,11 @@ Un jeu de *cellules* est le résultat d’une requête sur des données multidim
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Les cellules, les cellules, les axes et les positions sont tous représentés dans ADO MD par des objets [correspondants : ensemble de cellules,](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) [cellule](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [axe](../../../ado/reference/ado-md-api/axis-object-ado-md.md)et [position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Les cellules, les cellules, les axes et les positions sont tous représentés dans ADO MD par des objets [correspondants : ensemble de cellules,](../../reference/ado-md-api/cellset-object-ado-md.md) [cellule](../../reference/ado-md-api/cell-object-ado-md.md), [axe](../../reference/ado-md-api/axis-object-ado-md.md)et [position](../../reference/ado-md-api/position-object-ado-md.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèle objet ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (multidimensionnel) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Vue d’ensemble des schémas et des données multidimensionnels](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Programmation avec ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Utilisation d’ADO avec ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+ [Modèle objet ADO MD](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (multidimensionnel) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Vue d’ensemble des schémas et des données multidimensionnels](./overview-of-multidimensional-schemas-and-data.md)   
+ [Programmation avec ADO MD](./programming-with-ado-md.md)   
+ [Utilisation d’ADO avec ADO MD](./using-ado-with-ado-md.md)

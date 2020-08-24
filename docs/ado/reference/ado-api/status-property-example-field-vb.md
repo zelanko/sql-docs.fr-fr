@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 66fab5cee49adf89bffee79f5b51b13780d5d982
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 148deaa16746bd964e4bed07ed673fea0ec4cb6a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441941"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777288"
 ---
 # <a name="status-property-example-field-vb"></a>Status, exemple de propriété (objet Field) (VB)
-L’exemple suivant ouvre un document à partir d’un dossier en lecture/écriture à l’aide du [fournisseur de publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La propriété [Status](../../../ado/reference/ado-api/status-property-ado-field.md) d’un objet [Field](../../../ado/reference/ado-api/field-object.md) de l' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) est d’abord définie sur **AdFieldPendingInsert**, puis mise à jour vers **adFieldOK**.  
+L’exemple suivant ouvre un document à partir d’un dossier en lecture/écriture à l’aide du [fournisseur de publication Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). La propriété [Status](./status-property-ado-field.md) d’un objet [Field](./field-object.md) de l' [enregistrement](./record-object-ado.md) est d’abord définie sur **AdFieldPendingInsert**, puis mise à jour vers **adFieldOK**.  
   
 ```  
 'BeginStatusFieldVB  
@@ -86,13 +86,13 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- Le code suivant supprime un **champ** d’un **enregistrement** ouvert sur un document en lecture seule. L' **État** est défini sur **adFieldPendingDelete**. Lors de la [mise à jour](../../../ado/reference/ado-api/update-method.md), la suppression échoue et l' **État** est **adFieldPendingDelete** plus **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) efface le paramètre d' **État** en attente.  
+ Le code suivant supprime un **champ** d’un **enregistrement** ouvert sur un document en lecture seule. L' **État** est défini sur **adFieldPendingDelete**. Lors de la [mise à jour](./update-method.md), la suppression échoue et l' **État** est **adFieldPendingDelete** plus **adFieldPermissionDenied**. [CancelUpdate](./cancelupdate-method-ado.md) efface le paramètre d' **État** en attente.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Field, objet](../../../ado/reference/ado-api/field-object.md)   
- [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Status, propriété (objet Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Field, objet](./field-object.md)   
+ [Record, objet (ADO)](./record-object-ado.md)   
+ [Status, propriété (objet Field ADO)](./status-property-ado-field.md)

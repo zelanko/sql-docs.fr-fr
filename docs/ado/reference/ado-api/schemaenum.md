@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4356ad974c45e16cec32d45fa2ed6aeb42209f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 929421784aabdcd3e414d6005fc3d48ade2f68e2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442171"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777538"
 ---
 # <a name="schemaenum"></a>SchemaEnum
-Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) récupère.  
+Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [OpenSchema](./openschema-method.md) récupère.  
   
 ## <a name="remarks"></a>Notes  
- Vous trouverez des informations supplémentaires sur la fonction et les colonnes retournées pour chaque constante ADO dans les rubriques de l' [annexe B : ensembles de lignes de schéma](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de la OLE DB Guide de référence du programmeur. Le nom de chaque rubrique est indiqué entre parenthèses dans la section Description du tableau suivant.  
+ Vous trouverez des informations supplémentaires sur la fonction et les colonnes retournées pour chaque constante ADO dans les rubriques de l' [annexe B : ensembles de lignes de schéma](/previous-versions/windows/desktop/ms712921(v=vs.85)) de la OLE DB Guide de référence du programmeur. Le nom de chaque rubrique est indiqué entre parenthèses dans la section Description du tableau suivant.  
   
- Vous trouverez des informations supplémentaires sur la fonction et les colonnes retournées pour chaque ADO MD constante dans les rubriques dans [OLE DB pour les objets OLAP et les ensembles de lignes de schéma](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) dans le OLE DB pour la documentation sur le traitement analytique en ligne (OLAP). Le nom de chaque rubrique est indiqué entre parenthèses dans la colonne Description du tableau suivant.  
+ Vous trouverez des informations supplémentaires sur la fonction et les colonnes retournées pour chaque ADO MD constante dans les rubriques dans [OLE DB pour les objets OLAP et les ensembles de lignes de schéma](/previous-versions/windows/desktop/ms723056(v=vs.85)) dans le OLE DB pour la documentation sur le traitement analytique en ligne (OLAP). Le nom de chaque rubrique est indiqué entre parenthèses dans la colonne Description du tableau suivant.  
   
- Vous pouvez convertir les types de données des colonnes de la documentation OLE DB en types de données ADO en faisant référence à la colonne Description de la rubrique [DATATYPEENUM](../../../ado/reference/ado-api/datatypeenum.md) ADO. Par exemple, un OLE DB type de données de **DBTYPE_WSTR** est équivalent à un type de données ADO **adWChar**.  
+ Vous pouvez convertir les types de données des colonnes de la documentation OLE DB en types de données ADO en faisant référence à la colonne Description de la rubrique [DATATYPEENUM](./datatypeenum.md) ADO. Par exemple, un OLE DB type de données de **DBTYPE_WSTR** est équivalent à un type de données ADO **adWChar**.  
   
- ADO génère des résultats de type schéma pour les constantes, **adSchemaDBInfoKeywords** et **adSchemaDBInfoLiterals**. ADO crée un **jeu d’enregistrements**, puis remplit chaque ligne avec les valeurs retournées respectivement par les méthodes **IDBInfo :: GetKeywords** et **IDBInfo :: GetLiteralInfo** . Vous trouverez des informations supplémentaires sur ces méthodes dans la section [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) du Guide de référence du programmeur OLE DB.  
+ ADO génère des résultats de type schéma pour les constantes, **adSchemaDBInfoKeywords** et **adSchemaDBInfoLiterals**. ADO crée un **jeu d’enregistrements**, puis remplit chaque ligne avec les valeurs retournées respectivement par les méthodes **IDBInfo :: GetKeywords** et **IDBInfo :: GetLiteralInfo** . Vous trouverez des informations supplémentaires sur ces méthodes dans la section [IDBInfo](/previous-versions/windows/desktop/ms713663(v=vs.85)) du Guide de référence du programmeur OLE DB.  
   
-|Constante|Valeur|Description|Colonnes de contrainte|  
+|Constant|Valeur|Description|Colonnes de contrainte|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Retourne les assertions définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes assertions)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogue)|CATALOG_NAME|  
@@ -82,7 +82,7 @@ Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [Ope
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums. Schema. assertions|  
 |AdoEnums. Schema. catalogues|  
@@ -127,4 +127,4 @@ Spécifie le type de **jeu d’enregistrements** de schéma que la méthode [Ope
 |AdoEnums. Schema. VIEWTABLEUSAGE|  
   
 ## <a name="applies-to"></a>S'applique à  
- [OpenSchema, méthode](../../../ado/reference/ado-api/openschema-method.md)
+ [OpenSchema, méthode](./openschema-method.md)

@@ -19,12 +19,12 @@ ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433856
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b1505d27dfa186999d1730eece740b711d87ae0e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 40d7c10127efa14000a3f91f2cf003bf52d95b2c
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85659662"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200966"
 ---
 # <a name="compatibility-certification"></a>Certification de compatibilité
 
@@ -100,6 +100,7 @@ Pour mettre à niveau le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] vers la 
 >
 > - La nouvelle version (cible) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur du matériel comparable à celui sur lequel la précédente version (source) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécutait.
 > - Le même [niveau de compatibilité de base de données pris en charge](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) est utilisé sur la version cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sur la version source de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> - Les **mêmes** base de données et charge de travail sont utilisées à la fois au niveau du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible et du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]source. 
 >
 > Toute régression de la forme du plan de requête (par rapport à la version source de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) qui se produit dans les conditions précédentes sera traitée. Contactez le Support technique Microsoft si c’est le cas.
   

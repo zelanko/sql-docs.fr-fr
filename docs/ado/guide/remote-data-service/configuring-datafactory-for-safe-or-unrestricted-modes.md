@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0b01eada84095b94740319a6d63ed6b0066425d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ffd9c1b82225a131722cdaf384c4bd5662b5322f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452301"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758389"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>Configuration de DataFactory en mode sans échec ou unrestricted
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Par défaut, ADO est installé avec une configuration [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) « sécurisée ». Le mode sans échec pour les composants serveur RDS signifie que les conditions suivantes sont remplies :  
+ Par défaut, ADO est installé avec une configuration [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) « sécurisée ». Le mode sans échec pour les composants serveur RDS signifie que les conditions suivantes sont remplies :  
   
 1.  Le gestionnaire est requis avec RDSServer. DataFactory (cela est imposé par un paramètre de clé de registre).  
   
@@ -32,15 +32,12 @@ ms.locfileid: "88452301"
   
 3.  Msdfmap.ini fichier est installé dans le répertoire Windows. Vous devez configurer ce fichier en fonction de vos besoins, avant d’utiliser RDS en mode à trois niveaux.  
   
- Si vous le souhaitez, vous pouvez configurer une installation non restreinte de **DataFactory** . **DataFactory** peut être utilisé directement sans le gestionnaire personnalisé. Les utilisateurs peuvent toujours utiliser un gestionnaire personnalisé en modifiant les chaînes de connexion, mais cela n’est pas obligatoire. Pour plus d’informations sur les implications de l’utilisation de l’objet **RDSServer. DataFactory** , consultez [sécurisation des applications RDS](../../../ado/guide/remote-data-service/securing-rds-applications.md).  
+ Si vous le souhaitez, vous pouvez configurer une installation non restreinte de **DataFactory** . **DataFactory** peut être utilisé directement sans le gestionnaire personnalisé. Les utilisateurs peuvent toujours utiliser un gestionnaire personnalisé en modifiant les chaînes de connexion, mais cela n’est pas obligatoire. Pour plus d’informations sur les implications de l’utilisation de l’objet **RDSServer. DataFactory** , consultez [sécurisation des applications RDS](./securing-rds-applications.md).  
   
  Le fichier de Registre handsafe. reg a été fourni pour configurer les entrées de Registre du gestionnaire pour une configuration sécurisée. Pour qu’elle s’exécute en mode sans échec, exécutez handsafe. reg.  
   
  Après l’exécution de handsafe. reg, vous devez arrêter et redémarrer le service de publication World Wide Web sur le serveur Web en tapant les commandes suivantes dans une fenêtre d’invite de commandes : « NET STOP W3SVC » et « NET START W3SVC ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Concepts de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
+ [Personnalisation de DataFactory](./datafactory-customization.md)   
+ [Concepts de base de RDS](./rds-fundamentals.md)

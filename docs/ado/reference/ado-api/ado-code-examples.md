@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8e9550a0b410964d88d0755832350a9346048b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3cb075c1a71f548515543d4c408760c5b4fe224
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451481"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760129"
 ---
 # <a name="ado-code-examples"></a>Exemples de code ADO
 Utilisez les exemples de code suivants pour apprendre à utiliser les objets, les méthodes, les propriétés et les événements ADO.  
@@ -27,10 +27,10 @@ Utilisez les exemples de code suivants pour apprendre à utiliser les objets, le
 > [!NOTE]
 >  Collez l’intégralité de l’exemple de code dans votre éditeur de code. L’exemple peut ne pas s’exécuter correctement si des exemples partiels sont utilisés ou si la mise en forme des paragraphes est perdue.  
   
--   [Exemples de code ADO dans Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)  
+-   [Exemples de code ADO dans Visual Basic](./ado-code-examples-in-visual-basic.md)  
   
--   [Exemples de code ADO dans VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)  
+-   [Exemples de code ADO dans VBScript](./ado-code-examples-vbscript.md)  
   
--   [Exemples de code ADO dans Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)  
+-   [Exemples de code ADO dans Visual C++](./ado-code-examples-in-visual-c.md)  
   
--   [Exemples de code ADO en JScript](../../../ado/reference/ado-api/ado-code-examples-in-microsoft-jscript.md)
+-   [Exemples de code ADO en JScript](./ado-code-examples-in-microsoft-jscript.md)

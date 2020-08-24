@@ -1,7 +1,7 @@
 ---
 title: Installation sans assistance pour SQL Server sur RHEL
 titleSuffix: SQL Server
-description: Exemple de script SQL Server - Installation sans assistance sur RHEL (Red Hat Enterprise Linux)
+description: Utilisez un exemple de script Bash pour installer SQL Server 2017 sur Red Hat Enterprise Linux (RHEL) sans intervention de l’utilisateur.
 ms.custom: seo-lt-2019
 author: VanMSFT
 ms.author: vanto
@@ -9,12 +9,12 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a5681a7700e77d0cc5fd4afb7267a21f298c1f87
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: fda9b1459cf7cd0b15252cfb0e51e0d3ad4e9374
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894132"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88089019"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Exemple : Script d'installation de SQL Server sans assistance pour Red Hat Enterprise Linux
 

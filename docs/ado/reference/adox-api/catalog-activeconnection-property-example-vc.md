@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37b50500b66c4f9e4bdca19facf27e290ac242c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d5de9f7ed0956fb2983e3bc300f30028b876cb7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440391"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771238"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Exemple de propriété ActiveConnection de l’objet Catalog (VC++)
-La définition de la propriété [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) sur une connexion ouverte valide « ouvre » le catalogue. À partir d’un catalogue ouvert, vous pouvez accéder aux objets de schéma contenus dans ce catalogue.  
+La définition de la propriété [ActiveConnection](./activeconnection-property-adox.md) sur une connexion ouverte valide « ouvre » le catalogue. À partir d’un catalogue ouvert, vous pouvez accéder aux objets de schéma contenus dans ce catalogue.  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  
@@ -113,4 +113,4 @@ void OpenConnectionWithStringX() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ActiveConnection, propriété (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [ActiveConnection, propriété (ADOX)](./activeconnection-property-adox.md)

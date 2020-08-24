@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d1ff4bf67f103b613cb925a590b4d00e54482a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4097bcdeb5460776017ce7a120ff43aa7a4420f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451591"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760243"
 ---
 # <a name="adcprop_updateresync_enum"></a>ADCPROP_UPDATERESYNC_ENUM
-Spécifie si la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) est suivie d’une opération de méthode de [resynchronisation](../../../ado/reference/ado-api/resync-method.md) implicite et, le cas échéant, de l’étendue de cette opération.  
+Spécifie si la méthode [UpdateBatch](./updatebatch-method.md) est suivie d’une opération de méthode de [resynchronisation](./resync-method.md) implicite et, le cas échéant, de l’étendue de cette opération.  
   
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
@@ -36,4 +36,4 @@ Spécifie si la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatc
 |**adResyncUpdates**|4|Appelle **Resync** pour toutes les lignes mises à jour avec succès.|  
   
 ## <a name="applies-to"></a>S'applique à  
- [Update Resync, propriété dynamique (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)
+ [Update Resync, propriété dynamique (ADO)](./update-resync-property-dynamic-ado.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f5a1058b23c92160b039d2cb439d429b46bfcb98
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7baed4eff98c8286c1c84bd346826b4c49e4fa75
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452091"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759559"
 ---
 # <a name="rds-scenario"></a>Scénario RDS
 > [!IMPORTANT]
@@ -50,22 +50,20 @@ ms.locfileid: "88452091"
   
  Ce scénario contient les rubriques suivantes.  
   
--   [Configuration système exigée pour l’application Carnet d’adresses](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)  
+-   [Configuration système exigée pour l’application Carnet d’adresses](./system-requirements-for-the-address-book-application.md)  
   
--   [Exécution du script SQL Carnet d’adresses](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)  
+-   [Exécution du script SQL Carnet d’adresses](./running-the-address-book-sql-script.md)  
   
--   [Exécution de l’exemple d’application Carnet d’adresses](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)  
+-   [Exécution de l’exemple d’application Carnet d’adresses](./running-the-address-book-sample-application.md)  
   
--   [Objet de liaison de données de l’application Carnet d’adresses](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)  
+-   [Objet de liaison de données de l’application Carnet d’adresses](./address-book-data-binding-object.md)  
   
--   [Boutons de commande de l’application Carnet d’adresses](../../../ado/guide/remote-data-service/address-book-command-buttons.md)  
+-   [Boutons de commande de l’application Carnet d’adresses](./address-book-command-buttons.md)  
   
--   [Boutons de navigation de l’application Carnet d’adresses](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
+-   [Boutons de navigation de l’application Carnet d’adresses](./address-book-navigation-buttons.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration système requise pour l’application Carnet d’adresses](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Notions de base sur RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [Tutoriel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [Configuration système requise pour l’application Carnet d’adresses](./system-requirements-for-the-address-book-application.md)   
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Notions de base sur RDS](./rds-fundamentals.md)   
+ [Tutoriel RDS](./rds-tutorial.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3d1067f47d50b344731c0f270671861f381a3242
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7907572a282835e8d56150dbd034d530dd646b8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440431"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771328"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes, exemple de propriété (VB)
-Cet exemple illustre la propriété [attributes](../../../ado/reference/adox-api/attributes-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md). Sa définition sur **adColNullable** permet à l’utilisateur de définir la valeur d’un [champ](../../../ado/reference/ado-api/field-object.md) du [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sur une chaîne vide. Dans ce cas, l’utilisateur peut faire la distinction entre un enregistrement où les données ne sont pas connues et un enregistrement où les données ne s’appliquent pas.  
+Cet exemple illustre la propriété [attributes](./attributes-property-adox.md) d’une [colonne](./column-object-adox.md). Sa définition sur **adColNullable** permet à l’utilisateur de définir la valeur d’un [champ](../ado-api/field-object.md) du [Recordset](../ado-api/recordset-object-ado.md) sur une chaîne vide. Dans ce cas, l’utilisateur peut faire la distinction entre un enregistrement où les données ne sont pas connues et un enregistrement où les données ne s’appliquent pas.  
   
 ```  
 ' BeginAttributesVB  
@@ -127,6 +127,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributes, propriété (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Attributes, propriété (ADOX)](./attributes-property-adox.md)   
+ [Catalog, objet (ADOX)](./catalog-object-adox.md)   
+ [Column, objet (ADOX)](./column-object-adox.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19f8f15f35cae97d4c6882df90889513ce0eb430
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c403ed5112bf2957b0bf09028091a05d54d16aa3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440191"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770758"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated et DateModified, exemples de propriétés (VC++)
-Cet exemple illustre les propriétés [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) et [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) en ajoutant une nouvelle [colonne](../../../ado/reference/adox-api/column-object-adox.md) à une [table](../../../ado/reference/adox-api/table-object-adox.md) existante et en créant une nouvelle **table**. La procédure DateOutput est requise pour que cet exemple s’exécute.  
+Cet exemple illustre les propriétés [DateCreated](./datecreated-property-adox.md) et [DateModified](./datemodified-property-adox.md) en ajoutant une nouvelle [colonne](./column-object-adox.md) à une [table](./table-object-adox.md) existante et en créant une nouvelle **table**. La procédure DateOutput est requise pour que cet exemple s’exécute.  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -116,7 +116,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [DateCreated, propriété (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified, propriété (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Column, objet (ADOX)](./column-object-adox.md)   
+ [DateCreated, propriété (ADOX)](./datecreated-property-adox.md)   
+ [DateModified, propriété (ADOX)](./datemodified-property-adox.md)   
+ [Table, objet (ADOX)](./table-object-adox.md)

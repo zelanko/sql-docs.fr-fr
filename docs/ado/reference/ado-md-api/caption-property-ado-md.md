@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb766bddb637133dfb46af53187c8c34f99c2660
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d30b4fdcea6d8334e94d8b02ef8e060e5060d69
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441291"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778358"
 ---
 # <a name="caption-property-ado-md"></a>Caption, propriété (ADO MD)
-Indique la légende de texte à utiliser lors de l’affichage d’un objet de [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) ou de [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) .  
+Indique la légende de texte à utiliser lors de l’affichage d’un objet de [niveau](./level-object-ado-md.md) ou de [membre](./member-object-ado-md.md) .  
   
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne une **chaîne** et est en lecture seule.  
@@ -35,13 +35,13 @@ Indique la légende de texte à utiliser lors de l’affichage d’un objet de [
 
 :::row:::
     :::column:::
-        [Level, objet (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+        [Level, objet (ADO MD)](./level-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Member, objet (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Member, objet (ADO MD)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [CellSet, exemple (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Description, propriété (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)
+ [CellSet, exemple (VB)](./cellset-example-vb.md)   
+ [Description, propriété (ADO MD)](./description-property-ado-md.md)

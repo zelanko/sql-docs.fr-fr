@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 411bada2d562322a14c52965a1b86ed45ef45420
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d662516dd705ede8bd62f9a92866bd569120807f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440101"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770568"
 ---
 # <a name="deleterule-property-example-vb"></a>DeleteRule, exemple de propriété (VB)
-Cet exemple illustre la propriété [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) d’un objet [Key](../../../ado/reference/adox-api/key-object-adox.md) . Le code ajoute une nouvelle [table](../../../ado/reference/adox-api/table-object-adox.md) , puis définit une nouvelle clé primaire, en affectant à **DeleteRule** la valeur **adRICascade**.  
+Cet exemple illustre la propriété [DeleteRule](./deleterule-property-adox.md) d’un objet [Key](./key-object-adox.md) . Le code ajoute une nouvelle [table](./table-object-adox.md) , puis définit une nouvelle clé primaire, en affectant à **DeleteRule** la valeur **adRICascade**.  
   
 ```  
 ' BeginDeleteRuleVB  
@@ -86,5 +86,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DeleteRule, propriété (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
- [Key, objet (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [DeleteRule, propriété (ADOX)](./deleterule-property-adox.md)   
+ [Key, objet (ADOX)](./key-object-adox.md)

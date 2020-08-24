@@ -1,7 +1,7 @@
 ---
 title: 'Accéder aux données externes : Types génériques ODBC - PolyBase'
 description: PolyBase dans SQL Server vous permet de vous connecter à des sources de données compatibles par le biais du connecteur ODBC. Installez le pilote ODBC et créez des tables externes.
-ms.date: 02/19/2020
+ms.date: 07/16/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
 ms.technology: polybase
@@ -10,33 +10,33 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: c8bf01e39fb68d2315df2a441f7b2b4fefa81872
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 51dbde0144f26171994638d50659192ca31400ee
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246517"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216690"
 ---
 # <a name="configure-polybase-to-access-external-data-with-odbc-generic-types"></a>Configurer PolyBase pour accéder à des données externes avec des types génériques ODBC
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-PolyBase dans SQL Server 2019 vous permet de vous connecter à des sources de données compatibles avec ODBC par le biais du connecteur ODBC.
+PolyBase dans SQL Server 2019 vous permet de vous connecter à des sources de données compatibles avec ODBC à l’aide du connecteur ODBC.
 
-Cet article fournit des exemples d’utilisation d’un pilote ODBC. Contactez votre fournisseur ODBC pour obtenir des exemples spécifiques. Pour déterminer les options de chaîne de connexion appropriées, référez-vous à la documentation du pilote ODBC relative à la source de données. Les exemples présentés dans cet article peuvent ne s’appliquer à aucun pilote ODBC spécifique.
+Cet article explique comment créer la configuration de la connectivité à l’aide d’une source de données ODBC. L’aide fournie utilise un pilote ODBC spécifique comme exemple. Contactez votre fournisseur ODBC pour obtenir des exemples spécifiques. Pour déterminer les options de chaîne de connexion appropriées, référez-vous à la documentation du pilote ODBC relative à votre source de données. Les exemples présentés dans cet article peuvent ne s’appliquer à aucun pilote ODBC spécifique.
 
 ## <a name="prerequisites"></a>Prérequis
 
 >[!NOTE]
 >Cette fonctionnalité nécessite SQL Server sur Windows.
 
-* [Installation de PolyBase](polybase-installation.md).
+* PolyBase doit être installé et activé pour votre [installation de PolyBase](polybase-installation.md) dans l’instance SQL Server.
 
 * La [clé principale](../../t-sql/statements/create-master-key-transact-sql.md) doit être créée avant les informations d’identification incluses dans l’étendue de la base de données.
 
 ## <a name="install-the-odbc-driver"></a>Installer le pilote ODBC
 
-Commencez par télécharger et installer le pilote ODBC de la source de données à laquelle vous souhaitez vous connecter sur chacun des nœuds PolyBase. Une fois que le pilote est correctement installé, vous pouvez voir et tester le pilote à partir de l’**Administrateur de sources de données ODBC**.
+Téléchargez et installez le pilote ODBC de la source de données à laquelle vous souhaitez vous connecter sur chacun des nœuds PolyBase. Une fois que le pilote est correctement installé, vous pouvez voir et tester le pilote à partir de l’**Administrateur de sources de données ODBC**.
 
 ![Groupes de scale-out PolyBase](../../relational-databases/polybase/media/polybase-odbc-admin.png) 
 
@@ -45,15 +45,14 @@ Dans l’exemple ci-dessus, le nom du pilote est entouré en rouge. Utilisez ce 
 > [!IMPORTANT]
 > Afin d’améliorer les performances des requêtes, activez le regroupement de connexions. Cette opération peut être effectuée à partir de l’**Administrateur de sources de données ODBC**.
 
-## <a name="create-an-external-table"></a>Créer une table externe
+## <a name="create-dependent-objects-in-sql-server"></a>Créer des objets dépendants dans SQL Server
 
-Pour interroger les données d’une source de données ODBC, vous devez créer des tables externes afin de référencer les données externes. Cette section fournit un exemple de code pour créer des tables externes.
+Pour utiliser la source de données ODBC, vous devez d’abord créer quelques objets pour finaliser la configuration.
 
 Les commandes Transact-SQL suivantes sont utilisées dans cette section :
 
 * [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
 * [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
-* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
 1. Créez des informations d’identification incluses dans l’étendue de la base de données pour accéder à la source ODBC.
 
@@ -94,18 +93,44 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
     PUSHDOWN = ON,
     CREDENTIAL = credential_name );
     ```
+    
+## <a name="create-an-external-table"></a>Créer une table externe
+
+Une fois que vous avez créé les objets dépendants, vous pouvez créer des tables externes à l’aide de T-SQL. 
+
+Les commandes Transact-SQL suivantes sont utilisées dans cette section :
+* [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md)
+* [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
+
+1. Créez une ou plusieurs tables externes.
+
+   Créez une table externe. Vous devrez référencer la source de données externe créée ci-dessus à l’aide de l’argument `DATA_SOURCE` et spécifier la table source comme `LOCATION`. Vous n’avez pas besoin de référencer toutes les colonnes, mais vous devez vous assurer que les types sont correctement mappés.  
+
+   ```sql
+     CREATE EXTERNAL TABLE <your_table_name>
+     (
+     <col1_name>     DECIMAL(38) NOT NULL,
+     <col2_name>     DECIMAL(38) NOT NULL,
+     <col3_name>     CHAR COLLATE Latin1_General_BIN NOT NULL
+     )
+     WITH (
+     LOCATION='<sap_table_name>',
+     DATA_SOURCE= <external_data_source_name>
+     )
+     ;
+   ```
+
+   > [!NOTE]
+   > Remarque : vous pouvez réutiliser les objets dépendants pour toutes les tables externes à l’aide de cette source de données externe.
 
 1. **Facultatif :** Créez des statistiques sur une table externe.
 
     Pour des performances de requêtes optimales, nous vous recommandons de créer des statistiques sur les colonnes de table externe, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
 
     ```sql
-    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+    CREATE STATISTICS statistics_name ON contact (FirstName) WITH FULLSCAN; 
     ```
-
->[!IMPORTANT]
->Une fois que vous avez créé une source de données externes, utilisez la commande [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) afin de créer une table requêtable sur cette source.
-
+    
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour en savoir plus sur PolyBase, consultez [Vue d’ensemble de SQL Server PolyBase](polybase-guide.md).

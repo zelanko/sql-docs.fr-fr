@@ -1,6 +1,6 @@
 ---
 title: Installer la recherche en texte intégral SQL Server sur Linux
-description: Cet article décrit comment installer la recherche en texte intégral SQL Server sur Linux.
+description: Découvrez comment installer la recherche en texte intégral SQL Server sur Linux. La recherche en texte intégral vous permet d'exécuter des requêtes en texte intégral sur des données de caractères dans des tables SQL Server.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 781730767836eab18f613c9c1e99e0279635f7b3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 054de1a7f4213a7a8c23ff44bab021d2b64c9f35
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895278"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088779"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Installer la recherche en texte intégral SQL Server sur Linux
 
@@ -86,7 +86,7 @@ Si vous avez besoin d’une installation hors connexion, recherchez le télécha
 
 La recherche en texte intégral utilise des [séparateurs de mots](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) qui déterminent comment identifier des mots individuels en fonction de la langue. Vous pouvez obtenir la liste des séparateurs de mots inscrits en interrogeant l'affichage du catalogue **sys.fulltext_languages**. Les séparateurs de mots pour les langues suivantes sont installés avec SQL Server :
 
-| Langage | ID de langue |
+| Language | ID de langue |
 |---|---|
 | Neutre | 0 |
 | Arabe | 1025 |
@@ -146,7 +146,7 @@ La recherche en texte intégral utilise des [séparateurs de mots](../relational
 
 La recherche en texte intégral fonctionne également avec du texte stocké dans des fichiers binaires. Mais dans ce cas, un filtre installé est requis pour traiter le fichier. Pour plus d’informations sur les filtres, consultez [Configurer et gérer les filtres pour la recherche](../relational-databases/search/configure-and-manage-filters-for-search.md).
 
-Vous pouvez consulter une liste des filtres installés en appelant **sp_help_fulltext_system_components ’Filter'** . Pour SQL Server, les filtres suivants sont installés :
+Vous pouvez consulter une liste des filtres installés en appelant **sp_help_fulltext_system_components ’Filter'**. Pour SQL Server, les filtres suivants sont installés :
 
 | Nom du composant | ID de classe | Version |
 |---|---|---|

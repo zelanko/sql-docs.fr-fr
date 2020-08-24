@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b8a69e5ad4f31891ec93e84e835a6c0d1ffdcdce
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95755659875371a04511b1e48b4967ad07d6b93b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451641"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760296"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize et DefinedSize, exemple de propriétés (VC + +)
-Cet exemple utilise les propriétés [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) et [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) pour afficher la taille définie et la taille réelle d’un champ.  
+Cet exemple utilise les propriétés [ActualSize](./actualsize-property-ado.md) et [DefinedSize](./definedsize-property.md) pour afficher la taille définie et la taille réelle d’un champ.  
   
 ## <a name="example"></a>Exemple  
   
@@ -148,5 +148,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **Taille définie : 40**  
 **Taille réelle : 8**   
 ## <a name="see-also"></a>Voir aussi  
- [ActualSize, propriété (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [DefinedSize, propriété](../../../ado/reference/ado-api/definedsize-property.md)
+ [ActualSize, propriété (ADO)](./actualsize-property-ado.md)   
+ [DefinedSize, propriété](./definedsize-property.md)

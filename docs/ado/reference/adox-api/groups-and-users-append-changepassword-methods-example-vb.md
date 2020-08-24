@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c9426757-9cdd-4a95-b506-d3d011569109
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7aa335dc2aabdf05ab34a0245bb0aafc14b17cf1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13fe25638b47221960f6f39c7e367321578ee1ff
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439981"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770378"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vb"></a>Append (méthode) sur les collections Groups et Users, ChangePassword, exemple de méthodes (VB)
-Cet exemple illustre la méthode [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) des [groupes](../../../ado/reference/adox-api/groups-collection-adox.md), ainsi que la méthode [Append](../../../ado/reference/adox-api/append-method-adox-users.md) des [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) en ajoutant un nouveau [groupe](../../../ado/reference/adox-api/group-object-adox.md) et un nouvel [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) au système. Le nouveau **groupe** est ajouté à la collection de **groupes** du nouvel **utilisateur**. Par conséquent, le nouvel **utilisateur** est ajouté au **groupe**. En outre, la méthode [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) est utilisée pour spécifier le mot de passe de l' **utilisateur** .  
+Cet exemple illustre la méthode [Append](./append-method-adox-groups.md) des [groupes](./groups-collection-adox.md), ainsi que la méthode [Append](./append-method-adox-users.md) des [utilisateurs](./users-collection-adox.md) en ajoutant un nouveau [groupe](./group-object-adox.md) et un nouvel [utilisateur](./user-object-adox.md) au système. Le nouveau **groupe** est ajouté à la collection de **groupes** du nouvel **utilisateur**. Par conséquent, le nouvel **utilisateur** est ajouté au **groupe**. En outre, la méthode [ChangePassword](./changepassword-method-adox.md) est utilisée pour spécifier le mot de passe de l' **utilisateur** .  
   
 > [!NOTE]
 >  Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = Yes** ou **Integrated Security = SSPI** à la place des informations d’ID d’utilisateur et de mot de passe dans la chaîne de connexion.  
@@ -124,11 +124,11 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Append, méthode (groupes ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append, méthode (utilisateurs ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [ChangePassword, méthode (ADOX)](../../../ado/reference/adox-api/changepassword-method-adox.md)   
- [Group, objet (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)   
- [Groups, collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [User, objet (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
- [Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Append, méthode (groupes ADOX)](./append-method-adox-groups.md)   
+ [Append, méthode (utilisateurs ADOX)](./append-method-adox-users.md)   
+ [Catalog, objet (ADOX)](./catalog-object-adox.md)   
+ [ChangePassword, méthode (ADOX)](./changepassword-method-adox.md)   
+ [Group, objet (ADOX)](./group-object-adox.md)   
+ [Groups, collection (ADOX)](./groups-collection-adox.md)   
+ [User, objet (ADOX)](./user-object-adox.md)   
+ [Users, collection (ADOX)](./users-collection-adox.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80db98699916cea22cd2815871f99159b1f1a7c4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3805ac88556b6d00aaf43bf5e1d28ece71c1c591
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451921"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759109"
 ---
 # <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>Étape 4 : Le serveur retourne un recordset (tutoriel RDS)
 > [!IMPORTANT]
@@ -39,5 +39,5 @@ Sub RDSTutorial4()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étape 5 : le DataControl est rendu utilisable (didacticiel RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
- [Tutoriel RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Étape 5 : le DataControl est rendu utilisable (didacticiel RDS)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)   
+ [Tutoriel RDS (VBScript)](./rds-tutorial-vbscript.md)

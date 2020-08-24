@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad20679059706d9349fd6e4fd37dd6c6b5a8ea2d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a060f6fb7ac635368e92651d2e286d68c0f299eb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441901"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777278"
 ---
 # <a name="status-property-example-vc"></a>Status, exemple de propriété (VC++)
-Cet exemple utilise la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) pour afficher les enregistrements qui ont été modifiés dans une opération de traitement par lot avant qu’une mise à jour par lot ait eu lieu.  
+Cet exemple utilise la propriété [Status](./status-property-ado-recordset.md) pour afficher les enregistrements qui ont été modifiés dans une opération de traitement par lot avant qu’une mise à jour par lot ait eu lieu.  
   
 ```  
 // BeginStatusCpp.cpp  
@@ -188,4 +188,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Status, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status, propriété (objet Recordset ADO)](./status-property-ado-recordset.md)

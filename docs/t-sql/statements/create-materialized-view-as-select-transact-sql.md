@@ -1,4 +1,5 @@
 ---
+description: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)
 title: CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2020
@@ -37,12 +38,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 221b26f59feb3c51ade10fd4923f30e1ade91fbf
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 8d9dce220699fcdc2448ac19727d34ddd1bdad67
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394635"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88444835"
 ---
 # <a name="create-materialized-view-as-select-transact-sql"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
@@ -108,7 +109,7 @@ Lorsque les agrégats MIN/MAX sont utilisés dans la liste SELECT de la définit
   
 ## <a name="remarks"></a>Notes
 
-Une vue matérialisée dans l’entrepôt de données Azure est similaire à une vue indexée dans SQL Server.  Il partage presque les mêmes restrictions que la vue indexée (consultez [Créer des vues indexées](/sql/relational-databases/views/create-indexed-views) pour plus d’informations), à ceci près qu’un affichage matérialisé prend en charge des fonctions d’agrégation.   
+Une vue matérialisée dans l’entrepôt de données Azure est similaire à une vue indexée dans SQL Server.Il partage presque les mêmes restrictions que la vue indexée (consultez [Créer des vues indexées](/sql/relational-databases/views/create-indexed-views) pour plus d’informations), à ceci près qu’un affichage matérialisé prend en charge des fonctions d’agrégation.   
 
 Seul CLUSTERED COLUMNSTORE INDEX est pris en charge par l’affichage matérialisé. 
 
@@ -142,7 +143,8 @@ Pour déterminer si une instruction SQL peut bénéficier d’un nouvel affichag
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite l'autorisation CREATE VIEW dans la base de données et l'autorisation ALTER sur le schéma dans lequel la vue est créée. 
+Nécessite l’autorisation 1) REFERENCES et CREATE VIEW OU 2) CONTROL sur le schéma dans lequel la vue est créée. 
+
   
 ## <a name="see-also"></a>Voir aussi
 

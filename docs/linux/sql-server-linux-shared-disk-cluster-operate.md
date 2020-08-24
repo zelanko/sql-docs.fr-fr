@@ -1,6 +1,6 @@
 ---
 title: Basculer manuellement une instance de cluster de basculement - SQL Server sur Linux
-description: Apprenez à basculer manuellement une instance de cluster de basculement sur SQL Server sur Linux.
+description: Découvrez comment effectuer un basculement manuel d’une instance de cluster de basculement (FCI) sur SQL Server sur Linux, en particulier Red Hat Linux Enterprise, Ubuntu et SUSE Linux Enterprise Server.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 2be454ad7d2ca85f1648ba7f98ea503627d6c437
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897253"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088742"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Utiliser une instance de cluster de basculement - SQL Server sur Linux
 

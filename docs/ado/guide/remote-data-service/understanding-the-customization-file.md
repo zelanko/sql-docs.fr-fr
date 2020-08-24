@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59c0f32f7e5ba467fd1b90a348a78432a16621ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 18c7d09707a69967560765f880a3c6563de1506e
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451871"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759867"
 ---
 # <a name="understanding-the-customization-file"></a>Présentation du fichier de personnalisation
 Chaque en-tête de section du fichier de personnalisation se compose de crochets (**[]**) contenant un type et un paramètre. Les quatre types de section sont indiqués par les chaînes littérales **Connect**, **SQL**, **UserList**ou **logs**. Le paramètre est la chaîne littérale, la valeur par défaut, un identificateur spécifié par l’utilisateur ou rien.  
@@ -68,11 +68,10 @@ identifier
 -   La section **logs** est utilisée chaque fois que le **DataFactory** est en cours d’exécution.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Section de connexion au fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Section journaux des fichiers de personnalisation](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Section SQL du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Section UserList du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Paramètres client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Section de connexion au fichier de personnalisation](./customization-file-connect-section.md)   
+ [Section journaux des fichiers de personnalisation](./customization-file-logs-section.md)   
+ [Section SQL du fichier de personnalisation](./customization-file-sql-section.md)   
+ [Section UserList du fichier de personnalisation](./customization-file-userlist-section.md)   
+ [Personnalisation de DataFactory](./datafactory-customization.md)   
+ [Paramètres client requis](./required-client-settings.md)   
+ [Écriture d’un gestionnaire personnalisé](./writing-your-own-customized-handler.md)

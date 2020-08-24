@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 20145847731b831bcfb21ca27c0229b064e33286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 36d5deae232c609473b2cd81b203559343df2d00
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441891"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777258"
 ---
 # <a name="stayinsync-property-example-vc"></a>StayInSync, exemple de propriété (VC++)
-Cet exemple montre comment la propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) facilite l’accès aux lignes d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)hiérarchique.  
+Cet exemple montre comment la propriété [StayInSync](./stayinsync-property.md) facilite l’accès aux lignes d’un [jeu d’enregistrements](./recordset-object-ado.md)hiérarchique.  
   
- La boucle externe affiche le prénom et le nom, l’État et l’identification de chaque auteur. Le **Recordset** ajouté pour chaque ligne est extrait de la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) et affecté automatiquement à **rstTitleAuthor** par la propriété **StayInSync** chaque fois que le **jeu d’enregistrements** parent passe à une nouvelle ligne. La boucle interne affiche quatre champs de chaque ligne dans le Recordset ajouté.  
+ La boucle externe affiche le prénom et le nom, l’État et l’identification de chaque auteur. Le **Recordset** ajouté pour chaque ligne est extrait de la collection de [champs](./fields-collection-ado.md) et affecté automatiquement à **rstTitleAuthor** par la propriété **StayInSync** chaque fois que le **jeu d’enregistrements** parent passe à une nouvelle ligne. La boucle interne affiche quatre champs de chaque ligne dans le Recordset ajouté.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -145,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [StayInSync, propriété](../../../ado/reference/ado-api/stayinsync-property.md)
+ [Fields, collection (ADO)](./fields-collection-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)   
+ [StayInSync, propriété](./stayinsync-property.md)

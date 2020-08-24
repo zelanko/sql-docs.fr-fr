@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 647fe236ad7a616cbce54986f6a3ce3aba0db163
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1992c8c5796052e46719c34ecbc43d6b94553b6e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440351"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771138"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered, exemple de propriété (VB)
-Cet exemple illustre la propriété [cluster](../../../ado/reference/adox-api/clustered-property-adox.md) d’un [index](../../../ado/reference/adox-api/index-object-adox.md). Notez que les bases de données Microsoft Jet ne prennent pas en charge les index cluster. par conséquent, cet exemple retourne la **valeur false** pour la propriété **cluster** de tous les index de la base de données **Northwind** .  
+Cet exemple illustre la propriété [cluster](./clustered-property-adox.md) d’un [index](./index-object-adox.md). Notez que les bases de données Microsoft Jet ne prennent pas en charge les index cluster. par conséquent, cet exemple retourne la **valeur false** pour la propriété **cluster** de tous les index de la base de données **Northwind** .  
   
 ```  
 ' BeginClusteredVB  
@@ -74,7 +74,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Clustered, propriété (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Catalog, objet (ADOX)](./catalog-object-adox.md)   
+ [Clustered, propriété (ADOX)](./clustered-property-adox.md)   
+ [Index, objet (ADOX)](./index-object-adox.md)   
+ [Table, objet (ADOX)](./table-object-adox.md)

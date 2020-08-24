@@ -1,6 +1,6 @@
 ---
 title: Détecter un problème sur SQL Server sur Linux
-description: Fournit des conseils de résolution des problèmes pour l’utilisation de SQL Server sur Linux.
+description: Détectez un problème sur Microsoft SQL Server s’exécutant sur Linux ou dans un conteneur Docker. Découvrez où trouver des informations sur les fonctionnalités prises en charge et les limitations connues.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/01/2018
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 7c2c191fa05f1c584c9e45e88cd5bd5b0e3b7851
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897218"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088741"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Détecter un problème sur SQL Server sur Linux
 

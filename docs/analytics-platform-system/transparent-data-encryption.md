@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f80767ef3b371260e916aef386dd1c8dbc755586
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289747"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777728"
 ---
 # <a name="transparent-data-encryption"></a>chiffrement transparent des données
 Vous pouvez prendre plusieurs précautions pour sécuriser la base de données telles que la conception d’un système sécurisé, le chiffrement de ressources confidentielles et la création d'un pare-feu autour des serveurs de base de données. Toutefois, pour un scénario dans lequel le support physique (tel que des lecteurs ou des bandes de sauvegarde) est volé, une partie malveillante peut simplement restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
@@ -54,7 +54,7 @@ Pour utiliser le chiffrement transparent des données, procédez comme suit : Le
   
 7.  Utilisez l' `ALTER DATABASE` instruction pour chiffrer la base de données à l’aide de TDE.  
   
-L’exemple suivant illustre le chiffrement de `AdventureWorksPDW2012` la base de données à `MyServerCert`l’aide d’un certificat nommé, créé dans SQL Server PDW.  
+L’exemple suivant illustre le chiffrement `AdventureWorksPDW2012` de la base de données à l’aide d’un certificat nommé `MyServerCert` , créé dans SQL Server PDW.  
   
 **Tout d’abord : activez TDE sur le SQL Server PDW.** Cette action n’est nécessaire qu’une seule fois.  
   
@@ -108,7 +108,7 @@ ALTER DATABASE AdventureWorksPDW2012 SET ENCRYPTION ON;
 GO  
 ```  
   
-Les opérations de chiffrement et de déchiffrement sont planifiées sur les threads d’arrière-plan par SQL Server. Vous pouvez afficher l’état de ces opérations à l’aide des affichages catalogue et des vues de gestion dynamique dans la liste qui s’affiche plus loin dans cet article.  
+Les opérations de chiffrement et de déchiffrement sont planifiées sur des threads d'arrière-plan par SQL Server. Vous pouvez afficher l’état de ces opérations à l’aide des affichages catalogue et des vues de gestion dynamique dans la liste qui s’affiche plus loin dans cet article.  
   
 > [!CAUTION]  
 > Les fichiers de sauvegarde des bases de données pour lesquelles le chiffrement transparent des données est activé sont également chiffrés à l'aide de la clé de chiffrement de base de données. En conséquence, lorsque vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Cela signifie qu'en plus de sauvegarder la base de données, vous devez vous assurer que vous conservez des sauvegardes des certificats du serveur pour empêcher toute perte de données. Une perte de données interviendra si le certificat n'est plus disponible.  
@@ -123,7 +123,7 @@ Le tableau suivant fournit des liens et des explications pour les commandes et l
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crée une clé permettant de chiffrer une base de données.|  
 |[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Modifie la clé qui permet de chiffrer une base de données.|  
 |[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Supprime la clé qui était utilisée pour chiffrer une base de données.|  
-|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Présente l'option **ALTER DATABASE** qui est utilisée pour activer le chiffrement transparent des données.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explique l’option **de modification de base de données** utilisée pour activer TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Affichages catalogue et vues de gestion dynamique  
 Le tableau suivant indique les affichages catalogue et les vues de gestion dynamique du chiffrement transparent des données.  
@@ -137,25 +137,25 @@ Le tableau suivant indique les affichages catalogue et les vues de gestion dynam
 ## <a name="permissions"></a>Autorisations  
 Chaque fonctionnalité et commande TDE requiert des autorisations individuelles, décrites dans les tableaux précédents.  
   
-L’affichage des métadonnées impliquées dans TDE `CONTROL SERVER` nécessite l’autorisation.  
+L’affichage des métadonnées impliquées dans TDE nécessite l' `CONTROL SERVER` autorisation.  
   
-## <a name="considerations"></a>Éléments à prendre en considération  
+## <a name="considerations"></a>Considérations  
 Lorsqu'une analyse de rechiffrement est en cours pour une opération de chiffrement de la base de données, les opérations de maintenance sur la base de données sont désactivées.  
   
 Vous pouvez trouver l’état du chiffrement de la base de données à l’aide de la vue de gestion dynamique **sys. dm_pdw_nodes_database_encryption_keys** . Pour plus d’informations, consultez la section *affichages catalogue et vues de gestion dynamique* plus haut dans cet article.  
   
 ### <a name="restrictions"></a>Restrictions  
-Les opérations suivantes ne sont pas autorisées au `CREATE DATABASE ENCRYPTION KEY`cours `ALTER DATABASE ENCRYPTION KEY`des `DROP DATABASE ENCRYPTION KEY`instructions, `ALTER DATABASE...SET ENCRYPTION` , ou.  
+Les opérations suivantes ne sont pas autorisées au cours des `CREATE DATABASE ENCRYPTION KEY` `ALTER DATABASE ENCRYPTION KEY` instructions,, `DROP DATABASE ENCRYPTION KEY` ou `ALTER DATABASE...SET ENCRYPTION` .  
   
 -   Suppression de la base de données  
   
--   Utilisation d' `ALTER DATABASE` une commande.  
+-   Utilisation d’une `ALTER DATABASE` commande.  
   
 -   Démarrage d’une sauvegarde de base de données.  
   
 -   Démarrage d’une restauration de base de données.  
   
-Les opérations ou conditions suivantes empêchent `CREATE DATABASE ENCRYPTION KEY`les `ALTER DATABASE ENCRYPTION KEY`instructions `DROP DATABASE ENCRYPTION KEY`,, `ALTER DATABASE...SET ENCRYPTION` ou.  
+Les opérations ou conditions suivantes empêchent `CREATE DATABASE ENCRYPTION KEY` les `ALTER DATABASE ENCRYPTION KEY` instructions,, `DROP DATABASE ENCRYPTION KEY` ou `ALTER DATABASE...SET ENCRYPTION` .  
   
 -   Une `ALTER DATABASE` commande est en cours d’exécution.  
   
@@ -173,7 +173,7 @@ Les données protégées par TDE sont déchiffrées lorsqu’elles sont placées
 La base de données Master n’est pas protégée par TDE. Bien que la base de données Master ne contienne pas de données utilisateur, elle contient des informations telles que les noms de connexion.  
   
 ### <a name="transparent-data-encryption-and-transaction-logs"></a>Chiffrement transparent des données et journaux de transactions  
-L’activation d’une base de données pour l’utilisation de TDE a pour effet de replacer la partie restante du journal des transactions virtuelles afin de forcer le prochain journal des transactions virtuelles. Cela garantit qu'aucun texte en clair n'est conservé dans les journaux des transactions après que la base de données a été définie pour le chiffrement. Vous pouvez rechercher l’état du chiffrement du fichier journal sur chaque nœud PDW en affichant `encryption_state` la colonne dans `sys.dm_pdw_nodes_database_encryption_keys` la vue, comme dans cet exemple :  
+L’activation d’une base de données pour l’utilisation de TDE a pour effet de replacer la partie restante du journal des transactions virtuelles afin de forcer le prochain journal des transactions virtuelles. Cela garantit qu'aucun texte en clair n'est conservé dans les journaux des transactions après que la base de données a été définie pour le chiffrement. Vous pouvez rechercher l’état du chiffrement du fichier journal sur chaque nœud PDW en affichant la `encryption_state` colonne dans la `sys.dm_pdw_nodes_database_encryption_keys` vue, comme dans cet exemple :  
   
 ```sql  
 WITH dek_encryption_state AS   
@@ -207,7 +207,7 @@ La clé de chiffrement de base de données (DEK) est protégée par les certific
   
 Le système peut accéder aux clés sans nécessiter une intervention humaine (comme fournir un mot de passe). Si le certificat n’est pas disponible, le système génère une erreur qui explique que le DEK ne peut pas être déchiffré tant que le certificat approprié n’est pas disponible.  
   
-Lors du déplacement d’une base de données d’une appliance vers une autre, le certificat utilisé pour protéger son « DEK » doit d’abord être restauré sur le serveur de destination. La base de données peut ensuite être restaurée comme d’habitude. Pour plus d’informations, consultez la documentation de SQL Server standard, à la page [déplacer une base de données protégée TDE vers une autre SQL Server](https://technet.microsoft.com/library/ff773063.aspx).  
+Lors du déplacement d’une base de données d’une appliance vers une autre, le certificat utilisé pour protéger son « DEK » doit d’abord être restauré sur le serveur de destination. La base de données peut ensuite être restaurée comme d’habitude. Pour plus d’informations, consultez la documentation de SQL Server standard, à la page [déplacer une base de données protégée TDE vers une autre SQL Server](../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md?view=sql-server-ver15).  
   
 Les certificats utilisés pour chiffrer les chiffrement doivent être conservés tant qu’il existe des sauvegardes de base de données qui les utilisent. Les sauvegardes de certificats doivent inclure la clé privée du certificat, car sans la clé privée, un certificat ne peut pas être utilisé pour la restauration de la base de données. Ces sauvegardes de clés privées de certificat sont stockées dans un fichier distinct, protégé par un mot de passe qui doit être fourni pour la restauration des certificats.  
   
@@ -244,7 +244,7 @@ Exemple de l’action pour remplacer un ordinateur virtuel.
   
 `setup.exe /Action=ReplaceVM ... DMKPassword='**********'`  
   
-Pendant la mise à niveau, si une base de donnée utilisateur est chiffrée et que le mot de passe DMK n’est pas fourni, l’action de mise à niveau échoue. Lors du remplacement, si le mot de passe approprié n’est pas fourni lorsqu’un DMK existe, l’opération ignore l’étape de récupération DMK. Toutes les autres étapes seront effectuées à la fin de l’action remplacer l’ordinateur virtuel, mais l’action signalera une erreur à la fin pour indiquer que des étapes supplémentaires sont requises. Dans les journaux d’installation (situés dans **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data\\ Warehouse\100\Logs\Setup<> \detail-Setup**), l’avertissement suivant s’affiche près de la fin.  
+Pendant la mise à niveau, si une base de donnée utilisateur est chiffrée et que le mot de passe DMK n’est pas fourni, l’action de mise à niveau échoue. Lors du remplacement, si le mot de passe approprié n’est pas fourni lorsqu’un DMK existe, l’opération ignore l’étape de récupération DMK. Toutes les autres étapes seront effectuées à la fin de l’action remplacer l’ordinateur virtuel, mais l’action signalera une erreur à la fin pour indiquer que des étapes supplémentaires sont requises. Dans les journaux d’installation (situés dans **\ProgramData\Microsoft\Microsoft SQL Server Parallel Data Warehouse\100\Logs\Setup \\<> \detail-Setup**), l’avertissement suivant s’affiche près de la fin.  
   
 `*** WARNING \*\*\* DMK is detected in master database, but could not be recovered automatically! The DMK password was either not provided or is incorrect!`
   
@@ -265,7 +265,7 @@ A distributed query failed: Database '<db_name>' cannot be opened due to inacces
 ```  
   
 ## <a name="performance-impact"></a>Impact sur les performances  
-L’impact sur les performances de TDE varie selon le type de données dont vous disposez, la manière dont il est stocké et le type d’activité de charge de travail sur le SQL Server PDW. En cas de protection par TDE, les e/s de lecture et de déchiffrement des données, ou le chiffrement, puis l’écriture des données, sont une activité gourmande en ressources processeur et ont un impact plus important lorsque d’autres activités gourmandes en ressources processeur se produisent en même temps. Étant donné que TDE `tempdb`chiffre, TDE peut affecter les performances des bases de données qui ne sont pas chiffrées. Pour obtenir une idée précise des performances, vous devez tester l’ensemble du système à l’aide de vos données et de votre activité de requête.  
+L’impact sur les performances de TDE varie selon le type de données dont vous disposez, la manière dont il est stocké et le type d’activité de charge de travail sur le SQL Server PDW. En cas de protection par TDE, les e/s de lecture et de déchiffrement des données, ou le chiffrement, puis l’écriture des données, sont une activité gourmande en ressources processeur et ont un impact plus important lorsque d’autres activités gourmandes en ressources processeur se produisent en même temps. Étant donné que TDE chiffre `tempdb` , TDE peut affecter les performances des bases de données qui ne sont pas chiffrées. Pour obtenir une idée précise des performances, vous devez tester l’ensemble du système à l’aide de vos données et de votre activité de requête.  
   
 ## <a name="related-content"></a>Contenu associé  
 Les liens suivants contiennent des informations générales sur la façon dont SQL Server gère le chiffrement. Ces articles peuvent vous aider à comprendre le chiffrement SQL Server, mais ces articles n’ont pas d’informations spécifiques à SQL Server PDW et ils discutent des fonctionnalités qui ne sont pas présentes dans SQL Server PDW.  
@@ -287,4 +287,3 @@ Les liens suivants contiennent des informations générales sur la façon dont S
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
 [sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
 [sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
-  

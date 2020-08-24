@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 906a2ffb29345a2bbefdbf5a6bde6e71cd1c5af1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 819e6ebaa3932f19a693cb3d50651f7c451200e6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441641"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776998"
 ---
 # <a name="update-method"></a>Update, méthode
-Enregistre les modifications apportées à la ligne actuelle d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou à la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) d’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) .  
+Enregistre les modifications apportées à la ligne actuelle d’un objet [Recordset](./recordset-object-ado.md) ou à la collection [Fields](./fields-collection-ado.md) d’un objet [Record](./record-object-ado.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,11 +44,11 @@ record.Fields.Update
 ## <a name="remarks"></a>Notes  
   
 ## <a name="recordset"></a>Ensemble d'enregistrements  
- Utilisez la méthode **Update** pour enregistrer les modifications apportées à l’enregistrement actuel d’un objet **Recordset** depuis l’appel de la méthode [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) ou depuis la modification des valeurs de champ dans un enregistrement existant. L’objet **Recordset** doit prendre en charge les mises à jour.  
+ Utilisez la méthode **Update** pour enregistrer les modifications apportées à l’enregistrement actuel d’un objet **Recordset** depuis l’appel de la méthode [AddNew](./addnew-method-ado.md) ou depuis la modification des valeurs de champ dans un enregistrement existant. L’objet **Recordset** doit prendre en charge les mises à jour.  
   
  Pour définir des valeurs de champ, effectuez l’une des opérations suivantes :  
   
--   Assignez des valeurs à la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) d’un objet [Field](../../../ado/reference/ado-api/field-object.md) et appelez la méthode **Update** .  
+-   Assignez des valeurs à la propriété [value](./value-property-ado.md) d’un objet [Field](./field-object.md) et appelez la méthode **Update** .  
   
 -   Transmettez un nom de champ et une valeur comme arguments avec l’appel de **mise à jour** .  
   
@@ -56,14 +56,14 @@ record.Fields.Update
   
  Lorsque vous utilisez des tableaux de champs et de valeurs, il doit y avoir un nombre égal d’éléments dans les deux tableaux. En outre, l’ordre des noms de champs doit correspondre à l’ordre des valeurs de champ. Si le nombre et l’ordre des champs et des valeurs ne correspondent pas, une erreur se produit.  
   
- Si l’objet **Recordset** prend en charge la mise à jour par lot, vous pouvez mettre en cache plusieurs modifications dans un ou plusieurs enregistrements localement jusqu’à ce que vous appeliez la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Si vous modifiez l’enregistrement en cours ou si vous ajoutez un nouvel enregistrement lorsque vous appelez la méthode **UpdateBatch** , ADO appelle automatiquement la méthode **Update** pour enregistrer toutes les modifications en attente dans l’enregistrement en cours avant de transmettre les modifications par lot au fournisseur.  
+ Si l’objet **Recordset** prend en charge la mise à jour par lot, vous pouvez mettre en cache plusieurs modifications dans un ou plusieurs enregistrements localement jusqu’à ce que vous appeliez la méthode [UpdateBatch](./updatebatch-method.md) . Si vous modifiez l’enregistrement en cours ou si vous ajoutez un nouvel enregistrement lorsque vous appelez la méthode **UpdateBatch** , ADO appelle automatiquement la méthode **Update** pour enregistrer toutes les modifications en attente dans l’enregistrement en cours avant de transmettre les modifications par lot au fournisseur.  
   
- Si vous effectuez un déplacement à partir de l’enregistrement que vous ajoutez ou modifiez avant d’appeler la méthode **Update** , ADO appellera automatiquement **Update** pour enregistrer les modifications. Vous devez appeler la méthode [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) si vous voulez annuler les modifications apportées à l’enregistrement en cours ou ignorer un enregistrement qui vient d’être ajouté.  
+ Si vous effectuez un déplacement à partir de l’enregistrement que vous ajoutez ou modifiez avant d’appeler la méthode **Update** , ADO appellera automatiquement **Update** pour enregistrer les modifications. Vous devez appeler la méthode [CancelUpdate](./cancelupdate-method-ado.md) si vous voulez annuler les modifications apportées à l’enregistrement en cours ou ignorer un enregistrement qui vient d’être ajouté.  
   
  L’enregistrement actif reste actif après l’appel de la méthode **Update** .  
   
 ## <a name="record"></a>Enregistrement  
- La méthode **Update** finalise les ajouts, les suppressions et les mises à jour des champs de la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) d’un objet **Record** .  
+ La méthode **Update** finalise les ajouts, les suppressions et les mises à jour des champs de la collection [Fields](./fields-collection-ado.md) d’un objet **Record** .  
   
  Par exemple, les champs supprimés à l’aide de la méthode **Delete** sont marqués pour suppression immédiatement, mais restent dans la collection. La méthode **Update** doit être appelée pour supprimer réellement ces champs de la collection du fournisseur.  
   
@@ -71,17 +71,17 @@ record.Fields.Update
 
 :::row:::
     :::column:::
-        [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Fields, collection (ADO)](./fields-collection-ado.md)  
     :::column-end:::
     :::column:::
-        [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Recordset, objet (ADO)](./recordset-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [Update et CancelUpdate, exemple de méthodes (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
- [Update et CancelUpdate, exemple de méthodes (VC + +)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
- [AddNew, méthode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [CancelUpdate, méthode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [EditMode, propriété](../../../ado/reference/ado-api/editmode-property.md)   
- [UpdateBatch, méthode](../../../ado/reference/ado-api/updatebatch-method.md)
+ [Update et CancelUpdate, exemple de méthodes (VB)](./update-and-cancelupdate-methods-example-vb.md)   
+ [Update et CancelUpdate, exemple de méthodes (VC + +)](./update-and-cancelupdate-methods-example-vc.md)   
+ [AddNew, méthode (ADO)](./addnew-method-ado.md)   
+ [CancelUpdate, méthode (ADO)](./cancelupdate-method-ado.md)   
+ [EditMode, propriété](./editmode-property.md)   
+ [UpdateBatch, méthode](./updatebatch-method.md)

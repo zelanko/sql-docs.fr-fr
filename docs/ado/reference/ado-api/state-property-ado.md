@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 0b993bac-2653-40b1-bcbb-5b57b6aae2bf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca8a2421f15e5999347b0b7879f3faf707598ba2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 14e9a083c9f80d2c6485a9444211a2796b7fabee
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441981"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777348"
 ---
 # <a name="state-property-ado"></a>State, propriété (ADO)
 Indique pour tous les objets applicables si l’état de l’objet est ouvert ou fermé. Si l’objet exécute une méthode asynchrone, indique si l’état actuel de l’objet est en cours de connexion, en cours d’exécution ou en cours d’extraction.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne une valeur de **type long** qui peut être une valeur [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) . La valeur par défaut est **adStateClosed**.  
+ Retourne une valeur de **type long** qui peut être une valeur [ObjectStateEnum](./objectstateenum.md) . La valeur par défaut est **adStateClosed**.  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez utiliser la propriété **State** pour déterminer l’état actuel d’un objet donné à tout moment.  
@@ -40,18 +40,18 @@ Indique pour tous les objets applicables si l’état de l’objet est ouvert ou
 
 :::row:::
     :::column:::
-        [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Command, objet (ADO)](./command-object-ado.md)  
+        [Connection, objet (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
-        [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Record, objet (ADO)](./record-object-ado.md)  
+        [Recordset, objet (ADO)](./recordset-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Stream, objet (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [ConnectionString, ConnectionTimeout et State, exemple de propriétés (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout et State, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [ConnectionString, ConnectionTimeout et State, exemple de propriétés (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString, ConnectionTimeout et State, exemple de propriétés (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)

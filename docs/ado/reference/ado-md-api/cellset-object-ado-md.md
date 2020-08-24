@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f30243440d9b09194bd3cd1c7ed5a162ad8de34
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 65e5e28443fd4656aa2b953f18b07c952bcbb66a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441211"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778308"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset, objet (ADO MD)
 Représente les résultats d’une requête multidimensionnelle. Il s’agit d’une collection de cellules sélectionnées à partir de cubes ou d’autres cellules.  
@@ -34,35 +34,35 @@ cst.Axes(0).Positions(0).Members(0).Caption
 ```  
   
 ## <a name="remarks"></a>Notes  
- Il n’existe aucune notion de cellule active dans un CellSet. Au lieu de cela, la propriété [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) récupère un objet [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) spécifique du CellSet. Les arguments de la propriété de l' **élément** déterminent la cellule qui est récupérée. Vous pouvez spécifier la valeur ordinale unique d’une cellule. Vous pouvez également récupérer des cellules en utilisant leurs numéros de position le long de chaque axe de l’CellSet. Pour plus d’informations sur la récupération des cellules, consultez la propriété [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) .  
+ Il n’existe aucune notion de cellule active dans un CellSet. Au lieu de cela, la propriété [Item](./item-property-ado-md-cellset.md) récupère un objet [Cell](./cell-object-ado-md.md) spécifique du CellSet. Les arguments de la propriété de l' **élément** déterminent la cellule qui est récupérée. Vous pouvez spécifier la valeur ordinale unique d’une cellule. Vous pouvez également récupérer des cellules en utilisant leurs numéros de position le long de chaque axe de l’CellSet. Pour plus d’informations sur la récupération des cellules, consultez la propriété [Item](./item-property-ado-md-cellset.md) .  
   
  Avec les collections, les méthodes et les propriétés d’un objet **Cellset** , vous pouvez effectuer les opérations suivantes :  
   
--   Associez une connexion ouverte à un objet **Cellset** en définissant sa propriété [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) .  
+-   Associez une connexion ouverte à un objet **Cellset** en définissant sa propriété [ActiveConnection](./activeconnection-property-ado-md.md) .  
   
--   Exécutez et récupérez les résultats d’une requête multidimensionnelle à l’aide de la méthode [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) .  
+-   Exécutez et récupérez les résultats d’une requête multidimensionnelle à l’aide de la méthode [Open](./open-method-ado-md.md) .  
   
--   Récupérez une **cellule** de l' **Cellset** avec la propriété [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) .  
+-   Récupérez une **cellule** de l' **Cellset** avec la propriété [Item](./item-property-ado-md-cellset.md) .  
   
--   Retourne les objets [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md) qui définissent l’ensemble de **cellules** avec la collection [axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) .  
+-   Retourne les objets [Axis](./axis-object-ado-md.md) qui définissent l’ensemble de **cellules** avec la collection [axes](./axes-collection-ado-md.md) .  
   
--   Récupérez des informations sur les dimensions utilisées pour filtrer les données dans l' **Cellset** avec la propriété [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) .  
+-   Récupérez des informations sur les dimensions utilisées pour filtrer les données dans l' **Cellset** avec la propriété [FilterAxis](./filteraxis-property-ado-md.md) .  
   
--   Retourne ou spécifie la requête utilisée pour définir l' **Cellset** avec la propriété [source](../../../ado/reference/ado-md-api/source-property-ado-md.md) .  
+-   Retourne ou spécifie la requête utilisée pour définir l' **Cellset** avec la propriété [source](./source-property-ado-md.md) .  
   
--   Retourne l’état actuel de l’objet **Cellset** (ouvert, fermé, en cours d’exécution ou en cours de connexion) avec la propriété [State](../../../ado/reference/ado-md-api/state-property-ado-md.md) .  
+-   Retourne l’état actuel de l’objet **Cellset** (ouvert, fermé, en cours d’exécution ou en cours de connexion) avec la propriété [State](./state-property-ado-md.md) .  
   
--   Fermez un **Cellset** ouvert avec la méthode [Close](../../../ado/reference/ado-md-api/close-method-ado-md.md) .  
+-   Fermez un **Cellset** ouvert avec la méthode [Close](./close-method-ado-md.md) .  
   
--   Récupérez les informations spécifiques au fournisseur relatives à l’ensemble de **cellules** avec la collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) ADO standard.  
+-   Récupérez les informations spécifiques au fournisseur relatives à l’ensemble de **cellules** avec la collection de [Propriétés](../ado-api/properties-collection-ado.md) ADO standard.  
   
  Cette section contient la rubrique suivante.  
   
--   [Propriétés, méthodes et événements](../../../ado/reference/ado-md-api/cellset-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements](./cellset-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CellSet, exemple (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Axes, collection (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
- [Cell, objet (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CellSet, exemple (VB)](./cellset-example-vb.md)   
+ [Axes, collection (ADO MD)](./axes-collection-ado-md.md)   
+ [Cell, objet (ADO MD)](./cell-object-ado-md.md)   
+ [Connection, objet (ADO)](../ado-api/connection-object-ado.md)   
+ [Properties, collection (ADO)](../ado-api/properties-collection-ado.md)
