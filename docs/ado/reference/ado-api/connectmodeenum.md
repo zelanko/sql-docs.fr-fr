@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ce1d75faaf4bbaeb941a0da87b68c09744c2a422
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10bc68683f337f5a0bdf6fc5679c4276925a4234
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444431"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775848"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
-Spécifie les autorisations disponibles pour la modification des données dans une [connexion](../../../ado/reference/ado-api/connection-object-ado.md), l’ouverture d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md)ou la spécification de valeurs pour la propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) des objets **Record** et [Stream](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Spécifie les autorisations disponibles pour la modification des données dans une [connexion](./connection-object-ado.md), l’ouverture d’un [enregistrement](./record-object-ado.md)ou la spécification de valeurs pour la propriété [mode](./mode-property-ado.md) des objets **Record** et [Stream](./stream-object-ado.md) .  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Indique des autorisations en lecture seule.|  
 |**adModeReadWrite**|3|Indique des autorisations de lecture/écriture.|  
@@ -41,7 +41,7 @@ Spécifie les autorisations disponibles pour la modification des données dans u
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.ConnectMode.READ|  
 |AdoEnums.ConnectMode.READWRITE|  
@@ -57,11 +57,11 @@ Spécifie les autorisations disponibles pour la modification des données dans u
 
 :::row:::
     :::column:::
-        [Mode, propriété (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
-        [Open, méthode (objet Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+        [Mode, propriété (ADO)](./mode-property-ado.md)  
+        [Open, méthode (objet Record ADO)](./open-method-ado-record.md)  
     :::column-end:::
     :::column:::
-        [Open, méthode (Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
-        [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Open, méthode (Stream ADO)](./open-method-ado-stream.md)  
+        [Stream, objet (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::

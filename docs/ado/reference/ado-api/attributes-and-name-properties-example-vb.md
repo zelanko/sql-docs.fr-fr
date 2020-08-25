@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed744b6cb39b37958de8dcd6cb4dd6dde8b2a9a8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2fb0d90d8e6fd5a999d3596af600c140c75e9617
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451221"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776458"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes et Name, exemple de propriétés (VB)
-Cet exemple affiche la valeur de la propriété [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) pour les objets de [connexion](../../../ado/reference/ado-api/connection-object-ado.md), de [champ](../../../ado/reference/ado-api/field-object.md)et de [propriété](../../../ado/reference/ado-api/property-object-ado.md) . Elle utilise la propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) pour afficher le nom de chaque objet **Field** et **Property** .  
+Cet exemple affiche la valeur de la propriété [attributes](./attributes-property-ado.md) pour les objets de [connexion](./connection-object-ado.md), de [champ](./field-object.md)et de [propriété](./property-object-ado.md) . Elle utilise la propriété [Name](./name-property-ado.md) pour afficher le nom de chaque objet **Field** et **Property** .  
   
 ```  
 ' BeginAttributesVB  
@@ -128,8 +128,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributes, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Field, objet](../../../ado/reference/ado-api/field-object.md)   
- [Name, propriété (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Attributes, propriété (ADO)](./attributes-property-ado.md)   
+ [Connection, objet (ADO)](./connection-object-ado.md)   
+ [Field, objet](./field-object.md)   
+ [Name, propriété (ADO)](./name-property-ado.md)   
+ [Property, objet (ADO)](./property-object-ado.md)

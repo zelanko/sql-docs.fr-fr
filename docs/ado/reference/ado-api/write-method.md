@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b43e0f505a3c4455768c32abd93dbc89afe04a82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d26e9311a760e3d4349fdbbcececa9b9533741a4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441461"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776838"
 ---
 # <a name="write-method"></a>Write, méthode
-Écrit des données binaires dans un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Écrit des données binaires dans un objet de [flux](./stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,15 +41,15 @@ Stream.Write Buffer
 ## <a name="remarks"></a>Notes  
  Les octets spécifiés sont écrits dans l’objet de **flux** sans aucun espace intermédiaire entre chaque octet.  
   
- La [position](../../../ado/reference/ado-api/position-property-ado.md) actuelle est définie sur l’octet qui suit les données écrites. La méthode **Write** ne tronque pas le reste des données dans un flux. Si vous souhaitez tronquer ces octets, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ La [position](./position-property-ado.md) actuelle est définie sur l’octet qui suit les données écrites. La méthode **Write** ne tronque pas le reste des données dans un flux. Si vous souhaitez tronquer ces octets, appelez [SetEOS](./seteos-method.md).  
   
- Si vous écrivez après la position [EOS](../../../ado/reference/ado-api/eos-property.md) actuelle, la [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) du **flux** sera augmentée pour contenir de nouveaux octets, et **EOS** passera au nouvel octet dernier dans le **flux**.  
+ Si vous écrivez après la position [EOS](./eos-property.md) actuelle, la [taille](./size-property-ado-stream.md) du **flux** sera augmentée pour contenir de nouveaux octets, et **EOS** passera au nouvel octet dernier dans le **flux**.  
   
 > [!NOTE]
->  La méthode **Write** est utilisée avec les flux binaires (le[type](../../../ado/reference/ado-api/type-property-ado-stream.md) est **adTypeBinary**). Pour les flux de texte (**type** **adTypeText**), utilisez [WRITETEXT](../../../ado/reference/ado-api/writetext-method.md).  
+>  La méthode **Write** est utilisée avec les flux binaires (le[type](./type-property-ado-stream.md) est **adTypeBinary**). Pour les flux de texte (**type** **adTypeText**), utilisez [WRITETEXT](./writetext-method.md).  
   
 ## <a name="applies-to"></a>S'applique à  
- [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream, objet (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [WriteText, méthode](../../../ado/reference/ado-api/writetext-method.md)
+ [WriteText, méthode](./writetext-method.md)

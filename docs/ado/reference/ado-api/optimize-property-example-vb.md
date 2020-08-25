@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6dbeea5a053a1395e051939e313b9f672c73d2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442901"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773628"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize, exemple de propriété (VB)
-Cet exemple illustre la propriété d' **optimisation** dynamique de l’objet [Field](../../../ado/reference/ado-api/field-object.md) . Le champ ***zip*** de la table ***Authors*** de la base de données ***pubs*** n’est pas indexé. L’affectation de la **valeur true** à la propriété [optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) du champ ***zip*** autorise ADO à générer un index qui améliore les performances de la méthode [Find](../../../ado/reference/ado-api/find-method-ado.md) .  
+Cet exemple illustre la propriété d' **optimisation** dynamique de l’objet [Field](./field-object.md) . Le champ ***zip*** de la table ***Authors*** de la base de données ***pubs*** n’est pas indexé. L’affectation de la **valeur true** à la propriété [optimize](./optimize-property-dynamic-ado.md) du champ ***zip*** autorise ADO à générer un index qui améliore les performances de la méthode [Find](./find-method-ado.md) .  
   
 ```  
 'BeginOptimizeVB  
@@ -88,5 +88,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Field, objet](../../../ado/reference/ado-api/field-object.md)   
- [Optimize, propriété dynamique (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Field, objet](./field-object.md)   
+ [Optimize, propriété dynamique (ADO)](./optimize-property-dynamic-ado.md)

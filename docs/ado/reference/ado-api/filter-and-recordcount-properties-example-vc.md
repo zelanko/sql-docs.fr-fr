@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb95298fbc88749acdb5058cc45694688e0c2c6e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3974219f4070d38e877ff7fdd4b6c7e3a26adef2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443671"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775308"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter et RecordCount, exemples de propriétés (VC + +)
-Cet exemple utilise la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) pour ouvrir un nouveau [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) en fonction d’une condition spécifiée appliquée à un **jeu d’enregistrements**existant. Elle utilise la propriété [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) pour afficher le nombre d’enregistrements dans les deux **jeux d’enregistrements**. La fonction FilterField est requise pour l’exécution de cette procédure.  
+Cet exemple utilise la propriété [Filter](./filter-property.md) pour ouvrir un nouveau [jeu d’enregistrements](./recordset-object-ado.md) en fonction d’une condition spécifiée appliquée à un **jeu d’enregistrements**existant. Elle utilise la propriété [RecordCount](./recordcount-property-ado.md) pour afficher le nombre d’enregistrements dans les deux **jeux d’enregistrements**. La fonction FilterField est requise pour l’exécution de cette procédure.  
   
 ## <a name="example"></a>Exemple  
   
@@ -304,6 +304,6 @@ Scootney Books, USA
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filter (propriété)](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount, propriété (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter (propriété)](./filter-property.md)   
+ [RecordCount, propriété (ADO)](./recordcount-property-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b562d480cfbebefdee82703e0c953854de07d064
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cad540a13fbad480f795049df0d0150188df4283
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443741"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775448"
 ---
 # <a name="fieldenum"></a>FieldEnum
-Spécifie les champs spéciaux référencés dans la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) d’un objet [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) .  
+Spécifie les champs spéciaux référencés dans la collection de [champs](./fields-collection-ado.md) d’un objet [enregistrement](./record-object-ado.md) .  
   
 ## <a name="remarks"></a>Notes  
- Ces constantes fournissent un « raccourci » pour accéder à des champs spéciaux associés à un **enregistrement**. Récupérez l’objet de [champ](../../../ado/reference/ado-api/field-object.md) à partir de la collection de **champs** , puis obtenez son contenu avec la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) de l’objet **Field** .  
+ Ces constantes fournissent un « raccourci » pour accéder à des champs spéciaux associés à un **enregistrement**. Récupérez l’objet de [champ](./field-object.md) à partir de la collection de **champs** , puis obtenez son contenu avec la propriété [value](./value-property-ado.md) de l’objet **Field** .  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adDefaultStream**|-1|Fait référence au champ contenant l’objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) par défaut associé à un **enregistrement**.|  
+|**adDefaultStream**|-1|Fait référence au champ contenant l’objet de [flux](./stream-object-ado.md) par défaut associé à un **enregistrement**.|  
 |**adRecordURL**|-2|Fait référence au champ contenant la chaîne d’URL absolue pour l' **enregistrement**en cours.|

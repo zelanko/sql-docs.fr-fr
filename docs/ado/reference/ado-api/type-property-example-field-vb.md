@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94eeb6eb22e72b6db45d178c9d19ced33009be8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 79f72b8795fc060a44b83c3587f9243971b7c951
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441721"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777088"
 ---
 # <a name="type-property-example-field-vb"></a>Type, exemple de propriété (objet Field) (VB)
-Cet exemple illustre la propriété [type](../../../ado/reference/ado-api/type-property-ado.md) en affichant le nom de la constante qui correspond à la valeur de la propriété [type](../../../ado/reference/ado-api/type-property-ado.md) de tous les objets [Field](../../../ado/reference/ado-api/field-object.md) de la table ***Employees*** . La fonction FieldType est requise pour l’exécution de cette procédure.  
+Cet exemple illustre la propriété [type](./type-property-ado.md) en affichant le nom de la constante qui correspond à la valeur de la propriété [type](./type-property-ado.md) de tous les objets [Field](./field-object.md) de la table ***Employees*** . La fonction FieldType est requise pour l’exécution de cette procédure.  
   
 ```  
 'BeginTypeFieldVB  
@@ -107,5 +107,5 @@ Attribute VB_Name = "TypeField"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Field, objet](../../../ado/reference/ado-api/field-object.md)   
- [Type, propriété (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field, objet](./field-object.md)   
+ [Type, propriété (ADO)](./type-property-ado.md)

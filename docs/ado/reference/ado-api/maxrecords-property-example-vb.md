@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 023519763173c26465cef568345990221b4a0e1a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fef42834365372b889d9158c9b1a35582c384e7b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443281"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774418"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords, exemple de propriété (VB)
-Cet exemple utilise la propriété [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) pour ouvrir un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 titres les plus chers dans la table ***titles*** .  
+Cet exemple utilise la propriété [maxRecords](./maxrecords-property-ado.md) pour ouvrir un [jeu d’enregistrements](./recordset-object-ado.md) contenant les 10 titres les plus chers dans la table ***titles*** .  
   
 ```  
 'BeginMaxRecordsVB  
@@ -89,5 +89,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [MaxRecords, propriété (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MaxRecords, propriété (ADO)](./maxrecords-property-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

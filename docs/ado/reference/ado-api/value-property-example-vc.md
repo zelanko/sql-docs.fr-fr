@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0bcea6cd4ad8f786cf2e2a70b35f6f67dcae3127
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6cbe1d7738bd827a8f984e8b4f5e024e88457035
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441571"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776948"
 ---
 # <a name="value-property-example-vc"></a>Value, exemple de propriété (VC++)
-Cet exemple illustre la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) avec des objets [Field](../../../ado/reference/ado-api/field-object.md) et [Property](../../../ado/reference/ado-api/property-object-ado.md) en affichant les valeurs des champs et des propriétés de la table ***Employees*** .  
+Cet exemple illustre la propriété [value](./value-property-ado.md) avec des objets [Field](./field-object.md) et [Property](./property-object-ado.md) en affichant les valeurs des champs et des propriétés de la table ***Employees*** .  
   
 ```  
 // BeginValueCpp.cpp  
@@ -171,6 +171,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Field, objet](../../../ado/reference/ado-api/field-object.md)   
- [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Value, propriété (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+ [Field, objet](./field-object.md)   
+ [Property, objet (ADO)](./property-object-ado.md)   
+ [Value, propriété (ADO)](./value-property-ado.md)

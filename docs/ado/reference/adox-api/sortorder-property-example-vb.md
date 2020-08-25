@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a66fcb11780731424563526d30a4d544c60ea693
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 089c4e7f402e374ab4af43c683270ad488c0f8bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439501"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769358"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder, exemple de propriété (VB)
-Cet exemple illustre la propriété [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md) qui a été ajoutée à la collection [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) d’un [index](../../../ado/reference/adox-api/index-object-adox.md). Le code ajoute un index croissant à la colonne country de la table **Employees** , puis affiche les enregistrements. Ensuite, le code ajoute un index décroissant à la colonne country dans la table **Employees** et affiche à nouveau les enregistrements. La différence entre les index croissant et décroissant est indiquée.  
+Cet exemple illustre la propriété [SortOrder](./sortorder-property-adox.md) d’une [colonne](./column-object-adox.md) qui a été ajoutée à la collection [Columns](./columns-collection-adox.md) d’un [index](./index-object-adox.md). Le code ajoute un index croissant à la colonne country de la table **Employees** , puis affiche les enregistrements. Ensuite, le code ajoute un index décroissant à la colonne country dans la table **Employees** et affiche à nouveau les enregistrements. La différence entre les index croissant et décroissant est indiquée.  
   
 ```  
 ' BeginSortOrderVB  
@@ -138,7 +138,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns, collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [SortOrder, propriété (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [Column, objet (ADOX)](./column-object-adox.md)   
+ [Columns, collection (ADOX)](./columns-collection-adox.md)   
+ [Index, objet (ADOX)](./index-object-adox.md)   
+ [SortOrder, propriété (ADOX)](./sortorder-property-adox.md)

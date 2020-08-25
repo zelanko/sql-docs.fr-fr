@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1b0a92e7079338e290f228603767d6d15a3a351e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cade08630577b32d81643cb30b6a1e20656d95bf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442921"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773678"
 ---
 # <a name="openschema-method"></a>OpenSchema, méthode
 Obtient des informations de schéma de base de données à partir du fournisseur.  
@@ -35,14 +35,14 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) qui contient des informations de schéma. Le **jeu d’enregistrements** s’ouvre en tant que curseur statique en lecture seule. Le *TypeRequête* détermine les colonnes qui s’affichent dans le **jeu d’enregistrements**.  
+ Retourne un objet [Recordset](./recordset-object-ado.md) qui contient des informations de schéma. Le **jeu d’enregistrements** s’ouvre en tant que curseur statique en lecture seule. Le *TypeRequête* détermine les colonnes qui s’affichent dans le **jeu d’enregistrements**.  
   
 #### <a name="parameters"></a>Paramètres  
  *QueryType*  
- Toute valeur [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) qui représente le type de requête de schéma à exécuter.  
+ Toute valeur [SchemaEnum](./schemaenum.md) qui représente le type de requête de schéma à exécuter.  
   
  *Critères*  
- facultatif. Tableau de contraintes de requête pour chaque option *QueryType* , comme indiqué dans [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ facultatif. Tableau de contraintes de requête pour chaque option *QueryType* , comme indiqué dans [SchemaEnum](./schemaenum.md).  
   
  *SchemaID*  
  GUID d’une requête de schéma de fournisseur non définie par la spécification OLE DB. Ce paramètre est obligatoire si *QueryType* est défini sur **adSchemaProviderSpecific**; dans le cas contraire, il n’est pas utilisé.  
@@ -59,22 +59,22 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Les fournisseurs ne sont pas tenus de prendre en charge toutes les requêtes de schéma standard OLE DB. Plus précisément, seuls **adSchemaTables**, **adSchemaColumns**et **adSchemaProviderTypes** sont requis par la spécification OLE DB. Toutefois, le fournisseur n’est pas tenu de prendre en charge les contraintes de *critères* répertoriées précédemment pour ces requêtes de schéma.  
   
 > [!NOTE]
->  **Utilisation des services de données distants** La méthode **OpenSchema** n’est pas disponible sur un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) côté client.  
+>  **Utilisation des services de données distants** La méthode **OpenSchema** n’est pas disponible sur un objet de [connexion](./connection-object-ado.md) côté client.  
   
 > [!NOTE]
->  Dans Visual Basic, les colonnes qui ont un entier non signé de 4 octets (DBTYPE UI4) dans le **jeu d’enregistrements** retourné par la méthode **OpenSchema** sur l’objet de **connexion** ne peuvent pas être comparées à d’autres variables. Pour plus d’informations sur les types de données OLE DB, consultez [types de données dans OLE DB (OLE DB)](https://msdn.microsoft.com/6039292f-74e0-49b2-b133-17bc117ebf6a) et [annexe A : types de données](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6) dans le Guide de référence du programmeur Microsoft OLE DB.  
+>  Dans Visual Basic, les colonnes qui ont un entier non signé de 4 octets (DBTYPE UI4) dans le **jeu d’enregistrements** retourné par la méthode **OpenSchema** sur l’objet de **connexion** ne peuvent pas être comparées à d’autres variables. Pour plus d’informations sur les types de données OLE DB, consultez [types de données dans OLE DB (OLE DB)](/previous-versions/windows/desktop/ms714931(v=vs.85)) et [annexe A : types de données](/previous-versions/windows/desktop/ms723969(v=vs.85)) dans le Guide de référence du programmeur Microsoft OLE DB.  
   
 > [!NOTE]
 >  **Utilisateurs Visual C/C++** Lorsque vous n’utilisez pas de curseurs côté client, la récupération du « ORDINAL_POSITION » d’un schéma de colonne dans ADO retourne une variante de type VT_R8 dans MDAC 2,7, MDAC 2,8 et Windows DAC (Windows Data Access Components) 6,0, alors que le type utilisé dans MDAC 2,6 était VT_I4. Les programmes écrits pour MDAC 2,6 qui recherchent uniquement un Variant retourné de type VT_I4 obtenir un zéro pour chaque ordinal s’il est exécuté sous MDAC 2,7, MDAC 2,8 et Windows DAC 6,0 sans modification. Cette modification a été apportée parce que le type de données retourné par OLE DB est DBTYPE_UI4, et dans le type de VT_I4 signé, il n’y a pas assez de place pour contenir toutes les valeurs possibles sans risque de troncation, ce qui entraîne une perte de données.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection, objet (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [OpenSchema, exemple de méthode (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
- [OpenSchema, exemple de méthode (VC + +)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
- [Open, méthode (connexion ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open, méthode (ADO record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Open, méthode (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [OpenSchema, exemple de méthode (VB)](./openschema-method-example-vb.md)   
+ [OpenSchema, exemple de méthode (VC + +)](./openschema-method-example-vc.md)   
+ [Open, méthode (connexion ADO)](./open-method-ado-connection.md)   
+ [Open, méthode (ADO record)](./open-method-ado-record.md)   
+ [Open, méthode (objet Recordset ADO)](./open-method-ado-recordset.md)   
+ [Open, méthode (objet Stream ADO)](./open-method-ado-stream.md)   
+ [Annexe A : Fournisseurs](../../guide/appendixes/appendix-a-providers.md)

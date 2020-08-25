@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c37ac5209e7244a76f62a2d6979efb2df73a8e4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aeab0b42b530c91e57ea25fbca9e7dc3b7bfdba2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451251"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776498"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk et GetChunk, exemple de méthodes (VB)
-Cet exemple utilise les méthodes [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) et [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) pour remplir un champ d’image avec les données d’un autre enregistrement.  
+Cet exemple utilise les méthodes [AppendChunk](./appendchunk-method-ado.md) et [GetChunk](./getchunk-method-ado.md) pour remplir un champ d’image avec les données d’un autre enregistrement.  
   
 ```  
 'BeginAppendChunkVB  
@@ -149,7 +149,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [AppendChunk, méthode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Field, objet](../../../ado/reference/ado-api/field-object.md)   
- [GetChunk, méthode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
- [Parameter (objet)](../../../ado/reference/ado-api/parameter-object.md)
+ [AppendChunk, méthode (ADO)](./appendchunk-method-ado.md)   
+ [Field, objet](./field-object.md)   
+ [GetChunk, méthode (ADO)](./getchunk-method-ado.md)   
+ [Objet Parameter](./parameter-object.md)

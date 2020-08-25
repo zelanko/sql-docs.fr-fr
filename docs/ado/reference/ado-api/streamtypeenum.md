@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47ebcacf2403717c12c19c33a26001e031557b7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 561095ea23fbf03cf104105c1230955baa029341
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441801"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777168"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
-Spécifie le type de données stockées dans un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Spécifie le type de données stockées dans un objet de [flux](./stream-object-ado.md) .  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|Indique des données binaires.|  
-|**adTypeText**|2|Par défaut. Indique des données texte, qui se trouvent dans le jeu de caractères spécifié par [charset](../../../ado/reference/ado-api/charset-property-ado.md).|  
+|**adTypeText**|2|Par défaut. Indique des données texte, qui se trouvent dans le jeu de caractères spécifié par [charset](./charset-property-ado.md).|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Ces constantes n’ont pas d’équivalents ADO/WFC.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Type, propriété (objet Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Type, propriété (objet Stream ADO)](./type-property-ado-stream.md)

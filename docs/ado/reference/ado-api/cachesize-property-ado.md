@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3cafee5dbcc5d6469df2d733f1898806069dd112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6654adc5cbf5b01435dbc95a2f630cf980cc6d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451101"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776358"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize, propriété (ADO)
-Indique le nombre d’enregistrements d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) mis en cache localement en mémoire.  
+Indique le nombre d’enregistrements d’un objet [Recordset](./recordset-object-ado.md) mis en cache localement en mémoire.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **type long** qui doit être supérieure à 0. 1 constitue la valeur par défaut.  
@@ -41,14 +41,14 @@ Indique le nombre d’enregistrements d’un objet [Recordset](../../../ado/refe
   
  Un paramètre **CacheSize** de zéro n’est pas autorisé et retourne une erreur.  
   
- Les enregistrements récupérés à partir du cache ne reflètent pas les modifications simultanées apportées par d’autres utilisateurs aux données sources. Pour forcer une mise à jour de toutes les données mises en cache, utilisez la méthode [Resync](../../../ado/reference/ado-api/resync-method.md) .  
+ Les enregistrements récupérés à partir du cache ne reflètent pas les modifications simultanées apportées par d’autres utilisateurs aux données sources. Pour forcer une mise à jour de toutes les données mises en cache, utilisez la méthode [Resync](./resync-method.md) .  
   
- Si **CacheSize** est défini sur une valeur supérieure à un, les méthodes de navigation ([Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext et MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) peuvent entraîner la navigation vers un enregistrement supprimé, si la suppression se produit après la récupération des enregistrements. Après l’extraction initiale, les suppressions suivantes ne sont pas reflétées dans votre cache de données tant que vous n’essayez pas d’accéder à une valeur de données à partir d’une ligne supprimée. Toutefois, la définition de **CacheSize** sur l’une élimine ce problème, car les lignes supprimées ne peuvent pas être extraites.  
+ Si **CacheSize** est défini sur une valeur supérieure à un, les méthodes de navigation ([Move](./move-method-ado.md), [MoveFirst, MoveLast, MoveNext et MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) peuvent entraîner la navigation vers un enregistrement supprimé, si la suppression se produit après la récupération des enregistrements. Après l’extraction initiale, les suppressions suivantes ne sont pas reflétées dans votre cache de données tant que vous n’essayez pas d’accéder à une valeur de données à partir d’une ligne supprimée. Toutefois, la définition de **CacheSize** sur l’une élimine ce problème, car les lignes supprimées ne peuvent pas être extraites.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CacheSize, exemple de propriété (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [CacheSize, exemple de propriété (VC + +)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [CacheSize, exemple de propriété (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+ [CacheSize, exemple de propriété (VB)](./cachesize-property-example-vb.md)   
+ [CacheSize, exemple de propriété (VC + +)](./cachesize-property-example-vc.md)   
+ [CacheSize, exemple de propriété (JScript)](./cachesize-property-example-jscript.md)

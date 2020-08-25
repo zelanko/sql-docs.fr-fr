@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 440b2dec1ce045604456c38672c8c53e5c514df2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ed06cde45393f347ed5a001ca7da7f7adde375c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443201"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774288"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (ADO)
-Passe au premier enregistrement, dernier, suivant ou précédent dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) spécifié et convertit cet enregistrement en enregistrement actif.  
+Passe au premier enregistrement, dernier, suivant ou précédent dans un objet [Recordset](./recordset-object-ado.md) spécifié et convertit cet enregistrement en enregistrement actif.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,21 +50,21 @@ recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
   
  Un appel à **MoveFirst** ou **MoveLast** lorsque le **Recordset** est vide (les paramètres **BOF** et **EOF** ont la valeur true) génère une erreur.  
   
- Utilisez la méthode **MoveNext** pour déplacer la position d’enregistrement actuelle d’un enregistrement vers l’avant (vers le bas de l’ensemble d' **enregistrements**). Si le dernier enregistrement est l’enregistrement en cours et que vous appelez la méthode **MoveNext** , ADO définit l’enregistrement actif à la position qui suit le dernier enregistrement dans le **jeu d’enregistrements** ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a la **valeur true**). Une tentative de déplacement vers l’avant lorsque la propriété **EOF** a déjà la **valeur true** génère une erreur.  
+ Utilisez la méthode **MoveNext** pour déplacer la position d’enregistrement actuelle d’un enregistrement vers l’avant (vers le bas de l’ensemble d' **enregistrements**). Si le dernier enregistrement est l’enregistrement en cours et que vous appelez la méthode **MoveNext** , ADO définit l’enregistrement actif à la position qui suit le dernier enregistrement dans le **jeu d’enregistrements** ([EOF](./bof-eof-properties-ado.md) a la **valeur true**). Une tentative de déplacement vers l’avant lorsque la propriété **EOF** a déjà la **valeur true** génère une erreur.  
   
  Dans ADO 2,5 et versions ultérieures, lorsque le **Recordset** a été filtré ou trié et que les données de l’enregistrement actuel sont modifiées, l’appel de la méthode **MoveNext** déplace le curseur de deux enregistrements de l’enregistrement actif. En effet, lorsque l’enregistrement actif est modifié, l’enregistrement suivant devient le nouvel enregistrement actif. L’appel de **MoveNext** après la modification déplace le curseur d’un enregistrement vers l’avant à partir du nouvel enregistrement actif. Cela diffère du comportement de ADO 2,1 et des versions antérieures. Dans ces versions antérieures, la modification des données d’un enregistrement actif dans le **jeu d’enregistrements** trié ou filtré ne change pas la position de l’enregistrement actuel, et **MoveNext** déplace le curseur vers l’enregistrement suivant immédiatement après l’enregistrement actif.  
   
- Utilisez la méthode **MovePrevious** pour déplacer la position d’enregistrement actuelle d’un enregistrement vers l’arrière (vers le haut de l’ensemble d' **enregistrements**). L’objet **Recordset** doit prendre en charge les signets ou le déplacement du curseur vers l’arrière ; dans le cas contraire, l’appel de méthode génère une erreur. Si le premier enregistrement est l’enregistrement en cours et que vous appelez la méthode **MovePrevious** , ADO définit l’enregistrement actif à la position précédant le premier enregistrement dans le **jeu d’enregistrements** ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a la **valeur true**). Une tentative de déplacement vers l’arrière lorsque la propriété **BOF** a déjà la **valeur true** génère une erreur. Si l’objet **Recordset** ne prend pas en charge les signets ou le déplacement vers le haut du curseur, la méthode **MovePrevious** génère une erreur.  
+ Utilisez la méthode **MovePrevious** pour déplacer la position d’enregistrement actuelle d’un enregistrement vers l’arrière (vers le haut de l’ensemble d' **enregistrements**). L’objet **Recordset** doit prendre en charge les signets ou le déplacement du curseur vers l’arrière ; dans le cas contraire, l’appel de méthode génère une erreur. Si le premier enregistrement est l’enregistrement en cours et que vous appelez la méthode **MovePrevious** , ADO définit l’enregistrement actif à la position précédant le premier enregistrement dans le **jeu d’enregistrements** ([BOF](./bof-eof-properties-ado.md) a la **valeur true**). Une tentative de déplacement vers l’arrière lorsque la propriété **BOF** a déjà la **valeur true** génère une erreur. Si l’objet **Recordset** ne prend pas en charge les signets ou le déplacement vers le haut du curseur, la méthode **MovePrevious** génère une erreur.  
   
- Si le **jeu d’enregistrements** est Forward uniquement et que vous souhaitez prendre en charge à la fois le défilement vers l’avant et vers l’arrière, vous pouvez utiliser la propriété [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) pour créer un cache d’enregistrement qui prend en charge le déplacement du curseur vers l’arrière via la méthode [Move](../../../ado/reference/ado-api/move-method-ado.md) . Étant donné que les enregistrements mis en cache sont chargés en mémoire, vous devez éviter de mettre en cache plus d’enregistrements que nécessaire. Vous pouvez appeler la méthode **MoveFirst** dans un objet **Recordset** avant uniquement ; Cela peut entraîner la réexécution de la commande qui a généré l’objet **Recordset** par le fournisseur.  
+ Si le **jeu d’enregistrements** est Forward uniquement et que vous souhaitez prendre en charge à la fois le défilement vers l’avant et vers l’arrière, vous pouvez utiliser la propriété [CacheSize](./cachesize-property-ado.md) pour créer un cache d’enregistrement qui prend en charge le déplacement du curseur vers l’arrière via la méthode [Move](./move-method-ado.md) . Étant donné que les enregistrements mis en cache sont chargés en mémoire, vous devez éviter de mettre en cache plus d’enregistrements que nécessaire. Vous pouvez appeler la méthode **MoveFirst** dans un objet **Recordset** avant uniquement ; Cela peut entraîner la réexécution de la commande qui a généré l’objet **Recordset** par le fournisseur.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [MoveFirst, MoveLast, MoveNext et MovePrevious, exemple de méthodes (VB)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
- [MoveFirst, MoveLast, MoveNext et MovePrevious, exemple de méthode (VBScript)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
- [MoveFirst, MoveLast, MoveNext et MovePrevious, exemple de méthodes (VC + +)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   
- [Move, méthode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Méthodes MoveFirst, MoveLast, MoveNext et MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
- [MoveRecord, méthode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [MoveFirst, MoveLast, MoveNext et MovePrevious, exemple de méthodes (VB)](./movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)   
+ [MoveFirst, MoveLast, MoveNext et MovePrevious, exemple de méthode (VBScript)](./movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)   
+ [MoveFirst, MoveLast, MoveNext et MovePrevious, exemple de méthodes (VC + +)](./movefirst-movelast-movenext-and-moveprevious-methods-example-vc.md)   
+ [Move, méthode (ADO)](./move-method-ado.md)   
+ [Méthodes MoveFirst, MoveLast, MoveNext et MovePrevious (RDS)](../rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)   
+ [MoveRecord, méthode (ADO)](./moverecord-method-ado.md)

@@ -18,34 +18,34 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12788438d7db4cf51df564ea7d262bb4e7ef693d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 869daa9afc840e7580e6498510ef07d4be002802
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441701"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777078"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue, propriété
-Indique la valeur actuelle d’un objet [champ](../../../ado/reference/ado-api/field-object.md) dans la base de données.  
+Indique la valeur actuelle d’un objet [champ](./field-object.md) dans la base de données.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Retourne une valeur de **type Variant** qui indique la valeur du **champ**.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez la propriété **UnderlyingValue** pour retourner la valeur de champ actuelle de la base de données. La valeur de champ dans la propriété **UnderlyingValue** est la valeur qui est visible pour votre transaction et peut être le résultat d’une mise à jour récente par une autre transaction. Cela peut être différent de la propriété [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) , qui reflète la valeur retournée à l’origine à l' [objet Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Utilisez la propriété **UnderlyingValue** pour retourner la valeur de champ actuelle de la base de données. La valeur de champ dans la propriété **UnderlyingValue** est la valeur qui est visible pour votre transaction et peut être le résultat d’une mise à jour récente par une autre transaction. Cela peut être différent de la propriété [OriginalValue](./originalvalue-property-ado.md) , qui reflète la valeur retournée à l’origine à l' [objet Recordset](./recordset-object-ado.md).  
   
- Cela est similaire à l’utilisation de la méthode [Resync](../../../ado/reference/ado-api/resync-method.md) , mais la propriété **UnderlyingValue** retourne uniquement la valeur d’un champ spécifique de l’enregistrement en cours. Il s’agit de la même valeur que celle utilisée par la méthode [Resync](../../../ado/reference/ado-api/resync-method.md) pour remplacer la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) .  
+ Cela est similaire à l’utilisation de la méthode [Resync](./resync-method.md) , mais la propriété **UnderlyingValue** retourne uniquement la valeur d’un champ spécifique de l’enregistrement en cours. Il s’agit de la même valeur que celle utilisée par la méthode [Resync](./resync-method.md) pour remplacer la propriété [value](./value-property-ado.md) .  
   
  Lorsque vous utilisez cette propriété avec la propriété **OriginalValue** , vous pouvez résoudre les conflits qui résultent des mises à jour par lots.  
   
 ## <a name="record"></a>Enregistrement  
- Pour les objets [Record](../../../ado/reference/ado-api/record-object-ado.md) , cette propriété est vide pour les champs ajoutés avant l’appel de la méthode [Update](../../../ado/reference/ado-api/update-method.md) .  
+ Pour les objets [Record](./record-object-ado.md) , cette propriété est vide pour les champs ajoutés avant l’appel de la méthode [Update](./update-method.md) .  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Field](../../../ado/reference/ado-api/field-object.md)  
+ [Objet Field](./field-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [OriginalValue et UnderlyingValue, exemples de propriétés (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
- [OriginalValue et UnderlyingValue, exemples de propriétés (VC + +)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
- [OriginalValue, propriété (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
- [Resync, méthode](../../../ado/reference/ado-api/resync-method.md)
+ [OriginalValue et UnderlyingValue, exemples de propriétés (VB)](./originalvalue-and-underlyingvalue-properties-example-vb.md)   
+ [OriginalValue et UnderlyingValue, exemples de propriétés (VC + +)](./originalvalue-and-underlyingvalue-properties-example-vc.md)   
+ [OriginalValue, propriété (ADO)](./originalvalue-property-ado.md)   
+ [Resync, méthode](./resync-method.md)

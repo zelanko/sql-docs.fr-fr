@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fdc1c5aad0b07f19dc3f1b98b58ca322f7ae577
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f0af0f636513c3648755eb1d0c905e7a76ef9ee
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439511"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769368"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder, propriété (ADOX)
 Indique la séquence de tri de la colonne (colonnes d’index uniquement).  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit et retourne une valeur de **type long** qui peut être l’une des constantes [SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md) . La valeur par défaut est **adSortAscending**.  
+ Définit et retourne une valeur de **type long** qui peut être l’une des constantes [SortOrderEnum](./sortorderenum.md) . La valeur par défaut est **adSortAscending**.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété s’applique uniquement aux objets de [colonne](../../../ado/reference/adox-api/column-object-adox.md) de la collection [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) d’un [index](../../../ado/reference/adox-api/index-object-adox.md).  
+ Cette propriété s’applique uniquement aux objets de [colonne](./column-object-adox.md) de la collection [Columns](./columns-collection-adox.md) d’un [index](./index-object-adox.md).  
   
 ## <a name="applies-to"></a>S'applique à  
- [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column, objet (ADOX)](./column-object-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [SortOrder, exemple de propriété (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [Columns, collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [SortOrder, exemple de propriété (VB)](./sortorder-property-example-vb.md)   
+ [Columns, collection (ADOX)](./columns-collection-adox.md)   
+ [Index, objet (ADOX)](./index-object-adox.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d16881ba6ee448ab8efda506e506b0a7f3bde02c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ff88ab9dc0c3f050be5ae8cfd593473ca2a7fa8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443221"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774298"
 ---
 # <a name="move-method-example-vbscript"></a>Move, exemple de méthode (VBScript)
-Cet exemple utilise la méthode [Move](../../../ado/reference/ado-api/move-method-ado.md) pour positionner le pointeur d’enregistrement, en fonction de l’entrée utilisateur.  
+Cet exemple utilise la méthode [Move](./move-method-ado.md) pour positionner le pointeur d’enregistrement, en fonction de l’entrée utilisateur.  
   
  Utilisez l’exemple suivant dans une page de Active Server (ASP). Pour afficher cet exemple entièrement fonctionnel, vous devez disposer de la source de données AdvWorks. mdb (installée avec le kit de développement logiciel (SDK)) située dans C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou modifier le chemin d’accès dans l’exemple de code pour refléter l’emplacement réel de ce fichier. Il s’agit d’un fichier de base de données Microsoft Access.  
   
@@ -184,5 +184,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Move, méthode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Move, méthode (ADO)](./move-method-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

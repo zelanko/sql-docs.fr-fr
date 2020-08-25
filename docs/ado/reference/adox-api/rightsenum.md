@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ead66b4c3215ef0d7a42e8ec029e97502dac2f4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ddda86faaf032fbc981c159300ee4545643bb2e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439551"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769448"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Spécifie les droits ou les autorisations pour un groupe ou un utilisateur sur un objet.  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adRightCreate**|16384 (&H4000)|L’utilisateur ou le groupe a l’autorisation de créer des objets de ce type.|  
 |**adRightDelete**|65536 (&H10000)|L’utilisateur ou le groupe a l’autorisation de supprimer des données d’un objet. Pour les objets tels que les **tables**, l’utilisateur a l’autorisation de supprimer des valeurs de données des enregistrements.|  
@@ -37,7 +37,7 @@ Spécifie les droits ou les autorisations pour un groupe ou un utilisateur sur u
 |**adRightInsert**|32768 (&H8000)|L’utilisateur ou le groupe a l’autorisation d’insérer l’objet. Pour les objets tels que les **tables**, l’utilisateur a l’autorisation d’insérer des données dans la table.|  
 |**adRightMaximumAllowed**|33554432 (&H2000000)|L’utilisateur ou le groupe a le nombre maximal d’autorisations autorisées par le fournisseur. Les autorisations spécifiques sont dépendantes du fournisseur.|  
 |**adRightNone**|0|L’utilisateur ou le groupe n’a pas d’autorisations pour l’objet.|  
-|**adRightRead**|-2147483648 (&H80000000)|L’utilisateur ou le groupe a l’autorisation de lire l’objet. Pour les objets tels que les [tables](../../../ado/reference/adox-api/table-object-adox.md), l’utilisateur a l’autorisation de lire les données de la table.|  
+|**adRightRead**|-2147483648 (&H80000000)|L’utilisateur ou le groupe a l’autorisation de lire l’objet. Pour les objets tels que les [tables](./table-object-adox.md), l’utilisateur a l’autorisation de lire les données de la table.|  
 |**adRightReadDesign**|1024 (&H400)|L’utilisateur ou le groupe a l’autorisation de lire la conception de l’objet.|  
 |**adRightReadPermissions**|131072 (&H20000)|L’utilisateur ou le groupe peut afficher, mais pas modifier, les autorisations spécifiques pour un objet dans le catalogue.|  
 |**adRightReference**|8192 (&H2000)|L’utilisateur ou le groupe a l’autorisation de faire référence à l’objet.|  
@@ -51,9 +51,9 @@ Spécifie les droits ou les autorisations pour un groupe ou un utilisateur sur u
 
 :::row:::
     :::column:::
-        [GetPermissions, méthode (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [GetPermissions, méthode (ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [SetPermissions, méthode (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [SetPermissions, méthode (ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

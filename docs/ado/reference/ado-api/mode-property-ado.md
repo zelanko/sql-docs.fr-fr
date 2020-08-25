@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fd002f54010a9bc8d5cf543fe1fd4521bc6d221
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4d63e1ccddf4384a01911738e3eabfddb77cd6be
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443251"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774388"
 ---
 # <a name="mode-property-ado"></a>Mode, propriété (ADO)
-Indique les autorisations disponibles pour la modification des données dans une [connexion](../../../ado/reference/ado-api/connection-object-ado.md), un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md)ou un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Indique les autorisations disponibles pour la modification des données dans une [connexion](./connection-object-ado.md), un [enregistrement](./record-object-ado.md)ou un objet de [flux](./stream-object-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
- Définit ou retourne une valeur [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) . La valeur par défaut d’une **connexion** est **adModeUnknown**. La valeur par défaut d’un objet **Record** est **adModeRead**. La valeur par défaut d’un **flux** associé à une source sous-jacente (ouverte avec une URL comme source, ou en tant que **flux** par défaut d’un **enregistrement**) est **adModeRead**. La valeur par défaut d’un **flux** non associé à une source sous-jacente (instanciée en mémoire) est **adModeUnknown**.  
+ Définit ou retourne une valeur [ConnectModeEnum](./connectmodeenum.md) . La valeur par défaut d’une **connexion** est **adModeUnknown**. La valeur par défaut d’un objet **Record** est **adModeRead**. La valeur par défaut d’un **flux** associé à une source sous-jacente (ouverte avec une URL comme source, ou en tant que **flux** par défaut d’un **enregistrement**) est **adModeRead**. La valeur par défaut d’un **flux** non associé à une source sous-jacente (instanciée en mémoire) est **adModeUnknown**.  
   
 ## <a name="remarks"></a>Notes  
  Utilisez la propriété **mode** pour définir ou retourner les autorisations d’accès utilisées par le fournisseur sur la connexion actuelle. Vous pouvez définir la propriété **mode** uniquement lorsque l’objet de **connexion** est fermé.  
@@ -45,16 +45,16 @@ Indique les autorisations disponibles pour la modification des données dans une
 
 :::row:::
     :::column:::
-        [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Connection, objet (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [Record, objet (ADO)](./record-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Stream, objet (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [IsolationLevel et mode, exemple de propriétés (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel et mode, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+ [IsolationLevel et mode, exemple de propriétés (VB)](./isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel et mode, exemple de propriétés (VC + +)](./isolationlevel-and-mode-properties-example-vc.md)

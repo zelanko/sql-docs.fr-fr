@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39d0aa06-03ac-4c9a-8400-83947756ef99
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcbe8174b2866f3edfd9676d7873216fd16f5751
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 09d880b305d5325120325407c5ec07e0a4e40c42
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450891"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776168"
 ---
 # <a name="command-ado---wfc-syntax"></a>Command (ADO - syntaxe WFC)
 ## <a name="package-commswfcdata"></a>package com. ms. wfc. Data  
@@ -71,4 +71,4 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command, objet (ADO)](./command-object-ado.md)

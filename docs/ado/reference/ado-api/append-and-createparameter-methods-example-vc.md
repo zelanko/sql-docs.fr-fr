@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 832981161e0fcc6ec297186975de33c027cc694f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17e38f481478a43f59372d5be23fb29b701bc9c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451271"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776518"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Append et CreateParameter, exemples de méthodes (VC + +)
-Cet exemple utilise les méthodes [Append](../../../ado/reference/ado-api/append-method-ado.md) et [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) pour exécuter une procédure stockée avec un paramètre d’entrée.  
+Cet exemple utilise les méthodes [Append](./append-method-ado.md) et [CreateParameter](./createparameter-method-ado.md) pour exécuter une procédure stockée avec un paramètre d’entrée.  
   
 ## <a name="example"></a>Exemple  
   
@@ -204,5 +204,5 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Append, méthode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)
+ [Append, méthode (ADO)](./append-method-ado.md)   
+ [CreateParameter, méthode (ADO)](./createparameter-method-ado.md)

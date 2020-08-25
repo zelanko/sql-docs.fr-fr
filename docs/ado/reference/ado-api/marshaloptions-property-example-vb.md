@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6004df68918c166e3964cb10222b2117210430c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a8fc5df35b017913b5178d06ab4f51a0d8a720a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443311"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774488"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions, exemple de propriété (VB)
-Cet exemple utilise la propriété [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) pour spécifier les lignes qui sont renvoyées au serveur (toutes les lignes ou uniquement les lignes modifiées).  
+Cet exemple utilise la propriété [MarshalOptions](./marshaloptions-property-ado.md) pour spécifier les lignes qui sont renvoyées au serveur (toutes les lignes ou uniquement les lignes modifiées).  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -133,5 +133,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [MarshalOptions, propriété (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
- [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)
+ [MarshalOptions, propriété (ADO)](./marshaloptions-property-ado.md)   
+ [MarshalOptionsEnum](./marshaloptionsenum.md)

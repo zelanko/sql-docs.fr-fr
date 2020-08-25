@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 939de5306982ab2e369fce0648e477cac5f48cb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 343e5fd45a32e45cda342ab01feb64f379054486
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441791"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777158"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
-Spécifie si un séparateur de ligne est ajouté à la chaîne écrite dans un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Spécifie si un séparateur de ligne est ajouté à la chaîne écrite dans un objet de [flux](./stream-object-ado.md) .  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adWriteChar**|0|Par défaut. Écrit la chaîne de texte spécifiée (spécifiée par le paramètre de *données* ) dans l’objet de **flux** .|  
-|**adWriteLine**|1|Écrit une chaîne de texte et un caractère de séparation de ligne dans un objet de **flux** . Si la propriété [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) n’est pas définie, elle retourne une erreur d’exécution.|  
+|**adWriteLine**|1|Écrit une chaîne de texte et un caractère de séparation de ligne dans un objet de **flux** . Si la propriété [LineSeparator](./lineseparator-property-ado.md) n’est pas définie, elle retourne une erreur d’exécution.|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Ces constantes n’ont pas d’équivalents ADO/WFC.  
   
 ## <a name="applies-to"></a>S'applique à  
- [WriteText, méthode](../../../ado/reference/ado-api/writetext-method.md)
+ [WriteText, méthode](./writetext-method.md)

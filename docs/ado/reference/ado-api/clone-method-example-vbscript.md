@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e56e93f851d2f5f0dac7df2339dec37c0b6a1ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c696fb6be361327944223bab19d1edb0cf35460
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450941"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776238"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone, exemple de méthode (VBScript)
-Cet exemple utilise la méthode [clone](../../../ado/reference/ado-api/clone-method-ado.md) pour créer des copies d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) , puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  
+Cet exemple utilise la méthode [clone](./clone-method-ado.md) pour créer des copies d’un [jeu d’enregistrements](./recordset-object-ado.md) , puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  
   
  Utilisez l’exemple suivant dans une page de Active Server (ASP). Cet exemple utilise la base de données **Northwind** distribuée avec Microsoft Access. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que CloneVBS. asp. Vous pouvez afficher le résultat dans n’importe quel navigateur client.  
   
@@ -119,5 +119,5 @@ Cet exemple utilise la méthode [clone](../../../ado/reference/ado-api/clone-met
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Clone, méthode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Clone, méthode (ADO)](./clone-method-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

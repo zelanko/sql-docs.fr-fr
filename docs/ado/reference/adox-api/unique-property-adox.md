@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81c423d625039e36ddccd9f806921e5e0a41174b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109e7d004e65bc18e4af0e67d9fbada19fc538d5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439411"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769168"
 ---
 # <a name="unique-property-adox"></a>Unique, propriété (ADOX)
 Indique si les clés d’index doivent être uniques.  
@@ -34,11 +34,11 @@ Indique si les clés d’index doivent être uniques.
 ## <a name="remarks"></a>Notes  
  La valeur par défaut est **False**.  
   
- Cette propriété est en lecture seule sur les objets d' [index](../../../ado/reference/adox-api/index-object-adox.md) déjà ajoutés à une collection.  
+ Cette propriété est en lecture seule sur les objets d' [index](./index-object-adox.md) déjà ajoutés à une collection.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Index, objet (ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [PrimaryKey et unique, exemple de propriétés (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [Key, objet (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [PrimaryKey et unique, exemple de propriétés (VB)](./primarykey-and-unique-properties-example-vb.md)   
+ [Key, objet (ADOX)](./key-object-adox.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 617ceace87a7f265d3d4db901b0a586481c19e32
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7adb671b42d17b4abe13733fd912234e79560e3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444451"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775898"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString, propriété (ADO)
 Indique les informations utilisées pour établir une connexion à une source de données.  
@@ -42,9 +42,9 @@ Indique les informations utilisées pour établir une connexion à une source de
 |*Serveur distant =*|Spécifie le nom du chemin d’accès du serveur à utiliser lors de l’ouverture d’une connexion côté client. (Service de données distant uniquement.)|  
 |*URL =*|Spécifie la chaîne de connexion comme une URL absolue identifiant une ressource, telle qu’un fichier ou un répertoire.|  
   
- Une fois que vous avez défini la propriété **ConnectionString** et ouvert l’objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) , le fournisseur peut modifier le contenu de la propriété, par exemple, en mappant les noms d’arguments définis par ADO à leurs équivalents pour le fournisseur spécifique.  
+ Une fois que vous avez défini la propriété **ConnectionString** et ouvert l’objet de [connexion](./connection-object-ado.md) , le fournisseur peut modifier le contenu de la propriété, par exemple, en mappant les noms d’arguments définis par ADO à leurs équivalents pour le fournisseur spécifique.  
   
- La propriété **ConnectionString** hérite automatiquement de la valeur utilisée pour l’argument *ConnectionString* de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) , ce qui vous permet de remplacer la propriété **ConnectionString** actuelle pendant l’appel de la méthode **Open** .  
+ La propriété **ConnectionString** hérite automatiquement de la valeur utilisée pour l’argument *ConnectionString* de la méthode [Open](./open-method-ado-connection.md) , ce qui vous permet de remplacer la propriété **ConnectionString** actuelle pendant l’appel de la méthode **Open** .  
   
  Étant donné que l’argument de *nom de fichier* entraîne le chargement du fournisseur associé par ADO, vous ne pouvez pas transmettre à la fois le *fournisseur* et les arguments de *nom de fichier* .  
   
@@ -63,9 +63,9 @@ Indique les informations utilisées pour établir une connexion à une source de
 |Aucune valeur par défaut.<br /><br /> Quand une application ADO s’exécute sur les systèmes d’exploitation suivants et ne spécifie pas explicitement le fournisseur, ADO retourne l’erreur suivante : «ADODB. Connexion : le fournisseur n’est pas spécifié et il n’existe aucun fournisseur par défaut désigné.»|Windows 2000 (64 bits)<br /><br /> Windows XP (64 bits)<br /><br /> Windows 2003 Server (64 bits)<br /><br /> Windows Vista (64 bits)|  
   
 ## <a name="applies-to"></a>S'applique à  
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection, objet (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [ConnectionString, ConnectionTimeout et State, exemple de propriétés (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout et State, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [ConnectionString, ConnectionTimeout et State, exemple de propriétés (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString, ConnectionTimeout et State, exemple de propriétés (VC + +)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Annexe A : Fournisseurs](../../guide/appendixes/appendix-a-providers.md)

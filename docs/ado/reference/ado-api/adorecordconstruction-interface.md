@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a52b8006ed97809690ec874c27e20ee8f1b05d0f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f93370ae23cd50e1fb494d484756505f69514df1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451331"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776599"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction, interface
 L’interface **ADORecordConstruction**est utilisée pour construire un objet **enregistrement** ADO à partir d’un objet OLE DB **Row** dans une application C/C++.  
@@ -32,8 +32,8 @@ L’interface **ADORecordConstruction**est utilisée pour construire un objet **
   
 |Propriété|Description|  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|En écriture seule.<br />Définit le conteneur d’un objet OLE DB **Row** sur cet objet ADO **Record** .|  
-|[Ligne](../../../ado/reference/ado-api/row-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet de **ligne** OLE DB à partir de cet objet **enregistrement** ADO.|  
+|[ParentRow](./parentrow-property-ado.md)|En écriture seule.<br />Définit le conteneur d’un objet OLE DB **Row** sur cet objet ADO **Record** .|  
+|[Haut](./row-property-ado.md)|Lecture/écriture.<br />Obtient/définit un objet de **ligne** OLE DB à partir de cet objet **enregistrement** ADO.|  
   
 ## <a name="methods"></a>Méthodes  
  Aucun.  
@@ -71,7 +71,7 @@ L’interface **ADORecordConstruction**est utilisée pour construire un objet **
   
  Un objet **Record** ADO peut également être construit à partir du conteneur d’un objet OLE DB **Row** .  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Version :** ADO 2,0 et versions ultérieures  
   
  **Bibliothèque :** msado15.dll  

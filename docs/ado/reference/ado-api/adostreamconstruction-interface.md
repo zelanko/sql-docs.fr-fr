@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f911be2784e849c8feb271127e2a83ed1ce90c4f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 144965d31dbb11da6cbc9a3ee6b23cd79cda800e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451311"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776628"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction, interface
 L’interface **ADOStreamConstruction** est utilisée pour construire un objet de **flux** ADO à partir d’un objet OLE DB **IStream** dans une application C/C++.  
@@ -30,7 +30,7 @@ L’interface **ADOStreamConstruction** est utilisée pour construire un objet d
   
 |Propriété|Description|  
 |-|-|  
-|[Flux](../../../ado/reference/ado-api/stream-property.md)|Lecture/écriture. Obtient/définit un objet de **flux** OLE DB.|  
+|[Flux](./stream-property.md)|Lecture/écriture. Obtient/définit un objet de **flux** OLE DB.|  
   
 ## <a name="methods"></a>Méthodes  
  Aucun.  
@@ -66,7 +66,7 @@ adoStrConstruct->put_Stream(pUnk);
   
  L' `adoStr` objet résultant représente maintenant l’objet de **flux** ADO construit à partir de l’objet OLE DB **IStream** .  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Version :** ADO 2,0 ou version ultérieure  
   
  **Bibliothèque :** msado15.dll  
@@ -74,4 +74,4 @@ adoStrConstruct->put_Stream(pUnk);
  **UUID :** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADO](../../../ado/reference/ado-api/ado-api-reference.md)
+ [Informations de référence sur l’API ADO](./ado-api-reference.md)

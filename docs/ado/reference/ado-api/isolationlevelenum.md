@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c08da68e136d3e2cffbb492f021225a3b895a9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 03bd95a642f3942275e1ff9d32f1b2d1829b96d3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443411"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774688"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
-Spécifie le niveau d’isolation des transactions pour un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) .  
+Spécifie le niveau d’isolation des transactions pour un objet de [connexion](./connection-object-ado.md) .  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|Indique que le fournisseur utilise un niveau d’isolation différent de celui spécifié, mais que le niveau ne peut pas être déterminé.|  
 |**adXactChaos**|16|Indique que les modifications en attente de transactions hautement isolées ne peuvent pas être remplacées.|  
@@ -41,7 +41,7 @@ Spécifie le niveau d’isolation des transactions pour un objet de [connexion](
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums. IsolationLevel. non spécifié|  
 |AdoEnums. IsolationLevel. CHAOS|  
@@ -54,4 +54,4 @@ Spécifie le niveau d’isolation des transactions pour un objet de [connexion](
 |AdoEnums. IsolationLevel. Serializable|  
   
 ## <a name="applies-to"></a>S'applique à  
- [IsolationLevel, propriété](../../../ado/reference/ado-api/isolationlevel-property.md)
+ [IsolationLevel, propriété](./isolationlevel-property.md)

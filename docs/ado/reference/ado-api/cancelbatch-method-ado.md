@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8fa4d02dd10325726c83a6b645ebdd5b94397f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db1ae959094c07ea44e7e236e540070bea7814e5
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451031"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776308"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch, méthode (ADO)
 Annule une mise à jour par lot en attente.  
@@ -36,27 +36,27 @@ recordset.CancelBatchAffectRecords
   
 #### <a name="parameters"></a>Paramètres  
  *AffectRecords*  
- facultatif. Valeur [AffectEnum](../../../ado/reference/ado-api/affectenum.md) qui indique le nombre d’enregistrements affectés par la méthode **CancelBatch** .  
+ facultatif. Valeur [AffectEnum](./affectenum.md) qui indique le nombre d’enregistrements affectés par la méthode **CancelBatch** .  
   
 ## <a name="remarks"></a>Notes  
- Utilisez la méthode **CancelBatch** pour annuler les mises à jour en attente dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en mode de mise à jour par lot. Si le **jeu d’enregistrements** est en mode de mise à jour immédiate, l’appel de **CancelBatch** sans **adAffectCurrent** génère une erreur.  
+ Utilisez la méthode **CancelBatch** pour annuler les mises à jour en attente dans un [Recordset](./recordset-object-ado.md) en mode de mise à jour par lot. Si le **jeu d’enregistrements** est en mode de mise à jour immédiate, l’appel de **CancelBatch** sans **adAffectCurrent** génère une erreur.  
   
- Si vous modifiez l’enregistrement en cours ou si vous ajoutez un nouvel enregistrement lorsque vous appelez **CancelBatch**, ADO appelle d’abord la méthode [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) pour annuler les modifications mises en cache. Après cela, toutes les modifications en attente dans le **jeu d’enregistrements** sont annulées.  
+ Si vous modifiez l’enregistrement en cours ou si vous ajoutez un nouvel enregistrement lorsque vous appelez **CancelBatch**, ADO appelle d’abord la méthode [CancelUpdate](./cancelupdate-method-ado.md) pour annuler les modifications mises en cache. Après cela, toutes les modifications en attente dans le **jeu d’enregistrements** sont annulées.  
   
- L’enregistrement en cours peut ne pas être déterminable après un appel de **CancelBatch** , en particulier si vous étiez en train d’ajouter un nouvel enregistrement. Pour cette raison, il est prudent de définir la position de l’enregistrement actuel sur un emplacement connu dans le **jeu d’enregistrements** après l’appel de la fonction **CancelBatch** . Par exemple, appelez la méthode [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
+ L’enregistrement en cours peut ne pas être déterminable après un appel de **CancelBatch** , en particulier si vous étiez en train d’ajouter un nouvel enregistrement. Pour cette raison, il est prudent de définir la position de l’enregistrement actuel sur un emplacement connu dans le **jeu d’enregistrements** après l’appel de la fonction **CancelBatch** . Par exemple, appelez la méthode [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
- Si la tentative d’annulation des mises à jour en attente échoue en raison d’un conflit avec les données sous-jacentes (par exemple, si un enregistrement a été supprimé par un autre utilisateur), le fournisseur renvoie des avertissements à la collection d' [Erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) , mais n’interrompt pas l’exécution du programme. Une erreur d’exécution se produit uniquement en cas de conflit sur tous les enregistrements demandés. Utilisez la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) (**adFilterAffectedRecords**) et la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) pour localiser les enregistrements avec conflits.  
+ Si la tentative d’annulation des mises à jour en attente échoue en raison d’un conflit avec les données sous-jacentes (par exemple, si un enregistrement a été supprimé par un autre utilisateur), le fournisseur renvoie des avertissements à la collection d' [Erreurs](./errors-collection-ado.md) , mais n’interrompt pas l’exécution du programme. Une erreur d’exécution se produit uniquement en cas de conflit sur tous les enregistrements demandés. Utilisez la propriété [Filter](./filter-property.md) (**adFilterAffectedRecords**) et la propriété [Status](./status-property-ado-recordset.md) pour localiser les enregistrements avec conflits.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [UpdateBatch et CancelBatch, exemples de méthodes (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
- [UpdateBatch et CancelBatch, exemples de méthodes (VC + +)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
- [Cancel, méthode (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
- [Cancel, méthode (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
- [CancelUpdate, méthode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [CancelUpdate, méthode (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
- [Clear, méthode (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
- [LockType, propriété (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [UpdateBatch, méthode](../../../ado/reference/ado-api/updatebatch-method.md)
+ [UpdateBatch et CancelBatch, exemples de méthodes (VB)](./updatebatch-and-cancelbatch-methods-example-vb.md)   
+ [UpdateBatch et CancelBatch, exemples de méthodes (VC + +)](./updatebatch-and-cancelbatch-methods-example-vc.md)   
+ [Cancel, méthode (ADO)](./cancel-method-ado.md)   
+ [Cancel, méthode (RDS)](../rds-api/cancel-method-rds.md)   
+ [CancelUpdate, méthode (ADO)](./cancelupdate-method-ado.md)   
+ [CancelUpdate, méthode (RDS)](../rds-api/cancelupdate-method-rds.md)   
+ [Clear, méthode (ADO)](./clear-method-ado.md)   
+ [LockType, propriété (ADO)](./locktype-property-ado.md)   
+ [UpdateBatch, méthode](./updatebatch-method.md)

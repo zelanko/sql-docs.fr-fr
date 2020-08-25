@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa3afd41a64b35cca0e3ffc4e676939dd2920ee9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0adcc74321fa5e1d03ea305799ae8aaf654e26e9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441431"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776798"
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.  
@@ -178,7 +178,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  jeu d’enregistrements hiérarchique  
  **Jeu d’enregistrements** qui contient un autre **Recordset**. Voir aussi mise en forme des données, chapitre.  
   
- Pour plus d’informations, consultez [accès aux lignes d’un jeu d’enregistrements hiérarchique](../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Pour plus d’informations, consultez [accès aux lignes d’un jeu d’enregistrements hiérarchique](../guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
  hiérarchie  
  En général, une hiérarchie est une structure classée avec un niveau supérieur et des niveaux subordonnés. Dans ADO, les **recordsets** hiérarchiques sont utilisés pour représenter la relation parent-enfant entre un enregistrement et un chapitre. En outre, dans ADO, les objets d' **enregistrement** et de **flux** peuvent être utilisés pour accéder à des structures d’arborescences hiérarchiques, telles qu’un dossier et des documents. ADO MD comprend également des objets **Hierarchy** pour représenter une relation entre les niveaux d’une dimension dans un cube OLAP. Voir aussi recordsets hiérarchiques, relation parent-enfant, chapitre, arbre.  
@@ -203,7 +203,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  MIME est une norme qui permet de publier et de lire des données binaires sur Internet. L’en-tête d’un fichier contenant des données binaires contient le type MIME des données ; Cela indique aux programmes clients (navigateurs Web et packages de courrier électronique, par exemple) qu’ils doivent gérer les données d’une manière différente de celle qui gère le texte. Par exemple, l’en-tête d’un document Web contenant un graphique JPEG contient le type MIME spécifique au format de fichier JPEG. Cela permet à un navigateur d’afficher le fichier avec sa visionneuse JPEG, s’il en existe un.  
   
 ## <a name="n-o"></a>N-O  
- nœud  
+ node  
  Élément dans une arborescence hiérarchique. Un nœud peut être la racine ou l’enfant d’un autre nœud. Un nœud peut également être le parent de plusieurs enfants. Voir aussi hiérarchie, arborescence, racine, enfant, parent.  
   
  variable objet  

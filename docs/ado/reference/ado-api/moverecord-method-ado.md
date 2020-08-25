@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 270d93169c5c1d91c35a58a36be9a4577e25e7d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0aa5aebbd3a87ede7d73223ffa7684bff837a328
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443151"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774218"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord, méthode (ADO)
-Déplace l’entité représentée par un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) à un autre emplacement.  
+Déplace l’entité représentée par un [enregistrement](./record-object-ado.md) à un autre emplacement.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  facultatif. **Chaîne** qui contient le mot de passe qui, le cas échéant, vérifie le *nom d’utilisateur*.  
   
  *Options*  
- facultatif. Valeur [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  
+ facultatif. Valeur [MoveRecordOptionsEnum](./moverecordoptionsenum.md) dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  
   
  *Asynchrone*  
  facultatif. Valeur **booléenne** qui, lorsque la **valeur est true**, spécifie que cette opération doit être asynchrone.  
@@ -64,17 +64,17 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
 > [!NOTE]
 >  Utilisez l’option **adMoveOverWrite** judicieusement. Par exemple, si vous spécifiez cette option lors du déplacement d’un fichier vers un répertoire, le répertoire est supprimé et remplacé par le fichier.  
   
- Certains attributs de l’objet **Record** , tels que la propriété [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) , ne sont pas mis à jour une fois cette opération terminée. Actualisez les propriétés de l’objet **Record** en fermant l' **enregistrement**, puis en le réouvrant avec l’URL de l’emplacement où le fichier ou le répertoire a été déplacé.  
+ Certains attributs de l’objet **Record** , tels que la propriété [ParentURL](./parenturl-property-ado.md) , ne sont pas mis à jour une fois cette opération terminée. Actualisez les propriétés de l’objet **Record** en fermant l' **enregistrement**, puis en le réouvrant avec l’URL de l’emplacement où le fichier ou le répertoire a été déplacé.  
   
- Si cet **enregistrement** a été obtenu à partir d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md), le nouvel emplacement du fichier ou du répertoire déplacé ne sera pas reflété immédiatement dans le **jeu d’enregistrements**. Actualisez le **Recordset** en le fermant et en le réouvrant.  
+ Si cet **enregistrement** a été obtenu à partir d’un [jeu d’enregistrements](./recordset-object-ado.md), le nouvel emplacement du fichier ou du répertoire déplacé ne sera pas reflété immédiatement dans le **jeu d’enregistrements**. Actualisez le **Recordset** en le fermant et en le réouvrant.  
   
 > [!NOTE]
->  Les URL utilisant le schéma http appellera automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  Les URL utilisant le schéma http appellera automatiquement le [fournisseur Microsoft OLE DB pour la publication Internet](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Pour plus d’informations, consultez [URL absolues et relatives](../../guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>S'applique à  
- [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record, objet (ADO)](./record-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Move, méthode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
+ [Move, méthode (ADO)](./move-method-ado.md)   
+ [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (ADO)](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (RDS)](../rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
