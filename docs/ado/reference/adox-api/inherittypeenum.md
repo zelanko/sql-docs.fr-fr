@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dfa4d6c15cc7d26dbfe964947bd09a04e2f75128
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1fed614d90bbf53fdb2198e3ddd657a1e44acd1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439851"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770118"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
-Spécifie la manière dont les objets héritent des autorisations définies avec [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
+Spécifie la manière dont les objets héritent des autorisations définies avec [SetPermissions](./setpermissions-method-adox.md).  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|Les objets et les autres conteneurs contenus dans l’objet principal héritent de l’entrée.|  
 |**adInheritContainers**|2|Les autres conteneurs qui sont contenus par l’objet principal héritent de l’entrée.|  
@@ -35,4 +35,4 @@ Spécifie la manière dont les objets héritent des autorisations définies avec
 |**adInheritObjects**|1|Les objets qui ne sont pas des conteneurs dans le conteneur héritent des autorisations.|  
   
 ## <a name="applies-to"></a>S'applique à  
- [SetPermissions, méthode (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)
+ [SetPermissions, méthode (ADOX)](./setpermissions-method-adox.md)

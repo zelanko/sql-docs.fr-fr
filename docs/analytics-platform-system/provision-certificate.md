@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 669e65a7d27b208d861a33618d889707134dfefa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400512"
 ---
 # <a name="certificate-provisioning-in-analytics-platform-system"></a>Approvisionnement de certificats dans Analytics Platform System
@@ -40,7 +40,7 @@ Bien que la connexion via le certificat auto-signé chiffre les données en vol 
   
 Le chemin d’accès de certification doit contenir le nom de domaine complet qui correspond à l’adresse IP de cluster du nœud de contrôle (recommandé) ou le nom que les utilisateurs tapent dans leurs barres d’adresses de navigateur pour accéder à la **console d’administration**.  
   
-Utilisez le**Configuration Manager** système de plateforme d’analyse pour ajouter ou supprimer le certificat approuvé. L’utilisation directe de l’outil de configuration de certificat des services HTTP Microsoft Windows (**winHttpCertCfg. exe**) pour gérer le certificat n’est pas prise en charge.  
+Utilisez le**Configuration Manager** système de plateforme d’analyse pour ajouter ou supprimer le certificat approuvé. L’utilisation directe de l’outil de configuration de certificat des services HTTP Microsoft Windows (**winHttpCertCfg.exe**) pour gérer le certificat n’est pas prise en charge.  
   
 ## <a name="import-or-remove-the-certificate"></a>Importer ou supprimer le certificat  
 Les instructions suivantes indiquent comment importer ou supprimer le certificat de l’appareil.  

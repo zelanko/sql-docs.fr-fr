@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0795131ef1765b1fd376355a46fe9cf53ba6eb66
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d58e5a65b2566aa77b74d69479f310a2d4f6e05b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438571"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767328"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize, méthode (RDS)
 Synchronisez le Recordset donné avec la base de données spécifiée par la chaîne de connexion pour l’utiliser dans ADO 2,5 et versions ultérieures.  
@@ -68,6 +68,4 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  Le paramètre *HandlerString* peut avoir la valeur null. Ce qui se passe dans ce cas dépend de la configuration du serveur RDS. La chaîne de gestionnaire « MSDFMAP. Handler » indique que le gestionnaire fourni par Microsoft (Msdfmap.dll) doit être utilisé. Une chaîne de gestionnaire « MASDFMAP. Handler, sample.ini » indique que le gestionnaire de Msdfmap.dll doit être utilisé et que l’argument « sample.ini » doit être passé au gestionnaire. Msdfmap.dll interprète alors l’argument comme une direction pour utiliser la sample.ini pour vérifier la connexion et les chaînes de requête.  
   
 ## <a name="applies-to"></a>S'applique à  
- [DataFactory, objet (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory, objet (RDSServer)](./datafactory-object-rdsserver.md)

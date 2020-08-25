@@ -15,24 +15,24 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9ed83809ec1bf3fd4ba55552f4ecac1d55cfb8d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454021"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806528"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Présentation de Microsoft OLE DB simple Provider
-Le fournisseur Microsoft OLE DB simple (OSP) permet à ADO d’accéder à toutes les données pour lesquelles un fournisseur a été écrit à l’aide de [OLE DB boîte à outils OSP (simple Provider)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Les fournisseurs simples sont destinés à accéder aux sources de données qui nécessitent uniquement une prise en charge fondamentale de la OLE DB, telles que les tableaux en mémoire ou les documents XML.
+Le fournisseur Microsoft OLE DB simple (OSP) permet à ADO d’accéder à toutes les données pour lesquelles un fournisseur a été écrit à l’aide de [OLE DB boîte à outils OSP (simple Provider)](/previous-versions/windows/desktop/ms715822(v=vs.85)). Les fournisseurs simples sont destinés à accéder aux sources de données qui nécessitent uniquement une prise en charge fondamentale de la OLE DB, telles que les tableaux en mémoire ou les documents XML.
 
 ## <a name="connection-string-parameters"></a>Paramètres de chaîne de connexion
- Pour vous connecter au OLE DB DLL de fournisseur simple, affectez à l’argument *Provider* la valeur de la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) :
+ Pour vous connecter au OLE DB DLL de fournisseur simple, affectez à l’argument *Provider* la valeur de la propriété [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) :
 
 ```vb
 MSDAOSP
 ```
 
- Cette valeur peut également être définie ou lue à l’aide de la propriété [Provider](../../../ado/reference/ado-api/provider-property-ado.md) .
+ Cette valeur peut également être définie ou lue à l’aide de la propriété [Provider](../../reference/ado-api/provider-property-ado.md) .
 
  Vous pouvez vous connecter à des fournisseurs simples qui ont été enregistrés en tant que fournisseurs OLE DB complets en utilisant le nom du fournisseur inscrit, déterminé par le writer du fournisseur.
 
@@ -137,7 +137,7 @@ adoRS.Open "C:\Directory\portfolio.xml", adoConn
 
 -   XMLDSO ajoute une colonne de données supplémentaire ($Text) à chaque **jeu d’enregistrements** dans la hiérarchie.
 
- Pour plus d’informations sur le OLE DB fournisseur simple, consultez [création d’un fournisseur simple](https://msdn.microsoft.com/b31a6cba-58ae-4ee8-9039-700973d354d6).
+ Pour plus d’informations sur le OLE DB fournisseur simple, consultez [création d’un fournisseur simple](/previous-versions/windows/desktop/ms721067(v=vs.85)).
 
 ## <a name="code-example"></a>Exemple de code
  Le code Visual Basic suivant illustre l’ouverture d’un fichier XML arbitraire, la construction d’un **jeu d’enregistrements**hiérarchique et l’écriture récursive de chaque enregistrement de chaque **Recordset** dans la fenêtre de débogage.

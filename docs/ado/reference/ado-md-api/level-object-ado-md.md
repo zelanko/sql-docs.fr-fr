@@ -26,7 +26,7 @@ ms.locfileid: "88778048"
 # <a name="level-object-ado-md"></a>Level, objet (ADO MD)
 Contient un ensemble de membres, chacun ayant le même rang dans une hiérarchie.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Avec les collections et les propriétés d’un objet **Level** , vous pouvez effectuer les opérations suivantes :  
   
 -   Identifiez le **niveau** avec les propriétés [Name](./name-property-ado-md.md) et [UniqueName](./uniquename-property-ado-md.md) .  

@@ -26,7 +26,7 @@ ms.locfileid: "88771198"
 # <a name="catalog-object-adox"></a>Catalog, objet (ADOX)
 Contient des collections ([tables](./tables-collection-adox.md), [vues](./views-collection-adox.md), [utilisateurs](./users-collection-adox.md), [groupes](./groups-collection-adox.md)et [procédures](./procedures-collection-adox.md)) qui décrivent le catalogue de schémas d’une source de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Vous pouvez modifier l’objet **catalogue** en ajoutant ou en supprimant des objets ou en modifiant des objets existants. Certains fournisseurs peuvent ne pas prendre en charge tous les objets de **catalogue** ou ne prendre en charge que l’affichage des informations de schéma.  
   
  Avec les propriétés et les méthodes d’un objet **catalogue** , vous pouvez :  

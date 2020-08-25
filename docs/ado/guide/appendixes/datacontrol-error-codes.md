@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 057bd0f7a1023e32ef8bc9fd4da6aeca56e36a97
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b145e538ea44d5f007f800f70df84b8eed0b116
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422193"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806654"
 ---
 # <a name="datacontrol-object-error-codes"></a>Codes d’erreur de l’objet DataControl
-Le tableau suivant répertorie les [services Bureau à distance. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Codes d’erreur de l’objet DataControl. La traduction décimale positive des deux octets de poids faible, la traduction décimale négative du code d’erreur complet et les valeurs hexadécimales sont affichées.
+Le tableau suivant répertorie les [services Bureau à distance. ](../../reference/rds-api/datacontrol-object-rds.md) Codes d’erreur de l’objet DataControl. La traduction décimale positive des deux octets de poids faible, la traduction décimale négative du code d’erreur complet et les valeurs hexadécimales sont affichées.
 
 |Licence. Codes d’erreur DataControl|Number|Description|
 |---------------------------------|------------|-----------------|
@@ -48,4 +48,4 @@ Le tableau suivant répertorie les [services Bureau à distance. ](../../../ado/
 |**IDS_URLMONNotFound**|4119 -2146824169 0x800A1017|La propriété de l' **URL** DataControl requiert le fichier système Urlmon.dll, qui est introuvable.|
 
 ## <a name="see-also"></a>Voir aussi
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
+ [DataControl, objet (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

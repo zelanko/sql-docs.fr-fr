@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9dbc94caa6266ff2f44a07c8792ff8b6287fd61c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 83613f9083c0e532b4a2124b4beff20d4772c2fd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438921"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768058"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout, propriété (RDS)
 Indique le nombre de millisecondes à attendre avant l’expiration d’une demande.  
@@ -39,15 +39,13 @@ Indique le nombre de millisecondes à attendre avant l’expiration d’une dema
 
 :::row:::
     :::column:::
-        [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+        [DataControl, objet (RDS)](./datacontrol-object-rds.md)  
     :::column-end:::
     :::column:::
-        [DataSpace, objet (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+        [DataSpace, objet (RDS)](./dataspace-object-rds.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [InternetTimeout, exemple de propriété (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
- [InternetTimeout, exemple de propriété (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
- 
-
+ [InternetTimeout, exemple de propriété (VB)](./internettimeout-property-example-vb.md)   
+ [InternetTimeout, exemple de propriété (VC++)](./internettimeout-property-example-vc.md)   

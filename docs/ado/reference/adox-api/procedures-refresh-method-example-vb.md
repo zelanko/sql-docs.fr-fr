@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9f2d7f3d8ceb8d6d62a65382ee7084059c29bf8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0bc0bd69e4b184b91c1d337d6b9e1b9c490b3116
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439581"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769558"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Procedures, exemple de méthode Refresh (VB)
-Le code suivant montre comment actualiser la collection [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md). Cela est nécessaire avant d’accéder aux objets de [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) du **catalogue** .  
+Le code suivant montre comment actualiser la collection [procedures](./procedures-collection-adox.md) d’un [catalogue](./catalog-object-adox.md). Cela est nécessaire avant d’accéder aux objets de [procédure](./procedure-object-adox.md) du **catalogue** .  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -56,6 +56,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [Refresh, méthode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Catalog, objet (ADOX)](./catalog-object-adox.md)   
+ [Procedures, collection (ADOX)](./procedures-collection-adox.md)   
+ [Refresh, méthode (ADO)](../ado-api/refresh-method-ado.md)

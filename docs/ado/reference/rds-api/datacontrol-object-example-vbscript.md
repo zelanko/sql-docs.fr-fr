@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c237a4259838beca54f0016b8a34f191e169d0ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 181415874cfc6ede5f274fbdc5961b8275e13763
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439161"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768574"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl, exemple d’objet (VBScript)
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Le code suivant montre comment définir le [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) Les paramètres DataControl au moment du design et les lient à un contrôle qui prend en charge les données. Coupez et collez ce code entre \<Body> les \</Body> balises et dans un document HTML normal et nommez-le **DataControlDesignVBS. asp**. Le script ASP identifie votre serveur.  
+ Le code suivant montre comment définir le [RDS. ](./datacontrol-object-rds.md) Les paramètres DataControl au moment du design et les lient à un contrôle qui prend en charge les données. Coupez et collez ce code entre \<Body> les \</Body> balises et dans un document HTML normal et nommez-le **DataControlDesignVBS. asp**. Le script ASP identifie votre serveur.  
   
 ```  
 <!-- BeginDataControlDesignVBS -->  
@@ -184,6 +184,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [DataControl, objet (RDS)](./datacontrol-object-rds.md)

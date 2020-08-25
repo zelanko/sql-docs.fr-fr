@@ -26,7 +26,7 @@ ms.locfileid: "88771118"
 # <a name="column-object-adox"></a>Column, objet (ADOX)
 Représente une colonne d’une table, d’un index ou d’une clé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le code suivant crée une nouvelle **colonne**:  
   
  `Dim obj As New Column`  

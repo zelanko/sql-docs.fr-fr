@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d29e5897183cb10f33a322b75298d8adee08d0b5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2da60e0d6ea0652d531b3e8c459617f1d52954b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453431"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806858"
 ---
 # <a name="event-parameters"></a>Paramètres des événements
-Chaque gestionnaire d’événements a un paramètre d’État qui contrôle le gestionnaire d’événements. Pour les événements complets, ce paramètre est également utilisé pour indiquer la réussite ou l’échec de l’opération qui a généré l’événement. La plupart des événements complets ont également un paramètre d’erreur qui fournit des informations sur les erreurs qui ont pu se produire, ainsi qu’un ou plusieurs paramètres d’objet qui font référence aux objets ADO utilisés pour effectuer l’opération. Par exemple, l’événement [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) comprend les paramètres d’objet de la **commande**, du **Recordset**et des objets de **connexion** associés à l’événement. Dans l’exemple Microsoft® Visual Basic®, vous pouvez voir les objets pCommand, prerecordset et pConnection qui représentent les objets **Command**, **Recordset**et **Connection** utilisés par la méthode **Execute** .  
+Chaque gestionnaire d’événements a un paramètre d’État qui contrôle le gestionnaire d’événements. Pour les événements complets, ce paramètre est également utilisé pour indiquer la réussite ou l’échec de l’opération qui a généré l’événement. La plupart des événements complets ont également un paramètre d’erreur qui fournit des informations sur les erreurs qui ont pu se produire, ainsi qu’un ou plusieurs paramètres d’objet qui font référence aux objets ADO utilisés pour effectuer l’opération. Par exemple, l’événement [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) comprend les paramètres d’objet de la **commande**, du **Recordset**et des objets de **connexion** associés à l’événement. Dans l’exemple Microsoft® Visual Basic®, vous pouvez voir les objets pCommand, prerecordset et pConnection qui représentent les objets **Command**, **Recordset**et **Connection** utilisés par la méthode **Execute** .  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -60,7 +60,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|Demande d’annulation de l’opération qui est sur le lieu de se produire.|  
   
 ## <a name="error-parameter"></a>Paramètre d’erreur  
- Le paramètre d' *erreur* est une référence à un objet d' [erreur](../../../ado/reference/ado-api/error-object.md) ADO. Lorsque le paramètre *Status* est défini sur **adStatusErrorsOccurred**, l’objet **Error** contient des détails sur la raison de l’échec de l’opération. Si l’événement qui est associé à un événement Complete a annulé l’opération en définissant le paramètre *Status* sur **adStatusCancel**, l’objet Error est toujours défini sur **adErrOperationCancelled**.  
+ Le paramètre d' *erreur* est une référence à un objet d' [erreur](../../reference/ado-api/error-object.md) ADO. Lorsque le paramètre *Status* est défini sur **adStatusErrorsOccurred**, l’objet **Error** contient des détails sur la raison de l’échec de l’opération. Si l’événement qui est associé à un événement Complete a annulé l’opération en définissant le paramètre *Status* sur **adStatusCancel**, l’objet Error est toujours défini sur **adErrOperationCancelled**.  
   
 ## <a name="object-parameter"></a>Paramètre de l’objet  
  Chaque événement reçoit un ou plusieurs objets représentant les objets impliqués dans l’opération. Par exemple, l’événement **ExecuteComplete** reçoit un objet **Command** , un objet **Recordset** et un objet **Connection** .  
@@ -88,7 +88,7 @@ End Sub
  En revanche, vous devez définir *adStatus* sur **adStatusUnwantedEvent** une seule fois pour demander qu’un gestionnaire d’événements sans paramètre **adReason** cesse de recevoir des notifications d’événements.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résumé du gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Fonctionnement conjoint des gestionnaires d’événements](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Types d’événements](../../../ado/guide/data/types-of-events.md)
+ [Résumé du gestionnaire d’événements ADO](./ado-event-handler-summary.md)   
+ [Instanciation des événements ADO par langage](./ado-event-instantiation-by-language.md)   
+ [Fonctionnement conjoint des gestionnaires d’événements](./how-event-handlers-work-together.md)   
+ [Types d’événements](./types-of-events.md)

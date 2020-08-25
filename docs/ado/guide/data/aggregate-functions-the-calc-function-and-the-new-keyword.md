@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6bf4b041fbae0f30e327bd32dd067c1e9c429a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f3ef1ae1b6b5d60774e220cc4594cd54eda291e7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453751"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806955"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Fonctions d’agrégation, fonction CALC et mot clé NEW
 La mise en forme des données prend en charge les fonctions suivantes. Le nom affecté au chapitre contenant la colonne à utiliser est l' *alias du chapitre*.  
@@ -40,7 +40,7 @@ La mise en forme des données prend en charge les fonctions suivantes. Le nom af
   
 |Expression calculée|Description|  
 |---------------------------|-----------------|  
-|CALC (*expression*)|Calcule une expression arbitraire, mais uniquement sur la ligne de l’ensemble d' **enregistrements** contenant la fonction Calc. Toute expression utilisant ces [fonctions Visual Basic pour applications (VBA)](../../../ado/guide/data/visual-basic-for-applications-functions.md) est autorisée.|  
+|CALC (*expression*)|Calcule une expression arbitraire, mais uniquement sur la ligne de l’ensemble d' **enregistrements** contenant la fonction Calc. Toute expression utilisant ces [fonctions Visual Basic pour applications (VBA)](./visual-basic-for-applications-functions.md) est autorisée.|  
   
 |Mot clé NEW|Description|  
 |-----------------|-----------------|  
@@ -74,6 +74,6 @@ La mise en forme des données prend en charge les fonctions suivantes. Le nom af
  Lorsque le nouveau champ est de type Decimal (dans OLE DB, DBTYPE_DECIMAL ou dans ADO, adDecimal), vous devez spécifier les valeurs de précision et d’échelle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   
- [Grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
- [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)
+ [Exemple de mise en forme des données](./data-shaping-example.md)   
+ [Grammaire de forme formelle](./formal-shape-grammar.md)   
+ [Généralités sur les commandes SHAPE](./shape-commands-in-general.md)

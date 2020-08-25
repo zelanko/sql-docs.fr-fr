@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d00626b04c4107ffdbf15cd24b104b17602fc6e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3a4667b6524cef6694340d917dad04fad04ad3f8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438971"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768138"
 ---
 # <a name="handler-property-example-vb"></a>Handler, exemple de propriété (VB)
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Cet exemple illustre la propriété du [Gestionnaire](../../../ado/reference/rds-api/handler-property-rds.md) d’objets [RDS DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) . (Pour plus d’informations, consultez [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md) .)  
+ Cet exemple illustre la propriété du [Gestionnaire](./handler-property-rds.md) d’objets [RDS DataControl](./datacontrol-object-rds.md) . (Pour plus d’informations, consultez [Personnalisation de DataFactory](../../guide/remote-data-service/datafactory-customization.md) .)  
   
  Supposons que les sections suivantes du fichier de paramètres, Msdfmap.ini, se trouvent sur le serveur :  
   
@@ -38,7 +38,7 @@ Connect="DSN=Pubs"
 SQL="SELECT * FROM Authors WHERE au_id = ?"  
 ```  
   
- Votre code ressemble à ce qui suit. La commande affectée à la propriété [SQL](../../../ado/reference/rds-api/sql-property.md) correspond à l’identificateur ***AuthorById*** et récupère une ligne pour l’auteur Michael O’Leary. La propriété de **jeu d’enregistrements** de l’objet **DataControl** est assignée à un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) déconnecté, ce qui est purement indicatif.  
+ Votre code ressemble à ce qui suit. La commande affectée à la propriété [SQL](./sql-property.md) correspond à l’identificateur ***AuthorById*** et récupère une ligne pour l’auteur Michael O’Leary. La propriété de **jeu d’enregistrements** de l’objet **DataControl** est assignée à un objet [Recordset](../ado-api/recordset-object-ado.md) déconnecté, ce qui est purement indicatif.  
   
 ```  
 'BeginHandlerVB  
@@ -80,7 +80,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Handler, propriété (RDS)](../../../ado/reference/rds-api/handler-property-rds.md)
-
-
+ [DataControl, objet (RDS)](./datacontrol-object-rds.md)   
+ [Handler, propriété (RDS)](./handler-property-rds.md)

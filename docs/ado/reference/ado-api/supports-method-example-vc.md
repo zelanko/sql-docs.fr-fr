@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 03f01a5b8e9779687effd7fad1f3f96cd6cdcfd4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66592f099b5d125acb92cbcb85bf7e8964aeda8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441761"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777128"
 ---
 # <a name="supports-method-example-vc"></a>Supports, exemple de méthode (VC++)
-Cet exemple utilise la méthode [supports](../../../ado/reference/ado-api/supports-method.md) pour afficher les options prises en charge par un jeu d’enregistrements ouvert avec différents types de curseurs. La fonction DisplaySupport est requise pour que cet exemple s’exécute.  
+Cet exemple utilise la méthode [supports](./supports-method.md) pour afficher les options prises en charge par un jeu d’enregistrements ouvert avec différents types de curseurs. La fonction DisplaySupport est requise pour que cet exemple s’exécute.  
   
 ```  
 // SupportsMethodExample.cpp  
@@ -227,5 +227,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports, méthode](../../../ado/reference/ado-api/supports-method.md)
+ [Recordset, objet (ADO)](./recordset-object-ado.md)   
+ [Supports, méthode](./supports-method.md)

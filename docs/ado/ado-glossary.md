@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b67f8f38a57d7918f2b6f79ed9a2a82dc00d4dee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355455"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805557"
 ---
 # <a name="ado-glossary-terms"></a>Termes du Glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.
@@ -133,7 +133,7 @@ Cette rubrique définit les termes pertinents pour ADO.
 
  Recordset hiérarchique un **Recordset** qui contient un autre **Recordset**. Voir aussi mise en forme des données, chapitre.
 
- Pour plus d’informations, consultez [accès aux lignes d’un jeu d’enregistrements hiérarchique](../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).
+ Pour plus d’informations, consultez [accès aux lignes d’un jeu d’enregistrements hiérarchique](./guide/data/accessing-rows-in-a-hierarchical-recordset.md).
 
  hiérarchie en général, une hiérarchie est une structure classée avec un niveau supérieur et des niveaux subordonnés. Dans ADO, les **recordsets** hiérarchiques sont utilisés pour représenter la relation parent-enfant entre un enregistrement et un chapitre. En outre, dans ADO, les objets d' **enregistrement** et de **flux** peuvent être utilisés pour accéder à des structures d’arborescences hiérarchiques, telles qu’un dossier et des documents. ADO MD comprend également des objets **Hierarchy** pour représenter une relation entre les niveaux d’une dimension dans un cube OLAP. Voir aussi recordsets hiérarchiques, relation parent-enfant, chapitre, arbre.
 
