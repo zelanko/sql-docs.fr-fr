@@ -26,7 +26,7 @@ ms.locfileid: "88778258"
 # <a name="cubedef-object-ado-md"></a>CubeDef, objet (ADO MD)
 Représente un cube à partir d’un schéma multidimensionnel, contenant un ensemble de dimensions associées.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Avec les collections et les propriétés d’un objet **CubeDef** , vous pouvez effectuer les opérations suivantes :  
   
 -   Identifiez un **CubeDef** avec la propriété [Name](./name-property-ado-md.md) .  

@@ -30,10 +30,10 @@ ms.locfileid: "88776398"
   
 -   **EOF** Indique que la position actuelle de l’enregistrement est après le dernier enregistrement d’un objet **Recordset** .  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Les propriétés **BOF** et **EOF** retournent des valeurs **booléennes** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez les propriétés **BOF** et **EOF** pour déterminer si un objet **Recordset** contient des enregistrements ou si vous avez dépassé les limites d’un objet **Recordset** lorsque vous passez d’un enregistrement à l’autre.  
   
  La propriété **BOF** retourne **true** (-1) si la position actuelle de l’enregistrement est antérieure au premier enregistrement et **false** (0) si la position actuelle de l’enregistrement est égale ou postérieure au premier enregistrement.  

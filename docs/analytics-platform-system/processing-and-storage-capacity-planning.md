@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400543"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacité de traitement et de stockage dans Analytics Platform System
@@ -36,15 +36,15 @@ La majoration est le gain de capacité en ce qui concerne l’augmentation des U
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|2|32|512|-|  
 |2|4|64|1 024|100 %|  
-|3|6|96|1536|50|  
+|3|6|96|1536|50%|  
 |4|8|128|2 048|33 %|  
-|5|10|160|2560|25 %|  
+|5|10|160|2560|25%|  
 |6|12|192|3 072|20%|  
 |8|16|256|4096|33 %|  
-|10|20|320|5120|25 %|  
+|10|20|320|5120|25%|  
 |12|24|384|6144|20%|  
 |16|32|512|8 192|33 %|  
-|20|40|640|10240|25 %|  
+|20|40|640|10240|25%|  
 |24|48|768|12288|20%|  
 |28|56|896|14336|17 %|  
   
@@ -67,15 +67,15 @@ La majoration est le gain de capacité en ce qui concerne l’augmentation des U
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|3|48|768|-|  
 |2|6|96|1536|100 %|  
-|3|9|144|2 304|50|  
+|3|9|144|2 304|50%|  
 |4|12|192|3 072|33 %|  
-|5|15|240|3 840|25 %|  
+|5|15|240|3 840|25%|  
 |6|18|288|4 608|20%|  
 |7|21|336|5 376|17 %|  
 |8|24|384|6 144|14 %|  
 |9|27|432|6 912|13%|  
 |12|36|576|9 216|33 %|  
-|15|45|720|11 520|25 %|  
+|15|45|720|11 520|25%|  
 |18|54|864|13 824|20%|  
   
 ## <a name="planning-for-storage-capacity"></a><a name="section2"></a>Planification de la capacité de stockage  
@@ -83,12 +83,12 @@ Ce tableau estime que vous pouvez charger et stocker jusqu’à 6 pétaoctets de
   
 |Fournisseur|Taille du lecteur|Stockage physique des données par nœud de calcul|Nombre maximal de nœuds de calcul par rack|Stockage de données maximal physique par rack|Estimation du stockage de données utilisateur maximal par rack|Racks maximum|Estimation du stockage de données utilisateur maximal par Appliance|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
-|HPE|1 To|16 To|8|128 To|320 TO|7|2 240 TO|  
+|HPE|1 To|16 TO|8|128 To|320 TO|7|2 240 TO|  
 |HPE|2 To|32 To|8|256 To|640 TO|7|4 480 TO|  
-|HPE|4 To|64 To|8|512 TO|1280 TO|7|8 960 TO|  
-|DELL|1 To|16 To|9|144 TO|360 TO|6|2 160 TO|  
+|HPE|4 To|64 To|8|512 TO|1280 TO|7|8 960 TO|  
+|DELL|1 To|16 TO|9|144 TO|360 TO|6|2 160 TO|  
 |DELL|2 To|32 To|9|288 TO|720 TO|6|4 320 TO|  
-|DELL|4 To|64 To|9|576 TO|1440 TO|6|8 640 TO|   
+|DELL|4 To|64 To|9|576 TO|1440 TO|6|8 640 TO|   
   
 Explication :  
   
@@ -100,7 +100,7 @@ Explication :
   
 -   **Stockage de données maximal physique par rack** = (stockage de données physiques par nœud de calcul) * (nombre maximal de nœuds de calcul par rack).  
   
--   **Estimation du stockage de données utilisateur maximal par rack** = (stockage de données maximal physique par rack) * (5 pour un taux \* de compression de 5:1) (50% pour les journaux et tempdb). Il s’agit d’une estimation prudente des données utilisateur non compressées qui peuvent être chargées et stockées sur l’appliance. Il s’agit d’une estimation qui n’est pas appliquée par un logiciel. Le stockage de données utilisateur réel dépend de vos données et de votre configuration.  
+-   **Estimation du stockage de données utilisateur maximal par rack** = (stockage de données maximal physique par rack) * (5 pour un taux de compression de 5:1) \* (50% pour les journaux et tempdb). Il s’agit d’une estimation prudente des données utilisateur non compressées qui peuvent être chargées et stockées sur l’appliance. Il s’agit d’une estimation qui n’est pas appliquée par un logiciel. Le stockage de données utilisateur réel dépend de vos données et de votre configuration.  
   
 -   Les **racks maximaux** sont spécifiques à chaque fournisseur de matériel.  
   

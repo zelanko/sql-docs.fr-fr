@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e006add96d3bcb21c652ce33f7aab749b2bc8d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98719e10e837b83ac522743e120f037b1fedbd99
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453831"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806447"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>Instanciation des événements ADO ADO et WFC
 ADO pour Windows Foundation classes (ADO/WFC) s’appuie sur le modèle d’événement ADO et présente une interface de programmation d’applications simplifiée. En général, ADO/WFC intercepte les événements ADO, consolide les paramètres d’événement dans une classe d’événements unique, puis appelle votre gestionnaire d’événements.  
@@ -53,7 +53,7 @@ ADO pour Windows Foundation classes (ADO/WFC) s’appuie sur le modèle d’év�
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     Le premier argument est le type d’objet qui a envoyé l’événement ([connexion](../../../ado/reference/ado-api/connection-object-ado.md) ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)), et le deuxième argument est l’objet d’événement ADO/WFC (**ConnectionEvent** ou **RecordsetEvent**).  
+     Le premier argument est le type d’objet qui a envoyé l’événement ([connexion](../../reference/ado-api/connection-object-ado.md) ou [Recordset](../../reference/ado-api/recordset-object-ado.md)), et le deuxième argument est l’objet d’événement ADO/WFC (**ConnectionEvent** ou **RecordsetEvent**).  
   
      La signature de votre gestionnaire d’événements est plus simple qu’un événement ADO. Toutefois, vous devez toujours comprendre le modèle d’événement ADO pour savoir quels paramètres s’appliquent à un événement et comment répondre.  
   
@@ -62,8 +62,8 @@ ADO pour Windows Foundation classes (ADO/WFC) s’appuie sur le modèle d’év�
 7.  Une fois le traitement terminé, supprimez votre gestionnaire de la liste des gestionnaires d’événements ADO/WFC. Utilisez la méthode avec un nom tel que **RemoveAt**_EventName_(*handler*).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résumé du gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Index de la syntaxe ADO-WFC](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Paramètres d’événement](../../../ado/guide/data/event-parameters.md)   
- [Fonctionnement conjoint des gestionnaires d’événements](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Types d’événements](../../../ado/guide/data/types-of-events.md)
+ [Résumé du gestionnaire d’événements ADO](./ado-event-handler-summary.md)   
+ [Index de la syntaxe ADO-WFC](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [Paramètres d’événement](./event-parameters.md)   
+ [Fonctionnement conjoint des gestionnaires d’événements](./how-event-handlers-work-together.md)   
+ [Types d’événements](./types-of-events.md)

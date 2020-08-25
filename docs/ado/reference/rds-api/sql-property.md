@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  Variable objet qui représente un objet **RDS. DataControl** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  En général, il s’agit d’une instruction SQL (à l’aide du dialecte du serveur de base de données), telle que `"Select * from NewTitles"` . Pour vous assurer que les enregistrements sont mis en correspondance et mis à jour correctement, une requête pouvant être mise à jour doit contenir un champ autre qu’un champ binaire long ou un champ calculé.  
   
  La propriété **SQL** est facultative si un objet métier côté serveur personnalisé récupère les données du client.  

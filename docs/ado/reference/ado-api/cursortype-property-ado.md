@@ -29,7 +29,7 @@ Indique le type de curseur utilisé dans un objet [Recordset](./recordset-object
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur [CursorTypeEnum](./cursortypeenum.md) . La valeur par défaut est **adOpenForwardOnly**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la propriété **CursorType** pour spécifier le type de curseur à utiliser lors de l’ouverture de l’objet **Recordset** .  
   
  Seul un paramètre **adOpenStatic** est pris en charge si la propriété [CursorLocation](./cursorlocation-property-ado.md) est définie sur **adUseClient**. Si une valeur non prise en charge est définie, aucune erreur ne se produit. le **CursorType** le plus proche pris en charge sera utilisé à la place.  
@@ -40,7 +40,7 @@ Indique le type de curseur utilisé dans un objet [Recordset](./recordset-object
   
 |Pour un jeu d’enregistrements de ce CursorType|La méthode supports doit retourner la valeur true pour toutes ces constantes|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|Aucun|  
+|**adOpenForwardOnly**|aucun|  
 |**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
 |**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  

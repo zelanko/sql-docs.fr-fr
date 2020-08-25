@@ -31,7 +31,7 @@ Un objet **ObjectProxy** représente un serveur et est retourné par la méthode
 ### <a name="call-method-adowfc-syntax"></a>Call, méthode (syntaxe ADO/WFC)  
  Appelle une méthode sur le serveur représenté par l’objet ObjectProxy. Éventuellement, les arguments de méthode peuvent être passés en tant que tableau d’objets.  
   
-#### <a name="syntax"></a>Syntaxe  
+#### <a name="syntax"></a>Syntax  
   
 ```  
 public Object ObjectProxy.( String method )  

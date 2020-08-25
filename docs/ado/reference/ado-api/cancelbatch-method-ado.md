@@ -38,7 +38,7 @@ recordset.CancelBatchAffectRecords
  *AffectRecords*  
  facultatif. Valeur [AffectEnum](./affectenum.md) qui indique le nombre d’enregistrements affectés par la méthode **CancelBatch** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la méthode **CancelBatch** pour annuler les mises à jour en attente dans un [Recordset](./recordset-object-ado.md) en mode de mise à jour par lot. Si le **jeu d’enregistrements** est en mode de mise à jour immédiate, l’appel de **CancelBatch** sans **adAffectCurrent** génère une erreur.  
   
  Si vous modifiez l’enregistrement en cours ou si vous ajoutez un nouvel enregistrement lorsque vous appelez **CancelBatch**, ADO appelle d’abord la méthode [CancelUpdate](./cancelupdate-method-ado.md) pour annuler les modifications mises en cache. Après cela, toutes les modifications en attente dans le **jeu d’enregistrements** sont annulées.  

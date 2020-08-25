@@ -26,7 +26,7 @@ ms.locfileid: "88770308"
 # <a name="index-object-adox"></a>Index, objet (ADOX)
 Représente un index à partir d’une table de base de données.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le code suivant crée un nouvel **index**:  
   
 ```  

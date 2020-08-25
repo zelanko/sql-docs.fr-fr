@@ -53,10 +53,10 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *Asynchrone*  
  facultatif. Valeur **booléenne** qui, lorsque la **valeur est true**, spécifie que cette opération doit être asynchrone.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Valeur de **chaîne** . En règle générale, la valeur de *destination* est retournée. Toutefois, la valeur exacte retournée est dépendante du fournisseur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les valeurs de *source* et de *destination* ne doivent pas être identiques ; dans le cas contraire, une erreur d’exécution se produit. Au moins le nom du serveur, du chemin d’accès et des ressources doit être différent.  
   
  Pour les fichiers déplacés à l’aide du fournisseur de publication Internet, cette méthode met à jour tous les liens hypertexte dans les fichiers déplacés, sauf indication contraire dans les *options*. Cette méthode échoue si la *destination* identifie un objet existant (par exemple, un fichier ou un répertoire), sauf si **adMoveOverWrite** est spécifié.  

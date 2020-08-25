@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a1211a84bf42afdb406c085e57f5bb36f48a168
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7010c2dc4be6207397ee5e57fc999c3cacbba0b7
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454111"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806611"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Présentation du fournisseur de persistance Microsoft OLE DB
-Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un fichier et de restaurer ultérieurement cet objet **Recordset** à partir du fichier. Les informations de schéma, les données et les modifications en attente sont conservées.
+Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un objet [Recordset](../../reference/ado-api/recordset-object-ado.md) dans un fichier et de restaurer ultérieurement cet objet **Recordset** à partir du fichier. Les informations de schéma, les données et les modifications en attente sont conservées.
 
  Vous pouvez enregistrer le **Recordset** au format ADTG (Advanced Data table) propriétaire ou au format Open Extensible Markup Language (XML).
 
@@ -47,9 +47,9 @@ Le fournisseur de persistance Microsoft OLE DB vous permet d’enregistrer un ob
 
  Actuellement, seuls les objets **Recordset** hiérarchiques paramétrables ne peuvent pas être enregistrés.
 
- Pour plus d’informations sur le stockage permanent d’objets **Recordset** , consultez [persistance des recordsets](../../../ado/guide/data/more-about-recordset-persistence.md).
+ Pour plus d’informations sur le stockage permanent d’objets **Recordset** , consultez [persistance des recordsets](../data/more-about-recordset-persistence.md).
 
  Lorsqu’un flux est utilisé pour ouvrir un **jeu d’enregistrements,** aucun paramètre ne doit être spécifié autre que le paramètre *source* de la méthode **Open** .
 
 ## <a name="see-also"></a>Voir aussi
-[Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
+[Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO)]()

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5a81f8b3e8acbe09fed0bac975158a9d5ef26a9e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8633a6dd9ef94ff525c99b838de6dcec937d292
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454051"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806558"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Présentation de Fournisseur Microsoft OLE DB pour Oracle
 > [!IMPORTANT]
@@ -29,13 +29,13 @@ ms.locfileid: "88454051"
  Le Fournisseur Microsoft OLE DB pour Oracle permet à ADO d’accéder aux bases de données Oracle.
 
 ## <a name="connection-string-parameters"></a>Paramètres de chaîne de connexion
- Pour vous connecter à ce fournisseur, définissez l’argument *Provider* de la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) sur :
+ Pour vous connecter à ce fournisseur, définissez l’argument *Provider* de la propriété [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) sur :
 
 ```vb
 MSDAORA
 ```
 
- La lecture de la propriété [Provider](../../../ado/reference/ado-api/provider-property-ado.md) retourne également cette chaîne.
+ La lecture de la propriété [Provider](../../reference/ado-api/provider-property-ado.md) retourne également cette chaîne.
 
  Si une requête de jointure avec un jeu de clés ou un curseur dynamique est exécutée dans une base de données Oracle, une erreur se produit. Oracle ne prend en charge qu’un curseur statique en lecture seule.
 
@@ -59,9 +59,9 @@ MSDAORA
 >  Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = Yes** ou **Integrated Security = SSPI** à la place des informations d’ID d’utilisateur et de mot de passe dans la chaîne de connexion.
 
 ## <a name="provider-specific-connection-parameters"></a>Paramètres de connexion spécifiques au fournisseur
- Le fournisseur prend en charge plusieurs paramètres de connexion spécifiques au fournisseur, en plus de ceux définis par ADO. Comme avec les propriétés de connexion ADO, ces propriétés spécifiques au fournisseur peuvent être définies via la collection [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) d’une [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ou dans le cadre de **ConnectionString**.
+ Le fournisseur prend en charge plusieurs paramètres de connexion spécifiques au fournisseur, en plus de ceux définis par ADO. Comme avec les propriétés de connexion ADO, ces propriétés spécifiques au fournisseur peuvent être définies via la collection [Properties](../../reference/ado-api/properties-collection-ado.md) d’une [connexion](../../reference/ado-api/connection-object-ado.md) ou dans le cadre de **ConnectionString**.
 
- Ces paramètres sont décrits en détail dans le [Guide de référence du programmeur OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8). L' [index de propriété dynamique ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) fournit une référence croisée entre ces noms de paramètres et les propriétés de OLE DB correspondantes.
+ Ces paramètres sont décrits en détail dans le [Guide de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)). L' [index de propriété dynamique ADO](../../reference/ado-api/ado-dynamic-property-index.md) fournit une référence croisée entre ces noms de paramètres et les propriétés de OLE DB correspondantes.
 
 |Paramètre|Description|
 |---------------|-----------------|
@@ -69,7 +69,7 @@ MSDAORA
 |**Identificateur de paramètres régionaux**|Indique un nombre 32 bits unique (par exemple, 1033) qui spécifie les préférences relatives à la langue de l’utilisateur. Ces préférences indiquent comment les dates et les heures sont mises en forme, les éléments sont triés par ordre alphabétique, les chaînes sont comparées, et ainsi de suite.|
 |**Services OLE DB**|Indique un masque de masque qui spécifie OLE DB services à activer ou à désactiver.|
 |**Demander**|Indique s’il faut inviter l’utilisateur lors de l’établissement d’une connexion.|
-|**Propriétés étendues**|Chaîne contenant des informations de connexion étendues spécifiques au fournisseur. Utilisez cette propriété uniquement pour les informations de connexion spécifiques au fournisseur qui ne peuvent pas être décrites par le biais du mécanisme de propriété.|
+|**Extended Properties**|Chaîne contenant des informations de connexion étendues spécifiques au fournisseur. Utilisez cette propriété uniquement pour les informations de connexion spécifiques au fournisseur qui ne peuvent pas être décrites par le biais du mécanisme de propriété.|
 
 ## <a name="see-also"></a>Voir aussi
- [ConnectionString, propriété (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [Provider, propriété](../../../ado/reference/ado-api/provider-property-ado.md) (ADO), [objet Recordset (](../../../ado/reference/ado-api/recordset-object-ado.md) ADO)
+ [ConnectionString, propriété (ADO)](../../reference/ado-api/connectionstring-property-ado.md) [Provider, propriété](../../reference/ado-api/provider-property-ado.md) (ADO), [objet Recordset (](../../reference/ado-api/recordset-object-ado.md) ADO)

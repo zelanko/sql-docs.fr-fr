@@ -26,7 +26,7 @@ ms.locfileid: "88778328"
 # <a name="cell-object-ado-md"></a>Cell, objet (ADO MD)
 Représente les données à l’intersection des coordonnées d’axe contenues dans un CellSet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un objet **Cell** est retourné par la propriété [Item](./item-property-ado-md-cellset.md) d’un objet [Cellset](./cellset-object-ado-md.md) .  
   
  Avec les collections et les propriétés d’un objet **Cell** , vous pouvez effectuer les opérations suivantes :  

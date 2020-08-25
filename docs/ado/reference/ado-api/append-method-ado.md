@@ -59,7 +59,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  facultatif. **Variant** qui représente la valeur du nouveau champ. S’il n’est pas spécifié, le champ est ajouté avec une valeur null.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="parameters-collection"></a>Collection Parameters  
  Vous devez définir la propriété [type](./type-property-ado.md) d’un objet [Parameter](./parameter-object.md) avant de l’ajouter à la collection [Parameters](./parameters-collection-ado.md) . Si vous sélectionnez un type de données de longueur variable, vous devez également affecter à la propriété [Size](./size-property-ado-parameter.md) une valeur supérieure à zéro.  

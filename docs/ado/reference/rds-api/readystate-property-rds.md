@@ -30,7 +30,7 @@ Indique la progression d’un objet [DataControl](./datacontrol-object-rds.md) l
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne l’une des valeurs suivantes.  
   
-|Value|Description|  
+|Valeur|Description|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|La requête active est toujours en cours d’exécution et aucune ligne n’a été extraite. Le **jeu d’enregistrements** de l’objet **DataControl** ne peut pas être utilisé.|  
 |**adcReadyStateInteractive**|Un ensemble initial de lignes extraites par la requête actuelle a été stocké dans le **Recordset** de l’objet **DataControl** et peut être utilisé. Les lignes restantes sont toujours en cours d’extraction.|  
@@ -39,7 +39,7 @@ Indique la progression d’un objet [DataControl](./datacontrol-object-rds.md) l
 > [!NOTE]
 >  Chaque fichier exécutable côté client qui utilise ces constantes doit fournir des déclarations pour ceux-ci. Vous pouvez couper et coller les déclarations de constantes de votre choix à partir du fichier Adcvbs. Inc, situé dans le dossier d’installation par défaut de la bibliothèque RDS.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez l’événement [onreadystatechange](./onreadystatechange-event-rds.md) pour surveiller les modifications apportées à la propriété **ReadyState** pendant une opération de requête asynchrone. C’est plus efficace que de vérifier régulièrement la valeur de la propriété.  
   
  Si une erreur se produit pendant une opération asynchrone, la propriété **ReadyState** devient **adcReadyStateComplete**, la propriété [State](../ado-api/state-property-ado.md) passe de **AdStateExecuting** à **adStateClosed**, et la propriété [value](../ado-api/value-property-ado.md) de l’objet **Recordset** *ne conserve rien*.  

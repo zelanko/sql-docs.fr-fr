@@ -29,7 +29,7 @@ Indique les informations utilisées pour établir une connexion à une source de
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **chaîne** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la propriété **ConnectionString** pour spécifier une source de données en passant une chaîne de connexion détaillée contenant une série d’instructions *argument* *= value* séparées par des points-virgules.  
   
  ADO prend en charge cinq arguments pour la propriété **ConnectionString** . tout autre argument passe directement au fournisseur sans aucun traitement par ADO. Les arguments pris en charge par ADO sont les suivants :  

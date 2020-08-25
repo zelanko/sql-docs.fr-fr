@@ -28,10 +28,10 @@ ms.locfileid: "88777318"
 # <a name="status-property-ado-field"></a>Status, propriété (objet Field ADO)
 Indique l’état d’un objet de [champ](./field-object.md) .  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur [FieldStatusEnum](./fieldstatusenum.md) . La valeur par défaut est **adFieldOK**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="record-field-status"></a>État du champ d’enregistrement  
  Les modifications apportées à la valeur d’un objet **champ** dans la collection Fields d’un objet [Record](./record-object-ado.md) sont mises en cache jusqu’à ce que la méthode [Update](./update-method.md) de l’objet soit appelée. À ce stade, si la modification de la valeur du champ est à l’origine d’une erreur, OLE DB génère l’erreur **DB_E_ERRORSOCCURRED** (2147749409). La propriété Status de l’un des objets **Field** de la collection **Fields** à l’origine de l’erreur contient une valeur du [FieldStatusEnum](./fieldstatusenum.md) décrivant la cause du problème.  

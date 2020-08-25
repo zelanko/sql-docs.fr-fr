@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ceeb9abb3b14441e6f0e8194d07836cf5d482492
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbdc0b724d96cf541eedb7e26f8b652a280e829a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453181"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805839"
 ---
 # <a name="more-about-recordset-persistence"></a>En savoir plus sur la persistance des recordsets
-L’objet ADO Recordset prend en charge le stockage du contenu d’un objet **Recordset** dans un fichier à l’aide de sa méthode [Save](../../../ado/reference/ado-api/save-method.md) . Le fichier stocké de manière permanente peut exister sur un lecteur local, un serveur ou en tant qu’URL sur un site Web. Plus tard, le fichier peut être restauré à l’aide de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) de l’objet **Recordset** ou de la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) de l’objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) .  
+L’objet ADO Recordset prend en charge le stockage du contenu d’un objet **Recordset** dans un fichier à l’aide de sa méthode [Save](../../reference/ado-api/save-method.md) . Le fichier stocké de manière permanente peut exister sur un lecteur local, un serveur ou en tant qu’URL sur un site Web. Plus tard, le fichier peut être restauré à l’aide de la méthode [Open](../../reference/ado-api/open-method-ado-recordset.md) de l’objet **Recordset** ou de la méthode [Execute](../../reference/ado-api/execute-method-ado-connection.md) de l’objet [Connection](../../reference/ado-api/connection-object-ado.md) .  
   
- En outre, la méthode [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) convertit un objet **Recordset** en un formulaire dans lequel les colonnes et les lignes sont délimitées par des caractères que vous spécifiez.  
+ En outre, la méthode [GetString](../../reference/ado-api/getstring-method-ado.md) convertit un objet **Recordset** en un formulaire dans lequel les colonnes et les lignes sont délimitées par des caractères que vous spécifiez.  
   
- Pour conserver un **jeu d’enregistrements**, commencez par le convertir en un formulaire qui peut être stocké dans un fichier. Les objets **Recordset** peuvent être stockés au format ADTG (Advanced Data TableGram) propriétaire ou au format Open Extensible Markup Language (XML). Les exemples ADTG sont présentés dans la section suivante. Pour plus d’informations sur la persistance XML, consultez persistance [des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Pour conserver un **jeu d’enregistrements**, commencez par le convertir en un formulaire qui peut être stocké dans un fichier. Les objets **Recordset** peuvent être stockés au format ADTG (Advanced Data TableGram) propriétaire ou au format Open Extensible Markup Language (XML). Les exemples ADTG sont présentés dans la section suivante. Pour plus d’informations sur la persistance XML, consultez persistance [des enregistrements au format XML](./persisting-records-in-xml-format.md).  
   
  Enregistrez toutes les modifications en attente dans le fichier persistant. Cela vous permet d’émettre une requête qui retourne un objet **Recordset** , modifie le **Recordset**, l’enregistre et les modifications en attente, puis restaure ultérieurement le **Recordset**, puis met à jour la source de données avec les modifications en attente enregistrées.  
   
- Pour plus d’informations sur le stockage permanent des objets de **flux** , consultez [flux et persistance](../../../ado/guide/data/streams-and-persistence.md).  
+ Pour plus d’informations sur le stockage permanent des objets de **flux** , consultez [flux et persistance](./streams-and-persistence.md).  
   
  Pour obtenir un exemple de persistance d’un **jeu d’enregistrements** , consultez le scénario de persistance d’un jeu d’enregistrements XML.  
   
@@ -79,7 +79,7 @@ dc.Refresh
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [GetString, méthode (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Flux et persistance](../../../ado/guide/data/streams-and-persistence.md)
+ [GetString, méthode (ADO)](../../reference/ado-api/getstring-method-ado.md)   
+ [Fournisseur de persistance Microsoft OLE DB (fournisseur de services ADO)](../appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
+ [Recordset, objet (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [Flux et persistance](./streams-and-persistence.md)

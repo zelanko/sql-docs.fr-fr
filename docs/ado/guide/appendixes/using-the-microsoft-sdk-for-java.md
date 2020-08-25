@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6119433c1a5c52e07035d97878155123d787e26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 302cca77222454ac6fa73c69683c641e841acdda
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453971"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806485"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Utilisation du SDK Microsoft pour Java
 
@@ -32,7 +32,7 @@ Le kit de développement logiciel (SDK) Microsoft pour Java est le kit de dével
   
  Ce mécanisme lit la bibliothèque de types ADO et génère des classes que vous pouvez instancier dans votre application. Il génère ces classes à l’emplacement suivant : \\<répertoire Windows \> \Java\trustlib\msado15.  
   
- La création d’une application ADO en Java à l’aide du kit de développement logiciel (SDK) Microsoft pour Java est fondamentalement identique, du point de vue du code source, à l’utilisation de l’Assistant bibliothèque de types Java. Pour obtenir un exemple de code, consultez [wrappers de classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). La seule différence réelle réside dans la façon dont vous générez les classes wrapper en premier lieu, comme illustré dans les étapes suivantes.  
+ La création d’une application ADO en Java à l’aide du kit de développement logiciel (SDK) Microsoft pour Java est fondamentalement identique, du point de vue du code source, à l’utilisation de l’Assistant bibliothèque de types Java. Pour obtenir un exemple de code, consultez [wrappers de classe Java ADO](./ado-java-class-wrappers.md). La seule différence réelle réside dans la façon dont vous générez les classes wrapper en premier lieu, comme illustré dans les étapes suivantes.  
   
 ### <a name="to-create-an-ado-project-with-the-microsoft-sdk-for-java"></a>Pour créer un projet ADO avec le kit de développement logiciel (SDK) Microsoft pour Java  
   
@@ -51,4 +51,4 @@ Le kit de développement logiciel (SDK) Microsoft pour Java est le kit de dével
 3.  Pour utiliser ces fichiers, ouvrez votre projet dans Visual J++. Dans le menu **projet** , choisissez **Ajouter au projet**. Sélectionnez **fichiers**, puis ajoutez tout. Fichiers JAVA générés dans le répertoire trustlib\msado15 pour votre projet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Wrappers de classe Java ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+ [Wrappers de classe Java ADO](./ado-java-class-wrappers.md)

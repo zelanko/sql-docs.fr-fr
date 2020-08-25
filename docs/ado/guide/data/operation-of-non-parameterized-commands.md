@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec2dbf3dfb24fc484368f3fa2e2c2e950dbd20ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b0f425deb87e831547d24a4b81f7d1a601e344a
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453111"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805669"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Fonctionnement des commandes non paramétrées
 Pour les commandes non paramétrées, toutes les commandes du fournisseur sont exécutées et les **jeux d’enregistrements** sont créés lors de l’exécution de la commande. Si la commande est exécutée de façon synchrone, tous les **jeux d’enregistrements** sont entièrement remplis. Si un mode de remplissage asynchrone a été sélectionné, l’état rempli des **recordsets** dépend du mode de remplissage et de la taille des jeux d' **enregistrements**.  
@@ -38,11 +38,11 @@ SHAPE {SELECT * FROM Customers}
   
  Lorsque vous accédez à la référence dans la colonne de chapitre, ADO récupère automatiquement le **Recordset** représenté par la référence. Notez que dans une commande non paramétrable, bien que le **jeu d’enregistrements** enfant entier ait été récupéré, le chapitre ne présente qu’un sous-ensemble de lignes.  
   
- Si la colonne ajoutée n’a pas d' *alias de chapitre*, un nom est généré automatiquement. Un objet de [champ](../../../ado/reference/ado-api/field-object.md) pour la colonne est ajouté à la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) de l’objet **Recordset** , et son type de données est **adChapter**.  
+ Si la colonne ajoutée n’a pas d' *alias de chapitre*, un nom est généré automatiquement. Un objet de [champ](../../reference/ado-api/field-object.md) pour la colonne est ajouté à la collection de [champs](../../reference/ado-api/fields-collection-ado.md) de l’objet **Recordset** , et son type de données est **adChapter**.  
   
- Pour plus d’informations sur la navigation dans un **jeu d’enregistrements**hiérarchique, consultez [accès aux lignes d’un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Pour plus d’informations sur la navigation dans un **jeu d’enregistrements**hiérarchique, consultez [accès aux lignes d’un jeu d’enregistrements hiérarchique](./accessing-rows-in-a-hierarchical-recordset.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   
- [Grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
- [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)
+ [Exemple de mise en forme des données](./data-shaping-example.md)   
+ [Grammaire de forme formelle](./formal-shape-grammar.md)   
+ [Généralités sur les commandes SHAPE](./shape-commands-in-general.md)

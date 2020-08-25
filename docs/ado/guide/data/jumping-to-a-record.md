@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4196c0be69292e7e915c5fe24ca995645133fabc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dcbdf68a7d79b64e25dcb700b989628a6a72b8e2
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453191"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805854"
 ---
 # <a name="jumping-to-a-record"></a>Accès à un enregistrement
-La méthode [Move](../../../ado/reference/ado-api/move-method-ado.md) vous permet de vous déplacer vers l’avant ou vers l’arrière dans le **jeu** d’enregistrements à l’aide de la syntaxe suivante :  
+La méthode [Move](../../reference/ado-api/move-method-ado.md) vous permet de vous déplacer vers l’avant ou vers l’arrière dans le **jeu** d’enregistrements à l’aide de la syntaxe suivante :  
   
 ```  
 oRs.Move NumRecords, Start  
@@ -39,6 +39,6 @@ oRs.Move NumRecords, Start
   
  L’appel de la méthode **Move** à partir d’un objet **Recordset** vide génère une erreur.  
   
- Si vous passez un signet dans l’argument *Start* , le déplacement est relatif à l’enregistrement avec ce signet, en supposant que l’objet **Recordset** prend en charge les signets. Un signet est obtenu à l’aide de la propriété [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) . S’il n’est pas spécifié, le déplacement est relatif à l’enregistrement actif.  
+ Si vous passez un signet dans l’argument *Start* , le déplacement est relatif à l’enregistrement avec ce signet, en supposant que l’objet **Recordset** prend en charge les signets. Un signet est obtenu à l’aide de la propriété [Bookmark](../../reference/ado-api/bookmark-property-ado.md) . S’il n’est pas spécifié, le déplacement est relatif à l’enregistrement actif.  
   
  Si vous utilisez la propriété **CacheSize** pour mettre en cache localement des enregistrements à partir du fournisseur, le passage d’un argument *numRecords* qui déplace la position de l’enregistrement actuel en dehors du groupe actuel d’enregistrements mis en cache force ADO à récupérer un nouveau groupe d’enregistrements, en commençant par l’enregistrement de destination. La propriété **CacheSize** détermine la taille du groupe nouvellement récupéré, et l’enregistrement de destination est le premier enregistrement récupéré.

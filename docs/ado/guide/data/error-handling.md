@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d26cbadd4f9c6a33c6dc43a6dcc88e0a92f23d65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092f1a767e614b3426db63c95ca8bf4e14954dd0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453441"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806863"
 ---
 # <a name="error-handling-in-ado"></a>Gestion des erreurs dans ADO
 ADO utilise plusieurs méthodes différentes pour notifier une application des erreurs qui se produisent. Cette section décrit les types d’erreurs qui peuvent se produire lorsque vous utilisez ADO et comment votre application est notifiée. Il conclut en faisant des suggestions sur la façon de gérer ces erreurs.  
@@ -34,7 +34,7 @@ ADO utilise plusieurs méthodes différentes pour notifier une application des e
   
 -   Si l’erreur est spécifique à votre fournisseur de données, un ou plusieurs objets d' **erreur** sont placés dans la collection d' **Erreurs** de l’objet de **connexion** qui a été utilisé pour accéder au magasin de données lorsque l’erreur s’est produite.  
   
--   Si le processus qui a déclenché un événement a également généré une erreur, les informations sur l’erreur sont placées dans un objet d' **erreur** et transmises en tant que paramètre à l’événement. Pour plus d’informations sur les événements, consultez [gestion des événements ADO](../../../ado/guide/data/handling-ado-events.md) .  
+-   Si le processus qui a déclenché un événement a également généré une erreur, les informations sur l’erreur sont placées dans un objet d' **erreur** et transmises en tant que paramètre à l’événement. Pour plus d’informations sur les événements, consultez [gestion des événements ADO](./handling-ado-events.md) .  
   
 -   Les problèmes qui se produisent lors du traitement des mises à jour par lots ou d’autres opérations en bloc impliquant un **Recordset** peuvent être indiqués par la propriété **Status** du **Recordset**. Par exemple, les violations de contrainte de schéma ou les autorisations insuffisantes peuvent être spécifiées par des valeurs **RecordStatusEnum** .  
   
@@ -42,14 +42,14 @@ ADO utilise plusieurs méthodes différentes pour notifier une application des e
   
  Cette section contient les rubriques suivantes :  
   
--   [Erreurs ADO](../../../ado/guide/data/ado-errors.md)  
+-   [Erreurs ADO](./ado-errors.md)  
   
--   [Erreurs du fournisseur](../../../ado/guide/data/provider-errors.md)  
+-   [Erreurs du fournisseur](./provider-errors.md)  
   
--   [Informations sur les erreurs liées aux champs](../../../ado/guide/data/field-related-error-information.md)  
+-   [Informations sur les erreurs liées aux champs](./field-related-error-information.md)  
   
--   [Informations sur les erreurs liées aux recordsets](../../../ado/guide/data/recordset-related-error-information.md)  
+-   [Informations sur les erreurs liées aux recordsets](./recordset-related-error-information.md)  
   
--   [Gestion des erreurs dans d’autres langages](../../../ado/guide/data/handling-errors-in-other-languages.md)  
+-   [Gestion des erreurs dans d’autres langages](./handling-errors-in-other-languages.md)  
   
--   [Anticipation des erreurs](../../../ado/guide/data/anticipating-errors.md)
+-   [Anticipation des erreurs](./anticipating-errors.md)

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400365"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Envoyer des commentaires de télémétrie à Microsoft pour Analytics Platform System
@@ -35,14 +35,14 @@ Pour fournir la protection maximale de la confidentialité, APS est fourni sans 
   
 1.  À l’aide d’un compte d’administrateur de domaine d’appliance, connectez-vous au nœud de contrôle (<strong>*appliance_domain*-CTL01</strong>) et ouvrez une invite de commandes en utilisant vos informations d’identification d’administrateur Windows.  
   
-2.  Accédez au répertoire suivant : `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Accédez au répertoire suivant : `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importer le module`Configure-RemoteMonitoring.ps1`  
+3.  Importer le module `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Pour importer, vous devez utiliser deux points dans la commande.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -53,7 +53,7 @@ Pour fournir la protection maximale de la confidentialité, APS est fourni sans 
     > [!NOTE]  
     > Le script suppose que la connexion Internet fonctionne correctement et ne valide pas la connexion Internet.  
   
-    1.  La première fois que vous activez la télémétrie, utilisez la commande suivante pour vous assurer que tous les redirecteurs DNS sont correctement configurés. Dans cet exemple, remplacez l’adresse `xx.xx.xx.xx` IP transférée DNS par l’adresse IP du redirecteur DNS dans votre environnement.  
+    1.  La première fois que vous activez la télémétrie, utilisez la commande suivante pour vous assurer que tous les redirecteurs DNS sont correctement configurés. Dans cet exemple, remplacez l’adresse IP transférée DNS `xx.xx.xx.xx` par l’adresse IP du redirecteur DNS dans votre environnement.  
   
         ```  
         PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Enable-RemoteMonitoring -SetupDnsForwarder -DnsForwarderIp xx.xx.xx.xx  
@@ -73,7 +73,7 @@ Pour fournir la protection maximale de la confidentialité, APS est fourni sans 
   
 Si vous avez entré **n**, aucune commande n’est exécutée et la fonctionnalité n’est pas activée et il n’y a rien d’autre à faire.  
   
-Il n’y a aucun effet sur `Enable-RemoteMonitoring` l’exécution de la commande plusieurs fois. Si le redirecteur DNS est déjà défini, vous obtiendrez un message d’avertissement indiquant que c’est le cas.  
+Il n’y a aucun effet sur l’exécution de la `Enable-RemoteMonitoring` commande plusieurs fois. Si le redirecteur DNS est déjà défini, vous obtiendrez un message d’avertissement indiquant que c’est le cas.  
   
 ## <a name="disable-telemetry"></a><a name="disable"></a>Désactiver la télémétrie  
 La désactivation de la télémétrie entraînera l’arrêt de toutes les opérations qui communiquent les informations relatives à l’état de l’appliance au service d’analyse APS dans le Cloud.  
@@ -85,14 +85,14 @@ La désactivation de la télémétrie entraînera l’arrêt de toutes les opér
   
 1.  À l’aide d’un compte d’administrateur de domaine d’appliance, connectez-vous au nœud de contrôle (<strong>*appliance_domain*-CTL01</strong>) et ouvrez une fenêtre PowerShell avec des privilèges d’administrateur.  
   
-2.  Accédez au répertoire suivant : `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100`.  
+2.  Accédez au répertoire suivant : `C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100` .  
   
-3.  Importer le module`Configure-RemoteMonitoring.ps1`  
+3.  Importer le module `Configure-RemoteMonitoring.ps1`  
   
     > [!NOTE]  
     > Pour importer, vous devez utiliser deux points dans la commande.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ La désactivation de la télémétrie entraînera l’arrêt de toutes les opér
   
 4.  Appelle la `Disable-RemoteMonitoring` commande sans paramètres. Cette commande arrête d’envoyer des commentaires. (Cela n’affecte pas l’analyse locale.) Toutefois, la commande ne désactive pas le redirecteur DNS et/ou ne désactive aucune connectivité Internet. Cette opération doit être effectuée manuellement après la désactivation réussie des commentaires.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
@@ -108,7 +108,7 @@ La désactivation de la télémétrie entraînera l’arrêt de toutes les opér
   
 Si vous voyez des erreurs ou des informations qui vous conduisent à croire que la commande n’a pas réussi à contacter CSS pour obtenir de l’aide.  
   
-Il n’y a aucun effet sur `Disable-RemoteMonitoring` l’exécution de la commande plusieurs fois.  
+Il n’y a aucun effet sur l’exécution de la `Disable-RemoteMonitoring` commande plusieurs fois.  
   
 ## <a name="next-steps"></a>Étapes suivantes
 Pour plus d'informations, consultez les pages suivantes :

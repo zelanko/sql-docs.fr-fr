@@ -41,7 +41,7 @@ User.ChangePassword OldPassword, NewPassword
  *NewPassword*  
  Valeur de **chaîne** qui spécifie le nouveau mot de passe.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour des raisons de sécurité, l’ancien mot de passe doit être spécifié en plus du nouveau mot de passe.  
   
  Une erreur se produit si le fournisseur ne prend pas en charge l’administration des propriétés du tiers de confiance.  

@@ -28,7 +28,7 @@ ms.locfileid: "88775378"
 # <a name="fields-collection-ado"></a>Fields, collection (ADO)
 Contient tous les objets [Field](./field-object.md) d’un objet [Recordset](./recordset-object-ado.md) ou [Record](./record-object-ado.md) .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un objet **Recordset** possède une collection **Fields** composée d’objets **Field** . Chaque objet **Field** correspond à une colonne dans le **Recordset**. Vous pouvez remplir la collection de **champs** avant d’ouvrir le **jeu d’enregistrements** en appelant la méthode [Refresh](./refresh-method-ado.md) sur la collection.  
   
 > [!NOTE]

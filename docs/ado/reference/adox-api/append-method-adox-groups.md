@@ -38,7 +38,7 @@ Groups.Append Group
  *Groupe*  
  Objet de **groupe** à ajouter ou nom du groupe à créer et à ajouter.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La collection **groups** d’un [catalogue](./catalog-object-adox.md) représente tous les comptes de groupe du catalogue. La collection **groups** pour un [utilisateur](./user-object-adox.md) représente uniquement le groupe auquel appartient l’utilisateur.  
   
  Une erreur se produit si le fournisseur ne prend pas en charge la création de groupes.  

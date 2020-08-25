@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3c61e40220b99bd68c92e2651d58ea13ee10be29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d0acedc118c2789945f3b02a438655176179ef0
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454101"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806639"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Vue d’ensemble de Microsoft Data Shaping Service pour OLE DB
 > [!IMPORTANT]
 >  Cette fonctionnalité sera supprimée dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Au lieu de cela, les applications doivent utiliser XML.
 
- Le fournisseur de services Microsoft Data Shaping Service pour OLE DB prend en charge la construction d’objets [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) hiérarchiques (mis en forme) à partir d’un fournisseur de données.
+ Le fournisseur de services Microsoft Data Shaping Service pour OLE DB prend en charge la construction d’objets [Recordset](../../reference/ado-api/recordset-object-ado.md) hiérarchiques (mis en forme) à partir d’un fournisseur de données.
 
 ## <a name="provider-keyword"></a>Mot clé Provider
  Pour appeler le service de mise en forme des données pour OLE DB, spécifiez le mot clé et la valeur suivants dans la chaîne de connexion.
@@ -35,7 +35,7 @@ ms.locfileid: "88454101"
 ```
 
 ## <a name="dynamic-properties"></a>Propriétés dynamiques
- Lorsque ce fournisseur de services est appelé, les propriétés dynamiques suivantes sont ajoutées à la collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) de l’objet de[connexion](../../../ado/reference/ado-api/connection-object-ado.md) .
+ Lorsque ce fournisseur de services est appelé, les propriétés dynamiques suivantes sont ajoutées à la collection de [Propriétés](../../reference/ado-api/properties-collection-ado.md) de l’objet de[connexion](../../reference/ado-api/connection-object-ado.md) .
 
 |Nom de la propriété dynamique|Description|
 |---------------------------|-----------------|
@@ -49,7 +49,7 @@ Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- Vous pouvez également définir ou récupérer une propriété dynamique en spécifiant son nom en tant qu’index de la propriété [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) . Par exemple, l’exemple de code suivant obtient et imprime la valeur actuelle de la **fournisseur de données** propriété dynamique, puis définit une nouvelle valeur si CN. DataProvider a été défini sur « MSDataShape » (directement ou indirectement via la chaîne de connexion) et la connexion n’a pas été ouverte :
+ Vous pouvez également définir ou récupérer une propriété dynamique en spécifiant son nom en tant qu’index de la propriété [Properties](../../reference/ado-api/properties-collection-ado.md) . Par exemple, l’exemple de code suivant obtient et imprime la valeur actuelle de la **fournisseur de données** propriété dynamique, puis définit une nouvelle valeur si CN. DataProvider a été défini sur « MSDataShape » (directement ou indirectement via la chaîne de connexion) et la connexion n’a pas été ouverte :
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -59,7 +59,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 > [!NOTE]
 >  La propriété dynamique, **fournisseur de données**, peut être définie uniquement sur un objet de **connexion** non ouvert. Une fois la connexion ouverte, la propriété **fournisseur de données** devient en lecture seule.
 
- Pour plus d’informations sur la mise en forme des données, consultez mise en [forme des données](../../../ado/guide/data/data-shaping-overview.md).
+ Pour plus d’informations sur la mise en forme des données, consultez mise en [forme des données](../data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Voir aussi
- [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Annexe A : Fournisseurs](./appendix-a-providers.md)

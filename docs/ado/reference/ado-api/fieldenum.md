@@ -26,7 +26,7 @@ ms.locfileid: "88775448"
 # <a name="fieldenum"></a>FieldEnum
 Spécifie les champs spéciaux référencés dans la collection de [champs](./fields-collection-ado.md) d’un objet [enregistrement](./record-object-ado.md) .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Ces constantes fournissent un « raccourci » pour accéder à des champs spéciaux associés à un **enregistrement**. Récupérez l’objet de [champ](./field-object.md) à partir de la collection de **champs** , puis obtenez son contenu avec la propriété [value](./value-property-ado.md) de l’objet **Field** .  
   
 |Constant|Valeur|Description|  

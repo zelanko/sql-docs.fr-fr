@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8ec5c6812e2800825677cd844756d1dd9325729
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a7cfeeb8d91420ec25cd6dd196b260ad8222c086
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442061"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777418"
 ---
 # <a name="sort-property"></a>Sort, propriété
-Indique un ou plusieurs noms de champs sur lesquels le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est trié, et indique si chaque champ est trié par ordre croissant ou décroissant.  
+Indique un ou plusieurs noms de champs sur lesquels le [Recordset](./recordset-object-ado.md) est trié, et indique si chaque champ est trié par ordre croissant ou décroissant.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **chaîne** qui indique les noms de champs dans le **jeu d’enregistrements** sur lequel effectuer le tri. Chaque nom est séparé par une virgule et est éventuellement suivi d’un vide et du mot clé **ASC**, qui trie le champ par ordre croissant, ou **desc**, qui trie le champ dans l’ordre décroissant. Par défaut, si aucun mot clé n’est spécifié, le champ est trié dans l’ordre croissant.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété requiert que la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) soit définie sur **adUseClient**. Un index temporaire sera créé pour chaque champ spécifié dans la propriété de **Tri** si un index n’existe pas déjà.  
+ Cette propriété requiert que la propriété [CursorLocation](./cursorlocation-property-ado.md) soit définie sur **adUseClient**. Un index temporaire sera créé pour chaque champ spécifié dans la propriété de **Tri** si un index n’existe pas déjà.  
   
  L’opération de tri est efficace, car les données ne sont pas réorganisées physiquement, mais elles sont simplement accessibles dans l’ordre spécifié par l’index.  
   
@@ -51,11 +51,11 @@ Indique un ou plusieurs noms de champs sur lesquels le [Recordset](../../../ado/
  Aucun champ ne peut être nommé « ASC » ou « DESC », car ces noms sont en conflit avec les mots clés **ASC** et **desc**. Vous pouvez créer un alias pour un champ avec un nom en conflit en utilisant le mot clé **As** dans la requête qui retourne le **Recordset**.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sort, exemple de propriété (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [Sort, exemple de propriété (VC + +)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [Optimize, propriété dynamique (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [SortColumn, propriété (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection, propriété (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
+ [Sort, exemple de propriété (VB)](./sort-property-example-vb.md)   
+ [Sort, exemple de propriété (VC + +)](./sort-property-example-vc.md)   
+ [Optimize, propriété dynamique (ADO)](./optimize-property-dynamic-ado.md)   
+ [SortColumn, propriété (RDS)](../rds-api/sortcolumn-property-rds.md)   
+ [SortDirection, propriété (RDS)](../rds-api/sortdirection-property-rds.md)

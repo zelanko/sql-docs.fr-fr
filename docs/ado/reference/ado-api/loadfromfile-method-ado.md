@@ -37,7 +37,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  Valeur de **chaîne** qui contient le nom d’un fichier à charger dans le **flux**. *Filename* peut contenir n’importe quel chemin d’accès et nom valide au format UNC. Si le fichier spécifié n’existe pas, une erreur d’exécution se produit.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode peut être utilisée pour charger le contenu d’un fichier local dans un objet de **flux** . Cela peut être utilisé pour charger le contenu d’un fichier local sur un serveur.  
   
  L’objet de **flux** doit être déjà ouvert avant d’appeler **LoadFromFile**. Cette méthode ne modifie pas la liaison de l’objet de **flux** ; elle est toujours liée à l’objet spécifié par l’URL ou l' **enregistrement** avec lequel le **flux** a été ouvert à l’origine.  

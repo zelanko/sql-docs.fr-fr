@@ -24,7 +24,7 @@ ms.locfileid: "88769538"
 # <a name="property-object-adox"></a>Property, objet (ADOX)
 Représente une caractéristique d’un objet ADOX.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les objets ADOX ont deux types de propriétés : intégré et dynamique.  
   
  Les propriétés intégrées sont les propriétés immédiatement disponibles pour tout nouvel objet, à l’aide de la syntaxe MyObject. Property. Ils n’apparaissent pas en tant qu’objets de propriété dans la [collection de propriétés](../ado-api/properties-collection-ado.md)d’un objet. par conséquent, bien que vous puissiez modifier leurs valeurs, vous ne pouvez pas modifier leurs caractéristiques.  

@@ -30,7 +30,7 @@ Indique le nom d’un objet.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **chaîne** qui indique le nom d’un objet.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la propriété **Name** pour attribuer un nom à une **commande**, une **propriété**, un **champ**ou un objet **Parameter** ou pour en récupérer le nom.  
   
  La valeur est en lecture/écriture sur un objet **Command** et en lecture seule sur un objet **Property** .  

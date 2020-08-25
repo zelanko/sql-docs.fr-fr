@@ -33,7 +33,7 @@ Indique si l’index représente la clé primaire de la table.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et retourne une valeur **booléenne** .  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La valeur par défaut est **False**.  
   
  Cette propriété est en lecture seule sur les objets d' [index](./index-object-adox.md) déjà ajoutés à une collection.  

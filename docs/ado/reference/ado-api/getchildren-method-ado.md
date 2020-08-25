@@ -37,7 +37,7 @@ Set recordset = record.GetChildren
 ## <a name="return-value"></a>Valeur de retour  
  Objet **Recordset** pour lequel chaque ligne représente un enfant de l’objet **enregistrement** actif. Par exemple, les enfants d’un **enregistrement** qui représente un répertoire sont les fichiers et les sous-répertoires contenus dans le répertoire parent.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le fournisseur détermine les colonnes qui existent dans le **jeu d’enregistrements**retourné. Par exemple, un fournisseur de source de document retourne toujours un **jeu d’enregistrements**de ressources.  
   
 ## <a name="applies-to"></a>S'applique à  
