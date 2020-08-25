@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cec29c3c9c9486c08ee8c95625b026f7b51ef5e0
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472675"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216768"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -163,21 +163,20 @@ Always Encrypted n’est pas pris en charge pour les colonnes avec les caractér
 - Colonnes avec la propriété `IDENTITY`.  
 - Colonnes avec la propriété `ROWGUIDCOL`.  
 - Chaîne (`varchar`, `char`, etc.) avec des classements non-bin2.  
-- Colonnes qui font office de clés pour les index non cluster utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent).  
-- Colonnes qui font office de clés pour les index cluster utilisant une colonne chiffrée aléatoire comme colonne clé (les colonnes chiffrées déterministes conviennent).  
-- Colonnes qui font office de clés pour les index de texte intégral contenant des colonnes chiffrées aléatoires et déterministes.  
+- Colonnes qui font office de clés pour les index en cluster et non cluster lors de l’utilisation du chiffrement aléatoire (le chiffrement déterministe est pris en charge).
+- Colonnes qui font office de clés pour les index en texte intégral lors de l’utilisation du chiffrement aléatoire (le chiffrement déterministe est pris en charge).  
 - Colonnes calculées
 - Colonnes référencées par des colonnes calculées (quand l’expression effectue des opérations non prises en charge pour Always Encrypted).  
 - Jeu de colonnes éparses.  
-- Colonnes référencées par des statistiques.  
-- Colonnes utilisant un type d’alias.  
+- Colonnes référencées par des statistiques lors de l’utilisation du chiffrement aléatoire (le chiffrement déterministe est pris en charge).  
+- Colonnes utilisant des types d’alias.  
 - Colonnes de partitionnement.  
 - Colonnes avec des contraintes par défaut.  
 - Colonnes référencées par des contraintes uniques en cas d’utilisation du chiffrement aléatoire (le chiffrement déterministe est pris en charge).  
 - Colonnes de clé primaire en cas d’utilisation du chiffrement aléatoire (le chiffrement déterministe est pris en charge).  
 - Colonnes de référence dans les contraintes de clé étrangère en cas d’utilisation du chiffrement aléatoire ou déterministe, si les colonnes de référence et référencées utilisent des clés ou algorithmes différents.  
 - Colonnes référencées par des contraintes de validation.  
-- Colonnes dans des tables qui utilisent la capture des changements de données.  
+- Colonnes capturées/suivies à l’aide de la capture des données modifiées.  
 - Colonnes de clé primaire sur des tables avec suivi des changements.  
 - Colonnes masquées (à l’aide de Dynamic Data Masking).  
 - Colonnes dans les tables Stretch Database. (Les tables comportant des colonnes chiffrées avec Always Encrypted peuvent être activées pour l’extension.)  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8da4957f44c481e2a89ca1c8c964880f1ca93fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22664ed2943800702bbb12afe6900c1ca9bac6bd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451931"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759119"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Étape 3 : Le serveur obtient un recordset (tutoriel RDS)
 Le programme serveur utilise la chaîne de connexion et le texte de commande pour interroger la source de données pour les lignes souhaitées. ADO est généralement utilisé pour récupérer ce **Recordset**, bien que d’autres interfaces d’accès aux données Microsoft, telles que OLE DB, puissent être utilisées.  
@@ -39,5 +39,5 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étape 4 : le serveur retourne le recordset (didacticiel RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
- [Tutoriel RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Étape 4 : le serveur retourne le recordset (didacticiel RDS)](./step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [Tutoriel RDS (VBScript)](./rds-tutorial-vbscript.md)

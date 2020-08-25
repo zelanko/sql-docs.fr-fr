@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ae3ef035594b696b829f0f1898e1749a2c33f11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6334f4edb0d98e7fa0dca49f1c024f63e471c7f8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440531"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771428"
 ---
 # <a name="append-method-adox-keys"></a>Append, méthode (clés ADOX)
-Ajoute un nouvel objet [clé](../../../ado/reference/adox-api/key-object-adox.md) à la collection de [clés](../../../ado/reference/adox-api/keys-collection-adox.md) .  
+Ajoute un nouvel objet [clé](./key-object-adox.md) à la collection de [clés](./keys-collection-adox.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,29 +39,29 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  Objet **clé** à ajouter ou nom de la clé à créer et à ajouter.  
   
  *KeyType*  
- facultatif. Valeur de type **long** qui spécifie le type de clé. Le paramètre de *clé* correspond à la propriété de [type](../../../ado/reference/adox-api/type-property-key-adox.md) d’un objet **clé** .  
+ facultatif. Valeur de type **long** qui spécifie le type de clé. Le paramètre de *clé* correspond à la propriété de [type](./type-property-key-adox.md) d’un objet **clé** .  
   
  *Colonne*  
- facultatif. Valeur de **chaîne** qui spécifie le nom de la colonne à indexer. Le paramètre *Columns* correspond à la valeur de la propriété [Name](../../../ado/reference/adox-api/name-property-adox.md) d’un objet [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
+ facultatif. Valeur de **chaîne** qui spécifie le nom de la colonne à indexer. Le paramètre *Columns* correspond à la valeur de la propriété [Name](./name-property-adox.md) d’un objet [Column](./column-object-adox.md) .  
   
  *RelatedTable*  
- facultatif. Valeur de **chaîne** qui spécifie le nom de la table associée. Le paramètre *RelatedTable* correspond à la valeur de la propriété **Name** d’un objet [table](../../../ado/reference/adox-api/table-object-adox.md) .  
+ facultatif. Valeur de **chaîne** qui spécifie le nom de la table associée. Le paramètre *RelatedTable* correspond à la valeur de la propriété **Name** d’un objet [table](./table-object-adox.md) .  
   
  *; RelatedColumn*  
- facultatif. Valeur de **chaîne** qui spécifie le nom de la colonne associée pour une clé étrangère. Le paramètre *RelatedColumn* correspond à la valeur de la propriété **Name** d’un objet [Column](../../../ado/reference/adox-api/column-object-adox.md) .  
+ facultatif. Valeur de **chaîne** qui spécifie le nom de la colonne associée pour une clé étrangère. Le paramètre *RelatedColumn* correspond à la valeur de la propriété **Name** d’un objet [Column](./column-object-adox.md) .  
   
 ## <a name="remarks"></a>Notes  
  Le paramètre *Columns* peut prendre soit le nom d’une colonne, soit un tableau de noms de colonnes.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Keys, collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys, collection (ADOX)](./keys-collection-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthodes Append des clés, type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Append, méthode (colonnes ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append, méthode (groupes ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append, méthode (Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append, méthode (procédures ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append, méthode (Tables ADOX)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append, méthode (utilisateurs ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append, méthode (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Méthodes Append des clés, type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Append, méthode (colonnes ADOX)](./append-method-adox-columns.md)   
+ [Append, méthode (groupes ADOX)](./append-method-adox-groups.md)   
+ [Append, méthode (Index ADOX)](./append-method-adox-indexes.md)   
+ [Append, méthode (procédures ADOX)](./append-method-adox-procedures.md)   
+ [Append, méthode (Tables ADOX)](./append-method-adox-tables.md)   
+ [Append, méthode (utilisateurs ADOX)](./append-method-adox-users.md)   
+ [Append, méthode (vues ADOX)](./append-method-adox-views.md)

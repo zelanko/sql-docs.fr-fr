@@ -19,42 +19,42 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 01598bb9c9b7258b33f66df6bf00db9b892f4ec5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c0e37715077af500e0c5cc023021765a9e4978d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440281"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770978"
 ---
 # <a name="columns-collection-adox"></a>Columns, collection (ADOX)
-Contient tous les objets [Column](../../../ado/reference/adox-api/column-object-adox.md) d’une table, d’un index ou d’une clé.  
+Contient tous les objets [Column](./column-object-adox.md) d’une table, d’un index ou d’une clé.  
   
 ## <a name="remarks"></a>Notes  
- La méthode [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) d’une collection **Columns** est unique pour ADOX. Vous pouvez :  
+ La méthode [Append](./append-method-adox-columns.md) d’une collection **Columns** est unique pour ADOX. Vous pouvez :  
   
 -   Ajoutez une nouvelle colonne à la collection à l’aide de la méthode **Append** .  
   
  Les propriétés et les méthodes restantes sont standard pour les collections ADO. Vous pouvez :  
   
--   Accédez à une colonne de la collection avec la propriété [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
+-   Accédez à une colonne de la collection avec la propriété [Item](../ado-api/item-property-ado.md) .  
   
--   Retourne le nombre de colonnes contenues dans la collection avec la propriété [Count](../../../ado/reference/ado-api/count-property-ado.md) .  
+-   Retourne le nombre de colonnes contenues dans la collection avec la propriété [Count](../ado-api/count-property-ado.md) .  
   
--   Supprimez une colonne de la collection à l’aide de la méthode [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) .  
+-   Supprimez une colonne de la collection à l’aide de la méthode [Delete](./delete-method-adox-collections.md) .  
   
--   Mettez à jour les objets de la collection pour refléter le schéma de la base de données actuelle avec la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) .  
+-   Mettez à jour les objets de la collection pour refléter le schéma de la base de données actuelle avec la méthode [Refresh](../ado-api/refresh-method-ado.md) .  
   
 > [!NOTE]
->  Une erreur se produit lors de l’ajout d’une **colonne** à la collection **Columns** d’un [index](../../../ado/reference/adox-api/index-object-adox.md) si la **colonne** n’existe pas dans une [table](../../../ado/reference/adox-api/table-object-adox.md) qui est déjà ajoutée à la collection [tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
+>  Une erreur se produit lors de l’ajout d’une **colonne** à la collection **Columns** d’un [index](./index-object-adox.md) si la **colonne** n’existe pas dans une [table](./table-object-adox.md) qui est déjà ajoutée à la collection [tables](./tables-collection-adox.md) .  
   
  Cette section contient la rubrique suivante.  
   
--   [Propriétés, méthodes et événements de la collection Columns](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de la collection Columns](./columns-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Columns et tables Append, méthodes, Name, exemple de propriété (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Connection Close, méthode, table type, exemple de propriété (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Méthodes Append des clés, type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog, exemple de propriété (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [SortOrder, exemple de propriété (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Columns et tables Append, méthodes, Name, exemple de propriété (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close, méthode, table type, exemple de propriété (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Méthodes Append des clés, type de clé, RelatedColumn, RelatedTable et UpdateRule, exemple de propriétés (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ParentCatalog, exemple de propriété (VB)](./parentcatalog-property-example-vb.md)   
+ [SortOrder, exemple de propriété (VB)](./sortorder-property-example-vb.md)   
+ [Column, objet (ADOX)](./column-object-adox.md)

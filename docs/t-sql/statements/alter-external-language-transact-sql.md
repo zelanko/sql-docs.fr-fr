@@ -1,4 +1,5 @@
 ---
+description: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server
 title: ALTER EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2019
@@ -9,16 +10,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67774a985646e9058bb5e2600f50c043498ea96d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a102301cfa1e168fff01473176e8b6787ade06dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248621"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479125"
 ---
 # <a name="alter-external-language-transact-sql"></a>ALTER EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Modifie le contenu d’une extension de langage externe existante dans la base de données.
 
@@ -105,6 +106,8 @@ Cet argument permet de donner un ensemble de variables d’environnement au runt
 **platform**
 
 Ce paramètre est nécessaire pour les scénarios de systèmes d’exploitation hybrides. Dans une architecture hybride, le langage doit être inscrit une fois par plateforme. La plateforme et le nom du langage constituent la clé unique par langage externe. Si aucune plateforme n’est spécifiée, le système d’exploitation actuel est pris en considération.
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="remarks"></a>Notes
 

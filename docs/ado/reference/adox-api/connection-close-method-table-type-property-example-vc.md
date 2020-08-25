@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b8d3263ee4d343f9e77b4d64d42ee8e871888d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b0f907cd2976e53b6942ff9d33da0a2a4712e61
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440221"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770898"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VC++)
-La définition de la propriété [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) sur **Nothing** doit « fermer » le catalogue. Les regroupements associés seront vides. Tous les objets qui ont été créés à partir d’objets de schéma dans le catalogue sont orphelins. Toutes les propriétés de ces objets qui ont été mises en cache seront toujours disponibles, mais la tentative de lecture des propriétés qui nécessitent un appel du fournisseur échouera.  
+La définition de la propriété [ActiveConnection](./activeconnection-property-adox.md) sur **Nothing** doit « fermer » le catalogue. Les regroupements associés seront vides. Tous les objets qui ont été créés à partir d’objets de schéma dans le catalogue sont orphelins. Toutes les propriétés de ces objets qui ont été mises en cache seront toujours disponibles, mais la tentative de lecture des propriétés qui nécessitent un appel du fournisseur échouera.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  
@@ -144,4 +144,4 @@ void CloseConnectionX() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ActiveConnection, propriété (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [ActiveConnection, propriété (ADOX)](./activeconnection-property-adox.md)

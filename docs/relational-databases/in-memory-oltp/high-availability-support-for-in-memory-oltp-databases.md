@@ -11,18 +11,19 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d411bff221ed82f1d31252aa2530efcef68a614a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa468028198839f9cf8d4dd6d12791966d254aaf
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723214"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091981"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Prise en charge de la haute disponibilité pour les bases de données OLTP en mémoire
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Les bases de données contenant des tables optimisées en mémoire, avec ou sans procédures stockées compilées natives, sont entièrement prises en charge avec les groupes de disponibilité Always On.  Il n’existe aucune différence dans la configuration et la prise en charge des bases de données contenant des objets [!INCLUDE[hek_2](../../includes/hek-2-md.md)] et celles n’en comportant pas.  
-  
- Quand une base de données OLTP en mémoire est déployée dans une configuration de groupe de disponibilité Always On, les modifications apportées aux tables optimisées en mémoire sur le réplica principal sont appliquées dans la mémoire aux tables sur les réplicas secondaires, au moment où la phase de restauration par progression est appliquée. Cela signifie que le basculement vers un réplica secondaire peut être très rapide, étant donné que les données sont déjà en mémoire. En outre, les tables sont disponibles pour les requêtes sur les réplicas secondaires qui ont été configurés pour un accès en lecture.  
+
+ Les modifications apportées aux tables optimisées en mémoire sur le réplica principal sont appliquées aux tables sur le réplica secondaire pendant la phase de restauration par progression. Cela permet un basculement rapide vers le réplica secondaire car les données sont déjà en mémoire. Les tables sont disponibles pour les requêtes de lecture sur les réplicas secondaires qui ont été configurés pour un accès en lecture.  
+
   
 ## <a name="always-on-availability-groups-and-in-memory-oltp-databases"></a>Groupes de disponibilité Always On et bases de données OLTP en mémoire  
  La configuration des bases de données avec des composants [!INCLUDE[hek_2](../../includes/hek-2-md.md)] fournit les éléments suivants :  
@@ -35,9 +36,13 @@ ms.locfileid: "85723214"
   
 -   **Secondaire accessible en lecture**   
     Vous pouvez accéder aux tables optimisées en mémoire sur le réplica secondaire et les interroger si le réplica secondaire a été configuré pour un accès en lecture. Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l’horodateur de lecture sur le réplica secondaire est étroitement synchronisé avec l’horodateur de lecture sur le réplica principal, ce qui signifie que les modifications apportées sur le réplica principal sont rapidement visibles sur le réplica secondaire. Ce comportement de synchronisation étroite est différent d’OLTP en mémoire [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .  
+
+### <a name="considerations"></a>Considérations
+
+- SQL Server 2019 a introduit une restauration par progression parallèle pour les bases de données de groupe de disponibilité à mémoire optimisée. Dans SQL Server 2016 et 2017, les tables basées sur disque n’utilisent pas l’opération de restauration par progression parallèle si une base de données dans un groupe de disponibilité est également optimisée en mémoire. 
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Instance de clustering de basculement (FCI) et bases de données OLTP en mémoire  
- Pour bénéficier d’une haute disponibilité dans une configuration de stockage partagé, vous pouvez configurer le clustering de basculement sur les instances comportant une ou plusieurs bases de données avec des tables mémoire optimisées. Vous devez tenir compte des facteurs suivants dans le cadre de la configuration d'une instance FCI.  
+ Pour bénéficier d’une haute disponibilité dans une configuration de stockage partagé, vous pouvez configurer une instance de cluster de basculement comportant des bases de données avec des tables mémoire optimisées. Vous devez tenir compte des facteurs suivants dans le cadre de la configuration d'une instance FCI.  
   
 -   **Objectif de temps de récupération**   
     Le temps de basculement est susceptible d’être plus élevé, car les tables optimisées en mémoire doivent être chargées en mémoire avant que la base de données ne soit disponible.  

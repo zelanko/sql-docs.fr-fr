@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8c586b4e7ce2e18411d147e8aafb4eb144e01e6f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cdd0e393c7fc5214866142150c7ff497e48e7122
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442781"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773328"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
-Spécifie si le [paramètre](../../../ado/reference/ado-api/parameter-object.md) représente un paramètre d’entrée, un paramètre de sortie, à la fois un paramètre d’entrée et un paramètre de sortie, ou la valeur de retour d’une procédure stockée.  
+Spécifie si le [paramètre](./parameter-object.md) représente un paramètre d’entrée, un paramètre de sortie, à la fois un paramètre d’entrée et un paramètre de sortie, ou la valeur de retour d’une procédure stockée.  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|Par défaut. Indique que le paramètre représente un paramètre d’entrée.|  
 |**adParamInputOutput**|3|Indique que le paramètre représente à la fois un paramètre d’entrée et un paramètre de sortie.|  
@@ -37,7 +37,7 @@ Spécifie si le [paramètre](../../../ado/reference/ado-api/parameter-object.md)
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.ParameterDirection.INPUT|  
 |AdoEnums.ParameterDirection.INPUTOUTPUT|  
@@ -49,9 +49,9 @@ Spécifie si le [paramètre](../../../ado/reference/ado-api/parameter-object.md)
 
 :::row:::
     :::column:::
-        [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+        [CreateParameter, méthode (ADO)](./createparameter-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Direction, propriété](../../../ado/reference/ado-api/direction-property.md)  
+        [Direction, propriété](./direction-property.md)  
     :::column-end:::
 :::row-end:::

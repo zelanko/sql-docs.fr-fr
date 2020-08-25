@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 986d527f0d4f59053a53a8b566d28d43151c0f99
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b839f5f31671d7364eeec022da1b25bdf584a3a
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452161"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759719"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimisation de l’espace utilisé par un fichier journal
 Un fichier journal peut être rempli rapidement (ce qui entraîne l’arrêt du serveur) s’il existe un volume important d’activités sur une base de données SQL Server. Vous pouvez définir le fichier journal à **tronquer au point de contrôle** afin d’étendre considérablement la durée de vie du fichier journal pour une base de données.  
@@ -47,6 +47,4 @@ Un fichier journal peut être rempli rapidement (ce qui entraîne l’arrêt du 
  Pour plus d’informations sur la fonctionnalité **tronquer au point de contrôle** , consultez la documentation Microsoft SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Concepts de base de RDS](./rds-fundamentals.md)

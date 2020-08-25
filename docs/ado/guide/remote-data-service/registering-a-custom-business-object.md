@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df390d9e02f31913f74b82ed6196bc2442d1591a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73b1fe1d0089ed601391f9a621d7cdc163ab8983
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452051"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759479"
 ---
 # <a name="registering-a-custom-business-object"></a>Inscription d’un objet métier personnalisé
 Pour lancer correctement un objet métier personnalisé (. dll ou. exe) par le biais du serveur Web, vous devez entrer le ProgID de l’objet métier dans le registre, comme expliqué dans cette procédure. Cette fonctionnalité RDS protège la sécurité de votre serveur Web en exécutant uniquement les exécutables approuvés.  
@@ -29,7 +29,7 @@ Pour lancer correctement un objet métier personnalisé (. dll ou. exe) par le b
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 > [!NOTE]
->  Pour MDAC 2,0 et versions ultérieures et Windows DAC, l’objet métier par défaut, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), n’est pas inscrit par défaut au cours de l’installation de MDAC/Windows DAC. Toutefois, si **RDSServer. DataFactory** a été inscrit comme sécurisé pour une exécution sur l’ordinateur avant l’installation, l’entrée de Registre est conservée pour la nouvelle installation.  
+>  Pour MDAC 2,0 et versions ultérieures et Windows DAC, l’objet métier par défaut, [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md), n’est pas inscrit par défaut au cours de l’installation de MDAC/Windows DAC. Toutefois, si **RDSServer. DataFactory** a été inscrit comme sécurisé pour une exécution sur l’ordinateur avant l’installation, l’entrée de Registre est conservée pour la nouvelle installation.  
   
 ### <a name="to-register-a-custom-business-object"></a>Pour inscrire un objet métier personnalisé :  
   
@@ -42,5 +42,3 @@ Pour lancer correctement un objet métier personnalisé (. dll ou. exe) par le b
 4.  Sélectionnez la clé **ADCLaunch** , puis dans le menu **Edition**, pointez sur **nouveau** , puis cliquez sur **clé**.  
   
 5.  Tapez le ProgID de votre objet métier personnalisé, puis cliquez sur **entrée**. Ne renseignez pas l’entrée **valeur** .
-
-

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d9868c99-425a-4b10-af67-1929ed513fda
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e5ad64de17b67acfba0948398fbec7ba5e853eec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49d1e08e421c520238573cd802a592cc970b19da
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442611"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772798"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vc"></a>Provider et DefaultDatabase, exemple de propriétés (VC++)
-Cet exemple illustre la propriété de [fournisseur](../../../ado/reference/ado-api/provider-property-ado.md) en ouvrant trois objets de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) à l’aide de différents fournisseurs. Elle utilise également la propriété [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) pour définir la base de données par défaut pour le fournisseur Microsoft ODBC.  
+Cet exemple illustre la propriété de [fournisseur](./provider-property-ado.md) en ouvrant trois objets de [connexion](./connection-object-ado.md) à l’aide de différents fournisseurs. Elle utilise également la propriété [DefaultDatabase](./defaultdatabase-property.md) pour définir la base de données par défaut pour le fournisseur Microsoft ODBC.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -135,6 +135,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Propriété DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Provider, propriété (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Connection, objet (ADO)](./connection-object-ado.md)   
+ [Propriété DefaultDatabase](./defaultdatabase-property.md)   
+ [Provider, propriété (ADO)](./provider-property-ado.md)

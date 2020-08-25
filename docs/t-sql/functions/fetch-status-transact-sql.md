@@ -1,5 +1,6 @@
 ---
-title: '@@FETCH_STATUS (Transact-SQL) | Microsoft Docs'
+description: '&#x40;&#x40;FETCH_STATUS (Transact-SQL)'
+title: FETCH_STATUS (Transact-SQL)
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73c5802df5988c323efb7ae1c5554b4835063e4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2b8e44321611a4e814a1102a0cec233ede45eb2b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631719"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88310105"
 ---
 # <a name="x40x40fetch_status-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,12 +36,14 @@ Cette fonction retourne l’état de la dernière instruction FETCH effectuée s
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 @@FETCH_STATUS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="return-type"></a>Type de retour  
- **entier**  
+ **integer**  
   
 ## <a name="return-value"></a>Valeur de retour  
   
@@ -51,7 +54,7 @@ Cette fonction retourne l’état de la dernière instruction FETCH effectuée s
 |-2|La ligne recherchée est manquante.|
 |-9|Le curseur n’effectue pas d’opération de récupération (fetch).|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 La fonction `@@FETCH_STATUS` étant commune à tous les curseurs de la connexion, utilisez-la avec précaution. Après l’exécution d’une instruction FETCH, le test `@@FETCH_STATUS` doit avoir lieu avant qu’une autre instruction FETCH ne soit effectuée sur un autre curseur. `@@FETCH_STATUS` n’est pas défini tant qu’aucune récupération ne s’est produite sur la connexion.  
   
 Supposons, par exemple, qu’un utilisateur exécute une instruction FETCH sur un curseur, puis appelle une procédure stockée qui ouvre et traite les résultats sur un autre curseur. Lorsque le contrôle est retourné à partir de cette procédure stockée, `@@FETCH_STATUS` reflète la dernière instruction FETCH exécutée au sein de la procédure stockée et non celle qui avait eu lieu avant l’appel de la procédure stockée.  

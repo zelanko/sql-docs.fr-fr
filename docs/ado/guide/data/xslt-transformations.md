@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 13326277c0be8abbf7c2d7d623233b34ad2ed348
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ae0f13b2ece4ae21e8a8f8312a561bcfd0e6c88
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452481"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758959"
 ---
 # <a name="xslt-transformations"></a>Transformations XSLT
 XSLT peut être appliqué au code XML généré pour le transformer en un autre format. La compréhension du format XML dans ADO vous aide à développer des modèles XSLT qui peuvent le transformer en une forme plus conviviale.  
@@ -54,4 +54,4 @@ XSLT peut être appliqué au code XML généré pour le transformer en un autre 
  Le XSLT convertit le flux de données XML généré par la méthode ADO Save en une table HTML qui affiche chaque champ de l’ensemble d’enregistrements avec un en-tête de table. Les en-têtes et les lignes de la table se voient également attribuer des polices et des couleurs différentes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistance des enregistrements au format XML](./persisting-records-in-xml-format.md)

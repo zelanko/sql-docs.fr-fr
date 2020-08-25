@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5674fc090a9803f6ce5249c48c65615edb2581bc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67dd2ac9820167c92b16d11b056e02f796e56f5f
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451881"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759887"
 ---
 # <a name="troubleshooting-rds"></a>Résolution des problèmes liés à RDS
 > [!IMPORTANT]
@@ -26,19 +26,17 @@ ms.locfileid: "88451881"
   
  Reportez-vous à cette section pour obtenir des solutions à des erreurs ou problèmes spécifiques liés à RDS. Cette section contient les rubriques suivantes :  
   
--   [Configuration de RDS sur Windows 2000](../../../ado/guide/remote-data-service/configuring-rds-on-windows-2000.md)  
+-   [Configuration de RDS sur Windows 2000](./configuring-rds-on-windows-2000.md)  
   
--   [« Erreur du serveur Internet : accès refusé »](../../../ado/guide/remote-data-service/internet-server-error-access-denied.md)  
+-   [« Erreur du serveur Internet : accès refusé »](./internet-server-error-access-denied.md)  
   
--   [RDS retourne une erreur « Flux non lu »](../../../ado/guide/remote-data-service/rds-returns-stream-not-read-error.md)  
+-   [RDS retourne une erreur « Flux non lu »](./rds-returns-stream-not-read-error.md)  
   
--   [Interblocages avec un niveau d’isolation de lecture renouvelable](../../../ado/guide/remote-data-service/deadlocks-with-read-repeatable-isolation-level.md)  
+-   [Interblocages avec un niveau d’isolation de lecture renouvelable](./deadlocks-with-read-repeatable-isolation-level.md)  
   
--   [Configuration d’un espace TempDB suffisant](../../../ado/guide/remote-data-service/ensuring-sufficient-tempdb-space.md)  
+-   [Configuration d’un espace TempDB suffisant](./ensuring-sufficient-tempdb-space.md)  
   
--   [Minimisation de l’espace utilisé par un fichier journal](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
+-   [Minimisation de l’espace utilisé par un fichier journal](./minimizing-log-file-space-usage.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [Concepts de base de RDS](./rds-fundamentals.md)

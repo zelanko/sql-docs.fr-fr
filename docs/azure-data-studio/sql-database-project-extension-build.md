@@ -9,12 +9,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dzsquared
 ms.author: drskwier
-ms.openlocfilehash: 4348f117b57c9b13a70f4a6db39ab6710eafd0ef
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 191b10fd32d7c49c3f4a4e81c109e52fb2a1a81c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519164"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88171368"
 ---
 # <a name="build-and-publish-a-project"></a>Générer et publier un projet
 
@@ -32,7 +32,6 @@ Le processus de génération dans l’extension SQL Database Projects pour Azure
 
  ``` ... exited with code: 0 ```
 
-
 ## <a name="publish-a-database-project"></a>Publier un projet de base de données
 
 Une fois qu’un projet a été compilé via le processus de génération, la base de données peut être publiée sur une instance SQL Server. Pour publier un projet de base de données, dans la viewlet **Projets** sous **Explorateur**, cliquez avec le bouton droit sur le nœud racine *.sqlproj*, puis sélectionnez **Publier**.
@@ -42,6 +41,4 @@ Dans la boîte de dialogue **Publier la base de données** qui s’affiche, spé
 ## <a name="next-steps"></a>Étapes suivantes
 
 - [Extension SQL Database Projects pour Azure Data Studio](sql-database-project-extension.md)
-- [Applications de la couche Données](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
+- [Générer des projets de base de données SQL à partir de la ligne de commande](sql-database-project-extension-build-from-command-line.md)

@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 74734bd5518f7691107fff873379879b2edd2fa8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c6d402470724cfaaaa4a27e2c0d2d3843b7904c2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451551"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760201"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew, exemple de méthode (VBScript)
-Cet exemple utilise la méthode [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) pour créer un nouvel enregistrement avec le nom spécifié.  
+Cet exemple utilise la méthode [AddNew](./addnew-method-ado.md) pour créer un nouvel enregistrement avec le nom spécifié.  
   
  Utilisez l’exemple suivant dans une page de Active Server (ASP). Utilisez **Find** pour localiser le fichier adovbs. Inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou dans un autre éditeur de texte, puis enregistrez-le en tant que **AddNewVBS. asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur client.  
   
- Pour tester l’exemple, ajoutez un nouvel enregistrement dans le formulaire HTML. Cliquez sur **Ajouter nouveau**. Consultez l' [exemple de la méthode Delete](../../../ado/reference/ado-api/delete-method-example-vbscript.md) pour supprimer les enregistrements indésirables.  
+ Pour tester l’exemple, ajoutez un nouvel enregistrement dans le formulaire HTML. Cliquez sur **Ajouter nouveau**. Consultez l' [exemple de la méthode Delete](./delete-method-example-vbscript.md) pour supprimer les enregistrements indésirables.  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -214,5 +214,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [AddNew, méthode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AddNew, méthode (ADO)](./addnew-method-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

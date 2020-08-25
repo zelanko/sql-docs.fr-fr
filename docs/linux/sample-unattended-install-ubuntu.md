@@ -1,19 +1,19 @@
 ---
 title: Installation sans assistance pour SQL Server sur Ubuntu
 titleSuffix: SQL Server
-description: Exemple de script SQL Server - Installation sans assistance sur Ubuntu
+description: Découvrez comment utiliser un exemple de script Bash pour installer SQL Server 2017 sur Ubuntu 16.04 sans intervention de l’utilisateur.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e9921f6b2639d533674a487de26c1d26aa365a0f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 555a15c3120b9dec2bfc367f9f15f23d967e0c05
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900164"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088999"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Exemple : Script d'installation de SQL Server sans assistance pour Ubuntu
 

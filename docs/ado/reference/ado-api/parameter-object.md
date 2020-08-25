@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ac768cf83d370a1fc60508b5d6a476f0e586d4f6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eac5abf388644cff05c4a3a81955f025c65dd7aa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442811"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773408"
 ---
 # <a name="parameter-object"></a>Objet Parameter
-Représente un paramètre ou un argument associé à un objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) basé sur une requête paramétrable ou une procédure stockée.  
+Représente un paramètre ou un argument associé à un objet de [commande](./command-object-ado.md) basé sur une requête paramétrable ou une procédure stockée.  
   
 ## <a name="remarks"></a>Notes  
  De nombreux fournisseurs prennent en charge les commandes paramétrables. Il s’agit de commandes dans lesquelles l’action souhaitée est définie une seule fois, mais les variables (ou paramètres) sont utilisées pour modifier certains détails de la commande. Par exemple, une instruction SQL SELECT peut utiliser un paramètre pour définir les critères de correspondance d’une clause WHERE, et une autre pour définir le nom de colonne d’une clause SORT BY.  
@@ -33,26 +33,26 @@ Représente un paramètre ou un argument associé à un objet de [commande](../.
   
  Avec les collections, les méthodes et les propriétés d’un objet **Parameter** , vous pouvez effectuer les opérations suivantes :  
   
--   Définit ou retourne le nom d’un paramètre avec la propriété [Name](../../../ado/reference/ado-api/name-property-ado.md) .  
+-   Définit ou retourne le nom d’un paramètre avec la propriété [Name](./name-property-ado.md) .  
   
--   Définit ou retourne la valeur d’un paramètre à l’aide de la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) . La **valeur** est la propriété par défaut de l’objet de **paramètre** .  
+-   Définit ou retourne la valeur d’un paramètre à l’aide de la propriété [value](./value-property-ado.md) . La **valeur** est la propriété par défaut de l’objet de **paramètre** .  
   
--   Définissez ou retournez les caractéristiques des paramètres avec les propriétés [attributes](../../../ado/reference/ado-api/attributes-property-ado.md), [direction](../../../ado/reference/ado-api/direction-property.md), [précision](../../../ado/reference/ado-api/precision-property-ado.md), [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md), [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md)et [type](../../../ado/reference/ado-api/type-property-ado.md) .  
+-   Définissez ou retournez les caractéristiques des paramètres avec les propriétés [attributes](./attributes-property-ado.md), [direction](./direction-property.md), [précision](./precision-property-ado.md), [NumericScale](./numericscale-property-ado.md), [taille](./size-property-ado-parameter.md)et [type](./type-property-ado.md) .  
   
--   Transmettre des données binaires ou caractères longues à un paramètre avec la méthode [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) .  
+-   Transmettre des données binaires ou caractères longues à un paramètre avec la méthode [AppendChunk](./appendchunk-method-ado.md) .  
   
--   Accédez aux attributs spécifiques au fournisseur à l’aide de la collection [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) .  
+-   Accédez aux attributs spécifiques au fournisseur à l’aide de la collection [Properties](./properties-collection-ado.md) .  
   
- Si vous connaissez les noms et les propriétés des paramètres associés à la procédure stockée ou à la requête paramétrable que vous souhaitez appeler, vous pouvez utiliser la méthode [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) pour créer des objets **Parameter** avec les paramètres de propriété appropriés et utiliser la méthode [Append](../../../ado/reference/ado-api/append-method-ado.md) pour les ajouter à la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Cela vous permet de définir et de retourner des valeurs de paramètres sans avoir à appeler la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) sur la collection **Parameters** pour récupérer les informations sur les paramètres auprès du fournisseur, une opération potentiellement gourmande en ressources.  
+ Si vous connaissez les noms et les propriétés des paramètres associés à la procédure stockée ou à la requête paramétrable que vous souhaitez appeler, vous pouvez utiliser la méthode [CreateParameter](./createparameter-method-ado.md) pour créer des objets **Parameter** avec les paramètres de propriété appropriés et utiliser la méthode [Append](./append-method-ado.md) pour les ajouter à la collection [Parameters](./parameters-collection-ado.md) . Cela vous permet de définir et de retourner des valeurs de paramètres sans avoir à appeler la méthode [Refresh](./refresh-method-ado.md) sur la collection **Parameters** pour récupérer les informations sur les paramètres auprès du fournisseur, une opération potentiellement gourmande en ressources.  
   
  L’objet de **paramètre** n’est pas sûr pour l’écriture de scripts.  
   
  Cette section contient la rubrique suivante.  
   
--   [Propriétés, méthodes et événements de l’objet Parameter](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet Parameter](./parameter-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Command, objet (ADO)](./command-object-ado.md)   
+ [CreateParameter, méthode (ADO)](./createparameter-method-ado.md)   
+ [Parameters, collection (ADO)](./parameters-collection-ado.md)   
+ [Properties, collection (ADO)](./properties-collection-ado.md)

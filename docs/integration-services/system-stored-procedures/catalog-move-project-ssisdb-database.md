@@ -1,4 +1,5 @@
 ---
+description: catalog.move_project (base de données SSISDB)
 title: catalog.move_project (base de données SSISDB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
@@ -10,12 +11,12 @@ ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57e63a057c99c7f2e8f24b5d02a20a55da92f0db
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d1c9e003b76cfbf6e563fc41a47e4b9aabfeecf0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86912969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88430061"
 ---
 # <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project - base de données SSISDB
 
@@ -36,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Arguments  
  [ @source_folder = ] *source_folder*  
- Nom du dossier source, où le projet réside avant le déplacement. *source_folder* est de type **nvarchar(128)** .  
+ Nom du dossier source, où le projet réside avant le déplacement. *source_folder* est de type **nvarchar(128)**.  
   
  [ @project_name = ] *project_name*  
  Nom du projet qui sera supprimé. *project_name* est de type **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Nom du dossier de destination, où le projet réside après le déplacement. *destination_folder* est de type **nvarchar(128)** .  
+ Nom du dossier de destination, où le projet réside après le déplacement. *destination_folder* est de type **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  

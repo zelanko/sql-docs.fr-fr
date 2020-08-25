@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ef9ab4f077f4ec44b602a3d70d90b5b45f6b9f9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ea35e9a1549c35a50ef7f15e8a3b84d1e31e056
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440650"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777768"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection, propriété (ADOX)
-Indique l’objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) ADO auquel le [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) appartient.  
+Indique l’objet de [connexion](../ado-api/connection-object-ado.md) ADO auquel le [catalogue](./catalog-object-adox.md) appartient.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit un objet de **connexion** ou une **chaîne** contenant la définition d’une connexion. Retourne l’objet de **connexion** actif.  
@@ -39,18 +39,18 @@ Indique l’objet de [connexion](../../../ado/reference/ado-api/connection-objec
  La valeur par défaut est une référence d’objet null.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog, objet (ADOX)](./catalog-object-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de propriété ActiveConnection de Catalog (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Command et CommandText, exemples de propriétés (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Connection Close, méthode, table type, exemple de propriété (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Parameters (collection), Command, exemple de propriété (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Procedures, exemple de méthode Append (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
- [Procedures, exemple de méthode Delete (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Procedures, exemple de méthode Refresh (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
- [Views et Fields, exemple de collections (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views, exemple de méthode Append (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Views, collection, CommandText, exemple de propriété (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Views, exemple de méthode Refresh (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
- [Create, méthode (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [Exemple de propriété ActiveConnection de Catalog (VB)](./catalog-activeconnection-property-example-vb.md)   
+ [Command et CommandText, exemples de propriétés (VB)](./command-and-commandtext-properties-example-vb.md)   
+ [Connection Close, méthode, table type, exemple de propriété (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Parameters (collection), Command, exemple de propriété (VB)](./parameters-collection-command-property-example-vb.md)   
+ [Procedures, exemple de méthode Append (VB)](./procedures-append-method-example-vb.md)   
+ [Procedures, exemple de méthode Delete (VB)](./procedures-delete-method-example-vb.md)   
+ [Procedures, exemple de méthode Refresh (VB)](./procedures-refresh-method-example-vb.md)   
+ [Views et Fields, exemple de collections (VB)](./views-and-fields-collections-example-vb.md)   
+ [Views, exemple de méthode Append (VB)](./views-append-method-example-vb.md)   
+ [Views, collection, CommandText, exemple de propriété (VB)](./views-collection-commandtext-property-example-vb.md)   
+ [Views, exemple de méthode Refresh (VB)](./views-refresh-method-example-vb.md)   
+ [Create, méthode (ADOX)](./create-method-adox.md)

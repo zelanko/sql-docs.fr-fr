@@ -1,18 +1,18 @@
 ---
 title: Comment configurer MSDTC sur Linux
-description: Cet article explique de façon détaillée comment utiliser configurer MSDTC sur Linux.
+description: Dans cet article, découvrez comment configurer Microsoft Distributed Transaction Coordinator (MSDTC) sur Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 08/01/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 5f2e8502956b808556c0ac6ddb83f95a61cbe5c9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 77df45c3eb4cded79e4485e8c93262a6b5ed43fc
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900113"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180018"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Configurer Microsoft Distributed Transaction Coordinator (MSDTC) sur Linux
 
@@ -36,15 +36,17 @@ MSDTC utilise deux paramètres de configuration pour l'utilitaire mssql-conf :
 
 Pour plus d'informations sur ces paramètres et d'autres paramètres MSDTC connexes, voir [Configurer SQL Server sur Linux avec l'outil mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-## <a name="supported-msdtc-configurations"></a>Configurations MSDTC prises en charge
+## <a name="supported-transaction-standards"></a>Normes de transaction prises en charge
 
 Les configurations MSDTC prises en charge sont les suivantes :
 
-- Transactions distribuées OLE-TX avec SQL Server sur Linux pour les fournisseurs ODBC.
+| Norme de transaction | Sources de données | Pilote ODBC | Pilote JDBC|
+|---|---|---|---|
+| Transactions OLE-TX | SQL Server sur Linux | Oui | Non|
+| Transactions distribuées XA | SQL Server, autres bases de données ODBC et sources de données JDBC qui prennent en charge XA | Oui (nécessite la version 17.3 ou supérieure) | Oui |
+| Transactions distribuées sur le serveur Linked | SQL Server | Oui | Non
 
-- Transactions distribuées XA avec SQL Server sur Linux en utilisant des fournisseurs JDBC et ODBC. Pour les transactions XA à effectuer à l'aide du fournisseur ODBC, vous devez utiliser Microsoft ODBC Driver for SQL Server version 17.3 ou supérieure. Pour plus d'informations, consultez [Compréhension des transactions XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
-
-- Transactions distribuées sur le serveur Linked.
+Pour plus d'informations, consultez [Compréhension des transactions XA](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions).
 
 ## <a name="msdtc-configuration-steps"></a>Étapes de configuration MSDTC
 
@@ -157,7 +159,7 @@ sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
 sudo firewall-cmd --reload
 ```
 
-## <a name="verify"></a>Vérifier
+## <a name="verify"></a>Vérification
 
 À ce stade, SQL Server devrait être en mesure de participer aux transactions distribuées. Pour vérifier que SQL Server est à l'écoute, exécutez la commande **netstat** (si vous utilisez RHEL, vous devrez peut-être d'abord installer le package **net-tools**) :
 
@@ -165,7 +167,7 @@ sudo firewall-cmd --reload
 sudo netstat -tulpn | grep sqlservr
 ```
 
-Vous devez obtenir une sortie similaire à la suivante :
+Vous devez voir une sortie de ce type :
 
 ```bash
 tcp 0 0 0.0.0.0:1433 0.0.0.0:* LISTEN 13911/sqlservr
@@ -186,9 +188,9 @@ MSDTC pour SQL Server sur Linux n'utilise pas l'authentification sur la communi
 
 | Paramètre | Description |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | Configurer les appels sécurisés RPC pour les transactions distribuées. La valeur par défaut est 0. |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configurer les appels de sécurité RPC pour les transactions distribuées. La valeur par défaut est 0. |
-| **distributedtransaction.turnoffrpcsecurity**               | Activer ou désactiver la sécurité RPC pour les transactions distribuées. La valeur par défaut est 0. |
+| **distributedtransaction.allowonlysecurerpccalls**          | Configurer les appels sécurisés RPC pour les transactions distribuées. La valeur par défaut est 0. |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | Configurer les appels de sécurité RPC pour les transactions distribuées. La valeur par défaut est 0. |
+| **distributedtransaction.turnoffrpcsecurity**               | Activer ou désactiver la sécurité RPC pour les transactions distribuées. La valeur par défaut est 0. |
 
 ## <a name="additional-guidance"></a>Conseils supplémentaires
 
@@ -200,10 +202,10 @@ Microsoft recommande d’utiliser MSDTC avec RPC activé si SQL Server est inscr
 
 Si un client sur un système d’exploitation Windows doit s’inscrire dans une transaction distribuée avec SQL Server sur Linux, il doit avoir installé la version minimale suivante du système d’exploitation Windows :
 
-| Système d’exploitation | Version minimale | Version du système d'exploitation |
+| Système d’exploitation | Version minimale | Build de système d’exploitation |
 |---|---|---|
-| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
-| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
+| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

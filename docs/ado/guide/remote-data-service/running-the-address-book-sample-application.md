@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1fddb0d0fb2d7a49c7b9983c03157922862f5d96
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1b0c28fdc0487fc7f14982588eefc8a7011f33b7
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452001"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759349"
 ---
 # <a name="running-the-address-book-sample-application"></a>Exécution de l’exemple d’application Carnet d’adresses
 > [!IMPORTANT]
@@ -43,8 +43,4 @@ ms.locfileid: "88452001"
 3.  Vous pouvez ensuite essayer différents scénarios dans l’exemple d’application de carnet d’adresses, par exemple en recherchant une personne en fonction de son nom de messagerie électronique, en répertoriant toutes les personnes ayant le titre « responsable de programme » ou en modifiant des enregistrements existants. Cliquez sur **Rechercher** pour remplir la grille de données avec tous les noms disponibles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet de liaison de données de l’application Carnet d’adresses](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
-
-
-
+ [Objet de liaison de données de l’application Carnet d’adresses](./address-book-data-binding-object.md)

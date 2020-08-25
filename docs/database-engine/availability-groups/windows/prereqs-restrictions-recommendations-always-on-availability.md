@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ffcf45a0126e3443b1a5b3ac43cf9a0bdf7d6a1
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363001"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88092013"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,12 +34,12 @@ ms.locfileid: "87363001"
 > [!IMPORTANT]  
 >  Avant de déployer [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], nous vous recommandons de lire les sections de cette rubrique.  
     
-##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Correctifs logiciels .Net prenant en charge les groupes de disponibilité  
- Selon les composants et les fonctionnalités [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que vous allez utiliser avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vous pourrez éventuellement avoir besoin d'installer des correctifs logiciels .Net supplémentaires identifiés dans le tableau suivant. Ces derniers peuvent être installés dans n'importe quel ordre.  
+##  <a name="net-hotfixes-that-support-availability-groups"></a><a name="DotNetHotfixes"></a> Correctifs logiciels .NET prenant en charge les groupes de disponibilité  
+ Selon les composants et les fonctionnalités [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que vous allez utiliser avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vous pourrez éventuellement avoir besoin d'installer des correctifs logiciels .NET supplémentaires identifiés dans le tableau suivant. Ces derniers peuvent être installés dans n'importe quel ordre.  
   
 |Fonctionnalité dépendante|Correctif logiciel|Lien|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Le correctif pour .Net 3.5 SP1 ajoute une prise en charge au client SQL concernant les fonctionnalités Always On d’intention de lecture (read-intent), de lecture seule (readonly) et de basculement à plusieurs sous-réseaux (multisubnetfailover). Le correctif doit être installé sur chaque serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|ARTICLE 2654347 DE LA BASE DE CONNAISSANCES : [Correctif pour .Net 3.5 SP1 pour l’ajout d’une prise en charge des fonctionnalités Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Le correctif pour .NET 3.5 SP1 ajoute une prise en charge au client SQL concernant les fonctionnalités Always On d’intention de lecture (read-intent), de lecture seule (readonly) et de basculement à plusieurs sous-réseaux (multisubnetfailover). Le correctif doit être installé sur chaque serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|ARTICLE 2654347 DE LA BASE DE CONNAISSANCES : [Correctif pour .NET 3.5 SP1 pour l’ajout d’une prise en charge des fonctionnalités Always On](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="checklist-requirements-windows-system"></a><a name="SystemRequirements"></a> Liste de vérification : Configuration requise (système Windows)  
@@ -162,7 +162,9 @@ ms.locfileid: "87363001"
   
     -   Chaque réplica principal utilise 1 thread de capture du journal pour chaque base de données principale. En outre, il utilise un thread d'envoi du journal pour chaque base de données secondaire. Les threads d'envoi du journal sont libérés après environ 15 secondes d'inactivité.    
   
-    -   Une sauvegarde sur un réplica secondaire contient un thread sur le réplica principal pour la durée de l'opération de sauvegarde.  
+    -   Une sauvegarde sur un réplica secondaire contient un thread sur le réplica principal pour la durée de l'opération de sauvegarde. 
+
+-  SQL Server 2019 a introduit une restauration par progression parallèle pour les bases de données de groupe de disponibilité à mémoire optimisée. Dans SQL Server 2016 et 2017, les tables basées sur disque n’utilisent pas l’opération de restauration par progression parallèle si une base de données dans un groupe de disponibilité est également optimisée en mémoire. 
   
  Pour plus d’informations, consultez [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (blog des ingénieurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CSS).  
   

@@ -1,7 +1,8 @@
 ---
+description: CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
 title: CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: machine-learning-services
@@ -21,24 +22,24 @@ ms.assetid: 8cc798ad-c395-461c-b7ff-8c561c098808
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ffb59b95b555196aa72662dd2b7111eca488872
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 64294b819d05e46077fd6a94008d64fc60eb717f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426721"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Crée un pool externe utilisé pour définir des ressources pour les processus externes. Un pool de ressources représente un sous-ensemble des ressources physiques (mémoire et processeurs) d’une instance du moteur de base de données. Le Gouverneur de ressources permet à un administrateur de base de données de répartir des ressources serveur entre plusieurs pools de ressources (64 pools au maximum).
+Crée un pool externe pour définir des ressources pour les processus externes. Un pool de ressources représente un sous-ensemble des ressources physiques (mémoire et processeurs) d’une instance du moteur de base de données. Un Gouverneur de ressources peut répartir des ressources serveur entre plusieurs pools de ressources (64 pools au maximum).
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Pour [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], le pool externe gouverne `rterm.exe`, `BxlServer.exe` et les autres processus qu’ils engendrent.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Pour [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], le pool externe gouverne `rterm.exe`, `python.exe`, `BxlServer.exe` et les autres processus qu’ils engendrent.
 ::: moniker-end
   
@@ -68,25 +69,28 @@ CREATE EXTERNAL RESOURCE POOL pool_name
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+> [!NOTE]
+> SQL Machine Learning Services 2019 pour Linux ne permet pas de définir l’affinité du processeur.
+
 ## <a name="arguments"></a>Arguments
 
 *pool_name*  
 Nom défini par l’utilisateur du pool de ressources externes. *pool_name* est alphanumérique et peut contenir jusqu'à 128 caractères. Cet argument doit être unique au sein d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
 
 MAX_CPU_PERCENT =*value*  
-Spécifie la bande passante processeur moyenne maximale que toutes les demandes du pool de ressources externes peuvent recevoir en cas de contention du processeur. *value* est un entier. La plage autorisée pour *value* est comprise entre 1 et 100.
+La bande passante processeur moyenne maximale que toutes les demandes du pool de ressources externes peuvent recevoir en cas de contention du processeur. *value* est un entier. La plage autorisée pour *value* est comprise entre 1 et 100.
 
-AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)} Joint le pool de ressources externe aux processeurs spécifiés.
+AFFINITY {CPU = AUTO | ( <CPU_range_spec>) | NUMANODE = (\<NUMA_node_range_spec>)} Joint le pool de ressources externe aux processeurs spécifiés.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** mappe le pool de ressources externes aux processeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiés par les valeurs CPU_ID données.
+AFFINITY CPU = **(** <CPU_range_spec> **)** mappe le pool de ressources externes aux processeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiés par les valeurs CPU_ID données.
 
-Quand vous utilisez AFFINITY NUMANODE =  **(** \<NUMA_node_range_spec> **)** , le pool de ressources externes est associé par affinité aux processeurs physiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondant au nœud NUMA ou à la plage de nœuds donnée. 
+Quand vous utilisez AFFINITY NUMANODE = **(\<NUMA_node_range_spec> **)** , le pool de ressources externes est associé par affinité aux processeurs physiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondant au nœud NUMA ou à la plage de nœuds donnée. 
 
 MAX_MEMORY_PERCENT =*value*  
 Spécifie la mémoire totale du serveur qui peut être utilisée par les demandes dans ce pool de ressources externes. *value* est un entier. La plage autorisée pour *value* est comprise entre 1 et 100.
 
 MAX_PROCESSES =*value*  
-Spécifie le nombre maximal de processus autorisés pour le pool de ressources externes. Spécifiez 0 pour définir un seuil illimité pour le pool, qui est alors limité uniquement par les ressources de l’ordinateur.
+Le nombre maximal de processus autorisés pour le pool de ressources externes. 0 à seuil illimité pour le pool, qui est alors limité uniquement par les ressources de l’ordinateur.
 
 ## <a name="remarks"></a>Notes
 
@@ -102,7 +106,7 @@ Nécessite l'autorisation `CONTROL SERVER`.
 
 ## <a name="examples"></a>Exemples
 
-L’instruction suivante définit un pool externe qui limite l’utilisation du processeur à 75 %. L’instruction définit également la mémoire maximale sur 30 % de la mémoire disponible sur l’ordinateur.
+Le pool externe affiche une utilisation de l’UC limitée de 75 %. La mémoire maximale représente 30 % de la mémoire disponible sur l’ordinateur.
 
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1

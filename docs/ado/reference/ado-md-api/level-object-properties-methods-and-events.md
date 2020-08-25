@@ -13,28 +13,28 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec04416433339fcec45da199fb3291154fce330a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db4847a6ada52d051a13068dcd2d50f9a7448504
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440931"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778038"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Level
 ## <a name="propertiescollections"></a>Propriétés/collections  
- [Propriété Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)  
+ [Propriété Caption](./caption-property-ado-md.md)  
   
- [Depth, propriété](../../../ado/reference/ado-md-api/depth-property-ado-md.md)  
+ [Depth, propriété](./depth-property-ado-md.md)  
   
- [Description, propriété](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
+ [Description, propriété](./description-property-ado-md.md)  
   
- [Collection Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+ [Collection Members](./members-collection-ado-md.md)  
   
- [Propriété Name](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
+ [Propriété Name](./name-property-ado-md.md)  
   
- [Collection Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Collection Properties](../ado-api/properties-collection-ado.md)  
   
- [UniqueName, propriété](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
+ [UniqueName, propriété](./uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Méthodes  
  Aucun.  
@@ -43,4 +43,4 @@ ms.locfileid: "88440931"
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Level, objet (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)
+ [Level, objet (ADO MD)](./level-object-ado-md.md)

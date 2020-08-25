@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 55f0eb77a498eba9d6fe2565a8647dc11d77897b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c2cd1df656d07b274fe000c427dd3eae07da76b
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451721"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759909"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand, exemple de propriété (VB)
-Cet exemple illustre la propriété [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  
+Cet exemple illustre la propriété [ActiveCommand](./activecommand-property-ado.md) .  
   
- Une sous-routine reçoit un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dont la propriété **ActiveCommand** est utilisée pour afficher le texte de la commande et le paramètre qui a créé le **Recordset**.  
+ Une sous-routine reçoit un objet [Recordset](./recordset-object-ado.md) dont la propriété **ActiveCommand** est utilisée pour afficher le texte de la commande et le paramètre qui a créé le **Recordset**.  
   
 ```  
 'BeginActiveCommandVB  
@@ -91,9 +91,9 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- La routine **ActiveCommandXprint** ne reçoit qu’un objet **Recordset** , mais elle doit néanmoins imprimer le texte de la commande et le paramètre qui a créé le **Recordset**. Cela peut être fait parce que la propriété **ActiveCommand** de l’objet **Recordset** génère l’objet [Command](../../../ado/reference/ado-api/command-object-ado.md) associé.  
+ La routine **ActiveCommandXprint** ne reçoit qu’un objet **Recordset** , mais elle doit néanmoins imprimer le texte de la commande et le paramètre qui a créé le **Recordset**. Cela peut être fait parce que la propriété **ActiveCommand** de l’objet **Recordset** génère l’objet [Command](./command-object-ado.md) associé.  
   
- La propriété [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) de l’objet **Command** génère la commande paramétrable qui a créé le **Recordset**. La collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) de l’objet **Command** génère la valeur qui a été substituée à l’espace réservé du paramètre de la commande («**?**»).  
+ La propriété [CommandText](./commandtext-property-ado.md) de l’objet **Command** génère la commande paramétrable qui a créé le **Recordset**. La collection [Parameters](./parameters-collection-ado.md) de l’objet **Command** génère la valeur qui a été substituée à l’espace réservé du paramètre de la commande («**?**»).  
   
  Enfin, un message d’erreur ou le nom et l’ID de l’auteur sont imprimés.  
   
@@ -122,6 +122,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ActiveCommand, propriété (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ActiveCommand, propriété (ADO)](./activecommand-property-ado.md)   
+ [Command, objet (ADO)](./command-object-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

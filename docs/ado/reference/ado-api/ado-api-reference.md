@@ -13,41 +13,41 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 760510fba2f7a06a28e0c0804670d609b8ddc91d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 521d22dc7b61e6f7b807a959af567655f39e61be
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451531"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760190"
 ---
 # <a name="ado-api-reference"></a>Informations de référence sur l’API ADO
 Cette section de la documentation ADO contient des rubriques pour chaque objet, collection, propriété, propriété dynamique, méthode, événement et énumération ADO. En outre, il contient une liste d’index de syntaxe ADO à utiliser avec Microsoft Visual C++ et les classes Windows Foundation (WFC).  
   
  Pour plus d’informations, recherchez une rubrique spécifique dans l’index ou reportez-vous aux rubriques suivantes :  
   
--   [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)  
+-   [Modèle objet ADO](./ado-object-model.md)  
   
--   [Objets et interfaces ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)  
+-   [Objets et interfaces ADO](./ado-objects-and-interfaces.md)  
   
--   [Collections ADO](../../../ado/reference/ado-api/ado-collections.md)  
+-   [Collections ADO](./ado-collections.md)  
   
--   [Propriétés ADO](../../../ado/reference/ado-api/ado-properties.md)  
+-   [Propriétés ADO](./ado-properties.md)  
   
--   [Propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)  
+-   [Propriétés dynamiques ADO](./ado-dynamic-properties.md)  
   
--   [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md)  
+-   [Méthodes ADO](./ado-methods.md)  
   
--   [Événements ADO](../../../ado/reference/ado-api/ado-events.md)  
+-   [Événements ADO](./ado-events.md)  
   
--   [Constantes énumérées ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)  
+-   [Constantes énumérées ADO](./ado-enumerated-constants.md)  
   
--   [Index de la syntaxe ADO](../../../ado/reference/ado-api/ado-syntax-indexes.md)  
+-   [Index de la syntaxe ADO](./ado-syntax-indexes.md)  
   
--   [Exemples de code ADO](../../../ado/reference/ado-api/ado-code-examples.md)  
+-   [Exemples de code ADO](./ado-code-examples.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Annexe D : exemples ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Annexe C : programmation avec ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [Annexe A : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)   
- [Historique d’ADO](../../../ado/guide/ado-history.md)
+ [Annexe D : exemples ADO](../../guide/appendixes/appendix-d-ado-samples.md)   
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Annexe C : programmation avec ADO](../../guide/appendixes/appendix-c-programming-with-ado.md)   
+ [Annexe A : fournisseurs](../../guide/appendixes/appendix-a-providers.md)   
+ [Historique d’ADO](../../guide/ado-history.md)

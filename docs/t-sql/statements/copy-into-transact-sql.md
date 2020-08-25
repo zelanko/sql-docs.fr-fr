@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (préversion)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Utilisez l’instruction COPY dans Azure SQL Data Warehouse pour le chargement à partir de comptes de stockage externes.
-ms.date: 06/19/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9bbc4017411c457638ac93aac147ab63b44dbcab
-ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
+ms.openlocfilehash: 52096dc3c4996537b36082bb9bb215405e097a68
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/05/2020
-ms.locfileid: "87807498"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091958"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
@@ -102,7 +102,7 @@ Désigne l’emplacement où sont placés les fichiers de données. Actuellement
 - *Emplacement externe* pour ADLS Gen2 : https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> Le point de terminaison Blob est disponible pour ADLS Gen2 et est fourni uniquement pour la compatibilité descendante. Pour obtenir des performances optimales, utilisez le point de terminaison **dfs** pour ADLS Gen2.
+> Le point de terminaison Blob est disponible pour ADLS Gen2 pour la compatibilité descendante. Utilisez le point de terminaison **Blob** pour obtenir de meilleures performances.
 
 - *Account* : nom du compte de stockage
 
@@ -139,10 +139,12 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* spécifie le mécanisme d’authentification pour accéder au compte de stockage externe. Voici les méthodes d’authentification :
 
-|                          |                CSV                |              Parquet              |                ORC                |
-| :----------------------: | :-------------------------------: | :-------------------------------: | :-------------------------------: |
-|  **Stockage Blob Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY              |              SAS/KEY              |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |              Parquet               |                ORC                 |
+| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
+|  **Stockage Blob Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+
+*Uniquement pris en charge avec le point de terminaison Blob
 
 Avec l’authentification à l’aide d’AAD ou auprès d’un compte de stockage public, vous n’êtes pas tenu de spécifier CREDENTIAL. 
 
@@ -429,7 +431,7 @@ Il n’est pas nécessaire de fractionner les fichiers Parquet et ORC car la com
 La commande COPY sera en disponibilité générale à la fin de cette année (2020). 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Existe-t-il des restrictions quant au nombre ou à la taille des fichiers ?
-Les fichiers doivent avoir une taille d’au moins 4 Mo.
+Il n’existe aucune limite quant au nombre ou à la taille des fichiers ; toutefois, pour des performances optimales, nous recommandons des fichiers d’au moins 4 Mo.
 
 
 Envoyez vos commentaires ou signalez vos problèmes à la liste de distribution suivante : sqldwcopypreview@service.microsoft.com

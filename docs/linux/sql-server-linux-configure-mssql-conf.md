@@ -3,17 +3,17 @@ title: Configurer les paramètres SQL Server sur Linux
 description: Cet article explique comment utiliser l'outil mssql-conf pour configurer les paramètres SQL Server sur Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 07/30/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: fe93023bfbcd285d8d50a90bb11ea532eb066f2c
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 2e21b8f811af5887147ddb71b211e3a876b728d2
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472185"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180008"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l'outil mssql-conf
 
@@ -42,6 +42,8 @@ ms.locfileid: "87472185"
 | [Répertoire d’audit local](#localaudit) | Définir un répertoire pour ajouter des fichiers d’audit locaux. |
 | [Paramètres régionaux](#lcid) | Définir les paramètres régionaux que SQL Server doit utiliser. |
 | [Limite de mémoire](#memorylimit) | Définir la limite de mémoire pour SQL Server. |
+| [Paramètres réseau](#network) | Paramètres réseau supplémentaires pour SQL Server. |
+| [Microsoft Distributed Transaction Coordinator](#msdtc) | Configurer et dépanner MSDTC sur Linux. |
 | [Port TCP](#tcpport) | Modifier le port sur lequel SQL Server écoute les connexions. |
 | [TLS](#tls) | Configurer Transport Level Security. |
 | [Indicateurs de trace](#traceflags) | Définir les indicateurs de trace que le service va utiliser. |
@@ -72,6 +74,7 @@ ms.locfileid: "87472185"
 | [Limite de mémoire](#memorylimit) | Définir la limite de mémoire pour SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configurer et dépanner MSDTC sur Linux. |
 | [CLUF MLServices](#mlservices-eula) | Accepter les CLUF R et Python pour les packages mlservices. S'applique à SQL Server 2019 uniquement.|
+| [Paramètres réseau](#network) | Paramètres réseau supplémentaires pour SQL Server. |
 | [outboundnetworkaccess](#mlservices-outbound-access) |Activer l'accès réseau sortant pour les extensions [mlservices](sql-server-linux-setup-machine-learning.md) R, Python et Java.|
 | [Port TCP](#tcpport) | Modifier le port sur lequel SQL Server écoute les connexions. |
 | [TLS](#tls) | Configurer Transport Level Security. |
@@ -107,6 +110,34 @@ Pour modifier ce paramètre, procédez comme suit :
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+### <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> Définir le profil de messagerie de base de données par défaut pour SQL Server sur Linux
+
+L’option **sqlpagent.databasemailprofile** vous permet de définir le profil par défaut de DB Mail pour les alertes par e-mail.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
+
+### <a name="sql-agent-error-logs"></a><a id="agenterrorlog"></a> Journaux d’erreurs SQL Agent
+
+Les paramètres **sqlpagent.errorlogfile** et **sqlpagent.errorlogginglevel** vous permettent de définir le chemin d’accès au fichier journal SQL Agent et le niveau de journalisation, respectivement. 
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>
+```
+
+Les niveaux de journalisation SQL Agent correspondent aux valeurs de masque de bits suivantes :
+
+- 1 = Erreurs
+- 2 = Avertissements
+- 4 = Info
+
+Si vous souhaitez capturer tous les niveaux, utilisez `7` comme valeur.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
+```
 
 ## <a name="change-the-sql-server-collation"></a><a id="collation"></a> Modifier le classement SQL Server
 
@@ -335,6 +366,7 @@ Pour modifier ces paramètres :
    sudo systemctl restart mssql-server
    ```
 
+Le paramètre `errorlog.numerrorlogs` vous permet de spécifier le nombre de journaux d’erreurs maintenus avant le cycle du journal.
 
 ## <a name="change-the-default-backup-directory-location"></a><a id="backupdir"></a> Modifier l’emplacement par défaut du répertoire de sauvegarde
 
@@ -400,13 +432,6 @@ La première phase de capture est contrôlée par le paramètre **coredump.cored
     | **filtered** | Filtered utilise une conception basée sur la soustraction où toute la mémoire du processus est incluse, sauf si elle est spécifiquement exclue. La conception comprend les mécanismes internes de SQLPAL et de l'environnement hôte, en soustrayant les régions de mémoire suivantes de l’image mémoire.
     | **full** | Full correspond à un vidage de processus complet qui comprend toutes les régions situées dans **/proc/$pid/maps**. Cette opération n'est pas contrôlée par le paramètre **coredump.captureminiandfull**. |
 
-## <a name="set-the-default-database-mail-profile-for-sql-server-on-linux"></a><a id="dbmail"></a> Définir le profil de messagerie de base de données par défaut pour SQL Server sur Linux
-
-L’option **sqlpagent.databasemailprofile** vous permet de définir le profil par défaut de DB Mail pour les alertes par e-mail.
-
-```bash
-sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
-```
 ## <a name="high-availability"></a><a id="hadr"></a> Haute disponibilité
 
 L'option **hadr.hadrenabled** active les groupes de disponibilité sur votre instance SQL Server. La commande suivante active les groupes de disponibilité en définissant **hadr.hadrenabled** sur 1. Vous devez redémarrer SQL Server pour appliquer le paramètre.
@@ -485,7 +510,14 @@ Le paramètre **memory.memorylimitmb** contrôle la quantité de mémoire physiq
    sudo systemctl restart mssql-server
    ```
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+### <a name="additional-memory-settings"></a>Paramètres de mémoire supplémentaires
+
+Les options suivantes sont disponibles pour les paramètres de mémoire.
+
+|Option |Description |
+|--- |--- |
+| memory.disablememorypressure | Désactiver la sollicitation de mémoire sur SQL Server. Les valeurs peuvent être `true` ou `false`. |
+| memory.memory_optimized | Activez ou désactivez les fonctionnalités SQL Server à mémoire optimisée : état d’éveil du fichier de mémoire persistante et protection de la mémoire. Les valeurs peuvent être `true` ou `false`. |
 
 ## <a name="configure-msdtc"></a><a id="msdtc"></a> Configurer MSDTC
 
@@ -527,7 +559,6 @@ Il existe plusieurs autres paramètres pour mssql-conf que vous pouvez utiliser 
 | distributedtransaction.tracefilepath | Dossier dans lequel les fichiers de trace doivent être stockés |
 | distributedtransaction.turnoffrpcsecurity | Activer ou désactiver la sécurité RPC pour les transactions distribuées |
 
-::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a name="accept-mlservices-eulas"></a><a id="mlservices-eula"></a> Accepter les CLUF MLServices
@@ -624,6 +655,22 @@ Les options suivantes configurent TLS pour une instance SQL Server exécutée su
 
 Pour un exemple d'utilisation des paramètres TLS, voir [Chiffrement des connexions à SQL Server sur Linux](sql-server-linux-encrypted-connections.md).
 
+## <a name="network-settings"></a><a id="network"></a> Paramètres réseau
+
+Voir le [tutoriel : Utilisez l’authentification Active Directory avec SQL Server sur Linux](sql-server-linux-active-directory-authentication.md) pour obtenir des informations complètes sur l’utilisation de l’authentification AD avec SQL Server sur Linux.
+
+Les options suivantes sont des paramètres réseau supplémentaires configurables à l’aide de `mssql-conf`.
+
+|Option |Description |
+|--- |--- |
+| network.disablesssd | Désactiver l'interrogation de SSSD pour obtenir les informations du compte AD et utiliser par défaut des appels LDAP. Les valeurs peuvent être `true` ou `false`. |
+| network.enablekdcfromkrb5conf | Activer la recherche d'informations KDC à partir de krb5.conf. Les valeurs peuvent être `true` ou `false`. |
+| network.forcesecureldap | Forcer l'utilisation de LDAPS pour contacter le contrôleur de domaine. Les valeurs peuvent être `true` ou `false`. |
+| network.ipaddress | Adresse IP pour les connexions entrantes. |
+| network.kerberoscredupdatefrequency | Temps en secondes entre les vérifications des informations d'identification Kerberos qui doivent être mises à jour. La valeur est un entier.|
+| network.privilegedadaccount | Utilisateur AD privilégié à utiliser pour l'authentification AD. La valeur est `<username>`. Pour plus d’informations, consultez [Didacticiel : Utiliser l’authentification Active Directory avec SQL Server sur Linux](sql-server-linux-active-directory-authentication.md#spn)|
+| uncmapping | Mappe le chemin UNC à un chemin local. Par exemple : `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
+
 ## <a name="enabledisable-traceflags"></a><a id="traceflags"></a> Activer/désactiver les indicateurs de trace
 
 L’option **traceflag** active ou désactive les indicateurs de trace pour le démarrage du service SQL Server. Pour activer/désactiver un indicateur de trace, utilisez les commandes suivantes :
@@ -676,7 +723,7 @@ Pour afficher les paramètres configurés, exécutez la commande suivante afin d
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-Notez que tous les paramètres non affichés dans ce fichier utilisent leurs valeurs par défaut. La section suivante fournit un exemple de fichier **mssql.conf**.
+Tous les paramètres non affichés dans ce fichier utilisent leurs valeurs par défaut. La section suivante fournit un exemple de fichier **mssql.conf**.
 
 
 ## <a name="mssqlconf-format"></a><a id="mssql-conf-format"></a> Format mssql.conf
