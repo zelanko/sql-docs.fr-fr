@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aedb4037d4f6c37ad70086a4e2a51a6210c219c9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8200b9bd42d06a52e5786b839a55cce175bb0b2
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452071"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759519"
 ---
 # <a name="rds-tutorial"></a>Tutoriel RDS
 Ce didacticiel illustre l’utilisation du modèle de programmation RDS pour interroger et mettre à jour une source de données. Tout d’abord, il décrit les étapes nécessaires à la réalisation de cette tâche. Le didacticiel est ensuite répété dans Microsoft® Visual Basic Scripting Edition (avec ADO for Windows Foundation classes (ADO/WFC)).  
@@ -45,7 +45,7 @@ Ce didacticiel illustre l’utilisation du modèle de programmation RDS pour int
   
 -   Appelez le programme serveur. Transmettez des paramètres au programme serveur qui identifie la source de données et la commande à émettre.  
   
--   Le programme serveur obtient un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) à partir de la source de données, généralement à l’aide d’ADO. Le cas échéant, l’objet **Recordset** est traité sur le serveur.  
+-   Le programme serveur obtient un objet [Recordset](../../reference/ado-api/recordset-object-ado.md) à partir de la source de données, généralement à l’aide d’ADO. Le cas échéant, l’objet **Recordset** est traité sur le serveur.  
   
 -   Le programme serveur retourne l’objet **Recordset** final à l’application cliente.  
   
@@ -55,20 +55,20 @@ Ce didacticiel illustre l’utilisation du modèle de programmation RDS pour int
   
  Ce didacticiel contient les rubriques suivantes.  
   
--   [Étape 1 : Spécifier un programme serveur (tutoriel RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Étape 1 : Spécifier un programme serveur (tutoriel RDS)](./step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Étape 2 : Appeler le programme serveur (tutoriel RDS)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Étape 2 : Appeler le programme serveur (tutoriel RDS)](./step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Étape 3 : Le serveur obtient un recordset (tutoriel RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Étape 3 : Le serveur obtient un recordset (tutoriel RDS)](./step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Étape 4 : Le serveur retourne un recordset (tutoriel RDS)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Étape 4 : Le serveur retourne un recordset (tutoriel RDS)](./step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [Étape 5 : DataControl devient utilisable (tutoriel RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [Étape 5 : DataControl devient utilisable (tutoriel RDS)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Étape 6 : Les changements sont envoyés au serveur (tutoriel RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Étape 6 : Les changements sont envoyés au serveur (tutoriel RDS)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
--   [Tutoriel RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
+-   [Tutoriel RDS (VBScript)](./rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étape 1 : spécifier un programme serveur (didacticiel RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
- [Tutoriel RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Étape 1 : spécifier un programme serveur (didacticiel RDS)](./step-1-specify-a-server-program-rds-tutorial.md)   
+ [Tutoriel RDS (VBScript)](./rds-tutorial-vbscript.md)

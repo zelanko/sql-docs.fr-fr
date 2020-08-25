@@ -1,6 +1,6 @@
 ---
 title: Mise en route de la sécurité SQL Server sur Linux
-description: Cet article décrit des actions de sécurité typiques.
+description: Explorez les fonctionnalités de sécurité de SQL Server sur Linux pour obtenir un aperçu des zones à étudier plus en détail.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: d26cdde25f3431c72e1f5327db591db60b31938e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 031005dcb6a5353e9e4f0b73a7a45d667d2212e7
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883009"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088798"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de sécurité de SQL Server sur Linux
 

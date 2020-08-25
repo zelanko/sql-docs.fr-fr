@@ -1,4 +1,5 @@
 ---
+description: Index columnstore - Conseils en matière de chargement de données
 title: Index columnstore - Conseils en matière de chargement de données | Microsoft Docs
 ms.custom: ''
 ms.date: 12/03/2017
@@ -11,12 +12,12 @@ ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9113071199d8561f2f4521bd8563e7cab275fc34
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6b057d193af0cea47e1dc19c58c508d45786b940
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88482716"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Index columnstore - Conseils en matière de chargement de données
 
@@ -52,6 +53,8 @@ Le chargement en masse dispose des fonctions d’optimisation des performances i
 -   **Optimisation du verrouillage :** Le verrou X sur un groupe de lignes est automatiquement acquis lors du chargement des données dans un groupe de lignes compressé. Toutefois, lors d’un chargement en masse dans un rowgroup delta, un verrou X est acquis au niveau du rowgroup, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continue de verrouiller les verrous PAGE/EXTENT car le verrou de rowgroup X ne fait pas partie de la hiérarchie de verrouillage.  
   
 Si vous avez un index B-tree non cluster sur un index columnstore, aucune optimisation du verrouillage ou de la journalisation n’est effectuée pour l’index proprement dit, mais les optimisations de l’index columnstore cluster décrites ci-dessus sont applicables.  
+
+Remarque : DML (insérer, supprimer, mettre à jour) n’est pas une opération en mode batch, car elle n’est pas effectuée en parallèle.
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>Planifier les tailles de chargement en masse pour réduire les rowgroups delta
 Les index columnstore fonctionnent de manière optimale quand la plupart des lignes sont compressées dans le columnstore et qu’elles ne se trouvent pas dans des rowgroups delta. Il est préférable de dimensionner vos chargements afin que les lignes soient directement placées dans le columnstore et d’ignorer autant que possible le deltastore.

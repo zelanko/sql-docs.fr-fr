@@ -1,4 +1,5 @@
 ---
+description: + (Concaténation de chaîne) (Transact-SQL)
 title: + (Concaténation de chaînes) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/06/2016
@@ -21,19 +22,19 @@ ms.assetid: 35cb3d7a-48f5-4b13-926c-a9d369e20ed7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9a3124a8e66e8ac60acc78381431181ff224d00e
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: fa1c1cb27204fc6da21fa3841a2a32ba530c808c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920607"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88422463"
 ---
 # <a name="-string-concatenation-transact-sql"></a>+ (Concaténation de chaîne) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Opérateur dans une expression de chaîne qui concatène des chaînes binaires ou des chaînes de deux caractères ou plus, des colonnes ou une combinaison de chaînes et de noms de colonnes, pour former une seule expression (un opérateur chaîne).  L’exemple `SELECT 'book'+'case';` retourne `bookcase`.
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -1,4 +1,5 @@
 ---
+description: SET NOEXEC (Transact-SQL)
 title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7495f0eb68df1cf64320aee14276d33ff7641db5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e32f168c04aba303dc33e1e3db8c268e163ef82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85765770"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88356625"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -43,8 +44,10 @@ ms.locfileid: "85765770"
 SET NOEXEC { ON | OFF }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Notes  
- Si SET NOEXEC est défini sur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compile chaque lot d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sans les exécuter. Si SET NOEXEC est défini sur OFF, tous les traitements sont exécutés après compilation.  
+ Si SET NOEXEC est défini sur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analyse et compile chaque lot d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sans les exécuter. Si SET NOEXEC est défini sur OFF, tous les traitements sont exécutés après compilation.  NOEXEC prend en charge la résolution différée des noms ; si un ou plusieurs objets référencés dans le lot n’existent pas, aucune erreur n’est générée.
   
  L'exécution des instructions dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se déroule en deux temps : compilation et exécution. Ainsi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut valider la syntaxe et les noms d'objets dans le code [!INCLUDE[tsql](../../includes/tsql-md.md)] au moment de l'exécution. Ceci permet par ailleurs de déboguer les instructions qui font généralement partie d'un traitement d'instructions beaucoup plus important.  
   

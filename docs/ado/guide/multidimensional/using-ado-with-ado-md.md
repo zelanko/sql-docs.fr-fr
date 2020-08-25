@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6314ae9a0682e1c10b1ecd45c8f8d5217e7d6426
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b7829b984b603f7b21a339886d956b6db5cc0ffd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452401"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758379"
 ---
 # <a name="using-ado-with-ado-md"></a>Utilisation d’ADO avec ADO MD
 ADO et ADO MD sont associés à des modèles objet distincts. ADO fournit des objets pour se connecter à des sources de données, exécuter des commandes, récupérer des données tabulaires et des métadonnées de schéma dans un format tabulaire, et afficher des informations sur les erreurs du fournisseur. ADO MD fournit des objets pour la récupération de données multidimensionnelles et l’affichage des métadonnées de schéma multidimensionnel.  
   
  Quand vous utilisez un MDP, vous pouvez choisir d’utiliser ADO, ADO MD ou les deux avec votre application. En référençant les deux bibliothèques dans votre projet, vous aurez un accès complet à la fonctionnalité fournie par votre MDP.  
   
- Il est souvent utile pour les consommateurs d’obtenir une vue tabulaire aplatie d’un jeu de données multidimensionnel. Pour ce faire, vous pouvez utiliser l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ADO. Spécifiez la source de votre ensemble de [cellules](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) en tant que paramètre ***source*** pour la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) d’un **jeu d’enregistrements**, plutôt que comme source d’un ensemble de **cellules**ADO MD.  
+ Il est souvent utile pour les consommateurs d’obtenir une vue tabulaire aplatie d’un jeu de données multidimensionnel. Pour ce faire, vous pouvez utiliser l’objet [Recordset](../../reference/ado-api/recordset-object-ado.md) ADO. Spécifiez la source de votre ensemble de [cellules](../../reference/ado-md-api/cellset-object-ado-md.md) en tant que paramètre ***source*** pour la méthode [Open](../../reference/ado-api/open-method-ado-recordset.md) d’un **jeu d’enregistrements**, plutôt que comme source d’un ensemble de **cellules**ADO MD.  
   
- Il peut également être utile d’afficher les métadonnées de schéma dans une vue tabulaire plutôt que sous la forme d’une hiérarchie d’objets. La méthode [OPENSCHEMA](../../../ado/reference/ado-api/openschema-method.md) ADO sur l’objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) permet à l’utilisateur d’ouvrir un **jeu d’enregistrements** qui contient des informations de schéma. Le paramètre ***QueryType*** de la méthode **OpenSchema** a plusieurs valeurs [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) qui se rapportent spécifiquement à MDPS. Ces valeurs sont les suivantes :  
+ Il peut également être utile d’afficher les métadonnées de schéma dans une vue tabulaire plutôt que sous la forme d’une hiérarchie d’objets. La méthode [OPENSCHEMA](../../reference/ado-api/openschema-method.md) ADO sur l’objet de [connexion](../../reference/ado-api/connection-object-ado.md) permet à l’utilisateur d’ouvrir un **jeu d’enregistrements** qui contient des informations de schéma. Le paramètre ***QueryType*** de la méthode **OpenSchema** a plusieurs valeurs [SchemaEnum](../../reference/ado-api/schemaenum.md) qui se rapportent spécifiquement à MDPS. Ces valeurs sont les suivantes :  
   
 -   **adSchemaCubes**  
   
@@ -41,13 +41,13 @@ ADO et ADO MD sont associés à des modèles objet distincts. ADO fournit des ob
   
 -   **adSchemaMembers**  
   
- Pour utiliser des valeurs d’énumération ADO avec des propriétés ou des méthodes ADO MD, votre projet doit faire référence aux bibliothèques ADO et ADO MD. Par exemple, vous pouvez utiliser les valeurs d’énumération ADO **adState** avec la propriété [État](../../../ado/reference/ado-md-api/state-property-ado-md.md) de ADO MD. Pour plus d’informations sur la façon d’établir des références aux bibliothèques, consultez la documentation de votre outil de développement.  
+ Pour utiliser des valeurs d’énumération ADO avec des propriétés ou des méthodes ADO MD, votre projet doit faire référence aux bibliothèques ADO et ADO MD. Par exemple, vous pouvez utiliser les valeurs d’énumération ADO **adState** avec la propriété [État](../../reference/ado-md-api/state-property-ado-md.md) de ADO MD. Pour plus d’informations sur la façon d’établir des références aux bibliothèques, consultez la documentation de votre outil de développement.  
   
- Pour plus d’informations sur les objets et les méthodes ADO, consultez Référence de l' [API ADO](../../../ado/reference/ado-api/ado-api-reference.md).  
+ Pour plus d’informations sur les objets et les méthodes ADO, consultez Référence de l' [API ADO](../../reference/ado-api/ado-api-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèle objet ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (multidimensionnel) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Vue d’ensemble des schémas et des données multidimensionnels](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Programmation avec ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Utilisation de données multidimensionnelles](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [Modèle objet ADO MD](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (multidimensionnel) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Vue d’ensemble des schémas et des données multidimensionnels](./overview-of-multidimensional-schemas-and-data.md)   
+ [Programmation avec ADO MD](./programming-with-ado-md.md)   
+ [Utilisation de données multidimensionnelles](./working-with-multidimensional-data.md)

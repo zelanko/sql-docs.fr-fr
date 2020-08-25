@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 90c7c7863228ce210e56e76ab3e12c77e7ccc902
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.openlocfilehash: 0933f493ee71fe589842f8636e7364f79a432de0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80407973"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88122451"
 ---
 Chaque groupe de disponibilité contient un seul réplica principal. Le réplica principal autorise les opérations de lecture et d’écriture. Pour changer de réplica principal, vous pouvez effectuer un basculement. Dans un groupe de disponibilité pour la haute disponibilité, le gestionnaire de cluster automatise le processus de basculement. Dans un groupe de disponibilité avec le type de cluster AUCUN, le processus de basculement est manuel. 
 
@@ -51,7 +51,7 @@ Pour effectuer un basculement manuel sans perte de données :
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-2. Pour vérifier que les transactions actives sont validées sur le réplica principal et sur au moins un réplica secondaire synchrone, exécutez la requête suivante : 
+1. Pour vérifier que les transactions actives sont validées sur le réplica principal et sur au moins un réplica secondaire synchrone, exécutez la requête suivante : 
 
    ```SQL
    SELECT ag.name, 
@@ -66,7 +66,7 @@ Pour effectuer un basculement manuel sans perte de données :
 
    Le réplica secondaire est synchronisé quand `synchronization_state_desc` a pour valeur `SYNCHRONIZED`.
 
-3. Affectez la valeur 1 à `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`.
+1. Affectez la valeur 1 à `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT`.
 
    Le script suivant définit `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` sur 1 sur un groupe de disponibilité nommé `ag1`. Avant d’exécuter le script suivant, remplacez `ag1` par le nom de votre groupe de disponibilité :
 
@@ -79,18 +79,18 @@ Pour effectuer un basculement manuel sans perte de données :
    >[!NOTE]
    >Ce paramètre n’est pas propre au basculement et doit être défini en fonction des exigences de l’environnement.
    
-4. Mettez hors connexion le réplica principal en vue des changements de rôle.
+1. Mettez hors connexion le réplica principal en vue des changements de rôle.
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] OFFLINE
    ```
 
-5. Promouvez le réplica secondaire en réplica principal. 
+1. Promouvez le réplica secondaire en réplica principal. 
 
    ```SQL
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-6. Changez le rôle de l’ancien réplica principal en `SECONDARY`, et exécutez cette commande sur l’instance de SQL Server hébergeant le réplica principal :
+1. Changez le rôle de l’ancien réplica principal en `SECONDARY`, et exécutez cette commande sur l’instance de SQL Server hébergeant le réplica principal :
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -99,3 +99,10 @@ Pour effectuer un basculement manuel sans perte de données :
 
    > [!NOTE] 
    > Pour supprimer un groupe de disponibilité, utilisez [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). Pour un groupe de disponibilité créé avec le type de cluster NONE ou EXTERNAL, exécutez la commande sur tous les réplicas faisant partie du groupe de disponibilité.
+
+1. Pour reprendre le déplacement des données, exécutez la commande suivante pour chaque base de données du groupe de disponibilité sur l’instance de SQL Server qui héberge le réplica principal : 
+
+   ```sql
+   ALTER DATABASE [db1]
+        SET HADR RESUME
+   ```

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c2eb347c7bd4b4bd39e6d85690e9646784077ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 59913c457702e39b9009cd2a8a138b2dbc5f9032
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451891"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759899"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Configuration système exigée pour l’application Carnet d’adresses
 Pour configurer l’exemple d’application de carnet d’adresses, vous devez respecter les conditions suivantes relatives aux logiciels et aux bases de données :  
@@ -52,8 +52,6 @@ Pour configurer l’exemple d’application de carnet d’adresses, vous devez r
  Si vous n’avez pas de privilèges, il se peut que votre administrateur de base de données doive configurer le système et vous accorder l’autorisation d’accès à la base de données ou configurer la base de données pour vous.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécution du script SQL du carnet d’adresses](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [Exécution de l’exemple d’application Carnet d’adresses](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+ [Exécution du script SQL du carnet d’adresses](./running-the-address-book-sql-script.md)   
+ [DataControl, objet (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [Exécution de l’exemple d’application Carnet d’adresses](./running-the-address-book-sample-application.md)

@@ -11,12 +11,12 @@ ms.assetid: 8b7810b2-637e-46a3-9fe1-d055898ba639
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ff25352a7aefe716c66cb01a4abafcfb9742e6ca
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 98a7fefe85c953cfb186951ff69e287288fa0ac0
+ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883512"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88091993"
 ---
 # <a name="install-sql-server-with-smb-fileshare-storage"></a>Installer SQL Server avec le stockage de partage de fichiers SMB
 
@@ -111,7 +111,7 @@ Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données 
   
 ## <a name="known-issues"></a>Problèmes connus  
   
--   Après avoir détaché une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui réside sur le stockage attaché au réseau, vous pouvez rencontrer un problème d'autorisations sur la base de données lorsque vous essaierez de lier à nouveau la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le problème est décrit dans [cet article de la Base de connaissances](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Pour le contourner, consultez la section **Plus d'informations** dans l'article de la Base de connaissances.  
+-   Après avoir détaché une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui réside sur le stockage attaché au réseau, vous pouvez rencontrer un problème d'autorisations sur la base de données lorsque vous essaierez de lier à nouveau la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Erreur 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
 -   Si un partage de fichiers SMB est utilisé comme option de stockage pour une instance cluster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par défaut le journal de diagnostic du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas être écrit dans le partage de fichiers car la DLL Resource de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne dispose pas des autorisations de lecture/écriture sur le partage de fichiers. Pour résoudre ce problème, essayez l'une des opérations suivantes :  
   

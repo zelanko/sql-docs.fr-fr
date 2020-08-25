@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31205bbe32dd3c09d70fe4baeb41261be985096c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b0e2a308d9a83c936abe8f5f39b29dac86795ec
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451601"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760253"
 ---
 # <a name="adcprop_updatecriteria_enum"></a>ADCPROP_UPDATECRITERIA_ENUM
-Spécifie les champs qui peuvent être utilisés pour détecter les conflits pendant une mise à jour optimiste d’une ligne de la source de données avec un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Spécifie les champs qui peuvent être utilisés pour détecter les conflits pendant une mise à jour optimiste d’une ligne de la source de données avec un objet [Recordset](./recordset-object-ado.md) .  
   
- Utilisez ces constantes avec la propriété dynamique «**critères de mise à jour**» du **jeu d’enregistrements** , qui est référencée dans l' [index de propriété dynamique ADO](../../../ado/reference/ado-api/ado-dynamic-property-index.md) et documentée dans la documentation du [service de curseur Microsoft pour OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) .  
+ Utilisez ces constantes avec la propriété dynamique «**critères de mise à jour**» du **jeu d’enregistrements** , qui est référencée dans l' [index de propriété dynamique ADO](./ado-dynamic-property-index.md) et documentée dans la documentation du [service de curseur Microsoft pour OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) .  
   
 |Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  

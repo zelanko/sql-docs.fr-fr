@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2581d0834325d56daa8ea1043ac3915942961eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6bea35ef148aa2f5646420a1c2b46197ce66f0d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443401"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774678"
 ---
 # <a name="item-property-ado"></a>Item, propriété (ADO)
 Indique un membre spécifique d’une collection, par nom ou numéro ordinal.  
@@ -83,32 +83,32 @@ collection (Index)
 
 :::row:::
     :::column:::
-        [Axes, collection (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
-        [Columns, collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
-        [CubeDefs, collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
-        [Dimensions, collection (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
-        [Errors, collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
-        [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
-        [Groups, collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+        [Axes, collection (ADO MD)](../ado-md-api/axes-collection-ado-md.md)  
+        [Columns, collection (ADOX)](../adox-api/columns-collection-adox.md)  
+        [CubeDefs, collection (ADO MD)](../ado-md-api/cubedefs-collection-ado-md.md)  
+        [Dimensions, collection (ADO MD)](../ado-md-api/dimensions-collection-ado-md.md)  
+        [Errors, collection (ADO)](./errors-collection-ado.md)  
+        [Fields, collection (ADO)](./fields-collection-ado.md)  
+        [Groups, collection (ADOX)](../adox-api/groups-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Hierarchies, collection (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
-        [Indexes, collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
-        [Keys, collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
-        [Levels, collection (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
-        [Members, collection (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
-        [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+        [Hierarchies, collection (ADO MD)](../ado-md-api/hierarchies-collection-ado-md.md)  
+        [Indexes, collection (ADOX)](../adox-api/indexes-collection-adox.md)  
+        [Keys, collection (ADOX)](../adox-api/keys-collection-adox.md)  
+        [Levels, collection (ADO MD)](../ado-md-api/levels-collection-ado-md.md)  
+        [Members, collection (ADO MD)](../ado-md-api/members-collection-ado-md.md)  
+        [Parameters, collection (ADO)](./parameters-collection-ado.md)  
     :::column-end:::
     :::column:::
-        [Positions, collection (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
-        [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
-        [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
-        [Tables, collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
-        [Users, collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
-        [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+        [Positions, collection (ADO MD)](../ado-md-api/positions-collection-ado-md.md)  
+        [Procedures, collection (ADOX)](../adox-api/procedures-collection-adox.md)  
+        [Properties, collection (ADO)](./properties-collection-ado.md)  
+        [Tables, collection (ADOX)](../adox-api/tables-collection-adox.md)  
+        [Users, collection (ADOX)](../adox-api/users-collection-adox.md)  
+        [Views, collection (ADOX)](../adox-api/views-collection-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [Item, exemple de propriété (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
- [Item, exemple de propriété (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   
+ [Item, exemple de propriété (VB)](./item-property-example-vb.md)   
+ [Item, exemple de propriété (VC++)](./item-property-example-vc.md)

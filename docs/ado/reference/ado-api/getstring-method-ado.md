@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ef3d32e1caae337ecb2a03bba6af8c7b4cd858de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8a972edd11c419c1990c78635d42c44d8c06db2c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443511"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774908"
 ---
 # <a name="getstring-method-ado"></a>GetString, méthode (ADO)
-Retourne le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sous forme de chaîne.  
+Retourne le [Recordset](./recordset-object-ado.md) sous forme de chaîne.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +39,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 #### <a name="parameters"></a>Paramètres  
  *StringFormat*  
- Valeur [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) qui spécifie la façon dont l' **objet Recordset** doit être converti en chaîne. Les paramètres *RowDelimiter*, *ColumnDelimiter*et *NullExpr* sont utilisés uniquement avec un *StringFormat* de **adClipString**.  
+ Valeur [StringFormatEnum](./stringformatenum.md) qui spécifie la façon dont l' **objet Recordset** doit être converti en chaîne. Les paramètres *RowDelimiter*, *ColumnDelimiter*et *NullExpr* sont utilisés uniquement avec un *StringFormat* de **adClipString**.  
   
  *NumRows*  
  facultatif. Nombre de lignes à convertir dans le **Recordset**. Si la valeur *numRows* n’est pas spécifiée, ou si elle est supérieure au nombre total de lignes dans le **Recordset**, toutes les lignes de l’ensemble d' **enregistrements** sont converties.  
@@ -59,7 +59,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  Cette méthode est équivalente à la méthode **GETCLIPSTRING** RDO.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [GetString, exemple de méthode (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)
+ [GetString, exemple de méthode (VB)](./getstring-method-example-vb.md)

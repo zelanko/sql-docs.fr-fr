@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6221a608bd247852ed16e1d82c1b8b5994b50fe8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 151c111db94cd0132196437fc86e2aa9f80be7e8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438881"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767998"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (RDS)
-Passe au premier enregistrement, dernier, suivant ou précédent dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) spécifié.  
+Passe au premier enregistrement, dernier, suivant ou précédent dans un objet [Recordset](../ado-api/recordset-object-ado.md) spécifié.  
   
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -39,17 +39,15 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
   
 #### <a name="parameters"></a>Paramètres  
  *DataControl*  
- Variable objet qui représente un objet [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Variable objet qui représente un objet [RDS. DataControl](./datacontrol-object-rds.md) .  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez utiliser les méthodes **Move** avec le **RDS. DataControl** pour parcourir les enregistrements de données dans les contrôles liés aux données sur une page Web. Supposons, par exemple, que vous affichez un **jeu d’enregistrements** dans une grille en le liant à un **objet RDS. DataControl** . Vous pouvez ensuite inclure les boutons premier, dernier, suivant et précédent sur lesquels les utilisateurs peuvent cliquer pour passer au premier enregistrement, dernier, suivant ou précédent dans le **jeu d’enregistrements**affiché. Pour ce faire, appelez les méthodes **MoveFirst**, **MoveLast**, **MoveNext**et **MovePrevious** de l' **objet RDS. DataControl** dans les procédures OnClick pour les boutons First, Last, Next et Previous, respectivement. L' [exemple de carnet d’adresses](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) montre comment procéder.  
+ Vous pouvez utiliser les méthodes **Move** avec le **RDS. DataControl** pour parcourir les enregistrements de données dans les contrôles liés aux données sur une page Web. Supposons, par exemple, que vous affichez un **jeu d’enregistrements** dans une grille en le liant à un **objet RDS. DataControl** . Vous pouvez ensuite inclure les boutons premier, dernier, suivant et précédent sur lesquels les utilisateurs peuvent cliquer pour passer au premier enregistrement, dernier, suivant ou précédent dans le **jeu d’enregistrements**affiché. Pour ce faire, appelez les méthodes **MoveFirst**, **MoveLast**, **MoveNext**et **MovePrevious** de l' **objet RDS. DataControl** dans les procédures OnClick pour les boutons First, Last, Next et Previous, respectivement. L' [exemple de carnet d’adresses](../../guide/remote-data-service/address-book-navigation-buttons.md) montre comment procéder.  
   
 ## <a name="applies-to"></a>S'applique à  
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl, objet (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Move, méthode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
- [MoveRecord, méthode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
-
-
+ [Move, méthode (ADO)](../ado-api/move-method-ado.md)   
+ [MoveFirst, MoveLast, MoveNext et MovePrevious, méthodes (ADO)](../ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [MoveRecord, méthode (ADO)](../ado-api/moverecord-method-ado.md)

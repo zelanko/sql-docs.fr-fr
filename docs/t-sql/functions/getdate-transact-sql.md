@@ -30,12 +30,12 @@ ms.assetid: bebe3b65-2b3e-4c73-bf80-ff1132c680a7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4458702bc53bdec44bd5f690568bcbd06db6b12
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: c43f3522612e88a8f17ca6587fd8ffa06795e68b
+ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86484580"
+ms.lasthandoff: 08/14/2020
+ms.locfileid: "88216712"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,6 +44,8 @@ Renvoie l’horodateur système de base de données actuel en tant que valeur **
 
 > [!NOTE]
 >  SYSDATETIME et SYSUTCDATETIME ont plus de précision en fractions de seconde que GETDATE et GETUTCDATE. SYSDATETIMEOFFSET inclut le décalage de fuseau horaire système. SYSDATETIME, SYSUTCDATETIME et SYSDATETIMEOFFSET peuvent être assignés à une variable de chacun des types de date et d'heure.
+
+Azure SQL Database (à l’exception d’Azure SQL Managed Instance) et Azure Synapse Analytics suivent le fuseau UTC. Utilisez [AT TIME ZONE](../../t-sql/queries/at-time-zone-transact-sql.md) dans Azure SQL Database or Azure Synapse Analytics si vous devez interpréter des informations de date et d'heure dans un fuseau horaire autre qu'UTC.
 
  Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
 

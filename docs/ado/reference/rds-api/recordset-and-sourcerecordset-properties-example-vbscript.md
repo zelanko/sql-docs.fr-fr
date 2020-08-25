@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 95175316-cd10-4cf7-96ba-2a226fd97701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2c047ed21662335368f85273ad8c52bf4f5e70f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5f7844278460859de4ef3c5a0ee5cf073548ec81
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438741"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767668"
 ---
 # <a name="recordset-and-sourcerecordset-properties-example-vbscript"></a>Recordset et SourceRecordset, exemples de propriétés (VBScript)
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- L’exemple suivant montre comment définir les paramètres nécessaires de l’objet métier par défaut de l’objet [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) au moment de l’exécution.  
+ L’exemple suivant montre comment définir les paramètres nécessaires de l’objet métier par défaut de l’objet [RDSServer. DataFactory](./datafactory-object-rdsserver.md) au moment de l’exécution.  
   
  Pour tester cet exemple, coupez et collez ce code entre \<Body> les \</Body> balises et dans un document HTML normal et nommez-le **RecordsetVBS. asp**. Le script ASP identifie votre serveur.  
   
@@ -129,8 +129,5 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Recordset et SourceRecordset, propriétés (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
-
-
-
+ [Objet DataFactory (RDSServer)](./datafactory-object-rdsserver.md)   
+ [Recordset et SourceRecordset, propriétés (RDS)](./recordset-sourcerecordset-properties-rds.md)

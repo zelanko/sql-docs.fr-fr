@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1d817bae593d4083f3e4873d626e147e58d5c28
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401495"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767158"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Acquérir et configurer un serveur de sauvegarde pour les Data Warehouse parallèles
 Cet article explique comment configurer un système non-appareil Windows comme serveur de sauvegarde à utiliser avec les fonctionnalités de sauvegarde et de restauration dans Analytics Platform System (APS) et Parallel Data Warehouse (PDW).  
@@ -50,7 +50,7 @@ Nous vous recommandons Windows Server 2012 ou ultérieur pour effectuer les opé
   
 -   Tirez parti des avantages en matière de performances de préallocation de fichiers sur SMB.  
   
--   Utilisez l’initialisation instantanée des fichiers (IFI) pour les opérations de sauvegarde. Votre équipe informatique gère ce paramètre sur le serveur de sauvegarde. Le Configuration Manager PDW (dwconfig. exe) ne définit pas ou ne contrôle pas IFI sur votre serveur de sauvegarde. Les versions précédentes de Windows n’ont pas IFI, mais peuvent toujours être utilisées comme serveurs de sauvegarde.  
+-   Utilisez l’initialisation instantanée des fichiers (IFI) pour les opérations de sauvegarde. Votre équipe informatique gère ce paramètre sur le serveur de sauvegarde. Le Configuration Manager PDW (dwconfig.exe) ne définit pas ou ne contrôle pas IFI sur votre serveur de sauvegarde. Les versions précédentes de Windows n’ont pas IFI, mais peuvent toujours être utilisées comme serveurs de sauvegarde.  
   
 ### <a name="networking-requirements"></a>Configuration requise du réseau  
 Bien que cela ne soit pas obligatoire, InfiniBand est le type de connexion recommandé pour les serveurs de sauvegarde. Pour préparer la connexion du serveur de chargement au réseau de l’appliance InfiniBand :  
@@ -118,11 +118,11 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-Pour plus d’informations, voir : 
+Pour plus d'informations, consultez les pages suivantes : 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+-   [RESTAURER LA BASE DE DONNÉES](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="security-notices"></a><a name="Security"></a>Notifications de sécurité  
 Le serveur de sauvegarde n’est pas joint au domaine privé de l’appliance. Il se trouve dans votre propre réseau, et il n’existe aucune relation d’approbation entre votre propre domaine et votre propre domaine d’appliance privé.  
@@ -151,4 +151,3 @@ Les opérations sur le serveur de chargement peuvent utiliser un chemin UNC pour
   
 ## <a name="see-also"></a>Voir aussi  
 [Sauvegarde et restauration](backup-and-restore-overview.md)  
-  

@@ -14,32 +14,32 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fb960d7539dd2d47be6eb2aad424808d44db10d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: adaf8b1b14fbc6813096e8ba8fcbf3943e8a2179
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451471"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760119"
 ---
 # <a name="ado-collections"></a>Collections ADO
-Les relations entre ces collections et les objets ADO sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  
+Les relations entre ces collections et les objets ADO sont représentées dans le [modèle objet ADO](./ado-object-model.md).  
   
- Chaque collection peut contenir son objet correspondant. Par exemple, un objet d' [erreur](../../../ado/reference/ado-api/error-object.md) peut être contenu dans une collection d' [Erreurs](../../../ado/reference/ado-api/errors-collection-ado.md) . Pour plus d’informations sur les objets, consultez [objets ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) ou une rubrique relative à un objet spécifique.  
+ Chaque collection peut contenir son objet correspondant. Par exemple, un objet d' [erreur](./error-object.md) peut être contenu dans une collection d' [Erreurs](./errors-collection-ado.md) . Pour plus d’informations sur les objets, consultez [objets ADO](./ado-objects-and-interfaces.md) ou une rubrique relative à un objet spécifique.  
   
 |Collection|Description|  
 |-|-|  
-|[Erreurs](../../../ado/reference/ado-api/errors-collection-ado.md)|Contient tous les objets d' **erreur** créés en réponse à un échec lié à un fournisseur unique.|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contient tous les objets **Field** d’un objet **Recordset** .|  
-|[Paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contient tous les objets **Parameter** d’un objet **Command** .|  
-|[Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)|Contient tous les objets de **propriété** pour une instance spécifique d’un objet.|  
+|[Erreurs](./errors-collection-ado.md)|Contient tous les objets d' **erreur** créés en réponse à un échec lié à un fournisseur unique.|  
+|[Fields](./fields-collection-ado.md)|Contient tous les objets **Field** d’un objet **Recordset** .|  
+|[Paramètres](./parameters-collection-ado.md)|Contient tous les objets **Parameter** d’un objet **Command** .|  
+|[Propriétés](./properties-collection-ado.md)|Contient tous les objets de **propriété** pour une instance spécifique d’un objet.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
- [Propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
- [Constantes énumérées ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Annexe B : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [Événements ADO](../../../ado/reference/ado-api/ado-events.md)   
- [Méthodes ADO](../../../ado/reference/ado-api/ado-methods.md)   
- [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)   
- [Objets et interfaces ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
- [Propriétés ADO](../../../ado/reference/ado-api/ado-properties.md)
+ [Informations de référence sur l’API ADO](./ado-api-reference.md)   
+ [Propriétés dynamiques ADO](./ado-dynamic-properties.md)   
+ [Constantes énumérées ADO](./ado-enumerated-constants.md)   
+ [Annexe B : erreurs ADO](../../guide/appendixes/appendix-b-ado-errors.md)   
+ [Événements ADO](./ado-events.md)   
+ [Méthodes ADO](./ado-methods.md)   
+ [Modèle objet ADO](./ado-object-model.md)   
+ [Objets et interfaces ADO](./ado-objects-and-interfaces.md)   
+ [Propriétés ADO](./ado-properties.md)

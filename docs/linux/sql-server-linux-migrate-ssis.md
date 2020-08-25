@@ -1,6 +1,6 @@
 ---
 title: Extraire, transformer et charger des données sur Linux avec SSIS
-description: Cet article décrit SQL Server Integration Services (SSIS) pour les ordinateurs Linux
+description: Découvrez comment exécuter des packages SQL Server Integration Services (SSIS) sur Linux. Découvrez également où trouver plus d’informations sur les fonctionnalités SSIS.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 72ad1ca9c97834ad38b579b904f29db71cf0686d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882722"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088869"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraire, transformer et charger des données sur Linux avec SSIS
 
@@ -25,7 +25,7 @@ Les packages SSIS fonctionnant sur Linux peuvent se connecter à Microsoft SQL 
 
 Pour plus d’informations sur les capacités de SSIS, consultez [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Pour exécuter des packages SSIS sur un ordinateur Linux, vous devez d'abord installer SQL Server Integration Services. SSIS n'est pas inclus dans l'installation de SQL Server pour les ordinateurs Linux. Pour obtenir des instructions d'installation, voir [Installer SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 
@@ -36,7 +36,7 @@ Vous devez également disposer d'un ordinateur Windows pour créer et gérer les
 Pour exécuter un paquet SSIS sur un ordinateur Linux, procédez comme suit :
 
 1.  Copiez le package SSIS sur l'ordinateur Linux.
-2.  Exécutez la commande suivante :
+2.  Exécutez la commande suivante :
     ```
     $ dtexec /F \<package name \> /DE <protection password>
     ```

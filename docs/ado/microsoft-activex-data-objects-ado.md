@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 63307b7b0074cca482befd0dfa689684504f26f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f170bbc7144e624ea6788c844fb817014e178d0
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451831"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760029"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -50,21 +50,19 @@ Chaque section de cet article décrit un composant d’ADO.
  ADOX est une bibliothèque associée aux objets ADO de base. Il expose des objets supplémentaires pour la création, la modification et la suppression d’objets de schéma, tels que des tables et des procédures. Il comprend également des objets de sécurité pour gérer les utilisateurs et les groupes, ainsi que pour accorder et révoquer des autorisations sur des objets.  
   
 ## <a name="documentation"></a>Documentation  
- [Problèmes de conception de la sécurité d’ADO](../ado/guide/ado-security-design-issues.md)  
+ [Problèmes de conception de la sécurité d’ADO](./guide/ado-security-design-issues.md)  
   
- [Guide du programmeur ADO](../ado/guide/ado-programmer-s-guide.md)  
+ [Guide du programmeur ADO](./guide/ado-programmer-s-guide.md)  
   
  Introduction à l’utilisation d’ADO, RDS, ADO MD et ADOX.  
   
- [Guide de référence du programmeur ADO](../ado/reference/ado-programmer-s-reference.md)  
+ [Guide de référence du programmeur ADO](./reference/ado-programmer-s-reference.md)  
   
  Cette section de la documentation ADO contient des rubriques pour chaque objet, collection, propriété, propriété dynamique, méthode, événement et énumération ADO, RDS, ADO MD et ADOX.  
   
- [Glossaire ADO](../ado/ado-glossary.md)  
+ [Glossaire ADO](./ado-glossary.md)  
   
 ## <a name="support"></a>Support  
  Pour obtenir une aide gratuite sur les problèmes liés à ADO, essayez de publier dans le groupe de discussion public ADO. Ce groupe de discussion est surveillé par les professionnels du support technique Microsoft qui couvrent ADO et par d’autres développeurs ADO expérimentés.  
   
  Vous trouverez plus d'informations sur les options de support sur le site Web Aide et support Microsoft.
-
-

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 440a1947d5424840ec99f9e4da7ae03266c7ac04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 074226de92d5ea02a3eb507013c862e0ca493455
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451861"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760039"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Utilisation de RDS avec le regroupement de connexions ODBC
 Si vous utilisez une source de données ODBC, vous pouvez utiliser l’option de regroupement de connexions de Internet Information Services (IIS) pour obtenir des performances élevées de la charge du client. Le regroupement de connexions est un gestionnaire de ressources pour les connexions, ce qui maintient l’état ouvert sur les connexions fréquemment utilisées.  
@@ -125,26 +125,4 @@ Si vous utilisez une source de données ODBC, vous pouvez utiliser l’option de
 5.  Cliquez sur OK, puis à nouveau sur OK pour quitter l’utilitaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts de base de RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Concepts de base de RDS](./rds-fundamentals.md)

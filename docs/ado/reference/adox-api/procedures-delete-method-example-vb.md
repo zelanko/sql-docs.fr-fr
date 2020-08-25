@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3f7d26eded130f22bda4f707f451ddf78c4b3d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7c61d1446158dd74af15ab3ab354546c09aff672
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439611"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769578"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures, exemple de méthode Delete (VB)
-Le code suivant montre comment supprimer une procédure à l’aide de la méthode [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) de la collection [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) .  
+Le code suivant montre comment supprimer une procédure à l’aide de la méthode [Delete](./delete-method-adox-collections.md) de la collection [procedures](./procedures-collection-adox.md) .  
   
 ```  
 ' BeginDeleteProcedureVB  
@@ -56,8 +56,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ActiveConnection, propriété (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Delete, méthode (collections ADOX)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   
- [PROCEDURE, objet (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures, collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection, propriété (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog, objet (ADOX)](./catalog-object-adox.md)   
+ [Delete, méthode (collections ADOX)](./delete-method-adox-collections.md)   
+ [PROCEDURE, objet (ADOX)](./procedure-object-adox.md)   
+ [Procedures, collection (ADOX)](./procedures-collection-adox.md)

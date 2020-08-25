@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62b76b616786c593d395ee8720bba4c012390290
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401115"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766888"
 ---
 # <a name="instant-file-initialization-configuration"></a>Configuration de l’initialisation instantanée des fichiers
 L’initialisation instantanée de fichiers est une fonctionnalité SQL Server qui permet aux opérations de fichiers de données de s’exécuter plus rapidement. Si vous activez la case à cocher pour activer l’initialisation instantanée des fichiers, vous améliorerez les performances de SQL Server PDW. Toutefois, si cela pose un risque de sécurité pour votre entreprise, laissez la case désactivée.  
@@ -25,9 +25,9 @@ L’initialisation instantanée de fichiers est une fonctionnalité SQL Server q
 L'initialisation instantanée des fichiers n'est pas disponible quand le chiffrement transparent des données est activé.  
   
 ## <a name="add-permission-for-the-backup-account"></a>Ajouter une autorisation pour le compte de sauvegarde  
-Le processus de sauvegarde nécessite des informations d’identification réseau (compte d’utilisateur Windows) qui peuvent accéder à l’emplacement de stockage de la sauvegarde. Vous autorisez PDW à utiliser le compte à l’aide de la procédure [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Consultez [Backup database](../t-sql/statements/backup-database-parallel-data-warehouse.md) pour l’ensemble du processus de sauvegarde. Pour utiliser l’initialisation instantanée des fichiers, l' `Perform volume maintenance tasks` autorisation doit être accordée au compte de sauvegarde.  
+Le processus de sauvegarde nécessite des informations d’identification réseau (compte d’utilisateur Windows) qui peuvent accéder à l’emplacement de stockage de la sauvegarde. Vous autorisez PDW à utiliser le compte à l’aide de la procédure [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) . Consultez [Backup database](../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15) pour l’ensemble du processus de sauvegarde. Pour utiliser l’initialisation instantanée des fichiers, l’autorisation doit être accordée au compte de sauvegarde `Perform volume maintenance tasks` .  
   
-1.  Sur le serveur de sauvegarde, ouvrez l’application **stratégie de sécurité locale** (`secpol.msc`).  
+1.  Sur le serveur de sauvegarde, ouvrez l’application **stratégie de sécurité locale** ( `secpol.msc` ).  
   
 2.  Dans le volet gauche, développez **Stratégies locales**, puis cliquez sur **Attribution des droits utilisateur**.  
   
@@ -54,5 +54,4 @@ Le processus de sauvegarde nécessite des informations d’identification résea
   
 ![Initialisation d'instantanés de fichier PDW des appliances DWConfig](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-Pour plus d’informations sur l’initialisation instantanée des fichiers, consultez [initialisation instantanée des fichiers](https://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
-  
+Pour plus d’informations sur l’initialisation instantanée des fichiers, consultez [initialisation instantanée des fichiers](/previous-versions/sql/sql-server-2008-r2/ms175935(v=sql.105)).  

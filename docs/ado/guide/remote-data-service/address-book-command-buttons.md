@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2c2c3b0880a940b0f3388aced46c0cd9c888b786
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0abdb36a7ff51bdf0b01e21957c10ca8b9f995e4
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452331"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758609"
 ---
 # <a name="address-book-command-buttons"></a>Boutons de commande de l’application Carnet d’adresses
 L’application Carnet d’adresses contient les boutons de commande suivants :  
@@ -52,7 +52,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  Si la requête a réussi, toutes les personnes dont le nom contient le texte « berge » (par exemple, berge et Berger) et dont le titre contient les mots « responsable de programme » (par exemple, chef de programme, technologies avancées) s’affichent dans la grille de données HTML.  
   
 ## <a name="preparing-and-sending-the-query"></a>Préparation et envoi de la requête  
- La dernière partie de la procédure Find_OnClick Sub est constituée de deux instructions. La première instruction affecte la propriété [SQL](../../../ado/reference/rds-api/sql-property.md) de l' [objet RDS. Objet DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) égal à la requête SQL générée dynamiquement. La deuxième instruction provoque l' **objet RDS. DataControl** ( `DC1` ) pour interroger la base de données, puis afficher les nouveaux résultats de la requête dans la grille.  
+ La dernière partie de la procédure Find_OnClick Sub est constituée de deux instructions. La première instruction affecte la propriété [SQL](../../reference/rds-api/sql-property.md) de l' [objet RDS. Objet DataControl](../../reference/rds-api/datacontrol-object-rds.md) égal à la requête SQL générée dynamiquement. La deuxième instruction provoque l' **objet RDS. DataControl** ( `DC1` ) pour interroger la base de données, puis afficher les nouveaux résultats de la requête dans la grille.  
   
 ```vb
 Sub Find_OnClick  
@@ -63,7 +63,7 @@ End Sub
 ```  
   
 ## <a name="update-profile-button"></a>Bouton mettre à jour le profil  
- En cliquant sur le bouton **mettre à jour le profil** , vous activez la sous-procédure VBScript Update_OnClick, qui exécute les [services Bureau à distance. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) `DC1` Méthodes [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) et [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) de l’objet DataControl.  
+ En cliquant sur le bouton **mettre à jour le profil** , vous activez la sous-procédure VBScript Update_OnClick, qui exécute les [services Bureau à distance. ](../../reference/rds-api/datacontrol-object-rds.md) `DC1` Méthodes [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) et [Refresh](../../reference/rds-api/refresh-method-rds.md) de l’objet DataControl.  
   
 ```vb
 Sub Update_OnClick  
@@ -75,7 +75,7 @@ End Sub
  Lors de `DC1.SubmitChanges` l’exécution, le service de données distant transmet toutes les informations de mise à jour et les envoie au serveur via http. La mise à jour est tout-ou-rien ; Si une partie de la mise à jour échoue, aucune des modifications n’est apportée et un message d’État est renvoyé. `DC1.Refresh` n’est pas nécessaire après **SubmitChanges** avec le service de données distant, mais elle garantit l’actualisation des données.  
   
 ## <a name="cancel-changes-button"></a>Bouton Annuler les modifications  
- Le fait de cliquer sur **annuler les modifications** active la sous-procédure VBScript Cancel_OnClick, qui exécute les [services Bureau à distance. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) de l’objet ( `DC1)` méthode [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) .  
+ Le fait de cliquer sur **annuler les modifications** active la sous-procédure VBScript Cancel_OnClick, qui exécute les [services Bureau à distance. DataControl](../../reference/rds-api/datacontrol-object-rds.md) de l’objet ( `DC1)` méthode [CancelUpdate](../../reference/rds-api/cancelupdate-method-rds.md) .  
   
 ```vb
 Sub Cancel_OnClick  
@@ -86,7 +86,5 @@ End Sub
  Lorsque `DC1.CancelUpdate` s’exécute, il ignore toutes les modifications apportées par un utilisateur à un enregistrement d’employé sur la grille de données depuis la dernière requête ou mise à jour. Il restaure les valeurs d’origine.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boutons de navigation dans le carnet d’adresses](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [Boutons de navigation dans le carnet d’adresses](./address-book-navigation-buttons.md)   
+ [DataControl, objet (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

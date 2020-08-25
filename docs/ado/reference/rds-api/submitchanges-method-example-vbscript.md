@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f31eb54efbf1901471fc48b7499b7ab6190b680
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8be18e18b890dbe438a0aced23503e690985b5c1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438591"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767368"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges, exemple de méthode (VBScript)
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Le fragment de code suivant montre comment utiliser la méthode [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) avec un [objet RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ Le fragment de code suivant montre comment utiliser la méthode [SubmitChanges](./submitchanges-method-rds.md) avec un [objet RDS. DataControl](./datacontrol-object-rds.md) .  
   
  Pour tester cet exemple, coupez et collez ce code dans un document ASP normal et nommez-le **SubmitChangesCtrlVBS. asp**. Le script ASP identifie votre serveur.  
   
@@ -118,7 +118,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [SubmitChanges, méthode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [DataControl, objet (RDS)](./datacontrol-object-rds.md)   
+ [SubmitChanges, méthode (RDS)](./submitchanges-method-rds.md)

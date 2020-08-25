@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0db3a588dfabf290f2e095adafcd3331187af957
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401071"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766978"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installer les packs d’administration SQL Server Operations Manager (SCOM) pour Analytics Platform System
 Procédez comme suit pour télécharger et installer les packs d’administration System Center Operations Manager (SCOM) pour SQL Server PDW. Les packs d’administration sont requis pour analyser les SQL Server PDW à partir de SCOM.  
@@ -27,7 +27,7 @@ System Center Operations Manager doit être installé et en cours d’exécution
 ## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>Étape 1 : Télécharger les packs d’administration  
 Pour la charge de travail PDW APS, téléchargez le [Pack d’administration System Center pour le Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
-Pour la gestion de l’appliance, téléchargez le pack d’administration de base de l' [appliance SQL Server](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10)).  
+Pour la gestion de l’appliance, téléchargez le pack d’administration de base de l' [appliance SQL Server](/previous-versions/system-center/packs/gg602398(v=technet.10)).  
   
 Pour les anciennes versions de PDW sans APS, téléchargez le[Pack d’analyse System Center pour l’Appliance Data Warehouse parallèle Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
   
@@ -80,4 +80,3 @@ Maintenant que les packs d’administration sont installés, passez à l’étap
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-  

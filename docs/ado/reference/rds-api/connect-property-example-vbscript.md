@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f7b854f8d5b84883d28915af629c2af67036b718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20993c30753f87bd307d1516b7981ac6809ff2cb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439221"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768718"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect, exemple de méthode (VBScript)
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Ce code montre comment définir la propriété de [connexion](../../../ado/reference/rds-api/connect-property-rds.md) au moment de la conception :  
+ Ce code montre comment définir la propriété de [connexion](./connect-property-rds.md) au moment de la conception :  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -127,25 +127,4 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connect, propriété (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Connect, propriété (RDS)](./connect-property-rds.md)

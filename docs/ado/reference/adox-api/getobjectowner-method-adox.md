@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f4acea759ba213eac4365d79fa040c20e5a673cc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1c68adc866ce3ee73ca184a1e5e2851b3545329d
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440041"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770508"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner, méthode (ADOX)
-Retourne le propriétaire d’un objet dans un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md).  
+Retourne le propriétaire d’un objet dans un [catalogue](./catalog-object-adox.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,14 +35,14 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne une valeur de **chaîne** qui spécifie le [nom](../../../ado/reference/adox-api/name-property-adox.md) de l' [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) ou du [groupe](../../../ado/reference/adox-api/group-object-adox.md) propriétaire de l’objet.  
+ Retourne une valeur de **chaîne** qui spécifie le [nom](./name-property-adox.md) de l' [utilisateur](./user-object-adox.md) ou du [groupe](./group-object-adox.md) propriétaire de l’objet.  
   
 #### <a name="parameters"></a>Paramètres  
  *ObjectName*  
  Valeur de **chaîne** qui spécifie le nom de l’objet pour lequel le propriétaire doit être retourné.  
   
  *ObjectType*  
- Valeur de type **long** qui peut être l’une des constantes [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) , qui spécifie le type de l’objet pour lequel obtenir le propriétaire.  
+ Valeur de type **long** qui peut être l’une des constantes [ObjectTypeEnum](./objecttypeenum.md) , qui spécifie le type de l’objet pour lequel obtenir le propriétaire.  
   
  *ObjectTypeId*  
  facultatif. Valeur de **type Variant** qui spécifie le GUID pour un type d’objet fournisseur non défini par la spécification OLE DB. Ce paramètre est obligatoire si *ObjectType* a la valeur **adPermObjProviderSpecific**; dans le cas contraire, il n’est pas utilisé.  
@@ -51,8 +51,8 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  Une erreur se produit si le fournisseur ne prend pas en charge le retour de propriétaires d’objets.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog, objet (ADOX)](./catalog-object-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [GetObjectOwner et SetObjectOwner, exemple de méthodes (VB)](../../../ado/reference/adox-api/getobjectowner-and-setobjectowner-methods-example-vb.md)   
- [SetObjectOwner, méthode](../../../ado/reference/adox-api/setobjectowner-method.md)
+ [GetObjectOwner et SetObjectOwner, exemple de méthodes (VB)](./getobjectowner-and-setobjectowner-methods-example-vb.md)   
+ [SetObjectOwner, méthode](./setobjectowner-method.md)

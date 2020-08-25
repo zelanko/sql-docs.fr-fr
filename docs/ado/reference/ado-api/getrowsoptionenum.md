@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 76926e0190ad8cfe1d7451d89182a365a6c59993
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c071ba19a974f1ac63a31c8d01a4ed42f56804a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443541"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774938"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
-Spécifie le nombre d’enregistrements à récupérer à partir d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Spécifie le nombre d’enregistrements à récupérer à partir d’un [jeu d’enregistrements](./recordset-object-ado.md).  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|Récupère le reste des enregistrements dans le **Recordset**, à partir de la position actuelle ou d’un signet spécifié par le paramètre *Start* de la méthode [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) .|  
+|**adGetRowsRest**|-1|Récupère le reste des enregistrements dans le **Recordset**, à partir de la position actuelle ou d’un signet spécifié par le paramètre *Start* de la méthode [GetRows](./getrows-method-ado.md) .|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.GetRowsOption.REST|  
   
 ## <a name="applies-to"></a>S'applique à  
- [GetRows, méthode (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)
+ [GetRows, méthode (ADO)](./getrows-method-ado.md)

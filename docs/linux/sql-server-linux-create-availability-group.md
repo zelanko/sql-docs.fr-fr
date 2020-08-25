@@ -1,6 +1,6 @@
 ---
 title: Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
-description: Ce tutoriel montre comment créer et configurer des groupes de disponibilité pour SQL Server sur Linux.
+description: Ce tutoriel montre comment créer et configurer des groupes de disponibilité pour SQL Server sur Linux, et comment créer des points de terminaison et des certificats de groupe de disponibilité.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -8,12 +8,12 @@ ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d2bc4c05c711645b0cff669acbf847da4998f5d2
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: c3b1bf11bfbc91fa2226bfc925e80288aaf9281d
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196737"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088971"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
 

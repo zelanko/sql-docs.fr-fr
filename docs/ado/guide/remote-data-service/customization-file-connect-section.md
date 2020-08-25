@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02377ff40a56c8169576a5653ac21953946aaa1d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8c712efc368d9b84158697d3b7e6eedfb4224ff
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452261"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759845"
 ---
 # <a name="customization-file-connect-section"></a>Fichier de personnalisation, section connect
 Le comportement par défaut du gestionnaire consiste à refuser toutes les connexions. La section **Connect** spécifie des exceptions à ce comportement. Par exemple, si toutes les sections **Connect** étaient absentes ou vides, aucune connexion n’a pu être établie par défaut.  
@@ -64,13 +64,10 @@ connectionString
  Si vous souhaitez autoriser une connexion (en désactivant le comportement du gestionnaire par défaut), définissez l’entrée d’accès dans la section **connexion par défaut** sur `Access=ReadWrite` , puis supprimez ou commentez toute autre section d' _identificateur_ de **connexion** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Section journaux des fichiers de personnalisation](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Section SQL du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Section UserList du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Paramètres client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Fonctionnement du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
-
+ [Section journaux des fichiers de personnalisation](./customization-file-logs-section.md)   
+ [Section SQL du fichier de personnalisation](./customization-file-sql-section.md)   
+ [Section UserList du fichier de personnalisation](./customization-file-userlist-section.md)   
+ [Personnalisation de DataFactory](./datafactory-customization.md)   
+ [Paramètres client requis](./required-client-settings.md)   
+ [Fonctionnement du fichier de personnalisation](./understanding-the-customization-file.md)   
+ [Écriture d’un gestionnaire personnalisé](./writing-your-own-customized-handler.md)

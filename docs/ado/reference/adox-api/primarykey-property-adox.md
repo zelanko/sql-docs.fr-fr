@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ab3a4f6bd28c74dadb82d7e388866b4bf6100a06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b1dde4ddae2acf4a6b238489a0af56ae1ce63d4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439661"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769718"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey, propriété (ADOX)
 Indique si l’index représente la clé primaire de la table.  
@@ -36,11 +36,11 @@ Indique si l’index représente la clé primaire de la table.
 ## <a name="remarks"></a>Notes  
  La valeur par défaut est **False**.  
   
- Cette propriété est en lecture seule sur les objets d' [index](../../../ado/reference/adox-api/index-object-adox.md) déjà ajoutés à une collection.  
+ Cette propriété est en lecture seule sur les objets d' [index](./index-object-adox.md) déjà ajoutés à une collection.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Index, objet (ADOX)](./index-object-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [PrimaryKey et unique, exemple de propriétés (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [Index, objet (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+ [PrimaryKey et unique, exemple de propriétés (VB)](./primarykey-and-unique-properties-example-vb.md)   
+ [Index, objet (ADOX)](./index-object-adox.md)
