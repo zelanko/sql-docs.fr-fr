@@ -12,16 +12,18 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4298cbc0c80937f01f37126c93b01f927c8cbd2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21e97c74d99a3ce653a79c68727e714d773cbba9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427481"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645780"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Interrogation des données dans une table temporelle avec version gérée par le système
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Lorsque vous souhaitez obtenir l’état le plus récent (réel) des données d’une table temporelle, l’interrogation est exactement la même que pour une table non temporelle. Si les colonnes PERIOD ne sont pas masquées, leurs valeurs apparaissent dans une requête SELECT \* . Si vous avez spécifié les colonnes **PERIOD** comme étant masquées, leurs valeurs n’apparaissent pas dans une requête SELECT \*. Lorsque les colonnes **PERIOD** sont masquées, référencez spécifiquement les colonnes **PERIOD** dans la clause SELECT pour retourner les valeurs de ces colonnes.
 

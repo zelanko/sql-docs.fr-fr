@@ -12,16 +12,18 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 198cb23fdd7fe76b7777bc22b63ace4f1dedcc2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8aaedc07aef085f7245346adc5a8e04302be909
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473033"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646630"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Les tables temporelles à système par version pour les [tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sont conçues pour fournir une solution rentable dans des scénarios où [l’audit de données et l’analyse à un moment donné](https://msdn.microsoft.com/library/mt631669.aspx) sont nécessaires sur des données collectées à l’aide de charges de travail OLTP en mémoire. Elles offrent un débit transactionnel élevé et une simultanéité sans verrouillage, ainsi que la possibilité de stocker un grand nombre de données d’historique pouvant être interrogées facilement.
 

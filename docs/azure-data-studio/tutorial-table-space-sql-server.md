@@ -2,19 +2,19 @@
 title: Activer le widget d’exemple d’insight d’utilisation d’espace de table
 description: Ce didacticiel montre comment activer le widget d’insight d’utilisation de l’espace de table sur le tableau de bord d’une base de données Azure Data Studio.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: 8d2be24a72c098c5a6a0b5e3ecefbde9bbe39cd5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 276cb3535e3ee0623816aa329446e81b2feaf12e
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726701"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88745619"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>Tutoriel : Activer le widget d’exemple d’insight d’utilisation d’espace de table avec Azure Data Studio
 
