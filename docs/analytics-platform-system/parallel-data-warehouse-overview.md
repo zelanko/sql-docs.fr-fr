@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400933"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Composants de Data Warehouse parallèles-système de plateforme d’analyse
@@ -67,7 +67,7 @@ Le service de déplacement des données (DMS) fait partie du « sauce secrète�
 La console d’administration est une application Web qui présente les informations relatives à l’État, à l’intégrité et aux performances de l’appliance.  
   
 ### <a name="configuration-manager"></a>Gestionnaire de configuration  
-Le Configuration Manager (dwconfig. exe) est l’outil utilisé par les administrateurs d’appliance pour configurer Analytics Platform System.  
+Le Configuration Manager (dwconfig.exe) est l’outil utilisé par les administrateurs d’appliance pour configurer Analytics Platform System.  
   
 ### <a name="control-node-databases"></a>Bases de données de nœuds de contrôle  
 SQL Server gère toutes les bases de données sur le nœud de contrôle.  
@@ -115,7 +115,7 @@ Analytics Platform System utilise la virtualisation pour obtenir une haute dispo
   
 Windows Server Update Services (WSUS) pour appliquer ou supprimer des mises à jour Windows sur tous les ordinateurs hôtes et machines virtuelles.  
   
-### <a name="windows-server"></a>Windows Server  
+### <a name="windows-server"></a>Windows Server  
 Tous les ordinateurs hôtes et les ordinateurs virtuels de l’appliance exécutent le système d’exploitation Windows Server.  
   
 ### <a name="failover-clustering"></a>Clustering de basculement  
@@ -138,7 +138,7 @@ La technologie Polybase intègre des données SQL Server PDW avec des données H
   
 ## <a name="query-tools"></a>Outils de requête   
   
-Les requêtes sont écrites avec\-Transact SQL modifié pour s’adapter à la nature MPP des requêtes. Toutes les requêtes sont envoyées au nœud de contrôle, qui génère un plan de requête parallèle pour exécuter la requête sur les nœuds de calcul.  
+Les requêtes sont écrites avec Transact \- SQL modifié pour s’adapter à la nature MPP des requêtes. Toutes les requêtes sont envoyées au nœud de contrôle, qui génère un plan de requête parallèle pour exécuter la requête sur les nœuds de calcul.  
   
 ### <a name="sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)  
 SQL Server Data Tools s’exécute dans Visual Studio et est notre outil GUI recommandé pour soumettre des requêtes à SQL Server PDW. Elle est similaire à SQL Server Management Studio en vous permettant de naviguer dans un Explorateur d’objets.  
@@ -149,7 +149,7 @@ For more information, see [Install SQL Server database tooling  for Visual Studi
 -->
   
 ### <a name="sqlcmd-command-line-query-tool"></a>Outil de requête de ligne de commande sqlcmd  
-sqlcmd est l’outil de ligne de commande SQL Server pour l'\-exécution d’instructions Transact SQL et de commandes système. Il fonctionne avec SQL Server PDW et est notre outil de ligne de commande recommandé pour l’interrogation des SQL Server PDW. Avec sqlcmd, vous pouvez exécuter\-des instructions Transact SQL de manière interactive à partir de la ligne de commande, d’un fichier de commandes ou de Windows PowerShell.  
+sqlcmd est l’outil de ligne de commande SQL Server pour l’exécution d' \- instructions Transact SQL et de commandes système. Il fonctionne avec SQL Server PDW et est notre outil de ligne de commande recommandé pour l’interrogation des SQL Server PDW. Avec sqlcmd, vous pouvez exécuter des \- instructions Transact SQL de manière interactive à partir de la ligne de commande, d’un fichier de commandes ou de Windows PowerShell.  
   
 <!-- MISSING LINKS
 
@@ -165,7 +165,7 @@ For more information, see [Connect With SQL Server Integration Services for Quer
 --> 
   
 ### <a name="linked-server"></a>Serveur lié  
-En utilisant une connexion de serveur lié SQL Server, vous pouvez utiliser SQL Server pour envoyer\-des instructions Transact SQL à SQL Server PDW. 
+En utilisant une connexion de serveur lié SQL Server, vous pouvez utiliser SQL Server pour envoyer des \- instructions Transact SQL à SQL Server PDW. 
 <!-- MISSING LINKS
 For more information, see [Connect With SQL Server Linked Server &#40;SQL Server PDW&#41;](../sqlpdw/connect-with-sql-server-linked-server-sql-server-pdw.md). 
 --> 
@@ -235,7 +235,7 @@ For more information, see [Remote Table Copy &#40;SQL Server PDW&#41;](../sqlpdw
 
 -->
   
-## <a name="monitoring"></a>Surveillance  
+## <a name="monitoring"></a>Supervision  
 Analytics Platform System offre plusieurs moyens de surveiller l’activité de l’appliance.  
   
 ### <a name="admin-console"></a>Console Administration  

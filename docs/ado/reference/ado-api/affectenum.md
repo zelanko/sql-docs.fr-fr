@@ -16,27 +16,27 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 551c2ec7b8351ed17841ed1a4073c1a411dc77d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d67a4916328d5d6d435da1b8080be42e52b35f67
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451291"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776648"
 ---
 # <a name="affectenum"></a>AffectEnum
 Spécifie les enregistrements qui sont affectés par une opération.  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|Si aucun [filtre](../../../ado/reference/ado-api/filter-property.md) n’est appliqué à l’ensemble **d'** enregistrements, affecte tous les enregistrements.<br /><br /> Si la propriété **Filter** est définie sur un critère de chaîne (par exemple, « Author = 'Smith »), l’opération affecte les enregistrements visibles dans le chapitre actuel.<br /><br /> Si la propriété **Filter** est définie sur un membre de la propriété [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) ou sur un tableau de signets, l’opération affecte toutes les lignes de l’ensemble d' **enregistrements**. **Remarque : adAffectAll** est masqué dans l’Explorateur d’objets Visual Basic.|  
+|**adAffectAll**|3|Si aucun [filtre](./filter-property.md) n’est appliqué à l’ensemble **d'** enregistrements, affecte tous les enregistrements.<br /><br /> Si la propriété **Filter** est définie sur un critère de chaîne (par exemple, « Author = 'Smith »), l’opération affecte les enregistrements visibles dans le chapitre actuel.<br /><br /> Si la propriété **Filter** est définie sur un membre de la propriété [FilterGroupEnum](./filtergroupenum.md) ou sur un tableau de signets, l’opération affecte toutes les lignes de l’ensemble d' **enregistrements**. **Remarque : adAffectAll** est masqué dans l’Explorateur d’objets Visual Basic.|  
 |**adAffectAllChapters**|4|Affecte tous les enregistrements dans tous les chapitres frères du **Recordset**, y compris ceux qui ne sont pas visibles via un **filtre** qui est actuellement appliqué.|  
 |**adAffectCurrent**|1|Affecte uniquement l’enregistrement actif.|  
-|**adAffectGroup**|2|Affecte uniquement les enregistrements qui répondent au paramètre de propriété de [filtre](../../../ado/reference/ado-api/filter-property.md) actuel. Vous devez définir la propriété **Filter** sur une valeur **FilterGroupEnum** ou un tableau de **signets** pour utiliser cette option.|  
+|**adAffectGroup**|2|Affecte uniquement les enregistrements qui répondent au paramètre de propriété de [filtre](./filter-property.md) actuel. Vous devez définir la propriété **Filter** sur une valeur **FilterGroupEnum** ou un tableau de **signets** pour utiliser cette option.|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums. affecte. ALL|  
 |AdoEnums. affecte. ALLCHAPTERS|  
@@ -47,11 +47,11 @@ Spécifie les enregistrements qui sont affectés par une opération.
 
 :::row:::
     :::column:::
-        [CancelBatch, méthode (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
-        [Delete, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+        [CancelBatch, méthode (ADO)](./cancelbatch-method-ado.md)  
+        [Delete, méthode (objet Recordset ADO)](./delete-method-ado-recordset.md)  
     :::column-end:::
     :::column:::
-        [Resync, méthode](../../../ado/reference/ado-api/resync-method.md)  
-        [UpdateBatch, méthode](../../../ado/reference/ado-api/updatebatch-method.md)  
+        [Resync, méthode](./resync-method.md)  
+        [UpdateBatch, méthode](./updatebatch-method.md)  
     :::column-end:::
 :::row-end:::

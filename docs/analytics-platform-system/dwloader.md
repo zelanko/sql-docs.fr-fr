@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f5236d35009c67eb6e205129cd629fa5f7eca54d
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 7dd0ccf960b53b3cd1b474f61c60a58ff9b0a2c6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942341"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767048"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Chargeur de ligne de commande dwloader pour les Data Warehouse parallèles
 **dwloader** est un outil de ligne de commande PDW (Parallel Data Warehouse) qui charge des lignes de table en bloc dans une table existante. Lors du chargement de lignes, vous pouvez ajouter toutes les lignes à la fin de la table (mode*Append* ou *mode fastappend*), ajouter de nouvelles lignes et mettre à jour les lignes existantes (*mode upsert*), ou supprimer toutes les lignes existantes avant le chargement, puis insérer toutes les lignes dans une table vide (*mode de rechargement*).  
@@ -528,7 +528,7 @@ Les données chargées peuvent nécessiter plus ou moins d’espace sur l’appl
 Bien que **dwloader** soit un processus de transaction et s’annule normalement en cas d’échec, il ne peut pas être restauré une fois que le chargement en masse a été effectué avec succès. Pour annuler un processus **dwloader** actif, tapez Ctrl + C.  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
-La taille totale de toutes les charges se produisant simultanément doit être inférieure à LOG_SIZE pour la base de données, et nous recommandons que la taille totale de toutes les charges simultanées soit inférieure à 50% du LOG_SIZE. Pour atteindre cette limite de taille, vous pouvez fractionner des charges importantes en plusieurs lots. Pour plus d’informations sur les LOG_SIZE, consultez [Create Database](../t-sql/statements/create-database-parallel-data-warehouse.md) .  
+La taille totale de toutes les charges se produisant simultanément doit être inférieure à LOG_SIZE pour la base de données, et nous recommandons que la taille totale de toutes les charges simultanées soit inférieure à 50% du LOG_SIZE. Pour atteindre cette limite de taille, vous pouvez fractionner des charges importantes en plusieurs lots. Pour plus d’informations sur les LOG_SIZE, consultez [Create Database](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016) .  
   
 Lors du chargement de plusieurs fichiers à l’aide d’une commande de chargement, toutes les lignes rejetées sont écrites dans le même fichier de rejet. Le fichier rejeté n’indique pas quel fichier d’entrée contient chaque ligne rejetée.  
   
@@ -704,4 +704,3 @@ Description des paramètres de ligne de commande :
 [Common Metadata Query Examples](metadata-query-examples.md)  
 
 -->
-  

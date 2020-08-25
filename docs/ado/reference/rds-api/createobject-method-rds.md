@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 430031bab7e644278693aa26095aaa1724b715ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0fbc77fd5107e5642ba4fabe2f331c803ffde392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439201"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768638"
 ---
 # <a name="createobject-method-rds"></a>CreateObject, méthode (RDS)
 Crée le proxy pour l’objet métier cible et retourne un pointeur vers celui-ci. Le proxy conditionne et marshale les données vers le stub côté serveur pour les communications avec l’objet métier pour envoyer des requêtes et des données sur Internet. Pour les objets de composant in-process, aucun proxy n’est utilisé, mais simplement un pointeur vers l’objet est fourni.  
@@ -42,7 +42,7 @@ Crée le proxy pour l’objet métier cible et retourne un pointeur vers celui-c
  Variable objet qui prend la valeur d’un objet qui est le type spécifié dans *ProgID*.  
   
  *DataSpace*  
- Variable objet qui représente un objet [RDS. Objet DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) utilisé pour créer une instance du nouvel objet.  
+ Variable objet qui représente un objet [RDS. Objet DataSpace](./dataspace-object-rds.md) utilisé pour créer une instance du nouvel objet.  
   
  *ProgID*  
  Valeur de **chaîne** qui contient l’identificateur programmatique spécifiant un objet métier côté serveur qui implémente les règles métier de votre application.  
@@ -54,11 +54,9 @@ Crée le proxy pour l’objet métier cible et retourne un pointeur vers celui-c
  Le *protocole http* est le protocole Web standard. *Https* est un protocole Web sécurisé. Utilisez le *protocole DCOM* lors de l’exécution d’un réseau local sans http. Le protocole *in-process* est une bibliothèque de liens dynamiques (dll) locale ; Il n’utilise pas de réseau.  
   
 ## <a name="applies-to"></a>S'applique à  
- [DataSpace, objet (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [DataSpace, objet (RDS)](./dataspace-object-rds.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objet DataFactory, méthode Query et CreateObject, exemple de méthode (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [DataSpace, exemple d’objet et CreateObject, exemple de méthode (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [CreateRecordset, méthode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+ [Objet DataFactory, méthode Query et CreateObject, exemple de méthode (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [DataSpace, exemple d’objet et CreateObject, exemple de méthode (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [CreateRecordset, méthode (RDS)](./createrecordset-method-rds.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd1e9e9b2dd1dc3512c95100baed0c83745250bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453261"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806018"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Recordsets hiérarchiques dans XML
 ADO permet la persistance d’objets Recordset hiérarchiques en XML. Avec les objets Recordset hiérarchiques, la valeur d’un champ dans le jeu d’enregistrements parent est un autre Recordset. De tels champs sont représentés en tant qu’éléments enfants dans le flux XML plutôt qu’en tant qu’attribut.  
@@ -126,4 +126,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   Si un enregistrement enfant a des références à plusieurs enregistrements parents, lors de la réouverture du Recordset, le jeu d’enregistrements enfant peut contenir des enregistrements en double. Toutefois, ces doublons ne sont visibles que si l’utilisateur travaille directement avec l’ensemble de lignes enfant sous-jacent. Si un chapitre est utilisé pour naviguer dans le jeu d’enregistrements enfant (il s’agit de la seule façon de naviguer dans ADO), les doublons ne sont pas visibles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistance des enregistrements au format XML](./persisting-records-in-xml-format.md)

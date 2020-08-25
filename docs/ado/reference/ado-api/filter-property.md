@@ -36,7 +36,7 @@ Définit ou retourne une valeur de **type Variant** , qui peut contenir l’un d
   
 -   Valeur [FilterGroupEnum](./filtergroupenum.md) .  
   
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Utilisez la propriété **Filter pour filtrer** de manière sélective les enregistrements d’un objet **Recordset** . Le **Recordset** filtré devient le curseur actuel. Les autres propriétés qui retournent des valeurs basées sur le **curseur** actuel sont affectées, telles que [ABSOLUTEPOSITION Property (ADO)](./absoluteposition-property-ado.md), [AbsolutePage Property (ADO)](./absolutepage-property-ado.md), [RecordCount Property (ADO)](./recordcount-property-ado.md)et [PageCount Property (ADO)](./pagecount-property-ado.md). La définition de la propriété **Filter** sur une nouvelle valeur spécifique déplace l’enregistrement actif vers le premier enregistrement qui satisfait la nouvelle valeur.
   
@@ -57,7 +57,7 @@ La chaîne de critères est composée de clauses au format *fieldName-Operator-v
 -   Au lieu de cela, vous construisez ce filtre en tant que  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   Dans une clause **Like** , vous pouvez utiliser un caractère générique au début et à la fin du modèle. Par exemple, vous pouvez utiliser `LastName Like '*mit*'`. Ou avec **Like** , vous pouvez utiliser un caractère générique uniquement à la fin du modèle. Par exemple, `LastName Like 'Smit*'`.  
+-   Dans une clause **Like** , vous pouvez utiliser un caractère générique au début et à la fin du modèle. Par exemple, vous pouvez utiliser `LastName Like '*mit*'`. Ou avec **Like** , vous pouvez utiliser un caractère générique uniquement à la fin du modèle. Par exemple : `LastName Like 'Smit*'`.  
   
  Les constantes de filtre facilitent la résolution des conflits d’enregistrements individuels pendant le mode de mise à jour par lot en vous permettant d’afficher, par exemple, uniquement les enregistrements qui ont été affectés lors du dernier appel de la méthode [UpdateBatch](./updatebatch-method.md) .  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400725"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurer Polybase pour accéder à des données externes dans le stockage d’objets BLOB Azure
@@ -122,7 +122,7 @@ PolyBase est approprié pour trois fonctions :
 
 Les requêtes suivantes fournissent un exemple avec des données fictives provenant de capteurs sur des voitures.
 
-### <a name="ad-hoc-queries"></a>Requêtes ad hoc  
+### <a name="ad-hoc-queries"></a>requêtes ad hoc ;  
 
 La requête ad hoc suivante joint les données relationnelles au stockage d’objets BLOB Azure. Il sélectionne les clients qui ont une vitesse supérieure à 35 km, en joignant les données clientes structurées stockées dans SQL Server avec les données de capteur de voiture stockées dans le stockage d’objets BLOB Azure.  
 

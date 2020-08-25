@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb24cdf6acbe58891177dfc84d6c1e341699b129
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 092af21c57b733e12c233cb201304cbc27930c80
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439061"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768378"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace, objet (RDS)
 > [!IMPORTANT]
@@ -27,9 +27,9 @@ ms.locfileid: "88439061"
   
  Crée des proxies côté client pour des objets métier personnalisés situés sur la couche intermédiaire.  
   
- Le service de données distant nécessite des proxies d’objets métier afin que les composants côté client puissent communiquer avec les objets métier situés sur la couche intermédiaire. Les proxies facilitent l’empaquetage, le désassemblage et le transport (marshaling) des données de l’ensemble d' [enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) de l’application au-delà des limites des processus ou des ordinateurs.  
+ Le service de données distant nécessite des proxies d’objets métier afin que les composants côté client puissent communiquer avec les objets métier situés sur la couche intermédiaire. Les proxies facilitent l’empaquetage, le désassemblage et le transport (marshaling) des données de l’ensemble d' [enregistrements](../ado-api/recordset-object-ado.md) de l’application au-delà des limites des processus ou des ordinateurs.  
   
- Remote Data Service utilise le **RDS. ** Méthode [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) de l’objet DataSpace pour créer des proxys d’objets métier. Le proxy d’objet métier est créé dynamiquement chaque fois qu’une instance de son équivalent d’objet métier de couche intermédiaire est créée. Remote Data Service prend en charge les protocoles suivants : HTTP, HTTPs (HTTP Secure Sockets), DCOM et in-process (les composants clients et l’objet métier résident sur le même ordinateur).  
+ Remote Data Service utilise le **RDS. ** Méthode [CreateObject](./createobject-method-rds.md) de l’objet DataSpace pour créer des proxys d’objets métier. Le proxy d’objet métier est créé dynamiquement chaque fois qu’une instance de son équivalent d’objet métier de couche intermédiaire est créée. Remote Data Service prend en charge les protocoles suivants : HTTP, HTTPs (HTTP Secure Sockets), DCOM et in-process (les composants clients et l’objet métier résident sur le même ordinateur).  
   
 > [!NOTE]
 >  RDS se comporte de manière « sans état » lorsque le **RDS. ** L’objet DataSpace utilise les protocoles HTTP ou HTTPS. Autrement dit, toutes les informations internes relatives à une demande du client sont supprimées une fois que le serveur a renvoyé une réponse.  
@@ -46,9 +46,7 @@ ms.locfileid: "88439061"
   
  Cette section contient la rubrique suivante.  
   
--   [Propriétés, méthodes et événements de l’objet DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet DataSpace (RDS)](./dataspace-object-rds-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [DataSpace (exemple d’objet) et CreateObject (exemple de méthode) (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
-
-
+ [DataSpace (exemple d’objet) et CreateObject (exemple de méthode) (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)

@@ -29,7 +29,7 @@ Indique s’il faut enregistrer une version compilée d’une [commande](./comma
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur **booléenne** qui, si elle a la valeur **true**, indique que la commande doit être préparée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la propriété **Prepared** pour que le fournisseur enregistre une version préparée (ou compilée) de la requête spécifiée dans la propriété [CommandText](./commandtext-property-ado.md) avant la première exécution d’un objet [Command](./command-object-ado.md) . Cela peut ralentir la première exécution d’une commande, mais une fois que le fournisseur compile une commande, le fournisseur utilise la version compilée de la commande pour toutes les exécutions ultérieures, ce qui entraîne une amélioration des performances.  
   
  Si la propriété a la **valeur false**, le fournisseur exécutera directement l’objet de **commande** sans créer une version compilée.  

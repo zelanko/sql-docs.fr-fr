@@ -26,10 +26,10 @@ ms.locfileid: "88773568"
 # <a name="originalvalue-property-ado"></a>OriginalValue, propriété (ADO)
 Indique la valeur d’un [champ](./field-object.md) qui existait dans l’enregistrement avant toute modification.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur de **type Variant** qui représente la valeur d’un champ avant toute modification.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Utilisez la propriété **OriginalValue** pour retourner la valeur de champ d’origine d’un champ de l’enregistrement actif.  
   
  En *mode de mise à jour immédiate* (dans lequel le fournisseur enregistre les modifications apportées à la source de données sous-jacente après l’appel de la méthode [Update](./update-method.md) ), la propriété **OriginalValue** retourne la valeur de champ qui existait avant toute modification (autrement dit, depuis le dernier appel de la méthode **Update** ). Il s’agit de la même valeur que celle utilisée par la méthode [CancelUpdate](./cancelupdate-method-ado.md) pour remplacer la propriété [value](./value-property-ado.md) .  

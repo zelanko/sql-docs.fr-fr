@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 449d453ba8e1d27489fecaa8da56e76e1c85f313
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c91960975b04e5c09cf2745e1bb77e7b343dbd2e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450981"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776248"
 ---
 # <a name="clone-method-ado"></a>Clone, méthode (ADO)
-Crée un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dupliqué à partir d’un objet **Recordset** existant. Spécifie éventuellement que le clone doit être en lecture seule.  
+Crée un objet [Recordset](./recordset-object-ado.md) dupliqué à partir d’un objet **Recordset** existant. Spécifie éventuellement que le clone doit être en lecture seule.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,12 +45,12 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Variable objet qui identifie l’objet **Recordset** à dupliquer.  
   
  *Verrou*  
- facultatif. Valeur [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) qui spécifie le type de verrou du **Recordset**d’origine ou un **jeu d’enregistrements**en lecture seule. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
+ facultatif. Valeur [LockTypeEnum](./locktypeenum.md) qui spécifie le type de verrou du **Recordset**d’origine ou un **jeu d’enregistrements**en lecture seule. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
   
 ## <a name="remarks"></a>Notes  
  Utilisez la méthode **clone** pour créer plusieurs objets **Recordset** dupliqués, en particulier si vous souhaitez conserver plusieurs enregistrements actifs dans un ensemble donné d’enregistrements. L’utilisation de la méthode **clone** est plus efficace que la création et l’ouverture d’un nouvel objet **Recordset** qui utilise la même définition que l’original.  
   
- La propriété [Filter](../../../ado/reference/ado-api/filter-property.md) du **Recordset**d’origine, le cas échéant, ne sera pas appliquée au clone. Définissez la propriété **Filter** du nouvel ensemble d' **enregistrements** pour filtrer les résultats. La façon la plus simple de copier une valeur de **filtre** existante consiste à l’assigner directement, comme suit.  
+ La propriété [Filter](./filter-property.md) du **Recordset**d’origine, le cas échéant, ne sera pas appliquée au clone. Définissez la propriété **Filter** du nouvel ensemble d' **enregistrements** pour filtrer les résultats. La façon la plus simple de copier une valeur de **filtre** existante consiste à l’assigner directement, comme suit.  
   
 ```  
 rsNew.Filter = rsOriginal.Filter  
@@ -58,34 +58,34 @@ rsNew.Filter = rsOriginal.Filter
   
  L’enregistrement actuel d’un clone nouvellement créé est défini sur le premier enregistrement.  
   
- Les modifications que vous apportez à un objet **Recordset** sont visibles dans tous ses clones, quel que soit le type de curseur. Toutefois, après l’exécution de [Requery](../../../ado/reference/ado-api/requery-method.md) sur le **jeu d’enregistrements**d’origine, les clones ne sont plus synchronisés avec l’original.  
+ Les modifications que vous apportez à un objet **Recordset** sont visibles dans tous ses clones, quel que soit le type de curseur. Toutefois, après l’exécution de [Requery](./requery-method.md) sur le **jeu d’enregistrements**d’origine, les clones ne sont plus synchronisés avec l’original.  
   
  La fermeture de l' **objet Recordset** d’origine ne ferme pas ses copies et ne ferme pas non plus la copie d’origine ou de l’une des autres copies.  
   
  Vous pouvez cloner un objet **Recordset** qui prend en charge les signets uniquement. Les valeurs de signet sont interchangeables ; autrement dit, une référence de signet d’un objet **Recordset** fait référence au même enregistrement dans l’un de ses clones.  
   
- Certains événements du **Recordset** qui sont déclenchés se produisent également dans tous les clones de l’ensemble **d’enregistrements** . Toutefois, étant donné que l’enregistrement en cours peut différer d’un **jeu d’enregistrements**cloné à un autre, les événements peuvent ne pas être valides pour le clone. Par exemple, si vous modifiez la valeur d’un champ, un événement [WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md) se produit dans le **jeu d’enregistrements** modifié et dans tous les clones. Le paramètre *Fields* de l’événement **WillChangeField** d’un **jeu d’enregistrements** cloné (où la modification n’a pas été apportée) fait référence aux champs de l’enregistrement actuel du clone, qui peut être un enregistrement différent de l’enregistrement actif du **Recordset** d’origine où la modification s’est produite.  
+ Certains événements du **Recordset** qui sont déclenchés se produisent également dans tous les clones de l’ensemble **d’enregistrements** . Toutefois, étant donné que l’enregistrement en cours peut différer d’un **jeu d’enregistrements**cloné à un autre, les événements peuvent ne pas être valides pour le clone. Par exemple, si vous modifiez la valeur d’un champ, un événement [WillChangeField](./willchangefield-and-fieldchangecomplete-events-ado.md) se produit dans le **jeu d’enregistrements** modifié et dans tous les clones. Le paramètre *Fields* de l’événement **WillChangeField** d’un **jeu d’enregistrements** cloné (où la modification n’a pas été apportée) fait référence aux champs de l’enregistrement actuel du clone, qui peut être un enregistrement différent de l’enregistrement actif du **Recordset** d’origine où la modification s’est produite.  
   
  Le tableau suivant fournit une liste complète de tous les événements du **Recordset** . Elle indique si elles sont valides et déclenchées pour tous les clones d’ensemble d’enregistrements générés à l’aide de la méthode **clone** .  
   
 |Événement|Déclenché dans les clones ?|  
 |-----------|--------------------------|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Non|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Non|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Non|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Non|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Non|  
+|[EndOfRecordset](./endofrecordset-event-ado.md)|Non|  
+|[FetchComplete](./fetchcomplete-event-ado.md)|Non|  
+|[FetchProgress](./fetchprogress-event-ado.md)|Non|  
+|[FieldChangeComplete](./willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
+|[MoveComplete](./willmove-and-movecomplete-events-ado.md)|Non|  
+|[RecordChangeComplete](./willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
+|[RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
+|[WillChangeField](./willchangefield-and-fieldchangecomplete-events-ado.md)|Oui|  
+|[WillChangeRecord](./willchangerecord-and-recordchangecomplete-events-ado.md)|Oui|  
+|[WillChangeRecordset](./willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Non|  
+|[WillMove](./willmove-and-movecomplete-events-ado.md)|Non|  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Clone, exemple de méthode (VB)](../../../ado/reference/ado-api/clone-method-example-vb.md)   
- [Clone, exemple de méthode (VBScript)](../../../ado/reference/ado-api/clone-method-example-vbscript.md)   
- [Clone, exemple de méthode (VC++)](../../../ado/reference/ado-api/clone-method-example-vc.md)   
+ [Clone, exemple de méthode (VB)](./clone-method-example-vb.md)   
+ [Clone, exemple de méthode (VBScript)](./clone-method-example-vbscript.md)   
+ [Clone, exemple de méthode (VC++)](./clone-method-example-vc.md)

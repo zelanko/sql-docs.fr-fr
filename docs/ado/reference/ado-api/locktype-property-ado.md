@@ -29,7 +29,7 @@ Indique le type de verrou placé sur les enregistrements lors de la modification
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur [LockTypeEnum](./locktypeenum.md) . La valeur par défaut est **adLockReadOnly**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Définissez la propriété **LockType** avant d’ouvrir un [Recordset](./recordset-object-ado.md) pour spécifier le type de verrouillage que le fournisseur doit utiliser lors de son ouverture. Lisez la propriété pour retourner le type de verrouillage en cours d’utilisation sur un objet **Recordset** ouvert.  
   
  Les fournisseurs ne prennent peut-être pas en charge tous les types de verrous. Si un fournisseur ne prend pas en charge le paramètre **LockType** demandé, il remplace un autre type de verrouillage. Pour déterminer les fonctionnalités de verrouillage réelles disponibles dans un objet **Recordset** , utilisez la méthode [supports](./supports-method.md) avec **adUpdate** et **adUpdateBatch**.  

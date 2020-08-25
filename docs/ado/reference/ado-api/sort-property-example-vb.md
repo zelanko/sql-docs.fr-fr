@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7821e971d32f855fc219a2883f4190b9434d998
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 49964c5dc3f9f6402c853f4adddabd798db4b2f0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442081"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777448"
 ---
 # <a name="sort-property-example-vb"></a>Sort, exemple de propriétés (VB)
-Cet exemple utilise la propriété [sort](../../../ado/reference/ado-api/sort-property.md) de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour réorganiser les lignes d' **un jeu d’enregistrements** dérivé de la table ***Authors*** de la base de données ***pubs*** . Une routine utilitaire secondaire imprime chaque ligne.  
+Cet exemple utilise la propriété [sort](./sort-property.md) de l’objet [Recordset](./recordset-object-ado.md) pour réorganiser les lignes d' **un jeu d’enregistrements** dérivé de la table ***Authors*** de la base de données ***pubs*** . Une routine utilitaire secondaire imprime chaque ligne.  
   
 ```  
 'BeginSortVB  
@@ -111,5 +111,5 @@ Attribute VB_Name = "Sort"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Sort, propriété](../../../ado/reference/ado-api/sort-property.md)
+ [Recordset, objet (ADO)](./recordset-object-ado.md)   
+ [Sort, propriété](./sort-property.md)

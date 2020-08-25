@@ -26,7 +26,7 @@ ms.locfileid: "88777998"
 # <a name="member-object-ado-md"></a>Member, objet (ADO MD)
 Représente un membre d’un niveau dans un cube, les enfants d’un membre d’un niveau ou un membre d’une position le long d’un axe d’un ensemble de cellules.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les propriétés d’un **membre** varient en fonction du contexte dans lequel il est utilisé. Un **membre** d’un [niveau](./level-object-ado-md.md) dans un [CubeDef](./cubedef-object-ado-md.md) a une propriété [Children](./children-property-ado-md.md) qui retourne les **membres** au niveau inférieur suivant dans la hiérarchie à partir du **membre**actuel. Pour un **membre** d’une [position](./position-object-ado-md.md), la collection **Children** est toujours vide. En outre, la propriété [type](./type-property-ado-md.md) s’applique uniquement aux **membres** d’un **niveau**.  
   
  Un **membre** de la **position** possède deux propriétés qui sont utiles lors de l’affichage de l' [Cellset](./cellset-object-ado-md.md): [DrilledDown](./drilleddown-property-ado-md.md) et [ParentSameAsPrev](./parentsameasprev-property-ado-md.md). Une erreur se produit si ces propriétés sont accessibles sur un **membre** d’un **niveau**.  

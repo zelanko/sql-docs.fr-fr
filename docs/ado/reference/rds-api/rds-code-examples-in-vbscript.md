@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 49c6ae45be2f1d0979f8af827a85080edd919400
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ba3d23cf360285f87b0034e5b73162e7b2408da0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438841"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767908"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>Exemples de code RDS dans VBScript
 > [!IMPORTANT]
@@ -34,48 +34,46 @@ ms.locfileid: "88438841"
   
 ## <a name="objects"></a>Objets  
   
--   [DataControl, exemple d’objet](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
+-   [DataControl, exemple d’objet](./datacontrol-object-example-vbscript.md)  
   
--   [DataSpace, exemple d’objet](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [DataSpace, exemple d’objet](./dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [Exemple d’objet DataFactory](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [Exemple d’objet DataFactory](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
 ## <a name="methods"></a>Méthodes  
   
--   [Exemple de méthode Cancel](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)  
+-   [Exemple de méthode Cancel](./cancel-method-example-vbscript.md)  
   
--   [Exemple de méthode CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
+-   [Exemple de méthode CancelUpdate](./cancelupdate-method-example-vbscript.md)  
   
--   [ConvertToString, exemple de méthode](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)  
+-   [ConvertToString, exemple de méthode](./converttostring-method-example-vbscript.md)  
   
--   [CreateObject, méthode](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [CreateObject, méthode](./dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [CreateRecordset, exemple de méthode](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)  
+-   [CreateRecordset, exemple de méthode](./createrecordset-method-example-vbscript.md)  
   
--   [Exemple de méthode de requête](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [Exemple de méthode de requête](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
--   [Refresh, exemple de méthode](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)  
+-   [Refresh, exemple de méthode](./refresh-method-example-vbscript.md)  
   
--   [Exemple de méthode Reset](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Exemple de méthode Reset](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [SubmitChanges, exemple de méthode](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)  
+-   [SubmitChanges, exemple de méthode](./submitchanges-method-example-vbscript.md)  
   
 ## <a name="properties"></a>Propriétés  
   
--   [Connect, exemple de propriété](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
+-   [Connect, exemple de propriété](./connect-property-example-vbscript.md)  
   
--   [Exemple de propriétés ExecuteOptions et FetchOptions](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
+-   [Exemple de propriétés ExecuteOptions et FetchOptions](./executeoptions-and-fetchoptions-properties-example-vbscript.md)  
   
--   [Exemple de propriétés FilterColumn, FilterCriterion, FilterValue, SortColumn et SortDirection](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Exemple de propriétés FilterColumn, FilterCriterion, FilterValue, SortColumn et SortDirection](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [ReadyState, exemple de propriété](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
+-   [ReadyState, exemple de propriété](./readystate-property-example-vbscript.md)  
   
--   [Exemple de propriétés Recordset et SourceRecordset](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
+-   [Exemple de propriétés Recordset et SourceRecordset](./recordset-and-sourcerecordset-properties-example-vbscript.md)  
   
--   [Exemple de propriété de serveur](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
+-   [Exemple de propriété de serveur](./server-property-example-vbscript.md)  
   
--   [Exemple de propriété SQL](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
+-   [Exemple de propriété SQL](./sql-property-example-vbscript.md)  
   
--   [Exemple de propriété URL](../../../ado/reference/rds-api/url-property-example-vbscript.md)
-
-
+-   [Exemple de propriété URL](./url-property-example-vbscript.md)

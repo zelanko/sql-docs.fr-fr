@@ -62,7 +62,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *pRecordset*  
  Objet **Recordset** . **Jeu d’enregistrements** pour lequel cet événement s’est produit.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Un événement **WillChangeField** ou **FieldChangeComplete** peut se produire lors de la définition de la propriété [value](./value-property-ado.md) et de l’appel de la méthode [Update](./update-method.md) avec des paramètres de tableau de valeurs et de champs.  
   
 ## <a name="see-also"></a>Voir aussi  

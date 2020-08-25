@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b561c8d798236fa0c6df262e2fc2db4c4729cb90
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a4e42733013a7ea756924199d05a93ae08e0c08
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441491"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776828"
 ---
 # <a name="writetext-method"></a>WriteText, méthode
-Écrit une chaîne de texte spécifiée dans un objet de [flux](../../../ado/reference/ado-api/stream-object-ado.md) .  
+Écrit une chaîne de texte spécifiée dans un objet de [flux](./stream-object-ado.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,20 +39,20 @@ Stream.WriteText Data, Options
  Valeur de **chaîne** qui contient le texte en caractères à écrire.  
   
  *Options*  
- facultatif. Valeur de [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) qui spécifie si un caractère de séparation de ligne doit être écrit à la fin de la chaîne spécifiée.  
+ facultatif. Valeur de [StreamWriteEnum](./streamwriteenum.md) qui spécifie si un caractère de séparation de ligne doit être écrit à la fin de la chaîne spécifiée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les chaînes spécifiées sont écrites dans l’objet de **flux** sans aucun espace ou caractère intermédiaire entre chaque chaîne.  
   
- La [position](../../../ado/reference/ado-api/position-property-ado.md) actuelle est définie sur le caractère qui suit les données écrites. La méthode **WRITETEXT** ne tronque pas le reste des données dans un flux. Si vous souhaitez tronquer ces caractères, appelez [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ La [position](./position-property-ado.md) actuelle est définie sur le caractère qui suit les données écrites. La méthode **WRITETEXT** ne tronque pas le reste des données dans un flux. Si vous souhaitez tronquer ces caractères, appelez [SetEOS](./seteos-method.md).  
   
- Si vous écrivez après la position [EOS](../../../ado/reference/ado-api/eos-property.md) actuelle, la [taille](../../../ado/reference/ado-api/size-property-ado-stream.md) du **flux** est augmentée pour contenir de nouveaux caractères, et **EOS** se déplace vers le nouvel octet dernier dans le **flux**.  
+ Si vous écrivez après la position [EOS](./eos-property.md) actuelle, la [taille](./size-property-ado-stream.md) du **flux** est augmentée pour contenir de nouveaux caractères, et **EOS** se déplace vers le nouvel octet dernier dans le **flux**.  
   
 > [!NOTE]
->  La méthode **WRITETEXT** est utilisée avec les flux de texte (le[type](../../../ado/reference/ado-api/type-property-ado-stream.md) est **adTypeText**). Pour les flux binaires (**type** **adTypeBinary**), utilisez [Write](../../../ado/reference/ado-api/write-method.md).  
+>  La méthode **WRITETEXT** est utilisée avec les flux de texte (le[type](./type-property-ado-stream.md) est **adTypeText**). Pour les flux binaires (**type** **adTypeBinary**), utilisez [Write](./write-method.md).  
   
 ## <a name="applies-to"></a>S'applique à  
- [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream, objet (ADO)](./stream-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Write, méthode](../../../ado/reference/ado-api/write-method.md)
+ [Write, méthode](./write-method.md)

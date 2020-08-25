@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d1da11bab0ba3858eac13f8a1e32259d376f672
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc8619fd7c803fdbf417368ef8e7e896e1947ab2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444481"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775918"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout et State, exemple de propriétés (VB)
-Cet exemple illustre différentes façons d’utiliser la propriété [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) pour ouvrir un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) . Elle utilise également la propriété [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md) pour définir un délai d’attente de connexion et la propriété [State](../../../ado/reference/ado-api/state-property-ado.md) pour vérifier l’état des connexions. La fonction GetState est requise pour l’exécution de cette procédure.  
+Cet exemple illustre différentes façons d’utiliser la propriété [ConnectionString](./connectionstring-property-ado.md) pour ouvrir un objet de [connexion](./connection-object-ado.md) . Elle utilise également la propriété [ConnectionTimeout](./connectiontimeout-property-ado.md) pour définir un délai d’attente de connexion et la propriété [State](./state-property-ado.md) pour vérifier l’état des connexions. La fonction GetState est requise pour l’exécution de cette procédure.  
   
 > [!NOTE]
 >  Si vous vous connectez à un fournisseur de sources de données qui prend en charge l’authentification Windows, vous devez spécifier **Trusted_Connection = Yes** ou **Integrated Security = SSPI** à la place des informations d’ID d’utilisateur et de mot de passe dans la chaîne de connexion.  
@@ -128,7 +128,7 @@ End Function
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [ConnectionString, propriété (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
- [ConnectionTimeout, propriété (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   
- [State, propriété (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Connection, objet (ADO)](./connection-object-ado.md)   
+ [ConnectionString, propriété (ADO)](./connectionstring-property-ado.md)   
+ [ConnectionTimeout, propriété (ADO)](./connectiontimeout-property-ado.md)   
+ [State, propriété (ADO)](./state-property-ado.md)

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: beb6afdd93d69ea920acee3840dc6c0bc44d181e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444241"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775468"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
-Spécifie le type de curseur utilisé dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+Spécifie le type de curseur utilisé dans un objet [Recordset](./recordset-object-ado.md) .  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Utilise un curseur dynamique. Les ajouts, modifications et suppressions effectués par d’autres utilisateurs sont visibles, et tous les types de déplacement via le **Recordset** sont autorisés, à l’exception des signets, si le fournisseur ne les prend pas en charge.|  
 |**adOpenForwardOnly**|0|Par défaut. Utilise un curseur avant uniquement. Identique à un curseur statique, sauf que vous pouvez faire défiler vers l’avant les enregistrements. Cela améliore les performances lorsque vous devez effectuer une seule passe dans un **jeu d’enregistrements**.|  
@@ -37,7 +37,7 @@ Spécifie le type de curseur utilisé dans un objet [Recordset](../../../ado/ref
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.CursorType.DYNAMIC|  
 |AdoEnums.CursorType.FORWARDONLY|  
@@ -46,4 +46,4 @@ Spécifie le type de curseur utilisé dans un objet [Recordset](../../../ado/ref
 |AdoEnums.CursorType.UNSPECIFIED|  
   
 ## <a name="applies-to"></a>S'applique à  
- [CursorType, propriété (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [CursorType, propriété (ADO)](./cursortype-property-ado.md)

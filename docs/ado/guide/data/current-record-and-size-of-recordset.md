@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12d4b9803682e94326636dd27bbc3f134eea23d8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf1757eac1d3c94c0d26439c3519060def03e27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453601"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806207"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Enregistrement actif et taille du recordset
-Cette section décrit comment localiser la position actuelle du curseur dans l’exemple de code **Recordset** dans [JScript pour retourner un Recordset](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  
+Cette section décrit comment localiser la position actuelle du curseur dans l’exemple de code **Recordset** dans [JScript pour retourner un Recordset](./jscript-code-example-to-return-a-recordset.md).  
   
 ## <a name="current-record"></a>Enregistrement actif  
  L’enregistrement en cours dans le jeu de données correspond à celui pointé par la position du curseur de l’objet **Recordset** . Lorsqu’un objet **Recordset** est retourné à partir de la source de données comme résultat de l’appel de **Recordset. Open**, **Command.Exejolie**, ou **Connection.Exejolie** (y compris **Connection. NamedCommand** et **Connection. StoredProcedure**), le curseur est défini pour pointer au premier enregistrement. Dans l’exemple de jeu de données, l’enregistrement initial actuel est l’élément « poires séchées organiques de l’oncle Bob ».  
@@ -38,14 +38,14 @@ Cette section décrit comment localiser la position actuelle du curseur dans l�
   
  Dans certains cas, un fournisseur ou un curseur ne peut pas déterminer la valeur **RecordCount** sans extraire d’abord tous les enregistrements de la source de données. Pour garantir un comptage précis, appelez le **Recordset**. Méthode **MoveLast** avant **d’appeler Recordset. RecordCount**.  
   
- L’exemple **d’objet Recordset** obtenu à l’aide de l' [exemple de code JScript](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md) utilise un curseur avant uniquement. par conséquent, l’appel de **RecordCount** sur cet objet donne toujours la résultat-1. Si vous modifiez la ligne de code qui appelle le **Recordset**. Méthode **Open** , comme indiqué dans l’exemple suivant, la propriété **RecordCount** retourne le nombre réel d’enregistrements extraits.  
+ L’exemple **d’objet Recordset** obtenu à l’aide de l' [exemple de code JScript](./jscript-code-example-to-return-a-recordset.md) utilise un curseur avant uniquement. par conséquent, l’appel de **RecordCount** sur cet objet donne toujours la résultat-1. Si vous modifiez la ligne de code qui appelle le **Recordset**. Méthode **Open** , comme indiqué dans l’exemple suivant, la propriété **RecordCount** retourne le nombre réel d’enregistrements extraits.  
   
 ```  
 oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText   
 ```  
   
- Cela est dû au fait que les curseurs statiques avec le [fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) prennent en charge la fonction **RecordCount**. Dans cet exemple, il y a cinq enregistrements et, par conséquent, **RecordCount** doit donner la valeur 5.  
+ Cela est dû au fait que les curseurs statiques avec le [fournisseur Microsoft OLE DB pour SQL Server](../appendixes/microsoft-ole-db-provider-for-sql-server.md) prennent en charge la fonction **RecordCount**. Dans cet exemple, il y a cinq enregistrements et, par conséquent, **RecordCount** doit donner la valeur 5.  
   
  Cette section contient la rubrique suivante.  
   
- [Limites d’un recordset](../../../ado/guide/data/boundaries-of-a-recordset.md)
+ [Limites d’un recordset](./boundaries-of-a-recordset.md)

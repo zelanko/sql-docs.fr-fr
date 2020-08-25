@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa7fc5c5098b6e429960e5d72702111abab55ac2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0edf4941ac2fa985c644c37627f86cfd40f2e62
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442051"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777428"
 ---
 # <a name="source-property-ado-error"></a>Source, propriété (objet Error ADO)
 Indique le nom de l’objet ou de l’application qui a généré à l’origine une erreur.  
@@ -32,20 +32,20 @@ Indique le nom de l’objet ou de l’application qui a généré à l’origine
  Retourne une valeur de **chaîne** qui indique le nom d’un objet ou d’une application.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez la propriété **source** sur un objet d' [erreur](../../../ado/reference/ado-api/error-object.md) pour déterminer le nom de l’objet ou de l’application qui a généré une erreur à l’origine. Il peut s’agir du nom de classe ou de l’ID programmatique de l’objet. Pour les erreurs dans ADO, la valeur de propriété sera **ADODB.** _ObjectName_, où *ObjectName* est le nom de l’objet qui a déclenché l’erreur. Pour ADOX et ADO MD, la valeur est **ADOX.** _ObjectName_ et **ADOMD.** _ObjectName_, respectivement.  
+ Utilisez la propriété **source** sur un objet d' [erreur](./error-object.md) pour déterminer le nom de l’objet ou de l’application qui a généré une erreur à l’origine. Il peut s’agir du nom de classe ou de l’ID programmatique de l’objet. Pour les erreurs dans ADO, la valeur de propriété sera **ADODB.** _ObjectName_, où *ObjectName* est le nom de l’objet qui a déclenché l’erreur. Pour ADOX et ADO MD, la valeur est **ADOX.** _ObjectName_ et **ADOMD.** _ObjectName_, respectivement.  
   
- En fonction de la documentation d’erreur des propriétés **source**, [Number](../../../ado/reference/ado-api/number-property-ado.md)et [Description](../../../ado/reference/ado-api/description-property.md) des objets **Error** , vous pouvez écrire du code qui traitera l’erreur de façon appropriée.  
+ En fonction de la documentation d’erreur des propriétés **source**, [Number](./number-property-ado.md)et [Description](./description-property.md) des objets **Error** , vous pouvez écrire du code qui traitera l’erreur de façon appropriée.  
   
  La propriété **source** est en lecture seule pour les objets d' **erreur** .  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Error](../../../ado/reference/ado-api/error-object.md)  
+ [Objet Error](./error-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Description, HelpContext, HelpFile, NativeError, Number, source et SQLState, exemples de propriétés (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description, HelpContext, HelpFile, NativeError, Number, source et SQLState, exemples de propriétés (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description, propriété](../../../ado/reference/ado-api/description-property.md)   
- [HelpContext, HelpFile, propriétés](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Number, propriété (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Source, propriété (ADO record)](../../../ado/reference/ado-api/source-property-ado-record.md)   
- [Source, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Description, HelpContext, HelpFile, NativeError, Number, source et SQLState, exemples de propriétés (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description, HelpContext, HelpFile, NativeError, Number, source et SQLState, exemples de propriétés (VC + +)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description, propriété](./description-property.md)   
+ [HelpContext, HelpFile, propriétés](./helpcontext-helpfile-properties.md)   
+ [Number, propriété (ADO)](./number-property-ado.md)   
+ [Source, propriété (ADO record)](./source-property-ado-record.md)   
+ [Source, propriété (objet Recordset ADO)](./source-property-ado-recordset.md)

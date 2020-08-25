@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74399442"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestion des charges de travail dans Analytics Platform System
@@ -60,8 +60,8 @@ Le tableau suivant décrit les classes de ressources et leurs allocations de res
   
 |Classe de ressource|Importance de la demande|Utilisation maximale de la mémoire *|Emplacements de concurrence (maximum = 32)|Description|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|default|Moyen|400 Mo|1|Par défaut, chaque connexion est autorisée à disposer d’une petite quantité de mémoire et de ressources d’accès concurrentiel pour ses demandes.<br /><br />Lorsqu’une connexion est ajoutée à une classe de ressource, la nouvelle classe est prioritaire. Lorsqu’une connexion est supprimée de toutes les classes de ressources, la connexion revient à l’allocation de ressources par défaut.|  
-|MediumRC|Moyen|1200 MO|3|Exemples de requêtes qui peuvent nécessiter la classe de ressources de taille moyenne :<br /><br />Opérations CTAS qui ont des jointures de hachage volumineuses.<br /><br />Sélectionnez les opérations qui nécessitent davantage de mémoire pour éviter la mise en cache sur disque.<br /><br />Chargement de données dans des index ColumnStore en cluster.<br /><br />La création, la reconstruction et la réorganisation des index ColumnStore en cluster pour les tables plus petites qui ont 10-15 colonnes.|  
+|default|Moyenne|400 Mo|1|Par défaut, chaque connexion est autorisée à disposer d’une petite quantité de mémoire et de ressources d’accès concurrentiel pour ses demandes.<br /><br />Lorsqu’une connexion est ajoutée à une classe de ressource, la nouvelle classe est prioritaire. Lorsqu’une connexion est supprimée de toutes les classes de ressources, la connexion revient à l’allocation de ressources par défaut.|  
+|MediumRC|Moyenne|1200 MO|3|Exemples de requêtes qui peuvent nécessiter la classe de ressources de taille moyenne :<br /><br />Opérations CTAS qui ont des jointures de hachage volumineuses.<br /><br />Sélectionnez les opérations qui nécessitent davantage de mémoire pour éviter la mise en cache sur disque.<br /><br />Chargement de données dans des index ColumnStore en cluster.<br /><br />La création, la reconstruction et la réorganisation des index ColumnStore en cluster pour les tables plus petites qui ont 10-15 colonnes.|  
 |Largerc|Élevé|2,8 GO|7|Exemples de requêtes qui peuvent nécessiter la classe de ressources volumineuse :<br /><br />Des opérations CTAS très volumineuses qui ont des jointures de hachage énormes, ou qui contiennent des agrégations volumineuses, telles que des clauses de commande ou GROUP BY volumineuses.<br /><br />Sélectionnez les opérations qui nécessitent de très grandes quantités de mémoire pour les opérations telles que les jointures de hachage ou les agrégations telles que les clauses ORDER BY ou GROUP BY.<br /><br />Chargement de données dans des index ColumnStore en cluster.<br /><br />La création, la reconstruction et la réorganisation des index ColumnStore en cluster pour les tables plus petites qui ont 10-15 colonnes.|  
 |xlargerc|Élevé|8,4 GO|22|La classe de ressources extra large est destinée aux demandes qui peuvent nécessiter une grande consommation de ressources au moment de l’exécution.|  
   

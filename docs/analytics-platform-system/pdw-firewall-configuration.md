@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ed739ce12170aa6d0ab79b996de0075cd6723ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400886"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configuration du pare-feu Data Warehouse parallèle dans Analytics Platform System
@@ -35,7 +35,7 @@ La page **pare-feu** de la SQL Server PDW Configuration Manager vous permet d’
 ## <a name="external-ports"></a>Ports externes  
 Les ports suivants sont ouverts pour les connexions clientes provenant de l’extérieur de PDW.  
   
-|Objectif|Importer #|Nœuds|  
+|Fonction|Importer #|Nœuds|  
 |-----------|-----------|---------|  
 |Accès client SQL pour PDW (TDS)|17001|CONFIANCE|  
 |Accès client du chargeur (dwloader & SSIS)|8001|CONFIANCE|  
@@ -51,7 +51,7 @@ Les ports suivants sont ouverts pour les connexions clientes provenant de l’ex
 ## <a name="internal-ports"></a>Ports internes  
 Les ports suivants sont utilisés par PDW pour la communication interne, mais ne sont pas ouverts pour les connexions provenant de l’extérieur de l’appliance PDW.  
   
-|Objectif|Importer #|Nœuds|  
+|Fonction|Importer #|Nœuds|  
 |-----------|-----------|---------|  
 |Trafic du canal de contrôle DMS|16450|CTL, CMP|  
 |Trafic du canal de données DMS|16550|CTL, CMP|  

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4ff98b6c2fe1dbb6da0131bf1a1d539fdfb74649
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c85e34201cb37745ef9f09b337b8d1f71dd508af
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443391"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774648"
 ---
 # <a name="item-property-example-vb"></a>Item, exemple de propriété (VB)
-Cet exemple montre comment la propriété [Item](../../../ado/reference/ado-api/item-property-ado.md) accède aux membres d’une collection. L’exemple ouvre la table ***Authors*** de la base de données ***pubs*** avec une commande paramétrable.  
+Cet exemple montre comment la propriété [Item](./item-property-ado.md) accède aux membres d’une collection. L’exemple ouvre la table ***Authors*** de la base de données ***pubs*** avec une commande paramétrable.  
   
- Le paramètre de la commande exécutée sur la base de données est accessible à partir de la collection de [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) de l’objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) par index et par nom. Les champs de l’ensemble d' [enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) retourné sont ensuite accessibles à partir de la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) de cet objet par index et par nom.  
+ Le paramètre de la commande exécutée sur la base de données est accessible à partir de la collection de [paramètres](./parameters-collection-ado.md) de l’objet de [commande](./command-object-ado.md) par index et par nom. Les champs de l’ensemble d' [enregistrements](./recordset-object-ado.md) retourné sont ensuite accessibles à partir de la collection de [champs](./fields-collection-ado.md) de cet objet par index et par nom.  
   
 ```  
 'BeginItemVB  
@@ -136,8 +136,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Command, objet (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Item, propriété (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
- [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Command, objet (ADO)](./command-object-ado.md)   
+ [Fields, collection (ADO)](./fields-collection-ado.md)   
+ [Item, propriété (ADO)](./item-property-ado.md)   
+ [Parameters, collection (ADO)](./parameters-collection-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)
