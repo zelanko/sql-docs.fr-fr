@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52a6e4af75ac8887c23dd245a58981b1bbfb7eb2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7ba912f082cbd621d2d2205c6505e8c2be309bec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443331"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774548"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 Spécifie le type de verrou placé sur les enregistrements lors de la modification.  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|Indique les mises à jour optimistes par lot. Requis pour le mode de mise à jour par lot.|  
-|**adLockOptimistic**|3|Indique un verrouillage optimiste, enregistrement par enregistrement. Le fournisseur utilise le verrouillage optimiste et le verrouillage des enregistrements uniquement lorsque vous appelez la méthode de [mise à jour](../../../ado/reference/ado-api/update-method.md) .|  
+|**adLockOptimistic**|3|Indique un verrouillage optimiste, enregistrement par enregistrement. Le fournisseur utilise le verrouillage optimiste et le verrouillage des enregistrements uniquement lorsque vous appelez la méthode de [mise à jour](./update-method.md) .|  
 |**adLockPessimistic**|2|Indique le verrouillage pessimiste, enregistrement par enregistrement. Le fournisseur effectue ce qui est nécessaire pour garantir la réussite de la modification des enregistrements, en généralement en verrouillant les enregistrements au niveau de la source de données immédiatement après la modification.|  
 |**adLockReadOnly**|1|Indique des enregistrements en lecture seule. Vous ne pouvez pas modifier les données.|  
 |**adLockUnspecified**|-1|Ne spécifie pas de type de verrou. Pour les clones, le clone est créé avec le même type de verrou que l’original.|  
@@ -37,7 +37,7 @@ Spécifie le type de verrou placé sur les enregistrements lors de la modificati
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.LockType.BATCHOPTIMISTIC|  
 |AdoEnums.LockType.OPTIMISTIC|  
@@ -49,11 +49,11 @@ Spécifie le type de verrou placé sur les enregistrements lors de la modificati
 
 :::row:::
     :::column:::
-        [Clone, méthode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
-        [LockType, propriété (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+        [Clone, méthode (ADO)](./clone-method-ado.md)  
+        [LockType, propriété (ADO)](./locktype-property-ado.md)  
     :::column-end:::
     :::column:::
-        [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
-        [WillExecute, événement (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+        [Open, méthode (objet Recordset ADO)](./open-method-ado-recordset.md)  
+        [WillExecute, événement (ADO)](./willexecute-event-ado.md)  
     :::column-end:::
 :::row-end:::

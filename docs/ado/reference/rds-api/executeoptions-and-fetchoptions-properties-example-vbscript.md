@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b241eb84e4ea7766d209a61542562c2522a80849
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 277226353ad9e06aed7774f9195d429940165c26
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439041"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768338"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions et FetchOptions, exemples de propriétés (VBScript)
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Le code suivant montre comment définir les propriétés [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) et [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) au moment du Design. Si la valeur de n’est pas définie, **ExecuteOptions** est par défaut **adcExecSync**. Ce paramètre indique que lorsque le **RDS. ** La méthode Refresh est appelée, elle est exécutée sur le thread appelant actuel, c’est-à-dire de façon synchrone. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **ExecuteOptionsDesignVBS. asp**.  
+ Le code suivant montre comment définir les propriétés [ExecuteOptions](./executeoptions-property-rds.md) et [FetchOptions](./fetchoptions-property-rds.md) au moment du Design. Si la valeur de n’est pas définie, **ExecuteOptions** est par défaut **adcExecSync**. Ce paramètre indique que lorsque le **RDS. ** La méthode Refresh est appelée, elle est exécutée sur le thread appelant actuel, c’est-à-dire de façon synchrone. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **ExecuteOptionsDesignVBS. asp**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -95,7 +95,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- L’exemple suivant montre comment définir les propriétés **ExecuteOptions** et **FetchOptions** au moment de l’exécution dans du code VBScript. Pour obtenir un exemple fonctionnel de ces propriétés, consultez la méthode [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) . Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **ExecuteOptionsRuntimeVBS. asp**.  
+ L’exemple suivant montre comment définir les propriétés **ExecuteOptions** et **FetchOptions** au moment de l’exécution dans du code VBScript. Pour obtenir un exemple fonctionnel de ces propriétés, consultez la méthode [Refresh](./refresh-method-rds.md) . Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **ExecuteOptionsRuntimeVBS. asp**.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  
@@ -171,8 +171,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ExecuteOptions, propriété (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [FetchOptions, propriété (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
-
-
-
+ [ExecuteOptions, propriété (RDS)](./executeoptions-property-rds.md)   
+ [FetchOptions, propriété (RDS)](./fetchoptions-property-rds.md)

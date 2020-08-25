@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e97ec8a7b969311cec0a535a69a259c495d93f0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 98cbc245512ba957256605a05a3d44af46eb9d0c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442771"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773378"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
-Spécifie les attributs d’un objet de [paramètre](../../../ado/reference/ado-api/parameter-object.md) .  
+Spécifie les attributs d’un objet de [paramètre](./parameter-object.md) .  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|Indique que le paramètre accepte les valeurs signées.|  
 |**adParamNullable**|64|Indique que le paramètre accepte les valeurs NULL.|  
@@ -35,11 +35,11 @@ Spécifie les attributs d’un objet de [paramètre](../../../ado/reference/ado-
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.ParameterAttributes.SIGNED|  
 |AdoEnums.ParameterAttributes.NULLABLE|  
 |AdoEnums.ParameterAttributes.LONG|  
   
 ## <a name="applies-to"></a>S'applique à  
- [Attributes, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes, propriété (ADO)](./attributes-property-ado.md)

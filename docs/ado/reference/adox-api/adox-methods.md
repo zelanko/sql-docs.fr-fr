@@ -14,33 +14,33 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9d8a2c7e02b4b7efeb17166e1fcab8ee2c457b6b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 700af57bf6145fe4c4af123117e57c15283f0e2a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440581"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771598"
 ---
 # <a name="adox-methods"></a>Méthodes ADOX
 
 |Méthode|Description|  
 |-|-|  
-|[Append (colonnes)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Ajoute un nouvel objet **Column** à la collection **Columns** .|  
-|[Append (groupes)](../../../ado/reference/adox-api/append-method-adox-groups.md)|Ajoute un nouvel objet de **groupe** à la collection de **groupes** .|  
-|[Append (index)](../../../ado/reference/adox-api/append-method-adox-indexes.md)|Ajoute un nouvel objet **index** à la collection d' **index** .|  
-|[Append (clés)](../../../ado/reference/adox-api/append-method-adox-keys.md)|Ajoute un nouvel objet **clé** à la collection de **clés** .|  
-|[Append (procédures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)|Ajoute un nouvel objet de **procédure** à la collection **procedures** .|  
-|[Append (tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)|Ajoute un nouvel objet **table** à la collection **tables** .|  
-|[Ajouter (utilisateurs)](../../../ado/reference/adox-api/append-method-adox-users.md)|Ajoute un nouvel objet **utilisateur** à la collection **Users** .|  
-|[Append (vues)](../../../ado/reference/adox-api/append-method-adox-views.md)|Ajoute un nouvel objet **View** à la collection **views** .|  
-|[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Modifie le mot de passe d’un compte d’utilisateur.|  
-|[Créer](../../../ado/reference/adox-api/create-method-adox.md)|Crée un nouveau catalogue.|  
-|[Supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Supprime un objet d’une collection.|  
-|[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retourne le propriétaire d’un objet dans un catalogue.|  
-|[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Retourne les autorisations pour un groupe ou un utilisateur sur un objet.|  
-|[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|Spécifie le propriétaire d’un objet dans un catalogue.|  
-|[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Spécifie les autorisations pour un groupe ou un utilisateur sur un objet.|  
+|[Append (colonnes)](./append-method-adox-columns.md)|Ajoute un nouvel objet **Column** à la collection **Columns** .|  
+|[Append (groupes)](./append-method-adox-groups.md)|Ajoute un nouvel objet de **groupe** à la collection de **groupes** .|  
+|[Append (index)](./append-method-adox-indexes.md)|Ajoute un nouvel objet **index** à la collection d' **index** .|  
+|[Append (clés)](./append-method-adox-keys.md)|Ajoute un nouvel objet **clé** à la collection de **clés** .|  
+|[Append (procédures)](./append-method-adox-procedures.md)|Ajoute un nouvel objet de **procédure** à la collection **procedures** .|  
+|[Append (tables)](./append-method-adox-tables.md)|Ajoute un nouvel objet **table** à la collection **tables** .|  
+|[Ajouter (utilisateurs)](./append-method-adox-users.md)|Ajoute un nouvel objet **utilisateur** à la collection **Users** .|  
+|[Append (vues)](./append-method-adox-views.md)|Ajoute un nouvel objet **View** à la collection **views** .|  
+|[ChangePassword](./changepassword-method-adox.md)|Modifie le mot de passe d’un compte d’utilisateur.|  
+|[Créer](./create-method-adox.md)|Crée un nouveau catalogue.|  
+|[Supprimer](./delete-method-adox-collections.md)|Supprime un objet d’une collection.|  
+|[GetObjectOwner](./getobjectowner-method-adox.md)|Retourne le propriétaire d’un objet dans un catalogue.|  
+|[GetPermissions](./getpermissions-method-adox.md)|Retourne les autorisations pour un groupe ou un utilisateur sur un objet.|  
+|[SetObjectOwner](./setobjectowner-method.md)|Spécifie le propriétaire d’un objet dans un catalogue.|  
+|[SetPermissions](./setpermissions-method-adox.md)|Spécifie les autorisations pour un groupe ou un utilisateur sur un objet.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
- [Extensions ADO pour le langage de définition de données et la sécurité (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [Informations de référence sur l’API ADOX](./adox-object-model.md?view=sql-server-ver15)   
+ [Extensions ADO pour le langage de définition de données et la sécurité (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

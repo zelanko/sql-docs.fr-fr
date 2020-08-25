@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bceacc215a67050142c773675a0af464ff9b9ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3048bf470ed27adb3fb3ceaaef3c7658c1fb93fb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442241"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777628"
 ---
 # <a name="row-property-ado"></a>Row, propriété (ADO)
-Obtient ou définit un objet OLE DB **ligne** à partir de ou sur un objet d' [interface ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) . Lorsque vous utilisez **put_Row** pour définir un objet **Row** , une ligne est transformée en objet **Record** ADO.  
+Obtient ou définit un objet OLE DB **ligne** à partir de ou sur un objet d' [interface ADORecordConstruction](./adorecordconstruction-interface.md) . Lorsque vous utilisez **put_Row** pour définir un objet **Row** , une ligne est transformée en objet **Record** ADO.  
   
 ## <a name="readwritesyntax"></a>Read/write.Syntax  
   
@@ -48,4 +48,4 @@ HRESULT put_Row([in] IUnknown* pRow);
  Cette méthode de propriété retourne les valeurs HRESULT standard, y compris S_OK et E_FAIL.  
   
 ## <a name="applies-to"></a>S'applique à  
- [ADORecordConstruction, interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [ADORecordConstruction, interface](./adorecordconstruction-interface.md)

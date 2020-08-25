@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8ec3bb3a6c5f7e4f6d6654ca059e7ace7d97d9da
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 018de245b6d809b094a88d3a1f455bce0166a466
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443091"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774048"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset, méthode (ADO)
-Efface l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) actuel et retourne le **jeu d’enregistrements** suivant en progressant dans une série de commandes.  
+Efface l’objet [Recordset](./recordset-object-ado.md) actuel et retourne le **jeu d’enregistrements** suivant en progressant dans une série de commandes.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -46,23 +46,23 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 >  Ce paramètre retourne uniquement le nombre d’enregistrements affectés par une opération. elle ne retourne pas un nombre d’enregistrements à partir d’une instruction SELECT utilisée pour générer le **Recordset**.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez la méthode **NextRecordset** pour retourner les résultats de la commande suivante dans une instruction de commande composée ou une procédure stockée qui retourne plusieurs résultats. Si vous ouvrez un objet **Recordset** basé sur une instruction de commande composée (par exemple, «SELECT \* FROM table1 ; SELECT \* from table2») à l’aide de la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) sur une [commande](../../../ado/reference/ado-api/command-object-ado.md) ou de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) sur un **Recordset**, ADO exécute uniquement la première commande et retourne les résultats à *Recordset*. Pour accéder aux résultats des commandes suivantes dans l’instruction, appelez la méthode **NextRecordset** .  
+ Utilisez la méthode **NextRecordset** pour retourner les résultats de la commande suivante dans une instruction de commande composée ou une procédure stockée qui retourne plusieurs résultats. Si vous ouvrez un objet **Recordset** basé sur une instruction de commande composée (par exemple, «SELECT \* FROM table1 ; SELECT \* from table2») à l’aide de la méthode [Execute](./execute-method-ado-command.md) sur une [commande](./command-object-ado.md) ou de la méthode [Open](./open-method-ado-recordset.md) sur un **Recordset**, ADO exécute uniquement la première commande et retourne les résultats à *Recordset*. Pour accéder aux résultats des commandes suivantes dans l’instruction, appelez la méthode **NextRecordset** .  
   
- Tant qu’il existe des résultats supplémentaires et que le **jeu d’enregistrements** contenant les instructions composées n’est pas déconnecté ou marshalé entre les limites de processus, la méthode **NextRecordset** continue à retourner des objets **Recordset** . Si une commande de retour de ligne s’exécute correctement mais ne retourne aucun enregistrement, l’objet **Recordset** retourné est ouvert, mais vide. Pour tester ce cas, vérifiez que les propriétés [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) sont toutes les deux **vraies**. Si une commande qui ne retourne pas de lignes s’exécute correctement, l’objet **Recordset** retourné est fermé, ce que vous pouvez vérifier en testant la propriété [State](../../../ado/reference/ado-api/state-property-ado.md) sur le **Recordset**. Lorsqu’il n’y a plus de résultats, *Recordset* prend la valeur *Nothing*.  
+ Tant qu’il existe des résultats supplémentaires et que le **jeu d’enregistrements** contenant les instructions composées n’est pas déconnecté ou marshalé entre les limites de processus, la méthode **NextRecordset** continue à retourner des objets **Recordset** . Si une commande de retour de ligne s’exécute correctement mais ne retourne aucun enregistrement, l’objet **Recordset** retourné est ouvert, mais vide. Pour tester ce cas, vérifiez que les propriétés [BOF](./bof-eof-properties-ado.md) et [EOF](./bof-eof-properties-ado.md) sont toutes les deux **vraies**. Si une commande qui ne retourne pas de lignes s’exécute correctement, l’objet **Recordset** retourné est fermé, ce que vous pouvez vérifier en testant la propriété [State](./state-property-ado.md) sur le **Recordset**. Lorsqu’il n’y a plus de résultats, *Recordset* prend la valeur *Nothing*.  
   
- La méthode **NextRecordset** n’est pas disponible sur un objet **Recordset** déconnecté, où [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) a été défini sur **Nothing** (dans Microsoft Visual Basic) ou null (dans d’autres langues).  
+ La méthode **NextRecordset** n’est pas disponible sur un objet **Recordset** déconnecté, où [ActiveConnection](./activeconnection-property-ado.md) a été défini sur **Nothing** (dans Microsoft Visual Basic) ou null (dans d’autres langues).  
   
- Si une modification est en cours alors qu’elle est en mode de mise à jour immédiate, l’appel de la méthode **NextRecordset** génère une erreur. appelez d’abord la méthode [Update](../../../ado/reference/ado-api/update-method.md) ou [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
+ Si une modification est en cours alors qu’elle est en mode de mise à jour immédiate, l’appel de la méthode **NextRecordset** génère une erreur. appelez d’abord la méthode [Update](./update-method.md) ou [CancelUpdate](./cancelupdate-method-ado.md) .  
   
- Pour passer des paramètres pour plusieurs commandes dans l’instruction composée en remplissant la collection de [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) , ou en passant un tableau avec l’appel d' **ouverture** ou d' **exécution** d’origine, les paramètres doivent être dans le même ordre dans la collection ou le tableau que leurs commandes respectives dans la série de commandes. Vous devez terminer la lecture de tous les résultats avant de lire les valeurs des paramètres de sortie.  
+ Pour passer des paramètres pour plusieurs commandes dans l’instruction composée en remplissant la collection de [paramètres](./parameters-collection-ado.md) , ou en passant un tableau avec l’appel d' **ouverture** ou d' **exécution** d’origine, les paramètres doivent être dans le même ordre dans la collection ou le tableau que leurs commandes respectives dans la série de commandes. Vous devez terminer la lecture de tous les résultats avant de lire les valeurs des paramètres de sortie.  
   
- Votre fournisseur de OLE DB détermine le moment où chaque commande dans une instruction composée est exécutée. Par exemple, le [fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)exécute toutes les commandes d’un lot lors de la réception de l’instruction composée. Les **jeux d’enregistrements** résultants sont simplement retournés lorsque vous appelez **NextRecordset**.  
+ Votre fournisseur de OLE DB détermine le moment où chaque commande dans une instruction composée est exécutée. Par exemple, le [fournisseur Microsoft OLE DB pour SQL Server](../../guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)exécute toutes les commandes d’un lot lors de la réception de l’instruction composée. Les **jeux d’enregistrements** résultants sont simplement retournés lorsque vous appelez **NextRecordset**.  
   
  Toutefois, d’autres fournisseurs peuvent exécuter la commande suivante dans une instruction uniquement après l’appel de NextRecordset. Pour ces fournisseurs, si vous fermez explicitement l’objet **Recordset avant d'** exécuter l’instruction de commande dans son intégralité, ADO n’exécute jamais les commandes restantes.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [NextRecordset, exemple de méthode (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
- [NextRecordset, exemple de méthode (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   
+ [NextRecordset, exemple de méthode (VB)](./nextrecordset-method-example-vb.md)   
+ [NextRecordset, exemple de méthode (VC++)](./nextrecordset-method-example-vc.md)

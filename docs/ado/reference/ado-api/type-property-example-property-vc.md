@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 00c0121f7418fa63280950191c445ff499dcb133
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 10da6786a5a41e6329b8af6c7a745a00fa0a4cbe
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441681"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777058"
 ---
 # <a name="type-property-example-property-vc"></a>Type, exemple de propriété (objet Property) (VC++)
-Cet exemple illustre la propriété [type](../../../ado/reference/ado-api/type-property-ado.md) . Il s’agit d’un modèle d’utilitaire permettant de répertorier les noms et les types d’une collection, tels que les [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md), les [champs](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  
+Cet exemple illustre la propriété [type](./type-property-ado.md) . Il s’agit d’un modèle d’utilitaire permettant de répertorier les noms et les types d’une collection, tels que les [Propriétés](./properties-collection-ado.md), les [champs](./fields-collection-ado.md), etc.  
   
- Nous n’avons pas besoin d’ouvrir le [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) pour accéder à sa collection **Properties** . ils sont mis en existence lorsque l’objet **Recordset** est instancié. Toutefois, l’affectation de la valeur **adUseClient** à la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) ajoute plusieurs propriétés dynamiques à la collection **Properties** de l’objet **Recordset** , ce qui rend l’exemple un peu plus intéressant. À des fins d’illustration, nous utilisons explicitement la propriété [Item](../../../ado/reference/ado-api/item-property-ado.md) pour accéder à chaque objet [Property](../../../ado/reference/ado-api/property-object-ado.md) .  
+ Nous n’avons pas besoin d’ouvrir le [jeu d’enregistrements](./recordset-object-ado.md) pour accéder à sa collection **Properties** . ils sont mis en existence lorsque l’objet **Recordset** est instancié. Toutefois, l’affectation de la valeur **adUseClient** à la propriété [CursorLocation](./cursorlocation-property-ado.md) ajoute plusieurs propriétés dynamiques à la collection **Properties** de l’objet **Recordset** , ce qui rend l’exemple un peu plus intéressant. À des fins d’illustration, nous utilisons explicitement la propriété [Item](./item-property-ado.md) pour accéder à chaque objet [Property](./property-object-ado.md) .  
   
 ```  
 // BeginTypePropertyCpp.cpp  
@@ -217,5 +217,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Type, propriété (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Property, objet (ADO)](./property-object-ado.md)   
+ [Type, propriété (ADO)](./type-property-ado.md)

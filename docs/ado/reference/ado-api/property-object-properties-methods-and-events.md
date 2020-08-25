@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6f581ebc43b7ab8b4deefd3a73771e2a8835f94d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44e440edb4e3f54284c17e4a5547b19c0244012c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442601"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772938"
 ---
 # <a name="property-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Property
 ## <a name="properties"></a>Propriétés  
- [Attributes, propriété](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes, propriété](./attributes-property-ado.md)  
   
- [Propriété Name](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Propriété Name](./name-property-ado.md)  
   
- [Propriété type](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Propriété type](./type-property-ado.md)  
   
- [Propriété Value](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Propriété Value](./value-property-ado.md)  
   
 ## <a name="methods"></a>Méthodes  
  Aucun.  
@@ -37,4 +37,4 @@ ms.locfileid: "88442601"
  Aucun.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Property, objet (ADO)](./property-object-ado.md)

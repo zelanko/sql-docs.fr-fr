@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83ee7fc06923a4e0010fab835ea05e00768cbb94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da0a6641ff98848e3cfd2173ecd19711bf41fa4e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441921"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777308"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status, exemple de propriété (objet Recordset) (VB)
-Cet exemple utilise la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) pour afficher les enregistrements qui ont été modifiés dans une opération de traitement par lot avant qu’une mise à jour par lot ait eu lieu.  
+Cet exemple utilise la propriété [Status](./status-property-ado-recordset.md) pour afficher les enregistrements qui ont été modifiés dans une opération de traitement par lot avant qu’une mise à jour par lot ait eu lieu.  
   
 ```  
 'BeginStatusRecordsetVB  
@@ -99,4 +99,4 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Status, propriété (objet Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status, propriété (objet Recordset ADO)](./status-property-ado-recordset.md)

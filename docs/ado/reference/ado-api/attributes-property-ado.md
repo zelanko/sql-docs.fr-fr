@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43f374429d38cb4d3cb4516d640b6d05ef8e3efb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 99c4e9be5c998b8abc1a5b609bbdeb249fa6c7b8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451201"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776448"
 ---
 # <a name="attributes-property-ado"></a>Attributes, propriété (ADO)
 Indique une ou plusieurs caractéristiques d’un objet.  
@@ -31,13 +31,13 @@ Indique une ou plusieurs caractéristiques d’un objet.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **type long** .  
   
- Pour un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) , la propriété **attributes** est en lecture/écriture, et sa valeur peut être la somme d’une ou plusieurs valeurs [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) . La valeur par défaut est zéro (0).  
+ Pour un objet de [connexion](./connection-object-ado.md) , la propriété **attributes** est en lecture/écriture, et sa valeur peut être la somme d’une ou plusieurs valeurs [XactAttributeEnum](./xactattributeenum.md) . La valeur par défaut est zéro (0).  
   
- Pour un objet [Parameter](../../../ado/reference/ado-api/parameter-object.md) , la propriété **attributes** est en lecture/écriture, et sa valeur peut être la somme d’une ou plusieurs valeurs [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) . La valeur par défaut est **adParamSigned**.  
+ Pour un objet [Parameter](./parameter-object.md) , la propriété **attributes** est en lecture/écriture, et sa valeur peut être la somme d’une ou plusieurs valeurs [ParameterAttributesEnum](./parameterattributesenum.md) . La valeur par défaut est **adParamSigned**.  
   
- Pour un objet [Field](../../../ado/reference/ado-api/field-object.md) , la propriété **attributes** peut être la somme d’une ou plusieurs valeurs [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) . Il est généralement en lecture seule. Toutefois, pour les nouveaux objets de **champ** qui ont été ajoutés à la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) d’un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md), les **attributs** sont en lecture/écriture uniquement une fois que la propriété [value](../../../ado/reference/ado-api/value-property-ado.md) du **champ** a été spécifiée et que le nouveau **champ** a été ajouté avec succès par le fournisseur de données en appelant la méthode [Update](../../../ado/reference/ado-api/update-method.md) de la collection **Fields** .  
+ Pour un objet [Field](./field-object.md) , la propriété **attributes** peut être la somme d’une ou plusieurs valeurs [FieldAttributeEnum](./fieldattributeenum.md) . Il est généralement en lecture seule. Toutefois, pour les nouveaux objets de **champ** qui ont été ajoutés à la collection de [champs](./fields-collection-ado.md) d’un [enregistrement](./record-object-ado.md), les **attributs** sont en lecture/écriture uniquement une fois que la propriété [value](./value-property-ado.md) du **champ** a été spécifiée et que le nouveau **champ** a été ajouté avec succès par le fournisseur de données en appelant la méthode [Update](./update-method.md) de la collection **Fields** .  
   
- Pour un objet de [propriété](../../../ado/reference/ado-api/property-object-ado.md) , la propriété **attributes** est en lecture seule et sa valeur peut être la somme d’une ou plusieurs valeurs [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) .  
+ Pour un objet de [propriété](./property-object-ado.md) , la propriété **attributes** est en lecture seule et sa valeur peut être la somme d’une ou plusieurs valeurs [PropertyAttributesEnum](./propertyattributesenum.md) .  
   
 ## <a name="remarks"></a>Notes  
  Utilisez la propriété **attributes** pour définir ou retourner des caractéristiques d’objets de **connexion** , d’objets de **paramètres** , d’objets de **champ** ou d’objets de **propriété** .  
@@ -51,18 +51,18 @@ Indique une ou plusieurs caractéristiques d’un objet.
 
 :::row:::
     :::column:::
-        [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
-        [Objet Field](../../../ado/reference/ado-api/field-object.md)  
+        [Connection, objet (ADO)](./connection-object-ado.md)  
+        [Objet Field](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter (objet)](../../../ado/reference/ado-api/parameter-object.md)  
-        [Property, objet (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Objet Parameter](./parameter-object.md)  
+        [Property, objet (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [Attributes et Name, exemple de propriétés (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attributes et Name, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [AppendChunk, méthode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [BeginTrans, CommitTrans et RollbackTrans, méthodes (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [GetChunk, méthode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [Attributes et Name, exemple de propriétés (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Attributes et Name, exemple de propriétés (VC + +)](./attributes-and-name-properties-example-vc.md)   
+ [AppendChunk, méthode (ADO)](./appendchunk-method-ado.md)   
+ [BeginTrans, CommitTrans et RollbackTrans, méthodes (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [GetChunk, méthode (ADO)](./getchunk-method-ado.md)

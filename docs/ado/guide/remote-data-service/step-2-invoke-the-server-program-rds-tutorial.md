@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4b864578b67eda29c703bcf4952a9a2878aafe9c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19f16da3e3501a179bfb28529a9b1a14486aad20
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451941"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759149"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Étape 2 : Appeler le programme serveur (tutoriel RDS)
 Lorsque vous appelez une méthode sur le *proxy*client, le programme réel sur le serveur exécute la méthode. Dans cette étape, vous allez exécuter une requête sur le serveur.  
@@ -26,9 +26,9 @@ Lorsque vous appelez une méthode sur le *proxy*client, le programme réel sur l
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- **Partie A** Si vous n’avez pas utilisé [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) dans ce didacticiel, la méthode la plus pratique pour effectuer cette étape consiste à utiliser les [services Bureau à distance. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) . **RDS. DataControl** combine l’étape précédente de la création d’un proxy, avec cette étape, émettant la requête.  
+ **Partie A** Si vous n’avez pas utilisé [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) dans ce didacticiel, la méthode la plus pratique pour effectuer cette étape consiste à utiliser les [services Bureau à distance. DataControl](../../reference/rds-api/datacontrol-object-rds.md) . **RDS. DataControl** combine l’étape précédente de la création d’un proxy, avec cette étape, émettant la requête.  
   
- Définissez le **RDS. ** Propriété du [serveur](../../../ado/reference/rds-api/server-property-rds.md) d’objets DataControl pour identifier l’emplacement où le programme serveur doit être instancié ; la propriété [Connect](../../../ado/reference/rds-api/connect-property-rds.md) pour spécifier la chaîne de connexion permettant d’accéder à la source de données ; et la propriété [SQL](../../../ado/reference/rds-api/sql-property.md) pour spécifier le texte de la commande de requête. Ensuite, émettez la méthode [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) pour faire en sorte que le programme serveur se connecte à la source de données, récupère les lignes spécifiées par la requête et retourne un objet **Recordset** au client.  
+ Définissez le **RDS. ** Propriété du [serveur](../../reference/rds-api/server-property-rds.md) d’objets DataControl pour identifier l’emplacement où le programme serveur doit être instancié ; la propriété [Connect](../../reference/rds-api/connect-property-rds.md) pour spécifier la chaîne de connexion permettant d’accéder à la source de données ; et la propriété [SQL](../../reference/rds-api/sql-property.md) pour spécifier le texte de la commande de requête. Ensuite, émettez la méthode [Refresh](../../reference/rds-api/refresh-method-rds.md) pour faire en sorte que le programme serveur se connecte à la source de données, récupère les lignes spécifiées par la requête et retourne un objet **Recordset** au client.  
   
  Ce didacticiel n’utilise pas les **services Bureau à distance. DataControl**, mais il s’agit de la façon dont elle se présenterait :  
   
@@ -50,7 +50,7 @@ rs.Open "SELECT * FROM Authors","Provider=MS Remote;Data Source=Pubs;" & _
         "Remote Server=https://yourServer;Remote Provider=SQLOLEDB;"  
 ```  
   
- **Partie B** La méthode générale pour effectuer cette étape consiste à appeler la méthode de [requête](../../../ado/reference/rds-api/query-method-rds.md) d’objet **RDSServer. DataFactory** . Cette méthode prend une chaîne de connexion, qui est utilisée pour se connecter à une source de données, et un texte de commande, qui est utilisé pour spécifier les lignes à retourner à partir de la source de données.  
+ **Partie B** La méthode générale pour effectuer cette étape consiste à appeler la méthode de [requête](../../reference/rds-api/query-method-rds.md) d’objet **RDSServer. DataFactory** . Cette méthode prend une chaîne de connexion, qui est utilisée pour se connecter à une source de données, et un texte de commande, qui est utilisé pour spécifier les lignes à retourner à partir de la source de données.  
   
  Ce didacticiel utilise la méthode de **requête** d’objet **DataFactory** :  
   
@@ -65,5 +65,5 @@ Sub RDSTutorial2B()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étape 3 : le serveur obtient un Recordset (didacticiel RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
- [Tutoriel RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Étape 3 : le serveur obtient un Recordset (didacticiel RDS)](./step-3-server-obtains-a-recordset-rds-tutorial.md)   
+ [Tutoriel RDS (VBScript)](./rds-tutorial-vbscript.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bb26a778e3d484ba024a5a38564d9e3abc0a3ef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3847fb3f9beaba4abe7820dae16cd57eba1cedd3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443001"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773828"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open et Close, exemple de méthodes (VBScript)
-Cet exemple utilise les méthodes [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) et [Close](../../../ado/reference/ado-api/close-method-ado.md) sur les objets [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et [Connection](../../../ado/reference/ado-api/connection-object-ado.md) qui ont été ouverts.  
+Cet exemple utilise les méthodes [Open](./open-method-ado-recordset.md) et [Close](./close-method-ado.md) sur les objets [Recordset](./recordset-object-ado.md) et [Connection](./connection-object-ado.md) qui ont été ouverts.  
   
  Utilisez l’exemple suivant dans une page de Active Server (ASP). Utilisez **Find** pour localiser le fichier adovbs. Inc et placez-le dans le répertoire que vous prévoyez d’utiliser. Coupez et collez le code suivant dans le bloc-notes ou dans un autre éditeur de texte, puis enregistrez-le en tant que **OpenVBS. asp**. Vous pouvez afficher le résultat dans n’importe quel navigateur.  
   
@@ -163,8 +163,8 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Close, méthode (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open, méthode (connexion ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Close, méthode (ADO)](./close-method-ado.md)   
+ [Connection, objet (ADO)](./connection-object-ado.md)   
+ [Open, méthode (connexion ADO)](./open-method-ado-connection.md)   
+ [Open, méthode (objet Recordset ADO)](./open-method-ado-recordset.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ddac29da277027f1cc89a8c078ac4d072c369b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cf9b819d57a6ad0808c498e2492863c685b13ba
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441541"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776908"
 ---
 # <a name="version-property-example-vc"></a>Version, exemple de propriété (VC++)
-Cet exemple utilise la propriété [version](../../../ado/reference/ado-api/version-property-ado.md) d’un objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) pour afficher la version ADO actuelle. Il utilise également plusieurs propriétés dynamiques pour afficher :  
+Cet exemple utilise la propriété [version](./version-property-ado.md) d’un objet [Connection](./connection-object-ado.md) pour afficher la version ADO actuelle. Il utilise également plusieurs propriétés dynamiques pour afficher :  
   
 -   Nom et version du SGBD actuel.  
   
@@ -136,5 +136,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Version, propriété (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [Connection, objet (ADO)](./connection-object-ado.md)   
+ [Version, propriété (ADO)](./version-property-ado.md)

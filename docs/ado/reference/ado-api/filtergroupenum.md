@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8d3c510cfd9fa6c4a28f78005021465b9b0917b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7552eb4b069b2cd2adc33e0bff25f23d918468c2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443661"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775288"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
-Spécifie le groupe d’enregistrements à filtrer à partir d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Spécifie le groupe d’enregistrements à filtrer à partir d’un [jeu d’enregistrements](./recordset-object-ado.md).  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adFilterAffectedRecords**|2|Filtres permettant d’afficher uniquement les enregistrements affectés par le dernier appel [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .|  
+|**adFilterAffectedRecords**|2|Filtres permettant d’afficher uniquement les enregistrements affectés par le dernier appel [Delete](./delete-method-ado-recordset.md), [Resync](./resync-method.md), [UpdateBatch](./updatebatch-method.md)ou [CancelBatch](./cancelbatch-method-ado.md) .|  
 |**adFilterConflictingRecords**|5|Filtres permettant d’afficher les enregistrements qui ont échoué lors de la dernière mise à jour par lot.|  
 |**adFilterFetchedRecords**|3|Filtres permettant d’afficher les enregistrements dans le cache actuel, autrement dit, les résultats du dernier appel pour récupérer des enregistrements de la base de données.|  
 |**adFilterNone**|0|Supprime le filtre en cours et restaure tous les enregistrements à afficher.|  
@@ -37,7 +37,7 @@ Spécifie le groupe d’enregistrements à filtrer à partir d’un [jeu d’enr
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums. FilterGroup. AFFECTEDRECORDS|  
 |AdoEnums.FilterGroup.CONFLICTINGRECORDS|  
@@ -46,4 +46,4 @@ Spécifie le groupe d’enregistrements à filtrer à partir d’un [jeu d’enr
 |AdoEnums.FilterGroup.PENDINGRECORDS|  
   
 ## <a name="applies-to"></a>S'applique à  
- [Filter, propriété](../../../ado/reference/ado-api/filter-property.md)
+ [Filter, propriété](./filter-property.md)

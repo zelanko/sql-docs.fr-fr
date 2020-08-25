@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 61a51b74-93cd-439c-877f-f3055499d39f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d19c7a994cd4db7d65a285e523726c0bdd88f582
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5cef4b99210f4b9e066753a3a81ed0153f2c2392
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444391"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775729"
 ---
 # <a name="copyrecord-copyto-and-savetofile-methods-example-vb"></a>CopyRecord, CopyTo et SaveToFile, exemple de méthodes (VB)
-Cet exemple montre comment créer des copies d’un fichier à l’aide d’objets [Stream](../../../ado/reference/ado-api/stream-object-ado.md) ou [Record](../../../ado/reference/ado-api/record-object-ado.md) . Une copie est effectuée dans un dossier Web pour la publication Internet. Les autres propriétés et méthodes présentées incluent [Stream type](../../../ado/reference/ado-api/type-property-ado-stream.md), **Open**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md)et [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
+Cet exemple montre comment créer des copies d’un fichier à l’aide d’objets [Stream](./stream-object-ado.md) ou [Record](./record-object-ado.md) . Une copie est effectuée dans un dossier Web pour la publication Internet. Les autres propriétés et méthodes présentées incluent [Stream type](./type-property-ado-stream.md), **Open**, [LoadFromFile](./loadfromfile-method-ado.md)et [Record Open](./open-method-ado-record.md).  
   
 ```  
 'BeginCopyRecordVB  
@@ -126,12 +126,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CopyRecord, méthode (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
- [CopyTo, méthode (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
- [LoadFromFile, méthode (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
- [Open, méthode (ADO record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open, méthode (objet Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [SaveToFile, méthode](../../../ado/reference/ado-api/savetofile-method.md)   
- [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Type, propriété (objet Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [CopyRecord, méthode (ADO)](./copyrecord-method-ado.md)   
+ [CopyTo, méthode (ADO)](./copyto-method-ado.md)   
+ [LoadFromFile, méthode (ADO)](./loadfromfile-method-ado.md)   
+ [Open, méthode (ADO record)](./open-method-ado-record.md)   
+ [Open, méthode (objet Stream ADO)](./open-method-ado-stream.md)   
+ [Record, objet (ADO)](./record-object-ado.md)   
+ [SaveToFile, méthode](./savetofile-method.md)   
+ [Stream, objet (ADO)](./stream-object-ado.md)   
+ [Type, propriété (objet Stream ADO)](./type-property-ado-stream.md)

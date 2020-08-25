@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5888cf1ce3bb058c7c71e4bcec5b448d4f0ab9bd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa326f24e1c8d3e6e7fab3adf691f3dd3a80a0c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443261"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774378"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords, exemple de propriété (VC++)
-Cet exemple utilise la propriété [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) pour ouvrir un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 titres les plus chers dans la table ***titles*** .  
+Cet exemple utilise la propriété [maxRecords](./maxrecords-property-ado.md) pour ouvrir un [jeu d’enregistrements](./recordset-object-ado.md) contenant les 10 titres les plus chers dans la table ***titles*** .  
   
 ## <a name="example"></a>Exemple  
   
@@ -178,5 +178,5 @@ void PrintComError(_com_error &e) {
 **Sushi, tout le monde ? ---14,99**  
 **50 ans dans Buckingham Palace cuisines---11,95**   
 ## <a name="see-also"></a>Voir aussi  
- [MaxRecords, propriété (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MaxRecords, propriété (ADO)](./maxrecords-property-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

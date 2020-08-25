@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 215e45631f223e68d2933c103c3503d0564d416c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf23a36461c089a76ae40890fa548bc357029ea6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439671"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88769728"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey et Unique, exemples de propriétés (VC++)
-Cet exemple illustre les propriétés [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) et [unique](../../../ado/reference/adox-api/unique-property-adox.md) d’un [index](../../../ado/reference/adox-api/index-object-adox.md). Le code crée une nouvelle table avec deux colonnes. Les propriétés **PrimaryKey** et **unique** sont utilisées pour définir une colonne comme clé primaire pour laquelle les valeurs dupliquées ne sont pas autorisées.  
+Cet exemple illustre les propriétés [PrimaryKey](./primarykey-property-adox.md) et [unique](./unique-property-adox.md) d’un [index](./index-object-adox.md). Le code crée une nouvelle table avec deux colonnes. Les propriétés **PrimaryKey** et **unique** sont utilisées pour définir une colonne comme clé primaire pour laquelle les valeurs dupliquées ne sont pas autorisées.  
   
 ```  
 // BeginPrimaryKeyCpp.cpp  

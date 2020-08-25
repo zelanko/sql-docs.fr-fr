@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c6fc0eca4668aeaff00b8add8532ce633517eb64
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9648445435cc1f26a28c43110584fb6280739f64
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88439171"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88768628"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset, exemple de méthode (VBScript)
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Cet exemple de code crée un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) côté serveur. Il a deux colonnes avec quatre lignes chacune. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **CreateRecordsetVBS. asp**.  
+ Cet exemple de code crée un [jeu d’enregistrements](../ado-api/recordset-object-ado.md) côté serveur. Il a deux colonnes avec quatre lignes chacune. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte, puis enregistrez-le en tant que **CreateRecordsetVBS. asp**.  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -169,7 +169,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CreateRecordset, méthode (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
-
+ [CreateRecordset, méthode (RDS)](./createrecordset-method-rds.md)   
+ [Recordset, objet (ADO)](../ado-api/recordset-object-ado.md)

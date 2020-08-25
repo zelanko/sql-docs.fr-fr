@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7de7de37cf298005e7a8bdf58d1712d8cb46919
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3feab164032044d954a0ff90f909c210dc851743
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442201"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777588"
 ---
 # <a name="save-and-open-methods-example-vc"></a>Save et Open, exemples de méthodes (VC + +)
-Ces trois exemples montrent comment les méthodes [Save](../../../ado/reference/ado-api/save-method.md) et **Open** peuvent être utilisées ensemble.  
+Ces trois exemples montrent comment les méthodes [Save](./save-method.md) et **Open** peuvent être utilisées ensemble.  
   
- Supposons que vous vous retrouvez dans un voyage d’affaires et que vous souhaitez prendre un tableau à partir d’une base de données. Avant d’aller plus tard, vous accédez aux données sous la forme [d’un jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) et vous les enregistrez sous une forme transportable. Lorsque vous arrivez à votre destination, vous accédez au **Recordset** sous la forme d’un **jeu d’enregistrements**local et déconnecté. Vous apportez des modifications à l’ensemble **d’enregistrements**, puis vous l’enregistrez de nouveau. Enfin, lorsque vous revenez chez vous, vous vous reconnectez à la base de données et vous le mettez à jour avec les modifications que vous avez apportées sur la route.  
+ Supposons que vous vous retrouvez dans un voyage d’affaires et que vous souhaitez prendre un tableau à partir d’une base de données. Avant d’aller plus tard, vous accédez aux données sous la forme [d’un jeu d’enregistrements](./recordset-object-ado.md) et vous les enregistrez sous une forme transportable. Lorsque vous arrivez à votre destination, vous accédez au **Recordset** sous la forme d’un **jeu d’enregistrements**local et déconnecté. Vous apportez des modifications à l’ensemble **d’enregistrements**, puis vous l’enregistrez de nouveau. Enfin, lorsque vous revenez chez vous, vous vous reconnectez à la base de données et vous le mettez à jour avec les modifications que vous avez apportées sur la route.  
   
 ```  
 // BeginSaveCpp.cpp  
@@ -262,6 +262,6 @@ bool FileExists() {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Save, méthode](../../../ado/reference/ado-api/save-method.md)
+ [Open, méthode (objet Recordset ADO)](./open-method-ado-recordset.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)   
+ [Save, méthode](./save-method.md)

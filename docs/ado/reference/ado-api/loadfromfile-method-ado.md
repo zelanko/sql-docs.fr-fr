@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f07bd7bc6b04dac8c5b352cc6281ce4eb851d3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0da662437c19f9c5105b7602035c5bcc519ea2d0
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443351"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774598"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile, méthode (ADO)
-Charge le contenu d’un fichier existant dans un [flux](../../../ado/reference/ado-api/stream-object-ado.md).  
+Charge le contenu d’un fichier existant dans un [flux](./stream-object-ado.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,11 +42,11 @@ Stream.LoadFromFileFileName
   
  L’objet de **flux** doit être déjà ouvert avant d’appeler **LoadFromFile**. Cette méthode ne modifie pas la liaison de l’objet de **flux** ; elle est toujours liée à l’objet spécifié par l’URL ou l' **enregistrement** avec lequel le **flux** a été ouvert à l’origine.  
   
- **LoadFromFile** remplace le contenu actuel de l’objet de **flux** par les données lues à partir du fichier. Tout octet existant dans le **flux** de fichiers est remplacé par le contenu du fichier. Les octets précédemment existants et restants qui suivent le [EOS](../../../ado/reference/ado-api/eos-property.md) créé par **LoadFromFile**sont tronqués.  
+ **LoadFromFile** remplace le contenu actuel de l’objet de **flux** par les données lues à partir du fichier. Tout octet existant dans le **flux** de fichiers est remplacé par le contenu du fichier. Les octets précédemment existants et restants qui suivent le [EOS](./eos-property.md) créé par **LoadFromFile**sont tronqués.  
   
- Après un appel à **LoadFromFile**, la position actuelle est définie au début du **flux** (la[position](../../../ado/reference/ado-api/position-property-ado.md) est 0).  
+ Après un appel à **LoadFromFile**, la position actuelle est définie au début du **flux** (la[position](./position-property-ado.md) est 0).  
   
  Étant donné que 2 octets peuvent être ajoutés au début du flux pour l’encodage, la taille du flux peut ne pas correspondre exactement à la taille du fichier à partir duquel il a été chargé.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream, objet (ADO)](./stream-object-ado.md)

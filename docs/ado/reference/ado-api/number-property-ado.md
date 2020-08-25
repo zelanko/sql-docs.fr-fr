@@ -18,30 +18,30 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 448842387c524326e51b104a0850f9ff503d35e7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fe4984a9bdbeff69f7c2beba4d91833cdca85f50
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443071"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88774098"
 ---
 # <a name="number-property-ado"></a>Number, propriété (ADO)
-Indique le nombre qui identifie de façon unique un objet d' [erreur](../../../ado/reference/ado-api/error-object.md) .  
+Indique le nombre qui identifie de façon unique un objet d' [erreur](./error-object.md) .  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne une valeur de **type long** qui peut correspondre à l’une des constantes [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) .  
+ Retourne une valeur de **type long** qui peut correspondre à l’une des constantes [ErrorValueEnum](./errorvalueenum.md) .  
   
 ## <a name="remarks"></a>Notes  
  Utilisez la propriété **Number** pour déterminer l’erreur qui s’est produite. La valeur de la propriété est un nombre unique qui correspond à la condition d’erreur.  
   
- La collection [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) renvoie un HRESULT au format hexadécimal (par exemple, 0x80004005) ou une valeur long (par exemple, 2147467259). Ces HRESULT peuvent être déclenchés par des composants sous-jacents, tels que OLE DB ou même OLE lui-même. Pour plus d’informations sur ces nombres, consultez [Erreurs (OLE DB)](https://msdn.microsoft.com/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) dans le [Guide de référence du programmeur OLE DB](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  
+ La collection [Errors](./errors-collection-ado.md) renvoie un HRESULT au format hexadécimal (par exemple, 0x80004005) ou une valeur long (par exemple, 2147467259). Ces HRESULT peuvent être déclenchés par des composants sous-jacents, tels que OLE DB ou même OLE lui-même. Pour plus d’informations sur ces nombres, consultez [Erreurs (OLE DB)](/previous-versions/windows/desktop/ms724533(v=vs.85)) dans le [Guide de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85))*.*  
   
 ## <a name="applies-to"></a>S'applique à  
- [Objet Error](../../../ado/reference/ado-api/error-object.md)  
+ [Objet Error](./error-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Description, HelpContext, HelpFile, NativeError, Number, source et SQLState, exemples de propriétés (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description, HelpContext, HelpFile, NativeError, Number, source et SQLState, exemples de propriétés (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description, propriété](../../../ado/reference/ado-api/description-property.md)   
- [HelpContext, HelpFile, propriétés](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Source, propriété (objet Error ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Description, HelpContext, HelpFile, NativeError, Number, source et SQLState, exemples de propriétés (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description, HelpContext, HelpFile, NativeError, Number, source et SQLState, exemples de propriétés (VC + +)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description, propriété](./description-property.md)   
+ [HelpContext, HelpFile, propriétés](./helpcontext-helpfile-properties.md)   
+ [Source, propriété (objet Error ADO)](./source-property-ado-error.md)

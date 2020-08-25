@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 71dd02544e80d24e96d9cc64fa1e5947f38c685a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cefa913c42440d69345bfa9c8d4b8826a0bc3d84
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451191"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776568"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans et RollbackTrans, méthodes (ADO)
-Ces méthodes de transaction gèrent le traitement des transactions dans un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) comme suit :  
+Ces méthodes de transaction gèrent le traitement des transactions dans un objet de [connexion](./connection-object-ado.md) comme suit :  
   
 -   **BeginTrans** Commence une nouvelle transaction.  
   
@@ -60,7 +60,7 @@ object.RollbackTrans
  Utilisez ces méthodes avec un objet de **connexion** lorsque vous souhaitez enregistrer ou annuler une série de modifications apportées aux données sources en tant qu’unité unique. Par exemple, pour transférer de l’argent entre les comptes, vous devez soustraire un montant d’un et ajouter le même montant à l’autre. Si l’une des mises à jour échoue, les comptes ne sont plus équilibrés. L’apport de ces modifications dans une transaction ouverte garantit que toutes les modifications ou aucune d’entre elles sont effectuées.  
   
 > [!NOTE]
->  Tous les fournisseurs ne prennent pas en charge les transactions. Vérifiez que la propriété «**transaction DDL**» définie par le fournisseur apparaît dans la collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) de l’objet de **connexion** , ce qui indique que le fournisseur prend en charge les transactions. Si le fournisseur ne prend pas en charge les transactions, l’appel de l’une de ces méthodes renverra une erreur.  
+>  Tous les fournisseurs ne prennent pas en charge les transactions. Vérifiez que la propriété «**transaction DDL**» définie par le fournisseur apparaît dans la collection de [Propriétés](./properties-collection-ado.md) de l’objet de **connexion** , ce qui indique que le fournisseur prend en charge les transactions. Si le fournisseur ne prend pas en charge les transactions, l’appel de l’une de ces méthodes renverra une erreur.  
   
  Une fois que vous avez appelé la méthode **BeginTrans** , le fournisseur ne valide plus instantanément les modifications apportées jusqu’à ce que vous appeliez **CommitTrans** ou **RollbackTrans** pour terminer la transaction.  
   
@@ -68,15 +68,15 @@ object.RollbackTrans
   
  L’appel de la méthode **CommitTrans** enregistre les modifications apportées dans une transaction ouverte sur la connexion et met fin à la transaction. L’appel de la méthode **RollbackTrans** inverse toutes les modifications apportées dans une transaction ouverte et met fin à la transaction. L’appel de l’une ou l’autre méthode quand aucune transaction n’est ouverte génère une erreur.  
   
- En fonction de la propriété [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) de l’objet de **connexion** , l’appel des méthodes **CommitTrans** ou **RollbackTrans** peut démarrer automatiquement une nouvelle transaction. Si la propriété **attributes** a la valeur **adXactCommitRetaining**, le fournisseur démarre automatiquement une nouvelle transaction après un appel **CommitTrans** . Si la propriété **attributes** a la valeur **adXactAbortRetaining**, le fournisseur démarre automatiquement une nouvelle transaction après un appel **RollbackTrans** .  
+ En fonction de la propriété [attributes](./attributes-property-ado.md) de l’objet de **connexion** , l’appel des méthodes **CommitTrans** ou **RollbackTrans** peut démarrer automatiquement une nouvelle transaction. Si la propriété **attributes** a la valeur **adXactCommitRetaining**, le fournisseur démarre automatiquement une nouvelle transaction après un appel **CommitTrans** . Si la propriété **attributes** a la valeur **adXactAbortRetaining**, le fournisseur démarre automatiquement une nouvelle transaction après un appel **RollbackTrans** .  
   
 ## <a name="remote-data-service"></a>Service de données à distance  
  Les méthodes **BeginTrans**, **CommitTrans**et **RollbackTrans** ne sont pas disponibles sur un objet de **connexion** côté client.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection, objet (ADO)](./connection-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [BeginTrans, CommitTrans et RollbackTrans, exemples de méthodes (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [BeginTrans, CommitTrans et RollbackTrans, exemples de méthodes (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
- [Attributes, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [BeginTrans, CommitTrans et RollbackTrans, exemples de méthodes (VB)](./begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [BeginTrans, CommitTrans et RollbackTrans, exemples de méthodes (VC + +)](./begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
+ [Attributes, propriété (ADO)](./attributes-property-ado.md)

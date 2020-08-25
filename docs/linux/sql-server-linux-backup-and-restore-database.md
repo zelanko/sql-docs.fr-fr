@@ -1,6 +1,6 @@
 ---
 title: Sauvegarder et restaurer des bases de données SQL Server sur Linux
-description: En savoir plus sur la sauvegarde et la restauration des bases de données SQL Server sur Linux.
+description: En savoir plus sur la sauvegarde et la restauration des bases de données SQL Server sur Linux. Découvrez également comment effectuer une sauvegarde et une restauration avec SQL Server Management Studio (SSMS).
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
+ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882339"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "88088959"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sauvegarder et restaurer des bases de données SQL Server sur Linux
 
@@ -87,7 +87,7 @@ Les étapes suivantes vous guident dans la réalisation d’une sauvegarde avec 
 
 1. Démarrez SSMS et connectez-vous à votre serveur dans SQL Server 2017 sur Linux.
 
-1. Dans l’Explorateur d’objets, cliquez avec le bouton de droite sur votre base de données, cliquez sur **Tâches**, puis cliquez sur **Sauvegarder...** .
+1. Dans l’Explorateur d’objets, cliquez avec le bouton de droite sur votre base de données, cliquez sur **Tâches**, puis cliquez sur **Sauvegarder...**.
 
 1. Dans la boîte de dialogue **Sauvegarder la base de données**, vérifiez les paramètres et les options, puis cliquez sur **OK**.
  
@@ -99,7 +99,7 @@ Les étapes suivantes vous guident tout au long de la restauration d’une base 
 
 1. Cliquez avec le bouton de droite sur **Bases de données**, puis cliquez sur **Restaurer la base de données**. 
 
-1. Sous **Source**, cliquez sur **Périphérique :** , puis cliquez sur les points de suspension (...).
+1. Sous **Source**, cliquez sur **Périphérique :**, puis cliquez sur les points de suspension (...).
 
 1. Recherchez votre fichier de sauvegarde de bases de données, puis cliquez sur **OK**. 
 

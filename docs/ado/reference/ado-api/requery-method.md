@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b13d618bf5b9b2c17a4fd93b08f3a861cb958178
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a8b9a5d3ab52fdbd3e219104ce3553cd69753a40
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442321"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777688"
 ---
 # <a name="requery-method"></a>Requery, méthode
-Met à jour les données dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) en exécutant à nouveau la requête sur laquelle l’objet est basé.  
+Met à jour les données dans un objet [Recordset](./recordset-object-ado.md) en exécutant à nouveau la requête sur laquelle l’objet est basé.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,21 +36,21 @@ recordset.Requery Options
   
 #### <a name="parameters"></a>Paramètres  
  *Options*  
- facultatif. Masque de répercussion qui contient des valeurs [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) et [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) affectant cette opération.  
+ facultatif. Masque de répercussion qui contient des valeurs [ExecuteOptionEnum](./executeoptionenum.md) et [CommandTypeEnum](./commandtypeenum.md) affectant cette opération.  
   
 > [!NOTE]
->  Si *options* a la valeur **adAsyncExecute**, cette opération s’exécute de façon asynchrone et un événement [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) est émis lorsqu’elle se termine. Les valeurs **ExecuteOpenEnum** de **adExecuteNoRecords** ou **adExecuteStream** ne doivent pas être utilisées avec **Requery**.  
+>  Si *options* a la valeur **adAsyncExecute**, cette opération s’exécute de façon asynchrone et un événement [RecordsetChangeComplete](./willchangerecordset-and-recordsetchangecomplete-events-ado.md) est émis lorsqu’elle se termine. Les valeurs **ExecuteOpenEnum** de **adExecuteNoRecords** ou **adExecuteStream** ne doivent pas être utilisées avec **Requery**.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez la méthode **Requery** pour actualiser la totalité du contenu d’un objet **Recordset** à partir de la source de données en réémettant la commande d’origine et en extrayant les données une deuxième fois. L’appel de cette méthode équivaut à appeler les méthodes [Close](../../../ado/reference/ado-api/close-method-ado.md) et [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) à la suite. Si vous modifiez l’enregistrement en cours ou ajoutez un nouvel enregistrement, une erreur se produit.  
+ Utilisez la méthode **Requery** pour actualiser la totalité du contenu d’un objet **Recordset** à partir de la source de données en réémettant la commande d’origine et en extrayant les données une deuxième fois. L’appel de cette méthode équivaut à appeler les méthodes [Close](./close-method-ado.md) et [Open](./open-method-ado-recordset.md) à la suite. Si vous modifiez l’enregistrement en cours ou ajoutez un nouvel enregistrement, une erreur se produit.  
   
- Lorsque l’objet **Recordset** est ouvert, les propriétés qui définissent la nature du curseur ([CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md), [LockType](../../../ado/reference/ado-api/locktype-property-ado.md), [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md), etc.) sont en lecture seule. Ainsi, la méthode **Requery** peut uniquement actualiser le curseur actuel. Pour modifier l’une des propriétés de curseur et afficher les résultats, vous devez utiliser la méthode [Close](../../../ado/reference/ado-api/close-method-ado.md) afin que les propriétés soient à nouveau en lecture/écriture. Vous pouvez ensuite modifier les paramètres de propriété et appeler la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) pour rouvrir le curseur.  
+ Lorsque l’objet **Recordset** est ouvert, les propriétés qui définissent la nature du curseur ([CursorType](./cursortype-property-ado.md), [LockType](./locktype-property-ado.md), [maxRecords](./maxrecords-property-ado.md), etc.) sont en lecture seule. Ainsi, la méthode **Requery** peut uniquement actualiser le curseur actuel. Pour modifier l’une des propriétés de curseur et afficher les résultats, vous devez utiliser la méthode [Close](./close-method-ado.md) afin que les propriétés soient à nouveau en lecture/écriture. Vous pouvez ensuite modifier les paramètres de propriété et appeler la méthode [Open](./open-method-ado-recordset.md) pour rouvrir le curseur.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Execute, Requery et Clear, exemples de méthodes (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
- [Execute, Requery et Clear, exemple de méthode (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
- [Execute, Requery et Clear, exemples de méthodes (VC + +)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   
- [CommandText, propriété (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)
+ [Execute, Requery et Clear, exemples de méthodes (VB)](./execute-requery-and-clear-methods-example-vb.md)   
+ [Execute, Requery et Clear, exemple de méthode (VBScript)](./execute-requery-and-clear-methods-example-vbscript.md)   
+ [Execute, Requery et Clear, exemples de méthodes (VC + +)](./execute-requery-and-clear-methods-example-vc.md)   
+ [CommandText, propriété (ADO)](./commandtext-property-ado.md)

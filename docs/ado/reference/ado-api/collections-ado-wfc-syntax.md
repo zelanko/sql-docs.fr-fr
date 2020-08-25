@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1694de8b8be8d00f9117b70a3ac180e086164ab9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a3a52b1dabc9ebfa01b29e1a026214a3a97aa3f2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450921"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776198"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Collections (ADO - syntaxe WFC)
 **package com. ms. wfc. Data**  
@@ -84,6 +84,6 @@ public int getCount()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Errors, collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters, collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Errors, collection (ADO)](./errors-collection-ado.md)   
+ [Fields, collection (ADO)](./fields-collection-ado.md)   
+ [Parameters, collection (ADO)](./parameters-collection-ado.md)

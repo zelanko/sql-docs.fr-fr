@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bbe2180d9f63f7dff8fa7398b3f037ea662b32d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad6deb3d0b4bc1340835effaef3e2472017fa0cd
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451661"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760059"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize et DefinedSize, exemple de propriétés (JScript)
-Cet exemple utilise les propriétés [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) et [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) pour afficher la taille définie et la taille réelle d’un champ. Coupez et collez le code suivant dans le bloc-notes ou dans un autre éditeur de texte, puis enregistrez-le en tant que **ActualSizeJS. asp**.  
+Cet exemple utilise les propriétés [ActualSize](./actualsize-property-ado.md) et [DefinedSize](./definedsize-property.md) pour afficher la taille définie et la taille réelle d’un champ. Coupez et collez le code suivant dans le bloc-notes ou dans un autre éditeur de texte, puis enregistrez-le en tant que **ActualSizeJS. asp**.  
   
 ```  
 <!-- BeginActualSizeJS -->  
@@ -132,6 +132,6 @@ body {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ActualSize, propriété (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [DefinedSize, propriété](../../../ado/reference/ado-api/definedsize-property.md)   
- [Objet Field](../../../ado/reference/ado-api/field-object.md)
+ [ActualSize, propriété (ADO)](./actualsize-property-ado.md)   
+ [DefinedSize, propriété](./definedsize-property.md)   
+ [Objet Field](./field-object.md)

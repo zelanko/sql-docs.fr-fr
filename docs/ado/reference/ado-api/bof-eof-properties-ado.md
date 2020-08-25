@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a10ef4731db0e469743d09d9e3b35463d03e7020
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f6d27831c9215a66580cce32baa0d6d602d2813
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451126"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776398"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF, propriétés (ADO)
--   **BOF** Indique que la position actuelle de l’enregistrement est antérieure au premier enregistrement d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+-   **BOF** Indique que la position actuelle de l’enregistrement est antérieure au premier enregistrement d’un objet [Recordset](./recordset-object-ado.md) .  
   
 -   **EOF** Indique que la position actuelle de l’enregistrement est après le dernier enregistrement d’un objet **Recordset** .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "88451126"
   
  Si la propriété **BOF** ou **EOF** a la **valeur true**, il n’y a pas d’enregistrement actif.  
   
- Si vous ouvrez un objet **Recordset** qui ne contient aucun enregistrement, les propriétés **BOF** et **EOF** ont la valeur **true** (pour plus d’informations sur cet état d’un **Recordset**, consultez la propriété [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) ). Lorsque vous ouvrez un objet **Recordset** qui contient au moins un enregistrement, le premier enregistrement est l’enregistrement actif et les propriétés **BOF** et **EOF** ont la **valeur false**.  
+ Si vous ouvrez un objet **Recordset** qui ne contient aucun enregistrement, les propriétés **BOF** et **EOF** ont la valeur **true** (pour plus d’informations sur cet état d’un **Recordset**, consultez la propriété [RecordCount](./recordcount-property-ado.md) ). Lorsque vous ouvrez un objet **Recordset** qui contient au moins un enregistrement, le premier enregistrement est l’enregistrement actif et les propriétés **BOF** et **EOF** ont la **valeur false**.  
   
  Si vous supprimez le dernier enregistrement restant dans l’objet **Recordset** , les propriétés **BOF** et **EOF** peuvent rester **false** jusqu’à ce que vous tentiez de repositionner l’enregistrement actif.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "88451126"
 |**MoveNext**, **Move** > 0|Aucun changement|Définir sur **true**|  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [BOF, EOF et Bookmark, exemple de propriétés (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF, EOF et Bookmark, exemple de propriétés (VC + +)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [BOF, EOF et Bookmark, exemple de propriétés (VB)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF, EOF et Bookmark, exemple de propriétés (VC + +)](./bof-eof-and-bookmark-properties-example-vc.md)
