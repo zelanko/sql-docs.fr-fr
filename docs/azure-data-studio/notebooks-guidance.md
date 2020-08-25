@@ -6,15 +6,15 @@ ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
-ms.openlocfilehash: 7e61b31a21a6a3a85a9830bc73a7d62777c78b9b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: b7d6e2c33cfc76736c3678ff9c802e3059f53baa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86920517"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767818"
 ---
 # <a name="use-jupyter-notebooks-in-azure-data-studio"></a>Utiliser des notebooks Jupyter dans Azure Data Studio
 
@@ -22,7 +22,7 @@ ms.locfileid: "86920517"
 
 Jupyter Notebook est une application web open source qui vous permet de créer et de partager des documents contenant du code en temps réel, des équations, des visualisations et du texte narratif. L’utilisation inclut le nettoyage des données et la transformation, la simulation numérique, la modélisation statistique, la visualisation des données et le machine learning.
 
-Cet article explique comment créer un notebook dans la dernière version d’[**Azure Data Studio**](../azure-data-studio/download.md) et comment commencer à créer vos propres notebooks à l’aide de différents noyaux.
+Cet article explique comment créer un notebook dans la dernière version d’[**Azure Data Studio**](./download-azure-data-studio.md?view=sql-server-ver15) et comment commencer à créer vos propres notebooks à l’aide de différents noyaux.
 
 Regardez cette courte vidéo (cinq minutes) de présentation des notebooks dans Azure Data Studio :
 
@@ -51,7 +51,7 @@ Les notebooks Azure Data Studio prennent en charge plusieurs noyaux, notamment S
 **Attacher à** fournit le contexte pour le noyau. Par exemple, si vous utilisez le noyau SQL, vous pouvez attacher n’importe laquelle de vos instances SQL Server.
 Si vous utilisez le noyau Python3, vous attachez à **localhost** et vous pouvez utiliser ce noyau pour votre développement Python local.
 
-Le noyau SQL peut également être utilisé pour se connecter à des instances de serveur PostgreSQL. Si vous êtes développeur PostgreSQL et que vous souhaitez connecter les notebooks à votre serveur PostgreSQL, téléchargez l’[**extension PostgreSQL**](../azure-data-studio/postgres-extension.md) sur la Place de marché d’extensions Azure Data Studio et connectez-vous au serveur PostgreSQL.
+Le noyau SQL peut également être utilisé pour se connecter à des instances de serveur PostgreSQL. Si vous êtes développeur PostgreSQL et que vous souhaitez connecter les notebooks à votre serveur PostgreSQL, téléchargez l’[**extension PostgreSQL**](./postgres-extension.md) sur la Place de marché d’extensions Azure Data Studio et connectez-vous au serveur PostgreSQL.
 
 Si vous êtes connecté à un cluster Big Data SQL Server 2019, la valeur par défaut d’**Attacher à** est le point de terminaison du cluster. Vous pouvez soumettre du code Python, Scala et R à l’aide du calcul Spark du cluster.
 

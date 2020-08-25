@@ -1,5 +1,5 @@
 - name: Documentation Azure Data Studio
-  href: ../azure-data-studio/index.yml
+  href: ./index.yml
 - name: Télécharger Azure Data Studio
   href: download-azure-data-studio.md
 - name: Notes de publication
@@ -127,7 +127,7 @@
     - name: Outils SQL
       href: ../tools/overview-sql-tools.md
     - name: Outils de développeur Azure
-      href: 'https://docs.microsoft.com/azure/?product=developer-tools'
+      href: /azure/?product=developer-tools
 - name: Ressources
   items:
     - name: Questions fréquentes (FAQ)

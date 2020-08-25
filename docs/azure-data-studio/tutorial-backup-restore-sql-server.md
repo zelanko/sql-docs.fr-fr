@@ -2,19 +2,19 @@
 title: Sauvegarde et restauration des bases de données
 description: Suivez ce tutoriel pour découvrir comment sauvegarder et restaurer des bases de données avec Azure Data Studio.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: 5e276a830f5fa6abc9b1fcf70c540d4cb955d5af
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8594178dc6817cc8b826268c3fd0aebce59af2ec
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522423"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765798"
 ---
 # <a name="backup-and-restore-databases-using-azure-data-studio"></a>Sauvegarder et restaurer des bases de données à l’aide d’Azure Data Studio
 
@@ -32,7 +32,7 @@ Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server. Pour c
 
 * [Se connecter à et interroger SQL Server avec [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-Ce didacticiel nécessite une connexion à une base de données SQL Server. Azure SQL Database proposant des sauvegardes automatisées, Azure Data Studio n’effectue pas de sauvegarde et de restauration d’Azure SQL Database. Pour plus d’informations, consultez [En savoir plus sur les sauvegardes automatiques de SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+Ce didacticiel nécessite une connexion à une base de données SQL Server. Azure SQL Database proposant des sauvegardes automatisées, Azure Data Studio n’effectue pas de sauvegarde et de restauration d’Azure SQL Database. Pour plus d’informations, consultez [En savoir plus sur les sauvegardes automatiques de SQL Database](/azure/sql-database/sql-database-automated-backups).
 
 ## <a name="back-up-a-database"></a>Sauvegarder une base de données
 

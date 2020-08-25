@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c60b0dbb40c41a7d41971bffc0f44b89ad77eaaa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 25b22aa23d773765f98cf3610d57bb041ba2205b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882733"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746179"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Se connecter à un écouteur de groupe de disponibilité Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -184,10 +184,10 @@ SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.c
 
 Un administrateur de domaine doit configurer un nom de principal de service (SPN) dans Active Directory pour chaque écouteur du groupe de disponibilité afin d’activer Kerberos pour les connexions clientes vers l’écouteur. Lors de l’inscription du SPN, vous devez utiliser le compte de service de l’instance de serveur qui héberge le réplica de disponibilité. Pour que le SPN fonctionne sur tous les réplicas, le même compte de service doit être utilisé pour toutes les instances du cluster WSFC qui héberge le groupe de disponibilité.  
   
- Utilisez l’outil de ligne de commande **setspn** Windows pour configurer le SPN.  Par exemple, pour configurer un SPN pour un groupe de disponibilité nommé `AG1listener.Adventure-Works.com` hébergé dans un ensemble d'instances de SQL Server, toutes configurées pour s'exécuter sous le compte de domaine `corp/svclogin2`:  
+ Utilisez l’outil de ligne de commande **setspn** Windows pour configurer le SPN.  Par exemple, pour configurer un SPN pour un groupe de disponibilité nommé `AG1listener.Adventure-Works.com` hébergé dans un ensemble d'instances de SQL Server, toutes configurées pour s'exécuter sous le compte de domaine `corp\svclogin2`:  
   
 ```  
-setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2  
+setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2  
 ```  
   
  Pour plus d'informations sur l'inscription manuelle d'un SPN pour SQL Server, consultez [Inscrire un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  

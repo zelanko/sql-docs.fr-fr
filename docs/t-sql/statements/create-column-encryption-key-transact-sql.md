@@ -29,15 +29,16 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 9527007eb54e07747f3e6d12b9fdf98bc50ed3cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 62e2338159e845f206d4dbc119414a6bc35b7e1b
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458796"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645028"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Crée un objet de métadonnées de clé de chiffrement de colonne pour [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) ou [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Un objet de métadonnées de clé de chiffrement de colonne contient une ou deux valeurs chiffrées d’une clé de chiffrement de colonne qui est utilisée pour chiffrer les données dans une colonne. Chaque valeur est chiffrée à l’aide d’une clé principale de colonne. 
   

@@ -3,18 +3,18 @@ title: Extension de serveurs SQL Server Central Management
 description: Découvrez comment installer et utiliser l’extension Serveurs de gestion centralisée SQL Server (préversion), qui permet de regrouper des serveurs et d’appliquer des actions au groupe.
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 6f28601245c239b9ffed0379b43123a300d23d30
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 3024a9c61fb51063b50f8fde769e7bdbb5608fbf
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522493"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766048"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>Extension de serveurs SQL Server Central Management (préversion)
 
@@ -34,6 +34,4 @@ Cette expérience est actuellement dans sa préversion initiale. Signalez les pr
  Les serveurs de gestion centralisée peuvent être affichés en cliquant sur l’icône Connexions (Ctrl/Cmd+G). La première fois que vous téléchargez l’extension, la vue des serveurs de gestion centralisée est réduite, et vous pouvez l’ouvrir en cliquant sur **Serveurs de gestion centralisée**
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour en savoir plus sur les serveurs de gestion centralisée, vous pouvez [consulter ceci.](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group)
-
-
+Pour en savoir plus sur les serveurs de gestion centralisée, vous pouvez [consulter ceci.](../ssms/register-servers/create-a-central-management-server-and-server-group.md)

@@ -19,28 +19,29 @@ ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: babdda8ca6ced94eba21788028d8bf6e6e7eeaae
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: fef5768f72f45bf388ccd5878d56dc480371aecd
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012450"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646055"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemples d’importation et d’exportation en bloc de documents XML (SQL Server)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
-    
-##  <a name="top"></a>
- Vous pouvez importer en bloc des documents XML vers une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les exporter en bloc à partir d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique fournit des exemples de chaque.  
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
+## <a name="top"></a>
+
+Vous pouvez importer en bloc des documents XML vers une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les exporter en bloc à partir d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette rubrique fournit des exemples de chaque.
+
+Pour importer des données en bloc à partir d'un fichier de données dans une table ou une vue non partitionnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez utiliser les méthodes suivantes :  
   
- Pour importer des données en bloc à partir d'un fichier de données dans une table ou une vue non partitionnée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez utiliser les méthodes suivantes :  
+- utilitaire**bcp**  
+   Vous pouvez aussi faire appel à l’utilitaire **bcp** pour exporter des données à partir de n’importe quel emplacement d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant une instruction SELECT, vues partitionnées comprises.  
+
+- BULK INSERT  
   
--   utilitaire**bcp**  
-    Vous pouvez aussi faire appel à l’utilitaire **bcp** pour exporter des données à partir de n’importe quel emplacement d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant une instruction SELECT, vues partitionnées comprises.  
-  
--   BULK INSERT  
-  
--   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
+- INSERT ... SELECT * FROM OPENROWSET(BULK...)  
 
 Pour plus d'informations, consultez les rubriques ci-dessous.
 - [Importer et exporter des données en bloc à l'aide de l'utilitaire bcp (SQL Server).](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)

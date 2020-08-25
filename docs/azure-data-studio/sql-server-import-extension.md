@@ -5,22 +5,22 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: cac73bebca185f40deb1b1bac4a77c6ceb20264e
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 9ecee71588cb54cb23c813cf5009b92159cf94d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522453"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765918"
 ---
 # <a name="sql-server-import-extension-preview"></a>Extension d’importation SQL Server (préversion)
 
 L’extension d’importation SQL Server (préversion) convertit les fichiers. txt et. csv en une table SQL. Cet assistant utilise un framework Microsoft Research appelé [Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) pour analyser intelligemment le fichier avec une entrée utilisateur minimale. Il s’agit d’une infrastructure puissante pour le data wrangling, et il s’agit de la même technologie que celle derrière le remplissage rapide dans Microsoft Excel
 
-Pour en savoir plus sur la version SSMS de cette fonctionnalité, vous pouvez lire [cet article](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard).
+Pour en savoir plus sur la version SSMS de cette fonctionnalité, vous pouvez lire [cet article](../relational-databases/import-export/import-flat-file-wizard.md).
 
 
 ## <a name="install-the-sql-server-import-extension"></a>Installer l’extension d’importation SQL Server

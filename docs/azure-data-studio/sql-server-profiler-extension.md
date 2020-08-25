@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: e6e71f00748fa9d0fc4b803d8268d8a8b23284fc
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: e3ab5a83f8ea4a8715101debdbdf5d292761d7b6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522443"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765778"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>Extension SQL Server Profiler (préversion)
 
@@ -49,9 +49,4 @@ L’extension SQL Server Profiler (préversion) fournit une solution de suivi de
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur le profileur et les événements étendus, consultez [Événements étendus](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
-
-
-
-
-
+Pour en savoir plus sur le profileur et les événements étendus, consultez [Événements étendus](../relational-databases/extended-events/extended-events.md).

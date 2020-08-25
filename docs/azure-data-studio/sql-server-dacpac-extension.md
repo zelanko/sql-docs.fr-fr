@@ -5,16 +5,16 @@ ms.custom: seodec18
 ms.date: 11/04/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: eeff69a65751097017383399784ea9a717f3b7e8
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 709e218727ad85fdf220033e3d8ea8741451fd9e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522473"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766008"
 ---
 # <a name="sql-server-dacpac-extension"></a>Extension dacpac SQL Server
 
@@ -33,7 +33,7 @@ ms.locfileid: "87522473"
 
 ## <a name="why-would-i-use-the-data-tier-application-wizard"></a>Pourquoi utiliser l’Assistant Application de la couche Données ?
 
-L’Assistant facilite la gestion des fichiers dacpac et bacpac, ce qui simplifie le développement et le déploiement des éléments de la couche données qui prennent en charge votre application. Pour en savoir plus sur l’utilisation des applications de la couche Données, [consultez notre documentation.](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+L’Assistant facilite la gestion des fichiers dacpac et bacpac, ce qui simplifie le développement et le déploiement des éléments de la couche données qui prennent en charge votre application. Pour en savoir plus sur l’utilisation des applications de la couche Données, [consultez notre documentation.](../relational-databases/data-tier-applications/data-tier-applications.md?view=sql-server-2017)
 
 
 ## <a name="install-the-extension"></a>Installer l’extension
@@ -56,5 +56,5 @@ Pour lancer l’Assistant, cliquez avec le bouton droit sur le dossier Bases de 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur dacpac, [consultez notre documentation.](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+Pour en savoir plus sur dacpac, [consultez notre documentation.](../relational-databases/data-tier-applications/data-tier-applications.md?view=sql-server-2017)
 Signalez les problèmes et les demandes de fonctionnalités [ici](https://github.com/microsoft/azuredatastudio/issues).

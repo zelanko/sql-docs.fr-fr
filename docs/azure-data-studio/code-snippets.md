@@ -2,19 +2,19 @@
 title: Créer des extraits de code réutilisables
 description: Découvrez comment créer et utiliser des extraits de code SQL Azure Data Studio, qui facilitent la création de bases de données et d’objets de base de données.
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: a8ef725a83a0800dbe5027e4d76bc8f7f51f7f3b
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 95b0385178a5e2bd25f8b64be5f910d4f885e34b
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411165"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746089"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-azure-data-studio"></a>Créer et utiliser des extraits de code pour créer rapidement des scripts Transact-SQL (T-SQL) dans Azure Data Studio
 

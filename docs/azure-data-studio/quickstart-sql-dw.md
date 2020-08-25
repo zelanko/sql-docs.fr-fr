@@ -2,19 +2,19 @@
 title: Se connecter à Azure SQL Data Warehouse et exécuter des requêtes
 description: Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter à Azure SQL Data Warehouse et exécuter une requête
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728006"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766368"
 ---
 # <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Démarrage rapide : utiliser Azure Data Studio pour vous connecter et interroger des données dans Azure SQL Data Warehouse
 
@@ -23,9 +23,9 @@ Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se 
 ## <a name="prerequisites"></a>Prérequis
 Pour suivre cette procédure de démarrage rapide, vous avez besoin d’Azure Data Studio et d’un serveur Azure SQL Data Warehouse.
 
-- [Installez Azure Data Studio](download.md).
+- [Installez Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-Si vous ne disposez pas déjà d’un entrepôt de données SQL, consultez [Créer un entrepôt de données SQL](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Si vous ne disposez pas déjà d’un entrepôt de données SQL, consultez [Créer un entrepôt de données SQL](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 N’oubliez pas le nom du serveur et les informations d’identification de connexion !
 
@@ -52,7 +52,7 @@ Utilisez Azure Data Studio pour établir une connexion à votre serveur Azure SQ
 
    ![Icône de nouvelle connexion](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. Si votre serveur ne dispose pas d’une règle de pare-feu autorisant Azure Data Studio à se connecter, le formulaire **Créer une règle de pare-feu** s’ouvre. Remplissez le formulaire pour créer une nouvelle règle de pare-feu. Pour plus d’informations, consultez [Règles de pare-feu](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Si votre serveur ne dispose pas d’une règle de pare-feu autorisant Azure Data Studio à se connecter, le formulaire **Créer une règle de pare-feu** s’ouvre. Remplissez le formulaire pour créer une nouvelle règle de pare-feu. Pour plus d’informations, consultez [Règles de pare-feu](/azure/sql-database/sql-database-firewall-configure).
 
    ![Nouvelle règle de pare-feu](media/quickstart-sql-dw/firewall.png)  
 
@@ -140,7 +140,7 @@ L’éditeur de requête est toujours connecté à la base de données *MASTER*,
 ## <a name="clean-up-resources"></a>Nettoyer les ressources
 
 D’autres Articles de cette collection reposent sur ce démarrage rapide. Si vous envisagez de continuer à travailler avec les démarrages rapides suivants, ne nettoyez pas les ressources créées dans ce démarrage rapide. Si vous n’envisagez pas de continuer, procédez comme suit pour supprimer les ressources créées par ce guide de démarrage rapide dans le portail Azure.
-Nettoyez les ressources en supprimant les groupes de ressources dont vous n’avez plus besoin. Pour plus d’informations, consultez [Nettoyer les ressources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+Nettoyez les ressources en supprimant les groupes de ressources dont vous n’avez plus besoin. Pour plus d’informations, consultez [Nettoyer les ressources](/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 
 
 ## <a name="next-steps"></a>Étapes suivantes

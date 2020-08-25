@@ -5,21 +5,21 @@ ms.custom: seodec18
 ms.date: 10/07/2019
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
 manager: alanyu
-ms.openlocfilehash: 58c79a367782f040739b23f52e01bec5cb0ed917
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: dd1b610c5c8e99fcda446688d0dbdffe0a9dc51e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988601"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778478"
 ---
 # <a name="azure-sql-managed-instance-dashboard-for-azure-data-studio-preview"></a>Tableau de bord Azure SQL Managed Instance pour Azure Data Studio (préversion)
 
-L’extension Azure SQL Managed Instance fournit un tableau de bord permettant d’utiliser une [instance Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) dans [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Cette extension fournit les fonctionnalités suivantes :
+L’extension Azure SQL Managed Instance fournit un tableau de bord permettant d’utiliser une [instance Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index) dans [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). Cette extension fournit les fonctionnalités suivantes :
 
 - Affiche les propriétés de SQL Managed Instance, notamment les vCores et le stockage utilisé
 - Supervise l’utilisation du processeur et du stockage au cours des deux heures précédentes
@@ -29,7 +29,7 @@ L’extension Azure SQL Managed Instance fournit un tableau de bord permettant d
 
 ## <a name="install"></a>Installer
 
-Vous pouvez installer la version officielle de cette extension. Suivez pour cela les étapes décrites dans la documentation sur [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+Vous pouvez installer la version officielle de cette extension. Suivez pour cela les étapes décrites dans la documentation sur [Azure Data Studio](./extensions.md).
 Dans le volet **Extensions**, recherchez « Managed Instance » et installez-la à cet emplacement. Une fois l’installation terminée, vous recevrez automatiquement une notification à chaque mise à jour de l’extension.
 
 Quand l’extension est installée, un onglet **Instance managée** apparaît dans Azure Data Studio. Vous trouverez ici des informations spécifiques à votre instance managée.
@@ -58,8 +58,8 @@ Parmi les recommandations affichées, vous pouvez voir les suivantes :
 - **Limite d’espace de stockage en passe d’être atteinte**. Supprimez les données inutiles ou augmentez la taille de stockage de l’instance. Les bases de données qui atteignent la limite de stockage risquent même de ne pas pouvoir traiter les requêtes lues.
 - **Limite de débit de l’instance en passe d’être atteinte**. Vous avertit quand votre charge s’approche de la limite de votre niveau de service : 22 Mo/s pour le niveau universel ou 48 Mo/s pour le niveau vital pour l’entreprise. N’oubliez pas que votre instance managée limite votre charge pour que les sauvegardes puissent être effectuées.
 - **Sollicitation de la mémoire**. La faible espérance de vie d’une page ou de nombreuses statistiques d’attente `PAGEIOLATCH` peuvent indiquer que votre instance supprime des pages de la mémoire et essaie constamment de charger plus de pages à partir du disque.
-- **Limites des fichiers journaux**. Si vos fichiers journaux s’approchent des [limites d’E/S de fichier au niveau de service universel](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), vous devrez peut-être augmenter la taille des fichiers journaux pour améliorer les performances.
-- **Limites des fichiers de données**. Si vos fichiers de données s’approchent des [limites d’E/S de fichier au niveau de service universel](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), vous devrez peut-être augmenter la taille des fichiers pour améliorer les performances. Ce problème peut entraîner une sollicitation de la mémoire et ralentir les sauvegardes.
+- **Limites des fichiers journaux**. Si vos fichiers journaux s’approchent des [limites d’E/S de fichier au niveau de service universel](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), vous devrez peut-être augmenter la taille des fichiers journaux pour améliorer les performances.
+- **Limites des fichiers de données**. Si vos fichiers de données s’approchent des [limites d’E/S de fichier au niveau de service universel](/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), vous devrez peut-être augmenter la taille des fichiers pour améliorer les performances. Ce problème peut entraîner une sollicitation de la mémoire et ralentir les sauvegardes.
 - **Problèmes de disponibilité**. Un nombre élevé de fichiers journaux virtuels peut affecter les performances. En cas de défaillance d’un processus, ces problèmes peuvent entraîner un allongement de la récupération de la base de données au niveau de service universel.
 
 Examinez régulièrement ces recommandations, étudiez les causes racines et prenez les mesures nécessaires pour corriger les problèmes. L’extension SQL Managed Instance fournit des scripts que vous pouvez exécuter pour atténuer certains des problèmes signalés.

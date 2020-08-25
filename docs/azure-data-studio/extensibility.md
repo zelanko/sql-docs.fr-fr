@@ -2,19 +2,19 @@
 title: Ajout de fonctionnalités supplémentaires via l’extensibilité
 description: Apprenez-en davantage sur le modèle d’extensibilité et les domaines d’extensibilité clés pour étendre les fonctionnalités d’Azure Data Studio
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3595c9aac3b0b8a0419780cdeaf9b5547bfa97d1
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: a8866c438b446715f7e804688f50881e0b0eb167
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483857"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778438"
 ---
 # <a name="azure-data-studio-extensibility"></a>Extensibilité d’Azure Data Studio
 
@@ -111,7 +111,7 @@ Pour faire référence au conteneur inscrit, spécifiez l’ID du conteneur
 
 `dashboard.insights`
 
-Vous pouvez enregistrer des insights à l’aide de dashboard.insights. Cela est similaire au [Didacticiel : Créer un widget insight personnalisé](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+Vous pouvez enregistrer des insights à l’aide de dashboard.insights. Cela est similaire au [Didacticiel : Créer un widget insight personnalisé](./tutorial-build-custom-insight-sql-server.md?view=sql-server-ver15)
 
 ```json
 "dashboard.insights": {
