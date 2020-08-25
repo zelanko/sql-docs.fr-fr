@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 482f4376f8e33a185e3dcf8327f50321c6663172
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f84abf3fed9f4b05dae02b9432ffe01813b91c39
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438871"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767938"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange, événement (RDS)
-L’événement **onreadystatechange** est appelé chaque fois que la valeur de la propriété [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) change.  
+L’événement **onreadystatechange** est appelé chaque fois que la valeur de la propriété [ReadyState](./readystate-property-rds.md) change.  
   
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -38,13 +38,11 @@ onReadyStateChange
  Aucun.  
   
 ## <a name="remarks"></a>Notes  
- La propriété **ReadyState** reflète la progression d’un [objet RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) , car il récupère de manière asynchrone des données dans son objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) . Utilisez l’événement **onreadystatechange** pour surveiller les modifications apportées à la propriété **ReadyState** à chaque fois qu’elles se produisent. C’est plus efficace que de vérifier régulièrement la valeur de la propriété.  
+ La propriété **ReadyState** reflète la progression d’un [objet RDS. DataControl](./datacontrol-object-rds.md) , car il récupère de manière asynchrone des données dans son objet [Recordset](../ado-api/recordset-object-ado.md) . Utilisez l’événement **onreadystatechange** pour surveiller les modifications apportées à la propriété **ReadyState** à chaque fois qu’elles se produisent. C’est plus efficace que de vérifier régulièrement la valeur de la propriété.  
   
 ## <a name="applies-to"></a>S'applique à  
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl, objet (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de modèle d’événements ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Présentation rapide du gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-
-
+ [Exemple de modèle d’événements ADO (VC + +)](../ado-api/ado-events-model-example-vc.md)   
+ [Présentation rapide du gestionnaire d’événements ADO](../../guide/data/ado-event-handler-summary.md)

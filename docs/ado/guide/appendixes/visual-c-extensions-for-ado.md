@@ -16,29 +16,29 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9fa962d4710811cf376634dcc299707f6b0e654
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a045c24989f058ae97aa9c7f4a29e27fb51acd02
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453931"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806477"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Extensions Visual C++ pour ADO
-La méthode recommandée pour programmer ADO avec Visual C++ consiste à utiliser la directive **#import** , comme indiqué dans [Microsoft Visual C++ programmation ADO](../../../ado/guide/appendixes/visual-c-ado-programming.md). Toutefois, les versions antérieures d’ADO étaient fournies avec une autre méthode de programmation à l’aide de Visual C++ : les extensions Visual C++. Cette section documente cette fonctionnalité pour ceux qui doivent gérer Visual C++ code d’extensions, mais le nouveau code ADO doit être écrit à l’aide de #**Import**.
+La méthode recommandée pour programmer ADO avec Visual C++ consiste à utiliser la directive **#import** , comme indiqué dans [Microsoft Visual C++ programmation ADO](./visual-c-ado-programming.md). Toutefois, les versions antérieures d’ADO étaient fournies avec une autre méthode de programmation à l’aide de Visual C++ : les extensions Visual C++. Cette section documente cette fonctionnalité pour ceux qui doivent gérer Visual C++ code d’extensions, mais le nouveau code ADO doit être écrit à l’aide de #**Import**.
 
  L’un des travaux les plus fastidieux Visual C++ les programmeurs lorsque vous récupérez des données à l’aide d’ADO consiste à convertir les données retournées en tant que type de données VARIANT en un type de données C++, puis à stocker les données converties dans une classe ou une structure. En plus d’être fastidieux, la récupération de données C++ via un type de données VARIANT diminue les performances.
 
  ADO fournit une interface qui prend en charge la récupération de données dans des types de données C/C++ natifs sans passer par une variante, et fournit également des macros de préprocesseur qui simplifient l’utilisation de l’interface. Le résultat est un outil flexible qui est plus facile à utiliser et qui offre de bonnes performances.
 
- Un scénario client C/C++ courant consiste à lier un enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) à une classe ou un struct c/c++ contenant des types c/c++ natifs. En passant par les VARIANTs, cela implique l’écriture de code de conversion de VARIANT en types natifs C/C++. Les extensions Visual C++ pour ADO visent à rendre ce scénario beaucoup plus facile pour le programmeur Visual C++.
+ Un scénario client C/C++ courant consiste à lier un enregistrement dans un [Recordset](../../reference/ado-api/recordset-object-ado.md) à une classe ou un struct c/c++ contenant des types c/c++ natifs. En passant par les VARIANTs, cela implique l’écriture de code de conversion de VARIANT en types natifs C/C++. Les extensions Visual C++ pour ADO visent à rendre ce scénario beaucoup plus facile pour le programmeur Visual C++.
 
  Consultez les rubriques suivantes pour en savoir plus sur les extensions de Visual C++ pour ADO.
 
--   [Utilisation des extensions de Visual C++ pour ADO](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+-   [Utilisation des extensions de Visual C++ pour ADO](./using-visual-c-extensions.md)
 
--   [En-tête d’extensions Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+-   [En-tête d’extensions Visual C++](./visual-c-extensions-header.md)
 
--   [Exemple ADO avec Visual C++ extensions](../../../ado/guide/appendixes/visual-c-extensions-example.md)
+-   [Exemple ADO avec Visual C++ extensions](./visual-c-extensions-example.md)
 
 ## <a name="see-also"></a>Voir aussi
- Exemple d' [index de syntaxe ADO for Visual C++ pour COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [à l’aide](../../../ado/guide/appendixes/using-visual-c-extensions.md) des extensions de Visual C++ [Visual C++ en-tête extensions](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ Exemple d' [index de syntaxe ADO for Visual C++ pour COM](../../reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C++](./visual-c-extensions-example.md) [à l’aide](./using-visual-c-extensions.md) des extensions de Visual C++ [Visual C++ en-tête extensions](./visual-c-extensions-header.md)

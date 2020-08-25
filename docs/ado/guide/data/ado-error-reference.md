@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec9df42f3aee56d06883478e365fffcb71790d00
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a286804eb5ea575e259c3b54a106edea83f55f57
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453861"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806695"
 ---
 # <a name="ado-errors"></a>Erreurs ADO
-La constante **ErrorValueEnum** décrit les valeurs d’erreur ADO. Pour obtenir la liste complète de ces constantes énumérées, y compris les valeurs, consultez l' [annexe B : erreurs ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). Cette section examine certaines des erreurs les plus intéressantes et explique certaines situations spécifiques qui peuvent les déclencher, ou des solutions pour résoudre le problème. La constante **ErrorValueEnum** et le nombre décimal positif bref sont répertoriés.
+La constante **ErrorValueEnum** décrit les valeurs d’erreur ADO. Pour obtenir la liste complète de ces constantes énumérées, y compris les valeurs, consultez l' [annexe B : erreurs ADO](../appendixes/appendix-b-ado-errors.md). Cette section examine certaines des erreurs les plus intéressantes et explique certaines situations spécifiques qui peuvent les déclencher, ou des solutions pour résoudre le problème. La constante **ErrorValueEnum** et le nombre décimal positif bref sont répertoriés.
 
 |Number|ErrorValueEnum, constante|Description/causes possibles|
 |------------|-----------------------------|----------------------------------|

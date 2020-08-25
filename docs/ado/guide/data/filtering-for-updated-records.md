@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a0c3a33b9c45afacfdb790606da22713a0a82478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf6bae32e9ed966939d5589f779bdb1d4d6d6f4b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453381"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806841"
 ---
 # <a name="filtering-for-updated-records"></a>Filtrage des enregistrements mis à jour
 Avant d’appeler UpdateBatch, vous pouvez utiliser la propriété de filtre Recordset pour afficher uniquement les enregistrements qui ont été modifiés depuis l’ouverture du recordset ou le dernier appel à UpdateBatch. Pour ce faire, définissez le filtre sur adFilterPendingRecords pour déterminer le nombre d’enregistrements qui seront mis à jour, comme indiqué dans l’exemple de code de la section suivante.  
@@ -56,4 +56,4 @@ Avant d’appeler UpdateBatch, vous pouvez utiliser la propriété de filtre Rec
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mode Batch](../../../ado/guide/data/batch-mode.md)
+ [Mode Batch](./batch-mode.md)

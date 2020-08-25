@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6a8d92abc3a1b0d7e6d39ac4149c186c5a2fc2eb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 75cfedbafa7bc0c1b954f8bbdea29ec92d45c07f
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453371"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806832"
 ---
 # <a name="formal-shape-grammar"></a>Grammaire formelle de la commande SHAPE
 Il s’agit de la grammaire formelle pour créer n’importe quelle commande de forme :  
@@ -69,10 +69,10 @@ Il s’agit de la grammaire formelle pour créer n’importe quelle commande de 
 |\<expression>|Expression Visual Basic pour Applications dont les opérandes sont d’autres colonnes non CALCULées dans la même ligne.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès aux lignes d’un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Présentation de la mise en forme des données](../../../ado/guide/data/data-shaping-overview.md)   
- [Fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clause APPEND de la forme](../../../ado/guide/data/shape-append-clause.md)   
- [Mettre en forme les commandes en général](../../../ado/guide/data/shape-commands-in-general.md)   
- [Shape Compute, clause](../../../ado/guide/data/shape-compute-clause.md)   
- [Fonctions Visual Basic pour Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Accès aux lignes d’un jeu d’enregistrements hiérarchique](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Présentation de la mise en forme des données](./data-shaping-overview.md)   
+ [Fournisseurs requis pour la mise en forme des données](./required-providers-for-data-shaping.md)   
+ [Clause APPEND de la forme](./shape-append-clause.md)   
+ [Mettre en forme les commandes en général](./shape-commands-in-general.md)   
+ [Shape Compute, clause](./shape-compute-clause.md)   
+ [Fonctions Visual Basic pour Applications](./visual-basic-for-applications-functions.md)

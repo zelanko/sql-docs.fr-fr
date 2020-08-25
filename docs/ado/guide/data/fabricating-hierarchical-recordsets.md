@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2f418d2eb21f2cb02223234f6231efb39b232faa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e1bf51c8d7d6db2ac898787c3a649a0ecb0610cb
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453401"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806843"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabrication de recordsets hiérarchiques
 L’exemple suivant montre comment créer un jeu d’enregistrements hiérarchique sans source de données sous-jacente à l’aide de la syntaxe de mise en forme des données pour définir des colonnes pour les **jeux d’enregistrements**parents, enfants et petits-enfants.  
   
- Pour fabriquer un **jeu d’enregistrements**hiérarchique, vous devez spécifier [Microsoft Data Shaping Service pour OLE DB (fournisseur de services ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) et vous pouvez spécifier une fournisseur de données valeur None dans le paramètre de chaîne de connexion de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) de l’objet [Connection](../../../ado/reference/ado-api/connection-object-ado.md) . Pour plus d’informations, consultez [fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Pour fabriquer un **jeu d’enregistrements**hiérarchique, vous devez spécifier [Microsoft Data Shaping Service pour OLE DB (fournisseur de services ADO)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape) et vous pouvez spécifier une fournisseur de données valeur None dans le paramètre de chaîne de connexion de la méthode [Open](../../reference/ado-api/open-method-ado-connection.md) de l’objet [Connection](../../reference/ado-api/connection-object-ado.md) . Pour plus d’informations, consultez [fournisseurs requis pour la mise en forme des données](./required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -56,8 +56,8 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  Dès que le **jeu d’enregistrements** a été créé, il peut être rempli, manipulé ou rendu persistant dans un fichier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accès aux lignes d’un jeu d’enregistrements hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
- [Fournisseurs requis pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Clause APPEND de la forme](../../../ado/guide/data/shape-append-clause.md)   
- [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)
+ [Accès aux lignes d’un jeu d’enregistrements hiérarchique](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Grammaire de forme formelle](./formal-shape-grammar.md)   
+ [Fournisseurs requis pour la mise en forme des données](./required-providers-for-data-shaping.md)   
+ [Clause APPEND de la forme](./shape-append-clause.md)   
+ [Généralités sur les commandes SHAPE](./shape-commands-in-general.md)

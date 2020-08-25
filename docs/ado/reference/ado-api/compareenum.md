@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7901bf5888b3a0d4ee339b146b4eb693a88fe892
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1caf78c0f15ef2e0a3f4ad6fe73ec44684c0e4ef
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450761"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776018"
 ---
 # <a name="compareenum"></a>CompareEnum
 Spécifie la position relative de deux enregistrements représentés par leurs signets.  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adCompareEqual**|1|Indique que les signets sont égaux.|  
 |**adCompareGreaterThan**|2|Indique que le premier signet est après le deuxième.|  
@@ -37,7 +37,7 @@ Spécifie la position relative de deux enregistrements représentés par leurs s
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.Compare.EQUAL|  
 |AdoEnums.Compare.GREATERTHAN|  
@@ -46,7 +46,7 @@ Spécifie la position relative de deux enregistrements représentés par leurs s
 |AdoEnums.Compare.NOTEQUAL|  
   
 ## <a name="applies-to"></a>S'applique à  
- [CompareBookmarks, méthode (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [CompareBookmarks, méthode (ADO)](./comparebookmarks-method-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CompareBookmarks, méthode (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)
+ [CompareBookmarks, méthode (ADO)](./comparebookmarks-method-ado.md)

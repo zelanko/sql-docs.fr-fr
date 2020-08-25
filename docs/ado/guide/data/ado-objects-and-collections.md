@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cbebf1e910fd749ff4f582c57da6c8c2656e9f61
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 101eab85f19922b56a7e7f86f330188d87fcc9fe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453761"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806418"
 ---
 # <a name="ado-objects-and-collections"></a>Objets et collections ADO
 ADO est constitué des neuf objets et quatre collections suivants.  
@@ -33,11 +33,11 @@ ADO est constitué des neuf objets et quatre collections suivants.
 |**Parameter** (objet)|Représente un paramètre ou un argument associé à un objet de **commande** , en fonction d’une requête paramétrable ou d’une procédure stockée.|  
 |**Field** , objet|Représente une colonne de données avec un type de données commun. Chaque objet **Field** correspond à une colonne dans le **Recordset**.|  
 |Objet **Property**|Représente une caractéristique d’un objet ADO défini par le fournisseur. Les objets ADO ont deux types de propriétés : intégré et dynamique. Les propriétés intégrées sont les propriétés implémentées dans ADO et immédiatement disponibles pour tout nouvel objet. L’objet **Property** est un conteneur de propriétés dynamiques, défini par le fournisseur sous-jacent.|  
-|Objet **Error**|Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.|  
+|Objet**Error**|Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.|  
 |**Fields** , collection|Contient tous les objets **Field** d’un objet **Recordset** ou **Record** .|  
 |**Propriétés** , collection|Contient tous les objets de **propriété** pour une instance spécifique d’un objet.|  
 |Collection **Parameters**|Contient tous les objets **Parameter** d’un objet **Command** .|  
 |Collection d' **Erreurs**|Contient tous les objets d' **erreur** créés en réponse à un échec lié à un fournisseur unique.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md)
+ [Modèle objet ADO](../../reference/ado-api/ado-object-model.md)

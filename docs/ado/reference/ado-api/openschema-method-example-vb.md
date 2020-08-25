@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ede3bc72d9270e1a74fa0ced3abc5cd519452187
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e3c576f5cd06b5fe075ca60a06ad1cc8877c49b4
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442941"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773748"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema, exemple de méthode (VB)
-Cet exemple utilise la méthode [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) pour afficher le nom et le type de chaque table dans la base de données ***pubs*** .  
+Cet exemple utilise la méthode [OpenSchema](./openschema-method.md) pour afficher le nom et le type de chaque table dans la base de données ***pubs*** .  
   
 ```  
 'BeginOpenSchemaVB  
@@ -86,5 +86,5 @@ Attribute VB_Name = "OpenSchema"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [OpenSchema, méthode](../../../ado/reference/ado-api/openschema-method.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [OpenSchema, méthode](./openschema-method.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

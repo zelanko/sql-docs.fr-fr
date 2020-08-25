@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f3b10494a9ae9fb49de6bf2779395f9eb065cd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 127586308fe030507a2b4f4de6951a8068b034fd
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453561"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806180"
 ---
 # <a name="data-shaping-example"></a>Exemple de mise en forme des données
 La commande de mise en forme de données suivante montre comment créer un **jeu d’enregistrements** hiérarchique à partir des tables **Customers** et **Orders** dans la base de données Northwind.  
@@ -29,7 +29,7 @@ APPEND ({SELECT OrderID, OrderDate, CustomerID FROM Orders} AS chapOrders
 RELATE customerID TO customerID)   
 ```  
   
- Lorsque cette commande est utilisée pour ouvrir un objet **Recordset** (comme indiqué dans [Visual Basic exemple de mise en forme des données](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)), il crée un chapitre (**chapOrders**) pour chaque enregistrement retourné à partir de la table **Customers** . Ce chapitre se compose d’un sous-ensemble de l’ensemble d' **enregistrements** renvoyé par la table **Orders** . Le chapitre **chapOrders** contient toutes les informations demandées sur les commandes passées par le client donné. Dans cet exemple, le chapitre se compose de trois colonnes : **OrderID**, **OrderDate**et **CustomerID**.  
+ Lorsque cette commande est utilisée pour ouvrir un objet **Recordset** (comme indiqué dans [Visual Basic exemple de mise en forme des données](./visual-basic-example-of-data-shaping.md)), il crée un chapitre (**chapOrders**) pour chaque enregistrement retourné à partir de la table **Customers** . Ce chapitre se compose d’un sous-ensemble de l’ensemble d' **enregistrements** renvoyé par la table **Orders** . Le chapitre **chapOrders** contient toutes les informations demandées sur les commandes passées par le client donné. Dans cet exemple, le chapitre se compose de trois colonnes : **OrderID**, **OrderDate**et **CustomerID**.  
   
  Les deux premières entrées du **Recordset** mis en forme résultant sont les suivantes :  
   
@@ -42,10 +42,10 @@ RELATE customerID TO customerID)
   
  Il existe une deuxième façon d’utiliser des commandes de forme : à savoir, pour générer un **jeu d’enregistrements** parent à partir d’un **jeu d’enregistrements**enfant. Les enregistrements de l’ensemble **d'** enregistrements enfant sont regroupés, en général à l’aide de la clause by, et une ligne est ajoutée au **jeu d’enregistrements** parent pour chaque groupe résultant dans l’enfant. Si la clause BY est omise, le **jeu d’enregistrements** enfant constitue un groupe unique et le **jeu d’enregistrements** parent contient exactement une ligne. Cela est utile pour calculer des agrégats « total général » sur l’ensemble de l’ensemble **d’enregistrements**enfant.  
   
- La construction de la commande SHAPE vous permet également de créer par programmation un **Recordset**mis en forme. Vous pouvez ensuite accéder aux composants du **Recordset** par programmation ou par le biais d’un contrôle visuel approprié. Une commande Shape est émise comme tout autre texte de commande ADO. Pour plus d’informations, consultez [Shape, commandes en général](../../../ado/guide/data/shape-commands-in-general.md).  
+ La construction de la commande SHAPE vous permet également de créer par programmation un **Recordset**mis en forme. Vous pouvez ensuite accéder aux composants du **Recordset** par programmation ou par le biais d’un contrôle visuel approprié. Une commande Shape est émise comme tout autre texte de commande ADO. Pour plus d’informations, consultez [Shape, commandes en général](./shape-commands-in-general.md).  
   
  Quelle que soit la façon dont le **jeu d’enregistrements** parent est formé, il contient une colonne de chapitre qui est utilisée pour le lier à un **Recordset**enfant. Si vous le souhaitez, le **jeu d’enregistrements** parent peut également avoir des colonnes qui contiennent des agrégats (somme, min, Max, etc.) sur les lignes enfants. Le parent et le **Recordset** enfant peuvent avoir des colonnes qui contiennent une expression sur la ligne de l’ensemble d' **enregistrements**, ainsi que des colonnes qui sont nouvelles et vides initialement.  
   
  Cette section se poursuit avec la rubrique suivante.  
   
--   [Exemple Visual Basic de mise en forme des données](../../../ado/guide/data/visual-basic-example-of-data-shaping.md)
+-   [Exemple Visual Basic de mise en forme des données](./visual-basic-example-of-data-shaping.md)

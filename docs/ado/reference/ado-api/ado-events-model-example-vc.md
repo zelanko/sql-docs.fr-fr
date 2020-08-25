@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bdb668584a0a725add4decc0bd64217d5dacbb5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19743fb8434ddfb75025ae47da079a8256f270f
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451431"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776698"
 ---
 # <a name="ado-events-model-example-vc"></a>Exemple de modèle d’événements ADO (VC ++)
-La section Visual C++ de l' [instanciation d’événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md) fournit une description générale de l’instanciation du modèle d’événement ADO. Voici un exemple spécifique d’instanciation du modèle d’événement dans l’environnement créé par la directive **#import** .  
+La section Visual C++ de l' [instanciation d’événements ADO par langage](../../guide/data/ado-event-instantiation-by-language.md) fournit une description générale de l’instanciation du modèle d’événement ADO. Voici un exemple spécifique d’instanciation du modèle d’événement dans l’environnement créé par la directive **#import** .  
   
  La description générale utilise **adoint. h** comme référence pour les signatures de méthode. Toutefois, certains détails de la description générale changent légèrement à la suite de l’utilisation de la directive **#import** :  
   

@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8cb5b72579313f538ca763079787f2aba640d692
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e38c2d3ffdf7ac088611f6a260224f46f80a7d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444371"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775749"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
-Spécifie le comportement de la méthode [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) .  
+Spécifie le comportement de la méthode [CopyRecord](./copyrecord-method-ado.md) .  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adCopyAllowEmulation**|4|Indique que le fournisseur *source* tente de simuler la copie à l’aide des opérations de téléchargement et de téléchargement si cette méthode échoue en raison de la *destination*sur un autre serveur ou par un fournisseur différent de la *source*. Notez que des fonctionnalités de fournisseur différentes peuvent nuire aux performances ou perdre des données.|  
 |**adCopyNonRecursive**|2|Copie le répertoire actif, mais aucun de ses sous-répertoires, vers la destination. L’opération de copie n’est pas récursive.|  
@@ -37,4 +37,4 @@ Spécifie le comportement de la méthode [CopyRecord](../../../ado/reference/ado
  Ces constantes n’ont pas d’équivalents ADO/WFC.  
   
 ## <a name="applies-to"></a>S'applique à  
- [CopyRecord, méthode (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)
+ [CopyRecord, méthode (ADO)](./copyrecord-method-ado.md)

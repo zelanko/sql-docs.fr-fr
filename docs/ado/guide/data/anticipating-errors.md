@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 799a238d37e7b2fe4f5f4c8af5bb396513b75b03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a85d313dabe9c6c0cf8c4dcdb76e01b0f2962d7d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453731"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806411"
 ---
 # <a name="anticipating-errors"></a>Anticipation des erreurs
 La prévention des erreurs est au moins aussi importante que la gestion des erreurs. Cette dernière section contient une liste succincte des précautions que votre application peut prendre pour aider à rendre les erreurs moins susceptibles de se produire.  
@@ -29,7 +29,7 @@ La prévention des erreurs est au moins aussi importante que la gestion des erre
   
 -   Tout programme qui accepte les données d’un utilisateur doit inclure du code pour valider ces données avant de les envoyer au magasin de données. Vous ne pouvez pas compter sur le magasin de données, le fournisseur, ADO ou même votre langage de programmation pour vous avertir des problèmes. Vous devez vérifier chaque octet entré par vos utilisateurs, en vous assurant que les données sont de type correct pour le champ et que les champs obligatoires ne sont pas vides.  
   
- Vérifiez les données avant d’essayer d’écrire des données dans le magasin de données. Le moyen le plus simple consiste à gérer l’événement **WillMove** ou l’événement **WillUpdateRecordset** . Pour une description plus complète de la gestion des événements ADO, consultez [gestion des événements ADO](../../../ado/guide/data/handling-ado-events.md).  
+ Vérifiez les données avant d’essayer d’écrire des données dans le magasin de données. Le moyen le plus simple consiste à gérer l’événement **WillMove** ou l’événement **WillUpdateRecordset** . Pour une description plus complète de la gestion des événements ADO, consultez [gestion des événements ADO](./handling-ado-events.md).  
   
  Assurez-vous que les objets **Recordset** ne sont pas au-delà des limites du **Recordset** avant de tenter de déplacer le pointeur d’enregistrement. Si vous essayez d’utiliser **MoveNext** lorsque **EOF** a la valeur true ou **MovePrev** lorsque **BOF** a la valeur true, une erreur se produit. Si vous effectuez l’une des méthodes **Move** quand les paramètres **EOF** et **BOF** ont la valeur true, une erreur est générée.  
   

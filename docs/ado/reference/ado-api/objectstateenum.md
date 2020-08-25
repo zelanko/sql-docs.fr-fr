@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c387240e36225f03c8ba1287618ab59a98fb63c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 43e511329ba2b32784718d6edb381e6b7085aeb9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443021"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773908"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 Spécifie si un objet est ouvert ou fermé, s’il se connecte à une source de données, exécute une commande ou récupère des données.  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|Indique que l’objet est fermé.|  
 |**adStateOpen**|1|Indique que l’objet est ouvert.|  
@@ -37,7 +37,7 @@ Spécifie si un objet est ouvert ou fermé, s’il se connecte à une source de 
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.ObjectState.CLOSED|  
 |AdoEnums.ObjectState.OPEN|  
@@ -49,9 +49,9 @@ Spécifie si un objet est ouvert ou fermé, s’il se connecte à une source de 
 
 :::row:::
     :::column:::
-        [State, propriété (ADO)](../../../ado/reference/ado-api/state-property-ado.md)  
+        [State, propriété (ADO)](./state-property-ado.md)  
     :::column-end:::
     :::column:::
-        [State, propriété (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+        [State, propriété (ADO MD)](../ado-md-api/state-property-ado-md.md)  
     :::column-end:::
 :::row-end:::

@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e91e1c0801cb8062bca89968d0345f5bbcee1220
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4934fc5e5d0f7b5c65db6d36edf27282afb50c60
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444311"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775598"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset, exemple de méthode (VB)
-Vous pouvez créer un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et spécifier les informations de colonne. Vous pouvez ensuite insérer des données dans l’objet **Recordset** . l’ensemble de lignes sous-jacent met en mémoire tampon les insertions.  
+Vous pouvez créer un objet [Recordset](./recordset-object-ado.md) et spécifier les informations de colonne. Vous pouvez ensuite insérer des données dans l’objet **Recordset** . l’ensemble de lignes sous-jacent met en mémoire tampon les insertions.  
   
- L’exemple de code suivant montre comment définir un **jeu d’enregistrements** à l’aide de l’objet [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) . Vous pouvez également le faire avec les [services Bureau à distance. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
+ L’exemple de code suivant montre comment définir un **jeu d’enregistrements** à l’aide de l’objet [RDSServer. DataFactory](../rds-api/datafactory-object-rdsserver.md) . Vous pouvez également le faire avec les [services Bureau à distance. DataControl](../rds-api/datacontrol-object-rds.md) .  
   
 ```  
 'BeginRsDefineShapeVB  

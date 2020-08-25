@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 02574be8fc8333e357e31fe1e1425d6e237871a1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3f76cca88b2be94973b2271c81279b76b2706bc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453771"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806426"
 ---
 # <a name="ado-fundamentals"></a>Concepts de base d’ADO
 ADO offre aux développeurs un modèle d’objet logique puissant pour accéder, modifier et mettre à jour les données à partir d’un large éventail de sources de données via des interfaces système OLE DB. L’utilisation la plus courante d’ADO est d’interroger une table ou des tables dans une base de données relationnelle, de récupérer et d’afficher les résultats dans une application, et peut-être de permettre aux utilisateurs de créer et d’enregistrer les modifications apportées aux données. Les autres tâches sont les suivantes :  
@@ -57,10 +57,10 @@ ADO offre aux développeurs un modèle d’objet logique puissant pour accéder,
   
  Toutefois, avant d’aborder ces détails, nous présenterons une vue d’ensemble du modèle objet ADO et une simple application ADO, écrite en Microsoft® Visual Basic® et effectuant chacune des quatre opérations ADO principales :  
   
--   [Objets et collections ADO](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [Objets et collections ADO](./ado-objects-and-collections.md)  
   
--   [HelloData : une application ADO simple](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData : une application ADO simple](./hellodata-a-simple-ado-application.md)  
   
--   [Fournisseurs de OLE DB](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [Fournisseurs de OLE DB](./ole-db-providers-ado.md)  
   
--   [Erreurs](../../../ado/guide/data/errors-ado.md)
+-   [Erreurs](./errors-ado.md)

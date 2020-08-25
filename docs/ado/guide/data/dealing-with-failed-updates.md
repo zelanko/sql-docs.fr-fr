@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c313e424c44ce289254267e6d6aa651308ae25df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 508508da57fc7a0b1ab899acf3f77b1a49a7fa9b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453521"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806924"
 ---
 # <a name="dealing-with-failed-updates"></a>Traitement des mises à jour ayant échoué
 Lorsqu’une mise à jour se termine avec des erreurs, la façon dont vous résolvez les erreurs dépend de la nature et de la gravité des erreurs et de la logique de votre application. Toutefois, si la base de données est partagée avec d’autres utilisateurs, une erreur classique est que quelqu’un d’autre modifie le champ avant. Ce type d’erreur est appelé un conflit. ADO détecte cette situation et signale une erreur.  
@@ -38,4 +38,4 @@ Loop
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mode Batch](../../../ado/guide/data/batch-mode.md)
+ [Mode Batch](./batch-mode.md)

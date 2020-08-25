@@ -13,40 +13,40 @@ helpviewer_keywords:
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a15e137fd3dfcd8c863bbe2fb1d5bc5fe756851
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28893427bc94613f53504cd81c8b14fc5f595e83
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453541"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806935"
 ---
 # <a name="data-shaping"></a>Mise en forme des données
 Cette section contient les rubriques suivantes :  
   
--   [Vue d’ensemble de la mise en forme des données](../../../ado/guide/data/data-shaping-overview.md)  
+-   [Vue d’ensemble de la mise en forme des données](./data-shaping-overview.md)  
   
--   [ShapingExample de données](../../../ado/guide/data/data-shaping-example.md)  
+-   [ShapingExample de données](./data-shaping-example.md)  
   
--   [Remise en forme](../../../ado/guide/data/reshaping.md)  
+-   [Remise en forme](./reshaping.md)  
   
--   [Agrégats de petits-enfants](../../../ado/guide/data/grandchild-aggregates.md)  
+-   [Agrégats de petits-enfants](./grandchild-aggregates.md)  
   
--   [Commandes paramétrées avec des commandes COMPUTE intermédiaires](../../../ado/guide/data/parameterized-commands-with-intervening-compute-commands.md)  
+-   [Commandes paramétrées avec des commandes COMPUTE intermédiaires](./parameterized-commands-with-intervening-compute-commands.md)  
   
--   [Persistance des recordsets hiérarchiques](../../../ado/guide/data/persisting-hierarchical-recordsets.md)  
+-   [Persistance des recordsets hiérarchiques](./persisting-hierarchical-recordsets.md)  
   
--   [Fournisseurs nécessaires pour la mise en forme des données](../../../ado/guide/data/required-providers-for-data-shaping.md)  
+-   [Fournisseurs nécessaires pour la mise en forme des données](./required-providers-for-data-shaping.md)  
   
--   [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)  
+-   [Généralités sur les commandes SHAPE](./shape-commands-in-general.md)  
   
--   [Clause APPEND de la commande SHAPE](../../../ado/guide/data/shape-append-clause.md)  
+-   [Clause APPEND de la commande SHAPE](./shape-append-clause.md)  
   
--   [Clause COMPUTE de la commande SHAPE](../../../ado/guide/data/shape-compute-clause.md)  
+-   [Clause COMPUTE de la commande SHAPE](./shape-compute-clause.md)  
   
--   [Fabrication de recordsets hiérarchiques](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)  
+-   [Fabrication de recordsets hiérarchiques](./fabricating-hierarchical-recordsets.md)  
   
--   [Accès aux lignes dans un recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)  
+-   [Accès aux lignes dans un recordset hiérarchique](./accessing-rows-in-a-hierarchical-recordset.md)  
   
--   [Grammaire formelle de la commande SHAPE](../../../ado/guide/data/formal-shape-grammar.md)  
+-   [Grammaire formelle de la commande SHAPE](./formal-shape-grammar.md)  
   
--   [Fonctions Visual Basic pour Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+-   [Fonctions Visual Basic pour Applications](./visual-basic-for-applications-functions.md)

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a571c36a67a4d2c1c3b98c64c826af949b0e773
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39e50c060dc602cb2bdd3541a454624e41b4d5b3
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453251"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805974"
 ---
 # <a name="how-event-handlers-work-together"></a>Fonctionnement conjoint des gestionnaires d’événements
-À moins que vous ne programmiez dans Visual Basic, tous les gestionnaires d’événements pour les événements **Connection** et **Recordset** doivent être implémentés, que vous soyez en fait en train de traiter tous les événements. La quantité de travail d’implémentation que vous devez effectuer dépend de votre langage de programmation. Pour plus d’informations, consultez [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+À moins que vous ne programmiez dans Visual Basic, tous les gestionnaires d’événements pour les événements **Connection** et **Recordset** doivent être implémentés, que vous soyez en fait en train de traiter tous les événements. La quantité de travail d’implémentation que vous devez effectuer dépend de votre langage de programmation. Pour plus d’informations, consultez [instanciation des événements ADO par langage](./ado-event-instantiation-by-language.md).  
   
 ## <a name="paired-event-handlers"></a>Gestionnaires d’événements associés  
  Chaque gestionnaire d’événements est associé à un gestionnaire d’événements **complet** . Par exemple, lorsque votre application modifie la valeur d’un champ, le gestionnaire d’événements **WillChangeField** est appelé. Si la modification est acceptable, votre application laisse le paramètre **adStatus** inchangé et l’opération est effectuée. Une fois l’opération terminée, un événement **FieldChangeComplete** informe votre application que l’opération est terminée. S’il s’est terminé avec succès, **adStatus** contient **adStatusOK**; dans le cas contraire, **adStatus** contient **adStatusErrorsOccurred** et vous devez vérifier l’objet **Error** pour déterminer la cause de l’erreur.  
@@ -46,7 +46,7 @@ ms.locfileid: "88453251"
   
  Les gestionnaires d’événements **complets** peuvent être utiles pour la gestion des opérations asynchrones. Chaque opération asynchrone a un événement **complet** approprié.  
   
- Par exemple, le remplissage d’un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) volumineux peut prendre beaucoup de temps. Si votre application est écrite correctement, vous pouvez démarrer une `Recordset.Open(...,adAsyncExecute)` opération et continuer avec d’autres traitements. Vous serez alors averti lorsque le **Recordset** sera rempli par un événement **ExecuteComplete** .  
+ Par exemple, le remplissage d’un objet [Recordset](../../reference/ado-api/recordset-object-ado.md) volumineux peut prendre beaucoup de temps. Si votre application est écrite correctement, vous pouvez démarrer une `Recordset.Open(...,adAsyncExecute)` opération et continuer avec d’autres traitements. Vous serez alors averti lorsque le **Recordset** sera rempli par un événement **ExecuteComplete** .  
   
 ## <a name="single-event-handlers-and-multiple-objects"></a>Gestionnaires d’événements uniques et plusieurs objets  
  La flexibilité d’un langage de programmation comme Microsoft Visual C++® vous permet d’avoir un gestionnaire d’événements qui traite les événements de plusieurs objets. Par exemple, vous pouvez avoir un gestionnaire d’événements **Disconnect** pour traiter les événements de plusieurs objets de **connexion** . Si l’une des connexions est terminée, le gestionnaire d’événements de **déconnexion** est appelé. Vous pouvez indiquer la connexion à l’origine de l’événement, car le paramètre de l’objet de gestionnaire d’événements est défini sur l’objet de **connexion** correspondant.  
@@ -55,7 +55,7 @@ ms.locfileid: "88453251"
 >  Cette technique ne peut pas être utilisée dans Visual Basic, car ce langage ne peut corréler qu’un seul objet à un gestionnaire d’événements.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résumé du gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
- [Instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Paramètres d’événement](../../../ado/guide/data/event-parameters.md)   
- [Types d’événements](../../../ado/guide/data/types-of-events.md)
+ [Résumé du gestionnaire d’événements ADO](./ado-event-handler-summary.md)   
+ [Instanciation des événements ADO par langage](./ado-event-instantiation-by-language.md)   
+ [Paramètres d’événement](./event-parameters.md)   
+ [Types d’événements](./types-of-events.md)

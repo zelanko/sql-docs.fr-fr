@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2394cf5612dab45ccd2e0f3cc6e2204b6d451142
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e38dbfbf8b0a92a0d1a8a2eff1b8b8d4d5374057
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453881"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806704"
 ---
 # <a name="adding-records-to-a-recordset"></a>Ajout d’enregistrements à un jeu d’enregistrements
 Utilisez la méthode **AddNew** pour créer et initialiser un nouvel enregistrement dans un **jeu d’enregistrements**existant. Vous pouvez utiliser la méthode **supports** avec une valeur **CursorOptionEnum** de **adAddNew** pour vérifier si vous pouvez ajouter des enregistrements à l’objet **Recordset** actuel.
@@ -32,10 +32,10 @@ Utilisez la méthode **AddNew** pour créer et initialiser un nouvel enregistrem
 
  Cette section contient les rubriques suivantes :
 
--   [Ajout d’enregistrements avec AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [Ajout d’enregistrements avec AddNew](./adding-records-using-addnew.md)
 
--   [Ajout de plusieurs champs](../../../ado/guide/data/adding-multiple-fields.md)
+-   [Ajout de plusieurs champs](./adding-multiple-fields.md)
 
--   [Détermination du mode d’édition](../../../ado/guide/data/determining-edit-mode.md)
+-   [Détermination du mode d’édition](./determining-edit-mode.md)
 
--   [Utilisation d’AddNew dans les modes immédiat et batch](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
+-   [Utilisation d’AddNew dans les modes immédiat et batch](./using-addnew-in-immediate-and-batch-modes.md)

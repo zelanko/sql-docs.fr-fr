@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9157db745b999711966f0019747ba1d61823569e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400913"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Surveillance des requêtes actives-Data Warehouse parallèles
@@ -38,7 +38,7 @@ Vous pouvez utiliser la console d’administration et les vues système SQL Serv
 ### <a name="to-monitor-active-queries-by-using-the-system-views"></a>Pour surveiller les requêtes actives à l’aide des vues système  
 La vue système principale utilisée pour surveiller les requêtes est [sys. dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md). Utilisez cette vue système pour rechercher la `request_id` pour une requête active ou récente, en fonction du texte de la requête.  
   
-Par exemple, la requête suivante recherche le `request_id` et le actuel `status` pour toute requête qui sélectionne toutes les colonnes de `memberAddresses` la table.  
+Par exemple, la requête suivante recherche le `request_id` et le actuel `status` pour toute requête qui sélectionne toutes les colonnes de la `memberAddresses` table.  
   
 ```sql  
 SELECT request_id, command, status   
@@ -47,7 +47,7 @@ WHERE command
 LIKE '%SELECT * FROM db1..memberAddresses%';  
 ```  
   
-Une fois `request_id` que l’a été identifié pour une requête, utilisez les autres `dm_pdw_exec_requests` informations de la table pour en savoir plus sur le traitement de la requête, ou utilisez [sys. dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) pour afficher l’état des étapes de requête individuelles pour l’exécution de la requête.  
+Une fois que l' `request_id` a été identifié pour une requête, utilisez les autres informations de la `dm_pdw_exec_requests` table pour en savoir plus sur le traitement de la requête, ou utilisez [sys. dm_pdw_request_steps](../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md) pour afficher l’état des étapes de requête individuelles pour l’exécution de la requête.  
   
 <!-- MISSING LINKS 
 ## See Also  

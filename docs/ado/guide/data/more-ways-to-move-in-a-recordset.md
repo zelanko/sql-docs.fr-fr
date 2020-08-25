@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 847fe5406fcdcd75010a0f4836c6f35df4ab1da1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1895410181cea9a916589d766d2fa9254ca8642b
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453161"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805821"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Autres méthodes de déplacement dans un recordset
-Les quatre méthodes suivantes permettent de se déplacer ou de faire défiler dans le **jeu d’enregistrements**: [MoveFirst, MoveLast, MoveNext et MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Certaines de ces méthodes ne sont pas disponibles sur les curseurs avant uniquement.)  
+Les quatre méthodes suivantes permettent de se déplacer ou de faire défiler dans le **jeu d’enregistrements**: [MoveFirst, MoveLast, MoveNext et MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Certaines de ces méthodes ne sont pas disponibles sur les curseurs avant uniquement.)  
   
  **MoveFirst** change la position actuelle de l’enregistrement en premier enregistrement dans le **jeu d’enregistrements**. **MoveLast** remplace la position de l’enregistrement actuel par le dernier enregistrement du **Recordset**. Pour utiliser **MoveFirst** ou **MoveLast**, l’objet **Recordset** doit prendre en charge les signets ou le déplacement du curseur vers l’arrière. dans le cas contraire, l’appel de méthode génère une erreur.  
   

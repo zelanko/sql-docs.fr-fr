@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b7fc5d177b05447637d635a9f132c9f9da086ef2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 01f5f2010491e394addd37511ead8b7ea20136c1
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453461"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806882"
 ---
 # <a name="editing-data"></a>Modification des données
 Nous avons expliqué comment utiliser ADO pour se connecter à une source de données, exécuter une commande, obtenir les résultats dans un objet **Recordset** et naviguer dans le **Recordset**. Cette section se concentre sur l’opération ADO fondamentale suivante : modification des données.  
   
- Cette section continue à utiliser l’exemple **d’ensemble d’enregistrements** présenté lors de l' [examen des données](../../../ado/guide/data/examining-data.md), avec une modification importante. Le code suivant permet d’ouvrir le **jeu d’enregistrements**:  
+ Cette section continue à utiliser l’exemple **d’ensemble d’enregistrements** présenté lors de l' [examen des données](./examining-data.md), avec une modification importante. Le code suivant permet d’ouvrir le **jeu d’enregistrements**:  
   
 ```  
 'BeginEditIntro  
@@ -44,7 +44,7 @@ Nous avons expliqué comment utiliser ADO pour se connecter à une source de don
 'EndEditIntro  
 ```  
   
- La modification importante du code implique la définition de la propriété **CursorLocation** de l’objet de **connexion** égal à **adUseClient** dans la fonction *GetNewConnection* (illustrée dans l’exemple suivant), qui indique l’utilisation d’un curseur client. Pour plus d’informations sur les différences entre les curseurs côté client et côté serveur, consultez [Présentation des curseurs et des verrous](../../../ado/guide/data/understanding-cursors-and-locks.md).  
+ La modification importante du code implique la définition de la propriété **CursorLocation** de l’objet de **connexion** égal à **adUseClient** dans la fonction *GetNewConnection* (illustrée dans l’exemple suivant), qui indique l’utilisation d’un curseur client. Pour plus d’informations sur les différences entre les curseurs côté client et côté serveur, consultez [Présentation des curseurs et des verrous](./understanding-cursors-and-locks.md).  
   
  Le paramètre **adUseClient** de la propriété **CursorLocation** déplace l’emplacement du curseur à partir de la source de données (dans ce cas, le SQL Server) vers l’emplacement du code client (la station de travail). Ce paramètre force ADO à appeler le moteur de curseur client pour OLE DB sur le client afin de créer et de gérer le curseur.  
   
@@ -84,12 +84,12 @@ End Function
   
  Cette section contient les rubriques suivantes :  
   
--   [Modification d’enregistrements existants](../../../ado/guide/data/editing-existing-records.md)  
+-   [Modification d’enregistrements existants](./editing-existing-records.md)  
   
--   [Ajout d’enregistrements](../../../ado/guide/data/adding-records.md)  
+-   [Ajout d’enregistrements](./adding-records.md)  
   
--   [Détermination de ce qui est pris en charge](../../../ado/guide/data/determining-what-is-supported.md)  
+-   [Détermination de ce qui est pris en charge](./determining-what-is-supported.md)  
   
--   [Suppression d’enregistrements avec la méthode Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
+-   [Suppression d’enregistrements avec la méthode Delete](./deleting-records-using-the-delete-method.md)  
   
--   [Alternatives : Utilisation d’instructions SQL](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [Alternatives : Utilisation d’instructions SQL](./alternatives-using-sql-statements.md)

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ba9487a8fb3db896a69664d8ea0075627ba457c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8927b2c74b72020485719b9d52e391919e39794c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443041"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773978"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale et Precision, exemple de propriétés (VC++)
-Cet exemple utilise les propriétés [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) et [PRECISION](../../../ado/reference/ado-api/precision-property-ado.md) pour afficher l’échelle numérique et la précision des champs dans la table ***discounts*** de la base de données ***pubs*** .  
+Cet exemple utilise les propriétés [NumericScale](./numericscale-property-ado.md) et [PRECISION](./precision-property-ado.md) pour afficher l’échelle numérique et la précision des champs dans la table ***discounts*** de la base de données ***pubs*** .  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  
@@ -135,5 +135,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [NumericScale, propriété (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Precision, propriété (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [NumericScale, propriété (ADO)](./numericscale-property-ado.md)   
+ [Precision, propriété (ADO)](./precision-property-ado.md)

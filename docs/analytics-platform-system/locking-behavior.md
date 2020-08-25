@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74401002"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportement de verrouillage en parallèle Data Warehouse
@@ -27,7 +27,7 @@ SQL Server PDW prend en charge quatre modes de verrouillage :
 Exclusif  
 Le verrou exclusif interdit l’écriture ou la lecture de l’objet verrouillé jusqu’à ce que la transaction qui maintient le verrou exclusif se termine. Aucun autre verrou de n’importe quel mode n’est autorisé tant que le verrou exclusif est en vigueur. Par exemple, DROP TABLE et CREATe DATABASE utilisent un verrou exclusif.  
   
-Shared  
+Partagé  
 Le verrou partagé interdit l’initiation d’un verrou exclusif sur l’objet affecté, mais autorise tous les autres modes de verrouillage. Par exemple, l’instruction SELECT initie un verrou partagé et, par conséquent, permet à plusieurs requêtes d’accéder simultanément aux données sélectionnées, mais empêche les mises à jour des enregistrements en cours de lecture, jusqu’à ce que l’instruction SELECT soit terminée.  
   
 ExclusiveUpdate  

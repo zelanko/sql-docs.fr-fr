@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36934de15041ddec97b0cc266a980f4908518a24
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e21089ed2fd513f4c82ba9c30478b51fee6c4ebe
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453101"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805633"
 ---
 # <a name="operation-of-parameterized-commands"></a>Fonctionnement des commandes paramétrées
 Si vous utilisez un **jeu d’enregistrements**enfant volumineux, en particulier par rapport à la taille du **Recordset**parent, mais que vous n’avez besoin d’accéder qu’à quelques chapitres enfants, il peut s’avérer plus efficace d’utiliser une commande paramétrable.  
@@ -39,7 +39,7 @@ SHAPE {SELECT * FROM customer}
  Les tables parent et enfant ont un nom de colonne en commun, *cust_id*. La *commande enfant* a un espace réservé «  ? » auquel la clause relate fait référence (autrement dit, «... PARAMÈTRE 0»).  
   
 > [!NOTE]
->  La clause PARAMETER se rapporte uniquement à la syntaxe de commande Shape. Elle n’est pas associée à l’objet de [paramètre](../../../ado/reference/ado-api/parameter-object.md) ADO ou à la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) .  
+>  La clause PARAMETER se rapporte uniquement à la syntaxe de commande Shape. Elle n’est pas associée à l’objet de [paramètre](../../reference/ado-api/parameter-object.md) ADO ou à la collection [Parameters](../../reference/ado-api/parameters-collection-ado.md) .  
   
  Lorsque la commande de forme paramétrable est exécutée, voici ce qui se produit :  
   
@@ -49,7 +49,7 @@ SHAPE {SELECT * FROM customer}
   
 3.  Lorsque vous accédez à la colonne de chapitre d’une ligne parente, la *commande enfant* est exécutée à l’aide de la valeur de Customer. cust_id comme valeur du paramètre.  
   
-4.  Toutes les lignes de l’ensemble de lignes du fournisseur de données créé à l’étape 3 sont utilisées pour remplir le **Recordset**enfant. Dans cet exemple, il s’agit de toutes les lignes de la table Orders dans lesquelles la cust_id est égale à la valeur de Customer. cust_id. Par défaut, le **jeu d’enregistrements**enfant est mis en cache sur le client jusqu’à ce que toutes les références au **Recordset** parent soient libérées. Pour modifier ce comportement, affectez la valeur **false**aux **lignes enfants du cache** de [propriétés dynamiques](../../../ado/reference/ado-api/ado-dynamic-property-index.md) du **jeu d’enregistrements** .  
+4.  Toutes les lignes de l’ensemble de lignes du fournisseur de données créé à l’étape 3 sont utilisées pour remplir le **Recordset**enfant. Dans cet exemple, il s’agit de toutes les lignes de la table Orders dans lesquelles la cust_id est égale à la valeur de Customer. cust_id. Par défaut, le **jeu d’enregistrements**enfant est mis en cache sur le client jusqu’à ce que toutes les références au **Recordset** parent soient libérées. Pour modifier ce comportement, affectez la valeur **false**aux **lignes enfants du cache** de [propriétés dynamiques](../../reference/ado-api/ado-dynamic-property-index.md) du **jeu d’enregistrements** .  
   
 5.  Une référence aux lignes enfants récupérées (autrement dit, le chapitre du **Recordset**enfant) est placée dans la colonne de chapitre de la ligne actuelle de l' **objet Recordset**parent.  
   
@@ -90,6 +90,6 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 >  Lorsque vous utilisez des clauses WHERE, les paramètres ne peuvent pas utiliser les types de données SQL pour Text, ntext et image, sinon une erreur se produit, contenant la description suivante : `Invalid operator for data type` .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de mise en forme des données](../../../ado/guide/data/data-shaping-example.md)   
- [Grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md)   
- [Généralités sur les commandes SHAPE](../../../ado/guide/data/shape-commands-in-general.md)
+ [Exemple de mise en forme des données](./data-shaping-example.md)   
+ [Grammaire de forme formelle](./formal-shape-grammar.md)   
+ [Généralités sur les commandes SHAPE](./shape-commands-in-general.md)

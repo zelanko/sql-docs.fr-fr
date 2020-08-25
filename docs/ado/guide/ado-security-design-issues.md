@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc525a10d6211ee5f15517618f2cc5b99c8abee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a0ce44d1df589dc77a8a4cdfa216b0c54ce288dc
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355395"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805481"
 ---
 # <a name="ado-security-design-features"></a>Fonctionnalités de conception de la sécurité ADO
 Les sections suivantes décrivent les fonctionnalités de conception de sécurité de ActiveX Data Objects (ADO) 2,8 et versions ultérieures. Ces modifications ont été apportées dans ADO 2,8 pour améliorer la sécurité. ADO 6,0, qui est inclus dans Windows DAC 6,0 dans Windows Vista, est fonctionnellement équivalent à ADO 2,8, qui était inclus dans MDAC 2,8 dans Windows XP et Windows Server 2003. Cette rubrique fournit des informations sur la façon de sécuriser au mieux vos applications dans ADO 2,8 ou une version ultérieure.
@@ -55,9 +55,9 @@ Website, click OK, otherwise click Cancel.
 ### <a name="disk-accessible-code-limited-now-to-trusted-sites"></a>Code accessible sur disque limité maintenant aux sites de confiance
  Des modifications de conception supplémentaires ont été apportées dans ADO 2,8, qui restreignent spécifiquement la capacité d’un ensemble limité d’API, ce qui peut exposer le potentiel de lecture ou d’écriture dans les fichiers sur l’ordinateur local. Voici les méthodes d’API qui ont été encore plus limitées en matière de sécurité lors de l’exécution d’Internet Explorer :
 
--   Pour l’objet ADO **Stream** , si les méthodes [LoadFromFile](../../ado/reference/ado-api/loadfromfile-method-ado.md) ou [SaveToFile](../../ado/reference/ado-api/savetofile-method.md) sont utilisées.
+-   Pour l’objet ADO **Stream** , si les méthodes [LoadFromFile](../reference/ado-api/loadfromfile-method-ado.md) ou [SaveToFile](../reference/ado-api/savetofile-method.md) sont utilisées.
 
--   Pour l’objet **Recordset** ADO, si la méthode [Save](../../ado/reference/ado-api/save-method.md) ou la méthode [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) , par exemple quand l’option **adCmdFile** est définie ou si le [fournisseur de persistance Microsoft OLE DB (MSPersist)](../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) est utilisé.
+-   Pour l’objet **Recordset** ADO, si la méthode [Save](../reference/ado-api/save-method.md) ou la méthode [Open](../reference/ado-api/open-method-ado-recordset.md) , par exemple quand l’option **adCmdFile** est définie ou si le [fournisseur de persistance Microsoft OLE DB (MSPersist)](./appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) est utilisé.
 
  Pour ces ensembles limités de fonctions potentiellement accessibles sur disque, le comportement suivant se produit pour ADO 2,8 et versions ultérieures, si un code qui utilise ces méthodes est exécuté dans Internet Explorer :
 
@@ -69,12 +69,12 @@ Website, click OK, otherwise click Cancel.
     >  Dans ADO 2,8 et versions ultérieures, l’utilisateur n’est pas averti ou n’est pas invité à ajouter des sites à la liste des zones de sites de confiance. Par conséquent, la gestion de la liste des sites de confiance est la responsabilité de ceux qui déploient ou prennent en charge des applications basées sur le site Web qui requièrent l’accès au système de fichiers local.
 
 ### <a name="access-blocked-to-the-activecommand-property-on-recordset-objects"></a>Accès bloqué à la propriété ActiveCommand sur les objets Recordset
- En cas d’exécution dans Internet Explorer, ADO 2,8 bloque désormais l’accès à la propriété [ActiveCommand](../../ado/reference/ado-api/activecommand-property-ado.md) pour un objet **Recordset** actif et retourne une erreur. L’erreur se produit même si la page provient d’un site Web inscrit dans la liste des sites de confiance.
+ En cas d’exécution dans Internet Explorer, ADO 2,8 bloque désormais l’accès à la propriété [ActiveCommand](../reference/ado-api/activecommand-property-ado.md) pour un objet **Recordset** actif et retourne une erreur. L’erreur se produit même si la page provient d’un site Web inscrit dans la liste des sites de confiance.
 
 ### <a name="changes-in-handling-for-ole-db-providers-and-integrated-security"></a>Modifications de la gestion des fournisseurs de OLE DB et de la sécurité intégrée
  Lors de la révision d’ADO 2,7 et des versions antérieures pour des problèmes potentiels de sécurité et des préoccupations, le scénario suivant a été découvert :
 
- Dans certains cas, OLE DB fournisseurs qui prennent en charge la propriété Integrated Security [DBPROP_AUTH_INTEGRATED](https://msdn.microsoft.com/library/windows/desktop/ms712973.aspx) peuvent autoriser des pages Web scriptées à réutiliser l’objet de connexion ADO pour se connecter involontairement à d’autres serveurs à l’aide des informations d’identification de connexion actuelles des utilisateurs. Pour éviter cela, ADO 2,8 et versions ultérieures gèrent les fournisseurs de OLE DB en fonction de la façon dont ils ont choisi de fournir ou de ne pas fournir de sécurité intégrée.
+ Dans certains cas, OLE DB fournisseurs qui prennent en charge la propriété Integrated Security [DBPROP_AUTH_INTEGRATED](/previous-versions/windows/desktop/ms712973(v=vs.85)) peuvent autoriser des pages Web scriptées à réutiliser l’objet de connexion ADO pour se connecter involontairement à d’autres serveurs à l’aide des informations d’identification de connexion actuelles des utilisateurs. Pour éviter cela, ADO 2,8 et versions ultérieures gèrent les fournisseurs de OLE DB en fonction de la façon dont ils ont choisi de fournir ou de ne pas fournir de sécurité intégrée.
 
  Pour les pages Web qui sont chargées à partir de sites répertoriés dans la liste zone de sites de confiance, le tableau suivant explique comment ADO 2,8 et versions ultérieures gèrent les connexions ADO dans chaque cas.
 
@@ -97,18 +97,18 @@ This Website is using your identity to access a data source. If you trust this W
 >  Pour les sites non approuvés (c’est-à-dire les sites qui ne sont pas répertoriés dans la liste zone de sites de confiance), si le fournisseur est également non approuvé (comme indiqué plus haut dans cette section), l’utilisateur peut voir deux avertissements de sécurité dans une ligne, un avertissement concernant le fournisseur unsafe et un deuxième avertissement concernant la tentative d’utilisation de son identité. Si l’utilisateur clique sur OK jusqu’au premier avertissement, les paramètres d’Internet Explorer et le code de comportement de la réponse décrits dans le tableau précédent sont exécutés.
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>Contrôler si le texte du mot de passe est retourné dans les chaînes de connexion ADO
- Lorsque vous essayez d’extraire la valeur de la propriété [ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md) sur un objet de **connexion** ADO, les événements suivants se produisent :
+ Lorsque vous essayez d’extraire la valeur de la propriété [ConnectionString](../reference/ado-api/connectionstring-property-ado.md) sur un objet de **connexion** ADO, les événements suivants se produisent :
 
 1.  Si la connexion est ouverte, un appel d’initialisation est ensuite effectué sur le fournisseur de OLE DB sous-jacent pour recevoir la chaîne de connexion.
 
-2.  En fonction du paramètre du fournisseur OLE DB de la propriété [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](https://msdn.microsoft.com/library/windows/desktop/ms714905.aspx) , les mots de passe sont inclus avec d’autres informations de chaîne de connexion retournées.
+2.  En fonction du paramètre du fournisseur OLE DB de la propriété [DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO](/previous-versions/windows/desktop/ms714905(v=vs.85)) , les mots de passe sont inclus avec d’autres informations de chaîne de connexion retournées.
 
  Par exemple, si la propriété dynamique ADO Connection **Persist Security Info** a la valeur **true**, les informations de mot de passe sont incluses dans la chaîne de connexion retournée. Sinon, si le fournisseur sous-jacent a défini la propriété sur **false** (par exemple, avec le fournisseur SQLOLEDB), les informations de mot de passe sont omises dans la chaîne de connexion retournée.
 
  Si vous utilisez des fournisseurs tiers (autrement dit, non-Microsoft) OLE DB des fournisseurs avec votre code d’application ADO, vous pouvez vérifier comment la propriété **DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO** est implémentée pour déterminer si l’inclusion d’informations de mot de passe avec des chaînes de connexion ADO est autorisée.
 
 ## <a name="checking-for-non-file-devices-when-loading-and-saving-recordsets-or-streams"></a>Recherche de périphériques non-fichiers lors du chargement et de l’enregistrement des jeux d’enregistrements ou des flux
- Pour ADO 2,7 et versions antérieures, les opérations d’entrée/sortie de fichier telles que [Open](../../ado/reference/ado-api/open-method-ado-recordset.md) et [Save](../../ado/reference/ado-api/save-method.md) qui étaient utilisées pour lire et écrire des données basées sur des fichiers pouvaient, dans certains cas, permettre l’utilisation d’une URL ou d’un nom de fichier qui spécifiait un type de fichier qui n’est pas basé sur le disque. Par exemple, LPT1, COM2, PRN.TXT, aux peuvent être utilisés comme alias pour l’entrée/sortie entre les imprimantes et les périphériques auxiliaires sur le système en utilisant certains
+ Pour ADO 2,7 et versions antérieures, les opérations d’entrée/sortie de fichier telles que [Open](../reference/ado-api/open-method-ado-recordset.md) et [Save](../reference/ado-api/save-method.md) qui étaient utilisées pour lire et écrire des données basées sur des fichiers pouvaient, dans certains cas, permettre l’utilisation d’une URL ou d’un nom de fichier qui spécifiait un type de fichier qui n’est pas basé sur le disque. Par exemple, LPT1, COM2, PRN.TXT, aux peuvent être utilisés comme alias pour l’entrée/sortie entre les imprimantes et les périphériques auxiliaires sur le système en utilisant certains
 
  Pour ADO 2,8 et versions ultérieures, cette fonctionnalité a été mise à jour. Pour ouvrir et enregistrer des objets **Recordset** et **Stream** , ADO effectue désormais un contrôle de type de fichier pour s’assurer que l’appareil d’entrée ou de sortie spécifié dans une URL ou un nom de fichier est un fichier réel.
 

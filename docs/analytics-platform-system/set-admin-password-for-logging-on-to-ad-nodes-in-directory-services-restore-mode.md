@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400337"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Définir le mot de passe d’administrateur pour la connexion aux nœuds AD en mode de restauration des services d’annuaire (DSRM)-Analytics Platform System
@@ -25,9 +25,9 @@ Le mode de restauration des services d’annuaire (DSRM) est un mode de démarra
   
 2.  À l’invite de commandes, tapez `ntdsutil`.  
   
-3.  À l’invite **Ntdsutil** , tapez `set dsrm password`.  
+3.  À l’invite **Ntdsutil** , tapez `set dsrm password` .  
   
-4.  À l’invite de **réinitialisation du mot de passe administrateur :** , tapez `reset password on server null`.  
+4.  À l’invite de **réinitialisation du mot de passe administrateur :** , tapez `reset password on server null` .  
   
 5.  À l’invite, tapez le nouveau mot de passe.  
   

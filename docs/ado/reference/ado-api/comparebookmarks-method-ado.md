@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4729574b92b841da48f7cf6de6f1dcabc369b4a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c5e863a694aa63e568e388304d964752dbae325
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450801"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776068"
 ---
 # <a name="comparebookmarks-method-ado"></a>CompareBookmarks, méthode (ADO)
 Compare deux signets et retourne une indication de leurs valeurs relatives.  
@@ -36,7 +36,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>Valeur de retour  
- Retourne une valeur [CompareEnum](../../../ado/reference/ado-api/compareenum.md) qui indique la position de ligne relative de deux enregistrements représentés par leurs signets.  
+ Retourne une valeur [CompareEnum](./compareenum.md) qui indique la position de ligne relative de deux enregistrements représentés par leurs signets.  
   
 #### <a name="parameters"></a>Paramètres  
  *Signet1*  
@@ -46,9 +46,9 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Signet de la deuxième ligne.  
   
 ## <a name="remarks"></a>Notes  
- Les signets doivent s’appliquer au même objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , ou à un objet **Recordset** et à son [clone](../../../ado/reference/ado-api/clone-method-ado.md). Vous ne pouvez pas comparer de manière fiable des signets de différents objets **Recordset** , même s’ils ont été créés à partir de la même source ou commande. Vous ne pouvez pas non plus comparer les signets d’un objet **Recordset** dont le fournisseur sous-jacent ne prend pas en charge les comparaisons.  
+ Les signets doivent s’appliquer au même objet [Recordset](./recordset-object-ado.md) , ou à un objet **Recordset** et à son [clone](./clone-method-ado.md). Vous ne pouvez pas comparer de manière fiable des signets de différents objets **Recordset** , même s’ils ont été créés à partir de la même source ou commande. Vous ne pouvez pas non plus comparer les signets d’un objet **Recordset** dont le fournisseur sous-jacent ne prend pas en charge les comparaisons.  
   
- Un signet identifie de façon unique une ligne dans un objet **Recordset** . Utilisez la propriété [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) de la ligne actuelle pour obtenir son signet.  
+ Un signet identifie de façon unique une ligne dans un objet **Recordset** . Utilisez la propriété [Bookmark](./bookmark-property-ado.md) de la ligne actuelle pour obtenir son signet.  
   
  Étant donné que le type de données d’un signet est spécifique à chaque fournisseur, ADO l’expose en tant que **variante**. Par exemple, SQL Server signets sont de type DBTYPE_R8 (**double**). ADO expose ce type en tant que **Variant** avec un sous-type de **double**.  
   
@@ -57,9 +57,9 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  Un signet qui n’est pas valide ou de forme incorrecte génère une erreur.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CompareBookmarks, exemple de méthode (VB)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)   
- [CompareBookmarks, exemple de méthode (VC + +)](../../../ado/reference/ado-api/comparebookmarks-method-example-vc.md)   
- [Bookmark, propriété (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)
+ [CompareBookmarks, exemple de méthode (VB)](./comparebookmarks-method-example-vb.md)   
+ [CompareBookmarks, exemple de méthode (VC + +)](./comparebookmarks-method-example-vc.md)   
+ [Bookmark, propriété (ADO)](./bookmark-property-ado.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 33bd0bf737b6c586c0cb97072b28650898e86696
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: be80fc6c09279920a992b25bb91ee7621aabf5a1
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451141"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88776588"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF et Bookmark, exemple de propriétés (VC + +)
-La première fonction de cet exemple utilise les propriétés [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) pour afficher un message si un utilisateur tente de se déplacer après le premier ou le dernier enregistrement d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md). Elle utilise la propriété [Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md) pour permettre à l’utilisateur d’indicateur un enregistrement dans un **jeu d’enregistrements** et de revenir ultérieurement.  
+La première fonction de cet exemple utilise les propriétés [BOF](./bof-eof-properties-ado.md) et [EOF](./bof-eof-properties-ado.md) pour afficher un message si un utilisateur tente de se déplacer après le premier ou le dernier enregistrement d’un [jeu d’enregistrements](./recordset-object-ado.md). Elle utilise la propriété [Bookmark](./bookmark-property-ado.md) pour permettre à l’utilisateur d’indicateur un enregistrement dans un **jeu d’enregistrements** et de revenir ultérieurement.  
   
  La deuxième fonction utilise la propriété Bookmark pour placer le **signet** de chaque autre enregistrement d’un **jeu d’enregistrements** dans un tableau, puis filtre le recordset à l’aide du tableau.  
   
@@ -207,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [BOF, EOF, propriétés (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [Bookmark, propriété (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF, EOF, propriétés (ADO)](./bof-eof-properties-ado.md)   
+ [Bookmark, propriété (ADO)](./bookmark-property-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

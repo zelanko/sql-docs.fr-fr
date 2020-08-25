@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43fc1a32428f54682b8fde5dea0f0140568c482e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 285fba254c025268abc9ea93f6d6e53e39a87aca
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453911"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806729"
 ---
 # <a name="absolute-and-relative-urls"></a>URL absolues et relatives
 Une URL spécifie l’emplacement d’une cible stockée sur un ordinateur local ou en réseau. La cible peut être un fichier, un répertoire, une page HTML, une image, un programme, et ainsi de suite.  
@@ -46,22 +46,22 @@ Une URL spécifie l’emplacement d’une cible stockée sur un ordinateur local
  S’il est inclus, la *ressource* est la cible, et est généralement le nom d’un fichier. Il peut s’agir d’un *fichier simple,* contenant un seul flux binaire d’octets, ou un *document structuré,* contenant un ou plusieurs stockages et flux binaires d’octets.  
   
 ## <a name="url-scheme-registration"></a>Inscription du schéma d’URL  
- Si un fournisseur prend en charge les URL, le fournisseur inscrit un ou plusieurs schémas d’URL. L’inscription signifie que toutes les URL utilisant le schéma appellera automatiquement le fournisseur inscrit. Par exemple, le schéma *http* est inscrit au [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). ADO suppose que toutes les URL avec le préfixe « http » représentent les dossiers ou les fichiers Web à utiliser avec le fournisseur de publication Internet. Pour plus d’informations sur les schémas enregistrés par votre fournisseur, consultez la documentation de votre fournisseur.  
+ Si un fournisseur prend en charge les URL, le fournisseur inscrit un ou plusieurs schémas d’URL. L’inscription signifie que toutes les URL utilisant le schéma appellera automatiquement le fournisseur inscrit. Par exemple, le schéma *http* est inscrit au [fournisseur Microsoft OLE DB pour la publication Internet](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md). ADO suppose que toutes les URL avec le préfixe « http » représentent les dossiers ou les fichiers Web à utiliser avec le fournisseur de publication Internet. Pour plus d’informations sur les schémas enregistrés par votre fournisseur, consultez la documentation de votre fournisseur.  
   
 ## <a name="defining-context-with-a-url"></a>Définition du contexte avec une URL  
- L’une des fonctions d’une connexion ouverte, représentée par un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) , est de limiter les opérations ultérieures à la source de données représentée par cette connexion. Autrement dit, la connexion définit le contexte pour les opérations suivantes.  
+ L’une des fonctions d’une connexion ouverte, représentée par un objet de [connexion](../../reference/ado-api/connection-object-ado.md) , est de limiter les opérations ultérieures à la source de données représentée par cette connexion. Autrement dit, la connexion définit le contexte pour les opérations suivantes.  
   
- Avec ADO 2,7 ou une version ultérieure, une URL absolue peut également définir un contexte. Par exemple, lorsqu’un objet [Record](../../../ado/reference/ado-api/record-object-ado.md) est ouvert avec une URL absolue, un objet **Connection** est implicitement créé pour représenter la ressource spécifiée par l’URL.  
+ Avec ADO 2,7 ou une version ultérieure, une URL absolue peut également définir un contexte. Par exemple, lorsqu’un objet [Record](../../reference/ado-api/record-object-ado.md) est ouvert avec une URL absolue, un objet **Connection** est implicitement créé pour représenter la ressource spécifiée par l’URL.  
   
- Une URL absolue qui définit un contexte peut être spécifiée dans le paramètre *ActiveConnection* de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-record.md) de l’objet **Record** . Une URL absolue peut également être spécifiée en tant que valeur du mot clé « URL = » dans le paramètre *ConnectionString* de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) de l’objet de **connexion** et du paramètre *ActiveConnection* de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .  
+ Une URL absolue qui définit un contexte peut être spécifiée dans le paramètre *ActiveConnection* de la méthode [Open](../../reference/ado-api/open-method-ado-record.md) de l’objet **Record** . Une URL absolue peut également être spécifiée en tant que valeur du mot clé « URL = » dans le paramètre *ConnectionString* de la méthode [Open](../../reference/ado-api/open-method-ado-connection.md) de l’objet de **connexion** et du paramètre *ActiveConnection* de la méthode [Open](../../reference/ado-api/open-method-ado-recordset.md) de l’objet [Recordset](../../reference/ado-api/recordset-object-ado.md) .  
   
  Le contexte peut également être défini en ouvrant un **enregistrement** ou un objet **Recordset** qui représente un répertoire, car ces objets disposent déjà d’un objet de **connexion** implicitement ou explicitement déclaré qui spécifie Context.  
   
 ## <a name="scoped-operations"></a>Opérations délimitées  
- Le contexte définit également l’étendue, c’est-à-dire le répertoire et ses sous-répertoires qui peuvent participer aux opérations suivantes. L’objet **Record** a plusieurs méthodes délimitées qui fonctionnent sur un répertoire et tous ses sous-répertoires. Ces méthodes incluent [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)et [DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md).  
+ Le contexte définit également l’étendue, c’est-à-dire le répertoire et ses sous-répertoires qui peuvent participer aux opérations suivantes. L’objet **Record** a plusieurs méthodes délimitées qui fonctionnent sur un répertoire et tous ses sous-répertoires. Ces méthodes incluent [CopyRecord](../../reference/ado-api/copyrecord-method-ado.md), [MoveRecord](../../reference/ado-api/moverecord-method-ado.md)et [DeleteRecord](../../reference/ado-api/deleterecord-method-ado.md).  
   
 ## <a name="relative-urls-as-command-text"></a>URL relatives sous forme de texte de commande  
- Vous pouvez spécifier une commande à exécuter sur la source de données en tapant une chaîne dans le *paramètre CommandText* de la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) de l’objet de **connexion** et dans le paramètre *source* de la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) de l’objet **Recordset** .  
+ Vous pouvez spécifier une commande à exécuter sur la source de données en tapant une chaîne dans le *paramètre CommandText* de la méthode [Execute](../../reference/ado-api/execute-method-ado-connection.md) de l’objet de **connexion** et dans le paramètre *source* de la méthode [Open](../../reference/ado-api/open-method-ado-recordset.md) de l’objet **Recordset** .  
   
  Une URL relative peut être spécifiée dans le paramètre *CommandText* ou *source* . L’URL relative ne représente pas en fait une commande, telle qu’une commande SQL. Il spécifie simplement les paramètres. Le contexte de la connexion active doit être une URL absolue et le paramètre d' *option* doit avoir la valeur **adCmdTableDirect**.  
   
@@ -86,9 +86,9 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>OLE DB les schémas d’URL fournis par le fournisseur  
  Le premier élément d’une URL qualifiée complète est le *schéma* utilisé pour accéder à la ressource identifiée par le reste de l’URL. Les exemples sont HTTP (Hypertext Transfer Protocol) et FTP (protocole FTP).  
   
- ADO prend en charge les fournisseurs OLE DB qui reconnaissent leurs propres schémas d’URL. Par exemple, le [fournisseur Microsoft OLE DB pour la publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* qui accède aux fichiers Windows 2000 « publiés », reconnaît le schéma http existant.  
+ ADO prend en charge les fournisseurs OLE DB qui reconnaissent leurs propres schémas d’URL. Par exemple, le [fournisseur Microsoft OLE DB pour la publication Internet](../appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* qui accède aux fichiers Windows 2000 « publiés », reconnaît le schéma http existant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Record, objet (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Connection, objet (ADO)](../../reference/ado-api/connection-object-ado.md)   
+ [Record, objet (ADO)](../../reference/ado-api/record-object-ado.md)   
+ [Recordset, objet (ADO)](../../reference/ado-api/recordset-object-ado.md)

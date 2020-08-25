@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: abf0202e75ef64825d6dc815624adc1c1d337174
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453571"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806196"
 ---
 # <a name="data-section"></a>Section de données
 La section Data définit les données de l’ensemble de lignes, ainsi que toutes les mises à jour, insertions ou suppressions en attente. La section de données peut contenir zéro ou plusieurs lignes. Elle ne peut contenir que des données d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme indiqué précédemment, les colonnes sans données peuvent être omises. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, elle est ignorée en mode silencieux.  
@@ -86,4 +86,4 @@ La section Data définit les données de l’ensemble de lignes, ainsi que toute
  Une mise à jour contient toujours l’intégralité des données de ligne d’origine, suivies des données de ligne modifiées. La ligne modifiée peut contenir toutes les colonnes ou uniquement celles qui ont été réellement modifiées. Dans l’exemple précédent, la ligne de Shipper 2 n’est pas modifiée et seule la colonne Phone a changé de valeur pour Shipper 3 et est donc la seule colonne incluse dans la ligne modifiée. Les lignes insérées pour les expéditeurs 12, 13 et 14 sont regroupées sous une étiquette RS : Insert. Notez que les lignes supprimées peuvent également être regroupées par lot, bien que cela ne soit pas illustré dans l’exemple précédent.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Persistance des enregistrements au format XML](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persistance des enregistrements au format XML](./persisting-records-in-xml-format.md)

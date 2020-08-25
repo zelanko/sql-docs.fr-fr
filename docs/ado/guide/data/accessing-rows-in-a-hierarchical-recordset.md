@@ -14,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0794c1ab1f92a44ff59bb66306d348244666f9dd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ad70cc527a42188588df31ea7f3a53678423f37d
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453901"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806715"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>Accès aux lignes d’un jeu d’enregistrements hiérarchique (exemple)
-L’exemple suivant montre les étapes nécessaires pour accéder aux lignes d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md)hiérarchique :
+L’exemple suivant montre les étapes nécessaires pour accéder aux lignes d’un [jeu d’enregistrements](../../reference/ado-api/recordset-object-ado.md)hiérarchique :
 
 1.  Les objets **Recordset** des tables **Authors** et **titleauthor** sont liés par l’ID de l’auteur.
 
 2.  La boucle externe affiche le prénom et le nom, l’État et l’identification de chaque auteur.
 
-3.  Le **Recordset** ajouté pour chaque ligne est extrait de la collection de [champs](../../../ado/reference/ado-api/fields-collection-ado.md) et affecté à *rstTitleAuthor*.
+3.  Le **Recordset** ajouté pour chaque ligne est extrait de la collection de [champs](../../reference/ado-api/fields-collection-ado.md) et affecté à *rstTitleAuthor*.
 
 4.  La boucle interne affiche quatre champs de chaque ligne dans le **Recordset**ajouté.
 
- La propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) a la valeur **false** à des fins d’illustration, afin que vous puissiez voir le chapitre changer explicitement dans chaque itération de la boucle externe. Pour améliorer l’efficacité de l’exemple de code, vous pouvez déplacer l’affectation à l’étape 3 avant la première ligne de l’étape 2, afin que l’assignation ne soit exécutée qu’une seule fois. Affectez ensuite la valeur **true**à la propriété [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) , afin que *rstTitleAuthor* passe implicitement et automatiquement au chapitre correspondant chaque fois que *RST* passe à une nouvelle ligne.
+ La propriété [StayInSync](../../reference/ado-api/stayinsync-property.md) a la valeur **false** à des fins d’illustration, afin que vous puissiez voir le chapitre changer explicitement dans chaque itération de la boucle externe. Pour améliorer l’efficacité de l’exemple de code, vous pouvez déplacer l’affectation à l’étape 3 avant la première ligne de l’étape 2, afin que l’assignation ne soit exécutée qu’une seule fois. Affectez ensuite la valeur **true**à la propriété [StayInSync](../../reference/ado-api/stayinsync-property.md) , afin que *rstTitleAuthor* passe implicitement et automatiquement au chapitre correspondant chaque fois que *RST* passe à une nouvelle ligne.
 
 ## <a name="example"></a> Exemple
 
@@ -68,5 +68,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a> Voir aussi
- [Vue d’ensemble](../../../ado/guide/data/data-shaping-overview.md) de la mise en forme des données collection de champs d' [objets de champ](../../../ado/reference/ado-api/field-object.md) [(ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [grammaire de forme formelle](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft Data Shaping Service pour OLE DB (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [objet Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [fournisseurs requis pour](../../../ado/guide/data/required-providers-for-data-shaping.md) la mise en forme des données commande de la forme [Ajouter](../../../ado/guide/data/shape-append-clause.md) une clause [dans](../../../ado/guide/data/shape-commands-in-general.md) la [clause COMPUTE Shape](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic pour applications Functions](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+## <a name="see-also"></a>Voir aussi
+ [Vue d’ensemble](./data-shaping-overview.md) de la mise en forme des données collection de champs d' [objets de champ](../../reference/ado-api/field-object.md) [(ADO)](../../reference/ado-api/fields-collection-ado.md) [grammaire de forme formelle](./formal-shape-grammar.md) [Microsoft Data Shaping Service pour OLE DB (ADO Service Provider)](../appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [objet Recordset (ADO)](../../reference/ado-api/recordset-object-ado.md) [fournisseurs requis pour](./required-providers-for-data-shaping.md) la mise en forme des données commande de la forme [Ajouter](./shape-append-clause.md) une clause [dans](./shape-commands-in-general.md) la [clause COMPUTE Shape](./shape-compute-clause.md) [Visual Basic pour applications Functions](./visual-basic-for-applications-functions.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f544805336fdea586fac5697b3abde009dc6f7ff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6a682a706e18046bde0a6d117d1964262700c1c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453621"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806268"
 ---
 # <a name="creating-a-connection-string"></a>Création d’une chaîne de connexion
 Une chaîne de connexion se compose d’une liste de paires argument/valeur (c’est-à-dire des paramètres), séparées par des points-virgules. Par exemple :  
@@ -42,7 +42,7 @@ Une chaîne de connexion se compose d’une liste de paires argument/valeur (c�
   
  Les autres arguments sont passés au fournisseur nommé dans l’argument *Provider* , sans aucun traitement par ADO.  
   
- L’application HelloData dans [HelloData : une simple application ADO](../../../ado/guide/data/hellodata-a-simple-ado-application.md) utilisait la chaîne de connexion suivante :  
+ L’application HelloData dans [HelloData : une simple application ADO](./hellodata-a-simple-ado-application.md) utilisait la chaîne de connexion suivante :  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

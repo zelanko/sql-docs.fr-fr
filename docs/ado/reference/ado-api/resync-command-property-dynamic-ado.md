@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a7a350540d94ea0379f7829fa004d98ce691f1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4c79843bb3397fee6d4c2d92d9e7905d2db472c3
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442301"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777678"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command, propriété dynamique (ADO)
-Spécifie une chaîne de commande fournie par l’utilisateur que la méthode de [resynchronisation](../../../ado/reference/ado-api/resync-method.md) émet pour actualiser les données de la table nommée dans la propriété dynamique de la [table unique](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
+Spécifie une chaîne de commande fournie par l’utilisateur que la méthode de [resynchronisation](./resync-method.md) émet pour actualiser les données de la table nommée dans la propriété dynamique de la [table unique](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **chaîne** qui est une chaîne de commande.  
   
 ## <a name="remarks"></a>Notes  
- L’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) est le résultat d’une opération de jointure exécutée sur plusieurs tables de base. Les lignes affectées dépendent du paramètre *AffectRecords* de la méthode [Resync](../../../ado/reference/ado-api/resync-method.md) . La méthode de **resynchronisation** standard est exécutée si les propriétés de la table et de la **commande Resync** [uniques](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) ne sont pas définies.  
+ L’objet [Recordset](./recordset-object-ado.md) est le résultat d’une opération de jointure exécutée sur plusieurs tables de base. Les lignes affectées dépendent du paramètre *AffectRecords* de la méthode [Resync](./resync-method.md) . La méthode de **resynchronisation** standard est exécutée si les propriétés de la table et de la **commande Resync** [uniques](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) ne sont pas définies.  
   
  La chaîne de commande de la propriété de **commande Resync** est une commande paramétrée ou une procédure stockée qui identifie de façon unique la ligne en cours d’actualisation, et retourne une ligne unique contenant le même nombre et l’ordre des colonnes que la ligne à actualiser. La chaîne de commande contient un paramètre pour chaque colonne de clé primaire dans la **table unique**; dans le cas contraire, une erreur d’exécution est retournée. Les paramètres sont automatiquement renseignés avec les valeurs de clé primaire de la ligne à actualiser.  
   
@@ -81,7 +81,7 @@ WHERE Orders.ordid  = @ordid
   
  Une fois encore, la **table unique** est *Orders* et sa clé primaire, *OrderID*, est paramétrable.  
   
- La **commande Resync** est une propriété dynamique ajoutée à la collection de [Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md) de l’objet **Recordset** lorsque la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) a la valeur **adUseClient**.  
+ La **commande Resync** est une propriété dynamique ajoutée à la collection de [Propriétés](./properties-collection-ado.md) de l’objet **Recordset** lorsque la propriété [CursorLocation](./cursorlocation-property-ado.md) a la valeur **adUseClient**.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

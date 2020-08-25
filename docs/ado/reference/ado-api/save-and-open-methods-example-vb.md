@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 048fbb83c8a6b9de150642f6094a1f07e0c1e11e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34ad6214f36061ed12577f7ba843a69fc13b7d8a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442221"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777598"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save et Open, exemple de méthodes (VB)
-Ces trois exemples montrent comment les méthodes [Save](../../../ado/reference/ado-api/save-method.md) et [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) peuvent être utilisées ensemble.  
+Ces trois exemples montrent comment les méthodes [Save](./save-method.md) et [Open](./open-method-ado-recordset.md) peuvent être utilisées ensemble.  
   
- Supposons que vous vous apprêtez à effectuer un voyage d’affaires et que vous souhaitez prendre un tableau à partir d’une base de données. Avant d’aller plus tard, vous accédez aux données sous la forme [d’un jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) et vous les enregistrez sous une forme transportable. Lorsque vous arrivez à votre destination, vous accédez au **Recordset** sous la forme d’un **jeu d’enregistrements**local et déconnecté. Vous apportez des modifications au **jeu d’enregistrements**, puis vous l’enregistrez de nouveau. Enfin, lorsque vous revenez chez vous, vous vous reconnectez à la base de données et vous le mettez à jour avec les modifications que vous avez apportées sur la route.  
+ Supposons que vous vous apprêtez à effectuer un voyage d’affaires et que vous souhaitez prendre un tableau à partir d’une base de données. Avant d’aller plus tard, vous accédez aux données sous la forme [d’un jeu d’enregistrements](./recordset-object-ado.md) et vous les enregistrez sous une forme transportable. Lorsque vous arrivez à votre destination, vous accédez au **Recordset** sous la forme d’un **jeu d’enregistrements**local et déconnecté. Vous apportez des modifications au **jeu d’enregistrements**, puis vous l’enregistrez de nouveau. Enfin, lorsque vous revenez chez vous, vous vous reconnectez à la base de données et vous le mettez à jour avec les modifications que vous avez apportées sur la route.  
   
  Tout d’abord, accédez à la table ***Authors*** et enregistrez-la.  
   
@@ -98,7 +98,7 @@ Attribute VB_Name = "Save"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Open, méthode (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [En savoir plus sur la persistance des recordsets](../../../ado/guide/data/more-about-recordset-persistence.md)   
- [Save, méthode](../../../ado/reference/ado-api/save-method.md)
+ [Open, méthode (objet Recordset ADO)](./open-method-ado-recordset.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)   
+ [En savoir plus sur la persistance des recordsets](../../guide/data/more-about-recordset-persistence.md)   
+ [Save, méthode](./save-method.md)

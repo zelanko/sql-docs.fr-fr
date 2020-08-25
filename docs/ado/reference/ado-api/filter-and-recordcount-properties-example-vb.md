@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f948d2f0ba3a70c1f9a7b3279b0eb9bf68b5b3a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bf78308afe6a48a071daa8a68a0a3cfaecd907c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88443691"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88775298"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter et RecordCount, exemple de propriétés (VB)
-Cet exemple ouvre un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) sur la table Publishers dans la base de données ***pubs*** . Il utilise ensuite la propriété [Filter](../../../ado/reference/ado-api/filter-property.md) pour limiter le nombre d’enregistrements visibles à ces serveurs de publication dans un pays ou une région spécifique. La propriété **RecordCount** est utilisée pour afficher la différence entre les recordsets filtrés et non filtrés.  
+Cet exemple ouvre un [jeu d’enregistrements](./recordset-object-ado.md) sur la table Publishers dans la base de données ***pubs*** . Il utilise ensuite la propriété [Filter](./filter-property.md) pour limiter le nombre d’enregistrements visibles à ces serveurs de publication dans un pays ou une région spécifique. La propriété **RecordCount** est utilisée pour afficher la différence entre les recordsets filtrés et non filtrés.  
   
 ```  
 'BeginFilterVB  
@@ -116,6 +116,6 @@ Attribute VB_Name = "Filter"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filter (propriété)](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount, propriété (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter (propriété)](./filter-property.md)   
+ [RecordCount, propriété (ADO)](./recordcount-property-ado.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

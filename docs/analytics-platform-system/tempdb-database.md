@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
+ms.lasthandoff: 08/25/2020
 ms.locfileid: "74400142"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>base de données tempdb en parallèle Data Warehouse
@@ -25,7 +25,7 @@ Pour plus d’informations sur les bases de données système, voir [bases de do
 *table temporaire locale*  
 Une *table temporaire locale* utilise le préfixe # avant le nom de la table et est une table temporaire créée par une session utilisateur locale. Chaque session peut uniquement accéder aux données des tables temporaires locales pour sa propre session.  
   
-Chaque session peut afficher les métadonnées des tables temporaires locales dans toutes les sessions. Par exemple, toutes les sessions peuvent afficher les métadonnées de toutes les tables temporaires `SELECT * FROM tempdb.sys.tables` locales avec la requête.  
+Chaque session peut afficher les métadonnées des tables temporaires locales dans toutes les sessions. Par exemple, toutes les sessions peuvent afficher les métadonnées de toutes les tables temporaires locales avec la `SELECT * FROM tempdb.sys.tables` requête.  
   
 table temporaire globale  
 Les *tables temporaires globales*, prises en charge dans SQL Server avec la syntaxe # #, ne sont pas prises en charge dans cette version de SQL Server PDW.  

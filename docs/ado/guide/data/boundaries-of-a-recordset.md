@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d89f25dc6e37c0b5c569d5db7c4f8486115ce94a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aec0ad3065deb60f99f672712c085fe054885d27
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453711"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806379"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites d’un recordset
 **Recordset** prend en charge les propriétés **BOF** et **EOF** pour détourer le début et la fin, respectivement, du jeu de données. Vous pouvez considérer **BOF** et **EOF** comme des enregistrements « fantômes » placés au début et à la fin de l’ensemble d' **enregistrements**. En comptant **BOF** et **EOF**, notre exemple de **jeu d’enregistrements** se présenterait comme suit :  
@@ -70,4 +70,4 @@ else
   
  Ce schéma fonctionne pour tous les types de curseurs et est indépendant des fournisseurs sous-jacents. Si vous tentez de déterminer le vidage d’un objet **Recordset** en vérifiant si sa valeur de propriété **RecordCount** est égale à zéro (0) ou non, vous devez prendre des précautions pour utiliser un curseur et un fournisseur appropriés qui prennent en charge le retour du nombre d’enregistrements dans le résultat.  
   
- Si vous supprimez le dernier enregistrement restant dans l’objet **Recordset** , le curseur reste dans un état indéterminé. Les propriétés **BOF** et **EOF** peuvent conserver la **valeur false** jusqu’à ce que vous tentiez de repositionner l’enregistrement actif, en fonction du fournisseur. Pour plus d’informations, consultez [Suppression d’enregistrements à l’aide de la méthode Delete](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+ Si vous supprimez le dernier enregistrement restant dans l’objet **Recordset** , le curseur reste dans un état indéterminé. Les propriétés **BOF** et **EOF** peuvent conserver la **valeur false** jusqu’à ce que vous tentiez de repositionner l’enregistrement actif, en fonction du fournisseur. Pour plus d’informations, consultez [Suppression d’enregistrements à l’aide de la méthode Delete](./deleting-records-using-the-delete-method.md).

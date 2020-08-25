@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 93e4a003e2234c0ee8eb537bc8ee09cdef1869d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8d13a3d1ce8db32e01e20608dd1d7b3b3fb5be6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442261"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777508"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek (méthode) et Index (propriété), exemple (VC++)
-Cet exemple utilise la méthode [Seek](../../../ado/reference/ado-api/seek-method.md) de l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) et la propriété [index](../../../ado/reference/ado-api/index-property.md) conjointement avec un ***ID d’employé***donné pour localiser le nom de l’employé dans la table ***Employees*** de la base de données Nwind. mdb.  
+Cet exemple utilise la méthode [Seek](./seek-method.md) de l’objet [Recordset](./recordset-object-ado.md) et la propriété [index](./index-property.md) conjointement avec un ***ID d’employé***donné pour localiser le nom de l’employé dans la table ***Employees*** de la base de données Nwind. mdb.  
   
 ```  
 // BeginSeekCpp.cpp  
@@ -227,6 +227,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriété d’index](../../../ado/reference/ado-api/index-property.md)   
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Seek, méthode](../../../ado/reference/ado-api/seek-method.md)
+ [Propriété d’index](./index-property.md)   
+ [Recordset, objet (ADO)](./recordset-object-ado.md)   
+ [Seek, méthode](./seek-method.md)
