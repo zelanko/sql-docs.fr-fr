@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bac29c74bf70e29828fe8ec238839cd64e78fd7a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 823505aae912c64c2fd7d3375b3426cb6428bcdd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442561"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772868"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
-Spécifie les attributs d’un objet de [propriété](../../../ado/reference/ado-api/property-object-ado.md) .  
+Spécifie les attributs d’un objet de [propriété](./property-object-ado.md) .  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|Indique que la propriété n’est pas prise en charge par le fournisseur.|  
 |**adPropRequired**|1|Indique que l’utilisateur doit spécifier une valeur pour cette propriété avant que la source de données soit initialisée.|  
@@ -37,7 +37,7 @@ Spécifie les attributs d’un objet de [propriété](../../../ado/reference/ado
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.PropertyAttributes.NOTSUPPORTED|  
 |AdoEnums. PropertyAttributes. obligatoire|  
@@ -46,4 +46,4 @@ Spécifie les attributs d’un objet de [propriété](../../../ado/reference/ado
 |AdoEnums.PropertyAttributes.WRITE|  
   
 ## <a name="applies-to"></a>S'applique à  
- [Attributes, propriété (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes, propriété (ADO)](./attributes-property-ado.md)

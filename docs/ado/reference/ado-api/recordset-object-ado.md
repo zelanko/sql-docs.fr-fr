@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3750a779c434810856e1cae979b7471aa3f8428c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d9fade9e23303c9adaa22cad9822381fd10bb513
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442421"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772268"
 ---
 # <a name="recordset-object-ado"></a>Recordset, objet (ADO)
 Représente l’ensemble des enregistrements d’une table de base ou les résultats d’une commande exécutée. À tout moment, l’objet **Recordset** fait référence à un seul enregistrement dans le jeu en tant qu’enregistrement actif.  
@@ -41,26 +41,26 @@ Représente l’ensemble des enregistrements d’une table de base ou les résul
   
 -   **Curseur avant uniquement** Vous permet de faire défiler le **Recordset**uniquement vers l’avant. Les ajouts, modifications ou suppressions effectués par d’autres utilisateurs ne sont pas visibles. Cela améliore les performances dans les situations où vous devez effectuer une seule passe dans un **jeu d’enregistrements**.  
   
- Définissez la propriété [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) avant d’ouvrir le **jeu d’enregistrements** pour choisir le type de curseur, ou transmettez un argument *CursorType* avec la méthode [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) . Certains fournisseurs ne prennent pas en charge tous les types de curseurs. Consultez la documentation du fournisseur. Si vous ne spécifiez pas de type de curseur, ADO ouvre un curseur avant uniquement par défaut.  
+ Définissez la propriété [CursorType](./cursortype-property-ado.md) avant d’ouvrir le **jeu d’enregistrements** pour choisir le type de curseur, ou transmettez un argument *CursorType* avec la méthode [Open](./open-method-ado-recordset.md) . Certains fournisseurs ne prennent pas en charge tous les types de curseurs. Consultez la documentation du fournisseur. Si vous ne spécifiez pas de type de curseur, ADO ouvre un curseur avant uniquement par défaut.  
   
- Si la propriété [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) a la valeur **adUseClient** pour ouvrir un **jeu d’enregistrements**, la propriété **UnderlyingValue** sur les objets [Field](../../../ado/reference/ado-api/field-object.md) n’est pas disponible dans l’objet **Recordset** retourné. Lorsqu’ils sont utilisés avec certains fournisseurs (tels que le fournisseur Microsoft ODBC pour OLE DB conjointement avec Microsoft SQL Server), vous pouvez créer des objets **Recordset** indépendamment d’un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) défini précédemment en passant une chaîne de connexion avec la méthode **Open** . ADO crée toujours un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) , mais il n’affecte pas cet objet à une variable objet. Toutefois, si vous ouvrez plusieurs objets **Recordset** sur la même connexion, vous devez créer et ouvrir explicitement un objet de **connexion** ; Cela affecte l’objet de **connexion** à une variable objet. Si vous n’utilisez pas cette variable objet lors de l’ouverture de vos objets **Recordset** , ADO crée un objet **Connection** pour chaque nouvel ensemble **d’enregistrements**, même si vous transmettez la même chaîne de connexion.  
+ Si la propriété [CursorLocation](./cursorlocation-property-ado.md) a la valeur **adUseClient** pour ouvrir un **jeu d’enregistrements**, la propriété **UnderlyingValue** sur les objets [Field](./field-object.md) n’est pas disponible dans l’objet **Recordset** retourné. Lorsqu’ils sont utilisés avec certains fournisseurs (tels que le fournisseur Microsoft ODBC pour OLE DB conjointement avec Microsoft SQL Server), vous pouvez créer des objets **Recordset** indépendamment d’un objet de [connexion](./connection-object-ado.md) défini précédemment en passant une chaîne de connexion avec la méthode **Open** . ADO crée toujours un objet de [connexion](./connection-object-ado.md) , mais il n’affecte pas cet objet à une variable objet. Toutefois, si vous ouvrez plusieurs objets **Recordset** sur la même connexion, vous devez créer et ouvrir explicitement un objet de **connexion** ; Cela affecte l’objet de **connexion** à une variable objet. Si vous n’utilisez pas cette variable objet lors de l’ouverture de vos objets **Recordset** , ADO crée un objet **Connection** pour chaque nouvel ensemble **d’enregistrements**, même si vous transmettez la même chaîne de connexion.  
   
  Vous pouvez créer autant **d’objets Recordset** que nécessaire.  
   
- Lorsque vous ouvrez un **jeu d’enregistrements**, l’enregistrement actif est positionné sur le premier enregistrement (le cas échéant) et les propriétés [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) et [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) ont la valeur **false**. S’il n’y a aucun enregistrement, les paramètres de propriété **BOF** et **EOF** ont la **valeur true**.  
+ Lorsque vous ouvrez un **jeu d’enregistrements**, l’enregistrement actif est positionné sur le premier enregistrement (le cas échéant) et les propriétés [BOF](./bof-eof-properties-ado.md) et [EOF](./bof-eof-properties-ado.md) ont la valeur **false**. S’il n’y a aucun enregistrement, les paramètres de propriété **BOF** et **EOF** ont la **valeur true**.  
   
- Vous pouvez utiliser les méthodes [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**et **MovePrevious** . méthode [Move](../../../ado/reference/ado-api/move-method-ado.md) ; et les propriétés [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)et [Filter](../../../ado/reference/ado-api/filter-property.md) pour repositionner l’enregistrement actif, en supposant que le fournisseur prend en charge les fonctionnalités pertinentes. Les objets **Recordset** avant uniquement prennent uniquement en charge la méthode [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) . Lorsque vous utilisez les méthodes **Move** pour visiter chaque enregistrement (ou énumérer le **Recordset**), vous pouvez utiliser les propriétés **BOF** et **EOF** pour déterminer si vous avez dépassé le début ou la fin du **Recordset**.  
+ Vous pouvez utiliser les méthodes [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md), **MoveLast**, **MoveNext**et **MovePrevious** . méthode [Move](./move-method-ado.md) ; et les propriétés [AbsolutePosition](./absoluteposition-property-ado.md), [AbsolutePage](./absolutepage-property-ado.md)et [Filter](./filter-property.md) pour repositionner l’enregistrement actif, en supposant que le fournisseur prend en charge les fonctionnalités pertinentes. Les objets **Recordset** avant uniquement prennent uniquement en charge la méthode [MoveNext](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) . Lorsque vous utilisez les méthodes **Move** pour visiter chaque enregistrement (ou énumérer le **Recordset**), vous pouvez utiliser les propriétés **BOF** et **EOF** pour déterminer si vous avez dépassé le début ou la fin du **Recordset**.  
   
  Avant d’utiliser une fonctionnalité d’un objet **Recordset** , vous devez appeler la méthode **supports** sur l’objet pour vérifier que la fonctionnalité est prise en charge ou disponible. Vous ne devez pas utiliser la fonctionnalité quand la méthode **prend en charge** retourne la valeur false. Par exemple, vous pouvez utiliser la méthode **MovePrevious** uniquement si `Recordset.Supports(adMovePrevious)` retourne la **valeur true**. Dans le cas contraire, vous obtiendrez une erreur, car l’objet **Recordset** a peut-être été fermé et les fonctionnalités rendues indisponibles sur l’instance. Si une fonctionnalité qui vous intéresse n’est pas prise en charge, **prend** également la valeur false. Dans ce cas, vous devez éviter d’appeler la propriété ou la méthode correspondante sur l’objet **Recordset** .  
   
- Les objets **Recordset** peuvent prendre en charge deux types de mise à jour : immédiat et par lot. Dans la mise à jour immédiate, toutes les modifications apportées aux données sont écrites immédiatement dans la source de données sous-jacente une fois que vous avez appelé la méthode [Update](../../../ado/reference/ado-api/update-method.md) . Vous pouvez également passer des tableaux de valeurs en tant que paramètres avec les méthodes [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) et **Update** et mettre à jour plusieurs champs simultanément dans un enregistrement.  
+ Les objets **Recordset** peuvent prendre en charge deux types de mise à jour : immédiat et par lot. Dans la mise à jour immédiate, toutes les modifications apportées aux données sont écrites immédiatement dans la source de données sous-jacente une fois que vous avez appelé la méthode [Update](./update-method.md) . Vous pouvez également passer des tableaux de valeurs en tant que paramètres avec les méthodes [AddNew](./addnew-method-ado.md) et **Update** et mettre à jour plusieurs champs simultanément dans un enregistrement.  
   
- Si un fournisseur prend en charge la mise à jour par lot, vous pouvez faire en sorte que le cache du fournisseur soit modifié en plusieurs enregistrements, puis les transmette en un seul appel à la base de données avec la méthode [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) . Cela s’applique aux modifications apportées avec les méthodes **AddNew**, **Update**et [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) . Après avoir appelé la méthode **UpdateBatch** , vous pouvez utiliser la propriété [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) pour rechercher les éventuels conflits de données afin de les résoudre.  
+ Si un fournisseur prend en charge la mise à jour par lot, vous pouvez faire en sorte que le cache du fournisseur soit modifié en plusieurs enregistrements, puis les transmette en un seul appel à la base de données avec la méthode [UpdateBatch](./updatebatch-method.md) . Cela s’applique aux modifications apportées avec les méthodes **AddNew**, **Update**et [Delete](./delete-method-ado-recordset.md) . Après avoir appelé la méthode **UpdateBatch** , vous pouvez utiliser la propriété [Status](./status-property-ado-recordset.md) pour rechercher les éventuels conflits de données afin de les résoudre.  
   
 > [!NOTE]
->  Pour exécuter une requête sans utiliser d’objet [Command](../../../ado/reference/ado-api/command-object-ado.md) , transmettez une chaîne de requête à la méthode **Open** d’un objet **Recordset** . Toutefois, un objet **Command** est requis lorsque vous souhaitez conserver le texte de la commande et le réexécuter, ou utiliser des paramètres de requête.  
+>  Pour exécuter une requête sans utiliser d’objet [Command](./command-object-ado.md) , transmettez une chaîne de requête à la méthode **Open** d’un objet **Recordset** . Toutefois, un objet **Command** est requis lorsque vous souhaitez conserver le texte de la commande et le réexécuter, ou utiliser des paramètres de requête.  
   
- La propriété [mode](../../../ado/reference/ado-api/mode-property-ado.md) régit les autorisations d’accès.  
+ La propriété [mode](./mode-property-ado.md) régit les autorisations d’accès.  
   
  La collection **Fields** est le membre par défaut de l’objet **Recordset** . Par conséquent, les deux instructions de code suivantes sont équivalentes.  
   
@@ -75,10 +75,10 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
  Cette section contient la rubrique suivante.  
   
--   [Propriétés, méthodes et événements de l’objet Recordset](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de l’objet Recordset](./recordset-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Connection, objet (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Fields, collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Annexe A : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Connection, objet (ADO)](./connection-object-ado.md)   
+ [Fields, collection (ADO)](./fields-collection-ado.md)   
+ [Properties, collection (ADO)](./properties-collection-ado.md)   
+ [Annexe A : Fournisseurs](../../guide/appendixes/appendix-a-providers.md)

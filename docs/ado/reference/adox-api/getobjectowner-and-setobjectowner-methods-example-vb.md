@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 502bad9d142df67096f23bf89f60184a958de55a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dc9a111b3315c7737229ec0240e5ee4ed6e406b9
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440081"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770548"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner et SetObjectOwner, exemples de méthodes (VB)
-Cet exemple illustre les méthodes [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) et [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) . Ce code suppose l’existence de la gestion des groupes (voir les [groupes et les utilisateurs Append, exemple de méthodes ChangePassword (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) pour voir comment ajouter ce groupe au système). Le propriétaire de la table categories est défini sur Accounting.  
+Cet exemple illustre les méthodes [GetObjectOwner](./getobjectowner-method-adox.md) et [SetObjectOwner](./setobjectowner-method.md) . Ce code suppose l’existence de la gestion des groupes (voir les [groupes et les utilisateurs Append, exemple de méthodes ChangePassword (VB)](./groups-and-users-append-changepassword-methods-example-vb.md) pour voir comment ajouter ce groupe au système). Le propriétaire de la table categories est défini sur Accounting.  
   
 ```  
 ' BeginOwnersVB  
@@ -63,6 +63,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [GetObjectOwner, méthode (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
- [SetObjectOwner, méthode](../../../ado/reference/adox-api/setobjectowner-method.md)
+ [Catalog, objet (ADOX)](./catalog-object-adox.md)   
+ [GetObjectOwner, méthode (ADOX)](./getobjectowner-method-adox.md)   
+ [SetObjectOwner, méthode](./setobjectowner-method.md)

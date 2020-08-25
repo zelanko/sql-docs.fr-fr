@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83a6153e0017dafb0ac48c27aebc49c51c9b22d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b172179adefc880034443b29ed36bb309215ec5a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442351"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771978"
 ---
 # <a name="refresh-method-ado"></a>Refresh, méthode (ADO)
 Met à jour les objets d’une collection pour refléter les objets disponibles et spécifiques au fournisseur.  
@@ -39,17 +39,17 @@ collection.Refresh
  La méthode **Refresh** effectue différentes tâches en fonction de la collection à partir de laquelle vous l’appelez.  
   
 ### <a name="parameters"></a>Paramètres  
- L’utilisation de la méthode **Refresh** sur la collection [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) d’un objet [Command](../../../ado/reference/ado-api/command-object-ado.md) récupère les informations sur les paramètres côté fournisseur pour la procédure stockée ou la requête paramétrable spécifiée dans l’objet **Command** . La collection est vide pour les fournisseurs qui ne prennent pas en charge les appels de procédure stockée ou les requêtes paramétrables.  
+ L’utilisation de la méthode **Refresh** sur la collection [Parameters](./parameters-collection-ado.md) d’un objet [Command](./command-object-ado.md) récupère les informations sur les paramètres côté fournisseur pour la procédure stockée ou la requête paramétrable spécifiée dans l’objet **Command** . La collection est vide pour les fournisseurs qui ne prennent pas en charge les appels de procédure stockée ou les requêtes paramétrables.  
   
- Vous devez définir la propriété [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) de l’objet de **commande** sur un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) valide, la propriété [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) sur une commande valide et la propriété [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) sur **adCmdStoredProc** avant d’appeler la méthode **Refresh** .  
+ Vous devez définir la propriété [ActiveConnection](./activeconnection-property-ado.md) de l’objet de **commande** sur un objet de [connexion](./connection-object-ado.md) valide, la propriété [CommandText](./commandtext-property-ado.md) sur une commande valide et la propriété [CommandType](./commandtype-property-ado.md) sur **adCmdStoredProc** avant d’appeler la méthode **Refresh** .  
   
  Si vous accédez à la collection **Parameters** avant d’appeler la méthode **Refresh** , ADO appellera automatiquement la méthode et remplira la collection pour vous.  
   
 > [!NOTE]
->  Si vous utilisez la méthode **Refresh** pour obtenir des informations sur les paramètres du fournisseur et qu’elle retourne un ou plusieurs objets de [paramètre](../../../ado/reference/ado-api/parameter-object.md) de type de données de longueur variable, ADO peut allouer de la mémoire pour les paramètres en fonction de leur taille maximale potentielle, ce qui entraîne une erreur pendant l’exécution. Vous devez définir explicitement la propriété [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md) pour ces paramètres avant d’appeler la méthode [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) pour éviter les erreurs.  
+>  Si vous utilisez la méthode **Refresh** pour obtenir des informations sur les paramètres du fournisseur et qu’elle retourne un ou plusieurs objets de [paramètre](./parameter-object.md) de type de données de longueur variable, ADO peut allouer de la mémoire pour les paramètres en fonction de leur taille maximale potentielle, ce qui entraîne une erreur pendant l’exécution. Vous devez définir explicitement la propriété [Size](./size-property-ado-parameter.md) pour ces paramètres avant d’appeler la méthode [Execute](./execute-method-ado-command.md) pour éviter les erreurs.  
   
 ### <a name="fields"></a>Champs  
- L’utilisation de la méthode **Refresh** sur la collection [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) n’a aucun effet visible. Pour récupérer les modifications de la structure de base de données sous-jacente, vous devez utiliser la méthode [Requery](../../../ado/reference/ado-api/requery-method.md) ou, si l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ne prend pas en charge les signets, la méthode [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
+ L’utilisation de la méthode **Refresh** sur la collection [Fields](./fields-collection-ado.md) n’a aucun effet visible. Pour récupérer les modifications de la structure de base de données sous-jacente, vous devez utiliser la méthode [Requery](./requery-method.md) ou, si l’objet [Recordset](./recordset-object-ado.md) ne prend pas en charge les signets, la méthode [MoveFirst](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
 ### <a name="properties"></a>Propriétés  
  L’utilisation de la méthode **Refresh** sur une collection **Properties** de certains objets remplit la collection avec les propriétés dynamiques exposées par le fournisseur. Ces propriétés fournissent des informations sur les fonctionnalités spécifiques au fournisseur, au-delà des propriétés intégrées prises en charge par ADO.  
@@ -58,34 +58,34 @@ collection.Refresh
 
 :::row:::
     :::column:::
-        [Axes, collection](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
-        [Collection Columns](../../../ado/reference/adox-api/columns-collection-adox.md)  
-        [CubeDefs, collection](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
-        [Dimensions, collection](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
-        [Collection d’erreurs](../../../ado/reference/ado-api/errors-collection-ado.md)  
-        [Collection Fields](../../../ado/reference/ado-api/fields-collection-ado.md)  
-        [Collection de groupes](../../../ado/reference/adox-api/groups-collection-adox.md)  
+        [Axes, collection](../ado-md-api/axes-collection-ado-md.md)  
+        [Collection Columns](../adox-api/columns-collection-adox.md)  
+        [CubeDefs, collection](../ado-md-api/cubedefs-collection-ado-md.md)  
+        [Dimensions, collection](../ado-md-api/dimensions-collection-ado-md.md)  
+        [Collection d’erreurs](./errors-collection-ado.md)  
+        [Collection Fields](./fields-collection-ado.md)  
+        [Collection de groupes](../adox-api/groups-collection-adox.md)  
     :::column-end:::
     :::column:::
-        [Hiérarchies, collection](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
-        [Indexer la collection](../../../ado/reference/adox-api/indexes-collection-adox.md)  
-        [Collection Keys](../../../ado/reference/adox-api/keys-collection-adox.md)  
-        [Collection de niveaux](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
-        [Collection Members](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
-        [Collection Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+        [Hiérarchies, collection](../ado-md-api/hierarchies-collection-ado-md.md)  
+        [Indexer la collection](../adox-api/indexes-collection-adox.md)  
+        [Collection Keys](../adox-api/keys-collection-adox.md)  
+        [Collection de niveaux](../ado-md-api/levels-collection-ado-md.md)  
+        [Collection Members](../ado-md-api/members-collection-ado-md.md)  
+        [Collection Parameters](./parameters-collection-ado.md)  
     :::column-end:::
     :::column:::
-        [Collection de positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
-        [Procedures, collection](../../../ado/reference/adox-api/procedures-collection-adox.md)  
-        [Collection Properties](../../../ado/reference/ado-api/properties-collection-ado.md)  
-        [Tables, collection](../../../ado/reference/adox-api/tables-collection-adox.md)  
-        [Collection d’utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md)  
-        [Views, collection](../../../ado/reference/adox-api/views-collection-adox.md)  
+        [Collection de positions](../ado-md-api/positions-collection-ado-md.md)  
+        [Procedures, collection](../adox-api/procedures-collection-adox.md)  
+        [Collection Properties](./properties-collection-ado.md)  
+        [Tables, collection](../adox-api/tables-collection-adox.md)  
+        [Collection d’utilisateurs](../adox-api/users-collection-adox.md)  
+        [Views, collection](../adox-api/views-collection-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [Refresh, exemple de méthode (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
- [Refresh, exemple de méthode (VC + +)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
- [Count, propriété (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
- [Refresh, méthode (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
+ [Refresh, exemple de méthode (VB)](./refresh-method-example-vb.md)   
+ [Refresh, exemple de méthode (VC + +)](./refresh-method-example-vc.md)   
+ [Count, propriété (ADO)](./count-property-ado.md)   
+ [Refresh, méthode (RDS)](../rds-api/refresh-method-rds.md)

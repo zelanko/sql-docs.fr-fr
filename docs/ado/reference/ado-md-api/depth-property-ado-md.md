@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5633df4158aeafc2e650d5c89aa5d83b02fe8a11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e050f73aaa2ceb174c115218796e166b72f39381
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88441131"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778208"
 ---
 # <a name="depth-property-ado-md"></a>Depth, propriété (ADO MD)
-Indique le nombre de niveaux entre le [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) et la racine de la hiérarchie.  
+Indique le nombre de niveaux entre le [niveau](./level-object-ado-md.md) et la racine de la hiérarchie.  
   
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne un entier, et est en lecture seule.  
@@ -34,7 +34,7 @@ Indique le nombre de niveaux entre le [niveau](../../../ado/reference/ado-md-api
  Un **niveau** à la racine d’une hiérarchie a une valeur de **profondeur** égale à zéro (0).  
   
 ## <a name="applies-to"></a>S'applique à  
- [Level, objet (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+ [Level, objet (ADO MD)](./level-object-ado-md.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [LevelDepth, propriété (ADO MD)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)
+ [LevelDepth, propriété (ADO MD)](./leveldepth-property-ado-md.md)

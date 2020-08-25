@@ -2,7 +2,7 @@
 title: Démarrer SQL Server en mode mono-utilisateur | Microsoft Docs
 description: En savoir plus sur le mode mono-utilisateur dans SQL Server. Découvrez quand il est utile et comment utiliser l’option de démarrage « -m » pour démarrer une instance de SQL Server dans ce mode.
 ms.custom: ''
-ms.date: 09/20/2017
+ms.date: 08/11/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 31b0075dfa6b3f4fa380e8b43054d0c98ebd8d81
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8651bcaa4aebf69eae9622031b49fb562b7be9f6
+ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764004"
+ms.lasthandoff: 08/12/2020
+ms.locfileid: "88147300"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Démarrer SQL Server en mode mono-utilisateur
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,13 @@ Par exemple, **-m"SQLCMD"** limite les connexions à une connexion unique, laque
   
 > [!IMPORTANT]  
 >  N'utilisez pas cette option comme fonctionnalité de sécurité. L'application cliente fournit le nom d'application cliente et peut fournir un nom erroné dans la chaîne de connexion.  
-  
+
+L’exemple suivant démarre l’instance SQL Server en mode mono-utilisateur et autorise uniquement la connexion via SQL Server Management Studio Query Editor.
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## <a name="note-for-clustered-installations"></a>Remarque relative aux installations en cluster  
  Pour l'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement en cluster, lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré en mode mono-utilisateur, la DLL de ressource de cluster utilise la connexion disponible, ce qui bloque par conséquent les autres connexions au serveur. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est dans cet état, si vous essayez de mettre la ressource Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en ligne, la ressource SQL peut basculer à un nœud différent si la ressource est configurée pour affecter le groupe.  
   

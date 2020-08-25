@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: addfb9c6139f654e46cecda82ecd573b3cb1b3c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec3e0b89afc079e998f7fde992c12e96a2ca81bc
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440671"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777788"
 ---
 # <a name="ado-programmer39s-reference"></a>Guide de référence du programmeur ADO&#39;
 Cette section contient les rubriques suivantes :  
   
--   [Informations de référence sur l’API ADO](../../ado/reference/ado-api/ado-api-reference.md)  
+-   [Informations de référence sur l’API ADO](./ado-api/ado-api-reference.md)  
   
--   [Référence sur l’API RDS](../../ado/reference/rds-api/rds-api-reference.md)  
+-   [Référence sur l’API RDS](./rds-api/rds-api-reference.md)  
   
--   [Informations de référence sur l’API ADO MD](../../ado/reference/ado-md-api/ado-md-api-reference.md)  
+-   [Informations de référence sur l’API ADO MD](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15)  
   
--   [Informations de référence sur l’API ADOX](../../ado/reference/adox-api/adox-api-reference.md)
+-   [Informations de référence sur l’API ADOX](./adox-api/adox-object-model.md?view=sql-server-ver15)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 449bfe5056cdf96f86b5371731c2d1c0b00ba31e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c7fc8cd189534a217468f71188479a8df100fed6
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452421"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88758359"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Vue d’ensemble des données et des schémas multidimensionnels
 ## <a name="understanding-multidimensional-schemas"></a>Fonctionnement des schémas multidimensionnels  
@@ -32,7 +32,7 @@ ms.locfileid: "88452421"
   
  Un *membre* est un élément de données dans une dimension. En général, vous créez une légende ou décrivez une mesure de la base de données à l’aide de membres.  
   
- Les cubes sont représentés par des objets [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) dans ADO MD. Les dimensions, les hiérarchies, les niveaux et les membres sont également représentés par leurs objets ADO MD correspondants : [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [hiérarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md)et [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+ Les cubes sont représentés par des objets [CubeDef](../../reference/ado-md-api/cubedef-object-ado-md.md) dans ADO MD. Les dimensions, les hiérarchies, les niveaux et les membres sont également représentés par leurs objets ADO MD correspondants : [dimension](../../reference/ado-md-api/dimension-object-ado-md.md), [hiérarchie](../../reference/ado-md-api/hierarchy-object-ado-md.md), [niveau](../../reference/ado-md-api/level-object-ado-md.md)et [membre](../../reference/ado-md-api/member-object-ado-md.md).  
   
 ### <a name="dimensions"></a>Dimensions  
  Les dimensions d’un cube dépendent de vos entités métier et des types de données à modéliser dans la base de données. En règle générale, chaque dimension est un point d’entrée indépendant ou un mécanisme de sélection des données.  
@@ -85,8 +85,8 @@ Hamburg, Munich, Stuttgart}
  Cet exemple illustre également une autre caractéristique : certains membres du niveau semaine de la hiérarchie année-semaine n’apparaissent dans aucun niveau de la hiérarchie année-trimestre. Par conséquent, une hiérarchie n’a pas besoin d’inclure tous les membres d’une dimension.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèle objet ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (multidimensionnel) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Programmation avec ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Utilisation d’ADO avec ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
- [Utilisation de données multidimensionnelles](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+ [Modèle objet ADO MD](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (multidimensionnel) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Programmation avec ADO MD](./programming-with-ado-md.md)   
+ [Utilisation d’ADO avec ADO MD](./using-ado-with-ado-md.md)   
+ [Utilisation de données multidimensionnelles](./working-with-multidimensional-data.md)

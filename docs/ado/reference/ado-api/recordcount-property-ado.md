@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c7615a61622be136b0be951b71a1788d5f45bab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b307a4116731016858ce4cc74f37bdcfbd258f3a
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442481"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772478"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount, propriété (ADO)
 
-Indique le nombre d’enregistrements dans un objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) .
+Indique le nombre d’enregistrements dans un objet [Recordset](./recordset-object-ado.md) .
   
 ## <a name="return-value"></a>Valeur de retour
 
@@ -53,11 +53,11 @@ Le type de curseur de l’objet **Recordset** détermine si le nombre d’enregi
   
 ## <a name="applies-to"></a>S'applique à
 
-[Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Recordset, objet (ADO)](./recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi
 
-[Filter et RecordCount, exemple de propriétés (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
-[Filter et RecordCount, exemples de propriétés (VC + +)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
-[AbsolutePosition, propriété (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
-[PageCount, propriété (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)
+[Filter et RecordCount, exemple de propriétés (VB)](./filter-and-recordcount-properties-example-vb.md)   
+[Filter et RecordCount, exemples de propriétés (VC + +)](./filter-and-recordcount-properties-example-vc.md)   
+[AbsolutePosition, propriété (ADO)](./absoluteposition-property-ado.md)   
+[PageCount, propriété (ADO)](./pagecount-property-ado.md)

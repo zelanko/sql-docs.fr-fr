@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec710b0ea9a208963efec64e75dc826d8d0e6b01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 17dcabb379e9cc5d111b5c6914a99672039a2681
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440241"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770928"
 ---
 # <a name="command-property-adox"></a>Command, propriété (ADOX)
-Spécifie un objet de [commande](../../../ado/reference/ado-api/command-object-ado.md) ADO qui peut être utilisé pour créer ou exécuter la procédure.  
+Spécifie un objet de [commande](../ado-api/command-object-ado.md) ADO qui peut être utilisé pour créer ou exécuter la procédure.  
   
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne un objet **Command** ADO valide.  
@@ -37,15 +37,15 @@ Spécifie un objet de [commande](../../../ado/reference/ado-api/command-object-a
 
 :::row:::
     :::column:::
-        [Procedure, objet (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [Procedure, objet (ADOX)](./procedure-object-adox.md)  
     :::column-end:::
     :::column:::
-        [View, objet (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+        [View, objet (ADOX)](./view-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [Command et CommandText, exemples de propriétés (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Parameters (collection), Command, exemple de propriété (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Views et Fields, exemple de collections (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views (collection), CommandText (exemple de propriété) (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
+ [Command et CommandText, exemples de propriétés (VB)](./command-and-commandtext-properties-example-vb.md)   
+ [Parameters (collection), Command, exemple de propriété (VB)](./parameters-collection-command-property-example-vb.md)   
+ [Views et Fields, exemple de collections (VB)](./views-and-fields-collections-example-vb.md)   
+ [Views (collection), CommandText (exemple de propriété) (VB)](./views-collection-commandtext-property-example-vb.md)

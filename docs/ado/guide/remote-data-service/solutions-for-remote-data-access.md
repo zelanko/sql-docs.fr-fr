@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 27217324754143bcb1933bc1b9b139dccc7dee45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d337ef92600dbda0a54d2c2c51ab4e8caeed646c
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451961"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759209"
 ---
 # <a name="solutions-for-remote-data-access"></a>Solutions pour le service RDA (Remote Data Access)
 ## <a name="the-issue"></a>Le problème  
@@ -44,9 +44,7 @@ ms.locfileid: "88451961"
  RDS définit un modèle de programmation (la séquence d’activités nécessaire pour accéder à une source de données et la mettre à jour) pour accéder aux données par le biais d’un intermédiaire, tel que Internet Information Services (IIS). Le modèle de programmation résume l’ensemble des fonctionnalités de RDS.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modèle de programmation RDS de base](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
- [Scénario RDS](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [Didacticiel RDS](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Utilisation et sécurité de RDS](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Modèle de programmation RDS de base](./basic-rds-programming-model.md)   
+ [Scénario RDS](./rds-scenario.md)   
+ [Didacticiel RDS](./rds-tutorial.md)   
+ [Utilisation et sécurité de RDS](./rds-usage-and-security.md)

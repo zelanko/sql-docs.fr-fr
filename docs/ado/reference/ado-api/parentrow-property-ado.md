@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b81fc704c78b620c1319aa592336aba0489a3d37
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d7924a27a8b04e430eb1d9d68d5de6e4d19c51a8
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442741"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773268"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow, propriété (ADO)
 Définit le conteneur d’un objet OLE DB **Row** sur un objet **ADORecordConstruction** , de sorte que le parent de la ligne soit converti en objet ADO **Record** .  
@@ -44,4 +44,4 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
  Cette méthode de propriété retourne les valeurs HRESULT standard, y compris S_OK et E_FAIL.  
   
 ## <a name="applies-to"></a>S'applique à  
- [ADORecordConstruction, interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [ADORecordConstruction, interface](./adorecordconstruction-interface.md)

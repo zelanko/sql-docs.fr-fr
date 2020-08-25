@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 86bdb1cd343ff0c8b3375760c843ef1c4d93c2dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb9ab9b7b97875ee62fe96a39ff8d34591810560
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438891"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767948"
 ---
 # <a name="onerror-event-rds"></a>onError, événement (RDS)
 L’événement **OnError** est appelé chaque fois qu’une erreur se produit pendant une opération.  
@@ -48,10 +48,8 @@ onError SCode, Description, Source, CancelDisplay
  Valeur **booléenne** qui, si elle est définie sur **true**, empêche l’affichage de l’erreur dans une boîte de dialogue.  
   
 ## <a name="applies-to"></a>S'applique à  
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl, objet (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemple de modèle d’événements ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Présentation rapide du gestionnaire d’événements ADO](../../../ado/guide/data/ado-event-handler-summary.md)
-
-
+ [Exemple de modèle d’événements ADO (VC + +)](../ado-api/ado-events-model-example-vc.md)   
+ [Présentation rapide du gestionnaire d’événements ADO](../../guide/data/ado-event-handler-summary.md)

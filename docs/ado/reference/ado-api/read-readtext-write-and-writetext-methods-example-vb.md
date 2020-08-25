@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de640c5348b43fa7da5ad7e10b2dfa404f9ff4b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 32bc949827c943352808cb4981ef4f436e1b27d2
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442541"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772658"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Read, ReadText, Write et WriteText, exemples de méthodes (VB)
-Cet exemple montre comment lire le contenu d’une zone de texte dans un [flux](../../../ado/reference/ado-api/stream-object-ado.md) de texte et un **flux**binaire. Les autres propriétés et méthodes indiquées incluent la [position](../../../ado/reference/ado-api/position-property-ado.md), la [taille](../../../ado/reference/ado-api/size-property-ado-parameter.md), le [jeu](../../../ado/reference/ado-api/charset-property-ado.md)de caractères et [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+Cet exemple montre comment lire le contenu d’une zone de texte dans un [flux](./stream-object-ado.md) de texte et un **flux**binaire. Les autres propriétés et méthodes indiquées incluent la [position](./position-property-ado.md), la [taille](./size-property-ado-parameter.md), le [jeu](./charset-property-ado.md)de caractères et [SetEOS](./seteos-method.md).  
   
 ```  
 'BeginReadVB  
@@ -112,12 +112,12 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [CharSet, propriété (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
- [Position, propriété (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
- [Read, méthode](../../../ado/reference/ado-api/read-method.md)   
- [ReadText, méthode](../../../ado/reference/ado-api/readtext-method.md)   
- [SetEos, méthode](../../../ado/reference/ado-api/seteos-method.md)   
- [Size, propriété (objet Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)   
- [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Write, méthode](../../../ado/reference/ado-api/write-method.md)   
- [WriteText, méthode](../../../ado/reference/ado-api/writetext-method.md)
+ [CharSet, propriété (ADO)](./charset-property-ado.md)   
+ [Position, propriété (ADO)](./position-property-ado.md)   
+ [Read, méthode](./read-method.md)   
+ [ReadText, méthode](./readtext-method.md)   
+ [SetEos, méthode](./seteos-method.md)   
+ [Size, propriété (objet Stream ADO)](./size-property-ado-stream.md)   
+ [Stream, objet (ADO)](./stream-object-ado.md)   
+ [Write, méthode](./write-method.md)   
+ [WriteText, méthode](./writetext-method.md)

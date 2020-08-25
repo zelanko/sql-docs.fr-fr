@@ -18,24 +18,24 @@ helpviewer_keywords:
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70a3554ed1ef0c94965e340f303cc3208c1962fd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 06020bb66a8fd986d3fbf38bda59b98e29e66386
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442761"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773338"
 ---
 # <a name="parameters-collection-ado"></a>Parameters, collection (ADO)
-Contient tous les objets [Parameter](../../../ado/reference/ado-api/parameter-object.md) d’un objet [Command](../../../ado/reference/ado-api/command-object-ado.md) .  
+Contient tous les objets [Parameter](./parameter-object.md) d’un objet [Command](./command-object-ado.md) .  
   
 ## <a name="remarks"></a>Notes  
  Un objet **Command** a une collection **Parameters** composée d’objets **Parameter** .  
   
- L’utilisation de la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) sur la collection **Parameters** d’un objet **Command** récupère les informations sur les paramètres du fournisseur pour la procédure stockée ou la requête paramétrable spécifiée dans l’objet **Command** . Certains fournisseurs ne prennent pas en charge les appels de procédure stockée ou les requêtes paramétrables ; l’appel de la méthode **Refresh** sur la collection **Parameters** lors de l’utilisation d’un tel fournisseur retourne une erreur.  
+ L’utilisation de la méthode [Refresh](./refresh-method-ado.md) sur la collection **Parameters** d’un objet **Command** récupère les informations sur les paramètres du fournisseur pour la procédure stockée ou la requête paramétrable spécifiée dans l’objet **Command** . Certains fournisseurs ne prennent pas en charge les appels de procédure stockée ou les requêtes paramétrables ; l’appel de la méthode **Refresh** sur la collection **Parameters** lors de l’utilisation d’un tel fournisseur retourne une erreur.  
   
  Si vous n’avez pas défini vos propres objets de **paramètre** et que vous accédez à la collection de **paramètres** avant d’appeler la méthode **Refresh** , ADO appelle automatiquement la méthode et remplit la collection pour vous.  
   
- Vous pouvez réduire les appels au fournisseur pour améliorer les performances si vous connaissez les propriétés des paramètres associés à la procédure stockée ou à la requête paramétrable que vous souhaitez appeler. Utilisez la méthode [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) pour créer des objets **Parameter** avec les paramètres de propriété appropriés et utilisez la méthode [Append](../../../ado/reference/ado-api/append-method-ado.md) pour les ajouter à la collection **Parameters** . Cela vous permet de définir et de retourner des valeurs de paramètres sans avoir à appeler le fournisseur pour obtenir les informations sur les paramètres. Si vous écrivez dans un fournisseur qui ne fournit pas d’informations de paramètre, vous devez remplir manuellement la collection de **paramètres** à l’aide de cette méthode pour pouvoir utiliser des paramètres. Utilisez la méthode [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) pour supprimer des objets **Parameter** de la collection **Parameters** , si nécessaire.  
+ Vous pouvez réduire les appels au fournisseur pour améliorer les performances si vous connaissez les propriétés des paramètres associés à la procédure stockée ou à la requête paramétrable que vous souhaitez appeler. Utilisez la méthode [CreateParameter](./createparameter-method-ado.md) pour créer des objets **Parameter** avec les paramètres de propriété appropriés et utilisez la méthode [Append](./append-method-ado.md) pour les ajouter à la collection **Parameters** . Cela vous permet de définir et de retourner des valeurs de paramètres sans avoir à appeler le fournisseur pour obtenir les informations sur les paramètres. Si vous écrivez dans un fournisseur qui ne fournit pas d’informations de paramètre, vous devez remplir manuellement la collection de **paramètres** à l’aide de cette méthode pour pouvoir utiliser des paramètres. Utilisez la méthode [Delete](./delete-method-ado-parameters-collection.md) pour supprimer des objets **Parameter** de la collection **Parameters** , si nécessaire.  
   
  Les objets de la collection **Parameters** d’un **Recordset** sont hors de portée (devenant donc indisponible) lorsque le **Recordset** est fermé.  
   
@@ -83,9 +83,9 @@ Contient tous les objets [Parameter](../../../ado/reference/ado-api/parameter-ob
   
  Cette section contient la rubrique suivante.  
   
--   [Propriétés, méthodes et événements de la collection Parameters](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Propriétés, méthodes et événements de la collection Parameters](./parameters-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Append, méthode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Parameter (objet)](../../../ado/reference/ado-api/parameter-object.md)
+ [Append, méthode (ADO)](./append-method-ado.md)   
+ [CreateParameter, méthode (ADO)](./createparameter-method-ado.md)   
+ [Objet Parameter](./parameter-object.md)

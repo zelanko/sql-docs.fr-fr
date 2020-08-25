@@ -16,26 +16,26 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 326fc4f1b9b77c8a4470fedc7d55f2d379aff6f3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d7b443e94f3bea5977aeaf953e84c66c826daeb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442711"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88773168"
 ---
 # <a name="positionenum"></a>PositionEnum
-Spécifie la position actuelle du pointeur d’enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Spécifie la position actuelle du pointeur d’enregistrement dans un [Recordset](./recordset-object-ado.md).  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
-|**adPosBOF**|-2|Indique que le pointeur d’enregistrement actif se trouve sur BOF (autrement dit, la propriété [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a la **valeur true**).|  
-|**adPosEOF**|-3|Indique que le pointeur d’enregistrement actif se trouve dans EOF (c’est-à-dire que la propriété [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) a la **valeur true**).|  
-|**adPosUnknown**|-1|Indique que le **jeu d’enregistrements** est vide, que la position actuelle est inconnue ou que le fournisseur ne prend pas en charge la propriété [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) ou [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) .|  
+|**adPosBOF**|-2|Indique que le pointeur d’enregistrement actif se trouve sur BOF (autrement dit, la propriété [BOF](./bof-eof-properties-ado.md) a la **valeur true**).|  
+|**adPosEOF**|-3|Indique que le pointeur d’enregistrement actif se trouve dans EOF (c’est-à-dire que la propriété [EOF](./bof-eof-properties-ado.md) a la **valeur true**).|  
+|**adPosUnknown**|-1|Indique que le **jeu d’enregistrements** est vide, que la position actuelle est inconnue ou que le fournisseur ne prend pas en charge la propriété [AbsolutePage](./absolutepage-property-ado.md) ou [AbsolutePosition](./absoluteposition-property-ado.md) .|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constante|  
+|Constant|  
 |--------------|  
 |AdoEnums.Position.BOF|  
 |AdoEnums. position. EOF|  
@@ -45,9 +45,9 @@ Spécifie la position actuelle du pointeur d’enregistrement dans un [Recordset
 
 :::row:::
     :::column:::
-        [AbsolutePage, propriété (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+        [AbsolutePage, propriété (ADO)](./absolutepage-property-ado.md)  
     :::column-end:::
     :::column:::
-        [AbsolutePosition, propriété (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+        [AbsolutePosition, propriété (ADO)](./absoluteposition-property-ado.md)  
     :::column-end:::
 :::row-end:::

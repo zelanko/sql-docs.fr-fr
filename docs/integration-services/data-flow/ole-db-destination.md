@@ -1,4 +1,5 @@
 ---
+description: Destination OLE DB
 title: Destination OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 046e23f3861af9e1a1b6877036d90f249bb04723
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 91f2323a61440792654b341364efb79506c5cdd3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86908325"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88477791"
 ---
 # <a name="ole-db-destination"></a>Destination OLE DB
 
@@ -129,6 +130,8 @@ ms.locfileid: "86908325"
   
 > [!NOTE]  
 >  La propriété **CommandTimeout** de la destination OLE DB n’est pas disponible dans **l’Éditeur de destination OLE DB**, mais peut être définie à l’aide de **l’Éditeur avancé**. De plus, certaines options de chargement rapide sont uniquement disponibles dans **l’Éditeur avancé**. Pour plus d’informations sur ces propriétés, consultez la section sur la destination OLE DB dans [Propriétés personnalisées OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
+> 
+>  La propriété **CommandTimeout** prend effet uniquement lorsque le mode d’accès aux données est **Commande SQL**.
   
 ### <a name="static-options"></a>Options statiques  
  **Gestionnaire de connexions OLE DB**  

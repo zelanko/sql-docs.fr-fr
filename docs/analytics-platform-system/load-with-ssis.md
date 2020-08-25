@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea2a4f39b16fe2f8b23d6a6a229ce9b936e6e6d7
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401017"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766758"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Charger des données avec des Integration Services à des Data Warehouse parallèles
 Fournit des informations de référence et de déploiement pour le chargement de données dans SQL Server Data Warehouse parallèles à l’aide de packages SQL Server Integration Services (SSIS).  
@@ -54,12 +54,12 @@ Par défaut, BIDS exécute les packages en utilisant des binaires 64 bits. Cela 
 Pour exécuter le package à partir de SQL Server Data Tools, cliquez avec le bouton droit sur votre package et choisissez **exécuter le package**.  
   
 ### <a name="run-from-powershell"></a>Exécuter à partir de PowerShell  
-Pour exécuter le package à partir de Windows PowerShell, à l’aide de l’utilitaire **dtexec** :`dtexec /FILE <packagePath>`  
+Pour exécuter le package à partir de Windows PowerShell, à l’aide de l’utilitaire **dtexec** : `dtexec /FILE <packagePath>`  
   
 Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Exécuter à partir d’une invite de commandes Windows 
-Pour exécuter le package à partir d’une invite de commandes Windows, à l’aide de l’utilitaire **dtexec** :`dtexec /FILE <packagePath>`  
+Pour exécuter le package à partir d’une invite de commandes Windows, à l’aide de l’utilitaire **dtexec** : `dtexec /FILE <packagePath>`  
   
 Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
@@ -149,12 +149,12 @@ Si le nombre de charges présentes dans la file d'attente des charges dépasse l
 ## <a name="locking-behavior"></a><a name="Locks"></a>Comportement de verrouillage  
 Lors du chargement de données avec Integration Services, SQL ServerPDW utilise des verrous de niveau ligne pour mettre à jour les données dans la table de destination. Cela signifie que chaque ligne est verrouillée en lecture et en écriture pendant sa mise à jour. Les lignes de la table de destination ne sont pas verrouillées pendant le chargement des données dans la table de mise en lots.  
   
-## <a name="examples"></a><a name="Examples"></a>Illustre  
+## <a name="examples"></a><a name="Examples"></a>Exemples  
   
 ### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. Chargement simple à partir d’un fichier plat  
 La procédure pas à pas suivante illustre un chargement de données simple à l’aide de Integration Services pour charger des données de fichier plat sur un appareil SQL Server PDW.  Cet exemple suppose que Integration Services a déjà été installé sur l’ordinateur client et que la destination de SQL Server PDW a été installée, comme décrit ci-dessus.  
   
-Dans cet exemple, nous allons charger dans `Orders` la table, qui a la DDL suivante. La `Orders` table fait partie de la `LoadExampleDB` base de données.  
+Dans cet exemple, nous allons charger dans la `Orders` table, qui a la DDL suivante. La `Orders` table fait partie de la `LoadExampleDB` base de données.  
   
 ```sql  
 CREATE TABLE LoadExampleDB.dbo.Orders (  
@@ -174,7 +174,7 @@ id        city           lastUpdateDate     orderdate
 2         Denver         2002-06-25         1999-01-02  
 ```  
   
-Pour préparer le chargement, créez le fichier `exampleLoad.txt`plat, contenant les données de chargement :  
+Pour préparer le chargement, créez le fichier plat `exampleLoad.txt` , contenant les données de chargement :  
   
 ```  
 id,city,lastUpdateDate,orderDate  
@@ -184,7 +184,7 @@ id,city,lastUpdateDate,orderDate
   
 Commencez par créer un package Integration Services en effectuant les étapes suivantes :  
   
-1.  Dans SQL Server Data Tools \(SSDT\), sélectionnez **fichier**, **nouveau**, puis **projet**. Sélectionnez **Integration Services projet** dans les options de la liste. Nommez ce `ExampleLoad`projet, puis cliquez sur **OK**.  
+1.  Dans SQL Server Data Tools \( SSDT \) , sélectionnez **fichier**, **nouveau**, puis **projet**. Sélectionnez **Integration Services projet** dans les options de la liste. Nommez ce projet `ExampleLoad` , puis cliquez sur **OK**.  
   
 2.  Cliquez sur l’onglet **Flow Control** , puis faites glisser la **tâche de workflow** de la **boîte à outils** vers le volet **Flow Control** .  
   
@@ -192,9 +192,9 @@ Commencez par créer un package Integration Services en effectuant les étapes s
   
 4.  Cliquez sur **Gestionnaire de connexions** , puis sur **nouveau**.  
   
-5.  Dans la zone **nom du gestionnaire de connexions** , entrez un nom convivial pour la connexion. Pour cet exemple, `Example Load Flat File CM`.  
+5.  Dans la zone **nom du gestionnaire de connexions** , entrez un nom convivial pour la connexion. Pour cet exemple, `Example Load Flat File CM` .  
   
-6.  Cliquez sur **Parcourir** et sélectionnez `ExampleLoad.txt` le fichier sur l’ordinateur local.  
+6.  Cliquez sur **Parcourir** et sélectionnez le `ExampleLoad.txt` fichier sur l’ordinateur local.  
   
 7.  Étant donné que le fichier plat contient une ligne avec des noms de colonnes, cliquez sur les **noms des colonnes dans la première zone de ligne de données** .  
   
@@ -216,7 +216,7 @@ Spécifiez la destination du Workflow.
   
 4.  Sélectionnez **créer une nouvelle connexion**.  
   
-5.  Renseignez les informations du serveur, de l’utilisateur, du mot de passe et de la base de données de destination avec des informations spécifiques à votre appliance. (Des exemples sont illustrés ci-dessous). Cliquez sur **OK**.  
+5.  Renseignez les informations du serveur, de l’utilisateur, du mot de passe et de la base de données de destination avec des informations spécifiques à votre appliance. (Des exemples sont illustrés ci-dessous). Cliquez ensuite sur **OK**.  
   
     Pour les connexions InfiniBand, **nom du serveur**: entrez <Appliance-Name>-SQLCTL01, 17001.  
   
@@ -228,7 +228,7 @@ Spécifiez la destination du Workflow.
   
     **Base de données de destination :**`LoadExampleDB`  
   
-6.  Sélectionnez la table de destination `Orders`:.  
+6.  Sélectionnez la table de destination : `Orders` .  
   
 7.  Sélectionnez **Ajouter** en tant que mode de chargement, puis cliquez sur **OK**.  
   
@@ -242,7 +242,7 @@ Spécifiez le workflow de la source vers la destination.
   
 Exécutez le package sur votre ordinateur Integration Services.  
   
-1.  Dans la**Explorateur de solutions** Integration Services (colonne de droite), cliquez `Package.dtsx` avec le bouton droit et sélectionnez **exécuter**.  
+1.  Dans la**Explorateur de solutions** Integration Services (colonne de droite), cliquez avec le bouton droit `Package.dtsx` et sélectionnez **exécuter**.  
   
 2.  Le package s’exécute et la progression ainsi que toutes les erreurs sont affichées dans le volet de **progression** . Utilisez un client SQL pour confirmer la charge, ou surveillez la charge via la console d’administration SQL Server PDW.  
   
@@ -253,11 +253,11 @@ Exécutez le package sur votre ordinateur Integration Services.
 [Didacticiel : Création d'un package de base à l'aide d'un Assistant](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Prise en main (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Exemple de génération de package dynamique](https://go.microsoft.com/fwlink/?LinkId=202413)  
-[Conception de vos packages SSIS pour le parallélisme (Vidéo liée à SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  
+[Conception de vos packages SSIS pour le parallélisme (Vidéo liée à SQL Server)](/previous-versions/sql/sql-server-2008/dd795221(v=sql.100))  
 [Exemples de la communauté Microsoft SQL Server : Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Amélioration des chargements incrémentiels avec la capture de données modifiées](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Transformation de dimension à variation lente](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
-[tâche d'insertion en bloc](../integration-services/control-flow/bulk-insert-task.md)  
+[Tâche d’insertion en bloc](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

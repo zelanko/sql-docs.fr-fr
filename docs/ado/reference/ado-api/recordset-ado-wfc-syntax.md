@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1c116d2cece30da93cf167e7952096dbf019666
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd0989fcabdcb7ae017efb87a9c117b4ba037524
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88442431"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772298"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO - syntaxe WFC)
 ## <a name="package-commswfcdata"></a>package com. ms. wfc. Data  
@@ -136,7 +136,7 @@ public AdoProperties getProperties()
 ```  
   
 ### <a name="events"></a>Événements  
- Pour plus d’informations sur les événements ADO/WFC, consultez [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+ Pour plus d’informations sur les événements ADO/WFC, consultez [instanciation des événements ADO par langage](../../guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  
@@ -164,4 +164,4 @@ public void removeOnWillMove(RecordsetEventHandler handler)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset, objet (ADO)](./recordset-object-ado.md)

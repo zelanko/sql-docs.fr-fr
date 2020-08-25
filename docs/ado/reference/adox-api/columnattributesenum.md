@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f9ab23767ccac617694468f5ff1502b8c60f14e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ff4747f86f2bcca6acdfa0d472db3eb59506a14e
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440311"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771038"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
-Spécifie les caractéristiques d’une [colonne](../../../ado/reference/adox-api/column-object-adox.md).  
+Spécifie les caractéristiques d’une [colonne](./column-object-adox.md).  
   
-|Constante|Valeur|Description|  
+|Constant|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adColFixed**|1|La colonne a une longueur fixe.|  
 |**adColNullable**|2|La colonne peut contenir des valeurs NULL.|  
   
 ## <a name="applies-to"></a>S'applique à  
- [Attributes, propriété (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)
+ [Attributes, propriété (ADOX)](./attributes-property-adox.md)

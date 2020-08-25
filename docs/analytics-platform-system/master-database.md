@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: cafef8a5b702b6df4475d34e9395bb12bc9461fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7bf3928bfb21d34d0f60e6c52be8dae43621e4bd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400985"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766738"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Base de données Master-Data Warehouse parallèles
 La base de données Master SQL Server PDW stocke les informations de connexion au niveau de l’appareil et le catalogue de la base de données. Il s’agit d’une base de données Master SQL Server qui réside sur le nœud de contrôle. En tant que tel, il offre des fonctionnalités similaires SQL Server PDW à celles que le maître fournit pour SQL Server.  
@@ -44,7 +44,7 @@ Vous *ne pouvez pas :*
   
 |Tâche|Description|  
 |--------|---------------|  
-|Créez une sauvegarde complète de Master.|Exemple :<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Pour plus d’informations, consultez [Backup database](../t-sql/statements/backup-database-parallel-data-warehouse.md).|  
+|Créez une sauvegarde complète de Master.|Exemple :<br /><br />`BACKUP DATABASE master TO backup_directory;`<br /><br />Pour plus d’informations, consultez [Backup database](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016).|  
 |Restaurer la base de données MASTER|Pour restaurer la base de données Master, utilisez la page [restaurer la base de données Master](restore-the-master-database.md) dans l’outil Configuration Manager.|  
 |Affichez les informations du catalogue de la base de données.|`SELECT * FROM master.sys.databases;`|  
 |Affichez les informations de connexion et d’autorisation à l’ensemble du système.|`SELECT * FROM master.sys.server_permissions;`<br /><br />`SELECT * FROM master.sys.server_principals;`<br /><br />`SELECT * FROM master.sys.sql_logins;`|  
@@ -53,4 +53,3 @@ Vous *ne pouvez pas :*
 ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-  

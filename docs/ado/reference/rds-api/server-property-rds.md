@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb7ebc994d252fc8806c133c61239cce67b693bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c7d2c095c9f10e95df54849ce729ffdcbbca135
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438651"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767518"
 ---
 # <a name="server-property-rds"></a>Server, propriété (RDS)
 Indique le nom du Internet Information Services (IIS) et le protocole de communication.  
   
- Vous pouvez définir la propriété de **serveur** au moment du design dans les balises d’objet du[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) , ou au moment de l’exécution dans le code de script.  
+ Vous pouvez définir la propriété de **serveur** au moment du design dans les balises d’objet du[RDS. DataControl](./datacontrol-object-rds.md) , ou au moment de l’exécution dans le code de script.  
   
 > [!IMPORTANT]
 >  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -118,15 +118,13 @@ DataControl.Server=""
  Variable objet qui représente un objet **RDS. DataControl** .  
   
 ## <a name="remarks"></a>Notes  
- Le serveur est l’emplacement où **RDS. ** Demande de DataControl (autrement dit, une requête ou une mise à jour) est traitée. Par défaut, toutes les demandes sont traitées par l’objet [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) , [msdfmap. ](../../../ado/guide/remote-data-service/datafactory-customization.md) Et [MSDFMAP.INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) fichier sur le serveur spécifié. N’oubliez pas que lorsque vous modifiez des serveurs pour rapprocher des paramètres dans les anciens et nouveaux fichiers de **MSDFMAP.INI** . Les incompatibilités peuvent entraîner l’échec des requêtes qui aboutissent sur un serveur sur un autre. Si la propriété de serveur est définie sur la chaîne vide «», ces objets seront utilisés sur l’ordinateur local.  
+ Le serveur est l’emplacement où **RDS. ** Demande de DataControl (autrement dit, une requête ou une mise à jour) est traitée. Par défaut, toutes les demandes sont traitées par l’objet [RDSServer. DataFactory](./datafactory-object-rdsserver.md) , [msdfmap. ](../../guide/remote-data-service/datafactory-customization.md) Et [MSDFMAP.INI](../../guide/remote-data-service/understanding-the-customization-file.md) fichier sur le serveur spécifié. N’oubliez pas que lorsque vous modifiez des serveurs pour rapprocher des paramètres dans les anciens et nouveaux fichiers de **MSDFMAP.INI** . Les incompatibilités peuvent entraîner l’échec des requêtes qui aboutissent sur un serveur sur un autre. Si la propriété de serveur est définie sur la chaîne vide «», ces objets seront utilisés sur l’ordinateur local.  
   
 ## <a name="applies-to"></a>S'applique à  
- [DataControl, objet (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl, objet (RDS)](./datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Server, exemple de propriété (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
- [Connect, propriété (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
- [Propriété SQL](../../../ado/reference/rds-api/sql-property.md)   
- [SubmitChanges, méthode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
-
+ [Server, exemple de propriété (VBScript)](./server-property-example-vbscript.md)   
+ [Connect, propriété (RDS)](./connect-property-rds.md)   
+ [Propriété SQL](./sql-property.md)   
+ [SubmitChanges, méthode (RDS)](./submitchanges-method-rds.md)

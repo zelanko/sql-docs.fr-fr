@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3ceb97d4859126c2116383196db5e6c71affb77f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7be4aaa2a92de4f778ee69422b97ceb169411c10
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452241"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88759823"
 ---
 # <a name="customization-file-sql-section"></a>Fichier de personnalisation, section SQL
 La section **SQL** peut contenir une nouvelle chaîne SQL qui remplace la chaîne de commande du client. S’il n’existe aucune chaîne SQL dans la section, la section sera ignorée.  
@@ -52,12 +52,10 @@ SQL = " "
 |***sqlString***|Chaîne SQL qui remplace la chaîne du client.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Section de connexion au fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Section journaux des fichiers de personnalisation](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Section UserList du fichier de personnalisation](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [Personnalisation de DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Paramètres client requis](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Fonctionnement du fichier de personnalisation](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Écriture d’un gestionnaire personnalisé](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [Section de connexion au fichier de personnalisation](./customization-file-connect-section.md)   
+ [Section journaux des fichiers de personnalisation](./customization-file-logs-section.md)   
+ [Section UserList du fichier de personnalisation](./customization-file-userlist-section.md)   
+ [Personnalisation de DataFactory](./datafactory-customization.md)   
+ [Paramètres client requis](./required-client-settings.md)   
+ [Fonctionnement du fichier de personnalisation](./understanding-the-customization-file.md)   
+ [Écriture d’un gestionnaire personnalisé](./writing-your-own-customized-handler.md)

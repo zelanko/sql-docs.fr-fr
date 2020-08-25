@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7ee921e1865530356e1fd88c97489b63a81a02ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02bb55cddb1e9496893ee30448a2b479d2311d01
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440151"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770708"
 ---
 # <a name="datemodified-property-adox"></a>DateModified, propriété (ADOX)
 Indique la date à laquelle l’objet a été modifié pour la dernière fois.  
@@ -32,22 +32,22 @@ Indique la date à laquelle l’objet a été modifié pour la dernière fois.
  Retourne une valeur de **type Variant** spécifiant la date de modification. La valeur est null si **DateModified** n’est pas pris en charge par le fournisseur.  
   
 ## <a name="remarks"></a>Notes  
- La propriété **DateModified** a la valeur null pour les objets récemment ajoutés. Après avoir ajouté une nouvelle [vue](../../../ado/reference/adox-api/view-object-adox.md) ou une nouvelle [procédure](../../../ado/reference/adox-api/procedure-object-adox.md), vous devez appeler la méthode [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) de la collection [views](../../../ado/reference/adox-api/views-collection-adox.md) ou [procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) pour obtenir les valeurs de la propriété **DateModified** .  
+ La propriété **DateModified** a la valeur null pour les objets récemment ajoutés. Après avoir ajouté une nouvelle [vue](./view-object-adox.md) ou une nouvelle [procédure](./procedure-object-adox.md), vous devez appeler la méthode [Refresh](../ado-api/refresh-method-ado.md) de la collection [views](./views-collection-adox.md) ou [procedures](./procedures-collection-adox.md) pour obtenir les valeurs de la propriété **DateModified** .  
   
 ## <a name="applies-to"></a>S'applique à  
 
 :::row:::
     :::column:::
-        [Procedure, objet (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [Procedure, objet (ADOX)](./procedure-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [Table, objet (ADOX)](./table-object-adox.md)  
     :::column-end:::
     :::column:::
-        [View, objet (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+        [View, objet (ADOX)](./view-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## <a name="see-also"></a>Voir aussi  
- [DateCreated et DateModified, exemple de propriétés (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
- [DateCreated, propriété (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)
+ [DateCreated et DateModified, exemple de propriétés (VB)](./datecreated-and-datemodified-properties-example-vb.md)   
+ [DateCreated, propriété (ADOX)](./datecreated-property-adox.md)

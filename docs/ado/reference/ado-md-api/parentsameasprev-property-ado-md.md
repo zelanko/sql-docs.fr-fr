@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 510842e0-e8dc-4b33-9517-bd1c6df0cf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7bed95b3ce856b8636131da50ad8230a0a203add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f8a184501616588cd7da8a74f713dd692531b6dd
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440781"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88777898"
 ---
 # <a name="parentsameasprev-property-ado-md"></a>ParentSameAsPrev, propriété (ADO MD)
-Indique si le parent de ce [membre](../../../ado/reference/ado-md-api/member-object-ado-md.md) de position est le même que le parent du membre qui le précède immédiatement.  
+Indique si le parent de ce [membre](./member-object-ado-md.md) de position est le même que le parent du membre qui le précède immédiatement.  
   
 ## <a name="return-values"></a>Valeurs de retour  
  Retourne une valeur **booléenne** et est en lecture seule.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété est prise en charge uniquement sur les objets [membres](../../../ado/reference/ado-md-api/member-object-ado-md.md) appartenant à un objet [position](../../../ado/reference/ado-md-api/position-object-ado-md.md) . Une erreur se produit quand cette propriété est référencée à partir d’objets **membres** appartenant à un objet de [niveau](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
+ Cette propriété est prise en charge uniquement sur les objets [membres](./member-object-ado-md.md) appartenant à un objet [position](./position-object-ado-md.md) . Une erreur se produit quand cette propriété est référencée à partir d’objets **membres** appartenant à un objet de [niveau](./level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>S'applique à  
- [Member, objet (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Member, objet (ADO MD)](./member-object-ado-md.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [DrilledDown, propriété (ADO MD)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)
+ [DrilledDown, propriété (ADO MD)](./drilleddown-property-ado-md.md)

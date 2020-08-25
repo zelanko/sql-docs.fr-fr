@@ -9,17 +9,17 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 53707c62e018b9923f2bb923a4df46f6917d2902
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfd345ff4f55311de41140d5675809838eb06297
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74400439"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766718"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Restaurer une base de données protégée par TDE en parallèle Data Warehouse
 Procédez comme suit pour restaurer une base de données chiffrée à l’aide du chiffrement transparent des données.  
   
-L’exemple [Using transparent Data Encryption](transparent-data-encryption.md#using-tde) possède du code pour activer TDE sur `AdventureWorksPDW2012` la base de données. Le code suivant poursuit cet exemple en créant une sauvegarde de la base de données sur l’appliance Analytics Platform System (APS) d’origine, puis en restaurant le certificat et la base de données sur une autre appliance.  
+L’exemple [Using transparent Data Encryption](transparent-data-encryption.md#using-tde) possède du code pour activer TDE sur la `AdventureWorksPDW2012` base de données. Le code suivant poursuit cet exemple en créant une sauvegarde de la base de données sur l’appliance Analytics Platform System (APS) d’origine, puis en restaurant le certificat et la base de données sur une autre appliance.  
   
 La première étape consiste à créer une sauvegarde de la base de données source.  
   
@@ -59,10 +59,9 @@ RESTORE DATABASE AdventureWorksPDW2012
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
-[Créer une clé](../t-sql/statements/create-master-key-transact-sql.md) 
-principale[sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
+[BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)  
+[créer une clé principale](../t-sql/statements/create-master-key-transact-sql.md)  
+ [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)  
-[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)
-  
+[RESTAURER LA BASE DE DONNÉES](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)

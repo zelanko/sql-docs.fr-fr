@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f88e7a3b-19ed-46e2-b2ce-3b611d9b8166
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a77ff78be14566f472af277459b2bdaa52aad748
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b651389b4badd57e6a76b3b38c47c34cc814706
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440231"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88770908"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Close, méthode de l’objet Connection, Type (exemple de propriété de l’objet Table) (VB)
-L’affectation de la valeur **Nothing** à la propriété [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) doit fermer la connexion au catalogue. Les regroupements associés seront vides. Tous les objets qui ont été créés à partir d’objets de schéma dans le catalogue sont orphelins. Toutes les propriétés de ces objets qui ont été mises en cache seront toujours disponibles, mais une tentative de lecture des propriétés nécessitant un appel au fournisseur échouera.  
+L’affectation de la valeur **Nothing** à la propriété [ActiveConnection](./activeconnection-property-adox.md) doit fermer la connexion au catalogue. Les regroupements associés seront vides. Tous les objets qui ont été créés à partir d’objets de schéma dans le catalogue sont orphelins. Toutes les propriétés de ces objets qui ont été mises en cache seront toujours disponibles, mais une tentative de lecture des propriétés nécessitant un appel au fournisseur échouera.  
   
 ```  
 ' BeginCloseConnectionVB  
@@ -67,17 +67,17 @@ End Sub
 ' EndCloseConnectionVB  
 ```  
   
- La fermeture d’un objet de [connexion](../../../ado/reference/ado-api/connection-object-ado.md) qui a été utilisé pour ouvrir le catalogue doit avoir le même effet que l’affectation de la valeur **Nothing**à la propriété **ActiveConnection** .  
+ La fermeture d’un objet de [connexion](../ado-api/connection-object-ado.md) qui a été utilisé pour ouvrir le catalogue doit avoir le même effet que l’affectation de la valeur **Nothing**à la propriété **ActiveConnection** .  
   
 ```  
 Attribute VB_Name = "Connection"  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ActiveConnection, propriété (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog, objet (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column, objet (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns, collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Table, objet (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables, collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type, propriété (table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [ActiveConnection, propriété (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog, objet (ADOX)](./catalog-object-adox.md)   
+ [Column, objet (ADOX)](./column-object-adox.md)   
+ [Columns, collection (ADOX)](./columns-collection-adox.md)   
+ [Table, objet (ADOX)](./table-object-adox.md)   
+ [Tables, collection (ADOX)](./tables-collection-adox.md)   
+ [Type, propriété (table) (ADOX)](./type-property-table-adox.md)

@@ -18,45 +18,45 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f93ee0d10c3de2bbfe36673c6b521c0f38111ff2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8189af2c578600df66a16fd0f41ac259dbbe68d6
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88451401"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771828"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>Index de syntaxe ADO for Visual C++ avec #import
 Cet index est une référence croisée à la référence du langage ADO basée sur Microsoft Visual C++ et la directive **#import** .  
   
  Cet index particulier a été dérivé en compilant un programme avec la directive **#import** sur le fichier ADO. dll, puis en reformatant le \* fichier. tlh qui a été généré. Seules les informations sur les méthodes, les propriétés et les événements ont été conservées. La syntaxe alternative déclarée pour chaque propriété est indiquée par la `__declspec(property...)` directive "" correspondante.  
   
- Pour plus d’informations, il est vivement recommandé de lire [Visual C++ la programmation ADO](../../../ado/guide/appendixes/visual-c-ado-programming.md) .  
+ Pour plus d’informations, il est vivement recommandé de lire [Visual C++ la programmation ADO](../../guide/appendixes/visual-c-ado-programming.md) .  
   
  La syntaxe de méthode et de propriété dans Visual C++ avec la directive **#import** est indiquée pour les éléments suivants :  
   
--   [Collections ADO](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
+-   [Collections ADO](./collections-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet Command](../../../ado/reference/ado-api/command-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet Command](./command-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet Connection](../../../ado/reference/ado-api/connection-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet Connection](./connection-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet Error](../../../ado/reference/ado-api/error-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet Error](./error-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet Field](../../../ado/reference/ado-api/field-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet Field](./field-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Parameter (objet)](../../../ado/reference/ado-api/parameter-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet Parameter](./parameter-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet Property](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet Property](./property-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet record](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet record](./record-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Recordset, objet](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
+-   [Recordset, objet](./recordset-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Objet de flux](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
+-   [Objet de flux](./stream-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Événements de connexion](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [Événements de connexion](./connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Événements du Recordset](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [Événements du Recordset](./recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Index de la syntaxe ADO pour Visual C++ pour COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)
+ [Index de la syntaxe ADO pour Visual C++ pour COM](./ado-for-visual-c-syntax-index-for-com.md)

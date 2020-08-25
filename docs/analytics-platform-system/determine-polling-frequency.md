@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cafd18a7701ed5de5018a3e8dc23bc8d5d9640fa
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401215"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88767038"
 ---
 # <a name="determine-polling-frequency"></a>Déterminer la fréquence d’interrogation
 Cet article explique comment déterminer la fréquence d’interrogation pour les alertes de l’appliance système Analytics Platform.  
@@ -32,9 +32,8 @@ Cet article explique comment déterminer la fréquence d’interrogation pour le
   
 L’intervalle courant d’interrogation des alertes, qui est également utilisé par System Center, est de **15 minutes**.  Évidemment, vous pouvez interroger plus ou moins fréquemment, mais il n’est pas recommandé de demander une interrogation inférieure à toutes les six heures.  
   
-Une interrogation plus fréquente est acceptable, mais l’interrogation trop fréquente peut encombrer la DMV [sys. dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) .  Les interrogations trop fréquentes peuvent compliquer le diagnostic des problèmes de performances des requêtes lorsqu’ils sont rapidement déverrouillés.  
+Une interrogation plus fréquente est acceptable, mais l’interrogation trop fréquente peut encombrer la DMV [sys. dm_pdw_nodes_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md?view=sql-server-ver15) .  Les interrogations trop fréquentes peuvent compliquer le diagnostic des problèmes de performances des requêtes lorsqu’ils sont rapidement déverrouillés.  
   
 ## <a name="see-also"></a>Voir aussi  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [Système de plateforme d’analyse de &#40;Analytics de l’appliance&#41;](appliance-monitoring.md)  
-  

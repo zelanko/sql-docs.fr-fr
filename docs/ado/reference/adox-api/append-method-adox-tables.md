@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6069b3d99e021be01d8fd2d724b7c25868167bd3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f54f1491327b9b0294dec1332a3fb9ff8b2c69c
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440471"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88771388"
 ---
 # <a name="append-method-adox-tables"></a>Append, méthode (tables ADOX)
-Ajoute un nouvel objet [table](../../../ado/reference/adox-api/table-object-adox.md) à la collection [tables](../../../ado/reference/adox-api/tables-collection-adox.md) .  
+Ajoute un nouvel objet [table](./table-object-adox.md) à la collection [tables](./tables-collection-adox.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,15 +42,15 @@ Tables.Append Table
  Une erreur se produit si le fournisseur ne prend pas en charge la création de tables.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Tables, collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables, collection (ADOX)](./tables-collection-adox.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Columns et tables Append, méthodes, Name, exemple de propriété (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [ParentCatalog, exemple de propriété (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Append, méthode (colonnes ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append, méthode (groupes ADOX)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append, méthode (Index ADOX)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append, méthode (clés ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append, méthode (procédures ADOX)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append, méthode (utilisateurs ADOX)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append, méthode (vues ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Columns et tables Append, méthodes, Name, exemple de propriété (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [ParentCatalog, exemple de propriété (VB)](./parentcatalog-property-example-vb.md)   
+ [Append, méthode (colonnes ADOX)](./append-method-adox-columns.md)   
+ [Append, méthode (groupes ADOX)](./append-method-adox-groups.md)   
+ [Append, méthode (Index ADOX)](./append-method-adox-indexes.md)   
+ [Append, méthode (clés ADOX)](./append-method-adox-keys.md)   
+ [Append, méthode (procédures ADOX)](./append-method-adox-procedures.md)   
+ [Append, méthode (utilisateurs ADOX)](./append-method-adox-users.md)   
+ [Append, méthode (vues ADOX)](./append-method-adox-views.md)
