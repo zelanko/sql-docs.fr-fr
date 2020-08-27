@@ -19,12 +19,12 @@ ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
-ms.openlocfilehash: 6edd7864c127ea068e3017c7aa26ad5be86a4c8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 85b57b65e79dbe72c039f694f0fd3977847230b7
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88323245"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900979"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>sys. database_scoped_configurations (Transact-SQL)
 
@@ -39,7 +39,6 @@ Contient une ligne par configuration.
 |**value**|**SQLVARIANT**|Valeur définie pour cette option de configuration pour le réplica principal.|
 |**value_for_secondary**|**SQLVARIANT**|Valeur définie pour cette option de configuration pour les réplicas secondaires.|
 |**is_value_default**|**bit** |Spécifie si la valeur définie est la valeur par défaut.|
-|**dw_compatibility_level**|**int**|Niveau de compatibilité (version préliminaire) de la base de données.  Valeur par défaut = 0 (AUTO)|
 
 ## <a name="permissions"></a><a name="Permissions"></a> Autorisations
 
