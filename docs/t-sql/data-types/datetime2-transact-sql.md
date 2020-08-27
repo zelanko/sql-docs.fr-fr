@@ -2,7 +2,7 @@
 description: datetime2 (Transact-SQL)
 title: datetime2 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 08/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb7ef589270a5cdcd06d2eac18176ebbf529256d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a64acd93b34a1d919ec271f7a11a3d9edd199d44
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445980"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760329"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 
@@ -49,7 +49,7 @@ Définit une date qui est associée à une heure de la journée au format 24 he
 |Plages d'éléments|AAAA est un nombre de quatre chiffres, entre 0001 et 9999, qui représente une année.<br /><br /> MM est un nombre à deux chiffres, entre 01 et 12, qui représente un mois dans l'année spécifiée.<br /><br /> DD est un nombre à deux chiffres, entre 01 et 31 selon le mois, qui représente un jour du mois spécifié.<br /><br /> hh est un nombre à deux chiffres, entre 00 et 23, qui représente l'heure.<br /><br /> mm est un nombre à deux chiffres, entre 00 et 59, qui représente la minute.<br /><br /> ss est un nombre à deux chiffres, entre 00 et 59, qui représente la seconde.<br /><br /> n* est un nombre qui comprend entre zéro et sept chiffres, entre 0 et 9999999, qui représente les fractions de seconde. Dans Informatica, les fractions de seconde sont tronquées quand n > 3.|  
 |Longueur de caractère|19 positions au minimum (AAAA-MM-JJ hh:mm:ss) et 27 au maximum (AAAA-MM-JJ hh:mm:ss.0000000)|  
 |Précision, échelle|De 0 à 7 chiffres, avec une précision de 100 ns. La précision par défaut est de 7 chiffres.|  
-|Taille de stockage|6 octets pour une précision inférieure à 3.<br/>7 octets pour une précision de 3 ou 4.<br/>Toutes les autres précisions nécessitent 8 octets.<sup>1</sup>|  
+|Taille de stockage <sup>1</sup>|6 octets pour une précision inférieure à 3.<br/>7 octets pour une précision de 3 ou 4.<br/>Toutes les autres précisions nécessitent 8 octets.<sup>2</sup>|  
 |Précision|100 nanosecondes|  
 |Valeur par défaut|1900-01-01 00:00:00|  
 |Calendrier|Grégorien|  
@@ -57,7 +57,9 @@ Définit une date qui est associée à une heure de la journée au format 24 he
 |Prise en charge et conservation du décalage de fuseau horaire|Non|  
 |Prise en charge de l'heure d'été|Non|  
 
-<sup>1</sup> Le premier octet d’une valeur **datetime2** stocke la précision de la valeur, ce qui signifie que le stockage réellement nécessaire pour une valeur **datetime2** correspond à la taille de stockage indiquée dans le tableau ci-dessus, plus 1 octet supplémentaire pour stocker la précision.  Ceci fait que la taille maximale d’une valeur **datetime2** est de 9 octets : 1 octet pour stocker la précision, plus 8 octets pour stocker les données avec la précision maximale.
+<sup>1</sup> Les valeurs fournies sont destinées à un rowstore non compressé. L’utilisation de la [compression de données](../../relational-databases/data-compression/data-compression.md) ou de [columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md) peut altérer la taille de stockage pour chaque précision. De plus, la taille de stockage sur disque et en mémoire peut être différente. Par exemple, les valeurs **datetime2** nécessitent toujours 8 octets en mémoire quand le mode batch est utilisé.
+
+<sup>2</sup> Quand une valeur **datetime2** est castée en valeur **varbinary**, un octet supplémentaire est ajouté à la valeur **varbinary** pour stocker la précision.
 
 Pour afficher les métadonnées de type de données, consultez [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md) ou [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md). La précision et l'échelle sont variables pour certains types de données de date et d'heure. Pour obtenir la précision et l’échelle d’une colonne, consultez [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md), [COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md) ou [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).
   

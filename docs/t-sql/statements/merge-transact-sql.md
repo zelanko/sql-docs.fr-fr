@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67e1fe125172b6f273b27d6fcb2cac3d18d0bb2b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 73181df45ee72cc29bc73b73b40940ce7bb15b15
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357805"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88778558"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -56,7 +56,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>
+    USING <table_source> [ [ AS ] table_alias ]
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -125,12 +125,15 @@ Si *target_table* est une vue, toutes les opérations dont elle fait l’objet d
 *target_table* ne peut pas être une table distante. Aucune règle ne peut être définie sur *target_table*.  
   
 [ AS ] *table_alias*  
-Autre nom utilisé pour faire référence à une table.  
+Autre nom utilisé pour faire référence à une table pour *target_table*.  
   
 USING \<table_source>  
 Spécifie la source de données correspondant aux lignes de données dans *target_table* en fonction de \<merge_search condition>. Le résultat de cette correspondance dicte les actions à effectuer par les clauses WHEN de l'instruction MERGE. \<table_source> peut être une table distante ou une table dérivée qui accède à des tables distantes.
   
 \<table_source> peut être une table dérivée qui utilise le [!INCLUDE[tsql](../../includes/tsql-md.md)][constructeur de valeurs de table](../../t-sql/queries/table-value-constructor-transact-sql.md) pour construire une table en spécifiant plusieurs lignes.  
+  
+ [ AS ] *table_alias*  
+Autre nom utilisé pour faire référence à une table pour table_source.   
   
 Pour plus d’informations sur la syntaxe et les arguments de cette clause, consultez [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   

@@ -5,17 +5,17 @@ ms.custom: seodec18
 ms.date: 04/19/2019
 ms.reviewer: alayu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: ''
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: a0c6a37af62422f65329ef1bbe2e66efbdc5eeb0
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: c3edd5b618a6119021a69f90f4e90341ae6360bb
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411315"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88766538"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Prise en charge de l'éditeur PowerShell pour Azure Data Studio
 
@@ -39,7 +39,7 @@ Vous pouvez maintenant écrire et déboguer des scripts PowerShell en utilisant 
 
 ## <a name="installing-the-extension"></a>Installation de l’extension
 
-Vous pouvez installer la version officielle de l'extension PowerShell en suivant les étapes de la documentation [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/extensions).
+Vous pouvez installer la version officielle de l'extension PowerShell en suivant les étapes de la documentation [Azure Data Studio](./extensions.md).
 Dans le volet Extensions, recherchez l'extension « PowerShell » et installez-la.  Vous recevrez automatiquement une notification à chaque mise à jour de l'extension !
 
 Vous pouvez également installer un package VSIX depuis notre [page des versions](https://github.com/PowerShell/vscode-powershell/releases) et l'installer via la ligne de commande :
@@ -63,8 +63,8 @@ Si vous utilisez Azure Data Studio sur macOS ou Linux, vous devrez peut-être au
 PowerShell Core est un projet Open Source sur [GitHub](https://github.com/powershell/powershell).
 Pour plus d'informations sur l'installation de PowerShell Core sur les plateformes macOS ou Linux, consultez les articles suivants :
 
-- [Installation de PowerShell Core sur Linux](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [Installation de PowerShell Core sur macOS](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [Installation de PowerShell Core sur Linux](/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [Installation de PowerShell Core sur macOS](/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
 
 ## <a name="example-scripts"></a>Exemples de scripts
 

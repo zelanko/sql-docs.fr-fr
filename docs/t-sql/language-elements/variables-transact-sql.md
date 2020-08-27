@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4eed82330e1a70ddbe269f3a0be845199b4931d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459251"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807026"
 ---
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,10 +31,9 @@ Une variable locale Transact-SQL est un objet pouvant posséder une valeur de do
 * pour enregistrer une valeur de données que doit retourner le code de retour d'une procédure stockée ou la valeur de retour d'une fonction.
 
 > [!NOTE]
-> Le nom de certaines fonctions système Transact-SQL commence par deux *arobases* (\@\@). Bien que, dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les fonctions de type \@\@fonction soient considérées comme des variables globales, il ne s’agit pas de variables et elles n'en ont pas le comportement. Ce sont en réalité des \@\@ fonctions système, dont la syntaxe suit les règles des fonctions.
-
-> [!NOTE]
-> Les variables ne peuvent pas être utilisées dans les vues.
+> - Le nom de certaines fonctions système Transact-SQL commence par deux *arobases* (\@\@). Même si, dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les fonctions\@\@ sont considérées comme des variables globales, les fonctions\@\@ ne sont pas des variables et elles n’en ont pas le comportement. Ce sont en réalité des \@\@ fonctions système, dont la syntaxe suit les règles des fonctions.
+> - Vous ne pouvez pas utiliser de variables dans une vue.
+> - Les modifications apportées aux variables ne sont pas affectées par la restauration d’une transaction.
 
 Le script suivant crée une petite table test et lui attribue 26 lignes. Il utilise une variable pour effectuer trois actions : 
 

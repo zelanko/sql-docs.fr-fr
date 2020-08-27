@@ -138,12 +138,12 @@ ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93640502582b244c4b6e36473a087d84f53423c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 001b08d1a2556e325fd3923928705e2a0df9aeb8
+ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455493"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88760239"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Guide de référence des opérateurs Showplan logiques et physiques
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -259,7 +259,7 @@ Un compteur apparenté, **ActualEndOfScans**, est disponible uniquement si le r�
 |![Icône d’opérateur de curseur Population Query](../relational-databases/media/poulation-query-32x.gif "Icône d’opérateur de curseur Population Query")|**Population Query**|L'opérateur **Population Query** permet de renseigner la table de travail d'un curseur lorsque le curseur est ouvert.| 
 |![Icône d’opérateur de curseur Refresh Query](../relational-databases/media/refresh-query-32x.gif "Icône d’opérateur de curseur Refresh Query")|**Refresh Query**|L'opérateur **Refresh Query** extrait les données courantes des lignes du tampon d'extraction.| 
 |![Icône d’opérateur Remote Delete](../relational-databases/media/remote-delete-32x.gif "Icône d’opérateur Remote Delete")|**Remote Delete**|L'opérateur **Remote Delete** supprime les lignes d'entrée d'un objet distant. **Remote Delete** est un opérateur logique et physique.| 
-|![Opérateur de plan d’exécution de requêtes Remote Index Seek](../relational-databases/media/remote-index-scan-32x.gif "opérateur Showplan Remote Index Seek")|**Remote Index Scan**|L’opérateur **Remote Index Scan** analyse l’index distant spécifié dans la colonne Argument. **Remote Index Scan** est un opérateur logique et physique.| 
+|![Opérateur Showplan Remote Index Scan](../relational-databases/media/remote-index-scan-32x.gif "opérateur Showplan Remote Index Scan")|**Remote Index Scan**|L’opérateur **Remote Index Scan** analyse l’index distant spécifié dans la colonne Argument. **Remote Index Scan** est un opérateur logique et physique.| 
 |![Opérateur de plan d’exécution de requêtes Remote Index Seek](../relational-databases/media/remote-index-seek-32x.gif "opérateur Showplan Remote Index Seek")|**Remote Index Seek**|L'opérateur **Remote Index Seek** utilise les capacités de recherche d'un objet d'index distant pour extraire des lignes. La colonne **Argument** contient le nom de l’index distant utilisé et le prédicat SEEK:(). **Remote Index Seek** est un opérateur physique logique.| 
 |![Icône d’opérateur Remote Insert](../relational-databases/media/remote-insert-32x.gif "Icône d’opérateur Remote Insert")|**Remote Insert**|L'opérateur **Remote Insert** insère des lignes d'entrée dans un objet distant. **Remote Insert** est un opérateur logique et physique.| 
 |![Icône d’opérateur Remote Query](../relational-databases/media/remote-query-32x.gif "Icône d’opérateur Remote Query")|**Remote Query**|L'opérateur **Remote Query** soumet une requête à une source distante. Le texte de la requête envoyée au serveur distant apparaît dans la colonne **Argument** . **Remote Query** est un opérateur logique et physique.| 

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ab9b5b9a52656b948a63d2b283a0637f56da5037
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 952f527b248d6491c3a6f3acf3c4e5570e3ad54e
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772506"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564659"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Activez les connexions chiffrées dans le moteur de base de données
 
@@ -123,6 +123,10 @@ Si vous utilisez [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[
 9. Cliquez avec le bouton droit sur le certificat importé, pointez sur **Toutes les tâches**, puis cliquez sur **Gérer les clés privées**. Dans la boîte de dialogue **Sécurité**, ajoutez l’autorisation de lecture pour le compte d’utilisateur utilisé par le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 10. Remplissez les informations dans l' **Assistant Importation de certificat**afin d'ajouter un certificat à l'ordinateur, puis fermez la console MMC. Pour plus d'informations sur l'ajout d'un certificat à un ordinateur, consultez la documentation Windows.  
+
+> [!IMPORTANT]
+> Pour les environnements de production, nous vous recommandons de vous procurer un certificat approuvé auprès d’une autorité de certification.    
+> À des fins de test, un certificat auto-signé peut aussi être utilisé. Pour créer un certificat auto-signé, voir l’[applet de commande PowerShell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) ou la [commande certreq](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Installation sur plusieurs serveurs
 
@@ -141,9 +145,9 @@ Si vous utilisez [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[
 Configurez le serveur afin qu’il force les connexions chiffrées.
 
 > [!IMPORTANT]
-> Le compte de service SQL Server doit disposer d’autorisations de lecture sur le certificat utilisé pour forcer le chiffrement sur le serveur SQL Server. Pour un compte de service sans privilèges, les autorisations de lecture doivent être ajoutées au certificat. Si vous ne le faites pas, vous risquez de provoquer l’échec du redémarrage du service SQL Server.
+> Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit disposer d’autorisations de lecture sur le certificat utilisé pour forcer le chiffrement sur le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour un compte de service sans privilèges, les autorisations de lecture doivent être ajoutées au certificat. Si vous ne le faites pas, vous risquez de provoquer l’échec du redémarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-1. Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<server instance>_ , puis sélectionnez **Propriétés**.  
+1. Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, cliquez avec le bouton droit sur **Protocoles pour** _\<server instance>_ , puis sélectionnez **Propriétés**.  
   
 2. Dans la boîte de dialogue **Propriétés** _\<instance name>_ **Protocoles pour**, cliquez sur l'onglet **Certificat**, sélectionnez le certificat voulu dans la liste déroulante de la zone **Certificat**, puis cliquez sur **OK**.  
   
@@ -168,7 +172,7 @@ Configurez le client afin qu'il demande l'établissement de connexions chiffrée
   
 ## <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio
   
-Pour chiffrer une connexion dans SQL Server Management Studio :  
+Pour chiffrer une connexion à partir de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  
 
 1. Dans la barre d'outils de l'Explorateur d'objets, cliquez sur **Connecter**, puis sur **Moteur de base de données**.  
   
@@ -183,3 +187,4 @@ Les données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuven
 
 + [Prise en charge de TLS 1.2 pour Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
++ [Applet de commande PowerShell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)

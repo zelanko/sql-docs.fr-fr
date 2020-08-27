@@ -9,12 +9,12 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 89dee4f1fbce612ec3200bf700302f98bd4f9f36
-ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
+ms.openlocfilehash: 5681516c193a45fb3cee540d21bbc3e88a917d31
+ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/04/2020
-ms.locfileid: "87565303"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88564514"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Configurer une échelle lecture pour un groupe de disponibilité Always On
 
@@ -79,7 +79,7 @@ Ce groupe de disponibilité n’est pas une configuration à haute disponibilit�
 
 Vous pouvez vous connecter à des réplicas secondaires en lecture seule de deux façons :
 * Les applications peuvent se connecter directement à l’instance de SQL Server qui héberge le réplica secondaire et interroger les bases de données. Pour plus d’informations, consultez [Accès en lecture aux réplicas secondaires](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
-* Les applications peuvent aussi utiliser le routage en lecture seule, qui nécessite un écouteur. Pour plus d’informations, consultez [Routage en lecture seule](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
+* Les applications peuvent aussi utiliser le routage en lecture seule, qui nécessite un écouteur. Si vous déployez un scénario d’échelle lecture sans gestionnaire de cluster, vous pouvez toujours créer un écouteur qui pointe vers l’adresse IP du réplica principal actuel et un port différent de celui sur lequel écoute le serveur SQL Server. Vous devrez recréer l’écouteur pour qu’il pointe vers la nouvelle adresse IP principale après un basculement. Pour plus d’informations, consultez [Routage en lecture seule](listeners-client-connectivity-application-failover.md#ConnectToSecondary).
 
 ## <a name="fail-over-the-primary-replica-on-a-read-scale-availability-group"></a>Basculer le réplica principal sur un groupe de disponibilité avec échelle lecture
 

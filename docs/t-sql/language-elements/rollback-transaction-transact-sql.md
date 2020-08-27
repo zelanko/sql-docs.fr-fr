@@ -26,20 +26,22 @@ ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca35aa4105bf3d54a84457fb51b48e9fc269ef72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 795030b16c25b9bf97795e16df4c03cfb7bbea15
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417125"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88805870"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Annule une transaction implicite ou explicite jusqu'au début de la transaction ou jusqu'au dernier point d'enregistrement à l'intérieur de la transaction. Vous pouvez utiliser ROLLBACK TRANSACTION pour effacer toutes les modifications de données effectuées depuis le début de la transaction ou à partir d'un point d'enregistrement. Elle libère également les ressources bloquées par la transaction.  
   
+  Cela ne concerne pas les modifications apportées aux variables locales ou aux variables de table. Elles ne sont pas effacées par cette instruction.
+  
 
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

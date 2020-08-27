@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8fff6ad4-234c-44be-b123-e25d5e1cd63e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 621699cbc4ad763eea84669e085ea492eb6a546f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b4d474714579397d18e22f2c32cc540ff30d5ac0
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420913"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618070"
 ---
 # <a name="mssqlserver_845"></a>MSSQLSERVER_845
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,16 +36,39 @@ ms.locfileid: "88420913"
 ## <a name="explanation"></a>Explication  
 Un processus était en attente d’obtention d’un verrou, mais n’a pas pu se le procurer suite à l’expiration du délai. Cette situation peut se produire si une opération d'E/S prend trop de temps à s'accomplir, souvent à cause d'autres tâches qui bloquent les processus système. Dans d'autres cas, elle est due à une défaillance matérielle.  
   
+## <a name="cause"></a>Cause
+Ce message d’erreur dépend de l’environnement global de votre système. Les circonstances suivantes peuvent conduire à la surcharge d’un système :
+
+- Matériel qui ne répond pas à vos besoins en entrées/sorties (E/S) et mémoire
+- Paramètres configurés et testés de manière incorrecte
+- Conception inefficace
+
+ L’erreur 845 peut se produire si votre système subit une charge importante et ne peut pas répondre aux demandes de la charge de travail. Voici quelques-unes des causes les plus courantes d’un environnement surchargé :
+
+- Problèmes matériels
+- Volumes compressés
+- Paramètres de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] différents de ceux par défaut
+- Requêtes ou conception d’index inefficaces
+- Opérations AutoGrow ou AutoShrink fréquentes sur des bases de données
+
 ## <a name="user-action"></a>Action de l'utilisateur  
-L'exécution des tâches suivantes peut éviter cette erreur :  
+Pour prévenir cette erreur, procédez comme suit :  
   
--   Réduisez la charge de travail.  
-  
--   Recherchez des erreurs d'E/S associées dans le journal des erreurs ou le journal des événements. Les erreurs d'E/S sont généralement liées à un disque défectueux.  
-  
--   Recherchez dans le journal des erreurs les tâches improductives et d'autres erreurs critiques.  
-  
--   Si des erreurs critiques telles que les assertions surviennent fréquemment, corrigez-les.  
-  
-Si le problème persiste, contactez le service de support technique de Microsoft.  
-  
+- Déterminez si vous êtes en proie à des goulots d’étranglement matériels. L’article [Identifier les goulot d’étranglement](../performance/identify-bottlenecks.md) constitue un bon point de départ. Si nécessaire, mettez à niveau votre matériel pour qu’il puisse répondre aux besoins de votre environnement en matière de configuration, de requêtes et de charge.
+
+- Vérifiez que l’ensemble de votre matériel fonctionne correctement. Vérifiez si vous avez des erreurs dans le journal et exécutez tous les diagnostics que votre fournisseur de matériel vous a procurés. Recherchez les erreurs d'E/S assimilées dans le journal des erreurs ou le journal des événements. Les erreurs d'E/S révèlent généralement un disque défectueux.  
+- Vérifiez que vos volumes de disque ne sont pas compressés. Le stockage de fichiers de données et de fichiers journaux sur des lecteurs compressés n’est pas pris en charge. Consultez [Groupes de fichiers et fichiers de base de données](../databases/database-files-and-filegroups.md). Pour plus d’informations sur la prise en charge des lecteurs compressés, consultez l’article suivant : [Bases de données SQL Server non prises en charge sur les volumes compressés](https://support.microsoft.com/EN-US/help/231347)
+
+- Vérifiez si les messages d’erreur disparaissent quand vous désactivez toutes les options de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivantes :
+   - L’[option priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md)
+   - L’[option lightweight pooling (mode fibre)](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md)
+   - L’[option set working set size](../../database-engine/configure-windows/set-working-set-size-server-configuration-option.md)
+
+    Pour plus d’informations, consultez [Guide pratique pour déterminer les paramètres de configuration SQL Server appropriés](https://support.microsoft.com/EN-US/help/319942)
+
+- Ajustez les requêtes pour réduire les ressources utilisées sur le système. L’ajustement des performances permettra de réduire la charge d’un système et d’améliorer le temps de réponse de chaque requête.
+- Définissez l’option AutoShrink sur OFF pour réduire la surcharge qu’entraînent les modifications apportées à la taille de vos bases de données.
+- Veillez à définir des incréments suffisamment espacés pour la propriété AutoGrow. Planifiez une tâche pour vérifier l’espace disponible dans vos bases de données, puis augmentez la taille des bases de données pendant les heures creuses.
+- Recherchez dans le journal des erreurs les tâches improductives et d’autres erreurs critiques. Résolvez ces erreurs en premier, car elles peuvent révéler la cause racine du problème sous-jacent.
+- Si des erreurs critiques telles que des assertions surviennent fréquemment, corrigez ces problèmes.
+- Si les messages d’erreur 845 ne sont pas fréquents, vous pouvez ignorer ces erreurs.

@@ -13,18 +13,18 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 074dc46c36f4b90bebc241840eb137549e3bbd4d
-ms.sourcegitcommit: 2b4baae583a5430f2e2ec76192ef1af3f55b25e8
+ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2020
-ms.locfileid: "88251496"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646043"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistant Importation d’un fichier plat dans SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > Pour tout contenu associé à l’Assistant Importation et exportation, consultez [Assistant Importation et exportation SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-L’Assistant Importation de fichier plat permet de copier les données d’un fichier plat (.csv ou .txt) dans une nouvelle table d’une base de données. Cette présentation décrit les raisons d’utiliser cet Assistant et où le trouver, puis fournit un exemple simple à suivre.
+L’Assistant Importation de fichier plat permet de copier les données d’un fichier plat (.csv ou .txt) dans une nouvelle table d’une base de données.  L’Assistant Importation de fichier plat prend en charge les formats de fichiers de largeur fixe et séparés par des virgules. Cette présentation décrit les raisons d’utiliser cet Assistant et où le trouver, puis fournit un exemple simple à suivre.
 
 ## <a name="why-would-i-use-this-wizard"></a>Pourquoi utiliser cet Assistant ?
 Cet Assistant a été créé pour améliorer l’expérience d’importation actuelle en tirant parti d’un framework intelligent appelé [PROSE](https://microsoft.github.io/prose/) (Program Synthesis using Examples). Pour un utilisateur sans connaissance technique du domaine, l’importation de données peut souvent être une tâche complexe, sujette aux erreurs et fastidieuse. Avec cet Assistant, le processus d’importation se résume simplement à la sélection d’un fichier d’entrée et d’un nom unique de table, le framework PROSE s’occupe du reste.
@@ -36,7 +36,7 @@ Pour mieux comprendre l’amélioration apportée à l’expérience utilisateur
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prérequis
-Cette fonctionnalité est uniquement disponible dans SQL Server Management Studio (SSMS) version 17.3 ou ultérieure. Veillez à utiliser la version la plus récente. Vous trouverez la dernière version [ici.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+Cette fonctionnalité est disponible sur SQL Server Management Studio (SSMS) 17.3 ou version ultérieure. Veillez à utiliser la version la plus récente. Vous trouverez la dernière version [ici.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
  
 ## <a name="getting-started"></a><a id="started"></a>Commencer
 Pour accéder à l’Assistant Importation d’un fichier plat, procédez comme suit :
@@ -54,6 +54,14 @@ Pour les besoins de ce didacticiel, n’hésitez pas à utiliser votre propre fi
 
 ![Assistant - Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
+Présentation :
+1. [Assistant Accès](#step-1-access-wizard-and-intro-page)
+2. [Spécifier le fichier d’entrée](#step-2-specify-input-file)
+3. [Aperçu des données](#step-3-preview-data)
+4. [Modifier les colonnes](#step-4-modify-columns)
+5. [Résumé](#step-5-summary)
+6. [Résultats](#step-6-results)
+
 ### <a name="step-1-access-wizard-and-intro-page"></a>Étape 1 : Accéder à l’Assistant et à la page d’introduction
 Accédez à l’Assistant, comme décrit [ici](#started).
 
@@ -62,7 +70,7 @@ La première page de l’Assistant est la page d’accueil. Si vous ne souhaitez
 ![Assistant - Introduction](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### <a name="step-2-specify-input-file"></a>Étape 2 : Spécifier le fichier d’entrée
-Cliquez sur Parcourir pour sélectionner votre fichier d’entrée. Par défaut, l’Assistant recherche les fichiers .csv et .txt. 
+Cliquez sur Parcourir pour sélectionner votre fichier d’entrée. Par défaut, l’Assistant recherche les fichiers .csv et .txt. PROSE détecte s’il s’agit d’un format de fichier de largeur fixe ou séparé par des virgules, quelle que soit l’extension du fichier.
 
 Le nouveau nom de table doit être unique. S’il ne l’est pas, l’Assistant ne vous autorise pas à aller plus loin.
 
@@ -75,6 +83,8 @@ L’Assistant génère un aperçu où vous pouvez voir les 50 premières lignes
 
 ### <a name="step-4-modify-columns"></a>Étape 4 : Modifier les colonnes
 L’Assistant identifie ce qu’il pense être les bons noms de colonnes, de types de données, etc. Voici où vous pouvez modifier les champs s’ils sont incorrects (par exemple, le type de données doit être une valeur float et non une valeur int).
+
+Les colonnes où sont détectées des valeurs vides ont l’option « Autoriser les valeurs NULL » cochée. Cependant, si vous attendiez des valeurs NULL dans une colonne et que l’option « Autoriser les valeurs NULL » n’est pas cochée, c’est ici que pouvez mettre à jour la définition de la table de façon à d’autoriser les valeurs NULL dans une ou toutes les colonnes.
 
 Quand vous êtes prêt, poursuivez.
 

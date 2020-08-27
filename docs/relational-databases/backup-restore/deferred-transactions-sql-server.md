@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 86f7046fed39d95748c1f0ba7a7bbf5eb045cc5a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91d8cdd0c776a7cc8f3e0fcb9ef73da83bf37e6c
+ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748414"
+ms.lasthandoff: 08/19/2020
+ms.locfileid: "88618121"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transactions différées (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -48,6 +48,14 @@ ms.locfileid: "85748414"
 |Restauration par progression sur mise en miroir de bases de données|transaction différée|  
 |Groupe de fichiers hors connexion|transaction différée|  
   
+### <a name="requirements-and-limitations"></a>Limitations et exigences
+
+ - La base de données doit utiliser le mode de récupération FULL ou BULK-LOGGED.
+ - Au moins une sauvegarde de base de données et de journal doit avoir été effectuée pour la base de données.
+ - Les transactions différées ne s’appliquent pas aux erreurs rencontrées pendant la restauration d’une transaction une fois que la base de données est en ligne (p.ex., une erreur d’exécution).
+ - Les transactions ne peuvent pas être différées pour les échecs de récupération pendant un attachement de base de données.
+ - Certaines transactions comme les transactions système (p.ex., l’allocation de pages) ne peuvent pas être différées.
+
 ## <a name="moving-a-transaction-out-of-the-deferred-state"></a>Mise d'une transaction hors de l'état DEFERRED  
   
 > [!IMPORTANT]  
