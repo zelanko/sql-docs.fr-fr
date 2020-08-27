@@ -3,7 +3,7 @@ description: Clause APPEND de la commande SHAPE
 title: Clause APPEND de la forme | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f2a04e532256de30295f2179f7b15386bceaa8b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 11d2c02d24753460f90452ddd6cc6b1e1589b80b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452861"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979620"
 ---
 # <a name="shape-append-clause"></a>Clause APPEND de la commande SHAPE
 La clause APPEND de la commande SHAPE ajoute une ou plusieurs colonnes à un **Recordset**. Souvent, ces colonnes sont des colonnes de chapitres, qui font référence à un **jeu d’enregistrements**enfant.  
@@ -96,8 +96,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  La clause après le mot clé APPEND est en fait une liste, où chaque clause est séparée par une virgule et définit une autre colonne à ajouter au parent.  
   
-## <a name="remarks"></a>Notes  
- Lorsque vous construisez des commandes de fournisseur à partir de l’entrée utilisateur dans le cadre d’une commande de forme, SHAPE traite la commande de fournisseur fournie par l’utilisateur comme une chaîne opaque et la transmet fidèlement au fournisseur. Par exemple, dans la commande SHAPE suivante,  
+Lorsque vous construisez des commandes de fournisseur à partir de l’entrée utilisateur dans le cadre d’une commande de forme, SHAPE traite la commande de fournisseur fournie par l’utilisateur comme une chaîne opaque et la transmet fidèlement au fournisseur. Par exemple, dans la commande SHAPE suivante,  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  

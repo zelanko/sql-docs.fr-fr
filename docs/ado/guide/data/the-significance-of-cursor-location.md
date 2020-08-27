@@ -3,7 +3,7 @@ description: Signification de l’emplacement du curseur
 title: L’importance de l’emplacement du curseur | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acfb19f341bef22a9922e075d144026b9ef5f29d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ee12680e5d5acd0d4091e0c1864ae51b285a0e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452721"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979350"
 ---
 # <a name="the-significance-of-cursor-location"></a>Signification de l’emplacement du curseur
 Chaque curseur utilise des ressources temporaires pour stocker ses données. Ces ressources peuvent être de la mémoire, un fichier d’échange de disque, des fichiers de disque temporaire ou même un stockage temporaire dans la base de données. Le curseur est appelé curseur *côté client* lorsque ces ressources se trouvent sur l’ordinateur client. Le curseur est appelé curseur *côté serveur* lorsque ces ressources se trouvent sur le serveur.  

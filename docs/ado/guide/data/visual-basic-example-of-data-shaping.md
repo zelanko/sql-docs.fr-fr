@@ -3,7 +3,7 @@ description: Exemple Visual Basic de mise en forme des données
 title: Visual Basic exemple de mise en forme des données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: da0fc3bcc0af5aa4c4477c91f66e2ce1f2b2d7e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2614461407689ecd785dc905c6d95594cac4433a
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452561"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978950"
 ---
 # <a name="visual-basic-example-of-data-shaping"></a>Exemple Visual Basic de mise en forme des données
 ```  

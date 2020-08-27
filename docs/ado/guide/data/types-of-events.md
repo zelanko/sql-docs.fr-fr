@@ -3,7 +3,7 @@ description: Types d’événements
 title: Types d’événements | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3fa59b0faeb5b1c74ccd4dff3f9d3c274a8f12c6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fd226901137e3ad19df84d17467ad2f283430c14
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452681"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979270"
 ---
 # <a name="types-of-events"></a>Types d’événements
 Il existe deux types d’événements de base. Les événements « do Events », qui sont appelés avant le démarrage d’une opération, incluent généralement «» dans leur nom, par exemple **WillChangeRecordset** ou **WillConnect**. Les événements qui sont appelés après la fin d’un événement incluent généralement « Complete » dans leur nom, par exemple, **RecordChangeComplete** ou **ConnectComplete**. Il existe des exceptions, telles que **InfoMessage** , mais elles se produisent une fois l’opération associée terminée.  

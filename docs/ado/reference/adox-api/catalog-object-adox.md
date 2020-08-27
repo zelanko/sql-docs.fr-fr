@@ -3,7 +3,7 @@ description: Catalog, objet (ADOX)
 title: Catalog, objet (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 968142adb0cb633a19a574c2d0994360faa3fadb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 8329c4a94a6c9e01f0730b3244eabc6c74511cfa
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771198"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985310"
 ---
 # <a name="catalog-object-adox"></a>Catalog, objet (ADOX)
 Contient des collections ([tables](./tables-collection-adox.md), [vues](./views-collection-adox.md), [utilisateurs](./users-collection-adox.md), [groupes](./groups-collection-adox.md)et [procédures](./procedures-collection-adox.md)) qui décrivent le catalogue de schémas d’une source de données.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez modifier l’objet **catalogue** en ajoutant ou en supprimant des objets ou en modifiant des objets existants. Certains fournisseurs peuvent ne pas prendre en charge tous les objets de **catalogue** ou ne prendre en charge que l’affichage des informations de schéma.  
   
  Avec les propriétés et les méthodes d’un objet **catalogue** , vous pouvez :  

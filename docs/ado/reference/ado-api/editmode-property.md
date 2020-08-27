@@ -3,7 +3,7 @@ description: EditMode, propriété
 title: EditMode, propriété | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e330e1bbe559940324962cfde772258d3345594b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b6dd04a089d5a28a7eec3b67ebe1c48fe563ff69
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444061"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973830"
 ---
 # <a name="editmode-property"></a>EditMode, propriété
 Indique l’état de modification de l’enregistrement en cours.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) .  
   
 ## <a name="remarks"></a>Notes  

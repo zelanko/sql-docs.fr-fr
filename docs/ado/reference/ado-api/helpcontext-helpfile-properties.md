@@ -3,7 +3,7 @@ description: HelpContext, HelpFile, propriétés
 title: HelpContext, HelpFile, propriétés | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a4d4aacd44cc6dd245026f84b826d4c007f6b696
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d9ac9c7f712514f50ab8d40704700924ac344d23
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774867"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990840"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext, HelpFile, propriétés
 Indique le fichier d’aide et la rubrique associés à un objet d' [erreur](./error-object.md) .  
@@ -38,7 +38,7 @@ Indique le fichier d’aide et la rubrique associés à un objet d' [erreur](./e
   
 -   **HelpFile** Retourne une valeur de **chaîne** qui prend la valeur d’un chemin d’accès à un fichier d’aide entièrement résolu.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si un fichier d’aide est spécifié dans la propriété **HelpFile** , la propriété **HelpContext** est utilisée pour afficher automatiquement la rubrique d’aide qu’il identifie. Si aucune rubrique d’aide pertinente n’est disponible, la propriété **HelpContext** retourne la valeur zéro et la propriété **HelpFile** retourne une chaîne de longueur nulle ("").  
   
 ## <a name="applies-to"></a>S'applique à  

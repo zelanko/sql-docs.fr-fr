@@ -3,7 +3,7 @@ description: Append, méthode (groupes ADOX)
 title: Append, méthode (groupes ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 14900e34ef93f2ad738779b0cf7478372ab59179
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5890ffa77884927574f10edeb0d2acc3a428185e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771478"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985490"
 ---
 # <a name="append-method-adox-groups"></a>Append, méthode (groupes ADOX)
 Ajoute un nouvel objet de [groupe](./group-object-adox.md) à la collection de [groupes](./groups-collection-adox.md) .  
@@ -38,7 +38,7 @@ Groups.Append Group
  *Groupe*  
  Objet de **groupe** à ajouter ou nom du groupe à créer et à ajouter.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La collection **groups** d’un [catalogue](./catalog-object-adox.md) représente tous les comptes de groupe du catalogue. La collection **groups** pour un [utilisateur](./user-object-adox.md) représente uniquement le groupe auquel appartient l’utilisateur.  
   
  Une erreur se produit si le fournisseur ne prend pas en charge la création de groupes.  

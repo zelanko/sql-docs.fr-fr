@@ -3,7 +3,7 @@ description: DefinedSize, propriété
 title: DefinedSize, propriété | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fa6b01afc3a8643f7e4f28917ebaa8283bf1876e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35330c6cae4a3450d4a970edddf360296ce33148
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444181"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974150"
 ---
 # <a name="definedsize-property"></a>DefinedSize, propriété
 Indique la capacité de données d’un objet de [champ](../../../ado/reference/ado-api/field-object.md) .  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur de **type long** qui reflète la taille définie d’un champ, qui dépend du type de données de l’objet Field ; Pour plus d’informations, consultez [type](../../../ado/reference/ado-api/type-property-ado.md) . Pour un champ qui utilise un type de données de longueur fixe, la valeur de retour correspond à la taille du type de données en octets. Pour un champ qui utilise un type de données de longueur variable, il s’agit de l’un des éléments suivants :  
   
 1.  Longueur maximale du champ en caractères (pour **adVarChar** et **adVarWChar**) ou en octets (pour **adVarBinary**et **adVarNumeric**) si le champ a une longueur définie. Par exemple, le champ **adVarChar (5)** a une longueur maximale de 5.  

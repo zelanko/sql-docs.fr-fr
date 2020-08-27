@@ -3,7 +3,7 @@ title: Description, propriété | Microsoft Docs
 description: En savoir plus sur la propriété Description de l’objet d’erreur dans ADO qui retourne une valeur de chaîne contenant une description de l’erreur.
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5bbaa998c419ba1a0af49ffa28e32fe91ffc96b9
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 7060810eba49ad5e1b9385a090788690b43e07eb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880539"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973910"
 ---
 # <a name="description-property"></a>Description, propriété
 Décrit un objet d' [erreur](../../../ado/reference/ado-api/error-object.md) .  
@@ -31,7 +31,7 @@ Décrit un objet d' [erreur](../../../ado/reference/ado-api/error-object.md) .
 ## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur de **chaîne** qui contient une description de l’erreur.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la propriété **Description** pour obtenir une brève description de l’erreur. Affichez cette propriété pour alerter l’utilisateur en cas d’erreur que vous ne pouvez pas ou ne souhaitez pas gérer. La chaîne provient de ADO ou d’un fournisseur.  
   
  Les fournisseurs sont responsables du passage du texte d’erreur spécifique à ADO. ADO ajoute un objet [Error](../../../ado/reference/ado-api/error-object.md) à la collection **Errors** pour chaque erreur de fournisseur ou avertissement qu’il reçoit. Énumérez la collection **Errors** pour tracer les erreurs que le fournisseur passe.  

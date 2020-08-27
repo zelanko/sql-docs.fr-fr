@@ -3,7 +3,7 @@ description: Member, objet (ADO MD)
 title: Member, objet (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c53b22dc0b5129fc822c4a012eefcf99041f5b45
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 784dd3e842547c97f26107beaec67767363ce4ea
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777998"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986460"
 ---
 # <a name="member-object-ado-md"></a>Member, objet (ADO MD)
 Représente un membre d’un niveau dans un cube, les enfants d’un membre d’un niveau ou un membre d’une position le long d’un axe d’un ensemble de cellules.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les propriétés d’un **membre** varient en fonction du contexte dans lequel il est utilisé. Un **membre** d’un [niveau](./level-object-ado-md.md) dans un [CubeDef](./cubedef-object-ado-md.md) a une propriété [Children](./children-property-ado-md.md) qui retourne les **membres** au niveau inférieur suivant dans la hiérarchie à partir du **membre**actuel. Pour un **membre** d’une [position](./position-object-ado-md.md), la collection **Children** est toujours vide. En outre, la propriété [type](./type-property-ado-md.md) s’applique uniquement aux **membres** d’un **niveau**.  
   
  Un **membre** de la **position** possède deux propriétés qui sont utiles lors de l’affichage de l' [Cellset](./cellset-object-ado-md.md): [DrilledDown](./drilleddown-property-ado-md.md) et [ParentSameAsPrev](./parentsameasprev-property-ado-md.md). Une erreur se produit si ces propriétés sont accessibles sur un **membre** d’un **niveau**.  

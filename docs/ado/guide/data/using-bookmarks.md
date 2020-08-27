@@ -3,7 +3,7 @@ description: Utilisation de signets
 title: Utilisation des signets | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 98c8f08d6d60a47da2cdf4de6459e90cee4d716e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 34fc17275609dbf08ffa02a1bc89902c904cac85
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452591"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979036"
 ---
 # <a name="using-bookmarks"></a>Utilisation de signets
 Il est souvent utile de revenir directement à un enregistrement spécifique après l’avoir déplacé dans le **Recordset** sans avoir à faire défiler chaque enregistrement et à comparer des valeurs. Par exemple, si vous tentez de rechercher un enregistrement à l’aide de la méthode **Find** alors que la recherche ne retourne aucun enregistrement, vous êtes automatiquement placé à chaque extrémité du **Recordset**. Si votre fournisseur les prend en charge, vous pouvez utiliser des signets pour marquer votre lieu avant d’utiliser la méthode **Find** afin de pouvoir revenir à votre emplacement. Un signet est une valeur de type **Variant** qui identifie de façon unique un enregistrement dans un objet **Recordset** .  

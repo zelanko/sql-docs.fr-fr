@@ -3,7 +3,7 @@ description: Fournisseur OLE DB pour la publication Internet
 title: Fournisseur OLE DB pour la publication Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7203dd65a652cfdc71c088777ac9dd42d1da098
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7556d3857142a4762fd411f5175a38c2e4d58cf3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452731"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979360"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Fournisseur OLE DB pour la publication Internet
 Les objets d' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) et de [flux](../../../ado/reference/ado-api/stream-object-ado.md) ADO peuvent être utilisés avec le fournisseur Microsoft OLE DB pour la publication Internet (fournisseur de publication Internet) afin d’accéder à des ressources et de les manipuler, telles que des dossiers Web ou des fichiers pris en charge par Microsoft FrontPage. Avec ADO, vous pouvez spécifier la source d’un **enregistrement**, d’un **flux**ou d’un [jeu d’enregistrements](../../../ado/reference/ado-api/recordset-object-ado.md) comme URL. Vous pouvez ensuite charger, télécharger, déplacer, copier et supprimer des ressources, ou manipuler directement les propriétés des ressources.  

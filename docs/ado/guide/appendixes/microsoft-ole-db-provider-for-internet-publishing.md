@@ -3,7 +3,7 @@ description: Présentation du fournisseur Microsoft OLE DB pour la publication I
 title: Fournisseur Microsoft OLE DB pour la publication Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3888cf881fd1b6cdb0ccc2c5985fe4a6e08ae581
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: f924e1bec97ed399f4d6d3351c8d18b1d8dad5b1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806592"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991060"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Présentation du fournisseur Microsoft OLE DB pour la publication Internet
 Le fournisseur Microsoft OLE DB pour la publication Internet permet à ADO d’accéder aux ressources prises en charge par Microsoft FrontPage ou Microsoft Internet Information Server. Les ressources incluent des fichiers source Web tels que des fichiers HTML ou des dossiers Web Windows 2000.

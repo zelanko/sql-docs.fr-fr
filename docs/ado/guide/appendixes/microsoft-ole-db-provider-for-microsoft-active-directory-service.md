@@ -3,7 +3,7 @@ description: Fournisseur Microsoft OLE DB pour le service Microsoft Active Direc
 title: Fournisseur Microsoft OLE DB pour le service de Active Directory Microsoft | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c196b790299c4c241e5c8eda762b43115b71a038
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 08d945b101ac91300793920e3e01ea0a9619b372
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806581"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991050"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Fournisseur Microsoft OLE DB pour le service Microsoft Active Directory
 Le fournisseur ADSI (Active Directory Service Interfaces) permet à ADO de se connecter à des services d’annuaire hétérogènes par le biais d’ADSI. Cela donne aux applications ADO un accès en lecture seule aux services d’annuaire Microsoft Windows NT 4,0 et Microsoft Windows 2000, en plus des services d’annuaire compatibles LDAP et des services d’annuaire Novell. ADSI est basé sur un modèle de fournisseur, de sorte que si un nouveau fournisseur donne accès à un autre annuaire, l’application ADO peut y accéder en toute transparence. Le fournisseur ADSI est libre de thread et Unicode est activé.  
@@ -65,7 +65,7 @@ ADSDSOObject
 |*Causes*|Indique l’objet **ADsPath** à partir duquel démarrer la recherche (c’est-à-dire la racine de la recherche).|  
 |*Filter*|Indique le filtre de recherche au format RFC 1960.|  
 |*Attributs*|Indique une liste d’attributs délimités par des virgules à retourner.|  
-|*Étendue*|facultatif. **Chaîne** qui spécifie la portée de la recherche. Il peut s'agir d'une des méthodes suivantes :<br /><br /> -Base-recherche uniquement l’objet de base (racine de la recherche).<br />-OneLevel-Rechercher un seul niveau.<br />-Sous-arborescence-recherchez la sous-arborescence entière.|  
+|*Portée*|facultatif. **Chaîne** qui spécifie la portée de la recherche. Il peut s'agir d'une des méthodes suivantes :<br /><br /> -Base-recherche uniquement l’objet de base (racine de la recherche).<br />-OneLevel-Rechercher un seul niveau.<br />-Sous-arborescence-recherchez la sous-arborescence entière.|  
   
  Par exemple :  
   

@@ -3,7 +3,7 @@ description: Direction, propriété
 title: Direction, propriété | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d5732578-3434-4dcd-a9f7-db1abd1b3b94
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 37987e58829b1b6957b4fe1de440aaeb4aae1763
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: af002ff20ff3ad27ab2395529c533738ad797ea6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444051"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88973870"
 ---
 # <a name="direction-property"></a>Direction, propriété
 Indique si le [paramètre](../../../ado/reference/ado-api/parameter-object.md) représente un paramètre d’entrée, un paramètre de sortie, une entrée et un paramètre de sortie, ou si le paramètre est la valeur de retour d’une procédure stockée.  
@@ -35,7 +35,7 @@ Indique si le [paramètre](../../../ado/reference/ado-api/parameter-object.md) r
  Tous les fournisseurs ne peuvent pas déterminer la direction des paramètres dans leurs procédures stockées. Dans ce cas, vous devez définir la propriété **direction** avant d’exécuter la requête.  
   
 ## <a name="applies-to"></a>S'applique à  
- [Parameter (objet)](../../../ado/reference/ado-api/parameter-object.md)  
+ [Objet Parameter](../../../ado/reference/ado-api/parameter-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, size et direction, exemple de propriétés (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
