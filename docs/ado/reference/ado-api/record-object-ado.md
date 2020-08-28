@@ -3,7 +3,7 @@ description: Record, objet (ADO)
 title: Record, objet (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6860e10d3639fcbfdf59e8ff5fe8a5a8b675662a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6066d43bfa52d65ee133fd748f76fc651fac7379
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772598"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989860"
 ---
 # <a name="record-object-ado"></a>Record, objet (ADO)
 Représente une ligne d’un [jeu d’enregistrements](./recordset-object-ado.md) ou du fournisseur de données, ou un objet retourné par un fournisseur de données semi-structuré, tel qu’un fichier ou un répertoire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Un objet **Record** représente une ligne de données et présente des similarités conceptuelles avec un **Recordset**d’une seule ligne. Selon les capacités de votre fournisseur, les objets d' **enregistrement** peuvent être retournés directement à partir de votre fournisseur au lieu d’un **Recordset**d’une seule ligne, par exemple lorsqu’une requête SQL qui sélectionne une seule ligne est exécutée. Ou un objet **enregistrement** peut être obtenu directement à partir d’un objet **Recordset** . Ou un **enregistrement** peut être retourné directement d’un fournisseur à des données semi-structurées, telles que le fournisseur de OLE DB Microsoft Exchange.  
   
  Vous pouvez afficher les champs associés à l’objet **Record** par le biais de la collection [Fields](./fields-collection-ado.md) sur l’objet **Record** . ADO autorise les colonnes à valeurs objet, y compris les valeurs **Recordset**, **SAFEARRAY**et scalaires dans la collection **Fields** des objets **Record** .  

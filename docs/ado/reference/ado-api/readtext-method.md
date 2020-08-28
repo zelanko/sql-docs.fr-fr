@@ -3,7 +3,7 @@ description: ReadText, méthode
 title: ReadText, méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca797d4a6a8be7ee547f8bc80163469d0761ca29
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d2e55657dc0bf2e5cd508897196138e842e23b8e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772648"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989870"
 ---
 # <a name="readtext-method"></a>ReadText, méthode
 Lit le nombre spécifié de caractères à partir d’un objet de [flux](./stream-object-ado.md) de texte.  
@@ -38,7 +38,7 @@ String = Stream.ReadText ( NumChars)
  *NumChars*  
  facultatif. Valeur de **type long** qui spécifie le nombre de caractères à lire à partir du fichier ou une valeur [StreamReadEnum](./streamreadenum.md) . La valeur par défaut est **adReadAll**.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  La méthode **READTEXT** lit un nombre spécifié de caractères, une ligne entière ou le flux entier à partir d’un objet de **flux** et retourne la chaîne résultante.  
   
 ## <a name="remarks"></a>Notes  

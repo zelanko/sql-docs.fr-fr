@@ -3,7 +3,7 @@ description: PrimaryKey, propriété (ADOX)
 title: PrimaryKey, propriété (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6b1dde4ddae2acf4a6b238489a0af56ae1ce63d4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 79a3d8567c4f6a878611cbed890f320fe2f7ac9e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88769718"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88983650"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey, propriété (ADOX)
 Indique si l’index représente la clé primaire de la table.  
@@ -33,7 +33,7 @@ Indique si l’index représente la clé primaire de la table.
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit et retourne une valeur **booléenne** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La valeur par défaut est **False**.  
   
  Cette propriété est en lecture seule sur les objets d' [index](./index-object-adox.md) déjà ajoutés à une collection.  

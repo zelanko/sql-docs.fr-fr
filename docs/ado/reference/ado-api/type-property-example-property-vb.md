@@ -3,7 +3,7 @@ description: Type, exemple de propriété (objet Property) (VB)
 title: Type, exemple de propriété (Property) (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e6c0f758de185e56256aef4797c9507cdff539e4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e826903c37ca436f73bd82abc93afdd0568fc9e6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777048"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988240"
 ---
 # <a name="type-property-example-property-vb"></a>Type, exemple de propriété (objet Property) (VB)
 Cet exemple illustre la propriété [type](./type-property-ado.md) . Il s’agit d’un modèle d’utilitaire permettant de répertorier les noms et les types d’une collection, tels que les [Propriétés](./properties-collection-ado.md), les [champs](./fields-collection-ado.md), etc.  

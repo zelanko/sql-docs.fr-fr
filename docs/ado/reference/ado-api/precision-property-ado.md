@@ -3,7 +3,7 @@ description: Precision, propriété (ADO)
 title: Precision, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 59a42a7f577ae8f4712e679853d53939fd6f6ed1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e7a166077bd0237ff822193297d57dc364d17bef
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773138"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990050"
 ---
 # <a name="precision-property-ado"></a>Precision, propriété (ADO)
 Indique le degré de précision des valeurs numériques dans un objet de [paramètre](./parameter-object.md) ou pour les objets de [champ](./field-object.md) numérique.  
@@ -30,7 +30,7 @@ Indique le degré de précision des valeurs numériques dans un objet de [param�
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur d' **octet** qui indique le nombre maximal de chiffres utilisés pour représenter des valeurs.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la propriété **précision** pour déterminer le nombre maximal de chiffres utilisés pour représenter les valeurs d’un objet de **paramètre** ou de **champ** numérique.  
   
  La valeur est en lecture/écriture sur un objet de **paramètre** .  
