@@ -3,7 +3,7 @@ description: ConnectionString, ConnectionTimeout et State, exemple de propriét�
 title: Connection, exemple de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fc8619fd7c803fdbf417368ef8e7e896e1947ab2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6154dd6f741383dfbb2c86db95e766fc9903e3d5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775918"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974790"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString, ConnectionTimeout et State, exemple de propriétés (VB)
 Cet exemple illustre différentes façons d’utiliser la propriété [ConnectionString](./connectionstring-property-ado.md) pour ouvrir un objet de [connexion](./connection-object-ado.md) . Elle utilise également la propriété [ConnectionTimeout](./connectiontimeout-property-ado.md) pour définir un délai d’attente de connexion et la propriété [State](./state-property-ado.md) pour vérifier l’état des connexions. La fonction GetState est requise pour l’exécution de cette procédure.  

@@ -3,7 +3,7 @@ description: Source, propriété (objet Error ADO)
 title: Source, propriété (erreur ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e0edf4941ac2fa985c644c37627f86cfd40f2e62
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 117e6e1f16800daaf94cba6e4a7643d5aa1c8c1f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777428"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988980"
 ---
 # <a name="source-property-ado-error"></a>Source, propriété (objet Error ADO)
 Indique le nom de l’objet ou de l’application qui a généré à l’origine une erreur.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur de **chaîne** qui indique le nom d’un objet ou d’une application.  
   
 ## <a name="remarks"></a>Notes  

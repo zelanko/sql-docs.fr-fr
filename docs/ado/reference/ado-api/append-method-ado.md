@@ -3,7 +3,7 @@ description: Append, méthode (ADO)
 title: Append, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 87c4c1b9842dbd104a69ff4ba6a90eae2d7b1369
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 84969b95751726579bdc7d4a61aee311b95b6108
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776508"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976080"
 ---
 # <a name="append-method-ado"></a>Append, méthode (ADO)
 Ajoute un objet à une collection. Si la collection est de [champs](./fields-collection-ado.md), un nouvel objet de [champ](./field-object.md) peut être créé avant d’être ajouté à la collection.  
@@ -59,7 +59,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  facultatif. **Variant** qui représente la valeur du nouveau champ. S’il n’est pas spécifié, le champ est ajouté avec une valeur null.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 ## <a name="parameters-collection"></a>Collection Parameters  
  Vous devez définir la propriété [type](./type-property-ado.md) d’un objet [Parameter](./parameter-object.md) avant de l’ajouter à la collection [Parameters](./parameters-collection-ado.md) . Si vous sélectionnez un type de données de longueur variable, vous devez également affecter à la propriété [Size](./size-property-ado-parameter.md) une valeur supérieure à zéro.  

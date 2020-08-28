@@ -3,7 +3,7 @@ description: CursorTypeEnum
 title: CursorTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e0d37d5aad3f27a61cf3ae7c8dad9b27149e09b
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: ceb52384d5ed33019bf0d7ec5148322801a1dc2e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775468"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974310"
 ---
 # <a name="cursortypeenum"></a>CursorTypeEnum
 Spécifie le type de curseur utilisé dans un objet [Recordset](./recordset-object-ado.md) .  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adOpenDynamic**|2|Utilise un curseur dynamique. Les ajouts, modifications et suppressions effectués par d’autres utilisateurs sont visibles, et tous les types de déplacement via le **Recordset** sont autorisés, à l’exception des signets, si le fournisseur ne les prend pas en charge.|  
 |**adOpenForwardOnly**|0|Par défaut. Utilise un curseur avant uniquement. Identique à un curseur statique, sauf que vous pouvez faire défiler vers l’avant les enregistrements. Cela améliore les performances lorsque vous devez effectuer une seule passe dans un **jeu d’enregistrements**.|  
@@ -37,7 +37,7 @@ Spécifie le type de curseur utilisé dans un objet [Recordset](./recordset-obje
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.CursorType.DYNAMIC|  
 |AdoEnums.CursorType.FORWARDONLY|  

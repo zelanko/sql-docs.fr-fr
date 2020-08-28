@@ -3,7 +3,7 @@ description: ConnectModeEnum
 title: ConnectModeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 10bc68683f337f5a0bdf6fc5679c4276925a4234
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 704e4e78c47744fbdf2288800353fbbd33d8b090
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775848"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974710"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Spécifie les autorisations disponibles pour la modification des données dans une [connexion](./connection-object-ado.md), l’ouverture d’un [enregistrement](./record-object-ado.md)ou la spécification de valeurs pour la propriété [mode](./mode-property-ado.md) des objets **Record** et [Stream](./stream-object-ado.md) .  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|Indique des autorisations en lecture seule.|  
 |**adModeReadWrite**|3|Indique des autorisations de lecture/écriture.|  
@@ -41,7 +41,7 @@ Spécifie les autorisations disponibles pour la modification des données dans u
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.ConnectMode.READ|  
 |AdoEnums.ConnectMode.READWRITE|  

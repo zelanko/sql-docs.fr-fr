@@ -3,7 +3,7 @@ description: CommandTypeEnum
 title: CommandTypeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 994fe5eb0cf10189477e11154b8814f5e73c9194
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c23647edbe916daeb3f9356e06de75d11458a59c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776078"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975060"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Spécifie comment un argument de commande doit être interprété.  
   
  Il est important de valider les valeurs *CommandString* fournies par l’utilisateur pour éviter aux utilisateurs de l’application d’injecter des commandes potentiellement dangereuses pour l’exécution d’ADO.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|Ne spécifie pas l’argument de type de commande.|  
 |**adCmdText**|1|Évalue [CommandText](./commandtext-property-ado.md) comme définition textuelle d’une commande ou d’un appel de procédure stockée.|  
@@ -41,7 +41,7 @@ Spécifie comment un argument de commande doit être interprété.
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.CommandType.UNSPECIFIED|  
 |AdoEnums.CommandType.TEXT|  

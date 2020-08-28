@@ -3,7 +3,7 @@ description: ExecuteOptions, propriété (RDS)
 title: ExecuteOptions, propriété (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 042a69dd679cf84e2ab26da77cda3c06d2abd94e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c363333e7e88fa0bedbb8cddc126d7ad62f0e2d3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768308"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982250"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions, propriété (RDS)
 Indique si l’exécution asynchrone est activée.  
@@ -38,7 +38,7 @@ Indique si l’exécution asynchrone est activée.
 > [!NOTE]
 >  Chaque fichier exécutable qui utilise ces constantes doit fournir des déclarations pour eux. Vous pouvez couper et coller les déclarations de constantes que vous souhaitez à partir du fichier Adcvbs. Inc, situé dans le dossier d’installation par défaut de la bibliothèque RDS.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Si **ExecuteOptions** a la valeur **adcExecAsync**, alors l’appel d' **actualisation** suivant est exécuté de façon asynchrone sur le [RDS. ](./datacontrol-object-rds.md) **Jeu d’enregistrements**de l’objet DataControl.  
   
  Si vous essayez d’appeler [Reset](./reset-method-rds.md), [Refresh](./refresh-method-rds.md), [SubmitChanges](./submitchanges-method-rds.md), [CancelUpdate](../ado-api/cancelupdate-method-ado.md)ou [Recordset](./recordset-sourcerecordset-properties-rds.md) pendant une autre opération asynchrone qui peut modifier le [RDS. ](./datacontrol-object-rds.md) Le **jeu d’enregistrements** de l’objet DataControl est en cours d’exécution, une erreur se produit.  

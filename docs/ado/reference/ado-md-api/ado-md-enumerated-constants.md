@@ -3,7 +3,7 @@ description: Constantes énumérées ADO MD
 title: ADO MD les constantes énumérées | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24e742f36dfda2c76059eb8055a903bac4ced9ac
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c302bde71ea759a068aaa9e7274ec0182217a0cc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776748"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987550"
 ---
 # <a name="ado-md-enumerated-constants"></a>Constantes énumérées ADO MD
 Pour faciliter le débogage, les constantes énumérées ADO MD répertorient une valeur pour chaque constante. Toutefois, cette valeur est purement indicative et peut changer d’une version de ADO MD à une autre. Votre code ne doit dépendre que du nom, et non de la valeur réelle, des constantes énumérées.  

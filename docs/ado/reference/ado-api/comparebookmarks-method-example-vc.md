@@ -3,7 +3,7 @@ description: CompareBookmarks, exemple de méthode (VC++)
 title: CompareBookmarks, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 921fccf29a823be169f16a0144aa0cdb0cabe232
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b30ea43d8a47e5e32b57f94f997ea05bfbe641de
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776048"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975030"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks, exemple de méthode (VC++)
 Cet exemple illustre la méthode [CompareBookmarks](./comparebookmarks-method-ado.md) . La valeur relative des signets est rarement nécessaire, sauf si un signet particulier est spécial.  

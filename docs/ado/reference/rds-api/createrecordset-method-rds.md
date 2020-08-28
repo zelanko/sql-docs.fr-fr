@@ -3,7 +3,7 @@ description: CreateRecordset, méthode (RDS)
 title: CreateRecordset, méthode (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 872b8d44a371e8cdce6c25b571d229bb60f0039f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a459ddea3716bb918ed18a49d632e20a9e4557fd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768618"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88982520"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset, méthode (RDS)
 Crée un [jeu d’enregistrements](../ado-api/recordset-object-ado.md)vide et déconnecté.  
@@ -66,7 +66,7 @@ object.CreateRecordset(ColumnInfos)
   
  Pour certains types de données de variable, le type peut être forcé au type noté dans la colonne de substitution. Vous ne verrez pas les substitutions tant que le **jeu d’enregistrements** n’a pas été créé et rempli. Vous pouvez ensuite vérifier le type de données réel, si nécessaire.  
   
-|Longueur|Constant|Number|Substitution|  
+|Longueur|Constante|Number|Substitution|  
 |------------|--------------|------------|------------------|  
 |Fixe|**adTinyInt**|16||  
 |Fixe|**adSmallInt**|2||  
