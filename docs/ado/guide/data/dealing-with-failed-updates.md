@@ -3,7 +3,7 @@ description: Traitement des mises à jour ayant échoué
 title: Traitement des mises à jour ayant échoué | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 508508da57fc7a0b1ab899acf3f77b1a49a7fa9b
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ca4c5a094e263ca0c44c58a9d9118d4e2ce01538
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806924"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991410"
 ---
 # <a name="dealing-with-failed-updates"></a>Traitement des mises à jour ayant échoué
 Lorsqu’une mise à jour se termine avec des erreurs, la façon dont vous résolvez les erreurs dépend de la nature et de la gravité des erreurs et de la logique de votre application. Toutefois, si la base de données est partagée avec d’autres utilisateurs, une erreur classique est que quelqu’un d’autre modifie le champ avant. Ce type d’erreur est appelé un conflit. ADO détecte cette situation et signale une erreur.  

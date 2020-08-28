@@ -3,7 +3,7 @@ description: Section de données
 title: Section données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8cd34a76e2de6a37ee7fe3c647e845c0fbf3fac
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: ac4febc789aca18401380ee8ada7b2ab7f9d30a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806196"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991450"
 ---
 # <a name="data-section"></a>Section de données
 La section Data définit les données de l’ensemble de lignes, ainsi que toutes les mises à jour, insertions ou suppressions en attente. La section de données peut contenir zéro ou plusieurs lignes. Elle ne peut contenir que des données d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme indiqué précédemment, les colonnes sans données peuvent être omises. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, elle est ignorée en mode silencieux.  

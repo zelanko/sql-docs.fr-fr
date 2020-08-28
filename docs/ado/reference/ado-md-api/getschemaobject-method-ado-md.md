@@ -3,7 +3,7 @@ description: GetSchemaObject, méthode (ADO MD)
 title: Méthode GetSchemaObject (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b0a54b02cf748d8ff1144e50e3531295dbfe8c55
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 4031b9dbe100df7e73c64354888ffa97cf38c30c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778118"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986690"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject, méthode (ADO MD)
 Récupère un objet de schéma ADO MD ([dimension](./dimension-object-ado-md.md), [hiérarchie](./hierarchy-object-ado-md.md), [niveau](./level-object-ado-md.md)ou [membre](./member-object-ado-md.md)) par son [UniqueName](./uniquename-property-ado-md.md).  

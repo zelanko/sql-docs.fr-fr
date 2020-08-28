@@ -3,7 +3,7 @@ description: Exemple avec Members (VBScript)
 title: Members, exemple (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87bbd4ad-bb1a-4123-93ef-99ef47fd970b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1da649b752739f9e36fe22ac2c3e61d8b4fba14
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ca97249cff49d0c85a306b145e189354a918da5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88440851"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986300"
 ---
 # <a name="members-example-vbscript"></a>Exemple avec Members (VBScript)
 Cet exemple utilise une chaîne de requête MDX pour extraire des données OLAP et écrit le CellSet résultant dans une structure de table HTML à l’aide des fonctionnalités de fractionnement de colonne pour les cellules à plusieurs dimensions.  
