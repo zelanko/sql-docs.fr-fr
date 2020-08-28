@@ -3,7 +3,7 @@ description: Clone, exemple de méthode (VC++)
 title: Clone, exemple de méthode (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 83e21ebe312534dc74221c52919cc2428abe77b8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: b1c39561044936d0ed8ffa1bdd6982efa9e46d99
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776228"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975410"
 ---
 # <a name="clone-method-example-vc"></a>Clone, exemple de méthode (VC++)
 Cet exemple utilise la méthode [clone](./clone-method-ado.md) pour créer des copies d’un [jeu d’enregistrements](./recordset-object-ado.md) , puis permet à l’utilisateur de positionner le pointeur d’enregistrement de chaque copie indépendamment.  

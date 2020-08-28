@@ -3,7 +3,7 @@ description: Événements BeginTransComplete, CommitTransComplete et RollbackTra
 title: BeginTrans, CommitTrans, RollbackTrans, événements (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 47f559f839c4dcb6b73b273cd09a0289468f9046
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 91f5d573d62ef5000cdd6ed85a52866a0ee7f544
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776418"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975870"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>Événements BeginTransComplete, CommitTransComplete et RollbackTransComplete (ADO)
 Ces événements sont appelés après la fin de l’exécution de l’opération associée sur l’objet de [connexion](./connection-object-ado.md) .  
@@ -63,7 +63,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pConnection*  
  Objet de **connexion** pour lequel cet événement s’est produit.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Dans Visual C++, plusieurs **connexions** peuvent partager la même méthode de gestion des événements. La méthode utilise l’objet de **connexion** retourné pour déterminer l’objet qui a provoqué l’événement.  
   
  Si la propriété [attributes](./attributes-property-ado.md) a la valeur **adXactCommitRetaining** ou **adXactAbortRetaining**, une nouvelle transaction démarre après la validation ou la restauration d’une transaction. Utilisez l’événement **BeginTransComplete** pour ignorer tous les événements de début de transaction sauf le premier.  

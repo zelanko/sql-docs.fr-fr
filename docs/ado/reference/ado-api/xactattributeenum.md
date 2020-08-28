@@ -3,7 +3,7 @@ description: XactAttributeEnum
 title: XactAttributeEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c7ea7ccbf1a588458db9e213bfa57837e89898f
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bb2a1391e813fd80c394bd685eff07e06015dd5b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776818"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987690"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 Spécifie les attributs de transaction d’un objet de [connexion](./connection-object-ado.md) .  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adXactAbortRetaining**|262 144|Effectue des abandons de rétention en appelant [RollbackTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) pour démarrer automatiquement une nouvelle transaction. Tous les fournisseurs ne prennent pas en charge ce comportement.|  
 |**adXactCommitRetaining**|131 072|Effectue la conservation des validations en appelant [CommitTrans](./begintrans-committrans-and-rollbacktrans-methods-ado.md) pour démarrer automatiquement une nouvelle transaction. Tous les fournisseurs ne prennent pas en charge ce comportement.|  
@@ -34,7 +34,7 @@ Spécifie les attributs de transaction d’un objet de [connexion](./connection-
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.XactAttribute.ABORTRETAINING|  
 |AdoEnums.XactAttribute.COMMITRETAINING|  

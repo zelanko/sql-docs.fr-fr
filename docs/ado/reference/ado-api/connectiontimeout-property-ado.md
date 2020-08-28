@@ -3,7 +3,7 @@ description: ConnectionTimeout, propriété (ADO)
 title: ConnectionTimeout, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8904a403-1383-4b4b-b53d-5c01d6f5deac
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4391d077621377fb2a21e39ba188864a3c37ea83
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bd8fd11c017583ef49981021688210245589e971
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775858"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974740"
 ---
 # <a name="connectiontimeout-property-ado"></a>ConnectionTimeout, propriété (ADO)
 Indique le délai d’attente lors de l’établissement d’une connexion avant que la tentative ne soit abandonnée et qu’une erreur ne soit générée.  
@@ -29,7 +29,7 @@ Indique le délai d’attente lors de l’établissement d’une connexion avant
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **type long** qui indique, en secondes, le délai d’attente de l’ouverture de la connexion. La valeur par défaut est 15.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la propriété **ConnectionTimeout** sur un objet de [connexion](./connection-object-ado.md) si des retards de trafic réseau ou une utilisation intensive du serveur rendent nécessaire l’abandon d’une tentative de connexion. Si l’heure du paramètre de propriété **ConnectionTimeout** s’écoule avant l’ouverture de la connexion, une erreur se produit et ADO annule la tentative. Si vous affectez à la propriété la valeur zéro, ADO attend indéfiniment que la connexion soit ouverte. Assurez-vous que le fournisseur dans lequel vous écrivez le code prend en charge la fonctionnalité **ConnectionTimeout** .  
   
  La propriété **ConnectionTimeout** est en lecture/écriture lorsque la connexion est fermée et en lecture seule lorsqu’elle est ouverte.  

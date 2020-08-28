@@ -3,7 +3,7 @@ description: InvokeService (RDS)
 title: InvokeService (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9367a8766b0a26a4f83869aad1d11a417a03d9c3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: acd5dc5f78319c8fc75891dbaad5a98fc4463196
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88768048"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981970"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Retourne un pointeur vers l’interface demandée sur une version plus puissante de l’objet.  
@@ -47,7 +47,7 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
   
  à Adresse de la variable pointeur qui reçoit le pointeur d’interface demandé dans *riid*. En cas de retour correct, le paramètre *ppunkMoreFunctionalInterface* contient le pointeur d’interface demandé à l’objet. Si l’objet ne prend pas en charge l’interface spécifiée dans *riid*, *ppunkMoreFunctionalInterface* a la valeur null.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Valeur HRESULT qui indique si l’appel à la méthode **InvokeService** a réussi.  
   
 ## <a name="remarks"></a>Notes  

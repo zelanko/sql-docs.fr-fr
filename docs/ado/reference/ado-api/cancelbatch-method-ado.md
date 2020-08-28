@@ -3,7 +3,7 @@ description: CancelBatch, méthode (ADO)
 title: Méthode CancelBatch (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db1ae959094c07ea44e7e236e540070bea7814e5
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0baf8d291bbb45961163dfc80106724c48d71613
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776308"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975580"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch, méthode (ADO)
 Annule une mise à jour par lot en attente.  
@@ -38,7 +38,7 @@ recordset.CancelBatchAffectRecords
  *AffectRecords*  
  facultatif. Valeur [AffectEnum](./affectenum.md) qui indique le nombre d’enregistrements affectés par la méthode **CancelBatch** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la méthode **CancelBatch** pour annuler les mises à jour en attente dans un [Recordset](./recordset-object-ado.md) en mode de mise à jour par lot. Si le **jeu d’enregistrements** est en mode de mise à jour immédiate, l’appel de **CancelBatch** sans **adAffectCurrent** génère une erreur.  
   
  Si vous modifiez l’enregistrement en cours ou si vous ajoutez un nouvel enregistrement lorsque vous appelez **CancelBatch**, ADO appelle d’abord la méthode [CancelUpdate](./cancelupdate-method-ado.md) pour annuler les modifications mises en cache. Après cela, toutes les modifications en attente dans le **jeu d’enregistrements** sont annulées.  

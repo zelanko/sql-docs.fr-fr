@@ -1,7 +1,7 @@
 ---
 description: ReadyState, propriété (RDS)
 title: ReadyState, propriété (RDS) | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9915f76e336f7c8814428440460d1b0bfd7b9288
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5a7e27abfa2464f84e130d789db93a3d7606df21
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767658"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981480"
 ---
 # <a name="readystate-property-rds"></a>ReadyState, propriété (RDS)
 Indique la progression d’un objet [DataControl](./datacontrol-object-rds.md) lorsqu’il récupère des données dans son objet [Recordset](../ado-api/recordset-object-ado.md) .  
@@ -39,7 +39,7 @@ Indique la progression d’un objet [DataControl](./datacontrol-object-rds.md) l
 > [!NOTE]
 >  Chaque fichier exécutable côté client qui utilise ces constantes doit fournir des déclarations pour ceux-ci. Vous pouvez couper et coller les déclarations de constantes de votre choix à partir du fichier Adcvbs. Inc, situé dans le dossier d’installation par défaut de la bibliothèque RDS.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez l’événement [onreadystatechange](./onreadystatechange-event-rds.md) pour surveiller les modifications apportées à la propriété **ReadyState** pendant une opération de requête asynchrone. C’est plus efficace que de vérifier régulièrement la valeur de la propriété.  
   
  Si une erreur se produit pendant une opération asynchrone, la propriété **ReadyState** devient **adcReadyStateComplete**, la propriété [State](../ado-api/state-property-ado.md) passe de **AdStateExecuting** à **adStateClosed**, et la propriété [value](../ado-api/value-property-ado.md) de l’objet **Recordset** *ne conserve rien*.  

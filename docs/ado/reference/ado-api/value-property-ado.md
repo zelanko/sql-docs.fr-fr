@@ -3,7 +3,7 @@ description: Value, propriété (ADO)
 title: Value, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1ab44fcbb8409cd866167d4fb58bebc1de906274
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bc7ea2b5f571429d05b8201d8e23dc594bb896e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776968"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987990"
 ---
 # <a name="value-property-ado"></a>Value, propriété (ADO)
 
@@ -32,7 +32,7 @@ Indique la valeur assignée à un [champ](./field-object.md), un [paramètre](./
 
 Définit ou retourne une valeur de **type Variant** qui indique la valeur de l’objet. La valeur par défaut dépend de la propriété [type](./type-property-ado.md) .
   
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Utilisez la propriété **valeur** pour définir ou retourner des données à partir d’objets de **champ** , pour définir ou retourner des valeurs de paramètre avec des objets de **paramètre** , ou pour définir ou retourner des paramètres de propriété avec des objets de **propriété** . Le fait que la propriété de **valeur** soit en lecture/écriture ou en lecture seule dépend de nombreux facteurs. Pour plus d’informations, consultez les rubriques respectives relatives aux objets.
 
