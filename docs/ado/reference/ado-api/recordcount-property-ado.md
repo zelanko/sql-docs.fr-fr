@@ -3,7 +3,7 @@ description: RecordCount, propriété (ADO)
 title: RecordCount, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b307a4116731016858ce4cc74f37bdcfbd258f3a
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 2c2fbd70c1195d0fedf5041a672b704f4bf482d3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772478"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989830"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount, propriété (ADO)
 
 Indique le nombre d’enregistrements dans un objet [Recordset](./recordset-object-ado.md) .
   
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne une valeur de **type long** qui indique le nombre d’enregistrements dans le **Recordset**.
   

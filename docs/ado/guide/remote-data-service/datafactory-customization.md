@@ -3,7 +3,7 @@ description: Personnalisation de DataFactory
 title: Personnalisation de DataFactory | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c34ae14feda7c0a6847d638f35bf84c6b9cd0fd5
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 014341cc860e9db53447abc5db08169ba0e0b5b4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759803"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978200"
 ---
 # <a name="datafactory-customization"></a>Personnalisation de DataFactory
 RDS (Remote Data Service) offre un moyen d’accéder facilement aux données dans un système client/serveur à trois niveaux. Un contrôle de données client spécifie des paramètres de chaîne de connexion et de commande pour exécuter une requête sur une source de données distante, ou des paramètres de chaîne de connexion et d’objet [Recordset](../../reference/ado-api/recordset-object-ado.md) pour effectuer une mise à jour.  

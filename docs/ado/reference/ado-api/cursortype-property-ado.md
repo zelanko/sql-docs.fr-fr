@@ -3,7 +3,7 @@ description: CursorType, propriété (ADO)
 title: CursorType, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a85bb0f624c5f5a3100bfba5d33d63a574fa9d0e
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5401b5b5b9e91b6b851f70d2d3a7e19f5e5d7a82
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88775498"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88974320"
 ---
 # <a name="cursortype-property-ado"></a>CursorType, propriété (ADO)
 Indique le type de curseur utilisé dans un objet [Recordset](./recordset-object-ado.md) .  
@@ -29,7 +29,7 @@ Indique le type de curseur utilisé dans un objet [Recordset](./recordset-object
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur [CursorTypeEnum](./cursortypeenum.md) . La valeur par défaut est **adOpenForwardOnly**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la propriété **CursorType** pour spécifier le type de curseur à utiliser lors de l’ouverture de l’objet **Recordset** .  
   
  Seul un paramètre **adOpenStatic** est pris en charge si la propriété [CursorLocation](./cursorlocation-property-ado.md) est définie sur **adUseClient**. Si une valeur non prise en charge est définie, aucune erreur ne se produit. le **CursorType** le plus proche pris en charge sera utilisé à la place.  
@@ -40,7 +40,7 @@ Indique le type de curseur utilisé dans un objet [Recordset](./recordset-object
   
 |Pour un jeu d’enregistrements de ce CursorType|La méthode supports doit retourner la valeur true pour toutes ces constantes|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|aucun|  
+|**adOpenForwardOnly**|Aucun|  
 |**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
 |**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  

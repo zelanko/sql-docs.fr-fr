@@ -3,7 +3,7 @@ description: Qu’est qu’un verrou ?
 title: Qu’est qu’un verrou ? | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f8989555-28c6-4c17-9bf8-7f44a8a5c407
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db730cbda8ad0d24aa7d1400e67919ad37f987ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d64d6b417f6430cb834c48b8caf93e041a2084e8
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452531"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978870"
 ---
 # <a name="what-is-a-lock"></a>Qu’est qu’un verrou ?
 Le verrouillage est le processus par lequel un SGBD restreint l’accès à une ligne dans un environnement multi-utilisateur. Lorsqu’une ligne ou une colonne est verrouillée de manière exclusive, les autres utilisateurs ne sont pas autorisés à accéder aux données verrouillées tant que le verrou n’est pas libéré. Cela permet de s’assurer que deux utilisateurs ne peuvent pas simultanément mettre à jour la même colonne dans une ligne.  

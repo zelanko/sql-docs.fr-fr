@@ -3,7 +3,7 @@ description: Recordsets hiérarchiques dans XML
 title: Jeux d’enregistrements hiérarchiques dans XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3e6180c8aa422c5833234afba7881a1a4c8b9049
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: a9563782851575970d9f2ab9a5fcabce5efa32d1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806018"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980530"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Recordsets hiérarchiques dans XML
 ADO permet la persistance d’objets Recordset hiérarchiques en XML. Avec les objets Recordset hiérarchiques, la valeur d’un champ dans le jeu d’enregistrements parent est un autre Recordset. De tels champs sont représentés en tant qu’éléments enfants dans le flux XML plutôt qu’en tant qu’attribut.  

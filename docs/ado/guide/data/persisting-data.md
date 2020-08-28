@@ -3,7 +3,7 @@ description: Persistance des données
 title: Persistance des données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a1487cdbba81677cd58e3f130f5d05a8b9337588
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 86789dbce8ab86035f815f36f8eff369b55401a3
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453081"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980100"
 ---
 # <a name="persisting-data"></a>Persistance des données
 L’informatique portable (par exemple, à l’aide d’ordinateurs portables) a généré le besoin d’applications qui peuvent s’exécuter dans un état connecté et déconnecté. ADO a ajouté la prise en charge pour cela en donnant au développeur la possibilité d’enregistrer un **jeu d’enregistrements** de curseur client sur le disque et de le recharger ultérieurement.  

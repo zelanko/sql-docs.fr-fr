@@ -3,7 +3,7 @@ description: ActiveConnection, propriété (ADO MD)
 title: ActiveConnection, propriété (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ea9319e89c44b9cbb66b3acecdcbea4afa3e61c4
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 541f6800a440019d210bdf427ab8dafd58acc3b5
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776777"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987640"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection, propriété (ADO MD)
 Indique à quel objet de [connexion](../ado-api/connection-object-ado.md) ADO appartient actuellement le catalogue ou l’CellSet actuel.  
@@ -31,7 +31,7 @@ Indique à quel objet de [connexion](../ado-api/connection-object-ado.md) ADO ap
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur de **type Variant** qui contient une chaîne définissant une connexion ou un objet de **connexion** . La valeur par défaut est vide.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez définir cette propriété sur un objet de **connexion** ADO valide ou une chaîne de connexion valide. Quand cette propriété est définie sur une chaîne de connexion, le fournisseur crée un objet de **connexion** à l’aide de cette définition et ouvre la connexion.  
   
  Si vous utilisez l’argument *ActiveConnection* de la méthode [Open](./open-method-ado-md.md) pour ouvrir un objet [Cellset](./cellset-object-ado-md.md) , la propriété **ActiveConnection** héritera de la valeur de l’argument.  

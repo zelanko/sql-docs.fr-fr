@@ -3,7 +3,7 @@ description: Move, méthode (ADO)
 title: Move, méthode (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 57a5b882148c899136ff92315ff109b68868aa66
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6b394d64a9d1b1f403137e9875db83fdd82c2ac1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774408"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990590"
 ---
 # <a name="move-method-ado"></a>Move, méthode (ADO)
 Déplace la position de l’enregistrement actuel dans un objet [Recordset](./recordset-object-ado.md) .  
@@ -41,7 +41,7 @@ recordset.Move NumRecords, Start
  *Start*  
  facultatif. Valeur de **chaîne** ou **Variant** qui prend la valeur d’un signet. Vous pouvez également utiliser une valeur [BookmarkEnum](./bookmarkenum.md) .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La méthode **Move** est prise en charge sur tous les objets **Recordset** .  
   
  Si l’argument *numRecords* est supérieur à zéro, la position actuelle de l’enregistrement se déplace vers l’avant (vers la fin de l’ensemble d' **enregistrements**). Si *numRecords* est inférieur à zéro, la position actuelle de l’enregistrement est déplacée vers l’arrière (vers le début de l’ensemble d' **enregistrements**).  

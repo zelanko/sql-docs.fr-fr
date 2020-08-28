@@ -3,7 +3,7 @@ description: Enregistrements et flux
 title: Enregistrements et flux | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8afaae4221c57a7f7d832c34f0a374981e081cf6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38bf8e44ec6b9521a1608c6081697295e6d9aedf
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452981"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979910"
 ---
 # <a name="records-and-streams"></a>Enregistrements et flux
 ADO fournit actuellement l’objet [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) comme méthode principale d’accès aux informations dans des sources de données, telles que des bases de données relationnelles. Toutefois, certains fournisseurs prennent en charge les objets d' [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) et de [flux](../../../ado/reference/ado-api/stream-object-ado.md) en tant qu’autres ou objets complémentaires avec lesquels les données des fournisseurs peuvent être manipulées. Pour plus d’informations sur le comportement des **enregistrements** , consultez la documentation de votre fournisseur.  

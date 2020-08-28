@@ -3,7 +3,7 @@ description: Clause COMPUTE de la commande SHAPE
 title: Shape Compute, clause | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9513666eca4d9e191b74b8a1a25dd8a9da051ee8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 67411cf8d9be50571a515b5e7cf906fd19a650ec
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88452841"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979600"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
 Une clause COMPUTE Shape génère un **jeu d’enregistrements**parent, dont les colonnes se composent d’une référence à l' **objet Recordset**enfant ; les colonnes facultatives dont le contenu est un chapitre, une nouvelle colonne ou des colonnes calculées, ou le résultat de l’exécution des fonctions d’agrégation sur le **jeu d’enregistrements** enfant ou sur un **jeu d’enregistrements**précédemment mis en forme ; et toutes les colonnes de l' **objet Recordset** enfant qui sont listées dans la clause facultative by.  
@@ -77,7 +77,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  Par exemple, supposons que vous disposiez d’une table nommée données démographiques, composée de champs État, ville et remplissage. (Les chiffres de remplissage dans le tableau sont fournis uniquement à titre d’exemple).  
   
-|State|City|Remplissage|  
+|État|City|Remplissage|  
 |-----------|----------|----------------|  
 |WA|Seattle|700 000|  
 |OR|Medford|200 000|  
@@ -105,7 +105,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|SOMME (RS. Habitants|rs|State|  
+|SOMME (RS. Habitants|rs|État|  
 |---------------------------|--------|-----------|  
 |1,3 million|Référence à child1|CA|  
 |1,2 million|Référence à enfant2|WA|  
@@ -113,21 +113,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ## <a name="child1"></a>Enfant 1  
   
-|State|City|Remplissage|  
+|État|City|Remplissage|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800 000|  
 |CA|San Diego|600 000|  
   
 ## <a name="child2"></a>Enfant 2  
   
-|State|City|Remplissage|  
+|État|City|Remplissage|  
 |-----------|----------|----------------|  
 |WA|Seattle|700 000|  
 |WA|Tacoma|500 000|  
   
 ## <a name="child3"></a>Enfant 3  
   
-|State|City|Remplissage|  
+|État|City|Remplissage|  
 |-----------|----------|----------------|  
 |OR|Medford|200 000|  
 |OR|Portland|400 000|  

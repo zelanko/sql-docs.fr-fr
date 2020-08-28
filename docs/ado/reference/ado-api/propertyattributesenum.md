@@ -3,7 +3,7 @@ description: PropertyAttributesEnum
 title: PropertyAttributesEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 823505aae912c64c2fd7d3375b3426cb6428bcdd
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fec6a7ccb1b097a4927e7c82d4b0e31265cba1a1
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772868"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989950"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Spécifie les attributs d’un objet de [propriété](./property-object-ado.md) .  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|Indique que la propriété n’est pas prise en charge par le fournisseur.|  
 |**adPropRequired**|1|Indique que l’utilisateur doit spécifier une valeur pour cette propriété avant que la source de données soit initialisée.|  
@@ -37,7 +37,7 @@ Spécifie les attributs d’un objet de [propriété](./property-object-ado.md) 
 ## <a name="adowfc-equivalent"></a>Équivalent ADO/WFC  
  Package : **com. ms. wfc. Data**  
   
-|Constant|  
+|Constante|  
 |--------------|  
 |AdoEnums.PropertyAttributes.NOTSUPPORTED|  
 |AdoEnums. PropertyAttributes. obligatoire|  

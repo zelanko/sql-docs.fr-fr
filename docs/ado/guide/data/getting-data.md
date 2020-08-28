@@ -3,7 +3,7 @@ description: Obtention de données
 title: Obtention de données | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3931e7ec-f66b-4d5d-aad3-c4bf12e8b154
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 80f1bcfad7a931898396d2463275a2426fbf0033
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 3223d2291ba15ab0a2c14b1fac2aaea911bde395
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806806"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980770"
 ---
 # <a name="getting-data"></a>Obtention de données
 Les [principes de base d’ADO](./ado-fundamentals.md)et de l’exemple [HelloData](./hellodata-a-simple-ado-application.md) , en particulier, ont introduit les quatre opérations principales impliquées dans la création d’une application ADO : obtention de données, examen des données, modification des données et mise à jour des données. Cette section explique comment obtenir des données plus en détail.  
