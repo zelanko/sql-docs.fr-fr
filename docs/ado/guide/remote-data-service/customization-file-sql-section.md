@@ -3,7 +3,7 @@ description: Fichier de personnalisation, section SQL
 title: Section SQL du fichier de personnalisation | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7be4aaa2a92de4f778ee69422b97ceb169411c10
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 210363a1a852aa3c059c7929af1c07a9fe32c6ae
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759823"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978230"
 ---
 # <a name="customization-file-sql-section"></a>Fichier de personnalisation, section SQL
 La section **SQL** peut contenir une nouvelle chaîne SQL qui remplace la chaîne de commande du client. S’il n’existe aucune chaîne SQL dans la section, la section sera ignorée.  

@@ -3,7 +3,7 @@ description: Vue d’ensemble du fournisseur Microsoft OLE DB pour le service d�
 title: Fournisseur Microsoft OLE DB pour le service d’indexation Microsoft | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ec90db7109363cc017fd314dc674c143be01d185
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: b3e479ca023efb704bf496c9ffaeaca2f1b6ba15
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806623"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991040"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Vue d’ensemble du fournisseur Microsoft OLE DB pour le service d’indexation Microsoft
 Le fournisseur Microsoft OLE DB pour le service d’indexation Microsoft fournit un accès par programmation en lecture seule au système de fichiers et aux données Web indexées par le service d’indexation Microsoft. Les applications ADO peuvent émettre des requêtes SQL pour récupérer du contenu et des informations sur les propriétés de fichier.

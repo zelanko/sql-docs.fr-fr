@@ -3,7 +3,7 @@ description: Table unique, schéma unique, propriétés de catalogue uniques-dyn
 title: Contrôle des modifications apportées à la table de base du recordset (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2bd5979526e453e33674441ebd4e433f2a7ad6f3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 50a17938a2e1cffd3cc0bf76d3cc3758358318d2
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88777038"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88988160"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Table unique, schéma unique, propriétés de catalogue uniques-dynamique (ADO)
 Permet de contrôler étroitement les modifications apportées à une table de base particulière dans un [jeu d’enregistrements](./recordset-object-ado.md) formé par une opération de jointure sur plusieurs tables de base.  

@@ -3,7 +3,7 @@ description: ActiveCommand, exemple de propriété (VB)
 title: ActiveCommand, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c2cd1df656d07b274fe000c427dd3eae07da76b
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 3826a05f56539542af8c03dbb9321062a06446d9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88759909"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88977090"
 ---
 # <a name="activecommand-property-example-vb"></a>ActiveCommand, exemple de propriété (VB)
 Cet exemple illustre la propriété [ActiveCommand](./activecommand-property-ado.md) .  

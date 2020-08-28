@@ -3,7 +3,7 @@ description: PageCount, propriété (ADO)
 title: PageCount, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: b601b56c-0ac4-44ee-bc91-c3d2d104f00a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa050f7e99115ca13bf8871378ffa21b1f326d94
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 335f28c570ef240db6d65b66ef33f907d0202816
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773538"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990200"
 ---
 # <a name="pagecount-property-ado"></a>PageCount, propriété (ADO)
 Indique le nombre de pages de données que contient l’objet [Recordset](./recordset-object-ado.md) .  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur de **type long** qui indique le nombre de pages dans le **Recordset**.  
   
 ## <a name="remarks"></a>Notes  

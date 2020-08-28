@@ -3,7 +3,7 @@ description: Curseurs dynamiques
 title: Curseurs dynamiques | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00460f30-8cf7-494e-82df-41012f40ae51
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f646a608c8cbc25e16c5200f8271c133a62d3457
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: e8ce85233cec96af3d804652225b4d14698287db
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806159"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991350"
 ---
 # <a name="dynamic-cursors"></a>Curseurs dynamiques
 Les curseurs dynamiques détectent toutes les modifications apportées aux lignes dans le jeu de résultats, que les modifications se produisent à l’intérieur du curseur ou par d’autres utilisateurs en dehors du curseur. Toutes les instructions INSERT, Update et Delete effectuées par tous les utilisateurs sont visibles par le biais du curseur. Le curseur dynamique peut détecter toute modification apportée aux lignes, à l’ordre et aux valeurs dans le jeu de résultats après l’ouverture du curseur. Les mises à jour effectuées en dehors du curseur ne sont pas visibles tant qu’elles ne sont pas validées (sauf si le niveau d’isolation de la transaction de curseur est défini sur « non validé »).  

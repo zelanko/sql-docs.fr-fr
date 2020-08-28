@@ -3,7 +3,7 @@ description: Prompt, propriété dynamique (ADO)
 title: Prompt, propriété dynamique (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f5e8d379f1ef2a756505675b2969374ec130feb
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 67e8df1a59edecaf601f0ec4c5fd4b7782877e8d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773018"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990010"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt, propriété dynamique (ADO)
 Spécifie si le fournisseur de OLE DB doit inviter l’utilisateur à fournir des informations d’initialisation.  

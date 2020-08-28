@@ -3,7 +3,7 @@ description: LockType, propriété (ADO)
 title: LockType, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b9211ec3b9c6213ffab8cfc07c8bcf89559240ae
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 74e86b054ac9d63527cc0f142ee50aa81acbe4b4
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774578"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990690"
 ---
 # <a name="locktype-property-ado"></a>LockType, propriété (ADO)
 Indique le type de verrou placé sur les enregistrements lors de la modification.  
@@ -29,7 +29,7 @@ Indique le type de verrou placé sur les enregistrements lors de la modification
 ## <a name="settings-and-return-values"></a>Paramètres et valeurs de retour  
  Définit ou retourne une valeur [LockTypeEnum](./locktypeenum.md) . La valeur par défaut est **adLockReadOnly**.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Définissez la propriété **LockType** avant d’ouvrir un [Recordset](./recordset-object-ado.md) pour spécifier le type de verrouillage que le fournisseur doit utiliser lors de son ouverture. Lisez la propriété pour retourner le type de verrouillage en cours d’utilisation sur un objet **Recordset** ouvert.  
   
  Les fournisseurs ne prennent peut-être pas en charge tous les types de verrous. Si un fournisseur ne prend pas en charge le paramètre **LockType** demandé, il remplace un autre type de verrouillage. Pour déterminer les fonctionnalités de verrouillage réelles disponibles dans un objet **Recordset** , utilisez la méthode [supports](./supports-method.md) avec **adUpdate** et **adUpdateBatch**.  

@@ -3,7 +3,7 @@ description: Optimize, exemple de propriété (VB)
 title: Optimize, exemple de propriété (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5ee1d8d211c0ceeed02408f559c63b5942aafe05
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: eeb075e3ad722fa7d449833a6be9b1acaa481eab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773628"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990270"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize, exemple de propriété (VB)
 Cet exemple illustre la propriété d' **optimisation** dynamique de l’objet [Field](./field-object.md) . Le champ ***zip*** de la table ***Authors*** de la base de données ***pubs*** n’est pas indexé. L’affectation de la **valeur true** à la propriété [optimize](./optimize-property-dynamic-ado.md) du champ ***zip*** autorise ADO à générer un index qui améliore les performances de la méthode [Find](./find-method-ado.md) .  

@@ -3,7 +3,7 @@ description: Réception de plusieurs recordsets
 title: Réception de plusieurs recordsets | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5aad021e1d6003ba3c8d30915f1648f57124984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abac183f348553f30bf0cf5ed91725ef421afb3e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453011"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88979970"
 ---
 # <a name="receiving-multiple-recordsets"></a>Réception de plusieurs recordsets
 Le [fournisseur Microsoft OLE DB pour SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) prend en charge le retour de plusieurs objets **Recordset** pour une seule commande contenant plusieurs instructions SQL, un **jeu d’enregistrements** par instruction SQL. L’ordre dans lequel les **jeux d’enregistrements**sont retournés suit l’ordre dans lequel les instructions SQL sont placées dans le texte de la commande.  

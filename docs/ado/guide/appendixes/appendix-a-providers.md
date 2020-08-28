@@ -3,7 +3,7 @@ description: 'Annexe A : fournisseurs de données et de services'
 title: 'Annexe A : fournisseurs | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ced7c241c1ad8ac0744bded33ed18a9c2c172617
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: d50f77959b21031b03ae9591181c61a3419577fd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805284"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991170"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Annexe A : fournisseurs de données et de services
 Cette section traite de trois types de fournisseurs : les fournisseurs de données, les fournisseurs de services et les composants de service. Les fournisseurs se répartissent en deux catégories : celles fournissant des données et celles fournissant des services. Un *fournisseur de données* possède ses propres données et l’expose sous forme tabulaire à votre application. Un *fournisseur de services* encapsule un service en générant et en consommant des données, en augmentant les fonctionnalités de vos applications ADO. Un fournisseur de services peut également être défini comme un *composant de service*, qui doit fonctionner conjointement avec d’autres fournisseurs de services ou composants.
