@@ -3,7 +3,7 @@ description: Propriétés, méthodes et événements de l’objet Property ADOX
 title: Propriétés, méthodes et événements de l’objet de propriété ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 037d12b831f1cc652df6b53e4eb1a27bf7dace89
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 6b7a5ac4579d264e1597a222235b9017a20f91cd
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771558"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985560"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Property ADOX
 ## <a name="properties"></a>Propriétés  

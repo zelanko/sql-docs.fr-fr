@@ -3,7 +3,7 @@ description: ParentRow, propriété (ADO)
 title: ParentRow, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d7924a27a8b04e430eb1d9d68d5de6e4d19c51a8
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 03ef3135e72cac39f91dc1393458c36d63458db6
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773268"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990090"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow, propriété (ADO)
 Définit le conteneur d’un objet OLE DB **Row** sur un objet **ADORecordConstruction** , de sorte que le parent de la ligne soit converti en objet ADO **Record** .  

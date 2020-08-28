@@ -3,7 +3,7 @@ description: WriteText, méthode
 title: WriteText, méthode | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9a4e42733013a7ea756924199d05a93ae08e0c08
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: d38d493fb57e8147f882056d07514ba9f405ecf9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776828"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88987720"
 ---
 # <a name="writetext-method"></a>WriteText, méthode
 Écrit une chaîne de texte spécifiée dans un objet de [flux](./stream-object-ado.md) .  
@@ -41,7 +41,7 @@ Stream.WriteText Data, Options
  *Options*  
  facultatif. Valeur de [StreamWriteEnum](./streamwriteenum.md) qui spécifie si un caractère de séparation de ligne doit être écrit à la fin de la chaîne spécifiée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Les chaînes spécifiées sont écrites dans l’objet de **flux** sans aucun espace ou caractère intermédiaire entre chaque chaîne.  
   
  La [position](./position-property-ado.md) actuelle est définie sur le caractère qui suit les données écrites. La méthode **WRITETEXT** ne tronque pas le reste des données dans un flux. Si vous souhaitez tronquer ces caractères, appelez [SetEOS](./seteos-method.md).  

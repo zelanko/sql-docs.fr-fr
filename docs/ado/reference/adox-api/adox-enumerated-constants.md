@@ -3,7 +3,7 @@ description: Constantes énumérées ADOX
 title: Constantes énumérées ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 553924a51845c7ac49bfb76bab27f75c7d4e4742
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 1def9c0445551376aec56c36c554b9c74b15c02f
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771608"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985710"
 ---
 # <a name="adox-enumerated-constants"></a>Constantes énumérées ADOX
 Pour faciliter le débogage, les constantes énumérées ADOX répertorient une valeur pour chaque constante. Toutefois, cette valeur est purement consultative et peut passer d’une version d’ADOX à une autre. Votre code ne doit dépendre que du nom, et non de la valeur réelle, des constantes énumérées.  
