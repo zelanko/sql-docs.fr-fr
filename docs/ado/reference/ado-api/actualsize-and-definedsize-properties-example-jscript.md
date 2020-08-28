@@ -3,7 +3,7 @@ description: ActualSize et DefinedSize, exemple de propriétés (JScript)
 title: ActualSize et DefinedSize, exemple de propriétés (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ad6deb3d0b4bc1340835effaef3e2472017fa0cd
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: 5fb77fd1732162c745590d985fc1f0e29455545c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88760059"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88976940"
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize et DefinedSize, exemple de propriétés (JScript)
 Cet exemple utilise les propriétés [ActualSize](./actualsize-property-ado.md) et [DefinedSize](./definedsize-property.md) pour afficher la taille définie et la taille réelle d’un champ. Coupez et collez le code suivant dans le bloc-notes ou dans un autre éditeur de texte, puis enregistrez-le en tant que **ActualSizeJS. asp**.  

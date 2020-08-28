@@ -3,7 +3,7 @@ description: DateCreated et DateModified, exemples de propriétés (VB)
 title: DateCreated et DateModified, exemple de propriétés (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d608ea35-6e68-402f-8184-a5041e408678
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1bab3ba9d4cff5036e6024c7c13c3ba8404a7987
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 7ea4c3fb59c2df1bba8cccb0d1ce9074b97950c9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88770768"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88984800"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vb"></a>DateCreated et DateModified, exemples de propriétés (VB)
 Cet exemple illustre les propriétés [DateCreated](./datecreated-property-adox.md) et [DateModified](./datemodified-property-adox.md) en ajoutant une nouvelle [colonne](./column-object-adox.md) à une [table](./table-object-adox.md) existante et en créant une nouvelle **table**. La procédure DateOutput est requise pour que cet exemple s’exécute.  

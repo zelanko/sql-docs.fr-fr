@@ -3,7 +3,7 @@ description: Number, propriété (ADO)
 title: Number, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f92323c5-dd11-4a63-a505-d9014a0f067f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe4984a9bdbeff69f7c2beba4d91833cdca85f50
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a44c1a4902dbcd37089ee63c41db2b9a089c3aed
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88774098"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990430"
 ---
 # <a name="number-property-ado"></a>Number, propriété (ADO)
 Indique le nombre qui identifie de façon unique un objet d' [erreur](./error-object.md) .  
@@ -31,7 +31,7 @@ Indique le nombre qui identifie de façon unique un objet d' [erreur](./error-ob
 ## <a name="return-value"></a>Valeur renvoyée  
  Retourne une valeur de **type long** qui peut correspondre à l’une des constantes [ErrorValueEnum](./errorvalueenum.md) .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Utilisez la propriété **Number** pour déterminer l’erreur qui s’est produite. La valeur de la propriété est un nombre unique qui correspond à la condition d’erreur.  
   
  La collection [Errors](./errors-collection-ado.md) renvoie un HRESULT au format hexadécimal (par exemple, 0x80004005) ou une valeur long (par exemple, 2147467259). Ces HRESULT peuvent être déclenchés par des composants sous-jacents, tels que OLE DB ou même OLE lui-même. Pour plus d’informations sur ces nombres, consultez [Erreurs (OLE DB)](/previous-versions/windows/desktop/ms724533(v=vs.85)) dans le [Guide de référence du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85))*.*  

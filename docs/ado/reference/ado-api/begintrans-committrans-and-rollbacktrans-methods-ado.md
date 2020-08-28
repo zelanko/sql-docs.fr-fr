@@ -3,7 +3,7 @@ description: BeginTrans, CommitTrans et RollbackTrans, méthodes (ADO)
 title: BeginTrans, CommitTrans et RollbackTrans, méthodes (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cefa913c42440d69345bfa9c8d4b8826a0bc3d84
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 02c19026d519cf5c115dedfbe4c4dcdbf89cd37b
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88776568"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88975930"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans et RollbackTrans, méthodes (ADO)
 Ces méthodes de transaction gèrent le traitement des transactions dans un objet de [connexion](./connection-object-ado.md) comme suit :  
