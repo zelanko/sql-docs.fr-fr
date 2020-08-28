@@ -6,19 +6,19 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 861b170e55c37f333f09dc8168c35ad7088d17fa
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: def7cd0b826dd5efb378afbf0605ed82f894368c
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805495"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980780"
 ---
 # <a name="ado-overview-and-benefits"></a>Vue d’ensemble et avantages d’ADO
 ActiveX Data Objects (ADO) est une interface de haut niveau et facile à utiliser pour OLE DB. OLE DB est une interface de bas niveau et hautes performances pour une variété de magasins de données. ADO et OLE DB peuvent fonctionner avec des données relationnelles (tabulaires) et non relationnelles (hiérarchiques ou de flux).

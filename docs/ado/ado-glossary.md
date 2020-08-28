@@ -3,7 +3,7 @@ description: Termes du Glossaire ADO
 title: Termes du Glossaire ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -11,14 +11,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 109fe50bfabc39abf60e5b06ac63be98affb02fd
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dd781612557faebd4b6eefb710ffad2379928aee
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805557"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980850"
 ---
 # <a name="ado-glossary-terms"></a>Termes du Glossaire ADO
 Cette rubrique définit les termes pertinents pour ADO.
@@ -138,7 +138,7 @@ Cette rubrique définit les termes pertinents pour ADO.
  hiérarchie en général, une hiérarchie est une structure classée avec un niveau supérieur et des niveaux subordonnés. Dans ADO, les **recordsets** hiérarchiques sont utilisés pour représenter la relation parent-enfant entre un enregistrement et un chapitre. En outre, dans ADO, les objets d' **enregistrement** et de **flux** peuvent être utilisés pour accéder à des structures d’arborescences hiérarchiques, telles qu’un dossier et des documents. ADO MD comprend également des objets **Hierarchy** pour représenter une relation entre les niveaux d’une dimension dans un cube OLAP. Voir aussi recordsets hiérarchiques, relation parent-enfant, chapitre, arbre.
 
 ## <a name="i-l"></a>I-L
- ISAPI (Internet Server Application Programming Interface) un ensemble de fonctions pour les serveurs Internet, tels qu’un serveur Windows NT® Server/Windows 2000 exécutant Microsoft® Internet Information Services (IIS).
+ ISAPI (Internet Server Application Programming Interface) un ensemble de fonctions pour les serveurs Internet, tels qu’un &reg; serveur Windows NT Server/windows 2000 exécutant Microsoft &reg; Internet Information Services (IIS).
 
  Clé d’une colonne ou de colonnes dans une table qui identifie de façon unique une ligne ; souvent utilisée pour indexer une table.
 

@@ -3,7 +3,7 @@ description: Ajout de plusieurs champs et valeurs
 title: Ajout de plusieurs champs | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e2543741749c1521526aea18bc4600168559eb45
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c661e8e99ae9651a4b89f8facad238d5f83564e9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88453891"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991770"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Ajout de plusieurs champs et valeurs
 Parfois, il peut être plus efficace de passer un tableau de champs et leurs valeurs correspondantes à la méthode **AddNew** , plutôt que de définir plusieurs fois la **valeur** pour chaque nouveau champ. Si *FieldList* est un tableau, les *valeurs* doivent également être un tableau avec le même nombre de membres ; dans le cas contraire, une erreur se produit. L’ordre des noms de champs doit correspondre à l’ordre des valeurs de champ dans chaque tableau. Le code suivant passe un tableau de champs et un tableau de valeurs à la méthode **AddNew** .

@@ -3,7 +3,7 @@ description: Description, propriété (ADO MD)
 title: Description, propriété (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: acc3d3554e4046321b1fe76beebc9dddc942b5ac
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 726a49da64c36b487868068affad65164b9b3c5e
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778218"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88986900"
 ---
 # <a name="description-property-ado-md"></a>Description, propriété (ADO MD)
 Retourne une explication textuelle de l’objet actuel.  

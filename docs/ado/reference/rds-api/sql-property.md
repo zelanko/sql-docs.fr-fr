@@ -1,7 +1,7 @@
 ---
 description: SQL, propriété
 title: Propriété SQL | Microsoft Docs
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d5c87c5374a0e631b08d355e5f1fc0d7c0862d23
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 5da63f3c5a5acbf217a5bc585dc1be9d9af7feab
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88767408"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88981080"
 ---
 # <a name="sql-property"></a>SQL, propriété
 Indique la chaîne de requête utilisée pour récupérer le [jeu d’enregistrements](../ado-api/recordset-object-ado.md).  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  *DataControl*  
  Variable objet qui représente un objet **RDS. DataControl** .  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  En général, il s’agit d’une instruction SQL (à l’aide du dialecte du serveur de base de données), telle que `"Select * from NewTitles"` . Pour vous assurer que les enregistrements sont mis en correspondance et mis à jour correctement, une requête pouvant être mise à jour doit contenir un champ autre qu’un champ binaire long ou un champ calculé.  
   
  La propriété **SQL** est facultative si un objet métier côté serveur personnalisé récupère les données du client.  

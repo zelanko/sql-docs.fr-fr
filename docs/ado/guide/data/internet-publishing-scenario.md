@@ -3,7 +3,7 @@ description: Scénario de publication Internet
 title: Scénario de publication Internet | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2042cca7c4a6bc2cc01860ff29388cced3aa5387
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 40a74a489a39d0bbb4c11c27e16225aec8779606
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88805951"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88980450"
 ---
 # <a name="internet-publishing-scenario"></a>Scénario de publication Internet
 Cet exemple de code montre comment utiliser ADO avec le fournisseur Microsoft OLE DB pour la publication Internet. Dans ce scénario, vous allez créer une application Visual Basic qui utilise les objets **Recordset**, **Record**et **Stream** pour afficher le contenu des ressources publiées avec le fournisseur de publication Internet.  
