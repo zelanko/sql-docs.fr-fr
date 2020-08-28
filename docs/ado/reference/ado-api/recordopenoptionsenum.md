@@ -3,7 +3,7 @@ description: RecordOpenOptionsEnum
 title: RecordOpenOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 25d3c1fce0fd227a609da49d54bd55762fa1c4a2
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 352622f55e82b1941439a242249e067aae090e51
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772308"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88989780"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 Spécifie les options d’ouverture d’un [enregistrement](./record-object-ado.md). Ces valeurs peuvent être combinées à l’aide de ou de.  
   
-|Constant|Valeur|Description|  
+|Constante|Valeur|Description|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|Indique au fournisseur que les champs associés à l' **enregistrement** n’ont pas besoin d’être récupérés initialement, mais peuvent être récupérés lors de la première tentative d’accès au champ. Le comportement par défaut, indiqué par l’absence de cet indicateur, consiste à récupérer tous les champs d’objet **enregistrement** .|  
 |**adDelayFetchStream**|0x4000|Indique au fournisseur que le flux par défaut associé à l' **enregistrement** n’a pas besoin d’être récupéré initialement. Le comportement par défaut, indiqué par l’absence de cet indicateur, consiste à récupérer le flux par défaut associé à l’objet **enregistrement** .|  

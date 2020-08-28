@@ -3,7 +3,7 @@ description: Présentation de Microsoft OLE DB simple Provider
 title: Fournisseur Microsoft OLE DB simple | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/08/2018
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 81d60f33e0e9e055e086d990a681efb74cc943cc
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 4eb4635aafa67d2b6c96f88580811c204ff73423
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806528"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990980"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Présentation de Microsoft OLE DB simple Provider
 Le fournisseur Microsoft OLE DB simple (OSP) permet à ADO d’accéder à toutes les données pour lesquelles un fournisseur a été écrit à l’aide de [OLE DB boîte à outils OSP (simple Provider)](/previous-versions/windows/desktop/ms715822(v=vs.85)). Les fournisseurs simples sont destinés à accéder aux sources de données qui nécessitent uniquement une prise en charge fondamentale de la OLE DB, telles que les tableaux en mémoire ou les documents XML.

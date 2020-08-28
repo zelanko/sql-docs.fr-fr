@@ -3,7 +3,7 @@ description: ChangePassword, méthode (ADOX)
 title: ChangePassword, méthode (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 94ddd75bddf8845012fe0845826eea264718cc91
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: e51037f9838e9aef279351c822e6c35ffb25f0fb
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88771168"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88985200"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword, méthode (ADOX)
 Modifie le mot de passe d’un compte d' [utilisateur](./user-object-adox.md) .  
@@ -41,7 +41,7 @@ User.ChangePassword OldPassword, NewPassword
  *NewPassword*  
  Valeur de **chaîne** qui spécifie le nouveau mot de passe.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour des raisons de sécurité, l’ancien mot de passe doit être spécifié en plus du nouveau mot de passe.  
   
  Une erreur se produit si le fournisseur ne prend pas en charge l’administration des propriétés du tiers de confiance.  

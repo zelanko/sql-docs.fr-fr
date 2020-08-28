@@ -3,7 +3,7 @@ description: Objet de liaison de données de l’application Carnet d’adresses
 title: Objet de liaison de données du carnet d’adresses | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 11/09/2018
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2028a27c547d92903188c49e608dcc75b51fa27
-ms.sourcegitcommit: c4d564435c008e2c92035efd2658172f20f07b2b
+ms.openlocfilehash: d6b6bb99ea218268a7ccb988acb2f49fb4898f32
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88758619"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88978440"
 ---
 # <a name="address-book-data-binding-object"></a>Objet de liaison de données de l’application Carnet d’adresses
 L’application Carnet d’adresses utilise le [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) pour lier les données de la base de données SQL Server à un objet visuel (dans ce cas, un tableau DHTML) dans la page HTML cliente de l’application. La logique du programme VBScript piloté par les événements utilise le [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md) à :  

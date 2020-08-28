@@ -3,7 +3,7 @@ description: Prepared, exemple de propriété (VC++)
 title: Prepared, exemple de propriété (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 003f3f80e9a544e5b33929cf434f6b39855ca49d
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: fb8f0b2b269e872f8a40cbdce11388895ec5f927
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88773058"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88990020"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared, exemple de propriété (VC++)
 Cet exemple illustre la propriété [préparée](./prepared-property-ado.md) en ouvrant deux objets de [commande](./command-object-ado.md) : l’un préparé et l’autre non préparé.  

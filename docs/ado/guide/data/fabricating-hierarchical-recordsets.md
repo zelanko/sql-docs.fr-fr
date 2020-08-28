@@ -3,7 +3,7 @@ description: Fabrication de recordsets hiérarchiques
 title: Fabrication de jeux d’enregistrements hiérarchiques | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e1bf51c8d7d6db2ac898787c3a649a0ecb0610cb
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 24941f8fbf2aedb5fb61cea176ef26d3172012cc
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88806843"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991280"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>Fabrication de recordsets hiérarchiques
 L’exemple suivant montre comment créer un jeu d’enregistrements hiérarchique sans source de données sous-jacente à l’aide de la syntaxe de mise en forme des données pour définir des colonnes pour les **jeux d’enregistrements**parents, enfants et petits-enfants.  
