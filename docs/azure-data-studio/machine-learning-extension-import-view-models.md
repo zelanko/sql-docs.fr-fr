@@ -5,17 +5,17 @@ description: Découvrez comment utiliser l’extension Machine Learning pour Azu
 ms.date: 06/09/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 586136dde0c514523c96cb69aaa422fd739cf1f7
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 3c5faa821ecd9adcfcea426f88a388a6f7d10f27
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778388"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901050"
 ---
 # <a name="import-or-view-models-with-machine-learning-extension-preview-for-azure-data-studio"></a>Importer ou afficher des modèles avec l’extension Machine Learning (préversion) pour Azure Data Studio
 
