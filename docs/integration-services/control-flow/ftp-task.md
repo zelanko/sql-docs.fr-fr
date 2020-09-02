@@ -48,7 +48,7 @@ ms.locfileid: "88393549"
   
  Pour envoyer plusieurs fichiers et accéder à plusieurs fichiers et répertoires locaux, vous pouvez également exécuter la tâche FTP plusieurs fois en l'incluant dans une boucle Foreach. La boucle Foreach peut passer en revue tous les fichiers d'un répertoire à l'aide de l'énumérateur For Each File. Pour plus d’informations, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
   
- La tâche FTP prend en charge les caractères génériques *?* et *\** dans les chemins. Cela lui permet d'accéder à plusieurs fichiers. Toutefois, vous pouvez utiliser des caractères génériques seulement dans la partie du chemin d'accès qui spécifie le nom de fichier. Par exemple, « C:\MyDirectory\\*.txt » est un chemin valide, contrairement à « C:\\\**\MyText.txt ».  
+ La tâche FTP prend en charge les caractères génériques *?* et *\** dans les chemins. Cela lui permet d'accéder à plusieurs fichiers. Toutefois, vous pouvez utiliser des caractères génériques seulement dans la partie du chemin d'accès qui spécifie le nom de fichier. Par exemple, « C:\MyDirectory\\*.txt » est un chemin valide, contrairement à « C:\\\*MyText.txt ».  
   
  Vous pouvez configurer les opérations FTP de manière à ce que la tâche de système de fichiers soit arrêtée en cas d'échec des opérations ou de manière à transférer les fichiers en mode ASCII. De même, vous pouvez configurer les opérations qui envoient et reçoivent des fichiers de manière à ce que les fichiers et les répertoires de destination soient écrasés.  
   

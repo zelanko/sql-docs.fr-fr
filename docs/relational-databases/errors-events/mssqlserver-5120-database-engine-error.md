@@ -31,7 +31,7 @@ ms.locfileid: "88487029"
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DSK_FCB_FAILURE|  
-|Texte du message|Erreur de table, Impossible d'ouvrir le fichier physique "%.ls". Erreur %d du système d'exploitation : "%ls".|  
+|Texte du message|Erreur de table, Impossible d'ouvrir le fichier physique "%.*ls". Erreur %d du système d'exploitation : "%ls".|  
   
 ## <a name="explanation"></a>Explication  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas pu ouvrir un fichier de base de données.  L’erreur de système d’exploitation fournie dans le message pointe vers des raisons sous-jacentes plus spécifiques pour l’échec. Cette erreur est souvent associée à d'autres erreurs telles que [17204](mssqlserver-17204-database-engine-error.md) ou [17207](mssqlserver-17207-database-engine-error.md) .
