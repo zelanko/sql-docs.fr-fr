@@ -11,18 +11,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4b115c4249a0eded065ed95d45a7892ec1595911
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 187dcb7ca6da6802b60b36e2ae7f0fa5c66b0df1
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467541"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858100"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
-  Retourne le plan de requête pour une instruction [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sans exécuter l’instruction. Utilisez EXPLAIN pour afficher un aperçu des opérations qui nécessiteront un déplacement de données et afficher les coûts estimés des opérations de requête. `WITH RECOMMENDATIONS` s’applique à Azure SQL Data Warehouse (préversion).
+  Retourne le plan de requête pour une instruction [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sans exécuter l’instruction. Utilisez EXPLAIN pour afficher un aperçu des opérations qui nécessiteront un déplacement de données et afficher les coûts estimés des opérations de requête. `WITH RECOMMENDATIONS` s’applique à Azure SQL Data Warehouse.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -37,7 +37,7 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 
  Instruction [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sur laquelle EXPLAIN s’exécutera. *SQL_statement* peut être l’une de ces commandes : SELECT, INSERT, UPDATE, DELETE, CREATE TABLE AS SELECT, CREATE REMOTE TABLE.
 
-*WITH_RECOMMENDATIONS* (préversion)
+*WITH_RECOMMENDATIONS* 
 
 Retourner le plan de requête avec des suggestions pour optimiser les performances d’instruction SQL.  
   

@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 54216c027c01855ba5f140e1ad17accba3f9e7f9
-ms.sourcegitcommit: 71985f03656a30381b2498ac5393aaf86f670bf3
+ms.openlocfilehash: e2f225a66be811b3cafe13c0ccf89eb81700a1aa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88602204"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901569"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (préversion)
 
@@ -432,6 +432,15 @@ La commande COPY sera en disponibilité générale à la fin de cette année (20
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Existe-t-il des restrictions quant au nombre ou à la taille des fichiers ?
 Il n’existe aucune limite quant au nombre ou à la taille des fichiers ; toutefois, pour des performances optimales, nous recommandons des fichiers d’au moins 4 Mo.
 
+### <a name="are-there-any-limitations-with-copy-using-synapse-workspaces-preview"></a>Y-a-t-il des limitations d’utilisation des espaces de travail Synapse avec COPY (préversion) ?
+
+L’authentification à l’aide de Managed Identity (MSI) n’est pas prise en charge avec l’instruction COPY ou PolyBase (y compris en cas d’utilisation dans des pipelines). Vous pouvez rencontrer un message d’erreur semblable à celui-ci :
+
+*com.microsoft.sqlserver.jdbc.SQLServerException : Managed Service Identity n’a pas été activée sur ce serveur. Activez Managed Service Identity, puis réessayez.*
+
+L’authentification MSI est nécessaire lorsque le compte de stockage est associé à un réseau virtuel. Vous devez utiliser l’insertion BCP/Bulk au lieu de COPY ou de PolyBase pour charger des données si votre compte de stockage est attaché à un réseau virtuel.
+
+Cette limitation s’applique uniquement aux pools SQL appartenant à un espace de travail Synapse (préversion). Nous allons activer la prise en charge de MSI dans les espaces de travail Synapse dans une prochaine version. 
 
 Envoyez vos commentaires ou signalez vos problèmes à la liste de distribution suivante : sqldwcopypreview@service.microsoft.com
 

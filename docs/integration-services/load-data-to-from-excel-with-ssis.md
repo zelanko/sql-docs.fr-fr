@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c75779e244087072d36c041edd22d4a6fb3109b2
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 48a599580206e17131c28ecad757f11669851751
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435433"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991863"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importer des données à partir d’Excel ou exporter des données vers Excel avec SQL Server Integration Services (SSIS)
 
@@ -63,7 +63,7 @@ Téléchargez la dernière version des composants de connectivité pour Excel ic
 
 -   Si une version 32 bits d’Office est déjà installée sur l’ordinateur, vous devez installer la version 32 bits des composants. Vous devez également exécuter le package SSIS en mode 32 bits ou exécuter la version 32 bits de l’Assistant Importation et Exportation.
 
--   Si vous avez un abonnement Office 365, vous pouvez voir s’afficher un message d’erreur à l’exécution du programme d’installation. L’erreur indique que vous ne pouvez pas installer le téléchargement côte à côte avec les composants Office « Démarrer en un clic ». Pour contourner ce message d’erreur, exécutez l’installation en mode silencieux en ouvrant une fenêtre d’invite de commandes et en exécutant le fichier .EXE que vous avez téléchargé avec l’option `/quiet`. Par exemple :
+-   Si vous avez un abonnement Microsoft 365, vous pouvez voir s’afficher un message d’erreur à l’exécution du programme d’installation. L’erreur indique que vous ne pouvez pas installer le téléchargement côte à côte avec les composants Office « Démarrer en un clic ». Pour contourner ce message d’erreur, exécutez l’installation en mode silencieux en ouvrant une fenêtre d’invite de commandes et en exécutant le fichier .EXE que vous avez téléchargé avec l’option `/quiet`. Par exemple :
 
     `C:\Users\<user_name>\Downloads\AccessDatabaseEngine.exe /quiet`
 

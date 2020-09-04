@@ -18,12 +18,12 @@ ms.assetid: a86f9d6f-f242-43be-b65d-b3435b71b62a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c641b2562fa15f17bcb6ce235529916ca70a2a52
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 5a9be69bad3b4cad8265065d393bea75e107492f
+ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646319"
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "89195095"
 ---
 # <a name="create-unique-constraints"></a>Créer des contraintes uniques
 
@@ -63,9 +63,9 @@ ms.locfileid: "88646319"
   
 3.  Dans la boîte de dialogue **Index/Clés** , cliquez sur **Ajouter**.  
   
-4.  Dans la grille sous **Général**, cliquez sur **Type** et choisissez **Clé unique** dans la zone de liste déroulante située à droite de la propriété.  
+4.  Dans la grille sous **Général**, cliquez sur **Type** et choisissez **Clé unique** dans la zone de liste déroulante située à droite de la propriété, puis cliquez sur **Fermer**.  
   
-5.  Dans le menu **Fichier**, cliquez sur **Enregistrer**_nom de la table_.  
+5.  Dans le menu **Fichier**, cliquez sur **Enregistrer** _nom de la table_.  
 
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
@@ -106,7 +106,7 @@ ms.locfileid: "88646319"
   
     ```  
   
-#### <a name="to-create-a-unique-constraint-in-an-new-table"></a>Pour créer une contrainte unique sur une nouvelle table  
+#### <a name="to-create-a-unique-constraint-on-a-new-table"></a>Pour créer une contrainte unique sur une nouvelle table  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

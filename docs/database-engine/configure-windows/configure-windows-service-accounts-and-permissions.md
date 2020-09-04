@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3c231fef9f3700e5d131d15916dfbfe3e100751a
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362829"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900998"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurer les comptes de service Windows et les autorisations
 
@@ -168,14 +168,14 @@ Les comptes de service administrés, les comptes de service administrés de grou
 
 - <a name="GMSA"></a> **Comptes de service administrés de groupe**
 
-  Un compte de service administré de groupe est un compte MSA pour plusieurs serveurs. Windows gère un compte de service pour les services en cours d’exécution sur un groupe de serveurs. Active Directory met automatiquement à jour le mot de passe du compte de service administré de groupe sans redémarrer les services. Vous pouvez configurer les services SQL Server pour utiliser un principal de compte de service administré de groupe. À compter de SQL Server 2014, SQL Server prend en charge les comptes de service administrés de groupe sur les instances autonomes et SQL Server 2016 et ultérieur pour les instances de cluster de basculement et les groupes de disponibilité.
+  Un compte de service administré de groupe (gMSA) est un compte MSA pour plusieurs serveurs. Windows gère un compte de service pour les services en cours d’exécution sur un groupe de serveurs. Active Directory met automatiquement à jour le mot de passe du compte de service administré de groupe sans redémarrer les services. Vous pouvez configurer les services SQL Server pour utiliser un principal de compte de service administré de groupe. À compter de SQL Server 2014, SQL Server prend en charge les comptes de service administrés de groupe sur les instances autonomes et SQL Server 2016 et ultérieur pour les instances de cluster de basculement et les groupes de disponibilité.
 
-  Pour utiliser un compte de service administré de groupe pour SQL Server 2014 ou version ultérieure, le système d’exploitation doit être Windows Server 2012 R2 ou version ultérieure. Les serveurs avec Windows Server 2012 R2 nécessitent l’application de l’article [2998082 de la Base de connaissances](https://support.microsoft.com/kb/2998082) afin que les services puissent se connecter sans interruption immédiatement après la modification du mot de passe.
+  Pour utiliser un gMSA pour SQL Server 2014 ou version ultérieure, le système d’exploitation doit être Windows Server 2012 R2 ou version ultérieure. Les serveurs avec Windows Server 2012 R2 nécessitent l’application de l’article [2998082 de la Base de connaissances](https://support.microsoft.com/kb/2998082) afin que les services puissent se connecter sans interruption immédiatement après la modification du mot de passe.
 
   Pour plus d’informations, consultez [Comptes de service administrés de groupe](https://technet.microsoft.com/library/hh831782.aspx)
 
   > [!NOTE]
-  > Le compte de service administré de groupe doit être créé dans Active Directory par l’administrateur de domaine avant que le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne puisse l’utiliser pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+  > Le gMSA doit être créé dans Active Directory par l'administrateur de domaine avant que le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puisse l'utiliser pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
 - <a name="VA_Desc"></a>**Virtual Accounts**
 

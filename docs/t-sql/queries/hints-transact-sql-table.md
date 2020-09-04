@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d7dccda143515b801f06664d1916fbec6e2dcea3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88e4bea72d38e7c4a60bfb89d9962c58a99e4804
+ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445361"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89062328"
 ---
 # <a name="hints-transact-sql---table"></a>Indicateurs (Transact-SQL) - Table
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -72,10 +72,9 @@ ms.locfileid: "88445361"
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
-[ NOEXPAND ] {   
-    INDEX  ( index_value [ ,...n ] )   
-  | INDEX =  ( index_value )      
-  | FORCESEEK [( index_value ( index_column_name  [ ,... ] ) ) ]  
+{ NOEXPAND [ , INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> ) ]  
+  | INDEX ( <index_value> [ ,...n ] ) | INDEX = ( <index_value> )
+  | FORCESEEK [ ( <index_value> ( <index_column_name> [,... ] ) ) ] 
   | FORCESCAN  
   | FORCESEEK  
   | HOLDLOCK   
@@ -90,7 +89,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT   
-  | SPATIAL_WINDOW_MAX_CELLS = integer  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -145,15 +144,15 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 Nous vous recommandons d'utiliser des virgules entre les indicateurs de table.  
   
 > [!IMPORTANT]  
->  La séparation des indicateurs par des espaces à la place de virgules est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
+> La séparation des indicateurs par des espaces à la place de virgules est une fonctionnalité déconseillée : [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 NOEXPAND  
 Spécifie qu'aucune vue indexée n'est étendue pour permettre d'accéder aux tables sous-jacentes lorsque l'optimiseur de requête traite la requête. L'optimiseur de requête traite la vue comme une table avec un index cluster. NOEXPAND s'applique uniquement aux vues indexées. Pour plus d’informations, consultez [Utilisation de NOEXPAND](#using-noexpand).  
   
-INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
-La syntaxe INDEX() spécifie les noms ou les ID d'un ou de plusieurs index qui seront utilisés par l'optimiseur de requête lors du traitement de l'instruction. L'autre syntaxe INDEX = spécifie une seule valeur d'index. Un seul indicateur d'index par table peut être spécifié.  
+INDEX  **(** _<index\_value>_ [ **,** ... _n_ ] ) | INDEX =  ( _<index\_value>_ **)**  
+La syntaxe INDEX() spécifie les noms ou les ID d'un ou de plusieurs index qui seront utilisés par l'optimiseur de requête lors du traitement de l'instruction. L'autre syntaxe `INDEX =` spécifie une seule valeur d'index. Un seul indicateur d'index par table peut être spécifié.  
   
-S'il existe un index cluster, INDEX(0) force l'analyse de ce dernier, tandis que INDEX(1) en force l'analyse ou la recherche. S'il n'existe pas d'index cluster, INDEX(0) force l'analyse d'une table et INDEX(1) est interprété comme une erreur.  
+S'il existe un index cluster, `INDEX(0)` force l'analyse de ce dernier, tandis que `INDEX(1)` en force l'analyse ou la recherche. S'il n'existe pas d'index cluster, `INDEX(0)` force l'analyse d'une table et `INDEX(1)` est interprété comme une erreur.  
   
  Si plusieurs index sont utilisés dans une seule liste d'indicateurs, les doublons sont ignorés et les autres index répertoriés sont utilisés pour récupérer les lignes de la table. L'ordre des index dans l'indicateur d'index est très important. Un indicateur associé à plusieurs index met également en œuvre l'opérateur logique AND et l'optimiseur de requête applique autant de conditions que possible sur chaque index accessible. Si la collection d'index avec indicateur n'inclut pas toutes les colonnes référencées par la requête, une extraction est effectuée pour récupérer les colonnes restantes après que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] SQL Server a récupéré toutes les colonnes indexées.  
   
@@ -181,7 +180,7 @@ Spécifie l'insertion d'une valeur par défaut éventuelle de colonne de table, 
   
 Pour un exemple d’utilisation de cet indicateur dans une instruction INSERT ... SELECT * FROM OPENROWSET(BULK...), consultez [Conserver les valeurs NULL ou utiliser les valeurs par défaut lors de l’importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
-FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
+FORCESEEK [ **(** _<index\_value>_ **(** _<index\_column\_name>_ [ **,** ... _n_ ] **))** ]  
 Indique que l'optimiseur de requête doit utiliser uniquement une opération de recherche d'index comme chemin d'accès aux données dans la table ou la vue. 
 
 > [!NOTE]
@@ -234,7 +233,7 @@ Pour les tables et les index partitionnés, FORCESCAN est appliqué après que l
 L’indicateur FORCESCAN est soumis aux restrictions suivantes :  
 -   L'indicateur ne peut pas être spécifié pour une table qui est la cible d'une instruction INSERT, UPDATE ou DELETE.  
 -   L'indicateur ne peut pas être utilisé avec plusieurs indicateurs d'index.  
--   L'indicateur empêche l'optimiseur de considérer tout index spatial ou XML sur la table.  
+-   L'indicateur empêche l'optimiseur de requête de considérer tout index spatial ou XML sur la table.  
 -   L'indicateur ne peut pas être spécifié pour une source de données distante.  
 -   L'indicateur ne peut pas être spécifié en association avec l'indicateur FORCESEEK.  
   
@@ -331,9 +330,9 @@ LEFT JOIN dbo.[Order History] AS oh
     ON c.customer_id=oh.customer_id;  
 ```  
   
-SPATIAL_WINDOW_MAX_CELLS = *integer*  
+SPATIAL_WINDOW_MAX_CELLS = *<integer\_value>*  
 **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
-Spécifie le nombre maximal de cellules à utiliser pour le pavage d'un objet géométrique ou géographique. *number* est une valeur comprise entre 1 et 8192.  
+Spécifie le nombre maximal de cellules à utiliser pour le pavage d'un objet géométrique ou géographique. *<integer\_value>* est une valeur comprise entre 1 et 8 192.  
   
 Cette option permet de paramétrer précisément l'heure d'exécution de la requête en ajustant le compromis entre la durée d'exécution du filtre primaire et du filtre secondaire. Un nombre élevé réduit la durée d'exécution du filtre secondaire, mais augmente celle du filtre de l'exécution primaire, tandis qu'un nombre plus petit décroît la durée d'exécution du filtre primaire, mais augmente celle de l'exécution du filtre secondaire. Avec des données spatiales plus denses, un nombre élevé doit aboutir à une durée d'exécution plus rapide en donnant une meilleure approximation avec le filtre primaire et en réduisant la durée d'exécution du filtre secondaire. Avec des données éparses, un nombre inférieur décroît la durée d'exécution du filtre primaire.  
   
@@ -393,9 +392,9 @@ GO
 L'optimiseur de requête ne prendra pas en compte un indicateur d'index si les options SET n'ont pas les valeurs requises pour les index filtrés. Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="using-noexpand"></a>Utilisation de NOEXPAND  
-NOEXPAND s’applique uniquement aux *vues indexées*. Une vue indexée comporte un index cluster unique, créé sur cette dernière. Si une requête contient des références à des colonnes présentes à la fois dans une vue indexée et dans des tables de base, et que l'optimiseur de requête préconise l'utilisation de la vue indexée comme méthode d'exécution de la requête, il utilise alors l'index sur la vue. Cette fonctionnalité est appelée *correspondance de vue indexée*. Dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l’utilisation automatique d’une vue indexée par l’optimiseur de requête est prise en charge uniquement dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+NOEXPAND s’applique uniquement aux *vues indexées*. Une vue indexée comporte un index cluster unique, créé sur cette dernière. Si une requête contient des références à des colonnes présentes à la fois dans une vue indexée et dans des tables de base, et que l'optimiseur de requête préconise l'utilisation de la vue indexée comme méthode d'exécution de la requête, il utilise alors l'index sur la vue. Cette fonctionnalité est appelée *correspondance de vue indexée*. Dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, l’utilisation automatique d’une vue indexée par l’optimiseur de requête est prise en charge uniquement dans certaines éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md), [Fonctionnalités prises en charge par les éditions de SQL Server 2017](../../SQL-server/editions-and-components-of-SQL-server-2017.md) et [Fonctionnalités prises en charge par les éditions de SQL Server 2019](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
-Toutefois, pour que l'optimiseur prenne en considération les vues indexées pour la mise en correspondance ou utilise une vue indexée référencée avec l'indicateur NOEXPAND, les options SET suivantes doivent avoir pour valeur ON.  
+Toutefois, pour que l'optimiseur de requête prenne en considération les vues indexées pour la mise en correspondance ou utilise une vue indexée référencée avec l'indicateur NOEXPAND, les options SET suivantes doivent avoir pour valeur ON.  
 
 > [!NOTE]
 > [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] prend en charge l’utilisation automatique de vues indexées sans spécifier l’indicateur NOEXPAND.
@@ -411,13 +410,13 @@ Toutefois, pour que l'optimiseur prenne en considération les vues indexées pou
 
 En outre, l'option NUMERIC_ROUNDABORT doit être désactivée (OFF).  
   
- Pour contraindre l'optimiseur à utiliser un index pour une vue indexée, spécifiez l'option NOEXPAND. Cet indicateur peut être utilisé uniquement si la vue est également nommée dans la requête. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas d'indicateur pour imposer l'utilisation d'une vue indexée particulière dans une requête qui ne nomme pas directement la vue dans la clause FROM ; toutefois, l'optimiseur de requête admet l'utilisation de vues indexées même si elles ne sont pas référencées directement dans la requête. SQL Server crée automatiquement des statistiques sur une vue indexée uniquement quand un indicateur de table NOEXPAND est utilisé. L’omission de cet indicateur peut entraîner l’affichage d’avertissements de plan d’exécution concernant des statistiques manquantes, qui ne peuvent pas être résolus en créant manuellement des statistiques. Lors de l’optimisation de requête, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les statistiques d’affichage qui ont été créées automatiquement ou manuellement quand la requête référence directement la vue et que l’indicateur NOEXPAND est utilisé.    
+ Pour contraindre l'optimiseur de requête à utiliser un index pour une vue indexée, spécifiez l'option NOEXPAND. Cet indicateur peut être utilisé uniquement si la vue est également nommée dans la requête. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas d'indicateur pour imposer l'utilisation d'une vue indexée particulière dans une requête qui ne nomme pas directement la vue dans la clause FROM ; toutefois, l'optimiseur de requête admet l'utilisation de vues indexées même si elles ne sont pas référencées directement dans la requête. La [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crée automatiquement des statistiques sur une vue indexée uniquement quand un indicateur de table NOEXPAND est utilisé. L’omission de cet indicateur peut entraîner l’affichage d’avertissements de plan d’exécution concernant des statistiques manquantes, qui ne peuvent pas être résolus en créant manuellement des statistiques. Lors de l’optimisation de requête, la [!INCLUDE[ssde_md](../../includes/ssde_md.md)] utilise les statistiques d’affichage qui ont été créées automatiquement ou manuellement quand la requête référence directement la vue et que l’indicateur NOEXPAND est utilisé.    
   
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Utilisation d'un indicateur de table comme indicateur de requête  
  Un *indicateur de table* peut également être spécifié comme indicateur de requête avec la clause OPTION (TABLE HINT). Nous vous recommandons d’utiliser un indicateur de table comme indicateur de requête uniquement dans le contexte d’un [repère de plan](../../relational-databases/performance/plan-guides.md). Pour les requêtes ad hoc, spécifiez ces indicateurs uniquement comme indicateurs de table. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="permissions"></a>Autorisations  
- Les indicateurs KEEPIDENTITY, IGNORE_CONSTRAINTS et IGNORE_TRIGGERS requièrent des autorisations ALTER sur la table.  
+ Les indicateurs KEEPIDENTITY, IGNORE_CONSTRAINTS et IGNORE_TRIGGERS requièrent des autorisations `ALTER` sur la table.  
   
 ## <a name="examples"></a>Exemples  
   

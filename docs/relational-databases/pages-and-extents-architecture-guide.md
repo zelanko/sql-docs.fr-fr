@@ -15,12 +15,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8640f7adc7e5da1e5095e44d16d201396c0924
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: dbee5b80fdb6f74ae3840f7728ae0eab2d24c28d
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482550"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991850"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -88,14 +88,23 @@ Les extensions constituent l'unité de base dans laquelle l'espace est géré. U
 * Les extensions **uniformes** appartiennent à un objet unique ; les huit pages de l’extension ne peuvent être utilisées que par l’objet propriétaire.
 * Les extensions **mixtes** sont partagées par huit objets au plus. Chacune des huit pages de l'extension peut être la propriété d'un objet différent.
 
-Jusqu’à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] compris, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’affecte pas d’étendues complètes aux tables possédant de petites quantités de données. Une nouvelle table ou un nouvel index affecte en général des pages issues d'extensions mixtes. Lorsque la table ou l'index atteint huit pages, il bascule à l'utilisation des extensions uniformes pour les allocations suivantes. Si vous créez un index sur une table existante qui possède un nombre de lignes suffisant pour générer huit pages dans l'index, toutes les allocations à l'index se trouvent dans des extensions uniformes. Toutefois, à partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], l’option par défaut pour toutes les allocations dans la base de données correspond aux extensions uniformes.
+![Étendues uniformes et mixtes](../relational-databases/media/extents.gif)
 
-![Étendues](../relational-databases/media/extents.gif)
+Jusqu’à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] compris, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’affecte pas d’étendues complètes aux tables possédant de petites quantités de données. Une nouvelle table ou un nouvel index affecte en général des pages issues d'extensions mixtes. Lorsque la table ou l'index atteint huit pages, il bascule à l'utilisation des extensions uniformes pour les allocations suivantes. Si vous créez un index sur une table existante qui possède un nombre de lignes suffisant pour générer huit pages dans l'index, toutes les allocations à l'index se trouvent dans des extensions uniformes. 
+
+À partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la valeur par défaut pour la plupart des allocations dans une base de données utilisateur et tempdb consiste à utiliser des étendues uniformes, à l’exception des allocations appartenant aux huit premières pages d’une [chaîne IAM](#IAM). Les allocations pour les bases de données MASTER, msdb et model conservent toujours le comportement précédent. 
 
 > [!NOTE]
 > Jusqu'à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] compris, l’indicateur de trace 1118 peut être utilisé pour modifier l’allocation par défaut afin de toujours utiliser des extensions uniformes. Pour plus d’informations sur cet indicateur de trace, consultez [DBCC TRACEON - Indicateurs de Trace](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).   
 >   
-> À partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la fonctionnalité fournie par l’indicateur de trace 1118 est automatiquement activée pour TempDB. Pour les bases de données utilisateur, ce comportement est contrôlé par l’option `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, avec la valeur par défaut définie sur OFF, et l’indicateur de trace 1118 n’a aucun effet. Pour plus d’informations, consultez [Options SET d’ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+> À partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la fonctionnalité fournie par l’indicateur de trace 1118 est automatiquement activée pour tempdb. Pour les bases de données utilisateur, ce comportement est contrôlé par l’option `SET MIXED_PAGE_ALLOCATION` de `ALTER DATABASE`, avec la valeur par défaut définie sur OFF, et l’indicateur de trace 1118 n’a aucun effet. Pour plus d’informations, consultez [Options SET d’ALTER DATABASE (Transact-SQL)](../t-sql/statements/alter-database-transact-sql-set-options.md).
+
+À partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la fonction système `sys.dm_db_database_page_allocations` peut fournir des informations d’allocation de page pour une base de données, une table, un index et une partition.
+
+> [!IMPORTANT]
+> La fonction système `sys.dm_db_database_page_allocations` n’est pas documentée et est susceptible d’être modifiée. La compatibilité n'est pas garantie. 
+
+À partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], la fonction système [sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md) est disponible et retourne des informations sur une page d’une base de données. La fonction retourne une ligne qui contient les informations d’en-tête de la page, notamment object_id, index_id et partition_id. Cette fonction rend superflue l’utilisation de `DBCC PAGE` dans la plupart des cas.
 
 ## <a name="managing-extent-allocations-and-free-space"></a>Gestion des allocations des extensions et de l'espace libre 
 
@@ -141,7 +150,7 @@ Une nouvelle page PFS, GAM ou SGAM est ajoutée au fichier de données pour chaq
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## <a name="managing-space-used-by-objects"></a>Gestion de l’espace utilisé par les objets 
+## <a name="managing-space-used-by-objects"></a><a name="IAM"></a> Gestion de l’espace utilisé par les objets 
 
 Une page **IAM (Index Allocation Map)** mappe les étendues d’une portion de 4 Go d’un fichier de base de données utilisées par une unité d’allocation. Une unité d'allocation peut être de trois types :
 
@@ -149,10 +158,10 @@ Une page **IAM (Index Allocation Map)** mappe les étendues d’une portion de 4
     Contient une partition d'un segment ou d'un index.
 
 - LOB_DATA   
-   Contient des types de données d’objets volumineux (LOB), tels que xml, varbinary(max) et varchar(max).
+   Contient des types de données d’objets volumineux (LOB), tels que XML, VARBINARY(max) et VARCHAR(max).
 
 - ROW_OVERFLOW_DATA   
-   Contient des données de longueur variable stockées dans des colonnes varchar, nvarchar, varbinary ou sql_variant qui dépassent le seuil de 8 060 octets par ligne. 
+   Contient des données de longueur variable stockées dans des colonnes VARCHAR, NVARCHAR, VARBINARY ou SQL_VARIANT qui dépassent le seuil de 8 060 octets par ligne. 
 
 Chaque partition d'un segment ou d'un index contient au moins une unité d'allocation IN_ROW_DATA. Elle peut aussi contenir une unité d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, selon le schéma de segment ou d'index.
 
@@ -160,10 +169,10 @@ Une page IAM couvre une plage de 4 Go dans un fichier, comme une page GAM ou SGA
 
 ![iam_pages](../relational-databases/media/iam-pages.gif)
 
-Les pages IAM sont allouées au fur et à mesure des besoins pour chaque unité d'allocation et elles sont placées aléatoirement dans le fichier. La vue système, sys.system_internals_allocation_units, pointe sur la première page IAM d’une unité d’allocation. Toutes les pages IAM de cette unité d'allocation sont liées entre elles et forment une chaîne.
+Les pages IAM sont allouées au fur et à mesure des besoins pour chaque unité d'allocation et elles sont placées aléatoirement dans le fichier. La vue système `sys.system_internals_allocation_units` pointe vers la première page IAM d’une unité d’allocation. Toutes les pages IAM de cette unité d'allocation sont liées entre elles et forment une chaîne IAM.
 
 > [!IMPORTANT]
-> La vue système `sys.system_internals_allocation_units` est destinée exclusivement à un usage interne et elle est susceptible de changer. La compatibilité n'est pas garantie. Cette vue n’est pas disponible dans Azure SQL Database. 
+> La vue système `sys.system_internals_allocation_units` est destinée exclusivement à un usage interne et elle est susceptible de changer. La compatibilité n'est pas garantie. Cette vue n’est pas disponible dans [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)]. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
@@ -192,5 +201,6 @@ L'intervalle entre les pages DCM et les pages BCM est le même que l'intervalle 
 ## <a name="see-also"></a>Voir aussi
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
 [Segments &#40;tables sans index cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[sys.dm_db_page_info](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)     
 [Lecture de pages](../relational-databases/reading-pages.md)   
 [Écritures de pages](../relational-databases/writing-pages.md)   
