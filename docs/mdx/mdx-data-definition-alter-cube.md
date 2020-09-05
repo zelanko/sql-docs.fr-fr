@@ -9,21 +9,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 470a71cb88a6ea35ddadcc53e83fe60ebd369bbb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97d0653a08d2b08b0cafa5ae23b329c6193b5181
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494892"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480607"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>Définition de données MDX - ALTER CUBE
 
 
-  Modifie la structure d'un cube spécifié, en général pour prendre en charge l'écriture différée. Pour plus d’informations sur l’utilisation de l’écriture différée dans une application, consultez ce billet de blog : [création d’une application d’écriture différée avec Analysis Services (blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Modifie la structure d'un cube spécifié, en général pour prendre en charge l'écriture différée. Pour plus d’informations sur l’utilisation de l’écriture différée dans une application, consultez ce billet de blog : [création d’une application d’écriture différée avec Analysis Services (blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services)  
   
  Notez que les écritures différées de dimensions simultanées peuvent provoquer un blocage : la première écriture différée est bloquée par une validation en raison du verrou partagé conservé par la deuxième écriture différée. Aucune erreur n'est générée dans ce cas, mais aucune des deux d'opération ne peut progresser. Les deux opérations expirent et les modifications sont supprimées.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -114,7 +114,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  Expression de chaîne valide qui précise un nom de membre ou une clé de membre.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  Si la clause WITH DESCENDANTS n'est pas utilisée, les enfants d'un membre supprimé deviennent les enfants du parent de ce dernier. Si la clause WITH DESCENDANTS n'est pas employée, tous les descendants et leurs lignes dans la table de dimension sont également supprimés.  
   
 > [!NOTE]  
@@ -130,7 +130,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Expression MDX valide qui retourne un membre unique.  
   
-### <a name="remarks"></a>Notes  
+### <a name="remarks"></a>Remarques  
  L'expression MDX spécifiée peut être statique ou dynamique.  
   
 ## <a name="moving-a-dimension-member"></a>Déplacement d'un membre de dimension  
