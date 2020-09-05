@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b85a6f50b7e0759c5b691389c102236ce3df082b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487932"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480400"
 ---
 # <a name="create-a-domain-rule"></a>Créer une règle de domaine
 
@@ -127,7 +127,7 @@ ms.locfileid: "88487932"
 |La valeur est date/heure|Seules les valeurs ayant un type de données date/heure SQL Server sont valides. Cela inclut datetime, time, date, etc.|Exemple d'opérande : N/A<br /><br /> Valeurs valides : 1916-06-04 ; 1916-06-04 18:24:24 ; 21 mars 2001, 5/18/2011 ; 18:24:24<br /><br /> Valeurs non valides : Mars 213, 2006|  
 |La valeur se trouve dans|Seules les valeurs qui sont dans l'ensemble de l'opérande sont valides.<br /><br /> Pour écrire les valeurs de l'ensemble, cliquez dans la zone de texte de l'opérande, entrez la première valeur, appuyez sur ENTRÉE, entrez la seconde valeur, répétez ces étapes pour toutes les valeurs que vous souhaitez entrer, puis cliquez de nouveau dans la zone de texte de l'opérande. DQS ajoute une virgule entre les valeurs de l'ensemble. Si vous entrez une chaîne unique avec des virgules et aucun retour chariot (par exemple, « A1, B1 »), DQS considère cette chaîne comme une valeur unique dans l’ensemble.|Exemple d'opérande : [A1, B1]<br /><br /> Valeurs valides : A1, B1<br /><br /> Valeurs non valides : AA, 11|  
 |La valeur ne se trouve pas dans|Seules les valeurs qui ne se trouvent pas dans l'ensemble de l'opérande sont valides.|Exemple d'opérande : [A1, B1]<br /><br /> Valeurs valides : AA, 11<br /><br /> Valeurs non valides : A1, B1|  
-|La valeur correspond au modèle|Seules les valeurs qui correspondent au modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.<br /><br /> Toute lettre (A…Z) peut être utilisée comme modèle pour toute lettre ; respecte la casse. Tout chiffre (0…9) peut être utilisé comme modèle pour tout chiffre. Tout caractère spécial, sauf une lettre ou un chiffre, peut être utilisé comme modèle pour lui-même. Les crochets, [], définissent la correspondance facultative.|Exemple d'opérande : AA:000 (un modèle de deux caractères *quelconques* suivis de deux-points (:), puis suivis par trois chiffres *quelconques* .<br /><br /> Valeurs valides : AB:012, df:257<br /><br /> Valeurs non valides : abc:123, FJ-369<br /><br /> Pour plus d'informations et des exemples sur les règles de modèle dans DQS, consultez [Correspondance de modèle dans les règles de domaine DQS](https://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx).|  
+|La valeur correspond au modèle|Seules les valeurs qui correspondent au modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.<br /><br /> Toute lettre (A…Z) peut être utilisée comme modèle pour toute lettre ; respecte la casse. Tout chiffre (0…9) peut être utilisé comme modèle pour tout chiffre. Tout caractère spécial, sauf une lettre ou un chiffre, peut être utilisé comme modèle pour lui-même. Les crochets, [], définissent la correspondance facultative.|Exemple d'opérande : AA:000 (un modèle de deux caractères *quelconques* suivis de deux-points (:), puis suivis par trois chiffres *quelconques* .<br /><br /> Valeurs valides : AB:012, df:257<br /><br /> Valeurs non valides : abc:123, FJ-369<br /><br /> Pour plus d'informations et des exemples sur les règles de modèle dans DQS, consultez [Correspondance de modèle dans les règles de domaine DQS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/pattern-matching-in-dqs-domain-rules/ba-p/388103).|  
 |La valeur ne correspond pas au modèle|Seules les valeurs qui ne correspondent pas au modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.|Exemple d'opérande : A1 (la valeur ne doit pas correspondre à un modèle d'un caractère *quelconque* , suivi par un chiffre *quelconque* ).<br /><br /> Valeurs valides : AB1, A, A:5<br /><br /> Valeurs non valides : B7, c9|  
 |La valeur contient le modèle|Seules les valeurs qui contiennent le modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.|Exemple d'opérande : AA-12 (la valeur contient un modèle de deux caractères *quelconques* suivis d'un tiret (-), qui est encore suivi de deux chiffres *quelconques* ).<br /><br /> Valeurs valides : AAA-01, ab-975<br /><br /> Valeur non valide : A7, AA-6, C-45, AA ; 98|  
 |La valeur ne contient pas le modèle|Seules les valeurs qui ne contiennent pas le modèle de caractères de l'opérande sont valides.|Exemple d'opérande : AB-12 (la valeur ne doit pas contenir un modèle de deux caractères *quelconques* suivis d'un tiret (-), qui est encore suivi de deux chiffres *quelconques* ).<br /><br /> Valeurs valides : A7, AA-6, C-45, aa;98<br /><br /> Valeur non valide : AAA-01, ab-975|  
