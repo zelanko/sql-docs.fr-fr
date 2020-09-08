@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_profileaccount_sp
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 5d24b5ac22b944fde36f9588036c78698b570ad8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d5cc2643440544a3b1e65bc6fbb07df0b95e5594
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488992"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89525664"
 ---
 # <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Supprime un compte d'un profil de messagerie de base de données.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +77,7 @@ EXECUTE msdb.dbo.sysmail_delete_profileaccount_sp
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Database Mail](../../relational-databases/database-mail/database-mail.md)   
+ [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)   
  [Créer un compte Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Objets de configuration Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Database Mail des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
