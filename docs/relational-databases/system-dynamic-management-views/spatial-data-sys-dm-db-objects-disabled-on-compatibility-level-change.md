@@ -18,22 +18,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10abd1a344912dd88fbfec60ecd307f80a5373cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f4779675cd37f6f49f90ab01fa17e5f5e9259260
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419833"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89519033"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Données spatiales-sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Répertorie les index et les contraintes qui seront désactivés suite à la modification du niveau de compatibilité dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les index et les contraintes qui contiennent des colonnes calculées persistantes dont les expressions utilisent des types définis par l'utilisateur spatiaux sont désactivés après une mise à niveau ou une modification du niveau de compatibilité. Utilisez cette fonction de gestion dynamique pour déterminer l'impact d'un changement de niveau de compatibilité.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
