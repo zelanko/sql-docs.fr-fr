@@ -16,20 +16,20 @@ apitype: MOFDef
 helpviewer_keywords:
 - NumberOfFlags property
 ms.assetid: 7a656644-2154-419f-9787-99877f597770
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 39d7143082e4d146f7c9c0d4c78e12ddfdecd579
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9b56924909094c7bf99281118a1c4540dfa20129
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418893"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89522409"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>Propriété NumberOfFlags (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nombre d’options d’indicateur requises par le protocole réseau client spécifié par la [méthode SetOrderValue (classe ClientNetworkProtocol)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
