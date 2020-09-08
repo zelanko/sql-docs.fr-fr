@@ -16,20 +16,20 @@ apitype: MOFDef
 helpviewer_keywords:
 - GeneralFlags property
 ms.assetid: 36faf960-e49b-4866-bce0-f8bbf50fd225
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 335626f85e25380084fe312a7b5f61a8a3174cb4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a5c517f03f4d7634d51f09ecec19507d4511aba3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427221"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89516920"
 ---
 # <a name="generalflags-property-sinstance-class"></a>Propriété GeneralFlags (classe SInstance)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient les indicateurs généraux associés à une instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

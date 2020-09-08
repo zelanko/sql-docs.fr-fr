@@ -17,16 +17,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 804b9828ae2a1359075cce2db4077918b0294b59
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c316d1f87b76387ebf382754970a6b9dc1ab609f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498332"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89517655"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88498332"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |class|**entier** NON NULL|Classe de l'objet qui sera affecté :<br /><br /> **1** = contrainte<br /><br /> **7** = index et segments de mémoire|  
-|class_desc|**nvarchar (60)** NON NULL|Description de la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **ÉVALUER**|  
+|class_desc|**nvarchar (60)** NON NULL|Description de la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**entier** NON NULL|ID d'objet de la contrainte, ou ID d'objet de la table contenant l'index ou le segment de mémoire.|  
 |minor_id|**entier** NUL|**NULL** pour les contraintes<br /><br /> Index_id pour les index et les segments|  
 |dependency|**nvarchar (60)** NON NULL|Description de la dépendance qui provoque l'impact sur une contrainte ou un index. La valeur est également utilisée pour les avertissements générés pendant la mise à niveau.<br /><br /> Exemples :<br /><br /> **espace** (pour intrinsèque)<br /><br /> **geometry** (pour UDT système)<br /><br /> **geography::Parse** (pour méthode UDT système)|  

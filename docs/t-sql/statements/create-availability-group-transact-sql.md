@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65d05786dcd0cd7bc42834de6da2df133fee7fab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db4140d13fa0e521264a70bfcfb2363260327bdb
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88458831"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480443"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 
@@ -155,7 +155,7 @@ AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NO
   
 |Level|Condition d'échec|  
 |-----------|-----------------------|  
-|1|Spécifie qu'un basculement automatique doit être initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> -Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en panne.<br /><br /> -Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n’est reçu de l’instance de serveur. Pour plus d’informations, consultez [How It Works: SQL Server Always On Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx).|  
+|1|Spécifie qu'un basculement automatique doit être initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> -Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en panne.<br /><br /> -Le bail du groupe de disponibilité pour la connexion au cluster WSFC expire car aucun accusé de réception n’est reçu de l’instance de serveur. Pour plus d’informations, consultez [How It Works: SQL Server Always On Lease Timeout](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout).|  
 |2|Spécifie qu'un basculement automatique doit être initialisé lorsque l'une des conditions suivantes se produit :<br /><br /> -L’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne se connecte pas au cluster et le seuil HEALTH_CHECK_TIMEOUT spécifié par l’utilisateur pour le groupe de disponibilité est dépassé.<br /><br /> -Le réplica de disponibilité est dans un état d’échec.|  
 |3|Spécifie qu'un basculement automatique doit être initialisé sur les erreurs internes critiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles que les verrouillages spinlock orphelins, les violations graves d'accès en écriture, ou en cas de vidages trop importants.<br /><br /> Il s'agit du comportement par défaut.|  
 |4|Spécifie qu'un basculement automatique doit être initialisé sur les erreurs internes modérées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], telles qu'une condition persistante de mémoire insuffisante dans le pool de ressources interne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

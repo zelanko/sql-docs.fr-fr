@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e696c5f44059f47af6f4b27f030c2979a25c1b6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496918"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480855"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -440,7 +440,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } Spécifie l
 L’espace total utilisé par les mémoires tampons est déterminé par : `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
-> Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
+> Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition).
 
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
 
@@ -1057,7 +1057,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } Spécifie l
 L’espace total utilisé par les mémoires tampons est déterminé par : `BUFFERCOUNT * MAXTRANSFERSIZE`.
 
 > [!NOTE]
-> Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx).
+> Pour des informations importantes sur l’utilisation de l’option `BUFFERCOUNT`, consultez le blog [Incorrect BufferCount data transfer option can lead to OOM condition](https://docs.microsoft.com/archive/blogs/sqlserverfaq/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition).
 
 MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Spécifie la plus grande unité de transfert, en octets, à utiliser entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le support de sauvegarde. Les valeurs possibles sont les multiples de 65536 octets (64 Ko), dans la limite de 4194304 octets (4 Mo).
 
