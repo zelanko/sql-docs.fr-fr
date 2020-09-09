@@ -9958,10 +9958,16 @@
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
         - name: Containers
           items:
-            - name: Configurer des conteneurs Docker
-              href: linux/sql-server-linux-configure-docker.md
+            - name: Déployer et se connecter à des conteneurs
+              href: linux/sql-server-linux-docker-container-deployment.md
+            - name: Configurer et personnaliser des conteneurs
+              href: linux/sql-server-linux-docker-container-configure.md
+            - name: Sécurité du conteneur
+              href: linux/sql-server-linux-docker-container-security.md
             - name: Configurer Docker pour MSDTC
               href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: Résoudre les problèmes liés aux conteneurs Docker
+              href: linux/sql-server-linux-docker-container-troubleshooting.md
         - name: Développer
           href: linux/sql-server-linux-develop-overview.md
           items:
