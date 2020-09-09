@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_can_tlog_be_applied
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4e4596cfab5bb7a272e29b2d2749e38c9f38ddaf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e45af0f3817bdbc036816233e468995209bec622
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464465"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548206"
 ---
 # <a name="sp_can_tlog_be_applied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Vérifie si une sauvegarde du journal des transactions peut être appliquée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sp_can_tlog_be_applied** nécessite que la base de données soit dans l’état RESTORING.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

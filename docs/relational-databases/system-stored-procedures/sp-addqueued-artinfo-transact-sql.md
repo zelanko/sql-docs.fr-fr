@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqueued_artinfo
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 22c1c38828ab6f1857d64136a402752b110a214e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 16709ac2b02acf8641661831c4aee831ef95bc19
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469804"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548320"
 ---
 # <a name="sp_addqueued_artinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88469804"
   
  Crée la table [MSsubscription_articles](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md) sur l’abonné utilisé pour suivre les informations d’abonnement de l’article (mise à jour en attente et mise à jour immédiate avec mise à jour en file d’attente comme basculement). Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

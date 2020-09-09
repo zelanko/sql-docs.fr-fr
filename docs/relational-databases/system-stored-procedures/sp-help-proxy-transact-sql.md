@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ab6a1a976dd70e991b36f51429a96d0be425b152
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0125bee2811495eefc015e6be65d30b398edeaf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481177"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549668"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Répertorie les informations d'un ou plusieurs serveurs proxy.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,7 @@ sp_help_proxy
 |Instantané|Agent d'instantané de réplication|  
 |LogReader|Agent de lecture du journal des réplications|  
 |Distribution|Agent de distribution de réplication|  
-|Fusionner|Replication Merge Agent|  
+|Fusionner (Merge)|Replication Merge Agent|  
 |QueueReader|Agent de lecture de la file d'attente de réplication|  
 |ANALYSISQUERY|Commandes Analysis Services|  
 |ANALYSISCOMMAND|Requête Analysis Services|  
@@ -80,7 +80,7 @@ sp_help_proxy
 |**credential_identity**|**sysname**|Nom du domaine Microsoft Windows et nom d'utilisateur pour les informations d'identification associées au serveur proxy.|  
 |**activé**|**tinyint**|Indique si ce serveur proxy est activé. { **0** = non activé, **1** = activé}|  
 |**description**|**nvarchar(1024)**|Description de ce serveur proxy.|  
-|**user_sid**|**varbinary (85)**|Numéro d'identification de sécurité (SID) Windows de l'utilisateur Windows pour ce serveur proxy.|  
+|**user_sid**|**varbinary(85)**|Numéro d'identification de sécurité (SID) Windows de l'utilisateur Windows pour ce serveur proxy.|  
 |**credential_id**|**int**|Identifiant des informations d'identification associées à ce serveur proxy.|  
 |**credential_identity_exists**|**int**|Indique si l'identifiant des informations d'identification existe. { 0 = inexistant, 1 = existant }|  
   

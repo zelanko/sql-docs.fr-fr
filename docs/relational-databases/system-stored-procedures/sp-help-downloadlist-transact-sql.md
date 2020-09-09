@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fb53702ec86f30c81802b95b77c61b71037b402e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2196e6fbbbd0089c7e65592bfc4ebfd17bb14239
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469389"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89549727"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Répertorie toutes les lignes de la table système **sysdownloadlist** pour le travail fourni, ou toutes les lignes si aucun travail n’est spécifié.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -63,7 +63,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**INSERT**|Opération qui insère un travail ou actualise un travail existant. Cette opération comporte toutes les étapes et planifications du travail, le cas échéant.|  
 |**RE-ENLIST**|Opération serveur qui fait renvoyer les informations d'inscription par le serveur cible, y compris la fréquence d'interrogation et le fuseau horaire, au domaine multiserveur. Le serveur cible télécharge également les détails de l' **opérateur MSXOperator** .|  
 |**SET-POLL**|Opération de serveur qui définit l'intervalle, en secondes, que doivent respecter les serveurs cibles pour l'interrogation du domaine multiserveur. S’il est spécifié, la *valeur* est interprétée comme la valeur de l’intervalle requis et peut être comprise entre **10** et **28 800**.|  
-|**ACTIVER**|Opération de travail qui requiert le début de l'exécution d'un travail.|  
+|**ÉCRAN D’ACCUEIL**|Opération de travail qui requiert le début de l'exécution d'un travail.|  
 |**ERREUR**|Opération de travail qui nécessite l'interruption de l'exécution d'un travail.|  
 |**SYNC-TIME**|Opération de serveur qui commande au serveur cible de synchroniser son horloge système avec le domaine multiserveur. Cette opération étant coûteuse, il est préférable de l'exécuter le plus rarement possible.|  
 |**UPDATE**|Opération de travail qui met à jour uniquement les informations **sysjobs** pour un travail, pas les étapes de travail ou les planifications. Est appelé automatiquement par **sp_update_job**.|  

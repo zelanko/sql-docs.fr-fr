@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscription
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1cf622748da040060681dac848273238f73c66a5
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918936"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548332"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
@@ -137,7 +137,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|true|L'Agent de distribution n'envoie pas à l'abonné ses propres transactions. Utilisé avec la réplication transactionnelle bidirectionnelle. Pour plus d’informations, consultez [réplication transactionnelle bidirectionnelle](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|true|L'Agent de distribution n'envoie pas à l'abonné ses propres transactions. Utilisé avec la réplication transactionnelle bidirectionnelle. Pour plus d’informations, voir [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|L'Agent de distribution renvoie à l'abonné ses propres transactions.|  
 |NULL (par défaut)|Prend automatiquement la valeur true pour un Abonné [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et false pour un Abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -163,7 +163,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|1|First|  
+|1|Premier|  
 |2|Seconde|  
 |4|Third|  
 |8|Quatrième|  
@@ -281,7 +281,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0 (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Côté|  
+|0 (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Côté|  
 |1|Serveur de la source de données ODBC.|  
 |2|Base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Fournisseur OLE DB|  
@@ -319,7 +319,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="example"></a> Exemple  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Créer un abonnement pour un abonné non-SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [S’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   

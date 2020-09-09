@@ -17,21 +17,21 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpmonitoring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a085cf87-269f-454a-a146-21f80a113b72
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f6c01cf610764cc02f77ac1f035319fb1598687b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dd82681731ab29068c2a951850da9f2ad225742b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493360"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548157"
 ---
 # <a name="sp_dbmmonitorhelpmonitoring-transact-sql"></a>sp_dbmmonitorhelpmonitoring (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne la période de mise à jour actuelle.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -41,10 +41,10 @@ sp_dbmmonitorhelpmonitoring
 ```  
   
 ## <a name="arguments"></a>Arguments  
- None  
+ Aucun  
   
 ## <a name="return-code-values"></a>Codet de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne la période de mise à jour actuelle, c'est-à-dire le nombre de minutes qui s'écoulent entre les mises à jour de la table d'état de la mise en miroir de bases de données. Cette valeur est comprise entre 1 et 120.  

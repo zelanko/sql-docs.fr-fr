@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ceb162fa058f1dd46eea196929586b8e31f4152c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d385c34f58e7796d7ed09fe5d5ba644f32a6eff1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493468"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548289"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne un ensemble de lignes qui contient des informations sur les paramètres inclus dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] lot. **sp_batch_params** analyse uniquement le lot spécifié et retourne des informations sur les valeurs de paramètre incorporées. N'exécute pas le traitement et ne modifie pas l'environnement d'exécution.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,7 +43,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'` Est une chaîne Unicode qui contient une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou un lot pour lequel vous souhaitez obtenir des informations sur les paramètres. *TSqlBatch* est de type **nvarchar (max)** ou implicitement convertible en **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   

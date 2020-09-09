@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 008c9b4f6cd0478e960d77ff6c39b45d9a34fbe2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2884cda986a99f23c88c71c8960d25a467de0663
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489364"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89548024"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88489364"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,8 +49,8 @@ sp_help_fulltext_catalog_components
 |**nom du catalogue de texte intégral**|**int**|Nom du catalogue de texte intégral.|  
 |**ID de catalogue de texte intégral**|**sysname**|Identificateur du catalogue de texte intégral.|  
 |**componenttype**|**sysname**|Type de composant. Celui-ci peut avoir l'une des valeurs suivantes :<br /><br /> Filtrer<br /><br /> Gestionnaire de protocole<br /><br /> Analyseur lexical|  
-|**componentname**|**sysname**|Nom du composant.|  
-|**clsid**|**uniqueidentifier**|Identificateur de classe du composant.|  
+|**ComponentName**|**sysname**|Nom du composant.|  
+|**identificateur**|**uniqueidentifier**|Identificateur de classe du composant.|  
 |**FullPath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre du rôle serveur fixe **ServerAdmin** .|  
 |**version**|**nvarchar(30)**|Numéro de version du composant.|  
 |**fécule**|**sysname**|Nom du fabricant du composant.|  
@@ -60,7 +60,7 @@ sp_help_fulltext_catalog_components
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de recherche en texte intégral et de recherche sémantique &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [sys. fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
  [Recherche en texte intégral](../../relational-databases/search/full-text-search.md)  
   
