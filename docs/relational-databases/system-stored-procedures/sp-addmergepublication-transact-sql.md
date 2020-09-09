@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 346b335063238d118412e8a2951ced67ed685756
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4c3b3b78cc80f441ed340c4732e9b5d43a8af10e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489634"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89529941"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crée une nouvelle publication de fusion. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données publiée.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -90,7 +90,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 |Valeur|Description|  
 |-----------|-----------------|  
 |**natif** (par défaut)|Produit une copie par bloc en mode natif de toutes les tables.|  
-|**symbole**|Produit une copie par bloc en mode caractère de toutes les tables. Requis pour prendre en charge [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés et non.|  
+|**character**|Produit une copie par bloc en mode caractère de toutes les tables. Requis pour prendre en charge [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés et non.|  
   
 `[ @allow_push = ] 'allow_push'` Spécifie si des abonnements par émission de données peuvent être créés pour la publication donnée. *allow_push* est de type **nvarchar (5)**, avec true comme valeur par défaut, ce qui permet l’envoi d’abonnements à la publication.  
   
