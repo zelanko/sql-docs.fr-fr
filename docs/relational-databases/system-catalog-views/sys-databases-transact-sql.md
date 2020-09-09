@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.databases catalog view
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73141e7bc09d2748ff79cba0de4ebf9d4758cd65
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88379085"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550569"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -41,7 +41,7 @@ Si une base de données n’est pas `ONLINE` , ou `AUTO_CLOSE` a `ON` la valeur 
 |**name**|**sysname**|Nom de la base de données, unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans un serveur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**database_id**|**int**|ID de la base de données, unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou dans un serveur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**source_database_id**|**int**|Valeur autre que NULL = ID de la base de données source pour cet instantané.<br /> NULL = Pas un instantané de base de données.|  
-|**owner_sid**|**varbinary (85)**|SID (identificateur de sécurité) du propriétaire externe de la base de données, tel qu'il est enregistré sur le serveur. Pour plus d’informations sur les personnes qui peuvent posséder une base de données, consultez la section **ALTER AUTHORIZATION for Databases** de [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).|  
+|**owner_sid**|**varbinary(85)**|SID (identificateur de sécurité) du propriétaire externe de la base de données, tel qu'il est enregistré sur le serveur. Pour plus d’informations sur les personnes qui peuvent posséder une base de données, consultez la section **ALTER AUTHORIZATION for Databases** de [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).|  
 |**create_date**|**datetime**|Date de création ou de nouvelle appellation de la base de données. Pour **tempdb**, cette valeur change chaque fois que le serveur redémarre.|  
 |**compatibility_level**|**tinyint**|Entier correspondant à la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour laquelle le comportement est compatible :<br /><br /><table border="0"><tr><td>**Valeur**</td><td>**S’applique à**</td></tr><tr><td>70</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]</td></tr><tr><td>80</td><td>[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Parmi [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]</td></tr><tr><td>90</td><td>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Parmi [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]</td></tr><tr><td>100</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].</td></tr><tr><td>110</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].</td></tr><tr><td>120</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].</td></tr><tr><td>130</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].</td></tr><tr><td>140</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].</td></tr><tr><td>150</td><td>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].</td></tr></table>|  
 |**collation_name**|**sysname**|Classement pour la base de données. Joue le rôle du classement par défaut de la base de données.<br /> NULL = la base de données n’est pas en ligne ou AUTO_CLOSE a la valeur ON et la base de données est fermée.|  

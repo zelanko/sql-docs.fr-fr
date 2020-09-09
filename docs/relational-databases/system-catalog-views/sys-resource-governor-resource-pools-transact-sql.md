@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_resource_pools catalog view
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: b48957c69ee952e4239a8c4cd4709dca2ff19dd8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24c19d78cdd0d4b38398b4212568134aaee74e15
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490166"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89550431"
 ---
 # <a name="sysresource_governor_resource_pools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "88490166"
 |min_memory_percent|**int**|Quantité de mémoire garantie pour toutes les demandes dans le pool de ressources. Cette valeur n'est pas partagée avec d'autres pools de ressources. N'accepte pas la valeur NULL.|  
 |max_memory_percent|**int**|Pourcentage de la mémoire totale du serveur qui peut être utilisé par les demandes dans ce pool de ressources. N'accepte pas la valeur NULL. La valeur maximale effective dépend des valeurs minimales du pool. Par exemple, max_memory_percent peut avoir la valeur 100, alors que sa valeur maximale effective est inférieure.|  
 |cap_cpu_percent|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront. Limite la bande passante maximale de l'UC au niveau spécifié. La plage autorisée pour la valeur est comprise entre 1 et 100.|  
-|min_iops_per_volume|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Opérations d'E/S minimales par seconde (IOPS) par paramètre de volume de ce pool. 0 = aucune réservation. Ne peut pas avoir la valeur null.|  
-|max_iops_per_volume|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Opérations d'E/S maximales par seconde (IOPS) par paramètre de volume de ce pool. 0 = illimitées. Ne peut pas avoir la valeur null.|  
+|min_iops_per_volume|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Opérations d'E/S minimales par seconde (IOPS) par paramètre de volume de ce pool. 0 = aucune réservation. Ne peut pas être null.|  
+|max_iops_per_volume|**int**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Opérations d'E/S maximales par seconde (IOPS) par paramètre de volume de ce pool. 0 = illimitées. Ne peut pas être null.|  
   
 ## <a name="remarks"></a>Notes  
  L'affichage catalogue affiche les métadonnées stockées. Pour afficher la configuration en mémoire, utilisez la vue de gestion dynamique correspondante, [sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
