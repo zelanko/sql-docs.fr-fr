@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 48c548ed85c5110c8e3c117da796c6189eee39de
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef8bc8087811e25c8fde893a251e77d25661b5ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486430"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537467"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88486430"
 |service_id|**int**|Identificateur du service associé à ce côté de la conversation. Cette colonne n'accepte pas la valeur NULL.|  
 |lifetime|**datetime**|Date/heure d'expiration de la conversation. Cette colonne n'accepte pas la valeur NULL.|  
 |state|**char(2)**|État actuel de la conversation. Cette colonne n'accepte pas la valeur NULL. Valeurs possibles :<br /><br /> DONC démarré en sortie. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a traité une instruction BEGIN CONVERSATION pour cette conversation, mais aucun message n'a été envoyé pour l'instant.<br /><br /> SI a démarré, entrant. Une autre instance a démarré une nouvelle conversation avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a toujours pas complètement reçu le premier message. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans cet état si le premier message est fragmenté ou si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reçoit des messages inexploitables. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer la conversation dans l'état CO (conversation en cours) si la première transmission reçue pour cette conversation contient la totalité du premier message.<br /><br /> CO-inversion. La conversation est établie et les deux côtés peuvent envoyer des messages. La majeure partie de la communication associée à un service a généralement lieu lorsque la conversation est dans cet état.<br /><br /> DI déconnecté entrant. La partie distante de la conversation a émis une instruction END CONVERSATION. La conversation demeure dans cet état jusqu'à ce que la partie locale de la conversation émette une instruction END CONVERSATION. Une application peut toujours recevoir des messages pour la conversation. Dans la mesure où la partie distante de la conversation a terminé celle-ci, une application ne peut pas envoyer de messages sur cette conversation. Lorsqu’une application émet une action END CONVERSATION, la conversation passe à l’État CD (fermé).<br /><br /> DO   Déconnectée en sortie. La partie locale de la conversation a émis une instruction END CONVERSATION. La conversation reste dans cet état jusqu'à ce que le côté distant accuse réception de la commande END CONVERSATION. Une application ne peut pas envoyer ou recevoir des messages pour la conversation. Lorsque le côté distant de la conversation accuse réception de la commande END CONVERSATION, la conversation passe en état CD (fermée).<br /><br /> ER   Erreur. Une erreur s'est produite sur ce point de terminaison. Le message d'erreur est placé dans la file d'attente de l'application. Si la file d'attente de l'application est vide, cela signifie que l'application a déjà consommé le message d'erreur.<br /><br /> CD   Fermée. Le point de terminaison de la conversation n'est plus en cours d'utilisation.|  
-|state_desc|**nvarchar(60)**|Description de l’état de la conversation du point de terminaison. Cette colonne autorise la valeur Null. Valeurs possibles :<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSATION**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **LÉGENDES**<br /><br /> **Erreurs**|  
+|state_desc|**nvarchar(60)**|Description de l’état de la conversation du point de terminaison. Cette colonne autorise la valeur Null. Valeurs possibles :<br /><br /> **STARTED_OUTBOUND**<br /><br /> **STARTED_INBOUND**<br /><br /> **CONVERSATION**<br /><br /> **DISCONNECTED_INBOUND**<br /><br /> **DISCONNECTED_OUTBOUND**<br /><br /> **LÉGENDES**<br /><br /> **ERROR**|  
 |far_service|**nvarchar (256)**|Nom du service du côté distant de la conversation. Cette colonne n'accepte pas la valeur NULL.|  
 |far_broker_instance|**nvarchar(128)**|Instance du Broker associée au côté distant de la conversation. Accepte la valeur NULL.|  
 |principal_id|**int**|Identificateur du principal dont le certificat est utilisé par le côté local du dialogue. Cette colonne n'accepte pas la valeur NULL.|  

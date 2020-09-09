@@ -16,20 +16,20 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 17bde6ee4793e80a7dc3c3b536ba3337ac5de97c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6704808520b77867bd1a0b39af5118225398dae2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446311"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537274"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>Propriété ProtocolDLL (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nom du fichier .dll requis par le protocole réseau spécifié par [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx).  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

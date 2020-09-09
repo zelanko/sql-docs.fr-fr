@@ -19,15 +19,15 @@ helpviewer_keywords:
 - change tracking [SQL Server], sys.change_tracking_tables
 - sys.change_tracking_tables
 ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d9287586105befd5606d4bf115b13068cecccc7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b865d0d62f1029f3c8ebb976e8ed9cb5b8f0dd7
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486595"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537555"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>Affichages catalogue Change Tracking-sys. change_tracking_tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

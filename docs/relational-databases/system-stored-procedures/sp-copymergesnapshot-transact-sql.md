@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copymergesnapshot
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 13e7be3229332ece6a95966de84ef5ed59e28289
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4f763c28087802df2dd3922b54829f6dee888545
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481409"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536657"
 ---
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Copie le dossier d’instantané de la publication spécifiée dans le dossier indiqué dans le ** \@ destination_folder**. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
