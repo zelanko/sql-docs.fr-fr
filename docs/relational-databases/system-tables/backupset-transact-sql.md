@@ -18,15 +18,15 @@ helpviewer_keywords:
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f5bea32ebd5269ae57d7b754cf20d12a0d695109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 783452973a10a8f692b7fe3a3406665a2ed0eb86
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492849"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544669"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88492849"
 |**last_media_number**|**smallint**|Numéro du support qui est le dernier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**catalog_family_number**|**tinyint**|Numéro de famille du support contenant le début du répertoire du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**catalog_media_number**|**smallint**|Numéro du support de sauvegardes contenant le début du répertoire du jeu de sauvegardes. Sa valeur peut être NULL.|  
-|**endroit**|**int**|Position du jeu de sauvegardes utilisée lors de la restauration pour localiser les fichiers et le jeu de sauvegardes appropriés. Sa valeur peut être NULL. Pour plus d’informations, consultez FILE in [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Position du jeu de sauvegardes utilisée lors de la restauration pour localiser les fichiers et le jeu de sauvegardes appropriés. Sa valeur peut être NULL. Pour plus d’informations, consultez FILE in [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Date et heure d'expiration du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**software_vendor_id**|**int**|Numéro d'identification du fournisseur du logiciel qui a écrit l'en-tête de support de sauvegardes Sa valeur peut être NULL.|  
 |**name**|**nvarchar(128)**|Nom du jeu de sauvegardes. Sa valeur peut être NULL.|  
@@ -65,7 +65,7 @@ ms.locfileid: "88492849"
 |**database_creation_date**|**datetime**|Date et heure de création de la base de données. Sa valeur peut être NULL.|  
 |**backup_start_date**|**datetime**|Date et heure de début de la sauvegarde Sa valeur peut être NULL.|  
 |**backup_finish_date**|**datetime**|Date et heure de fin de la sauvegarde Sa valeur peut être NULL.|  
-|**type**|**Char(1**|Type de sauvegarde. Valeurs possibles :<br /><br /> D = Base de données<br /><br /> I = Base de données différentielle<br /><br /> L = Journal<br /><br /> F = Fichier ou groupe de fichiers<br /><br /> G =Fichier différentiel<br /><br /> P = Partiel<br /><br /> Q = Partielle différentielle<br /><br /> Sa valeur peut être NULL.|  
+|**type**|**char(1)**|Type de sauvegarde. Valeurs possibles :<br /><br /> D = Base de données<br /><br /> I = Base de données différentielle<br /><br /> L = Journal<br /><br /> F = Fichier ou groupe de fichiers<br /><br /> G =Fichier différentiel<br /><br /> P = Partiel<br /><br /> Q = Partielle différentielle<br /><br /> Sa valeur peut être NULL.|  
 |**sort_order**|**smallint**|Ordre de tri utilisé par le serveur effectuant la sauvegarde. Sa valeur peut être NULL. Pour plus d’informations sur les ordres de tri et les classements, consultez [prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**code_page**|**smallint**|Page de codes du serveur effectuant la sauvegarde. Sa valeur peut être NULL. Pour plus d’informations sur les pages de codes, consultez [prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**compatibility_level**|**tinyint**|Paramètres définissant le niveau de compatibilité de la base de données. Valeurs possibles :<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Sa valeur peut être NULL.<br /><br /> Pour plus d’informations sur les niveaux de compatibilité, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  

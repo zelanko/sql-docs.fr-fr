@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_memory_dumps dynamic management view
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 636beea5b820aef3d37b8ac27f6e75c66bc6da3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cec8575270fd7068290cb24f88405453415b3020
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397705"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543825"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "88397705"
  
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**extension**|**nvarchar (256)**|Chemin d'accès et nom du fichier de vidage de mémoire. Ne peut pas avoir la valeur null.|  
-|**creation_time**|**datetimeoffset(7)**|Date et heure de création du fichier. Ne peut pas avoir la valeur null.|  
+|**extension**|**nvarchar (256)**|Chemin d'accès et nom du fichier de vidage de mémoire. Ne peut pas être null.|  
+|**creation_time**|**datetimeoffset(7)**|Date et heure de création du fichier. Ne peut pas être null.|  
 |**size_in_bytes**|**bigint**|Taille (en octets) du fichier. Autorise la valeur NULL.|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  

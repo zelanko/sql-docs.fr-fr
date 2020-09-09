@@ -16,20 +16,20 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetNumValue method
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: a67607dcf70b5d8a77eba098ba3090bd1ec552f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1e9c06349348b24e58f16644fa77dfd602a7570b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427151"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545219"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Méthode SetNumValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Définit la valeur numérique d'une propriété.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

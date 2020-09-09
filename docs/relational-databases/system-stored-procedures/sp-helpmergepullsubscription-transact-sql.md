@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepullsubscription
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: fde1ffb997d476cc114b7bac3f3a6d32ad208dd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b74d9846d672a59adbde9eada760af1d60fc725e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489315"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543273"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur des abonnements par extraction de données (pull) existant sur l'Abonné. Cette procédure stockée est exécutée sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -62,7 +62,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**statut**|**int**|État de l'abonnement :<br /><br /> **0** = abonnement inactif<br /><br /> **1** = abonnement actif<br /><br /> **2** = abonnement supprimé<br /><br /> **3** = abonnement détaché<br /><br /> **4** = abonnement attaché<br /><br /> **5** = abonnement marqué pour réinitialisation avec chargement<br /><br /> **6** = échec de l’attachement de l’abonnement<br /><br /> **7** = abonnement restauré à partir d’une sauvegarde|  
 |**subscriber_type**|**int**|Type d'Abonné :<br /><br /> **1** = global<br /><br /> **2** = local<br /><br /> **3** = anonyme|  
 |**subscription_type**|**int**|Type d'abonnement :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = anonyme|  
-|**importance**|**float (8)**|Priorité de l'abonnement. La valeur doit être inférieure à **100,00**.|  
+|**priority**|**float (8)**|Priorité de l'abonnement. La valeur doit être inférieure à **100,00**.|  
 |**sync_type**|**tinyint**|Type de synchronisation d'abonnement :<br /><br /> **1** = automatique<br /><br /> **2** = la capture instantanée n’est pas utilisée.|  
 |**description**|**nvarchar(255)**|Brève description de l’abonnement par extraction.|  
 |**merge_jobid**|**Binary(16**|ID de travail de l'Agent de fusion.|  

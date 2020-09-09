@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1faec2f41d2396102b4ee675f2dac40be4b9b216
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2942c06e5d63c0be25a05cd34e871447a29e7d6d
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489493"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543575"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ouvre un curseur. sp_cursoropen définit l’instruction SQL associée au curseur et aux options de curseur, puis remplit le curseur. sp_cursoropen équivaut à la combinaison des [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions DECLARE_CURSOR et Open. Cette procédure est appelée en spécifiant ID = 2 dans un paquet TDS (Tabular Data Stream).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -118,7 +118,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  Une opération FETCH est en cours.  
   
- Un  
+ A  
  Ce curseur a été libéré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et n'est pas disponible.  
   
  Lorsqu'une erreur est générée, les valeurs de retour peuvent être incohérentes et l'exactitude ne peut pas être garantie.  

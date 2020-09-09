@@ -16,20 +16,20 @@ apitype: MOFDef
 helpviewer_keywords:
 - NumerOfFlags property
 ms.assetid: d720f093-0d67-4e6c-8231-78d9ab853a8f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 478a91ae1d2d4e11cf11a7e1efb95f7db81fb522
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3c684fb64a29bd50a26285a546671a48fbf650f6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446143"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544351"
 ---
 # <a name="numberofflags-property-serversettings-class"></a>Propriété NumberOfFlags (classe ServerSettings)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nombre d’indicateurs généraux associés à l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_cache_clock_hands dynamic management view
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 688cafb3413d1252113ecb226daef76d2e730d1e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 921a2c9e1b2f40c308c4f93b291d57ea1c39ef7f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397955"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543868"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88397955"
 |**name**|**nvarchar (256)**|Nom du cache. N'accepte pas la valeur NULL.|  
 |**type**|**nvarchar(60)**|Type de cache. Il peut exister plusieurs caches du même type. N'accepte pas la valeur NULL.|  
 |**clock_hand**|**nvarchar(60)**|Type d'aiguille. Il s’agit de l’un des éléments suivants :<br /><br /> Externe<br /><br /> Interne<br /><br /> N'accepte pas la valeur NULL.|  
-|**clock_status**|**nvarchar(60)**|Statut de l'horloge. Il s’agit de l’un des éléments suivants :<br /><br /> Interrompu<br /><br /> Exécution en cours<br /><br /> N'accepte pas la valeur NULL.|  
+|**clock_status**|**nvarchar(60)**|Statut de l'horloge. Il s’agit de l’un des éléments suivants :<br /><br /> Interrompu<br /><br /> En cours d’exécution<br /><br /> N'accepte pas la valeur NULL.|  
 |**rounds_count**|**bigint**|Nombre de balayages effectués sur le cache pour supprimer des entrées. N'accepte pas la valeur NULL.|  
 |**removed_all_rounds_count**|**bigint**|Nombre d'entrées supprimées par tous les balayages. N'accepte pas la valeur NULL.|  
 |**updated_last_round_count**|**bigint**|Nombre d'entrées mises à jour lors du dernier balayage. N'accepte pas la valeur NULL.|  

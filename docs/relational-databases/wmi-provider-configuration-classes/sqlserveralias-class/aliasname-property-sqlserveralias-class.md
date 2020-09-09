@@ -15,20 +15,20 @@ apilocation:
 helpviewer_keywords:
 - AliasName property
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4096c972fb47db05deb9d42dfb415f4db1e8cb38
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48fd72017866881be21fa3e066f5012c0155f7e8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446427"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545231"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>Propriété AliasName (classe SqlServerAlias)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nom de l'alias de connexion au serveur.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

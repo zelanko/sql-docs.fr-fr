@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 95bd2aa7491b15b2e16172b0761c6dccc8eb5818
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edabb8a59a672c3ebfe04a799df7901b402fb5b3
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446931"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543184"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88446931"
   Convertit un utilisateur de la base de données mappé à un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en utilisateur de base de données autonome avec mot de passe. Dans une base de données autonome, utilisez cette procédure pour supprimer les dépendances sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où la base de données est installée. **sp_migrate_user_to_contained** sépare l’utilisateur de la connexion d’origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , afin que les paramètres tels que le mot de passe et la langue par défaut puissent être administrés séparément pour la base de données à relation contenant-contenu. **sp_migrate_user_to_contained** peut être utilisé avant de déplacer la base de données à relation contenant-contenu vers une autre instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] pour éliminer les dépendances sur les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions d’instance actuelles.  
   
 > [!NOTE]
-> Soyez prudent lorsque vous utilisez **sp_migrate_user_to_contained**, car vous ne pourrez pas inverser l’effet. Cette procédure est utilisée uniquement dans une base de données à relation contenant-contenu. Pour plus d’informations, consultez [contained databases](../../relational-databases/databases/contained-databases.md).  
+> Soyez prudent lorsque vous utilisez **sp_migrate_user_to_contained**, car vous ne pourrez pas inverser l’effet. Cette procédure est utilisée uniquement dans une base de données à relation contenant-contenu. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   

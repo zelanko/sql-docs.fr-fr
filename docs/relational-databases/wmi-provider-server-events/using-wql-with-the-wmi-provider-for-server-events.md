@@ -15,14 +15,14 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bf1f87043075fdf44adec9d61f379f20d898c2fa
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 076c91605c245ad49f6c51a2a656d48c7dba2109
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888160"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545161"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilisation de WQL avec le fournisseur WMI pour les événements de serveur
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -84,7 +84,7 @@ WHERE where_condition
   
  Seul l' `=` opérande peut être utilisé avec **DatabaseName**, **SchemaName**et **ObjectName**. D'autres expressions ne peuvent pas être utilisées avec ces propriétés d'événement.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La *where_condition* de la syntaxe du fournisseur WMI pour les événements de serveur détermine les éléments suivants :  
   
 -   Portée par laquelle le fournisseur tente de récupérer les *event_type*spécifiées : le niveau serveur, le niveau base de données ou le niveau objet (le seul objet pris en charge actuellement est la file d’attente). En dernier ressort, cette étendue détermine le type de notification d'événements créé dans la base de données cible. Ce processus est appelé inscription de notification d'événements.  

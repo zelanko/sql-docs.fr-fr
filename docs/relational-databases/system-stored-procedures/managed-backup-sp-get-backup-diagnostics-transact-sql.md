@@ -19,23 +19,23 @@ helpviewer_keywords:
 - sp_get_backup_diagnostics
 - smart_admin.sp_get_backup_diagnostics
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 54e81df3d503b5c520ed812fefec8601d4979cd2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: efd884b6e757ab81cf01eda00b0322ef3ec5c701
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481605"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543688"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Retourne les événements étendus enregistrés par Smart Admin.  
   
- Utilisez cette procédure stockée pour surveiller les événements étendus enregistrés par Smart admin. les [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] événements sont enregistrés dans ce système et peuvent être examinés et surveillés à l’aide de cette procédure stockée.  
+ Utilisez cette procédure stockée pour surveiller les événements étendus enregistrés par Smart admin. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] les événements sont enregistrés dans ce système et peuvent être examinés et surveillés à l’aide de cette procédure stockée.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

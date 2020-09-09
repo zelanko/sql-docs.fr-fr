@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6e128b63ebe77467e7c3fd6ea2486f3fdc043334
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c09007256e5c336ecfa2ad62c45623fe2c0e5ff
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725717"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543192"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -38,7 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @session_id = ] session_id`Spécifie une session d’agent. *session_id* est de **type int** sans valeur par défaut.  
+`[ @session_id = ] session_id` Spécifie une session d’agent. *session_id* est de **type int** sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -46,10 +46,10 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|Phase de la session de synchronisation, qui peut prendre l'une des valeurs suivantes :<br /><br /> **0** = ligne d’initialisation ou de résumé<br /><br /> **1** = téléchargement<br /><br /> **2** = téléchargement|  
 |**ArticleName**|**sysname**|Nom de l'article en cours de synchronisation. **ArticleName** contient également des informations de synthèse pour les lignes du jeu de résultats qui ne représentent pas les détails de l’article.|  
-|**PourcentageAchevé**|**decimal**|Indique le pourcentage de modifications appliqué dans une ligne de détails d'article donnée pour des sessions en cours d'exécution ou ayant échoué.|  
+|**PercentComplete**|**decimal**|Indique le pourcentage de modifications appliqué dans une ligne de détails d'article donnée pour des sessions en cours d'exécution ou ayant échoué.|  
 |**RelativeCost**|**decimal**|Indique le temps consacré à la synchronisation de l'article en pourcentage de la durée de synchronisation totale pour la session.|  
 |**Durée**|**int**|Durée de la session de l'Agent.|  
-|**Insère**|**int**|Nombre d'insertions dans une session.|  
+|**Inserts**|**int**|Nombre d'insertions dans une session.|  
 |**Mises à jour**|**int**|Nombre de mises à jour dans une session.|  
 |**Suppressions**|**int**|Nombre de suppressions dans une session.|  
 |**Conflits**|**int**|Nombre de conflits qui se sont produits dans une session.|  
@@ -61,7 +61,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_replmonitorhelpmergesessiondetail** est utilisé pour surveiller la réplication de fusion.  
   
  Lorsqu’elle est exécutée sur l’abonné, **sp_replmonitorhelpmergesessiondetail** renvoie uniquement des informations détaillées sur les 5 dernières sessions agent de fusion.  

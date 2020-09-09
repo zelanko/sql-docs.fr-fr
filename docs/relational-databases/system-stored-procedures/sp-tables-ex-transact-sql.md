@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c195e3fa5e932bd1eb844ca5231d67747bc67486
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0156f75940cf5e0d2186625d148850dcfb181ad0
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480981"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89544730"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne des informations de table sur les tables provenant du serveur lié spécifié.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -60,16 +60,16 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**AFFECTÉ**|Nom d'un alias.|  
 |**GLOBAL TEMPORARY**|Nom d'une table temporaire disponible au niveau du système.|  
 |**LOCAL TEMPORARY**|Nom d'une table temporaire disponible uniquement au niveau du travail en cours.|  
-|**SYNONYME**|Nom d'un synonyme.|  
+|**SYNONYM**|Nom d'un synonyme.|  
 |**TABLE SYSTÈME**|Nom d'une table système.|  
 |**VUE SYSTÈME**|Nom d'une vue système.|  
-|**Tableau**|Nom d'une table utilisateur.|  
-|**AFFICHAGE**|Nom d'une vue.|  
+|**TABLE**|Nom d'une table utilisateur.|  
+|**VIEW**|Nom d'une vue.|  
   
 `[ @fUsePattern = ] 'fUsePattern'` Détermine si les caractères **_**, **%** , **[** et **]** sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est de **bits**, avec 1 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
