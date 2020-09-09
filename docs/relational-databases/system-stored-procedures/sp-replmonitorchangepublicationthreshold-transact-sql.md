@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6114d52b0db23d04c3b8cf001b0881dbc38844a6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749278"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89543149"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -46,13 +46,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données publiée. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données publiée. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'`Nom de la publication pour laquelle les attributs de seuil d’analyse sont modifiés. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication pour laquelle les attributs de seuil d’analyse sont modifiés. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication_type = ] publication_type`Si le type de publication. *publication_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @publication_type = ] publication_type` Si le type de publication. *publication_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -61,7 +61,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**2**|Publication de fusion.|  
 |NULL (par défaut)|La réplication essaie de déterminer le type de publication.|  
   
-`[ @metric_id = ] metric_id`ID de la métrique de seuil de publication en cours de modification. *metric_id* est de **type int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @metric_id = ] metric_id` ID de la métrique de seuil de publication en cours de modification. *metric_id* est de **type int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Nom de métrique|  
 |-----------|-----------------|  
@@ -75,18 +75,18 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
  Vous devez spécifier *metric_id* ou *thresholdmetricname*. Si *thresholdmetricname* est spécifié, *metric_id* doit avoir la valeur null.  
   
-`[ @thresholdmetricname = ] 'thresholdmetricname'`Nom de la métrique de seuil de publication en cours de modification. *thresholdmetricname* est de **type sysname**, avec NULL comme valeur par défaut. Vous devez spécifier *thresholdmetricname* ou *metric_id*. Si *metric_id* est spécifié, *thresholdmetricname* doit avoir la valeur null.  
+`[ @thresholdmetricname = ] 'thresholdmetricname'` Nom de la métrique de seuil de publication en cours de modification. *thresholdmetricname* est de **type sysname**, avec NULL comme valeur par défaut. Vous devez spécifier *thresholdmetricname* ou *metric_id*. Si *metric_id* est spécifié, *thresholdmetricname* doit avoir la valeur null.  
   
-`[ @value = ] value`Nouvelle valeur de la mesure du seuil de publication. la *valeur* est de **type int**, avec NULL comme valeur par défaut. Si la valeur est **null**, la valeur de la métrique n’est pas mise à jour.  
+`[ @value = ] value` Nouvelle valeur de la mesure du seuil de publication. la *valeur* est de **type int**, avec NULL comme valeur par défaut. Si la valeur est **null**, la valeur de la métrique n’est pas mise à jour.  
   
-`[ @shouldalert = ] shouldalert`Indique si une alerte est générée lorsqu’une métrique de seuil de publication est atteinte. *ShouldAlert* est de type **bit**, avec NULL comme valeur par défaut. La valeur **1** signifie qu’une alerte est générée, tandis que la valeur **0** indique qu’une alerte n’est pas générée.  
+`[ @shouldalert = ] shouldalert` Indique si une alerte est générée lorsqu’une métrique de seuil de publication est atteinte. *ShouldAlert* est de type **bit**, avec NULL comme valeur par défaut. La valeur **1** signifie qu’une alerte est générée, tandis que la valeur **0** indique qu’une alerte n’est pas générée.  
   
-`[ @mode = ] mode`Indique si la métrique du seuil de publication est activée. *mode* est de **type tinyint**, avec **1**comme valeur par défaut. La valeur **1** signifie que la surveillance de cette métrique est activée, et la valeur **2** signifie que la surveillance de cette métrique est désactivée.  
+`[ @mode = ] mode` Indique si la métrique du seuil de publication est activée. *mode* est de **type tinyint**, avec **1**comme valeur par défaut. La valeur **1** signifie que la surveillance de cette métrique est activée, et la valeur **2** signifie que la surveillance de cette métrique est désactivée.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_replmonitorchangepublicationthreshold** est utilisé avec tous les types de réplications.  
   
 ## <a name="permissions"></a>Autorisations  

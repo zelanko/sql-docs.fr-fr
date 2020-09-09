@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_traninfo dynamic management view
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 13688621c4547f5bc49be2d2385d20973b85f7e9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ccac1a54db0fb5395f76205713fe65c9cba3f8e1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88419593"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89542096"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88419593"
 |**begin_lsn**|**nvarchar (64)**|Numéro séquentiel dans le journal (NSE) de l'enregistrement du début pour la transaction.|  
 |**commit_lsn**|**nvarchar (64)**|Numéro de séquence de l'enregistrement du journal de validation pour la transaction.|  
 |**dbid**|**smallint**|ID de la base de données.|  
-|**lignes**|**int**|ID de la commande répliquée à l'intérieur de la transaction.|  
+|**rows**|**int**|ID de la commande répliquée à l'intérieur de la transaction.|  
 |**xdesid auquel appartient**|**nvarchar (64)**|ID de la transaction.|  
 |**artcache_table_address**|**varbinary (8)**|Adresse en mémoire de la dernière structure de table d'article mis en cache utilisée pour cette transaction.|  
 |**server**|**nvarchar (514)**|Nom du serveur.|  

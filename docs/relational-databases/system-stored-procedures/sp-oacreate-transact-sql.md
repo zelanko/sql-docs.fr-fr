@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e28f5bcd2f539ae9ab457c2ab14ed7aee6121b7c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: efcdc5094183143d3f45bc5a0174c0bead5381d2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489222"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89541137"
 ---
 # <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Crée une instance d'un objet OLE.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  Par exemple, SQLDMO. SQLServer est le ProgID de l’objet SQL-DMO **SqlServer** . SQL-DMO a le nom de composant SQLDMO, l’objet **SqlServer** est valide et (comme tous les objets SQL-DMO) l’objet **SqlServer** prend en charge **IDispatch**.  
   
- *clsid*  
+ *identificateur*  
  Identificateur de classe (CLSID) de l'objet OLE à créer. Cette chaîne de caractères décrit la classe de l’objet OLE et se présente sous la forme suivante : **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**} '**. L’objet OLE spécifié doit être valide et doit prendre en charge l’interface **IDispatch** .  
   
  Par exemple, {00026BA1-0000-0000-C000-000000000046} est le CLSID de l’objet SQL-DMO **SqlServer** .  
