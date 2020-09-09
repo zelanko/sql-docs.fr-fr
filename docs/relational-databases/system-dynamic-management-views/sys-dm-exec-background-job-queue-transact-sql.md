@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_background_job_queue dynamic management function
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e169cfdf49a4808f53796acc4a6c2923b722d54
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4499bbffd3e5b14eb870db2bf55e639188c08912
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454972"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89534019"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,10 +40,10 @@ ms.locfileid: "88454972"
 |**time_queued**|**datetime**|Moment auquel le travail a été ajouté à la file d'attente.|  
 |**job_id**|**int**|Identificateur du travail.|  
 |**database_id**|**int**|Base de données sur laquelle le travail doit s'exécuter.|  
-|**object_id1**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
-|**object_id2**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
-|**object_id3**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
-|**object_id4**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
+|**object_id1**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Remarques.|  
+|**object_id2**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Remarques.|  
+|**object_id3**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Remarques.|  
+|**object_id4**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Remarques.|  
 |**error_code**|**int**|Code d'erreur si le travail a été réinséré à cause d'une erreur. NULL si le travail a été suspendu, n'a pas été récupéré ou est terminé.|  
 |**request_type**|**smallint**|Type de demande du travail.|  
 |**retry_count**|**smallint**|Nombre de fois où le travail a été récupéré et réinséré dans la file d'attente pour cause de manque de ressources ou pour d'autres raisons.|  

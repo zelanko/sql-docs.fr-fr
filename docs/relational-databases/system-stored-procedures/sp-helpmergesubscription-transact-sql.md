@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6892f15293c66e36afe7108047a7e81539559fc1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48d40b3209311968443a6c6d2b713b4aa1e3d43a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464231"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535192"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie des informations sur un abonnement à une publication de fusion, par envoi (push) et par extraction (pull) de données. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication ou sur la base de données d'abonnement d'un Abonné de republication.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -77,7 +77,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**statut**|**int**|État de l’abonnement :<br /><br /> **0** = tous les travaux sont en attente de démarrage<br /><br /> **1** = un ou plusieurs travaux commencent<br /><br /> **2** = toutes les tâches ont été exécutées avec succès<br /><br /> **3** = au moins un travail est en cours d’exécution<br /><br /> **4** = tous les travaux sont planifiés et inactifs<br /><br /> **5** = au moins un travail tente de s’exécuter après un échec précédent<br /><br /> **6** = au moins un travail n’a pas réussi à s’exécuter correctement|  
 |**subscriber_type**|**int**|Type d'Abonné.|  
 |**subscription_type**|**int**|Type d'abonnement :<br /><br /> **0** = Push<br /><br /> **1** = extraction<br /><br /> **2** = les deux|  
-|**importance**|**float (8)**|Numéro indiquant la priorité de l'abonnement.|  
+|**priority**|**float (8)**|Numéro indiquant la priorité de l'abonnement.|  
 |**sync_type**|**tinyint**|Type de synchronisation d'abonnement|  
 |**description**|**nvarchar(255)**|Brève description de cet abonnement de fusion.|  
 |**merge_jobid**|**Binary(16**|ID de travail de l'Agent de fusion.|  

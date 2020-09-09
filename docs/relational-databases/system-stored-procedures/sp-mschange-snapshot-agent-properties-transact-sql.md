@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ea8b10c2cb788a8f778479487c0f39f95613f524
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2baf36e4f2eb4d4b16fa441969fdbbb6ba4f1e10
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893508"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89535076"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,13 +57,13 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publisher = ] 'publisher'`Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Nom du serveur de publication. *Publisher* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publisher_db = ] 'publisher_db'`Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Nom de la base de données de publication. *publisher_db* est de **type sysname**, sans valeur par défaut.  
   
-`[ @publication = ] 'publication'`Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication. *publication* est de **type sysname**, sans valeur par défaut.  
   
-`[ @frequency_type = ] frequency_type`Fréquence à laquelle l’Agent d’instantané est exécutée. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_type = ] frequency_type` Fréquence à laquelle l’Agent d’instantané est exécutée. *frequency_type* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -75,9 +75,9 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**20**|Mensuellement, en fonction de l'intervalle de fréquence|  
 |**40**|Au démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
-`[ @frequency_interval = ] frequency_interval`Valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est de **type int**, sans valeur par défaut.  
+`[ @frequency_interval = ] frequency_interval` Valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est de **type int**, sans valeur par défaut.  
   
-`[ @frequency_subday = ] frequency_subday`Est l’unité pour *freq_subday_interval*. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_subday = ] frequency_subday` Est l’unité pour *freq_subday_interval*. *frequency_subday* est de **type int**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -86,39 +86,39 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**4**|Minute|  
 |**8**|Heure|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, sans valeur par défaut.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervalle de *frequency_subday*. *frequency_subday_interval* est de **type int**, sans valeur par défaut.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval`Date à laquelle le Agent d’instantané s’exécute. *frequency_relative_interval* est de **type int**, sans valeur par défaut.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Date à laquelle le Agent d’instantané s’exécute. *frequency_relative_interval* est de **type int**, sans valeur par défaut.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, sans valeur par défaut.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est de **type int**, sans valeur par défaut.  
   
-`[ @active_start_date = ] active_start_date`Date à laquelle le Agent d’instantané est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est de **type int**, sans valeur par défaut.  
+`[ @active_start_date = ] active_start_date` Date à laquelle le Agent d’instantané est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est de **type int**, sans valeur par défaut.  
   
-`[ @active_end_date = ] active_end_date`Date à laquelle le Agent d’instantané cesse d’être planifié, au format AAAAMMJJ. *active_end_date* est de **type int**, sans valeur par défaut.  
+`[ @active_end_date = ] active_end_date` Date à laquelle le Agent d’instantané cesse d’être planifié, au format AAAAMMJJ. *active_end_date* est de **type int**, sans valeur par défaut.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day`Heure de la journée à laquelle le Agent d’instantané est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est de **type int**, sans valeur par défaut.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Heure de la journée à laquelle le Agent d’instantané est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est de **type int**, sans valeur par défaut.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day`Heure de la journée à laquelle le Agent d’instantané cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, sans valeur par défaut.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Heure de la journée à laquelle le Agent d’instantané cesse d’être planifié, au format HHMMSS. *active_end_time_of_day* est de **type int**, sans valeur par défaut.  
   
-`[ @snapshot_job_name = ] 'snapshot_agent_name'`Nom d’un Agent d’instantané nom de tâche existant si un travail existant est utilisé. *snapshot_agent_name* est de type **nvarchar (100)**, sans valeur par défaut.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` Nom d’un Agent d’instantané nom de tâche existant si un travail existant est utilisé. *snapshot_agent_name* est de type **nvarchar (100)**, sans valeur par défaut.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Mode de sécurité utilisé par l’agent lors de la connexion au serveur de publication. *publisher_security_mode* est de **type int**, sans valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification et **1** spécifie l’authentification Windows. La valeur **0** doit être spécifiée pour les serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication non-. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` Mode de sécurité utilisé par l’agent lors de la connexion au serveur de publication. *publisher_security_mode* est de **type int**, sans valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification et **1** spécifie l’authentification Windows. La valeur **0** doit être spécifiée pour les serveurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication non-. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'`Nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est de **type sysname**, sans valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* a la **valeur 0**. Si *publisher_login* a la valeur null et que Publisher *_ * * security_mode* a la valeur **1**, le compte Windows spécifié dans *job_login* sera utilisé lors de la connexion au serveur de publication.  
+`[ @publisher_login = ] 'publisher_login'` Nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est de **type sysname**, sans valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* a la **valeur 0**. Si *publisher_login* a la valeur null et que Publisher *_ * * security_mode* a la valeur **1**, le compte Windows spécifié dans *job_login* sera utilisé lors de la connexion au serveur de publication.  
   
-`[ @publisher_password = ] 'publisher_password'`Mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est de type **nvarchar (524)**, sans valeur par défaut.  
-  
-> [!IMPORTANT]  
->  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
-  
-`[ @job_login = ] 'job_login'`Nom de connexion du compte Windows sous lequel l’agent s’exécute. *job_login* est de type **nvarchar (257)**, sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané. *Cela ne peut pas être modifié pour un non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Serveur de *publication.*  
-  
-`[ @job_password = ] 'job_password'`Mot de passe du compte Windows sous lequel l’agent s’exécute. *job_password* est de **type sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
+`[ @publisher_password = ] 'publisher_password'` Mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est de type **nvarchar (524)**, sans valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
-`[ @publisher_type = ] 'publisher_type'`Spécifie le type de serveur de publication lorsque le serveur de publication n’est pas en cours d’exécution dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
+`[ @job_login = ] 'job_login'` Nom de connexion du compte Windows sous lequel l’agent s’exécute. *job_login* est de type **nvarchar (257)**, sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané. *Cela ne peut pas être modifié pour un non-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Serveur de *publication.*  
+  
+`[ @job_password = ] 'job_password'` Mot de passe du compte Windows sous lequel l’agent s’exécute. *job_password* est de **type sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
+  
+> [!IMPORTANT]  
+>  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
+  
+`[ @publisher_type = ] 'publisher_type'` Spécifie le type de serveur de publication lorsque le serveur de publication n’est pas en cours d’exécution dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* est de **type sysname**et peut prendre l’une des valeurs suivantes.  
   
 |Valeur|Description|  
 |-----------|-----------------|  
@@ -131,7 +131,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_MSchange_snapshot_agent_properties** est utilisé dans la réplication d’instantané, la réplication transactionnelle et la réplication de fusion.  
   
  Vous devez spécifier tous les paramètres lors de l’exécution de **sp_MSchange_snapshot_agent_properties**. Exécutez [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) pour retourner les propriétés actuelles du travail agent d’instantané.  

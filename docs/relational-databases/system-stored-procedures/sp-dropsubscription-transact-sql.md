@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3ef0707d0e2f2770a241ad22be567fed16ad9e3b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c8c13030b1232a01aac14ac936323c05c540ab1f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783029"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536573"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,13 +43,13 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication associée. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Si la **totalité**est, tous les abonnements de toutes les publications de l’abonné spécifié sont annulés. la *publication* est un paramètre obligatoire.  
+`[ @publication = ] 'publication'` Nom de la publication associée. *publication* est de **type sysname**, avec NULL comme valeur par défaut. Si la **totalité**est, tous les abonnements de toutes les publications de l’abonné spécifié sont annulés. la *publication* est un paramètre obligatoire.  
   
-`[ @article = ] 'article'`Nom de l’article. *article* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est **All**, les abonnements à tous les articles pour chaque publication et abonné spécifiés sont supprimés. Utilisez **All pour les** publications qui autorisent la mise à jour immédiate.  
+`[ @article = ] 'article'` Nom de l’article. *article* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est **All**, les abonnements à tous les articles pour chaque publication et abonné spécifiés sont supprimés. Utilisez **All pour les** publications qui autorisent la mise à jour immédiate.  
   
-`[ @subscriber = ] 'subscriber'`Nom de l’abonné dont les abonnements seront supprimés. *Subscriber* est de **type sysname**, sans valeur par défaut. Si la **totalité**est, tous les abonnements de tous les abonnés sont supprimés.  
+`[ @subscriber = ] 'subscriber'` Nom de l’abonné dont les abonnements seront supprimés. *Subscriber* est de **type sysname**, sans valeur par défaut. Si la **totalité**est, tous les abonnements de tous les abonnés sont supprimés.  
   
-`[ @destination_db = ] 'destination_db'`Nom de la base de données de destination. *destination_db* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, tous les abonnements de cet Abonné seront supprimés.  
+`[ @destination_db = ] 'destination_db'` Nom de la base de données de destination. *destination_db* est de **type sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, tous les abonnements de cet Abonné seront supprimés.  
   
 `[ @ignore_distributor = ] ignore_distributor`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -60,7 +60,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_dropsubscription** est utilisé dans la réplication transactionnelle et d’instantané.  
   
  Si vous supprimez l'abonnement à un article dans une publication à synchronisation immédiate, vous ne pourrez le rajouter que si vous supprimez les abonnements relatifs à tous les articles de la publication et que vous les rajoutez tous en même temps.  

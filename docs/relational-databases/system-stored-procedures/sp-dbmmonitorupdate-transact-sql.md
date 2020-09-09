@@ -17,14 +17,14 @@ helpviewer_keywords:
 - sp_dbmmonitorupdate
 - database mirroring [SQL Server], monitoring
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 3d1feb50ba79c7d9cb33218db1a256796d762b5f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e8d150c2b45cd3556b47bef9cb2b2f882156f355
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447331"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89536583"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "88447331"
 > [!NOTE]  
 >  À sa première exécution, **sp_dbmmonitorupdate** crée la table d’état de la mise en miroir de bases de données et le rôle de base de données fixe **dbm_monitor** dans la base de données **msdb** .  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,7 +48,7 @@ sp_dbmmonitorupdate [ database_name ]
  Nom de la base de données dont vous souhaitez mettre à jour l'état de mise en miroir. Si *database_name* n’est pas spécifié, la procédure met à jour la table d’État pour chaque base de données mise en miroir sur l’instance de serveur.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  None  
