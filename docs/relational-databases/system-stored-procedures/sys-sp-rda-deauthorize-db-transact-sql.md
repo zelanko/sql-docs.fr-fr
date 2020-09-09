@@ -15,21 +15,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 11e039ad6c0550942632be6f34d23972e1897e2b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5c8413bf0a78ea1780d0babfc6fd88abb615d4ea
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243357"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538475"
 ---
 # <a name="syssp_rda_deauthorize_db-transact-sql"></a>sys. sp_rda_deauthorize_db (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-  Supprime la connexion authentifiée entre une base de données Stretch locale et la base de données Azure distante. Exécutez **sp_rda_deauthorize_db** lorsque la base de données distante est inaccessible ou dans un état incohérent et que vous souhaitez modifier le comportement de la requête pour toutes les tables Stretch dans la base de données.  
+  Supprime la connexion authentifiée entre une base de données Stretch locale et la base de données Azure distante. Exécutez **sp_rda_deauthorize_db**  lorsque la base de données distante est inaccessible ou dans un état incohérent et que vous souhaitez modifier le comportement de la requête pour toutes les tables Stretch dans la base de données.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

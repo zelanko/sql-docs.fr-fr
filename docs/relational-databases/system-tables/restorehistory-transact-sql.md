@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - restorehistory system table
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 26b3d319738ce827d482aafcfb76f91cc2ab53ba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03b5887ee905d5a39bce5ef9e73e78e27b581972
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460280"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540837"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88460280"
 |**destination_database_name**|**nvarchar(128)**|Nom de la base de données de destination à utiliser pour l'opération de restauration. Sa valeur peut être NULL.|  
 |**user_name**|**nvarchar(128)**|Nom de l'utilisateur qui a exécuté l'opération de restauration. Sa valeur peut être NULL.|  
 |**backup_set_id**|**int**|Numéro d'identification unique identifiant le jeu de sauvegarde en cours de restauration. Fait référence à une **backup_set_id**.|  
-|**restore_type**|**Char(1**|Type d'opération de restauration :<br /><br /> D = Base de données<br /><br /> F = Fichier<br /><br /> G = Groupe de fichiers<br /><br /> I = Différentielle<br /><br /> L = Journal<br /><br /> V = Vérification uniquement<br /><br /> Sa valeur peut être NULL.|  
+|**restore_type**|**char(1)**|Type d'opération de restauration :<br /><br /> D = Base de données<br /><br /> F = Fichier<br /><br /> G = Groupe de fichiers<br /><br /> I = Différentielle<br /><br /> L = Journal<br /><br /> V = Vérification uniquement<br /><br /> Sa valeur peut être NULL.|  
 |**replace**|**bit**|Indique si l'option REPLACE a été spécifiée pour l'opération de restauration :<br /><br /> 1 = Spécifiée<br /><br /> 0 = Non spécifiée<br /><br /> Sa valeur peut être NULL.<br /><br /> Lorsqu'un instantané de base de données est rétabli, 0 est la seule option disponible.|  
 |**recovery**|**bit**|Indique si l'option RECOVERY ou NORECOVERY a été spécifiée pour l'opération de restauration :<br /><br /> 1 = RECOVERY<br /><br /> Sa valeur peut être NULL.<br /><br /> Lorsqu’une base de données est restaurée dans un instantané de base de données, la valeur 1 est la seule option.<br /><br /> 0 = NORECOVERY|  
 |**restart**|**bit**|Indique si l'option RESTART a été spécifiée pour l'opération de restauration :<br /><br /> 1 = Spécifiée<br /><br /> 0 = Non spécifiée<br /><br /> Sa valeur peut être NULL.<br /><br /> Lorsqu'un instantané de base de données est rétabli, 0 est la seule option disponible.|  

@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 75e6753328857be7f677a253fde790dd51defc51
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474811"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539245"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   Retourne les informations relatives au volume du système d'exploitation (répertoire) sur lequel les bases de données et fichiers spécifiés sont stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez cette fonction de gestion dynamique pour vérifier les attributs du lecteur de disque physique ou retourner les informations relatives à l'espace disque disponible pour le répertoire.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -51,19 +51,19 @@ sys.dm_os_volume_stats (database_id, file_id)
 ||||  
 |-|-|-|  
 |**Colonne**|**Type de données**|**Description**|  
-|**database_id**|**int**|ID de la base de données. Ne peut pas avoir la valeur null.|  
-|**file_id**|**int**|ID du fichier. Ne peut pas avoir la valeur null.|  
+|**database_id**|**int**|ID de la base de données. Ne peut pas être null.|  
+|**file_id**|**int**|ID du fichier. Ne peut pas être null.|  
 |**volume_mount_point**|**nvarchar(512)**|Point de montage à la racine duquel le volume est attaché. Peut retourner une chaîne vide.|  
 |**volume_id**|**nvarchar(512)**|Identificateur du volume du système d'exploitation. Peut retourner une chaîne vide|  
 |**logical_volume_name**|**nvarchar(512)**|Nom du volume logique. Peut retourner une chaîne vide|  
 |**file_system_type**|**nvarchar(512)**|Type du volume du système de fichiers (par exemple, NTFS, FAT, RAW). Peut retourner une chaîne vide|  
-|**total_bytes**|**bigint**|Taille totale (en octets) du volume. Ne peut pas avoir la valeur null.|  
-|**available_bytes**|**bigint**|Espace disponible sur le volume. Ne peut pas avoir la valeur null.|  
-|**supports_compression**|**bit**|Indique si le volume prend en charge la compression du système d'exploitation. Ne peut pas avoir la valeur null.|  
-|**supports_alternate_streams**|**bit**|Indique si le volume prend en charge les flux de remplacement. Ne peut pas avoir la valeur null.|  
-|**supports_sparse_files**|**bit**|Indique si le volume prend en charge les fichiers partiellement alloués.  Ne peut pas avoir la valeur null.|  
-|**is_read_only**|**bit**|Indique si le volume est actuellement marqué comme étant en lecture seule. Ne peut pas avoir la valeur null.|  
-|**is_compressed**|**bit**|Indique si ce volume est actuellement compressé. Ne peut pas avoir la valeur null.|  
+|**total_bytes**|**bigint**|Taille totale (en octets) du volume. Ne peut pas être null.|  
+|**available_bytes**|**bigint**|Espace disponible sur le volume. Ne peut pas être null.|  
+|**supports_compression**|**bit**|Indique si le volume prend en charge la compression du système d'exploitation. Ne peut pas être null.|  
+|**supports_alternate_streams**|**bit**|Indique si le volume prend en charge les flux de remplacement. Ne peut pas être null.|  
+|**supports_sparse_files**|**bit**|Indique si le volume prend en charge les fichiers partiellement alloués.  Ne peut pas être null.|  
+|**is_read_only**|**bit**|Indique si le volume est actuellement marqué comme étant en lecture seule. Ne peut pas être null.|  
+|**is_compressed**|**bit**|Indique si ce volume est actuellement compressé. Ne peut pas être null.|  
   
 ## <a name="security"></a>Sécurité  
   

@@ -16,20 +16,20 @@ apitype: MOFDef
 helpviewer_keywords:
 - Enabled property
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0da8f0be827c4d65ee675be81116655cb42ef69e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a41927930daadf575aea9933cb86a63ed9d810b1
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446235"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540133"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Propriété Enabled (classe ServerNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient la propriété booléenne qui spécifie si le protocole réseau serveur est activé.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

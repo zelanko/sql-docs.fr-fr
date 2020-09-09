@@ -16,20 +16,20 @@ apitype: MOFDef
 helpviewer_keywords:
 - ProcessId property
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0e998dad0b768ebfcca33b83a8128dc44c776acc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d4e6ceb18ecda885481860bf9889143bccfd0ed6
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463606"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540007"
 ---
 # <a name="processid-class-sqlservice-class"></a>Classe ProcessId (classe SqlService)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient l'ID de processus système qui identifie un service de façon unique.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
@@ -51,7 +51,7 @@ object.ProcessId [= value]
 mysqlservice.ProcessId = 324  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrage et arrêt des services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

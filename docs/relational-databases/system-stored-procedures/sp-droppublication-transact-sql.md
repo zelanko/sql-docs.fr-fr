@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droppublication
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 980b40421b51594ef0d687521ba9e436c2a16c4c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5ae91db140ea261a6417cb08eae07cfe2eb7fb79
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783825"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538923"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,14 +39,14 @@ sp_droppublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'`Nom de la publication à supprimer. *publication* est de **type sysname**, sans valeur par défaut. Si **All** est spécifié, toutes les publications sont supprimées de la base de données de publication, à l’exception de celles qui ont des abonnements.  
+`[ @publication = ] 'publication'` Nom de la publication à supprimer. *publication* est de **type sysname**, sans valeur par défaut. Si **All** est spécifié, toutes les publications sont supprimées de la base de données de publication, à l’exception de celles qui ont des abonnements.  
   
 `[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_droppublication** est utilisé dans la réplication d’instantané et la réplication transactionnelle.  
   
  **sp_droppublication** supprime de manière récursive tous les articles associés à une publication, puis supprime la publication elle-même. Une publication ne peut être supprimée si elle fait l'objet d'un ou de plusieurs abonnements. Pour plus d’informations sur la suppression des abonnements, consultez [supprimer un abonnement par émission](../../relational-databases/replication/delete-a-push-subscription.md) de données et [supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md).  

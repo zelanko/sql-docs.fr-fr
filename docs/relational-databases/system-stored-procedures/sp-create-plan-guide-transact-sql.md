@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 0595885b12cc70d5634058eeb9650ee323921ba5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e7cc07a0878eefdb6f8c0cdf33cf6e063651afb
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489529"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89539051"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Crée un repère de plan permettant d'associer des indicateurs de requête ou des plans de requête réels à des requêtes d'une base de données. Pour plus d'informations sur les repères de plan, consultez [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -74,7 +74,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@ module_or_batch =] {N' [ *schema_name*. ] *object_name*' | N'*batch_text*' | NUL  
  Spécifie le nom de l’objet dans lequel *statement_text* s’affiche, ou le texte du lot dans lequel *statement_text* apparaît. Le texte du lot ne peut pas inclure une instruction USE*Database* .  
   
- Pour qu’un repère de plan corresponde à un lot envoyé à partir d’une application, *batch_tex*t doit être fourni dans le même format, caractère pour caractère, tel qu’il est envoyé à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Aucune conversion interne n'est effectuée pour faciliter cette correspondance. Pour plus d'informations, consultez la section Notes.  
+ Pour qu’un repère de plan corresponde à un lot envoyé à partir d’une application, *batch_tex*t doit être fourni dans le même format, caractère pour caractère, tel qu’il est envoyé à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Aucune conversion interne n'est effectuée pour faciliter cette correspondance. Pour plus d'informations, consultez la section Remarques.  
   
  [*schema_name*.] *object_name* spécifie le nom d’une [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure stockée, d’une fonction scalaire, d’une fonction table à instructions multiples ou d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] déclencheur DML qui contient des *statement_text*. Si *schema_name* n’est pas spécifié, *schema_name* utilise le schéma de l’utilisateur actuel. Si NULL est spécifié et \@ type = 'SQL', la valeur de \@ module_or_batch est définie sur la valeur de \@ stmt. Si \@ type = 'template **\'** , \@ module_or_batch doit avoir la valeur null.  
   
@@ -85,7 +85,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 -   *statement_text* est soumise à l’aide de sp_executesql et une valeur \@ est spécifiée pour le paramètre params, ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envoie une instruction en interne après l’avoir paramétrée. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère la soumission de requêtes paramétrables à partir des API de bases de données (y compris ODBC, OLE DB et ADO.NET) comme des appels à sp_executesql ou aux routines de curseur côté serveur d'API. Par conséquent, elles peuvent également être mises en correspondance par des repères de plan SQL ou TEMPLATE.  
   
- * \@ parameter_name data_type* doit être fourni dans le même format que celui dans lequel il est soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’aide de sp_executesql ou soumis en interne après le paramétrage. Pour plus d'informations, consultez la section Notes. Si le traitement ne contient aucun paramètre, la valeur NULL doit être spécifiée. La taille des \@ paramètres est limitée uniquement par la mémoire disponible du serveur.  
+ * \@ parameter_name data_type* doit être fourni dans le même format que celui dans lequel il est soumis à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’aide de sp_executesql ou soumis en interne après le paramétrage. Pour plus d'informations, consultez la section Remarques. Si le traitement ne contient aucun paramètre, la valeur NULL doit être spécifiée. La taille des \@ paramètres est limitée uniquement par la mémoire disponible du serveur.  
   
  [ \@ Hints =] {n’option (*query_hint* [,*... n* ]) ' | N'*XML_showplan*' | NUL  
  N’option (*query_hint* [,*... n* ])  
@@ -330,12 +330,12 @@ GO
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Moteur de base de données des procédures stockées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
- [sys. fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
+ [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql.md)   
  [sp_get_query_template &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md)  
   
   

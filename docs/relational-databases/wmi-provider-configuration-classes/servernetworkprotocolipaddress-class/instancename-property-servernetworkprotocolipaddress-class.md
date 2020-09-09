@@ -16,20 +16,20 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: e23e2b64-2a74-474f-a425-39ca439ac37a
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: dfd92d11477cc04026209561ebebc5cd482e1054
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fc0af527898dd923d394bbb9881621ce774ce81f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488430"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538236"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>Propriété InstanceName (classe ServerNetworkProtocolIPAddress)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nom de l’instance de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle le protocole réseau serveur est installé.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

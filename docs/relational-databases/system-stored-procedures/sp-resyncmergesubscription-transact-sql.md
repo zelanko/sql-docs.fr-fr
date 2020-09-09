@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9210352380000b465c93f2b1d2121af1bd786f80
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86e1aaf4ee97447518e09a9b0b08a2624015cbef
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446802"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89540483"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Resynchronise un abonnement de fusion avec un état de validation connu que vous spécifiez. Ceci permet de forcer la convergence ou de synchroniser la base de données d'abonnement par rapport à un point dans le temps, tel que la dernière validation qui a abouti, ou à une date spécifiée. L'instantané n'est pas réappliqué lors de la resynchronisation d'un abonnement à l'aide de cette méthode. Cette procédure stockée n'est pas utilisée pour les abonnements de réplication d'instantané ou de réplication transactionnelle. Cette procédure stockée est exécutée sur la base de données d’abonnement sur la base de données de publication, sur la base de données de publication ou sur l’abonné.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

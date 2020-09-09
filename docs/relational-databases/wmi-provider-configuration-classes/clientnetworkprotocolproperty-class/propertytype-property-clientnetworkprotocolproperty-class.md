@@ -16,20 +16,20 @@ apitype: MOFDef
 helpviewer_keywords:
 - PropertyType property
 ms.assetid: fc0e4725-979f-4517-a8f5-25436b87f5c2
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f05a8c7802389cdc89eef44e59e6bb2a263479cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1c3bb3ea3bad4087ea88c8abdbd51ed5b1644575
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485182"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89537825"
 ---
 # <a name="propertytype-property-clientnetworkprotocolproperty-class"></a>Propriété PropertyType (classe ClientNetworkProtocolProperty)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le type de la propriété référencée par la valeur de la [propriété PropertyIdx (classe ClientNetworkProtocolProperty)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocolproperty-class/propertyidx-property-clientnetworkprotocolproperty-class.md) .  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```  
   

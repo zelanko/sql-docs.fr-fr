@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repldone
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: e627296cecad35b21c84b928f4474f6302e9214d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7a8e32127986fb67a28abfa2433caefc044ed1b2
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725739"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89538572"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -44,20 +44,20 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @xactid = ] xactid`Numéro séquentiel dans le journal (LSN) du premier enregistrement de la dernière transaction distribuée du serveur. *xactid* est de **type Binary (10)**, sans valeur par défaut.  
+`[ @xactid = ] xactid` Numéro séquentiel dans le journal (LSN) du premier enregistrement de la dernière transaction distribuée du serveur. *xactid* est de **type Binary (10)**, sans valeur par défaut.  
   
-`[ @xact_seqno = ] xact_seqno`LSN du dernier enregistrement de la dernière transaction distribuée du serveur. *xact_seqno* est de **type Binary (10)**, sans valeur par défaut.  
+`[ @xact_seqno = ] xact_seqno` LSN du dernier enregistrement de la dernière transaction distribuée du serveur. *xact_seqno* est de **type Binary (10)**, sans valeur par défaut.  
   
-`[ @numtrans = ] numtrans`Nombre de transactions distribuées. *numtrans* est de **type int**, sans valeur par défaut.  
+`[ @numtrans = ] numtrans` Nombre de transactions distribuées. *numtrans* est de **type int**, sans valeur par défaut.  
   
-`[ @time = ] time`Nombre de millisecondes, s’il est fourni, nécessaires pour distribuer le dernier lot de transactions. l' *heure* est de **type int**, sans valeur par défaut.  
+`[ @time = ] time` Nombre de millisecondes, s’il est fourni, nécessaires pour distribuer le dernier lot de transactions. l' *heure* est de **type int**, sans valeur par défaut.  
   
-`[ @reset = ] reset`Est l’état de réinitialisation. *Reset* est de **type int**, sans valeur par défaut. Si la **1**est définie, toutes les transactions répliquées dans le journal sont marquées comme distribuées. Si la **valeur est 0**, le journal des transactions est réinitialisé à la première transaction répliquée et aucune transaction répliquée n’est marquée comme distribuée. la *réinitialisation* est valide uniquement lorsque *xactid* et *xact_seqno* ont la valeur null.  
+`[ @reset = ] reset` Est l’état de réinitialisation. *Reset* est de **type int**, sans valeur par défaut. Si la **1**est définie, toutes les transactions répliquées dans le journal sont marquées comme distribuées. Si la **valeur est 0**, le journal des transactions est réinitialisé à la première transaction répliquée et aucune transaction répliquée n’est marquée comme distribuée. la *réinitialisation* est valide uniquement lorsque *xactid* et *xact_seqno* ont la valeur null.  
   
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  **sp_repldone** est utilisé dans la réplication transactionnelle.  
   
  **sp_repldone** est utilisé par le processus de lecture du journal pour effectuer le suivi des transactions qui ont été distribuées.  
