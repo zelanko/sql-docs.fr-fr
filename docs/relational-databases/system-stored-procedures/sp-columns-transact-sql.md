@@ -16,22 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dec6803d57bbb67286dc7b9ceb1b573644c2863
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5085fce0bec1568b940fbffd369effd0a6d31c8f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489552"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546208"
 ---
 # <a name="sp_columns-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne des informations de colonne pour les objets spécifiés qui peuvent être interrogés dans l'environnement actuel.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -59,7 +59,7 @@ sp_columns [ @table_name = ] object
 `[ \@ODBCVer = ] ODBCVer` Est la version de ODBC en cours d’utilisation. *ODBCVer* est de **type int**, avec 2 comme valeur par défaut. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Pour connaître les différences de comportement entre les versions 2 et 3, consultez la spécification ODBC **SQLColumns** .  
   
 ## <a name="return-code-values"></a>Codet de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  La procédure stockée du catalogue **sp_columns** est équivalente à **SQLColumns** dans ODBC. Les résultats retournés sont triés par **TABLE_QUALIFIER**, **TABLE_OWNER**et **table_name**.  

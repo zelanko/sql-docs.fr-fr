@@ -16,22 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_recompile
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bbf1e6b85b3071e0029d1fd294a8147b79d64fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e0f32166351f80b87b28a169ea0204af97f832f
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473888"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547593"
 ---
 # <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Provoque la recompilation des procédures stockées, des déclencheurs et des fonctions définies par l'utilisateur lors de leur prochaine exécution. Pour cela, il supprime le plan existant du cache de procédures, ce qui force la création d'un nouveau plan lors de la prochaine exécution de la procédure ou du déclencheur. Dans une collection [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], l'événement SP:CacheInsert est journalisé au lieu de l'événement SP:Recompile.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

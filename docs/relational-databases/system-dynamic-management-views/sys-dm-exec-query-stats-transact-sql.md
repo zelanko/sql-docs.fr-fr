@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 12ef4ff17b243a674911a9611517529bbe0ce0dc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f2bca0c700f483aced7a4387885649cb0ac2e764
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489983"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546579"
 ---
 # <a name="sysdm_exec_query_stats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -74,10 +74,10 @@ Retourne les statistiques sur les performances des agrégats pour les plans de r
 |**max_elapsed_time**|**bigint**|Temps maximum écoulé, indiqué en microsecondes (mais précis uniquement en millisecondes), pour les différentes exécutions de ce plan.|  
 |**query_hash**|**Binaire (8)**|La valeur de hachage binaire calculée sur la requête et utilisée pour identifier des requêtes avec une logique similaire. Vous pouvez utiliser le hachage de requête pour déterminer l'utilisation des ressources globale pour les requêtes qui diffèrent uniquement par les valeurs littérales.|  
 |**query_plan_hash**|**Binary(8**|Valeur de hachage binaire calculée sur le plan d'exécution de requête et utilisée pour identifier des plans d'exécution de requête semblables. Vous pouvez utiliser le hachage de plan de requête pour rechercher le coût cumulatif de requêtes avec les plans d'exécution semblables.<br /><br /> Sa valeur est toujours 0x000 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
-|**total_rows**|**bigint**|Nombre total de lignes renvoyées par la requête. Ne peut pas avoir la valeur null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
-|**last_rows**|**bigint**|Nombre de lignes renvoyées par la dernière exécution de la requête. Ne peut pas avoir la valeur null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
-|**min_rows**|**bigint**|Nombre minimal de lignes retournées par la requête au cours d’une exécution. Ne peut pas avoir la valeur null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
-|**max_rows**|**bigint**|Nombre maximal de lignes retournées par la requête au cours d’une exécution. Ne peut pas avoir la valeur null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
+|**total_rows**|**bigint**|Nombre total de lignes renvoyées par la requête. Ne peut pas être null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
+|**last_rows**|**bigint**|Nombre de lignes renvoyées par la dernière exécution de la requête. Ne peut pas être null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
+|**min_rows**|**bigint**|Nombre minimal de lignes retournées par la requête au cours d’une exécution. Ne peut pas être null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
+|**max_rows**|**bigint**|Nombre maximal de lignes retournées par la requête au cours d’une exécution. Ne peut pas être null.<br /><br /> Sa valeur est toujours 0 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
 |**statement_sql_handle**|**varbinary(64)**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Renseigné avec des valeurs non NULL uniquement si Magasin des requêtes est activé et collecte les statistiques de cette requête particulière.|  
 |**statement_context_id**|**bigint**|**S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.<br /><br /> Renseigné avec des valeurs non NULL uniquement si Magasin des requêtes est activé et collecte les statistiques de cette requête particulière.|  
 |**total_dop**|**bigint**|Somme totale du degré de parallélisme utilisé par ce plan depuis sa compilation. Elle sera toujours 0 pour l’interrogation d’une table optimisée en mémoire.<br /><br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
@@ -104,14 +104,14 @@ Retourne les statistiques sur les performances des agrégats pour les plans de r
 |**last_used_threads**|**bigint**|Nombre de threads parallèles utilisés lors de la dernière exécution de ce plan. Elle sera toujours 0 pour l’interrogation d’une table optimisée en mémoire.<br /><br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
 |**min_used_threads**|**bigint**|Nombre minimal de threads parallèles utilisés que ce plan a jamais utilisé pendant une exécution. Elle sera toujours 0 pour l’interrogation d’une table optimisée en mémoire.<br /><br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
 |**max_used_threads**|**bigint**|Nombre maximal de threads parallèles utilisés que ce plan a jamais utilisé pendant une exécution. Elle sera toujours 0 pour l’interrogation d’une table optimisée en mémoire.<br /><br /> **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.|  
-|**total_columnstore_segment_reads**|**bigint**|Somme totale des segments ColumnStore lus par la requête. Ne peut pas avoir la valeur null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_reads**|**bigint**|Nombre de segments ColumnStore lus par la dernière exécution de la requête. Ne peut pas avoir la valeur null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_reads**|**bigint**|Nombre minimal de segments ColumnStore lus par la requête au cours d’une exécution. Ne peut pas avoir la valeur null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_reads**|**bigint**|Nombre maximal de segments ColumnStore lus par la requête au cours d’une exécution. Ne peut pas avoir la valeur null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**total_columnstore_segment_skips**|**bigint**|Somme totale des segments ColumnStore ignorés par la requête. Ne peut pas avoir la valeur null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**last_columnstore_segment_skips**|**bigint**|Nombre de segments ColumnStore ignorés par la dernière exécution de la requête. Ne peut pas avoir la valeur null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**min_columnstore_segment_skips**|**bigint**|Nombre minimal de segments ColumnStore ignorés par la requête au cours d’une exécution. Ne peut pas avoir la valeur null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
-|**max_columnstore_segment_skips**|**bigint**|Nombre maximal de segments ColumnStore jamais ignorés par la requête pendant une exécution. Ne peut pas avoir la valeur null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
+|**total_columnstore_segment_reads**|**bigint**|Somme totale des segments ColumnStore lus par la requête. Ne peut pas être null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|Nombre de segments ColumnStore lus par la dernière exécution de la requête. Ne peut pas être null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|Nombre minimal de segments ColumnStore lus par la requête au cours d’une exécution. Ne peut pas être null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|Nombre maximal de segments ColumnStore lus par la requête au cours d’une exécution. Ne peut pas être null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|Somme totale des segments ColumnStore ignorés par la requête. Ne peut pas être null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|Nombre de segments ColumnStore ignorés par la dernière exécution de la requête. Ne peut pas être null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|Nombre minimal de segments ColumnStore ignorés par la requête au cours d’une exécution. Ne peut pas être null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|Nombre maximal de segments ColumnStore jamais ignorés par la requête pendant une exécution. Ne peut pas être null.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
 |**total_spills**|**bigint**|Nombre total de pages déduites par l’exécution de cette requête depuis sa compilation.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**last_spills**|**bigint**|Nombre de pages débordées lors de la dernière exécution de la requête.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Nombre minimal de pages que cette requête a déjà débordées lors d’une seule exécution.<br /><br /> **S’applique à**: à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  

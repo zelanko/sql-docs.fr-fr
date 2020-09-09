@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 324f3d5b8b1e70d41e276fd0b0f909b27a937e81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 78b4901fc70299373044ce0720403031992e37a4
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473762"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547387"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne un jeu de résultats affichant les modifications en attente de réplication. Cette procédure stockée est exécutée sur la base de données de publication du serveur de publication et sur la base de données d'abonnement de l'Abonné.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 > [!NOTE]  
 >  Cette procédure fournit un nombre approximatif des modifications apportées ainsi que les lignes concernées par ces modifications. Par exemple, la procédure récupère les informations du serveur de publication ou de l'abonné, mais pas à la fois en même temps. Les informations stockées à l'autre nœud peuvent engendrer un plus petit jeu de modifications à synchroniser que les estimations de procédure.  

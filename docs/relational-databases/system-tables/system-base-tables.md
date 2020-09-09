@@ -15,14 +15,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: c60aad12977f5260cc108697e52245bc8a37d9d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 56da705b29be712942fec337e84aec5d68a31bad
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446535"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547022"
 ---
 # <a name="system-base-tables"></a>Tables de base système
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "88446535"
 |----------------|-----------------|  
 |**sys.sysschobjs**|Existe dans toutes les bases de données. Chaque ligne représente un objet de la base de données.|  
 |**sys.sysbinobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de Service Broker dans la base de données. Les entités de Service Broker incluent les éléments suivants :<br /><br /> type de message<br /><br /> contrat de service<br /><br /> Service<br /><br /> Les noms et les types utilisent un classement binaire fixe.|  
-|**sys.sysclsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité classifiée qui partage les mêmes propriétés communes qui incluent les éléments suivants :<br /><br /> Assembly<br /><br /> unité de sauvegarde<br /><br /> Catalogue de texte intégral<br /><br /> Fonction de partition<br /><br /> Schéma de partition<br /><br /> groupe de fichiers<br /><br /> clé d'obfuscation|  
+|**sys.sysclsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité classifiée qui partage les mêmes propriétés communes qui incluent les éléments suivants :<br /><br /> Assembly<br /><br /> unité de sauvegarde<br /><br /> Catalogue de texte intégral<br /><br /> Fonction de partition<br /><br /> Schéma de partition<br /><br /> Groupe de fichiers<br /><br /> clé d'obfuscation|  
 |**sys.sysnsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de l'étendue de l'espace de noms. Cette table est utilisée pour le stockage des entités de collection XML.|  
 |**sys.syscolpars**|Existe dans toutes les bases de données. Contient une ligne pour chaque colonne de table, chaque vue ou chaque fonction table. Contient également des lignes pour chaque paramètre d'une procédure ou d'une fonction.|  
 |**sys.systypedsubobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque sous-entité typée. Seuls les paramètres de la fonction de partition appartiennent à cette catégorie.|  

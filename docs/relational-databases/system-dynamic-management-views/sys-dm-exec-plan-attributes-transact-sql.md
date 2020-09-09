@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_plan_attributes dynamic management function
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ddfa137e0efd93bfad2a59a4fc2c8da2c189cdc3
-ms.sourcegitcommit: a0245fdae1ff9045f587a3a67b72f34405d35a4f
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 481638908fea0dbad0c593b2ca8ee28195b3eaf8
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/19/2020
-ms.locfileid: "88618115"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546589"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|Attribut|**varchar(128)**|Nom de l'attribut associé à ce plan. Le tableau situé juste en dessous de celui-ci répertorie les attributs possibles, leurs types de données et leurs descriptions.|  
+|attribut|**varchar(128)**|Nom de l'attribut associé à ce plan. Le tableau situé juste en dessous de celui-ci répertorie les attributs possibles, leurs types de données et leurs descriptions.|  
 |value|**sql_variant**|Valeur de l'attribut associé à ce plan.|  
 |is_cache_key|**bit**|Indique si l'attribut est utilisé comme une partie de la clé de recherche en cache pour le plan.|  
 
@@ -122,7 +122,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
   
 |Option|Valeur|  
 |------------|-----------|  
-|None|0|  
+|Aucune|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

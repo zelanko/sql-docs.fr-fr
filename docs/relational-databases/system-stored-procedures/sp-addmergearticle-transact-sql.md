@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: ef60a3770d579358d561d98648d4bc7a54309555
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40c50362e8976552f80bf7a023a49f05a5bb5043
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489702"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546294"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ajoute un article à une publication de fusion existante. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -285,7 +285,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**Aucune**|Désactive la gestion des plages d’identité.|  
 |**Manuelle**|Marque la colonne d'identité en utilisant NOT FOR REPLICATION pour activer la gestion manuelle des plages d'identité.|  
-|**auto**|Spécifie la gestion automatique des plages d'identité.|  
+|**Auto**|Spécifie la gestion automatique des plages d'identité.|  
 |NULL (valeur par défaut)|La valeur par défaut est **None**lorsque la valeur de *auto_identity_range* n’est pas **true**.|  
   
  Pour la compatibilité descendante, lorsque la valeur de *identityrangemanagementoption* est null, la valeur de *auto_identity_range* est vérifiée. Toutefois, lorsque la valeur de *identityrangemanagementoption* n’est pas null, la valeur de *auto_identity_range* est ignorée. Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).  

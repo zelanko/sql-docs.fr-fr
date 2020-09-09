@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f85830c11ca64f3540995411a2cfe1dac6044544
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce3aa58526b458619b9875a19118fd4575aca3bf
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474030"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546058"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Renvoie la liste des colonnes de l'article de table ou de vue spécifié pour une réplication de fusion. Étant donné que les procédures stockées n'ont pas de colonnes, cette procédure stockée renvoie une erreur si une procédure stockée est spécifiée en tant qu'article. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

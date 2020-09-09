@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: d2bd308f79e9ef4a49e91509400e8d4938cd4473
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 01c576dcb71aa3814f1e1c560c6e38ec35874161
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485659"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547409"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -32,7 +32,7 @@ Capture des données de diagnostics et des informations d'intégrité à propos 
   
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures).  
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -85,7 +85,7 @@ Du point de vue d'un échec, les composant system, resource et query_processing 
   
 Le tableau suivant mappe les composants à leurs états d'intégrité associés.  
   
-|Composants|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
+|Components|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |système|x|x|x||  
 |resource|x|x|x||  

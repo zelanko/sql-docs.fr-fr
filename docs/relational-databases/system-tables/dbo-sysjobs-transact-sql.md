@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobs system table
 ms.assetid: e244a6a5-54c2-47a6-8039-dd1852b0ae59
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 71fc80a0c847957f52b85344139c75a397b8e6c8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fb1e7125dd953fe4904c963f888ae9c11c400df9
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454731"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545796"
 ---
 # <a name="dbosysjobs-transact-sql"></a>dbo.sysjobs (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88454731"
 |**description**|**nvarchar(512)**|Description du travail.|  
 |**start_step_id**|**int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
 |**category_id**|**int**|ID de la catégorie du travail.|  
-|**owner_sid**|**varbinary (85)**|Numéro d'identification de sécurité (SID) du propriétaire du travail.|  
+|**owner_sid**|**varbinary(85)**|Numéro d'identification de sécurité (SID) du propriétaire du travail.|  
 |**notify_level_eventlog**|**int**|**Masque binaire** indiquant les circonstances entraînant la consignation d’un événement de notification dans le journal des applications Microsoft Windows :<br /><br /> **0** = jamais<br /><br /> **1** = lorsque la tâche est réussie<br /><br /> **2** = en cas d’échec du travail<br /><br /> **3** = à chaque achèvement du travail (quel que soit le résultat du travail)|  
 |**notify_level_email**|**int**|Masque binaire indiquant les circonstances entraînant l'envoi d'un courrier électronique en fin de travail :<br /><br /> **0** = jamais<br /><br /> **1** = lorsque la tâche est réussie<br /><br /> **2** = en cas d’échec du travail<br /><br /> **3** = à chaque achèvement du travail (quel que soit le résultat du travail)|  
 |**notify_level_netsend**|**int**|Masque binaire indiquant les circonstances entraînant l'envoi d'un message sur le réseau en fin de travail :<br /><br /> **0** = jamais<br /><br /> **1** = lorsque la tâche est réussie<br /><br /> **2** = en cas d’échec du travail<br /><br /> **3** = à chaque achèvement du travail (quel que soit le résultat du travail)|  

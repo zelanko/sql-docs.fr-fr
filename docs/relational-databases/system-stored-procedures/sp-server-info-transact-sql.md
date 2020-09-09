@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 09a7f0e7b0496d3f38ca31bc4a1df369133bb548
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5936e83d902926ad1cab22c7046693aab47cd97e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489133"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547468"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
@@ -31,7 +31,7 @@ ms.locfileid: "88489133"
 
   Retourne une liste de noms d'attributs et de valeurs correspondantes pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la passerelle de base de données ou la source de données sous-jacente.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,7 +44,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'` Est l’ID d’entier de l’attribut. *attribute_id* est de **type int**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -69,23 +69,23 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**16**|IDENTIFIER_CASE<br /><br /> Spécifie les noms définis par l'utilisateur (noms de table, noms de colonne, noms de procédure stockée) dans la base de données (cas des objets des catalogues système).|SENSITIVE|  
 |**17**|TX_ISOLATION<br /><br /> Spécifie le niveau initial d'isolement de la transaction assuré par le serveur, ce qui correspond à un niveau d'isolement défini dans SQL-92.|2|  
 |**19**|COLLATION_SEQ<br /><br /> Spécifie l'ordre du jeu de caractères de ce serveur.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
-|**19**|SAVEPOINT_SUPPORT<br /><br /> Spécifie si le SGBD sous-jacent prend en charge les points d'enregistrement nommés.|O|  
-|**20**|MULTI_RESULT_SETS<br /><br /> Spécifie si la base de données sous-jacente ou la passerelle elle-même gère les jeux de résultats multiples (plusieurs instructions peuvent être envoyées par l'intermédiaire de la passerelle et plusieurs jeux de résultats peuvent être retournés au client).|O|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> Spécifie si, dans **sp_tables**, la passerelle retourne uniquement les tables, les vues, etc., accessibles par l’utilisateur actuel (autrement dit, l’utilisateur qui a au moins des autorisations SELECT pour la table).|O|  
+|**19**|SAVEPOINT_SUPPORT<br /><br /> Spécifie si le SGBD sous-jacent prend en charge les points d'enregistrement nommés.|Y|  
+|**20**|MULTI_RESULT_SETS<br /><br /> Spécifie si la base de données sous-jacente ou la passerelle elle-même gère les jeux de résultats multiples (plusieurs instructions peuvent être envoyées par l'intermédiaire de la passerelle et plusieurs jeux de résultats peuvent être retournés au client).|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> Spécifie si, dans **sp_tables**, la passerelle retourne uniquement les tables, les vues, etc., accessibles par l’utilisateur actuel (autrement dit, l’utilisateur qui a au moins des autorisations SELECT pour la table).|Y|  
 |**100**|USERID_LENGTH<br /><br /> Spécifie le nombre maximal de caractères pour un nom d'utilisateur.|128|  
 |**101**|QUALIFIER_TERM<br /><br /> Spécifie le terme utilisé par le fournisseur du SGBD pour désigner un qualificateur de table (première partie d'un nom en trois parties).|database|  
-|**102**|NAMED_TRANSACTIONS<br /><br /> Spécifie si le SGBD sous-jacent prend en charge les transactions nommées.|O|  
-|**103**|SPROC_AS_LANGUAGE<br /><br /> Spécifie si les procédures stockées peuvent être exécutées comme événements de langage.|O|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> Spécifie si, dans **sp_stored_procedures**, la passerelle retourne uniquement les procédures stockées qui sont exécutables par l’utilisateur actuel.|O|  
+|**102**|NAMED_TRANSACTIONS<br /><br /> Spécifie si le SGBD sous-jacent prend en charge les transactions nommées.|Y|  
+|**103**|SPROC_AS_LANGUAGE<br /><br /> Spécifie si les procédures stockées peuvent être exécutées comme événements de langage.|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> Spécifie si, dans **sp_stored_procedures**, la passerelle retourne uniquement les procédures stockées qui sont exécutables par l’utilisateur actuel.|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> Spécifie le nombre maximal de colonnes dans un index pour le SGBD.|16|  
-|**106**|RENAME_TABLE<br /><br /> Spécifie si les tables peuvent être renommées.|O|  
-|**107**|RENAME_COLUMN<br /><br /> Spécifie si les colonnes peuvent être renommées.|O|  
-|**108**|DROP_COLUMN<br /><br /> Spécifie si des colonnes peuvent être supprimées.|O|  
-|**109**|INCREASE_COLUMN_LENGTH<br /><br /> Spécifie s'il est possible d'augmenter la taille des colonnes.|O|  
-|**110**|DDL_IN_TRANSACTION<br /><br /> Spécifie si des instructions DDL peuvent apparaître dans des transactions.|O|  
-|**111**|DESCENDING_INDEXES<br /><br /> Spécifie si des index décroissants sont gérés.|O|  
-|**112**|SP_RENAME<br /><br /> Spécifie s'il est possible de renommer une procédure stockée.|O|  
-|**113**|REMOTE_SPROC<br /><br /> Spécifie si les procédures stockées peuvent être exécutées par des fonctions de procédures stockées distantes figurant dans la bibliothèque de bases de données.|O|  
+|**106**|RENAME_TABLE<br /><br /> Spécifie si les tables peuvent être renommées.|Y|  
+|**107**|RENAME_COLUMN<br /><br /> Spécifie si les colonnes peuvent être renommées.|Y|  
+|**108**|DROP_COLUMN<br /><br /> Spécifie si des colonnes peuvent être supprimées.|Y|  
+|**109**|INCREASE_COLUMN_LENGTH<br /><br /> Spécifie s'il est possible d'augmenter la taille des colonnes.|Y|  
+|**110**|DDL_IN_TRANSACTION<br /><br /> Spécifie si des instructions DDL peuvent apparaître dans des transactions.|Y|  
+|**111**|DESCENDING_INDEXES<br /><br /> Spécifie si des index décroissants sont gérés.|Y|  
+|**112**|SP_RENAME<br /><br /> Spécifie s'il est possible de renommer une procédure stockée.|Y|  
+|**113**|REMOTE_SPROC<br /><br /> Spécifie si les procédures stockées peuvent être exécutées par des fonctions de procédures stockées distantes figurant dans la bibliothèque de bases de données.|Y|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Spécifie la version actuelle des procédures stockées de catalogue.|Numéro de version actuelle|  
   
 ## <a name="remarks"></a>Notes  

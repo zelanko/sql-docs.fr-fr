@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitmergesubscription
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 8712640a1f5f1b2dd53e49d09610dd30b192b4cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f1a924af8d72239e3d185e27c491ecd48d9f38ad
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446846"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547420"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Signale un abonnement de fusion en vue de sa réinitialisation lors de la prochaine exécution de l’Agent de fusion. Cette procédure stockée est exécutée dans la base de données de publication du serveur de publication.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

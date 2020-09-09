@@ -18,14 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 16e51513c6d2b678798d0f4bde3b5a9cb1de69a7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9c0bb164d77ba4c505207e56897ecc17f8644821
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488866"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89545805"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88488866"
 |**schedule_uid**|**uniqueidentifier**|Identificateur unique de la planification du travail. Cette valeur permet d'identifier une planification pour les travaux distribués.|  
 |**originating_server_id**|**int**|ID du serveur principal duquel provient la planification du travail.|  
 |**name**|**sysname (nvarchar (128))**|Nom de la planification du travail défini par l'utilisateur. Ce nom doit être unique au sein d'un travail.|  
-|**owner_sid**|**varbinary (85)**|Microsoft Windows *security_identifier* de l’utilisateur ou du groupe propriétaire de la planification du travail.|  
+|**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* de l’utilisateur ou du groupe propriétaire de la planification du travail.|  
 |**activé**|**int**|État de la planification du travail :<br /><br /> **0** = non activé.<br /><br /> **1** = activé.<br /><br /> Si la planification n'est pas activée, aucun travail n'est exécuté sur la planification.|  
 |**freq_type**|**int**|Fréquence d'exécution d'un travail pour cette planification.<br /><br /> **1** = une seule fois<br /><br /> **4** = tous les jours<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuelle, par rapport à **freq_interval**<br /><br /> **64** = s’exécute au démarrage du service SQL Server Agent<br /><br /> **128** = s’exécute lorsque l’ordinateur est inactif|  
 |**freq_interval**|**int**|Jours d'exécution du travail. Dépend de la valeur de **freq_type**. La valeur par défaut est **0**, ce qui indique que **freq_interval** n’est pas utilisé. Consultez le tableau ci-dessous pour connaître les valeurs possibles et leurs effets.|  

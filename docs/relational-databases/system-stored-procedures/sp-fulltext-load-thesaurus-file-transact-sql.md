@@ -18,14 +18,14 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: de200151bf6c17119e9926ac848e33a5dd84751b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fa28cb49c289437bc6c9dea524d1ff9e8b8ac64
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447144"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89546162"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "88447144"
 
   Oblige l'instance de serveur à analyser et charger les données à partir du fichier de dictionnaire des synonymes qui correspond à la langue dont le LCID est spécifié. Cette procédure stockée est utile après la mise à jour d'un fichier de dictionnaire des synonymes. L’exécution de **sp_fulltext_load_thesaurus_file** provoque la recompilation des requêtes de texte intégral qui utilisent le dictionnaire des synonymes du LCID spécifié.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 |1|Charge le fichier de dictionnaire des synonymes uniquement s'il n'est pas encore chargé.|  
   
 ## <a name="return-code-values"></a>Codet de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  None  
