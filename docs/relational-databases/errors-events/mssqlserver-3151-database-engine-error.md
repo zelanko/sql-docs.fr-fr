@@ -31,7 +31,7 @@ ms.locfileid: "88491199"
 |Source de l’événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|LDDB_MASTER_LOAD_FAILED|  
-|Texte du message|Échec de la restauration de la base de données master. Arrêt du serveur SQL Server. Check the error logs, and rebuild the master database. Pour plus d'informations sur la façon de reconstruire la base de données master, consultez la documentation en ligne de SQL Server.|  
+|Texte du message|Échec de la restauration de la base de données master. Arrêt du serveur SQL Server. Consultez les journaux d'erreurs et reconstruisez la base de données principale. Pour plus d'informations sur la façon de reconstruire la base de données master, consultez la documentation en ligne de SQL Server.|  
   
 ## <a name="explanation"></a>Explication  
 Ceci est un message d’erreur général qui indique des problèmes variés avec la base de données **MASTER**.  

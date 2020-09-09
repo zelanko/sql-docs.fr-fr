@@ -2,7 +2,7 @@
 description: sys.dm_os_volume_stats (Transact-SQL)
 title: sys. dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/06/2019
+ms.date: 09/03/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 085659b4c6754bc2de68124dcb7d5c6fbbcdeb16
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d6e6eb3ccf2823af437fc37cdddfa2b0b640ae12
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539245"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614597"
 ---
 # <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +53,18 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**Colonne**|**Type de données**|**Description**|  
 |**database_id**|**int**|ID de la base de données. Ne peut pas être null.|  
 |**file_id**|**int**|ID du fichier. Ne peut pas être null.|  
-|**volume_mount_point**|**nvarchar(512)**|Point de montage à la racine duquel le volume est attaché. Peut retourner une chaîne vide.|  
-|**volume_id**|**nvarchar(512)**|Identificateur du volume du système d'exploitation. Peut retourner une chaîne vide|  
-|**logical_volume_name**|**nvarchar(512)**|Nom du volume logique. Peut retourner une chaîne vide|  
-|**file_system_type**|**nvarchar(512)**|Type du volume du système de fichiers (par exemple, NTFS, FAT, RAW). Peut retourner une chaîne vide|  
+|**volume_mount_point**|**nvarchar(512)**|Point de montage à la racine duquel le volume est attaché. Peut retourner une chaîne vide. Retourne la valeur NULL sur le système d’exploitation Linux.|  
+|**volume_id**|**nvarchar(512)**|Identificateur du volume du système d'exploitation. Peut retourner une chaîne vide. Retourne la valeur NULL sur le système d’exploitation Linux.|  
+|**logical_volume_name**|**nvarchar(512)**|Nom du volume logique. Peut retourner une chaîne vide. Retourne la valeur NULL sur le système d’exploitation Linux.|  
+|**file_system_type**|**nvarchar(512)**|Type du volume du système de fichiers (par exemple, NTFS, FAT, RAW). Peut retourner une chaîne vide. Retourne la valeur NULL sur le système d’exploitation Linux.|  
 |**total_bytes**|**bigint**|Taille totale (en octets) du volume. Ne peut pas être null.|  
 |**available_bytes**|**bigint**|Espace disponible sur le volume. Ne peut pas être null.|  
-|**supports_compression**|**bit**|Indique si le volume prend en charge la compression du système d'exploitation. Ne peut pas être null.|  
-|**supports_alternate_streams**|**bit**|Indique si le volume prend en charge les flux de remplacement. Ne peut pas être null.|  
-|**supports_sparse_files**|**bit**|Indique si le volume prend en charge les fichiers partiellement alloués.  Ne peut pas être null.|  
-|**is_read_only**|**bit**|Indique si le volume est actuellement marqué comme étant en lecture seule. Ne peut pas être null.|  
-|**is_compressed**|**bit**|Indique si ce volume est actuellement compressé. Ne peut pas être null.|  
+|**supports_compression**|**tinyint**|Indique si le volume prend en charge la compression du système d'exploitation. Ne peut pas avoir la valeur NULL sur Windows et retourne la valeur NULL sur le système d’exploitation Linux.|  
+|**supports_alternate_streams**|**tinyint**|Indique si le volume prend en charge les flux de remplacement. Ne peut pas avoir la valeur NULL sur Windows et retourne la valeur NULL sur le système d’exploitation Linux.|  
+|**supports_sparse_files**|**tinyint**|Indique si le volume prend en charge les fichiers partiellement alloués.  Ne peut pas avoir la valeur NULL sur Windows et retourne la valeur NULL sur le système d’exploitation Linux.|  
+|**is_read_only**|**tinyint**|Indique si le volume est actuellement marqué comme étant en lecture seule. Ne peut pas être null.|  
+|**is_compressed**|**tinyint**|Indique si ce volume est actuellement compressé. Ne peut pas avoir la valeur NULL sur Windows et retourne la valeur NULL sur le système d’exploitation Linux.|  
+|**incurs_seek_penalty**|**tinyint**|Indique le type de stockage prenant en charge ce volume. Les valeurs possibles sont les suivantes :<br /><br />0 : aucune pénalité de recherche sur ce volume, en général lorsque le périphérique de stockage est PMM ou SSD<br /><br />1 : Rechercher la pénalité sur ce volume, généralement lorsque le périphérique de stockage est un disque dur<br /><br />2 : impossible de déterminer le type de stockage lorsque le volume se trouve sur un chemin d’accès UNC ou des partages montés<br /><br />NULL : le type de stockage ne peut pas être déterminé sur le système d’exploitation Linux<br /><br />**S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] )|  
   
 ## <a name="security"></a>Sécurité  
   
