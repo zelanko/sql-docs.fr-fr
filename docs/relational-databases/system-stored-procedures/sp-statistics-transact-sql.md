@@ -16,22 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd5a7fa747241cfbfa767219894ba937a63ce7c7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e4b24a8b2a825c5754d7cd1ec3f1c9594896eed
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473722"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551231"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne la liste de tous les index et statistiques d'une table ou d'une vue indexée.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -78,7 +78,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TYPE**|**smallint**|Cette colonne renvoie toujours une valeur :<br /><br /> 0 = Statistiques pour une table<br /><br /> 1 = Clustered<br /><br /> 2 = Haché<br /><br /> 3 = non cluster|  
 |**SEQ_IN_INDEX**|**smallint**|Position de la colonne dans l'index|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne de chaque colonne de la **table_name** retournée. Cette colonne renvoie toujours une valeur.|  
-|**CLASSEMENT**|**Char(1**|Ordre utilisé dans les classements. Valeurs possibles :<br /><br /> A = Croissant<br /><br /> D = Décroissant<br /><br /> NULL = Non applicable|  
+|**COLLATION**|**char(1)**|Ordre utilisé dans les classements. Valeurs possibles :<br /><br /> A = Croissant<br /><br /> D = Décroissant<br /><br /> NULL = Non applicable|  
 |**CARDINALITÉ**|**int**|Nombre de lignes dans la table ou valeurs uniques dans l’index.|  
 |**PAGES**|**int**|Nombre de pages pour stocker l'index ou la table.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur.|  

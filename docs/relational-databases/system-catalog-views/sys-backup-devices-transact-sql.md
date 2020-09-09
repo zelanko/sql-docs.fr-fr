@@ -19,14 +19,14 @@ helpviewer_keywords:
 - backup devices [SQL Server], viewing information
 - sys.backup_devices catalog view
 ms.assetid: 457edaa4-aca1-4bd3-bf8d-734490b80fcd
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: f25b8d91bdfe729b0f2842973ab5d5c818e69a41
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b58bfc803d66b8782631ec4fd3d9223041dbce73
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470019"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551484"
 ---
 # <a name="sysbackup_devices-transact-sql"></a>sys.backup_devices (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88470019"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nom du périphérique de sauvegarde. Unique dans le jeu.|  
 |**type**|**tinyint**|Type de l'unité de sauvegarde :<br /><br /> 2 = Disque<br /><br /> 3 = Disquette (obsolète)<br /><br /> 5 = Bande<br /><br /> 6 = Canal (obsolète)<br /><br /> 7 = Périphérique virtuel (pour une utilisation facultative par des revendeurs de sauvegarde tiers)<br /><br /> 9 = URL<br /><br />En règle générale, seuls le disque (2) et l’URL (9) sont utilisés.|  
-|**type_desc**|**nvarchar(60)**|Description du type de périphérique de sauvegarde :<br /><br /> DISK<br /><br /> DISKETTE (obsolète)<br /><br /> TAPE<br /><br /> PIPE (obsolète)<br /><br /> VIRTUAL_DEVICE (pour une utilisation facultative par des revendeurs de sauvegarde tiers)<br /><br /> Adresse URL <br /><br /> En règle générale, seuls le disque et l’URL sont utilisés.|  
+|**type_desc**|**nvarchar(60)**|Description du type de périphérique de sauvegarde :<br /><br /> DISK<br /><br /> DISKETTE (obsolète)<br /><br /> TAPE<br /><br /> PIPE (obsolète)<br /><br /> VIRTUAL_DEVICE (pour une utilisation facultative par des revendeurs de sauvegarde tiers)<br /><br /> URL <br /><br /> En règle générale, seuls le disque et l’URL sont utilisés.|  
 |**physical_name**|**nvarchar(260)**|Nom de fichier physique ou chemin du périphérique de sauvegarde.|  
   
 ## <a name="permissions"></a>Autorisations  

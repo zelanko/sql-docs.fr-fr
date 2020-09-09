@@ -18,15 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.assembly_modules catalog view
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8d04bb98a27ea81f2624c5d9e822b254eee9503
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33599443948e52ca21eba59afd86eb6a67c58fae
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464831"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551533"
 ---
 # <a name="sysassembly_modules-transact-sql"></a>sys.assembly_modules (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "88464831"
 |**assembly_class**|**sysname**|Nom de la classe dans l'assembly qui définit ce module.|  
 |**assembly_method**|**sysname**|Nom de la méthode dans la **assembly_class** qui définit ce module.<br /><br /> Les fonctions d'agrégation (AF) ont la valeur NULL.|  
 |**null_on_null_input**|**bit**|Le module a été déclaré pour produire une sortie NULL pour toute entrée NULL.|  
-|**execute_as_principal_id**|**int**|ID de la base de données principale dans laquelle le contexte est exécuté, comme spécifié par la clause EXECUTE AS de la fonction, la procédure stockée ou le déclencheur CLR.<br /><br /> NULL = EXECUTE AS CALLER. Il s’agit de la valeur par défaut.<br /><br /> ID du principal de base de données spécifié = EXECUTe AS SELF, EXECUTe AS *user_name*ou Execute As *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|ID de la base de données principale dans laquelle le contexte est exécuté, comme spécifié par la clause EXECUTE AS de la fonction, la procédure stockée ou le déclencheur CLR.<br /><br /> NULL = EXECUTE AS CALLER. Il s'agit de la valeur par défaut.<br /><br /> ID du principal de base de données spécifié = EXECUTe AS SELF, EXECUTe AS *user_name*ou Execute As *login_name*.<br /><br /> -2 = EXECUTE AS OWNER.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -16,21 +16,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_checkpoint_force_garbage_collection
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 9073ebd53ea3b2bb87719b92132e2e4e1e38caf5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4ca922c0f2cfe2036107509026d97cd0db1ee54a
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473413"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551119"
 ---
 # <a name="syssp_xtp_checkpoint_force_garbage_collection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Marque les fichiers source utilisés dans l'opération de fusion avec le numéro séquentiel dans le journal (LSN) après lequel ils ne sont pas nécessaires et peuvent être récupérés par le garbage collector. En outre, place les fichiers dont le LSN associé est inférieur au point de troncation du journal dans le garbage collection du flux de fichier.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
  
 ## <a name="syntax"></a>Syntaxe  
@@ -65,7 +65,7 @@ exec [sys].[sp_xtp_checkpoint_force_garbage_collection] hkdb1
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées système &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

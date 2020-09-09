@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_restoremergeidentityrange
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 1858ef748ebf063fe3e541542003f46861821eeb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce2166f3179097c44fb8d725fb6125ae8b2b5d06
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446807"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551256"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure stockée permet de mettre à jour les affectations de plage d'identité. Elle garantit le bon fonctionnement de la gestion automatique des plages d'identité lorsqu'un serveur de publication a été restauré à partir d'une sauvegarde. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

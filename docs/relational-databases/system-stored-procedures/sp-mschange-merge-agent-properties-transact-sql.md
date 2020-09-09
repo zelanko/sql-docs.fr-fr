@@ -14,21 +14,21 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_merge_agent_properties
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 7e81812af12cf7789c48d890ced2aa06a5829ad0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a54e5f84f653c45b7163e3f0f0805450a5fc892c
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446914"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551290"
 ---
 # <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifie les propriétés d’un travail de Agent de fusion qui s’exécute sur un serveur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] distribution ou version ultérieure. Cette procédure stockée est utilisée pour modifier des propriétés lorsque le serveur de publication s'exécute sur une instance de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Cette procédure stockée est exécutée au niveau du serveur de distribution sur la base de données de distribution.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

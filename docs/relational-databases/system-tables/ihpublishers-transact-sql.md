@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublishers system table
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 6ab92ff375fdf7774cbb008c366559677c09ad9b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03d8633b8e859df67d60e8b535cb18c01d031a1e
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488825"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551031"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

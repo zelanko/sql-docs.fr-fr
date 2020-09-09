@@ -19,21 +19,21 @@ helpviewer_keywords:
 - sp_xtp_unbind_db_resource_pool
 - sys.sp_xtp_unbind_db_resource_pool
 ms.assetid: 695a796d-087e-4bc8-99d0-ddc342604c75
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 4dda2f6da0ee65b7bfa927739ac945407f28cbc7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 27d5d5efd923dfffd66054da48b8baf28b6f193b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463927"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551098"
 ---
 # <a name="syssp_xtp_unbind_db_resource_pool-transact-sql"></a>sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Cette procédure système supprime une liaison existante entre une base de données et un pool de ressources aux fins de suivi de l'utilisation de la mémoire [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  Si aucun pool n'est actuellement lié à la base de données spécifiée, un message de réussite est retourné. Lorsque la liaison de la base de données est annulée, la mémoire allouée précédemment aux objets mémoire optimisés reste allouée au pool de ressources précédent. Vous devez redémarrer la base de données pour libérer la mémoire allouée. Une fois que la base de données n'est plus liée au pool de ressources, la liaison recourt au pool de ressources DEFAULT.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

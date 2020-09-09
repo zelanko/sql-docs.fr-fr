@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_stop_job
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: 2314cec4cbb66893eb77ed6c8b025355c319de71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c9f44d705f9aff418312a9f8d0f1a9a9f8012216
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473678"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89551201"
 ---
 # <a name="sp_stop_job-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88473678"
   Demande à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent d'arrêter l'exécution d'un travail.  
 
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
