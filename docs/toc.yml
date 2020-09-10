@@ -1831,7 +1831,7 @@
           items:
             - name: Créer
               href: relational-databases/tables/create-edge-constraints.md
-            - name: Supprimer
+            - name: DELETE
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifier
               href: relational-databases/tables/modify-edge-constraint.md
@@ -7094,8 +7094,8 @@
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
             - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: Forums MSDN >>
-              href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
+            - name: Microsoft Q & A >>
+              href: 'https://https://docs.microsoft.com/answers/products/sql-server'
             - name: Envoyer des commentaires >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: Reddit >>
@@ -10110,8 +10110,8 @@
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: Forums MSDN >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
+        - name: Microsoft Q & A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: Envoyer des commentaires >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: Reddit >>
@@ -10140,16 +10140,16 @@
       items:
         - name: Obtenir de l’aide
           href: sql-server/sql-server-get-help.md
-        - name: Gestion de version dans la documentation SQL
-          href: sql-server/versioning-system-monikers-ui-sql-server.md
+        - name: Microsoft Q & A >>
+          href: 'https://docs.microsoft.com/answers/products/sql-server'
         - name: DBA Stack Exchange >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: Forums MSDN >>
-          href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
+        - name: Conseils de navigation dans les docs
+          href: sql-server/sql-docs-navigation-guide.md
     - name: Blogs
       items:
         - name: SQL Server >>
