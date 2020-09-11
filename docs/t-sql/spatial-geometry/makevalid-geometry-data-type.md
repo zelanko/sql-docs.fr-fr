@@ -44,7 +44,7 @@ Convertit une instance **geometry** non valide en instance **geometry** ayant un
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode peut entraîner un changement de type de l’instance **geometry**, ainsi qu’un léger décalage des points d’une instance **geometry**.  
   
 ## <a name="examples"></a>Exemples  

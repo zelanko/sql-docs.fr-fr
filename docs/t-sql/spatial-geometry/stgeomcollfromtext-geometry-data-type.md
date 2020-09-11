@@ -51,7 +51,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le type OGC de l’instance **geometry** retournée par `STGeomCollFromText()` a comme valeur l’entrée WKT correspondante.  
   
  Cette méthode lève une exception si l'entrée n'est pas valide.  

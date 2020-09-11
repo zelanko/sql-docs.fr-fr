@@ -43,7 +43,7 @@ Une valeur du type de données **hierarchyid** représente une position dans une
   
 Le type **hierarchyid** est disponible pour les clients CLR comme le type de données **SqlHierarchyId**.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Le type **hierarchyid** encode logiquement les informations sur un nœud unique dans une arborescence hiérarchique en encodant le chemin de la racine de l’arborescence au nœud. Un tel chemin d'accès est représenté logiquement comme une séquence d'étiquettes de nœud de tous les enfants visités après la racine. Une barre oblique démarre la représentation et un chemin d'accès qui visite uniquement la racine est représenté par une barre oblique unique. Pour les niveaux sous la racine, chaque étiquette est encodée comme une séquence d'entiers séparés par des points. La comparaison entre les enfants est effectuée en comparant les séquences d'entiers séparés par des points dans le classement du dictionnaire. Chaque niveau est suivi d'une barre oblique. Par conséquent, une barre oblique sépare les parents de leurs enfants. Par exemple, les éléments suivants sont des chemins de **hierarchyid** valides de longueurs 1, 2, 2, 3, sur 3 niveaux respectivement :
   
 -   /  

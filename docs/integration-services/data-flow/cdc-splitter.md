@@ -29,12 +29,12 @@ ms.locfileid: "88457398"
   
 |Valeur de l'opération|Output|Description|  
 |------------------------|------------|-----------------|  
-|1|DELETE|Ligne supprimée|  
+|1|Supprimer|Ligne supprimée|  
 |2|Insérer|Ligne insérée (non disponible en cas d’utilisation du mode de capture de données modifiées **Net avec fusion** )|  
 |3|Update|Ligne avant la mise à jour (disponible uniquement en cas d’utilisation du mode de capture de données modifiées **Tout avec les anciennes valeurs** )|  
 |4|Update|Ligne après la mise à jour (suit avant la mise à jour)|  
 |5|Update|Ligne de fusion (disponible uniquement en cas d’utilisation du mode de capture de données modifiées **Net avec fusion** )|  
-|Autre|Error||  
+|Autres|Error||  
   
  Vous pouvez utiliser le séparateur pour vous connecter aux sorties INSERT, DELETE et UPDATE afin d'effectuer d'autres opérations de traitement.  
   

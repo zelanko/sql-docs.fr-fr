@@ -44,8 +44,8 @@ Retourne le nombre d’anneaux intérieurs d’une instance **Polygongeometry**.
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
- Cette méthode retourne une valeur Null si l’instance **geometry** n’est pas un polygone.  
+## <a name="remarks"></a>Remarques  
+ Cette méthode retourne null si l’instance **geometry** n’est pas un polygone.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `Polygon` et utilise `STNumInteriorRing()` pour rechercher le nombre d'anneaux intérieurs que l'instance possède.  
