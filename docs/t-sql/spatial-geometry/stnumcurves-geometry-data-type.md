@@ -41,7 +41,7 @@ Cette méthode retourne le nombre de courbes d’une instance **geometry** quand
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Une instance **geometry** unidimensionnelle vide retourne 0. **NULL** est retourné quand l’instance **geometry** n’est pas une instance unidimensionnelle ou une instance initialisée.  
   
 ## <a name="examples"></a>Exemples  

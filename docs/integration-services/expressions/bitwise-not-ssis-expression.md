@@ -44,7 +44,7 @@ ms.locfileid: "88430611"
  Retourne le type de données *integer_expression*.  
   
 ## <a name="remarks"></a>Notes  
- Aucun  
+ None  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
  L'exemple suivant réalise une opération NOT au niveau du bit ( ~ ) sur le nombre 170 (0000 0000 1010 1010). Le nombre est un entier signé.  

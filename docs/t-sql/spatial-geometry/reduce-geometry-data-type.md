@@ -48,7 +48,7 @@ Retourne une approximation de l’instance **geometry** donnée. L’approximati
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour les types de collection, cet algorithme fonctionne indépendamment sur chaque **geometry** contenu dans l’instance.  
   
  Cet algorithme ne modifie pas les instances **Point**.  
@@ -113,6 +113,6 @@ SELECT @g.STIsValid() AS Valid
 SELECT @g.ToString() AS Original, @h.ToString() AS Reduced;  
 ```  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
  [Méthodes de géométrie statiques étendues](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

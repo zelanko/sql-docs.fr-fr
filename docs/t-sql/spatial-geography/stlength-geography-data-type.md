@@ -44,7 +44,7 @@ ms.locfileid: "88445163"
   
  Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Si une instance **geography** est fermée, sa longueur est calculée en tant que longueur totale autour de l’instance ; la longueur d’un polygone correspond à son périmètre et la longueur d’un point est 0. La longueur de **GeometryCollection** est déterminée en calculant la somme des longueurs de toutes les instances **geography** contenues dans la collection.  
   
  STLength () fonctionne sur LineStrings valide et non valide. Généralement, un LineString n'est pas valide à cause du chevauchement des segments, qui peut être provoqué par des anomalies telles que des traces de longitude GPS inexactes. STLength () ne supprime pas les segments chevauchés ou non valides. Il les inclut dans la valeur de longueur retournée. La méthode MakeValid () peut supprimer les segments chevauchés d'un LineString.  

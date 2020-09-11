@@ -65,11 +65,11 @@ ms.locfileid: "88430671"
   
     -   Cliquez sur **Utiliser les résultats d’une requête SQL**, puis générez une requête dans la fenêtre **Commande SQL** .  
   
-         - ou -  
+         -ou-  
   
          Cliquez sur **Générer la requête** pour générer une requête à l’aide des outils graphiques fournis par le **Générateur de requêtes** .  
   
-         - ou -  
+         -ou-  
   
          Cliquez sur **Parcourir** pour importer une instruction SQL à partir d’un fichier.  
   

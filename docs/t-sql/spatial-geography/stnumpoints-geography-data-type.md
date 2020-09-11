@@ -44,7 +44,7 @@ ms.locfileid: "88445158"
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode compte les points dans la description d’une instance **geography**. Les points en double sont comptés ; toutefois, les points de connexion entre les segments ne sont comptés qu'une seule fois. Si cette instance est une collection, cette méthode retourne le nombre total de points dans la collection.  
   
 ## <a name="examples"></a>Exemples  

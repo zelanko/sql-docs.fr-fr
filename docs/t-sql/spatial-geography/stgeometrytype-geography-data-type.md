@@ -44,7 +44,7 @@ ms.locfileid: "88445259"
   
  Type de retour CLR : **SqlString**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Les noms de types OGC qui peuvent être retournés par `STGeometryType()` sont **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, **MultiPolygon** et **FullGlobe**.  
   
 ## <a name="examples"></a>Exemples  
