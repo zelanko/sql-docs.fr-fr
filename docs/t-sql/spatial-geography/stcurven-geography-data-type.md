@@ -51,7 +51,7 @@ ms.locfileid: "88479342"
 ## <a name="exceptions"></a>Exceptions  
  Si n < 1, **ArgumentOutOfRangeException** est levé.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **NULL** est retourné en présence des critères suivants.  
   
 -   L’instance **geography** est déclarée, mais n’est pas instanciée  

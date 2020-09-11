@@ -101,6 +101,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi
-[ORDER BY, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[Clause ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

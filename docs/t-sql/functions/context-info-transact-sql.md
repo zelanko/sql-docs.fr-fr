@@ -44,7 +44,7 @@ CONTEXT_INFO()
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur renvoyée
 La valeur **context_info**.
   
 Si **context_info** n’était pas défini :

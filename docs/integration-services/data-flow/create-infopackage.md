@@ -62,7 +62,7 @@ ms.locfileid: "88457371"
  **Enregistrer et activer**  
  Enregistrez et activez le nouvel InfoPackage.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Aide (F1) sur Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

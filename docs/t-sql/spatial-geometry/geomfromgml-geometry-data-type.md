@@ -55,7 +55,7 @@ GeomFromGml ( GML_input, SRID )
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  

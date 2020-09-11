@@ -41,7 +41,7 @@ ms.locfileid: "88495216"
 |created_time|**datatimeoffset(7)**|Heure à laquelle les valeurs ont été obtenues.|  
 |execution_path|**nvarchar(max)**|Chemin d'accès d'exécution du composant.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 -   Lorsqu'il existe plusieurs sorties du composant, une ligne est ajoutée pour chacune d'elles.  
   

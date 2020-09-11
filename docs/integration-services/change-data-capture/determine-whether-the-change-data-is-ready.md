@@ -91,7 +91,7 @@ ms.locfileid: "88496219"
   
  Dans la table suivante, la première colonne montre les valeurs retournées de la tâche d'exécution SQL par l'exemple de requête Transact-SQL. La deuxième colonne montre comment les autres composants répondent à ces valeurs.  
   
-|Valeur de retour|Signification|Réponse|  
+|Valeur renvoyée|Signification|response|  
 |------------------|-------------|--------------|  
 |0|Indique que les données modifiées ne sont pas prêtes.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées postérieur au point de fin de l'intervalle sélectionné.|L'exécution se poursuit avec le composant qui implémente un délai. Le contrôle retourne ensuite au conteneur de boucles For qui continue à vérifier la tâche d'exécution SQL tant que la valeur retournée est 0.|  
 |1|Peut indiquer que les données modifiées n'ont pas été capturées pour l'intervalle complet ou qu'elles ont été supprimées. Cela est traité comme une condition d'erreur.<br /><br /> Il n'existe aucun enregistrement de capture de données modifiées antérieur au point de départ de l'intervalle sélectionné.|L'exécution se poursuit avec le composant facultatif qui enregistre l'erreur.|  

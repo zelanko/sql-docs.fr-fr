@@ -47,7 +47,7 @@ ms.locfileid: "88456014"
 |**NTDomainName**|**nvarchar**|Domaine Windows auquel appartient l'utilisateur.|7|Oui|  
 |**NTUserName**|**nvarchar**|Nom de l'utilisateur propriétaire de la connexion ayant généré l'événement.|6|Oui|  
 |**ObjectName**|**nvarchar**|Nom de service de l'autre partie de la conversation et chaîne de connexion que la base de données distante a utilisée pour se connecter à cette base de données.|34|Non|  
-|**RoleName**|**nvarchar**|Rôle du point de terminaison qui reçoit ce message. Une des valeurs ci-dessous.<br /><br /> **initiateur**: le point de terminaison récepteur est l’initiateur de la conversation.<br /><br /> **cible**: le point de terminaison récepteur est la cible de la conversation.|38|Non|  
+|**RoleName**|**nvarchar**|Rôle du point de terminaison qui reçoit ce message. Une des valeurs suivantes.<br /><br /> **initiateur**: le point de terminaison récepteur est l’initiateur de la conversation.<br /><br /> **cible**: le point de terminaison récepteur est la cible de la conversation.|38|Non|  
 |**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**Niveau de gravité**|**int**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a supprimé le message en raison d'une erreur, il s'agit de la gravité de l'erreur.|29|Non|  
 |**SPID**|**int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  

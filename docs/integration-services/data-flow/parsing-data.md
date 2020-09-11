@@ -38,7 +38,7 @@ ms.locfileid: "88457345"
 ## <a name="fast-parse"></a>Analyse rapide
 L'analyse rapide propose un ensemble de routines simples et rapides d'analyse des données. Ces routines ne tiennent pas compte des paramètres régionaux et prennent en charge uniquement un sous-ensemble de formats de date, d'heure et d'entier.  
   
-### <a name="requirements-and-limitations"></a>Exigences et limitations  
+### <a name="requirements-and-limitations"></a>Conditions requises et limitations :  
  En implémentant l'analyse rapide, un package perd sa capacité d'interpréter les données de type date, heure et nombre dans des formats régionaux et dans de nombreux formats de base et étendus ISO 9601 couramment utilisés, mais il améliore ses performances. Par exemple, l'analyse rapide prend uniquement en charge les formats de date les plus courants, tels que AAAAMMJJ et AAAA-MM-JJ, n'effectue aucune analyse des spécificités régionales, ne reconnaît pas les caractères spéciaux dans les devises et ne peut pas convertir les représentations hexadécimales ou scientifiques des entiers.  
   
  L'analyse rapide est disponible uniquement lorsque vous utilisez la source de fichier plat ou la transformation de conversion de données. L'amélioration des performances pouvant être significative, pensez à utiliser si possible l'analyse rapide dans ces composants de flux de données.  
@@ -185,7 +185,7 @@ L'analyse rapide propose un ensemble de routines simples et rapides d'analyse de
 |Minutes|Ajouter 00:00.|  
 |Heure|Ajout de 00:00:00.|  
 |Jour|Ajout de 01 pour le jour du mois.|  
-|Month|Ajout de 01 pour le mois de l'année.|  
+|Month (Mois)|Ajout de 01 pour le mois de l'année.|  
   
  Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
