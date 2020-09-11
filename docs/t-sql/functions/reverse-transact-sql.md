@@ -50,7 +50,7 @@ REVERSE ( string_expression )
 ## <a name="return-types"></a>Types de retour  
  **varchar** ou **nvarchar**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  *string_expression* doit appartenir à un type de données pouvant être implicitement converti en **varchar**. Sinon, utilisez la fonction [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) pour convertir explicitement *string_expression*.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caractères supplémentaires (paires de substitution)  

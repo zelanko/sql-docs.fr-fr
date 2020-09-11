@@ -41,12 +41,12 @@ ISJSON ( expression )
  *expression*  
  Chaîne à tester.  
   
-## <a name="return-value"></a>Valeur de retour  
+## <a name="return-value"></a>Valeur renvoyée  
  Renvoie 1 si la chaîne contient des données JSON valides ; sinon, renvoie 0. Renvoie Null si *expression* est Null.  
   
  Ne renvoie pas d’erreurs.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  **ISJSON** ne vérifie pas l’unicité des clés au même niveau.  
   
 ## <a name="examples"></a>Exemples  

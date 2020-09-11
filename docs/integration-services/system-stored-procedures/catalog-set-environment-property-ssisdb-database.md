@@ -73,7 +73,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   Le nom de l'environnement n'est pas valide.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Dans cette version finale, seule la propriété `Description` peut être définie. La valeur de la propriété `Description` ne peut pas dépasser 4000 caractères.  
   
   

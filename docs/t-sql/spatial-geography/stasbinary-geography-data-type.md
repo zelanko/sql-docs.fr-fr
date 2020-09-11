@@ -59,6 +59,6 @@ SELECT @g.STAsBinary();
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthodes OGC sur les instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
+ [Méthodes OGC sur des instances Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

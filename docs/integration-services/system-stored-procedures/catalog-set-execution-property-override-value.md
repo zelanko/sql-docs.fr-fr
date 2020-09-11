@@ -44,12 +44,12 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  Chemin d'accès à la propriété dans le package. *property_path* est de type **nvarchar(4000)**.  
   
  [ @property_value = ] *property_value*  
- Valeur de remplacement à affecter à la propriété. *property_value* est de type **nvarchar(max)**.  
+ Valeur de remplacement à affecter à la propriété. *property_value* est de type **nvarchar(max)** .  
   
  [ @sensitive = ] *sensitive*  
  Lorsque la valeur est 1, la propriété est sensible et est chiffrée lorsqu'elle est stockée. Lorsque la valeur est 0, la propriété n'est pas sensible et la valeur est stockée dans en texte en clair. L’argument *sensitive* est de type **bit**.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette procédure remplit la même fonction que la section **Substitutions de propriété** sous l’onglet **Avancé** de la boîte de dialogue **Exécuter le package**. Le chemin d’accès de la propriété est dérivé de la propriété **Chemin d’accès au package** de la tâche du package.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
