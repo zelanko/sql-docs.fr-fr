@@ -44,7 +44,7 @@ ms.locfileid: "88422283"
   
  Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  `STArea()` retourne 0 si une instance **geometry** contient uniquement des figures à 0 et 1 dimension, ou si elle est vide. `STArea()` retourne **NULL** si l’instance **geometry** n’a pas été initialisée.  
   
 ## <a name="examples"></a>Exemples  

@@ -45,7 +45,7 @@ Retourne une instance **LineString** avec deux points qui représentent la dista
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La méthode retourne une instance **LineString** avec des points de terminaison situés sur les bordures des deux instances **geometry** sans intersection qui sont comparées. La longueur du **LineString** retourné est égale à la distance la plus courte entre les deux instances **geometry**. Une instance **LineString** vide est retournée quand les deux instances **geometry** se croisent.  
   
 ## <a name="examples"></a>Exemples  

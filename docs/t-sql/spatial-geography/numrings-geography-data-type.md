@@ -44,7 +44,7 @@ ms.locfileid: "88422323"
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode retourne NULL s’il ne s’agit pas d’une instance **Polygon**, et retourne 0 si l’instance est vide. Cette méthode est précise.  
   
 ## <a name="examples"></a>Exemples  

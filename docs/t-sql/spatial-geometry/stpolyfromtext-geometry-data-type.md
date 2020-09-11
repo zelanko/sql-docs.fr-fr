@@ -53,7 +53,7 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
  Type OGC : **Polygon**  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  

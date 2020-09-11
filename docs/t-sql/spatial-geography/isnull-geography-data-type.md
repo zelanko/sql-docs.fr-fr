@@ -43,7 +43,7 @@ ms.locfileid: "88422373"
   
  Type CLR : **SqlBoolean**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  `IsNull` permet de tester si une instance **geography** a une valeur Null. Les résultats peuvent prêter à confusion, la méthode retournant 0 si l'instance n'est pas Null, mais Null si l'instance est Null.  
   
  Cette méthode est principalement utilisée par l’infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il est recommandé d’utiliser le prédicat T-SQL IS NULL pour tester si une instance **geography** a une valeur Null. Pour plus d’informations sur le prédicat T-SQL IS NULL, consultez [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md).  

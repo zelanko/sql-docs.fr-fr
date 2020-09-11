@@ -46,7 +46,7 @@ Si les packages ne s'exécutent pas correctement, vous devez les corriger avant 
 3.  Une fois l'exécution du package terminée, dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Créer l’application de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+[Leçon 2 : Créer l’application de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
   
   

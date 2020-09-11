@@ -23,7 +23,7 @@ ms.locfileid: "88422173"
 
 Ce guide de démarrage rapide montre comment utiliser un script PowerShell pour se connecter à un serveur de base de données et exécuter un package SSIS.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 
 Un serveur Azure SQL Database écoute sur le port 1433. Si vous essayez de vous connecter à un serveur Azure SQL Database en étant derrière un pare-feu d’entreprise, ce port doit être ouvert dans le pare-feu d’entreprise pour que vous puissiez vous connecter.
 
