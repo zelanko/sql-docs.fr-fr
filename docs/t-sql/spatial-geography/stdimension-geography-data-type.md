@@ -44,7 +44,7 @@ ms.locfileid: "88479293"
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  STDimension() retourne -1 si l’instance **geography** est vide.  
   
 ## <a name="examples"></a>Exemples  

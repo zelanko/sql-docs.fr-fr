@@ -46,7 +46,7 @@ EnvelopeAngle( )
   
  Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Cette méthode retourne un point de l’instance **geography** en degrés. En cas d’utilisation avec EnvelopeCenter(), `EnvelopeAngle()` retourne un cercle englobant d’une instance **geography**.  
   
  Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette méthode a été étendue aux instances **FullGlobe**.  

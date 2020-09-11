@@ -46,7 +46,7 @@ Retourne le centre géométrique d’une instance **geometry** qui comprend un o
   
  Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  `STCentroid()` retourne une valeur Null si l’instance **geometry** n’est pas de type **Polygon, CurvePolygon** ou **MultiPolygon**.  
   
 ## <a name="examples"></a>Exemples  

@@ -37,7 +37,7 @@ L’entier 75 se convertit en binaire 0100 1011.
 |operator|mathématiques au niveau du bit|
 |---- |---- |
 |AND <br> Si les bits, quel que soit leur emplacement, égalent tous les deux 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 0000 1010 = 10 |
-|OR <br> Si l’un ou l’autre des bits, quel que soit son emplacement, égale 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
+|OU <br> Si l’un ou l’autre des bits, quel que soit son emplacement, égale 1, le résultat est 1. |1010 1010 = 170 <br>0100 1011 = 75 <br>-----------------  <br> 1110 1011 = 235|
 |NOT  <br> Inverse la valeur de bit à chaque emplacement de bit. |1010 1010 = 170 <br>----------------- <br>  0101 0101 = 85 |
   
 Consultez les rubriques suivantes :   

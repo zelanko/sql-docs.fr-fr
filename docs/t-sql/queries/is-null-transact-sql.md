@@ -70,7 +70,7 @@ expression IS [ NOT ] NULL
   
  Si *expression* a la valeur NULL, IS NOT NUL retourne FALSE. Sinon, la valeur TRUE est retournée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Pour déterminer si une expression est NULL, utilisez IS NULL ou IS NOT NULL à la place d'opérateurs de comparaison (tels que = ou !=). Les opérateurs de comparaison renvoient UNKNOWN lorsque l'un ou l'autre des arguments ou les deux arguments sont NULL.  
   
 ## <a name="examples"></a>Exemples  

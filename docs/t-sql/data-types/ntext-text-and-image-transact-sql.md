@@ -46,7 +46,7 @@ Données non-Unicode de longueur variable figurant dans la page de codes du serv
 **image**  
 Données binaires de longueur variable occupant de 0 à 2^31 - 1 (2 147 483 647) octets.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Les fonctions et instructions suivantes peuvent être utilisées en conjonction avec les données de type **ntext**, **text** ou **image**.
   
 |Fonctions|Instructions|  

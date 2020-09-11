@@ -41,7 +41,7 @@ catalog.rename_folder [ @old_name = ] old_name , [ @new_name = ] new_name
  Nouveau nom du dossier. *new_name* est de type **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  None  

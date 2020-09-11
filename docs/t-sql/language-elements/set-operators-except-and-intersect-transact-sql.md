@@ -72,7 +72,7 @@ Retourne toute valeur distincte de la requête à gauche de l’opérateur EXCEP
 INTERSECT  
 Retourne toute valeur distincte trouvée par les requêtes à gauche et à droite de l'opérateur INTERSECT.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Les types de données de colonnes comparables sont retournés par les requêtes à gauche et à droite des opérateurs EXCEPT ou INTERSECT. Ces types de données peuvent inclure des types de données de caractères avec des classements différents. Dans ce cas, la comparaison nécessaire est exécutée selon les règles de [priorité de classement](../../t-sql/statements/collation-precedence-transact-sql.md). Si vous ne pouvez pas exécuter cette conversion, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retourne une erreur.  
   
 Lors de la comparaison des valeurs de colonnes pour trouver les lignes DISTINCT, deux valeurs NULL sont considérées comme égales.  

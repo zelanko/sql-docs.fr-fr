@@ -75,7 +75,7 @@ Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent faire réf�
 ## <a name="examples"></a>Exemples  
 Ces exemples utilisent les six fonctions système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui retournent les valeurs de date et d’heure actuelles pour retourner la date, l’heure ou les deux. Comme les exemples retournent les valeurs en série, leurs fractions de seconde peuvent être différentes. Notez que les valeurs réelles retournées reflètent le jour et/ou l’heure d’exécution réels.
   
-### <a name="a-get-the-current-system-date-and-time"></a>R. Obtention des date et heure système actuelles  
+### <a name="a-get-the-current-system-date-and-time"></a>A. Obtention des date et heure système actuelles  
   
 ```sql
 SELECT SYSDATETIME()  

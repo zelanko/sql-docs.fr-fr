@@ -59,7 +59,7 @@ ms.locfileid: "88477384"
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.DisplayName%2A>|Affiche le nom de la tâche dans la boîte à outils Flux de contrôle.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute.Description%2A>|Description de la tâche (héritée de <xref:Microsoft.SqlServer.Dts.Runtime.Localization.DtsLocalizableAttribute>). Cette propriété est affichée dans des info-bulles.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.IconResource%2A>|Icône affichée dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)].|  
-|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Si vous utilisez cette propriété, attribuez-lui l'une des valeurs de l'énumération <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Par exemple : `RequiredProductLevel = DTSProductLevel.None`.|  
+|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.RequiredProductLevel%2A>|Si vous utilisez cette propriété, attribuez-lui l'une des valeurs de l'énumération <xref:Microsoft.SqlServer.Dts.Runtime.DTSProductLevel>. Par exemple, `RequiredProductLevel = DTSProductLevel.None`.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskContact%2A>|Contient des informations de contact au cas où la tâche nécessite un support technique.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute.TaskType%2A>|Assigne un type à la tâche.|  
 |Attribute.TypeId|Dans le cadre d'une implémentation dans une classe dérivée, obtient un identificateur unique pour cet attribut. Pour plus d’informations, consultez la propriété **Attribute.TypeID** dans la bibliothèque de classes .NET Framework.|  

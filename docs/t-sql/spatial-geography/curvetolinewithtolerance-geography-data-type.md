@@ -54,7 +54,7 @@ Type de retour CLR : **SqlGeography**
 ## <a name="exceptions"></a>Exceptions  
 Si tolerance est <= 0, une exception **ArgumentOutOfRange** est levée.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 Cette méthode permet de spécifier une valeur de tolérance d’erreur pour le **LineString** résultant.  
   
 La méthode **CurveToLineWithTolerance** retourne une instance **LineString** pour une instance **CircularString** ou **CompoundCurve**, et une instance **Polygon** pour une instance **CurvePolygon**.  

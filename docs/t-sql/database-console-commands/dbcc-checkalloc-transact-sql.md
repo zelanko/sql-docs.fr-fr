@@ -101,7 +101,7 @@ Les noms de base de données doivent suivre les règles applicables aux [identif
  ESTIMATEONLY  
  Affiche une estimation de la quantité d’espace tempdb nécessaire pour exécuter DBCC CHECKALLOC quand toutes les autres options sont spécifiées.
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
 DBCC CHECKALLOC vérifie l'allocation de toutes les pages de la base de données, quel que soit le type de page ou le type d'objet auquel elles appartiennent. Il valide également les différentes structures internes qui sont utilisées pour garder la trace de ces pages et des relations entre elles.
 Si NO_INFOMSGS n'est pas spécifié, DBCC CHECKALLOC collecte les informations d'utilisation de l'espace pour tous les objets de la base de données. Ces informations sont imprimées avec les erreurs détectées.
   
