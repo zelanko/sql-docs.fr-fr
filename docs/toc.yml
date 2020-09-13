@@ -1831,7 +1831,7 @@
           items:
             - name: Créer
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: Supprimer
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifier
               href: relational-databases/tables/modify-edge-constraint.md
@@ -9045,7 +9045,7 @@
               href: ssms/scripting/database-engine-scripting.md
               items:
                 - name: Éditeurs de texte et de requête
-                  href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                  href: /previous-versions/sql/sql-server-2012/ms173477(v=sql.110)?redirectedfrom=MSDN
                 - name: Éditeur de requête du moteur de base de données
                   href: ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
                 - name: Éditeur XML
