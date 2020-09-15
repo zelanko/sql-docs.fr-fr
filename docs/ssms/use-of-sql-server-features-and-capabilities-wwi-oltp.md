@@ -1,4 +1,5 @@
 ---
+description: Arguments pour outils externes
 title: Arguments pour outils externes
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 3991c13a-f23f-450b-a2ba-19391c399735
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 23c2680b2043ff35e882e801a684f8aeb9503b21
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4cf19970c7c742701248c362806bc823d38cf8a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010814"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314955"
 ---
 # <a name="arguments-for-external-tools"></a>Arguments pour outils externes
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Les arguments sont des variables pour lesquelles l'environnement Studio fournit des valeurs lorsque vous lancez un outil externe à partir du menu **Outils** . Des outils externes, tels que le Bloc-notes, peuvent être ajoutés au menu **Outils** via la boîte de dialogue **Outils externes** .  
+ Les arguments sont des variables pour lesquelles l’environnement Studio fournit des valeurs quand vous lancez un outil externe à partir du menu **Outils**. Des outils externes, tels que le Bloc-notes, peuvent être ajoutés au menu **Outils** via la boîte de dialogue **Outils externes** .  
   
 Le tableau ci-dessous répertorie les arguments pour les outils externes.  
   

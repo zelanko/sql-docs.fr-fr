@@ -1,4 +1,5 @@
 ---
+description: Fenêtre Propriétés (Management Studio)
 title: Fenêtre Propriétés (Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a9a1389-df8d-4cfc-928b-eccbf884a22d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2ff8df58824aee2e718284bbbb2201b2123c216e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2017d434218356a87cc1db079b3195f42030029f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001812"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88316655"
 ---
 # <a name="properties-window-management-studio"></a>Fenêtre Propriétés (Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
