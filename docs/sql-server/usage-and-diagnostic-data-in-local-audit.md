@@ -14,12 +14,12 @@ ms.assetid: a0665916-7789-4f94-9086-879275802cf3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7a8162132f884c1bda7ea673eedbbceffa604e44
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: a212013d950f6a8f39816361b7f9c6209d0fa3e3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812630"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362509"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Audit local pour l’utilisation de SQL Server et collecte des données d’utilisation et de diagnostic (CEIP)
 
@@ -78,12 +78,12 @@ Créez un dossier (répertoire d’audit local) où l’audit local écrit les j
   >[!NOTE] 
   >Configurez le chemin du répertoire pour l’audit local en dehors du chemin d’installation de SQL Server pour éviter que la fonctionnalité d’audit et la correction entraînent des problèmes éventuels avec SQL Server.
 
-  ||Décision de conception|Recommandation|  
-  |------|-----------------|----------|  
-  |![Case à cocher](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Disponibilité de l’espace |Pour une charge de travail modérée d’environ 10 bases de données, prévoyez environ 2 Mo d’espace disque par base de données et par instance.|  
-|![Case à cocher](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Répertoires distincts | Créez un répertoire pour chaque instance. Par exemple, utilisez *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* pour une instance SQL Server nommée `MSSQLSERVER`. Cela simplifie la gestion des fichiers.
-|![Case à cocher](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Dossiers séparés |Utilisez un dossier spécifique pour chaque service. Par exemple, pour un nom d’instance donné, vous devez avoir un dossier pour le moteur de base de données. Si une instance d’Analysis Services utilise le même nom d’instance, créez un dossier distinct pour Analysis Services. Lorsque le moteur de base de données et les instances Analysis Services sont configurés dans le même dossier, l’audit local écrit dans le même fichier journal pour les deux instances.| 
-|![Case à cocher](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Accorder des autorisations au compte de connexion du service SQL Server CEIP|Activer l’option **Lister le contenu des dossiers**, et l’accès **En lecture** et **En écriture** au compte de connexion de service SQL Server CEIP|
+|Décision de conception|Recommandation|  
+|-----------------|----------|  
+|Disponibilité de l’espace |Pour une charge de travail modérée d’environ 10 bases de données, prévoyez environ 2 Mo d’espace disque par base de données et par instance.|  
+|Répertoires distincts | Créez un répertoire pour chaque instance. Par exemple, utilisez *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* pour une instance SQL Server nommée `MSSQLSERVER`. Cela simplifie la gestion des fichiers.
+|Dossiers séparés |Utilisez un dossier spécifique pour chaque service. Par exemple, pour un nom d’instance donné, vous devez avoir un dossier pour le moteur de base de données. Si une instance d’Analysis Services utilise le même nom d’instance, créez un dossier distinct pour Analysis Services. Lorsque le moteur de base de données et les instances Analysis Services sont configurés dans le même dossier, l’audit local écrit dans le même fichier journal pour les deux instances.| 
+|Accorder des autorisations au compte de connexion du service SQL Server CEIP|Activer l’option **Lister le contenu des dossiers**, et l’accès **En lecture** et **En écriture** au compte de connexion de service SQL Server CEIP|
 
 
 ### <a name="grant-permissions-to-the-sql-server-ceip-service-logon-account"></a>Accorder des autorisations au compte de connexion du service SQL Server CEIP
@@ -155,8 +155,8 @@ SQL Server CEIP doit reconnaître le paramètre d’audit local immédiatement s
 
 1. Accédez au service approprié. 
 
-    - Pour le moteur de base de données, utilisez **Service SQL Server CEIP (*Nom-de-votre-instance*)** .     
-    - Pour Analysis Services, utilisez **CEIP SQL Server Analysis Services (*Nom-de-votre-instance*)** .
+    - Pour le moteur de base de données, utilisez **Service SQL Server CEIP (*Nom-de-votre-instance*)**.     
+    - Pour Analysis Services, utilisez **CEIP SQL Server Analysis Services (*Nom-de-votre-instance*)**.
     - Pour Integration Services, 
         - Pour SQL 2016, utilisez *Service CEIP SQL Server Integration Services 13.0*.
         - Pour SQL 2017, utilisez *Service CEIP SQL Server Integration Services 14.0*.
@@ -194,7 +194,7 @@ L’audit local va générer un fichier journal par jour. Les fichiers journaux 
 | Machine | operatingSystem 
 | Instance | instanceUniqueID, correlationID, clientVersion 
 | session | sessionID, traceName 
-| Requête | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
+| Query | sequence, querySetVersion, queryIdentifier, query, queryTimeInTicks 
 | Données |  data 
 
 ### <a name="namevalue-pairs-definition-and-examples"></a>Définition et exemples des paires nom/valeur 
@@ -212,11 +212,11 @@ Les colonnes répertoriées ci-dessous représentent l’ordre de la sortie du f
 |clientVersion | Version d’instance SQL Server | 13.0.2161.3 ((SQL16_RTM_QFE-CU).160907-1223) 
 |operatingSystem | La version du système d’exploitation sur lequel l’instance SQL Server est installée | Microsoft Windows Server 2012 R2 Datacenter 
 |querySetVersion | Version d’un groupe de définitions de requête | 1.0.0.0 
-|traceName | Catégories de traces : (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
+|traceName | Catégories de traces : (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Un identificateur de la requête | SQLServerProperties.002 
-|data   | La sortie des informations collectées sur queryIdentifier en tant que sortie de requête T-SQL, de session XE ou de l’application |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|data   | La sortie des informations collectées sur queryIdentifier en tant que sortie de requête T-SQL, de session XE ou de l’application |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tÉdition Standard (64 bits) sur Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |query| Le cas échéant, la définition de requêtes T-SQL liée au queryIdentifier qui génère des données.        Ce composant n’est pas téléchargé par le service SQL Server CEIP. Il est inclus dans l’audit local en tant que référence pour les clients uniquement.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | Durée nécessaire à l’exécution de la requête avec la catégorie de trace suivante : (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|queryTimeInTicks | La durée nécessaire à l’exécution de la requête avec la catégorie de trace suivante : (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Catégories de trace 
 Actuellement, nous collectons les catégories de trace suivantes : 
