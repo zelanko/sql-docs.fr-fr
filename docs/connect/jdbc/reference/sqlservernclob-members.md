@@ -1,4 +1,5 @@
 ---
+description: Membres de SQLServerNClob
 title: Membres de SQLServerNClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 80f495051aabf5ecf3d020fc749cfdb4ddfd4c5f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3e23a4a5e9a4cb2d2c2a7ecd93db8615e814652c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923536"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354455"
 ---
 # <a name="sqlservernclob-members"></a>Membres de SQLServerNClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "80923536"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|Cette méthode libère l’objet **NCLOB** ainsi que les ressources qu’il détient.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|Récupère la valeur **NCLOB** désignée par l’objet **java.sql.NClob** sous forme de flux ASCII.|  
@@ -54,6 +55,6 @@ ms.locfileid: "80923536"
 |java.sql.Clob|free, getAsciiStream, getCharacterStream, getSubString, length, position, setAsciiStream, setCharacterStream, setString, truncate|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLServerClob, classe](../../../connect/jdbc/reference/sqlserverclob-class.md)  
+ [Classe SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

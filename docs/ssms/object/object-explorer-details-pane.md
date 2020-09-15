@@ -1,4 +1,5 @@
 ---
+description: Volet Détails de l'Explorateur d'objets
 title: Volet Détails de l'Explorateur d'objets
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c3a13ad090b378e00ed43d0319100ec8e8a0638
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c9ee38de46d4bcd689c471eb9f32fa79df40fa68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001914"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370785"
 ---
 # <a name="object-explorer-details-pane"></a>Volet Détails de l'Explorateur d'objets
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,12 +43,12 @@ Détails de l'Explorateur d'objets comprend une barre d'outils contenant les ic�
 |Icône|Action|  
 |--------|----------|  
 |**Précédent**|Passe aux éléments précédents affichés dans Détails de l'Explorateur d'objets. Réexécute une recherche lorsque l'affichage précédent est le résultat d'une opération de recherche.|  
-|**Suivant**|Passe à l’écran suivant après une opération **Précédent** .|  
+|**Prédictif**|Passe à l’écran suivant après une opération **Précédent** .|  
 |**Haut**|Passe à l'objet ou au dossier parent.|  
 |**Synchroniser**|Définit l'objet sélectionné dans Détails de l'Explorateur d'objets comme focus de l'Explorateur d'objets.|  
 |**Filter**|Affiche, si disponible, un sous-ensemble configurable d'objets.|  
 |**Actualiser**|Actualise l'affichage dans Détails de l'Explorateur d'objets.|  
-|**action**|Fournit une zone pour entrer un terme de recherche pour certains objets de base de données.|  
+|**Recherche**|Fournit une zone pour entrer un terme de recherche pour certains objets de base de données.|  
   
 ### <a name="column-header-selections"></a>Sélections d'en-tête de colonne  
 Détails de l'Explorateur d'objets possède des colonnes sélectionnables. Vous pouvez cliquer avec le bouton droit sur n'importe quel en-tête de colonne et sélectionner les éléments à afficher. Vos sélections sont rendues persistantes à travers les différents objets que vous parcourez. Les sélections pour chaque utilisateur sont conservées lorsque vous quittez et redémarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

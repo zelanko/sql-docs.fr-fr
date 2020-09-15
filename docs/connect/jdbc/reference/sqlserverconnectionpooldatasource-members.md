@@ -1,4 +1,5 @@
 ---
+description: Membres de SQLServerConnectionPoolDataSource
 title: Membres de SQLServerConnectionPoolDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e5f75ad27e2e6a346adc098f59f5c54144bafb4d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ede3a0d4d6fea9451258cb6add2cbc4e6ba9ee3b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921996"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88354875"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>Membres de SQLServerConnectionPoolDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80921996"
   
 ## <a name="constructors"></a>Constructeurs  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[SQLServerConnectionPoolDataSource ()](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-constructor.md)|Initialise une nouvelle instance de la classe [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md).|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80921996"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|(héritée de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Retourne la valeur de la propriété de connexion **applicationIntent**.|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|(héritée de [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) Retourne le nom de l’application.|  
@@ -95,6 +96,6 @@ ms.locfileid: "80921996"
 |javax.sql.ConnectionPoolDataSource|getLoginTimeout, getLogWriter, setLoginTimeout, setLogWriter, getPooledConnection|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLServerConnectionPoolDataSource, classe](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
+ [Classe SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données
 title: Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 08/14/2017
-ms.openlocfilehash: d1136d29ee8ee62648922f008042266a59632475
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: e5b01c75e099facc54c65ce5ef0d4c290ec79694
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123070"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370845"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Se connecter au serveur (page Propriétés de connexion) — Moteur de base de données
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Utilisez cet onglet pour afficher ou spécifier les options de connexion à une instance du [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] ou d’inscription du [!INCLUDE[ssDE](../../includes/ssde_md.md)] dans **Serveurs inscrits**. **Se connecter** et **Options** ne s’affichent dans cette boîte de dialogue que quand vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)]. **Tester** et **Enregistrer** s’affichent uniquement dans cette boîte de dialogue lors de l’inscription du [!INCLUDE[ssDE](../../includes/ssde_md.md)].  
   
-**Se connecter à la base de données**  
+**Connecter à la base de données**  
 Dans la liste, sélectionnez une base de données à laquelle se connecter. Si vous sélectionnez **<default>** , vous vous connectez à la base de données par défaut du serveur. Si vous sélectionnez **<Browse server>** , vous pouvez parcourir l’arborescence du serveur à la recherche de la base de données à laquelle vous souhaitez vous connecter.  
   
 Quand vous vous connectez à une instance du moteur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous devez utiliser l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et spécifier une base de données dans la boîte de dialogue **Se connecter au serveur** , sous l’onglet **Propriétés de connexion** . Vérifiez que vous avez coché la case **Chiffrer la connexion** .  
@@ -75,5 +76,5 @@ Quand vous inscrivez [!INCLUDE[ssDE](../../includes/ssde_md.md)] dans **Serveurs
 Enregistre les paramètres dans **Serveurs inscrits**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Boîte de dialogue Propriétés de la connexion](../../ssms/f1-help/connection-properties-dialog-box.md)  
+[Propriétés de connexion (boîte de dialogue)](../../ssms/f1-help/connection-properties-dialog-box.md)  
   

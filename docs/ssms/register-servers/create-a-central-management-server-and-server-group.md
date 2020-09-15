@@ -1,4 +1,5 @@
 ---
+description: Créer un serveur de gestion centralisée et un groupe de serveurs
 title: Créer un serveur de gestion centralisée
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -12,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: da2c3891f86476b75d47711415baeaca85813043
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d0d43fe140f2165b19cb38a6c8d7391428a14e93
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370829"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Créer un serveur de gestion centralisée et un groupe de serveurs
 

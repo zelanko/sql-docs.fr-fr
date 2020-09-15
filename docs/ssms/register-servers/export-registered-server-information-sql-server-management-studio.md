@@ -1,4 +1,5 @@
 ---
+description: Exporter les informations des serveurs inscrits (SQL Server Management Studio)
 title: Exporter des informations de serveur inscrit
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 6137cc5760caec8017f2aeecc1cbb5dffb19e8a0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d770a7396f48aa11e00eb4f4663285f4cf6eef9a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85977854"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88370305"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exporter les informations des serveurs inscrits (SQL Server Management Studio)
 
@@ -51,7 +52,7 @@ Cette rubrique explique comment enregistrer et exporter les informations des ser
      Le groupe de serveurs affiche uniquement les groupes de serveurs de l'arborescence actuelle de serveurs inscrits.  
   
      **Fichier d'exportation**  
-     Tapez le nom du fichier d’exportation dans la zone de texte ou utilisez le bouton Parcourir ( **...** ) pour rechercher un fichier d’exportation sur l’ordinateur client. Si vous sélectionnez un fichier existant, les informations de serveur inscrit sont ajoutées au fichier. Utilisez l'extension .regsrvr. Pour rendre les informations de serveurs inscrits accessibles à d'autres utilisateurs ou un autre ordinateur, vous pouvez enregistrer le fichier sur le réseau. Les autres utilisateurs peuvent accéder au fichier et importer l'ensemble ou une partie des informations de serveurs inscrits. Si vous sélectionnez un fichier d'exportation existant, le contenu du fichier est remplacé par les informations d'inscription des serveurs.  
+     Tapez le nom du fichier d’exportation dans la zone de texte ou utilisez le bouton Parcourir (**...**) pour rechercher un fichier d’exportation sur l’ordinateur client. Si vous sélectionnez un fichier existant, les informations de serveur inscrit sont ajoutées au fichier. Utilisez l'extension .regsrvr. Pour rendre les informations de serveurs inscrits accessibles à d'autres utilisateurs ou un autre ordinateur, vous pouvez enregistrer le fichier sur le réseau. Les autres utilisateurs peuvent accéder au fichier et importer l'ensemble ou une partie des informations de serveurs inscrits. Si vous sélectionnez un fichier d'exportation existant, le contenu du fichier est remplacé par les informations d'inscription des serveurs.  
   
      **Ne pas inclure les noms d'utilisateur ni les mots de passe dans le fichier d'exportation**  
      Exclut les noms d'utilisateur lors de l'exportation du fichier.  
