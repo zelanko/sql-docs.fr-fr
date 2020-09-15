@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6eaa6caa15f7cef82ca7d18caa8429b9df9978d8
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 48e6da2956896035f53e070a3ea48d3d72e0f7d8
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255255"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945684"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Publication de parties de rapports (Générateur de rapports et SSRS)
   Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que *parties de rapports*. Les parties de rapports sont des éléments de rapports paginés qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d’autres rapports paginés. Les parties de rapports ont l'extension de fichier .rsc.  
@@ -108,7 +108,7 @@ ms.locfileid: "84255255"
  Chaque fois que vous ouvrez un rapport, le Générateur de rapports vérifie si les instances de serveur des parties de rapport de ce rapport ont été mises à jour sur le serveur. Il recherche également des modifications dans les éléments dépendants des parties de rapport, tels que le dataset et les paramètres. Si des parties de rapport publiées ou leurs dépendances ont été mises à jour sur le serveur, une barre d'informations dans votre rapport affiche le nombre d'éléments mis à jour. Vous pouvez choisir d'afficher et d'accepter ou de rejeter les mises à jour ou de faire disparaître la barre d'informations. Si vous choisissez d'afficher les mises à jour, une miniature de la partie de rapport, de la personne qui l'a modifié en dernier et du moment de cette modification apparaît. Vous pouvez alors accepter certains ou l'ensemble des éléments mis à jour.  
   
 > [!NOTE]  
->  Vous pouvez désactiver la barre d'informations, auquel cas vous ne serez plus informé en cas de modification d'une partie de rapport. Vous définissez cette option lorsque vous ajoutez la partie de rapport à votre rapport. Même si vous avez désactivé la barre d'informations, vous pouvez toujours rechercher des mises à jour. Pour plus d’informations, consultez [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  Vous pouvez désactiver la barre d'informations, auquel cas vous ne serez plus informé en cas de modification d'une partie de rapport. Vous définissez cette option lorsque vous ajoutez la partie de rapport à votre rapport. Même si vous avez désactivé la barre d'informations, vous pouvez toujours rechercher des mises à jour.
   
  Le Générateur de rapports recherche des différences entre la date de la dernière mise à jour de la partie de rapport sur le serveur et la date de la dernière synchronisation de la partie de rapport avec le serveur. Il ne vérifie pas la date à laquelle vous avez modifié la partie de rapport dans votre rapport. Ainsi, la partie de rapport dans votre rapport et celle sur le serveur peuvent être assez différentes mais, lorsque le Générateur de rapports recherche des mises à jour, il n'en trouve pas.  
   
@@ -137,11 +137,6 @@ ms.locfileid: "84255255"
   
  [Rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
-  
 ## <a name="see-also"></a>Voir aussi  
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Gestion de parties de rapport](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+ [Gestion de parties de rapport](../../reporting-services/report-design/managing-report-parts.md) 

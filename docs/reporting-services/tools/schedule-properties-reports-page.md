@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 7db728bd-4b08-43ef-a49a-e8dcdd37cf89
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 155df0fc52ffc390a0bf528fb2a907751dbbfe6b
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 556fc5e4c785345ede475dcadb2c5673489a279f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916895"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939388"
 ---
 # <a name="schedule-properties-reports-page"></a>Propriétés de planification (page Rapports)
   Utilisez la page Propriétés de planification de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] pour consulter la liste de tous les rapports qui utilisent la planification partagée spécifique. Les planifications peuvent être utilisées pour actualiser les instantanés de rapport, générer un historique de rapport, déclencher un abonnement ou faire expirer une copie mise en cache du rapport. Pour savoir comment la planification est utilisée, consultez les informations sur les propriétés et les abonnements du rapport.  
@@ -47,7 +47,7 @@ ms.locfileid: "86916895"
  [Planifications](../../reporting-services/subscriptions/schedules.md)   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Configurer les propriétés générales d’un rapport (Gestionnaire de rapports)](https://msdn.microsoft.com/10b941b2-28e6-4408-9ee4-acebc63c8496)  
+ [Configurer les propriétés générales d’un rapport (Gestionnaire de rapports)](https://docs.microsoft.com/sql/reporting-services/reports/configure-execution-properties-for-a-report-report-manager)  
   
   
 

@@ -157,12 +157,12 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 24fb81c9714e9008308721906505aab8cc4247fc
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: 03c4fa2ddf36130fb9ff96899870207c6427efe1
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84011857"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939219"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
   Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une région de données de jauge affiche une valeur unique tirée de votre dataset. Chaque jauge est toujours positionnée à l'intérieur d'un panneau de jauge, où vous pouvez ajouter des jauges enfants ou adjacentes. Dans un panneau de jauge, vous pouvez créer plusieurs jauges qui partagent des fonctions communes telles que le filtrage, le regroupement ou le tri.  
@@ -283,16 +283,13 @@ ms.locfileid: "84011857"
   
 -   [Définir un minimum ou un maximum sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Définir un intervalle d'alignement sur une jauge (Générateur de rapports et SSRS)](https://msdn.microsoft.com/0ece7297-6e2f-47fb-835d-b9e9cce53fe2)  
-  
--   [Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)](https://msdn.microsoft.com/9d73b3c3-a068-4868-a2be-0cd261b6e92b)  
+-   [Définir un intervalle d'alignement sur une jauge (Générateur de rapports et SSRS)](https://docs.microsoft.com/sql/reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs)  
   
 ##  <a name="in-this-section"></a><a name="InThisSection"></a> Dans cette section  
  Les rubriques suivantes fournissent des informations supplémentaires sur l'utilisation des jauges.  
   
-|||  
-|-|-|  
 |Terme|Définition|  
+|-|-|  
 |[Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Fournit des informations générales sur la mise en forme des échelles sur les jauges et des informations détaillées sur les options de mise en forme pour les échelles sur les jauges radiales et linéaires.|  
 |[Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Fournit des informations générales sur la mise en forme des pointeurs sur les jauges et des informations détaillées sur les options de mise en forme pour les styles de pointeurs disponibles pour les jauges radiales et linéaires.|  
 |[Mise en forme de plages sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Fournit des informations sur la mise en forme des plages sur les jauges pour indiquer une sous-section importante de valeurs sur la jauge ou indiquer visuellement le moment où la valeur de pointeur entre dans une certaine plage de valeurs.|  

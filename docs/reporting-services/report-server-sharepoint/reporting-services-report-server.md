@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b884782c7ae1ad7898a2d2ef04de7de18b7c73df
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 2d91801bd8fa23cdb14112c98af6584d9a7b9250
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764798"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934248"
 ---
 # <a name="comparing-native-and-sharepoint-reporting-services-report-servers"></a>Comparaison des serveurs de rapports Reporting Services natifs et SharePoint
 
@@ -138,7 +138,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 |Tâche|Lien|  
 |----------|----------|  
 |Vérifier les configurations matérielle et logicielle requises|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Installer Reporting Services en mode SharePoint.|[Installer le mode SharePoint de Reporting Services pour SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|Installer Reporting Services en mode SharePoint.|[Installer le mode SharePoint de Reporting Services pour SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
 |Explique comment ajuster les paramètres de la mémoire pour le service Web Report Server et le service Windows.|[Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explique les étapes recommandées pour configurer un serveur de rapports pour l'administration à distance.|[Configurer un serveur de rapports pour l'administration à distance](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Fournit des instructions pour configurer la disponibilité de **Mes rapports** sur une instance de serveur de rapports en mode natif.|[Activer et désactiver Mes rapports](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

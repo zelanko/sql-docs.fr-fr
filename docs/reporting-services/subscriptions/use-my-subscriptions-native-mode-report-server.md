@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e96623ba-677e-4748-8787-f32bed3b5c12
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 55842ea259a2298388dc82b89cc941f561c029fb
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 964e6752dc44477215180e6e61f6440feb8972af
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742207"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87939391"
 ---
 # <a name="use-my-subscriptions-native-mode-report-server"></a>Utiliser mes abonnements (serveur de rapports en mode natif)
 Le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une page **Mes abonnements** qui centralise tous les abonnements. Vous pouvez utiliser la page *Mes abonnements* pour afficher, modifier, activer, désactiver et supprimer des abonnements existants. En revanche, vous ne pouvez pas l'utiliser pour créer des abonnements.  La page Mes abonnements contient uniquement les abonnements que vous créez. Elle ne répertorie ni les abonnements pilotés par les données ni les abonnements appartenant à d'autres utilisateurs, même si vous figurez parmi les abonnés.
@@ -55,6 +55,6 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ## <a name="see-also"></a>Voir aussi  
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)  
+ [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](https://docs.microsoft.com/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers)  
   
   

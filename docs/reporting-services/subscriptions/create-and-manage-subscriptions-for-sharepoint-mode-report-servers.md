@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5275678180b785b1d41705d4f2debdada8fd5a78
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 0da2edb5af1484d6d8f9428ec6ec9a7f9e7c554f
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742258"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87945296"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
   Vous pouvez créer des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour remettre les rapports à partir d’une application web SharePoint qui est intégrée à un serveur de rapports en mode SharePoint. Les abonnements peuvent remettre des rapports dans une bibliothèque de documents, un dossier de fichiers ou sous forme de courrier électronique. Cette rubrique résume les conditions requises et les étapes de création d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -160,6 +160,6 @@ ms.locfileid: "80742258"
  [Remise par e-mail dans Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Remise par partage de fichiers dans Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
  [Remise à une bibliothèque SharePoint dans Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md)   
- [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Configurer un serveur de rapports pour la remise par messagerie (Gestionnaire de configuration de SSRS)](https://docs.microsoft.com/sql/reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager)  
   
   

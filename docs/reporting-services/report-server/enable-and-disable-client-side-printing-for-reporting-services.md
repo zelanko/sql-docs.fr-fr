@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ffa8d5781eb3ad7eb95a4dc5b360ad51ede6843
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4a2f61a8700c24a2cc41192103f57a51befbbd15
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547471"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87390655"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Activer et désactiver l'impression côté client pour Reporting Services
 
@@ -32,7 +32,7 @@ ms.locfileid: "84547471"
   
  ![Barre d'outils Rapports](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Barre d'outils Rapports")  
   
-|||  
+|Interaction|Interface utilisateur|  
 |-|-|  
 |La première boîte de dialogue, identique pour tous les navigateurs, vous permet de modifier les propriétés de disposition de base, par exemple l'orientation. Lorsque vous cliquez sur **Imprimer**, l'expérience sera légèrement différente selon le navigateur que vous utilisez.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |Dans Chrome, une boîte de dialogue d’impression détaillée s'ouvre dans le navigateur.   Vous pouvez modifier la configuration d'impression, imprimer et ouvrir la boîte de dialogue d'impression du système d'exploitation.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  

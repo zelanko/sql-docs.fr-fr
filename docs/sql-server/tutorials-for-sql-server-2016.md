@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8d86c5a3662417c1af39f12fc3d32167a73912c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: df4709bbbfa17cdf33cfd13a20486a213fcc5a05
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913944"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934238"
 ---
 # <a name="tutorials-for-sql-server"></a>Didacticiels pour SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "86913944"
 |--------------|---------------|  
 |[Didacticiels pour Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Apprenez à développer et à déployer des modèles tabulaires ou multidimensionnels [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Apprenez également à utiliser des outils tels que PowerPivot pour analyser les données dans les modèles.|  
 |[Didacticiels sur le moteur de base de données](../relational-databases/database-engine-tutorials.md)|Apprenez à vous connecter à une instance du moteur de base de données, puis à créer et à exécuter des instructions Transact-SQL.|  
-|[Didacticiels sur la Gestion des informations d'entreprise](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Apprenez comment gérer les informations dans une entreprise à l'aide des technologies Microsoft EIM.|  
+|[Didacticiels sur la Gestion des informations d'entreprise](https://wiki.scn.sap.com/wiki/display/EIM/EIM+Tutorials)|Apprenez comment gérer les informations dans une entreprise à l'aide des technologies Microsoft EIM.|  
 |[Didacticiels sur Integration Services](../integration-services/integration-services-tutorials.md)|Découvrez comment créer et déployer des packages [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Didacticiels sur la réplication](../relational-databases/replication/replication-tutorials.md)|Apprenez comment installer et exécuter les topologies de réplication à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Découvrez comment créer des rapports de base et des abonnements.|  
@@ -38,7 +38,7 @@ ms.locfileid: "86913944"
   
  ## <a name="previously-published-tutorials"></a>Didacticiels déjà publiés 
   
- - [Didacticiels pour SQL Server 2014](https://msdn.microsoft.com/library/hh231699(v=sql.120).aspx)  
+ - [Didacticiels pour SQL Server 2014](https://www.quackit.com/sql_server/sql_server_2014/tutorial/)  
   
  - [Didacticiels pour SQL Server 2012](https://msdn.microsoft.com/library/hh231699(v=sql.110).aspx)  
   

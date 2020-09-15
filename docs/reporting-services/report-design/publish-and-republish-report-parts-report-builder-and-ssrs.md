@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92dce484-f39b-403c-9caf-d8772bc3aca3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c8beab2bdd11e0b8f3b550d46601b5e00069525
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: f8848fb3d8d474083e0ce1a10b7d355a2e4b886e
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255222"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87928630"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Publier et republier des parties de rapports (Générateur de rapports et SSRS)
   Les parties de rapports sont des éléments de rapports paginés qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d’autres rapports paginés. Vous pouvez publier une partie de rapport avec des paramètres par défaut à un emplacement par défaut, ou vous pouvez modifier des métadonnées de partie de rapport, telles que le nom et la description, puis les enregistrer ailleurs sur un serveur de rapports. Vous pouvez également les enregistrer sur un site SharePoint intégré avec un serveur de rapports si vous avez les autorisations appropriées.  
@@ -58,8 +58,6 @@ ms.locfileid: "84255222"
 ## <a name="see-also"></a>Voir aussi  
  [Parties de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [Parties de rapports et datasets dans le Générateur de rapports](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Résoudre les problèmes liés aux parties de rapports (Générateur de rapports et SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Vérifier la présence de mises à jour ou désactiver les mises à jour (Générateur de rapports et SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [Rechercher des parties de rapports et définir un dossier par défaut &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
   
