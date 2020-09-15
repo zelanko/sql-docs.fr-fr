@@ -1,20 +1,20 @@
 ---
-title: 'Tutoriel : Créer un widget insight personnalisé'
+title: Créer un widget insight personnalisé
 description: Ce didacticiel montre comment créer des widgets d’insight personnalisés et les ajouter aux tableaux de bord de base de données et de serveur dans Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: efe6473dc716b8e8a2c70349b98e6433105d401a
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 08/26/2020
+ms.openlocfilehash: 0cd248b323ebc6176dbad37f578da1c08141281b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745752"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283750"
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Tutoriel : Créer un widget insight personnalisé
 
@@ -104,7 +104,7 @@ Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azur
 
 7. Enregistrez le fichier *Paramètres utilisateur* et ouvrez le tableau de bord de la base de données *TutorialDB* pour afficher le widget de sessions actives:
 
-   ![Insight activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![session active insight tableau de bord](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
 ## <a name="add-details-to-custom-insight"></a>Ajouter des détails à un insight personnalisé
 
@@ -159,7 +159,7 @@ Ce didacticiel nécessite la base de données *TutorialDB* de SQL Server ou Azur
 
 7. Enregistrez le fichier *Paramètres utilisateur* et ouvrez le tableau de bord de la base de données *TutorialDB*. Cliquez sur le bouton de sélection (...) à côté de *My-Widget* pour afficher les détails :
 
-    ![Insight activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![session active insight détail](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
 Dans ce didacticiel, vous avez appris à :

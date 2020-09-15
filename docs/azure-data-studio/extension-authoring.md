@@ -6,22 +6,21 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu, maghan, sstein
+ms.reviewer: alayu
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: bd2a20857c8f16ea2b2d71ebfcb620bcea3f0190
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.date: 08/26/2020
+ms.openlocfilehash: 477e93dc272c4a26e40333b02728c643299161ce
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88778418"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283716"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Étendre les fonctionnalités en créant des extensions Azure Data Studio
 
 Les extensions dans Azure Data Studio offrent un moyen simple d’ajouter des fonctionnalités à l'installation d’Azure Data Studio de base.
 
 Les extensions sont fournies par l’équipe Azure Data Studio (Microsoft), ainsi que par la communauté tierce (vous !).
-
 
 ## <a name="author-an-extension"></a>Créer une extension
 
@@ -35,7 +34,7 @@ Pour développer une extension, [Node.js](https://nodejs.org/) doit être instal
 
 Pour créer votre nouvelle extension, vous pouvez utiliser le générateur d’extensions Azure Data Studio. Le [générateur d’extensions](https://www.npmjs.com/package/generator-azuredatastudio) Yeoman est un bon point de départ pour les projets d’extension. Pour lancer le générateur, tapez la commande suivante à une invite de commandes :
 
-```
+```console
 npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
@@ -46,23 +45,22 @@ Pour obtenir un guide détaillé expliquant comment bien démarrer avec votre mo
 
 Pour en savoir plus sur l’extensibilité d’Azure Data Studio, consultez [Vue d’ensemble de l’extensibilité](extensibility.md). Vous pouvez également voir des exemples d’utilisation de l’API dans des [exemples](https://github.com/Microsoft/azuredatastudio/tree/main/samples) existants.
 
-
 ## <a name="debug-an-extension"></a>Déboguer une extension
 
 Vous pouvez déboguer votre nouvelle extension à l’aide de l’extension Visual Studio Code [Azure Data Studio Debug](https://github.com/kevcunnane/sqlops-debug).
 
-Étapes
-1. Ouvrez votre extension avec [Visual Studio Code](https://code.visualstudio.com/).
-1. Installez l’extension Azure Data Studio Debug.
-1. Appuyez sur **F5** ou cliquez sur l’icône de débogage, puis cliquez sur **Démarrer**.
-1. Une nouvelle instance d’Azure Data Studio démarre en mode spécial (hôte de développement d’extension) et cette nouvelle instance est désormais consciente de votre extension.
+Étapes :
 
+1. Ouvrez votre extension avec [Visual Studio Code](https://code.visualstudio.com/).
+2. Installez l’extension Azure Data Studio Debug.
+3. Appuyez sur **F5** ou cliquez sur l’icône de débogage, puis cliquez sur **Démarrer**.
+4. Une nouvelle instance d’Azure Data Studio démarre en mode spécial (hôte de développement d’extension) et cette nouvelle instance est désormais consciente de votre extension.
 
 ## <a name="create-an-extension-package"></a>Créer un package d’extension
 
-Après avoir écrit votre extension, vous devez créer un package VSIX pour pouvoir l’installer dans Azure Data Studio. Vous pouvez utiliser [vsce](https://github.com/Microsoft/vscode-vsce) (Extensions Visual Studio Code) pour créer le package VSIX. 
+Après avoir écrit votre extension, vous devez créer un package VSIX pour pouvoir l’installer dans Azure Data Studio. Vous pouvez utiliser [vsce](https://github.com/Microsoft/vscode-vsce) (Extensions Visual Studio Code) pour créer le package VSIX.
 
-```
+```console
 npm install -g vsce
 cd myExtensionName
 vsce package
@@ -70,7 +68,6 @@ vsce package
 ```
 
 Avec un package VSIX, vous pouvez partager votre extension localement et en privé en partageant le fichier `.vsix` et en utilisant la commande **Extensions : Installer à partir d’un VSIX** dans la palette de commandes pour installer l’extension dans Azure Data Studio.
-
 
 ## <a name="publish-an-extension"></a>Publier une extension
 
@@ -86,3 +83,13 @@ Votre extension sera examinée et ajoutée à la galerie d’extensions.
 **Publication de mises à jour d’extension**
 
 Le processus de publication de mises à jour est similaire à la publication de l’extension. Vérifiez que la version est mise à jour dans package.json.
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour obtenir des instructions pas à pas afin de bien démarrer, reportez-vous à l’un des tutoriels de création d’extensions suivants :
+
+- [Tutoriel sur l’extension de mappage de touches](extensions/keymap-extension.md)
+- [Tutoriel sur l’extension de tableau de bord](extensions/dashboard-extension.md)
+- [Tutoriel sur l’extension de notebook](extensions/notebook-extension.md)
+- [Tutoriel sur l’extension Jupyter Book](extensions/jupyter-book-extension.md)
+- [Tutoriel sur l’extension de l’Assistant](extensions/wizard-extension.md)

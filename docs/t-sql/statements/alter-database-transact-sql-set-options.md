@@ -2,7 +2,7 @@
 title: Options SET d’ALTER DATABASE (Transact-SQL) | Microsoft Docs
 description: Découvrez comment définir des options de base de données comme l’optimisation automatique, le chiffrement, le Magasin des requêtes dans SQL Server et Azure SQL Database.
 ms.custom: ''
-ms.date: 06/22/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,6 +22,7 @@ helpviewer_keywords:
 - snapshot isolation framework option
 - checksums [SQL Server]
 - Automatic tuning
+- " Data Retention Policy"
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,12 +31,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1dd62f3d2d0a3ee3b63abd5d01fe33ba7dac196f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: c7e35b474e33da25b2d323d4af4aced5c4fe50f1
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900960"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511301"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d’ALTER DATABASE (Transact-SQL)
 
@@ -115,6 +116,7 @@ SET
   | <target_recovery_time_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
 }
 ;
 
@@ -305,6 +307,10 @@ SET
 
 <temporal_history_retention> ::=
     TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<data_retention_policy> ::=
+    DATA_RETENTION { ON | OFF }
+
 ```
 
 ## <a name="arguments"></a>Arguments
@@ -504,6 +510,17 @@ Si GLOBAL est spécifié et qu’aucun curseur n’est défini comme LOCAL lors 
 Le curseur n'est libéré implicitement qu'au moment de la déconnexion. Pour plus d’informations, voir [DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md).
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne `is_local_cursor_default` de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Vous pouvez également déterminer l’état en consultant la propriété `IsLocalCursorsDefault` de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
+
+**\<data_retention_policy> ::=**
+
+**S’applique à** : Azure SQL Edge *uniquement*
+
+DATA_RETENTION { ON | OFF }   
+ACTIVÉ    
+Active le nettoyage basé sur la stratégie de rétention des données sur une base de données.
+
+OFF   
+Désactive le nettoyage basé sur la stratégie de rétention des données sur une base de données.
 
 **\<database_mirroring>**     
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]

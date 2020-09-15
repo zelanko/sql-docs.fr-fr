@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9aec87c4b57016f862b671734a871f77bd84da15
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 769000368599b2dc4e39b851d3d0def2f8b40a38
+ms.sourcegitcommit: 8689a1abea3e2b768cdf365143b9c229194010c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87395054"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89424429"
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité Always On)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "87395054"
   Dans le contexte d'un groupe de disponibilité, le rôle principal et le rôle secondaire des réplicas de disponibilité sont généralement interchangeables au moyen d'un processus appelé *basculement*. Trois formes de basculement existent : basculement automatique (sans perte de données), basculement manuel planifié (sans perte de données) et basculement manuel forcé (avec perte de données possible), ce dernier étant généralement appelé *basculement forcé*. Les basculements automatiques et planifiés manuels préservent vos données. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Autrement dit, un groupe de disponibilité bascule vers l’un de ses réplicas secondaires ( *cible de basculement*actuelle).  
   
 > [!NOTE]  
->  Les problèmes qui surviennent au niveau de la base de données, tels qu'une base de données devenant suspecte en raison de la perte d'un fichier de données, la suppression d'une base de données ou l'altération d'un journal des transactions, ne provoquent pas le basculement d'un groupe de disponibilité.  
+>   Sauf si la [détection de l’état d’intégrité au niveau de base de données](../../../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md) est configurée, les problèmes qui surviennent au niveau de la base de données, comme une base de données devenant suspecte en raison de la perte d’un fichier de données, la suppression d’une base de données ou l’altération d’un journal des transactions, ne provoquent pas le basculement d’un groupe de disponibilité.  
   
  Pendant le basculement, la cible de basculement adopte le rôle principal, récupère ses bases de données et les met en ligne en tant que nouvelles bases de données primaires. Le réplica principal précédent, lorsqu'il est disponible, bascule vers le rôle secondaire, et ses bases de données deviennent des bases de données secondaires. Ces rôles peuvent éventuellement basculer plusieurs fois (ou vers une cible de basculement différente), soit en réponse à plusieurs défaillances, soit pour des raisons administratives.  
   

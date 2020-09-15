@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0986c7af4ed3f6f8284db2e9faf99cad149b216
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c8636dad789915289ef0f08c7355c5f443a7a87a
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457614"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480502"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "86457614"
   
 #### <a name="to-start-the-database-engine-tuning-advisor-from-the-sql-server-management-studio-query-editor"></a>Pour démarrer l'Assistant Paramétrage du moteur de base de données à partir de l'Éditeur de requête SQL Server Management Studio  
   
-1.  Ouvrez un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md).  
+1.  Ouvrez un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
   
 2.  Sélectionnez une requête dans le script [!INCLUDE[tsql](../../includes/tsql-md.md)] ou sélectionnez le script en entier, cliquez avec le bouton droit sur la sélection, puis choisissez **Analyser la requête dans l’Assistant Paramétrage de base de données**. L'interface utilisateur graphique de l'Assistant Paramétrage du moteur de base de données s'ouvre et importe le script sous forme de charge de travail de fichier XML. Vous pouvez spécifier un nom de session et des options de paramétrage pour paramétrer les requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] sélectionnées en tant que charge de travail.  
   
@@ -180,7 +180,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
 > [!NOTE]  
 >  La suspension de l'Assistant Paramétrage du moteur de base de données n'est pas acceptée. Si vous cliquez sur le bouton de barre d’outils **Démarrer l’analyse** après avoir cliqué soit sur **Arrêter l’analyse** soit sur **Arrêter l’analyse (avec recommandations)** , l’Assistant Paramétrage du moteur de base de données démarre une nouvelle session de paramétrage.  
   
-##### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>Pour paramétrer une base de données en utilisant un fichier ou une table de charge de travail comme entrée  
+#### <a name="to-tune-a-database-using-a-workload-file-or-table-as-input"></a>Pour paramétrer une base de données en utilisant un fichier ou une table de charge de travail comme entrée  
   
 1.  Déterminez les fonctionnalités de base de données (index, vues indexées, partitionnement) que l'Assistant Paramétrage du moteur de base de données doit ajouter, supprimer ou conserver pendant l'analyse.  
   
@@ -195,7 +195,6 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
      La table doit être spécifiée dans le format suivant :  
   
     ```  
-  
     database_name.schema_name.table_name  
     ```  
   
@@ -235,7 +234,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
   
  Pour plus d’informations sur la syntaxe de l’utilitaire **dta** ainsi que des exemples, voir [dta Utility](../../tools/dta/dta-utility.md).  
   
-##### <a name="to-tune-a-database-by-using-the-plan-cache"></a>Pour paramétrer une base de données à l'aide du cache du plan  
+#### <a name="to-tune-a-database-by-using-the-plan-cache"></a>Pour paramétrer une base de données à l'aide du cache du plan  
   
 1.  Spécifiez l’option **-ip** . Les 1 000 premiers événements du cache du plan pour les bases de données sélectionnées sont analysés.  
   
@@ -257,7 +256,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
     dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
-##### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Pour paramétrer une base de données en utilisant les paramètres par défaut d'une charge de travail et de l'utilitaire dta  
+#### <a name="to-tune-a-database-by-using-a-workload-and-dta-utility-default-settings"></a>Pour paramétrer une base de données en utilisant les paramètres par défaut d'une charge de travail et de l'utilitaire dta  
   
 1.  Déterminez les fonctionnalités de base de données (index, vues indexées, partitionnement) que l'Assistant Paramétrage du moteur de base de données doit ajouter, supprimer ou conserver pendant l'analyse.  
   
@@ -273,7 +272,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
   
      Les quatre options indiquées ici (nom de base de données, charge de travail, type de connexion et nom de session) sont obligatoires.  
   
-##### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>Pour paramétrer une base de données distante ou une instance nommée pour une durée spécifique  
+#### <a name="to-tune-a-remote-database-or-a-named-instance-for-a-specific-duration"></a>Pour paramétrer une base de données distante ou une instance nommée pour une durée spécifique  
   
 1.  Déterminez les fonctionnalités de base de données (index, vues indexées, partitionnement) que l'Assistant Paramétrage du moteur de base de données doit ajouter, supprimer ou conserver pendant l'analyse.  
   
@@ -288,7 +287,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
   
      où l'option `-S` spécifie un nom de serveur distant et une instance distante (ou une instance nommée sur le serveur local) et l'option `-D` indique le nom de la base de données à paramétrer. L'option `-it` spécifie le nom de la table de charge de travail, les options `-U` et `-P` définissent l'ID de connexion et le mot de passe permettant d'accéder à la base de données distante, l'option `-s` indique le nom de la session de paramétrage tandis que l'option `-A` précise, en minutes, la durée de la session de paramétrage. Par défaut, l’utilitaire **dta** utilise une durée de paramétrage de 8 heures. Si vous voulez que l’Assistant Paramétrage du moteur de base de données paramètre une charge de travail pour une durée illimitée, spécifiez **0** (zéro) pour l’option `-A` .  
   
-##### <a name="to-tune-a-database-using-an-xml-input-file"></a>Pour paramétrer une base de données à l'aide d'un fichier d'entrée XML  
+#### <a name="to-tune-a-database-using-an-xml-input-file"></a>Pour paramétrer une base de données à l'aide d'un fichier d'entrée XML  
   
 1.  Déterminez les fonctionnalités de base de données (index, vues indexées, partitionnement) que l'Assistant Paramétrage du moteur de base de données doit ajouter, supprimer ou conserver pendant l'analyse.  
   
@@ -311,7 +310,7 @@ Pour plus d’informations, consultez [Paramétrage de base de données à l’a
   
  Le schéma XML de l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est disponible dans votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’emplacement suivant :  
   
- C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
+ `C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd` 
   
  Le schéma XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est également disponible en ligne sur ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
@@ -415,7 +414,7 @@ database_name.owner_name.table_name
  Limite la durée de la session de paramétrage actuelle. L'augmentation de la durée du paramétrage améliore la qualité des recommandations. Pour obtenir des recommandations optimales, n'activez pas cette option.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] consomme des ressources système pendant l'analyse. Utilisez l'option **Limiter la durée du paramétrage** pour arrêter le paramétrage avant des périodes de lourdes charges de travail anticipées sur le serveur qui est paramétré.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)] consomme des ressources système pendant l'analyse. Utilisez l'option **Limiter la durée du paramétrage** pour arrêter le paramétrage avant des périodes de lourdes charges de travail anticipées sur le serveur qui est paramétré.  
   
  **Options avancées**  
  Utilisez la boîte de dialogue **Options de paramétrage avancées** pour configurer l’espace maximal, le nombre de colonnes clés maximal et les recommandations d’index en ligne.  
@@ -518,6 +517,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et utiliser la sortie de l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [Utilitaire dta](../../tools/dta/dta-utility.md)  
-  
+ [Utilitaire dta](../../tools/dta/dta-utility.md)    
+ [Tutoriel : Assistant Paramétrage du moteur de base de données](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
   

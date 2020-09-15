@@ -18,19 +18,29 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915845"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511311"
 ---
 # <a name="joins-sql-server"></a>Jointures (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les opérations de tri, d’intersection, d’union et de différentiation au moyen des technologies de jointure de hachage et de tri en mémoire. Grâce à ce type de plan de requête, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le partitionnement vertical de tables, parfois nommé stockage en colonnes.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les opérations de tri, d’intersection, d’union et de différentiation au moyen des technologies de jointure de hachage et de tri en mémoire. À l’aide de ce type de plan de requête, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le partitionnement vertical de tables.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise quatre types d’opérations de jointure :    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente des opérations de jointure logique, comme le détermine la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] :
+-   Jointure interne
+-   Jointure externe gauche
+-   Jointure externe droite
+-   Jointure externe entière
+-   Jointure croisée
+
+> [!NOTE]
+> Pour plus d’informations sur la syntaxe de jointure, consultez [Clause FROM plus JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise quatre types d’opérations de jointure physique pour effectuer les opérations de jointure logique :    
 -   Jointures de boucles imbriquées     
 -   Jointures de fusion   
 -   Jointures de hachage   
@@ -41,50 +51,57 @@ Les jointures permettent d'extraire des données de deux ou de plusieurs tables 
 
 Une condition de jointure définit la manière dont deux tables sont liées dans une requête :    
 -   en spécifiant la colonne de chaque table à utiliser pour la jointure. Une condition de jointure standard spécifie une clé étrangère d'une table et la clé qui lui est associée dans l'autre table ;    
--   en spécifiant un opérateur logique (par exemple = ou <>) à utiliser pour comparer les valeurs des colonnes.    
+-   en spécifiant un opérateur logique (par exemple = ou <>) à utiliser pour comparer les valeurs des colonnes.   
 
-Vous pouvez spécifier des jointures internes dans les clauses `FROM` ou `WHERE`. Vous ne pouvez spécifier des jointures externes que dans la clause `FROM`. Les conditions de jointure peuvent être combinées aux conditions de recherche `WHERE` et `HAVING` afin de contrôler les lignes qui sont sélectionnées parmi les tables de base référencées dans la clause `FROM`.    
+Les jointures s’expriment logiquement à l’aide de la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :
+-   INNER JOIN
+-   LEFT [ OUTER ] JOIN
+-   RIGHT [ OUTER ] JOIN
+-   FULL [ OUTER ] JOIN
+-   CROSS JOIN
 
-Nous vous recommandons de spécifier les conditions de jointure dans la clause `FROM`, car cela vous permet de les séparer des autres conditions de recherche susceptibles d’être spécifiées dans une clause `WHERE`. Voici une syntaxe de jointure simplifiée d'une clause FROM ISO :
+Vous pouvez spécifier des **jointures internes** dans les clauses `FROM` ou `WHERE`. Vous pouvez spécifier des **jointures externes** et des **jointures croisée** uniquement dans la clause `FROM`. Les conditions de jointure peuvent être combinées aux conditions de recherche `WHERE` et `HAVING` afin de contrôler les lignes qui sont sélectionnées parmi les tables de base référencées dans la clause `FROM`.    
+
+Nous vous recommandons de spécifier les conditions de jointure dans la clause `FROM`, car cela vous permet de les séparer des autres conditions de recherche susceptibles d’être spécifiées dans une clause `WHERE`. Voici une syntaxe de jointure simplifiée d’une clause `FROM` ISO :
 
 ```
-FROM first_table join_type second_table [ON (join_condition)]
+FROM first_table < join_type > second_table [ ON ( join_condition ) ]
 ```
 
-*join_type* spécifie le type de jointure effectué : interne, externe ou croisée. *join_condition* définit le prédicat à évaluer pour chaque paire de lignes jointes. L'exemple suivant spécifie une jointure dans une clause FROM :
+*join_type* spécifie le type de jointure effectué : interne, externe ou croisée. *join_condition* définit le prédicat à évaluer pour chaque paire de lignes jointes. L’exemple suivant spécifie une jointure dans une clause `FROM` :
 
 ```sql
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
-     ON (ProductVendor.BusinessEntityID = Vendor.BusinessEntityID)
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
+     ON ( ProductVendor.BusinessEntityID = Vendor.BusinessEntityID )
 ```
 
-L'instruction SELECT suivante utilise cette jointure :
+L’instruction `SELECT` suivante utilise cette jointure :
 
 ```sql
 SELECT ProductID, Purchasing.Vendor.BusinessEntityID, Name
-FROM Purchasing.ProductVendor JOIN Purchasing.Vendor
+FROM Purchasing.ProductVendor INNER JOIN Purchasing.Vendor
     ON (Purchasing.ProductVendor.BusinessEntityID = Purchasing.Vendor.BusinessEntityID)
 WHERE StandardPrice > $10
   AND Name LIKE N'F%'
 GO
 ```
 
-La sélection retourne les informations relatives au produit et au fournisseur pour toutes les combinaisons de pièces fournies par une société dont le nom commence par F et dont le prix du produit est supérieur à 10 $.   
+L’instruction `SELECT` retourne les informations relatives au produit et au fournisseur pour toutes les combinaisons de pièces fournies par une société dont le nom commence par F et dont le prix du produit est supérieur à 10 dollars US.   
 
-Lorsque plusieurs tables sont référencées dans une seule requête, aucune référence de colonne ne doit être ambiguë. Dans l’exemple précédent, les tables ProductVendor et Vendor contiennent toutes deux une colonne nommée BusinessEntityID. Tout nom de colonne dupliqué dans deux ou plusieurs tables référencées dans la requête doit être qualifié par le nom de la table. Toutes les références aux colonnes Vendor de l’exemple sont qualifiées.   
+Lorsque plusieurs tables sont référencées dans une seule requête, aucune référence de colonne ne doit être ambiguë. Dans l’exemple précédent, les tables `ProductVendor` et `Vendor` contiennent toutes deux une colonne nommée `BusinessEntityID`. Tout nom de colonne dupliqué dans deux ou plusieurs tables référencées dans la requête doit être qualifié par le nom de la table. Toutes les références aux colonnes `Vendor` de l’exemple sont qualifiées.   
 
-Lorsqu'un nom de colonne n'est pas dupliqué dans d'autres tables utilisées dans la requête, les références à ce nom ne doivent pas être qualifiées par le nom de la table. Cette caractéristique apparaît dans l'exemple précédent. Une telle instruction SELECT est parfois difficile à comprendre car rien n'indique de quelle table provient chaque colonne. Vous pouvez donc améliorer la lisibilité de la requête si vous qualifiez toutes les colonnes par leur nom de table. La lisibilité est encore améliorée si vous utilisez des alias de table, surtout lorsque les noms de table eux-mêmes doivent être qualifiés par les noms de base de données et de propriétaire. Il s'agit du même exemple, à ceci près que des alias de table ont été affectés et que les colonnes ont été qualifiées par les alias de table afin d'améliorer la lisibilité :
+Lorsqu'un nom de colonne n'est pas dupliqué dans d'autres tables utilisées dans la requête, les références à ce nom ne doivent pas être qualifiées par le nom de la table. Cette caractéristique apparaît dans l'exemple précédent. Une telle clause `SELECT` est parfois difficile à comprendre car rien n’indique de quelle table provient chaque colonne. Vous pouvez donc améliorer la lisibilité de la requête si vous qualifiez toutes les colonnes par leur nom de table. La lisibilité est encore améliorée si vous utilisez des alias de table, surtout lorsque les noms de table eux-mêmes doivent être qualifiés par les noms de base de données et de propriétaire. Il s'agit du même exemple, à ceci près que des alias de table ont été affectés et que les colonnes ont été qualifiées par les alias de table afin d'améliorer la lisibilité :
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
 FROM Purchasing.ProductVendor AS pv 
-JOIN Purchasing.Vendor AS v
+INNER JOIN Purchasing.Vendor AS v
     ON (pv.BusinessEntityID = v.BusinessEntityID)
 WHERE StandardPrice > $10
     AND Name LIKE N'F%';
 ```
 
-Dans les exemples précédents, les conditions de jointure sont spécifiées dans la clause FROM, ce qui correspond à la méthode recommandée. La requête suivante contient la même condition de jointure spécifiée dans la clause WHERE :
+Dans les exemples précédents, les conditions de jointure sont spécifiées dans la clause `FROM`, ce qui correspond à la méthode recommandée. La requête suivante contient la même condition de jointure spécifiée dans la clause `WHERE` :
 
 ```sql
 SELECT pv.ProductID, v.BusinessEntityID, v.Name
@@ -94,13 +111,13 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
     AND Name LIKE N'F%';
 ```
 
-La liste de sélection d'une jointure peut faire référence à toutes les colonnes des tables jointes ou à un sous-ensemble de colonnes. Il n'est pas nécessaire que la liste de sélection contienne des colonnes de toutes les tables de la jointure. Dans une jointure sur trois tables, par exemple, vous pouvez n'utiliser qu'une seule table pour rapprocher l'une des autres tables de la troisième, sans qu'il soit nécessaire de référencer dans la liste de sélection une des colonnes de la table du milieu.   
+La liste `SELECT` d’une jointure peut faire référence à toutes les colonnes des tables jointes ou à un sous-ensemble de colonnes. Il n’est pas nécessaire que la liste `SELECT`contienne des colonnes de toutes les tables de la jointure. Dans une jointure sur trois tables, par exemple, vous pouvez n'utiliser qu'une seule table pour rapprocher l'une des autres tables de la troisième, sans qu'il soit nécessaire de référencer dans la liste de sélection une des colonnes de la table du milieu. Ceci est également appelé **antisemi-jointure**.  
 
 Bien que les conditions de jointure disposent généralement d'opérateurs de comparaison d'égalité (=), vous pouvez spécifier d'autres opérateurs de comparaison ou relationnels ainsi que d'autres prédicats. Pour plus d’informations, consultez [Opérateurs de comparaison &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) et [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
 
-Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procède au traitement des jointures, le moteur de requête choisit (parmi plusieurs possibilités) la méthode de traitement la plus efficace. L'exécution physique de différentes jointures peut utiliser de nombreuses optimisations différentes et ne peut par conséquent pas être prédite de manière fiable.   
+Quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procède au traitement des jointures, l’optimiseur de requête choisit parmi plusieurs possibilités la méthode de traitement la plus efficace. Ce choix implique de déterminer le type de jointure physique le plus efficace, l’ordre dans lequel les tables sont jointes et même d’utiliser des types d’opérations de jointure logique qui ne peuvent pas être directement exprimés avec la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)], comme des **semi-jointures** et des **antisemi-jointures**. L'exécution physique de différentes jointures peut utiliser de nombreuses optimisations différentes et ne peut par conséquent pas être prédite de manière fiable. Pour plus d’informations sur les semi-jointures et les antisemi-jointures, consultez [Informations de référence des opérateurs logiques et physiques du plan d’exécution de requêtes](../../relational-databases/showplan-logical-and-physical-operators-reference.md).  
 
-Les colonnes utilisées dans une condition de jointure ne doivent pas forcément porter le même nom ou être du même type de données. Si les types de données ne sont pas identiques, ils doivent cependant être compatibles ou pouvoir être convertis de manière implicite par SQL Server. Si les types de données ne peuvent pas être convertis implicitement, la condition de jointure doit le faire explicitement à l’aide de la fonction `CAST`. Pour plus d’informations sur les conversions implicites et explicites, consultez [Conversion de types de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
+Les colonnes utilisées dans une condition de jointure ne doivent pas forcément porter le même nom ou être du même type de données. Si les types de données ne sont pas identiques, ils doivent cependant être compatibles ou pouvoir être convertis de manière implicite par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si les types de données ne peuvent pas être convertis implicitement, la condition de jointure doit le faire explicitement à l’aide de la fonction `CAST`. Pour plus d’informations sur les conversions implicites et explicites, consultez [Conversion de types de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).    
 
 La plupart des requêtes utilisant une jointure peuvent être réécrites à l'aide d'une sous-requête (une requête imbriquée dans une autre), et la plupart des sous-requêtes peuvent être réécrites sous forme de jointures. Pour plus d’informations sur les sous-requêtes, consultez [Sous-requêtes](../../relational-databases/performance/subqueries.md).   
 
@@ -356,3 +373,4 @@ Dans les résultats, il est difficile d’établir la différence entre une vale
 [Conversion de type de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Sous-requêtes](../../relational-databases/performance/subqueries.md)      
 [Jointures adaptatives](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
+[Clause FROM plus JOIN, APPLY, PIVOT (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)

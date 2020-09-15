@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12d986004250f40acb9dc99d225fc30c015ac734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403055"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480946"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -424,7 +424,7 @@ GO
   
  En général, les applications ne demandent pas de verrous directement. Les verrous sont gérés en interne par une partie du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], nommée gestionnaire de verrous. Lorsqu'une instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] traite une instruction [!INCLUDE[tsql](../includes/tsql-md.md)], le processeur de requêtes du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] détermine les ressources qui doivent être accédées. Le processeur de requêtes détermine les types de verrou nécessaires pour protéger chaque ressource, en fonction du type d'accès et de la configuration du niveau d'isolement de la transaction. Le processeur de requêtes demande ensuite les verrous appropriés auprès du gestionnaire de verrous. Le gestionnaire de verrous accorde les verrous s'il n'existe aucun verrou en conflit détenu par d'autres transactions.  
   
-### <a name="lock-granularity-and-hierarchies"></a>Granularité et hiérarchie des verrous  
+## <a name="lock-granularity-and-hierarchies"></a>Granularité et hiérarchie des verrous  
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] possède un verrouillage multigranulaire qui permet à différents types de ressources d'être verrouillés par une transaction. Pour minimiser le coût du verrouillage, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verrouille automatiquement les ressources au niveau approprié pour la tâche. Le verrouillage à un faible niveau de granularité (tel que les lignes) augmente la simultanéité d'accès, mais à un coût plus élevé, puisqu'un grand nombre de verrous doit être maintenu si de nombreuses lignes sont verrouillées. Le verrouillage à un niveau de granularité élevé (tel que les tables) est coûteux en termes de simultanéité d'accès, car le verrouillage d'une table entière empêche les autres transactions d'accéder à d'autres parties de la table. Cependant, son coût est moindre puisque les verrous sont peu nombreux.  
   
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] doit souvent acquérir des verrous à plusieurs niveaux de granularité pour protéger intégralement une ressource. Ce groupe de verrous à plusieurs niveaux de granularité est appelé « hiérarchie des verrous ». Par exemple, pour protéger complètement la lecture d'un index, une instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] devra peut-être acquérir des verrous partagés sur les lignes et des verrous partagés Intent sur les pages et la table.  
@@ -448,7 +448,7 @@ GO
 > [!NOTE]  
 > Les verrous HoBT et TABLE peuvent être affectés par l’option LOCK_ESCALATION de l’instruction [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
-### <a name="lock-modes"></a><a name="lock_modes"></a> Modes de verrouillage  
+## <a name="lock-modes"></a><a name="lock_modes"></a> Modes de verrouillage  
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verrouille les ressources en utilisant différents modes de verrouillage qui déterminent le mode d'accès aux ressources par des transactions simultanées.  
   
  Le tableau suivant illustre les modes de verrouillage des ressources utilisés par le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].  
@@ -463,20 +463,20 @@ GO
 |**Mise à jour en bloc (BU)**|Utilisé lors de la copie en bloc de données dans une table avec l’indicateur **TABLOCK** spécifié.|  
 |**Groupe de clés**|Protège la plage de lignes lue par une requête lorsque le niveau d'isolation des transactions SERIALIZABLE est utilisé. Garantit qu'aucune autre transaction ne peut insérer des lignes susceptibles de répondre aux requêtes de la transaction sérialisable si ces dernières étaient réexécutées.|  
   
-#### <a name="shared-locks"></a><a name="shared"></a> Verrous partagés  
+### <a name="shared-locks"></a><a name="shared"></a> Verrous partagés  
  Les verrous partagés (S) permettent à des transactions simultanées de lire (SELECT) une ressource dans des conditions de contrôle d'accès concurrentiel pessimiste. Aucune autre transaction ne peut modifier les données de la ressource tant que des verrous partagés (S) existent sur la ressource. Les verrous partagés (S) sur une ressource sont enlevés dès que l'opération de lecture est terminée, à moins que le niveau d'isolation de la transaction soit de type lecture renouvelable ou plus élevé, ou qu'un indicateur de verrouillage conserve les verrous partagés (S) pendant toute la durée de la transaction.  
   
-#### <a name="update-locks"></a><a name="update"></a> Verrous de mise à jour  
+### <a name="update-locks"></a><a name="update"></a> Verrous de mise à jour  
  Les verrous de mise à jour (U) empêchent une forme fréquente de blocage. Une transaction isolée avec le niveau sérialisable ou de lecture renouvelable lit les données en obtenant un verrou partagé (S) sur la ressource (page ou ligne), puis modifie ces données, ce qui nécessite une conversion du verrou en mode exclusif (X). Si deux transactions acquièrent des verrous partagés sur une ressource et tentent ensuite de mettre à jour des données de manière simultanée, une transaction tente de convertir le verrou en verrou exclusif (X). La conversion du verrou partagé au mode de verrou exclusif reste en attente, car le verrou exclusif de la première transaction n'est pas compatible avec le verrou partagé de l'autre transaction. Une attente de verrouillage se produit alors. La deuxième transaction impliquée essaie d'acquérir un verrou exclusif (X) pour sa mise à jour. Puisque les deux transactions effectuant la conversion en verrous exclusifs (X) attendent que l'autre transaction libère son verrou partagé, un blocage se produit.  
   
  Les verrous de mise à jour (U) permettent de résoudre les problèmes de blocage. Une seule transaction à la fois peut obtenir un verrou de mise à jour (U) pour une ressource. Si une transaction modifie une ressource, le verrou de mise à jour (U) est converti en verrou exclusif (X).  
   
-#### <a name="exclusive-locks"></a><a name="exclusive"></a> Verrous exclusifs  
+### <a name="exclusive-locks"></a><a name="exclusive"></a> Verrous exclusifs  
  Les verrous exclusifs (X) empêchent l'accès à une ressource par des transactions simultanées. Un verrou exclusif (X) empêche toute autre transaction de modifier les données ; les opérations de lecture ne peuvent avoir lieu qu'avec l'indicateur NOLOCK ou le niveau d'isolation « lecture non validée ».  
   
  Les instructions qui modifient les données telles que INSERT, UPDATE et DELETE combinent des opérations de modification et de lecture. Elles commencent par les opérations de lecture pour obtenir les données, puis elles effectuent les opérations de modification. Par conséquent, les instructions qui modifient les données demandent généralement à la fois des verrous partagés et des verrous exclusifs. Ainsi, une instruction UPDATE peut modifier les lignes d'une table en fonction d'une jointure avec une autre table. Dans ce cas, l'instruction UPDATE demande des verrous partagés sur les lignes lues dans la table jointe en plus des verrous exclusifs sur les lignes mises à jour.  
   
-#### <a name="intent-locks"></a><a name="intent"></a> Verrous intentionnels  
+### <a name="intent-locks"></a><a name="intent"></a> Verrous intentionnels  
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise des verrous intentionnels pour protéger le placement de verrous partagés (S) ou exclusifs (X) sur une ressource hiérarchiquement inférieure. Les verrous intentionnels sont appelés ainsi parce qu'ils sont obtenus avant un verrou de niveau inférieur et signalent par conséquent l'intention de placer des verrous à un niveau inférieur.  
   
  Les verrous intentionnels ont deux fonctions :  
@@ -497,14 +497,14 @@ GO
 |**Mise à jour intentionnelle partagée (SIU)**|Combinaison de verrous S et IU résultant de l'acquisition séparée de ces verrous et de leur gestion simultanée. Par exemple, une transaction peut exécuter une requête avec l'indicateur PAGLOCK, puis une opération de mise à jour. La requête contenant l'indicateur PAGLOCK obtient le verrou S et l'opération de mise à jour obtient le verrou IU.|  
 |**Mise à jour intentionnelle exclusive (UIX)**|Combinaison de verrous U et IX résultant de l'acquisition séparée de ces verrous et de leur gestion simultanée.|  
   
-#### <a name="schema-locks"></a><a name="schema"></a> Verrous de schéma  
+### <a name="schema-locks"></a><a name="schema"></a> Verrous de schéma  
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les verrous de modification de schémas (Sch-M) quand une opération de langage de définition de données (DDL, Data Definition Language) est effectuée sur une table (ajout d’une colonne ou suppression d’une table, par exemple). Pendant le temps de sa détention, le verrou Sch-M empêche les accès simultanés à la table. Cela signifie que le verrou Sch-M bloque toutes les opérations externes jusqu'à ce que le verrou soit libéré.  
   
  Certaines opérations DML(langage de manipulation de données), comme la troncation de table, utilisent les verrous SCH-M pour empêcher l'accès aux tables affectées par des opérations simultanées.  
   
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise les verrous de stabilité de schéma (Sch-S) lors de la compilation et l’exécution des requêtes. Les verrous Sch-S ne bloquent aucun verrou transactionnel, verrous exclusifs (X) y compris. Par conséquent, les autres transactions, y compris celles avec des verrous exclusifs (X) sur une table, continuent à s'exécuter pendant la compilation d'une requête. Toutefois, les opérations DDL simultanées, ainsi que les opérations DML simultanées qui définissent des verrous Sch-M, ne peuvent pas être exécutées sur la table.  
   
-#### <a name="bulk-update-locks"></a><a name="bulk_update"></a> Verrous de mise à jour en bloc (BU)  
+### <a name="bulk-update-locks"></a><a name="bulk_update"></a> Verrous de mise à jour en bloc (BU)  
  Les verrous BU permettent à plusieurs threads de charger simultanément en masse des données dans la même table tout en empêchant les processus qui n'effectuent pas de chargement de données en masse d'accéder à cette table. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise des verrous BU lorsque les deux conditions suivantes sont vraies.  
   
 -   Vous utilisez l’instruction [!INCLUDE[tsql](../includes/tsql-md.md)] BULK INSERT ou la fonction OPENROWSET(BULK), ou l’une des commandes d’API Bulk Insert, telles que .NET SqlBulkCopy, les API OLEDB Fast Load ou les API ODBC Bulk Copy pour copier en bloc des données dans une table.  
@@ -513,10 +513,10 @@ GO
 > [!TIP]  
 > Contrairement à l’instruction BULK INSERT, qui maintient un verrou de mise à jour en bloc moins restrictif, INSERT INTO...SELECT avec l’indicateur TABLOCK maintient un verrou exclusif (X) sur la table. Cela signifie que vous ne pouvez pas insérer de lignes à l'aide d'opérations d'insertion parallèles.  
   
-#### <a name="key-range-locks"></a><a name="key_range"></a> Verrous d’étendues de clés  
+### <a name="key-range-locks"></a><a name="key_range"></a> Verrous d’étendues de clés  
  Les verrous d'étendues de clés protègent une plage de lignes implicitement incluses dans un jeu d'enregistrements lu par une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] lors de l'utilisation du niveau d'isolement des transactions sérialisable. Le verrouillage d'étendues de clés empêche les lectures fantômes. Les verrous d'étendues de clés couvrent des enregistrements individuels et les étendues entre les enregistrements, empêchant les insertions ou les suppressions fantômes dans un ensemble d'enregistrements auquel accède une transaction.  
   
-### <a name="lock-compatibility"></a><a name="lock_compatibility"></a> Compatibilité de verrouillage  
+## <a name="lock-compatibility"></a><a name="lock_compatibility"></a> Compatibilité de verrouillage  
  La compatibilité de verrouillage détermine si plusieurs transactions peuvent simultanément acquérir des verrous sur la même ressource. Si une ressource est déjà verrouillée par une autre transaction, une demande de nouveau verrou ne peut être accordée que si le mode du verrou demandé est compatible avec celui du verrou existant. Si le mode du verrou demandé n'est pas compatible avec le verrou existant, la transaction qui demande le nouveau verrou attend que le verrou existant soit libéré ou que l'intervalle de délai de verrouillage ait expiré. Par exemple, aucun mode de verrou n'est compatible avec les verrous exclusifs. Lorsqu'un verrou exclusif (X) est posé, aucune autre transaction ne peut acquérir un verrou de quelque sorte que ce soit (partagé, mise à jour, exclusif) sur cette ressource tant que le verrou exclusif (X) n'a pas été libéré. Inversement, si un verrou partagé (S) a été appliqué à une ressource, les autres transactions peuvent aussi acquérir un verrou partagé ou de mise à jour (U) sur cet élément, même si la première transaction n'est pas terminée. Toutefois, les autres transactions ne peuvent pas acquérir un verrou exclusif tant que le verrou partagé n'a pas été libéré.  
   
 <a name="lock_compat_table"></a> Le tableau suivant décrit la compatibilité des modes de verrouillage les plus courants.  
@@ -538,14 +538,14 @@ GO
   
  ![lock_conflicts](../relational-databases/media/LockConflictTable.png)  
   
-### <a name="key-range-locking"></a>Verrouillage d'étendues de clés  
+## <a name="key-range-locking"></a>Verrouillage d'étendues de clés  
  Les verrous d'étendues de clés protègent une plage de lignes implicitement incluses dans un jeu d'enregistrements lu par une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] lors de l'utilisation du niveau d'isolement des transactions sérialisable. Le niveau d'isolement sérialisable exige que toute requête exécutée pendant une transaction obtienne le même jeu de lignes à chaque exécution lors de la transaction. Un verrou d'étendues de clés protège cette exigence en empêchant d'autres transactions d'insérer de nouvelles lignes dont les clés sont comprises dans la plage des clés lues par la transaction sérialisable.  
   
  Le verrouillage d'étendues de clés empêche les lectures fantômes. La protection des étendues de clés entre les lignes permet également d'empêcher les insertions fantômes dans un jeu d'enregistrements auquel une transaction accède.  
   
  Un verrou d'étendues de clés est placé sur un index, spécifiant une valeur de clé de début et de fin. Ce verrou bloque toute tentative d'insertion, de mise à jour ou de suppression de ligne possédant une valeur de clé comprise dans cette étendue, car ces opérations doivent d'abord acquérir un verrou sur l'index. Par exemple, une transaction sérialisable peut émettre une instruction `SELECT` qui lit toutes les lignes dont les valeurs de clés remplissent la condition `BETWEEN 'AAA' AND 'CZZ'`. Un verrou de groupes de clés sur les valeurs de clés comprises entre **'** AAA **'** et **'** CZZ **'** empêche les autres transactions d’insérer des lignes possédant des valeurs de clés comprises dans ce groupe, telles que **'** ADG **'** , **'** BBD **'** ou **'** CAL **'** .  
   
-#### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> Modes de verrouillage d'étendues de clés  
+### <a name="key-range-lock-modes"></a><a name="key_range_modes"></a> Modes de verrouillage d'étendues de clés  
  Les verrous d'étendues de clés comprennent un composant étendue et un composant ligne, au format étendue-ligne :  
   
 -   L'étendue représente le mode de verrouillage protégeant l'étendue entre deux entrées d'index successives.  
@@ -575,7 +575,7 @@ GO
 |**RangeI-N**|Oui|Oui|Oui|Non|Non|Oui|Non|  
 |**RangeX-X**|Non|Non|Non|Non|Non|Non|Non|  
   
-#### <a name="conversion-locks"></a><a name="lock_conversion"></a> Verrous de conversion  
+### <a name="conversion-locks"></a><a name="lock_conversion"></a> Verrous de conversion  
  Les verrous de conversion sont créés lorsqu'un verrou d'étendue de clés chevauche un autre verrou.  
   
 |Verrou 1|Verrou 2|Verrou de conversion|  
@@ -588,7 +588,7 @@ GO
   
  Les verrous de conversion peuvent être observés pendant une courte période dans différentes circonstances complexes, parfois lors de l'exécution de processus concurrents.  
   
-#### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>Analyse d'étendue sérialisable, extraction singleton, suppression et insertion  
+### <a name="serializable-range-scan-singleton-fetch-delete-and-insert"></a>Analyse d'étendue sérialisable, extraction singleton, suppression et insertion  
  Le verrouillage d'étendues de clés permet la sérialisation des opérations suivantes :  
   
 -   Requête d'analyse d'étendue  
@@ -601,12 +601,12 @@ GO
 -   Le niveau d'isolement de la transaction doit être défini sur SERIALIZABLE.  
 -   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d’étendue avec le prédicat suivant : ColonneX BETWEEN N **’** AAA **’** AND N **’** CZZ **’** . Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
   
-#### <a name="examples"></a>Exemples  
+### <a name="examples"></a>Exemples  
  La table et l'index suivants sont utilisés comme base pour les exemples de verrouillage d'étendues de clés ci-dessous.  
   
  ![btree](../relational-databases/media/btree4.png)  
   
-##### <a name="range-scan-query"></a>Requête d'analyse d'étendue  
+#### <a name="range-scan-query"></a>Requête d'analyse d'étendue  
  Pour qu'une requête d'analyse d'étendue soit sérialisable, cette requête doit retourner les mêmes résultats chaque fois qu'elle est exécutée dans la même transaction. De nouvelles lignes ne doivent pas être insérées dans la requête d'analyse d'étendue par d'autres transactions, sinon celles-ci deviennent des insertions fantômes. Par exemple, la requête suivante utilise la table et l'index de l'illustration précédente :  
   
 ```sql  
@@ -615,12 +615,12 @@ FROM mytable
 WHERE name BETWEEN 'A' AND 'C';  
 ```  
   
- Les verrous d'étendues de clés sont placés sur les entrées d'index correspondant à l'étendue de lignes de données dans laquelle name se trouve entre Adam et Dale, empêchant l'insertion ou la suppression de nouvelles lignes correspondant à la requête précédente. Bien que le premier nom de l'étendue soit Adam, le verrou d'étendues de clés du mode RangeS-S sur cette entrée d'index veille à ce qu'aucun nouveau nom commençant par la lettre A ne soit ajouté avant Adam, comme Abigail. De manière similaire, le verrou d'étendues de clés RangeS-S sur l'entrée d'index pour Dale fait en sorte qu'aucun nom commençant par C ne puisse être ajouté après Carlos, comme Clive.  
+ Des verrous de groupes de clés sont placés sur les entrées d’index correspondant à l’étendue de lignes de données dans laquelle le nom se trouve entre `Adam` et `Dale`, empêchant l’insertion ou la suppression de nouvelles lignes correspondant à la requête précédente. Bien que le premier nom de l’étendue soit `Adam`, le verrou de groupes de clés du mode RangeS-S sur cette entrée d’index veille à ce qu’aucun nouveau nom commençant par la lettre A ne soit ajouté avant `Adam`, comme `Abigail`. De manière similaire, le verrou de groupes de clés RangeS-S sur l’entrée d’index pour `Dale` fait en sorte qu’aucun nom commençant par C ne puisse être ajouté après `Carlos`, comme `Clive`.  
   
 > [!NOTE]  
 > Le nombre de verrous RangeS-S maintenus est *n*+1, où *n* est le nombre de lignes répondant aux critères de la requête.  
   
-##### <a name="singleton-fetch-of-nonexistent-data"></a>Extraction d'un singleton de données non existantes  
+#### <a name="singleton-fetch-of-nonexistent-data"></a>Extraction d'un singleton de données non existantes  
  Si une requête à l'intérieur d'une transaction tente de sélectionner une ligne qui n'existe pas, l'exécution de la requête plus loin dans la même transaction doit retourner le même résultat. Aucune autre transaction ne peut être autorisée à insérer cette ligne inexistante. Supposons par exemple la requête suivante :  
   
 ```sql  
@@ -631,7 +631,7 @@ WHERE name = 'Bill';
   
  Un verrou d'étendues de clés est placé sur l'entrée d'index correspondant à l'étendue de noms se trouvant entre `Ben` et `Bing`, car le nom `Bill` serait inséré entre ces deux entrées d'index adjacentes. Le verrou d'étendues de clés du mode RangeS-S est placé sur l'entrée d'index `Bing`. Ceci empêche toute autre transaction d'insérer des valeurs, telles que `Bill`, entre les entrées d'index `Ben` et `Bing`.  
   
-##### <a name="delete-operation"></a>Opération de suppression  
+#### <a name="delete-operation"></a>Opération de suppression  
  Lors de la suppression d'une valeur dans une transaction, l'étendue dans laquelle la valeur se trouve ne doit pas nécessairement être verrouillée pendant toute la durée de la transaction effectuant l'opération de suppression. Le verrouillage de la valeur de clé supprimée jusqu'à la fin de la transaction est suffisant pour assurer la sérialisation. Par exemple, pour l'instruction DELETE suivante :  
   
 ```sql  
@@ -641,9 +641,9 @@ WHERE name = 'Bob';
   
  Un verrou exclusif (X) est placé sur l'entrée d'index correspondant au nom `Bob`. Les autres transactions peuvent insérer ou supprimer des valeurs avant ou après la valeur effacée `Bob`. Toutefois, toute transaction tentant de lire, insérer ou supprimer la valeur `Bob` sera bloquée jusqu'à ce que la transaction effectuant la suppression soit validée ou restaurée.  
   
- La suppression d'étendues peut être exécutée à l'aide de trois modes de verrouillage de base : verrouillage de ligne, de page ou de table. La stratégie de verrouillage de ligne, de page ou de table est décidée par l'optimiseur de requête, ou peut être spécifiée par l'utilisateur par l'intermédiaire d'options d'optimiseur telles que ROWLOCK, PAGLOCK ou TABLOCK. Lorsque l'option PAGLOCK ou TABLOCK est utilisée, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] désalloue immédiatement une page d'index page si toutes les lignes qu'elle contient sont supprimées. En revanche, lorsque l'option ROWLOCK est utilisée, toutes les lignes supprimées sont uniquement marquées en tant que telles ; elles sont effectivement retirées de la page d'index ultérieurement, à l'aide d'une tâche d'arrière-plan.  
+ La suppression d'étendues peut être exécutée à l'aide de trois modes de verrouillage de base : verrouillage de ligne, de page ou de table. La stratégie de verrouillage de ligne, de page ou de table est décidée par l’optimiseur de requête, ou peut être spécifiée par l’utilisateur via des options d’optimiseur de requête comme ROWLOCK, PAGLOCK ou TABLOCK. Lorsque l'option PAGLOCK ou TABLOCK est utilisée, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] désalloue immédiatement une page d'index page si toutes les lignes qu'elle contient sont supprimées. En revanche, lorsque l'option ROWLOCK est utilisée, toutes les lignes supprimées sont uniquement marquées en tant que telles ; elles sont effectivement retirées de la page d'index ultérieurement, à l'aide d'une tâche d'arrière-plan.  
   
-##### <a name="insert-operation"></a>Opération d'insertion  
+#### <a name="insert-operation"></a>Opération d'insertion  
  Lors de l'insertion d'une valeur à l'intérieur d'une transaction, l'étendue dans laquelle la valeur se trouve ne doit pas nécessairement être verrouillée pendant la durée de l'opération effectuant l'opération d'insertion. Le verrouillage de la valeur de clé jusqu'à la fin de la transaction suffit pour assurer la sérialisation. Par exemple, étant donné l'instruction INSERT suivante :  
   
 ```sql  
@@ -652,7 +652,162 @@ INSERT mytable VALUES ('Dan');
   
  Le verrou d'étendues de clés du mode RangeI-N est placé sur l'entrée d'index correspondant au nom David pour le test de l'étendue. Si le verrou est accordé, la valeur `Dan` est insérée et un verrou exclusif (X) est placé sur la valeur `Dan`. Le verrou d'étendues de clés du mode RangeI-N est uniquement nécessaire pour le test de l'étendue et n'est pas maintenu pendant la durée de la transaction effectuant l'opération d'insertion. D'autres transactions peuvent insérer ou supprimer des valeurs avant ou après la valeur `Dan` insérée. Toutefois, toute transaction essayant de lire, écrire ou supprimer la valeur `Dan` est verrouillée jusqu'à ce que la transaction d'insertion soit validée ou restaurée.  
   
-### <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Verrouillage dynamique  
+## <a name="lock-escalation"></a>Escalade de verrous
+L'escalade de verrous est le processus de conversion d'un grand nombre de verrous détaillés en verrous moins détaillés, tout en réduisant la charge du système et en augmentant la probabilité de contention de simultanéité.
+
+Quand le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] acquiert des verrous de bas niveau, il place également des verrous intentionnels sur les objets qui contiennent les objets de niveau inférieur :
+
+-   Lors du verrouillage de lignes ou de plages de clés d’index, le [!INCLUDE[ssde_md](../includes/ssde_md.md)] place un verrou intentionnel sur les pages qui contiennent les lignes ou les clés.
+-   Lors du verrouillage de pages, le [!INCLUDE[ssde_md](../includes/ssde_md.md)] place un verrou intentionnel sur les objets de niveau supérieur qui contiennent ces pages. Outre le verrou intentionnel sur l'objet, des verrous de page intentionnels sont demandés sur les objets suivants :
+    -  Pages de niveau feuille d'index non-cluster
+    -  Pages de données d'index cluster
+    -  Pages de données de segment de mémoire
+
+Le [!INCLUDE[ssde_md](../includes/ssde_md.md)] peut effectuer un verrouillage de ligne et un verrouillage de page pour la même instruction afin de réduire au minimum le nombre de verrous et la probabilité qu’il faille en escalader. Par exemple, le moteur de base de données peut placer des verrous de page sur un index non cluster (si suffisamment de clés contiguës dans le nœud d’index sont sélectionnées pour satisfaire à la requête) et des verrous de ligne sur les données.
+
+Pour escalader des verrous, le [!INCLUDE[ssde_md](../includes/ssde_md.md)] essaie de remplacer le verrou intentionnel sur la table par le verrou complet correspondant, par exemple, en substituant un verrou exclusif (X) à un verrou intentionnel exclusif (IX) ou un verrou partagé (S) à un verrou intentionnel partagé (IS). Si la tentative d'escalade de verrous réussit et que le verrou de table complet est acquis, tous les verrous de page (PAGE), de niveau ligne (RID), de segment ou d'arbre B (B-tree) détenus par la transaction sur le segment ou sur l'index sont libérés. Si le verrou complet ne peut pas être acquis, aucune escalade de verrous ne se produit à ce stade et le moteur de base de données continue d’acquérir des verrous de ligne, de clé ou de page.
+
+Le [!INCLUDE[ssde_md](../includes/ssde_md.md)] n’escalade pas les verrous de ligne ou de plage de clés en verrous de page, mais il les escalade directement en verrous de table. De même, les verrous de page sont systématiquement escaladés en verrous de table. Le verrouillage des tables partitionnées peut être escaladé au niveau HoBT de la partition associée plutôt qu’au verrou de la table. Un verrou au niveau du HoBT ne verrouille pas nécessairement les HoBT alignés pour la partition.
+
+> [!NOTE]
+> Les verrous au niveau du HoBT augmentent habituellement la concurrence, mais introduisent le potentiel des blocages lorsque les transactions qui verrouillent différentes partitions souhaitent étendre leurs verrous exclusifs aux autres partitions. Dans de rares instances, la granularité de verrouillage de TABLE peut s'avérer plus efficace.
+
+Si une tentative d’escalade de verrous échoue en raison de verrous en conflit détenus par des transactions simultanées, le [!INCLUDE[ssde_md](../includes/ssde_md.md)] renouvelle la tentative d’escalade de verrous chaque fois que la quantité de verrous supplémentaires acquis par la transaction atteint 1 250.
+
+Chaque événement d’escalade fonctionne essentiellement au niveau d’une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] unique. Lorsque l’événement démarre, le [!INCLUDE[ssde_md](../includes/ssde_md.md)] essaie d’escalader tous les verrous détenus par la transaction en cours dans toutes les tables ayant été référencées par l’instruction active, sous réserve que celle-ci satisfasse aux contraintes de seuil d’escalade. Si l'événement d'escalade démarre avant que l'instruction n'ait accédé à une table, aucune tentative n'est réalisée pour escalader les verrous sur cette table. Si l'escalade de verrous réussit, tous les verrous acquis par la transaction dans une instruction antérieure et toujours détenus au moment du démarrage de l'événement sont escaladés si la table est référencée par l'instruction en cours et qu'elle figure dans l'événement d'escalade.
+
+Par exemple, supposons qu'une session effectue les opérations suivantes :
+
+-  Commence une transaction.
+-  Met à jour `TableA`. Cette opération génère dans TableA des verrous de ligne exclusifs détenus jusqu'à la fin de la transaction.
+-  Met à jour `TableB`. Cette opération génère dans TableB des verrous de ligne exclusifs détenus jusqu'à la fin de la transaction.
+-  Exécute une instruction SELECT qui joint `TableA` à `TableC`. Le plan d’exécution de requête demande à ce que les lignes soient extraites de `TableA` avant d’être extraites de `TableC`.
+-  L’instruction SELECT déclenche une escalade de verrous pendant qu’elle extrait les lignes de `TableA` et avant d’accéder à `TableC`.
+
+Si l’escalade de verrous réussit, seuls les verrous détenus par la session sur `TableA` sont escaladés. Cela inclut les verrous partagés acquis par l'instruction SELECT et les verrous exclusifs acquis par l'instruction UPDATE antérieure Alors que seuls les verrous acquis par la session dans `TableA` pour l’instruction SELECT sont décomptés pour déterminer si l’escalade de verrous doit être réalisée, une fois que celle-ci a réussi, tous les verrous détenus par la session dans `TableA` sont escaladés en verrou exclusif sur la table et tous les autres verrous de granularité inférieure de `TableA`, y compris les verrous intentionnels, sont libérés.
+
+Aucune tentative n’est réalisée pour escalader les verrous de `TableB` car l’instruction SELECT ne comportait aucune référence active à `TableB`. De même, aucune tentative n’est réalisée pour escalader les verrous de `TableC` car l’instruction n’avait toujours pas accédé à cette table au moment de l’escalade.
+
+### <a name="lock-escalation-thresholds"></a>Seuils d'escalade de verrous
+
+L’escalade de verrous est déclenchée lorsqu’elle n’est pas désactivée sur la table à l’aide de l’option `ALTER TABLE SET LOCK_ESCALATION` et lorsque l’une ou l’autre des conditions suivantes existe :
+
+-  Une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] unique acquiert au moins 5 000 verrous sur une table ou un index unique et non partitionné.
+-  Une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] unique acquiert au moins 5 000 verrous sur une partition unique d’une table partitionnée et l’option `ALTER TABLE SET LOCK_ESCALATION` a la valeur AUTO.
+-  Le nombre de verrous dans une instance du [!INCLUDE[ssde_md](../includes/ssde_md.md)] dépasse les seuils de mémoire ou de configuration.
+
+Si des verrous ne peuvent pas être escaladés en raison de verrous en conflit, le [!INCLUDE[ssde_md](../includes/ssde_md.md)] déclenche régulièrement une escalade de verrous chaque fois que le nombre de nouveaux verrous acquis atteint 1 250.
+
+### <a name="escalation-threshold-for-a-transact-sql-statement"></a>Seuil d'escalade pour une instruction Transact-SQL
+Quand le [!INCLUDE[ssde_md](../includes/ssde_md.md)] vérifie les escalades possibles chaque fois que 1 250 verrous ont été acquis, une escalade de verrous se produit si et seulement si une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] a acquis au moins 5 000 verrous sur une référence unique d’une table. L’escalade de verrous est déclenchée quand une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] acquiert au moins 5 000 verrous sur une seule référence d’une table. Par exemple, l'escalade de verrous n'est pas déclenchée si une instruction acquiert 3 000 verrous dans un index et 3 000 verrous dans un autre index de la même table. De même, l'escalade de verrous n'est pas déclenchée si une instruction possède une jointure réflexive sur une table et que chaque référence à la table n'acquiert que 3 000 verrous dans celle-ci.
+
+L'escalade de verrous ne se produit que pour les tables auxquelles l'instruction a accédé au moment du déclenchement de l'escalade. Supposons une instruction SELECT unique représentant une jointure qui accède successivement à trois tables : `TableA`, `TableB` et `TableC`. L’instruction acquiert 3 000 verrous de ligne dans l’index cluster de `TableA` et au moins 5 000 verrous de ligne dans l’index cluster de `TableB`, mais n’a toujours pas accédé à `TableC`. Lorsque le [!INCLUDE[ssde_md](../includes/ssde_md.md)] détecte que l’instruction a acquis au moins 5 000 verrous de ligne dans `TableB`, il essaie d’escalader tous les verrous détenus par la transaction en cours dans `TableB`. Il essaie également d’escalader tous les verrous détenus par la transaction en cours dans `TableA` mais, dans la mesure où le nombre de verrous dans `TableA` est inférieur à 5 000, l’escalade échoue. Aucune tentative d’escalade de verrous n’est réalisée pour `TableC` car l’instruction n’y avait toujours pas accédé lorsque l’escalade s’est produite.
+
+### <a name="escalation-threshold-for-an-instance-of-the-database-engine"></a>Seuil d'escalade pour une instance du moteur de base de données
+Chaque fois que le nombre de verrous est supérieur au seuil de mémoire pour l’escalade de verrous, le [!INCLUDE[ssde_md](../includes/ssde_md.md)] déclenche l’escalade de verrous. Le seuil de mémoire dépend du paramétrage de l’[option de configuration locks](../database-engine/configure-windows/configure-the-locks-server-configuration-option.md) :
+
+-   Si l’option **locks** est paramétrée sur sa valeur par défaut 0, le seuil d’escalade de verrous est atteint lorsque la mémoire utilisée par les objets de verrou représente 24 % de la mémoire utilisée par le moteur de base de données, à l’exclusion de la mémoire AWE. La structure de données utilisée pour représenter un verrou occupe approximativement 100 octets. Ce seuil est dynamique car le moteur de base de données acquiert et libère dynamiquement la mémoire en fonction de l’importance des charges de travail.
+
+-   Si l’option **locks** n’a pas pour valeur 0, le seuil d’escalade de verrous représente 40 % de la valeur de l’option (ou moins en cas d’insuffisance de mémoire).
+
+Le [!INCLUDE[ssde_md](../includes/ssde_md.md)] peut choisir pour l’escalade n’importe quelle instruction active depuis n’importe quelle session et, chaque fois que 1 250 nouveaux verrous sont acquis, il choisit des instructions pour l’escalade, sous réserve que la mémoire des verrous utilisée dans l’instance demeure au-dessus du seuil.
+
+### <a name="escalating-mixed-lock-types"></a>Escalade de types de verrous mixtes
+Lorsque l'escalade de verrous se produit, le verrou sélectionné pour le segment ou pour l'index est en mesure de satisfaire aux conditions du verrou de niveau inférieur le plus contraignant.
+
+Par exemple, supposons la session suivante :
+
+-  Commence une transaction.
+-  Met à jour une table contenant un index cluster.
+-  Émet une instruction SELECT qui référence la même table.
+
+L'instruction UPDATE acquiert les verrous suivants :
+
+-  Des verrous exclusifs (X) sur les lignes de données mises à jour
+-  Des verrous intentionnels exclusifs (IX) sur les pages d'index cluster contenant ces lignes
+-  Un verrou IX sur l'index cluster et un autre sur la table
+
+L'instruction SELECT acquiert les verrous suivants :
+
+-  Des verrous partagés (S) sur toutes les lignes de données qu'elle lit, sauf si la ligne est déjà protégée par un verrou X acquis par l'instruction UPDATE
+-  Des verrous intentionnels partagés sur toutes les pages d'index cluster contenant ces lignes, sauf si la page est déjà protégée par un verrou IX
+-  Aucun verrou sur la table ou sur l'index cluster car ils sont déjà protégés par des verrous IX
+
+Si l'instruction SELECT acquiert suffisamment de verrous pour déclencher l'escalade de verrous et que celle-ci réussit, le verrou IX de la table est converti en verrou X et tous les verrous de ligne, de page et d'index sont libérés. Les mises à jour et les lectures sont protégées par le verrou X de la table.
+
+### <a name="reducing-locking-and-escalation"></a>Réduction du verrouillage et de l'escalade
+Dans la plupart des cas, le [!INCLUDE[ssde_md](../includes/ssde_md.md)] offre les meilleures performances lorsqu’il utilise ses paramètres par défaut de verrouillage et d’escalade de verrous. Si une instance du [!INCLUDE[ssde_md](../includes/ssde_md.md)] génère beaucoup de verrous et donne lieu à de fréquentes escalades de verrous, pensez à réduire la quantité de verrouillage à l’aide :
+
+-   d’un niveau d’isolement qui ne génère pas de verrous partagés pour les opérations de lecture ;
+    -  d'un niveau d'isolement READ COMMITTED lorsque l'option de base de données READ_COMMITTED_SNAPSHOT a pour valeur ON ;
+    -  d'un niveau d'isolement SNAPSHOT ;
+    -  d'un niveau d'isolement READ UNCOMMITTED. Celui-ci ne peut être utilisé que pour les systèmes qui prennent en charge les lectures incorrectes ;    
+  
+    > [!NOTE]
+    > Le changement du niveau d’isolement affecte toutes les tables sur l’instance du [!INCLUDE[ssde_md](../includes/ssde_md.md)].
+
+-   des indicateurs de table PAGLOCK ou TABLOCK afin que le moteur de base de données utilise des verrous de page, d’index ou de segment au lieu de verrous de ligne. Toutefois, cette option augmente le risque pour un utilisateur de bloquer un autre utilisateur essayant d'accéder aux mêmes données et ne peut être utilisée que dans les systèmes prenant en charge une faible quantité d'utilisateurs simultanés.
+
+-   Pour les tables partitionnées, utilisez l’option LOCK_ESCALATION de [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md) pour escalader des verrous au niveau du HoBT au lieu de la table ou désactiver l’escalade de verrous.
+
+-   Divisez les opérations de traitement par lots volumineuses en plusieurs opérations plus petites. Par exemple, supposons que vous avez exécuté la requête suivante pour supprimer plusieurs centaines de milliers d’enregistrements d’une table d’audit, et que vous avez découvert que cela a entraîné une escalade de verrous à l’origine du blocage d’autres utilisateurs :
+   
+    ```sql
+    DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    ```
+
+    En supprimant ces enregistrements par plusieurs centaines à la fois, vous pouvez réduire considérablement le nombre de verrous qui s’accumulent par transaction et empêcher l’escalade de verrous. Par exemple :
+
+    ```sql
+    SET ROWCOUNT 500
+    delete_more:
+      DELETE FROM LogMessages WHERE LogDate < '2/1/2002'
+    IF @@ROWCOUNT > 0 GOTO delete_more
+    SET ROWCOUNT 0
+    ```
+
+-   Réduisez l’empreinte des verrous d’une requête en rendant la requête aussi efficace que possible. Les analyses de grande envergure ou les nombres élevés de recherches par signet peuvent augmenter le risque d’escalade de verrous ; de plus, cela augmente le risque d’interblocages et dégrade généralement la concurrence et les performances. Une fois que vous avez trouvé la requête à l’origine de l’escalade de verrous, recherchez les opportunités de créer des index ou d’ajouter des colonnes à un index existant pour supprimer les analyses d’index ou de table et maximiser l’efficacité des recherches d’index. Envisagez d’utiliser l’[Assistant Paramétrage du moteur de base de données](../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md) pour effectuer une analyse d’index automatique sur la requête. Pour plus d’informations, consultez [Didacticiel : Assistant Paramétrage du moteur de base de données](../tools/dta/tutorial-database-engine-tuning-advisor.md).
+    L’un des objectifs de cette optimisation est de faire en sorte que les recherches d’index renvoient le moins de lignes possible pour réduire le coût des recherches par signet (maximiser la sélectivité de l’index pour une requête particulière). Si le [!INCLUDE[ssde_md](../includes/ssde_md.md)] estime qu’un opérateur logique de recherche par signet peut retourner de nombreuses lignes, il peut utiliser une prérécupération pour effectuer la recherche par signet. Si le [!INCLUDE[ssde_md](../includes/ssde_md.md)] utilise une prérécupération pour une recherche par signet, il doit augmenter le niveau d’isolation de la transaction d’une partie de la requête à la lecture renouvelable pour une partie de la requête. Cela signifie que ce qui peut ressembler à une instruction SELECT à un niveau d’isolation read-committed peut acquérir plusieurs milliers de verrous de clé (à la fois sur l’index cluster et sur un index non cluster), ce qui peut entraîner un dépassement des seuils d’escalade de verrous pour une telle requête. Cela s’avère particulièrement important si vous constatez que le verrou escaladé est un verrou de table partagé, qui, en revanche, n’est pas communément visible au niveau d’isolation read-committed par défaut. Si une clause WITH PREFETCH de recherche par signet est à l’origine de l’escalade, envisagez d’ajouter des colonnes supplémentaires à l’index non cluster qui apparaît dans l’opérateur logique Recherche d’index ou Analyse d’index sous l’opérateur logique Recherche par signet dans le plan de requête. Il peut être possible de créer un index de couverture (un index qui inclut toutes les colonnes d’une table qui ont été utilisées dans la requête), ou au moins un index qui couvre les colonnes utilisées pour les critères de jointure ou dans la clause WHERE si l’inclusion de tous les éléments dans la liste de sélection de colonnes n’est pas pratique.
+    Une jointure de boucle imbriquée peut également utiliser une prérécupération, ce qui entraîne le même comportement de verrouillage.
+   
+-   L’escalade de verrous ne peut pas se produire si un autre SPID contient actuellement un verrou de table incompatible. L’escalade de verrous passe toujours à un verrou de table et jamais à des verrous de page. De plus, si une tentative d’escalade de verrous échoue parce qu’un autre SPID contient un verrou TAB incompatible, la requête qui a tenté l’escalade n’est pas bloquée pendant l’attente d’un verrou TAB. Elle continue plutôt d’acquérir des verrous à son niveau d’origine, plus précis (ligne, clé ou page), en effectuant régulièrement des tentatives d’escalade supplémentaires. Ainsi, une méthode pour empêcher l’escalade de verrous sur une table particulière consiste à acquérir et à conserver un verrou sur une autre connexion qui n’est pas compatible avec le type de verrou escaladé. Un verrou IX (exclusion intentionnelle) au niveau de la table ne verrouille aucune ligne ni aucune page, mais il n’est quand même pas compatible avec un verrou TAB S (partagé) ou X (exclusif) remonté. Par exemple, supposons que vous devez exécuter un programme de traitement par lots qui modifie un grand nombre de lignes dans la table mytable et qui a entraîné un blocage en raison d’une escalade de verrous. Si ce programme s’exécute toujours en moins d’une heure, vous pouvez créer un travail [!INCLUDE[tsql](../includes/tsql-md.md)] qui contient le code suivant et planifier le démarrage du nouveau travail plusieurs minutes avant l’heure de début d’exécution du programme de traitement par lots :
+  
+    ```sql
+    BEGIN TRAN
+    SELECT * FROM mytable (UPDLOCK, HOLDLOCK) WHERE 1=0
+    WAITFOR DELAY '1:00:00'
+    COMMIT TRAN
+    ```
+   
+    Cette requête acquiert et conserve un verrou IX sur mytable pendant une heure, ce qui empêche l’escalade de verrous sur la table pendant cette période. Ce programme ne modifie pas les données et ne bloque pas les autres requêtes (sauf si l’autre requête force un verrou de table avec l’indicateur TABLOCK ou si un administrateur a désactivé des verrous de page ou de ligne à l’aide d’une procédure stockée sp_indexoption).
+
+En outre, vous pouvez utiliser les indicateurs de trace 1211 et 1224 pour désactiver la totalité ou une partie des escalades de verrous. Toutefois, ces [indicateurs de trace](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) désactivent toutes les escalades de verrous globalement pour tout le [!INCLUDE[ssde_md](../includes/ssde_md.md)]. Une escalade de verrous joue un rôle très utile dans le [!INCLUDE[ssde_md](../includes/ssde_md.md)] en optimisant l’efficacité des requêtes qui, sinon, sont ralenties par la surcharge due à l’acquisition et à la libération de plusieurs milliers de verrous. Une escalade de verrous permet également de réduire la mémoire nécessaire pour effectuer le suivi des verrous. La mémoire que le [!INCLUDE[ssde_md](../includes/ssde_md.md)] peut allouer dynamiquement pour les structures de verrous est limitée. Par conséquent, si vous désactivez l’escalade de verrous et que la mémoire de verrous augmente de façon suffisante, toute tentative d’allocation de verrous supplémentaires pour une requête risque d’échouer et l’erreur suivante se produit :
+
+```Error: 1204, Severity: 19, State: 1
+The SQL Server cannot obtain a LOCK resource at this time. Rerun your statement when there are fewer active users or ask the system administrator to check the SQL Server lock and memory configuration.
+```
+
+> [!NOTE]
+> Quand l’[erreur 1204](../relational-databases/errors-events/mssqlserver-1204-database-engine-error.md) se produit, elle arrête le traitement de l’instruction en cours et entraîne une restauration de la transaction active. La restauration elle-même risque de bloquer les utilisateurs ou d’entraîner une longue durée de récupération de base de données si vous redémarrez le service de base de données.
+
+> [!NOTE]
+> L’utilisation d’un indicateur de verrou comme ROWLOCK modifie uniquement le plan de verrouillage initial. Les indicateurs de verrou n’empêchent pas l’escalade de verrous. 
+
+De plus, supervisez l’escalade de verrous en utilisant l’événement étendu (xEvent) `lock_escalation`, comme dans l’exemple suivant :
+
+```sql
+-- Session creates a histogram of the number of lock escalations per database 
+CREATE EVENT SESSION [Track_lock_escalation] ON SERVER 
+ADD EVENT sqlserver.lock_escalation(SET collect_database_name=(1),collect_statement=(1)
+    ACTION(sqlserver.database_id,sqlserver.database_name,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,sqlserver.sql_text,sqlserver.username))
+ADD TARGET package0.histogram(SET source=N'sqlserver.database_id')
+GO
+```
+
+> [!IMPORTANT]
+> L’événement étendu (xEvent) `lock_escalation` doit être utilisé à la place de la classe d’événements Lock:Escalation dans SQL Trace ou SQL Profiler.
+
+## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Verrouillage dynamique
  L'utilisation de verrous de bas niveau, comme les verrous de ligne, augmente la concurrence car elle diminue la probabilité d'avoir deux transactions qui demandent des verrous sur les mêmes données en même temps. L'utilisation de verrous de bas niveau augmente également le nombre de verrous et les ressources nécessaires à leur gestion. Les verrous de table ou de page de haut niveau réduisent la charge mais au détriment de la concurrence.  
   
  ![lockcht](../relational-databases/media/lockcht.png) 
@@ -665,15 +820,15 @@ INSERT mytable VALUES ('Dan');
 -   Performances améliorées. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] réduit la charge sur le système en utilisant les verrous appropriés pour la tâche.  
 -   Les développeurs d'applications peuvent se concentrer sur le développement. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] adapte le verrouillage automatiquement.  
   
- À compter de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], le comportement d’escalade de verrous a changé avec l’introduction de l’option `LOCK_ESCALATION`. Pour plus d’informations, consultez l’option `LOCK_ESCALATION` de l’instruction [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
-  
+ À compter de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], le comportement d’escalade de verrous a changé avec l’introduction de l’option `LOCK_ESCALATION`. Pour plus d’informations, consultez l’option `LOCK_ESCALATION` de l’instruction [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md). 
+   
 ## <a name="deadlocks"></a><a name="deadlocks"></a> Interblocages  
  Un interblocage se produit lorsque deux tâches ou plus se bloquent mutuellement de façon permanente. Dans ce cas, chaque tâche place un verrou sur une ressource que la ou les autres tâches essaient de verrouiller. Par exemple :  
   
 -   La transaction A obtient un verrou partagé sur la ligne 1.  
 -   La transaction B obtient un verrou partagé sur la ligne 2.  
--   La transaction A demande un verrou exclusif sur la ligne 2, mais elle est bloquée jusqu'à la fin de la transaction B qui libérera le verrou partagé sur la ligne 2.  
--   La transaction B demande un verrou exclusif sur la ligne 1, mais elle est bloquée jusqu'à la fin de la transaction A qui libérera le verrou partagé sur la ligne 1.  
+-   La transaction A demande un verrou exclusif sur la ligne 2, mais elle est bloquée jusqu’à la fin de la transaction B qui libérera le verrou partagé sur la ligne 2.  
+-   La transaction B demande un verrou exclusif sur la ligne 1, mais elle est bloquée jusqu’à la fin de la transaction A qui libérera le verrou partagé sur la ligne 1.  
   
  La transaction A ne peut pas se terminer tant que la transaction B n'est pas terminée, mais la transaction B est bloquée par la transaction A. Il s’agit d’une dépendance cyclique : La transaction A est dépendante de la transaction B, mais celle-ci ne peut pas s’exécuter, car elle est dépendante de la transaction A.  
   
@@ -688,7 +843,7 @@ INSERT mytable VALUES ('Dan');
   
  ![Diagramme montrant le blocage de la transaction](../relational-databases/media/deadlock.png)  
   
- Dans l’illustration, la transaction T1 est dépendante de la transaction T2 pour la ressource de verrou de table **Part**. De même, la transaction T2 est dépendante de T1 pour la ressource de verrou de table **Supplier**. Comme ces dépendances forment un cycle, il y a interblocage entre les transactions T1 et T2.  
+ Dans l’illustration, la transaction T1 est dépendante de la transaction T2 pour la ressource de verrou de table `Part`. De même, la transaction T2 est dépendante de T1 pour la ressource de verrou de table `Supplier`. Comme ces dépendances forment un cycle, il y a interblocage entre les transactions T1 et T2.  
   
  Des interblocages peuvent également se produire quand une table est partitionnée et que le paramètre `LOCK_ESCALATION` de `ALTER TABLE` a la valeur AUTO. Quand `LOCK_ESCALATION` a la valeur AUTO, la concurrence augmente en permettant au [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] de verrouiller des partitions de table au niveau HoBT plutôt qu’au niveau des tables. Toutefois, lorsque des transactions distinctes maintiennent des verrous de partition dans une table et souhaitent un verrou sur l'autre partition de transactions, cela provoque un interblocage. Ce type d’interblocage peut être évité en affectant à `LOCK_ESCALATION` la valeur `TABLE`, bien que ce paramètre réduise la concurrence en forçant les mises à jour volumineuses d’une partition à attendre un verrou de table.  
   
@@ -747,7 +902,7 @@ INSERT mytable VALUES ('Dan');
   
  Dès lors qu'un blocage est détecté, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] met fin à un blocage en choisissant l'un des threads comme victime. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] met fin au traitement en cours d'exécution pour le thread, annule la transaction de la victime, puis retourne une erreur 1205 à l'application. L'annulation de la transaction de la victime du blocage a pour effet de libérer tous les verrous détenus par la transaction. Cela permet aux transactions des autres threads de se débloquer et de continuer. L'erreur de victime de blocage 1205 enregistre des informations sur les threads et les ressources impliqués dans un blocage dans le journal des erreurs.  
   
- Par défaut, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] choisit comme victime du blocage la session qui exécute la transaction dont l'annulation est la moins coûteuse. Un utilisateur peut également spécifier la priorité des sessions dans une situation de blocage au moyen de l'instruction SET DEADLOCK_PRIORITY. DEADLOCK_PRIORITY accepte les valeurs LOW, NORMAL ou HIGH, voire toute valeur entière comprise entre -10 et 10. La valeur par défaut de la priorité de blocage est NORMAL. Si deux sessions ont des priorités de blocage différentes, c'est la session qui a la priorité la plus basse qui est choisie comme victime. Si les deux sessions ont la même priorité de blocage, c'est celle dont la transaction est la moins coûteuse à annuler qui est choisie. Si les sessions impliquées dans le cycle de blocage présentent une priorité de blocage et un coût identiques, la victime est choisie de façon aléatoire.  
+ Par défaut, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] choisit comme victime du blocage la session qui exécute la transaction dont l'annulation est la moins coûteuse. Un utilisateur peut également spécifier la priorité des sessions dans une situation de blocage au moyen de l’instruction `SET DEADLOCK_PRIORITY`. DEADLOCK_PRIORITY accepte les valeurs LOW, NORMAL ou HIGH, voire toute valeur entière comprise entre -10 et 10. La valeur par défaut de la priorité de blocage est NORMAL. Si deux sessions ont des priorités de blocage différentes, c'est la session qui a la priorité la plus basse qui est choisie comme victime. Si les deux sessions ont la même priorité de blocage, c'est celle dont la transaction est la moins coûteuse à annuler qui est choisie. Si les sessions impliquées dans le cycle de blocage présentent une priorité de blocage et un coût identiques, la victime est choisie de façon aléatoire.  
   
  Lorsque les fonctionnalités CLR sont utilisées, le moniteur de blocage détecte automatiquement le blocage des ressources de synchronisation (moniteurs, verrou de lecture/écriture et jointure de thread) qui font l'objet d'accès à l'intérieur des procédures gérées. Toutefois, le blocage est résolu par la levée d'une exception dans la procédure qui a été sélectionnée comme victime du blocage. Il est important de comprendre que l'exception ne libère pas automatiquement les ressources actuellement détenues par la victime ; les ressources doivent être libérées explicitement. Conformément au comportement des exceptions, l'exception utilisée pour identifier une victime de blocage peut être interceptée et annulée.  
   
@@ -757,7 +912,7 @@ INSERT mytable VALUES ('Dan');
 #### <a name="deadlock-extended-event"></a><a name="deadlock_xevent"></a> Événement étendu de blocage
 À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], l’événement étendu `xml_deadlock_report` (xEvent) doit être utilisé à la place de la classe d’événements Deadlock Graph dans SQL Trace ou SQL Profiler.
 
-De plus, à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], dans le cas de blocages, la session system\_health capture tous les événements xEvent `xml_deadlock_report` qui contiennent le graphique de blocage. Étant donné que la session system\_health est activée par défaut, il n’est pas nécessaire qu’une session xEvent distincte soit configurée pour capturer les informations de blocage. 
+De plus, à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], en cas d’interblocage, la session ***system\_health*** capture déjà tous les événements étendus `xml_deadlock_report` qui contiennent le graphique d’interblocage. Étant donné que la session *system\_health* est activée par défaut, il n’est pas nécessaire qu’une session xEvent distincte soit configurée pour capturer les informations d’interblocage. 
 
 L’événement Deadlock Graph capturé a généralement trois nœuds distincts :
 -   **victim-list**. Identificateur du processus victime de l’interblocage.
@@ -768,7 +923,7 @@ Lors de l’ouverture du fichier ou de la mémoire tampon en anneau de session s
 
 ![Graphique de blocage xEvent](../relational-databases/media/udb9_xEventDeadlockGraphc.png)
 
-La requête suivante peut afficher tous les événements d’interblocage capturés par la mémoire tampon en anneau de session system\_health :
+La requête suivante peut afficher tous les événements d’interblocage capturés par la mémoire tampon en anneau de session *system\_health* :
 
 ```sql
 SELECT xdr.value('@timestamp', 'datetime') AS [Date],
@@ -1762,7 +1917,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
  Pour plus d’informations sur les indicateurs de verrouillage spécifiques et leurs comportements, consultez [Indicateurs de table &#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-table.md).  
   
 > [!NOTE]  
-> L'optimiseur de requête du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] choisit presque toujours le niveau de verrouillage correct. Nous vous recommandons d'utiliser les indicateurs de verrouillage au niveau des tables à la place du verrouillage par défaut seulement lorsque cela est nécessaire. La désactivation d'un niveau de verrouillage peut affecter défavorablement la concurrence d'accès.  
+> Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] choisit presque toujours le niveau de verrouillage correct. Nous vous recommandons d'utiliser les indicateurs de verrouillage au niveau des tables à la place du verrouillage par défaut seulement lorsque cela est nécessaire. La désactivation d'un niveau de verrouillage peut affecter défavorablement la concurrence d'accès.  
   
  Il se peut que le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] doive obtenir des verrous lors de la lecture de métadonnées, même lors du traitement d'une sélection avec un indicateur de verrouillage qui empêche les demandes de verrous de partage lors de la lecture de données. Par exemple, une instruction `SELECT` qui utilise l’indicateur `NOLOCK` n’obtient pas de verrous partagés lors de la lecture de données, mais elle peut occasionnellement demander des verrous quand elle lit un affichage catalogue système. Cela signifie qu’il est possible qu’une instruction `SELECT` utilisant `NOLOCK` soit bloquée.  
   
@@ -1793,7 +1948,7 @@ ROLLBACK;
 GO  
 ```  
   
- Le seul verrou appliqué faisant référence à *HumanResources.Employee* est un verrou de stabilité de schéma (Sch-S). Dans ce cas, la possibilité de sérialisation n'est plus garantie.  
+ Le seul verrou appliqué faisant référence à `HumanResources.Employee` est le verrou de stabilité de schéma (Sch-S). Dans ce cas, la possibilité de sérialisation n'est plus garantie.  
   
  Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], l’option `LOCK_ESCALATION` de l’instruction `ALTER TABLE` peut défavoriser des verrous de table et activer des verrous HoBT sur des tables partitionnées. Cette option n'est pas un indicateur de verrouillage, mais elle peut servir à réduire l'escalade de verrous. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -1957,7 +2112,7 @@ GO
  Vous devrez peut-être utiliser l'instruction KILL. Utilisez cette instruction avec précaution, particulièrement lorsque des processus critiques sont en cours d'exécution. Pour plus d’informations, consultez [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecture supplémentaire   
-[Charge du contrôle de version de ligne](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2008/03/30/overhead-of-row-versioning.aspx)   
+[Charge du contrôle de version de ligne](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [Événements étendus](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      

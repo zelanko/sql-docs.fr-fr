@@ -2,7 +2,7 @@
 description: ALTER TABLE (Transact-SQL)
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/23/2020
+ms.date: 09/04/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,17 +55,18 @@ helpviewer_keywords:
 - constraints [SQL Server], enabling
 - dropping constraints
 - dropping columns
+- data retention policy
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94e6ab85dd61babfc6a4ca2e4d57b3ee546a0d03
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb5fa8a9f667ff94d05dbfd67e4115b599042f57
+ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479067"
+ms.lasthandoff: 09/07/2020
+ms.locfileid: "89511271"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -174,6 +175,18 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
+            | DATA_DELETION =
+                  {
+                     OFF 
+                  | ON
+                      ( FILTER_COLUMN = column_name
+                         , RETENTION_PERIOD =
+                          {
+                           INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                            | MONTH | MONTHS | YEAR | YEARS }
+                          }
+                        )
+                  }  
           )
 
     | REBUILD
@@ -792,6 +805,22 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** \| nombre {DAY \| DAYS \| WEEK \| WEEK
 **S’applique à**  : [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Spécifie la rétention finie ou infinie des données d’historique dans une table temporelle. Si vous l’omettez, la rétention infinie est appliquée.
+
+SET (DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
+            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } }  ) **S’applique à :** Azure SQL Edge *uniquement*
+
+Active le nettoyage basé sur la stratégie de rétention des données anciennes dans les tables d’une base de données. Pour plus d’informations, consultez [Activer et désactiver la rétention des données](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Les paramètres suivants doivent être spécifiés pour que la rétention des données soit activée. 
+
+- FILTER_COLUMN = { column_name }  
+Spécifie la colonne qui doit être utilisée pour déterminer si les lignes de la table sont obsolètes ou non. Les types de données suivants sont autorisés pour la colonne de filtre.
+  - Date
+  - DateTime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}       
+  Spécifie la stratégie de la période de rétention pour la table. La période de rétention est spécifiée sous forme de combinaison d’une valeur entière positive et de l’unité de la partie date. 
 
 SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
