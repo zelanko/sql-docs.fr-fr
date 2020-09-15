@@ -11,15 +11,15 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 111230ebcd1108cc6fc99830d186294534f13a05
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: adcd1b0fba892e904a3866235e7a59e3d1774f4f
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784119"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178536"
 ---
 # <a name="quickstart-run-simple-python-scripts-with-sql-machine-learning"></a>Démarrage rapide : Exécution de scripts Python simples avec le Machine Learning SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts Python simples en utilisant [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [clusters Big Data](../../big-data-cluster/machine-learning-services.md). Vous allez découvrir comment utiliser la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour exécuter ce script dans une instance SQL Server.
@@ -103,7 +103,7 @@ GO
 
 Les entrées de la procédure stockée `sp_execute_external_script` sont les suivantes :
 
-| | |
+| Entrée | Description |
 |-|-|
 | @language | définit l’extension de langage à appeler (dans le cas présent, Python) |
 | @script | Cette entrée définit les commandes transmises au runtime Python. L’intégralité de votre script Python doit être placé dans cet argument en tant que texte Unicode. Vous pouvez aussi ajouter le texte à une variable de type **nvarchar**, puis appeler cette variable |

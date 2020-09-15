@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a42d3203455d4273410b9b216c19e7a9d1da4e3a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 95390a1eb5418a43883a9605c7498e6a86876e7e
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896382"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178896"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurer un client de science des données pour le développement R sur SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 L’intégration de R est disponible dans SQL Server 2016 (et versions ultérieures) quand vous incluez l’option de langage R dans [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) ou une installation [Machine Learning Services (en base de données)](../install/sql-machine-learning-services-windows-install.md). 
 
@@ -38,7 +38,7 @@ Que vous soyez un développeur R qui débute avec SQL ou un développeur SQL qui
 
 Pour les scénarios de développement R simples, vous pouvez utiliser l’exécutable RGUI fourni avec la distribution R de base dans MRO et SQL Server. Cet article explique comment utiliser RGUI pour les sessions R locales et distantes. Pour améliorer la productivité, vous devez utiliser un IDE complet, tel que [RStudio ou Visual Studio](#install-ide).
 
-Disponible en téléchargement distinct, SSMS permet de créer et d’exécuter des procédures stockées sur SQL Server, y compris celles contenant du code R. Presque tout le code R que vous écrivez dans un environnement de développement peut être incorporé à une procédure stockée. Vous pouvez consulter d’autres didacticiels pour en savoir plus sur [SSMS et le code R incorporé](../tutorials/sqldev-in-database-r-for-sql-developers.md).
+Disponible en téléchargement distinct, SSMS permet de créer et d’exécuter des procédures stockées sur SQL Server, y compris celles contenant du code R. Presque tout le code R que vous écrivez dans un environnement de développement peut être incorporé à une procédure stockée. Vous pouvez consulter d’autres didacticiels pour en savoir plus sur [SSMS et le code R incorporé](../tutorials/r-taxi-classification-introduction.md).
 
 ## <a name="1---install-r-packages"></a>1 - Installer des packages R
 

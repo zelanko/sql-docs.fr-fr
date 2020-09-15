@@ -9,15 +9,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: cc65081551da08f74730b728869db0847928f4ac
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1c2860efa5b47d3f6b6209f152e7085094fabaf3
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242349"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178960"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Utiliser T-SQL (CREATE EXTERNAL LIBRARY) pour installer des packages R sur SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 Cet article explique comment installer de nouveaux packages R sur une instance de SQL Server où Machine Learning est activé. Vous avez le choix entre plusieurs approches. L’utilisation de T-SQL fonctionne mieux pour les administrateurs de serveur qui ne sont pas familiarisés avec R.
 

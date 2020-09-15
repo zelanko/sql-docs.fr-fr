@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 1af68324f613c0e47cd8cc5eaca73dca5881db04
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242324"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179992"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et ressources
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Cet article est le quatrième et le dernier d’une série qui décrit l’optimisation des performances pour R Services. Cet article est un résumé des méthodes, résultats et conclusions de deux études de cas ayant testé plusieurs méthodes d’optimisation.
 

@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ac7bbbb10d736b68d3e9930fafd7ae6e50f739f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 28cbd4f91992ceb98d8c983099e0bbb0bed56971
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85671022"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178717"
 ---
 # <a name="r-tutorials-for-sql-machine-learning"></a>Tutoriels R pour le Machine Learning SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Cet article décrit les tutoriels et les démarrages rapides R pour [Machine Learning Services sur SQL Serveur](../sql-server-machine-learning-services.md) et les [clusters Big Data](../../big-data-cluster/machine-learning-services.md).
@@ -44,7 +44,7 @@ Cet article décrit les tutoriels et les démarrages rapides Python pour [Azure 
 | [Prédire la location de skis avec l’arbre de décision](r-predictive-model-introduction.md) | Utilisez R et un modèle d’arbre de décision pour prédire le nombre de futures locations de skis. Utilisez des notebooks dans Azure Data Studio pour préparer les données et entraîner le modèle, et T-SQL pour le déploiement du modèle. |
 | [Classement des clients par catégorie à l’aide du clustering k-moyennes](r-clustering-model-introduction.md) | Utilisez R pour développer et déployer un modèle de clustering k-moyennes en vue de classer les clients par catégorie. Utilisez des notebooks dans Azure Data Studio pour préparer les données et entraîner le modèle, et T-SQL pour le déploiement du modèle. |
 | [Analytique R en base de données pour les scientifiques de données](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Ce tutoriel explique aux développeurs R qui débutent avec le Machine Learning SQL comment effectuer des tâches courantes de science des données dans SQL. Chargez et visualisez les données, entraînez et enregistrez un modèle dans une base de données, et utilisez-le à des fins d’analyse prédictive. |
-| [Analytique R en base de données pour les développeurs SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Créez et déployez une solution R complète à l’aide d’outils SQL uniquement. Se concentre sur le déplacement d’une solution en production. Vous découvrirez comment encapsuler du code R dans une procédure stockée, enregistrer un modèle R dans une base de données et effectuer des appels paramétrables au modèle R à des fins de prédiction. |
+| [Analytique R en base de données pour les développeurs SQL](../tutorials/r-taxi-classification-introduction.md) | Créez et déployez une solution R complète à l’aide d’outils SQL uniquement. Se concentre sur le déplacement d’une solution en production. Vous découvrirez comment encapsuler du code R dans une procédure stockée, enregistrer un modèle R dans une base de données et effectuer des appels paramétrables au modèle R à des fins de prédiction. |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | Didacticiel | Description |

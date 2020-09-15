@@ -11,15 +11,15 @@ ms.reviewer: garye, davidph
 ms.date: 05/21/2020
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 5d83270e473f3135cfcdc3676d97675d7f658bb9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5d56b3cb50c268a2af74ec4bfacebf8049a4518d
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772329"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178454"
 ---
 # <a name="tutorial-build-a-clustering-model-in-r-with-sql-machine-learning"></a>Tutoriel : Créer un modèle de clustering dans R avec le Machine Learning SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans la troisième partie de cette série de quatre tutoriels, vous allez créer un modèle K-moyennes dans R pour effectuer le clustering. Dans la prochaine partie de cette série, vous déploierez ce modèle dans une base de données avec SQL Server Machine Learning Services ou sur des clusters Big Data.

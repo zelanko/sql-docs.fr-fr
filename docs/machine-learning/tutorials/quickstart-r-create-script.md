@@ -11,15 +11,15 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 2327b6644725c77949b49c661bc7d02d13c4e47d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 331e7b56087d75222d29c3bdabccbd8717b40171
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772356"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178504"
 ---
 # <a name="quickstart-run-simple-r-scripts-with-sql-machine-learning"></a>Démarrage rapide : Exécuter des scripts R simples avec le Machine Learning SQL
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Dans ce démarrage rapide, vous allez exécuter un ensemble de scripts R simples en utilisant [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [clusters Big Data](../../big-data-cluster/machine-learning-services.md). Vous allez découvrir comment utiliser la procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) pour exécuter ce script dans une instance SQL Server.
@@ -109,7 +109,7 @@ GO
 
 Les entrées de la procédure stockée `sp_execute_external_script` sont les suivantes :
 
-| | |
+| Entrée | Description |
 |-|-|
 | @language | définit l’extension de langage à appeler, dans le cas présent, R |
 | @script | définit les commandes transmises au runtime R. Tout votre script R doit être placé dans cet argument sous forme de texte Unicode. Vous pouvez aussi ajouter le texte à une variable de type **nvarchar**, puis appeler cette variable |

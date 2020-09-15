@@ -8,15 +8,15 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 844489b4c9f3e0e92848ebb1c9cb3b725ac5fedd
-ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
+ms.openlocfilehash: ba5f9677022eb07a8810f3ea9c5dcffeaa716e7c
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86406162"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179924"
 ---
 # <a name="olapr-r-package-in-sql-server-machine-learning-services"></a>olapR (package R de SQL Server Machine Learning Services)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 **olapR** est un package R de Microsoft servant à effectuer des requêtes MDX sur un cube OLAP SQL Server Analysis Services. Les fonctions ne prennent pas en charge toutes les opérations MDX, mais vous pouvez créer des requêtes qui découpent en tranches, découpent en cubes, descendent dans la hiérarchie, regroupent et pivotent dans plusieurs dimensions. Il est inclus dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) et dans [SQL Server 2016 R Services](sql-server-r-services.md).
 
