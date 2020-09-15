@@ -1,4 +1,5 @@
 ---
+description: Assistance utilisateur de SQL Server Management Studio
 title: Assistance utilisateur de SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6fe67dc138f9c3661732f1c1cbbf5038d9013f1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 26b2ecf32bb6c7a683f0321f342258b44ff4d214
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009340"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417835"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Assistance utilisateur de SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,11 +28,11 @@ Une assistance utilisateur est disponible dans [!INCLUDE[ssManStudioFull](../inc
 ## <a name="the-help-interface"></a>Interface de l'aide  
 Les onglets **Sommaire** et **Index** offrent des fonctionnalités et une interface que les utilisateurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connaissent déjà. Les autres options sont :  
   
--   **Comment faire**  
+-   **Guide pratique pour**  
   
     Fournit un ensemble hiérarchique de pages liées qui contiennent des rubriques associées aux tâches [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] courantes. Le contenu est classé par composant et tâche (rubriques Réplication, par exemple), etc.  
   
--   **action**  
+-   **Recherche**  
   
     Recherche des rubriques avec ou sans filtres prédéfinis. L’option Rechercher dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se trouve dans une page avec onglets distincte. Les utilisateurs peuvent affiner leurs recherches à l'aide d'un ou de plusieurs filtres prédéfinis (type de rubrique, langage ou technologie). Par défaut, l'option Rechercher n'utilise aucun des filtres prédéfinis, et seules les rubriques des collections installées font l'objet des recherches.  
   
@@ -56,7 +57,7 @@ L'aide de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] permet égaleme
   
 #### <a name="to-access-sql-server-focused-communities-from-the-how-do-i-page"></a>Pour accéder aux communautés SQL Server à partir de la page Comment faire ?  
   
-1.  Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], cliquez dans le menu **?** (Aide) sur **Comment faire ?** .  
+1.  Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], cliquez dans le menu **?** (Aide) sur **Comment faire ?**.  
   
 2.  La page [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Comment faire ?** s’ouvre. Dans la barre latérale des liens vers les communautés, cliquez sur le nom de la communauté désirée.  
   

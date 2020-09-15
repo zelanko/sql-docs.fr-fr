@@ -1,4 +1,5 @@
 ---
+description: Utiliser des données du volet de résultats (Visual Database Tools)
 title: Utiliser des données du volet de résultats
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,12 +20,12 @@ ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 759aaed19c2ef313712725edaa03b91eb37afcbe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 19730090a82eba0c1511e05145803ac42549ebac
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417705"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Utiliser des données du volet de résultats (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

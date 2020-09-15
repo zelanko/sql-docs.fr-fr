@@ -1,4 +1,5 @@
 ---
+description: Fenêtres Outil dans SQL Server Management Studio
 title: Fenêtres Outil dans SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ec93cc023145e051115318c67c644ea98403663
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236805"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417845"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Fenêtres Outil dans SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,10 +29,10 @@ ms.locfileid: "87236805"
 |-|-|   
 |[l’Explorateur d’objets](../ssms/object/object-explorer.md)|Parcourir les serveurs, créer et trouver des objets, gérer des sources de données et afficher des journaux. Cet outil est accessible à partir du menu **Affichage** .|  
 |[Explorateur de solutions](../ssms/solution/solution-explorer.md)|Stockez et organisez les scripts et les informations de connexion associées dans des projets appelés scripts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Vous pouvez stocker plusieurs scripts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant que solutions et utiliser le contrôle de code source pour les gérer au fur et à mesure de leur évolution. Cet outil est accessible à partir du menu **Affichage** .|  
-|[l’Explorateur de modèles](../ssms/template/template-explorer.md)|Créer des requêtes basées sur des modèles existants. Vous pouvez également créer des requêtes personnalisées ou modifier les modèles existants afin qu'ils correspondent à vos scénarios. Cet outil est accessible à partir du menu **Affichage** .|  
+|[Explorateur de modèles](../ssms/template/template-explorer.md)|Créer des requêtes basées sur des modèles existants. Vous pouvez également créer des requêtes personnalisées ou modifier les modèles existants afin qu'ils correspondent à vos scénarios. Cet outil est accessible à partir du menu **Affichage** .|  
 |[Aide dynamique](../ssms/user-assistance-in-sql-server-management-studio.md)|Afficher la liste des rubriques d'aide associées lorsque vous cliquez sur un composant ou que vous tapez du code.|  
   
-Les outils de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fonctionnent ensemble. Vous pouvez par exemple :  
+Les outils de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fonctionnent ensemble. Par exemple, vous pouvez :  
   
 -   inscrire un serveur à l'aide de l'Explorateur d'objets ;  
   

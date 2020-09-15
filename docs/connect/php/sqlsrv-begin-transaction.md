@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_begin_transaction
 title: sqlsrv_begin_transaction | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c8e9b237130bfc0c74176ab26ad5fe3821ce3dc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6ac4ca8e892fdc24af003ba69db6129a57c7870b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923777"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414305"
 ---
 # <a name="sqlsrv_begin_transaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +49,7 @@ sqlsrv_begin_transaction( resource $conn)
 ## <a name="return-value"></a>Valeur de retour  
 Valeur booléenne : **true** si la transaction a été correctement commencée. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple ci-après exécute deux requêtes dans le cadre d’une transaction. Si les deux requêtes réussissent, la transaction est validée. Si l’une des requêtes (ou les deux) échoue, la transaction est annulée.  
   
 La première requête de l’exemple insère une nouvelle commande dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. La commande concerne cinq unités du produit dont l’ID est 709. La seconde requête réduit de cinq unités la quantité de stock du produit dont l’ID est 709. Ces requêtes sont incluses dans une transaction, car elles doivent toutes les deux réussir pour que la base de données reflète avec exactitude l’état des commandes et la disponibilité du produit.  
@@ -126,7 +127,7 @@ Pour mieux mettre l’accent sur le comportement de la transaction, aucune recom
 ## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Guide pratique pour effectuer des transactions](../../connect/php/how-to-perform-transactions.md)
+[Procédure : Effectuer des transactions](../../connect/php/how-to-perform-transactions.md)
 
 [Vue d’ensemble de Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md) 
   

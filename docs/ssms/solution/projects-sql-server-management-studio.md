@@ -1,4 +1,5 @@
 ---
+description: Projets (SQL Server Management Studio)
 title: Projets (SQL Server Management Studio)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13845b7e7903207f7d5b3c026663d6b1d44d4795
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 321257f45a593afdaf8c69228b2018347074d7ce
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011592"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88417875"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projets (SQL Server Management Studio)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +50,7 @@ Pour modifier les informations sur une connexion, utilisez la fenêtre Propriét
 |--------------------|---------|  
 |Explique comment créer un projet dans une solution.|[Créer un projet](../../ssms/solution/create-a-project.md)|  
 |Explique comment ajouter un projet existant à une solution.|[Ajouter un projet existant à une solution](../../ssms/solution/add-an-existing-project-to-a-solution.md)|  
-|Explique comment modifier l'emplacement par défaut dans lequel les fichiers du projet sont enregistrés.|[Modifier l’emplacement par défaut des projets](../../ssms/solution/change-the-default-location-for-projects.md)|  
+|Explique comment modifier l'emplacement par défaut dans lequel les fichiers du projet sont enregistrés.|[Modifier l'emplacement par défaut des projets](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |Explique comment afficher les propriétés actuelles d'un projet.|[Afficher les propriétés d'un projet](../../ssms/solution/view-project-properties.md)|  
 |Explique comment ajouter de nouveaux éléments, tels que des connexions ou des fichiers de script, à un projet.|[Ajouter de nouveaux éléments à un projet](../../ssms/solution/add-new-items-to-a-project.md)|  
 |Explique comment établir les informations de connexion d'une requête.|[Associer une requête à une connexion dans un projet](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  
@@ -59,5 +60,5 @@ Pour modifier les informations sur une connexion, utilisez la fenêtre Propriét
 ## <a name="see-also"></a>Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Contrôle de code source de l'Explorateur de solutions](https://msdn.microsoft.com/library/ms173879.aspx)  
+[Contrôle de code source de l'Explorateur de solutions](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_close
 title: sqlsrv_close | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ac6209c-a134-4f8f-b88b-8eefaa1cbc7f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e0ebeee9f527d5f47aa75ef992ef309d58fa9286
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0ef31416d2ac40677e5907c96290ec8e32845862
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927931"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88414175"
 ---
 # <a name="sqlsrv_close"></a>sqlsrv_close
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +45,7 @@ Valeur booléenne **true** sauf si la fonction est appelée avec un paramètre n
 > [!NOTE]  
 > **Null** est un paramètre valide pour cette fonction. Ainsi, la fonction peut être appelée plusieurs fois dans un script. Par exemple, si vous fermez une connexion dans une condition d’erreur et que vous la refermez à la fin du script, le deuxième appel à **sqlsrv_close** va retourner **true**, car le premier appel à **sqlsrv_close** (dans la condition d’erreur) affecte la valeur **null** à la ressource de connexion.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant ferme une connexion. L’exemple part du principe que SQL Server est installé sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
