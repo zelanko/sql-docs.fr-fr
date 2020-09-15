@@ -1,4 +1,5 @@
 ---
+description: Méthode setDouble (SQLServerCallableStatement)
 title: Méthode setDouble (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d4ba5cce322b9fe925f3455929f0a040e05b3aa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d39c2e3ad209d58ba7878cd76322244362ca9011
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925795"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431961"
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>Méthode setDouble (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +43,7 @@ public void setDouble(java.lang.String sCol,
   
  *d*  
   
- Valeur **double**.  
+ Une valeur **double**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,6 +53,6 @@ public void setDouble(java.lang.String sCol,
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_num_fields
 title: sqlsrv_num_fields | Microsoft Docs
 ms.custom: ''
 ms.date: 03/23/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a1155a01de68a9c4d45fc2c7e4e6660c581c3bb7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 81f279d758f6dcb212fd20306fb09cb0222a2832
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926427"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426211"
 ---
 # <a name="sqlsrv_num_fields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,7 +42,7 @@ sqlsrv_num_fields( resource $stmt)
 ## <a name="return-value"></a>Valeur de retour  
 Valeur entière qui représente le nombre de champs dans le jeu de résultats actif. Si une erreur se produit, la valeur booléenne **false** est retournée.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant exécute une requête pour récupérer tous les champs des trois lignes supérieures de la table *HumanResources.Department* de la base de données AdventureWorks. La fonction **sqlsrv_num_fields** détermine le nombre de champs du jeu de résultats. Ainsi, les données sont affichées en itérant au sein des champs dans chaque ligne retournée.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  

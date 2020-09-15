@@ -1,4 +1,5 @@
 ---
+description: Méthode setNClob (int, java.io.Reader, long)
 title: Méthode setNClob (int, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11071f8f-0e9b-45f0-b600-aaef7e2815d8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 915f10af904bb6688ce5c59d8322662ebefaf9a1
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e8c2a96bd9d2d114ce148e51f0728e9409cb4915
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901109"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431611"
 ---
 # <a name="setnclob-method-int-javaioreader-long"></a>Méthode setNClob (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,6 +53,6 @@ public final void setNClob(int parameterIndex,
   
 ## <a name="see-also"></a>Voir aussi  
  [setNClob, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   
- [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
+ [Membres de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

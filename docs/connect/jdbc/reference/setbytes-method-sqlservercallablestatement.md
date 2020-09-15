@@ -1,4 +1,5 @@
 ---
+description: Méthode setBytes (SQLServerCallableStatement)
 title: Méthode setBytes (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f264f1a6-ee35-4eaf-81d8-ecf99f03b35d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4cb75f7d7e0ed77872e384d6e981a8fe8cae4410
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ea6f65bb071cf61c5fe0b0d39ef95559361bceca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929158"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432371"
 ---
 # <a name="setbytes-method-sqlservercallablestatement"></a>Méthode setBytes (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,6 +55,6 @@ public void setBytes(java.lang.String sCol,
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

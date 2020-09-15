@@ -1,4 +1,5 @@
 ---
+description: Méthode updateNClob (java.lang.String, java.io.Reader, long)
 title: updateNClob, méthode (java.lang.String, java.io.Reader, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5c8d9b-f8c8-4ddf-85c8-23420bba54ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b4de6d422de17b1a4ac756284a75b78c433460c9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c6bd151c08cff98bba419d425d24ac0160ffc42d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903025"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88431261"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader-long"></a>Méthode updateNClob (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +51,7 @@ public void updateNClob(java.lang.String columnLabel,
 ## <a name="remarks"></a>Notes  
  Cette méthode getNClob est spécifiée par la méthode getNClob de l’interface java.sql.ResultSet.  
   
- Cette méthode n’est prise en charge que sur les colonnes **nvarchar(max)** , **ntext** et **xml**. L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
+ Cette méthode n’est prise en charge que sur les colonnes **nvarchar(max)**, **ntext** et **xml**. L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateNClob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

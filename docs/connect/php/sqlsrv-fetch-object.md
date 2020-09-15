@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_fetch_object
 title: sqlsrv_fetch_object | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893177"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426301"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +37,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$stmt*: ressource d’instruction correspondant à une instruction exécutée.  
+*$stmt* : ressource d’instruction correspondant à une instruction exécutée.  
   
 *$className* [FACULTATIF]: chaîne spécifiant le nom de la classe à instancier. Si aucune valeur n’est spécifiée pour le paramètre *$className* , une instance de **stdClass** PHP est instanciée.  
   
@@ -58,7 +59,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Pour plus d’informations sur ces valeurs, consultez [Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*offset* [FACULTATIF] : utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
+*décaler* [FACULTATIF] : Utilisé avec SQLSRV_SCROLL_ABSOLUTE et SQLSRV_SCROLL_RELATIVE pour spécifier la ligne à récupérer. Le premier enregistrement dans le jeu de résultats est 0.  
   
 ## <a name="return-value"></a>Valeur de retour  
 Objet PHP avec des propriétés qui correspondent à des noms de champ du jeu de résultats. Les valeurs de propriété sont renseignées avec les valeurs de champ de jeu de résultats correspondantes. Si la classe spécifiée avec le paramètre *$className* facultatif n’existe pas ou s’il n’existe aucun jeu de résultats actif associé à l’instruction spécifiée, **false** est retourné. S’il n’y a plus aucune ligne à récupérer, la valeur **null** est retournée.  
@@ -91,7 +92,7 @@ Si les résultats retournés par cette requête sont récupérés avec **sqlsrv_
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’un objet PHP. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ``` 
@@ -233,7 +234,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-La variable **sqlsrv_fetch_object** retourne toujours des données en fonction des [Default PHP Data Types](../../connect/php/default-php-data-types.md). Pour plus d’informations sur la façon de spécifier le type de données PHP, consultez [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
+La variable **sqlsrv_fetch_object** retourne toujours des données en fonction des [Default PHP Data Types](../../connect/php/default-php-data-types.md). Pour plus d’informations sur la façon de spécifier le type de données PHP, consultez [Procédure : spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md).  
   
 Si un champ sans nom est retourné, **sqlsrv_fetch_object** ignore la valeur du champ et émet un avertissement. Par exemple, considérez cette instruction Transact-SQL qui insère une valeur dans une table de base de données et récupère la clé primaire générée par le serveur :  
   

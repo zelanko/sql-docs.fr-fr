@@ -1,4 +1,5 @@
 ---
+description: Sauvegarder des bases de données Stretch (Stretch Database)
 title: Sauvegarder des bases de données Stretch
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 38ee204a715e691654e550f849ccf0216c715edc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286303"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423123"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Sauvegarder des bases de données Stretch (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Les sauvegardes de base de données vous aident à récupérer suite à de nombreux types d’échecs, d’erreurs et de sinistres.  
@@ -46,7 +47,7 @@ Le service SQL Server Stretch Database sur Azure protège vos bases de données 
 ### <a name="azure-reduces-the-risk-of-data-loss-with-geo-redundancy"></a>Azure réduit le risque de perte de données avec la géoredondance  
 Les sauvegardes de base de données Azure sont stockées sur du stockage Azure géoredondant (RA-GRS) et sont donc géoredondantes par défaut. Le stockage géoredondant réplique vos données dans une région secondaire située à des centaines de kilomètres de la région principale. Dans les régions principale et secondaire, vos données sont répliquées trois fois chacune, sur des domaines d’erreur et de mise à niveau distincts. Cela garantit la durabilité de vos données même en cas de panne ou de sinistre régional total rendant l’une des régions Azure indisponible.
 
-### <a name="stretch-database-reduces-the-risk-of-data-loss-for-your-azure-data-by-retaining-migrated-rows-temporarily"></a><a name="stretchRPO"></a>Stretch Database réduit le risque de perte de vos données Azure en conservant temporairement les lignes migrées
+### <a name="stretch-database-reduces-the-risk-of-data-loss-for-your-azure-data-by-retaining-migrated-rows-temporarily"></a><a name="stretchRPO"></a>Stretch Database réduit le risque de perte de données pour vos données Azure en conservant temporairement les lignes migrées
 Une fois que Stretch Database a migré les lignes éligibles de SQL Server vers Azure, il conserve ces lignes dans la table intermédiaire pendant au minimum huit heures. Si vous restaurez une sauvegarde de votre base de données Azure, Stretch Database utilise les lignes enregistrées dans la table intermédiaire pour rapprocher le serveur SQL Server et les bases de données Azure.
 
 Après avoir restauré une sauvegarde de vos données Azure, vous devez exécuter la procédure stockée [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) pour reconnecter la base de données Stretch SQL Server à la base de données Azure distante. Quand vous exécutez **sys.sp_rda_reauthorize_db**, Stretch Database rapproche automatiquement le serveur SQL Server et les bases de données Azure.

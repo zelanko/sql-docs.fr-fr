@@ -1,4 +1,5 @@
 ---
+description: Naviguer dans le Concepteur de requêtes et de vues (Visual Database Tools)
 title: Naviguer dans le Concepteur de vues et de requêtes
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 57141f45ed985932d365bffb9479e085ba59e9bf
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ff0153da9b3905fb57d0e1359ff71aaaeef663df
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85996775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423073"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Naviguer dans le Concepteur de requêtes et de vues (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -52,10 +53,10 @@ Pour plus d’informations, consultez [Volet Schéma &#40;Visual Database Tools&
   
 ## <a name="criteria-pane"></a>Volet Critères  
   
-|À|Appuyez sur|Cliquez sur|  
+|À|Appuyez sur|Cliquez|  
 |------|---------|---------|  
 |Vous déplacer entre les cellules|Touches de direction, TAB ou MAJ+TAB|Sur la cellule cible|  
-|Vous déplacer sur la dernière ligne d'une colonne sélectionnée|Ctrl+Flèche bas||  
+|Vous déplacer sur la dernière ligne d'une colonne sélectionnée|Ctrl+Bas||  
 |Vous déplacer sur la première ligne d'une colonne sélectionnée|Ctrl+Haut||  
 |Vous déplacer sur la cellule située en haut à gauche dans la partie visible de la grille|Ctrl+Origine||  
 |Vous déplacer sur la cellule située en bas à droite|CTRL+FIN||  
@@ -93,7 +94,7 @@ Pour plus d’informations, consultez [Volet SQL &#40;Visual Database Tools&#41;
 |Vous déplacer sur la première ou la dernière cellule de la ligne en cours|ORIGINE ou FIN||  
 |Vous déplacer sur la première ligne de la colonne en cours|Ctrl+Haut||  
 |Vous déplacer sur la cellule située en haut à gauche|Ctrl+Origine||  
-|Vous déplacer sur la cellule du bas dans la première colonne|Ctrl+Flèche bas||  
+|Vous déplacer sur la cellule du bas dans la première colonne|Ctrl+Bas||  
 |Étendre la sélection jusqu'au premier caractère d'une cellule|MAJ+ORIGNE||  
 |Étendre la sélection jusqu'au dernier caractère d'une cellule|MAJ+FIN||  
 |Basculer entre le mode Édition et le mode de sélection des cellules|F2||  

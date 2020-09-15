@@ -1,4 +1,5 @@
 ---
+description: Membres MSReportServer_ConfigurationSetting
 title: Membres MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae51a72f0dc2be73e4175c9e50d03246d5d3b49d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7643435954c74285992c6a21ebd1df5d8998164b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632526"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423093"
 ---
 # <a name="msreportserver_configurationsetting-members"></a>Membres MSReportServer_ConfigurationSetting
   La classe MSReportServer_ConfigurationSetting contient les propriétés et méthodes suivantes.  
   
 ## <a name="public-properties"></a>Propri&#233;t&#233;s publiques  
   
-|||  
+|Propriété|Description|  
 |-|-|  
 |[ConnectionPoolSize](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-connectionpoolsize.md)|Retourne la taille du pool de connexions qu'utilise le serveur de rapports pour communiquer avec l'instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports. Lecture seule.|  
 |[DatabaseLogonAccount](../../reporting-services/wmi-provider-library-reference/configurationsetting-property-databaselogonaccount.md)|Spécifie le compte de connexion utilisé par le serveur de rapports pour se connecter à l'instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports. Lecture seule.|  
@@ -58,7 +59,7 @@ ms.locfileid: "81632526"
   
 ## <a name="public-methods"></a>M&#233;thodes publiques  
   
-|||  
+|Méthode|Description|  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|Sauvegarde la clé de chiffrement pour l'instance. Un chiffrement par mot de passe est utilisé pour le stockage de la clé de chiffrement.|  
 |[Méthode CreateSSLCertificateBinding &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|Crée une liaison de certificat TLS/SSL.|  

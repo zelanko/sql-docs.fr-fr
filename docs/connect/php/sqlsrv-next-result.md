@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_next_result
 title: sqlsrv_next_result | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41270d16-0003-417c-b837-ea51439654cd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8ffdab9700e32cb2c10e85950db54e6c78c54349
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f10a69247a442c1fa7b369f46b65d8c0c04e7237
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926439"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88426231"
 ---
 # <a name="sqlsrv_next_result"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +47,7 @@ sqlsrv_next_result( resource $stmt )
 ## <a name="return-value"></a>Valeur de retour  
 Si le résultat suivant est correctement devenu actif, la valeur booléenne **true** est retournée. Si une erreur s’est produite pour rendre le résultat suivant actif, **false** est retourné. Si aucun autre résultat n’est disponible, **Null** est retourné.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant crée et exécute une procédure stockée qui insère une évaluation de produit dans la table *Production.ProductReview* , puis sélectionne toutes les évaluations concernant le produit spécifié. Après l’exécution de la procédure stockée, le premier résultat (le nombre de lignes affectées par la requête INSERT dans la procédure stockée) est consommé sans appeler **sqlsrv_next_result**. Le résultat suivant (lignes retournées par la requête SELECT dans la procédure stockée) est rendu disponible en appelant **sqlsrv_next_result** et consommé en utilisant [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
@@ -179,7 +180,7 @@ sqlsrv_close( $conn );
   
 Quand vous exécutez une procédure stockée qui possède des paramètres de sortie, il est préférable que tous les autres résultats soient consommés avant d’accéder aux valeurs des paramètres de sortie. Pour plus d’informations, consultez [Procédure : spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant exécute une requête par lot qui récupère des informations d’évaluation de produit relatives à un ID de produit spécifique, insère une évaluation du produit, puis récupère à nouveau les informations d’évaluation de produit relatives à l’ID de produit spécifié. La nouvelle évaluation de produit insérée est incluse dans le jeu de résultats final de la requête par lot. L’exemple utilise [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) pour passer d’un résultat de la requête par lot au suivant.  
   
 > [!NOTE]  
