@@ -1,4 +1,5 @@
 ---
+description: Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports
 title: Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ee1a5dcf3d475937ae87a1f3c5282d484b2193a9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed7a08a8f109da6151ffba2efed9df4263f2db5a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570683"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373365"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports
   Cette rubrique constitue une référence concernant les autorisations de SharePoint utilisables pour accorder un accès à des opérations sur un serveur de rapports qui s'exécute en mode intégré SharePoint. Si vous créez des niveaux d'autorisation personnalisés, cette rubrique peut vous aider à choisir les autorisations à utiliser.  
@@ -27,18 +28,25 @@ ms.locfileid: "65570683"
   
  Chaque tableau commence par une liste des autorisations SharePoint et la description correspondante. Le tableau contient trois colonnes qui indiquent comment une autorisation est utilisée dans les niveaux d'autorisation prédéfinis. Les niveaux d'autorisation prédéfinis incluent les suivants :  
   
-|Niveau d'autorisation|Abréviation|  
+|Niveau d’autorisation|Abréviation|  
 |----------------------|------------------|  
 |Contrôle total|**F**|  
-|Participez|**C**|  
+|Collaboration|**C**|  
 |Visiteur|**V**|  
   
  Les autorisations sans incidence sur un serveur de rapports ne sont pas répertoriées. Toutes les autorisations de personnalisation sont exclues de cet article de référence. Même si vous pouvez inclure des éléments du serveur de rapports dans un site Web personnalisé, le serveur de rapports ne traite pas directement les opérations ou les demandes de personnalisation.  
-  
-||  
-|-|  
-| [!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint &#124; SharePoint 2010 et SharePoint 2013.|  
-  
+
+[!INCLUDE[applies](../../includes/applies-md.md)]
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint  
+    :::column-end:::
+    :::column:::
+        SharePoint 2010 et SharePoint 2013  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="list-permissions"></a>Autorisations sur les listes  
  Les autorisations définies sur la bibliothèque contenant les éléments du serveur de rapports déterminent la façon dont les utilisateurs accèdent à ces éléments.  
   
@@ -66,7 +74,7 @@ ms.locfileid: "65570683"
 |Ajouter et personnaliser les pages|Ajoutez, modifiez ou supprimez des pages HTML ou des pages de composant WebPart, et modifiez le site web à l’aide d’un éditeur compatible [!INCLUDE[winSPServ](../../includes/winspserv-md.md)].|X|||Ajoutez ou supprimez un composant WebPart Visionneuse de rapports.|  
 |Parcourir les informations utilisateur|Affichez les informations relatives aux utilisateurs du site Web.|X|X|X|Parcourez des rapports et autres éléments sur des sites, des bibliothèques et des dossiers. Publiez des rapports et autres éléments dans une bibliothèque.|  
 |Énumérer les autorisations|Énumérez les autorisations sur le site Web, la liste, le dossier, le document ou l'élément de liste.|X|||Consultez les autorisations pour tous les éléments du serveur de rapports. Affichez un rapport consultable à l'aide de clics qui utilise un modèle contenant des paramètres de sécurité de l'élément de modèle.|  
-|Gérer les alertes|Gérez les alertes pour tous les utilisateurs du site Web.|X|||Créez, modifiez et supprimez un abonnement quelconque d'un site.|  
+|Gestion des alertes|Gérez les alertes pour tous les utilisateurs du site Web.|X|||Créez, modifiez et supprimez un abonnement quelconque d'un site.|  
 |Utiliser les interfaces distantes|Utilisez les interfaces SOAP, Web DAV ou SharePoint Designer pour accéder au site Web.|X|X|X|Sert à appeler le point de terminaison du proxy URL vers le serveur de rapports.|  
 |Ouvrir|Ouvrez un site Web, une liste ou un dossier pour accéder aux éléments qu'il contient.|X|X|X|Consultez les planifications et les propriétés des éléments.|  
   

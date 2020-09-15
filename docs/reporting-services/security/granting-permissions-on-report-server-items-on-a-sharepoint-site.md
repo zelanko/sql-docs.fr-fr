@@ -1,4 +1,5 @@
 ---
+description: Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint
 title: Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e1d11d26ccc86b9db04d29856adfbd4c9ce643a6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2dfaece778331dd84a3d24283d11c5721180ef2f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580035"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373355"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fournit des fonctionnalités de sécurité intégrées qui vous permettent d’accéder aux éléments de serveur de rapports à partir des sites et des bibliothèques SharePoint. Si vous avez déjà affecté des autorisations aux utilisateurs, ces derniers auront accès aux éléments et opérations de serveur de rapport dès que vous aurez configuré les paramètres d'intégration entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] et un serveur de rapports. Les autorisations existantes vous permettent de télécharger des définitions de rapport et d'autres documents, d'afficher des rapports, de créer des abonnements et de gérer des éléments.  
@@ -79,7 +80,7 @@ ms.locfileid: "65580035"
  [Référence autorisations de sites et de listes SharePoint pour des éléments de serveur de rapports](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Fournit une référence de l'ensemble des autorisations de produit SharePoint permettant d'accéder aux opérations de serveur de rapports.  
   
- [Définir des autorisations pour des opérations de serveurs de rapports dans une application Web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  Décrit les autorisations requises pour la génération d'états ad hoc et offre des stratégies de mise à disposition des fonctionnalités.  
   
  [Comparer des rôles et des tâches dans Reporting Services pour des autorisations et des groupes SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  

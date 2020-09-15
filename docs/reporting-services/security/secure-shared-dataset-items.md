@@ -1,4 +1,5 @@
 ---
+description: Sécuriser les éléments de dataset partagés
 title: Sécuriser les éléments de dataset partagé | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a51e261d06933a30bf1c59adffa6963c9826f360
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 80cfeba2128e82c6254ba962e91c6c51461ff955
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570673"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373215"
 ---
 # <a name="secure-shared-dataset-items"></a>Sécuriser les éléments de dataset partagés
   Sur un serveur de rapports, les éléments de dataset partagés peuvent être utilisés par plusieurs rapports. Vous pouvez sécuriser des datasets partagés pour contrôler le degré d'accès dont disposent les utilisateurs. Par défaut, seuls les utilisateurs qui sont membres du groupe prédéfini **Administrateurs** peuvent consulter des datasets partagés, modifier des propriétés, activer la mise en cache, créer des plans d’actualisation du cache et supprimer les éléments. Tous les autres utilisateurs possèdent des attributions de rôles créées pour eux qui autorisent l'accès à un dataset partagé.  
@@ -40,7 +41,7 @@ ms.locfileid: "65570673"
 |Sélectionnez cette tâche|Pour autoriser les utilisateurs à effectuer les opérations suivantes|Rôles par défaut qui incluent la tâche|  
 |----------------------|---------------------------------|-----------------------------------------|  
 |Afficher les rapports|Afficher les éléments de dataset dans l'arborescence des dossiers. Sans cette tâche, l'élément n'est pas visible pour les utilisateurs et ils peuvent ignorer que le dataset est disponible.|Browser<br /><br /> Gestionnaire de contenu<br /><br /> Générateur de rapports<br /><br /> Mes rapports|  
-|Gérer les rapports|Afficher les propriétés qui spécifient le nom, la description et les informations de connexion. Cette tâche est également utilisée pour afficher un élément de sdataset partagé dans la hiérarchie de dossiers. Si vous choisissez cette tâche, vous pouvez omettre la tâche « Afficher les rapports ».|Gestionnaire de contenu<br /><br /> Serveur de publication<br /><br /> Mes rapports|  
+|Gérer les rapports|Afficher les propriétés qui spécifient le nom, la description et les informations de connexion. Cette tâche est également utilisée pour afficher un élément de sdataset partagé dans la hiérarchie de dossiers. Si vous choisissez cette tâche, vous pouvez omettre la tâche « Afficher les rapports ».|Gestionnaire de contenu<br /><br /> Publisher<br /><br /> Mes rapports|  
 |Lire les rapports|Consulter la définition de dataset partagé.|Gestionnaire de contenu<br /><br /> Générateur de rapports|  
 |Définir la sécurité au niveau des éléments|Créer et modifier des attributions de rôles qui contrôlent l'accès au dataset partagé. Cette tâche doit être utilisée avec les tâches « Afficher les rapports » ou « Gérer les rapports ». Si tel n'est pas le cas, elle est sans effet puisque l'utilisateur ne peut pas sélectionner l'élément.|Gestionnaire de contenu|  
   

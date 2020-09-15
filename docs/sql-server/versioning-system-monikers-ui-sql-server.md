@@ -1,18 +1,19 @@
 ---
+description: Système de gestion de versions dans la documentation SQL
 title: Système de gestion de versions dans la documentation SQL
-ms.date: 07/22/2020
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7ca82e29d32bfe2721baa619ec37d4c7576a0533
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247365"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373165"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Système de gestion de versions dans la documentation SQL
 
@@ -164,7 +165,7 @@ Le système de gestion de versions est entièrement implémenté pour SQL Server
     - [Documentation SQL Server 2014 hors connexion](/sql/sql-server/sql-server-offline-documentation)
 
 - _Versions 2016 et ultérieures :_ &nbsp; le système de gestion de versions est entièrement implémenté pour SQL Server versions 2016 et ultérieures.
-    - [Bienvenue dans la documentation SQL Server versions 2016 et ultérieures](/sql/sql-server/?view=sql-server-2016)
+    - [Bienvenue dans la documentation SQL Server versions 2016 et ultérieures](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
     - [Documentation SQL Server 2016 hors connexion](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>Voir aussi

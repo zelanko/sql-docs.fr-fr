@@ -1,4 +1,5 @@
 ---
+description: À propos de (boîte de dialogue)
 title: À propos de (boîte de dialogue)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,17 +14,17 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 24fb3fcc579b30d0eb3964405867add08c05ba69
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 994838ff8296e79d673b4f3bfcb0d062830a5b8b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010934"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88372945"
 ---
 # <a name="about-dialog-box"></a>À propos de (boîte de dialogue)
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
-La boîte de dialogue **À propos de** fournit des informations sur le produit et permet d'accéder à d'autres informations relatives à l'ordinateur où s'exécute le produit. Pour les versions d'évaluation, l'entrée [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] répertorie le nombre de jours restant avant l'expiration de l'installation. Cette boîte de dialogue est accessible à partir du menu **?** (Aide).  
+ La boîte de dialogue **À propos de** fournit des informations sur le produit et permet d’accéder à d’autres informations relatives à l’ordinateur où s’exécute le produit. Pour les versions d'évaluation, l'entrée [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] répertorie le nombre de jours restant avant l'expiration de l'installation. Cette boîte de dialogue est accessible à partir du menu **?** (Aide).   
   
 ## <a name="options"></a>Options  
 **Nom du composant**  
