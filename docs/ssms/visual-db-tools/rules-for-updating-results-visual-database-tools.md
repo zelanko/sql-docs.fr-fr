@@ -1,4 +1,5 @@
 ---
+description: Règles relatives à la mise à jour des résultats (Visual Database Tools)
 title: Règles de mise à jour des résultats
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: de131ef0-ccbd-446f-9400-b93c7b8fa537
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b71d1e6324465df97a174134463f8d5759a2d06a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bbf2a7a3ca1d25a6556a6f31667d3f406cf055dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010704"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88397345"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>Règles relatives à la mise à jour des résultats (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Dans de nombreux cas, vous pouvez mettre à jour le jeu de résultats affiché dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md), avec quelques exceptions.  
+ Dans de nombreux cas, vous pouvez mettre à jour le jeu de résultats affiché dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md), avec quelques exceptions.  
   
 En général, pour mettre à jour des résultats, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) doit disposer de suffisamment d’informations pour identifier de façon unique la ligne de la table. C'est le cas par exemple si la requête inclut une clé primaire dans la liste de sortie. En outre, vous devez être autorisé à mettre à jour la base de données.  
   
@@ -35,7 +36,7 @@ Si votre requête est basée sur une vue, vous devriez pouvoir la mettre à jour
   
 Le tableau suivant récapitule les cas spécifiques dans lesquels vous pourriez mettre à jour ou non des résultats de requête dans le volet Résultats. Dans de nombreux cas, c'est la base de données que vous utilisez qui décide si vous pouvez mettre à jour des résultats de requête.  
   
-|Requête|Les résultats peuvent-ils être mis à jour ?|  
+|Query|Les résultats peuvent-ils être mis à jour ?|  
 |---------|---------------------------|  
 |Requête basée sur une table dont la clé primaire figure dans la liste de sortie|Oui (sauf dans les cas répertoriés ci-dessous).|  
 |Requête basée sur une table n'ayant ni index unique ni clé primaire|Dépend de la requête et de la base de données. Certaines bases de données autorisent la mise à jour s'il y a suffisamment d'informations pour identifier des enregistrements de façon unique.|  

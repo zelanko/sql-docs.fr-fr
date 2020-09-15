@@ -1,4 +1,5 @@
 ---
+description: Colonnes éparses
 title: Colonnes éparses | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6767ff420defc32bf91559e11878672012de626b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 406f4fea8df9a3c410f126f5a766aeb2e1ad4bb8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909575"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88396295"
 ---
 # <a name="sparse-columns"></a>Colonnes éparses
 
@@ -33,7 +34,7 @@ Le fichier de code de cet exemple, SparseColumns.java, se trouve à l’emplacem
 
 Les jeux de colonnes sont des colonnes calculées qui retournent toutes les colonnes fragmentées sous la forme XML non typée. Vous devez envisager d'utiliser des jeux de colonnes lorsque le nombre de colonnes dans une table est élevé ou supérieur à 1 024 et qu'il serait trop long d'opérer individuellement sur des colonnes fragmentées. Un jeu de colonnes peut contenir jusqu'à 30 000 colonnes.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ### <a name="description"></a>Description
 
