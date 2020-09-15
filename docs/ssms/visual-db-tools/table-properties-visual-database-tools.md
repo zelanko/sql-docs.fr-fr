@@ -1,4 +1,5 @@
 ---
+description: Propriétés de la table (Visual Database Tools)
 title: Propriétés de la table
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: e5b8873d5387bf80159c8687310b2116f16874b9
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2c82638c23213db41aece277812522eb40a52e66
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000742"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312815"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriétés de la table (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,14 +60,14 @@ Se développe pour afficher des propriétés pour **Colonne d’identité**, **I
 **Colonne d’identité**  
 Affiche la colonne utilisée comme colonne d'identité de la table. Pour modifier l'identité d'une colonne, choisissez-la dans la liste déroulante. Seules les colonnes d'un type de données numérique s'affichent dans la liste.  
   
-**Indexable**  
+**Is Indexable**  
 Indique si la table peut être indexée. Si la table n'est pas indexable, cela peut être dû au fait que vous n'êtes pas le propriétaire de la table ou que la table contient des colonnes possédant des types de données texte, ntext ou image.  
   
-**Répliquée**  
+**Is Replicated**  
 Indique si la table est répliquée à un autre emplacement.  
   
 **Catégorie Spécification d'espace de données régulière**  
-Se développe pour afficher des propriétés pour **(Type d’espace de données)** , **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
+Se développe pour afficher des propriétés pour **(Type d’espace de données)**, **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
   
 **(Type d’espace de données)**  
 Indique si cette table est stockée à l'aide d'un groupe de fichiers ou d'un schéma de partition.  

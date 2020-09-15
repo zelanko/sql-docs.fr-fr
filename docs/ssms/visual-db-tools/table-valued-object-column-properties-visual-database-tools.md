@@ -1,4 +1,5 @@
 ---
+description: Propriétés de l’objet table (colonne) (Visual Database Tools)
 title: Propriétés des objets table (colonne)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: d64ccb277d9016cd94b5613529e2d1c322162a73
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f33c6df2e1acfa5c014b6739acd61c4d0153631c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004173"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312705"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Propriétés de l’objet table (colonne) (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Ces propriétés s’affichent quand vous sélectionnez une colonne d’un objet table dans le volet **Diagramme** du Concepteur de requêtes et de vues.  
+ Ces propriétés s’affichent quand vous sélectionnez une colonne d’un objet table dans le volet **Schéma** du Concepteur de requêtes et de vues.  
   
 > [!NOTE]  
 > Les propriétés mentionnées dans cette rubrique sont classées par catégorie et non par ordre alphabétique.  
@@ -51,12 +52,12 @@ Affiche le type de données de la colonne sélectionnée.
 Affiche le nombre de caractères ou de chiffres autorisé par le type de données de la colonne sélectionnée. Cette propriété est disponible uniquement pour les types de données basés sur les caractères.  
   
 > [!NOTE]  
-> Pour afficher la taille en octets, consultez la propriété **Taille** ci-dessous.  
+>  Pour afficher la taille en octets, consultez la propriété **Taille** ci-dessous.  
   
 **Précision**  
 Affiche le nombre maximal de chiffres autorisés pour les types de données numériques. Cette propriété affiche **0** pour les types de données non numériques.  
   
-**Mettre à l'échelle**  
+**Mise à l’échelle**  
 Affiche le nombre maximal de chiffres qui peuvent apparaître à droite de la virgule décimale pour les types de données numériques. Cette valeur doit être inférieure ou égale à la précision. Cette propriété affiche **0** pour les types de données non numériques.  
   
 **Taille**  

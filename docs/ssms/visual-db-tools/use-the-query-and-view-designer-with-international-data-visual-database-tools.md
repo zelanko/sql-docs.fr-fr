@@ -1,4 +1,5 @@
 ---
+description: Utiliser le Concepteur de requêtes et de vues avec des données internationales (Visual Database Tools)
 title: Utiliser le Concepteur de requêtes et de vues avec des données internationales
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,16 +23,16 @@ ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 99e6d84d96171747977852caa1ceeef287d3e337
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: bf7402047138bc70810aec16e6ea99845e85dbef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008123"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312655"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Utiliser le Concepteur de requêtes et de vues avec des données internationales (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Vous pouvez utiliser le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) quelle que soit la langue utilisée dans les données et le système d’exploitation Windows. Vous trouverez ci-dessous les quelques différences que vous pourrez rencontrer ainsi que des informations sur la gestion des données dans des applications internationales.  
+ Vous pouvez utiliser le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) quelle que soit la langue utilisée dans les données et le système d’exploitation Windows. Vous trouverez ci-dessous les quelques différences que vous pourrez rencontrer ainsi que des informations sur la gestion des données dans des applications internationales.  
   
 ## <a name="localized-information-in-the-criteria-and-sql-panes"></a>Informations localisées dans les volets Critères et SQL  
 Si vous utilisez le volet Critères pour créer votre requête, vous pouvez entrer vos informations dans le format prévu sur votre ordinateur, dans les Paramètres régionaux de Windows. Par exemple, si vous recherchez des données, vous pouvez entrer les données dans les colonnes Critères en utilisant le format auquel vous êtes habitué, avec les quelques exceptions suivantes :  

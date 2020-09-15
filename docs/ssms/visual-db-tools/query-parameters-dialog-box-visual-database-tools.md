@@ -1,4 +1,5 @@
 ---
+description: Paramètres de la requête, boîte de dialogue (Visual Database Tools)
 title: Boîte de dialogue Paramètres de la requête
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 758a7681a3e89a33bfa5ce29500f1d85177dd8d4
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ea62b4a278ca2f6b6c272f404d8446973fa51680
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004184"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88313955"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>Paramètres de la requête, boîte de dialogue (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ Cette boîte de dialogue permet d'entrer des valeurs pour les paramètres défin
 **Valeur**  
 Entrez la valeur de chaque paramètre énuméré sous **Nom**. La dernière valeur utilisée apparaît comme valeur par défaut du paramètre.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 La requête suivante dans le volet SQL ouvre la boite de dialogue Paramètres de la requête lorsqu'elle est exécutée dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  

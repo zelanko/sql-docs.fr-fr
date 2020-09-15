@@ -1,4 +1,5 @@
 ---
+description: Synthétiser ou regrouper des valeurs à l'aide d'expressions personnalisées (Visual Database Tools)
 title: Synthétiser ou regrouper des valeurs à l’aide d’expressions personnalisées
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: f2ed48eba4722522645f904de0775db056ffc1fd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e71f0ffc06314678becda493f6e45c98060d3a32
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88312545"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>Synthétiser ou regrouper des valeurs à l'aide d'expressions personnalisées (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +39,7 @@ Il est impossible d'inclure une expression basée sur des calculs portant sur de
   
 3.  Dans la colonne **Grouper par** de l’expression, sélectionnez **Expression**.  
   
-4.  Exécute la requête.  
+4.  Exécuter la requête  
   
 ## <a name="see-also"></a>Voir aussi  
 [Trier et regrouper des résultats de requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  

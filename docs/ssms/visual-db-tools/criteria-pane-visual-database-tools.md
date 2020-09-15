@@ -1,4 +1,5 @@
 ---
+description: Volet Critères (Visual Database Tools)
 title: Volet Critères
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,12 +19,12 @@ ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6f1df4856844b162560f562e487f970dc1974d04
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 4738edd7c0db3522547bba26cd637a132f6630bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999963"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314755"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Volet Critères (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -58,16 +59,16 @@ Si le volet Critères n'est pas visible, cliquez avec le bouton droit sur le con
   
 |**Colonne**|**Type de requête**|**Description**|  
 |--------------|------------------|-------------------|  
-|Colonne|Tous|Affiche soit le nom d'une colonne de données utilisée pour la requête, soit l'expression d'une colonne calculée. La colonne est verrouillée pour rester toujours visible lors d'un défilement horizontal.|  
+|Colonne|Tout|Affiche soit le nom d'une colonne de données utilisée pour la requête, soit l'expression d'une colonne calculée. La colonne est verrouillée pour rester toujours visible lors d'un défilement horizontal.|  
 |Alias|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Spécifie soit un autre nom à donner à la colonne, soit le nom d'une colonne calculée.|  
 |Table de charge de travail|SELECT, INSERT FROM, UPDATE, MAKE TABLE|Spécifie le nom de la table ou de l'objet structuré en table contenant la colonne de données associée. Cette colonne est vide dans le cas de colonnes calculées.|  
 |Output|SELECT, INSERT FROM, MAKE TABLE|Spécifie si une colonne de données apparaît dans le résultat de la requête.<br /><br />Remarque : Si la base de données le permet, vous pouvez mettre les clauses de tri ou de recherche dans une colonne de données que vous n'afficherez pas dans l'ensemble des résultats.|  
 |Type de tri|SELECT, INSERT FROM|Spécifie si la colonne de données associée sert à trier les résultats de la requête et si le tri est croissant ou décroissant.|  
 |Ordre de tri|SELECT, INSERT FROM|Spécifie l'ordre de priorité dans lequel les colonnes de données seront triées dans l'ensemble des résultats. Lorsque vous modifiez l'ordre de tri d'une colonne de données, toutes les autres colonnes sont mises à jour en conséquence.|  
 |Regrouper par|SELECT, INSERT FROM, MAKE TABLE|Spécifie que la colonne de données associée est utilisée pour créer une requête d'agrégation. Cette colonne n'apparaît que si, dans le menu **Outils** , vous avez choisi **Regroupement** ou si, dans le volet SQL, vous avez ajouté une clause GROUP BY.<br /><br />Par défaut, cette colonne a la valeur **Regrouper par**et la colonne associée devient partie intégrante de la clause GROUP BY.<br /><br />Si vous allez dans une cellule de cette colonne, puis sélectionnez une fonction d'agrégation à appliquer à la colonne de données associée, par défaut l'expression obtenue s'ajoute en tant que colonne de sortie de l'ensemble des résultats.|  
-|Critères|Tous|Spécifie une condition de recherche (filtre) dans la colonne de données associée. Entrez un opérateur (« = » par défaut) ainsi que la valeur à rechercher. Si la valeur est un texte, encadrez ce dernier par des apostrophes.<br /><br />Si la colonne de données associée fait partie d'une clause GROUP BY, l'expression entrée est utilisée dans une clause HAVING.<br /><br />Si, dans la colonne **Critères** de la grille, vous entrez des valeurs dans plusieurs cellules, les conditions de recherche qui en résultent sont automatiquement liées par un ET logique.<br /><br />Pour que plusieurs expressions de conditions de recherche s'appliquent à une même colonne de base de données, par exemple (fname > 'A') AND (fname < 'M'), ajoutez deux fois la colonne de données au volet Critères et, dans la colonne **Critères**, entrez une valeur distincte par instance de cette colonne de données.|  
-|Ou...|Tous|Spécifie une expression ajoutant une condition de recherche de la colonne de données, liée aux expressions précédentes par un OU logique. Pour ajouter des colonnes **Ou...** à la grille, appuyez sur la touche Tab dans la colonne **Ou...** la plus à droite.|  
-|Ajouter|INSERT FROM|Spécifie le nom de la colonne de données cible de la colonne de données associée. Lorsque vous créez une requête Insert From, le Concepteur de requêtes et de vues essaie de faire correspondre la source à une colonne de données cible appropriée. Si le Concepteur de requêtes et de vues ne peut pas choisir de correspondance, vous devez indiquer le nom de la colonne.|  
+|Critères|Tout|Spécifie une condition de recherche (filtre) dans la colonne de données associée. Entrez un opérateur (« = » par défaut) ainsi que la valeur à rechercher. Si la valeur est un texte, encadrez ce dernier par des apostrophes.<br /><br />Si la colonne de données associée fait partie d'une clause GROUP BY, l'expression entrée est utilisée dans une clause HAVING.<br /><br />Si, dans la colonne **Critères** de la grille, vous entrez des valeurs dans plusieurs cellules, les conditions de recherche qui en résultent sont automatiquement liées par un ET logique.<br /><br />Pour que plusieurs expressions de conditions de recherche s'appliquent à une même colonne de base de données, par exemple (fname > 'A') AND (fname < 'M'), ajoutez deux fois la colonne de données au volet Critères et, dans la colonne **Critères**, entrez une valeur distincte par instance de cette colonne de données.|  
+|Ou ...|Tout|Spécifie une expression ajoutant une condition de recherche de la colonne de données, liée aux expressions précédentes par un OU logique. Pour ajouter des colonnes **Ou...** à la grille, appuyez sur la touche Tab dans la colonne **Ou...** la plus à droite.|  
+|Ajouter (Append)|INSERT FROM|Spécifie le nom de la colonne de données cible de la colonne de données associée. Lorsque vous créez une requête Insert From, le Concepteur de requêtes et de vues essaie de faire correspondre la source à une colonne de données cible appropriée. Si le Concepteur de requêtes et de vues ne peut pas choisir de correspondance, vous devez indiquer le nom de la colonne.|  
 |Nouvelle valeur|UPDATE, INSERT INTO|Spécifie la valeur à placer dans la colonne associée. Entrez une valeur littérale ou une expression.|  
   
 ## <a name="see-also"></a>Voir aussi  
