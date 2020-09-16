@@ -1,4 +1,5 @@
 ---
+description: Méthode setNull (SQLServerCallableStatement)
 title: Méthode setNull (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 842dbcfb-7f6a-46d5-b386-c6cbb879a23d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: de1995ed76f31739ec239fff5df99f7baab54c6b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 507e8b7c9f97bdcf925e2719686346ccfeace0ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920888"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458601"
 ---
 # <a name="setnull-method-sqlservercallablestatement"></a>Méthode setNull (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,13 +30,13 @@ ms.locfileid: "80920888"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[setNull (java.lang.String, int)](../../../connect/jdbc/reference/setnull-method-java-lang-string-int.md)|Définit le paramètre désigné avec une valeur Null, en fonction du type de paramètre à définir.|  
 |[setNull (java.lang.String, int, java.lang.String)](../../../connect/jdbc/reference/setnull-method-java-lang-string-int-java-lang-string.md)|Définit le paramètre désigné avec une valeur Null, en fonction du type et du nom du paramètre à définir.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

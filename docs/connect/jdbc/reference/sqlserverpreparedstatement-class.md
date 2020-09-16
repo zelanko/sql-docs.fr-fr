@@ -1,4 +1,5 @@
 ---
+description: Classe SQLServerPreparedStatement
 title: Classe SQLServerPreparedStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7a1a8b95814cbd9a75dad0b9a42a474d932a88d4
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 75a04a0873308cc09c16b54f5d482ed54a20c0b1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472135"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>Classe SQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "80923477"
   
  **Étend :** SQLServerStatement  
   
- **Implémente :** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
+ **Implémente :** [ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   

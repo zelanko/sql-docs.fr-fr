@@ -1,4 +1,5 @@
 ---
+description: Créer des jointures externes (Visual Database Tools)
 title: Créer des jointures externes
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3328277c15511a94603436c7c845671e9fd8dc86
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3e337deac89fb3e788def041524801ad94db4943
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000060"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468428"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Créer des jointures externes (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ Lorsque vous créez une jointure externe, l'ordre d'affichage des tables dans l'
   
 1.  Créez la jointure, soit automatiquement, soit manuellement. Pour plus d’informations, consultez [Joindre automatiquement des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md) ou [Joindre manuellement des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md).  
   
-2.  Sélectionnez la ligne de jointure dans le volet Schéma, puis dans le menu **Concepteur de requêtes**, choisissez **Sélectionner toutes les lignes de <tablename>** , en sélectionnant la commande qui ajoute la table dont vous voulez inclure les lignes supplémentaires.  
+2.  Sélectionnez la ligne de jointure dans le volet Schéma, puis dans le menu **Concepteur de requêtes**, choisissez **Sélectionner toutes les lignes de <tablename>**, en sélectionnant la commande qui ajoute la table dont vous voulez inclure les lignes supplémentaires.  
   
     -   Choisissez la première table pour créer une jointure externe gauche.  
   

@@ -1,4 +1,5 @@
 ---
+description: Utilisation d’Always Encrypted avec Microsoft Drivers for PHP for SQL Server
 title: Utilisation d’Always Encrypted avec Microsoft Drivers for PHP for SQL Server | Microsoft Docs
 ms.date: 12/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.reviewer: v-kaywon
 ms.author: v-daenge
 author: David-Engel
 manager: v-mabarw
-ms.openlocfilehash: 81119187f1f00814e5b50dc97e41a506fe94131e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7f0e4ece6031f4aba769a9b9fee04e249ef553e4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926830"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466653"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Utilisation d’Always Encrypted avec Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -158,7 +159,7 @@ L’exemple suivant montre le filtrage de données basé sur des valeurs chiffr�
  -   Lors de l’exécution d’une requête avec des paramètres liés, les pilotes PHP déterminent automatiquement le type SQL de l’utilisateur, sauf si ce dernier spécifie explicitement le type SQL lors de l’utilisation du pilote SQLSRV.
  -   Toutes les valeurs imprimées par le programme sont en texte clair, car le pilote déchiffre de manière transparente les données récupérées à partir des colonnes SSN et BirthDate.
  
-Remarque : Les requêtes peuvent effectuer des comparaisons d’égalité sur des colonnes chiffrées uniquement si le chiffrement est déterministe. Pour plus d’informations, consultez [Sélection d’un chiffrement déterministe ou aléatoire](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
+Remarque : Les requêtes peuvent effectuer des comparaisons d’égalité sur des colonnes chiffrées uniquement si le chiffrement est déterministe. Pour plus d’informations, consultez [Sélection d’un chiffrement déterministe ou aléatoire](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
 SQLSRV :
 ```
@@ -256,7 +257,7 @@ Contrairement à ODBC Driver pour SQL Server, l’activation d’Always Encrypte
 
 Afin de réduire le nombre d’appels à un magasin de clés principales de colonne pour déchiffrer les clés de chiffrement de colonne (CEK), le pilote met en cache les clés CEK en clair dans la mémoire. Après avoir reçu la clé CEK (ECEK) chiffrée à partir des métadonnées de la base de données, le pilote ODBC tente d’abord de trouver la clé CEK en clair correspondant à la valeur de clé chiffrée qui se trouve dans le cache. Le pilote appelle le magasin de clés contenant la clé CMK uniquement s’il ne trouve pas la clé CEK en clair correspondante dans le cache.
 
-Remarque : Dans ODBC Driver for SQL Server, les entrées dans le cache sont supprimées après un délai d’attente de deux heures. Ce comportement signifie que, pour une clé CEK chiffrée, le pilote ne contacte le magasin de clés qu’une seule fois au cours de la durée de vie de l’application, ou toutes les deux heures, la plus petite des deux valeurs étant retenue.
+Remarque : Dans ODBC Driver for SQL Server, les entrées dans le cache sont supprimées après un délai d’attente de deux heures. Ce comportement signifie que, pour une clé CEK chiffrée, le pilote ne contacte le magasin de clés qu’une seule fois au cours de la durée de vie de l’application, ou toutes les deux heures, la plus petite des deux valeurs étant retenue.
 
 ## <a name="working-with-column-master-key-stores"></a>Utilisation de magasins de clés principales de colonne
 

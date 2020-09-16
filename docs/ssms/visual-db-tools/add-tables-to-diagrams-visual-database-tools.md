@@ -1,4 +1,5 @@
 ---
+description: Ajouter des tables à des schémas (Visual Database Tools)
 title: Ajouter des tables à des schémas
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: da818756c2239d460af2d18b3050e9681aff2698
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5aa8b90a1a6d3b03ec7a8c091d2f17cbb669823f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007442"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462928"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Ajouter des tables à des schémas (Visual Database Tools)
 
@@ -32,7 +33,7 @@ Vous pouvez ajouter une table à votre diagramme de base de données, afin de mo
 
    Pour créer une table dans votre schéma actuel, cliquez sur le bouton **Nouvelle table** dans la barre d'outils.
 
-   -ou-  
+   - ou -  
 
    Cliquez avec le bouton droit dans le schéma et, dans le menu contextuel, cliquez sur **Nouvelle table**.
 

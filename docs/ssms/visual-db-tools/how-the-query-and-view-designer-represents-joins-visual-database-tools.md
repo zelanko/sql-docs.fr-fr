@@ -1,4 +1,5 @@
 ---
+description: Représentation des jointures dans le Concepteur de requêtes et de vues (Visual Database Tools)
 title: Représentation des jointures dans le Concepteur de requêtes et de vues
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,16 +15,16 @@ ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 51c94c3d0cd6f5e86d8d6ed35e0ebf81606ecfdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 51728a73872bed843c8ea34190be21a19906cd1b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011751"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462795"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Représentation des jointures dans le Concepteur de requêtes et de vues (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Dans le cas de tables jointes, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) représente la jointure graphiquement dans le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) et il utilise la syntaxe SQL dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
+ Dans le cas de tables jointes, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) représente la jointure graphiquement dans le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) et il utilise la syntaxe SQL dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 ## <a name="diagram-pane"></a>Volet Schéma  
 Dans le volet Schéma, le Concepteur de requêtes et de vues affiche une ligne de jointure entre les colonnes de données impliquées. Il affiche une ligne de jointure par condition de jointure. Par exemple, l'illustration suivante montre une ligne de jointure entre deux tables jointes :  

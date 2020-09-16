@@ -1,4 +1,5 @@
 ---
+description: Suspension et reprise de la migration des données (Stretch Database)
 title: Suspendre et reprendre la migration de données
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
@@ -12,15 +13,15 @@ ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5146c258c099c487643ca343ecd06402fc623c84
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73844542"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468961"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>Suspension et reprise de la migration des données (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Pour suspendre ou reprendre la migration de données vers Azure, sélectionnez **Stretch** pour une table dans SQL Server Management Studio, puis sélectionnez **Suspendre** pour suspendre la migration des données ou **Reprendre** pour reprendre la migration des données. Vous pouvez également utiliser Transact-SQL pour suspendre ou reprendre la migration des données.  
@@ -36,7 +37,7 @@ ms.locfileid: "73844542"
 2.  Cliquez avec le bouton droit et sélectionnez **Stretch**, puis choisissez **Suspendre**.  
   
 ### <a name="use-transact-sql-to-pause-data-migration"></a>Utilisation de Transact-SQL pour suspendre la migration des données  
- Exécutez la commande suivante :  
+ Exécutez la commande suivante.  
   
 ```sql  
 USE <Stretch-enabled database name>;
@@ -55,7 +56,7 @@ GO
 2.  Cliquez avec le bouton droit et sélectionnez **Stretch**, puis choisissez **Reprendre**.  
   
 ### <a name="use-transact-sql-to-resume-data-migration"></a>Utilisation de Transact-SQL pour reprendre la migration des données  
- Exécutez la commande suivante :  
+ Exécutez la commande suivante.  
   
 ```sql  
 USE <Stretch-enabled database name>;

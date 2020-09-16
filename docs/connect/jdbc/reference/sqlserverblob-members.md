@@ -1,4 +1,5 @@
 ---
+description: Membres de SQLServerBlob
 title: Membres de SQLServerBlob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 90e48555-ea83-4a90-80a3-51bc685015ec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 17f51e9b0ebe03da7772bd07de4ad0d525826050
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 223ed92379cce4baf294e7cdf6b16654aaa8fd49
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927253"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462684"
 ---
 # <a name="sqlserverblob-members"></a>Membres de SQLServerBlob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80927253"
   
 ## <a name="constructors"></a>Constructeurs  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|Initialise une nouvelle instance de la classe SQLServerBlob.|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80927253"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlserverblob.md)|Cette méthode libère l'objet BLOB, ainsi que les ressources qu'il détient.|  
 |[getBinaryStream](../../../connect/jdbc/reference/getbinarystream-method-sqlserverblob.md)|Retourne un flux d'entrée pour la lecture des données depuis le BLOB.|  

@@ -1,4 +1,5 @@
 ---
+description: Utiliser des colonnes dans des requêtes d'agrégation (Visual Database Tools)
 title: Utiliser des colonnes dans des requêtes d’agrégation
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 397e41a6ad34203fd16bf19e56f6284f7bb8c94f
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: acd777cfd536c60f1eb7e7b81e65e55f9fb6bb1c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002605"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468307"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Utiliser des colonnes dans des requêtes d'agrégation (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Quand vous créez des requêtes d’agrégation, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) fait certaines suppositions afin de construire une requête valide. Par exemple, si vous créez une requête d'agrégation puis placez un marqueur de sortie sur une colonne de données, cette dernière est automatiquement intégrée à la clause GROUP BY par le Concepteur de requêtes et de vues pour éviter l'affichage accidentel du contenu d'une ligne individuelle dans une synthèse.  
+ Quand vous créez des requêtes d’agrégation, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) fait certaines suppositions afin de construire une requête valide. Par exemple, si vous créez une requête d'agrégation puis placez un marqueur de sortie sur une colonne de données, cette dernière est automatiquement intégrée à la clause GROUP BY par le Concepteur de requêtes et de vues pour éviter l'affichage accidentel du contenu d'une ligne individuelle dans une synthèse.  
   
 ## <a name="using-group-by"></a>Utilisation de Regrouper par  
 Le Concepteur de requêtes et de vues suit les instructions ci-dessous lorsque vous utilisez des colonnes :  

@@ -1,4 +1,5 @@
 ---
+description: Membres de SQLServerSavepoint
 title: Membres de SQLServerSavepoint | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3adc8469720ec87343325afd552b5630d3c3b39
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c80da4d3b87c379bda298880ae1ac09c300f76e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927030"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462611"
 ---
 # <a name="sqlserversavepoint-members"></a>Membres de SQLServerSavepoint
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80927030"
   
 ## <a name="constructors"></a>Constructeurs  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[SQLServerSavepoint (SQLServerConnection, java.lang.StringName)](../../../connect/jdbc/reference/sqlserversavepoint-constructor-sqlserverconnection-java-lang-stringname.md)|Initialise une nouvelle instance de la classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) en fonction de la connexion et du nom donnés.|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80927030"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[getLabel](../../../connect/jdbc/reference/getlabel-method-sqlserversavepoint.md)|Obtient le nom de l'étiquette du point de sauvegarde.|  
 |[getSavepointId](../../../connect/jdbc/reference/getsavepointid-method-sqlserversavepoint.md)|Obtient l'ID du point de sauvegarde.|  
@@ -50,6 +51,6 @@ ms.locfileid: "80927030"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLServerSavepoint, classe](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
+ [Classe SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   
   

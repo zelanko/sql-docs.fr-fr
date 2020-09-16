@@ -1,4 +1,5 @@
 ---
+description: Importer des informations de serveur inscrit (SQL Server Management Studio)
 title: Importer des informations de serveur inscrit
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 77ae5807a5a509ecfa83973fe07d34fed1f4dbd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ed7c74f225998a7556ece2d6f62bf5ce6e47d7eb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011824"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462987"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importer des informations de serveur inscrit (SQL Server Management Studio)
 
@@ -42,8 +43,8 @@ Cette rubrique explique comment importer les informations du serveur inscrit enr
   
 3.  Dans la boîte de dialogue **Importer des serveurs inscrits** , sélectionnez le fichier de serveurs inscrits à importer, puis cliquez sur **OK**.  
   
-     **Fichier d'importation**  
-     Tapez le nom du fichier d’importation dans la zone de texte ou cliquez sur le bouton Parcourir ( **...** ) pour rechercher le fichier d’importation sur l’ordinateur client. Si vous sélectionnez un fichier existant, les informations de serveur inscrit sont ajoutées au fichier. Le fichier d'importation peut être uniquement un fichier de serveur inscrit précédemment exporté. Les fichiers de serveur inscrit ont l'extension .regsrvr.  
+     **Importer un fichier**  
+     Tapez le nom du fichier d’importation dans la zone de texte ou cliquez sur le bouton Parcourir (**...**) pour rechercher le fichier d’importation sur l’ordinateur client. Si vous sélectionnez un fichier existant, les informations de serveur inscrit sont ajoutées au fichier. Le fichier d'importation peut être uniquement un fichier de serveur inscrit précédemment exporté. Les fichiers de serveur inscrit ont l'extension .regsrvr.  
   
      **Sélectionnez le groupe de serveurs vers lequel importer**  
      Sélectionnez le nœud racine ou un groupe de serveurs particulier vers lequel seront importées les entrées de serveur inscrit dans le fichier. Vous pouvez importer dans le fichier d'exportation tous les serveurs inscrits, les serveurs inscrits d'un groupe de serveurs particulier ou un serveur inscrit individuel. La fonctionnalité d'importation est récursive ; par exemple, si le groupe de serveurs A contient le groupe de serveurs B, et que le groupe de serveurs B contient les groupes de serveurs C et D, l'importation du groupe de serveur A entraîne l'exportation de toutes les entrées de A, B, C et D.  

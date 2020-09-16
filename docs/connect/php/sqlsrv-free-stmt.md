@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_free_stmt
 title: sqlsrv_free_stmt | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fb937b9477be3a18f14960c3ed9d142aacbe7452
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8984bd68e56e0ccf4d8bb29f54da9c8369812a20
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922763"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466743"
 ---
 # <a name="sqlsrv_free_stmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +45,7 @@ Valeur booléenne **true** sauf si la fonction est appelée avec un paramètre n
 > [!NOTE]  
 > **Null** est un paramètre valide pour cette fonction. Ainsi, la fonction peut être appelée plusieurs fois dans un script. Par exemple, si vous libérez une instruction dans une condition d’erreur et que vous la libérez à nouveau à la fin du script, le deuxième appel à **sqlsrv_free_stmt** retourne **true** car le premier appel à **sqlsrv_free_stmt** (dans la condition d’erreur) affecte la valeur **null** à la ressource d’instruction.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant crée une ressource d’instruction, exécute une requête simple et appelle **sqlsrv_free_stmt** pour libérer toutes les ressources associées à l’instruction. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  

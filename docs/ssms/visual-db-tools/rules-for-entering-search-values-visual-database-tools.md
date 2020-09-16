@@ -1,4 +1,5 @@
 ---
+description: Règles pour l'entrée de valeurs de recherche (Visual Database Tools)
 title: Règles pour l’entrée de valeurs de recherche
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,12 +21,12 @@ ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 469afd2894737fd0a1f6150650fce3fa08fe981c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6943034cbad433254c576d68a631d45be470b49c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009274"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462713"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Règles pour l'entrée de valeurs de recherche (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -115,7 +116,7 @@ Le Concepteur de requêtes et de vues accepte les formats de date suivants :
   
 Le tableau suivant récapitule les formats de date que vous pouvez utiliser dans les différents volets du Concepteur de requêtes et de vues.  
   
-|**Volet**|**Format de date**|  
+|**Volet**|**Format de la date**|  
 |------------|-------------------|  
 |Critères|Données locales spécifiques, spécifiques à la base de données, ANSI standard<br /><br />Les dates entrées dans le [volet Critères](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) sont converties dans un format compatible avec la base de données à l’intérieur du volet SQL.|  
 |SQL|Données spécifique à la base de données, ANSI standard|  

@@ -1,4 +1,5 @@
 ---
+description: Boîte de dialogue Couleur (Visual Database Tools)
 title: Boîte de dialogue Couleur
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6bea7a1e8a660bd9f33112e1bbf8dc737621a8ef
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 98ac865345b0d5e71f1823fcb49d48c729dcb160
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003843"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468491"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Boîte de dialogue Couleur (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,13 +40,13 @@ La matrice des couleurs affiche la palette de couleurs. Pour définir une couleu
 Barre de luminosité  
 Faites glisser le curseur pour modifier la luminosité (clarté ou obscurité relatives) d'une couleur. La valeur numérique correspondante s'affiche dans **Lum**.  
   
-**Color**  
+**Couleur**  
 Affiche la couleur actuellement sélectionnée.  
   
-**Hue**  
+**Teinte**  
 Valeur de la teinte de la couleur sélectionnée.  
   
-**Sat**  
+**Sam**  
 Valeur de saturation de la couleur sélectionnée.  
   
 **Lum**  

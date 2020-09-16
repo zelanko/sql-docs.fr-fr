@@ -1,4 +1,5 @@
 ---
+description: Mise à jour des données (Pilotes Microsoft SQL Server pour PHP)
 title: Mise à jour des données (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6431ba7d874d93bfac7510eb21815dc79f093694
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 350b0d1cd368664598fa766f125956fb7bedf4f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926846"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466674"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>Mise à jour des données (Pilotes Microsoft SQL Server pour PHP)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,9 +35,9 @@ Les étapes d’utilisation de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp
   
 |Rubrique|Description|  
 |---------|---------------|  
-|[Guide pratique pour exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)|Décrit comment exécuter des requêtes paramétrables.|  
-|[Guide pratique pour envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)|Décrit comment diffuser en continu des données vers le serveur.|  
-|[Guide pratique pour effectuer des transactions](../../connect/php/how-to-perform-transactions.md)|Décrit comment utiliser des fonctions **sqlsrv** pour effectuer des transactions.|  
+|[Procédure : Exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)|Décrit comment exécuter des requêtes paramétrables.|  
+|[Procédure : Envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)|Décrit comment diffuser en continu des données vers le serveur.|  
+|[Procédure : Effectuer des transactions](../../connect/php/how-to-perform-transactions.md)|Décrit comment utiliser des fonctions **sqlsrv** pour effectuer des transactions.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Exemple d’application &#40;pilote SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)

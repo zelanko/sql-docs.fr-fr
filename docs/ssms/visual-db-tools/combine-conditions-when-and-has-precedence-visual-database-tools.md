@@ -1,4 +1,5 @@
 ---
+description: Associer des conditions avec priorité à l'opérateur AND (Visual Database Tools)
 title: Associer des conditions avec priorité à l'opérateur AND
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: e5f7932ecfedaace610bb9adc1e76825c8797e0a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ad323d3efdbb760b315c16d94752d8c658fdab5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005160"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468476"
 ---
 # <a name="combine-conditions-when-and-has-precedence-visual-database-tools"></a>Associer des conditions avec priorité à l'opérateur AND (Visual Database Tools)
 
@@ -33,7 +34,7 @@ Imaginez que vous souhaitiez, par exemple, rechercher des employés travaillant 
   
 -   Employés dont la date d'embauche remonte à plus de cinq ans ET dont le niveau de poste s'élève à 100.  
   
-    -ou-  
+    - ou -  
   
 -   Employés dont le niveau de poste s'élève à 200.  
   

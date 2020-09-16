@@ -1,4 +1,5 @@
 ---
+description: Méthodes MSReportServer_ConfigurationSetting
 title: Méthodes MSReportServer_ConfigurationSetting | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
@@ -16,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: a08c2476-5b8e-4792-94da-1360fe231c6e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b10f33a795a1c91db07f6cc97b091c8f68b34475
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7b51e79a99f47886627f6479f58b7a2980629d88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632493"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88472607"
 ---
 # <a name="msreportserver_configurationsetting-methods"></a>Méthodes MSReportServer_ConfigurationSetting
   La classe MSReportServer_ConfigurationSetting du Fournisseur WMI Report Server fournit les méthodes publiques suivantes.  
   
 ## <a name="public-methods"></a>M&#233;thodes publiques  
   
-|||  
+|Méthode|Description|  
 |-|-|  
 |[BackupEncryptionKey](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)|Sauvegarde la clé de chiffrement pour l'instance. Un chiffrement par mot de passe est utilisé pour le stockage de la clé de chiffrement.|  
 |[Méthode CreateSSLCertificateBinding &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-createsslcertificatebinding.md)|Crée une liaison de certificat TLS/SSL.|  

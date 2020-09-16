@@ -1,4 +1,5 @@
 ---
+description: Copier les résultats d'une requête (Visual Database Tools)
 title: Copier des résultats de requête
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 6ab720bb886946c975bf721a2a38d6d53176201d
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 97f444de2e08ac17500e5aa8bffbc8346598cab6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85978009"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462837"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copier les résultats d'une requête (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Vous pouvez copier le jeu de résultats sous la forme de texte séparé par des tabulations à partir du volet **Résultats** . Vous pouvez copier le jeu de résultats complet ou plusieurs lignes ou cellules contiguës ou non contiguës.  
+ Vous pouvez copier le jeu de résultats sous la forme de texte séparé par des tabulations à partir du volet **Résultats**. Vous pouvez copier le jeu de résultats complet ou plusieurs lignes ou cellules contiguës ou non contiguës.  
   
 ### <a name="to-copy-result-set-text-from-the-results-pane"></a>Pour copier le texte du jeu de résultats à partir du volet Résultats  
   

@@ -1,4 +1,5 @@
 ---
+description: Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 title: Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif | Microsoft Docs
 ms.date: 11/29/2018
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73593868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88460001"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 
@@ -75,9 +76,9 @@ Pour SQL Server 2016 Reporting Services et les versions antérieures, les serveu
 
 Les comptes de service utilisés pour l’instance de Reporting Services sont importants dans le contexte d’un déploiement avec montée en puissance parallèle. Vous devez effectuer l’une des actions suivantes lors du déploiement de vos instances de Reporting Services.
 
-**Option 1 :** Toutes les instances de Reporting Services doivent être configurées avec le même compte d’utilisateur de domaine pour le compte de service.
+**Option 1 :** toutes les instances de Reporting Services doivent être configurées avec le même compte d’utilisateur de domaine pour le compte de service.
 
-**Option 2 :** Chaque compte de service individuel, qu’il s’agisse ou non d’un compte de domaine, doit disposer des autorisations dbadmin au sein de l’instance de base de données SQL Server qui héberge la base de données de catalogues ReportServer.
+**Option 2 :** chaque compte de service individuel, qu’il s’agisse ou non d’un compte de domaine, doit disposer des autorisations dbadmin au sein de l’instance de base de données SQL Server qui héberge la base de données de catalogues ReportServer.
 
 Si votre configuration est différente des options ci-dessus, vous risquez de rencontrer des échecs intermittents lors de la modification de tâches avec l’Agent SQL. Une erreur sera alors consignée à la fois dans le journal Reporting Services et sur le portail web lors de la modification d’un abonnement aux rapports.
 
@@ -138,7 +139,7 @@ Ce problème est intermittent dans le sens où seul le serveur qui a créé la t
     > [!NOTE]  
     >  **Problème :** Au moment de joindre une instance de serveur de rapports Reporting Services au déploiement de scale-out, un message d’erreur du type « Accès refusé » peut s’afficher.  
     >   
-    >  **Solution de contournement :** Sauvegardez la clé de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la première instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et restaurez la clé dans le deuxième serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puis, essayez de joindre le second serveur au déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+    >  **Solution :** sauvegardez la clé de chiffrement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de la première instance [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et restaurez la clé dans le deuxième serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puis, essayez de joindre le second serveur au déploiement avec montée en puissance parallèle de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 4.  Vous devez maintenant être en mesure de vérifier que les deux instances de serveur de rapports sont opérationnelles. Pour vérifier la deuxième instance, vous pouvez utiliser l’outil de configuration de Reporting Services pour vous connecter au serveur de rapports et cliquer sur l’ **URL du service web** ou l’ **URL du portail web**.  
   

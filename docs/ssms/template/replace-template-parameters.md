@@ -1,4 +1,5 @@
 ---
+description: Remplacer les paramètres de modèle
 title: Remplacer les paramètres de modèle
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1234aa14-3464-4a3e-922a-5cfb8fb23627
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 4f04595d222f037e875e85b1cb079cef435e1404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 5daa809acf191527b72a6ea65b666b396dd51b68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001541"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468519"
 ---
 # <a name="replace-template-parameters"></a>Remplacer les paramètres de modèle
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,6 +44,6 @@ Après avoir ouvert le modèle dans une fenêtre d'éditeur de code :
 3.  Cliquez sur **OK** pour fermer la boîte de dialogue **Remplacer les paramètres de modèle** et modifier le script dans l’éditeur de requête.  
   
 ## <a name="see-also"></a>Voir aussi  
-[l’Explorateur de modèles](../../ssms/template/template-explorer.md)  
+[Explorateur de modèles](../../ssms/template/template-explorer.md)  
 [Ouvrir un modèle](../../ssms/template/open-a-template.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_rollback
 title: sqlsrv_rollback | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d8253ad826b8537768aaf01331a60ceacb65edbe
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4cde5b4e805b6dc55830c2ad396f181f2e1f642c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928565"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88466721"
 ---
 # <a name="sqlsrv_rollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +49,7 @@ sqlsrv_rollback( resource $conn)
 ## <a name="return-value"></a>Valeur de retour  
 Valeur booléenne : **true** si la transaction a été annulée correctement. Dans le cas contraire, la valeur est **false**.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant exécute deux requêtes dans le cadre d’une transaction. Si les deux requêtes réussissent, la transaction est validée. Si l’une des requêtes (ou les deux) échoue, la transaction est annulée.  
   
 La première requête de l’exemple insère une nouvelle commande dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. La commande concerne cinq unités du produit dont l’ID est 709. La seconde requête réduit de cinq unités la quantité de stock du produit dont l’ID est 709. Ces requêtes sont incluses dans une transaction, car elles doivent toutes les deux réussir pour que la base de données reflète avec exactitude l’état des commandes et la disponibilité du produit.  
@@ -126,7 +127,7 @@ Pour mieux mettre l’accent sur le comportement de la transaction, aucune recom
 ## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Guide pratique pour effectuer des transactions](../../connect/php/how-to-perform-transactions.md)
+[Procédure : Effectuer des transactions](../../connect/php/how-to-perform-transactions.md)
 
 [Vue d’ensemble de Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md) 
   
