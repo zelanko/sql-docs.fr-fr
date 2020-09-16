@@ -1,4 +1,5 @@
 ---
+description: Méthode getSavepointId (SQLServerSavepoint)
 title: Méthode getSavepointId (SQLServerSavepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 48037dab-165d-4310-93ad-86f9d7963b41
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 78605f67f3514de24ed037b3c1a6c2fda4112312
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fa7009ed2845bf9644e5ce615cb115f412ed8536
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921779"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434701"
 ---
 # <a name="getsavepointid-method-sqlserversavepoint"></a>Méthode getSavepointId (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,6 +47,6 @@ public int getSavepointId()
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerSavepoint, méthodes](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   
  [SQLServerSavepoint, membres](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
- [SQLServerSavepoint, classe](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
+ [Classe SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   
   

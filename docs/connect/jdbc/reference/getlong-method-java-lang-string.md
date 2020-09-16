@@ -1,4 +1,5 @@
 ---
+description: Méthode getLong (java.lang.String)
 title: Méthode getLong (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 92e30537-5fd9-4b67-8b0f-486c6e840e03
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bd37233f280cd70f7af4742cf5647eb23e74b710
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7af80b24c383e3b8dc69fbd02c93288b422bc942
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921324"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435711"
 ---
 # <a name="getlong-method-javalangstring"></a>Méthode getLong (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,6 +54,6 @@ public long getLong(java.lang.String sCol)
 ## <a name="see-also"></a>Voir aussi  
  [getLong, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

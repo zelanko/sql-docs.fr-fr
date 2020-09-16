@@ -1,4 +1,5 @@
 ---
+description: Méthode getLabel (SQLServerSavepoint)
 title: Méthode getLabel (SQLServerSavepoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: ccc32b87-8451-46c8-a173-068d33374e57
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 75c4aea03dccb50dda43116323eb1d24dfa8f2ab
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f65d439d2132a269aa0c3c601d1e425815af84b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921390"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435761"
 ---
 # <a name="getlabel-method-sqlserversavepoint"></a>Méthode getLabel (SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,6 +41,6 @@ public java.lang.String getLabel()
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerSavepoint, méthodes](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   
  [SQLServerSavepoint, membres](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
- [SQLServerSavepoint, classe](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
+ [Classe SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   
   

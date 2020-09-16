@@ -1,4 +1,5 @@
 ---
+description: Méthode getSchemas ()
 title: Méthode getSchemas () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1c7951e25fd7dfbd089b21be066cfefd9828c231
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8918b4806972ff6cf1cbb08250149049ecbec6b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80929236"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434671"
 ---
 # <a name="getschemas-method-"></a>Méthode getSchemas ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +56,7 @@ public java.sql.ResultSet getSchemas()
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getSchemas, consultez la rubrique « sys.schemas (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant montre comment utiliser la méthode getSchemas pour retourner des informations sur le catalogue et ses noms de schémas associés dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quand l’argument de connexion spécifie la base de données à utiliser.  
   
 ```  

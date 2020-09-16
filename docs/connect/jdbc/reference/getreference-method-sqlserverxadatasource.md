@@ -1,4 +1,5 @@
 ---
+description: Méthode getReference (SQLServerXADataSource)
 title: Méthode getReference (SQLServerXADataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1586755e55d8c1bc4c1d09f3685c363b206283cb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2efaed9fe06d4f82f3a3fd54cc15e58358ddd6be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921886"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434811"
 ---
 # <a name="getreference-method-sqlserverxadatasource"></a>Méthode getReference (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +39,7 @@ public javax.naming.Reference getReference()
  Objet de référence.  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getReference est spécifiée par la méthode getReference de l’interface javax.naming.Referenceable.  
+ Cette méthode getReference est spécifiée par la méthode getReference dans l'interface javax.naming.Referenceable.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerXADataSource, méthodes](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

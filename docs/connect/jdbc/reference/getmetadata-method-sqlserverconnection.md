@@ -1,4 +1,5 @@
 ---
+description: getMetaData, méthode (SQLServerConnection)
 title: Méthode getMetaData (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a51abb4e39b25f11ea1b094232b6f9f4d0badb3f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 92beda80ff310c621ce1c849a8fff1d82d9f771e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906294"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435451"
 ---
 # <a name="getmetadata-method-sqlserverconnection"></a>getMetaData, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,6 +46,6 @@ public java.sql.DatabaseMetaData getMetaData()
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+ [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Méthode getMoreResults ()
 title: Méthode getMoreResults () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 220f8144045e159a18a6d538718e9e5bd13483bb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: accbf0d6789b67b8ebd3998ead58fdbb949bd602
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80905985"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435381"
 ---
 # <a name="getmoreresults-method-"></a>Méthode getMoreResults ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +42,7 @@ public final boolean getMoreResults()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMoreResults est spécifiée par la méthode getMoreResults de l’interface java.sql.Statement.  
+ Cette méthode getMoreResults est spécifiée par la méthode getMoreResults de l'interface java.sql.Statement.  
   
  L’appel de la méthode getMoreResults ferme implicitement tous les objets actuellement ouverts du jeu de résultats qui ont été obtenus avec la méthode [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md).  
   

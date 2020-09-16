@@ -1,4 +1,5 @@
 ---
+description: getObject, méthode (SQLServerResultSet)
 title: Méthode getObject (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 924df406-14b2-40b8-a7bc-c2fd145d7d7c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 51014150475dfa614879a9327a62247a7347bc8d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 56e7a96f530db0a6c2e7e0abff765848f794357b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925267"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435071"
 ---
 # <a name="getobject-method-sqlserverresultset"></a>getObject, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80925267"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[getObject (int)](../../../connect/jdbc/reference/getobject-method-int-sqlserverresultset.md)|Obtient la valeur de l’index de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant qu’objet dans le langage de programmation Java.|  
 |[getObject (int, java.util.Map)](../../../connect/jdbc/reference/getobject-method-int-java-util-map-sqlserverresultset.md)|Obtient la valeur de l’index de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant qu’objet dans le langage de programmation Java, en utilisant l’objet Map donné.|  

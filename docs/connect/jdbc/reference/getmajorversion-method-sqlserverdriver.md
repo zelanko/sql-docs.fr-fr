@@ -1,4 +1,5 @@
 ---
+description: Méthode getMajorVersion (SQLServerDriver)
 title: Méthode getMajorVersion (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 027edab7-9b5c-4f5f-9469-fe00cf7798b6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0ac7754008694c49a09c4e2db2d3ca0a8e10d750
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1520cdba1c61dd3f536629e44e29fba121c04132
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921290"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435671"
 ---
 # <a name="getmajorversion-method-sqlserverdriver"></a>Méthode getMajorVersion (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,6 +44,6 @@ public int getMajorVersion()
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDriver, méthodes](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [SQLServerDriver, membres](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [SQLServerDriver, classe](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
+ [Classe SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   

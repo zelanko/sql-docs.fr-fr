@@ -1,4 +1,5 @@
 ---
+description: Méthode getMoreResults (int)
 title: Méthode getMoreResults (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db242def83e840e3518aa4036a66f823585f80b2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73d18f6319d0ddfbe362a21742e99c27e3637691
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80906155"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435401"
 ---
 # <a name="getmoreresults-method-int"></a>Méthode getMoreResults (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +53,7 @@ public final boolean getMoreResults(int mode)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMoreResults est spécifiée par la méthode getMoreResults de l’interface java.sql.Statement.  
+ Cette méthode getMoreResults est spécifiée par la méthode getMoreResults de l'interface java.sql.Statement.  
   
  Si la méthode getMoreResults est appelée avant la récupération des résultats, elle se comporte comme spécifié par l’argument *mode* et passe au résultat suivant.  
   

@@ -1,4 +1,5 @@
 ---
+description: Méthode getObject (java.lang.String)
 title: Méthode getObject (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a1e955ce-13db-4828-ad59-d9b6a8b2c6cc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4bba253043a7f6af5049a3fe102ec03e117543f9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e597e302c5b10f1130d93c0eab5f75c1851228b6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904832"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88435111"
 ---
 # <a name="getobject-method-javalangstring"></a>Méthode getObject (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,6 +66,6 @@ public java.lang.Object getObject(java.lang.String sCol)
 ## <a name="see-also"></a>Voir aussi  
  [getObject, méthode (SQLServerCallableStatement)](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
