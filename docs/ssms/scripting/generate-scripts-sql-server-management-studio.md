@@ -3,7 +3,7 @@ title: Générer des scripts
 description: Découvrez comment utiliser l’Assistant Générer et publier des scripts pour créer des scripts Transact-SQL pour plusieurs objets et comment utiliser le script en tant que menu dans l'Explorateur d'objets pour générer des scripts pour des objets individuels ou multiples.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 534d4982f46d0d83cb25718646b018dfa662cc35
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123125"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901335"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Générer des scripts (SQL Server Management Studio)
 
@@ -67,7 +67,7 @@ Vous pouvez utiliser le volet **Détails de l’Explorateur d’objets** afin de
 
 4. Ouvrez le volet **Détails de l'Explorateur d'objets** en appuyant sur **F7**, ou en ouvrant le menu **Affichage** et en sélectionnant **Détails de l'Explorateur d'objets**.
 
-    ![Explorateur d’objets](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![Menu Affichage](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. Cliquez avec le bouton gauche sur l'un des objets pour lesquels vous voulez générer un script.
 
@@ -75,4 +75,4 @@ Vous pouvez utiliser le volet **Détails de l’Explorateur d’objets** afin de
 
 7. Cliquez avec le bouton de droite sur l'un des objets sélectionnés et sélectionnez **Script \<object type> en tant que**.
 
-    ![Explorateur d’objets](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![Détails](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882364"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042840"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Résoudre les problèmes : Dépassement de RPO du groupe de disponibilité
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85882364"
   
  Il est également utile de vérifier les deux objets de performance suivants : `SQL Server:Availability Replica > Flow Control Time (ms/sec)` et `SQL Server:Availability Replica > Flow Control/sec`. Multipliez ces deux valeurs pour savoir le temps passé à attendre l’aboutissement du contrôle de flux au cours de la dernière seconde. Plus le temps d’attente du contrôle de flux est long, plus le taux d’envoi est faible.  
   
- Les métriques suivantes sont utiles pour diagnostiquer les problèmes liés à la latence et au débit du réseau. Vous pouvez utiliser d’autres outils Windows comme **ping.exe** et [Moniteur réseau](https://www.microsoft.com/download/details.aspx?id=4865) pour évaluer la latence et l’utilisation du réseau.  
+ Les métriques suivantes sont utiles pour diagnostiquer les problèmes liés à la latence et au débit du réseau. Vous pouvez utiliser d’autres outils Windows comme **ping.exe** et [Moniteur réseau](https://www.microsoft.com/p/network-monitor-pro-free-edition/9n8gdvj32gp7) pour évaluer la latence et l’utilisation du réseau.  
   
 -   DMV `sys.dm_hadr_database_replica_states, log_send_queue_size`  
   

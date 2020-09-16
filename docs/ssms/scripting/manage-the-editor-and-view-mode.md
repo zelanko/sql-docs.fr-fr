@@ -1,11 +1,8 @@
 ---
 title: Gérer l'Éditeur et le mode d'affichage
 description: 'Découvrez comment sélectionner l’un des deux modes d’affichage de SQL Server Management Studio : Mode documents avec onglet et mode interface multidocuments. En savoir plus sur les affichages fractionnés, l’inclusion dans un wrapper de mot, le mode Espace virtuel, l’affichage des numéros de ligne, le mode plein écran et Tout masquer automatiquement.'
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], managing window behavior
@@ -20,20 +17,26 @@ helpviewer_keywords:
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b3017d75cd7222948c63b4883b7935c551f3144
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122583"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093427"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gérer l'Éditeur et le mode d'affichage
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  L'Éditeur offre plusieurs moyens de contrôler l'affichage du code.  
-  
+
+L'Éditeur offre plusieurs moyens de contrôler l'affichage du code.  
+
 ## <a name="changing-the-view-mode"></a>Changement du mode d'affichage  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un mode d’affichage appelé **Documents avec onglet**, qui permet d’ouvrir plusieurs éditeurs et documents en même temps et d’y accéder au moyen des onglets situés dans la partie supérieure de l’Éditeur. Vous pouvez également ouvrir l'environnement [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dans le mode MD, dans lequel il est possible d'attacher les fenêtres sans les onglets, de les organiser, de les réduire, etc.  
+
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un mode d’affichage appelé **Documents avec onglet**, qui permet d’ouvrir plusieurs éditeurs et documents en même temps et d’y accéder au moyen des onglets situés dans la partie supérieure de l’Éditeur. Vous pouvez également ouvrir l'environnement [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] dans le mode MD, dans lequel il est possible d'attacher les fenêtres sans les onglets, de les organiser, de les réduire, etc.  
   
 #### <a name="to-switch-between-view-modes"></a>Pour passer d'un mode d'affichage à un autre  
   
