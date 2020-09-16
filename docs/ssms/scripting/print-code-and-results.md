@@ -1,11 +1,8 @@
 ---
 title: Imprimer le code et les résultats
 description: Découvrez comment spécifier la coloration du texte à l’impression. Les couleurs peuvent différer de celles utilisées pour l’affichage. Découvrez également comment vérifier si les numéros de ligne apparaissent dans la liste.
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], printing
@@ -15,17 +12,22 @@ helpviewer_keywords:
 ms.assetid: 6e60173f-77fb-4a3e-a561-62c4d0128b95
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf3abb5bbecbc93a9a2f86b373f6192b7fbb6169
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 0a498a46d2b3afce46079faaec0ef717836fc973
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122552"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093463"
 ---
 # <a name="print-code-and-results"></a>Imprimer le code et les résultats
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Lorsque vous imprimez une requête ou un fichier, les éléments en couleurs s'impriment en couleurs si votre imprimante prend en charge l'impression en couleurs et que celle-ci est activée dans la configuration de l'imprimante.  
+
+Lorsque vous imprimez une requête ou un fichier, les éléments en couleurs s'impriment en couleurs si votre imprimante prend en charge l'impression en couleurs et que celle-ci est activée dans la configuration de l'imprimante.  
   
  Toutefois, la police et la coloration du texte dans l'Éditeur peuvent être différentes à l'impression. Dans le menu **Outils** , sélectionnez **Options**. Sous **Environnement**, cliquez sur **Polices et couleurs**, puis sélectionnez les polices et les couleurs des éléments à afficher dans l’Éditeur et celles qui doivent être prises en compte pour l’impression. Comme ces valeurs peuvent être différentes, la sortie imprimée peut être différente de ce qui est affiché dans l'Éditeur.  
   

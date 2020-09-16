@@ -2,7 +2,7 @@
 title: 'SQL Server 2019 : Configuration matérielle et logicielle requise'
 description: Liste du matériel, des logiciels et du système d’exploitation nécessaires à l’installation et à l’exécution de SQL Server 2019.
 ms.custom: sqlfreshmay19
-ms.date: 02/19/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 0a8b1dc044dba9fc7ee8fef3623b82405bd9e109
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c3513b7209cc5f79aa26486540c236ac7b7dca1c
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245636"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288321"
 ---
 # <a name="sql-server-2019-hardware-and-software-requirements"></a>SQL Server 2019 : Configuration matérielle et logicielle requise
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -113,11 +113,11 @@ Le tableau suivant indique les éditions de SQL Server 2019 qui sont compatible
 | Windows Server 2016 Datacenter    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows Server 2016 Standard      |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
 | Windows Server 2016 Essentials    |    Oui     |    Oui    |    Oui   | Oui |   Oui   |
+| Windows 10 IoT Entreprise         |    Non      |    Oui    |    Oui   | Non  |   Oui   |
 | Windows 10 Entreprise             |    Non      |    Oui    |    Oui   | Non  |   Oui   |
 | Windows 10 Professionnel           |    Non      |    Oui    |    Oui   | Non  |   Oui   |
-| Windows 10 Famille                   |    Non      |    Oui    |    Oui   | Non  |   Oui   |
+| Windows 10 Famille                   |    Non       |    Oui    |    Oui   | Non   |   Oui   |
 | &nbsp; | &nbsp; |
-
 
 ### <a name="server-core-support"></a>Prise en charge Server Core
 

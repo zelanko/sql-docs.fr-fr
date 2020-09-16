@@ -2,7 +2,7 @@
 title: Exécuter le débogueur Transact-SQL
 description: Découvrez comment personnaliser le débogueur Transact-SQL et l’utiliser pour déboguer votre code Transact-SQL. Vous pouvez exécuter le débogueur sur une instance du moteur de base de données qui se trouve sur un autre ordinateur.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24fc9e6fd00aa0586630e611ef09568b7bf61cba
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122819"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901958"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
 
