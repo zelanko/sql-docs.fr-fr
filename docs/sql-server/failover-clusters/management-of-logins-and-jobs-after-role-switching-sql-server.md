@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68b46562968cd53b0fb12f13cc82fd0b83f6e192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ccec5e37a3ff533f5658b4d9ca529281d46147
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729017"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480458"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Gestion des connexions et des travaux après un basculement de rôle (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85729017"
 > [!NOTE]  
 >  Ce problème affecte les comptes Windows locaux sur différents ordinateurs. Toutefois, ce problème ne se pose pas pour les comptes de domaine car le SID est identique sur chacun des ordinateurs.  
   
- Pour plus d’informations, consultez [Orphaned Users with Database Mirroring and Log Shipping (Utilisateurs orphelins avec mise en miroir de bases de données et copie des journaux de transaction)](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (blog du moteur de base de données).  
+ Pour plus d’informations, consultez [Orphaned Users with Database Mirroring and Log Shipping (Utilisateurs orphelins avec mise en miroir de bases de données et copie des journaux de transaction)](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (blog du moteur de base de données).  
   
 ## <a name="jobs"></a>travaux  
  Les travaux tels que les travaux de sauvegarde, requièrent une attention particulière. Généralement, après un basculement de rôle, le propriétaire de la base de données ou l'administrateur système doit recréer les travaux de la nouvelle base de données primaire/principale.  

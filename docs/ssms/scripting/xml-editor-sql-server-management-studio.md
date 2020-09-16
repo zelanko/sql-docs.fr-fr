@@ -1,11 +1,8 @@
 ---
 title: Éditeur XML (SQL Server Management Studio)
 description: Découvrez comment utiliser les outils visuels de l’éditeur XML de SQL Server Management Studio pour travailler avec des schémas XML (XSD), des jeux de données ADO.NET et des documents XML.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -17,22 +14,27 @@ helpviewer_keywords:
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 528293a500c391fa2d7efbcd9fe8a35f6a797f23
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 1de79327a877be44f6c17639a7c3a9e0fb1425ad
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87236926"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093563"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Éditeur XML (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Fournit un ensemble d'outils visuels pour utiliser des schémas XML, des groupes de données ADO.NET et des documents XML. Le Concepteur XML prend en charge le langage de définition de schéma XML (XSD, XML Schema Definition) défini par le World Wide Web Consortium (WC3), mais pas les définitions de type de document (DTD) ni les autres langages de schéma XML, tel XDR (XML-Data Reduced).  
-  
- Pour afficher le concepteur, ajoutez un groupe de données, un schéma XML ou un fichier XML à votre projet ou ouvrez l'un des types de fichiers énumérés dans le tableau suivant.  
-  
-> [!CAUTION]  
->  La commande **Annuler** n'est pas disponible lorsque vous travaillez en mode Schéma. Planifiez soigneusement votre travail et enregistrez souvent vos fichiers.  
+
+Fournit un ensemble d'outils visuels pour utiliser des schémas XML, des groupes de données ADO.NET et des documents XML. Le Concepteur XML prend en charge le langage de définition de schéma XML (XSD, XML Schema Definition) défini par le World Wide Web Consortium (WC3), mais pas les définitions de type de document (DTD) ni les autres langages de schéma XML, tel XDR (XML-Data Reduced).  
+
+Pour afficher le concepteur, ajoutez un groupe de données, un schéma XML ou un fichier XML à votre projet ou ouvrez l'un des types de fichiers énumérés dans le tableau suivant.  
+
+> [!CAUTION]
+> La commande **Annuler** n'est pas disponible lorsque vous travaillez en mode Schéma. Planifiez soigneusement votre travail et enregistrez souvent vos fichiers.  
   
  Le concepteur propose trois vues (ou modes) pour travailler sur les fichiers XML, les schémas XML et les groupes de données :  
   

@@ -3,21 +3,21 @@ title: Création d’une fonction à partir de code R groupé à l’aide du pac
 description: Utilisez le package R sqlrutils dans SQL Server pour regrouper du code de langage R en une fonction unique qui peut être passée comme argument dans une procédure stockée.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/15/2018
+ms.date: 08/31/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f1a53e3b2c5d6481bea436d7a7b6d045653a9e7d
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 0ba94a55144278abd54ebbc2cf038463c3c5f0cb
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86483870"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288281"
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Créer une procédure stockée à l’aide de sqlrutils
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Cet article décrit les étapes nécessaires pour convertir votre code R pour qu’il s’exécute en tant que procédure stockée T-SQL. Pour de meilleurs résultats, vous devrez peut-être modifier un peu votre code pour être sûr que toutes les entrées peuvent être paramétrées.
 
