@@ -1,4 +1,5 @@
 ---
+description: Politique de support SQL Server Management Studio (SSMS)
 title: Politique de support SQL Server Management Studio (SSMS)
 ms.date: 11/13/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: dnethi
 ms.author: dinethi
-ms.openlocfilehash: 2b46da30a4ea3c7548ca4696f144373feea7b986
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 035ea616a92f1760252087bc6a8e27bec3fe2d24
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245667"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497267"
 ---
 # <a name="sql-server-management-studio-ssms-support-policy"></a>Politique de support SQL Server Management Studio (SSMS)
 
@@ -43,4 +44,4 @@ Phase de maintenance **Prise en charge complète** : quand vous exécutez la de
 
 
 > [!NOTE]
-> La dernière version Current Branch est toujours dans la phase de maintenance **Prise en charge complète**. Autrement dit, si vous rencontrez une erreur dans le code qui nécessite une mise à jour critique, vous devez disposer de la dernière version Current Branch pour recevoir le correctif.
+> La dernière version Current Branch est toujours dans la phase de maintenance **Prise en charge complète**. Cette déclaration de support signifie que si vous rencontrez une erreur de code qui nécessite une mise à jour critique, vous devez avoir la dernière version Current Branch afin de recevoir un correctif.

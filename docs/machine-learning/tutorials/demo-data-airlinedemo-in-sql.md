@@ -1,4 +1,5 @@
 ---
+description: Données de démonstration d’arrivée de vols Airline pour les didacticiels R et Python SQL Server
 title: Données de démonstration de vols Airline pour les didacticiels
 Description: Créez une base de données contenant le jeu de données Airline à partir de R et Python. Ce jeu de données est utilisé dans les didacticiels R et Python pour SQL Server Machine Learning Services.
 ms.prod: sql
@@ -9,15 +10,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4f697287bff5ad4734d11c3d6391154a3a970470
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e00d3814b20f774568da007ba1e60f6784b1c9fb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728003"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484072"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration d’arrivée de vols Airline pour les didacticiels R et Python SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Dans cet exercice, créez une base de données SQL Server pour stocker des données importées à partir des jeux de données de démonstration Airline intégrés de R ou Python. Les distributions R et Python fournissent des données équivalentes, que vous pouvez importer dans une base de données SQL Server à l’aide de Management Studio.
 
@@ -27,7 +28,7 @@ Voici les tutoriels et les démarrages rapides qui utilisant ce jeu de données�
 
 +  [Créer un modèle Python à l’aide de revoscalepy](use-python-revoscalepy-to-create-model.md)
 
-## <a name="create-the-database"></a>Création de la base de données
+## <a name="create-the-database"></a>Créer la base de données
 
 1. Démarrez SQL Server Management Studio et connectez-vous à une instance du moteur de base de données qui dispose de l’intégration R ou Python.  
 

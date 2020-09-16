@@ -1,4 +1,5 @@
 ---
+description: Boîte de dialogue Mise en page
 title: Boîte de dialogue Mise en page
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: b395ad0cb0d570f74f84937ee78cb7118a5f8404
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 698e9022fc5fbb4b3ba5d33a13c7495b7d96c118
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003240"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491682"
 ---
 # <a name="page-setup-dialog-box"></a>Boîte de dialogue Mise en page
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Vous pouvez personnaliser votre conception de page à l'aide des options de la boîte de dialogue **Mise en page** . La disponibilité de certaines options dépend des langues qui sont installées et activées pour la modification.  
+ Vous pouvez personnaliser votre conception de page à l’aide des options de la boîte de dialogue **Mise en page**. La disponibilité de certaines options dépend des langues qui sont installées et activées pour la modification.  
   
 ## <a name="paper"></a>Article  
 **Taille**  
@@ -50,7 +51,7 @@ Définit la distance entre le haut de la page et le haut de la première ligne d
 Bas  
 Définit la distance entre le bas de la page et le bas de la dernière ligne de la page.  
   
-## <a name="other"></a>Autres  
+## <a name="other"></a>Autre  
 **Préversion**  
 L'aperçu affiche les effets des paramètres sélectionnés.  
   

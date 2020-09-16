@@ -1,4 +1,5 @@
 ---
+description: Ouvrir avec (Nouveau fichier)
 title: Ouvrir avec (Nouveau fichier)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1ac269ba2768195448927375b4cbde5713f15f2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001657"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491935"
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +41,7 @@ Pour supprimer un programme, sélectionnez-le, puis cliquez sur **Supprimer**.
 Pour spécifier un éditeur par défaut (et, le cas échéant, des options d’encodage linguistique) pour le type de fichier sélectionné, choisissez un programme dans la liste **Sélectionnez le programme à ouvrir** , puis cliquez sur **Par défaut**. La prochaine fois que vous allez ouvrir ce type de fichier dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], le document s'ouvrira dans l'éditeur par défaut spécifié.  
   
 > [!NOTE]  
-> Dans la liste de programmes figurant sous **Sélectionnez le programme à ouvrir**, le nom de l’éditeur par défaut pour le type de fichier sélectionné est suivi de **(Par défaut)** .  
+> Dans la liste de programmes figurant sous **Sélectionnez le programme à ouvrir**, le nom de l’éditeur par défaut pour le type de fichier sélectionné est suivi de **(Par défaut)**.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Association d’extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

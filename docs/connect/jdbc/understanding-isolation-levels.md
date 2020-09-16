@@ -1,4 +1,5 @@
 ---
+description: Présentation des niveaux d’isolation
 title: Comprendre les niveaux d’isolation | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab8517345f60e0b747e2693e3c07c5ea9db0b0fa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 758012112df2bce1b0a7624834bfde3c3c4ece10
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921188"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88488042"
 ---
 # <a name="understanding-isolation-levels"></a>Présentation des niveaux d’isolation
 
@@ -48,10 +49,10 @@ Plus le niveau d'isolement est faible, plus le nombre de personnes susceptibles 
 | Niveau d’isolation  | Lecture erronée | Lecture non reproductible | Fantôme |
 | ---------------- | ---------- | ------------------- | ------- |
 | Lecture non validée | Oui        | Oui                 | Oui     |
-| Lecture validée   | Non         | Oui                 | Oui     |
-| Lecture renouvelable  | Non         | Non                  | Oui     |
-| Instantané         | Non         | Non                  | Non      |
-| Sérialisable     | Non         | Non                  | Non      |
+| Lecture validée   | Non          | Oui                 | Oui     |
+| Lecture renouvelable  | Non         | Non                   | Oui     |
+| Instantané         | Non         | Non                  | Non       |
+| Sérialisable     | Non         | Non                  | Non       |
   
 Les transactions doivent être exécutées à un niveau d'isolement au moins égal à la lecture reproductible afin d'empêcher les pertes de mises à jour qui peuvent se produire lorsque deux transactions récupèrent la même ligne, puis mettent ultérieurement à jour la ligne en fonction des valeurs récupérées initialement. Si les deux transactions mettent à jour des lignes avec une seule instruction UPDATE sans se baser sur les valeurs récupérées auparavant, les mises à jour perdues ne peuvent pas se produire au niveau d’isolation par défaut de la lecture de données validées.  
 

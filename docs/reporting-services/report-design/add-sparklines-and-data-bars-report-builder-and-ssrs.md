@@ -1,4 +1,5 @@
 ---
+description: Ajouter des graphiques sparkline et des barres de données (Générateur de rapports et SSRS)
 title: Ajouter des graphiques sparkline et des barres de données (Générateur de rapports) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c33752294c7335dca86dd51d7d06478188c20548
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 74db316bf1e8eb4d72f3419799f76e3c2742fa81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77081531"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88484957"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>Ajouter des graphiques sparkline et des barres de données (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques de petite taille qui communiquent beaucoup d'informations avec peu de détails superflus. Pour plus d’informations sur ces graphiques, consultez [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
@@ -37,9 +38,9 @@ ms.locfileid: "77081531"
   
      Le volet **Données du graphique** s’ouvre.  
   
-6.  Dans la zone **Valeurs** , cliquez sur le signe plus ( **)** Ajouter des champs **+** , puis sur le champ dont vous voulez représenter les valeurs graphiquement.  
+6.  Dans la zone **Valeurs** , cliquez sur le signe plus ( **)** Ajouter des champs**+**, puis sur le champ dont vous voulez représenter les valeurs graphiquement.  
   
-7.  Dans la zone **Groupes de catégories** , cliquez sur le signe plus ( **)** Ajouter des champs **+** , puis sur le champ selon lequel vous voulez regrouper les valeurs.  
+7.  Dans la zone **Groupes de catégories** , cliquez sur le signe plus ( **)** Ajouter des champs**+**, puis sur le champ selon lequel vous voulez regrouper les valeurs.  
   
      En général, pour les graphiques sparkline et les barres de données, vous n’ajoutez pas de champ à la zone **Groupes de séries** car vous voulez une seule série pour chaque ligne.  
   

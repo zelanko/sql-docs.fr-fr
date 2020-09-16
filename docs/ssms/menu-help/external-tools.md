@@ -1,4 +1,5 @@
 ---
+description: Outils externes
 title: Outils externes
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3950d93088e98ebb5d69ae4a5647ee64f60a00d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 280180cda65f72bc2ea3fd4515e12ee46b3879cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491944"
 ---
 # <a name="external-tools"></a>Outils externes
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -63,7 +64,7 @@ Autorise la fenêtre de sortie à accepter le format Unicode.
 **Fermer en quittant**  
 Ferme en même temps que l'outil la fenêtre qu'il a ouverte.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 #### <a name="to-add-sql-server-configuration-manager-to-the-tools-menu"></a>Pour ajouter le Gestionnaire de configuration SQL Server au menu Outils  
   
@@ -73,7 +74,7 @@ Ferme en même temps que l'outil la fenêtre qu'il a ouverte.
   
 3.  Dans la zone **Commande** , tapez le chemin de l'exécutable [!INCLUDE[msCoName](../../includes/msconame_md.md)] Management Console, tel que **C:\WINNT\system32\mmc.exe**.  
   
-4.  Dans la zone **Arguments** , tapez le chemin du fichier .msc, tel que **« C:\WINNT\system32\SQLServerManager.msc »** .  
+4.  Dans la zone **Arguments** , tapez le chemin du fichier .msc, tel que **« C:\WINNT\system32\SQLServerManager.msc »**.  
   
 > [!NOTE]  
-> Affichez les propriétés du raccourci de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans le menu **Démarrer** pour vérifier l'emplacement des fichiers sur votre ordinateur.  
+>  Affichez les propriétés du raccourci de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] dans le menu **Démarrer** pour vérifier l'emplacement des fichiers sur votre ordinateur.  

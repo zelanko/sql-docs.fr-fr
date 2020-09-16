@@ -1,4 +1,5 @@
 ---
+description: Aide de SQL Server Management Studio
 title: Aide de SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c16c2f27f95eb987c1d8cd1368aa27709fa4fc9c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 06562bfd23c315e13f2bf7c0891270c2e68b3d62
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002059"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497439"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Aide de SQL Server Management Studio
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Cette section contient l’aide accessible par le biais de la touche F1 pour les boîtes de dialogue et les pages disponibles dans la barre de menus de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+ Cette section contient l’aide accessible par le biais de la touche F1 pour les boîtes de dialogue et les pages accessibles à partir de la barre de menus dans [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 [À propos de SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

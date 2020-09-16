@@ -1,4 +1,5 @@
 ---
+description: Avenant à la déclaration de confidentialité de SQL Server 2019
 title: Avenant à la déclaration de confidentialité de SQL Server 2019 | Microsoft Docs
 ms.date: 09/20/2019
 ms.prod: sql
@@ -11,12 +12,12 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c365f3e9aa5221e29d875d05ba3daf4337ca44cd
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480684"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>Avenant à la déclaration de confidentialité de SQL Server 2019
 
@@ -48,8 +49,8 @@ Détails des informations d’identification utilisées pour sécuriser les conn
 |Scénario |Restrictions d'accès |Conditions de rétention |
 |---------|---------|---------|
 |Ces informations d’identification ne quittent jamais l’ordinateur de l’utilisateur par le biais des données d’utilisation et de diagnostic. |- |- |
-|Les images mémoire peuvent contenir des données de contrôle d’accès. |- |Vidages sur incident : 30 jours maximum. |
-|Ces informations d’identification ne quittent jamais l’ordinateur de l’utilisateur via les Commentaires des utilisateurs, sauf si le client les indique manuellement |Limité à un usage interne Microsoft sans accès à des tiers. |Commentaires des utilisateurs : 1 an maximum|
+|Les images mémoire peuvent contenir des données de contrôle d’accès. |- |Images mémoire : 30 jours maximum. |
+|Ces informations d’identification ne quittent jamais l’ordinateur de l’utilisateur via les Commentaires des utilisateurs, sauf si le client les indique manuellement |Limité à un usage interne Microsoft sans accès à des tiers. |Commentaires de l’utilisateur : 1 an maximum|
 |&nbsp;|&nbsp;|&nbsp;|
 
 ## <a name="customer-content"></a>Contenu client
@@ -67,8 +68,8 @@ Le contenu client est défini comme les données stockées dans les tables utili
 |Scénario  |Restrictions d'accès  |Conditions de rétention |
 |---------|---------|---------|
 |Ces données ne quittent jamais l’ordinateur de l’utilisateur par le biais des données d’utilisation et de diagnostic. |- |- |
-|Les images mémoire peuvent contenir du contenu de client et être envoyées à Microsoft. |- |Vidages sur incident : 30 jours max. |
-|Les clients avec leur consentement peuvent envoyer via les Commentaires des utilisateurs du contenu client à Microsoft. |Limité à un usage interne Microsoft sans accès à des tiers. Microsoft peut exposer les données au client d’origine. |Commentaires des utilisateurs : 1 an maximum |
+|Les images mémoire peuvent contenir du contenu de client et être envoyées à Microsoft. |- |Images mémoire : 30 jours maximum. |
+|Les clients avec leur consentement peuvent envoyer via les Commentaires des utilisateurs du contenu client à Microsoft. |Limité à un usage interne Microsoft sans accès à des tiers. Microsoft peut exposer les données au client d’origine. |Commentaires de l’utilisateur : 1 an maximum |
 
 ## <a name="end-user-identifiable-information-euii"></a>Informations d’identification de l’utilisateur final (EUII)
 
@@ -90,9 +91,9 @@ Données reçues d’un utilisateur ou générées par son utilisation du produi
 |Scénario  |Restrictions d'accès  |Conditions de rétention|
 |---------|---------|---------|
 |Ces données ne quittent jamais l’ordinateur de l’utilisateur par le biais des données d’utilisation et de diagnostic. |- |- |
-|Les images mémoire peuvent contenir des informations EUII et être envoyées à Microsoft. |- |Vidages sur incident : 30 jours max |
+|Les images mémoire peuvent contenir des informations EUII et être envoyées à Microsoft. |- |Images mémoire : 30 jours maximum |
 |L’ID d’identification du client peut être envoyé à Microsoft pour distribuer des nouvelles fonctionnalités hybrides et cloud auxquelles l’utilisateur s’est abonné. |- |Actuellement, ces fonctionnalités cloud ou hybrides n’existent pas.|
-|Les clients avec leur consentement peuvent envoyer via les Commentaires des utilisateurs du contenu client à Microsoft.|Limité à un usage interne Microsoft sans accès à des tiers. Microsoft peut exposer les données au client d’origine. |Commentaires des utilisateurs : 1 an maximum |
+|Les clients avec leur consentement peuvent envoyer via les Commentaires des utilisateurs du contenu client à Microsoft.|Limité à un usage interne Microsoft sans accès à des tiers. Microsoft peut exposer les données au client d’origine. |Commentaires de l’utilisateur : 1 an maximum |
 
 ## <a name="internet-based-services-data"></a>Données des services Internet
 
@@ -155,10 +156,10 @@ Microsoft examine les valeurs de nom d’application définies par d’autres pr
 |Scénario  |Restrictions d’accès  |Conditions de rétention|
 |---------|---------|---------|
 |Peut être utilisé par Microsoft pour améliorer les fonctionnalités ou corriger les bogues dans les fonctionnalités actuelles.|Limité à un usage interne Microsoft sans accès à des tiers. |90 jours minimum, 3 ans maximum |
-|Peut être utilisé pour faire des suggestions au client.  Par exemple, « D’après votre utilisation du produit, utilisez la fonctionnalité *X* pour obtenir de meilleures performances ». |Microsoft peut exposer les données au client d’origine, par exemple, à travers des tableaux de bord. |Journaux de sécurité des données client : 3 ans min - 6 ans max |
+|Peut être utilisé pour faire des suggestions au client.  Par exemple, « D’après votre utilisation du produit, utilisez la fonctionnalité *X* pour obtenir de meilleures performances ». |Microsoft peut exposer les données au client d’origine, par exemple, à travers des tableaux de bord. |Journaux de sécurité de données client : 3 ans minimum, 6 ans maximum |
 |Peut être utilisé par Microsoft pour la planification du produit futur. |Microsoft peut partager ces informations avec d’autres fournisseurs de matériel et de logiciel afin d’améliorer le fonctionnement de leurs produits exécutés avec les logiciels Microsoft. |90 jours minimum, 3 ans maximum|
 |Peut être utilisé par Microsoft pour fournir des services cloud basés sur les données d’utilisation et de diagnostic envoyées. Par exemple, le tableau de bord d’un client affichant l’utilisation des fonctionnalités sur toutes les installations de SQL Server dans une organisation. |Microsoft peut exposer les données au client d’origine, par exemple, à travers des tableaux de bord. |90 jours minimum, 3 ans maximum |
-|Les clients avec leur consentement peuvent envoyer via les Commentaires des utilisateurs du contenu client à Microsoft. |Limité à un usage interne Microsoft sans accès à des tiers. Microsoft peut exposer les données au client d’origine. |Commentaires des utilisateurs : 1 an maximum |
+|Les clients avec leur consentement peuvent envoyer via les Commentaires des utilisateurs du contenu client à Microsoft. |Limité à un usage interne Microsoft sans accès à des tiers. Microsoft peut exposer les données au client d’origine. |Commentaires de l’utilisateur : 1 an maximum |
 |Peut utiliser les noms de base de données et les noms d’application pour classer les bases de données et les applications dans des catégories connues, par exemple, celles susceptibles d’exécuter des logiciels fournis par Microsoft ou d’autres sociétés.|Limité à un usage interne Microsoft sans accès à des tiers.|90 jours minimum, 3 ans maximum |
 
 ## <a name="object-metadata"></a>les métadonnées d'objets.

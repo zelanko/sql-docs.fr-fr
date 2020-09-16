@@ -1,4 +1,5 @@
 ---
+description: Méthode ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
 title: ListReportServersInDatabase, méthode (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b88e5006ab772d232f65016033738c0b46848c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67d5ee6e505a706248490f9fb6c74913657cd455
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579901"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480621"
 ---
 # <a name="configurationsetting-method---listreportserversindatabase"></a>Méthode ConfigurationSetting - ListReportServersInDatabase
   Retourne la liste des installations du serveur de rapports qui sont présentes dans la base de données du serveur de rapports, même si elles n'ont pas accès aux informations sécurisées.  

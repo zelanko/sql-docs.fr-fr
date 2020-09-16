@@ -1,4 +1,5 @@
 ---
+description: Choisir des éléments de boîte à outils (page Tâches de maintenance)
 title: Choisir des éléments de boîte à outils (page Tâches de maintenance)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0924181e87591db6ac7ac21fd8f70429802a19e1
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c2cc71bd272c0f2865d2e4491ff9a373e897b2bb
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001675"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491993"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Choisir des éléments de boîte à outils (page Tâches de maintenance)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Cet onglet de la boîte de dialogue **Personnaliser la boîte à outils** affiche la liste de tous les composants des tâches de maintenance inscrits sur votre ordinateur et vous permet de modifier ceux qui sont affichés dans la boîte à outils. Vous pouvez ouvrir la boîte de dialogue **Personnaliser la boîte à outils** à partir du menu **Outils** . Pour trier la liste des composants, cliquez sur un en-tête de colonne.  
+ Cet onglet de la boîte de dialogue **Personnaliser la boîte à outils** affiche la liste de tous les composants des tâches de maintenance inscrits sur votre ordinateur et vous permet de changer ceux qui sont affichés dans la boîte à outils. Vous pouvez ouvrir la boîte de dialogue **Personnaliser la boîte à outils** à partir du menu **Outils** . Pour trier la liste des composants, cliquez sur un en-tête de colonne.  
   
 ## <a name="options"></a>Options  
 L’onglet **Tâches de maintenance** contient les colonnes d’informations suivantes :  

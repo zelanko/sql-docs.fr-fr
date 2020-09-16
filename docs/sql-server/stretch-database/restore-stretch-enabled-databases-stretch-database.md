@@ -1,4 +1,5 @@
 ---
+description: Restaurer des bases de données Stretch (Stretch Database)
 title: Restaurer des bases de données Stretch
 ms.date: 07/06/2016
 ms.service: sql-server-stretch-database
@@ -8,15 +9,15 @@ ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8cef37be62e91b608852a4b5867d5917e72e8742
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843771"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492601"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Restaurer des bases de données Stretch (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Restaurez une base de données sauvegardée quand cela est nécessaire pour effectuer une récupération après de nombreux types d’échecs, d’erreurs et d’incidents.
@@ -38,7 +39,7 @@ Le service SQL Server Stretch Database sur Azure effectue une capture instantan�
 
 Pour restaurer une base de données Azure active à un point antérieur dans le temps à l’aide du portail Azure, procédez comme suit.
 
-1. Connectez-vous au [Azure portal][].
+1. Connectez-vous au [portail Azure][].
 2. Sur le côté gauche de l’écran, sélectionnez **PARCOURIR** , puis sélectionnez **Bases de données SQL**.
 3. Accédez à votre base de données et sélectionnez-la.
 4. En haut du panneau de la base de données, cliquez sur **Restaurer**.
@@ -50,7 +51,7 @@ Le service SQL Server Stretch Database sur Azure effectue une capture instantan�
 
 Pour restaurer une base de données Azure supprimée au point où elle a été supprimée à l’aide du portail Azure, procédez comme suit.
 
-1. Connectez-vous au [Azure portal][].
+1. Connectez-vous au [portail Azure][].
 2. Sur le côté gauche de l’écran, sélectionnez **PARCOURIR** , puis sélectionnez **Serveurs SQL**.
 3. Accédez à votre serveur et sélectionnez-le.
 4. Faites défiler le panneau de votre serveur jusqu’à Opérations, puis cliquez sur la vignette **Bases de données supprimées** .

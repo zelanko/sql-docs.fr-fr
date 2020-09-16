@@ -1,4 +1,5 @@
 ---
+description: Ajouter des annotations de texte aux schémas (Visual Database Tools)
 title: Ajouter des annotations de texte à des schémas
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: e7b7ed1aaeb5e88532a349c8e8b0a64e1eb1f643
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 483d0a0043df5900f231943382e28740e004a96c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011582"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497252"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>Ajouter des annotations de texte aux schémas (Visual Database Tools)
 

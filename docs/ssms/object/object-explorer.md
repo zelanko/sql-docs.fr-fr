@@ -1,4 +1,5 @@
 ---
+description: Explorateur d’objets
 title: Explorateur d’objets
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -26,12 +27,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: 4eae86044d8e0ec03268e23abc81df4945b46990
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ea4cde409c05054614a4881b189ebef15abb5fef
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245561"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497402"
 ---
 # <a name="object-explorer"></a>Explorateur d’objets
 
@@ -45,8 +46,8 @@ L'Explorateur d'objets fournit une interface utilisateur hiérarchique pour affi
   
 |Description|Rubrique|  
 |---------------|---------|  
-|Décrit comment ouvrir l'Explorateur d'objets et configurer les options qui définissent le comportement de l'explorateur.|[Ouvrir et configurer l’Explorateur d’objets](../../ssms/object/open-and-configure-object-explorer.md)|  
+|Décrit comment ouvrir l'Explorateur d'objets et configurer les options qui définissent le comportement de l'explorateur.|[Ouvrir et configurer l'Explorateur d'objets](../../ssms/object/open-and-configure-object-explorer.md)|  
 |Décrit comment connecter l'Explorateur d'objets à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)], d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], d' [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]et de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Se connecter à une instance à partir de l’Explorateur d’objets](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
-|Explique comment gérer des objets représentés en tant que nœuds dans la hiérarchie de l'Explorateur d'objets.|[Gérer les objets à l’aide de l’Explorateur d’objets](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
-|Décrit le volet Détails de l'Explorateur d'objets, une vue tabulaire de tous les objets se trouvant dans le serveur avec une interface utilisateur pour les gérer.|[Détails de l’Explorateur d’objets, volet](../../ssms/object/object-explorer-details-pane.md)|  
+|Explique comment gérer des objets représentés en tant que nœuds dans la hiérarchie de l'Explorateur d'objets.|[Gérer les objets à l'aide de l'Explorateur d'objets](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
+|Décrit le volet Détails de l'Explorateur d'objets, une vue tabulaire de tous les objets se trouvant dans le serveur avec une interface utilisateur pour les gérer.|[Volet Détails de l'Explorateur d'objets](../../ssms/object/object-explorer-details-pane.md)|  
 |Décrit les méthodes pour exécuter des rapports personnalisés dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|

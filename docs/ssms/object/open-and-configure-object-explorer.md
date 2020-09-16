@@ -1,4 +1,5 @@
 ---
+description: Ouvrir et configurer l'Explorateur d'objets
 title: Ouvrir et configurer l'Explorateur d'objets
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b1bda1521bf3982f66179a170c6aba7990db81ea
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: a2cc8f3df83bc35eb039336bf6d7c83ae5ff188d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001890"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88491848"
 ---
 # <a name="open-and-configure-object-explorer"></a>Ouvrir et configurer l'Explorateur d'objets
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +31,7 @@ Pour configurer les paramètres de l'Explorateur d'objets, dans le menu **Outils
 ## <a name="see-also"></a>Voir aussi  
 [l’Explorateur d’objets](../../ssms/object/object-explorer.md)  
 [Se connecter à une instance à partir de l’Explorateur d’objets](../../ssms/object/connect-to-an-instance-from-object-explorer.md)  
-[Gérer les objets à l’aide de l’Explorateur d’objets](../../ssms/object/manage-objects-by-using-object-explorer.md)  
-[Détails de l’Explorateur d’objets, volet](../../ssms/object/object-explorer-details-pane.md)  
+[Gérer les objets à l'aide de l'Explorateur d'objets](../../ssms/object/manage-objects-by-using-object-explorer.md)  
+[Volet Détails de l'Explorateur d'objets](../../ssms/object/object-explorer-details-pane.md)  
 [Rapports personnalisés dans Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
   

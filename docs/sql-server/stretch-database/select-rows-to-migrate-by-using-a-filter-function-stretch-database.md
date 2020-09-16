@@ -1,4 +1,5 @@
 ---
+description: Sélectionner les lignes à migrer à l’aide d’une fonction de filtre (Stretch Database)
 title: Sélectionner les lignes à migrer avec une fonction de filtre
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 9bb34b5e716f4cb0da7f11e5ce4772f52712127f
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: 31199872a4a206469c44f91aa80c3606f129fdb9
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872758"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492607"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Sélectionner les lignes à migrer à l’aide d’une fonction de filtre (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Si vous stockez d’anciennes données dans une table séparée, vous pouvez configurer Stretch Database pour migrer la table entière. Par ailleurs, si votre table contient des données actuelles et anciennes, vous pouvez spécifier un prédicat de filtre pour sélectionner les lignes à migrer. Le prédicat de filtre est une fonction table incluse. Cet article explique comment écrire une fonction table incluse pour sélectionner des lignes à migrer.  
@@ -135,7 +136,7 @@ RETURN  SELECT 1 AS is_eligible
 <comparison_operator> ::= { < | <= | > | >= | = | <> | != | !< | !> }  
 ```  
   
-### <a name="constant-expressions"></a>Expressions constantes  
+### <a name="constant-expressions"></a>Expressions de constantes  
  Les constantes utilisées dans une fonction de filtre peuvent être toute expression déterministe évaluable lors de la définition de la fonction. Les expressions constantes peuvent contenir les éléments suivants.  
   
 -   littéraux. Par exemple : `N'abc', 123`.  
@@ -152,7 +153,7 @@ RETURN  SELECT 1 AS is_eligible
  Vous ne pouvez pas utiliser des sous-requêtes ou des fonctions non déterministes telles que RAND() ou GETDATE().  
   
 ## <a name="add-a-filter-function-to-a-table"></a>Ajouter une fonction de filtre à une table  
- Pour ajouter une fonction de filtre à une table, exécutez l’instruction **ALTER TABLE** et spécifiez une fonction table incluse existante comme valeur du paramètre **FILTER_PREDICATE** . Par exemple :  
+ Pour ajouter une fonction de filtre à une table, exécutez l’instruction **ALTER TABLE** et spécifiez une fonction table incluse existante comme valeur du paramètre **FILTER_PREDICATE** . Exemple :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -484,7 +485,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Comment Stretch Database applique la fonction de filtre  
- Stretch Database applique la fonction de filtre à la table, et détermine les lignes pouvant être migrées à l’aide de l’opérateur CROSS APPLY. Par exemple :  
+ Stretch Database applique la fonction de filtre à la table, et détermine les lignes pouvant être migrées à l’aide de l’opérateur CROSS APPLY. Exemple :  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -493,7 +494,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Si la fonction retourne un résultat non vide pour la ligne, celle-ci peut être migrée.  
   
 ## <a name="replace-an-existing-filter-function"></a><a name="replacePredicate"></a>Remplacer une fonction de filtre existante  
- Vous pouvez remplacer une fonction de filtre spécifiée précédemment en réexécutant l’instruction **ALTER TABLE** et en spécifiant une nouvelle valeur pour le paramètre **FILTER_PREDICATE** . Par exemple :  
+ Vous pouvez remplacer une fonction de filtre spécifiée précédemment en réexécutant l’instruction **ALTER TABLE** et en spécifiant une nouvelle valeur pour le paramètre **FILTER_PREDICATE** . Exemple :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -589,7 +590,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>Supprimer une fonction de filtre d’une table  
- Pour migrer la table entière plutôt que des lignes sélectionnées, supprimez la fonction existante en affectant la valeur null à **FILTER_PREDICATE**  . Par exemple :  
+ Pour migrer la table entière plutôt que des lignes sélectionnées, supprimez la fonction existante en affectant la valeur null à **FILTER_PREDICATE**  . Exemple :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

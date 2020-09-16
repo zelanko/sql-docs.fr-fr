@@ -1,4 +1,5 @@
 ---
+description: Ajouter des éléments existants à un projet
 title: Ajouter des éléments existants à un projet
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 60939da70ed334f4fc7c020f123fff9441a27088
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3744d99ede7e4f50e7fb4393d8e58cff314f4f06
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003317"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480112"
 ---
 # <a name="add-existing-items-to-a-project"></a>Ajouter des éléments existants à un projet
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +37,7 @@ Vous pouvez ajouter des éléments à un projet pour étendre la fonctionnalité
     **Bureau**  
     Affiche les fichiers et les dossiers situés sur le bureau.  
   
-    **Mes Projets**  
+    **Mes projets**  
     Affiche les fichiers et les dossiers à l’emplacement **Mes projets** par défaut.  
   
     **Poste de travail**  
@@ -48,7 +49,7 @@ Vous pouvez ajouter des éléments à un projet pour étendre la fonctionnalité
     > [!NOTE]  
     > Vous pouvez naviguer jusqu’à un emplacement sur le web ou sur le réseau en entrant une URL ou un chemin réseau dans la zone de texte **Nom de fichier** . Par exemple, **`https://mywebsite`** affiche les fichiers disponibles à l’emplacement monsiteweb, tandis que **\\\myserver\myshare** affiche les fichiers disponibles à l’emplacement partage sur monserveur.  
   
-    **Fichiers de type**  
+    **Type de fichiers**  
     Utilisez cette option pour filtrer les fichiers selon leur extension de fichier. Chaque produit affiche la liste des filtres par défaut correspondant aux types de fichiers les plus courants.  
   
     **Ajouter**  

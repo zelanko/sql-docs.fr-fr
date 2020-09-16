@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 45e168c5fa0e0edcb450ca4f302de2676303b5c3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914887"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512335"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Définir des propriétés de déploiement (Reporting Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "86914887"
   
 10. Dans la zone de texte **TargetServerURL** , tapez l'URL du serveur de rapports cible. Avant de publier un rapport, vous devez affecter à cette propriété une URL de serveur de rapports valide. Quand vous publiez sur un serveur de rapports qui s’exécute en mode natif, utilisez l’URL du répertoire virtuel du serveur de rapports (par exemple, http:*//serveur/serveur_rapports* ou https:*//serveur/serveur_rapports)*. Il s'agit du répertoire virtuel du serveur de rapports et non du portail web.  
   
-     Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez pas de site, le site de niveau supérieur par défaut est utilisé (par exemple, <https://*servername*>, <https://*servername*/*site*> ou <https://*servername*/*site*/*subsite*>).  
+     Lors de la publication sur un serveur de rapports s'exécutant en mode intégré SharePoint, utilisez l'URL d'un site de premier niveau ou d'un sous-site SharePoint. Si vous ne spécifiez pas de site, le site de niveau supérieur par défaut est utilisé (par exemple, `https://*servername*`, `https://*servername*/*site*` ou `https://*servername*/*site*/*subsite*`).  
   
 ## <a name="to-set-configuration-manager-properties"></a>Pour définir les propriétés du Gestionnaire de configuration  
   

@@ -1,4 +1,5 @@
 ---
+description: 'Procédure pas à pas : ajout et modification d’un diagramme de base de données'
 title: ajouter et modifier un diagramme de base de données
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,18 +15,18 @@ ms.assetid: 228caa0d-8f24-46ab-86d1-b6d8631322bc
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 41ecd01badd21d8c3198dfb661d63b7d14753d76
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 87ff469370e58c261e762cf9c4d6c604488ccfb4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002617"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88479915"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Procédure pas à pas : ajout et modification d’un diagramme de base de données
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Cette procédure pas à pas montre comment créer et modifier un diagramme de base de données et apporter des modifications à la base de données par l’intermédiaire du composant des diagrammes de base de données. Vous apprendrez à ajouter des tables aux schémas, à créer des relations entre les tables, créer des contraintes et des index sur des colonnes et modifier le niveau des informations qui s'affichent pour chaque table.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
 Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments suivants :  
   
 -   Accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
@@ -45,7 +46,7 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
 3.  Cliquez avec le bouton droit sur le nœud Diagrammes de base de données et sélectionnez **Nouveau diagramme de base de données**.  
   
-    Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Choisissez **Oui**.  
+    Si la base de données n’a pas les objets nécessaires pour créer des diagrammes, le message suivant s’affiche : **Cette base de données ne dispose pas d’au moins un des objets de prise en charge nécessaires pour la fonctionnalité de diagrammes de base de données. Voulez-vous les créer ?** Cliquez sur **Oui**.  
   
     La boîte de dialogue **Ajouter une table** s’affiche.  
   
@@ -79,9 +80,9 @@ Pour réaliser cette procédure pas à pas, vous aurez besoin des éléments sui
   
     |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |-------------------|-----------------|-------------------|  
-    |**T1col1**|**int**|cochée|  
-    |**T1col2**|**varchar(50)**|cochée|  
-    |**T1col3**|**float**|cochée|  
+    |**T1col1**|**int**|checked|  
+    |**T1col2**|**varchar(50)**|checked|  
+    |**T1col3**|**float**|checked|  
   
 4.  Cliquez avec le bouton droit sur `T1col1` , puis sélectionnez **Définir la clé primaire**.  
   
@@ -102,7 +103,7 @@ Vous pouvez ajouter des contraintes de validation et établir des relations entr
   
     La boîte de dialogue **Contraintes de validation** apparaît.  
   
-2.  Cliquez sur **Ajouter**.  
+2.  Cliquez sur **Add**.  
   
     Une nouvelle contrainte s’affiche dans la liste **Contrainte de validation sélectionnée** avec le nom par défaut `CK_Table1`.  
   
@@ -123,8 +124,8 @@ Vous pouvez ajouter des contraintes de validation et établir des relations entr
     |**Nom de la colonne**|**Type de données**|**Null autorisé**|  
     |-------------------|-----------------|-------------------|  
     |**T2col1**|**int**|non validé|  
-    |**T2col2**|**varchar(50)**|cochée|  
-    |**T2col3**|**xml**|cochée|  
+    |**T2col2**|**varchar(50)**|checked|  
+    |**T2col3**|**xml**|checked|  
   
     > [!NOTE]  
     > Les colonnes situées du côté clé primaire d'une relation de clé étrangère doivent faire partie d'une clé primaire ou d'une contrainte unique.  
@@ -135,7 +136,7 @@ Vous pouvez ajouter des contraintes de validation et établir des relations entr
   
 3.  Cliquez sur **OK** pour enregistrer la nouvelle relation.  
   
-4.  Cliquez de nouveau sur **OK** .  
+4.  Cliquez à nouveau sur **OK**.  
   
 ## <a name="creating-indexes"></a>Création des index  
 Vous pouvez créer des index sur la plupart des types de données, y compris les données XML.  
@@ -146,7 +147,7 @@ Vous pouvez créer des index sur la plupart des types de données, y compris les
   
     La boîte de dialogue **Index/Clés** s’ouvre.  
   
-2.  Cliquez sur **Ajouter**.  
+2.  Cliquez sur **Add**.  
   
     Un nouvel index s’affiche dans la liste **Selected Primary/Unique Key or Index** (Clé ou index primaire/unique sélectionné) avec un nom par défaut similaire à `IX_Table1`.  
   
@@ -174,7 +175,7 @@ Vous pouvez créer des index sur la plupart des types de données, y compris les
   
     La boîte de dialogue **Index XML** s’ouvre.  
   
-3.  Cliquez sur **Ajouter**.  
+3.  Cliquez sur **Add**.  
   
     Un index XML contenant des valeurs par défaut sera ajouté à la liste **Index XML sélectionné** .  
   

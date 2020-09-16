@@ -1,4 +1,5 @@
 ---
+description: Propriété ConnectionPoolSize (WMI MSReportServer_ConfigurationSetting)
 title: ConnectionPoolSize, propriété (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 052aef53b4a02e26757493ab6cdd89578c39f4f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0170b595f9e729c847bd2ed72046722d0670d3a3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570936"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497982"
 ---
 # <a name="configurationsetting-property---connectionpoolsize"></a>Propriété ConfigurationSetting - ConnectionPoolSize
   Taille du pool de connexions qu’utilise le serveur de rapports pour communiquer avec l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de rapports. Lecture seule.  

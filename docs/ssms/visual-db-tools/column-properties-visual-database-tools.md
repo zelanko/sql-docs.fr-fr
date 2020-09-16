@@ -1,4 +1,5 @@
 ---
+description: Propriétés de la colonne (Visual Database Tools)
 title: Propriétés de colonne
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 56bb24bbf28a07da1ade12eecea0e0db5b2badbd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005186"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480081"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +58,7 @@ Affiche le type de données de la colonne sélectionnée. Pour plus d’informat
 **Incrément d'identité**  
 Indique l’incrément qui sera ajouté à **Valeur initiale de la propriété Identity** pour chaque ligne ultérieure de la colonne d’identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
-**Valeur initiale de la propriété Identity**  
+**Valeur initiale de la propriété identity**  
 Affiche la valeur de départ affectée à la première ligne de la table pour la colonne d'identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Est d'identité**  
@@ -72,7 +73,7 @@ Indique si la colonne autorise ou non les valeurs Null.
 **Précision**  
 Affiche le nombre maximal de chiffres autorisés pour les types de données numériques. Cette propriété affiche **0** pour les types de données non numériques.  
   
-**Mettre à l'échelle**  
+**Mise à l’échelle**  
 Affiche le nombre maximal de chiffres qui peuvent apparaître à droite de la virgule décimale pour les types de données numériques. Cette valeur doit être inférieure ou égale à la précision. Cette propriété affiche **0** pour les types de données non numériques.  
   
 ## <a name="column-properties-tab"></a>Onglet Propriétés de la colonne  
@@ -105,7 +106,7 @@ Affiche le nombre de caractères autorisés pour les types de données texte. Ce
 **Précision**  
 Affiche le nombre maximal de chiffres autorisés pour les types de données numériques. Cette propriété affiche **0** pour les types de données non numériques. Cette propriété est disponible uniquement pour les types de données numériques.  
   
-**Mettre à l'échelle**  
+**Mise à l’échelle**  
 Affiche le nombre maximal de chiffres qui peuvent apparaître à droite de la virgule décimale pour les types de données numériques. Cette valeur doit être inférieure ou égale à la précision. Cette propriété affiche **0** pour les types de données non numériques. Cette propriété est disponible uniquement pour les types de données numériques.  
   
 **Catégorie Concepteur de tables**  
@@ -158,7 +159,7 @@ Détermine si la colonne sélectionnée est la colonne identité de la table. Po
 **Incrément d'identité**  
 Affiche l’incrément qui sera ajouté à **Valeur initiale de la propriété Identity** à chaque nouvelle ligne. Si vous laissez cette cellule vide, la valeur 1 est affectée par défaut. Pour modifier cette propriété, tapez directement la nouvelle valeur.  
   
-**Valeur initiale de la propriété Identity**  
+**Valeur initiale de la propriété identity**  
 Affiche la valeur attribuée à la première ligne de la table. Si vous laissez cette cellule vide, la valeur 1 est affectée par défaut. Pour modifier cette propriété, tapez directement la nouvelle valeur.  
   
 **Est déterministe**  
@@ -167,7 +168,7 @@ Indique si le type de données de la colonne sélectionnée peut être détermin
 **Publiée via DTS**  
 Indique si la colonne est publiée via DTS.  
   
-**Indexable**  
+**Is Indexable**  
 Indique si la colonne sélectionnée peut être indexée. Par exemple, les colonnes calculées non déterministes ne peuvent pas être indexées.  
   
 **Publiée par fusion**  
@@ -176,7 +177,7 @@ Indique si la colonne est publiée par fusion.
 **Pas pour la réplication**  
 Indique si les valeurs d'identité d'origine sont préservées pendant la réplication. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur.  
   
-**Répliquée**  
+**Is Replicated**  
 Indique si cette colonne est répliquée dans un autre emplacement.  
   
 **Est RowGuid**  

@@ -1,4 +1,5 @@
 ---
+description: Déplacer des éléments dans une solution
 title: Déplacer des éléments dans une solution
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 67456bfd826610aaf500735d4f055e00f0c58aa7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 871f86e949eb8c4567b6998f5f664de554e4f466
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000807"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497288"
 ---
 # <a name="move-items-in-a-solution"></a>Déplacer des éléments dans une solution
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +34,7 @@ Les éléments de projet des projets [!INCLUDE[ssManStudioFull](../../includes/s
   
 3.  Dans l'Explorateur de solutions, sélectionnez la destination.  
   
-4.  Dans le menu **Edition** , cliquez sur **Coller**.  
+4.  Dans le menu **Edition**, cliquez sur **Coller**.  
   
 Vous pouvez déplacer des éléments en faisant glisser les requêtes et les fichiers divers dans l'Explorateur de solutions. Faire glisser ces éléments vous permet de voir le résultat de l'opération de glissement. Les requêtes déplacées d'un type de projet vers un autre peuvent être considérées comme des fichiers divers dans le projet cible.  
   
@@ -42,5 +43,5 @@ Vous pouvez déplacer des éléments en faisant glisser les requêtes et les fic
   
 ## <a name="see-also"></a>Voir aussi  
 [Explorateur de solutions](../../ssms/solution/solution-explorer.md)  
-[Copier des éléments d’une solution](../../ssms/solution/copy-items-in-a-solution.md)  
+[Copier des éléments d'une solution](../../ssms/solution/copy-items-in-a-solution.md)  
   

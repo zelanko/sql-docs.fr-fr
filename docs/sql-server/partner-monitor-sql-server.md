@@ -8,12 +8,12 @@ ms.prod: sql
 ms.technology: release-landing
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 5b2ea5e22800d2fc8f65282f62fa52ce19e87722
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 2270305d9fd3ae3bacdccee6166f02e305f94361
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86921768"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512325"
 ---
 # <a name="sql-server-monitoring-partners"></a>Partenaires pour la surveillance de SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -62,7 +62,7 @@ Pour plus d’informations sur quelques autres de nos partenaires, consultez [Pa
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
 
-[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlightcloud?tab=Overview
 [solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->
