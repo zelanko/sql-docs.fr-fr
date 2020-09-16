@@ -6,7 +6,7 @@ ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - ports [SQL Server], listening on
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c68b7a9f1da65862403750e32315ee7168ded6e6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8824963894b70412ff4525f25b40de7ed53ccd3b
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85880304"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901063"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propriétés TCP/IP (onglet Adresses IP)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -62,8 +62,7 @@ ms.locfileid: "85880304"
  Recherchez par exemple les rubriques **Configurer un serveur pour écouter un port TCP spécifique (Gestionnaire de configuration SQL Server)** et **Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP**dans MSDN.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choix d'un protocole réseau](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
+ [Choix d'un protocole réseau](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Création d’une chaîne de connexion valide avec TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Service SQL Server Browser](sql-server-browser-service.md)  
-  
   
