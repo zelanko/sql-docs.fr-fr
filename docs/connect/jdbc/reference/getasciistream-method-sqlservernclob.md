@@ -1,4 +1,5 @@
 ---
+description: Méthode getAsciiStream (SQLServerNClob)
 title: Méthode getAsciiStream (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ff1d47e4-572a-4169-a631-ac261f7642b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 969b254344cd1351d7a146c4dd05788cde713219
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 04c7acab2316276a78697c4469643446437c76d5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925388"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437381"
 ---
 # <a name="getasciistream-method-sqlservernclob"></a>Méthode getAsciiStream (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

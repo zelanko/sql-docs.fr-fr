@@ -1,4 +1,5 @@
 ---
+description: Méthode createStatement (int, int, int)
 title: Méthode createStatement (int, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 2e4fa385-8f61-4394-8f75-3e839930a57d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: adf3e74fc6fe823d816e3f86993fe9075d966289
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 53395cc630c161c15e50559fd1cc78b8faf5c044
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927679"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437941"
 ---
 # <a name="createstatement-method-int-int-int"></a>Méthode createStatement (int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,6 +62,6 @@ public java.sql.Statement createStatement(int nType,
 ## <a name="see-also"></a>Voir aussi  
  [createStatement, méthode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md)   
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+ [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

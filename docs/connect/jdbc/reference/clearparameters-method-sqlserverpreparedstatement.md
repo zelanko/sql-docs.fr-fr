@@ -1,4 +1,5 @@
 ---
+description: clearParameters, méthode (SQLServerPreparedStatement)
 title: clearParameters, méthode (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: cb1d0f36-d2de-4685-b97a-626608e50e5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84cf1569d865f8e7aad5b407ea993576dbe8b456
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6df59c5e303edb586df489a4b68a3f5a50ce7fa1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927968"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438161"
 ---
 # <a name="clearparameters-method-sqlserverpreparedstatement"></a>clearParameters, méthode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,6 +43,6 @@ public final void clearParameters()
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
+ [Classe SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   

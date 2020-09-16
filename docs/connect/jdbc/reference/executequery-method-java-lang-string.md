@@ -1,4 +1,5 @@
 ---
+description: Méthode executeQuery (java.lang.String)
 title: Méthode executeQuery (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: edb099aaa88887f96a3a05369373035588f25b74
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: cff547cf27a6ef796e31383e524872717943b860
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922038"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437701"
 ---
 # <a name="executequery-method-javalangstring"></a>Méthode executeQuery (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,6 +58,6 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 ## <a name="see-also"></a>Voir aussi  
  [executeQuery, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
+ [Classe SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   

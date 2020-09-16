@@ -1,4 +1,5 @@
 ---
+description: Méthode getArray (int)
 title: Méthode getArray (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 5b839d3f-5a4e-43da-b93c-dc9e0f6d4b3b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d1c6e2f5cac93ab188ecae0f798722541b62e69
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 81844036d6f3d25177b8ddddbae10b37d9515085
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923446"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437491"
 ---
 # <a name="getarray-method-int"></a>Méthode getArray (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,6 +52,6 @@ public java.sql.Array getArray(int i)
 ## <a name="see-also"></a>Voir aussi  
  [getArray, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

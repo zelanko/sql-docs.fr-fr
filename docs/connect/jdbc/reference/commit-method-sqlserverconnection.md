@@ -1,4 +1,5 @@
 ---
+description: commit, méthode (SQLServerConnection)
 title: Méthode commit (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c7346165-51bf-4844-b64c-29833c147236
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 50afbfa25052e0f602c486d011ce666a599372e0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 50fe66c673f443c7c69e26ca608562794950558f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923586"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438031"
 ---
 # <a name="commit-method-sqlserverconnection"></a>commit, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,6 +47,6 @@ public void commit()
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+ [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

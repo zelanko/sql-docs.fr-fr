@@ -1,4 +1,5 @@
 ---
+description: Méthode close (SQLServerPooledConnection)
 title: Méthode close (SQLServerPooledConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0d9205ad146dc4ad170281d351d8e13d0b64e554
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fe33e7c030ad84bcefce5fb8f1f247ebd65886fa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923647"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438101"
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>Méthode close (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,6 +44,6 @@ public void close()
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerPooledConnection, méthodes](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   
  [SQLServerPooledConnection, membres](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   
- [SQLServerPooledConnection, classe](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
+ [Classe SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  
   
   
