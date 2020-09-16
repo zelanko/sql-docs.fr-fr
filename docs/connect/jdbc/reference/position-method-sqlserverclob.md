@@ -1,4 +1,5 @@
 ---
+description: Méthode position (SQLServerClob)
 title: Méthode position (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 20e04cb0-34ea-4b7a-ba74-4de13b8645b6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c041f28d2885face086f4334a5e3091ed38c345d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b0aacbb9b6f3fcf43aaacbf070f96aef715251b4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914149"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432991"
 ---
 # <a name="position-method-sqlserverclob"></a>Méthode position (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80914149"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[position (java.sql.Clob, long)](../../../connect/jdbc/reference/position-method-java-sql-clob-long.md)|Retourne la position de caractère de l'objet CLOB spécifié dans le CLOB, en fonction de la position de départ donnée.|  
 |[position (java.lang.String, long)](../../../connect/jdbc/reference/position-method-java-lang-string-long.md)|Retourne la position de caractère de la sous-chaîne spécifiée dans l'objet CLOB, en fonction de la position de départ donnée.|  
@@ -37,6 +38,6 @@ ms.locfileid: "80914149"
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)   
- [SQLServerClob, classe](../../../connect/jdbc/reference/sqlserverclob-class.md)  
+ [Classe SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

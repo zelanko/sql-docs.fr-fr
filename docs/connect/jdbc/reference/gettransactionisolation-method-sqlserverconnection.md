@@ -1,4 +1,5 @@
 ---
+description: getTransactionIsolation, méthode (SQLServerConnection)
 title: Méthode getTransactionIsolation (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 96b7636b1987a6b210af06436dee4b7a9ad788f2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 53d49dd19d57d8e7c520601711165d09bbe6c6e3
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911408"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434021"
 ---
 # <a name="gettransactionisolation-method-sqlserverconnection"></a>getTransactionIsolation, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,6 +58,6 @@ public int getTransactionIsolation()
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+ [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

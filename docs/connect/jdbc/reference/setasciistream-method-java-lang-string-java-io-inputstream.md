@@ -1,4 +1,5 @@
 ---
+description: Méthode setAsciiStream (java.lang.String, java.io.InputStream)
 title: Méthode setAsciiStream pour flux d’entrée | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: dc2caa44-9eb5-4ed8-a889-36148b50901d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b8a50e1b93ce1fead2f69dc3680bbb90d2bf3170
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2fef33d5b60bef1f26fde6711cf849d6fab7487f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921970"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432571"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream"></a>Méthode setAsciiStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,6 +48,6 @@ public final void setAsciiStream(java.lang.String parameterName,
   
 ## <a name="see-also"></a>Voir aussi  
  [setAsciiStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   
- [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
+ [Membres de SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   
   

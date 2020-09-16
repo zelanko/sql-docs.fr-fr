@@ -1,4 +1,5 @@
 ---
+description: Méthode setAsciiStream (java.lang.String, java.io.InputStream, int)
 title: Méthode setAsciiStream pour octets du flux d’entrée – int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 6ea23386-201f-41af-8232-225de3476765
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b494e8745e1634ad313cb2da18367550e24b852e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d6edf6a538c0a2bf7f6f4783c5339277f622aac5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920140"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432601"
 ---
 # <a name="setasciistream-method--javalangstring-javaioinputstream-int"></a>Méthode setAsciiStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,6 +62,6 @@ public void setAsciiStream(java.lang.String parameterName,
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

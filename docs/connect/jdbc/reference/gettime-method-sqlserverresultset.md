@@ -1,4 +1,5 @@
 ---
+description: getTime, méthode (SQLServerResultSet)
 title: Méthode getTime (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 1db346ba-a3bd-4387-a423-72e227346318
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 65b89b00873f2b2ad232b52625e7e96269674351
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9dbe3dac818721d3dc129b93a0e77e45a3f4a583
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927367"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434161"
 ---
 # <a name="gettime-method-sqlserverresultset"></a>getTime, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80927367"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[getTime (int)](../../../connect/jdbc/reference/gettime-method-int-sqlserverresultset.md)|Récupère la valeur de l’index de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant qu’objet java.sql.Time dans le langage de programmation Java.|  
 |[getTime (int, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-int-java-util-calendar-sqlserverresultset.md)|Récupère la valeur de l’index de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant qu’objet java.sql.Time dans le langage de programmation Java, en utilisant l’objet Calendar donné.|  

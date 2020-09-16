@@ -1,4 +1,5 @@
 ---
+description: Méthode setAsciiStream (SQLServerPreparedStatement)
 title: setAsciiStream, méthode (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 83dcca17bdd2741cadb2a71631db5f5158217478
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 74f87d8ec49080556d04364757e8b2b77e09ca88
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927816"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432560"
 ---
 # <a name="setasciistream-method-sqlserverpreparedstatement"></a>Méthode setAsciiStream (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80927816"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[setAsciiStream, méthode &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|Définit le numéro de paramètre désigné selon l’objet java.io.InputStream spécifié.|  
 |[setAsciiStream, méthode &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|Définit le numéro de paramètre désigné selon l’objet java.io.InputStream spécifié avec le nombre d’octets précisé.|  
@@ -32,6 +33,6 @@ ms.locfileid: "80927816"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
+ [Classe SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Méthode rollback (SQLServerXAResource)
 title: Méthode rollback (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 93d9d7e6-54b6-4d86-8f8c-386c6057e85e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d129913a4946d5887a100bd4a295c344a951c2f0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 12f4acc7329e1683a200f4ccb0e1e848ec0df5ed
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80903776"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432701"
 ---
 # <a name="rollback-method-sqlserverxaresource"></a>Méthode rollback (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,6 +49,6 @@ public void rollback(javax.transaction.xa.Xid xid)
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerXAResource, méthodes](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource, membres](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
- [SQLServerXAResource, classe](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
+ [Classe SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   

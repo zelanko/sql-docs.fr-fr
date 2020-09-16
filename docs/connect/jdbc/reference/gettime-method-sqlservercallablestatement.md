@@ -1,4 +1,5 @@
 ---
+description: Méthode getTime (SQLServerCallableStatement)
 title: Méthode getTime (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6801394bda93a87860e60f01719c69d709e04ee5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fb2ca273e5fdecb8aa01e0c26c4b60285edf861e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927387"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434171"
 ---
 # <a name="gettime-method-sqlservercallablestatement"></a>Méthode getTime (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80927387"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[getTime (int)](../../../connect/jdbc/reference/gettime-method-int.md)|Récupère la valeur du paramètre désigné en tant qu'objet java.sql.Time dans le langage de programmation Java en fonction de l'index de paramètre.|  
 |[getTime (int, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-int-java-util-calendar.md)|Récupère la valeur du paramètre désigné sous forme d’objet java.sql.Time dans le langage de programmation Java en fonction de l’index de paramètre fourni, avec l’objet Calendar donné.|  
@@ -38,6 +39,6 @@ ms.locfileid: "80927387"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

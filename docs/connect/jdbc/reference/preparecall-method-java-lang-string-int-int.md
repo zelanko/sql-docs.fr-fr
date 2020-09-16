@@ -1,4 +1,5 @@
 ---
+description: Méthode prepareCall (java.lang.String, int, int)
 title: prepareCall, méthode (java.lang.String, int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 04d36a25-7f95-4675-9690-4462671b3d67
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0c6f1b51509f73858093c2d208cf2c9012fb219d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: eb4d75933c55868f64ce81b851b0c96140b33758
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923159"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432941"
 ---
 # <a name="preparecall-method-javalangstring-int-int"></a>Méthode prepareCall (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -61,6 +62,6 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 ## <a name="see-also"></a>Voir aussi  
  [prepareCall, méthode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+ [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

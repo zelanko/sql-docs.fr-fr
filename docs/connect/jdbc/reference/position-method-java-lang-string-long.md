@@ -1,4 +1,5 @@
 ---
+description: Méthode position (java.lang.String, long)
 title: Méthode position (java.lang.String, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 432ee4fccc21a57130e1bccad9c43b50e2b992ba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6529acba826fb4e76c3c6f6612eacccc63ee7a30
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914375"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433041"
 ---
 # <a name="position-method-javalangstring-long"></a>Méthode position (java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,6 +58,6 @@ public long position(java.lang.String searchstr,
  [Méthode position &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   
  [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)   
- [SQLServerClob, classe](../../../connect/jdbc/reference/sqlserverclob-class.md)  
+ [Classe SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

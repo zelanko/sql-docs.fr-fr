@@ -1,4 +1,5 @@
 ---
+description: Méthode getTypeInfo (SQLServerDatabaseMetaData)
 title: Méthode getTypeInfo (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b007e5db3358cd1af350ac0d87af7df1af18518
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f58266a7b90b88c49aabfb60062e396181f8dde7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80911185"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434011"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Méthode getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +56,7 @@ public java.sql.ResultSet getTypeInfo()
 |CREATE_PARAMS|**Chaîne**|Description des paramètres de création du type de données.|  
 |NULLABLE|**short**|Indique si la colonne peut contenir une valeur Null. Ce peut être l’une des valeurs suivantes :<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Indique si le type de donnée respecte la casse. « **true** » si le type respecte la casse ; sinon, « **false** ».|  
-|SEARCHABLE|**short**|Indique si la colonne désignée peut être utilisée dans une clause SQL WHERE. Ce peut être l’une des valeurs suivantes :<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|POSSIBILITÉ DE RECHERCHE|**short**|Indique si la colonne désignée peut être utilisée dans une clause SQL WHERE. Ce peut être l’une des valeurs suivantes :<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Indique le signe du type de données. « **true** » si le type est non signé ; sinon, « **false** ».|  
 |FIXED_PREC_SCALE|**boolean**|Indique que le type de données peut être une valeur monétaire. « **true** » si le type de données est money ; sinon, « **false** ».|  
 |AUTO_INCREMENT|**boolean**|Indique que le type de données peut être incrémenté automatiquement. « **true** » si le type ne peut pas être incrémenté automatiquement ; sinon, « **false** ».|  
@@ -71,7 +72,7 @@ public java.sql.ResultSet getTypeInfo()
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getTypeInfo, consultez « sp_datatype_info (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant montre comment utiliser la méthode getTypeInfo pour retourner des informations sur les types de données utilisés dans une base de données [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] (ou ultérieur).  
   
 ```  

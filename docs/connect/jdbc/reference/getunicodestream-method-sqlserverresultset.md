@@ -1,4 +1,5 @@
 ---
+description: getUnicodeStream, méthode (SQLServerResultSet)
 title: Méthode getUnicodeStream (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 0dd61865-663b-47e2-b417-e9df418894cc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e4eb5989f2674825963f2db2157d67d85416d030
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 43590c9d660a54d24c42b8032ee886ffcd587ed0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80910915"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433911"
 ---
 # <a name="getunicodestream-method-sqlserverresultset"></a>getUnicodeStream, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "80910915"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[getUnicodeStream, méthode &#40;int&#41;](../../../connect/jdbc/reference/getunicodestream-method-int.md)|Récupère la valeur de l’index de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de flux de caractères Unicode.|  
 |[getUnicodeStream, méthode &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getunicodestream-method-java-lang-string.md)|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) sous forme de flux de caractères Unicode.|  

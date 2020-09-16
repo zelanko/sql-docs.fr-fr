@@ -1,4 +1,5 @@
 ---
+description: Méthode getTimestamp (int)
 title: Méthode getTimestamp (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: a9fd6496-c72e-4cc6-b46a-4aa9f13f90ff
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44f86bdda2868150d1bf52ef193426f7683b06fa
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7a8c8ffb622236d6bdff684686bef42ce6e3f02c
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927323"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88434071"
 ---
 # <a name="gettimestamp-method-int"></a>Méthode getTimestamp (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,11 +49,11 @@ public java.sql.Timestamp getTimestamp(int index)
 ## <a name="remarks"></a>Notes  
  Cette méthode getTimestamp est spécifiée par la méthode getTimestamp de l’interface java.sql.CallableStatement.  
   
- Cette méthode retourne des valeurs seulement à partir des colonnes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]datetime**et**smalldatetime**de**.  
+ Cette méthode retourne des valeurs seulement à partir des colonnes **datetime** et **smalldatetime** de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [getTimestamp, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

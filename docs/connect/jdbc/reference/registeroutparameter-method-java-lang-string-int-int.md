@@ -1,4 +1,5 @@
 ---
+description: Méthode registerOutParameter (java.lang.String, int, int)
 title: Méthode registerOutParameter pour type et mise à l'échelle | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 8bddc557-4526-4843-9804-05dc83c8832d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb0a97e0b9ee1ef33897d98580a67794fbc8e2bb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 575573dfc043cbb5c4dba115860abedcf2981aaa
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80904275"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432791"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-int"></a>Méthode registerOutParameter (java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,6 +59,6 @@ public void registerOutParameter(java.lang.String s,
 ## <a name="see-also"></a>Voir aussi  
  [registerOutParameter, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   

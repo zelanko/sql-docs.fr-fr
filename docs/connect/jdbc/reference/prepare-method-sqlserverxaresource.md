@@ -1,4 +1,5 @@
 ---
+description: Méthode prepare (SQLServerXAResource)
 title: Méthode prepare (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: f800c966-3fae-41b3-963a-464988f80da3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c926cafd2e0bb167d34484e864b7770cf894f3f9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5df7e43a944180be9cf73bda5b65343022fd51c2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80914095"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432981"
 ---
 # <a name="prepare-method-sqlserverxaresource"></a>Méthode prepare (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,6 +52,6 @@ public int prepare(javax.transaction.xa.Xid xid)
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerXAResource, méthodes](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [SQLServerXAResource, membres](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
- [SQLServerXAResource, classe](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
+ [Classe SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   

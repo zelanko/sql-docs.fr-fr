@@ -1,4 +1,5 @@
 ---
+description: Méthode setBinaryStream (int, java.io.InputStream, long)
 title: setBinaryStream, méthode (int, java.io.InputStream, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4ab2e2f3-eaf0-471a-8422-2cf98ce979cf
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 712fdfd5cd4b7dd87654d78feea49b15278bdd02
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e7f7b9564c6ae1c7dd1793d8c76a890807686e6d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921225"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432481"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-long"></a>Méthode setBinaryStream (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,6 +57,6 @@ public final void setBinaryStream(int parameterIndex,
   
 ## <a name="see-also"></a>Voir aussi  
  [setBinaryStream, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   
- [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
+ [Membres de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   
   

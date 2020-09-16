@@ -1,4 +1,5 @@
 ---
+description: Méthode jdbcCompliant (SQLServerDriver)
 title: Méthode jdbcCompliant (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ae5ac88d0427a605493bc19786bdd5f23dc93b6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 25495005dafdc95982b2f7005c96eb186c864caf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915061"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88433281"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>Méthode jdbcCompliant (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,6 +44,6 @@ public boolean jdbcCompliant()
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDriver, méthodes](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [SQLServerDriver, membres](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [SQLServerDriver, classe](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
+ [Classe SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   

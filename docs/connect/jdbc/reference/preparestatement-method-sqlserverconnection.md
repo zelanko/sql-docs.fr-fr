@@ -1,4 +1,5 @@
 ---
+description: prepareStatement, méthode (SQLServerConnection)
 title: Méthode prepareStatement (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e2bd4afa0d0ed4f25b570c084dd0c6baabdcf488
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33ff50a91a7fd66191665a335a6e462adb9eb632
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913885"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88432871"
 ---
 # <a name="preparestatement-method-sqlserverconnection"></a>prepareStatement, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80913885"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[prepareStatement (java.lang.String)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string.md)|Crée un objet [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) servant à envoyer des instructions SQL paramétrables à la base de données.|  
 |[prepareStatement (java.lang.String, int)](../../../connect/jdbc/reference/preparestatement-method-java-lang-string-int.md)|Crée un objet [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) servant à envoyer des instructions SQL paramétrables à la base de données et capable de récupérer des clés générées automatiquement.|  
@@ -40,6 +41,6 @@ ms.locfileid: "80913885"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+ [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   
