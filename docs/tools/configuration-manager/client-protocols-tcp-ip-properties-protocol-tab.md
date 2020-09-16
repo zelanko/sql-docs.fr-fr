@@ -6,7 +6,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
@@ -15,12 +15,12 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 637ebfc8b031ed5b8b49ac634718c56786a9b813
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 86ff8b00da8989d3e9ffb3d24c84cbefa3d51bfd
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85892042"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88900537"
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>Protocoles clients – Propriétés TCP/IP (onglet Protocole)
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -44,8 +44,7 @@ ms.locfileid: "85892042"
  Ce paramètre (en millisecondes), détermine l’intervalle qui sépare les retransmissions **KEEPALIVE** jusqu’à ce qu’une réponse soit reçue. La valeur par défaut est 1 000 millisecondes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Choix d'un protocole réseau](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
+ [Choix d'un protocole réseau](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))   
  [Nouvel alias &#40;onglet Alias&#41;](../../tools/configuration-manager/new-alias-alias-tab.md)   
  [Propriétés d’&#60;alias&#62; &#40;onglet Alias&#41;](../../tools/configuration-manager/alias-properties-alias-tab.md)  
-  
   

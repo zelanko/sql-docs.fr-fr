@@ -1,6 +1,6 @@
 ---
 title: Extraction des informations sur les erreurs (pilote OLE DB)
-description: Récupération des informations sur les erreurs à l’aide d’OLE DB Driver pour SQL Server
+description: Cet exemple obtient les informations des différentes interfaces d’erreur exposées par le pilote OLE DB pour SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - OLE DB error handling, retrieving information
 - errors [OLE DB], retrieving information
 - OLE DB error handling, examples
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: f380f983b191843b82f7ba6ee9d17b06d43e2ba3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d0dd82b6ff3cb708cd6136929d1bdfd503a297bf
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244789"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862211"
 ---
 # <a name="retrieving-error-information"></a>Extraction des informations sur les erreurs
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
