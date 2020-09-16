@@ -10,12 +10,12 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 8be8ec4b61c42c0a25c01a6511b5bf69da6a47fd
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: f35d9ad1cf571708e547924d75efc9522db21cc1
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519129"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480842"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Prise en charge d’Azure Active Directory dans SQL Server Data Tools (SSDT)
 
@@ -89,6 +89,6 @@ La mise en œuvre de MFA est fournie par Azure AD par le biais de cette fenêtre
 [Authentification multifacteur](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [Authentification Azure Active Directory avec SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [Forum MSDN SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
-[Blog de l’équipe SSDT](https://blogs.msdn.com/b/ssdt/)  
+[Blog de l’équipe SSDT](https://docs.microsoft.com/archive/blogs/ssdt/)  
 [Référence de l’API DACFx](https://msdn.microsoft.com/library/dn645454.aspx)  
 [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)  

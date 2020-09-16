@@ -9,19 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ebcedf2adc48fad6668b30d9c34d21b7557879dc
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87253664"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569911"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Erreurs courantes de script R dans SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Cet article documente plusieurs erreurs de script courantes susceptibles de se produire lors de l’exécution de code R dans SQL Server. Cette liste n’est pas exhaustive. Il existe en effet de nombreux packages, et les erreurs peuvent varier entre les versions d’un même package.
-
-Si vous rencontrez des erreurs de script non traitées ici, publiez-les sur le [forum Machine Learning Server](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR). Ce forum prend en charge les composants Machine Learning utilisés dans différents produits de Machine Learning SQL.
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>Échec de script valide dans T-SQL ou dans les procédures stockées
 
@@ -100,6 +98,6 @@ Si plusieurs variables doivent être supprimées,nous vous suggérons d’enregi
 
 [Collecte de données pour la résolution des problèmes de machine learning](data-collection-ml-troubleshooting-process.md)
 
-[FAQ sur la mise à niveau et l’installation](upgrade-and-installation-faq-sql-server-r-services.md)
+[Installer SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
 [Résoudre les problèmes de connexion au moteur de base de données](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

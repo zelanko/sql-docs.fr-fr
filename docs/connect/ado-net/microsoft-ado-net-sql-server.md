@@ -11,12 +11,12 @@ ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 95a53493949b7c024328a7e94870f509f7e7bd99
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 65a9bacead100287a7ddb3be9a18d9b30ae9a313
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922220"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569921"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET pour SQL Server
 
@@ -37,8 +37,8 @@ ADO.NET est la technologie principale d’accès aux données pour les langages 
 * [SQL Server et ADO.NET](./sql/index.md)
   
 ## <a name="community"></a>Communauté  
-* [Forum des Fournisseurs managés ADO.NET](https://social.msdn.microsoft.com/Forums/adodotnetdataproviders/threads/)  
-* [Forum DataSet ADO.NET](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
+* [Forum des Fournisseurs managés ADO.NET](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataproviders)  
+* [Forum DataSet ADO.NET](https://social.msdn.microsoft.com/Forums/en-US/home?forum=adodotnetdataset)  
   
 ## <a name="more-samples"></a>Autres exemples  
 * [Exemples de code ADO.NET](/dotnet/framework/data/adonet/ado-net-code-examples)  

@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 39803c2063bf6afbae9bc6797d85499fc91a10bd
-ms.sourcegitcommit: 19ae05bc69edce1e3b3d621d7fdd45ea5f74969d
+ms.openlocfilehash: ed482982ecee2de572bc4241f199a7d16abc47d1
+ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88564669"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "89875568"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et des classements
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -647,7 +647,9 @@ Pour plus d’informations, consultez le contenu connexe suivante :
 * [Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
 * [Nom du classement SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md)  
 * [Nom de classement Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md)  
-* [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)       
+* [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)      
+* [COLLATE (Transact-SQL)](../../t-sql/statements/collations.md)      
+* [Priorité de classement](../../t-sql/statements/collation-precedence-transact-sql.md)    
     
 ## <a name="see-also"></a>Voir aussi    
 [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)     

@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a8ed0a9892110f4469a9adeb4d586c8eec7f081c
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111009"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570308"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ Ajout de la vue de gestion dynamique (DMV) **sys.dm_db_stats_properties**. Vous 
 ## <a name="20-before-you-install"></a>2.0 Avant d’installer  
 Pour plus d'informations sur l'installation des mises à jour de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , consultez la [documentation relative à la maintenance de SQL Server 2008 R2](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Pour plus d'informations d'ordre général sur le démarrage et l'installation de SQL Server 2008 R2, consultez le fichier Lisez-moi de SQL Server 2008 R2. Le document Lisez-moi est disponible sur le support d'installation. Vous pouvez également trouver des informations supplémentaires dans les [forums SQL Server](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
+Pour plus d'informations d'ordre général sur le démarrage et l'installation de SQL Server 2008 R2, consultez le fichier Lisez-moi de SQL Server 2008 R2. Le document Lisez-moi est disponible sur le support d'installation.
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Choisir le fichier approprié à télécharger et à installer  
 Utilisez le tableau suivant pour déterminer le fichier à télécharger et installer. Vérifiez que vous disposez de la configuration requise avant d'installer le Service Pack. La configuration requise est disponible sur les pages de téléchargement liées dans le tableau.  
