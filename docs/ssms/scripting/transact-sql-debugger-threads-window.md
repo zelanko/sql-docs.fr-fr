@@ -3,7 +3,7 @@ title: Fenêtre Threads
 description: En savoir plus sur la fenêtre Threads, qui affiche des informations sur le thread Moteur de base de données en cours de débogage. Les informations s’affichent uniquement en mode débogage.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
 - Threads Window [Transact-SQL]
@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27a1b4f5673b959d378bd70122e334e3a4629bad
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: bdc8d20024999e51509fdc45c054123667b94ee8
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248013"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901821"
 ---
 # <a name="transact-sql-debugger---threads-window"></a>Débogueur Transact-SQL - Fenêtre Threads
 

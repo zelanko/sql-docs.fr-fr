@@ -21,14 +21,14 @@ helpviewer_keywords:
 - QUERY_GOVERNOR_COST_LIMIT option
 - overriding connection values
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
-author: CarlRabeler
-ms.author: carlrab
-ms.openlocfilehash: bef95342402c065b0691e7478a3fc04b26e5495d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb7b16a18832bbdea950843409b0a17153c7a05b
+ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88304352"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89547456"
 ---
 # <a name="set-query_governor_cost_limit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -52,7 +52,7 @@ SET QUERY_GOVERNOR_COST_LIMIT value
   
  Le « coût d'une requête » correspond à la durée (en secondes) estimée nécessaire à l'exécution complète d'une requête dans une configuration matérielle donnée.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  L'utilisation de SET QUERY_GOVERNOR_COST_LIMIT s'applique à la connexion active et est effective durant celle-ci uniquement. Utilisez l’option de configuration du serveur [SET QUERY_GOVERNOR_COST_LIMIT](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) de **sp_configure** pour modifier le coût maximal d’exécution de l’Administrateur de requêtes sur l’ensemble du serveur. Pour plus d’informations sur la configuration de cette option, consultez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) et [Options de configuration du serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
  SET QUERY_GOVERNOR_COST_LIMIT est définie lors de l'exécution, et non pas durant l'analyse.  

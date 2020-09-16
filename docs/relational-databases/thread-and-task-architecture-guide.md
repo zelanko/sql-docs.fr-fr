@@ -15,12 +15,12 @@ ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61fad1afac14c2e6a27314e2a65371722ee9b23
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485574"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076804"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guide d’architecture de thread et de tâche
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -177,9 +177,13 @@ Microsoft Windows utilise un système de priorité numérique qui va de 1 à 31 
 
 Par défaut, chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est une priorité 7 (priorité dite normale). Ceci octroie aux threads [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] une priorité suffisamment élevée pour obtenir les ressources UC dont ils ont besoin sans pénaliser les autres applications. 
 
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]  
+
 L'option de configuration [Renforcement de priorité](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) peut être utilisée pour augmenter la priorité des threads d'une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à 13. (priorité dite élevée). Cette valeur donne aux threads [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] une priorité plus élevée que la plupart des autres applications. Par conséquent, les threads [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auront plutôt tendance à être distribués chaque fois qu'ils sont prêts à être exécutés et ne seront pas devancés par les threads d'autres applications. Ceci peut améliorer les performances lorsqu'un serveur n'exécute que des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et aucune autre application. Cependant, si une opération nécessitant beaucoup de mémoire se produit dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les autres applications n'auront sans doute pas une priorité suffisamment élevée pour devancer le thread [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 Si vous utilisez plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un ordinateur et activez le renforcement de priorité pour certaines d'entre elles uniquement, les performances des instances exécutées avec une priorité normale peuvent être compromises. Les performances d’autres applications et composants sur le serveur peuvent aussi diminuer si l’option Renforcement de priorité est activée. C'est pourquoi elle doit être utilisée dans certaines conditions bien définies.
+
 
 ## <a name="hot-add-cpu"></a>Ajout d’un processeur à chaud
 L'ajout d'un processeur à chaud est la capacité d'ajouter dynamiquement des processeurs à un système en cours d'exécution. L'ajout de processeurs peut s'effectuer physiquement en ajoutant du matériel, logiquement en partitionnant du matériel en ligne ou virtuellement par l'intermédiaire d'une couche de virtualisation. À compter de [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge l'ajout de processeurs à chaud.

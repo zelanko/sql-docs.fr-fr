@@ -1,27 +1,29 @@
 ---
 title: Configurer des éditeurs (SQL Server Management Studio)
 description: Découvrez comment personnaliser le fonctionnement des éditeurs SQL Server Management Studio en définissant des options dans la boîte de dialogue Options.
-ms.custom: seo-lt-2019
-ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fe8cc40b18678e080e97285f5566a3a0de7a73b
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 99fb2ac932b3fde03c024d1ecce06de2ef37d5b1
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122870"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093498"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurer des éditeurs (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Vous pouvez personnaliser le fonctionnement des éditeurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en configurant les options pour chaque éditeur.  
+
+Vous pouvez personnaliser le fonctionnement des éditeurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en configurant les options pour chaque éditeur.  
   
 ## <a name="setting-editor-options"></a>Définition des options d'éditeur  
  La plupart des options d’éditeur peuvent être définies dans le menu **Outils**, en sélectionnant **Options...** pour afficher la boîte de dialogue **Options**. Dans la boîte de dialogue **Options** , ouvrez le nœud **Éditeur de texte** dans le volet gauche pour définir les options d'édition de code et de texte. Les nœuds sous Éditeur de texte s'appliquent à des éditeurs spécifiques :  
@@ -43,6 +45,4 @@ ms.locfileid: "87122870"
 |Décrit comment spécifier qu'un éditeur doit être ouvert par un double-clic sur un fichier avec une extension spécifiée dans l'Explorateur Windows.|[Associer des extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
 |Décrit comment personnaliser les polices pour rendre le code et le texte plus lisibles.|[Modifier la couleur, la taille et le style de la police](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
 |Décrit comment afficher des propriétés.|[Utiliser la fenêtre Propriétés dans Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
-|Emplacement des pages d'aide F1 concernant les boîtes de dialogue d'options d'éditeur.|[Aide (F1) des pages Options de requête](https://msdn.microsoft.com/library/fad98caa-8a29-4b88-8464-f60a5c4fc00e)|  
-  
-  
+|Emplacement des pages d'aide F1 concernant les boîtes de dialogue d'options d'éditeur.|[Aide (F1) des pages Options de requête](https://docs.microsoft.com/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio)|

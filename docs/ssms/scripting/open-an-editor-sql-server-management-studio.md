@@ -1,26 +1,28 @@
 ---
 title: Ouvrir un éditeur (SQL Server Management Studio)
 description: Découvrez comment ouvrir les éditeurs de requête, MDX, DMX et XML/A du Moteur de base de données dans SQL Server Management Studio.
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.technology: scripting
-ms.reviewer: ''
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab96c21c9ac7d6e8b90564d6759c85744adc27f8
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
+ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122568"
+ms.lasthandoff: 08/29/2020
+ms.locfileid: "89093474"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-  Cette rubrique explique comment ouvrir l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ainsi que les éditeurs MDX, DMX et XML/A dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Une fois ouverte, chaque fenêtre d'éditeur s'affiche sous forme d'onglet dans le volet central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+
+Cette rubrique explique comment ouvrir l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , ainsi que les éditeurs MDX, DMX et XML/A dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Une fois ouverte, chaque fenêtre d'éditeur s'affiche sous forme d'onglet dans le volet central de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] prend en charge quatre éditeurs : l’Éditeur de requête [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la modification de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] , les éditeurs DMX et MDX pour la modification des scripts utilisant ces langages et l’éditeur XML/A pour la modification de scripts XML/A ou de fichiers XML. Tous ces éditeurs peuvent également être utilisés pour modifier des fichiers texte.  
@@ -81,6 +83,4 @@ ms.locfileid: "87122568"
   
 -   La fenêtre **Explorateur de modèles** s’affiche dans le volet droit.  
   
--   Double-cliquez sur un modèle pour ouvrir une fenêtre Requête de moteur de base de données avec le texte du modèle. Par exemple, pour ouvrir un modèle CREATE DATABASE, ouvrez le dossier **Modèles SQL Server** , ouvrez le dossier **Bases de données** et double-cliquez sur **Créer la base de données**.  
-  
-  
+-   Double-cliquez sur un modèle pour ouvrir une fenêtre Requête de moteur de base de données avec le texte du modèle. Par exemple, pour ouvrir un modèle CREATE DATABASE, ouvrez le dossier **Modèles SQL Server** , ouvrez le dossier **Bases de données** et double-cliquez sur **Créer la base de données**.
