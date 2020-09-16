@@ -1,4 +1,5 @@
 ---
+description: Prise en charge des jeux de caractères nationaux
 title: Prise en charge des jeux de caractères nationaux | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 4fceacfd-df4f-40cd-b7a2-5e5e58a5979f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ae20e40723822da0004b82dd7c89961fa0448e10
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 394d81f28921bfc4e68204778ed6fcdf1e2fb9e7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69027873"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438341"
 ---
 # <a name="national-character-set-support"></a>Prise en charge des jeux de caractères nationaux
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

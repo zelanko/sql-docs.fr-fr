@@ -1,4 +1,5 @@
 ---
+description: Constructeur SQLServerException (java.lang.String, java.lang.String, int, java.lang.Throwable)
 title: Constructeur SQLServerException (java.lang.String, java.lang.String, int, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -13,12 +14,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c8c90b5fcf9fd58bf4c6468603a91242fa1f935c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fb84d0c1216047f28ed980806129ff1e21c08bb6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902555"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450434"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>Constructeur SQLServerException (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,6 +56,6 @@ public SQLServerException(java.lang.String errText,
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerException, constructeurs](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
  [SQLServerException, membres](../../../connect/jdbc/reference/sqlserverexception-members.md)   
- [SQLServerException, classe](../../../connect/jdbc/reference/sqlserverexception-class.md)  
+ [Classe SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
   

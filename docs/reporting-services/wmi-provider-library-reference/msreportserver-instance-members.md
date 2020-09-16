@@ -1,4 +1,5 @@
 ---
+description: Membres MSReportServer_Instance
 title: Membres MSReportServer_Instance | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 13b266ed09c4187070403837a47011b30b43aa99
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2f75e1f2cffcbfc09672dc60242ad955360c864f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572221"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454412"
 ---
 # <a name="msreportserver_instance-members"></a>Membres MSReportServer_Instance
   La classe MSReportServer_Instance fournit des informations de base nécessaires pour qu’un client puisse se connecter à un serveur de rapports installé.  
   
 ## <a name="public-properties"></a>Propri&#233;t&#233;s publiques  
   
-|||  
+|Propriété|Description|  
 |-|-|  
 |[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Retourne l'édition du serveur de rapports.|  
 |[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Retourne le nom explicite de l'édition du serveur de rapports.|  
@@ -38,7 +39,7 @@ ms.locfileid: "65572221"
   
 ## <a name="public-methods"></a>M&#233;thodes publiques  
   
-|||  
+|Méthode|Description|  
 |-|-|  
 |[Méthode GetReportServerUrls &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Répertorie les URL que les utilisateurs peuvent employer pour accéder au serveur de rapports et au Gestionnaire de rapports.|  
   

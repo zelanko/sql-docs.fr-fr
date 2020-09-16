@@ -1,4 +1,5 @@
 ---
+description: Membres de SQLServerXAResource
 title: Membres de SQLServerXAResource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6d41f89ce541d6bb6497ad0702511c303704a41b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d0f772627bf8fb2265bfc95d25416d0f64f39601
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925670"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458156"
 ---
 # <a name="sqlserverxaresource-members"></a>Membres de SQLServerXAResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80925670"
   
 ## <a name="fields"></a>Champs  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[SSTRANSTIGHTLYCPLD](../../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md)|Utilisé pour permettre les transactions XA étroitement couplées, qui ont des ID de transaction de branche XA (XID) différents mais le même ID de transaction global (GTRID).|  
   
@@ -39,7 +40,7 @@ ms.locfileid: "80925670"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverxaresource.md)|Valide la transaction globale spécifiée par l’objet Xid donné.|  
 |[end](../../../connect/jdbc/reference/end-method-sqlserverxaresource.md)|Termine le travail effectué pour le compte d'une branche de transaction.|  
@@ -59,6 +60,6 @@ ms.locfileid: "80925670"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLServerXAResource, classe](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
+ [Classe SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  
   
   

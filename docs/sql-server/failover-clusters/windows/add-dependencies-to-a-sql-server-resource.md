@@ -1,4 +1,5 @@
 ---
+description: Ajouter des dépendances à une ressource SQL Server
 title: Ajouter des dépendances à une ressource FCI SQL Server
 descriptoin: Describes how to add dependencies to an Always On failover cluster instance (FCI) resource using the Failover Cluster Manager.
 ms.custom: seo-lt-2019
@@ -15,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84633c480003acc62b464c2609d7143051547de9
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: edfe4aef388749cf1a9362f31f9ae2668f85b524
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897363"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454421"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>Ajouter des dépendances à une ressource SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment ajouter des dépendances à une ressource d’instance de cluster de basculement (FCI) Always On à l’aide du composant logiciel enfichable Gestionnaire du cluster de basculement. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Prérequis](#Prerequisites)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Conditions préalables requises](#Prerequisites)  
   
--   **Pour ajouter une dépendance à une ressource SQL Server, à l’aide de :** [Gestionnaire du cluster de basculement Windows](#WinClusManager)  
+-   **Pour ajouter une dépendance à une ressource SQL Server à l'aide du** [Gestionnaire du cluster de basculement Windows](#WinClusManager)  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -45,13 +46,13 @@ ms.locfileid: "85897363"
   
  Tenez compte de ces problèmes supplémentaires :  
   
--   FTP avec la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : pour les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui utilisent FTP avec la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], votre service FTP doit utiliser l’un des disques physiques utilisés pour l’installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurée pour utiliser le service FTP.  
+-   FTP avec la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : pour les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui utilisent FTP avec la réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , votre service FTP doit utiliser un des mêmes disques physiques que pour l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurée pour utiliser le service FTP.  
   
--   Dépendances de ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : si vous ajoutez une ressource à un groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s’il existe une dépendance sur la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour garantir que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est disponible, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous recommande d’ajouter une dépendance sur la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent. N'ajoutez pas une dépendance à la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour garantir que l’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reste hautement disponible, configurez la ressource de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent de façon à ce qu’elle n’affecte pas le groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en cas d’échec de cette dernière. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : si vous ajoutez une ressource à un groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et s'il existe une dépendance sur la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour garantir que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est disponible, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous recommande d'ajouter une dépendance à la ressource de l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . N'ajoutez pas une dépendance à la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour garantir que l’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] reste hautement disponible, configurez la ressource de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent de façon à ce qu’elle n’affecte pas le groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en cas d’échec de cette dernière. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
--   Ressources de partage de fichiers ou d’imprimantes : quand vous installez des ressources de partage de fichiers ou de cluster d’imprimante, celles-ci ne doivent pas se trouver sur les mêmes ressources de disques physiques que l’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si elles se trouvent sur les ressources des disques physiques, vous pouvez constater une dégradation des performances et une perte des services sur l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Ressources de partage de fichiers ou d'imprimantes : lorsque vous installez des ressources de partage de fichiers ou de clusters d'imprimantes, celles-ci ne doivent pas se trouver sur les mêmes ressources des disques physiques que l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si elles se trouvent sur les ressources des disques physiques, vous pouvez constater une dégradation des performances et une perte des services sur l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Considérations relatives à MS DTC : après avoir installé le système d’exploitation et configuré votre FCI, vous devez configurer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) pour travailler dans un cluster à l’aide du composant logiciel enfichable Gestionnaire du cluster de basculement. L'échec de la mise en cluster de MS DTC ne bloquera pas l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mais les fonctionnalités des applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent être affectées si MS DTC n'est pas configuré correctement.  
+-   Considérations relatives à MS DTC : après avoir installé le système d'exploitation et configuré votre FCI, vous devez configurer le Coordinateur de transactions distribuées (MS DTC) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour travailler dans un cluster à l'aide du composant logiciel enfichable Gestionnaire du cluster de basculement. L'échec de la mise en cluster de MS DTC ne bloquera pas l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mais les fonctionnalités des applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent être affectées si MS DTC n'est pas configuré correctement.  
   
      Si vous installez MS DTC dans votre groupe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et si d'autres ressources dépendent de MS DTC, MS DTC ne sera pas disponible si ce groupe est hors connexion ou lors d'un basculement. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recommande de placer MS DTC dans un groupe distinct avec sa propre ressource de disque physique, si possible.  
   

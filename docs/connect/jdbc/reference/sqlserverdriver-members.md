@@ -1,4 +1,5 @@
 ---
+description: Membres de SQLServerDriver
 title: Membres de SQLServerDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ed87b925bd5c835a6955b9fb7e67aeed05a4ffdd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dbdee613bcf217f7f60401c305ce6f68ca55ad29
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80913385"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450488"
 ---
 # <a name="sqlserverdriver-members"></a>Membres de SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80913385"
   
 ## <a name="constructors"></a>Constructeurs  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[SQLServerDriver ()](../../../connect/jdbc/reference/sqlserverdriver-constructor.md)|Initialise une nouvelle instance de la classe [SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md).|  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80913385"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[acceptsURL](../../../connect/jdbc/reference/acceptsurl-method-sqlserverdriver.md)|Vérifie que l'URL donnée est valide.|  
 |[connect](../../../connect/jdbc/reference/connect-method-sqlserverdriver.md)|Établit une connexion à la base de données.|  
@@ -52,6 +53,6 @@ ms.locfileid: "80913385"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLServerDriver, classe](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
+ [Classe SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Index spatiaux, boîte de dialogue (Visual Database Tools)
 title: Boîte de dialogue Index spatiaux
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -12,16 +13,16 @@ ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: ffbabe94a55328a4de6bd6c85bcaa5af01b3fa8c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e8da73314062051bf93da1fba6912612b20e1a9b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999305"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446035"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Index spatiaux, boîte de dialogue (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-Utilisez la boîte de dialogue **Index spatiaux** pour créer des index pour les colonnes du type de données **géométrie** or **géographie** (*colonnes spatiales*), qui ne peuvent pas être indexées à l'aide de la boîte de dialogue **Index/Clés** . Chaque colonne spatiale peut avoir plusieurs index spatiaux, mais ils doivent être créés un par un.  
+ Utilisez la boîte de dialogue **Index spatiaux** pour créer des index pour les colonnes du type de données **géométrie** ou **géographie** (*colonnes spatiales*), qui ne peuvent pas être indexées à l’aide de la boîte de dialogue **Index/Clés**. Chaque colonne spatiale peut avoir plusieurs index spatiaux, mais ils doivent être créés un par un.  
   
 Pour plus d'informations sur les restrictions relatives à la création d'index spatiaux, consultez [Vue d'ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md).  
   

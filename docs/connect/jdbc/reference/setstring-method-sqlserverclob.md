@@ -1,4 +1,5 @@
 ---
+description: Méthode setString (SQLServerClob)
 title: setString, méthode (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: e329de08-7624-4cf6-9da7-350584e87011
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a63051a9c86a4d28d14bded428d7b482c9e6b2c5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fc76e65c8c7e55a8973d786bcfe89e8d965e6e41
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450733"
 ---
 # <a name="setstring-method-sqlserverclob"></a>Méthode setString (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80926620"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[setString (long, java.lang.String)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string.md)|Écrit la chaîne donnéedans le CLOB, en démarrant à la position donnée.|  
 |[setString (long, java.lang.String, int, int)](../../../connect/jdbc/reference/setstring-method-long-java-lang-string-int-int.md)|Écrit la chaîne donnée dans le CLOB, en démarrant à la position spécifiée et en fonction du décalage et de la longueur donnés.|  
@@ -37,6 +38,6 @@ ms.locfileid: "80926620"
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [SQLServerClob, membres](../../../connect/jdbc/reference/sqlserverclob-members.md)   
- [SQLServerClob, classe](../../../connect/jdbc/reference/sqlserverclob-class.md)  
+ [Classe SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  
   
   

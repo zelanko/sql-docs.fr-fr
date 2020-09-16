@@ -1,4 +1,5 @@
 ---
+description: SQLServerException, constructeur (java.lang.Object, java.lang.String, java.lang.String, StreamError, booléen)
 title: SQLServerException, constructeur (java.lang.Object, java.lang.String, java.lang.String, StreamError, booléen) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
@@ -13,12 +14,12 @@ apitype: Assembly
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 95217b384788ea78bd389948930ba34f580036ec
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0a0ee96aa32378e69f01fb8865cd773c30287416
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902615"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450484"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException, constructeur (java.lang.Object, java.lang.String, java.lang.String, StreamError, booléen)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,6 +63,6 @@ public SQLServerException(java.lang.Object obj,
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerException, constructeurs](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
  [SQLServerException, membres](../../../connect/jdbc/reference/sqlserverexception-members.md)   
- [SQLServerException, classe](../../../connect/jdbc/reference/sqlserverexception-class.md)  
+ [Classe SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
   

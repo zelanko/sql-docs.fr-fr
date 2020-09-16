@@ -1,4 +1,5 @@
 ---
+description: Désactiver Stretch Database et récupérer des données distantes
 title: Désactiver Stretch Database et récupérer des données distantes
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -11,15 +12,15 @@ ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 80974811f45a88b740aa8d84ea9ac67c2c2c1c07
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ed34730c85a8d492bb40e3013ea5a9a05fc01d90
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843818"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454372"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Désactiver Stretch Database et récupérer des données distantes
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Afin de désactiver Stretch Database pour une table, sélectionnez **Stretch** pour une table dans SQL Server Management Studio. Sélectionnez ensuite l’une des options suivantes.  
@@ -100,7 +101,7 @@ ms.locfileid: "73843818"
 > La désactivation de Stretch Database pour une base de données ne supprime pas la base de données distante. Si vous souhaitez supprimer la base de données distante, vous devez le faire à l’aide du portail de gestion Azure. La base de données distante continue d’entraîner des coûts Azure tant qu’elle n’a pas été supprimée. Pour plus d'informations, consultez la rubrique [Tarification de SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
   
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>Utilisation de Transact-SQL pour désactiver Stretch Database sur une base de données  
- Exécutez la commande suivante :  
+ Exécutez la commande suivante.  
   
 ```sql  
 ALTER DATABASE <Stretch-enabled database name>  

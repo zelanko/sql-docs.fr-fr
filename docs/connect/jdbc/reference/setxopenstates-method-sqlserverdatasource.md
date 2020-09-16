@@ -1,4 +1,5 @@
 ---
+description: Méthode setXopenStates (SQLServerDataSource)
 title: setXopenStates, méthode (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 9723591f-e987-426f-b70a-07f5c70dc094
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 42c8e22ed8fe17ea72accee7c1a58b49abf97134
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 345f243f6fb712208df336207ee408cd7596b296
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80901465"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88450611"
 ---
 # <a name="setxopenstates-method-sqlserverdatasource"></a>Méthode setXopenStates (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +38,7 @@ public void setXopenStates(boolean xopenStates)
 #### <a name="parameters"></a>Paramètres  
  *xopenStates*  
   
- **true** si la conversion d’états SQL en états compatibles XOPEN est activée. Dans le cas contraire, la valeur est **false**.  
+ **true** si la conversion d'états SQL en états compatibles XOPEN est activée. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  
  Si la propriété xopenStates a la valeur **true**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] convertit les états SQL en états compatibles XOPEN. La valeur par défaut est **false**, qui entraîne le pilote JDBC à générer des codes d'état SQL 99. Si xopenStates n’est pas défini, la méthode [getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md) retourne la valeur par défaut (**false**).  

@@ -1,4 +1,5 @@
 ---
+description: setSavepoint, méthode (SQLServerConnection)
 title: Méthode setSavepoint (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c39c6b4f-b9e2-423b-94ae-9f82d9e6d08d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 45ee5ce9b14763a50149896b6a53d45c104789dc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 71d70f1745d282cb36b40715962b959b1c2aa0fc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925005"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458391"
 ---
 # <a name="setsavepoint-method-sqlserverconnection"></a>setSavepoint, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,13 +30,13 @@ ms.locfileid: "80925005"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[setSavepoint ()](../../../connect/jdbc/reference/setsavepoint-method.md)|Crée un point de sauvegarde sans nom dans la transaction actuelle, puis retourne le nouvel objet [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) qui le représente.|  
 |[setSavepoint (java.lang.String)](../../../connect/jdbc/reference/setsavepoint-method-java-lang-string.md)|Crée un point de sauvegarde avec le nom donné dans la transaction actuelle, puis retourne le nouvel objet [SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md) qui le représente.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+ [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

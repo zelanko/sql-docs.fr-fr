@@ -1,4 +1,5 @@
 ---
+description: sqlsrv_field_metadata
 title: sqlsrv_field_metadata | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2020
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3d235fdf00922453b90979f5f8d5b6c720b7dac3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fd0c925808fda11127d1632e62c296f8cce30272
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922775"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88449965"
 ---
 # <a name="sqlsrv_field_metadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,26 +46,26 @@ sqlsrv_field_metadata( resource $stmt)
 |-------|---------------|  
 |Name|Nom de la colonne à laquelle le champ correspond.|  
 |Type|Valeur numérique qui correspond à un type SQL.|  
-|Size|Nombre de caractères des champs de type caractère (char(n), varchar(n), nchar(n), nvarchar(n), XML). Nombre d’octets des champs de type binaire (binary(n), varbinary(n), UDT). **NULL** pour les autres types de données SQL Server.|  
+|Taille|Nombre de caractères des champs de type caractère (char(n), varchar(n), nchar(n), nvarchar(n), XML). Nombre d’octets des champs de type binaire (binary(n), varbinary(n), UDT). **NULL** pour les autres types de données SQL Server.|  
 |Precision|Précision des types dont la précision varie (réel, numérique, décimal, DateHeure2, datetimeoffset et Heure). **NULL** pour les autres types de données SQL Server.|  
 |Scale|Échelle des types dont l’échelle varie (numérique, décimal, DateHeure2, datetimeoffset et Heure). **NULL** pour les autres types de données SQL Server.|  
 |Nullable|Valeur énumérée indiquant si la colonne est Nullable (**SQLSRV_NULLABLE_YES**), si la colonne n’est pas Nullable (**SQLSRV_NULLABLE_NO**) ou si l’indication que la colonne est Nullable est inconnu (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 Le tableau suivant fournit plus d’informations sur les clés pour chaque sous-tableau (consultez la documentation de SQL Server pour plus d’informations sur ces types) :  
   
-|Type de données de SQL Server 2008|Type|Précision minimale/maximale|Échelle minimale/maximale|Size|  
+|Type de données de SQL Server 2008|Type|Précision minimale/maximale|Échelle minimale/maximale|Taille|  
 |-----------------------------|--------|----------------------|------------------|--------|  
 |bigint|SQL_BIGINT (-5)|||8|  
 |binary|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
-|Date|SQL_TYPE_DATE (91)|10/10|0/0||  
+|date|SQL_TYPE_DATE (91)|10/10|0/0||  
 |DATETIME|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
 |Décimal|SQL_DECIMAL (3)|1/38|0/valeur de précision||  
 |float|SQL_FLOAT (6)|4/8|||  
-|image|SQL_LONGVARBINARY (-4)|||2 Go|  
+|image|SQL_LONGVARBINARY (-4)|||2 Go|  
 |int|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
 |NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
@@ -76,7 +77,7 @@ Le tableau suivant fournit plus d’informations sur les clés pour chaque sous-
 |SMALLINT|SQL_SMALLINT (5)|||2 octets|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
 |sql_variant|SQL_SS_VARIANT (-150)|||variable|  
-|text|SQL_LONGVARCHAR (-1)|||2 Go|  
+|texte|SQL_LONGVARCHAR (-1)|||2 Go|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
 |timestamp|SQL_BINARY (-2)|||8 octets|  
 |TINYINT|SQL_TINYINT (-6)|||1 octet|  
@@ -90,7 +91,7 @@ Le tableau suivant fournit plus d’informations sur les clés pour chaque sous-
   
 La clé Nullable peut avoir la valeur oui ou non.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant crée une ressource d’instruction, puis récupère et affiche les métadonnées de champ. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```

@@ -1,4 +1,5 @@
 ---
+description: Membres de SQLServerConnection
 title: Membres SQLServerConnection | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3f7000c8737d8d950968a9074e092a88c738941e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 75a3670a0f7e958f1976e387acdaa02a8449d202
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921052"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458281"
 ---
 # <a name="sqlserverconnection-members"></a>Membres de SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "80921052"
   
 ## <a name="fields"></a>Champs  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|Utilisé pour spécifier le niveau d'isolation de la transaction d'instantané.|  
   
@@ -39,7 +40,7 @@ ms.locfileid: "80921052"
   
 ## <a name="methods"></a>Méthodes  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|Efface tous les avertissements signalés pour cet objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Libère immédiatement les ressources JDBC et la base de données de cet objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md), au lieu de patienter jusqu’à leur libération automatique.|  
@@ -95,6 +96,6 @@ ms.locfileid: "80921052"
 |java.lang.Wrapper|isWrapperFor, unwrap|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+ [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

@@ -1,4 +1,5 @@
 ---
+description: Configurer les abonnements et les alertes pour les applications de service de SSRS
 title: Mettre en service les abonnements et les alertes pour les applications de service SSRS | Microsoft Docs
 ms.date: 06/03/2016
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 28f69b4aa47b45708832162b2b4b8429a847bc65
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62651954"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454531"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Configurer les abonnements et les alertes pour les applications de service de SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Les abonnements et les alertes de données nécessitent SQL Server Agent et peuvent exiger la configuration des autorisations de SQL Server Agent. Si des messages d'erreur apparaissent indiquant que SQL Server Agent est obligatoire et que vous avez vérifié le fonctionnement de SQL Server Agent, alors vous devez mettre à jour ou vérifier les autorisations. Cette rubrique traite de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint et décrit trois méthodes pour mettre à jour les autorisations de SQL Server Agent avec les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les informations d'identification que vous utilisez pour les étapes de cette rubrique doivent disposer d'autorisations suffisantes pour accorder des autorisations EXECUTE au rôle RSExecRole pour les objets dans les bases de données de l'application de service, msdb et master.  
@@ -100,7 +101,7 @@ ms.locfileid: "62651954"
   
     -   Si vous utilisez l'authentification SQL Server pour vous connecter, vous devez fournir un ID de conenxion et un mot de passe.  
   
-3.  Cliquez sur **Connecter**.  
+3.  Cliquez sur **Se connecter**.  
   
 #### <a name="to-run-the-transact-sql-statement"></a>Pour exécuter l'instruction Transact-SQL  
   

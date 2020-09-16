@@ -1,4 +1,5 @@
 ---
+description: Mise en route en exécutant l’Assistant Activer la base de données pour Stretch
 title: Mise en route en exécutant l’Assistant Activer la base de données pour Stretch
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
@@ -21,15 +22,15 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 5d730c8e71044154b9844174ac8d21837c9ea05f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6b06f82e5c51aa1c3843abec0daa7d3bebabe40a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73843801"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454354"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Mise en route en exécutant l’Assistant Activer la base de données pour Stretch
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Pour configurer une base de données pour Stretch Database, exécutez l’Assistant Activer la base de données pour Stretch.  Cet article décrit les informations que vous devez entrer et les choix que vous avez à faire dans l’Assistant.  
@@ -169,7 +170,7 @@ Si vous souhaitez utiliser un autre type de fonction de filtre pour sélectionne
  ![Page Récapitulatif de l’Assistant Stretch Database](../../sql-server/stretch-database/media/stretch-wizard-8.png "Page Récapitulatif de l’Assistant Stretch Database")  
   
 ##  <a name="results"></a><a name="Results"></a> Résultats  
- Passez en revue les résultats.  
+ Examinez les résultats.  
   
  Pour surveiller l’état de la migration de données, consultez [Surveiller et résoudre les problèmes de migration de données &#40;Stretch Database&#41;](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).  
   

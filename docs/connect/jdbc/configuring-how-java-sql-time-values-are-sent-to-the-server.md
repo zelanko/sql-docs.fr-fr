@@ -1,4 +1,5 @@
 ---
+description: Configuration du mode d’envoi des valeurs java.sql.Time au serveur
 title: Configuration du mode d'envoi des valeurs java.sql.Time au serveur | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -8,14 +9,14 @@ ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: a360def7656fb270267372d5b226b68d30aeaf57
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69028234"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438471"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuration du mode d’envoi des valeurs java.sql.Time au serveur
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

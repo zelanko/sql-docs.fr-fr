@@ -1,4 +1,5 @@
 ---
+description: Méthode acceptsURL (SQLServerDriver)
 title: Méthode acceptsURL (SQLServerDriver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68e12a39cb4a27f170b7f12705f17791bb40b649
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 17dad07495a7297a70f005e95162ea3edd968296
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923703"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88438301"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>Méthode acceptsURL (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,6 +52,6 @@ public boolean acceptsURL(java.lang.String url)
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDriver, méthodes](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [SQLServerDriver, membres](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
- [SQLServerDriver, classe](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
+ [Classe SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   

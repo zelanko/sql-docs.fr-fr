@@ -1,4 +1,5 @@
 ---
+description: Réservations d'URL pour les déploiements de serveur de rapports multi-instance
 title: Réservations d’URL pour les déploiements de serveur de rapports multi-instance | Microsoft Docs
 ms.date: 05/18/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0a09d7c391af0d8800f5d9c66d40ab7ba0c2cbf4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 661dc1ee0e259cc2f1457e555ca685e8e581dc0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88445961"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Réservations d'URL pour les déploiements de serveur de rapports multi-instance
   Si vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur, vous devez considérer comment vous définirez les réservations d'URL pour chaque instance. Dans chaque instance, le service Web Report Server et le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] doivent avoir au moins une réservation d’URL chacun. L'ensemble entier de réservations doit être unique dans HTTP.SYS.  

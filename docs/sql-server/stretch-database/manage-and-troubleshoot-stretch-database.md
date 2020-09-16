@@ -1,4 +1,5 @@
 ---
+description: Gestion et dépannage de Stretch Database
 title: Gérer et dépanner
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
@@ -13,15 +14,15 @@ ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: efe0b68c605c96423dae5206693ff733430aff63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285773"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454331"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Gestion et dépannage de Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Pour gérer Stretch Database et résoudre ses problèmes, utilisez les méthodes et outils décrits dans cet article.  
@@ -120,7 +121,7 @@ SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = 
 GO
 ```  
    
- ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>Effectuer des mises à jour et des suppressions administratives  
+ ## <a name="make-administrative-updates-and-deletes"></a><a name="adminHints"></a>Effectuer des suppressions et mises à jour administratives  
  Par défaut, vous ne pouvez pas mettre à jour ou supprimer des lignes éligibles à la migration, ou des lignes qui ont déjà migré, dans une table compatible Stretch. Quand vous devez corriger un problème, un membre du rôle db_owner peut exécuter une opération UPDATE ou DELETE en ajoutant l’indicateur de requête **WITH ( REMOTE_DATA_ARCHIVE_OVERRIDE = *valeur* )** à l’instruction. L’indicateur de requête REMOTE_DATA_ARCHIVE_OVERRIDE peut avoir les valeurs suivantes.  
  -   **LOCAL_ONLY**. Met à jour ou supprime des données locales uniquement.  
    
