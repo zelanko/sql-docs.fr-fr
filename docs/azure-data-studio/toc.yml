@@ -75,7 +75,7 @@
         - name: Extension PowerShell
           href: powershell-extension.md
         - name: Extension Managed Instance
-          href: azure-sql-managed-instance-extension.md
+          href: extensions/azure-sql-managed-instance-extension.md
         - name: Extension SandDance
           href: sanddance-extension.md
     - name: Création d’extensions
