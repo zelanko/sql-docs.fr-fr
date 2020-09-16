@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: a29748dc5c62d3102dc964871b416e175dbd725a
+ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487867"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88746069"
 ---
 # <a name="python-sql-driver"></a>Pilote SQL Python
 
@@ -37,7 +37,7 @@ Plusieurs pilotes SQL Python sont disponibles. Cependant, Microsoft place ses ef
 * [Communauté python.org](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>Autres exemples  
-* [Créer une application web Python avec Django et SQL Database sur le site web Azure](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Créer une application Python dans Azure App Service sur Linux](https://docs.microsoft.com/azure/app-service/containers/quickstart-python?tabs=bash)
 * [Bien démarrer avec Python sur Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [Bien démarrer avec Python sur macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
 * [Bien démarrer avec Python sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)

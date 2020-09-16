@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-dt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 16843ff8599e9cda540c2a9f3ac264c8edc2dc88
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4f6f001aa71a5ae2fd397fae2d89bdd951956987
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726925"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713827"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor-dta"></a>Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données (DTA)
 
@@ -30,12 +30,12 @@ L'Assistant Paramétrage du moteur de base de données fournit une interface gra
 
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l’accès à un serveur qui exécute SQL Server et d’une base de données AdventureWorks.
 
-- Installez [SQL Server Management Studio.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+- Installez [SQL Server Management Studio.](../../ssms/download-sql-server-management-studio-ssms.md)
 - Installez [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Téléchargez les [exemples de bases de données AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
+- Téléchargez les [exemples de bases de données AdventureWorks2017.](../../samples/adventureworks-install-configure.md?view=sql-server-2017)
 
 
-Les instructions de restauration de bases de données dans SSMS se trouvent ici : [Restaurer une base de données.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Les instructions de restauration de bases de données dans SSMS se trouvent ici : [Restaurer une base de données.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > Ce tutoriel est destiné aux utilisateurs familiarisés avec l’utilisation de SQL Server Management Studio et les tâches de base d’administration de base de données. 
@@ -89,6 +89,5 @@ Lorsque l'Assistant Paramétrage du moteur de base de données s'ouvre pour la p
   
 ## <a name="next-lesson"></a>Leçon suivante  
 [Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
-  
   
   

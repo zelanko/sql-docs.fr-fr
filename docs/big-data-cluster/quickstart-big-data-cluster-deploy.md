@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 052e3794fa058ec988160855123c5b0993f3fbd4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d547dc374de8171097ceda77afb234d4e5dfa451
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85699829"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88772388"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Utiliser un script Python pour déployer un cluster Big Data SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -75,14 +75,14 @@ Procédez comme suit pour exécuter le script de déploiement dans une invite ba
    | **ID d’abonnement Azure** | ID d’abonnement Azure à utiliser pour AKS. Vous pouvez lister tous vos abonnements et leur ID en exécutant `az account list` à partir d’une autre ligne de commande. |
    | **Groupe de ressources Azure** | Nom du groupe de ressources Azure à créer pour le cluster AKS. |
    | **Région Azure** | Région Azure pour le nouveau cluster AKS (**westus** par défaut). |
-   | **Taille de machine** | [Taille de machine](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) à utiliser pour les nœuds dans le cluster AKS (**Standard_L8s** par défaut). |
+   | **Taille de machine** | [Taille de machine](/azure/virtual-machines/windows/sizes) à utiliser pour les nœuds dans le cluster AKS (**Standard_L8s** par défaut). |
    | **Nœuds worker** | Nombre de nœuds worker du cluster AKS (**1** par défaut). |
    | **Nom du cluster** | Nom du cluster AKS et du cluster Big Data. Le nom de votre cluster Big Data ne doit contenir que des caractères alphanumériques minuscules et aucun espace. (**sqlbigdata** par défaut). |
    | **Mot de passe** | Mot de passe pour le contrôleur, la passerelle HDFS/Spark et l’instance principale (**MySQLBigData2019** par défaut). |
    | **Nom d’utilisateur** | Nom d’utilisateur de l’utilisateur du contrôleur (**admin** par défaut). |
 
    > [!IMPORTANT]
-   > La taille de machine **Standard_L8s** par défaut peut ne pas être disponible dans toutes les régions Azure. Si vous sélectionnez une autre taille de machine, veillez à ce que le nombre total de disques pouvant être attachés sur les nœuds du cluster soit supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, le cluster Big Data nécessite 24 revendications de volumes persistants. Par exemple, la taille de machine [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/lsv2-series) prend en charge 32 disques attachés : vous pouvez donc évaluer les clusters Big Data avec un seul nœud de cette taille de machine.
+   > La taille de machine **Standard_L8s** par défaut peut ne pas être disponible dans toutes les régions Azure. Si vous sélectionnez une autre taille de machine, veillez à ce que le nombre total de disques pouvant être attachés sur les nœuds du cluster soit supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, le cluster Big Data nécessite 24 revendications de volumes persistants. Par exemple, la taille de machine [Standard_L8s](/azure/virtual-machines/lsv2-series) prend en charge 32 disques attachés : vous pouvez donc évaluer les clusters Big Data avec un seul nœud de cette taille de machine.
 
    > [!NOTE]
    > Le compte SQL Server `sa` est désactivé durant le déploiement de clusters Big Data. Un nouveau compte de connexion d’administrateur système est provisionné dans l’instance maître de SQL Server avec le même nom que celui spécifié pour l’entrée du **Nom d’utilisateur** et le mot de passe correspondant à l’entrée du **Mot de passe**. Les mêmes valeurs correspondant à **Nom d’utilisateur** et **Mot de passe** sont utilisées pour provisionner un utilisateur administrateur de contrôleur. Le seul utilisateur pris en charge pour la passerelle (Knox) sur des clusters déployés avant SQL Server 2019 CU5 est **racine** et le mot de passe est le même que ci-dessus.

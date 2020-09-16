@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1302360b6ab5175bed5a9776d7de5389c3d40c00
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 36fde81f6317d45b2169282d99e4eef27b3467b3
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112573"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714267"
 ---
 # <a name="sqlservr-application"></a>Application sqlservr
 
@@ -85,7 +85,7 @@ Les paramètres suivants sont obsolètes et ne sont pas pris en charge dans [!IN
 
 |Paramètre | Informations complémentaires|
 |:-----|:-----|
-|**-h** | Utilis dans les versions antérieures des instances 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour réserver l'espace d'adressage de mémoire virtuelle pour les métadonnées d'ajout de mémoire à chaud lorsque AWE est activé. Prise en charge via [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Pour plus d’informations, consultez [Fonctionnalités SQL Server supprimées dans SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
+|**-h** | Utilis dans les versions antérieures des instances 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour réserver l'espace d'adressage de mémoire virtuelle pour les métadonnées d'ajout de mémoire à chaud lorsque AWE est activé. Prise en charge via [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Pour plus d’informations, consultez [Fonctionnalités SQL Server supprimées dans SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server.md?view=sql-server-ver15).|
 |**-g** | *memory_to_reserve*<br/><br>S’applique aux versions antérieures des instances 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Prise en charge via [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Spécifie un nombre entier de mégaoctets (Mo) de mémoire que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] laisse disponible pour des allocations de mémoire à l'intérieur du processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mais hors du pool de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour en savoir plus, consultez la [documentation 2014 SQL Server sur les options de configuration de la mémoire du serveur](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 

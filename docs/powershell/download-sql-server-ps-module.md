@@ -2,19 +2,19 @@
 title: Télécharger le module PowerShell SQL Server
 description: Découvrez comment installer le module SqlServer PowerShell, qui fournit des cmdlets qui prennent en charge les fonctionnalités SQL les plus récentes et contient également des versions mises à jour des cmdlets dans le module SQLPS.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: matteot, aanelson
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: 63b91463a265585036416721d1794920e02b9d13
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: 3165a56d93ba78c387be0cdd23ef0c225b31c336
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87123000"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714067"
 ---
 # <a name="install-the-sql-server-powershell-module"></a>Installer le module SQL Server PowerShell
 

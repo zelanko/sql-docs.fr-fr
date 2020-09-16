@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/07/2017
-ms.openlocfilehash: 6ce61356dcbaaf1d05be9aa56804af3d85adbd7b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3b8bc77f5d4fd2bd549c253b8a64cfa86c6132c
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734174"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713767"
 ---
 # <a name="run-sql-server-profiler"></a>Exécuter SQL Server Profiler
 
@@ -55,4 +55,4 @@ Quand vous démarrez [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md
 
 ## <a name="next-steps"></a>Étapes suivantes  
  [Présentation de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [Utiliser SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
+ [Utiliser SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md?view=sql-server-ver15)

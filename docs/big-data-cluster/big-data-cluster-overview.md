@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: d21f5c3f572356a18f8567f798af8af10f58c001
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942774"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765738"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Présentation des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -26,14 +26,14 @@ ms.locfileid: "86942774"
 
 Utilisez les clusters Big Data SQL Server pour :
 
-- [Déployer des clusters scalables](../big-data-cluster/deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes. 
+- [Déployer des clusters scalables](./deploy-get-started.md) de conteneurs SQL Server, Spark et HDFS exécutés sur Kubernetes. 
 - Lire, écrire et traiter les données du Big Data à partir de Transact-SQL ou de Spark.
 - Combiner et analyser facilement des données relationnelles à valeur élevée et un volume important de données du Big Data.
 - Interroger des sources de données externes.
 - Stocker les données du Big Data dans un système HDFS géré par SQL Server.
 - Interroger les données de plusieurs sources de données externes via le cluster.
 - Utiliser les données pour l’IA, le machine learning et d’autres tâches d’analyse.
-- [Déployer et exécuter des applications](../big-data-cluster/concept-application-deployment.md) dans des [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
+- [Déployer et exécuter des applications](./concept-application-deployment.md) dans des [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)].
 - Virtualiser les données avec [Polybase](../relational-databases/polybase/polybase-guide.md). Interrogez des données à partir de sources de données SQL Server, Oracle, Teradata, MongoDB et ODBC externes avec des tables externes.
 - Fournir la haute disponibilité pour l’instance principale SQL Server et toutes les bases de données à l’aide de la technologie des groupes de disponibilité Always On.
 
