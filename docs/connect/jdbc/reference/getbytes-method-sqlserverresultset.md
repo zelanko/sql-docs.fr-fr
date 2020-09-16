@@ -1,4 +1,5 @@
 ---
+description: Méthode getBytes (SQLServerResultSet)
 title: Méthode getBytes (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: d16a0aea-6144-4fcb-bcbc-5d7daa36d327
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d4ad0ac453e5b048c4db9654a28ab3585a0257c0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 51d42777f17aebf69c0b10aadcbef1d940a7a613
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921569"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436921"
 ---
 # <a name="getbytes-method-sqlserverresultset"></a>Méthode getBytes (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "80921569"
   
 ## <a name="overload-list"></a>Liste de surcharge  
   
-|Name|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[getBytes (int)](../../../connect/jdbc/reference/getbytes-method-int-sqlserverresultset.md)|Récupère la valeur de l’index de la colonne désignée dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant que tableau **d’octets** dans le langage de programmation Java.|  
 |[getBytes (java.lang.String)](../../../connect/jdbc/reference/getbytes-method-java-lang-string-sqlserverresultset.md)|Récupère la valeur du nom de colonne désigné dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) en tant que tableau **d’octets** dans le langage de programmation Java.|  

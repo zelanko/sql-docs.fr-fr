@@ -1,4 +1,5 @@
 ---
+description: Méthode getClientInfo ()
 title: Méthode getClientInfo () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b06a5ced-b760-4c78-b17e-854ce95a1a5c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 678e28915faefafa832f4f9795b8e9b008681a3a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 31c88ff13769c192c9fdc468cd21d2b3f2a12dbe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907432"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88436681"
 ---
 # <a name="getclientinfo-method-"></a>Méthode getClientInfo ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,6 +46,6 @@ public java.util.Properties getClientInfo()
 ## <a name="see-also"></a>Voir aussi  
  [getClientInfo, méthode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)   
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
- [SQLServerConnection, classe](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
+ [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

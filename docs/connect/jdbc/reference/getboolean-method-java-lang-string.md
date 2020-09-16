@@ -1,4 +1,5 @@
 ---
+description: Méthode getBoolean (java.lang.String)
 title: Méthode getBoolean (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: c9ee851f-1827-42f5-a50a-bdef3e323a5e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e840b3fab0a3786976282eb6606f8bee9a5747dc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fc6cc6df290a005e89eaf76c866c84d2358928bc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926382"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88437051"
 ---
 # <a name="getboolean-method-javalangstring"></a>Méthode getBoolean (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,6 +52,6 @@ public boolean getBoolean(java.lang.String sCol)
 ## <a name="see-also"></a>Voir aussi  
  [getBoolean, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getboolean-method-sqlservercallablestatement.md)   
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
- [SQLServerCallableStatement, classe](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
+ [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   
   
