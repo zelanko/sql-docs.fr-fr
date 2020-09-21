@@ -1,6 +1,6 @@
 ---
-title: Résultats des messages SQL Server | Microsoft Docs
-description: résultats des messages SQL Server
+title: Résultats des messages SQL Server (OLE DB pilote)
+description: Découvrez les instructions Transact-SQL qui ne génèrent pas ou peu d’ensembles de lignes OLE DB Driver pour SQL Server et les valeurs de retour attendues.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,21 +12,21 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, errors
 - errors [OLE DB], SQL Server message results
 - OLE DB error handling, SQL Server message results
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: dfebd7443b24d09e6bf7696caba5449c1890e0d2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: dc3701313f920eead650435ca40538ad8a4b6ef0
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998284"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862505"
 ---
 # <a name="sql-server-message-results"></a>Résultats des messages SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivantes ne génèrent pas d’ensembles de lignes du pilote OLE DB pour SQL Server ni un nombre de lignes affectées lors de l’exécution :  
+Les instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivantes ne génèrent pas ou peu d’ensembles de lignes OLE DB Driver pour SQL Server de lignes affectées lors de l’exécution :  
   
 -   PRINT  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85998284"
   
  OLE DB Driver pour SQL Server retourne S_OK et possède un ou plusieurs messages d'information disponibles après l'exécution de plusieurs instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou après l'exécution par le consommateur d'une fonction membre OLE DB Driver pour SQL Server.  
   
- Le consommateur du pilote OLE DB pour SQL Server autorisant la spécification dynamique du texte de la requête doit vérifier les interfaces d’erreur après chaque exécution d’une fonction membre, indépendamment de la valeur du code de retour, de la présence ou de l’absence d’une référence d’interface **IRowset** ou **IMultipleResults** retournée, ou d’un nombre de lignes affectées.  
+Le contrôle serveur consommateur OLE DB Driver pour SQL Server est autorisé à spécifier dynamiquement le texte de la requête. Le contrôle serveur consommateur doit vérifier les interfaces d’erreur après _chaque_ exécution de la fonction membre. Il doit toujours effectuer ces vérifications, quelle que soit la valeur du code de retour, indiquant si une référence d’interface à un `IRowset` ou `IMultipleResults` est retournée, quel que soit le nombre de lignes affectées.
   
 ## <a name="see-also"></a>Voir aussi  
  [Erreurs](../../oledb/ole-db-errors/errors.md)  

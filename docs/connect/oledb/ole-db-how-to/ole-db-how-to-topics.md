@@ -1,6 +1,6 @@
 ---
 title: Rubriques de procédures (pilote OLE DB)
-description: Rubriques de procédures OLE DB
+description: Utilisez ces articles de procédure pour comprendre comment OLE DB Driver pour SQL Server se connecte à un serveur, exécute une commande et traite des résultats.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, how-to topics
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c8491c084e166b48e9436838879fd66386b9da38
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca01ad2797e0f39c1195416c21a1bb030f6d0576
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244729"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860326"
 ---
 # <a name="ole-db-how-to-topics"></a>Rubriques de procédures OLE DB
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

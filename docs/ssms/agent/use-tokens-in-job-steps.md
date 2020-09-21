@@ -1,4 +1,5 @@
 ---
+description: Utiliser des jetons dans les étapes d'un travail
 title: Utiliser des jetons dans les étapes d'un travail
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6980c7914a10498d2f1d5cc08d60d63d9dd1f0ac
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 933848c0d0056a67a561a6468db8f10c2bd8c478
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895205"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88317635"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent vous permet d’utiliser des jetons dans des scripts d’étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ces jetons avec lesquels vous rédigez des étapes de travail vous offrent la même flexibilité que les variables lors de l'écriture de programmes logiciels. Après que vous avez inséré un jeton dans un script d'étape de travail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent le remplace au moment de l'exécution avant que le sous-système [!INCLUDE[tsql](../../includes/tsql-md.md)] n'exécute l'étape de travail.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "85895205"
 ## <a name="understanding-using-tokens"></a>Utilisation de jetons  
   
 > [!IMPORTANT]  
-> Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**et **WMI(** _propriété_ **)** . Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
+> Tout utilisateur Windows qui dispose des autorisations d'écriture dans le journal des événements Windows peut accéder aux étapes de travail activées par les alertes WMI ou par les alertes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour éviter ce risque de sécurité, les jetons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui peuvent être utilisés dans des travaux activés par des alertes sont désactivés par défaut. Ces jetons sont : **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** et **WMI(** _propriété_ **)** . Notez que dans cette version, l'utilisation des jetons est étendue toutes les alertes.  
 >   
 > Si vous devez utiliser ces jetons, assurez-vous d'abord que seuls les membres des groupes de sécurité Windows approuvés, comme le groupe Administrateurs, disposent des autorisations d'écriture pour le journal d'événements de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réside. Ensuite, pour activer ces jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** qui s’affiche, sélectionnez l’option **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   

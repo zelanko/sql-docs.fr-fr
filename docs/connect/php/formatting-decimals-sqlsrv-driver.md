@@ -1,22 +1,22 @@
 ---
-title: Mise en forme des chaînes décimales et valeurs monétaires (pilote SQLSRV) | Microsoft Docs
+title: Mise en forme des chaînes décimales et valeurs monétaires (pilote SQLSRV)
+description: Découvrez comment utiliser les options FormatDecimals et DecimalPlaces pour mettre en forme les valeurs décimales ou monétaires lors de l’utilisation du pilote Microsoft SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 4a5ac641a98077c09bb38a5fc8fbd3fb1a4bf73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265145"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680724"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Mise en forme des chaînes décimales et valeurs monétaires (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -84,6 +84,6 @@ if (sqlsrv_execute($stmt)) {
 ```
 
 ## <a name="see-also"></a>Voir aussi
-[Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)
+[Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)
 
 [Récupération de données](../../connect/php/retrieving-data.md)

@@ -1,6 +1,6 @@
 ---
 title: Exécuter une procédure stockée avec ODBC CALL et traiter la sortie | Microsoft Docs
-description: Traiter les codes de retour et les paramètres de sortie à l’aide d’OLE DB Driver pour SQL Server
+description: Découvrez comment traiter des codes de retour et des paramètres de sortie dans OLE DB Driver pour SQL Server, qui sont reçus dans le paquet final après la mise en production de l’ensemble de lignes.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC]
 - ODBC CALL syntax
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 010b00088a2a4256a922a0f8f500f33d61036304
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 99c2603e310807ad3f15618082579de434f6dd75
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012514"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860314"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécuter une procédure stockée avec ODBC CALL et traiter la sortie
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

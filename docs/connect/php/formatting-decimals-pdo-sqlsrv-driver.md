@@ -1,22 +1,22 @@
 ---
-title: Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSRV) | Microsoft Docs
+title: Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSRV)
+description: Découvrez comment utiliser les attributs PDO::SQLSRV_ATTR_FORMAT_DECIMALS et SQLSRV_ATTR_DECIMAL_PLACES pour mettre en forme les valeurs décimales ou monétaires lors de l’utilisation du pilote PDO_SQLSRV
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - formatting, decimal types, money values
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265152"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680654"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

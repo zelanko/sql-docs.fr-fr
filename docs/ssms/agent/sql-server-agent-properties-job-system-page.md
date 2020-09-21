@@ -1,4 +1,5 @@
 ---
+description: Propriétés de l'Agent SQL Server (page Système de travaux)
 title: Propriétés de l'Agent SQL Server (page Système de travaux)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a0e33eb0b4999c608f2083d3023f046a2ecc640a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5703e1a3ea206938c67fde52e4cfdff88115130
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755120"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492039"
 ---
 # <a name="sql-server-agent-properties-job-system-page"></a>Propriétés de l'Agent SQL Server (page Système de travaux)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Utilisez cette page pour afficher et modifier la façon dont le service [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent gère les travaux.  
   
@@ -35,7 +36,7 @@ Spécifie le nombre de secondes que l'Agent [!INCLUDE[ssNoVersion](../../include
 **Utiliser un compte proxy non-administrateur**  
 Définit un compte proxy non-administrateur pour l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] et les versions ultérieures prennent en charge plusieurs serveurs proxy, c'est pourquoi cette option est applicable uniquement à la gestion des versions de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui précèdent [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
-**Nom d'utilisateur**  
+**Nom d’utilisateur**  
 Entrez le nom de l'utilisateur du compte proxy non-administrateur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs serveurs proxy, c'est pourquoi cette option est applicable uniquement à la gestion des versions de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui précèdent [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
 **Mot de passe**  

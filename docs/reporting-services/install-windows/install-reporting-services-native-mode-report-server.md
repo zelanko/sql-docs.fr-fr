@@ -1,4 +1,5 @@
 ---
+description: Installer le serveur de rapports Reporting Services 2016 en mode natif
 title: Installer le serveur de rapports Reporting Services 2016 en mode natif | Microsoft Docs
 ms.date: 12/20/2017
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 2c05251bb8ac19f3c4594a263c7b108a8dbc90a4
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486840"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498080"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Installer le serveur de rapports Reporting Services 2016 en mode natif
 
@@ -75,7 +76,7 @@ L'option de configuration par défaut utilise les valeurs par défaut pour confi
 
 - Le compte d'utilisateur utilisé pour exécuter le programme d'installation doit être membre du groupe local Administrateurs et avoir l'autorisation de créer des bases de données et d'y accéder sur l'instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge les bases de données du serveur de rapports.
 
-- L’installation doit être en mesure d’utiliser les valeurs par défaut pour réserver les URL qui fournissent l’accès au serveur de rapports et au [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Ces valeurs sont le port 80, un caractère générique fort et les noms de répertoire virtuel aux formats **ReportServer_\<***nom_instance***>** et **Reports_\<***nom_instance***>** .
+- L’installation doit être en mesure d’utiliser les valeurs par défaut pour réserver les URL qui fournissent l’accès au serveur de rapports et au [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Ces valeurs sont le port 80, un caractère générique fort et les noms de répertoire virtuel aux formats **ReportServer_\<***instance_name***>** et **Reports_\<***instance_name***>** .
 
 - L'installation doit être en mesure d'utiliser les valeurs par défaut pour créer les bases de données du serveur de rapports. Ces valeurs sont **ReportServer** et **ReportServerTempDB**. Si vous avez des bases de données d'une précédente installation, le programme d'installation sera bloqué car il ne peut pas configurer le serveur de rapports dans la configuration par défaut pour le mode natif. Vous devez renommer, déplacer ou supprimer les bases de données pour débloquer le programme d'installation.
 
@@ -93,7 +94,7 @@ Les réservations d'URL se composent d'un préfixe, d'un nom d'hôte, d'un port 
 |Préfixe|Le préfixe par défaut est HTTP. Si vous avez préalablement installé un certificat TLS (Secure Sockets Layer), l'installation tente de créer des réservations d'URL qui utilisent le préfixe HTTPS.|
 |Nom de l’hôte|Le nom d'hôte par défaut est un caractère générique fort (+). Il indique que le serveur de rapports accepte toute requête HTTP sur le port désigné pour tout nom d’hôte qui correspond à l’ordinateur, notamment `https://<computername>/reportserver`, `https://localhost/reportserver` ou`https://<IPAddress>/reportserver`.|
 |Port|Le port par défaut est 80. Notez que si vous utilisez un port autre que le port 80, vous devez l'ajouter explicitement à l'URL lorsque vous ouvrez une application Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans une fenêtre de navigateur.|
-|Répertoire virtuel|Par défaut, les répertoires virtuels sont créés au format ReportServer_\<*nom_instance*> pour le service web Report Server et Reports_\<*nom_instance* pour le [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Pour le service Web Report Server, le répertoire virtuel par défaut est **reportserver**. Par défaut, le répertoire virtuel du [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]est **reports**.|
+|Répertoire virtuel|Des répertoires virtuels sont créés, par défaut, au format ReportServer_\<*instance_name*> pour le service Web Report Server et Reports_\<*instance_name*> pour le [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Pour le service Web Report Server, le répertoire virtuel par défaut est **reportserver**. Par défaut, le répertoire virtuel du [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]est **reports**.|
 
 Voici un exemple de chaîne URL complète :
 

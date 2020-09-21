@@ -1,7 +1,8 @@
 ---
-title: PDO::beginTransaction | Microsoft Docs
+title: PDO::beginTransaction
+description: Référence API pour la fonction PDO::beginTransaction dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4ec1b4149b882e520eb58a8789516461c83c01de
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ed3a4ed3e1dd4642f5456423e6266bb2a327c330
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919399"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646209"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ Si cette méthode échoue, la connexion repasse en mode de validation automatiqu
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant utilise une base de données nommée Test et une table nommée Table1. Il démarre une transaction, émet des commandes pour ajouter deux lignes, puis supprime une ligne. Les commandes sont envoyées à la base de données et la transaction est explicitement terminée par `PDO::commit`.  
   
 ```  

@@ -1,6 +1,6 @@
 ---
 title: Support de l’API pour les améliorations de date et d’heure (pilote OLE DB)
-description: Prise en charge des API OLE DB pour les améliorations de date et d’heure
+description: En savoir plus sur les API OLE DB qui prennent en charge les fonctionnalités de date/heure améliorées, y compris les noms et les descriptions des fonctions.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 3003ed2de3b3c732ac9ef57e21ed5d6cf9415ec7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8209c1b1ca6f3c00ce4cd10455c35c8b9d4dfad4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244876"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862353"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Prise en charge des API OLE DB pour les améliorations de date et d’heure
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

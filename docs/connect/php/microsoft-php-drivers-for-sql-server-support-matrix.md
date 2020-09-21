@@ -2,7 +2,7 @@
 title: Matrice de prise en charge des pilotes Microsoft pour PHP
 description: Cette page contient la matrice de support et la politique de support des pilotes Microsoft PHP pour SQL Server.
 ms.custom: ''
-ms.date: 04/15/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 635c6ecbe6404b7e5466ecf5929dd2330183e7a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 778d9aa4ee666ba3719095508d5f5e28516f954d
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85793147"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87942158"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Matrice de prise en charge des pilotes PHP pour SQL Server
 
@@ -53,26 +53,29 @@ Les pilotes Microsoft PHP suivants ne sont plus supportés.
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>Compatibilité certifiée de la version SQL Server
- La matrice suivante répertorie les versions de SQL Server qui ont été testées et certifiées comme compatibles avec la version du pilote correspondante. Nous nous efforçons de maintenir une compatibilité descendante avec les versions de pilote précédentes, mais seul le dernier pilote pris en charge est testé et certifié avec les nouvelles versions de SQL Server, à mesure que SQL Server est publié.
+ La matrice suivante répertorie les versions de bases de données qui ont été testées et certifiées comme étant compatibles avec la version du pilote correspondante. Nous nous efforçons de maintenir une compatibilité descendante avec les versions de pilote précédentes, mais seul le dernier pilote pris en charge est testé et certifié avec les nouvelles versions de SQL Server, à mesure que SQL Server est publié.
 
-|PHP pour le pilote SQL Server version &#8594;<br />&#8595; Version de SQL Server|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|Version du pilote&nbsp;&#8594;<br />Version de base de données &#8595;|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Managed Instance|O|O|O|O|O| | |
-|Azure SQL Data Warehouse.|O|O|O|O|O| | |
-|SQL Server 2019         |O| | | | | | |
-|SQL Server 2017         |O|O|O|O|O| | |
-|SQL Server 2016         |O|O|O|O|O|O| |
-|SQL Server 2014         |O|O|O|O|O|O|O|
-|SQL Server 2012         |O|O|O|O|O|O|O|
-|SQL Server 2008 R2      | |O|O|O|O|O|O|
-|SQL Server 2008         | | | | | |O|O|
+|Azure SQL Database        |Oui|Oui|Oui|Oui|Oui|   |   |
+|Azure SQL Managed Instance|Oui|Oui|Oui|Oui|Oui|   |   |
+|Azure Synapse Analytics   |Oui|Oui|Oui|Oui|Oui|   |   |
+|SQL Server 2019           |Oui|   |   |   |   |   |   |
+|SQL Server 2017           |Oui|Oui|Oui|Oui|Oui|   |   |
+|SQL Server 2016           |Oui|Oui|Oui|Oui|Oui|Oui|   |
+|SQL Server 2014           |Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|SQL Server 2012           |Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|SQL Server 2008 R2        |   |Oui|Oui|Oui|Oui|Oui|Oui|
+|SQL Server 2008           |   |   |   |   |   |Oui|Oui|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+
+Pour plus d’informations sur l’utilisation de PHP avec Azure SQL Database, consultez [Connexion à Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md).
 
 ## <a name="php-version-support"></a>Prise en charge de la version de PHP
 
 Les versions suivantes de PHP sont prises en charge avec la version répertoriée des pilotes Microsoft PHP :
 
-|PHP pour le pilote SQL Server version &#8594;<br />&#8595; Version de PHP|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|Version du pilote&nbsp;&#8594;<br />&#8595; Version de PHP|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |:---:|---|---|---|---|---|---|---|
 |7.4|7.4.0+          |                |                |                |       |        |        |
 |7.3|7.3.0+          |7.3.0+          |                |                |       |        |        |
@@ -90,46 +93,47 @@ Les versions suivantes de PHP sont prises en charge avec la version répertorié
 
 Les versions suivantes du système d'exploitation Windows sont prises en charge avec la version répertoriée des pilotes Microsoft PHP :
 
-|PHP pour le pilote SQL Server version &#8594;<br />&#8595; Système d’exploitation|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|Version du pilote&nbsp;&#8594;<br />&#8595; Système d’exploitation|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Windows Server 2019                 |O  |O  |   |   |   |   |   |
-|Windows Server 2016                 |O  |O  |O  |O  |O  |   |   |
-|Windows Server 2012 R2              |O  |O  |O  |O  |O  |O  |O  |
-|Windows Server 2012                 |O  |O  |O  |O  |O  |O  |O  |
-|Windows Server 2008 R2 SP1          |   |   |   |   |   |O  |O  |
+|Windows Server 2019                 |Oui|Oui|   |   |   |   |   |
+|Windows Server 2016                 |Oui|Oui|Oui|Oui|Oui|   |   |
+|Windows Server 2012 R2              |Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|Windows Server 2012                 |Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|Windows Server 2008 R2 SP1          |   |   |   |   |   |Oui|Oui|
 |Windows Server 2008 R2              |   |   |   |   |   |   |   |
-|Windows Server 2008 SP2             |   |   |   |   |   |O  |O  |
-|Windows 10                          |O  |O  |O  |O  |O  |O  |   |
-|Windows 8.1                         |O  |O  |O  |O  |O  |O  |O  |
-|Windows 8                           |   |   |   |   |O  |O  |O  |
-|Windows 7 SP1                       |   |   |   |   |   |O  |O  |
-|Windows Vista SP2                   |   |   |   |   |   |O  |O  |
+|Windows Server 2008 SP2             |   |   |   |   |   |Oui|Oui|
+|Windows 10                          |Oui|Oui|Oui|Oui|Oui|Oui|   |
+|Windows 8.1                         |Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|Windows 8                           |   |   |   |   |Oui|Oui|Oui|
+|Windows 7 SP1                       |   |   |   |   |   |Oui|Oui|
+|Windows Vista SP2                   |   |   |   |   |   |Oui|Oui|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 Les versions suivantes des systèmes d'exploitation Linux et macOS (64 bits uniquement) sont prises en charge avec la version répertoriée des pilotes Microsoft PHP :
 
-|PHP pour le pilote SQL Server version &#8594;<br />&#8595; Système d’exploitation|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|Version du pilote&nbsp;&#8594;<br />&#8595; Système d’exploitation|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Ubuntu 19.10 (64 bits)               |O  |   |   |   |   |   |   |
-|Ubuntu 18.10 (64 bits)               |   |O  |   |   |   |   |   |
-|Ubuntu 18.04 (64 bits)               |O  |O  |O  |   |   |   |   |
-|Ubuntu 17.10 (64 bits)               |   |   |O  |O  |   |   |   |
-|Ubuntu 16.04 (64 bits)               |O  |O  |O  |O  |O  |O  |   |
-|Ubuntu 15.10 (64 bits)               |   |   |   |   |O  |   |   |
-|Ubuntu 15.04 (64 bits)               |   |   |   |   |   |O  |   |
-|Debian 10 (64 bits)                  |O  |   |   |   |   |   |   |
-|Debian 9 (64 bits)                   |O  |O  |O  |O  |   |   |   |
-|Debian 8 (64 bits)                   |O  |O  |O  |O  |O  |   |   |
-|Red Hat Enterprise Linux 8 (64 bits) |O  |   |   |   |   |   |   |
-|Red Hat Enterprise Linux 7 (64-bit) |O  |O  |O  |O  |O  |O  |   |
-|Red Hat Enterprise Linux 15 (64 bits)   |O  |O  |   |   |   |   |   |
-|Red Hat Enterprise Linux 12 (64 bits)   |O  |O  |O  |O  |   |   |   |
-|Alpine Linux 3.11 (64 bits)<sup>1</sup>|O  |   |   |   |   |   |   |
-|macOS Catalina (64 bits)             |O  |   |   |   |   |   |   |
-|macOS Mojave (64 bits)               |O  |O  |   |   |   |   |   |
-|macOS High Sierra (64 bits)          |O  |O  |O  |   |   |   |   |
-|macOS Sierra (64 bits)               |   |O  |O  |O  |O  |   |   |
-|macOS El Capitan (64 bits)           |   |   |O  |O  |O  |   |   |
+|Ubuntu 20.04 (64 bits)               |Oui|   |   |   |   |   |   |
+|Ubuntu 19.10 (64 bits)               |Oui|   |   |   |   |   |   |
+|Ubuntu 18.10 (64 bits)               |   |Oui|   |   |   |   |   |
+|Ubuntu 18.04 (64 bits)               |Oui|Oui|Oui|   |   |   |   |
+|Ubuntu 17.10 (64 bits)               |   |   |Oui|Oui|   |   |   |
+|Ubuntu 16.04 (64 bits)               |Oui|Oui|Oui|Oui|Oui|Oui|   |
+|Ubuntu 15.10 (64 bits)               |   |   |   |   |Oui|   |   |
+|Ubuntu 15.04 (64 bits)               |   |   |   |   |   |Oui|   |
+|Debian 10 (64 bits)                  |Oui|   |   |   |   |   |   |
+|Debian 9 (64 bits)                   |Oui|Oui|Oui|Oui|   |   |   |
+|Debian 8 (64 bits)                   |Oui|Oui|Oui|Oui|Oui|   |   |
+|Red Hat Enterprise Linux 8 (64 bits) |Oui|   |   |   |   |   |   |
+|Red Hat Enterprise Linux 7 (64-bit) |Oui|Oui|Oui|Oui|Oui|Oui|   |
+|Red Hat Enterprise Linux 15 (64 bits)   |Oui|Oui|   |   |   |   |   |
+|Red Hat Enterprise Linux 12 (64 bits)   |Oui|Oui|Oui|Oui|   |   |   |
+|Alpine Linux 3.11 (64 bits)<sup>1</sup>|Oui|   |   |   |   |   |   |
+|macOS Catalina (64 bits)             |Oui|   |   |   |   |   |   |
+|macOS Mojave (64 bits)               |Oui|Oui|   |   |   |   |   |
+|macOS High Sierra (64 bits)          |Oui|Oui|Oui|   |   |   |   |
+|macOS Sierra (64 bits)               |   |Oui|Oui|Oui|Oui|   |   |
+|macOS El Capitan (64 bits)           |   |   |Oui|Oui|Oui|   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> La prise en charge d’Alpine Linux est expérimentale pour la version 5.8.0. La version 5.8.1 ajoute la prise en charge de la production.

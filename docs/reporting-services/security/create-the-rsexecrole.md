@@ -1,4 +1,5 @@
 ---
+description: Créer le rôle RSExecRole
 title: Créer le rôle RSExecRole | Microsoft Docs
 ms.date: 06/12/2019
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08895328856056d01b927a8c80962ff0b90570f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67140477"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492632"
 ---
 # <a name="create-the-rsexecrole"></a>Créer le rôle RSExecRole
 
@@ -71,7 +72,7 @@ ms.locfileid: "67140477"
   
 12. Cliquez sur **OK**. La boîte de dialogue **Sélectionner des objets** s'affiche.  
   
-13. Cliquez sur **Types d'objets**.  
+13. Cliquez sur **Types d'objet**.  
   
 14. Cliquez sur **Procédures stockées étendues**.  
   
@@ -122,7 +123,7 @@ ms.locfileid: "67140477"
   
 10. Cliquez sur **OK**.  
   
-11. Cliquez sur **Types d'objets**.  
+11. Cliquez sur **Types d'objet**.  
   
 12. Cliquez sur **Procédures stockées**.  
   
@@ -164,7 +165,7 @@ ms.locfileid: "67140477"
   
 21. Cliquez sur **OK**.  
   
-22. Cliquez sur **Types d'objets**.  
+22. Cliquez sur **Types d'objet**.  
   
 23. Cliquez sur **Tables.**  
   
@@ -204,11 +205,11 @@ ms.locfileid: "67140477"
   
 2.  Cliquez sur **Base de données**.  
   
-3.  Cliquez sur **Changer la base de données**.  
+3.  Cliquez sur **Modifier la base de données**.  
   
 4.  Cliquez sur **Choisir une base de données de serveur de rapports existante**.  
   
-5.  Entrez le nom de serveur du moteur de base de données. Si vous avez attaché les bases de données du serveur de rapports à une instance nommée, vous devez taper le nom de l’instance au format suivant : \<nom_serveur>\\<nom_instance\>.  
+5.  Entrez le nom de serveur du moteur de base de données. Si vous avez joint les bases de données du serveur de rapports à une instance nommée, vous devez taper le nom de l’instance au format suivant : \<servername>\\<instancename\>.  
   
 6.  Cliquez sur **Tester la connexion**. Vous devriez voir une boîte de dialogue indiquant « Test de la connexion réussi ».
   
@@ -216,7 +217,7 @@ ms.locfileid: "67140477"
   
 8.  Dans Base de données, sélectionnez la base de données du serveur de rapports.  
   
-9.  Cliquez sur **Suivant** et mettez fin à l'Assistant.  
+9.  Cliquez sur **Suivant** pour terminer l'Assistant.  
   
 10. Cliquez sur **Clés de chiffrement**.  
   

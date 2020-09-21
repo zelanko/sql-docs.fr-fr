@@ -1,4 +1,5 @@
 ---
+description: Créer un serveur cible
 title: Créer un serveur cible
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,18 +21,18 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 07d1b987dc5f033f200770d5e1c5b6f5f73c23e6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d419d2ba35e4991dd7ff69f3a5adbb6240a07a81
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749014"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418125"
 ---
 # <a name="make-a-target-server"></a>Créer un serveur cible
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Cette rubrique explique comment créer un serveur cible dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets SMO (SQL Server Management Objects).  
   
@@ -99,6 +100,6 @@ Les autorisations d'exécution de cette procédure sont accordées par défaut a
   
     Pour plus d’informations, consultez [sp_msx_enlist (Transact-SQL)](https://msdn.microsoft.com/ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f).  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Administration automatisée à l'échelle d'une entreprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

@@ -1,6 +1,6 @@
 ---
 title: 'Didacticiel R : Développer un modèle dans SQL'
-description: Didacticiel illustrant comment créer une solution R de bout en bout pour l’analyse dans la base de données.
+description: Découvrez comment créer une solution de bout en bout pour la modélisation prédictive basée sur la prise en charge des fonctionnalités R dans SQL Server 2016 ou SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 10/11/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cc423acd1e8c703b5890984df556b65f46cf5d4a
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781798"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179749"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutoriel : Développement SQL pour les scientifiques des données R
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Dans ce didacticiel pour les scientifiques des données, découvrez comment créer une solution de bout en bout pour la modélisation prédictive basée sur la prise en charge des fonctionnalités R dans SQL Server 2016 ou SQL Server 2017. Ce didacticiel utilise une base de données [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) sur SQL Server. 
 

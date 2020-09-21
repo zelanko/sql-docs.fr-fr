@@ -5,17 +5,17 @@ description: L’extension Machine Learning pour Azure Data Studio vous permet d
 ms.date: 05/19/2020
 ms.reviewer: sstein
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5b54ec71ec3debaf39b0788cac0c1534300a4a72
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: a6a86baeb3c206c722aa91eae386ca80c287644c
+ms.sourcegitcommit: b9871e6cffb4c2c65d1f27f797630c43fc02cfb0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745549"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90101119"
 ---
 # <a name="machine-learning-extension-preview-for-azure-data-studio"></a>Extension Machine Learning (préversion) pour Azure Data Studio
 
@@ -101,7 +101,7 @@ Pour utiliser l’extension Machine Learning pour la gestion des packages R dans
 
 Pour utiliser l’extension Machine Learning dans Azure Data Studio, procédez comme suit.
 
-1. Ouvrez les connexions dans Azure Data Studio.
+1. Ouvrez la viewlet **Connexions** dans Azure Data Studio.
 
 1. Cliquez avec le bouton droit sur votre serveur, puis sélectionnez **Gérer**.
 

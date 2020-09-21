@@ -1,7 +1,8 @@
 ---
-title: Configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV | Microsoft Docs
+title: Configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV
+description: Cette rubrique explique comment configurer le pilote SQLSRV pour gérer des erreurs et des avertissements lors de l’utilisation du pilote Microsoft SQLSRV pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07ab941b5813ccd60bb3afcd5ba76718406fb446
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e4905b618c20d945946831c5492ec0e75ea882d
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916575"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680704"
 ---
-# <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Procédure : configurer la gestion des erreurs et avertissements à l’aide du pilote SQLSRV
+# <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Procédure : Configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique décrit comment configurer le pilote SQLSRV pour gérer les erreurs et avertissements.  
@@ -41,7 +42,7 @@ La valeur de **WarningsReturnAsErrors** peut également être définie dans le f
   
 Pour plus d’informations sur la récupération d’informations d’erreur et d’avertissement, consultez [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) et [Procédure : gérer les erreurs et avertissements](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple de code suivant montre comment désactiver le comportement de gestion des erreurs par défaut. L’exemple utilise la commande Transact-SQL PRINT pour générer un avertissement. Pour plus d’informations sur la commande PRINT, consultez [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
   
 L’exemple montre d’abord le comportement de gestion des erreurs par défaut en exécutant une requête qui génère un avertissement. Cet avertissement est traité comme une erreur. Après avoir modifié la configuration de la gestion des erreurs, la même requête est exécutée. Cet avertissement n’est pas traité comme une erreur.  

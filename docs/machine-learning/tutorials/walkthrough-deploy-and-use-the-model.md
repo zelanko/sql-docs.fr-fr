@@ -1,6 +1,6 @@
 ---
 title: 'Didacticiel R : Déployer un modèle'
-description: Didacticiel expliquant comment déployer un modèle R sur SQL Server pour l’analyse dans la base de données.
+description: Découvrez comment déployer des modèles R dans un environnement de production en appelant un modèle formé à partir d’une procédure stockée.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781783"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179747"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Déployer le modèle R et l’utiliser dans SQL Server (procédure pas à pas)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Dans cette leçon, découvrez comment déployer des modèles R dans un environnement de production en appelant un modèle formé à partir d’une procédure stockée. Vous pouvez appeler la procédure stockée à partir de R ou de n’importe quel langage de programmation d’application prenant en charge [!INCLUDE[tsql](../../includes/tsql-md.md)] (tel que C#, Java, Python, etc.) et utiliser le modèle afin d’effectuer des prédictions sur de nouvelles observations.
 
@@ -228,6 +228,6 @@ Après avoir appris à utiliser des données [!INCLUDE[ssNoVersion](../../includ
 Vous pouvez également explorer ces exemples et ressources supplémentaires :
 
 + [Scénarios de science des données et modèles de solutions](data-science-scenarios-and-solution-templates.md)
-+ [Analytique avancée en base de données](sqldev-in-database-r-for-sql-developers.md)
++ [Analytique avancée en base de données](r-taxi-classification-introduction.md)
 + [How-to guides for data analysis and operationalization](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction) (Guides pratiques pour l’opérationnalisation et l’analyse des données)
 + [Additional Resources for Machine Learning Server and Microsoft R](https://docs.microsoft.com//machine-learning-server/resources-more) (Ressources supplémentaires pour Machine Learning Server et Microsoft R)

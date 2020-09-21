@@ -1,4 +1,5 @@
 ---
+description: Configurer SQL Server Agent
 title: Configurer SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -16,19 +17,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 50021dca6e570e7150ffb6a16ac030804ad3f4ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8321fef50a76e08a3d6c4eb82bedbffad4f9d0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755293"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497618"
 ---
 # <a name="configure-sql-server-agent"></a>Configurer SQL Server Agent
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. L’activation et la désactivation de SQL Server Agent ne sont actuellement pas prises en charge dans SQL Database Managed Instance. L’Agent SQL est toujours en cours d’exécution. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. L’activation et la désactivation de SQL Server Agent ne sont actuellement pas prises en charge dans SQL Managed Instance. L’Agent SQL est toujours en cours d’exécution. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Cette rubrique explique comment spécifier certaines options de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent lors de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’ensemble complet des options de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent n’est disponible que dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], les objets SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) ou dans les procédures stockées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

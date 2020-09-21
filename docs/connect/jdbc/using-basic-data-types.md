@@ -2,7 +2,7 @@
 title: Utilisation des types de données JDBC de base
 description: Le pilote Microsoft JDBC pour SQL Server utilise les types de données JDBC de base pour convertir les types de données SQL Server en un format compréhensible par Java.
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 08/24/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 3c26c3c065ddf415d966c8fd3613e284c3c7a2b6
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728381"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88806994"
 ---
 # <a name="using-basic-data-types"></a>Utilisation des types de données de base
 
@@ -35,9 +35,9 @@ Le tableau suivant répertorie les mappages par défaut entre les types de donn�
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
 | Date               | DATE                                               | java.sql.Date                |
-| DATETIME           | timestamp                                          | java.sql.Timestamp           |
+| DateHeure<sup>3</sup>          | timestamp                               | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
-| datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
+| datetimeoffset<sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET         | microsoft.sql.DateTimeOffset |
 | Décimal            | DECIMAL                                            | java.math.BigDecimal         |
 | float              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
@@ -53,7 +53,7 @@ Le tableau suivant répertorie les mappages par défaut entre les types de donn�
 | SMALLINT           | SMALLINT                                           | short                        |
 | SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
-| time               | TIME (1)                                           | java.sql.Time (1)            |
+| time               | TIME<sup>1</sup>                                   | java.sql.Time<sup>1</sup>            |
 | timestamp          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
@@ -67,9 +67,11 @@ Le tableau suivant répertorie les mappages par défaut entre les types de donn�
 | geometry           | VARBINARY                                          | byte[]                       |
 | Geography          | VARBINARY                                          | byte[]                       |
   
-(1) pour utiliser java.sql.Time avec le type d’heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez affecter à la propriété de connexion **sendTimeAsDatetime** la valeur False.  
+<sup>1</sup> Pour utiliser java.sql.Time avec le type d’heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez affecter à la propriété de connexion **sendTimeAsDatetime** la valeur False.  
   
-(2) Vous pouvez accéder par programmation aux valeurs de **datetimeoffset** avec la [classe DateTimeOffset](reference/datetimeoffset-class.md).  
+<sup>2</sup> Vous pouvez accéder par programme aux valeurs de **datetimeoffset** avec la [classe DateTimeOffset](reference/datetimeoffset-class.md).  
+  
+<sup>3</sup> Notez que les valeurs Java. Sql.Timestamp ne peuvent plus être utilisées pour comparer des valeurs d’une colonne DateHeure à partir de SQL Server 2016. Cette limitation est due à une modification côté serveur qui convertit DateHeure en DateHeure2 de façon différente, ce qui génère des valeurs non équitables. Pour contourner ce problème, vous pouvez soit modifier les colonnes DateHeure en DateHeure2(3), utiliser String au lieu de Java.sql.Timestamp ou modifier le niveau de compatibilité de la base de données par 120 ou en dessous.
   
 Les sections suivantes proposent des exemples d'utilisation du pilote JDBC et des types de données de base. Pour obtenir un exemple plus détaillé sur l’utilisation des types de données de base dans une application Java, consultez [Exemple de types de données de base](basic-data-types-sample.md).  
   
@@ -81,7 +83,7 @@ Si vous devez récupérer des données d’une source de données qui correspond
   
 ## <a name="retrieving-data-by-data-type"></a>Extraction de données par type de données
 
-Si vous devez récupérer des données d’une source de données et que vous connaissez le type des données récupérées, utilisez l’une des méthodes get\<Type> de la classe SQLServerResultSet, également connues comme *méthodes d’accesseur Get*. Vous pouvez utiliser soit un nom de colonne, soit un index de colonne avec les méthodes get\<Type>, comme suit :  
+Si vous devez récupérer des données d’une source de données et que vous connaissez le type des données récupérées, utilisez l’une des méthodes get\<Type> de la classe SQLServerResultSet, également connues comme *méthodes getter*. Vous pouvez utiliser soit un nom de colonne, soit un index de colonne avec les méthodes get\<Type>, comme suit :  
   
 [!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
@@ -99,7 +101,7 @@ Si vous devez mettre à jour la valeur d'un champ dans une source de données, u
   
 ## <a name="updating-data-by-parameterized-query"></a>Mise à jour des données par requête paramétrable
 
-Si vous devez mettre à jour des données dans une source de données en utilisant une requête paramétrable, vous pouvez définir le type de données des paramètres à l’aide de l’une des méthodes set\<Type> de la classe [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), également connues comme *méthodes d’accesseur Set*. Dans l’exemple suivant, la méthode [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) est utilisée pour précompiler la requête paramétrable, puis la méthode [setString](reference/setstring-method-sqlserverpreparedstatement.md) est utilisée pour définir la valeur de chaîne du paramètre avant d’appeler la méthode [executeUpdate](reference/executeupdate-method.md).  
+Si vous devez mettre à jour des données dans une source de données en utilisant une requête paramétrable, vous pouvez définir le type de données des paramètres à l’aide de l’une des méthodes set\<Type> de la classe [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md), également connues comme *méthodes setter*. Dans l’exemple suivant, la méthode [prepareStatement](reference/preparestatement-method-sqlserverconnection.md) est utilisée pour précompiler la requête paramétrable, puis la méthode [setString](reference/setstring-method-sqlserverpreparedstatement.md) est utilisée pour définir la valeur de chaîne du paramètre avant d’appeler la méthode [executeUpdate](reference/executeupdate-method.md).  
   
 [!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   

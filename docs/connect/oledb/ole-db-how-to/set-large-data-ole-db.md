@@ -1,6 +1,6 @@
 ---
 title: Définir des données volumineuses (pilote OLE DB)
-description: Définir des données volumineuses (OLE DB)
+description: Découvrez comment définir des données BLOB, créer une table, ajouter un enregistrement, extraire cet enregistrement dans l’ensemble de lignes, puis définir la valeur du champ BLOB dans OLE DB Driver pour SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - large data
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9650f475da3fd15d2956cc8a64c9fcb995b562ce
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 51ca3f7d977b558f196e95cb826b11cd22cc0ce7
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244672"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860263"
 ---
 # <a name="set-large-data-ole-db"></a>Définir des données volumineuses (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

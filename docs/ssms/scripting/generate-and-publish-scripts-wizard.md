@@ -3,7 +3,7 @@ title: Assistant Générer et publier des scripts
 description: Découvrez comment utiliser l’Assistant Générer et publier des scripts pour créer des scripts afin de transférer une base de données d’une instance de base de données vers une autre instance. Les instances peuvent être des instances du moteur de base de données SQL Server ou Azure SQL Database.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e6b5619628bd9974a2b690fc9c8472543d3ca12
-ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
+ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
+ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2020
-ms.locfileid: "87122617"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88901372"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
 
@@ -128,7 +128,7 @@ Utilisez cette page pour spécifier si vous souhaitez que l'Assistant enregistre
 
 **Enregistrer les scripts à un emplacement spécifique** - Permet d’enregistrer un ou plusieurs fichiers de script Transact-SQL à un emplacement que vous spécifiez.
 
-![Enregistrer](media/generate-and-publish-scripts-wizard/save.png)
+![Enregistrer comme notebook](media/generate-and-publish-scripts-wizard/save.png)
 
 - **[Enregistrer comme notebook](../../azure-data-studio/notebooks-guidance.md)** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Sélectionnez le bouton Parcourir ( **...** ) pour spécifier le nom et l’emplacement du fichier.
 
@@ -222,7 +222,7 @@ Utilisez cette page pour spécifier la façon dont vous souhaitez que cet Assist
 
 ### <a name="summary-page"></a><a name="Summary"></a> Page Résumé
 
-![Résumé](media/generate-and-publish-scripts-wizard/summary.png)
+![Récapitulatif GS](media/generate-and-publish-scripts-wizard/summary.png)
 
 Cette page résume les options que vous avez sélectionnées dans cet Assistant. Pour modifier une option, sélectionnez **Précédent**. Pour commencer à générer des scripts qui sont enregistrés ou publiés, sélectionnez **Suivant**.
 

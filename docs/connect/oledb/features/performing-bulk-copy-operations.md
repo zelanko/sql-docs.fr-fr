@@ -1,6 +1,6 @@
 ---
-title: Exécution d’opérations de copie en bloc | Microsoft Docs
-description: Exécution d’opérations de copie en bloc à l’aide d’OLE DB Driver pour SQL Server
+title: Exécution d'opérations de copie en bloc
+description: En savoir plus sur l’exécution d’opérations de copie en bloc à l’aide d’OLE DB Driver pour SQL Server et la façon dont cela permet le transfert rapide de données dans la base de données.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], bulk copy operations
 - OLE DB Driver for SQL Server, bulk copy operations
 - MSOLEDBSQL, bulk copy operations
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 3d4fcb39822ba70a807e80f25579947e670b8985
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6035f5ac8723e9ccb84735080569468c1b7b33b3
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006895"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861328"
 ---
 # <a name="performing-bulk-copy-operations"></a>Exécution d'opérations de copie en bloc
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

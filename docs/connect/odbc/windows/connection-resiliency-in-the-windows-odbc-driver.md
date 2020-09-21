@@ -1,7 +1,8 @@
 ---
-title: Résilience des connexions du pilote ODBC Windows | Microsoft Docs
+title: Résilience de connexion du pilote ODBC Windows
+description: Découvrez comment la résilience des connexions dans le pilote ODBC restaure de manière transparente les connexions et améliore le comportement de l’application lorsque le serveur ferme les connexions inactives.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2c04c0f1573fe3353c7cc65e614b784822e578ce
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 01b8da5d2a7f7c0e49d54a9fe237367ab3ed405f
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928317"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288121"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Résilience de connexion du pilote ODBC Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "80928317"
   Pour garantir que les applications restent connectées à [!INCLUDE[ssAzure](../../../includes/ssazure_md.md)], le pilote ODBC sur Windows peut restaurer les connexions inactives.  
   
 > [!IMPORTANT]  
->  La fonctionnalité de résilience de connexion est prise en charge sur les versions de serveur SQL Server 2014 (et versions ultérieures) et les bases de données Microsoft Azure SQL Database.  
+>  La fonctionnalité de résilience des connexions est prise en charge sur les versions de serveurs Microsoft Azure SQL Database et SQL Server 2014 (et versions ultérieures).  
   
  Pour plus d’informations sur la résilience des connexions inactives, consultez [Article technique, Résilience des connexions inactives](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx).
   
@@ -70,7 +71,7 @@ ms.locfileid: "80928317"
 |IMC05|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le serveur comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
 |IMC06|La connexion est interrompue et la récupération n’est pas possible. La connexion est marquée par le pilote du client comme irrécupérable. Aucune tentative n’a été faite pour rétablir la connexion.|  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant contient deux fonctions. **func1** montre comment se connecter avec un nom de source de données (DSN) qui utilise ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows. Le nom de source de données utilise l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et spécifie l’identifiant utilisateur. **func1** récupère ensuite le nombre de tentatives de connexion avec **SQL_COPT_SS_CONNECT_RETRY_COUNT**.  
   
  **func2** utilise **SQLDriverConnect**, le mot clé de chaîne de connexion **ConnectRetryCount** et les attributs de connexion pour récupérer le paramètre pour les tentatives de connexion et l’intervalle avant nouvelle tentative.  
@@ -137,7 +138,7 @@ void func2() {
   
 #define MAXBUFLEN 255  
   
-   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 13 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
+   SQLCHAR ConnStrIn[MAXBUFLEN] = "DRIVER={ODBC Driver 17 for SQL Server};SERVER=server_that_supports_connection_resiliency;UID=userID;PWD= password_for_userID;ConnectRetryCount=2";
    SQLCHAR ConnStrOut[MAXBUFLEN];
 
    SQLSMALLINT cbConnStrOut = 0;  

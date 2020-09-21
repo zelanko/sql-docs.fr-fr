@@ -1,6 +1,6 @@
 ---
 title: Créer des index SQL Server (pilote OLE DB) | Microsoft Docs
-description: Création d’index SQL Server à l’aide d’OLE DB Driver pour SQL Server
+description: Le pilote OLE DB pour SQL Server expose la fonction IIndexDefinition::CreateIndex, en permettant aux consommateurs de définir de nouveaux index sur les tables SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, indexes
 - indexes [OLE DB]
 - adding indexes
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 96521e592f1c44d4929c93dca7463d8e20189726
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 2e0868c24fe17c7c386ca78198e72e74a5be6cde
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977814"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858763"
 ---
 # <a name="creating-sql-server-indexes"></a>Création d'index SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

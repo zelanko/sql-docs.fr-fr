@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: aed63e215bdf4306700c50c0e3a746ead50a2626
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 28b07fa4befbae597fd3356d5abe83cf1631763e
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006970"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480937"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "86006970"
 >  Cette fonctionnalité n'est conçue qu'à des fins de dépannage et de diagnostic et peut ne pas convenir à des fins d'audit ou de sécurité.  
   
 ## <a name="remarks"></a>Notes  
- Pour les opérations de connexion, OLE DB Driver pour SQL Server envoie un ID de connexion client. Si la connexion échoue, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](https://go.microsoft.com/fwlink/?LinkId=207752)) et rechercher le champ **ClientConnectionID** pour obtenir les informations de diagnostic sur l’échec de connexion. Les ID de connexion du client sont enregistrés dans la mémoire tampon en anneau uniquement en cas d'erreur. (Si une connexion échoue avant d'envoyer le paquet de préconnexion, un ID de connexion client ne sera pas généré.) L'ID de connexion client est un GUID à 16 octets. Vous pouvez également rechercher l’ID de connexion client dans la cible de sortie d’événements étendus, si l’action **client_connection_id** est ajoutée aux événements dans une session d’événements étendus. Vous pouvez activer le traçage de l’accès aux données et réexécuter la commande de connexion, puis observer le champ **ClientConnectionID** dans la trace d’accès aux données pour une opération ayant échoué, si vous avez besoin d’une aide supplémentaire pour le diagnostic.  
+ Pour les opérations de connexion, OLE DB Driver pour SQL Server envoie un ID de connexion client. En cas d’échec de la connexion, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) et rechercher le champ **ClientConnectionID** pour obtenir les informations de diagnostic sur l’échec de la connexion. Les ID de connexion du client sont enregistrés dans la mémoire tampon en anneau uniquement en cas d'erreur. (Si une connexion échoue avant d'envoyer le paquet de préconnexion, un ID de connexion client ne sera pas généré.) L'ID de connexion client est un GUID à 16 octets. Vous pouvez également rechercher l’ID de connexion client dans la cible de sortie d’événements étendus, si l’action **client_connection_id** est ajoutée aux événements dans une session d’événements étendus. Vous pouvez activer le traçage de l’accès aux données et réexécuter la commande de connexion, puis observer le champ **ClientConnectionID** dans la trace d’accès aux données pour une opération ayant échoué, si vous avez besoin d’une aide supplémentaire pour le diagnostic.  
    
   
  OLE DB Driver pour SQL Server envoie également un ID d'activité spécifique au thread. L'ID d'activité est capturé dans les sessions d'événements étendus si les sessions sont démarrées alors que l'option TRACK_CAUSAILITY est activée. En cas de problèmes de performance avec une connexion active, vous pouvez obtenir l’ID d’activité de la trace d’accès aux données du client (champ **ActivityID**), puis le localiser dans la sortie d’événements étendus. L'ID d'activité dans les événements étendus est un GUID à 16 octets (différent du GUID de l'ID de connexion client) ajouté avec un numéro de séquence de quatre octets. Le numéro séquentiel représente l'ordre d'une demande dans un thread et indique l'ordre relatif du traitement par lot et des instructions RPC pour le thread. **ActivityID** est éventuellement envoyé pour les instructions par lots SQL et les demandes RPC quand le traçage de l’accès aux données est activé et que le 18ème bit dans le mot de configuration de traçage est activé.  

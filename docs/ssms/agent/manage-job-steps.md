@@ -1,4 +1,5 @@
 ---
+description: Gérer les étapes de travail
 title: Gérer les étapes de travail
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -25,18 +26,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ddcd4cde0412590e051a1d2f34ebce10435b2e55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247392"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480303"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Une étape du travail est une action exécutée par le travail sur une base de données ou un serveur. Chaque travail doit posséder au moins une étape de travail. Les étapes de travail peuvent être :  
   
@@ -205,14 +206,14 @@ Pour plus d’informations sur la création d’étapes de travail qui exécuten
 |Description|Rubrique|  
 |-|-|  
 |Décrit comment créer une étape de travail avec un programme exécutable.|[Créer une étape de travail CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)|  
-|Décrit comment réinitialiser les autorisations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurer un utilisateur de manière à créer et à gérer des travaux de SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
+|Décrit comment réinitialiser les autorisations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Configurer un utilisateur de manière à créer et à gérer des travaux de l'Agent SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Décrit comment créer une étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Créer une étape de travail Transact-SQL](../../ssms/agent/create-a-transact-sql-job-step.md)|  
 |Décrit comment définir les options des étapes de travail Transact-SQL de l'Agent Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Définir les options d'une étape de travail Transact-SQL](../../ssms/agent/define-transact-sql-job-step-options.md)|  
 |Décrit comment créer une étape de travail de script ActiveX.|[Créer une étape de travail de script ActiveX](../../ssms/agent/create-an-activex-script-job-step.md)|  
 |Décrit comment créer et définir les étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui exécutent les commandes et requêtes Analysis Services de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Créer une étape de travail Analysis Services](../../ssms/agent/create-an-analysis-services-job-step.md)|  
 |Décrit quelle mesure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit exécuter si une défaillance se produit pendant l'exécution d'une tâche.|[Définir un flux en cas de réussite ou d'échec de l'étape de travail](../../ssms/agent/set-job-step-success-or-failure-flow.md)|  
-|Décrit comment afficher les détails d'une étape de travail dans la boîte de dialogue Propriétés de l'étape du travail.|[Afficher des informations sur une étape de travail](../../ssms/agent/view-job-step-information.md)|  
-|Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Supprimer un journal d'étapes de travail](../../ssms/agent/delete-a-job-step-log.md)|  
+|Décrit comment afficher les détails d'une étape de travail dans la boîte de dialogue Propriétés de l'étape du travail.|[View Job Step Information](../../ssms/agent/view-job-step-information.md)|  
+|Décrit comment supprimer un journal d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Supprimer un journal d’étapes de travail](../../ssms/agent/delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
 [sysjobstepslogs (Transact-SQL)](https://msdn.microsoft.com/128c25db-0b71-449d-bfb2-38b8abcf24a0)  

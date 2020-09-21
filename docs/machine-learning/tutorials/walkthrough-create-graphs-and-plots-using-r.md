@@ -1,6 +1,6 @@
 ---
 title: 'Didacticiel R : Créer des graphes et des tracés'
-description: Didacticiel illustrant comment créer des graphiques et des tracés à l’aide des fonctions de langage R sur SQL Server.
+description: Découvrez les techniques de génération de tracés et de cartes à l’aide du langage R avec des données SQL Server. Créez un histogramme simple, puis développez un tracé de carte plus complexe.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 06/13/2019
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 491c85f0f5c3a9532c6c196e14f49a06998e387e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781819"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178426"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Créer des graphiques et des tracés à l’aide de SQL et R (procédure pas à pas)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Dans cette partie de la procédure pas à pas, vous allez apprendre des techniques de génération de tracés et de cartes en utilisant R avec des données SQL Server. Vous allez d’abord créer un histogramme simple, puis développer un tracé de carte plus complexe.
 
@@ -89,7 +89,7 @@ En règle générale, les serveurs de base de données bloquent l’accès à In
 
     + La ligne commençant par `googmap` génère une carte avec les coordonnées spécifiées au centre.
 
-3. Basculez vers le contexte de calcul SQL Server et restituez les résultats en incluant dans un wrapper la fonction de tracé dans [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec), comme illustré ici. La fonction rxExec fait partie du package **RevoScaleR** et prend en charge l’exécution de fonctions R arbitraires dans un contexte de calcul distant.
+3. Basculez vers le contexte de calcul SQL Server et restituez les résultats en incluant dans un wrapper la fonction de tracé dans [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec), comme illustré ici. La fonction rxExec fait partie du package **RevoScaleR** et prend en charge l’exécution de fonctions R arbitraires dans un contexte de calcul distant.
 
     ```R
     rxSetComputeContext(sqlcc)

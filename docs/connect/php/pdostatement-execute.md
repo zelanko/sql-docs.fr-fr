@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::execute | Microsoft Docs
+title: PDOStatement::execute
+description: Référence API pour la fonction PDOStatement::execute dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c2e80566-fa41-4918-8521-cf2e05374cbd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5d6918a70217e7b98100bdc514edf65622e30b1a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 71b9592a35fcc28b302c7aadb1ca5de0c75c3d6c
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909055"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645120"
 ---
 # <a name="pdostatementexecute"></a>PDOStatement::execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +31,7 @@ bool PDOStatement::execute ([ $input ] );
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$input* : (facultatif) tableau associatif qui contient les valeurs des marqueurs de paramètre.  
+*$Input* : (Facultatif) tableau associatif qui contient les valeurs des marqueurs de paramètre.  
   
 ## <a name="return-value"></a>Valeur de retour  
 true en cas de réussite, false dans le cas contraire.  
@@ -44,7 +45,7 @@ Si l’instruction préparée inclut des marqueurs de paramètre, vous devez soi
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  

@@ -1,4 +1,5 @@
 ---
+description: Gérer plusieurs étapes de travail
 title: Gérer plusieurs étapes de travail
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,18 +18,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc739b6c37ce91b0c6d1010f2c3d1f06a60cec6d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 27c19395f8962cd994ea82e0d52ede9a0131fb16
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786737"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492159"
 ---
 # <a name="handle-multiple-job-steps"></a>Gérer plusieurs étapes de travail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Si votre travail est composé de plusieurs étapes, vous devez spécifier l'ordre dans lequel celles-ci sont exécutées. Ce processus s’appelle le *contrôle de flux*. Vous pouvez ajouter de nouvelles étapes de travail et réorganiser le flux des étapes de travail à tout moment ; les modifications prennent effet lors de l'exécution suivante du travail. Cette illustration montre le contrôle de flux pour un travail de sauvegarde de base de données.  
   

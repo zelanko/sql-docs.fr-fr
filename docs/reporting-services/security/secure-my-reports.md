@@ -1,4 +1,5 @@
 ---
+description: Sécuriser Mes Rapports
 title: Sécuriser Mes rapports | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aba081c02ca027a861ab6c7680e038bac7a18304
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570696"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498032"
 ---
 # <a name="secure-my-reports"></a>Sécuriser Mes Rapports
   La fonctionnalité Mes Rapports offre un espace géré par l'utilisateur pour utiliser des rapports. Pour remplir sa fonction, le dossier Mes Rapports nécessite des autorisations moins restrictives que d'autres dossiers d'utilisation générale. Les utilisateurs qui disposent uniquement d'autorisations d'affichage et d'exécution de rapports dans d'autres dossiers peuvent nécessiter un ensemble étendu d'autorisations pour gérer leurs dossiers Mes rapports et leurs contenus. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre une attribution et une définition de rôles spécialisées à cette fin.  
@@ -32,7 +33,7 @@ ms.locfileid: "65570696"
   
  Une attribution de rôle **Mes Rapports** se compose des éléments suivants :  
   
--   Le dossier Mes rapports de l’utilisateur, qui se trouve dans Dossiers des utilisateurs\\ *\<nom_utilisateur>* \Mes Rapports.  
+-   Le dossier Mes Rapports de l'utilisateur, qui se trouve dans le dossier Dossiers utilisateurs\\ *\<username>* \Mes Rapports.  
   
 -   Le compte d'utilisateur, qui est déterminé lors de l'activation du dossier Mes Rapports. Un dossier est activé lorsqu'un utilisateur clique sur un dossier Mes Rapports dans le Gestionnaire de rapports ou lorsqu'il publie un rapport dans un dossier Mes Rapports depuis le Gestionnaire de rapports. Ce dossier est également activé lorsqu'un utilisateur demande des propriétés sur le lien Mes Rapports.  
   

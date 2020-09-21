@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: fd90e97a8703e4d4a11f082b864555621542f745
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518849"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934110"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
 
@@ -87,7 +87,7 @@ Les paramètres du tableau suivant s'appliquent à toutes les configurations de 
 |Champ|Valeur par défaut|Description|  
 |---------|-----------------|---------------|  
 |Plateforme cible|Microsoft SQL Server 2012|Spécifie la version de SQL Server que vous ciblez avec ce projet de base de données.|  
-|Activer la vérification Transact\-SQL étendue pour les objets communs.|Cette option n'est pas activée lorsque vous créez un projet.<br /><br />Cette option est activée lorsque vous créez un projet à partir de l’Explorateur d’objets SQL Server connecté à SQL Azure, importez une base de données SQL Azure dans le projet ou modifiez la plateforme cible d’un projet afin qu’elle corresponde à SQL Azure.|Lorsque cette option est activée, les erreurs détectées dans le projet, pour lequel la vérification SQL Server Compiler a échoué, sont signalées. Si vous modifiez votre plateforme cible pour qu'elle corresponde à SQL Azure, la vérification étendue est activée. L'option n'est pas désactivée si vous modifiez la plateforme cible.<br /><br />Vous pouvez activer cette option pour d'autres versions de SQL Server, mais la validation est limitée aux bases de données partiellement autonomes Microsoft SQL Server 2012 et à SQL Azure. Les versions de SQL Server ne prennent pas toutes en charge la syntaxe Transact\-SQL.<br /><br />Pour plus d’informations, consultez [Vérification Transact-SQL étendue](#bkmk_evf) plus loin dans cette rubrique|  
+|Activer la vérification Transact\-SQL étendue pour les objets communs.|Cette option n'est pas activée lorsque vous créez un projet.<br /><br />Cette option est activée lorsque vous créez un projet à partir de l’Explorateur d’objets SQL Server connecté à SQL Azure, importez une instance Azure SQL Database dans le projet ou modifiez la plateforme cible d’un projet afin qu’elle corresponde à SQL Azure.|Lorsque cette option est activée, les erreurs détectées dans le projet, pour lequel la vérification SQL Server Compiler a échoué, sont signalées. Si vous modifiez votre plateforme cible pour qu'elle corresponde à SQL Azure, la vérification étendue est activée. L'option n'est pas désactivée si vous modifiez la plateforme cible.<br /><br />Vous pouvez activer cette option pour d'autres versions de SQL Server, mais la validation est limitée aux bases de données partiellement autonomes Microsoft SQL Server 2012 et à SQL Azure. Les versions de SQL Server ne prennent pas toutes en charge la syntaxe Transact\-SQL.<br /><br />Pour plus d’informations, consultez [Vérification Transact-SQL étendue](#bkmk_evf) plus loin dans cette rubrique|  
 |Types de sortie|||  
 |Application de la couche Données (fichier .dacpac)|Activé et verrouillé. La sortie de la génération d'un projet de base de données génère toujours un package .dacpac lorsque le projet est généré.|Si vous utilisez la version de SQL Server Data Tools (SSDT) qui comporte l'option « Créer un fichier .dacpac de bas niveau supplémentaire (v2.0) », vérifiez si vous souhaitez que le package soit compatible avec SQL Server Management Studio ou avec le portail de gestion SQL Azure. Vous pouvez déployer un package .dacpac directement à partir de SSDT, mais vous pouvez déployer uniquement un fichier .dacpac version 2.0 via SQL Server Management Studio lors de la publication de SQL Server Data Tools.|  
 |Créer un script (fichier .sql)||Spécifie si un script SQL CREATE complet est généré pour tous les objets du projet et placé dans le dossier bin/debug lorsque le projet est généré. Vous pouvez créer un script de mise à jour incrémentielle à l'aide de la commande **Publier le projet** ou de l'utilitaire SQL Compare.|  
@@ -132,7 +132,7 @@ Fonctionnalités qui ne sont pas prises en charge actuellement pour la validatio
 -   Classement de métadonnées SQL Azure (Compiler Service utilise le classement de métadonnées de base de données partiellement autonome SQL Server 2012 - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>Activation/Désactivation de la vérification étendue  
-La vérification Transact-SQL étendue est activée par défaut dans un projet de base de données créé directement à partir d'une base de données SQL Azure ou d'un projet dont la plateforme cible est définie sur SQL Azure. Il est recommandé d'utiliser la vérification étendue lors du développement pour une base de données SQL Azure ou à portée d'application ciblant SQL Server 2012. Pour plus d'informations sur les bases de données à portée d'application, consultez [Bases de données partiellement autonomes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+La vérification Transact-SQL étendue est activée par défaut dans un projet de base de données créé directement à partir d'une instance Azure SQL Database ou d'un projet dont la plateforme cible est définie sur SQL Azure. Il est recommandé d'utiliser la vérification étendue lors du développement pour une base de données SQL Azure ou à portée d'application ciblant SQL Server 2012. Pour plus d'informations sur les bases de données à portée d'application, consultez [Bases de données partiellement autonomes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
   
 La fonctionnalité de vérification étendue peut également être utilisée lors du développement d'une base de données à portée d'application pour SQL Server 2008/R2 afin de parvenir à la compatibilité avec Microsoft SQL Server 2012 et SQL Azure.  
   
@@ -151,7 +151,7 @@ La fonctionnalité de vérification étendue peut également être utilisée lor
   
 2.  Dans **Propriétés**, affectez à la propriété **Vérification Transact-SQL étendue** la valeur **False**.  
   
-![Propriétés du fichier](../ssdt/media/ssdt-evf.gif "Propriétés du fichier")  
+    ![Propriétés du fichier](../ssdt/media/ssdt-evf.gif "Propriétés du fichier")  
   
 ### <a name="special-considerations-for-collations"></a>Considérations spéciales relatives aux classements  
 Pour plus d'informations concernant les classements dans les bases de données partiellement autonomes, consultez [Classements de base de données autonome](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  

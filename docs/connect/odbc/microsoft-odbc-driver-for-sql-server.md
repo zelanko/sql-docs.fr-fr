@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 42fce5ed05099227cf134b7bd244b7c93e98d501
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: b17517d0a4a904c5a8ffa56a625ba092c6b79b41
+ms.sourcegitcommit: 6f49804b863fed44968ea5829e2c26edc5988468
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886336"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87807042"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Pilote Microsoft ODBC pour SQL Server
 
@@ -64,6 +64,7 @@ L’exemple C++ suivant montre comment utiliser les API ODBC pour se connecter e
 - [Problèmes connus](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [Instructions de programmation](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [Notes de publication](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Notes de publication (mssql-tools)](../../connect/odbc/linux-mac/release-notes-tools.md)
 - [Prise en charge de la haute disponibilité et de la récupération d’urgence](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 - [Utilisation de l’authentification intégrée (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 

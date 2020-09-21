@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 483832a0460b404a76d11bac4beaf2836d5534fa
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88900998"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042800"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurer les comptes de service Windows et les autorisations
 
@@ -264,7 +264,7 @@ Selon la configuration du service, le compte de service pour un service ou un SI
 
 ### <a name="windows-privileges-and-rights"></a><a name="Windows"></a> Privilèges et droits Windows
 
-Le compte affecté pour démarrer un service a besoin d' **autorisations de démarrage, arrêt et pause** pour le service. Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les affecte automatiquement. En premier lieu, installez les Outils d'administration de serveur distant. Consultez la rubrique [Outils d'administration de serveur distant pour Windows 7](https://www.microsoft.com/download/details.aspx?id=7887).
+Le compte affecté pour démarrer un service a besoin d' **autorisations de démarrage, arrêt et pause** pour le service. Le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les affecte automatiquement. En premier lieu, installez les Outils d'administration de serveur distant. Consultez la rubrique [Outils d'administration de serveur distant pour Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 
 Le tableau suivant affiche les autorisations que le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demande pour les SID par service ou les groupes Windows locaux utilisés par les composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 

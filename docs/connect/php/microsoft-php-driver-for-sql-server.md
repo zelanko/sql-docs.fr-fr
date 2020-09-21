@@ -1,5 +1,5 @@
 ---
-title: Pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs
+title: Pilotes Microsoft SQL Server pour PHP
 description: Les pilotes Microsoft pour PHP pour SQL Server permettent l’intégration avec SQL Server pour les applications PHP, via des extensions PHP.
 ms.custom: ''
 ms.date: 03/26/2018
@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 894361044f45d294ad19f7057c57aa741bb0d454
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486736"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680534"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Pilotes Microsoft SQL Server pour PHP
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Les pilotes Microsoft pour PHP pour SQL Server permettent l’intégration avec SQL Server pour les applications PHP. Les pilotes sont des extensions PHP qui permettent de lire et d’écrire des données SQL Server à partir de scripts PHP. Ils fournissent des interfaces pour accéder aux données dans les bases de données SQL Azure et dans toutes les éditions de SQL Server 2005 et versions ultérieures (dont Express Edition). Ils utilisent des fonctionnalités PHP, et notamment les flux PHP, pour lire et écrire des objets volumineux.  
+Les pilotes Microsoft pour PHP pour SQL Server permettent l’intégration avec SQL Server pour les applications PHP. Les pilotes sont des extensions PHP qui permettent de lire et d’écrire des données SQL Server à partir de scripts PHP. Les pilotes fournissent des interfaces pour accéder aux données dans Azure SQL Database et dans toutes les éditions de SQL Server 2005 et versions ultérieures (dont Express Edition). Ils utilisent des fonctionnalités PHP, et notamment les flux PHP, pour lire et écrire des objets volumineux.  
   
 ## <a name="getting-started"></a>Mise en route  
 * [Étape 1 : Configurer un environnement de développement PHP](step-1-configure-development-environment-for-php-development.md)  

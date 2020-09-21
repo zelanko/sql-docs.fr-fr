@@ -9,12 +9,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 299182ad45f8c96f4b2f07d38f1b3f366eea7b33
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c1232571931a8260e545aa21d483a5fbe2d93c70
+ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86923403"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87864270"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -262,7 +262,7 @@ Cette version introduit de nouvelles fonctionnalités pour améliorer les opéra
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-|Prise en charge des bases de données d’instances managées Azure SQL Database| Hébergement de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] sur une instance managée. Consultez [Installation et configuration de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
+|Prise en charge des bases de données Azure SQL Managed Instance| Hébergez [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)] sur Azure SQL Managed Instance. Consultez [Installation et configuration de [!INCLUDE[master-data-services](../includes/ssmdsshort-md.md)]](../master-data-services/master-data-services-installation-and-configuration.md#SetUpWeb).|
 |Nouveaux contrôles HTML| Les contrôles HTML remplacent tous les anciens composants Silverlight. La dépendance à Silverlight a été supprimée.|
 | &nbsp; | &nbsp; |
 

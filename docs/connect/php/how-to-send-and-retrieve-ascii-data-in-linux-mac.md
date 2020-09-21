@@ -1,5 +1,6 @@
 ---
-title: 'Procédure : Envoyer et récupérer des données ASCII dans Linux et macOS (SQL) | Microsoft Docs'
+title: 'Procédure : Envoyer et récupérer des données ASCII sur Linux et macOS (SQL)'
+description: Cette rubrique explique comment envoyer et récupérer des données ASCII dans Linux et macOS lors de l’utilisation des Pilotes Microsoft pour PHP pour SQL Server
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -11,15 +12,14 @@ helpviewer_keywords:
 - sending data
 - linux
 - macOS
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 015562e9a783cef79a9466778b89edecffee5fe0
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68251905"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680414"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Procédure : Envoyer et récupérer des données ASCII dans Linux et macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ Lorsque vous spécifiez l’encodage d’une ressource de connexion (dans SQLSRV
   
 L’encodage par défaut pour PDO_SQLSRV pilote est UTF-8 (PDO ::SQLSRV_ENCODING_UTF8), contrairement au pilote SQLSRV. Pour plus d’informations sur ces constantes, consultez [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Les exemples suivants montrent comment envoyer et récupérer des données ASCII à l’aide des pilotes PHP pour SQL Server en spécifiant des paramètres régionaux particuliers avant d’établir la connexion. Les paramètres régionaux de différentes plateformes Linux peuvent être nommés différemment des mêmes paramètres régionaux dans macOS. Par exemple, les paramètres régionaux ISO-8859-1 (latin 1) pour les États-Unis sont `en_US.ISO-8859-1` dans Linux, tandis que dans macOS ils s’appellent `en_US.ISO8859-1`.
   
 Les exemples supposent que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé sur un serveur. Toutes les sorties sont écrites dans le navigateur quand les exemples sont exécutés à partir du navigateur.  

@@ -1,4 +1,5 @@
 ---
+description: Méthode GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting)
 title: GenerateDatabaseRightsScript, méthode (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8714aee2b5bb33c84a1d9f11b626d3e21e06ed1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3a54cd6367cea9caf2f72ec7412d15e878233a51
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570969"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88423263"
 ---
 # <a name="configurationsetting-method---generatedatabaserightsscript"></a>Méthode ConfigurationSetting - GenerateDatabaseRightsScript
   Génère un script SQL pouvant être utilisé pour accorder des droits d'utilisateur à la base de données du serveur de rapports et à d'autres bases de données requises pour l'exécution d'un serveur de rapports. Il est prévu que l'appelant se connecte au serveur de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et exécute le script.  
@@ -64,7 +65,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Notes  
  Si *DatabaseName* est vide, *IsRemote* est ignoré et la valeur du fichier de configuration du serveur de rapports est utilisée comme nom de base de données.  
   
- Si *IsWindowsUser* est défini sur **true**, *UserName* doit être au format \<domaine>\\<nom_utilisateur\>.  
+ Si *IsWindowsUser* est défini sur **true**, *UserName* doit être au format \<domain>\\<username\>.  
   
  Quand *IsWindowsUser* a la valeur **true**, le script généré accorde des droits de connexion à l’utilisateur pour le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](en définissant la base de données du serveur de rapports comme base de données par défaut) et il accorde le rôle **RSExec** sur la base de données du serveur de rapports, la base de données temporaire du serveur de rapports, la base de données MASTER et la base de données système MSDB.  
   
@@ -74,12 +75,12 @@ out Int32 HRESULT);
   
 |Compte/SID converti|Nom commun|Nom distant|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Système Local|\<Domaine>\\<nom_ordinateur\>$|  
-|.\LocalSystem|Système Local|\<Domaine>\\<nom_ordinateur\>$|  
-|ComputerName\LocalSystem|Système Local|\<Domaine>\\<nom_ordinateur\>$|  
-|LocalSystem|Système Local|\<Domaine>\\<nom_ordinateur\>$|  
-|(S-1-5-20)|Service réseau|\<Domaine>\\<nom_ordinateur\>$|  
-|NT AUTHORITY\NetworkService|Service réseau|\<Domaine>\\<nom_ordinateur\>$|  
+|(S-1-5-18)|Système Local|\<Domain>\\<ComputerName\>$|  
+|.\LocalSystem|Système Local|\<Domain>\\<ComputerName\>$|  
+|ComputerName\LocalSystem|Système Local|\<Domain>\\<ComputerName\>$|  
+|LocalSystem|Système Local|\<Domain>\\<ComputerName\>$|  
+|(S-1-5-20)|Service réseau|\<Domain>\\<ComputerName\>$|  
+|NT AUTHORITY\NetworkService|Service réseau|\<Domain>\\<ComputerName\>$|  
 |(S-1-5-19)|Service local|Erreur (voir ci-dessous)|  
 |NT AUTHORITY\LocalService|Service local|Erreur (voir ci-dessous)|  
   
@@ -89,15 +90,15 @@ out Int32 HRESULT);
   
  Quand *IsWindowsUser* a la valeur true et qu’il est nécessaire de convertir la valeur indiquée dans *UserName* , le fournisseur WMI détermine si la base de données du serveur de rapports réside sur le même ordinateur ou sur un ordinateur distant. Pour déterminer si l’installation est locale, le fournisseur WMI évalue la propriété DatabaseServerName par rapport à la liste de valeurs suivante. Si une correspondance est trouvée, la base de données est locale. Dans le cas contraire, elle est distante. La comparaison respecte la casse.  
   
-|Valeur de DatabaseServerName|Exemple|  
+|Valeur de DatabaseServerName| Exemple|  
 |---------------------------------|-------------|  
 |"."||  
 |"(local)"||  
 |"LOCAL"||  
 |localhost||  
-|\<Nom ordinateur>|labtest14|  
-|\<FQDN_ordinateur>|example.redmond.microsoft.com|  
-|\<Adresse IP>|180.012.345,678|  
+|\<Machinename>|labtest14|  
+|\<MachineFQDN>|example.redmond.microsoft.com|  
+|\<IPAddress>|180.012.345,678|  
   
  Quand *IsWindowsUser* a la valeur **true**, le fournisseur WMI appelle LookupAccountName pour obtenir le SID du compte, puis LookupAccountSID pour obtenir le nom à insérer dans le script [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De cette manière, le nom du compte utilisé réussit systématiquement la validation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

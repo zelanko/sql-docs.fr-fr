@@ -1,4 +1,5 @@
 ---
+description: Propriétés de l’alerte - Nouvelle alerte (page Réponse)
 title: Propriétés de l’alerte - Nouvelle alerte (page Réponse)
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3266ae4e031088a0db6155d5ee20e792b6d9365c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: faf7aaabf1fbd8bdaf4c181288a8c38068d249f5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749224"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418445"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>Propriétés de l’alerte - Nouvelle alerte (page Réponse)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Utilisez cette page pour spécifier un travail que vous souhaitez exécuter et pour obtenir une liste d’opérateurs à notifier en réponse à une alerte de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -61,8 +62,8 @@ Affiche la boîte de dialogue **Propriétés** pour l’opérateur sélectionné
   
 ## <a name="see-also"></a>Voir aussi  
 [Alertes](../../ssms/agent/alerts.md)  
-[Créer une alerte à l’aide d’un niveau de gravité](../../ssms/agent/create-an-alert-using-severity-level.md)  
+[Créer une alerte à l'aide d'un niveau de gravité](../../ssms/agent/create-an-alert-using-severity-level.md)  
 [Alertes](../../ssms/agent/alerts.md)  
-[Edit an Alert](../../ssms/agent/edit-an-alert.md)  
+[Modifier une alerte](../../ssms/agent/edit-an-alert.md)  
 [Delete an Alert](../../ssms/agent/delete-an-alert.md)  
   

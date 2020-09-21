@@ -2,7 +2,7 @@
 title: Développeur de données SQL | Microsoft Docs
 description: Utilisez la plateforme de données SQL de Microsoft pour créer des solutions orientées données sur des appareils mobiles et des ordinateurs de bureau pour les serveurs web, les serveurs d’entreprise et le cloud.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,25 +11,26 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b60eb6ca02ef446fe05bb109123e5c48951905a
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ff3fb2b5e789d9eb9d89100e1722b37c9eae6385
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922303"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988483"
 ---
 # <a name="sql-data-developer"></a>Développeur de données SQL
 Utilisez la plateforme de données SQL de Microsoft pour créer des solutions orientées données sur des appareils mobiles et des ordinateurs de bureau pour les serveurs web, les serveurs d’entreprise et le cloud.  
 
 ## <a name="sql-data-storage"></a>Stockage de données SQL
 * [Moteur de base de données SQL Server](../database-engine/configure-windows/sql-server-database-engine.md) : utilisez-le pour créer des bases de données relationnelles pour le traitement de transactions en ligne ou les données de traitement analytique en ligne. 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/) : utilisez SQL Azure pour déplacer votre base de données vers le cloud 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709) : SQL Server Compact sert à créer des applications autonomes et occasionnellement connectées pour les appareils mobiles, les ordinateurs de bureau et les clients web.
+* [Azure SQL](https://docs.microsoft.com/azure/azure-sql/azure-sql-iaas-vs-paas-what-is-overview) : Utiliser SQL Azure pour déplacer votre base de données vers le cloud 
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709) : Utilisez SQL Server Compact pour générer des applications autonomes et occasionnellement connectées pour les appareils mobiles, les ordinateurs de bureau et les clients web.
 * [Base de données locale](../database-engine/configure-windows/sql-server-2016-express-localdb.md) : utilisez la base de données locale pendant le développement pour écrire et tester du code Transact-SQL sans avoir à gérer une instance de serveur complète de SQL Server.
 
 ## <a name="sql-data-tools"></a>Outils SQL Data
-* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : utilisez SSDT pour créer des bases de données relationnelles, des bases de données Azure SQL, des packages Integration Services, des modèles de données Analysis Services et des rapports Reporting Services.
-* [Outils d'administration SQL Server](../ssms/download-sql-server-management-studio-ssms.md) :  utilisez SSMS pour configurer, surveiller et administrer des instances de SQL Server.
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md): Utilisez Azure Data Studio sur Windows, macOS et Linux pour exécuter SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebook et plus encore.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : Utilisez SSDT à l’intérieur de Visual Studio pour générer des bases de données relationnelles, des bases de données Azure SQL, des packages Integration Services, des modèles de données Analysis Services et des rapports Reporting Services.
+* [Outils d'administration SQL Server](../ssms/download-sql-server-management-studio-ssms.md) :  Utilisez SSMS sur Windows pour configurer, surveiller et administrer des instances de SQL Server.
 
 ## <a name="sql-data-access"></a>Accès aux données SQL
 * [Pilotes clients SQL](sql-connection-libraries.md) :  utilisez des pilotes SQL pour vous connecter, interroger, mettre à jour, insérer des données dans une base de données SQL ou les en supprimer.

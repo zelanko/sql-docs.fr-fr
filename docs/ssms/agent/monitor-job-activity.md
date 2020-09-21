@@ -1,4 +1,5 @@
 ---
+description: Surveiller l'activité des travaux
 title: Surveiller l'activité des travaux
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,18 +23,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b4bfe163fb1f3ffe4eb5b5203bfced15f43069de
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: e621359985b7d5f31662e09c938ad3974ad1637b
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87237374"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88319145"
 ---
 # <a name="monitor-job-activity"></a>Surveiller l'activité des travaux
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Vous pouvez surveiller l'activité en cours de tous les travaux définis sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide du moniteur d'activité des travaux de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

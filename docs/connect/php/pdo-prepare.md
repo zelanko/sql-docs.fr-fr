@@ -1,5 +1,6 @@
 ---
-title: PDO::prepare | Microsoft Docs
+title: PDO::prepare
+description: Référence API pour la fonction PDO::prepare dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 01/31/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e8765718829f3df3bca5fd289ec326f9d7aad861
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919195"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435203"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,9 +30,9 @@ PDOStatement PDO::prepare ( $statement [, array(key_pair)] )
 ```
 
 #### <a name="parameters"></a>Paramètres
-$*statement*: chaîne qui contient l’instruction SQL.
+$*instruction* : chaîne contenant l’instruction SQL.
 
-*key_pair* : tableau contenant un nom et une valeur d’attribut. Pour plus d'informations, consultez la section Remarques.
+*key_pair* : tableau contenant un nom et une valeur d’attribut. Pour plus d'informations, consultez la section Notes.
 
 ## <a name="return-value"></a>Valeur de retour
 En cas de réussite, retourne un objet PDOStatement. En cas d’échec, retourne un objet PDOException, ou false en fonction de la valeur de `PDO::ATTR_ERRMODE`.
@@ -49,7 +50,7 @@ Le tableau suivant répertorie les valeurs possibles de *key_pair*.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|Spécifie le nombre de décimales pour la mise en forme des valeurs monétaires extraites. Cette option fonctionne uniquement quand `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` a la valeur true. Pour plus d’informations, consultez [Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Si la valeur est True, spécifie l’exécution de requête directe. False est synonyme d’exécution d’instruction préparée. Pour plus d’informations sur `PDO::SQLSRV_ATTR_DIRECT_QUERY`, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (par défaut)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Spécifie s’il faut récupérer les types de date et d’heure en tant qu’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Pour plus d’informations, consultez [Guide pratique pour récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|Spécifie s’il faut récupérer les types de date et d’heure en tant qu’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Pour plus d’informations, consultez [Procédure : Récupérer des types date et heure sous forme d’objets datetime PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|Gère les extractions numériques à partir de colonnes avec des types numériques SQL. Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|Spécifie s’il faut ajouter des zéros au début des chaînes décimales si nécessaire. Si elle est définie, cette option active l’option `PDO::SQLSRV_ATTR_DECIMAL_PLACES` pour mettre en forme les types monétaires. Pour plus d’informations, consultez [Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Pour plus d’informations, consultez [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|
@@ -72,7 +73,7 @@ Vous pouvez fermer un objet PDOStatement en appelant `unset` :
 unset($stmt);
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 Cet exemple montre comment utiliser PDO::prepare avec des marqueurs de paramètres et un curseur avant uniquement.
 
 ```
@@ -99,7 +100,7 @@ unset($stmt);
 ?>
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 Cet exemple montre comment utiliser PDO::prepare avec un curseur statique côté serveur. Pour obtenir un exemple de curseur côté client, consultez [Types de curseurs &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
 ```
@@ -139,7 +140,7 @@ print_r($row);
 ?>
 ```
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 Les deux extraits de code suivants montrent comment utiliser PDO::prepare avec des données ciblées pour les colonnes CHAR/VARCHAR. Comme l’encodage par défaut pour PDO::prepare est UTF-8, l’utilisateur peut pour éviter les conversions implicites à l’aide de l’option `PDO::SQLSRV_ENCODING_SYSTEM`.
 
 **Option 1 :**
@@ -168,7 +169,7 @@ $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCO
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Cet exemple montre comment utiliser PDO::prepare avec `PDO::ATTR_EMULATE_PREPARES` défini sur true.
 

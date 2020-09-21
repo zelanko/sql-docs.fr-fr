@@ -1,6 +1,6 @@
 ---
-title: Mise à jour des données dans les curseurs SQL Server | Microsoft Docs
-description: Mise à jour des données dans les curseurs SQL Server
+title: Mettre à jour les données dans les curseurs (pilote OLE DB)
+description: Découvrez comment une application de contrôle serveur consommateur OLE DB Driver pour SQL Server fonctionne avec des requêtes dans un ensemble de lignes modifiable à l’aide de curseurs SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - immediate update mode [OLE DB]
 - cursors [OLE DB]
 - data updates [SQL Server], OLE DB
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7a1a476c9e8588cb5dc14ce7f24b335c0b433b68
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: eae7b9119803615a2d18fe4710ff1eda2b91ac5b
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999614"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88859929"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Mise à jour des données dans les curseurs SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Lorsque vous récupérez (fetch) et mettez à jour des données via les curseurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l’application consommateur du pilote OLE DB pour SQL Server est liée par les mêmes contraintes que celles qui s’appliquent à toute autre application cliente.  
+  Lorsque vous récupérez (fetch) et mettez à jour des données via des curseurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l’application de contrôle serveur consommateur OLE DB Driver pour SQL Server est liée par les mêmes contraintes que celles qui s’appliquent à toute autre application cliente.  
   
  Seules les lignes des curseurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participent à un contrôle de simultanéité d'accès aux données. Lorsque le consommateur demande un ensemble de lignes modifiable, le contrôle de simultanéité est vérifié par DBPROP_LOCKMODE. Pour modifier le niveau de contrôle d'accès simultané, le consommateur définit la propriété DBPROP_LOCKMODE avant d'ouvrir l'ensemble de lignes.  
   

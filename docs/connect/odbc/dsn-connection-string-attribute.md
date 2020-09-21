@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 61b3e618b413ddb1a8b52f7fb377148b282fcb66
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528981"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87878413"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Attributs et mots clés de chaîne de connexion et DSN
 
@@ -97,6 +97,7 @@ Le tableau suivant liste les mots clés disponibles et les attributs pour chaque
 | | [SQL_ATTR_TXN_ISOLATION](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TXN_ISOLATION) | LMW |
 | | [SQL_COPT_SS_ACCESS_TOKEN](dsn-connection-string-attribute.md#sql_copt_ss_access_token) | LMW |
 | | [SQL_COPT_SS_ANSI_OEM](dsn-connection-string-attribute.md#sql_copt_ss_ansi_oem)| W |
+| | [SQL_COPT_SS_AUTOBEGINTXN](dsn-connection-string-attribute.md#sql_copt_ss_autobegintxn)| LMW |
 | | [SQL_COPT_SS_BCP](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbcp) | LMW |
 | | [SQL_COPT_SS_BROWSE_CACHE_DATA](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) | LMW |
 | | [SQL_COPT_SS_BROWSE_CONNECT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseconnect) | LMW |
@@ -137,6 +138,15 @@ Contrôle la conversion ANSI vers OEM des données.
 | SQL_AO_OFF | (Valeur par défaut) Aucune conversion n’est effectuée. |
 | SQL_AO_ON | La conversion est effectuée. |
 
+### <a name="sql_copt_ss_autobegintxn"></a>SQL_COPT_SS_AUTOBEGINTXN
+
+Version 17.6+ alors que la validation automatique est désactivée, contrôle la BEGIN TRANSACTION automatique après ROLLBACK ou COMMIT.
+
+| Valeur d'attribut | Description |
+|-|-|
+| SQL_AUTOBEGINTXN_ON | (Par défaut) BEGIN TRANSACTION automatique après ROLLBACK ou COMMIT. |
+| SQL_AUTOBEGINTXN_OFF | Aucun BEGIN TRANSACTION automatique après ROLLBACK ou COMMIT. |
+
 ### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 Contrôle l’utilisation de connexions de secours SQL Server. Cet attribut n’est plus pris en charge.
@@ -161,7 +171,7 @@ Définit le mode d’authentification à utiliser lors de la connexion à SQL Se
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Authentification intégrée à Azure Active Directory.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Authentification par mot de passe Azure Active Directory.|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Authentification interactive Azure Active Directory.|
-|ActiveDirectoryMsi|SQL_AU_AD_MSI|Authentification Azure Active Directory Managed Service Identity. Pour l’identité attribuée par l’utilisateur, UID est défini sur l’ID d’objet de l’identité d’utilisateur. |
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Authentification Managed Identity Azure Active Directory Pour l’identité attribuée par l’utilisateur, UID est défini sur l’ID d’objet de l’identité d’utilisateur. |
 | |SQL_AU_RESET|Non défini. Remplace tout nom de source de données ou paramètre de chaîne de connexion.|
 
 > [!NOTE]

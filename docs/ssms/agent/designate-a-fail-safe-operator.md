@@ -1,4 +1,5 @@
 ---
+description: Désigner un opérateur de prévention de défaillance
 title: Désigner un opérateur de prévention de défaillance
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f91a6c3548c944d3b2bcf075f2189a5fe4112df
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0be299ee081043e03a55a3cd0fa7a5a0aaf2c2be
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724499"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88371405"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Désigner un opérateur de prévention de défaillance
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Un opérateur de prévention de défaillance est un utilisateur qui reçoit l'alerte si l'opérateur désigné n'est pas joignable. Cette rubrique explique comment définir un opérateur de prévention de défaillance qui recevra les notifications d’alertes de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -54,7 +55,7 @@ Seuls les membres du rôle serveur fixe **sysadmin** peuvent désigner des opér
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent -** _nom\_serveur_, sous **Sélectionner une page**, sélectionnez **Système d’alerte**.  
+3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent -**_nom\_serveur_, sous **Sélectionner une page**, sélectionnez **Système d’alerte**.  
   
 4.  Sous **Opérateur de prévention de défaillance**, sélectionnez **Activer l’opérateur de prévention de défaillance**.  
   

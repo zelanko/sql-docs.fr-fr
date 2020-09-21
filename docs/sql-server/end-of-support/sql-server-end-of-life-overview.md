@@ -1,20 +1,20 @@
 ---
 title: Options de fin du support
 description: Découvrez les différentes options disponibles pour les produits SQL Server qui ont atteint la fin du support, par exemple SQL Server 2005, SQL Server 2008 et SQL Server 2008 R2.
-ms.date: 12/18/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: =sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3143a586c54f0c908e80ca9e78041c9f1996931
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 378af311994d2aa478df0c673e0a1f0162d4dbfd
+ms.sourcegitcommit: bf5acef60627f77883249bcec4c502b0205300a4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87112099"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88200297"
 ---
 # <a name="sql-server-end-of-support-options"></a>Options de fin du support SQL Server 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -80,7 +80,7 @@ Exigences requises :
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 Mises à niveau de version et d’édition prises en charge :
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -165,7 +165,7 @@ Si vous souhaitez décharger la maintenance, réduire les coûts et éliminer le
 
 - **Coût** : Une base de données unique peut être rentable, étant donné que le matériel, les logiciels et la maintenance sont déchargés et que vous pouvez payer l’utilisation par la seconde ou l’heure. 
 - **Flexibilité** : La base de données unique est particulièrement adaptée aux applications conçues pour le cloud si la productivité des développeurs et une commercialisation rapide pour les solutions sont des critères essentiels ou si un accès externe est requis.  
-- **Fonctionnalités communes** : Les fonctionnalités [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] les plus couramment utilisées sont disponibles, mais pas autant que pour une instance managée Azure SQL Database.  
+- **Fonctionnalités communes** : Les fonctionnalités [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] les plus couramment utilisées sont disponibles, mais pas autant que pour SQL Managed Instance.  
 - **Déploiement rapide** : Vous pouvez rapidement déployer une base de données unique. 
 - **Scalabilité** : Vous pouvez rapidement et facilement monter et descendre en puissance en fonction des besoins de votre entreprise, ce qui offre des avantages supplémentaires en matière de coûts. 
 - **Disponibilité** : Le coût du service comprend le stockage et la haute disponibilité, avec une disponibilité de 99,995 % garantie.  
@@ -177,7 +177,7 @@ Si vous souhaitez décharger la maintenance, réduire les coûts et éliminer le
 ### <a name="considerations"></a>Considérations
 
 - **Options de migration limitées** :  Vous ne pouvez migrer qu’une seule base de données à la fois, au lieu d’une instance entière.   
-- **Limitation des fonctionnalités** :  Bien que les fonctionnalités [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] les plus couramment utilisées soient disponibles, l’ensemble de fonctionnalités pour une seule base de données n’est pas aussi complet que pour une instance gérée [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+- **Limitation des fonctionnalités** :  Bien que les fonctionnalités Azure SQL Database les plus couramment utilisées soient disponibles, l’ensemble de fonctionnalités pour une seule base de données n’est pas aussi complet que pour Azure SQL Managed Instance ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Différences Transact-SQL** :  Il existe des différences [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) entre une base de données unique et une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale. 
 - **Limitations de taille** :  Une base de données unique a une taille de base de données maximale de 100 To, par rapport à une taille de 524 Po pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Durée de maintenance** : Il n’existe aucune garantie quant à la durée de la maintenance exacte, bien qu’elle soit presque transparente. 
@@ -197,9 +197,9 @@ Outils :
 - [Assistant de migration des données](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="sql-managed-instance"></a>Instance managée SQL
 
-Si vous souhaitez tirer parti du déchargement de la maintenance et des coûts, mais que vous recherchez l’ensemble de fonctionnalités d’une base de données unique [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] trop restrictive, vous pouvez passer à [l’instance gérée Azure SQL Database](/azure/sql-database/sql-database-managed-instance). Une instance gérée ressemble beaucoup à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale, sans avoir à se préoccuper des défaillances matérielles ni des mises à jour correctives. Une instance gérée est une collection de bases de données système et utilisateur avec un ensemble partagé de ressources prêt pour la technologie « lift-and-shift » pouvant être utilisé pour la plupart des migrations vers le cloud. Cette option est idéale pour de nouvelles applications ou des applications locales existantes qui souhaitent utiliser les dernières fonctionnalités stables [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et sont migrées vers le cloud avec des modifications minimales. 
+Si vous souhaitez tirer parti du déchargement de la maintenance et des coûts, mais que vous recherchez l’ensemble de fonctionnalités d’une base de données unique [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] trop restrictive, vous pouvez passer à [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance). Une instance gérée ressemble beaucoup à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale, sans avoir à se préoccuper des défaillances matérielles ni des mises à jour correctives. Une instance gérée est une collection de bases de données système et utilisateur avec un ensemble partagé de ressources prêt pour la technologie « lift-and-shift » pouvant être utilisé pour la plupart des migrations vers le cloud. Cette option est idéale pour de nouvelles applications ou des applications locales existantes qui souhaitent utiliser les dernières fonctionnalités stables [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et sont migrées vers le cloud avec des modifications minimales. 
 
 ### <a name="benefits"></a>Avantages
 
@@ -225,10 +225,10 @@ Si vous souhaitez tirer parti du déchargement de la maintenance et des coûts, 
 
 ### <a name="resources"></a>Ressources
 
-[Vue d’ensemble des instances gérées Azure SQL Database](/azure/sql-database/sql-database-managed-instance)       
+[Vue d’ensemble des instances gérées SQL](/azure/sql-database/sql-database-managed-instance)       
 [Sélection d’une option SQL Azure](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [Comparaison des fonctionnalités SQL Database](/azure/sql-database/sql-database-features)       
-[Migrer SQL Server vers une instance gérée](/azure/sql-database/sql-database-managed-instance-migrate)       
+[Migration de SQL Server vers Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-migrate)       
 [Processus de migration plus large](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 Outils :

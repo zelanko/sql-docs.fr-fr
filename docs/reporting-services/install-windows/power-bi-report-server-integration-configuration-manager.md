@@ -1,4 +1,5 @@
 ---
+description: Intégration du serveur de rapports Power BI (Gestionnaire de configuration)
 title: Intégration de Power BI Report Server (Gestionnaire de configuration) | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
@@ -6,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: c2013e99f5e222c50d954e292cbc0b48b39cb7c9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
+ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68265642"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "88991865"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Intégration du serveur de rapports Power BI (Gestionnaire de configuration)
 
@@ -25,7 +26,7 @@ Outre une connexion Internet active pour pouvoir accéder au service [!INCLUDE[s
 
 - **Azure Active Directory :** votre organisation doit utiliser Azure Active Directory, qui fournit la gestion des annuaires et des identités pour les services et applications web Azure. Pour plus d’informations, consultez [Qu’est-ce qu’Azure Active Directory ?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
 
-- **Client géré :** le tableau de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] auquel vous voulez épingler des éléments de rapport doit faire partie d’un client géré Azure AD.  Un client géré est créé automatiquement la première fois que votre organisation souscrit à des services Azure tels qu’Office 365 et Microsoft Intune.   Les clients viraux ne sont pas pris en charge pour le moment.  Pour plus d’informations, consultez les sections « Qu’est-ce qu’un client Azure AD ?» et « Obtention d’un annuaire Azure AD » de la rubrique [Qu’est-ce qu’un annuaire Azure AD ?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Client géré :** le tableau de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] auquel vous voulez épingler des éléments de rapport doit faire partie d’un client géré Azure AD.  Un client managé est créé automatiquement la première fois que votre organisation s’abonne à des services Azure tels que Microsoft 365 et Microsoft Intune.   Les clients viraux ne sont pas pris en charge pour le moment.  Pour plus d’informations, consultez les sections « Qu’est-ce qu’un client Azure AD ?» et « Obtention d’un annuaire Azure AD » de la rubrique [Qu’est-ce qu’un annuaire Azure AD ?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
 
 - L’intégration de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] doit être effectuée par un utilisateur membre du client Azure AD, un administrateur système [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et un administrateur système pour la base de données de catalogues ReportServer.
 
@@ -108,7 +109,7 @@ Cette section présente les étapes de base et les technologies impliquées dans
 
  ![ssrs_pbiflow_integration](../../reporting-services/install-windows/media/ssrs-pbiflow-integration.png "ssrs_pbiflow_integration")
 
- **Lorsqu’un utilisateur épingle un élément de rapport à un tableau de bord :**
+ **Lorsqu’un utilisateur épingle un élément de rapport à un tableau de bord :**
 
 1. Les utilisateurs prévisualisent les rapports dans le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] la première fois qu’ils cliquent pour épingler un élément de rapport dans le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
@@ -146,7 +147,7 @@ Lorsqu’un utilisateur épingle un élément pour la deuxième fois, les étape
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/QhPQObqmMPc" frameborder="0" allowfullscreen></iframe>
 
-## <a name="considerations-and-limitations"></a>Observations et limitations
+## <a name="considerations-and-limitations"></a>Considérations et limitations
 
 * Les locataires viraux et gouvernementaux ne sont pas pris en charge.
 

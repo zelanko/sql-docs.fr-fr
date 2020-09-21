@@ -1,6 +1,6 @@
 ---
 title: Objets source de données (pilote OLE DB) | Microsoft Docs
-description: Objets source de données (OLE DB)
+description: Découvrez comment un contrôle serveur consommateur OLE DB Driver pour SQL Server crée une instance d’objet de source de données pour un fournisseur.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OLE DB data source objects [OLE DB Driver for SQL Server]
 - data source objects [OLE DB]
 - CLSID
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5bdfdd91daf1e41b7eae33cd504e127c249de1b8
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9abdf54d533eab604ff564c9f32b99b2eba566d9
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976225"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862404"
 ---
 # <a name="data-source-objects-ole-db"></a>Objets source de données (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

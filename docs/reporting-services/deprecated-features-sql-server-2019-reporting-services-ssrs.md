@@ -1,7 +1,7 @@
 ---
 title: Fonctionnalités déconseillées dans SQL Server 2019 Reporting Services | Microsoft Docs
-description: Cet article décrit les fonctionnalités qui seront déconseillées dans la prochaine version de SQL Server Reporting Services.
-ms.date: 11/21/2019
+description: Cet article décrit les fonctionnalités dans SQL Server 2019 Reporting Services qui seront déconseillées dans la prochaine version de SQL Server Reporting Services.
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -15,12 +15,12 @@ ms.assetid: 3876c01e-f81d-4cce-9104-5106a8c369e6
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: eaa7edebe99a7c444fe1bfa23971317517399ea2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d3e48ab45f34e583dbbeca883a64d04dc965b018
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74320273"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283815"
 ---
 # <a name="deprecated-features-in-sql-server-2019-reporting-services"></a>Fonctionnalités déconseillées dans SQL Server 2019 Reporting Services
 
@@ -42,6 +42,7 @@ SQL Server Reporting Services prend en charge les fonctionnalités suivantes dan
 | Serveur de rapports | Rapports mobiles dans l’Éditeur de rapports mobiles | Rapports Power BI dans les fonctionnalités mobiles de l’offre Power BI Report Server. |
 | Serveur de rapports | Formats de rendu XLS et DOC | Les formats XLSX et DOCX sont disponibles et pris en charge. |
 | Serveur de rapports | Flux de données Atom | oLe support des flux de données est disponible pour les jeux de données partagés dans SSRS et Power BI Report Server. |
+| Serveur de rapports | Épingler à Power BI | La prise en charge des rapports paginés est désormais disponible directement dans le service Power BI.  |
 
 ## <a name="see-also"></a>Voir aussi
 

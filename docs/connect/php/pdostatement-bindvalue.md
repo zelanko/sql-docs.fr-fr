@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindValue | Microsoft Docs
+title: PDOStatement::bindValue
+description: Référence API pour la fonction PDOStatement::bindValue dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: adb07064c6252978b343415fc1758c0b2f5da5f5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ebb895ac26aaff16ef4fb0d51a56243a9401e4d1
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921014"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645360"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +44,7 @@ TRUE en cas de réussite ; sinon, FALSE.
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple montre qu’une fois que la valeur de $contact est liée, sa modification ne change pas la valeur transmise dans la requête.  
   
 ```  
@@ -78,7 +79,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 > [!NOTE]
 > Il est recommandé d’utiliser des chaînes en entrée pour lier des valeurs à une [colonne décimale ou numérique](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) pour des raisons de précision et d’exactitude, car PHP n’offre qu’une précision limitée pour les [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Il en va de même pour les colonnes bigint, en particulier si les valeurs sont en dehors de la plage des [entiers](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple de code montre comment lier une valeur décimale comme paramètre d’entrée.  
 
 ```

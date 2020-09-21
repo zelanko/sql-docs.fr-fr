@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_prepare | Microsoft Docs
+title: sqlsrv_prepare
+description: Référence API pour la fonction sqlsrv_prepare dans Microsoft SQLSRV Driver pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ef36e929b44517a6e4688346d72923a0a2f897ca
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9e82a25d3386de2f86d7e43fe5bde13eb25c6416
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925495"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435125"
 ---
 # <a name="sqlsrv_prepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -87,9 +88,9 @@ La combinaison de **sqlsrv_prepare** et **sqlsrv_execute** sépare la préparati
   
 Pour découvrir d’autres stratégies d’écriture et de lecture de grandes quantités d’informations, consultez [Batches of SQL Statements](../../odbc/reference/develop-app/batches-of-sql-statements.md) et [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Pour plus d’informations, consultez [Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Pour plus d’informations, consultez [Procédure : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant prépare et exécute une instruction. L’instruction, quand elle est exécutée (voir [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), met à jour un champ dans la table *Sales.SalesOrderDetail* de la base de données AdventureWorks. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
@@ -137,7 +138,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>Exemple  
-L’exemple suivant montre comment préparer une instruction puis la réexécuter avec des valeurs de paramètres différentes. L’exemple met à jour la colonne *OrderQty* de la table *Sales.SalesOrderDetail* dans la base de données AdventureWorks. Une fois les mises à jour effectuées, la base de données est interrogée pour vérifier que les mises à jour ont réussi. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple suivant montre comment préparer une instruction puis la réexécuter avec des valeurs de paramètres différentes. L’exemple met à jour la colonne *OrderQty* de la table *Sales.SalesOrderDetail* dans la base de données AdventureWorks. Une fois les mises à jour effectuées, la base de données est interrogée pour vérifier que les mises à jour ont réussi. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -224,7 +225,7 @@ sqlsrv_close($conn);
 > [!NOTE]
 > Il est recommandé d’utiliser des chaînes en entrée pour lier des valeurs à une [colonne décimale ou numérique](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) pour des raisons de précision et d’exactitude, car PHP n’offre qu’une précision limitée pour les [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Il en va de même pour les colonnes bigint, en particulier si les valeurs sont en dehors de la plage des [entiers](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple de code montre comment lier une valeur décimale comme paramètre d’entrée.  
 
 ```
@@ -252,11 +253,11 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Guide pratique pour exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)
+[Procédure : Exécuter des requêtes paramétrables](../../connect/php/how-to-perform-parameterized-queries.md)
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Guide pratique pour envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)
+[Procédure : Envoyer des données sous forme de flux](../../connect/php/how-to-send-data-as-a-stream.md)
 
 [Utilisation de paramètres directionnels](../../connect/php/using-directional-parameters.md)
 

@@ -1,22 +1,22 @@
 ---
-title: 'Procédure : récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV | Microsoft Docs'
+title: 'Procédure : récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV'
+description: Cette rubrique explique comment récupérer des types de date et d’heure sous forme d’objets PHP DateTime lors de l’utilisation du pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as datetime objects
-author: yitam
-ms.author: v-yitam
-manager: v-mabarw
-ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 507dc2a228419fb695d10a437681229ec6586f11
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68264570"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680754"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdo_sqlsrv-driver"></a>Procédure : récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

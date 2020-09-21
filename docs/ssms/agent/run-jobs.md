@@ -1,4 +1,5 @@
 ---
+description: Exécuter des travaux
 title: Exécuter des travaux
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2927502310511e55cba942184d019d2151ee2069
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2d44604d7aea950d86523065b66973a787075edf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246458"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463105"
 ---
 # <a name="run-jobs"></a>Exécuter des travaux
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Pour gérer des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] ou des Objets de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -35,8 +36,8 @@ Pour gérer des travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnover
   
 |Description|Rubrique|  
 |-|-|  
-|Explique comment lancer l'exécution d'un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Start a Job](../../ssms/agent/start-a-job.md)|  
-|Explique comment arrêter un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Stop a Job](../../ssms/agent/stop-a-job.md)|  
+|Explique comment lancer l'exécution d'un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Démarrer un travail](../../ssms/agent/start-a-job.md)|  
+|Explique comment arrêter un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Arrêter un travail](../../ssms/agent/stop-a-job.md)|  
 |Explique comment désactiver ou activer un travail [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_num_rows | Microsoft Docs
+title: sqlsrv_num_rows
+description: Référence API pour la fonction sqlsrv_num_rows dans Microsoft SQLSRV Driver pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3478580ae0670036e64ae6774f420485aec30ef3
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 52366287eb25cb9932e8e80c97abc1c97ddbbcae
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926421"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435137"
 ---
 # <a name="sqlsrv_num_rows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +34,7 @@ sqlsrv_num_rows( resource $stmt )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$stmt* : jeu de résultats duquel compter les lignes.  
+*$stmt*: jeu de résultats duquel compter les lignes.  
   
 ## <a name="return-value"></a>Valeur de retour  
 **false** en cas d’erreur de calcul du nombre de lignes. Sinon, retourne le nombre de lignes dans le jeu de résultats.  
@@ -41,7 +42,7 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="remarks"></a>Notes  
 sqlsrv_num_rows nécessite un curseur côté client, statique ou de jeu de clés, et retourne **false** si vous utilisez un curseur avant ou un curseur dynamique. (Par défaut, il s’agit d’un curseur avant.) Pour plus d’informations sur les curseurs, consultez [sqlsrv_query](../../connect/php/sqlsrv-query.md) et [Types de curseurs &#40;pilote SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  

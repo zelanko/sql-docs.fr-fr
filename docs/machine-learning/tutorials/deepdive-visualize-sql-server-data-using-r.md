@@ -1,6 +1,6 @@
 ---
 title: Visualiser des données à l’aide de RevoScaleR
-description: 'Tutoriel RevoScaleR 6 : Comment visualiser des données à l’aide du langage R sur SQL Server.'
+description: Découvrez comment utiliser les fonctions de R pour afficher la distribution des valeurs dans la colonne creditLine par sexe.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/27/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04ab3d5fc6d4d877dfca18c650bad16e75fa46e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 23f3eb157a76a9a197cf0f15a72ae0e51f7cf13b
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756427"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180386"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualiser des données SQL Server à l’aide de R (didacticiel sur SQL Server et RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Il s’agit du tutoriel 6 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 

@@ -1,4 +1,5 @@
 ---
+description: Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint
 title: Définir des autorisations pour des opérations de serveurs de rapports dans une application web SharePoint | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ce5ddca1cb39d7d4f375232e3588900b5b1ebe6a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: af15f2a0d7116ea82144a42db423de289e771056
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570596"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492557"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint
   Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, les paramètres de sécurité définis sur le site SharePoint déterminent le mode d'affichage et de gestion des rapports, des modèles de rapport et des sources de données partagées. Si vous utilisez les groupes SharePoint par défaut, les niveaux d'autorisation et les attributions d'autorisations, vous pouvez utiliser les rapports et d'autres documents à l'aide des paramètres de sécurité actuels.  
@@ -49,7 +50,7 @@ ms.locfileid: "65570596"
   
  Si vous utilisez des niveaux d'autorisation prédéfinis, aucune action n'est nécessaire, car les autorisations ci-dessus sont déjà incluses dans Contrôle total, Création, Collaboration, Lecture et Accès limité. Cependant, si vous utilisez des niveaux d'autorisation personnalisés ou si vous modifiez les autorisations attribuées à un utilisateur ou un groupe spécifique, vous devez ajouter cette autorisation manuellement.  
   
- L'autorisation « Parcourir les informations utilisateur » permet au serveur de rapports de retourner des informations sur l'auteur de l'élément et sur l'utilisateur qui l'a modifié en dernier. Sans cette autorisation, le serveur de rapports retourne les erreurs ci-après. Pour les opérations de navigation, l’erreur est : « Report Server a rencontré une erreur SharePoint. ---> System.UnauthorizedAccessException : accès refusé. » Pour les opérations de publication, l’erreur est : « Les autorisations accordées à l’utilisateur « \<domaine>\\<utilisateur\> » sont insuffisantes pour effectuer cette opération. »  
+ L'autorisation « Parcourir les informations utilisateur » permet au serveur de rapports de retourner des informations sur l'auteur de l'élément et sur l'utilisateur qui l'a modifié en dernier. Sans cette autorisation, le serveur de rapports retourne les erreurs ci-après. Pour les opérations de navigation, l’erreur est : « Report Server a rencontré une erreur SharePoint. ---> System.UnauthorizedAccessException : accès refusé. » Pour les opérations de publication, l’erreur est : « Les permissions accordées à l'utilisateur « \<domain>\\<utilisateur\> » sont insuffisantes pour effectuer cette opération. »  
   
 ##  <a name="permissions-for-viewing-and-managing-reports"></a><a name="permissionReports"></a> Autorisations pour afficher et gérer des rapports  
  Les autorisations de définition de rapport sont définies par l'intermédiaire des autorisations pour les listes sur la bibliothèque contenant le rapport ; vous pouvez toutefois définir des autorisations sur des rapports individuels si vous souhaitez en restreindre l'accès. Le tableau suivant présente une liste de tâches et les autorisations nécessaires pour chacune d'entre elles.  

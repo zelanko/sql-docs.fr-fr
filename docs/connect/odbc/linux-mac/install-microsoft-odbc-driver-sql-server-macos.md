@@ -1,7 +1,7 @@
 ---
 title: Installer Microsoft ODBC Driver for SQL Server (macOS)
 description: Découvrez comment installer Microsoft ODBC Driver for SQL Server sur des clients macOS pour permettre la connectivité de base de données.
-ms.date: 03/05/2020
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 24ddbbd8adaa646005c8e5ea3c945cb3ab164d48
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488517"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569819"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Installer Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -69,6 +69,13 @@ Le pilote ODBC sur macOS est constitué des composants suivants :
 Le pilote doit charger le fichier de ressources pour pouvoir fonctionner. Ce fichier est appelé `msodbcsqlr17.rll` ou `msodbcsqlr13.rll` selon la version du pilote. L’emplacement du fichier `.rll` est relatif à l’emplacement du pilote lui-même (`so` ou `dylib`), comme indiqué dans le tableau ci-dessus. Depuis la version 17.1, le pilote peut aussi essayer de charger le fichier `.rll` à partir du répertoire par défaut si le chargement échoue à partir du chemin d’accès relatif. Le chemin du fichier de ressources par défaut sur macOS est `/usr/local/share/msodbcsql17/resources/en_US/`.
 
 ## <a name="troubleshooting"></a>Dépannage
+
+Certains utilisateurs rencontrent un problème lors de la tentative de connexion après l’installation du pilote ODBC et reçoivent une erreur semblable à la suivante : `"[01000] [unixODBC][Driver Manager]Can't open lib 'ODBC Driver 17 for SQL Server' : file not found (0) (SQLDriverConnect)"`. Cela peut être le cas si unixODBC n’est pas configuré correctement pour trouver les pilotes inscrits. Dans ce cas, la création de liens symboliques peut résoudre le problème.
+
+```bash
+sudo ln -s /usr/local/etc/odbcinst.ini /etc/odbcinst.ini
+sudo ln -s /usr/local/etc/odbc.ini /etc/odbc.ini
+```
 
 Si vous ne parvenez pas à établir de connexion à SQL Server à l’aide du pilote ODBC, consultez l’article sur la [résolution des problèmes de connexion](known-issues-in-this-version-of-the-driver.md#connectivity).
 

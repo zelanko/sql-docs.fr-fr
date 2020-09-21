@@ -1,4 +1,5 @@
 ---
+description: Publier les instructions de téléchargement
 title: Publier les instructions de téléchargement
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -13,18 +14,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dc3732b205f76555bd345a130d856322d20a1035
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b21535c1347ddd0e63b3cdf5fd2ed8297bd2b2a
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715654"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88318585"
 ---
 # <a name="post-download-instructions"></a>Publier les instructions de téléchargement
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Utilisez cette page pour spécifier les instructions de téléchargement pour un serveur cible.  
   
@@ -56,6 +57,6 @@ Affiche la date et l'heure du serveur cible correspondant au fuseau horaire loca
 **Fréquence d’interrogation**  
 Affiche la fréquence d'interrogation actuelle pour le serveur cible.  
   
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a> Voir aussi  
 [Administration automatisée à l'échelle d'une entreprise](../../ssms/agent/automated-administration-across-an-enterprise.md)  
   

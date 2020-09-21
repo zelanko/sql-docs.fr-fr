@@ -1,21 +1,21 @@
 ---
-title: Stratégies de prise en charge d’OLE DB Driver pour SQL Server | Microsoft Docs
-description: Stratégies de prise en charge d’OLE DB Driver pour SQL Server
-ms.date: 05/25/2020
+title: Stratégies de prise en charge d’OLE DB Driver pour SQL Server
+description: Découvrez les stratégies de support pour OLE DB Driver pour SQL Server et les systèmes d’exploitation et versions de base de données SQL pris en charge avec chaque version de pilote.
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: ca90e20ef6dab5a61bfa6b2969a1220d4a22db2e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007047"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860644"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Stratégies de prise en charge d’OLE DB Driver pour SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,26 +28,26 @@ Cet article décrit les façons dont différents composants d'accès aux donnée
 
 Le pilote OLE DB pour SQL Server a été testé et prend en charge les connexions aux versions suivantes de SQL Server.
 
-| Version du pilote | Azure SQL Database | Azure SQL DW | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
-|----|-|-|-|-|-|-|-|-|
-|18.4|O|O|O|O|O|O|O|O|
-|18.3|O|O|O|O|O|O|O|O|
-|18.2|O|O|O|O|O|O|O|O|
-|18.1|O|O|O| |O|O|O|O|
-|18.0|O|O|O| |O|O|O|O|
+| Version de la base de données&nbsp;&#8594;<br />Version du pilote &#8595; | Azure SQL Database | Azure Synapse Analytics | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
+|----|---|---|---|---|---|---|---|---|
+|18.4|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|18.3|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|18.2|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|18.1|Oui|Oui|Oui|   |Oui|Oui|Oui|Oui|
+|18.0|Oui|Oui|Oui|   |Oui|Oui|Oui|Oui|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="supported-operating-system-versions"></a>Versions du système d'exploitation prises en charge  
 
 Le tableau suivant liste les systèmes d’exploitation qui prennent en charge OLE DB Driver pour SQL Server.  
 
-| Version du pilote | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
-|----|-|-|-|-|-|-|
-|18.4|O|O|O|O|O|O|
-|18.3|O|O|O|O|O|O|
-|18.2|O|O|O|O|O|O|
-|18.1| |O|O|O|O|O|
-|18.0| |O|O|O|O|O|
+| Système d’exploitation&nbsp;&#8594;<br />Version du pilote &#8595; | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
+|----|---|---|---|---|---|---|
+|18.4|Oui|Oui|Oui|Oui|Oui|Oui|
+|18.3|Oui|Oui|Oui|Oui|Oui|Oui|
+|18.2|Oui|Oui|Oui|Oui|Oui|Oui|
+|18.1|   |Oui|Oui|Oui|Oui|Oui|
+|18.0|   |Oui|Oui|Oui|Oui|Oui|
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Pris en charge sur Windows Server 2012 avec [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  

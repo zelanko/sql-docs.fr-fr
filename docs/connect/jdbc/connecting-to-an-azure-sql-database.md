@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 52821d92728e5d54f98e6d977e7829dd13ed5bf0
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632527"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988587"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connexion à une base de données SQL Azure
 
@@ -24,9 +24,9 @@ ms.locfileid: "81632527"
 
 Cet article aborde les problèmes rencontrés lors de l’utilisation de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] pour la connexion à une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. Pour plus d’informations sur la connexion à une base de données [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], consultez :  
   
-- [Base de données SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
+- [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [Procédure : Se connecter à SQL Azure avec JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Procédure : Se connecter à Azure SQL à l'aide de JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
 - [Connexion avec l’authentification Azure Active Directory](connecting-using-azure-active-directory-authentication.md)  
   
@@ -41,7 +41,7 @@ Lors de la connexion à une base de données [!INCLUDE[ssAzure](../../includes/s
 
 - Les connexions inactives sur la couche TCP, lorsque les connexions peuvent être supprimées par n'importe quel dispositif réseau.  
 
-- Les connexions inactives via la passerelle SQL Azure, en cas de messages TCP **keepalive** (qui rendent la connexion non inactive du point de vue de TCP), mais sans requête active pendant 30 minutes. Dans ce scenario, la passerelle détermine que la connexion TDS est inactive à 30 minutes et l'arrête.  
+- Les connexions inactives via la passerelle Azure SQL, en cas de messages TCP **keepalive** (qui rendent la connexion non inactive du point de vue de TCP), mais sans requête active pendant 30 minutes. Dans ce scenario, la passerelle détermine que la connexion TDS est inactive à 30 minutes et l'arrête.  
   
 Pour éviter la suppression des connexions inactives par un composant réseau, les paramètres de registre suivants (ou leurs équivalents non Windows) doivent être définis sur le système d'exploitation dans lequel se trouve le pilote.  
   
@@ -67,7 +67,7 @@ Puis ajoutez un fichier AddKeepAlive.cmd à votre projet. Définissez le paramè
 ```bat
 if exist keepalive.txt goto done  
 time /t > keepalive.txt  
-REM Workaround for JDBC keep alive on SQL Azure  
+REM Workaround for JDBC keep alive on Azure SQL  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveTime /t REG_DWORD /d 30000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v KeepAliveInterval /t REG_DWORD /d 1000 >> keepalive.txt  
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters /v TcpMaxDataRetransmissions /t REG_DWORD /d 10 >> keepalive.txt  

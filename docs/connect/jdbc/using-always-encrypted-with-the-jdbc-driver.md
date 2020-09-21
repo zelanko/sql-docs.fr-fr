@@ -2,7 +2,7 @@
 title: Utilisation d’Always Encrypted avec le pilote JDBC
 description: Découvrez comment utiliser Always Encrypted dans votre application Java avec le pilote JDBC pour SQL Server pour chiffrer les données sensibles sur le serveur.
 ms.custom: ''
-ms.date: 07/10/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b2005416234f517a8414f3d9405968659f7e553a
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: d0623450d73b47328a71bc84e46dda22824eaf5f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279616"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570324"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilisation d’Always Encrypted avec le pilote JDBC
 
@@ -98,6 +98,9 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 ```
 Le pilote JDBC instancie automatiquement un objet **SQLServerColumnEncryptionAzureKeyVaultProvider** lorsque ces informations d’identification sont présentes parmi les propriétés de connexion.
 
+> [!IMPORTANT]
+> Les propriétés de connexion **keyVaultProviderClientId** et **keyVaultProviderClientKey** ont été déconseillées à compter de la v 8.4.1. Les utilisateurs sont encouragés à utiliser à la place **keyStoreAuthentication**, **KeyStorePrincipalId** et **KeyStoreSecret**.
+
 #### <a name="jdbc-driver-version-prior-to-741"></a>Version du pilote JDBC antérieure à 7.4.1
 
 Cette section concerne les versions du pilote JDBC antérieures à 7.4.1.
@@ -126,6 +129,42 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Pour obtenir un exemple montrant comment inclure ces dépendances dans un projet Maven, consultez [Télécharger des dépendances ADAL4J et AKV avec Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
+
+### <a name="using-azure-key-vault-authentication-with-managed-identities"></a>Utilisation de l’authentification Azure Key Vault avec des identités managées
+
+À partir du Pilote JDBC **8.4.1**, le pilote a ajouté le support pour l’authentification auprès d’Azure Key Vault à l’aide d’identités managées.
+
+Si l’application est hébergée dans Azure, l’utilisateur peut utiliser des [identités managées](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) pour s’authentifier auprès d’Azure Key Vault, éliminant ainsi la nécessité de fournir et d’exposer des informations d’identification dans le code. 
+
+#### <a name="connection-properties-for-key-vault-authentication-with-managed-identities"></a>Propriétés de connexion pour l’authentification Key Vault avec des identités managées
+
+Pour JDBC Driver 8.4.1 et versions ultérieures, le pilote a introduit les propriétés de connexion suivantes :
+
+| ConnectionProperty    | Valeur possible de jumelage 1 | Valeur possible de jumelage 2 | Valeur possible de jumelage 3 |
+| ---|---|---|----|
+| keyStoreAuthentication| KeyVaultClientSecret   |KeyVaultManagedIdentity |JavaKeyStorePassword |  
+| keyStorePrincipalId   | \<Azure AD Application Client ID\>    | \<Azure AD Application object ID\> (facultatif)| n/a |
+| keyStoreSecret        | \<Azure AD Application Client Secret\>|n/a|\<secret/password for the Java Key Store\> |
+
+Les exemples suivants montrent comment les propriétés de connexion sont utilisées dans une chaîne de connexion.
+
+#### <a name="use-managed-identity-to-authenticate-to-akv"></a>Utiliser l’identité managée pour s’authentifier sur AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;"
+```
+#### <a name="use-managed-identity-and-the-principal-id-to-authenticate-to-akv"></a>Utiliser l’identité gérée et l’ID du principal pour s’authentifier sur AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;keyStorePrincipal=<principalId>"
+```
+#### <a name="use-clientid-and-clientsecret-to-authentication-to-akv"></a>Utiliser clientId et clientSecret pour s’authentifier sur AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultClientSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
+```
+Les utilisateurs sont encouragés à utiliser ces propriétés de connexion pour spécifier le type d’authentification utilisé pour les magasins de clés au lieu d’utiliser`SQLServerColumnEncryptionAzureKeyVaultProvider`.
+
+Notez que les propriétés de connexion précédemment ajoutées `keyVaultProviderClientId` et `keyVaultProviderClientKey` sont déconseillées et remplacées par les propriétés de connexion décrites ci-dessus.
+
+Pour obtenir des informations sur la configuration des identités managées, consultez [Configurer des identités managées pour les ressources Azure sur une machine virtuelle en utilisant le Portail Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
 
 ### <a name="using-windows-certificate-store-provider"></a>Avec le fournisseur du magasin de certificats Windows
 SQLServerColumnEncryptionCertificateStoreProvider peut être utilisé pour stocker les clés principales de colonne dans le magasin de certificats Windows. Utilisez l’assistant Always Encrypted SQL Server Management Studio (SSMS) ou d’autres outils pris en charge pour créer les définitions de clé principale de colonne et de clé de chiffrement de colonne dans la base de données. Le même Assistant peut servir à générer un certificat auto-signé dans le magasin de certificats Windows afin de l’utiliser ensuite comme clé principale de colonne pour les données Always Encrypted. Pour plus d’informations sur la syntaxe T-SQL de clé principale de colonne et de clé de chiffrement de colonne, consultez [Créer une clé principale de colonne](../../t-sql/statements/create-column-master-key-transact-sql.md) et [Créer une clé de chiffrement de colonne](../../t-sql/statements/create-column-encryption-key-transact-sql.md), respectivement.

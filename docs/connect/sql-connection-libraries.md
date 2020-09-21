@@ -1,5 +1,5 @@
 ---
-title: Bibliothèques de connexions pour les bases de données SQL Microsoft | Microsoft Docs
+title: Bibliothèques de connexions pour Microsoft SQL Database | Microsoft Docs
 description: Fournit des liens de téléchargement de modules qui permettent de se connecter à Microsoft SQL Server et Azure SQL Database à partir d’un large éventail de langages de programmation côté client.
 author: David-Engel
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: f6f75adc047f39ae3e0e0c21143f64cf57d2803a
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244050"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988510"
 ---
-# <a name="connection-modules-for-microsoft-sql-databases"></a>Modules de connexion pour les bases de données SQL Microsoft
+# <a name="connection-modules-for-microsoft-sql-database"></a>Modules de connexion pour les bases de données SQL Microsoft
 
 Cet article fournit des liens de téléchargement de modules de connexion ou de *pilotes* permettant aux programmes clients d’interagir avec [Microsoft SQL Server](../relational-databases/database-features.md) et son équivalent dans le cloud, [Azure SQL Database](/azure/sql-database/). Les pilotes sont disponibles pour un large éventail de langages de programmation, sur les systèmes d’exploitation suivants :
 
@@ -50,7 +50,7 @@ Le présent article consacre des sections distinctes à ces deux types de pilote
 
 ## <a name="drivers-for-orm-access"></a>Pilotes pour l’accès ORM
 
-Le tableau suivant présente des exemples de frameworks de mapping objet-relationnel (ORM) utilisés par les applications clientes pour se connecter aux bases de données SQL Microsoft.
+Le tableau suivant présente des exemples d’infrastructures de Mappage Objet Relationnel (ORM) utilisés par les applications clientes pour se connecter à Microsoft SQL Database.
 
 | Langage | Téléchargement du pilote ORM |
 | :------- | :------------------ |

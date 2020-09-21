@@ -1,7 +1,7 @@
 ---
 title: Cycle de vie de prise en charge du pilote SqlClient
 description: Page contenant des informations sur le cycle de vie du support technique.
-ms.date: 11/25/2019
+ms.date: 09/08/2020
 dev_langs:
 - csharp
 - vb
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: db1258fec30ad326babdf7268dff3c17c212efed
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5b9b461454db98de77ed6003477b7a02114067eb
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918253"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614586"
 ---
 # <a name="sqlclient-driver-support-lifecycle"></a>Cycle de vie de prise en charge du pilote SqlClient
 
@@ -32,17 +32,26 @@ La bibliothèque Microsoft.Data.SqlClient suit la dernière stratégie de prise 
 
 Les nouvelles versions stables (GA) seront publiées tous les six mois sur une cadence normale à partir de la version 1.2, avec en plus de 2 à 3 préversions entre elles. Les versions avec prise en charge à long terme (LTS) seront choisies par les parties prenantes et les responsables de maintenance en fonction de quelques qualifications et de la réponse des clients.
 
-## <a name="release-life-cycles"></a>Cycles de vie des versions
+### <a name="release-life-cycles"></a>Cycles de vie des versions
 
 | Version | Date de publication officielle | Dernière version du correctif | Date de publication du correctif | Niveau de prise en charge  | Fin du support |
 | -- | -- | -- | -- | -- | -- |
-| 1.1 | 20 novembre 2019 |  |  | Current |  |
-| 1.0 | 28 août 2019 | 1.0.19269.1 | 26 septembre 2019 | Current | 20 février 2020 |
+| 2.0 | 16 juin 2020 | 2.0.1 | 25 août 2020 | Actuel | |
+| 1.1 | 20 novembre 2019 | 1.1.3 | 15 mai 2020 | LTS | 21 novembre 2022 |
+| 1.0 | 28 août 2019 | 1.0.19269.1 | 26 septembre 2019 | Actuel | 20 février 2020 |
 
-## <a name="long-term-support-lts-releases"></a>Versions avec prise en charge à long terme (LTS)
+### <a name="long-term-support-lts-releases"></a>Versions avec prise en charge à long terme (LTS)
 
 Les versions LTS sont prises en charge pendant trois ans après la version initiale.
 
-## <a name="current-releases"></a>Versions actuelles
+### <a name="current-releases"></a>Versions actuelles
 
 Les versions actuelles sont prises en charge pendant trois mois après la publication d’une version actuelle ou LTS postérieure.
+
+## <a name="sql-version-compatibility-with-microsoftdatasqlclient"></a>Compatibilité des versions SQL avec Microsoft.Data.SqlClient
+
+|Version de la base de données&nbsp;&#8594;<br />&#8595; Version du pilote|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|
+|---|---|---|---|---|---|---|---|---|
+|2.0|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|1.1|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|
+|1.0|Oui|Oui|Oui|Oui|Oui|Oui|Oui|Oui|

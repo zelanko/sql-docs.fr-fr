@@ -1,5 +1,6 @@
 ---
-title: Utilisation d’Azure Active Directory | Microsoft Docs pour SQL Server
+title: Utilisation d’Azure Active Directory
+description: En savoir plus sur les méthodes d’authentification Azure Active Directory disponibles dans Microsoft OLE DB Driver pour SQL Server qui permettent de se connecter aux bases de données Azure SQL.
 ms.custom: ''
 ms.date: 10/11/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
-ms.openlocfilehash: 9c3586c8b51495ed3c49dd88f9f85a2b60d09aa0
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: e4591d74ba5e11b65cc3ede83533d72a11dbec96
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007249"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899051"
 ---
 # <a name="using-azure-active-directory"></a>Utilisation d’Azure Active Directory
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86007249"
 
 La version 18.3 ajoute la prise en charge des méthodes d’authentification suivantes :
 - Authentification interactive Azure Active Directory
-- Authentification MSI Azure Active Directory
+- Authentification Managed Identity Azure Active Directory
 
 > [!NOTE]
 > L’utilisation des modes d’authentification suivants avec la `DataTypeCompatibility` (ou la propriété correspondante) définie sur `80` n’est **pas** prise en charge :
@@ -39,7 +40,7 @@ La version 18.3 ajoute la prise en charge des méthodes d’authentification sui
 > - Authentification Azure Active Directory avec le jeton d’accès
 > - Authentification intégrée à Azure Active Directory
 > - Authentification interactive Azure Active Directory
-> - Authentification MSI Azure Active Directory
+> - Authentification Managed Identity Azure Active Directory
 
 ## <a name="connection-string-keywords-and-properties"></a>Mots clés et propriétés de chaîne de connexion
 Les mots clés de chaîne de connexion suivants ont été introduits pour prendre en charge l’authentification Azure Active Directory :
@@ -129,7 +130,7 @@ Cette section présente des exemples de mots clés de chaîne de connexion nouve
 - Utilisation de `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryInteractive**;UID=[username];Encrypt=yes
 
-### <a name="azure-active-directory-msi-authentication"></a>Authentification MSI Azure Active Directory
+### <a name="azure-active-directory-managed-identity-authentication"></a>Authentification Managed Identity Azure Active Directory
 
 - Utilisation de `IDataInitialize::GetDataSource`:
     - Identité managée affectée par l’utilisateur :

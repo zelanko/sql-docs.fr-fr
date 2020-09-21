@@ -1,6 +1,6 @@
 ---
 title: Créer des objets RxSqlServerData
-description: 'Tutoriel RevoScaleR 2 : Comment créer des objets de données avec le langage R sur SQL Server.'
+description: 'Découvrez comment utiliser les fonctions RevoScaleR avec SQL Server. Ce tutoriel est la suite de la création d’une base de données : ajout de tables et chargement de données.'
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a2c7daa106429f4db1382a3e73aa6b280b14dc57
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728606"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178806"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Créer des objets de données SQL Server avec RxSqlServerData (tutoriel SQL Server et RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Il s’agit du tutoriel 2 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
@@ -145,7 +145,7 @@ Le package **RevoScaleR** contient des fonctions spécifiques aux types de sourc
     
     En supposant que votre chaîne de connexion n’ait rencontré aucun problème, après une courte pause, vous devez voir les résultats suivants :
   
-    *Total lignes écrites : 10 000, Durée totale : 0,466* *Lignes lues : 10 000, Nombre total de lignes traitées : 10 000, Durée totale de la segmentation : 0,577 secondes*
+    *Nombre total de lignes écrites : 10000, Durée totale : 0,466* *Lignes lues : 10000, Total des lignes traitées : 10000, Durée totale du segment : 0,577 seconde*
   
 5. Actualisez la liste des tables. Pour vérifier que chaque variable a le type de données correct et qu’elle a été correctement importée, vous pouvez aussi cliquer avec le bouton droit sur la table dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et sélectionner **Sélectionner les 1 000 premières lignes**.
 

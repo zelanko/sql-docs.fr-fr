@@ -1,6 +1,6 @@
 ---
 title: Exécution d’une commande (pilote OLE DB) | Microsoft Docs
-description: Exécution d’une commande
+description: Découvrez comment un contrôle serveur consommateur dans OLE DB Driver pour SQL Server exécute une commande en créant d’abord une session, en obtenant un ensemble de lignes et en utilisant Exécuter.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sessions [OLE DB Driver for SQL Server]
 - OLE DB extensions for XML
 - OLE DB Driver for SQL Server, command execution
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 5077f621e8a3698e5aec09b79f28a2f5cf9257e7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: f24216ec62b77c56d5d2b18563f64e37fd4b7691
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244848"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861527"
 ---
 # <a name="executing-a-command"></a>Exécution d'une commande
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

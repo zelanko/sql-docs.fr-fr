@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 66abbc624cfb4126a55ce36b9ea67cbdd9aaeff2
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110175"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860026"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Surveiller les scripts Python et R avec des événements étendus dans SQL Server Machine Learning Services
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Découvrez comment utiliser des événements étendus pour surveiller et résoudre les problèmes liés à SQL Server Machine Learning Services, à SQL Server Launchpad et aux scripts externes des travaux R ou Python.
 
@@ -53,8 +53,8 @@ Pour plus d’informations sur cette opération, consultez la section [Collecte 
 |satellite_abort_connection|Enregistrement d’abandon de connexion||  
 |satellite_abort_received|Se déclenche lorsqu’un message d’abandon est reçu sur une connexion satellite.||  
 |satellite_abort_sent|Se déclenche lorsqu’un message d’abandon est envoyé sur une connexion satellite.||  
-|satellite_authentication_completion|Se déclenche lorsque l'authentification est terminée pour une connexion sur TCP ou Namedpipe.||  
-|satellite_authorization_completion|Se déclenche lorsque l'autorisation est effectuée pour une connexion sur TCP ou Namedpipe.||  
+|satellite_authentication_completion|Se déclenche lorsque l'authentification est terminée pour une connexion sur TCP ou canal nommé.||  
+|satellite_authorization_completion|Se déclenche lorsque l'autorisation est effectuée pour une connexion sur TCP ou canal nommé.||  
 |satellite_cleanup|Se déclenche lorsque le satellite appelle la fonction de nettoyage.|Déclenché uniquement à partir de processus externes. Consultez les instructions sur la collecte d'événements à partir de processus externes.|  
 |satellite_data_chunk_sent|Se déclenche lorsque la connexion satellite termine l'envoi d'un bloc de données unique.|L’événement indique le nombre de lignes envoyées, le nombre de colonnes, le nombre de paquets SNI utilisés et le temps écoulé en millisecondes pendant l’envoi du bloc. Ces informations peuvent vous aider à comprendre le temps nécessaire à la transmission des différents types de données, ainsi que le nombre de paquets utilisés.|  
 |satellite_data_receive_completion|Se déclenche lorsque toutes les données requises par une requête sont reçues sur la connexion satellite.|Déclenché uniquement à partir de processus externes. Consultez les instructions sur la collecte d'événements à partir de processus externes.|  
@@ -102,7 +102,7 @@ SQL Server Machine Learning Services démarre des services s’exécutant à l�
      
     **R :** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
-    **Python :** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
+    **Python :** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs`.
 
 Le fichier de configuration doit porter le même nom que le fichier exécutable, avec le format « [nom].xevents.xml ». En d'autres termes, les fichiers doivent être nommés comme suit :
 
@@ -112,7 +112,7 @@ Le fichier de configuration doit porter le même nom que le fichier exécutable,
 Le fichier de configuration lui-même a le format suivant :
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  

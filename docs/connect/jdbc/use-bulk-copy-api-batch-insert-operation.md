@@ -1,6 +1,6 @@
 ---
 title: API de copie en bloc pour l'insertion dans JDBC
-description: Le pilote Microsoft JDBC pour SQL Server prend en charge l’utilisation de l’API de copie en bloc pour les opérations d’insertion de lot pour Azure Data Warehouse.
+description: Le pilote Microsoft JDBC pour SQL Server prend en charge l’utilisation de la copie en bloc pour les opérations d’insertion de lot pour Azure Data Warehouse afin de charger les données plus rapidement dans la base de données.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 497b68b2b1f19d5d67ca3e790f06844592205d70
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 09eac13d41656721a9a4cc6d8fb8fa9790779018
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633989"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943018"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Utilisation de l'API de copie en bloc pour l'opération d'insertion par lot
 
@@ -71,7 +71,7 @@ Si la requête échoue en raison d’erreurs non liées à « SQL Server », l
 
 ## <a name="example"></a>Exemple
 
-Voici un exemple de code qui illustre le cas d’usage d’une opération d’insertion de lot sur Azure DW d’un millier de lignes pour les deux scénarios (API de copie en bloc et standard).
+Voici un exemple de code qui illustre le cas d’usage d’une opération d’insertion de lot sur Azure Synapse Analytics (SQL DW) d’un millier de lignes pour les deux scénarios (API de copie en bloc et standard).
 
 ```java
     public static void main(String[] args) throws Exception

@@ -1,7 +1,7 @@
 ---
 title: Présentation des pools de données
 titleSuffix: SQL Server big data clusters
-description: Cet article décrit le pool de données dans un cluster Big Data SQL Server 2019.
+description: Découvrez le rôle des pools de données SQL Server dans un cluster Big Data SQL Server, ainsi que l’architecture et les fonctionnalités d’un pool de données SQL.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 547f3e14d0e73b944cc7bde31f657dbf4ad49d41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d9eaba636c2567d60dfc62ce37080717e9c32e9
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773666"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680566"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>Présentation des pools de données dans un cluster Big Data SQL Server
 

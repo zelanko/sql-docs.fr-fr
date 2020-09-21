@@ -5,16 +5,16 @@ description: Découvrez comment mettre à niveau des clusters Big Data SQL Serve
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 02/13/2020
+ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
+ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764068"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89392171"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Guide pratique pour effectuer la mise à niveau de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -36,20 +36,28 @@ Avant de continuer, consultez les [notes de mise à niveau pour connaître les p
 
 Cette section explique comment mettre à niveau une version de SQL Server BDC prise en charge (à compter de SQL Server 2019 GDR1) vers une version prise en charge plus récente.
 
+1. Vérifiez l’absence de sessions Livy actives.
+
+   Assurez-vous qu’aucune session Livy n’est active et qu’aucun travail de traitement par lots n’est en cours d’exécution dans Azure Data Studio. Pour ce faire, vous pouvez utiliser la commande `curl` ou un navigateur pour demander ces URL :
+
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/sessions`
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/batches`
+
 1. Sauvegardez l’instance maître SQL Server.
-2. Sauvegardez HDFS.
+
+1. Sauvegardez HDFS.
 
    ```
    azdata bdc hdfs cp --from-path <path> --to-path <path>
    ```
    
-   Par exemple : 
+   Exemple : 
 
    ```
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-3. Mettez à jour `azdata`.
+1. Mettez à jour `azdata`.
 
    Suivez les instructions d’installation de `azdata`. 
    - [Windows installer](deploy-install-azdata-installer.md)
@@ -66,10 +74,10 @@ Cette section explique comment mettre à niveau une version de SQL Server BDC pr
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   Par exemple, le script suivant utilise la balise d’image `2019-CU4-ubuntu-16.04` :
+   Par exemple, le script suivant utilise la balise d’image `2019-CU6-ubuntu-16.04` :
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU6-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -93,10 +101,10 @@ Un délai d’expiration peut se produire si certains composants ne sont pas mis
    Control plane upgrade failed. Failed to upgrade controller.
    ```
 
-Pour augmenter les délais d’expiration d’une mise à niveau, utilisez les paramètres **--controller-timeout** et **--component-timeout** afin de spécifier des valeurs plus élevées quand vous effectuez la mise à niveau. Cette option est disponible à compter de SQL Server 2019 CU2 uniquement. Par exemple :
+Pour augmenter les délais d’expiration d’une mise à niveau, utilisez les paramètres **--controller-timeout** et **--component-timeout** afin de spécifier des valeurs plus élevées quand vous effectuez la mise à niveau. Cette option est disponible à compter de SQL Server 2019 CU2 uniquement. Exemple :
 
    ```bash
-   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU6-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** spécifie le nombre de minutes à attendre avant la fin de la mise à niveau du contrôleur ou de la base de données du contrôleur.
 **--component-timeout** spécifie le délai d’exécution de chaque phase suivante de la mise à niveau.

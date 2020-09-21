@@ -1,4 +1,5 @@
 ---
+description: Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 title: Configurer le compte de démarrage du service
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -15,19 +16,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eaebc08b30cab88ab5563f98ed63739b2f36c2f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05602500c18f85168eee996b1685cd9d907ae5dc
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729753"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497517"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Le compte de démarrage du service Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet de définir le compte Windows sous lequel s'exécute l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ainsi que ses autorisations réseau. Cette rubrique explique comment définir le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] avec [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -62,20 +63,20 @@ Pour plus d’informations sur les autorisations Windows nécessaires pour le co
   
 2.  Cliquez sur le signe plus pour développer le dossier **Groupes de serveurs locaux** .  
   
-3.  Cliquez avec le bouton droit sur l’instance de serveur où vous souhaitez configurer le compte de démarrage du service, puis sélectionnez **Gestionnaire de configuration SQL Server...** .  
+3.  Cliquez avec le bouton droit sur l’instance de serveur où vous souhaitez configurer le compte de démarrage du service, puis sélectionnez **Gestionnaire de configuration SQL Server...**.  
   
-4.  Dans la boîte de dialogue **Contrôle de compte d'utilisateur** , cliquez sur **Oui**.  
+4.  Dans la boîte de dialogue **Contrôle de compte d’utilisateur**, cliquez sur **Oui**.  
   
 5.  Dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sélectionnez **Services SQL Server**dans le volet de la console.  
   
-6.  Dans le volet d’informations, cliquez avec le bouton droit sur **Agent SQL Server** _(nom\_serveur)_ , où *nom_serveur* représente le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour laquelle vous voulez changer le compte de démarrage du service, puis sélectionnez **Propriétés**.  
+6.  Dans le volet d’informations, cliquez avec le bouton droit sur **Agent SQL Server**_(nom\_serveur)_, où *nom_serveur* représente le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour laquelle vous voulez changer le compte de démarrage du service, puis sélectionnez **Propriétés**.  
   
 7.  Dans la boîte de dialogue **Propriétés** de **SQL Server Agent** _(nom\_serveur)_ , sous l’onglet **Se connecter**, sélectionnez l’une des options suivantes sous **Se connecter en tant que** :  
   
     -   **Compte intégré**: sélectionnez cette option si vos travaux nécessitent des ressources du serveur local uniquement. Pour plus d’informations sur la façon de choisir un type de compte intégré Windows, consultez [Sélection d’un compte pour le service SQL Server Agent](https://msdn.microsoft.com/library/ms191543.aspx).  
   
         > [!IMPORTANT]  
-        > Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne prend pas en charge le compte **Service local** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+        >  Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne prend pas en charge le compte **Service local** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
     -   **Ce compte**: sélectionnez cette option si vos travaux nécessitent des ressources sur le réseau, notamment des ressources d’application, si vous souhaitez transférer des événements vers d’autres journaux d’applications Windows, ou si vous souhaitez notifier des opérateurs par courrier électronique ou radiomessagerie.  
   

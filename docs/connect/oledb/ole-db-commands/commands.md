@@ -1,6 +1,6 @@
 ---
 title: Commandes (pilote OLE DB) | Microsoft Docs
-description: Commandes dans le pilote OLE DB pour SQL Server
+description: Découvrez l’interface ICommand dans OLE DB Driver pour SQL Server, y compris la syntaxe, les paramètres, la préparation des commandes et les commandes avec plusieurs résultats.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, commands
 - commands [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: da86675b244ac3424c6ffaf04df6c42bc133c4d7
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 715ab31652697643e473a6b7cd944c89c46037c8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943059"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860144"
 ---
 # <a name="commands"></a>Commandes
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

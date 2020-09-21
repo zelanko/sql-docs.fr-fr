@@ -12,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 05/01/2020
-ms.openlocfilehash: 93fb645af08eaef372694e492cc211ed4f82b922
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 485bb37dee0c118cf313bd7b3740b56c41e20c90
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86914805"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88713777"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 
@@ -34,11 +34,11 @@ ms.locfileid: "86914805"
 > Les charges de travail [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour Analysis Services sont prises en charge.
 
 > [!NOTE]
-> Quand vous tentez de vous connecter à une base de données SQL Azure à partir de SQL Server Profiler, un message d’erreur trompeur s’affiche :
+> Quand vous tentez de vous connecter à Azure SQL Database à partir du profileur SQL Server, un message d’erreur trompeur est envoyé de façon incorrecte, comme suit :
 >
 > - Pour exécuter une trace sur SQL Server, vous devez être membre du rôle serveur fixe sysadmin ou bénéficier de l’autorisation ALTER TRACE.
 >
-> Ce message devrait expliquer que les instances de base de données SQL Azure ne sont pas prises en charge par SQL Server Profiler.
+> Ce message devrait expliquer que Azure SQL Database n’est pas pris en charge par le profileur SQL Server.
 
 ## <a name="where-is-the-profiler"></a>Où se trouve le Générateur de profils ?
 
@@ -164,7 +164,7 @@ Si aucun filtre n’est défini, tous les événements des classes d’événeme
 |Décrit comment relire jusqu'à un curseur.|[Relire jusqu’à un curseur &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
 |Décrit comment relire un script [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Relire un script Transact-SQL &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |Décrit comment créer un modèle de trace.|[Créer un modèle de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
-|Explique comment modifier un modèle de trace.|[Modifier un modèle de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
+|Explique comment modifier un modèle de trace.|[Modifier un modèle de trace &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)|  
 |Explique comment définir les options globales de trace.|[Définir les options globales de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |Explique comment rechercher une valeur ou une colonne de données au cours de l'exécution d'une trace.|[Retrouver une valeur ou une colonne de données au cours de l’exécution d’une trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |Explique comment dériver un modèle d'une trace en cours d'exécution.|[Dériver un modèle à partir d’une trace en cours d’exécution &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
@@ -173,7 +173,7 @@ Si aucun filtre n’est défini, tous les événements des classes d’événeme
 |Décrit comment exporter un modèle de trace.|[Exporter un modèle de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |Décrit comment importer un modèle de trace.|[Importer un modèle de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |Décrit comment extraire un script d'une trace.|[Extraire un script d’une trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|Explique comment corréler une trace avec les données du journal de performances Windows.|[Corréler une trace aux données du journal de performances Windows &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|Explique comment corréler une trace avec les données du journal de performances Windows.|[Corréler une trace aux données du journal de performances Windows &#40;SQL Server Profiler&#41;](./correlate-a-trace-with-windows-performance-log-data.md?view=sql-server-ver15)|  
 |Décrit comment organiser les colonnes affichées dans une trace.|[Organiser les colonnes affichées dans une trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |Décrit comment démarrer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Démarrer SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |Explique comment enregistrer les traces et les modèles de trace.|[Enregistrer des traces et de modèles de trace](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  

@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::getColumnMeta | Microsoft Docs
+title: PDOStatement::getColumnMeta
+description: Référence API pour la fonction PDOStatement::getColumnMeta dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fafc4b7bfcd72db1898e0a76b2ff43b3638f1f49
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925300"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645074"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ Tableau associatif (clé et valeur) contenant les métadonnées pour la colonne.
 ## <a name="remarks"></a>Notes  
 Le tableau suivant décrit les champs du tableau retourné par getColumnMeta.  
   
-|NAME|VALUES|  
+|NOM|VALUES|  
 |--------|----------|  
 |native_type|Spécifie le type PHP de la colonne. Toujours une chaîne.|  
 |driver:decl_type|Spécifie le type SQL utilisé pour représenter la valeur de la colonne dans la base de données. Si la colonne dans le jeu de résultats est le résultat d’une fonction, cette valeur n’est pas retournée par PDOStatement::getColumnMeta.|  
@@ -46,12 +47,12 @@ Le tableau suivant décrit les champs du tableau retourné par getColumnMeta.
 |name|Spécifie le nom de la colonne dans la base de données.|  
 |table|Spécifie le nom de la table qui contient la colonne dans la base de données. Toujours vide.|  
 |len|Spécifie la longueur de la colonne.|  
-|precision|Spécifie la précision numérique de cette colonne.|  
+|précision|Spécifie la précision numérique de cette colonne.|  
 |pdo_type|Spécifie le type de cette colonne comme représenté par les constantes PDO::PARAM_*. Toujours PDO::PARAM_STR (2).|  
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  

@@ -1,4 +1,5 @@
 ---
+description: Accorder à un utilisateur l'accès à un serveur de rapports
 title: Accorder à un utilisateur l’accès à un serveur de rapports | Microsoft Docs
 ms.date: 05/6/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2144c020-3253-4b47-8cda-e14c928bb471
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1622da633dca63eb5ddf8bef0dc46e71e3db850b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0eb38550a0fc9e395b651783af4d449626de1d63
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65619620"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88373885"
 ---
 # <a name="grant-user-access-to-a-report-server"></a>Accorder à un utilisateur l'accès à un serveur de rapports
 
@@ -61,7 +62,7 @@ Examinez la liste suivante avant d'ajouter des utilisateurs à un serveur de rap
 
 4. Sélectionnez **Ajouter un groupe ou un utilisateur**.
 
-5. Dans **Groupe ou utilisateur**, entrez un compte de groupe ou d’utilisateur de domaine Windows au format suivant : \<domaine>\\<compte\>.
+5. Dans **Groupe ou utilisateur**, entrez un compte de groupe ou d’utilisateur de domaine Windows au format : \<domain>\\<compte\>.
 
     > [!NOTE]
     > Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.
@@ -76,7 +77,7 @@ Examinez la liste suivante avant d'ajouter des utilisateurs à un serveur de rap
 
 1. Démarrez le **portail web**, puis recherchez l’élément de rapport pour lequel vous souhaitez ajouter un utilisateur ou un groupe.
 
-2. Sélectionnez les points de suspension ( **...** ) sur un élément.
+2. Sélectionnez les points de suspension (**...**) sur un élément.
 
 3. Dans le menu déroulant, sélectionnez **Gérer**.
 
@@ -87,7 +88,7 @@ Examinez la liste suivante avant d'ajouter des utilisateurs à un serveur de rap
     > [!NOTE]
     > Si un élément hérite actuellement de la sécurité de l’un de ses parents, sélectionnez **Personnaliser la sécurité** dans la barre d’outils pour changer les paramètres de sécurité. Sélectionnez ensuite **Ajouter un groupe ou un utilisateur**.
 
-6. Dans **Groupe ou utilisateur**, entrez un compte de groupe ou d’utilisateur de domaine Windows au format suivant : \<domaine>\\<compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.
+6. Dans **Groupe ou utilisateur**, entrez un compte de groupe ou d’utilisateur de domaine Windows au format : \<domain>\\<compte\>. Si vous utilisez l'authentification par formulaires ou la sécurité personnalisée, spécifiez le compte d'utilisateur ou de groupe en respectant le format approprié pour votre déploiement.
 
 7. Sélectionnez une ou plusieurs définitions de rôles décrivant la façon dont l’utilisateur ou le groupe doit accéder à l’élément, puis **OK**.
 

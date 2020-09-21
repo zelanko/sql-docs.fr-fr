@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3076c0f00a358a1a2adbee57178561649e6a44c2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487208"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395187"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Erreur Reporting Services
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Category|Valeur|  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID de l’événement|rsServerConfiguration|  
@@ -46,7 +46,7 @@ ms.locfileid: "81487208"
 ## <a name="user-action"></a>Action de l'utilisateur  
  Si cette erreur a commencé à se produire après que vous avez modifié manuellement un fichier de configuration, supprimez vos modifications et entrez la valeur précédente, ou restaurez une version précédente si vous disposez d'une sauvegarde.  
   
- Pour examiner des informations de message d’erreur supplémentaires qui accompagnent l’erreur **rsServerConfiguration**, examinez les fichiers journaux des traces du serveur de rapports, qui se trouvent dans \Microsoft SQL Server\MSRS12.\<nom_instance>\Reporting Services\LogFiles. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Pour examiner des informations de message d’erreur supplémentaires qui accompagnent l’erreur **rsServerConfiguration**, examinez les fichiers journaux des traces du serveur de rapports, qui se trouvent dans \Microsoft SQL Server\MSRS12.\<instancename >\Reporting Services\LogFiles. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Interne uniquement  
   

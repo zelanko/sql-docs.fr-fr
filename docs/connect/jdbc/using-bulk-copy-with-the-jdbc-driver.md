@@ -2,7 +2,7 @@
 title: Utilisation de la copie en bloc avec le pilote JDBC
 description: La classe SQLServerBulkCopy vous permet d’écrire des solutions de chargement de données en Java qui offrent des avantages significatifs en termes de performances par rapport aux API JDBC standard.
 ms.custom: ''
-ms.date: 07/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b3af2624e46e6e61516ce015760544de3ca112e8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 69379b9af3dc126713cb2bbd3172003692a7d4de
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245008"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042212"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Utilisation de la copie en bloc avec le pilote JDBC
 
@@ -357,6 +357,36 @@ public class BulkCopyMultiple {
  Les opérations de copie en bloc peuvent être effectuées comme des opérations isolées ou dans le cadre d'une transaction à plusieurs étapes. Cette dernière option permet d'effectuer plusieurs opérations de copie en bloc dans la même transaction ainsi que d'autres opérations de base de données (telles que des insertions, mises à jour et suppressions), tout en étant en mesure de valider ou restaurer toute la transaction.  
   
  Par défaut, une opération de copie en bloc est effectuée comme une opération isolée. L'opération de copie en bloc se produit de façon non transactionnelle, sans possibilité de restauration. Si vous devez restaurer tout ou partie de la copie en bloc en cas d’erreur, vous pouvez utiliser une transaction managée par `SQLServerBulkCopy` ou effectuer l’opération de copie en bloc dans une transaction existante.  
+
+## <a name="extended-bulk-copy-for-azure-data-warehouse"></a>Copie en bloc étendue pour Azure Data Warehouse
+
+La version du pilote v8.4.1 ajoute une nouvelle propriété de connexion, `sendTemporalDataTypesAsStringForBulkCopy`. Par défaut, cette propriété booléenne est `true` par défaut.
+
+Cette propriété de connexion, lorsqu’elle est définie sur `false` envoie les types de données **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME** et **TIME** en tant que types respectifs au lieu de les envoyer en tant que Chaîne.
+
+L’envoi des types de données temporels en tant que types respectifs permet à l’utilisateur d’envoyer des données dans ces colonnes pour Azure Synapse Analytics (SQL DW), ce qui n’était pas possible auparavant en raison du pilote convertissant les données en Chaîne. L’envoi de données de chaîne dans des colonnes temporelles fonctionne pour SQL Server, car SQL Server effectuerait une conversion implicite pour nous, mais ce n’est pas pareil avec Azure Synapse Analytics (SQL DW).
+
+En outre, même si vous ne définissez cette chaîne de connexion sur « false », à partir de la **v 8.4.1** et les versions ultérieures, es types de données **MONEY** et **SMALLMONEY** seront envoyés en tant que type de données **MONEY** / **SMALLMONEY** au lieu de **DECIMAL**, ce qui permet également la copie en bloc de ces types de données dans Azure Synapse Analytics (SQL DW).
+
+### <a name="extended-bulk-copy-for-azure-data-warehouse-limitations"></a>Limitations des copies en bloc étendues pour Azure Data Warehouse
+
+Il existe actuellement deux limitations :
+
+1. Avec cette propriété de connexion définie sur `false`, le pilote n’accepte que le format de littéral de chaîne par défaut de chaque type de données temporel, par exemple :
+
+    `DATE: YYYY-MM-DD`
+
+    `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+
+    `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+
+    `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+
+    `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+
+    `TIME: hh:mm:ss[.nnnnnnn]`
+
+2. Lorsque cette propriété de connexion est définie sur `false`, le type de colonne spécifié pour la copie en bloc doit respecter le graphique de mappage des types de données à partir d’[ici](../../connect/jdbc/using-basic-data-types.md). Par exemple, les utilisateurs précédents pouvaient spécifier `java.sql.Types.TIMESTAMP` pour copier en bloc des données dans une colonne `DATE`, mais avec cette fonctionnalité activée, ils doivent spécifier `java.sql.Types.DATE` pour effectuer la même opération.
   
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>Exécution d'une opération de copie en bloc non transactionnelle
 
@@ -648,6 +678,15 @@ public class BulkCopyCSV {
     }
 }
 ```  
+
+### <a name="bulk-copy-with-delimiters-as-data-in-csv-file"></a>Copie en bloc avec des délimiteurs comme données dans un fichier CSV
+
+La version du pilote 8.4.1 ajoute un nouvel API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`. Quand la valeur est définie sur true, les règles suivantes s’appliquent :
+
+- Chaque champ peut ou ne peut pas être placé entre guillemets doubles.
+- Si les champs ne sont pas entourés de guillemets doubles, les guillemets doubles peuvent ne pas apparaître à l’intérieur des champs.
+- Les champs contenant des guillemets doubles et les délimiteurs doivent être placés entre guillemets doubles.
+- Si vous utilisez des guillemets doubles pour encadrer des champs, un guillemet double s’affichant à l’intérieur d’un champ doit être placé dans une séquence d’échappement en le faisant précéder d’un autre guillemet.
 
 ### <a name="bulk-copy-with-always-encrypted-columns"></a>Copie en bloc avec des colonnes Always Encrypted  
 

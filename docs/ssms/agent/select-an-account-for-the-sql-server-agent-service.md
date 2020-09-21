@@ -1,4 +1,5 @@
 ---
+description: Sélectionner un compte pour le service SQL Server Agent
 title: Sélectionner un compte pour le service SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -22,19 +23,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 05/04/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4356764f50b816a05e9bcfbfb294c65cdc8080fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0bab74ab5bbd51099ef8d38b7ad8471e1d7fee55
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644684"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88318455"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Sélectionner un compte pour le service SQL Server Agent
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Le compte de démarrage du service définit le compte [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows dans le contexte duquel l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, ainsi que ses autorisations réseau. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dans le contexte d'un compte d'utilisateur spécifié. Pour sélectionner un compte pour le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez le Gestionnaire de configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour choisir l'une des options suivantes :  
   
@@ -76,26 +77,26 @@ Le compte avec lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversi
   
 -   Le compte doit être membre du rôle serveur fixe **sysadmin** .  
   
--   Pour utiliser le traitement de travaux multiserveur, le compte doit être membre du rôle de base de données **msdb** **TargetServersRole** sur le serveur maître.  
+-   Pour utiliser le traitement de travaux multiserveur, le compte doit être membre du rôle de base de données **msdb****TargetServersRole** sur le serveur maître.  
   
 ## <a name="supported-service-account-types"></a>Types de comptes de service pris en charge  
 Le tableau ci-dessous répertorie les types de comptes Windows qui peuvent être utilisés pour le service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Type de compte de service|Serveur non-cluster|Serveur en cluster|Contrôleur de domaine (non-cluster)|  
 |------------------------|-------------------------|--------------------|--------------------------------------|  
-|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Compte de domaine Windows (membre du groupe Administrateurs Windows)|Prise en charge|Prise en charge|Prise en charge|  
-|Compte de domaine Windows (non administratif)|Prise en charge<br /><br />Voir la restriction 1 ci-dessous.|Prise en charge<br /><br />Voir la restriction 1 ci-dessous.|Prise en charge<br /><br />Voir la restriction 1 ci-dessous.|  
-|Compte Service réseau (AUTORITE NT\NetworkService)|Prise en charge<br /><br />Voir les restrictions 1, 3 et 4 ci-dessous.|Non pris en charge|Non pris en charge|  
-|Compte d'utilisateur local (non administratif)|Prise en charge<br /><br />Voir la restriction 1 ci-dessous.|Non pris en charge|Non applicable|  
-|Compte système local (AUTORITE NT\System)|Prise en charge<br /><br />Voir la restriction 2 ci-dessous.|Non pris en charge|Prise en charge<br /><br />Voir la restriction 2 ci-dessous.|  
+|[!INCLUDE[msCoName](../../includes/msconame_md.md)] Compte de domaine Windows (membre du groupe Administrateurs Windows)|Prise en charge|Prise en charge|Pris en charge|  
+|Compte de domaine Windows (non administratif)|Pris en charge<br /><br />Voir la restriction 1 ci-dessous.|Pris en charge<br /><br />Voir la restriction 1 ci-dessous.|Pris en charge<br /><br />Voir la restriction 1 ci-dessous.|  
+|Compte Service réseau (AUTORITE NT\NetworkService)|Pris en charge<br /><br />Voir les restrictions 1, 3 et 4 ci-dessous.|Non pris en charge|Non pris en charge|  
+|Compte d'utilisateur local (non administratif)|Pris en charge<br /><br />Voir la restriction 1 ci-dessous.|Non pris en charge|Non applicable|  
+|Compte système local (AUTORITE NT\System)|Pris en charge<br /><br />Voir la restriction 2 ci-dessous.|Non pris en charge|Pris en charge<br /><br />Voir la restriction 2 ci-dessous.|  
 |Compte Service local (AUTORITE NT\LocalService)|Non pris en charge|Non pris en charge|Non pris en charge|  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Restriction 1 : utilisation de comptes non administratifs pour l’administration multiserveur  
-L’enregistrement de serveurs cibles auprès d’un serveur maître peut échouer en affichant le message d’erreur suivant : « L’opération d’enregistrement a échoué. »  
+### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Restriction 1 : utilisation de comptes non administratifs pour l'administration multiserveur  
+L'enregistrement de serveurs cibles auprès d'un serveur maître peut échouer en affichant le message d'erreur suivant : « L'opération d'enregistrement a échoué. »  
   
 Pour résoudre cette erreur, redémarrez les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d'informations, consultez [Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server](https://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6).  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Restriction 2 : utilisation du compte système local pour l’administration multiserveur  
+### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Restriction 2 : utilisation du compte système local pour l'administration multiserveur  
 L'administration multiserveur est prise en charge lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est exécuté sous le compte système local, seulement si le serveur maître et le serveur cible résident sur le même ordinateur. Si vous utilisez cette configuration, le message ci-dessous est retourné lorsque vous enregistrez les serveurs cibles auprès du serveur maître :  
   
 « Vérifiez que le compte de démarrage de l’agent pour *<nom_ordinateur_serveur_cible>* dispose des autorisations pour se connecter en tant que serveur cible. »  
@@ -107,7 +108,7 @@ Vous pouvez ignorer ce message d'information. L'opération d'enregistrement doit
   
 Pour résoudre ce problème, redémarrez l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela doit être effectué une seule fois.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Restriction 4 : utilisation du compte Service réseau lorsque SQL Server Reporting Services s’exécute sur le même ordinateur  
+### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>Restriction 4 : utilisation du compte Service réseau lorsque SQL Server Reporting Services s'exécute sur le même ordinateur  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut ne pas démarrer si vous exécutez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sous le compte Service réseau, alors que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s’exécute aussi sur le même ordinateur.  
   
 Pour résoudre ce problème, redémarrez l'ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puis redémarrez les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les services de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela doit être effectué une seule fois.  
@@ -117,7 +118,7 @@ Pour résoudre ce problème, redémarrez l'ordinateur qui exécute [!INCLUDE[ssN
   
 -   [Définir le compte de démarrage du service pour l’Agent SQL Server &#40;Gestionnaire de configuration SQL Server&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
-**Pour spécifier le profil de messagerie de SQL Server Agent**  
+**Pour spécifier le profil de messagerie de l'Agent SQL Server**  
   
 -   [Procédure : Configurer SQL Server Agent Mail pour utiliser Database Mail](https://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   

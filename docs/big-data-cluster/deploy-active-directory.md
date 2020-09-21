@@ -5,16 +5,16 @@ description: Apprenez à mettre à niveau des clusters Big Data SQL Server dans 
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 037c8bd26249ab3dc2cb3d0d8f4adf718f56000e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 345002bdf21ee13fc6d33c9cbc1e9938a8b58377
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243070"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076659"
 ---
 # <a name="deploy-big-data-clusters-2019-in-active-directory-mode"></a>Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory
 
@@ -31,9 +31,16 @@ Pour activer l’authentification Active Directory (AD), le cluster BDC crée a
 
 Pour créer automatiquement tous les objets requis dans Active Directory, le cluster BDC a besoin d’un compte AD pendant le déploiement. Ce compte doit disposer d’autorisations pour créer des utilisateurs, des groupes et des comptes d’ordinateur au sein de l’unité d’organisation fournie.
 
-Les étapes ci-dessous supposent que vous disposez déjà d’un contrôleur de domaine Active Directory. Si vous n’avez pas de contrôleur de domaine, le [guide](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) suivant comprend les étapes qui peuvent être utiles.
+>[!IMPORTANT]
+>Selon la stratégie d’expiration de mot de passe définie dans le contrôleur de domaine, les mots de passe de ces comptes peuvent expirer. La politique d'expiration par défaut est de 42 jours. Il n’existe aucun mécanisme permettant de faire pivoter les informations d’identification de tous les comptes dans le BDC, ainsi le cluster ne pourra plus fonctionner une fois la période d’expiration atteinte. Pour contourner ce problème, mettez à jour la stratégie d’expiration pour les comptes de service BDC sur « Le mot de passe n’expire jamais » dans le contrôleur de domaine. Cette action peut être effectuée avant ou après l’heure d’expiration. Dans ce dernier cas, Active Directory réactivera les mots de passe arrivés à expiration.
+>
+>L’illustration suivante montre où définir cette propriété pour Utilisateurs et Ordinateurs dans Active Directory.
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Définir la stratégie d’expiration de mot de passe":::
 
 Pour obtenir la liste des comptes et des groupes AD, consultez [Objets Active Directory générés automatiquement](active-directory-objects.md).
+
+Les étapes ci-dessous supposent que vous disposez déjà d’un contrôleur de domaine Active Directory. Si vous n’avez pas de contrôleur de domaine, le [guide](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) suivant comprend les étapes qui peuvent être utiles.
 
 ## <a name="create-ad-objects"></a>Créer des objets AD
 
@@ -180,6 +187,9 @@ L’intégration AD nécessite les paramètres suivants. Ajoutez ces paramètre
 
 - `security.activeDirectory.realm` **Paramètre facultatif** : Dans la majorité des cas, le domaine est égal au nom de domaine. Pour les cas où ils ne sont pas les mêmes, utilisez ce paramètre pour définir le nom du domaine (par exemple, `CONTOSO.LOCAL`). La valeur fournie pour ce paramètre doit être complète.
 
+  > [!IMPORTANT]
+  > À ce stade, le BDC ne prend pas en charge une configuration où le nom de domaine Active Directory est différent du nom de **NETBIOS** du domaine Active Directory.
+
 - `security.activeDirectory.domainDnsName`: Nom du domaine DNS qui sera utilisé pour le cluster (par exemple, `contoso.local`).
 
 - `security.activeDirectory.clusterAdmins`: Ce paramètre prend un groupe AD. L’étendue du groupe AD doit être universelle ou globale. Les membres de ce groupe possèdent le rôle de cluster *bdcAdmin*, ce qui leur donne des autorisations d’administrateur dans le cluster. Ils disposent donc des [autorisations `sysadmin` dans SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), des [autorisations `superuser` dans HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User) et des autorisations d’administrateurs lorsqu’ils sont connectés au point de terminaison du contrôleur.
@@ -192,6 +202,9 @@ L’intégration AD nécessite les paramètres suivants. Ajoutez ces paramètre
 Les groupes AD de cette liste sont associés au rôle de cluster Big Data *bdcUser* et doivent être autorisés à accéder à SQL Server (cf. [Autorisations SQL Server](../relational-databases/security/permissions-hierarchy-database-engine.md)) ou à HDFS (consultez [Guide des autorisations HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). Lorsqu’ils sont connectés au point de terminaison du contrôleur, ces utilisateurs peuvent seulement lister les points de terminaison disponibles dans le cluster à l’aide de la commande *azdata bdc endpoint list*.
 
 Pour savoir comment mettre à jour les groupes AD en ce qui concerne ces paramètres, consultez [Gestion de l’accès au cluster Big Data en mode Active Directory](manage-user-access.md).
+
+  >[!TIP]
+  >Pour activer l’expérience de navigation HDFS quand vous vous connectez au maître SQL Server dans Azure Data Studio, un utilisateur disposant du rôle bdcUser doit disposer des autorisations VIEW SERVER STATE, car Azure Data Studio utilise la DMV *sys.dm_cluster_endpoints* pour obtenir le point de terminaison de passerelle Knox requis pour se connecter à HDFS.
 
   >[!IMPORTANT]
   >Créez ces groupes dans AD avant le début du déploiement. Si l’étendue de l’un de ces groupes AD est locale au niveau du domaine, le déploiement échoue.
@@ -263,7 +276,7 @@ Le tableau ci-dessous montre le modèle d’autorisation pour la gestion des app
   >[!NOTE]
   >Active Directory impose que les noms de compte soient limités à 20 caractères. Le cluster Big Data doit en utiliser 8 pour distinguer les pods et les StatefulSet, ce qui laisse 12 caractères comme limite du préfixe de compte.
 
-[Vérifiez l’étendue du groupe AD](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) pour déterminer s’il s’agit d’un groupe local de domaine.
+[Vérifiez l’étendue du groupe AD](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps) pour déterminer s’il s’agit d’un groupe local de domaine.
 
 Si vous n’avez pas encore initialisé le fichier de configuration de déploiement, vous pouvez exécuter cette commande pour obtenir une copie de la configuration. Les exemples ci-dessous utilisent le profil `kubeadm-prod`. Le même principe s’applique à `openshift-prod`.
 
@@ -422,7 +435,7 @@ curl -k -v --negotiate -u : https://<Gateway DNS name>:30443/gateway/default/web
 
 - Avant la version SQL Server 2019 CU5, seul un cluster Big Data par domaine (Active Directory) est autorisé. La présence de plusieurs clusters Big Data par domaine est disponible à partir de la version CU5.
 
-- Aucun des groupes AD spécifiés dans les configurations de sécurité ne peut être d’une étendue DomainLocal. Vous pouvez vérifier l’étendue d’un groupe AD en suivant [ces instructions](https://docs.microsoft.com/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
+- Aucun des groupes AD spécifiés dans les configurations de sécurité ne peut être d’une étendue DomainLocal. Vous pouvez vérifier l’étendue d’un groupe AD en suivant [ces instructions](/powershell/module/activedirectory/get-adgroup?view=winserver2012-ps&viewFallbackFrom=winserver2012r2-ps).
 
 - Le compte AD qui peut servir à se connecter à Clusters Big Data est autorisé à partir du domaine configuré pour Clusters Big Data. Les connexions à partir d’un autre domaine approuvé ne sont pas prises en charge.
 

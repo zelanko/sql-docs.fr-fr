@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::setFetchMode | Microsoft Docs
+title: PDOStatement::setFetchMode
+description: Référence API pour la fonction PDOStatement::setFetchMode dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f132b2af-0433-4fbe-b03f-69a7d631093a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 75082b50eeb6298173d41e70ed3020247896c164
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2f23800d3c1d7ffa232d87999fecb0de1b39bfde
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921147"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646519"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ true en cas de réussite, false dans le cas contraire.
 ## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  

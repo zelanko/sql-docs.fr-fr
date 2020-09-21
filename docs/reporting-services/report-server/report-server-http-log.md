@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f640506f2f247c31c74d111d30b64f4fa0016dae
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: c1f270bb3f26cada3944979ee32019737dcb13e3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84548001"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87392075"
 ---
 # <a name="report-server-http-log"></a>Journal HTTP Report Server
   Le fichier journal HTTP Report Server garde un enregistrement de chaque requête et réponse HTTP gérée par le serveur de rapports. Dans la mesure où les erreurs de dépassement de capacité et de délai d'attente des requêtes n'atteignent pas le serveur de rapports, elles ne sont pas enregistrées dans le fichier journal.  
@@ -26,7 +26,7 @@ ms.locfileid: "84548001"
 ## <a name="viewing-log-information"></a>Affichage des informations des journaux  
  Le journal est un fichier texte ASCII. Vous pouvez utiliser n'importe quel éditeur de texte pour afficher le fichier. Le fichier journal HTTP Report Server est équivalent au fichier journal étendu W3C des services IIS (Internet Information Services) ; il utilise des champs semblables afin que vous puissiez vous servir des visionneuses de fichiers journaux IIS existantes pour lire le fichier journal HTTP du serveur de rapports. Le tableau suivant fournit des informations supplémentaires sur le fichier journal HTTP :  
   
-|||  
+|informations relatives au fichier journal|Description|  
 |-|-|  
 |Nom de fichier|Par défaut, le nom de fichier est ReportServerService_HTTP_\<timestamp>.log. Vous pouvez personnaliser le préfixe du nom de fichier en modifiant l'attribut HttpTraceFileName dans le fichier ReportingServicesService.exe.config. L'horodateur est basé sur l'heure UTC (Coordinated Universal Time).|  
 |Emplacement du fichier|Le fichier se trouve à l’emplacement \Microsoft SQL Server\\ *\<SQL Server Instance>* \Reporting Services\LogFiles.|  

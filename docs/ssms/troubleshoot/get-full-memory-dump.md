@@ -1,6 +1,7 @@
 ---
+description: Obtenir l’image mémoire complète
 title: Obtenir une image mémoire complète pour résoudre les problèmes de SSMS
-Description: Dépannage d’un SSMS qui cesse de répondre ou se bloque en collectant une image mémoire complète
+Description: Capturer des informations de diagnostic à partir de SQL Server Management Studio (SSMS) afin de pouvoir résoudre un incident ou un problème de système qui ne répond pas.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,12 +12,12 @@ ms.author: maghan
 ms.reviewer: dineth, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: 7b55e8e68076ad14f874306ffdb578f619af1cf0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 749562d3a4326c8db2d38e06dcc265b08b7cea68
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091245"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88314456"
 ---
 # <a name="get-full-memory-dump"></a>Obtenir l’image mémoire complète
 

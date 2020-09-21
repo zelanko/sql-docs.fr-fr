@@ -1,4 +1,5 @@
 ---
+description: Désigner un serveur de transfert d'événements
 title: Désigner un serveur de transfert d'événements
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d05b8e386a3df5314433dbf505e3c7682740434c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c6642a2cd8eac59cf20e8b0f9cb74482870f27ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749055"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88463100"
 ---
 # <a name="designate-an-events-forwarding-server"></a>Désigner un serveur de transfert d'événements
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/sql-managed-instance-paas-overview), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Managed Instance Azure SQL ManagSQL à partir de SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Cette rubrique explique comment désigner un serveur auquel [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfère les événements dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Notez que le transfert d'événements s'applique aux événements transférés entre serveurs, et non aux événements transférés entre instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergées sur un même ordinateur. Notez également qu'afin de recevoir les événements transférés, le serveur de gestion des alertes doit être une instance par défaut de SQL Server.  
   
@@ -45,7 +46,7 @@ Nécessite l'appartenance au rôle serveur fixe **sysadmin** .
   
 2.  Cliquez avec le bouton droit sur **SQL Server Agent** , puis sélectionnez **Propriétés**.  
   
-3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent -** _nom_serveur_, sous **Sélectionner une page**, sélectionnez **Avancé**.  
+3.  Dans la boîte de dialogue **Propriétés de SQL Server Agent -**_nom_serveur_, sous **Sélectionner une page**, sélectionnez **Avancé**.  
   
 4.  Sous **Transfert d'événements SQL Server**, sélectionnez la case à cocher **Transférer les événements sur un autre serveur** .  
   

@@ -1,6 +1,6 @@
 ---
 title: Installer des versions dans d’autres langues que l’anglais
-description: Installer des versions de SQL Server Management Studio (SSMS) dans d’autres langues que l’anglais
+description: Installez des versions de SQL Server Management Studio (SSMS) dans d’autres langues que l’anglais. Cet article s’applique à SSMS 17.x.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssms
@@ -9,12 +9,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/25/2019
-ms.openlocfilehash: cc4d98322f0422053402bdf097674c90807e11a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 044813df5fc1e222c24418c60d0a1c7d40d8c011
+ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246882"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87523001"
 ---
 # <a name="install-non-english-language-versions-of-sql-server-management-studio-ssms"></a>Installer des versions de SQL Server Management Studio (SSMS) dans d’autres langues que l’anglais
 
@@ -53,4 +53,4 @@ Les instructions suivantes dépendent de la version de Windows. Celles qui sont 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Didacticiel : SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [Tutoriel : SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)

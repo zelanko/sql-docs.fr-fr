@@ -1,4 +1,5 @@
 ---
+description: Créer un environnement multiserveur
 title: Créer un environnement multiserveur
 ms.custom: seo-lt-2019
 ms.date: 01/30/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 860d107c807e2e182127c23dd989d7f301fea178
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0ea258ee3fc53012286f171e78379f9459343c0e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755254"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418215"
 ---
 # <a name="create-a-multiserver-environment"></a>Créer un environnement multiserveur
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 L'administration multiserveur nécessite que vous configuriez un serveur maître (MSX) et au moins un serveur cible (TSX). Les travaux qui seront traités sur l'ensemble des serveurs cibles sont d'abord définis sur le serveur maître, puis téléchargés sur les serveurs cibles.  
   

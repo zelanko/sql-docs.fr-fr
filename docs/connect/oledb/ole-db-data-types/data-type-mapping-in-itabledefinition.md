@@ -1,6 +1,6 @@
 ---
 title: Mappage de type de données dans ITableDefinition (pilote OLE DB) | Microsoft Docs
-description: Mappage de types de données dans ITableDefinition
+description: Découvrez comment un contrôle serveur consommateur OLE DB Driver pour SQL Server peut spécifier des types de données SQL Server lors de la création de tables à l’aide de la méthode ITableDefinition::CreateTable.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data types [OLE DB]
 - CreateTable function
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: af28946406b4bd0fed0c75f85b9e69450dc38434
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: fecca9ed46ea35fe45868b8c618b3514f0b04abd
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86976589"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860125"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Mappage de type de données dans ITableDefinition
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

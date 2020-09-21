@@ -1,6 +1,6 @@
 ---
 title: Paramètres de commande (pilote OLE DB) | Microsoft Docs
-description: Paramètres de commande
+description: En savoir plus sur les paramètres de commande, y compris les types que OLE DB Driver pour SQL Server prend en charge pour les commandes d’instruction et d’appel de procédure SQL.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, commands
 - parameters [OLE DB Driver for SQL Server], OLE DB
 - commands [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: d5538e11a121a61b4e5c93175bdecbf31be27127
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7c7266c3fd59e9883cb59ae81f42f651c2ea2b3e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942762"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860174"
 ---
 # <a name="command-parameters"></a>Paramètres de commande
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

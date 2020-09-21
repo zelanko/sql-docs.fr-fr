@@ -1,7 +1,7 @@
 ---
 title: Notes de publication pour Reporting Services 2017 et versions ultérieures | Microsoft Docs
 description: Découvrez les modifications qui ont été apportées à SQL Server Reporting Services (SSRS) dans les versions 2017 et ultérieures.
-ms.date: 04/28/2020
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -10,12 +10,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a97ab8d68a1b265a25eb3b97a5146a402aa9b3b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3b1984133387f1cbf5405f0c90b4532e56e776b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247508"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282390"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notes de publication de SQL Server Reporting Services (SSRS) 2017 et versions ultérieures
 
@@ -53,12 +53,39 @@ GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
 ## <a name="sql-server-2019-reporting-services"></a>SQL Server 2019 Reporting Services
 
+## <a name="15075454810-20200831"></a>15.0.7545.4810, 08/31/2020 
+
+| Problème résolu | Détails |
+| :---------- | :------ |
+| Mises à jour de sécurité  | &nbsp; |
+| Prise en charge des commentaires joints limitée pour ne plus autoriser les documents PDF  | &nbsp; |
+| Correction de la troncation des noms de fichiers lors de l’exportation de rapports contenant un point dans le nom  | &nbsp; |
+| Résolution d’un problème lié aux abonnements et à la culture zh-TW qui entraînait des erreurs de format de date non valide  | &nbsp; |
+| Résolution d’un problème lié à certains rapports, où l’accès à l’option Paramètres lançait une boucle infinie  | &nbsp; |
+| Résolution des problèmes liés aux guillemets simples dans les noms de rapport  | &nbsp; |
+| Correction d’un problème dans l’accès d’URL empêchant la localisation de correspondances par FindString  | &nbsp; |
+| Correction d’un problème où le texte de remplacement pour l’exportation PDF n’était pas correctement encodé pour les caractères multioctets  | &nbsp; |
+| Correction de l’apparition indésirable d’une image vide sous un élément linéaire  | &nbsp; |
+| Correction d’une erreur de prise en charge erronée pour l’authentification personnalisée dans l’édition web  | &nbsp; |
+| Résolution d’un problème où un lecteur d’écran lisait une ligne supplémentaire et une colonne supplémentaire dans un tableau matriciel  | &nbsp; |
+| Correction d’un problème de troncation d’image avec Ajuster à la taille pour la page entière  | &nbsp; |
+| La mise à niveau de la ligne de commande ne requiert plus l’indicateur EULA  | &nbsp; |
+
 ## <a name="150724337714-20191101"></a>15.0.7243.37714, 2019/01/11
 
 Version initiale.
 
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services
+
+## <a name="1406001669-20200831"></a>14.0.600.1669, 08/31/2020 
+
+| Problème résolu | Détails |
+| :---------- | :------ |
+| Mises à jour de sécurité  | &nbsp; |
+| Prise en charge des commentaires joints limitée pour ne plus autoriser les documents PDF  | &nbsp; |
+| Correction de la troncation des noms de fichiers lors de l’exportation de rapports contenant un point dans le nom  | &nbsp; |
+| Résolution d’un problème lié aux abonnements et à la culture zh-TW qui entraînait des erreurs de format de date non valide  | &nbsp; |
 
 ## <a name="1406001572-20200406"></a>14.0.600.1572, 06/04/2020 
 

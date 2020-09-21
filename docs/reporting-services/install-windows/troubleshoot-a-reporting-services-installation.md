@@ -1,4 +1,5 @@
 ---
+description: Dépanner une installation de Reporting Services
 title: Dépanner une installation de Reporting Services | Microsoft Docs
 ms.date: 01/17/2018
 ms.prod: reporting-services
@@ -7,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b3d3bf132fb869ac2273a1db76dd34c4f24970ad
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68889696"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569889"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Dépanner une installation de Reporting Services
 
@@ -77,7 +78,7 @@ ms.locfileid: "68889696"
  ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="you-do-not-see-the-sql-server-reporting-services-service-in-sharepoint-central-administration-after-installing-sql-server-2016-ssrs-in-sharepoint-mode"></a><a name="bkmk_no_ssrs_service"></a> Vous ne voyez pas le service SQL Server Reporting Services dans l’Administration centrale de SharePoint après avoir installé SQL Server 2016 SSRS en mode SharePoint  
- **Description :** si après avoir correctement installé SQL Server 2016 Reporting Services en mode SharePoint et le complément SQL Server 2016 Reporting Services pour SharePoint 2013/2016, vous ne voyez pas « SQL Server Reporting Services » dans les deux menus suivants, le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’a pas été enregistré :  
+ **Description :** Si après avoir correctement installé SQL Server 2016 Reporting Services en mode SharePoint et le complément SQL Server 2016 Reporting Services pour SharePoint 2013/2016, vous ne voyez pas « SQL Server Reporting Services » dans les deux menus suivants, le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n’a pas été enregistré :  
   
 -   Administration centrale de SharePoint 2013/2016 -> « Gestion des applications » -> Page « Gérer les services sur le serveur »  
   
@@ -101,7 +102,7 @@ ms.locfileid: "68889696"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Vérifiez que le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] indique l’état **Démarré** dans la page : Administration centrale de SharePoint 2013/2016 -> **Gestion des applications** -> **Gérer les services sur le serveur**.  
+2.  Vérifiez que le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] affiche l'état « **Démarré** » sur la page : Administration centrale de SharePoint 2013/2016 -> « **Gestion des applications** » -> « **Gérer les services sur le serveur** »  
   
  ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
   
@@ -137,7 +138,7 @@ ms.locfileid: "68889696"
  
  - L’application de service SSRS n’est pas mappée à cette application Web. Utilisez les pages d'application de service SSRS pour associer le proxy d'application de service SSRS au Groupe de proxy d'application pour cette application Web. 
   
- **Solution de contournement :** le message d'erreur suggère trois étapes pour résoudre ce problème. La première suggestion dans le message « Une URL de serveur de rapports n’est pas configuré » s'applique lors de l'intégration à la version de serveur de rapports antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configuration SharePoint pour les versions de serveurs de rapports précédentes est effectuée dans la page **Paramètres généraux de l’application** , à l’aide de **SQL Server Reporting Services (2008 et 2008 R2)** .  
+ **Solution de contournement :** le message d'erreur suggère trois étapes pour résoudre ce problème. La première suggestion dans le message « Une URL de serveur de rapports n’est pas configuré » s'applique lors de l'intégration à la version de serveur de rapports antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. La configuration SharePoint pour les versions de serveurs de rapports précédentes est effectuée dans la page **Paramètres généraux de l’application** , à l’aide de **SQL Server Reporting Services (2008 et 2008 R2)**.  
   
  **Autres informations :** vous verrez ce message d'erreur lorsque vous tenterez d'utiliser une fonctionnalité [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui requiert une connexion au service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . notamment :  
   
@@ -187,7 +188,7 @@ ms.locfileid: "68889696"
   
  « La fonctionnalité spécifiée « RS_SHP » n’est pas prise en charge lors de l’exécution de l’action PREPAREIMAGE, car elle ne prend pas en charge SysPrep. Supprimez les fonctionnalités qui ne sont pas compatibles avec SysPrep et réexécutez le programme d'installation. »  
   
- **Solution de contournement :** il n'existe aucune solution de contournement. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prends pas en charge SYSPREP.  
+ **Solution de contournement :** Il n’existe aucune possibilité pour contourner ce problème. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prend pas en charge SYSPREP (PREPAREIMAGE). [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne prends pas en charge SYSPREP.  
   
  ![Icône de flèche utilisée avec le lien Retour au début](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Résoudre les problèmes liés aux installations en mode SharePoint](#bkmk_tshoot_sharepoint)  
 
@@ -208,10 +209,10 @@ ms.locfileid: "68889696"
   
 2.  Ouvrez une fenêtre de commande et tapez la commande suivante à l'invite de commandes :  
   
-    -   **run \<** *.NET 4.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
+    -   **exécuter \<** *.NET 4.0 Framework directory* **>\InstallUtil.exe \<** *Report Server Bin directory* **>\ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
-        >  Remplacez \<*répertoire .NET 4.0 Framework*> par le chemin physique des fichiers .NET Framework 4.0 et \<*répertoire bin du serveur de rapports*> par le chemin physique des fichiers bin du serveur de rapports.  
+        >  Remplacez \<*.NET 4.0 Framework directory*> par le chemin d'accès physique aux fichiers .NET Framework 4.0 et remplacez \<*Report Server Bin directory*> par le chemin d'accès physique aux fichiers de la corbeille du serveur de rapports.  
   
 3.  Redémarrez le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -255,7 +256,7 @@ ms.locfileid: "68889696"
 
  Si vous effectuez une mise à niveau de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vers [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] et que vous utilisez l’authentification NTLM avec un compte intégré pour le compte de service Report Server, une erreur 401-Non autorisé peut se produire lorsque vous accédez au serveur de rapports ou au portail web après la mise à niveau.  
   
- Vous voyez ce message à cause d’un changement dans la configuration par défaut de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] pour l’authentification Windows. Negotiate est configuré lorsque le compte de service Report Server est Service réseau ou Système local. NTLM est configuré lorsque le compte de service Report Server n'est pas l'un de ces comptes intégrés. Pour résoudre ce problème après la mise à niveau, vous pouvez modifier le fichier RSReportServer.config et attribuer à **AuthenticationType** la valeur **RSWindowsNTLM**. Pour plus d’informations, consultez [Configure Windows Authentication on the Report Server](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
+ Vous voyez ce message à cause d’un changement dans la configuration par défaut de [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] pour l’authentification Windows. Negotiate est configuré lorsque le compte de service Report Server est Service réseau ou Système local. NTLM est configuré lorsque le compte de service Report Server n'est pas l'un de ces comptes intégrés. Pour résoudre ce problème après la mise à niveau, vous pouvez modifier le fichier RSReportServer.config et attribuer à **AuthenticationType** la valeur **RSWindowsNTLM**. Pour plus d’informations, voir [Configurer l’authentification Windows sur le serveur de rapports](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md).  
 
 ### <a name="uninstalling-32-bit-instance-of-sql-server-2016-reporting-services-in-side-by-side-deployment-with-a-64-bit-instance-breaks-the-64-bit-instance"></a><a name="Uninstall32BitBreaks64Bit"></a> La désinstallation d’une instance 32 bits de SQL Server 2016 Reporting Services dans un déploiement côte à côte avec une instance 64 bits endommage l’instance 64 bits
 
@@ -266,14 +267,14 @@ ms.locfileid: "68889696"
  Pour résoudre ce problème, vous pouvez réparer l'instance 64 bits. Même s’il est recommandé d’utiliser la réparation, vous pouvez manuellement rajouter les clés de Registre à l’aide de l’Éditeur du Registre.  
   
 > [!CAUTION]  
->  Une modification incorrecte du Registre peut sérieusement endommager votre système. Avant d'apporter des modifications au Registre, il convient de sauvegarder les données importantes qui se trouvent sur l'ordinateur.  
+>  Une modification incorrecte du Registre peut sérieusement endommager votre système. Avant toute modification du registre, il est conseillé de sauvegarder toutes les données importantes de votre ordinateur.  
   
 ##  <a name="additional-resources"></a><a name="bkmk_additional"></a> Ressources supplémentaires  
  Vous trouverez ci-dessous des ressources complémentaires pour vous aider à résoudre les problèmes :  
   
 -   Wiki TechNet : [Dépanner SQL Server Reporting Services (SSRS) en mode intégré SharePoint 2010](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Forum : SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
+-   [Questions et réponses Microsoft : SQL Server Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html)  
   
 -   Vous avez des commentaires ou d’autres questions ? Visitez [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
   

@@ -1,4 +1,5 @@
 ---
+description: Afficher le journal des erreurs de SQL Server Agent
 title: Afficher le journal des erreurs de SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,19 +18,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a709a4b3d0fae266d871301128039a15d97b45b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 17388dbf612600bd95642d0d961a73edcb06245f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759755"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88318065"
 ---
 # <a name="view-sql-server-agent-error-log"></a>Afficher le journal des erreurs de SQL Server Agent
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Cette rubrique décrit comment afficher le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -67,7 +68,7 @@ Pour plus d’informations sur les autorisations Windows requises pour le compte
   
 4.  Cliquez avec le bouton droit sur le journal d’erreurs que vous souhaitez afficher et sélectionnez **Afficher le journal de l’Agent**.  
   
-    Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal -** _nom_serveur_ :  
+    Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal -**_nom_serveur_ :  
   
     **Charger le journal**  
     Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  

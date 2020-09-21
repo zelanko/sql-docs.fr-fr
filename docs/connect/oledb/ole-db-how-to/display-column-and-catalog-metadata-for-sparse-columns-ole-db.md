@@ -1,6 +1,6 @@
 ---
 title: Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses (OLE DB) | Microsoft Docs
-description: Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses (OLE DB)
+description: Découvrez comment afficher des métadonnées de colonne et de catalogue pour les colonnes éparses dans OLE DB Driver pour SQL Server avec cet exemple.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e82ff159dc39cdeb416395b0686bef755ed60a2a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: e47803f6c4dc61c1a13135f3fd4b0bafc91e9646
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008261"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861397"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: Propriétés de l'étape du travail - Nouvelle étape du travail (page Avancé)
 title: Propriétés de la nouvelle étape du travail (page Avancé)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa078a72894711dbe267a4cac049317a159eb20d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8133db62cb2805ad0f267b9779a5f9ef64535dc2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755209"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418145"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Propriétés de l'étape du travail - Nouvelle étape du travail (page Avancé)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Utilisez cette page pour afficher et changer les propriétés d’une étape de travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -33,7 +34,7 @@ Utilisez cette page pour afficher et changer les propriétés d’une étape de 
 **Action en cas de succès**  
 Définit l'action que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit exécuter si l'étape de travail réussit.  
   
-**Tentatives de reprises**  
+**Nouvelles tentatives**  
 Définit le nombre de tentatives effectuées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour reprendre une étape de travail qui a échoué.  
   
 **Intervalle de reprise (minutes)**  

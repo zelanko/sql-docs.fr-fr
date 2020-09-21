@@ -10,16 +10,16 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 23a3e746996615cac0fa902e21733f9ce3ea4f45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4e467fb50ae2b2c76deea885990b160745c691eb
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723966"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042515"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Installer de nouveaux packages R avec sqlmlutils
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2019 SQL MI](../../includes/applies-to-version/sqlserver2019-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Cet article explique comment utiliser les fonctions du package [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) pour installer de nouveaux packages R sur une instance de [Machine Learning Services sur SQL Server](../sql-server-machine-learning-services.md) et sur [Clusters Big Data](../../big-data-cluster/machine-learning-services.md). Les packages que vous installez peuvent être utilisés dans des scripts R exécutés dans la base de données à l’aide de l’instruction T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
@@ -38,6 +38,8 @@ Cet article explique comment utiliser les fonctions du package [**sqlmlutils**](
 - Installez [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) sur l’ordinateur client que vous utilisez pour vous connecter à SQL Server. Vous pouvez utiliser d’autres outils de gestion de base de données ou de requête, mais cet article part du principe que vous utilisez Azure Data Studio.
 
 ### <a name="other-considerations"></a>Autres considérations
+
+- L’installation du package est spécifique à l’instance SQL, à la base de données et à l’utilisateur que vous spécifiez dans les informations de connexion que vous fournissez à **sqlmlutils**. Pour utiliser le package dans plusieurs instances ou bases de données SQL, ou pour différents utilisateurs, vous devez installer le package pour chacun d’entre eux. L’exception est que si le package est installé par un membre de `dbo`, le package est *public* et est partagé avec tous les utilisateurs. Si un utilisateur installe une version plus récente d’un package public, le package public n’est pas affecté, mais cet utilisateur aura accès à la version plus récente.
 
 - Le script R s’exécutant dans SQL Server peut utiliser uniquement des packages installés dans la bibliothèque d’instances par défaut. SQL Server ne peut pas charger les packages à partir de bibliothèques externes, même si cette bibliothèque est sur le même ordinateur. Cela comprend les bibliothèques R installées avec d’autres produits Microsoft.
 

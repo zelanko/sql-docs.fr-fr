@@ -2,7 +2,7 @@
 description: Validate XML with the XML Task
 title: Effectuer une validation XML avec la tâche XML | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/08/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2dd292ea05ae40ff5cd19a1a8e8de55f9f0b9095
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d5009a7a1c0b51feb555223294e1cc4cb5ff490f
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349255"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89570351"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
 
@@ -28,7 +28,7 @@ ms.locfileid: "88349255"
 
   Validez des documents XML et obtenez une sortie d’erreur détaillée en activant la propriété **ValidationDetails** de la tâche XML.  
   
- La capture d’écran ci-après affiche l’ **Éditeur de tâche XML** avec les paramètres requis pour l’exécution d’une validation XML avec une sortie d’erreur détaillée.  
+ La capture d’écran ci-après affiche l’**Éditeur de tâche XML** avec les paramètres requis pour la validation XML avec une sortie d’erreur détaillée.  
   
  ![Propriétés de la tâche XML dans l’Éditeur de tâche XML](../../integration-services/control-flow/media/xmltaskproperties.jpg "Propriétés de la tâche XML dans l’Éditeur de tâche XML")  
   
@@ -121,7 +121,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Voici le résultat dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] du second exemple de requête figurant dans le texte précédent.  
   
- ![Erreurs XML de requête sur un groupe dans Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Erreurs XML de requête sur un groupe dans Management Studio")  
+ ![Erreurs XML de requête sur un groupe dans Management Studio](../../integration-services/control-flow/media/query-for-xml-errors.png "Erreurs XML de requête sur un groupe dans Management Studio")  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche XML](../../integration-services/control-flow/xml-task.md)   

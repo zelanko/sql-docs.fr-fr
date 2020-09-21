@@ -1,7 +1,8 @@
 ---
-title: PDO::setAttribute | Microsoft Docs
+title: PDO::setAttribute
+description: Référence API pour la fonction PDO::setAttribute dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 04/22/2019
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bdf399d03a74aabfd703507b185a95c5b14f50c2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: fc64e04ee53b6b654974312a8a7050bbb120a804
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918956"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645889"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +52,7 @@ Retourne true en cas de réussite ; sinon, false.
 |PDO::SQLSRV_ATTR_DECIMAL_PLACES|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|Entier compris entre 0 et 4 (inclus)|Spécifie le nombre de décimales pour la mise en forme des valeurs monétaires extraites.<br /><br />Les entiers négatifs et les valeurs supérieures à 4 sont ignorés.<br /><br />Cette option fonctionne uniquement quand PDO::SQLSRV_ATTR_FORMAT_DECIMALS a la valeur true.<br /><br />Cette option peut également être définie au niveau de l’instruction. Dans ce cas, l’option au niveau de l’instruction remplace celle-ci.<br /><br />Pour plus d’informations, consultez [Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|True ou False|Spécifie une exécution de requête directe ou préparée. Pour plus d’informations, consultez [Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Définit l’encodage de jeu de caractères utilisé par le pilote pour communiquer avec le serveur.<br /><br />PDO::SQLSRV_ENCODING_BINARY n’est pas pris en charge.<br /><br />La valeur par défaut est PDO::SQLSRV_ENCODING_UTF8.|  
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|True ou False|Spécifie s’il faut récupérer les types de date et d’heure en tant qu’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Si vous conservez la valeur false, le comportement par défaut consiste à les retourner sous forme de chaînes.<br /><br />Cette option peut également être définie au niveau de l’instruction. Dans ce cas, l’option au niveau de l’instruction remplace celle-ci.<br /><br />Pour plus d’informations, consultez [Guide pratique pour récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|True ou False|Spécifie s’il faut récupérer les types de date et d’heure en tant qu’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Si vous conservez la valeur false, le comportement par défaut consiste à les retourner sous forme de chaînes.<br /><br />Cette option peut également être définie au niveau de l’instruction. Dans ce cas, l’option au niveau de l’instruction remplace celle-ci.<br /><br />Pour plus d’informations, consultez [Procédure : Récupérer des types date et heure sous forme d’objets datetime PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|True ou False|Gère les extractions de nombres à partir de colonnes avec des types SQL numériques (bit, entier, smallint, tinyint, float ou real).<br /><br />Quand l’indicateur d’option de connexion ATTR_STRINGIFY_FETCHES est activé, la valeur de retour est une chaîne, même si SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est activé.<br /><br />Quand le type PDO retourné dans la colonne de liaison est PDO_PARAM_INT, la valeur de retour à partir d’une colonne d’entiers est int, même si SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est désactivé.|  
 |PDO::SQLSRV_ATTR_FORMAT_DECIMALS|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|True ou False|Spécifie s’il faut ajouter des zéros au début des chaînes décimales si nécessaire. Si elle est définie, cette option active l’option PDO::SQLSRV_ATTR_DECIMAL_PLACES pour mettre en forme les types monétaires. Si vous conservez la valeur false, le comportement par défaut qui consiste à retourner la précision exacte et à omettre les zéros non significatifs pour les valeurs inférieures à 1 est utilisé.<br /><br />Cette option peut également être définie au niveau de l’instruction. Dans ce cas, l’option au niveau de l’instruction remplace celle-ci.<br /><br />Pour plus d’informations, consultez [Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|entier|Définit le délai d’expiration de la requête, en secondes.<br /><br />La valeur par défaut est 0, ce qui signifie que le pilote attend indéfiniment les résultats.<br /><br />Les nombres négatifs ne sont pas autorisés.|  
@@ -60,7 +61,7 @@ PDO traite certains des attributs prédéfinis et exige que le pilote en traite 
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple montre comment définir l’attribut PDO::ATTR_ERRMODE.  
   
 ```  

@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8f4bd0718d0fa9785d3a2f87c437a6b732f39a
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 8a3ab7a079106cf009bbae82a1116a93499e0d71
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487218"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396832"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Erreur Reporting Services
     
 ## <a name="details"></a>Détails  
   
-|||  
+|Category|Valeur|  
 |-|-|  
 |Nom du produit|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |ID de l’événement|rsProcessingError|  
@@ -71,7 +71,7 @@ ms.locfileid: "81487218"
   
 -   Si vous affichez un rapport sur le serveur de rapports et que vous êtes connecté en tant qu’administrateur local sur le serveur de rapports, vous pouvez consulter la pile des appels en cliquant avec le bouton droit sur la page et en sélectionnant **Afficher la source**. La pile des appels contient des informations supplémentaires.  
   
--   Si vous êtes connecté en tant qu’administrateur local sur le serveur de rapports, recherchez `ReportProcessingException`dans le fichier journal. Les entrées du journal contiennent des informations supplémentaires. Le fichier journal du serveur de rapports se trouve généralement à l’emplacement suivant : \<*lecteur*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*horodatage*.log. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+-   Si vous êtes connecté en tant qu’administrateur local sur le serveur de rapports, recherchez `ReportProcessingException`dans le fichier journal. Les entrées du journal contiennent des informations supplémentaires. Le fichier journal du serveur de rapports se trouve généralement à l’emplacement suivant : \<*drive*>:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__*horodatage*.log. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ### <a name="failed-to-load-expression-host-assembly"></a>Échec du chargement de l'assembly hôte d'expressions  
  Les assemblys personnalisés doivent être signés par un nom fort et disposer de l’attribut AllowPartiallyTrustedCallers. Pour plus d’informations, consultez [Utilisation d’assemblys personnalisés avec des rapports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md) et [Présentation des stratégies de sécurité](../../reporting-services/extensions/secure-development/understanding-security-policies.md).  
@@ -97,11 +97,11 @@ ms.locfileid: "81487218"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>Impossible de comparer des types de données pour un filtre  
  Dans une équation de filtre, l'expression de filtre qui définit le contenu du filtre et la valeur du filtre doit être le même type de données pour être comparé. Si l'une des erreurs suivantes s'affichent, modifiez l'expression de champ ou la valeur de filtre pour que les types de données correspondent :  
   
--   Impossible d’effectuer le traitement de *\<type_élément_rapport>* pour l’élément *\<nom_élément_rapport>* . Impossible de comparer les données de types *\<type>* et *\<type>* . Vérifiez le type de données retourné par l’élément *\<nom_élément_rapport>* .  
+-   Impossible d'effectuer le traitement de *\<report item type>* pour le *\<report item name>* . Impossible de comparer les données de types *\<type>* et *\<type>* . Vérifiez le type de données retourné par le *\<report item name>* .  
   
--   Échec de l’évaluation de *\<nom de propriété>* .  
+-   Échec de l'évaluation du *\<property name>* .  
   
--   Échec de l’évaluation de *\<nom de propriété>* . Il fait référence à un champ de dataset qui contient une erreur : *\<>* .  
+-   Échec de l'évaluation du *\<property name>* . Il référence un champ de jeux de données qui contient une erreur : *\<error string>* .  
   
  Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -110,13 +110,13 @@ ms.locfileid: "81487218"
   
  Vous pouvez également passer le nom d'une étendue spécifique à une fonction d'agrégation. L'étendue peut faire référence au nom d'un dataset, une région de données ou le nom d'une étendue plus élevée dans la hiérarchie de données. Cela s'applique aux messages suivants :  
   
--   L’étendue « *\<nom_étendue>*  » de l’élément *\<type_élément_rapport>* « *\<nom_élément_rapport>*  » n’est pas valide. L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
+-   Le *\<report item type>* « *\<report item name>*  » a une étendue non valide « *\<scope name>*  ». L'étendue doit être l'étendue actuelle ou doit se trouver dans l'étendue actuelle.  
   
--   L’expression de la propriété *\<nom_propriété* de l’objet *\<type_élément_rapport>* ' *\<nom_élément_rapport>* ' possède un paramètre d’étendue qui n’est pas valide pour une fonction d’agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
+-   L'expression *\<property name>* pour le *\<report item type>* « *\<report item name>*  » contient un paramètre d'étendue qui n'est pas valide pour une fonction d'agrégation. Le paramètre d'étendue doit être défini sur une constante de chaîne qui est égale au nom d'un groupe conteneur, au nom d'une région de données conteneur, ou au nom d'un dataset.  
   
  Pour les fonctions d’agrégation qui calculent des totaux cumulés (**Previous**, **RunningValue**, or **RowNumber**), vous pouvez spécifier un paramètre d’étendue qui est un nom de groupe de lignes ou un nom de groupe de colonnes, mais pas les deux. Cela s'applique au message d'erreur suivant :  
   
--   Les fonctions d’agrégation **Previous**, **RunningValue** ou **RowNumber** utilisées dans les cellules de données de l’élément *\<type_élément_rapport>* ' *\<nom_élément_rapport>* ' font référence à des étendues de regroupement dans des colonnes et des lignes de *\<type_élément_rapport>* . Les paramètres d’étendue de toutes les fonctions d’agrégation **Previous**, **RunningValue** et **RowNumber** de *\<type_élément_rapport>* peuvent faire référence à des regroupements de lignes ou à des regroupements de colonnes de données, mais pas aux deux.  
+-   Les fonctions d'agrégation **Précédent**, **RunningValue** ou **RowNumber** utilisées dans les cellules de données du *\<report item type>* « *\<report item name>*  » font référence aux étendues de regroupement dans les colonnes et les lignes du *\<report item type>* . Les paramètres d’étendue de toutes les fonctions d’agrégation **Précédent**, **RunningValue** et **RowNumber** dans un *\<report item type>* peuvent faire référence à des regroupements de lignes ou à des regroupements de colonnes de données, mais pas aux deux.  
   
  Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) et [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   

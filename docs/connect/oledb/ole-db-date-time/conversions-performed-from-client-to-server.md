@@ -1,6 +1,6 @@
 ---
 title: Conversions effectuées de client à serveur | Microsoft Docs
-description: Conversions effectuées de client à serveur
+description: Découvrez les conversions de date/heure effectuées entre une application cliente écrite avec OLE DB Driver pour SQL Server et SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], client to server
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ccf1505fd896b627a83fe2ee7b3d1e6e19ab556e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c5a43604c485c2baf7bb5b4430303db7fedd9bd8
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244879"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860225"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversions de client à serveur
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -70,8 +70,8 @@ ms.locfileid: "87244879"
 |15|La sémantique des conversions antérieure à [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] pour **datetime** est conservée. Les secondes sont arrondies au 300ème de seconde le plus proche.|  
 |16|Le comportement de conversion d'une valeur (d'un type donné) incorporée à un struct client SSVARIANT est identique à celui des mêmes valeur et type non incorporés à un struct client SSVARIANT.|  
   
-|Type|Longueur (en caractères)|Scale|  
-|-|-|-|  
+| Type | Longueur (en caractères) | Scale |  
+| ---- | ----------------- | ----- |  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

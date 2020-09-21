@@ -1,6 +1,6 @@
 ---
-title: Prise en charge de la reprise d’activité et de la haute disponibilité par OLE DB Driver pour SQL Server | Microsoft Docs
-description: Prise en charge de la reprise d’activité et de la haute disponibilité par OLE DB Driver pour SQL Server
+title: Prise en charge de la récupération d’urgence et de la haute disponibilité par OLE DB Driver pour SQL Server
+description: En savoir plus sur la prise en charge d’OLE DB Driver pour SQL Server pour la haute disponibilité et la récupération d’urgence lors de la connexion à des bases de données avec ces fonctionnalités configurées.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 26c340a10118f115db87c742e570831edc8b65f6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 6f7e926485480bb18979350eea69ace972c0a102
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006914"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860705"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Prise en charge de la récupération d’urgence et de la haute disponibilité par OLE DB Driver pour SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 000d7c39221f54459783fc9117a35a880fb02c92
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: cb1d1cff13865981f30495ac406495593a778180
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006979"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076774"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Télécharger Microsoft OLE DB Driver pour SQL Server
 
@@ -21,6 +21,8 @@ ms.locfileid: "86006979"
 OLE DB Driver pour SQL Server est une interface de programmation d’applications (API) autonome d’accès aux données, utilisée pour OLE DB. OLE DB Driver pour SQL Server est disponible sur Windows et fournit le pilote OLE DB SQL dans une bibliothèque de liens dynamiques (DLL).
 
 ## <a name="download"></a>Téléchargement
+
+Le programme d’installation redistribuable pour Microsoft OLE DB Driver pour SQL Server installe les composants clients, qui sont nécessaires au moment de l’exécution pour tirer parti des fonctionnalités les plus récentes de SQL Server. À partir de la version 18.3, le programme d’installation comprend et installe également la Bibliothèque d’authentification Microsoft Active Directory (ADAL.dll).
 
 Microsoft OLE DB Driver 18.4 pour SQL Server est la version la plus récente en disponibilité générale (GA). Si vous une version précédente de Microsoft OLE DB Driver 18 pour SQL Server est installée, l’installation de la version 18.4 la met à niveau vers 18.4.
 

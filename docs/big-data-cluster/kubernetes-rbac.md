@@ -5,20 +5,20 @@ description: Cet article explique comment Clusters Big Data SQL Server utilise l
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d2e3f379402f16f32020f9cd34103919f13a30c
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 79ea97a0824d7213f0758d75f8b552372bba51c2
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86552974"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87879047"
 ---
-# <a name="kubernetes-rbac-model--impact-on-users-managing-bdc"></a>Modèle RBAC Kubernetes et impact sur les utilisateurs qui gèrent des clusters Big Data
+# <a name="kubernetes-rbac-model--impact-on-users-and-service-accounts-managing-bdc"></a>Modèle RBAC Kubernetes et impact sur les utilisateurs et comptes de service qui gèrent des clusters Big Data
 
-La section suivante décrit les autorisations requises pour les utilisateurs qui gèrent des clusters Big Data.
+Cet article décrit les autorisations requises pour les utilisateurs qui gèrent des clusters Big Data et la sémantique associée au compte de service par défaut et à l’accès Kubernetes à partir du cluster Big Data.
 
 > [!NOTE]
 > Pour des ressources supplémentaires sur le modèle RBAC Kubernetes, consultez [Utilisation de l’autorisation RBAC – Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) et [Utilisation du contrôle RBAC pour définir et appliquer des autorisations – OpenShift](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
@@ -47,39 +47,43 @@ Dans la mesure où le rôle `admin` par défaut ne dispose pas de ces autorisati
 
 À compter de SQL Server 2019 CU5, Telegraf exige un compte de service disposant d’autorisations de rôle à l’échelle du cluster pour collecter les métriques sur les pods et les nœuds. Lors du déploiement (ou de la mise à niveau de déploiements existants), nous tentons de créer le compte de service et le rôle de cluster nécessaires. Cependant, même si l’utilisateur qui déploie le cluster ou effectue la mise à niveau ne dispose pas d’autorisations suffisantes, le déploiement ou la mise à niveau continuera avec un avertissement et aboutira. Dans ce cas, les métriques sur les pods et les nœuds ne seront pas collectées. L’utilisateur qui déploie le cluster devra demander à un administrateur de cluster de créer le rôle et le compte de service (avant ou après le déploiement ou la mise à niveau). Clusters Big Data pourra alors les utiliser. 
 
-Voici un script montrant comment créer les artefacts requis :
+Voici les étapes pour créer les artefacts requis :
 
-```console
-export CLUSTER_NAME=mssql-cluster
-kubectl create -f - <<EOF
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: ${CLUSTER_NAME}:cr-mssql-metricsdc-reader
-rules:
-- apiGroups:
-  - '*'
-  resources:
-  - pods
-  - nodes/stats
-  verbs:
-  - get
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: ${CLUSTER_NAME}:crb-mssql-metricsdc-reader
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: ${CLUSTER_NAME}:cr-mssql-metricsdc-reader
-subjects:
-- kind: ServiceAccount
-  name: sa-mssql-metricsdc-reader
-  namespace: ${CLUSTER_NAME}
-EOF
-```
+1. Créez un fichier *metrics-role.yaml* avec le contenu ci-dessous. Veillez à remplacer les espaces réservés *<clusterName>* par le nom de votre cluster Big Data.
+
+   ```yaml
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRole
+   metadata:
+     name: <clusterName>:cr-mssql-metricsdc-reader
+   rules:
+   - apiGroups:
+     - '*'
+     resources:
+     - pods
+     - nodes/stats
+     verbs:
+     - get
+   ---
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRoleBinding
+   metadata:
+     name: <clusterName>:crb-mssql-metricsdc-reader
+   roleRef:
+     apiGroup: rbac.authorization.k8s.io
+     kind: ClusterRole
+     name: <clusterName>:cr-mssql-metricsdc-reader
+   subjects:
+   - kind: ServiceAccount
+     name: sa-mssql-metricsdc-reader
+     namespace: <clusterName>
+   ```
+
+2. Créez le rôle de cluster et la liaison de rôle de cluster :
+
+   ```bash
+   kubectl create -f metrics-role.yaml
+   ```
 
 Le compte de service, le rôle de cluster et la liaison de rôle de cluster peuvent être créés avant ou après le déploiement Clusters Big Data. Kubernetes met automatiquement à jour l’autorisation du compte de service Telegraf. En cas de création dans le cadre d’un déploiement de pod, un délai de quelques minutes se produit dans la collecte des métriques sur les pods et les nœuds.
 
@@ -97,3 +101,12 @@ Vous pouvez personnaliser ces paramètres dans la section security du fichier de
 ```
 
 Si ces paramètres sont définis sur `false`, le flux de travail de déploiement Clusters Big Data ne tente pas de créer le compte de service, le rôle de cluster ni la liaison pour Telegraf.
+
+## <a name="default-service-account-usage-from-within-a-bdc-pod"></a>Utilisation du compte de service par défaut à partir d’un pod BDC
+
+Pour un modèle de sécurité plus strict, SQL Server 2019 CU5 a désactivé le montage par défaut pour le compte de service Kubernetes par défaut dans les pods de BDC. Cela s’applique aux déploiements nouveaux et mis à niveau dans la CU5 ou versions ultérieures.
+Le jeton d’informations d’identification à l’intérieur des pods peut être utilisé pour accéder au serveur d’API Kubernetes, et le niveau d’autorisations dépend des paramètres de stratégie d’autorisation Kubernetes. Si vous avez des cas d’usage spécifiques qui requièrent le rétablissement du comportement CU5 précédent, dans la CU6, nous introduisons un nouveau commutateur de fonctionnalité qui vous permet d’activer le montage automatique uniquement au moment du déploiement. Pour ce faire, vous pouvez utiliser le fichier de déploiement de configuration control.json et définir *automountServiceAccountToken* sur *true*. Exécutez cette commande pour mettre à jour ce paramètre dans votre fichier de configuration *control.json* personnalisé à l’aide la ligne de commande `azdata` : 
+
+``` bash
+azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"
+```

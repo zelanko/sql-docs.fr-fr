@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
-ms.openlocfilehash: 0a9b93190f0240c917c6331ae69d1e8461cb7ea2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 7df66b1102a315dc80eac9ac989f3cb8067e3a27
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243773"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180044"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notes de publication de SQL Server Management Studio (SSMS)
 
@@ -84,14 +84,15 @@ SSMS 18.6 est la dernière version en disponibilité générale de SSMS. Si vou
 | SSMS général | Résolution de trois sources de blocage courantes dans SSMS. |
 | SSMS général | Résolution de quelques problèmes dans lesquels la boîte de dialogue de connexion de SSMS *oublie* des entrées (serveur/utilisateur/mots de passe). Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/40256401) et [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/40015519). |
 | SSMS général | Résolution d’un problème avec la boîte de dialogue **Propriétés de statistiques**, dans laquelle la case à cocher **Mettre à jour les statistiques pour ces colonnes** et la sélection de l’option **OK** n’a aucun effet. Les statistiques ne sont pas mises à jour, et la tentative de création d’un script pour l’action génère un message d’erreur *Aucune action ne requiert de script.* ). Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37799992). |
+| SSMS général | Résoudre les problèmes liés à [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455). | 
 | Application de la couche Données d’importation/exportation | Correction d’un problème dans lequel SSMS provoquait une erreur lors de l’importation d’un fichier bacpac. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/40229137). |
 | Integration Services | Correction d’un bogue dans lequel les clients ne peuvent pas modifier une étape de travail de l’agent SQL lors de l’utilisation des versions 18.4 ou antérieures de SSMS pour exécuter des packages SSIS dans Azure SQL Managed Instance. |
 | Integration Services | Correction d’un bogue dans lequel l'option **Utiliser le runtime 32 bits** est manquante dans l’onglet **Options d'exécution** pour exécuter un package SSIS dans une étape de travail de l’agent SQL pour une instance SQL Server locale. |
 | IntelliSense / Éditeur | Correction d’un problème dans lequel une boîte de dialogue d’erreur peut s’afficher lors de la sélection du menu Fichier -> Nouveau -> Requête de moteur de base de données. |
-| Explorateur d’objets | Correction d’un problème dans lequel la *fenêtre Propriétés* n’était pas disponible pour les bases de données SQL Azure quand vous cliquez avec le bouton droit sur un nœud Table ou Index dans l’Explorateur d’objets. |
+| Explorateur d’objets | Correction d’un problème dans lequel la *fenêtre Propriétés* n’était pas disponible pour les instances Azure SQL Database quand vous cliquez avec le bouton droit sur un nœud Table ou Index dans l’Explorateur d’objets. |
 | Explorateur d’objets | Résolution d’un problème dans lequel SSMS ne peut pas développer le nœud des bases de données pour master dans Azure en cas de défaillance du plan de contrôle affectant sys.database_service_objectives. |
 | Rapports | Correction de plusieurs rapports standard corrompus sur Linux </br></br> Exemple : Le rapport de consommation de mémoire a échoué avec une erreur semblable à celle-ci : « /var/opt/mssql/log/log_116.trc\log.trc' n’est pas valide… »). |
-| SMO / Création de scripts | Mise à jour de la logique pour créer des bases de données SQL Azure afin d’utiliser Gen5_2 comme SLO par défaut. |
+| SMO / Création de scripts | Mise à jour de la logique pour créer des bases de données dans Azure SQL Database afin d’utiliser Gen5_2 comme SLO par défaut. |
 | Interface utilisateur XEvent | Résolution d’un problème en suspens depuis longtemps (introduit dans SSMS 18.0) dans lequel « Enregistrer dans un fichier XEL... » provoquait une erreur. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37695592). |
 
 #### <a name="known-issues-186"></a>Problèmes connus (18.6)
@@ -102,6 +103,7 @@ SSMS 18.6 est la dernière version en disponibilité générale de SSMS. Si vou
 | SSMS général | La boîte de dialogue Nouvelle spécification de l’audit du serveur peut provoquer le blocage de SSMS avec une erreur de violation d’accès. | N/A |
 | SSMS général | Les extensions SSMS utilisant SMO doivent être recompilées pour cibler le nouveau package SMO v161 spécifique à SSMS. Une préversion est disponible à l’adresse https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects.SSMS/ </br></br> Les extensions compilées avec des versions 160 antérieures du package Microsoft.SqlServer.SqlManagementObjects continueront de fonctionner. | N/A |
 | Integration Services | Lorsque vous importez ou exportez des packages dans Integration Services ou exportez des packages dans Azure-SSIS Integration Runtime, des scripts sont perdus pour les packages contenant des tâches/composants de script. Solution de contournement : Supprimer le dossier « C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild ». | N/A|
+| Integration Services | Les connexions à distance à Integration Services peuvent échouer avec le message « Le service spécifié n’existe pas en tant que service installé. » sur les systèmes d’exploitation récents. Solution de contournement : Identifiez l’emplacement du Registre associé aux services d'intégration sous Computer\HKEY_CLASSES_ROOT\AppID & Computer\HKEY_CLASSES_ROOT\ WOW6432Node\AppID, et dans ces ruches, renommez la clé de Registre « LocalService » en « LocalService_A » pour la version spécifique des services d’intégration que vous essayez de connecter | N/A|
 
 
 Pour connaître les autres problèmes connus et pour envoyer vos commentaires à l’équipe produit, accédez à [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server).
@@ -144,6 +146,7 @@ Téléchargez les versions précédentes de SSMS en sélectionnant le lien de t�
 ### <a name="known-issues-1851"></a>Problèmes connus 18.5.1
 
 | Nouvel élément | Détails | Solution de contournement | |----------|---------| | -----------| | SSMS général | Il existe un bogue connu dans la coconception de diagramme, qui endommage vos diagrammes existants. Par exemple, vous créez une conception de diagramme avec SSMS 17.9.1, vous la mettez à jour/l’enregistrez avec SSMS 18. x, puis vous essayez de l’ouvrir avec 17.9.1. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37992649) pour plus de détails. | N/A | | SSMS général | La boîte de dialogue Nouvelle spécification de l’audit du serveur peut provoquer le blocage de SSMS avec une erreur de violation d’accès. | N/A | | | SMO/Script | Les extensions SSMS utilisant SMO doivent être recompilées pour cibler le nouveau SMO v160. | N/A | | Integration Services | Lorsque vous importez ou exportez des packages dans Integration Services ou exportez des packages dans Azure-SSIS Integration Runtime, des scripts sont perdus pour les packages contenant des tâches/composants de script. Solution de contournement : | Supprimer le dossier « C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild ». |
+
 
 ### <a name="185"></a>18.5
 
@@ -227,7 +230,7 @@ Téléchargez les versions précédentes de SSMS en sélectionnant le lien de t�
 | SMO/Création de scripts | Suppression du cast sqlvariant explicite (syntaxe T-SQL non conforme pour SqlOnDemand) qui corrige les scripts pour SqlOnDemand. |
 | SMO/Création de scripts | Correction d’un problème où FILLFACTOR sur les index pour SQL Azure était ignoré. |
 | SMO/Création de scripts | Correction d’un problème lié à l’écriture de scripts d’objets externes. |
-| SMO/Création de scripts | Correction d’un problème où *Générer des scripts* n’autorisait pas le choix de l’option de script pour les propriétés étendues sur SQL DB. En outre, correction du script de telles propriétés étendues. |
+| SMO/Création de scripts | Correction d’un problème où *Générer des scripts* n’autorisait pas le choix de l’option de script pour les propriétés étendues sur SQL Database. En outre, correction du script de telles propriétés étendues. |
 | SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) - Lien d’aide erroné dans la règle XTPHashAvgChainBuckets. |
 | Interface utilisateur XEvent | Correction d’un problème où les éléments de la grille étaient sélectionnés en cas de pointage. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/38262124) et [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/37873921). |
 
@@ -316,10 +319,10 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | IntelliSense/Éditeur | Mise à jour de la prise en charge des fonctionnalités récemment ajoutées à SQL Server 2019 (par exemple *ALTER SERVER CONFIGURATION*). |
 | Integration Services | Ajout d’un nouvel élément du menu de sélection `Tools > Migrate to Azure > Configure Azure-enabled DTExec` qui appelle des exécutions de packages SSIS sur Azure-SSIS Integration Runtime comme activités Exécuter le package SSIS dans des pipelines ADF. |
 | SMO/Création de scripts | Ajout de la prise en charge des scripts de contrainte unique Azure SQL DW. |
-| SMO/Création de scripts | Classification des données </br> - Ajout de la prise en charge de SQL version 10 (SQL 2008) et ultérieur. </br> - Ajout d’un nouvel attribut de sensibilité « rang » pour SQL version 15 (SQL 2019) et ultérieur et Azure SQL DB. |
+| SMO/Création de scripts | Classification des données </br> - Ajout de la prise en charge de SQL version 10 (SQL 2008) et ultérieur. </br> - Ajout d’un nouvel attribut de sensibilité « rang » pour SQL version 15 (SQL 2019) et ultérieur et Azure SQL Database. |
 | SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) - Ajout du contrôle de version au format des ensembles de règles. |
 | SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) - Ajout de nouvelles vérifications. |
-| SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) - Ajout de la prise en charge d’Azure SQL Database Managed Instance. |
+| SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) - Ajout de la prise en charge d’Azure SQL Managed Instance. |
 | SMO/Création de scripts | [API SQL Assessment](../sql-assessment-api/sql-assessment-api-overview.md) - Mise à jour de la vue par défaut des applets de commande pour afficher les résultats sous forme de table. |
 
 #### <a name="bug-fixes-in-1831"></a>Correctifs de bogues dans la version 18.3.1
@@ -342,7 +345,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | Integration Services | Correction d’un problème dans les pipelines Azure Data Factory générés par l’utilitaire `DTExec` compatible Azure pour utiliser le type de paramètre correct. (explicite pour 18.3.1) |
 | SMO/Création de scripts | Correction d’un problème, provoquant la levée d’erreurs par SMO lors de l’extraction des propriétés quand **SMO.Server.SetDefaultInitFields(true)** était utilisé.|
 | Interface utilisateur du magasin de requêtes | Résolution d’un problème où l’axe des Y ne se mettait pas à l’échelle quand la métrique *Nombre d’exécutions* était sélectionnée dans la vue *Requête suivie*. |
-| Évaluation des vulnérabilités | Désactivation de l’effacement et de l’approbation de la base de référence pour les bases de données Azure SQL.|
+| Évaluation des vulnérabilités | Désactivation de l’effacement et de l’approbation de la base de référence pour les bases de données Azure SQL Database.|
 
 #### <a name="known-issues-1831"></a>Problèmes connus (18.3.1)
 
@@ -440,7 +443,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | :-------| :------|
 | Diagrammes de base de données | [Les diagrammes de base de données ont été rajoutés à SSMS](https://feedback.azure.com/forums/908035/suggestions/37507828).
 | SSBDIAGNOSE.EXE |L’outil de ligne de commande SQL Server Diagnose a été rajouté au package SSMS.|
-| Integration Services (SSIS) | Prise en charge de la planification du package SSIS, situé dans le catalogue SSIS dans Azure ou le système de fichiers, dans Azure. Il existe trois entrées pour le lancement de la boîte de dialogue Nouvelle planification, l’élément de menu *Nouvelle planification...* affiché lors d’un clic droit sur le package SSIS dans le catalogue SSIS au sein d’Azure, l’élément de menu *Planifier un package SSIS dans Azure* sous l’élément de menu *Migrer vers Azure* sous l’élément de menu *Outils* et « Planifier SSIS dans Azure » affiché lors d’un clic droit sur le dossier Travaux sous l’agent SQL Server de l’instance managée Azure SQL Database.|
+| Integration Services (SSIS) | Prise en charge de la planification du package SSIS, situé dans le catalogue SSIS dans Azure ou le système de fichiers, dans Azure. Il existe trois entrées pour le lancement de la boîte de dialogue Nouvelle planification, l’élément de menu *Nouvelle planification...* affiché lors d’un clic droit sur le package SSIS dans le catalogue SSIS au sein d’Azure, l’élément de menu *Planifier un package SSIS dans Azure* sous l’élément de menu *Migrer vers Azure* sous l’élément de menu *Outils* et « Planifier SSIS dans Azure » affiché lors d’un clic droit sur le dossier Travaux sous l’agent SQL Server de l’instance managée Azure SQL.|
 
 #### <a name="bug-fixes-in-181"></a>Correctifs de bogues dans la version 18.1
 
@@ -462,7 +465,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | Haute résolution | Correction de la disposition des contrôles dans la page *Nouveau groupe de disponibilité* sur certaines versions localisées de SSMS. |
 | Haute résolution | Correction de la disposition de la page *Nouvelle planification du travail*. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37632094) pour plus de détails. |
 | Importer un fichier plat | Correction d’un problème pouvant entraîner la perte silencieuse de lignes durant l’importation.|
-| IntelliSense/éditeur | Réduction du trafic de requêtes basées sur SMO vers les bases de données Azure SQL pour IntelliSense. |
+| IntelliSense/éditeur | Réduction du trafic de requêtes basées sur SMO vers Azure SQL Database pour IntelliSense. |
 | IntelliSense/éditeur | Correction d’une erreur grammaticale dans l’info-bulle affichée lors de la saisie de T-SQL pour créer un utilisateur. Correction également du message d’erreur pour lever l’ambiguïté entre les utilisateurs et les connexions. |
 | Visionneuse du journal | Correction d’un problème lié au fait que SSMS ouvre toujours le journal du serveur (ou de l’agent) actuel, même en cas de double-clic sur un ancien journal d’archivage dans l’Explorateur d’objets. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37633648) pour plus de détails. |
 | Installation de SSMS | Résolution du problème provoquant l’échec de l’installation de SSMS quand le chemin du journal d’installation contient des espaces. Voir [Commentaires des utilisateurs sur SQL Server](https://feedback.azure.com/forums/908035/suggestions/37496110) pour plus de détails. |
@@ -509,7 +512,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | Nouvel élément| Détails|
 | :-------| :------|
 |Prise en charge de SQL Server 2019|SSMS 18.0 est la première version qui prend entièrement *en charge* SQL Server 2019 (compatLevel 150).|
-|Prise en charge de SQL Server 2019|Prise en charge de « BATCH_STARTED_GROUP » et de « BATCH_COMPLETED_GROUP » dans SQL Server 2019 et SQL Database Managed Instance.|
+|Prise en charge de SQL Server 2019|Prise en charge de « BATCH_STARTED_GROUP » et de « BATCH_COMPLETED_GROUP » dans SQL Server 2019 et SQL Database Managed Instance.|
 |Prise en charge de SQL Server 2019|SMO : Ajout de la prise en charge pour l’incorporation (inlining) des fonctions UDF.|
 |Prise en charge de SQL Server 2019|GraphDB : Ajout d’un indicateur dans le plan d’exécution de requêtes pour Graph TC Sequence.|
 |Prise en charge de SQL Server 2019|Always Encrypted : ajout de la prise en charge d’AEv2/des enclaves.|
@@ -542,9 +545,9 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Intégration d’Azure Data Studio|Ajout d’un élément de menu pour démarrer/télécharger Azure Data Studio.|
 |Intégration d’Azure Data Studio|Ajout de l’élément de menu « Démarrer Azure Data Studio » à l’Explorateur d’objets.|
 |Intégration d’Azure Data Studio|Après un clic droit sur un nœud de base de données dans l’Explorateur d’objets, des menus contextuels s’affichent pour l’utilisateur afin d’exécuter une requête ou créer un nouveau notebook dans Azure Data Studio.|
-|Prise en charge d’Azure SQL| Les propriétés de base de données SLO/Edition/MaxSize acceptent désormais les noms personnalisés, ce qui facilite la prise en charge des futures éditions des bases de données Azure SQL.|
+|Prise en charge d’Azure SQL| Les propriétés de base de données SLO/Edition/MaxSize acceptent désormais les noms personnalisés, ce qui facilite la prise en charge des futures éditions d’Azure SQL Database.|
 |Prise en charge d’Azure SQL| Ajout de la prise en charge des références SKU vCore (Usage général et Critique pour l’entreprise) : Gen4_24 et Gen5 en intégralité.|
-|Instance gérée d'Azure SQL|Ajout de « connexions AAD » comme nouveau type de connexion dans SMO et SSMS lors d’une connexion à une instance managée Azure SQL.|
+|Azure SQL Managed Instance|Ajout de « connexions AAD » comme nouveau type de connexion dans SMO et SSMS lors d’une connexion à Azure SQL Managed Instance.|
 |Always On|Rehachage du temps de récupération estimé (RTO) et de la perte de données estimée (RPO) dans le tableau de bord Always On de SSMS. Consultez la documentation mise à jour à l’adresse [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| La case à cocher Activer Always Encrypted sous le nouvel onglet Always Encrypted de la boîte de dialogue Se connecter au serveur offre désormais un moyen simple d’activer/de désactiver Always Encrypted pour une connexion de base de données.|
 |Always Encrypted avec enclaves sécurisées| Plusieurs améliorations ont été apportées pour prendre en charge Always Encrypted avec enclaves sécurisées dans SQL Server 2019 :  Champ de texte permettant de spécifier l’URL d’attestation d’enclave dans la boîte de dialogue Se connecter au serveur (sous le nouvel onglet Always Encrypted).  Nouvelle case à cocher dans la boîte de dialogue Nouvelle clé principale de colonne permettant d’indiquer si une nouvelle clé principale de colonne doit autoriser les calculs d’enclave.  D’autres boîtes de dialogue de gestion de clés Always Encrypted exposent désormais des informations indiquant sur quelles clés principales de colonne les calculs d’enclave sont autorisés.|
@@ -557,8 +560,8 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Assistant Application de la couche Données|Ajout de la prise en charge de l’importation/exportation de l’application de la couche Données avec des tables de graphe.|
 |Assistant Importation d’un fichier plat|Ajout d’une logique pour notifier l’utilisateur que l’importation peut avoir abouti à un renommage des colonnes.|
 |Integration Services (SSIS)|Les clients peuvent désormais planifier des packages SSIS sur les runtimes d’intégration Azure-SSIS qui se trouvent dans le cloud Azure Government.|
-|Integration Services (SSIS)|Quand vous utilisez SQL Agent d’Azure SQL Managed Instance par le biais de SSMS, vous pouvez configurer les paramètres et le Gestionnaire des connexions à l’étape de travail de l’agent SSIS.|
-|Integration Services (SSIS)|Quand vous vous connectez à Azure SQL Database/Managed Instance, vous pouvez le faire avec la base de données initiale *par défaut*.|
+|Integration Services (SSIS)|Quand vous utilisez SQL Agent d’Azure SQL Managed Instance par SSMS, vous pouvez configurer les paramètres et le Gestionnaire des connexions à l’étape de travail de l’agent SSIS.|
+|Integration Services (SSIS)|Quand vous vous connectez à Azure SQL Database/Azure SQL Managed Instance, vous pouvez le faire avec la base de données initiale *par défaut*.|
 |Integration Services (SSIS)|Ajout d’un nouvel élément d’entrée **Essayer SSIS dans Azure Data Factory** sous le nœud « Catalogues Integration Services », utilisable pour lancer l’« Assistant Création d’Integration Runtime » et créer rapidement « Azure-SSIS Integration Runtime ».
 |Integration Services (SSIS)|Ajout du bouton **Créer SSIS IR** dans l’Assistant Création de catalogue, utilisable pour lancer l’Assistant Création d’Integration Runtime et créer rapidement Azure-SSIS Integration Runtime.|
 |Integration Services (SSIS)|ISDeploymentWizard prend désormais en charge l’authentification SQL, l’authentification intégrée à Azure Active Directory et l’authentification par mot de passe Azure Active Directory en mode ligne de commande.|
@@ -585,7 +588,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |SMO|Ajout de la prise en charge de la suppression en cascade aux « contraintes d’arête » dans SMO et SSMS.|
 |SMO|Ajout de la prise en charge des autorisations de « lecture/écriture » pour la classification de données.|
 |Évaluation des vulnérabilités| Activation du menu de tâches Évaluation des vulnérabilités sur Azure SQL DW.|
-|Évaluation des vulnérabilités|Changement de l’ensemble des règles d’évaluation des vulnérabilités exécutées sur des serveurs Azure SQL Managed Instance, pour que les résultats d’analyse de l’évaluation des vulnérabilités soient cohérents avec ceux d’Azure SQL Database.|
+|Évaluation des vulnérabilités|Changement de l’ensemble des règles d’évaluation des vulnérabilités exécutées sur Azure SQL Managed Instance, pour que les résultats d’analyse de l’évaluation des vulnérabilités soient cohérents avec ceux d’Azure SQL Database.|
 |Évaluation des vulnérabilités| L’évaluation des vulnérabilités prend désormais en charge Azure SQL DW.|
 |Évaluation des vulnérabilités|Ajout d’une nouvelle fonctionnalité d’exportation permettant d’exporter les résultats d’analyse de l’évaluation des vulnérabilités dans Excel.|
 |Observateur XEvent|Dans l’observateur XEvent, activation d’une fenêtre de plan d’exécution de requêtes pour plus d’événements XEvent.|
@@ -596,7 +599,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | :-------| :------|
 |Se bloque et gèle|Correction d’une source courante d’incidents SSMS liés aux objets GDI.|
 |Se bloque et gèle|Correction d’une source courante de blocages et de performances médiocres quand « Générer un script en tant que Créer/Mettre à jour/Supprimer » est sélectionné (les objets SMO ne sont plus récupérés inutilement).|
-|Se bloque et gèle|Correction d’un problème dans lequel le système cesse de répondre lors de la connexion à une base de données Azure SQL DB avec MFA quand les traces ADAL sont activées.|
+|Se bloque et gèle|Correction d’un problème dans lequel le système cesse de répondre lors de la connexion à une base de données Azure SQL Database avec MFA quand les traces ADAL sont activées.|
 |Se bloque et gèle|Correction d’un problème dans lequel le système cessait de répondre (ou semblait ne plus répondre) pendant l’appel aux Statistiques des requêtes en direct à partir du Moniteur d’activité (le problème se manifestait quand l’authentification SQL Server était utilisée sans que « Persist Security Info » soit défini).|
 |Se bloque et gèle|Correction d’un problème dans lequel le système cessait de répondre quand l’utilisateur sélectionnait « Rapports » dans l’Explorateur d’objets avec des connexions à latence élevée ou en cas de non-accessibilité temporaire des ressources.|
 |Se bloque et gèle|Correction d’un plantage dans SSMS lié à l’utilisation du serveur de gestion centralisée et des serveurs Azure SQL. Pour plus d’informations, consultez [SSMS 17.5 application error + crash when using Central Management Server](https://feedback.azure.com/forums/908035/suggestions/33374884) (Erreur d’application SSMS et plantage lié à l’utilisation du serveur de gestion centralisée).|
@@ -619,25 +622,25 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Azure SQL - Prise en charge générale|Résolution des problèmes dans un contrôle commun de l’interface utilisateur Azure qui empêchait l’utilisateur d’afficher des abonnements Azure (au-delà de 50). Par ailleurs, le tri a été modifié pour porter sur le nom plutôt que sur l’ID d’abonnement. L’utilisateur pouvait rencontrer ce problème quand il essayait de restaurer une sauvegarde à partir d’une URL, par exemple.|
 |Azure SQL - Prise en charge générale|Correction d’un problème dans un contrôle commun de l’interface utilisateur Azure à l’occasion de l’énumération des abonnements qui pouvait générer une erreur « L’index était hors limites. Il ne doit pas être négatif et sa taille doit être inférieure à celle de la collection » quand l’utilisateur ne disposait pas d’abonnements dans certains locataires. L’utilisateur pouvait rencontrer ce problème quand il essayait de restaurer une sauvegarde à partir d’une URL, par exemple.|
 |Azure SQL - Prise en charge générale|Correction du problème selon lequel les objectifs de niveau de service étaient codés en dur, ce qui compliquait la prise en charge des nouveaux objectifs Azure SQL par SSMS. Désormais, les utilisateurs peuvent se connecter à Azure et autoriser SSMS à récupérer toutes les données SLO applicables (Édition et Taille maximale).|
-|Prise en charge d’Azure SQL Database Managed Instance|Amélioration/perfectionnement de la prise en charge des instances managées : désactivation des options non prises en charge dans l’interface utilisateur et correction de l’option Afficher les journaux d’audit pour gérer la cible d’audit d’URL.|
-|Prise en charge d’Azure SQL Database Managed Instance|L’Assistant « Génération et publication de scripts » génère un script pour les clauses CREATE DATABASE non prises en charge.|
-|Prise en charge d’Azure SQL Database Managed Instance|Active les Statistiques des requêtes en direct pour les instances managées.|
-|Prise en charge d’Azure SQL Database Managed Instance|Propriétés de la base de données -> Fichiers générait un script incorrect pour ALTER DB ADD FILE.|
-|Prise en charge d’Azure SQL Database Managed Instance|Correction de la régression au niveau du planificateur de l’Agent SQL qui choisissait la planification ONIDLE même quand un autre type de planification était choisi.|
-|Prise en charge d’Azure SQL Database Managed Instance|Ajustement de MAXTRANSFERRATE, MAXBLOCKSIZE pour la création de sauvegardes dans Stockage Azure.|
-|Prise en charge d’Azure SQL Database Managed Instance|Correction d’un problème lié à la génération d’un script pour la sauvegarde de la fin du journal avant l’opération RESTORE (cela n’est pas pris en charge par CL).|
-|Prise en charge d’Azure SQL Database Managed Instance|Correction d’un problème lié à l’Assistant Création d’une base de données qui ne générait pas de script correct pour l’instruction CREATE DATABASE.|
-|Prise en charge d’Azure SQL Database Managed Instance|Traitement spécial des packages SSIS dans SSMS lors des connexions à des instances managées.|
-|Prise en charge d’Azure SQL Database Managed Instance|Correction d’un problème entraînant l’affichage d’une erreur quand le « Moniteur d’activité » était utilisé en étant connecté à des instances managées.|
-|Prise en charge d’Azure SQL Database Managed Instance|Amélioration de la prise en charge des connexions AAD (dans l’Explorateur SSMS).|
-|Prise en charge d’Azure SQL Database Managed Instance|Amélioration de la génération de script des objets de groupes de fichiers SMO.|
-|Prise en charge d’Azure SQL Database Managed Instance|Amélioration de l’interface utilisateur des informations d’identification.|
-|Prise en charge d’Azure SQL Database Managed Instance|Ajout de la prise en charge de la réplication logique.|
-|Prise en charge d’Azure SQL Database Managed Instance|Correction d’un problème à l’origine de l’échec du clic droit sur une base de données et du choix de l’option « Importer une application de la couche Données ».|
-|Prise en charge d’Azure SQL Database Managed Instance|Correction d’un problème à l’origine de l’affichage d’erreurs en cas de clic droit sur un « TempDB ».|
-|Prise en charge d’Azure SQL Database Managed Instance|Correction d’un problème lié à l’écriture de scripts pour l’instruction ALTER DB ADD FILE dans SMO, à l’origine de la génération d’un script T-SQL vide.|
-|Prise en charge d’Azure SQL Database Managed Instance|Amélioration de l’affichage des propriétés spécifiques au serveur des instances managées (génération de matériel, niveau de service, stockage utilisé et réservé).|
-|Prise en charge d’Azure SQL Database Managed Instance|Correction d’un problème lié à l’écriture de scripts d’une base de données (« Script comme créer... ») qui ne créait pas de script sur les groupes de fichiers et fichiers supplémentaires. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799). |
+|Prise en charge d’Azure SQL Managed Instance|Amélioration/perfectionnement de la prise en charge des instances managées : désactivation des options non prises en charge dans l’interface utilisateur et correction de l’option Afficher les journaux d’audit pour gérer la cible d’audit d’URL.|
+|Prise en charge d’Azure SQL Managed Instance|L’Assistant « Génération et publication de scripts » génère un script pour les clauses CREATE DATABASE non prises en charge.|
+|Prise en charge d’Azure SQL Managed Instance|Active les Statistiques des requêtes en direct pour les instances managées.|
+|Prise en charge d’Azure SQL Managed Instance|Propriétés de la base de données -> Fichiers générait un script incorrect pour ALTER DB ADD FILE.|
+|Prise en charge d’Azure SQL Managed Instance|Correction de la régression au niveau du planificateur de l’Agent SQL qui choisissait la planification ONIDLE même quand un autre type de planification était choisi.|
+|Prise en charge d’Azure SQL Managed Instance|Ajustement de MAXTRANSFERRATE, MAXBLOCKSIZE pour la création de sauvegardes dans Stockage Azure.|
+|Prise en charge d’Azure SQL Managed Instance|Correction d’un problème lié à la génération d’un script pour la sauvegarde de la fin du journal avant l’opération RESTORE (cela n’est pas pris en charge par CL).|
+|Prise en charge d’Azure SQL Managed Instance|Correction d’un problème lié à l’Assistant Création d’une base de données qui ne générait pas de script correct pour l’instruction CREATE DATABASE.|
+|Prise en charge d’Azure SQL Managed Instance|Traitement spécial des packages SSIS dans SSMS lors des connexions à des instances managées.|
+|Prise en charge d’Azure SQL Managed Instance|Correction d’un problème entraînant l’affichage d’une erreur quand le « Moniteur d’activité » était utilisé en étant connecté à des instances managées.|
+|Prise en charge d’Azure SQL Managed Instance|Amélioration de la prise en charge des connexions AAD (dans l’Explorateur SSMS).|
+|Prise en charge d’Azure SQL Managed Instance|Amélioration de la génération de script des objets de groupes de fichiers SMO.|
+|Prise en charge d’Azure SQL Managed Instance|Amélioration de l’interface utilisateur des informations d’identification.|
+|Prise en charge d’Azure SQL Managed Instance|Ajout de la prise en charge de la réplication logique.|
+|Prise en charge d’Azure SQL Managed Instance|Correction d’un problème à l’origine de l’échec du clic droit sur une base de données et du choix de l’option « Importer une application de la couche Données ».|
+|Prise en charge d’Azure SQL Managed Instance|Correction d’un problème à l’origine de l’affichage d’erreurs en cas de clic droit sur un « TempDB ».|
+|Prise en charge d’Azure SQL Managed Instance|Correction d’un problème lié à l’écriture de scripts pour l’instruction ALTER DB ADD FILE dans SMO, à l’origine de la génération d’un script T-SQL vide.|
+|Prise en charge d’Azure SQL Managed Instance|Amélioration de l’affichage des propriétés spécifiques au serveur des instances managées (génération de matériel, niveau de service, stockage utilisé et réservé).|
+|Prise en charge d’Azure SQL Managed Instance|Correction d’un problème lié à l’écriture de scripts d’une base de données (« Script comme créer... ») qui ne créait pas de script sur les groupes de fichiers et fichiers supplémentaires. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799). |
 |Sauvegarde/restauration/attachement/détachement de base de données|Correction d’un problème qui empêchait l’utilisateur d’attacher une base de données quand le nom de fichier physique du fichier .mdf ne correspondait pas au nom de fichier d’origine.|
 |Sauvegarde/restauration/attachement/détachement de base de données|Correction d’un problème empêchant SSMS de trouver un plan de restauration valide ou qui en trouvait un non optimal. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752). |
 |Sauvegarde/restauration/attachement/détachement de base de données|Correction d’un problème empêchant l’Assistant Attachement de base de données d’afficher les fichiers secondaires renommés. À présent, le fichier s’affiche et un commentaire le concernant est ajouté (par exemple « introuvable »). Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434). |
@@ -689,7 +692,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Scripts d’objets|Absence de génération de code T-SQL dynamique pendant la génération de scripts. Pour plus d’informations, consultez [https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391](https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391). |
 |Scripts d’objets|Omission de la syntaxe de graphe « as edge » et « as node » pendant la génération d’un script pour une table sur SQL Server 2016 et versions antérieures.|
 |Scripts d’objets|Correction d’un problème qui entraînait l’échec de la génération de scripts d’objets de base de données lors de la connexion à une base de données Azure SQL Database à l’aide d’AAD avec l’authentification multifacteur (MFA).|
-|Scripts d’objets|Correction d’un problème entraînant une erreur à la suite d’une tentative de génération d’un script pour un index spatial avec GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID sur une base de données Azure SQL.|
+|Scripts d’objets|Correction d’un problème où la tentative de générer un script pour un index spatial avec GEOMETRY_AUTO_GRID/GEOGRAPHY_AUTO_GRID sur une base de données Azure SQL Database générait une erreur.|
 |Scripts d’objets|Correction d’un problème à l’origine du ciblage permanent d’une instance SQL Server locale par les scripts de base de données (d’une base de données Azure SQL), même si les paramètres de script de l’Explorateur d’objets sont définis pour correspondre à la source.|
 |Scripts d’objets|Correction du problème lié à la tentative d’exécuter un script dans une table de base de données SQL DW impliquant des index cluster et non-cluster, qui générait des instructions T-SQL incorrectes.|
 |Scripts d’objets|Correction d’un problème lié à la tentative d’exécuter un script dans une table de base de données SQL DW avec des « index columnstore cluster » et des « index cluster », qui générait des instructions T-SQL incorrectes (instructions en double).|

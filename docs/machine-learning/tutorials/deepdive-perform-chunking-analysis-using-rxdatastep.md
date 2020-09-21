@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 094354c0e5039d70bac0cb4463aa5323b294a3e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1dd8b47f7a251918eb87db9a8ec2dfd9d412a10
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680021"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88179880"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Effectuer une analyse de segmentation à l’aide de rxDataStep (didacticiel SQL Server et RevoScaleR)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Il s’agit du tutoriel 12 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
@@ -91,7 +91,7 @@ Dans ce tutoriel, vous allez utiliser la fonction **rxDataStep** pour traiter le
 
     **Résultats partiels**
 
-    |      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
+    | Ligne \# |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
     | --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
     | 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
     | 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |

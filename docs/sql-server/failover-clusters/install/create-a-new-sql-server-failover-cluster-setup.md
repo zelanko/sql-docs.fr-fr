@@ -1,6 +1,6 @@
 ---
-title: Créer un cluster de basculement
-description: Cet article explique comment utiliser le programme d’installation pour installer ou mettre à niveau un cluster de basculement SQL Server ou ajouter un nœud à un cluster existant.
+title: Créer une nouvelle instance de cluster de basculement
+description: Cet article explique comment utiliser le programme d’installation pour installer ou mettre à niveau une instance de cluster de basculement Always On SQL Server ou ajouter un nœud à une instance de cluster de basculement existante.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
@@ -17,57 +17,59 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8425df35905f08b49750a2d265a260438bbbf2ef
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 03a3b84d5f21391d957ea1ae1f71286133e4d492
+ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897727"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87442380"
 ---
-# <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
+# <a name="create-a-new-always-on-failover-cluster-instance-setup"></a>Créer une nouvelle instance de cluster de basculement Always On (Installation)
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Pour installer ou mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez exécuter le programme d'installation sur chaque nœud du cluster de basculement. Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . N'exécutez pas le programme d'installation sur le nœud actif pour gérer les autres nœuds.  
+
+  Pour installer ou mettre à niveau une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez exécuter le programme d’installation sur chaque nœud du cluster de basculement Windows Server sous-jacent. Pour ajouter un nœud à une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existante, vous devez exécuter la Configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. N'exécutez pas le programme d'installation sur le nœud actif pour gérer les autres nœuds.  
   
- Selon la façon dont les nœuds sont mis en cluster, le cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré des façons suivantes :  
+ Selon la façon dont les nœuds sont mis en cluster, l’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configurée des façons suivantes :  
   
 -   Noeuds se trouvant sur le même sous-réseau ou ensemble de sous-réseaux - La dépendance de ressource d'adresse IP est définie sur AND pour ces types de configurations.  
   
--   Noeuds se trouvant sur des sous-réseaux différents - La dépendance de ressource d'adresse IP est définie sur OR et cette configuration est appelée une configuration du cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Clustering de sous-réseaux multiples SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
+-   Noeuds se trouvant sur des sous-réseaux différents : la dépendance de ressource d'adresse IP est définie sur OR et cette configuration est appelée une configuration d’instance de cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Clustering de sous-réseaux multiples SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
  Les options suivantes sont disponibles pour l'installation d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
- **Option 1 : Installation Intégration avec ajout de nœud**  
+ **Option 1 : Installation Intégration avec ajout de nœud**   
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation intégrée de cluster de basculement comprend les étapes suivantes :  
   
--   Créez et configurez une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à un seul nœud. Une fois la configuration du nœud réussie, vous disposez d'une instance de cluster de basculement entièrement fonctionnelle. Celle-ci n'offre pas une haute disponibilité pour l'instant, car il n'y a qu'un seul nœud dans le cluster de basculement.  
+-   Créez et configurez une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à un seul nœud. Une fois la configuration du nœud réussie, vous disposez d'une instance de cluster de basculement entièrement fonctionnelle. Celle-ci n'offre pas une haute disponibilité pour l'instant, car il n'y a qu'un seul nœud dans l’instance de cluster de basculement.  
   
--   Sur chaque nœud à ajouter au cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez le programme d'installation en utilisant la fonctionnalité d'ajout de nœud pour ajouter le nœud correspondant.  
+-   Sur chaque nœud à ajouter à l’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , exécutez la Configuration en utilisant la fonctionnalité d'ajout de nœud pour ajouter ce nœud.  
   
-    -   Si le nœud que vous ajoutez a des sous-réseaux supplémentaires ou différents, le programme d'installation vous permet de spécifier des adresses IP supplémentaires. Si le nœud que vous ajoutez se trouve sur un sous-réseau différent, vous devez également confirmer la modification de dépendance de ressource d'adresse IP sur OR. Pour plus d’informations sur les différents scénarios possibles pendant les opérations d’ajout de nœuds, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+    -   Si le nœud que vous ajoutez a des sous-réseaux supplémentaires ou différents, le programme d'installation vous permet de spécifier des adresses IP supplémentaires. Si le nœud que vous ajoutez se trouve sur un sous-réseau différent, vous devez également confirmer la modification de dépendance de ressource d'adresse IP sur OR. Pour plus d’informations sur les différents scénarios possibles pendant les opérations d’ajout de nœuds, consultez [Ajouter ou supprimer des nœuds dans une instance de cluster de basculement Always On &#40;Configuration&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  **Option n°2 : Installation avancée/entreprise**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] L’installation avancée/entreprise de cluster de basculement comprend les étapes suivantes :  
   
--   Sur chaque nœud potentiellement propriétaire du nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous créez, suivez les étapes de préparation de l’installation du cluster de basculement dans la [section Préparer](#prepare). Après avoir effectué la préparation du cluster de basculement sur un nœud, le programme d'installation crée le fichier Configuration.ini qui répertorie tous les paramètres que vous spécifiez. Sur les autres nœuds à préparer, au lieu de suivre ces étapes, vous pouvez fournir le fichier Configuration.ini généré automatiquement à partir du premier nœud comme entrée pour la ligne de commande du programme d'installation. Pour plus d’informations, consultez [Installer SQL Server 2016 à l’aide d’un fichier de configuration](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md). Cette étape prépare les nœuds pour le clustering ; toutefois, aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'est opérationnelle à la fin de cette étape.  
+-   Sur chaque nœud potentiellement propriétaire du nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous créez, suivez les étapes de préparation de l’installation du cluster de basculement dans la [section Préparer](#prepare). Après avoir effectué la préparation du cluster de basculement sur un nœud, le programme d'installation crée le fichier Configuration.ini qui répertorie tous les paramètres que vous spécifiez. Sur les autres nœuds à préparer, au lieu de suivre ces étapes, vous pouvez fournir le fichier Configuration.ini généré automatiquement à partir du premier nœud comme entrée pour la ligne de commande de la Configuration. Pour plus d’informations, consultez [Installer SQL Server 2016 à l’aide d’un fichier de configuration](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md). Cette étape prépare les nœuds pour le clustering ; toutefois, aucune instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'est opérationnelle à la fin de cette étape.  
   
--   Une fois les nœuds préparés pour le clustering, exécutez l'installation sur l'un de ces nœuds. Cette étape permet de configurer et de finaliser l'instance de cluster de basculement. À la fin de cette étape, vous disposerez d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opérationnelle et tous les nœuds préparés précédemment pour cette instance seront des propriétaires potentiels du nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] créé.  
+-   Une fois les nœuds préparés pour le clustering, exécutez l'installation sur l'un de ces nœuds. Cette étape permet de configurer et de finaliser l'instance de cluster de basculement. À la fin de cette étape, vous disposerez d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] opérationnelle et tous les nœuds préparés précédemment pour cette instance seront des propriétaires potentiels de l’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nouvellement créée.  
   
-     Si vous mettez des nœuds en cluster sur plusieurs sous-réseaux, le programme d'installation détectera l'union de tous les sous-réseaux à travers tous les nœuds ayant l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] préparée. Vous serez en mesure de spécifier plusieurs adresses IP pour les sous-réseaux. Chaque nœud préparé doit être le propriétaire possible d'au moins une adresse IP.  
+     Si vous créez une instance de cluster de basculement qui s’étend sur plusieurs sous-réseaux, la Configuration détecte l’union de tous les sous-réseaux sur tous les nœuds ayant une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] préparée. Vous serez en mesure de spécifier plusieurs adresses IP pour les sous-réseaux. Chaque nœud préparé doit être le propriétaire possible d'au moins une adresse IP.  
   
      Si chacune des adresses IP spécifiées pour les sous-réseaux est prise en charge sur tous les nœuds préparés, la dépendance est définie sur AND.  
   
      Si aucune des adresses IP spécifiées pour les sous-réseaux n'est prise en charge sur tous les nœuds préparés, la dépendance est définie sur OR. Pour plus d’informations, consultez [Clustering de sous-réseaux multiples SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
     > [!NOTE]  
-    >  La création du cluster de basculement requiert l'existence du cluster Windows sous-jacent. Si le cluster de basculement Windows n'existe pas, le programme d'installation signale une erreur et s'arrête.  
+    >  Le cluster de basculement complet requiert l'existence du cluster de basculement Windows sous-jacent. Si le cluster de basculement Windows Server n'existe pas, la Configuration signale une erreur et s'arrête.  
   
- Pour plus d’informations sur l’ajout ou la suppression de nœuds dans une instance de cluster de basculement existante, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ Pour plus d’informations sur l’ajout ou la suppression de nœuds dans une instance de cluster de basculement existante, consultez [Ajouter ou supprimer des nœuds dans une instance de cluster de basculement Always On &#40;Configuration&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  Pour plus d’informations sur une installation distante, consultez [Mises à niveau de la version et de l’édition prises en charge](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
- Pour plus d’informations sur l’installation d’ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans un cluster de basculement Windows, consultez [Procédure : mettre en cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
+ Pour plus d’informations sur l’installation de[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans un WSFC, consultez [Comment mettre en cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548).  
   
 ## <a name="prerequisites"></a>Prérequis  
  Avant de commencer, consultez les rubriques suivantes dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -81,9 +83,9 @@ ms.locfileid: "85897727"
 -   [Clustering de sous-réseaux multiples SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  
   
 > [!NOTE]  
->  Souvenez-vous de l'emplacement du lecteur partagé dans l'Administrateur de cluster avant d'exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous aurez besoin de ces informations pour créer un cluster de basculement.  
+>  Souvenez-vous de l'emplacement du lecteur partagé dans l'Administrateur de cluster avant d'exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous aurez besoin de ces informations pour créer une nouvelle instance de cluster de basculement.  
   
-### <a name="to-install-a-new-ssnoversion-failover-cluster-using-integrated-install-with-add-node"></a>Pour installer un nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant l'installation intégrée avec ajout de nœud.  
+### <a name="to-install-a-new-ssnoversion-failover-cluster-instance-using-integrated-install-with-add-node"></a>Pour installer une nouvelle instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en utilisant l'installation intégrée avec ajout de nœud.  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe. Pour plus d’informations sur l’installation des composants requis, consultez [Avant l’installation du clustering de basculement](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
@@ -124,10 +126,10 @@ ms.locfileid: "85897727"
   
 11. Dans la page Configuration de l'instance, spécifiez s'il faut installer une instance par défaut ou une instance nommée. Pour plus d'informations, consultez [Instance Configuration](../../install/instance-configuration.md).  
   
-     **Nom réseau [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  : indiquez un nom réseau pour le nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il s'agit du nom qui est utilisé pour identifier votre cluster de basculement sur le réseau.  
+     **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Nom réseau** : indiquez un nom réseau pour la nouvelle instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il s'agit du nom qui est utilisé pour identifier votre instance de cluster de basculement sur le réseau.  
   
     > [!NOTE]  
-    >  Il s'agit du nom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtuel dans les versions antérieures des clusters de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    >  Il est connu comme le nom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtuel des versions antérieures des instances de clusters de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
      **ID d’instance** : Par défaut, le nom de l’instance est utilisé comme ID d’instance. Il permet d'identifier les répertoires d'installation et les clés de Registre de votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Tel est le cas pour les instances par défaut et les instances nommées. Pour une instance par défaut, le nom de l'instance et l'ID d'instance sont MSSQLSERVER. Pour utiliser un ID d’instance non défini par défaut, cochez la case **ID d’instance** et entrez une valeur.  
   
@@ -138,13 +140,13 @@ ms.locfileid: "85897727"
   
      **Fonctionnalités et instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] détectées sur cet ordinateur** : la grille affiche les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui se trouvent sur l’ordinateur où le programme d’installation s’exécute. Si une instance par défaut est déjà installée sur l'ordinateur, vous devez installer une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cliquez sur **Suivant** pour continuer.  
   
-12. Utilisez la page Groupe de ressources de cluster pour spécifier le nom du groupe de ressources de cluster où les ressources du serveur virtuel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seront hébergées. Pour spécifier le nom du groupe de ressources de cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous avez deux options :  
+12. Utilisez la page Groupe de ressources de cluster pour spécifier le nom ou rôle du groupe de ressources de cluster où les ressources du serveur virtuel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seront hébergées. Pour spécifier le nom du groupe de ressources de cluster [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous avez deux options :  
   
     -   Utilisez la zone de liste déroulante pour spécifier un groupe existant à utiliser.  
   
     -   Tapez le nom d'un groupe à créer. Notez que le nom « Stockage disponible » n'est pas un nom de groupe valide.  
   
-13. Dans la page Sélection du disque du cluster, sélectionnez la ressource disque de cluster partagée pour votre cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le disque de cluster est l'emplacement où les données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seront placées. Plusieurs disques peuvent être spécifiés. La grille des disques partagés disponibles affiche une liste de disques disponibles, indique si chacun d'eux est qualifié en tant que disque partagé et fournit une description de chaque ressource de disque. Cliquez sur **Suivant** pour continuer.  
+13. Dans la page Sélection du disque du cluster, sélectionnez la ressource disque de cluster partagée pour votre instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le disque de cluster est l'emplacement où les données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seront placées. Plusieurs disques peuvent être spécifiés. La grille des disques partagés disponibles affiche une liste de disques disponibles, indique si chacun d'eux est qualifié en tant que disque partagé et fournit une description de chaque ressource de disque. Cliquez sur **Suivant** pour continuer.  
   
     > [!NOTE]  
     >  Le premier lecteur est utilisé comme lecteur par défaut pour toutes les bases de données, mais peut être changé sur les pages de configuration [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ou [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
@@ -192,7 +194,7 @@ ms.locfileid: "85897727"
 20. Utilisez la page Configuration du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - Répertoires de données pour spécifier les répertoires d'installation non définis par défaut. Pour installer sur les répertoires par défaut, cliquez sur **Suivant**.  
   
     > [!IMPORTANT]  
-    >  Si vous spécifiez des répertoires d'installation autres que les répertoires par défaut, assurez-vous que les dossiers d'installation sont uniques à cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Aucun des répertoires dans cette boîte de dialogue ne doit être partagé avec des répertoires d'autres instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les répertoires de données doivent se trouver sur le disque de cluster partagé pour le cluster de basculement.  
+    >  Si vous spécifiez des répertoires d'installation autres que les répertoires par défaut, assurez-vous que les dossiers d'installation sont uniques à cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Aucun des répertoires dans cette boîte de dialogue ne doit être partagé avec des répertoires d'autres instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les répertoires de données doivent se trouver sur le disque de cluster partagé pour l’instance de cluster de basculement.  
   
     > [!NOTE]  
     >  Pour spécifier un serveur de fichiers SMB comme répertoire de données, définissez le **répertoire de données racine par défaut** sur le partage de fichiers au format \\\NomServeur\NomPartage\\...  
@@ -206,9 +208,9 @@ ms.locfileid: "85897727"
 23. Utilisez la page Configuration du [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Répertoires de données pour spécifier les répertoires d'installation non définis par défaut. Pour installer sur les répertoires par défaut, cliquez sur **Suivant**.  
   
     > [!IMPORTANT]  
-    >  Si vous spécifiez des répertoires d'installation autres que les répertoires par défaut, assurez-vous que les dossiers d'installation sont uniques à cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Aucun des répertoires dans cette boîte de dialogue ne doit être partagé avec des répertoires d'autres instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les répertoires de données doivent se trouver sur le disque de cluster partagé pour le cluster de basculement.  
+    >  Si vous spécifiez des répertoires d'installation autres que les répertoires par défaut, assurez-vous que les dossiers d'installation sont uniques à cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Aucun des répertoires dans cette boîte de dialogue ne doit être partagé avec des répertoires d'autres instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les répertoires de données doivent se trouver sur le disque de cluster partagé pour l’instance de cluster de basculement.  
    
-24. Utilisez la page Configuration de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour spécifier le type d'installation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] à créer. Pour l'installation d'un cluster de basculement, cette option est définie à Installation [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non configurée. Vous devez configurer les services [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] une fois l'installation terminée.  
+24. Utilisez la page Configuration de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour spécifier le type d'installation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] à créer. Pour les installations d'une instance de cluster de basculement, cette option est définie sur l’installation [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non configurée. Vous devez configurer les services [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] une fois l'installation terminée.  
   
  
 25. L'Outil d'analyse de configuration système exécute un autre ensemble de règles pour valider la configuration avec les fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous avez spécifiées.  
@@ -221,16 +223,16 @@ ms.locfileid: "85897727"
   
 29. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d’informations sur les fichiers journaux d’installation, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-30. Pour ajouter des nœuds au cluster de basculement à un seul nœud que vous venez de créer, exécutez le programme d'installation sur chacun des nœuds supplémentaires et suivez les étapes pour l'opération AddNode. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+30. Pour ajouter des nœuds au cluster de basculement à un seul nœud que vous venez de créer, exécutez le programme d'installation sur chacun des nœuds supplémentaires et suivez les étapes pour l'opération AddNode. Pour plus d’informations, consultez [Ajouter ou supprimer des nœuds dans une instance de cluster de basculement ](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md) &#40;Configuration&#41; Always On.  
   
     > [!NOTE]  
     >  Si vous ajoutez plusieurs nœuds, vous pouvez utiliser le fichier de configuration pour déployer les installations. Pour plus d’informations, consultez [Installer SQL Server 2016 à l’aide d’un fichier de configuration](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
     >   
-    >  L'édition [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous installez doit être la même sur tous les nœuds d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Lorsque vous ajoutez un nouveau nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez spécifier que l'édition est identique à celle du cluster de basculement existant.  
+    >  L'édition [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que vous installez doit être la même sur tous les nœuds d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Lorsque vous ajoutez un nouveau nœud à une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existante, vous devez être certain de spécifier que l'édition est identique à celle de l’instance de cluster de basculement existante.  
   
 ##  <a name="prepare"></a><a name="prepare"></a> Préparation  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Étape 1 de l’installation avancée/entreprise sur un cluster de basculement : Préparation  
+#### <a name="advancedenterprise-failover-cluster-instance-install-step-1-prepare"></a>Étape 1 de l’installation avancée/entreprise sur une instance de cluster de basculement : Préparation  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe. Pour plus d’informations sur l’installation des composants requis, consultez [Avant l’installation du clustering de basculement](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md). Il se peut que vous deviez installer les composants requis si ceux-ci ne sont pas déjà présents sur l'ordinateur.  
   
@@ -251,7 +253,7 @@ ms.locfileid: "85897727"
 8.  Dans la page Clé du produit, cliquez pour indiquer si vous installez une édition gratuite de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou si vous disposez d'une clé PID pour une version de production du produit. Pour plus d’informations, consultez [Éditions et composants de SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
     > [!NOTE]  
-    >  Vous devez spécifier la même clé de produit sur tous les nœuds que vous préparez pour le même cluster de basculement.  
+    >  Vous devez spécifier la même clé de produit sur tous les nœuds que vous préparez pour la même instance de cluster de basculement.  
   
 9. Dans la page Termes du contrat de licence, prenez connaissance du contrat de licence, puis activez la case à cocher indiquant que vous en acceptez les termes et conditions. Pour aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez également activer l'option d'utilisation des fonctionnalités et envoyer des rapports à [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Cliquez sur **Suivant** pour continuer. Pour mettre fin au programme d'installation, cliquez sur **Annuler**.  
   
@@ -272,7 +274,7 @@ ms.locfileid: "85897727"
     >  Les instances autonomes classiques de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], qu’il s’agisse d’instances par défaut ou d’instances nommées, n’utilisent pas de valeur non définie par défaut pour la zone de texte **ID d’instance** .  
   
     > [!IMPORTANT]  
-    >  Utilisez le même ID d'instance pour tous les nœuds préparés pour le cluster de basculement  
+    >  Utilisez le même ID d'instance pour tous les nœuds préparés pour l’instance de cluster de basculement  
   
      **Répertoire racine de l’instance** : par défaut, le répertoire racine de l’instance est C:\Program Files\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\. Pour spécifier un répertoire racine non défini par défaut, utilisez le champ fourni ou cliquez sur le bouton de sélection afin de rechercher un dossier d'installation.  
   
@@ -304,7 +306,7 @@ ms.locfileid: "85897727"
   
 17. Utilisez la page **Configuration du serveur - Filestream** pour activer FILESTREAM pour votre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  Cliquez sur **Suivant** pour continuer.  
   
-18. Utilisez la page Configuration de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour spécifier le type d'installation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] à créer. Pour l'installation d'un cluster de basculement, cette option est définie à Installation [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non configurée. Vous devez configurer les services [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] une fois l'installation terminée.  
+18. Utilisez la page Configuration de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour spécifier le type d'installation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] à créer. Pour les installations d'une instance de cluster de basculement, cette option est définie sur l’installation [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non configurée. Vous devez configurer les services [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] une fois l'installation terminée.  
    
 19. Dans la page Création de rapports d'erreurs, spécifiez les informations que vous souhaitez envoyer à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] afin d'aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les options de création de rapports d'erreurs sont activées par défaut.  
   
@@ -318,11 +320,11 @@ ms.locfileid: "85897727"
   
 23. Redémarrez l'ordinateur si vous êtes invité à le faire. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d’informations sur les fichiers journaux d’installation, consultez [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-24. Répétez les étapes précédentes pour préparer les autres nœuds pour le cluster de basculement. Vous pouvez également utiliser le fichier de configuration généré automatiquement pour exécuter la préparation sur les autres nœuds. Pour plus d’informations, consultez [Installer SQL Server 2016 à l’aide d’un fichier de configuration](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
+24. Répétez les étapes précédentes pour préparer les autres nœuds pour l’instance de cluster de basculement. Vous pouvez également utiliser le fichier de configuration généré automatiquement pour exécuter la préparation sur les autres nœuds. Pour plus d’informations, consultez [Installer SQL Server 2016 à l’aide d’un fichier de configuration](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  
   
 ## <a name="complete"></a>Terminé  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Étape 2 de l’installation avancée/entreprise sur un cluster de basculement : Terminé  
+#### <a name="advancedenterprise-failover-cluster-instance-install-step-2-complete"></a>Étape 2 de l’installation avancée/entreprise sur une instance de cluster de basculement : Terminé  
   
 1.  Une fois tous les nœuds préparés de la façon décrite dans [l’étape de préparation](#prepare), lancez le programme d’installation sur l’un des nœuds préparés, de préférence sur le nœud propriétaire du disque partagé. Dans la page **Avancé** du Centre d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Création de cluster avancée**.  
   
@@ -336,10 +338,10 @@ ms.locfileid: "85897727"
   
      Pour continuer, cliquez sur **Suivant**.  
   
-6.  Utilisez la page Configuration du nœud de clusters pour sélectionner le nom de l'instance préparée pour le clustering et spécifier le nom réseau pour le nouveau cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il s'agit du nom qui est utilisé pour identifier votre cluster de basculement sur le réseau.  
+6.  Utilisez la page Configuration du nœud de clusters pour sélectionner le nom de l'instance préparée pour le clustering et spécifier le nom réseau pour la nouvelle instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il s'agit du nom qui est utilisé pour identifier votre instance de cluster de basculement sur le réseau.  
   
     > [!NOTE]  
-    >  Il s'agit du nom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtuel dans les versions antérieures des clusters de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+    >  Il est connu comme le nom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] virtuel des versions antérieures des instances de clusters de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 7.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le programme d’installation exécute un autre ensemble de règles qui sont basées sur les fonctionnalités sélectionnées pour valider votre configuration.  
   
@@ -349,14 +351,14 @@ ms.locfileid: "85897727"
   
     -   Tapez le nom d'un groupe à créer. Notez que le nom « Stockage disponible » n'est pas un nom de groupe valide.  
   
-9. Dans la page Sélection du disque du cluster, sélectionnez la ressource disque de cluster partagée pour votre cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Le disque de cluster est l'emplacement où les données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seront placées. Plusieurs disques peuvent être spécifiés. La grille des disques partagés disponibles affiche une liste de disques disponibles, indique si chacun d'eux est qualifié en tant que disque partagé et fournit une description de chaque ressource de disque. Cliquez sur **Suivant** pour continuer.  
+9. Dans la page Sélection du disque du cluster, sélectionnez la ressource disque de cluster partagée pour votre instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le disque de cluster est l'emplacement où les données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] seront placées. Plusieurs disques peuvent être spécifiés. La grille des disques partagés disponibles affiche une liste de disques disponibles, indique si chacun d'eux est qualifié en tant que disque partagé et fournit une description de chaque ressource de disque. Cliquez sur **Suivant** pour continuer.  
   
     > [!NOTE]  
     >  Le premier lecteur est utilisé comme lecteur par défaut pour toutes les bases de données, mais peut être changé sur les pages de configuration [!INCLUDE[ssDE](../../../includes/ssde-md.md)] ou [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 10. Dans la page Configuration du réseau de cluster, spécifiez les ressources réseau de votre instance de cluster de basculement :  
   
-    -   **Paramètres réseau** : spécifiez le type IP et l’adresse IP pour tous les nœuds et sous-réseaux de votre instance de cluster de basculement. Vous pouvez spécifier plusieurs adresses IP pour un cluster de basculement de sous-réseaux multiples, mais une seule adresse IP par sous-réseau est prise en charge. Chaque nœud préparé doit être le propriétaire d'au moins une adresse IP. Si vous avez plusieurs sous-réseaux dans votre cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous serez invité à définir la dépendance de ressource d'adresse IP sur OR.  
+    -   **Paramètres réseau** : spécifiez le type IP et l’adresse IP pour tous les nœuds et sous-réseaux de votre instance de cluster de basculement. Vous pouvez spécifier plusieurs adresses IP pour une instance de cluster de basculement de sous-réseaux multiples, mais une seule adresse IP par sous-réseau est prise en charge. Chaque nœud préparé doit être le propriétaire d'au moins une adresse IP. Si vous avez plusieurs sous-réseaux dans votre instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous serez invité à définir la dépendance de ressource d'adresse IP sur OR.  
   
      Cliquez sur **Suivant** pour continuer.  
   
@@ -375,7 +377,7 @@ ms.locfileid: "85897727"
 13. Utilisez la page Configuration du [!INCLUDE[ssDE](../../../includes/ssde-md.md)] - Répertoires de données pour spécifier les répertoires d'installation non définis par défaut. Pour installer sur les répertoires par défaut, cliquez sur **Suivant**.  
   
     > [!IMPORTANT]  
-    >  Si vous spécifiez des répertoires d'installation autres que les répertoires par défaut, assurez-vous que les dossiers d'installation sont uniques à cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Aucun des répertoires dans cette boîte de dialogue ne doit être partagé avec des répertoires d'autres instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les répertoires de données doivent se trouver sur le disque de cluster partagé pour le cluster de basculement.  
+    >  Si vous spécifiez des répertoires d'installation autres que les répertoires par défaut, assurez-vous que les dossiers d'installation sont uniques à cette instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Aucun des répertoires dans cette boîte de dialogue ne doit être partagé avec des répertoires d'autres instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les répertoires de données doivent se trouver sur le disque de cluster partagé pour l’instance de cluster de basculement.  
   
   
 14. Utilisez la page Configuration d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] - Attribution de privilèges d'accès aux comptes pour spécifier les utilisateurs ou comptes qui ont les autorisations d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Vous devez spécifier au moins un administrateur système pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Pour ajouter le compte sous lequel le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute, cliquez sur **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, cliquez sur **Ajouter** ou **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposeront des privilèges d'administrateur pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -394,7 +396,7 @@ ms.locfileid: "85897727"
   
 18. Au cours de l'installation, la page Progression de l'installation fournit des informations d'état de sorte que vous puissiez contrôler la progression de l'installation au fil de l'exécution du programme d'installation.  
   
-19. Après l'installation, la page **Terminé** fournit un lien vers le fichier journal résumé de l'installation et d'autres remarques importantes. Pour terminer le processus d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Fermer**. Avec cette procédure, tous les nœuds préparés pour le même cluster de basculement font partie du cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] terminé.  
+19. Après l'installation, la page **Terminé** fournit un lien vers le fichier journal résumé de l'installation et d'autres remarques importantes. Pour terminer le processus d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Fermer**. Avec cette procédure, tous les nœuds préparés pour la même instance de cluster de basculement font partie de l’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] terminée.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
  **Configurer votre nouvelle installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** - Pour réduire la surface d’exposition vulnérable aux attaques d’un système, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installe et active de manière sélective les services et fonctionnalités clés. Pour plus d'informations, consultez [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  

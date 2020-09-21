@@ -1,6 +1,6 @@
 ---
 title: Sessions (pilote OLE DB)
-description: Sessions dans le pilote OLE DB pour SQL Server
+description: Découvrez comment utiliser OLE DB Driver pour SQL Server pour se connecter à une base de données SQL Server. Une session représente une connexion unique à une instance de SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - OLE DB Driver for SQL Server, sessions
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: ba9d1dcfbc3ac57d9f24ba78e992443d6d7d6453
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 0187f42ab9389f18d35d4f400c2ea494a6d6dcd4
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244939"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862483"
 ---
 # <a name="sessions"></a>Sessions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

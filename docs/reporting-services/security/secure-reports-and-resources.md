@@ -1,4 +1,5 @@
 ---
+description: Sécuriser des rapports et des ressources
 title: Sécuriser des rapports et des ressources | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0dc9ee5a8bcdf2afd2ca02703eed1a6d0b782587
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570628"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88454491"
 ---
 # <a name="secure-reports-and-resources"></a>Sécuriser des rapports et des ressources
   Vous pouvez définir la sécurité pour des rapports et des ressources individuels afin de contrôler le degré d'accès dont disposent les utilisateurs à ces éléments. Par défaut, seuls les utilisateurs qui sont membres du groupe intégré **Administrateurs** peuvent exécuter les rapports, afficher les ressources, modifier les propriétés et supprimer les éléments. Tous les autres utilisateurs possèdent des attributions de rôles créées pour eux qui autorisent l'accès à un rapport ou une ressource.  
@@ -51,7 +52,7 @@ ms.locfileid: "65570628"
   
 2.  Le rapport est publié sur un serveur de rapports ou mis à disposition de telle façon que la valeur du paramètre de rapport est contrôlable par l'URL d'une page Web.  
   
-3.  Un intrus crée un lien vers la page web ou le serveur de rapports en spécifiant la valeur du paramètre sous la forme « javascript:\<script malveillant ici> » et envoie ce lien à une autre personne en vue d’une attaque par ruse.  
+3.  Un attaquant crée un lien vers la page web ou le serveur de rapports en spécifiant la valeur du paramètre sous la forme « javascript :\<malicious script here> » et envoie ce lien à une autre personne visée par une attaque par ruse.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Limitation des attaques par injection de script dans un lien hypertexte figurant dans un rapport ou un document publié  
  Les rapports peuvent contenir des liens hypertexte incorporés dans la valeur de la propriété Action sur un élément de rapport ou une partie d’un élément de rapport. Les liens hypertexte peuvent être liés aux données extraites d'une source de données externe au moment du traitement du rapport. Si un utilisateur mal intentionné modifie les données sous-jacentes, le lien hypertexte risque d'être utilisé pour écrire des exploits. Si un utilisateur clique sur le lien dans le rapport publié ou exporté, le script malveillant peut ensuite s'exécuter.  

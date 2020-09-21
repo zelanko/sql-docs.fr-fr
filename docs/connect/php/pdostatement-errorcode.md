@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::errorCode | Microsoft Docs
+title: PDOStatement::errorCode
+description: Référence API pour la fonction PDOStatement::errorCode dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4161abec-c12b-444e-9de5-f1dac7b3e0e4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1092f1736c4d217a3e875a7df8060b0f722fd080
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7a514d18bc03d1cbbc05b3e75f98e93a88535c9e
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80907909"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645220"
 ---
 # <a name="pdostatementerrorcode"></a>PDOStatement::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +36,7 @@ Retourne une valeur SQLSTATE à cinq caractères sous la forme d’une chaîne, 
 ## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple montre une requête SQL qui comporte une erreur.  Le code d’erreur est ensuite indiqué.  
   
 ```  

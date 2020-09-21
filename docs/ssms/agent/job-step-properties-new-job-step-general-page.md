@@ -1,4 +1,5 @@
 ---
+description: Propriétés de l’étape du travail - Nouvelle étape du travail (page Général)
 title: Propriétés d’une nouvelle étape de travail (page Général)
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,19 +14,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 44b333c1865046f779581265fb49186810f8944c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c16c9895eb6fdcec859a20651f9912b78ee9946
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731402"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88497560"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriétés de l’étape du travail - Nouvelle étape du travail (page Général)
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Utilisez cette page pour afficher et changer les propriétés d’une étape d’un travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou pour définir une nouvelle étape de travail.  
   
@@ -54,13 +55,13 @@ Charge la commande à partir d'un fichier.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné dans le Presse-papiers.  
   
 **Coller**  
 Colle le contenu du Presse-papiers.  
   
-**Analyser**  
+**Analyser**.  
 Vérifie la syntaxe de la commande.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Options pour les étapes de travail Script ActiveX  
@@ -83,7 +84,7 @@ Charge la commande à partir d'un fichier.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -99,7 +100,7 @@ Charge la commande à partir d'un fichier.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -112,7 +113,7 @@ Charge le script à partir d'un fichier.
 **Sélectionner tout**  
 Sélectionne le texte du script.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -122,7 +123,7 @@ Colle le contenu du Presse-papiers.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -132,7 +133,7 @@ Colle le contenu du Presse-papiers.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -145,7 +146,7 @@ Base de données à utiliser pour l'étape du travail.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -155,7 +156,7 @@ Colle le contenu du Presse-papiers.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -165,7 +166,7 @@ Colle le contenu du Presse-papiers.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -181,7 +182,7 @@ Charge la commande à partir d'un fichier.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -200,7 +201,7 @@ Charge la commande à partir d'un fichier.
 **Sélectionner tout**  
 Sélectionne le texte de la commande.  
   
-**Copy**  
+**Copier**  
 Copie le texte sélectionné.  
   
 **Coller**  
@@ -375,6 +376,6 @@ Tapez les options de ligne de commande à utiliser pour ce package.
   
 ## <a name="see-also"></a>Voir aussi  
 [Gérer les étapes de travail](../../ssms/agent/manage-job-steps.md)  
-[Travaux de SQL Server Agent pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[Travaux de l'Agent SQL Server pour les packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
 [Administration des agents de réplication](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

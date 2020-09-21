@@ -1,6 +1,6 @@
 ---
 title: Utilisation du chiffrement sans validation | Microsoft Docs
-description: Utilisation du chiffrement sans validation
+description: En savoir plus sur le chiffrement sans validation pour les connexions SQL Server. OLE DB Driver pour SQL Server prend en charge le chiffrement sans validation.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MSOLEDBSQL, encryption
 - encryption [OLE DB Driver for SQL Server]
 - OLE DB Driver for SQL Server, encryption
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: e728440447e9e7dbdd13ce52a60781ea3b240ebe
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 7b4e69fcc506f8e52dc8104067b9e7454e4022f5
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006850"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861624"
 ---
 # <a name="using-encryption-without-validation"></a>Utilisation du chiffrement sans validation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,10 +42,10 @@ Pour plus d’informations sur les mots clés de chaîne de connexion, consultez
   
 |Paramètre client Forcer le chiffrement du protocole|Paramètre client Faire confiance au certificat de serveur|Chaîne de connexion/attribut de connexion Encrypt/Use Encryption for Data|Chaîne de connexion/attribut de connexion Trust Server Certificate|Résultats|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|Non|N/A|Non (par défaut)|Ignoré|Aucun chiffrement ne se produit.|  
-|Non|N/A|Oui|Non (par défaut)|Le chiffrement se produit uniquement s'il existe un certificat de serveur vérifiable ; sinon, la tentative de connexion échoue.|  
-|Non|N/A|Oui|Oui|Le chiffrement se produit toujours, mais peut utiliser un certificat de serveur auto-signé.|  
-|Oui|Non|Ignoré|Ignoré|Le chiffrement se produit uniquement s'il existe un certificat de serveur vérifiable ; sinon, la tentative de connexion échoue.|  
+|Non |N/A|Non (par défaut)|Ignoré|Aucun chiffrement ne se produit.|  
+|Non |N/A|Oui|Non (par défaut)|Le chiffrement se produit uniquement s'il existe un certificat de serveur vérifiable ; sinon, la tentative de connexion échoue.|  
+|Non |N/A|Oui|Oui|Le chiffrement se produit toujours, mais peut utiliser un certificat de serveur auto-signé.|  
+|Oui|Non |Ignoré|Ignoré|Le chiffrement se produit uniquement s'il existe un certificat de serveur vérifiable ; sinon, la tentative de connexion échoue.|  
 |Oui|Oui|Non (par défaut)|Ignoré|Le chiffrement se produit toujours, mais peut utiliser un certificat de serveur auto-signé.|  
 |Oui|Oui|Oui|Non (par défaut)|Le chiffrement se produit uniquement s'il existe un certificat de serveur vérifiable ; sinon, la tentative de connexion échoue.|  
 |Oui|Oui|Oui|Oui|Le chiffrement se produit toujours, mais peut utiliser un certificat de serveur auto-signé.|  

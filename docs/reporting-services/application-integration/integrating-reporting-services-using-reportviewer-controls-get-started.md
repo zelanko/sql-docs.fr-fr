@@ -2,7 +2,7 @@
 title: Bien démarrer avec les contrôles Visionneuse de rapports
 description: Les contrôles Visionneuse de rapports permettent d’intégrer des rapports Reporting Services RDL dans les applications WebForms et WinForms.
 ms.custom: seo-lt-2019
-ms.date: 06/03/2020
+ms.date: 09/01/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
@@ -10,22 +10,24 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a559bdb5b525b8d95c121b8059076d86029a37fd
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86943192"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569959"
 ---
-# <a name="integrating-reporting-services-using-the-report-viewer-controls---get-started"></a>Intégration de Reporting Services à l’aide des contrôles Visionneuse de rapports - Bien démarrer
+# <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>Intégrer Reporting Services à l’aide des contrôles Visionneuse de rapports - Prise en main
 
 Les contrôles Visionneuse de rapports permettent d’intégrer des rapports Reporting Services RDL dans les applications WebForms et WinForms. Pour plus d’informations sur les mises à jour récentes, consultez le [journal des modifications](changelog.md).
 
-## <a name="adding-the-report-viewer-control-to-a-new-web-project"></a>Ajout du contrôle Visionneuse de rapports à un nouveau projet web
+## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>Ajouter le contrôle Visionneuse de rapports à un nouveau projet web
 
 1. Créez un **site web ASP.NET vide** ou ouvrez un projet ASP.NET existant.
 
-    ![ssRS-Create-New-ASPNET-Project](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    Vous pouvez utiliser .NET Framework 4.6 ou une version plus récente.
+
+    ![Capture d’écran de la création d’un site Web vide ASP.NET.](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project-4-6.png)
 
 2. Installez le package NuGet du contrôle Visionneuse de rapports via la **console du gestionnaire de package Nuget**.
 
@@ -73,7 +75,7 @@ La page finale devrait ressembler à ce qui suit.
 </html>
 ```
 
-## <a name="updating-an-existing-project-to-use-the-report-viewer-control"></a>Mise à jour d’un projet existant pour utiliser le contrôle Visionneuse de rapports
+## <a name="update-an-existing-project-to-use-the-report-viewer-control"></a>Mettre à jour un projet existant pour utiliser le contrôle Visionneuse de rapports
 
 Veillez à mettre à jour les références d’assembly vers la version *15.0.0.0*, y compris le fichier web.config du projet et toutes les pages .aspx qui référencent le contrôle de visionneuse.
 
@@ -87,7 +89,7 @@ Veillez à mettre à jour les références d’assembly vers la version *15.0.0.
   -->
 <configuration>
   <system.web>
-    <compilation debug="true" targetFramework="4.5.2">
+    <compilation debug="true" targetFramework="4.6">
       <assemblies>
         <!-- All assemblies updated to version 15.0.0.0. -->
         <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
@@ -104,7 +106,7 @@ Veillez à mettre à jour les références d’assembly vers la version *15.0.0.
           type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
-    <httpRuntime targetFramework="4.5.2"/>
+    <httpRuntime targetFramework="4.6"/>
     <httpHandlers>
       <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
@@ -135,18 +137,20 @@ Veillez à mettre à jour les références d’assembly vers la version *15.0.0.
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-report-viewer-control-to-a-new-windows-forms-project"></a>Ajout du contrôle Visionneuse de rapports à un nouveau projet Windows Forms
+## <a name="add-the-report-viewer-control-to-a-new-windows-forms-project"></a>Ajouter le contrôle Visionneuse de rapports à un nouveau projet Windows Forms
 
 1. Créez une **application Windows Forms** ou ouvrez un projet existant.
 
-    ![ssRS-Create-New-winforms-Project](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    Vous pouvez utiliser .NET Framework 4.6 ou une version plus récente.
+    
+    ![Capture d’écran de la création d’une application Windows Forms.](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project-4-6.png)
 
 2. Installez le package NuGet du contrôle Visionneuse de rapports via la **console du gestionnaire de package Nuget**.
 
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Ajoutez un nouveau contrôle à partir du code ou [ajoutez le contrôle à la boîte à outils](#adding-control-to-visual-studio-toolbar).
+3. Ajoutez un nouveau contrôle à partir du code ou [ajoutez le contrôle à la boîte à outils](#add-the-control-to-visual-studio-toolbar).
 
     ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
@@ -174,7 +178,7 @@ Veillez à mettre à jour les références d’assembly vers la version *15.0.0.
 
 Si vous définissez la hauteur du contrôle de visionneuse à 100 %, l’élément parent doit avoir une hauteur définie ou tous les ancêtres sont obligés d’avoir des pourcentages de hauteur.
 
-### <a name="setting-the-height-of-all-the-ancestors-to-100"></a>Définition de la hauteur de tous les ancêtres à 100 %
+### <a name="set-the-height-of-all-the-ancestors-to-100"></a>Définir la hauteur de tous les ancêtres à 100 %
 
 ```html
 <!DOCTYPE html>
@@ -199,7 +203,7 @@ Si vous définissez la hauteur du contrôle de visionneuse à 100 %, l’éléme
 </html>
 ```
 
-### <a name="setting-the-parents-height-attribute"></a>Définition de l’attribut de hauteur du parent
+### <a name="set-the-parents-height-attribute"></a>Définir l’attribut de hauteur du parent
 
 Pour plus d’informations sur les longueurs en pourcentage de la fenêtre d’affichage, consultez [Viewport-percentage lengths](http://www.w3.org/TR/css3-values/#viewport-relative-lengths) (Longueurs en pourcentage de la fenêtre d’affichage).
 
@@ -221,7 +225,7 @@ Pour plus d’informations sur les longueurs en pourcentage de la fenêtre d’a
 </html>
 ```
 
-## <a name="adding-control-to-visual-studio-toolbar"></a>Ajout du contrôle à la barre d’outils de Visual Studio
+## <a name="add-the-control-to-visual-studio-toolbar"></a>Ajouter le contrôle à la barre d’outils de Visual Studio
 
 Le contrôle Visionneuse de rapports est désormais fourni sous forme de package NuGet et ne s’affiche plus dans la boîte à outils Visual Studio par défaut. Vous pouvez ajouter manuellement le contrôle à la boîte à outils.
 
@@ -229,15 +233,15 @@ Le contrôle Visionneuse de rapports est désormais fourni sous forme de package
 
 2. Supprimez le contrôle Visionneuse de rapports qui est répertorié dans la boîte à outils.
 
-    ![ssRS-remove-old-rvcontrol-toolbox](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
+    ![Capture d’écran de la suppression du contrôle ReportViewer.](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
 3. Cliquez avec le bouton droit n’importe où dans la boîte à outils, puis sélectionnez **Choisir les éléments...**
 
-    ![ssRS-toolbox-choose-item](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
+    ![Capture d’écran de l’option Choisir des éléments dans la boîte à outils.](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
 4. Dans **Composants .NET Framework**, sélectionnez **Parcourir**.
 
-    ![ssRS-toolbox-browse](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
+    ![Capture d’écran du bouton Parcourir dans la boîte de dialogue Composants .NET Framework.](../../reporting-services/application-integration/media/ssrs-toolbox-browse.png)
 
 5. Sélectionnez **Microsoft.ReportViewer.WinForms.dll** ou **Microsoft.ReportViewer.WebForms.dll** à partir du package NuGet que vous avez installé.
 
@@ -246,7 +250,7 @@ Le contrôle Visionneuse de rapports est désormais fourni sous forme de package
 
 6. Le nouveau contrôle doit s’afficher dans la boîte à outils. Vous pouvez ensuite le déplacer vers un autre onglet de la boîte à outils si vous le souhaitez.
 
-    ![ssRS-toolbox-rvcontrol](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
+    ![Capture d’écran du nouveau contrôle ReportViewer dans la boîte à outils.](../../reporting-services/application-integration/media/ssrs-toolbox-rvcontrol.png)
 
 ## <a name="common-issues"></a>Problèmes courants
     
@@ -264,12 +268,11 @@ Voici des liens vers des articles sur le site NuGet.org sur les versions WebForm
 - Microsoft.ReportingServices.ReportViewerControl.Winforms [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
 
 
-## <a name="feedback"></a>Commentaires
+## <a name="forum-feedback"></a>Commentaires sur le forum
 
-Informez l’équipe au sujet des problèmes sur les [forums Reporting Services](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
+Informez l’équipe au sujet des problèmes sur les [forums Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Collecte de données dans le contrôle Visionneuse de rapports](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-D’autres questions ? [Essayez le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
 

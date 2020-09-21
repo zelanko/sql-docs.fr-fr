@@ -1,4 +1,5 @@
 ---
+description: Enregistrer sous
 title: Enregistrer sous
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8d89f8352f7ab00911a54335825f1bce7a446b7a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 24d23f4c67cfc78dca0c68dae8758ca5543b7997
+ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007798"
+ms.lasthandoff: 08/18/2020
+ms.locfileid: "88512345"
 ---
 # <a name="save-as"></a>Enregistrer sous
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +34,9 @@ Recherchez le dossier de projet existant dans ce menu déroulant. Si vous sélec
 Utilisez cette option pour afficher le nom de fichier actuel, changer le nom de fichier ou filtrer les fichiers et les dossiers qui sont affichés. Pour filtrer les fichiers et les dossiers affichés, entrez un nom de fichier complet ou partiel sur lequel doit s'effectuer le filtrage. Vous pouvez utiliser l'astérisque (`*`) comme caractère générique.  
   
 > [!TIP]
-> Pour afficher des fichiers qui se trouvent sur le web ou sur un réseau, entrez une URL ou un chemin réseau dans la zone **Nom de fichier** . Par exemple, « <https://mywebsite> » affiche les fichiers disponibles à l’emplacement « monsiteweb », tandis que «\\\monserveur\partage » affiche les fichiers disponibles à l’emplacement « partage » sur « monserveur ».  
+> Pour afficher des fichiers qui se trouvent sur le web ou sur un réseau, entrez une URL ou un chemin réseau dans la zone **Nom de fichier** . Par exemple, `https://mywebsite` affiche les fichiers disponibles à l’emplacement web « monsiteweb », tandis que « \\\myserver\myshare » affiche les fichiers disponibles à l’emplacement « myshare » » sur « myserver ».  
   
-**Enregistrer en tant que**  
+**Type**  
 Utilisez cette option pour choisir un nouveau type de fichier pour l'élément sélectionné. Les types de fichiers proposés représentent tous les types de fichiers disponibles dans lesquels l'élément sélectionné peut être converti.  
   
 **Options d’enregistrement avancées**  
@@ -45,7 +46,7 @@ Pour accéder à la boîte de dialogue **Options d’enregistrement avancées**,
 **Bureau**  
 Affiche les fichiers et les dossiers situés sur le Bureau.  
   
-**Mes Projets**  
+**Mes projets**  
 Affiche les fichiers et les dossiers contenus dans **Mes Projets** ou à l’emplacement visité le plus récemment.  
   
 **Poste de travail**  

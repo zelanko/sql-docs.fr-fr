@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_errors | Microsoft Docs
+title: sqlsrv_errors
+description: Référence API pour la fonction sqlsrv_errors dans Microsoft SQLSRV Driver pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ffd866d5e4493fe327dfb29b54d2fadda8cda3be
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c0922e0ec7f3072b15b61f76908116bb86f4fe04
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928217"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435196"
 ---
 # <a name="sqlsrv_errors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -76,7 +77,7 @@ Si aucune valeur de paramètre n’est fournie, les erreurs et avertissements g�
   
 Les valeurs de tableau sont également accessibles avec des clés numériques 0, 1 et 2. Si aucune erreur ou aucun avertissement ne se produisent, **Null** est retourné.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant affiche les erreurs qui se produisent pendant une exécution d’instruction qui a échoué. (l’instruction échoue, car **InvalidColumName** n’est pas un nom de colonne valide dans la table spécifiée). L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  

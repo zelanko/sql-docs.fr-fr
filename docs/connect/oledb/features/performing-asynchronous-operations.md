@@ -1,6 +1,6 @@
 ---
 title: Exécution d’opérations asynchrones Azure | Microsoft Docs
-description: Exécution d’opérations asynchrones avec OLE DB Driver pour SQL Server
+description: OLE DB Driver pour SQL Server prend en charge les opérations de bases de données asynchrones, ce qui active des méthodes pour un retour sans blocage sur le thread appelant.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - rowsets [SQL Server], initializing
 - MSOLEDBSQL, asynchronous operations
 - OLE DB Driver for SQL Server, asynchronous operations
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: b7d53e5e66d65bd09f672bd8d2b3fcd6cd319e20
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b9005314e248f5aff1f377944395143d67363fd
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006937"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861338"
 ---
 # <a name="performing-asynchronous-operations"></a>Exécution d'opérations asynchrones
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

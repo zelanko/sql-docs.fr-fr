@@ -1,4 +1,5 @@
 ---
+description: Create a Transact-SQL Job Step
 title: Create a Transact-SQL Job Step
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 73cb2231cc863e8ff4f521d5e3cc5b5a23b300b3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0d1c6d72dc524bae8b1a315b0a9f75ee8118211f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749105"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468705"
 ---
 # <a name="create-a-transact-sql-job-step"></a>Create a Transact-SQL Job Step
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Cette rubrique indique comment créer une étape de travail de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent qui exécute des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
   
@@ -49,7 +50,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 4.  Dans la boîte de dialogue **Nouvelle étape du travail** , tapez un **nom d'étape**de travail.  
   
-5.  Dans la liste **Type** , cliquez sur **Script Transact-SQL (TSQL)** .  
+5.  Dans la liste **Type** , cliquez sur **Script Transact-SQL (TSQL)**.  
   
 6.  Dans la zone **Commande** , tapez les traitements de commandes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou cliquez sur **Ouvrir** pour sélectionner un fichier [!INCLUDE[tsql](../../includes/tsql-md.md)] à utiliser comme commande.  
   

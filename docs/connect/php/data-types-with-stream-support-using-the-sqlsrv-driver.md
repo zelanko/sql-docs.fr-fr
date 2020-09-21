@@ -1,7 +1,8 @@
 ---
-title: Types de données avec prise en charge des flux avec le pilote SQLSRV | Microsoft Docs
+title: Types de données avec support des flux à l’aide du pilote SQLSRV
+description: Cette rubrique répertorie les types de données SQL Server qui peuvent être récupérés comme des flux lors de l’utilisation de Microsoft SQLSRV Driver pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae18b0e3e5c3add352f2efe71c78c3591740dd6c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5ca74b31b55fd0cb8a0c8405ac3303d041c38478
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928049"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680804"
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>Types de données avec prise en charge des flux à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +39,7 @@ Les types de données SQL Server suivants peuvent être récupérés sous forme 
   
 -   NVARCHAR  
   
--   text  
+-   texte  
   
 -   UDT  
   
@@ -53,5 +54,5 @@ Les types de données SQL Server suivants peuvent être récupérés sous forme 
 
 [Types de données PHP par défaut](../../connect/php/default-php-data-types.md)
 
-[Guide pratique pour spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md)  
+[Procédure : Spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md)  
   

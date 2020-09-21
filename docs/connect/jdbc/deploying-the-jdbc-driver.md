@@ -2,7 +2,7 @@
 title: Déploiement du pilote JDBC
 description: Découvrez comment vous pouvez redistribuer et déployer le pilote JDBC Microsoft pour SQL Server avec votre application, ainsi que les fichiers requis.
 ms.custom: ''
-ms.date: 03/13/2020
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 08365944acd071f21b3b4fadf950c23b65c6cfe5
+ms.sourcegitcommit: b80364e31739d7b08cc388c1f83bb01de5dd45c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728361"
+ms.lasthandoff: 08/04/2020
+ms.locfileid: "87565424"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Déploiement du pilote JDBC
 
@@ -51,7 +51,7 @@ Pour décompresser le fichier d'archive tar, déplacez-le vers le répertoire da
 
 ## <a name="legalities-of-driver-redistribution"></a>Aspects juridiques de la redistribution des pilotes
 
-Les versions 6.0, 6.2, 6.4, 7.0, 7.2, 7.4 et 8.2 du pilote JDBC sont redistribuables. Lisez la clause _Code distribuable_ des contrats de licence.
+Les versions 6.0, 6.2, 6.4, 7.0, 7.2, 7.4, 8.2 et 8.4 de JDBC Driver sont redistribuables. Lisez la clause _Code distribuable_ des contrats de licence.
 
 Les versions 4.x du pilote JDBC sont anciennes et obsolètes. La prise en charge de 4.x a expiré avant 2018.
 

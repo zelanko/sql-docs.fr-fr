@@ -1,6 +1,6 @@
 ---
 title: Utilisation de MSDeploy avec le fournisseur dbSqlPackage
-description: En savoir plus sur le fournisseur MSDeploy obsolète DbSqlPackage. Affichez des paramètres, des exemples et d’autres outils de publication de bases de données SQL Server et SQL Azure.
+description: En savoir plus sur le fournisseur MSDeploy obsolète DbSqlPackage. Affichez des paramètres, des exemples et d’autres outils de publication de SQL Server et Azure SQL Database.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: 5a0bda3b935a7123de3c8766a40e7d7f8df5a0d0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899740"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934084"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilisation de MSDeploy avec le fournisseur dbSqlPackage
 
-**DbSqlPackage**est un fournisseur **MSDeploy** qui vous permet d'interagir avec des bases de données SQL Server/SQL Azure. **DbSqlPackage** prend en charge les actions suivantes :  
+**DbSqlPackage**est un fournisseur **MSDeploy** qui vous permet d'interagir avec des bases de données SQL Server/Azure SQL Database. **DbSqlPackage** prend en charge les actions suivantes :  
   
--   **Extraire** : crée un fichier d’instantané de base de données (.dacpac) à partir de bases de données SQL Server ou SQL Azure actives.  
+-   **Extraire** : crée un fichier de capture instantanée de base de données (.dacpac) à partir d’une base de données SQL Server ou Azure SQL Database active.  
   
 -   **Publier** : met à jour de manière incrémentielle un schéma de base de données pour qu’il corresponde au schéma d’un fichier .dacpac source.  
   
@@ -57,7 +57,7 @@ Le fournisseur **dbSqlPackage** accepte une entrée qui correspond à une chaîn
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**N/A**|*entrée* correspond à une chaîne de connexion SQL Server ou SQL Azure valide ou à un chemin d'accès à un fichier .dacpac présent sur le disque.<br /><br />**REMARQUE :** les seules propriétés de chaîne de connexion prises en charge lors de l’utilisation d’une chaîne de connexion comme source d'entrée sont *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* et *ConnectionTimeout*.|  
   
-Si votre source d'entrée correspond à une chaîne de connexion à une base de données SQL Server/SQL Azure active, **dbSqlPackage** extrait un instantané de base de données au format de fichier .dacpac à partir d'une base de données SQL Server/Azure active.  
+Si votre source d'entrée correspond à une chaîne de connexion à une base de données SQL Server/Azure SQL Database, **dbSqlPackage** extrait un instantané de base de données au format de fichier .dacpac à partir d'une base de données SQL Server/Azure SQL Database.  
   
 Les paramètres **sources** sont :  
   

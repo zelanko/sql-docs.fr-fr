@@ -1,6 +1,6 @@
 ---
 title: Mappage de types de données dans les ensembles de lignes et les paramètres (pilote OLE DB) | Microsoft Docs
-description: Mappage de types de données dans les ensembles de lignes et les paramètres
+description: Découvrez comment OLE DB Driver pour SQL Server représente des données SQL Server dans des ensembles de lignes et en tant que valeurs de paramètre, à l’aide des types de données définis par OLE DB.
 ms.custom: ''
 ms.date: 02/21/2020
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SSPROP_ALLOWNATIVEVARIANT property
 - GetParameterInfo function
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 373bb0165c663232342b690711d5f56e18544211
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cbe23a1e1edce96997968bf40075b2fc3b13db49
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244913"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861606"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mappage de type de données dans les ensembles de lignes et les paramètres
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -7,14 +7,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/28/2020
+ms.date: 08/17/2020
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d1bfbb7a1abb13df05ce402fa79a1598ee04ca1f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e3ea21418a058f3d4b8db13ea498c1bb94564964
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286463"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89282395"
 ---
 # <a name="server-properties-advanced-page---power-bi-report-server--reporting-services"></a>Page Avancé des Propriétés du serveur - Serveur de rapports Power BI et Reporting Services
 
@@ -51,7 +51,17 @@ Pour ouvrir cette page, démarrez SQL Server Management Studio, connectez-vous �
 
 (Serveur de rapports Power BI Janvier 2020, Reporting Services 2019 et versions ultérieures uniquement)
 
-Définit des valeurs d’en-tête pour toutes les URL correspondant au modèle d’expression régulière spécifié. Les utilisateurs peuvent mettre à jour la valeur CustomHeaders avec du code XML valide pour définir les valeurs d’en-tête des URL de demande sélectionnées. Les administrateurs peuvent ajouter n’importe quel nombre d’en-têtes dans le code XML. Par défaut, il n’y a pas d’en-tête personnalisé et la valeur est vide. 
+Définit des valeurs d’en-tête pour toutes les URL correspondant au modèle d’expression régulière spécifié. Les utilisateurs peuvent mettre à jour la valeur CustomHeaders avec du code XML valide pour définir les valeurs d’en-tête des URL de demande sélectionnées. Les administrateurs peuvent ajouter n’importe quel nombre d’en-têtes dans le code XML. Par défaut, dans Reporting Services 2019, il n’existe aucun en-tête personnalisé et la valeur est vide. Par défaut, dans Power BI Report Server Janvier 2020 et version ultérieure, la valeur est la suivante :
+
+```xml
+<CustomHeaders>
+    <Header>
+        <Name>X-Frame-Options</Name>
+        <Pattern>(?(?=.*api.*|.*rs:embed=true.*|.*rc:toolbar=false.*)(^((?!(.+)((\/api)|(\/(mobilereport|report|excel|pages|powerbi)\/(.+)(rs:embed=true|rc:toolbar=false)))).*$))|(^(?!(http|https):\/\/([^\/]+)\/powerbi.*$)))</Pattern>
+        <Value>SAMEORIGIN</Value>
+    </Header>
+</CustomHeaders>
+```
 
 > [!NOTE]
 > Le fait d’avoir trop d’en-têtes peut avoir un impact sur les performances. 
@@ -75,7 +85,7 @@ Nous vous recommandons de valider la configuration de votre topologie pour vous 
 - Vous pouvez la définir à l’aide du point de terminaison SOAP [SetSystemProperties](https://docs.microsoft.com/dotnet/api/reportservice2010.reportingservice2010.setsystemproperties) en passant la propriété CustomHeaders comme paramètre.
 - Vous pouvez utiliser le point de terminaison REST [UpdateSystemProperties](https://app.swaggerhub.com/apis/microsoft-rs/PBIRS/2.0#/System/UpdateSystemProperties) : `/System/Properties` passant la propriété CustomHeaders
 
-#### <a name="example"></a>Exemple
+#### <a name="example"></a> Exemple
 
 L’exemple ci-dessous montre comment définir HSTS et d’autres en-têtes personnalisés pour les URL avec un modèle d’expression régulière correspondant.
 
@@ -223,7 +233,7 @@ Nombre maximal de jours pendant lesquels un paramètre stocké peut être stock�
 Nombre maximal de valeurs de paramètres qui peuvent être stockées par le serveur de rapports. Les valeurs valides sont comprises entre **-1**, **+1** et **2147483647**. La valeur par défaut est de **1500**.  
 
 ### <a name="supportedhyperlinkschemes"></a>SupportedHyperlinkSchemes 
-(Serveur de rapports Power BI Janvier 2019, Reporting Services 2019 et versions ultérieures uniquement) Définit une liste de schémas d’URI séparés par des virgules et pouvant être définis sur des actions de lien hypertexte dont la restitution est autorisée ou « &ast; » pour activer toutes les schémas de lien hypertexte. Par exemple, le paramètre « http, https » autoriserait les liens hypertexte vers « https://www. contoso.com », mais supprimerait les liens hypertextes vers « mailto:bill@contoso.com » ou « javascript:window.open(‘ www.contoso.com’, ‘_blank’) ». La valeur par défaut est « &ast; ».
+(Serveur de rapports Power BI Janvier 2019, Reporting Services 2019 et versions ultérieures uniquement) Définit une liste de schémas d’URI séparés par des virgules et pouvant être définis sur des actions de lien hypertexte dont la restitution est autorisée ou « &ast; » pour activer toutes les schémas de lien hypertexte. Par exemple, le paramètre « http, https » autoriserait les liens hypertexte vers « https://www. contoso.com », mais supprime les liens hypertexte vers « mailto:bill@contoso.com » ou « javascript:window.open('www.contoso.com', '_blank') ». La valeur par défaut est « &ast; ».
 
 ### <a name="systemreporttimeout"></a>SystemReportTimeout
 Valeur (en secondes) du délai d'exécution du traitement du rapport par défaut pour tous les rapports gérés dans l'espace de noms du serveur de rapports. Cette valeur peut être remplacée au niveau du rapport. Si cette propriété est définie, le serveur de rapports essaie d'arrêter le traitement d'un rapport lorsque le délai spécifié est expiré. Les valeurs valides sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est égale à **-1**, les rapports de l’espace de noms ne spécifient pas de délai d’exécution pendant le traitement. La valeur par défaut est **1800**.  

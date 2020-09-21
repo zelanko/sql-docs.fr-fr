@@ -1,4 +1,5 @@
 ---
+description: Spécifier des réponses à un travail
 title: Spécifier des réponses à un travail
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 643c58adfed622b6a5d57e6056dcea316b6cf5ec
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 642243221d1f65e8adc05e252c2638f25dfc46d1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243735"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418005"
 ---
 # <a name="specify-job-responses"></a>Spécifier des réponses à un travail
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Les réponses à un travail spécifient les actions que le service Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réalisera après l'achèvement d'un travail. Les réponses à un travail garantissent que les administrateurs de base de données ont connaissance de l'achèvement des travaux et de leur fréquence d'exécution. Les réponses classiques à un travail peuvent être :  
   
@@ -47,8 +48,8 @@ Les réponses à un travail spécifient les actions que le service Agent [!INCLU
   
 |Description|Rubrique|  
 |-|-|  
-|Explique comment avertir un opérateur de l'état d'un travail.|[Notifier l’état d’un travail à un opérateur](../../ssms/agent/notify-an-operator-of-job-status.md)|  
-|Explique comment écrire l'état du travail dans le journal des applications Windows.|[Écrire l'état du travail dans le journal des applications Windows](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
+|Explique comment avertir un opérateur de l'état d'un travail.|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
+|Explique comment écrire l'état du travail dans le journal des applications Windows.|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Surveiller et répondre aux événements](../../ssms/agent/monitor-and-respond-to-events.md)  

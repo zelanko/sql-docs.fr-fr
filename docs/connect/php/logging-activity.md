@@ -1,7 +1,8 @@
 ---
-title: Activité de journalisation| Microsoft Docs
+title: Journalisation de l’activité
+description: Découvrir comment configurer différentes combinaisons d’options de journalisation lors de l’utilisation des Pilotes Microsoft pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 5486f32894b04a211be26bd7c55d58294ad36367
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6301b429191b0f563a5f1dea08bd6e8d92a0c46a
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922857"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680544"
 ---
 # <a name="logging-activity"></a>Journalisation de l’activité
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

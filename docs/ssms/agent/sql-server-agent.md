@@ -1,4 +1,5 @@
 ---
+description: SQL Server Agent
 title: SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,19 +15,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9914ebe147344b24352b97d018166601077a8895
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec94ebc0b62194a8b6201ccd9a7a2c6cfe8c3ba8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755115"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418015"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est un service Microsoft Windows qui exécute des tâches administratives planifiées appelées *travaux* dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
 
@@ -107,7 +108,7 @@ Un *opérateur* est une personne responsable de la maintenance d'une ou plusieur
 > Pour envoyer des notifications via **net send**, le service Windows Messenger doit être actif sur l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent réside.  
   
 > [!IMPORTANT]  
-> Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
+> Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une version future de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
   
 Pour envoyer des notifications aux opérateurs par e-mail ou radiomessagerie, vous devez configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent afin qu’il utilise la messagerie de base de données. Pour plus d’informations, consultez [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md).  
   

@@ -13,16 +13,18 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: df08f0434247f3235d9316c064e669d6bf453d1f
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: b58763dc5bf126e164ada0c0d808a75270819171
+ms.sourcegitcommit: 71a334c5120a1bc3809d7657294fe44f6c909282
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511254"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89614611"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Démarrage rapide : Exécuter des images de conteneur SQL Server avec Docker
-
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
+> [!NOTE]
+> Les exemples ci-dessous utilisent le fichier docker.exe, mais la plupart de ces commandes fonctionnent également avec Podman. Il fournit l’interface CLI semblable au moteur de conteneurs Docker. Vous pouvez trouver plus d’informations sur Podman [ici](http://docs.podman.io/en/latest).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -99,7 +101,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 \
+      -p 1433:1433 --name sql1 -h sql1 \
       -d \
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -112,7 +114,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -121,7 +123,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d `
       mcr.microsoft.com/mssql/server:2017-latest
    ```
@@ -140,6 +142,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Spécifiez votre propre mot de passe fort, qui doit avoir au moins 8 caractères et respecter les [exigences de mot de passe SQL Server](../relational-databases/security/password-policy.md). Paramètre obligatoire pour l’image de SQL Server. |
    | **-p 1433:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur, mappé au port 1433 sur l’hôte. |
    | **--name sql1** | Spécifiez un nom personnalisé pour le conteneur plutôt qu’un nom généré de manière aléatoire. Si vous exécutez plusieurs conteneurs, vous ne pouvez pas réutiliser le même nom. |
+   | **-h sql1** | Utilisé pour définir explicitement le nom d’hôte du conteneur, si vous ne le spécifiez pas, il prend par défaut l’ID du conteneur qui est un GUID système généré de manière aléatoire. |
    | **-d** | Exécutez le conteneur en arrière-plan (démon) |
    | **mcr.microsoft.com/mssql/server:2017-latest** | Image conteneur Linux de SQL Server 2017. |
 
@@ -170,7 +173,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
 
 4. Si la colonne **ÉTAT** affiche **En cours d’exécution**, SQL Server est en cours d’exécution dans le conteneur et écoute sur le port spécifié dans la colonne **PORTS**. Si la colonne **ÉTAT** pour votre conteneur SQL Server affiche **Quitté**, consultez la [section Résolution des problèmes dans le guide de configuration](sql-server-linux-configure-docker.md#troubleshooting).
 
-Le paramètre `-h` (nom d’hôte) est également utile, mais il n’est pas utilisé dans ce didacticiel pour plus de simplicité. Il permet de changer le nom interne du conteneur en une valeur personnalisée. Il s’agit du nom retourné dans la requête Transact-SQL suivante :
+Le paramètre `-h` (nom d’hôte), comme indiqué ci-dessus, remplace le nom interne du conteneur par une valeur personnalisée. Il s’agit du nom retourné dans la requête Transact-SQL suivante :
 
 ```sql
 SELECT @@SERVERNAME,
@@ -231,7 +234,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    ::: zone pivot="cs1-bash"
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
-      -p 1433:1433 --name sql1 \
+      -p 1433:1433 --name sql1 -h sql1 \
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -239,7 +242,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    ::: zone pivot="cs1-powershell"
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -247,7 +250,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    ::: zone pivot="cs1-cmd"
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
-      -p 1433:1433 --name sql1 `
+      -p 1433:1433 --name sql1 -h sql1 `
       -d mcr.microsoft.com/mssql/server:2019-latest
    ```
    ::: zone-end
@@ -265,6 +268,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Spécifiez votre propre mot de passe fort, qui doit avoir au moins 8 caractères et respecter les [exigences de mot de passe SQL Server](../relational-databases/security/password-policy.md). Paramètre obligatoire pour l’image de SQL Server. |
    | **-p 1433:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur, mappé au port 1433 sur l’hôte. |
    | **--name sql1** | Spécifiez un nom personnalisé pour le conteneur plutôt qu’un nom généré de manière aléatoire. Si vous exécutez plusieurs conteneurs, vous ne pouvez pas réutiliser le même nom. |
+   | **-h sql1** | Utilisé pour définir explicitement le nom d’hôte du conteneur, si vous ne le spécifiez pas, il prend par défaut l’ID du conteneur qui est un GUID système généré de manière aléatoire. |
    | **mcr.microsoft.com/mssql/server:2019-latest** | Image conteneur SQL Server 2019 Ubuntu Linux. |
 
 3. Pour afficher vos conteneurs Docker, utilisez la commande `docker ps`.
@@ -293,7 +297,7 @@ Avant de commencer les étapes suivantes, assurez-vous que vous avez sélectionn
 
 4. Si la colonne **ÉTAT** affiche **En cours d’exécution**, SQL Server est en cours d’exécution dans le conteneur et écoute sur le port spécifié dans la colonne **PORTS**. Si la colonne **ÉTAT** de votre conteneur SQL Server indique **Terminé**, consultez [Résolution des problèmes liés aux conteneurs Docker SQL Server](sql-server-linux-docker-container-troubleshooting.md).
 
-Le paramètre `-h` (nom d’hôte) est également utile, mais il n’est pas utilisé dans ce didacticiel pour plus de simplicité. Il permet de changer le nom interne du conteneur en une valeur personnalisée. Il s’agit du nom retourné dans la requête Transact-SQL suivante :
+Le paramètre `-h` (nom d’hôte), comme indiqué ci-dessus, remplace le nom interne du conteneur par une valeur personnalisée. Il permet de changer le nom interne du conteneur en une valeur personnalisée. Il s’agit du nom retourné dans la requête Transact-SQL suivante :
 
 ```sql
 SELECT @@SERVERNAME,

@@ -1,7 +1,8 @@
 ---
-title: Types de données SQL Server par défaut | Microsoft Docs
+title: Types de données SQL Server par défaut
+description: Cette rubrique répertorie tous les types de données SQL Server par défaut en fonction des types de données PHP lors de l’utilisation de Microsoft SQLSRV Driver pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: dcfe4dd998f320da7e23ea28df99a28c48d2abba
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a5f60111e8a98e3f187e4db39eec06ab35e38195
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928017"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680774"
 ---
 # <a name="default-sql-server-data-types"></a>Types de données SQL Server par défaut
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ Lors de l’envoi de données au serveur, le [!INCLUDE[ssDriverPHP](../../includ
 |Type de données PHP|Type SQL Server par défaut dans le pilote SQLSRV|Type SQL Server par défaut dans le pilote PDO_SQLSRV|  
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|non pris en charge|  
-|Boolean|bit|bit|  
+|Booléen|bit|bit|  
 |Integer|int|int|  
 |Float|float(24)|non pris en charge|  
 |String (longueur inférieure à 8000 octets)|varchar(<string length>)|varchar(<string length>)|  
@@ -37,7 +38,7 @@ Lors de l’envoi de données au serveur, le [!INCLUDE[ssDriverPHP](../../includ
 |Flux (encodage : non binaire)|varchar(max)|varchar(max)|  
 |Flux (encodage : binaire)|varbinary|varbinary|  
 |Array|Non pris en charge.|Non pris en charge.|  
-|Object|Non pris en charge.|Non pris en charge.|  
+|Objet|Non pris en charge.|Non pris en charge.|  
 |DateTime (1)|DATETIME|Non pris en charge.|  
   
 ## <a name="see-also"></a>Voir aussi  

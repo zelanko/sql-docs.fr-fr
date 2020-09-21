@@ -1,6 +1,6 @@
 ---
 title: Types CLR volumineux définis par l'utilisateur | Microsoft Docs
-description: Types CLR volumineux définis par l'utilisateur dans OLE DB Driver pour SQL Server
+description: Découvrez les restrictions de taille et le comportement associé pour les types définis par l’utilisateur dans le common language runtime pour les différentes versions de SQL Server.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 20469f3cd6a1b98a6fd08db195e883ccff4ac776
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9fdc52df9307bbe4ce3e826ca682d787e1c11506
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006954"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861462"
 ---
 # <a name="large-clr-user-defined-types"></a>Types CLR volumineux définis par l'utilisateur
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

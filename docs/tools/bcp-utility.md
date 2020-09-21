@@ -27,14 +27,14 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
-ms.date: 01/23/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8bec01c994df45975ac42faa25f0fb389443eb82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 61d00005973755588012d0e7e1d9f4be9327fa08
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998546"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076754"
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 
@@ -42,7 +42,7 @@ ms.locfileid: "85998546"
 
 > Pour utiliser bcp sur Linux, consultez [Installer sqlcmd et bcp sur Linux](../linux/sql-server-linux-setup-tools.md).
 >
-> Pour plus d’informations sur l’utilisation de bcp avec Azure SQL Data Warehouse, consultez [Charger des données avec bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+> Pour plus d’informations sur l’utilisation de bcp avec Azure SQL Data Warehouse, consultez [Charger des données avec bcp](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
 L’utilitaire **b**ulk **c**opy **p**rogram (**bcp**) copie en bloc des données entre une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un fichier de données dans un format spécifié par l’utilisateur. L’utilitaire **bcp** permet d’importer un grand nombre de nouvelles lignes dans des tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d’exporter des données de tables dans des fichiers de données. Sauf lorsqu’il est utilisé avec l’option **queryout** , l’utilitaire ne nécessite aucune connaissance de [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour importer des données dans une table, vous devez utiliser un fichier de format créé pour cette table ou comprendre la structure de la table et les types de données valides pour ses colonnes.  
 
@@ -53,16 +53,16 @@ L’utilitaire **b**ulk **c**opy **p**rogram (**bcp**) copie en bloc des donnée
 
 ## <a name="download-the-latest-version-of-bcp-utility"></a>Télécharger la dernière version de l’utilitaire bcp
 
-**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Télécharger bcp pour x64](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![Télécharger bcp pour x86](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 Les outils en ligne de commande sont en disponibilité générale (GA), mais ils sont publiés avec le package d’installation de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ### <a name="version-information"></a>Informations sur la version
 
-Numéro de version : 15.0 <br>
-Numéro de build : 15.0.1300.359<br>
-Date de publication : 13 mars 2019
+Numéro de version : 15.0.2 <br>
+Numéro de build : 15.0.2000.5<br>
+Date de publication : 11 septembre 2020
 
 La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour les fonctionnalités SQL Database, SQL Data Warehouse et Always Encrypted.
 Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour SQL Database et SQL Data Warehouse.
@@ -71,9 +71,9 @@ Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise
 
 Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
-Ce composant nécessite [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+Ce composant nécessite [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).
 
-Pour vérifier la version de BCP, exécutez la commande `bcp /v` et vérifiez que 15.0.1300.359 ou une version ultérieure est en cours d’utilisation.
+Pour vérifier la version de BCP, exécutez la commande `bcp /v` et vérifiez que 15.0.2000.5 ou une version ultérieure est utilisée.
 
 <table><th>Syntaxe</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -124,7 +124,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
  Vous pouvez aussi spécifier explicitement le nom de la base de données avec **-d**.  
 
- **in** *data_file* | **out** *data_file* | **queryout** *data_file* | **format nul**  
+ **dans** *data_file* \| **hors** *data_file* \| **queryout** *data_file* \| **format nul**  
  Direction de la copie en bloc :  
   
 - **in**<a name="in"></a> copie à partir d’un fichier dans une table ou une vue de la base de données.  
@@ -163,7 +163,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  Pour plus d’informations, consultez [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).  
   
- **-C** { **ACP** | **OEM** | **RAW** | *code_page* }<a name="C"></a>   
+ **-C** { **ACP** \| **OEM** \| **RAW** \| *code_page* }<a name="C"></a>   
  Indique la page de codes des données dans le fichier. L’utilisation de*code_page* n’est justifiée que si les données contiennent des colonnes de type **char**, **varchar**ou **text** dont les valeurs de caractères sont supérieures à 127 ou inférieures à 32.  
   
 > [!NOTE]
@@ -215,7 +215,7 @@ Indique que la ou les valeurs d'identité figurant dans le fichier de données i
 
 **-G**<a name="G"></a>
 
- Ce commutateur est utilisé par le client lors de la connexion à Azure SQL Database ou à Azure SQL Data Warehouse, pour indiquer que l’utilisateur doit être authentifié avec l’authentification Azure Active Directory. Le commutateur -G nécessite la [version 14.0.3008.27 ou ultérieure](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp -v. Pour plus d’informations, consultez [Utiliser l’authentification Azure Active Directory pour l’authentification auprès de SQL Database ou de SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+ Ce commutateur est utilisé par le client lors de la connexion à Azure SQL Database ou à Azure SQL Data Warehouse, pour indiquer que l’utilisateur doit être authentifié avec l’authentification Azure Active Directory. Le commutateur -G nécessite la [version 14.0.3008.27 ou ultérieure](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp -v. Pour plus d’informations, consultez [Utiliser l’authentification Azure Active Directory pour l’authentification auprès de SQL Database ou de SQL Data Warehouse](/azure/sql-database/sql-database-aad-authentication). 
 
 > [!IMPORTANT]
 > L’option **-G** s’applique uniquement à Azure SQL Database et à Azure Data Warehouse.
@@ -260,7 +260,7 @@ Indique que la ou les valeurs d'identité figurant dans le fichier de données i
 
    L’authentification interactive Azure AD pour Azure SQL Database et SQL Data Warehouse vous permet d’utiliser une méthode interactive qui prend en charge l’authentification multifacteur. Pour plus d’informations, consultez [Authentification interactive Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
-   L’authentification Azure AD interactive requiert **bcp** [version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) ou version ultérieure, ainsi que [ODBC version 17.2 ou ultérieure](https://www.microsoft.com/download/details.aspx?id=56567).  
+   L’authentification Azure AD interactive requiert **bcp** [version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) ou version ultérieure, ainsi que [ODBC version 17.2 ou ultérieure](https://aka.ms/downloadmsodbcsql).  
 
    Pour activer l’authentification interactive, fournissez l’option -G avec le nom d’utilisateur (-U) uniquement, sans mot de passe.
 
@@ -278,7 +278,7 @@ Indique que la ou les valeurs d'identité figurant dans le fichier de données i
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
-   Si des utilisateurs invités existent dans un Azure AD spécifique et font partie d’un groupe qui existe dans la base de données SQL et qui dispose d’autorisations de base de données pour exécuter la commande bcp, leur alias d’utilisateur invité est utilisé (par exemple, *keith0@adventureworks.com* ).
+   Si des utilisateurs invités existent dans un Azure AD spécifique et font partie d’un groupe qui existe dans SQL Database et qui dispose d’autorisations de base de données pour exécuter la commande bcp, leur alias d’utilisateur invité est utilisé (par exemple, *keith0@adventureworks.com* ).
   
 **-h** _**"load hints**_[ ,... *n*] **"** <a name="h"></a> Spécifie le ou les indicateurs à utiliser lors de l’importation en bloc de données vers une table ou une vue.  
   
@@ -415,7 +415,7 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
  **-v**<a name="v"></a>  
  Indique le numéro de version et le copyright de l’utilitaire **bcp** .  
   
- **-V** (**80** | **90** | **100** | **110** | **120** | **130)<a name="V"></a>  
+ **-V** (**80** \| **90** \| **100** \| **110** \| **120** \| **130**)<a name="V"></a>  
  Copie en bloc en faisant appel aux types de données d'une version antérieure de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cette option ne pose aucune question pour aucun champ, mais utilise les valeurs par défaut.  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  
@@ -444,7 +444,7 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
 
 ## <a name="remarks"></a>Notes<a name="remarks"></a>
 
-- L’utilitaire **bcp** 13.0 est installé lorsque vous installez les outils [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Si les outils sont installés pour [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et pour une version antérieure de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], en fonction de la valeur de la variable d’environnement PATH, vous utiliserez peut-être le client **bcp** antérieur au lieu du client **bcp** 13.0. Cette variable d'environnement définit l'ensemble de répertoires utilisés par Windows pour rechercher des fichiers exécutables. Pour savoir quelle version vous utilisez, exécutez la commande **bcp /v** ou **bcp -v** à l’invite de commandes Windows. Pour plus d’informations sur la définition du chemin de commande dans la variable d’environnement PATH, consultez [Variables d’environnement](https://docs.microsoft.com/windows/win32/shell/user-environment-variables) ou recherchez Variables d’environnement dans l’aide de Windows.
+- L’utilitaire **bcp** 13.0 est installé lorsque vous installez les outils [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Si les outils sont installés pour [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et pour une version antérieure de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], en fonction de la valeur de la variable d’environnement PATH, vous utiliserez peut-être le client **bcp** antérieur au lieu du client **bcp** 13.0. Cette variable d'environnement définit l'ensemble de répertoires utilisés par Windows pour rechercher des fichiers exécutables. Pour savoir quelle version vous utilisez, exécutez la commande **bcp /v** ou **bcp -v** à l’invite de commandes Windows. Pour plus d’informations sur la définition du chemin de commande dans la variable d’environnement PATH, consultez [Variables d’environnement](/windows/win32/shell/user-environment-variables) ou recherchez Variables d’environnement dans l’aide de Windows.
 
     Pour vous assurer que vous exécutez la version la plus récente de l’utilitaire bcp, vous devez supprimer toutes les anciennes versions de cet utilitaire.
 
@@ -464,7 +464,7 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
 
 - Pour savoir à quel moment les opérations d’insertion de ligne effectuées par l’importation en bloc sont consignées dans le journal des transactions, consultez [Conditions requises pour une journalisation minimale dans l’importation en bloc](../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).
 
-- [Utilisation de caractères spéciaux supplémentaires](https://docs.microsoft.com/windows-server/administration/windows-commands/set_1#remarks)
+- [Utilisation de caractères spéciaux supplémentaires](/windows-server/administration/windows-commands/set_1#remarks)
 
     Les caractères <, >, |, & et ^ sont des caractères d’interpréteur de commandes spéciaux. Ils doivent être précédés du caractère d’échappement (^) ou placés entre guillemets quand ils sont utilisés dans une chaîne (par exemple, « StringContaining&Symbol »). Si vous placez une chaîne contenant un caractère spécial entre guillemets, les guillemets sont définis comme faisant partie de la valeur de la variable d’environnement.
 
@@ -758,9 +758,5 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 - [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
 - [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-
-## <a name="feedback"></a>Commentaires
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum sur les outils clients SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

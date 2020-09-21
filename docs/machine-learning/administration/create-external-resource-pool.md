@@ -3,21 +3,21 @@ title: Créer un pool de ressources
 description: Découvrez comment vous pouvez créer et utiliser un pool de ressources pour gérer les charges de travail Python et R dans SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/28/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5679a02542777e2302dcefc98274957b2f837445
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 08f2c66fec80ce27e3e7a9ffca7a00194ff3b81b
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902319"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283760"
 ---
 # <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>Créer un pool de ressources pour SQL Server Machine Learning Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Découvrez comment vous pouvez créer et utiliser un pool de ressources pour gérer les charges de travail Python et R dans SQL Server Machine Learning Services. 
 
@@ -33,7 +33,7 @@ Le processus comprend plusieurs étapes :
 
 ##  <a name="review-the-status-of-existing-resource-pools"></a>Examiner l’état des pools de ressources existants
   
-1.  Utilisez les instructions suivantes pour vérifier les ressources allouées au pool par défaut du serveur.
+1.  Utilisez les instructions suivantes pour vérifier les ressources affectées au pool par défaut du serveur.
   
     ```sql
     SELECT * FROM sys.resource_governor_resource_pools WHERE name = 'default'
@@ -45,7 +45,7 @@ Le processus comprend plusieurs étapes :
     |-|-|-|-|-|-|-|-|-|
     |2|default|0|100|0|100|100|0|0|
 
-2.  Vérifiez les ressources allouées au pool de ressources **externe** par défaut.
+2.  Vérifiez les ressources affectées au pool de ressources **externe** par défaut.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools WHERE name = 'default'
@@ -57,7 +57,7 @@ Le processus comprend plusieurs étapes :
     |-|-|-|-|-|-|
     |2|default|100|20|0|2|
  
-3.  Avec ces paramètres de serveur par défaut, il est probable que le runtime externe n’aurait pas suffisamment de ressources pour mener à bien la plupart des tâches. Pour changer cela, vous devez modifier l’utilisation des ressources serveur comme suit :
+3.  Avec ces paramètres de serveur par défaut, il est probable que le runtime externe n’aurait pas suffisamment de ressources pour mener à bien la plupart des tâches. Pour améliorer les ressources, vous devez modifier l’utilisation des ressources serveur comme suit :
   
     -   Réduisez la quantité maximale de mémoire de l’ordinateur que peut utiliser le moteur de base de données.
   
@@ -71,7 +71,7 @@ Le processus comprend plusieurs étapes :
     ALTER RESOURCE POOL "default" WITH (max_memory_percent = 60);
     ```
   
-2.  De la même manière, exécutez l’instruction suivante pour limiter la quantité de mémoire qu’utilise un processus externe à **40 %** des ressources totales de l’ordinateur.
+2. Exécutez l’instruction suivante pour limiter la quantité de mémoire qu’utilise un processus externe à **40 %** des ressources totales de l’ordinateur.
   
     ```sql
     ALTER EXTERNAL RESOURCE POOL "default" WITH (max_memory_percent = 40);
@@ -88,11 +88,11 @@ Le processus comprend plusieurs étapes :
 
 ## <a name="create-a-user-defined-external-resource-pool"></a>Créer un pool de ressources externe défini par l’utilisateur
   
-1.  Les modifications apportées à la configuration de Resource Governor s’appliquent à l’ensemble du serveur et affectent les charges de travail qui utilisent les pools par défaut du serveur, ainsi que les charges de travail qui utilisent les pools externes.
+1.  Toutes les modifications apportées à la configuration de Resource Governor sont appliquées sur l’ensemble du serveur. Les modifications affectent les charges de travail qui utilisent les pools par défaut pour le serveur, ainsi que les charges de travail qui utilisent les pools externes.
   
-     Par conséquent, pour définir avec plus de précision les charges de travail qui doivent avoir la priorité, vous pouvez créer un nouveau pool de ressources externe défini par l’utilisateur. Vous devez aussi définir une fonction de classification et l’assigner au pool de ressources externe. Le mot clé **EXTERNE** est nouveau.
+     Pour définir avec plus de précision les charges de travail qui doivent avoir la priorité, vous pouvez créer un nouveau pool de ressources externe défini par l’utilisateur. Définissez une fonction de classification et affectez-la au pool de ressources externe. Le mot clé **EXTERNE** est nouveau.
   
-     Commencez par créer un *pool de ressources externe défini par l’utilisateur*. Dans l’exemple suivant, le pool est nommé **ds_ep**.
+     Créez un nouveau *pool de ressources externe défini par l’utilisateur*. Dans l’exemple suivant, le pool est nommé **ds_ep**.
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);
@@ -105,12 +105,13 @@ Le processus comprend plusieurs étapes :
     ```
   
      Les demandes sont assignées au groupe par défaut chaque fois qu’elles ne peuvent pas être classifiées ou que tout autre échec de classification se produit.
-  
-     Pour plus d’informations, consultez [Groupe de charge de travail de Resource Governor](../../relational-databases/resource-governor/resource-governor-workload-group.md) et [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).
+
+ 
+Pour plus d’informations, consultez [Groupe de charge de travail de Resource Governor](../../relational-databases/resource-governor/resource-governor-workload-group.md) et [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).
   
 ## <a name="create-a-classification-function-for-machine-learning"></a>Créer une fonction de classification pour le Machine Learning
   
-Une fonction de classification vise à examiner les tâches entrantes et à déterminer si elles peuvent être exécutées en utilisant le pool de ressources actif. Les tâches qui ne répondent pas aux critères de la fonction de classification sont réassignées au pool de ressources par défaut du serveur.
+Une fonction de classification examine les tâches entrantes. Elle détermine si la tâche peut être exécutée à l’aide du pool de ressources actuel. Les tâches qui ne répondent pas aux critères de la fonction de classification sont réassignées au pool de ressources par défaut du serveur.
   
 1. Commencez par préciser qu’une fonction de classification doit être utilisée par Resource Governor pour déterminer les pools de ressources. Vous pouvez assigner une valeur **null** en guise d’espace réservé pour la fonction classifieur.
   
@@ -149,7 +150,7 @@ Une fonction de classification vise à examiner les tâches entrantes et à dét
 
 ## <a name="verify-new-resource-pools-and-affinity"></a>Vérifier les nouveaux pools de ressources et l’affinité
 
-Pour vérifier que les modifications ont été effectuées, vous devez vérifier la configuration de la mémoire du serveur et du processeur pour chaque groupe de charge de travail associé à ces pools de ressources d’instance :
+Vérifiez la configuration de la mémoire du serveur et le processeur pour chacun des groupes de charge de travail. Vérifiez que les modifications apportées aux ressources de l’instance ont été effectuées, en examinant :
 
 + le pool par défaut du serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 + le pool de ressources par défaut pour les processus externes
@@ -165,7 +166,7 @@ Pour vérifier que les modifications ont été effectuées, vous devez vérifier
 
     |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|interne|Moyenne|25|0|0|0|0|1|2|
+    |1|internal|Moyenne|25|0|0|0|0|1|2|
     |2|default|Moyenne|25|0|0|0|0|2|2|
     |256|ds_wg|Moyenne|25|0|0|0|0|2|256|
   
@@ -190,7 +191,7 @@ Pour vérifier que les modifications ont été effectuées, vous devez vérifier
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
     ```
   
-     Dans ce cas, comme les pools ont été créés avec une affinité AUTO, aucune information n’est affichée. Pour plus d’informations, consultez [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
+     Comme les pools ont été créés avec une affinité AUTO, aucune information n’est affichée. Pour plus d’informations, consultez [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

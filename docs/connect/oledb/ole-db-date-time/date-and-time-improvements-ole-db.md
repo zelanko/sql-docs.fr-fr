@@ -1,6 +1,6 @@
 ---
 title: Améliorations des types de données de date et d’heure (OLE DB) | Microsoft Docs
-description: Améliorations des types de données de date et d’heure (OLE DB)
+description: Ces articles décrivent comment OLE DB Driver pour SQL Server prend en charge de nouveaux types de données de date et d’heure. Consultez une vue d’ensemble et des exemples.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB]
 - OLE DB, date/time improvements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9d3d00493790eed66865d8c3cd393a71b7246776
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cd0f564a68f0b296008907f8620cd870c0e5ca7d
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004470"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862028"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Améliorations des types de données de date et d’heure (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "86004470"
  [Changements de la copie en bloc pour les types de date et d’heure améliorés (OLE DB)](../../oledb/ole-db-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db.md)  
  Décrit les améliorations des types date/time pour prendre en charge les opérations de copie en bloc.  
   
- [Prise en charge des API OLE DB pour les améliorations de date et heure](../../oledb/ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md)  
+ [Prise en charge des API OLE DB pour les améliorations de date et d’heure](../../oledb/ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md)  
  Décrit les API OLE DB qui prennent en charge les fonctionnalités améliorées des types date/time.  
   
  [Comparabilité pour IRowsetFind](../../oledb/ole-db-date-time/comparability-for-irowsetfind.md)  

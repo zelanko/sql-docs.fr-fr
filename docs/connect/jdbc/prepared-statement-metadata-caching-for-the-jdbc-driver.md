@@ -1,5 +1,6 @@
 ---
-title: Préparation de la mise en cache des métadonnées d'instruction pour le pilote JDBC | Microsoft Docs
+title: Préparation de la mise en cache des métadonnées d'instruction pour le pilote JDBC
+description: Découvrez comment JDBC Driver pour SQL Server met en cache les instructions préparées pour améliorer les performances en minimisant les appels à la base de données et comment contrôler son comportement.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8918be02b5dbb0e6decf49bc315b0ebd8c83e369
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 67b35e04ede8608d222c8fc31d89bfd01b093ba7
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923765"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435389"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Préparation de la mise en cache des métadonnées d'instruction pour le pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,7 +56,7 @@ Autre modification introduite à partir de 6.1.6-Preview : le pilote appelle to
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|Ce paramètre contrôle le nombre d’actions d’instruction préparée en attente (sp_unprepare) qui peuvent être en attente par connexion avant l’exécution d’un appel pour nettoyer les handles en attente sur le serveur. Si le paramètre est < = 1, les actions d’annulation de la préparation sont exécutées immédiatement à la fermeture de l’instruction préparée. S’il est défini sur {@literal >} 1, ces appels sont regroupés pour éviter une surcharge trop fréquente liée aux appels à sp_unprepare|
 |int getServerPreparedStatementDiscardThreshold()|Ce paramètre contrôle le nombre d’actions d’instruction préparée en attente (sp_unprepare) qui peuvent être en attente par connexion avant l’exécution d’un appel pour nettoyer les handles en attente sur le serveur. Si le paramètre est < = 1, les actions d’annulation de la préparation sont exécutées immédiatement à la fermeture de l’instruction préparée. S’il est défini sur {@literal >} 1, ces appels sont regroupés pour éviter une surcharge trop fréquente liée aux appels à sp_unprepare.|
 
-## <a name="prepared-statement-metatada-caching"></a>Mise en cache des métadonnées d’une instruction préparée
+## <a name="prepared-statement-metadata-caching"></a>Mise en cache des métadonnées de l’instruction préparée
 Depuis la version 6.3.0-Preview, le pilote JDBC Microsoft pour SQL Server prend en charge la mise en cache des instructions préparées. Avant la version 6.3.0-Preview, si un utilisateur exécutait une requête déjà préparée et mise en cache, l’appel de cette même requête n’entraînait pas sa préparation. À présent, le pilote recherche la requête dans le cache, identifie le descripteur, puis exécute la requête avec sp_execute.
 La mise en cache des métadonnées d'instruction préparée est **désactivée** par défaut. Pour l’activer, vous devez appeler la méthode suivante sur l’objet de connexion :
 

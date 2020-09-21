@@ -1,4 +1,5 @@
 ---
+description: Gérer les événements
 title: Gérer les événements
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,18 +20,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c9f3e94252e955b5191ecdaef0188861f503aa77
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98b162787254ed49ed64e5acd38d1ff8cb13f84f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749004"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418115"
 ---
 # <a name="manage-events"></a>Gérer les événements
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Vous pouvez transférer à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tous les messages d'événements qui correspondent à un niveau de gravité d'erreur ou le dépassent. Cette fonction est qualifiée de *transfert d'événements*. Le serveur de transfert est un serveur dédié qui peut également être un serveur maître. Le transfert d'événements permet de centraliser la gestion des alertes pour un groupe de serveurs, réduisant ainsi la charge de travail sur les serveurs à utilisation intense.  
   
@@ -41,7 +42,7 @@ Les avantages liés à la désignation d'un serveur de gestion des alertes sont 
   
 -   **Centralisation**. Il est possible d'effectuer un contrôle centralisé et une vue consolidée des événements de plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un seul serveur.  
   
--   **Extensibilité**. De nombreux serveurs physiques peuvent être administrés comme un serveur logique unique. En fonction des besoins, vous pouvez ajouter et supprimer des serveurs dans ce groupe de serveurs physiques.  
+-   **Scalabilité**. De nombreux serveurs physiques peuvent être administrés comme un serveur logique unique. En fonction des besoins, vous pouvez ajouter et supprimer des serveurs dans ce groupe de serveurs physiques.  
   
 -   **Efficacité**. Le temps de configuration est réduit car vous ne devez définir les alertes et les opérateurs qu'une seule fois.  
   

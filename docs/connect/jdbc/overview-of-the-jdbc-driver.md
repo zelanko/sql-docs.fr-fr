@@ -2,7 +2,7 @@
 title: Vue d’ensemble du pilote JDBC | Microsoft Docs
 description: Microsoft JDBC Driver pour SQL Server est un pilote compatible avec Java Database Connectivity (JDBC) 4.2 de type 4, qui fournit un accès aux données des bases de données SQL.
 ms.custom: ''
-ms.date: 10/28/2019
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,24 +11,24 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a405918283f1e72c63cf56bd6ac9da1bcb498d36
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5455169782503939330c32829a89bf0701aac25a
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529333"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87943611"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Présentation du pilote JDBC
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Le pilote Microsoft JDBC pour SQL Server est un pilote compatible avec Java Database Connectivity (JDBC) 4.2 de type 4, qui fournit un accès fiable aux données de SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 et Azure SQL Database.  
+Microsoft JDBC Driver pour SQL Server est un pilote compatible avec Java Database Connectivity (JDBC) 4.2 de type 4, qui fournit un accès aux données robustes pour SQL Server et des bases de données Azure SQL.  
 
 ## <a name="redistribution"></a>Redistribution
 
-Les versions 6.0, 6.2, 6.4 et 7.0 du pilotes JDBC sont redistribuables. Lisez la clause _Code distribuable_ des contrats de licence.
+Les versions 6.0 de JDBC Driver sont redistribuables. Lisez la clause _Code distribuable_ des contrats de licence.
 
-Les versions 4.x du pilote JDBC sont anciennes et obsolètes. Leur prise en charge a expiré avant 2018.
+Les versions 4.x de JDBC Driver sont obsolètes. Leur prise en charge a expiré avant 2018.
 
 ## <a name="in-this-section"></a>Contenu de cette section  
 

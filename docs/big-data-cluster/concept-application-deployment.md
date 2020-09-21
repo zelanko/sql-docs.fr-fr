@@ -1,7 +1,7 @@
 ---
 title: Présentation du déploiement d’application
 titleSuffix: SQL Server Big Data Clusters
-description: Cet article décrit le déploiement d’application sur un cluster Big Data pour SQL Server 2019.
+description: Découvrez comment le déploiement d’applications fournit des interfaces pour créer, gérer et exécuter des applications sur un cluster Big Data SQL Server 2019.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4423e6fe624c27c0b9c06d3ff59c56648762af99
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 4bde49046ab8d4f4ea7217970ec85c7a7966f487
+ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215448"
+ms.lasthandoff: 08/24/2020
+ms.locfileid: "88765328"
 ---
 # <a name="what-is-application-deployment-on-a-big-data-cluster"></a>Présentation du déploiement d’application sur un cluster Big Data
 
@@ -57,7 +57,7 @@ Quand une application est exécutée, le service Kubernetes pour l’application
 
 SQL Server 2019 CU5 prend en charge le déploiement de clusters Big Data sur Red Hat OpenShift, ainsi qu’un modèle de sécurité mis à jour pour BDC, si bien que les conteneurs privilégiés ne sont plus nécessaires. Outre les utilisateurs sans privilège, les conteneurs s’exécutent en tant qu’utilisateur non racine par défaut pour tous les nouveaux déploiements avec SQL Server 2019 CU5.
 
-À l’heure où CU5 est publié, l’étape de configuration des applications déployées avec les interfaces de [déploiement d’application](concept-application-deployment.md) s’exécute toujours comme utilisateur *racine*. En effet, c’est à ce moment-là que sont installés les packages supplémentaires utilisés par l’application. Le reste du code utilisateur déployé dans le cadre de l’application s’exécute en tant qu’utilisateur à faibles privilèges. 
+À l’heure où CU5 est publié, l’étape de configuration des applications déployées avec les interfaces de [déploiement d’application]() s’exécute toujours comme utilisateur *racine*. En effet, c’est à ce moment-là que sont installés les packages supplémentaires utilisés par l’application. Le reste du code utilisateur déployé dans le cadre de l’application s’exécute en tant qu’utilisateur à faibles privilèges. 
 
 En outre, **CAP_AUDIT_WRITE** est une fonctionnalité facultative permettant la planification d’applications SSIS à l’aide de travaux cron. Lorsque le fichier de spécification yaml de l’application indique une planification, l’application est déclenchée par le biais d’un travail cron, qui nécessite une fonctionnalité supplémentaire.  L’application peut également être déclenchée à la demande avec *azdata app run* via un appel de service web, qui ne nécessite pas la fonctionnalité CAP_AUDIT_WRITE. 
 
@@ -78,18 +78,18 @@ allowedCapabilities:
 ## <a name="how-to-work-with-application-deployment"></a>Comment utiliser le déploiement d’application
 
 Les deux interfaces principales pour le déploiement d’application sont les suivantes : 
-- [Interface de ligne de commande `azdata`](big-data-cluster-create-apps.md)
+- [Interface de ligne de commande `azdata`](app-create.md)
 - [Visual Studio Code et extension Azure Data Studio](app-deployment-extension.md)
 
-Vous pouvez également exécuter une application à l’aide d’un service web RESTful. Pour plus d’informations, consultez [Utiliser des applications sur des clusters Big Data](big-data-cluster-consume-apps.md).
+Vous pouvez également exécuter une application à l’aide d’un service web RESTful. Pour plus d’informations, consultez [Utiliser des applications sur des clusters Big Data](app-consume.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur la création et l’exécution d’applications sur des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez les rubriques suivantes :
 
-- [Déployer des applications avec azdata](big-data-cluster-create-apps.md)
+- [Déployer des applications avec azdata](app-create.md)
 - [Déployer des applications à l’aide de l’extension de déploiement d’application](app-deployment-extension.md)
-- [Utiliser des applications sur des clusters Big Data](big-data-cluster-consume-apps.md)
+- [Utiliser des applications sur des clusters Big Data](app-consume.md)
 
 Pour plus d’informations sur les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], consultez la vue d’ensemble suivante :
 

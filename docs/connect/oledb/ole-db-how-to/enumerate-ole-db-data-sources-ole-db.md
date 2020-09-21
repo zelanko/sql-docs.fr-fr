@@ -1,6 +1,6 @@
 ---
 title: Énumérer des sources de données OLE DB (pilote OLE DB) | Microsoft Docs
-description: Énumérer des sources de données OLE DB à l’aide de l’énumérateur MSOLEDBSQL
+description: Découvrez comment utiliser l’énumérateur MSOLEDBSQL pour répertorier les sources de données OLE DB Driver pour SQL Server disponibles dans cet exemple.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - data sources [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 33006af4eee9d97566144e66c984d55cabd5765d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244796"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861385"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Énumérer des sources de données OLE DB (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

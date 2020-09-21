@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d98e13b0d42dd61ae87e52ef3cc757d12093f4b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: d01a7cdd6d81d0c27e9c8d8562f71f5605ed4df2
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86455661"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396688"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
 
@@ -40,7 +40,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  **Tableau 1**  
   
-||Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
+|Type de récupération|Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Liste SharePoint locale de batteries de serveurs|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Oui|  
 ||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Oui|Non|  
@@ -51,7 +51,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  **Tableau 2**  
   
-||Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
+|Type de récupération|Informations d'identification prises en charge|Mode d'authentification Windows classique|*Authentification par revendications|  
 |-|---------------------------|-----------------------------------------|-----------------------------|  
 |Liste SharePoint locale de batteries de serveurs|Jeton utilisateur pour l'authentification Windows (intégrée) ou SharePoint|Oui|Oui|  
 ||Stockage, invite, aucun (avec les informations d’identification Windows)<br /><br /> Les informations d’identification stockées et sur invite non-Windows ne sont pas prises en charge.|Non|Non|  

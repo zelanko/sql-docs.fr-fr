@@ -1,6 +1,6 @@
 ---
 title: SQL Server Management Studio (SSMS)
-description: Description de SQL Server Management Studio (SSMS) et de ce qu’il peut faire.
+description: Découvrez plus d’informations sur SQL Server Management Studio (SSMS) et ce que SMMS peut faire, notamment comment gérer les solutions Analysis Services.
 ms.prod: sql
 ms.technology: ssms
 ms.topic: overview
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: seo-lt-2019
 ms.date: 09/11/2019
-ms.openlocfilehash: 80f6a13c952c09153713a36e3e0f8f979ee7bcd3
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 0b46427196ad48bc6dbfaeaca25fa7e327d114f8
+ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001591"
+ms.lasthandoff: 09/04/2020
+ms.locfileid: "89480427"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>Qu’est-ce que SQL Server Management Studio (SSMS) ?
 
@@ -43,7 +43,7 @@ ms.locfileid: "86001591"
 |Comment utiliser l’**Explorateur de modèles** pour créer et gérer des fichiers de texte réutilisable que vous utilisez pour accélérer le développement de requêtes et de scripts.|[l’Explorateur de modèles](../ssms/template/template-explorer.md)|  
 |Comment utiliser **l’Explorateur de solutions** déconseillé pour créer des projets visant à gérer les éléments d’administration, comme les scripts et les requêtes.|[Explorateur de solutions](../ssms/solution/solution-explorer.md)|  
 |Comment utiliser les outils de conception visuelle inclus dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|Comment utiliser les éditeurs de langage de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour créer et déboguer des requêtes et des scripts de manière interactive.|[Éditeurs de texte et de requête](scripting/query-and-text-editors-sql-server-management-studio.md)
+|Comment utiliser les éditeurs de langage de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour créer et déboguer des requêtes et des scripts de manière interactive.|[Éditeurs de texte et de requête](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>SQL Server Management Studio pour le décisionnel
 

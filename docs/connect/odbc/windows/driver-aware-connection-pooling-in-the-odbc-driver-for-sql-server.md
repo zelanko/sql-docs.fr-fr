@@ -2,7 +2,7 @@
 title: Regroupement de connexions prenant en charge les pilotes dans ODBC Driver
 description: Découvrez les améliorations apportées au regroupement de connexions prenant en charge les pilotes dans Microsoft ODBC Driver for SQL Server sur Windows.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: b1d8700e6868781480771c4a62f2a5fc6c92ddfc
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922086"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288101"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Regroupement de connexions prenant en charge le pilote dans le pilote ODBC pour SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -43,7 +43,7 @@ Si l’un des ID d’attribut de connexion ou des mots clés de chaîne de conne
   
 -   En cas de différence dans l’un des mots clés de connexion suivants entre votre chaîne de connexion et une chaîne de connexion regroupée, une connexion regroupée n’est pas utilisée.  
   
-    |Mot clé|ODBC Driver 13|ODBC Driver 11|
+    |Mot clé|ODBC Driver 17/13|ODBC Driver 11|
     |-|-|-|
     |`Address`|Oui|Oui|
     |`AnsiNPW`|Oui|Oui|
@@ -68,7 +68,7 @@ Si l’un des ID d’attribut de connexion ou des mots clés de chaîne de conne
     
 - En cas de différence dans l’un des attributs de connexion suivants entre votre chaîne de connexion et une chaîne de connexion regroupée, une connexion regroupée n’est pas utilisée.  
   
-    |Attribut|ODBC Driver 13|ODBC Driver 11|  
+    |Attribut|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Oui|Oui|
     |`SQL_ATTR_PACKET_SIZE`|Oui|Oui|
@@ -94,7 +94,7 @@ Si l’un des ID d’attribut de connexion ou des mots clés de chaîne de conne
   
      Ces mots clés de connexion ne sont pas pris en considération quand le Gestionnaire de pilotes tente de faire correspondre votre connexion à une connexion dans le regroupement. (Même si vous modifiez l’un de ces paramètres, une connexion existante peut être réutilisée. Le pilote réinitialise les options, si nécessaire.) Ces attributs peuvent être réinitialisés côté client sans appel réseau supplémentaire.  
   
-    |Mot clé|ODBC Driver 13|ODBC Driver 11|  
+    |Mot clé|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`AutoTranslate`|Oui|Oui|
     |`Description`|Oui|Oui|
@@ -108,7 +108,7 @@ Si l’un des ID d’attribut de connexion ou des mots clés de chaîne de conne
   
      Si vous modifiez l’un des attributs de connexion suivants, une connexion existante peut être réutilisée.  Le pilote réinitialise la valeur, si nécessaire. Le pilote peut réinitialiser ces attributs dans le client sans appel réseau supplémentaire.  
   
-    |Attribut|ODBC Driver 13|ODBC Driver 11|  
+    |Attribut|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |Tous les attributs d’instruction|Oui|Oui|
     |`SQL_ATTR_AUTOCOMMIT`|Oui|Oui|

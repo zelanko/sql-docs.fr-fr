@@ -1,4 +1,5 @@
 ---
+description: Implémenter la sécurité de l'Agent SQL Server
 title: Implémenter la sécurité de l'Agent SQL Server
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 663647c1113d4b3f8a017707e278daf5befadba8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b55dcfbdc7172e545c93e9878a18ee5826eb43f0
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722681"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468661"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implémenter la sécurité de l'Agent SQL Server
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent permet à l’administrateur de la base de données d’exécuter chaque étape de travail dans un contexte de sécurité qui a uniquement les autorisations requises pour effectuer cette étape, ce qui est déterminé par un proxy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour définir des autorisations pour une étape de travail particulière, créez un proxy possédant les autorisations requises, puis assignez ce proxy à l'étape de travail. Un proxy peut être spécifié pour plusieurs étapes de travail. Pour les étapes de travail qui requièrent les mêmes autorisations, vous utilisez le même proxy.  
   

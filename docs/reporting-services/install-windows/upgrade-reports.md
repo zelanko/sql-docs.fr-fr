@@ -1,4 +1,5 @@
 ---
+description: Mettre à niveau des rapports (SSRS)
 title: Mettre à niveau des rapports | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: reporting-services
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bae0cffce8cfacd56feaab289d75b7c70d509ce7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 1454c579739c892cc3d0c03211283589ba3e6b82
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77082282"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446023"
 ---
 # <a name="upgrade-reports-ssrs"></a>Mettre à niveau des rapports (SSRS)
 
@@ -127,7 +128,7 @@ Les fichiers de définition de rapport (.rdl) existants sont automatiquement mis
   
 -   **Non** Choisissez **Non** si vous ne souhaitez pas convertir les CRI dans le rapport. Ces CRI ne peuvent pas être affichés par le processeur de rapports dans leur version actuelle. Si votre administrateur système projette d’installer une nouvelle version du CRI de l’éditeur de logiciels tiers compatible avec le nouveau format de définition de rapport, vous devez choisir **Non**. Tant que de nouvelles versions ne sont pas disponibles, les CRI apparaissent dans le rapport sous la forme d'une zone de texte vide marquée d'une croix (X) rouge.  
   
- Dans les deux cas, le rapport est mis à niveau vers le nouveau format de définition de rapport et une copie de sauvegarde du rapport d’origine est enregistrée au format *\<nom rapport>* `-` Backup.rdl. Si vous enregistrez le rapport dans votre outil de création de rapports, vous enregistrez le rapport mis à niveau dans le nouveau format de définition de rapport. Si vous publiez le rapport, celui-ci est d'abord enregistré sur votre ordinateur, puis publié sur le serveur de rapports. Vous publiez la version mise à niveau du rapport sur le serveur de rapports.  
+ Dans les deux cas, le rapport est mis à niveau au nouveau format de définition de rapport et une copie de sauvegarde du rapport d'origine est enregistrée en tant que *\<Report Name>* `-`Backup.rdl. Si vous enregistrez le rapport dans votre outil de création de rapports, vous enregistrez le rapport mis à niveau dans le nouveau format de définition de rapport. Si vous publiez le rapport, celui-ci est d'abord enregistré sur votre ordinateur, puis publié sur le serveur de rapports. Vous publiez la version mise à niveau du rapport sur le serveur de rapports.  
   
  Si vous n'enregistrez pas le rapport, le rapport d'origine reste inchangé. Toutefois, vous ne pouvez pas modifier ce rapport dans la version SQL Server 2016 de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou dans un environnement de création de rapports qui utilise un format de définition de rapport plus récent. Vous pouvez continuer à exécuter la version d’origine du rapport en le téléchargeant sur un serveur de rapports [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] à l’aide du portail web. Pour plus d’informations, consultez [Portail web](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
@@ -140,6 +141,6 @@ Les fichiers de définition de rapport (.rdl) existants sont automatiquement mis
 [Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2016](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Fonctionnalités supprimées de SQL Server Reporting Services dans SQL Server 2016](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [Éléments de rapport personnalisés](../../reporting-services/custom-report-items/custom-report-items.md)   
-[Mettre à niveau une base de données de serveurs de rapports](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
+[Mettre à niveau une base de données du serveur de rapports](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

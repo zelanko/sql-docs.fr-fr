@@ -1,7 +1,8 @@
 ---
-title: 'Procédure : Spécifier des types de données PHP | Microsoft Docs'
+title: 'Procédure : spécifier des types de données PHP'
+description: Découvrez comment spécifier des types de données PHP lors de la récupération de données à l’aide des Pilotes Microsoft pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8453b2cd2db36ed2c69b8ada941bcde0050a0759
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9a47fd479449a8725c2e8a86d960ef020d1ee1ba
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915795"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680674"
 ---
 # <a name="how-to-specify-php-data-types"></a>Procédure : Spécifier des types de données PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +36,7 @@ Les étapes suivantes récapitulent la manière de spécifier des types de donn�
   
     Pour plus d’informations sur les constantes utilisées pour spécifier le type de données PHP, consultez la section PHPTYPE de [Constantes &#40;pilotes Microsoft pour PHP pour SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant récupère des lignes de la table *Production.ProductReview* de la base de données AdventureWorks. Dans chaque ligne retournée, le champ *ReviewDate* est récupéré sous forme de chaîne et le champ *Comments* sous forme de flux. Les données de flux apparaissent à l’aide de la fonction [fpassthru](https://php.net/manual/en/function.fpassthru.php) PHP.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
@@ -102,7 +103,7 @@ Dans l’exemple, le fait de récupérer le deuxième champ (*ReviewDate*) sous 
 La récupération du quatrième champ (*Comments*) sous forme de flux est indiquée à des fins de démonstration. Par défaut, le type de données SQL Server nvarchar(3850) est récupérée sous la forme d’une chaîne, ce qui est acceptable dans la plupart des situations.  
   
 > [!NOTE]  
-> La fonction [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) fournit un moyen d’obtenir des informations de champ, ainsi que des informations de type, avant d’exécuter une requête.  
+>  La fonction [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) fournit un moyen d’obtenir des informations de champ, y compris des informations de type, avant d’exécuter une requête.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)

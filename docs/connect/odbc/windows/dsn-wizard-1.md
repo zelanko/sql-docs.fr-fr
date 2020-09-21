@@ -1,4 +1,5 @@
 ---
+description: Assistant Source de données, écran 1 (ODBC Driver pour SQL Server)
 title: Assistant Source de données, écran 1 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28c89bd90a8182a8fd8114de4a9e2ec9da4e9464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 78009925b5d62e8a314d0a3fdc27c29acaee5c5d
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928259"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462223"
 ---
 # <a name="data-source-wizard-screen-1"></a>Assistant Source de données, écran 1
 

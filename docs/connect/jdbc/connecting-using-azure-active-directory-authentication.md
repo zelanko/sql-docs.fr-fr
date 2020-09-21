@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 16e6758e6846c6258c0345bd8ceca8aed3c3f3c6
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
+ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054256"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87899013"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connexion avec l'authentification Azure Active Directory
 
@@ -24,14 +24,14 @@ ms.locfileid: "85054256"
 
 Cet article donne des informations sur le développement d’applications Java pour utiliser la fonctionnalité d’authentification Azure Active Directory avec le pilote JDBC Microsoft pour SQL Server.
 
-Vous pouvez utiliser l’authentification Azure Active Directory (AAD), qui est un mécanisme de connexion à Azure SQL Database v12 à l’aide d’identités dans Azure Active Directory. Utilisez l’authentification Azure Active Directory pour gérer de manière centralisée les identités des utilisateurs de base de données et comme alternative à l’authentification SQL Server. Le pilote JDBC vous permet de spécifier vos informations d’identification Azure Active Directory dans la chaîne de connexion JDBC pour vous connecter à la base de données Azure SQL. Pour savoir comment configurer l’authentification Azure Active Directory, consultez [Se connecter à une base de données SQL avec l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+Vous pouvez utiliser l’authentification Azure Active Directory (Azure AD), qui est un mécanisme de connexion à Azure SQL Database v12 à l’aide d’identités dans Azure Active Directory. Utilisez l’authentification Azure Active Directory pour gérer de manière centralisée les identités des utilisateurs de base de données et comme alternative à l’authentification SQL Server. JDBC Driver vous permet de spécifier vos informations d’identification Azure Active Directory dans la chaîne de connexion JDBC pour vous connecter à Azure SQL Database. Pour savoir comment configurer l’authentification Azure Active Directory, consultez [Se connecter à une base de données SQL avec l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
 Les propriétés de connexion pour la prise en charge de l’authentification Azure Active Directory dans le pilote JDBC Microsoft pour SQL Server sont les suivantes :
 *   **authentication** :  utilisez cette propriété pour indiquer la méthode d’authentification SQL à utiliser pour la connexion. Les valeurs possibles sont les suivantes : 
     * **ActiveDirectoryMSI**
-        * Prise en charge depuis la version de pilote **v 7.2**, l’authentification `authentication=ActiveDirectoryMSI` peut être utilisée pour se connecter à un Azure SQL Database/Data Warehouse à partir d’une ressource Azure où la prise en charge de l’« identité » est activée. L’authentification **msiClientId** peut également être spécifiée dans les propriétés Connection/DataSource avec ce mode d’authentification, qui doit contenir l’ID client d’une identité de service géré à utiliser pour acquérir le jeton **accessToken** qui permettra d’établir la connexion.
+        * Prise en charge depuis la version de pilote **v 7.2**, l’authentification `authentication=ActiveDirectoryMSI` peut être utilisée pour se connecter à un Azure SQL Database/Data Warehouse à partir d’une ressource Azure où la prise en charge de l’« identité » est activée. L’authentification **msiClientId** peut également être spécifiée dans les propriétés Connection/DataSource avec ce mode d’authentification, qui doit contenir l’ID client d’une identité managée à utiliser pour acquérir **accessToken** qui permettra d’établir la connexion.
     * **ActiveDirectoryIntegrated**
-        * Prise en charge depuis la version de pilote **v6.0**, l’authentification `authentication=ActiveDirectoryIntegrated` peut être utilisée pour se connecter à Azure SQL Database/Data Warehouse à l’aide de l’authentification intégrée. Pour utiliser ce mode d’authentification, vous devez fédérer les services de fédération Active Directory (AD FS) locaux avec Azure Active Directory dans le cloud. Une fois la configuration terminée, vous pouvez vous connecter en ajoutant la bibliothèque Native « mssql-jdbc_auth-\<version>-\<arch>.dll » au chemin de la classe d’application sur le système d’exploitation Windows ou en configurant un ticket Kerberos pour le support de l’authentification multiplateforme. Vous pourrez accéder à Azure SQL DB/DW sans être invité à entrer des informations d’identification lorsque vous vous connecterez à un ordinateur joint au domaine.
+        * Prise en charge depuis la version de pilote **v6.0**, l’authentification `authentication=ActiveDirectoryIntegrated` peut être utilisée pour se connecter à Azure SQL Database/Data Warehouse à l’aide de l’authentification intégrée. Pour utiliser ce mode d’authentification, vous devez fédérer les services de fédération Active Directory (AD FS) locaux avec Azure Active Directory dans le cloud. Une fois la configuration terminée, vous pouvez vous connecter en ajoutant la bibliothèque Native « mssql-jdbc_auth-\<version>-\<arch>.dll » au chemin de la classe d’application sur le système d’exploitation Windows ou en configurant un ticket Kerberos pour le support de l’authentification multiplateforme. Vous pourrez accéder à Azure SQL Database/SQL Data Warehouse sans être invité à entrer des informations d’identification lorsque vous vous connecterez à un ordinateur joint au domaine.
     * **ActiveDirectoryPassword**
         * Prise en charge depuis la version de pilote **v6.0**, l’authentification `authentication=ActiveDirectoryPassword` peut être utilisée pour se connecter à Azure SQL Database/Data Warehouse à l’aide d’un nom de principal et d’un mot de passe Azure AD.
     * **SqlPassword**
@@ -49,7 +49,7 @@ Pour l’authentification **ActiveDirectoryMSI**, les composants ci-dessous doiv
 * Java 8 ou version ultérieure
 * Pilote Microsoft JDBC 7.2 (ou version ultérieure) pour SQL Server
 * L’environnement client doit être une ressource Azure et la prise en charge de la fonctionnalité « Identité » doit être activée.
-* Un utilisateur de base de données autonome représentant l’identité managée affectée par le système ou l’identité managée affectée par l’utilisateur de votre ressource Azure, ou l’un des groupes dont votre MSI fait partie, doit exister dans la base de données cible et disposer de l’autorisation CONNECT.
+* Un utilisateur de base de données autonome représentant l’identité managée affectée par le système ou l’identité managée affectée par l’utilisateur de votre ressource Azure ou l’un des groupes auquel appartient votre identité managée, doit exister dans la base de données cible et disposer de l’autorisation CONNECT.
 
 Pour d’autres modes d’authentification, les composants ci-dessous doivent être installés sur l’ordinateur client :
 * Java 7 ou version ultérieure
@@ -67,7 +67,7 @@ Avant d’exécuter l’exemple, remplacez le nom du serveur/de la base de donn�
 ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 ds.setDatabaseName("demo"); // replace with your database name
 //Optional
-ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+ds.setMSIClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
 ```
 
 Exemple d’utilisation du mode d’authentification ActiveDirectoryMSI :
@@ -87,7 +87,7 @@ public class AAD_MSI {
         ds.setDatabaseName("demo"); // Replace with your database name
         ds.setAuthentication("ActiveDirectoryMSI");
         // Optional
-        ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned MSI to be used
+        ds.setMsiClientId("94de34e9-8e8c-470a-96df-08110924b814"); // Replace with Client ID of User-Assigned Managed Identity to be used
 
         try (Connection connection = ds.getConnection(); 
                 Statement stmt = connection.createStatement();
@@ -103,7 +103,7 @@ public class AAD_MSI {
 L’exécution de cet exemple sur une machine virtuelle Azure récupère un jeton d’accès à partir de l’_identité managée affectée par le système_ ou de l’_identité managée affectée par l'utilisateur_ (si **msiClientId** est spécifié) et établit une connexion à l’aide du jeton d’accès extrait. Si une connexion est établie, le message suivant doit s’afficher :
 
 ```bash
-You have successfully logged on as: <your MSI username>
+You have successfully logged on as: <your Managed Identity username>
 ```
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Connexion à l’aide du mode d’authentification ActiveDirectoryIntegrated
@@ -223,7 +223,7 @@ Avant de créer et d’exécuter l’exemple :
     ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
     ds.setDatabaseName("demo"); // replace with your database name
     ```
-3.  Localisez les lignes de code suivantes et remplacez nom d’utilisateur par le nom de l’utilisateur AAD auquel vous souhaitez vous connecter.
+3.  Localisez les lignes de code suivantes et remplacez le nom d’utilisateur par le nom de l’utilisateur Azure AD auquel vous souhaitez vous connecter.
     ```java
     ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
     ds.setPassword("password");     // replace with your password
@@ -293,7 +293,7 @@ L’exemple ci-dessous contient une application Java simple qui se connecte à A
     CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
     ```
 
-3.  Sur l’ordinateur client (sur lequel vous souhaitez exécuter l’exemple), téléchargez la [bibliothèque azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) et ses dépendances et incluez-les dans le chemin du build Java. Notez que la bibliothèque azure-activedirectory-library-for-java n’est nécessaire que pour exécuter cet exemple spécifique. L’exemple utilise les API de cette bibliothèque pour récupérer le jeton d’accès à partir d’Azure AAD. Si vous disposez déjà d’un jeton d’accès, vous pouvez ignorer cette étape. Notez que vous devez également supprimer la section contenant l’exemple de récupération du jeton d’accès.
+3.  Sur l’ordinateur client (sur lequel vous souhaitez exécuter l’exemple), téléchargez la [bibliothèque azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) et ses dépendances et incluez-les dans le chemin du build Java. Notez que la bibliothèque azure-activedirectory-library-for-java n’est nécessaire que pour exécuter cet exemple spécifique. L’exemple utilise les API de cette bibliothèque pour récupérer le jeton d’accès à partir d’Azure AD. Si vous disposez déjà d’un jeton d’accès, vous pouvez ignorer cette étape. Notez que vous devez également supprimer la section contenant l’exemple de récupération du jeton d’accès.
 
 Dans l’exemple suivant, remplacez l’URL STS, l’ID client, la clé secrète client, le nom du serveur et de la base de données par vos propres valeurs.
 

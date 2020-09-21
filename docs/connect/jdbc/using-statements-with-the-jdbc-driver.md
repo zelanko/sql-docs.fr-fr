@@ -1,5 +1,6 @@
 ---
-title: Utilisation d'instructions avec le pilote JDBC | Microsoft Docs
+title: Utilisation d'instructions avec le pilote JDBC
+description: Découvrez comment utiliser Microsoft JDBC Driver pour SQL Server pour exécuter des instructions SQL et des procédures stockées afin d’effectuer des opérations de base de données.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b94782d6e36f6ef6fb2997ceb195bf9ecdb1e947
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: de6f5340375a3a9a5c39e2405943729b997e9198
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923955"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435291"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Utilisation d'instructions avec le pilote JDBC
 

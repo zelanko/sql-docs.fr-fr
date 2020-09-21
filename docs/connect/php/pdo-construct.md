@@ -1,7 +1,8 @@
 ---
-title: PDO::__construct | Microsoft Docs
+title: PDO::__construct
+description: Référence API pour la fonction PDO::__construct dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3a6a96099a3e0e478fa08dc2aff3af73a0e14f99
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ded33f50037c510fadd5016ffe2c72f664e70e12
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919407"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646222"
 ---
 # <a name="pdo__construct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +35,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$username* : facultatif. Chaîne qui contient le nom de l’utilisateur. Pour vous connecter avec l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez l’ID de connexion. Pour vous  connecter avec l’authentification Windows, spécifiez `""`.  
   
-*$password* : facultatif. Chaîne qui contient le mot de passe de l’utilisateur. Pour vous connecter avec l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez le mot de passe. Pour vous  connecter avec l’authentification Windows, spécifiez `""`.  
+*$password*: facultatif. Chaîne qui contient le mot de passe de l’utilisateur. Pour vous connecter avec l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], spécifiez le mot de passe. Pour vous  connecter avec l’authentification Windows, spécifiez `""`.  
   
 *$driver_options* : facultatif. Vous pouvez spécifier les attributs du Gestionnaire de pilotes PDO et des attributs de pilotes spécifiques [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] : PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Un attribut non valide ne lève pas d’exception. Les attributs non valides lèvent des exceptions quand ils sont spécifiés avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
@@ -53,7 +54,7 @@ Si PDO::__construct échoue pour une raison quelconque, une exception est levée
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple montre comment se connecter à un serveur en utilisant l’authentification Windows et spécifier une base de données.  
   
 ```  
@@ -69,7 +70,7 @@ Cet exemple montre comment se connecter à un serveur en utilisant l’authentif
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple montre comment se connecter à un serveur en spécifiant la base de données plus tard.  
   
 ```  

@@ -1,4 +1,5 @@
 ---
+description: Méthode setObject (int, java.lang.Object)
 title: setObject, méthode (int, java.lang.Object) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
@@ -15,12 +16,12 @@ apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 77e5b4c13d6ff298f1a12127dffba8be2bda8c5b
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4889cde1e7c50cb9aeb40d05468c035b99772a72
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920849"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88458561"
 ---
 # <a name="setobject-method-int-javalangobject"></a>Méthode setObject (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,13 +63,13 @@ public final void setObject(int index,
   
  Si la valeur de obj est Null et qu’aucune information de type ne peut être déterminée pour ce paramètre, cette méthode setObject convertit le paramètre spécifié en type CHAR avant de l’envoyer à la base de données.  
   
- À partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** ([Définir les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et par [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ À compter de la version 3.0 de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** ([Définir les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et par [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
  Pour plus d’informations, consultez [Configurer le mode d’envoi des valeurs java.sql.Time au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [setObject, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
- [SQLServerPreparedStatement, classe](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
+ [Classe SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   
   

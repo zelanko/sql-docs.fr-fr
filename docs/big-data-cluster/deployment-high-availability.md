@@ -5,16 +5,16 @@ description: Découvrez comment déployer un cluster Big Data SQL Server avec un
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08574ef070803a8612d12e595169bbc00b99b139
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 2ed7a1b5169c7104ea089410d244095cd953aaf2
+ms.sourcegitcommit: 6ab28d954f3a63168463321a8bc6ecced099b247
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279459"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87790268"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>Déployer un cluster Big Data SQL Server avec une haute disponibilité
 
@@ -133,6 +133,9 @@ Pour certaines opérations telles que la définition de configurations au niveau
 
 > [!IMPORTANT]
 > Le point de terminaison exposé pour les connexions d’instance SQL Server prend uniquement en charge l’authentification SQL, même dans les clusters où Active Directory est activé. Par défaut, au cours d’un déploiement de cluster Big Data, la connexion `sa` est désactivée et une nouvelle connexion `sysadmin` est provisionnée en fonction des valeurs fournies au moment du déploiement pour les variables d’environnement `AZDATA_USERNAME` et `AZDATA_PASSWORD`.
+
+> [!IMPORTANT]
+> Le DDL du groupe de disponibilité contenu est autogéré exclusivement dans le BDC. Toute tentative (par un utilisateur externe) de supprimer la disponibilité contenue ou le point de terminaison de mise en miroir de bases de données n’est pas prise en charge et peut entraîner un état de BDC irrécupérable.
 
 Voici un exemple illustrant comment exposer ce point de terminaison, puis ajouter la base de données créée avec un workflow de restauration dans le groupe de disponibilité. Des instructions similaires pour la configuration d’une connexion à l’instance principale SQL Server s’appliquent lorsque vous souhaitez modifier les configurations de serveur avec `sp_configure`.
 

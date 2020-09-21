@@ -7,26 +7,26 @@ ms.prod_service: connectivity
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: ulvii
-ms.author: v-ulibra
+author: David-Engel
+ms.author: v-daenge
 manager: v-mabarw
-ms.openlocfilehash: 3fc2747f21ff50af6206e59da594c0a06b2bb909
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ee4938e8a0d226f668fabf3aaf4db1359ab6bf61
+ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886276"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88807015"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutoriel : Installation sur Linux et macOS des pilotes Microsoft pour PHP pour SQL Server
-Les instructions suivantes partent du principe que votre environnement est propre. Elles montrent comment installer PHP 7.x, le pilote Microsoft ODBC, le serveur web Apache et les pilotes Microsoft pour PHP pour SQL Server sur Ubuntu 16.04, 18.04 et 19.10, Red Hat 7 et 8, Debian 8, 9 et 10, Suse 12 et 15, Alpine 3.11 ainsi que macOS 10.13, 10.14 et 10.15. Ces instructions conseillent d’installer les pilotes à l’aide de PECL, mais vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la page de projet GitHub des [pilotes Microsoft pour PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases) et les installer en suivant les instructions fournies dans [Chargement des pilotes Microsoft SQL Server pour PHP](../../connect/php/loading-the-php-sql-driver.md). Pour obtenir une explication concernant le chargement d’extension et savoir pourquoi nous n’ajoutons pas les extensions à php.ini, consultez la section sur le [chargement des pilotes](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+Les instructions suivantes partent du principe que votre environnement est propre. Elles montrent comment installer PHP 7.x, le pilote ODBC Microsoft, le serveur web Apache et les Pilotes Microsoft pour PHP pour SQL Server sur Ubuntu 16.04, 18.04 et 20.04, RedHat 7 et 8, Debian 8, 9 et 10, Suse 12 et 15, Alpine 3.11 ainsi que macOS 10.13, 10.14 et 10.15. Ces instructions conseillent d’installer les pilotes à l’aide de PECL, mais vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la page de projet GitHub des [pilotes Microsoft pour PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases) et les installer en suivant les instructions fournies dans [Chargement des pilotes Microsoft SQL Server pour PHP](../../connect/php/loading-the-php-sql-driver.md). Pour obtenir une explication concernant le chargement d’extension et savoir pourquoi nous n’ajoutons pas les extensions à php.ini, consultez la section sur le [chargement des pilotes](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
 Ces instructions installent PHP 7.4 par défaut avec `pecl install`. Vous devrez peut-être d’abord exécuter `pecl channel-update pecl.php.net`. Notez que certaines distributions de Linux prises en charge utilisent par défaut PHP 7.1 ou une version antérieure, qui ne sont pas prises en charge pour la dernière version des pilotes PHP pour SQL Server. Consultez les notes au début de chaque section pour installer PHP 7.2 ou 7.3 à la place.
 
 Vous trouverez également des instructions pour l’installation du gestionnaire de processus PHP FastCGI, PHP-FPM, sur Ubuntu. C’est nécessaire si vous utilisez le serveur Web nginx au lieu d’Apache.
 
-## <a name="contents-of-this-page"></a>Contenu de cette page :
+## <a name="contents-of-this-page"></a>Contenu de cette page
 
-- [Installation des pilotes sur Ubuntu 16.04, 18.04 et 19.10](#installing-the-drivers-on-ubuntu-1604-1804-and-1910)
+- [Installation des pilotes sur Ubuntu 16.04, 18.04 et 20.04](#installing-the-drivers-on-ubuntu-1604-1804-and-2004)
 - [Installation des pilotes avec PHP-FPM sur Ubuntu](#installing-the-drivers-with-php-fpm-on-ubuntu)
 - [Installation des pilotes sur Red Hat 7 et 8](#installing-the-drivers-on-red-hat-7-and-8)
 - [Installation des pilotes sur Debian 8, 9 et 10](#installing-the-drivers-on-debian-8-9-and-10)
@@ -34,7 +34,7 @@ Vous trouverez également des instructions pour l’installation du gestionnaire
 - [Installation des pilotes sur Alpine 3.11](#installing-the-drivers-on-alpine-311)
 - [Installation des pilotes sur macOS High Sierra, Mojave et Catalina](#installing-the-drivers-on-macos-high-sierra-mojave-and-catalina)
 
-## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-1910"></a>Installation des pilotes sur Ubuntu 16.04, 18.04 et 19.10
+## <a name="installing-the-drivers-on-ubuntu-1604-1804-and-2004"></a>Installation des pilotes sur Ubuntu 16.04, 18.04 et 20.04
 
 > [!NOTE]
 > Pour installer PHP 7.2 ou 7.3, remplacez 7.4 par 7.2 ou 7.3 dans les commandes suivantes.

@@ -1,5 +1,6 @@
 ---
-title: Guide pratique pour récupérer des paramètres de sortie avec le pilote SQLSRV | Microsoft Docs
+title: 'Procédure : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV'
+description: Découvrez comment utiliser et récupérer des paramètres de sortie dans une procédure stockée avec Microsoft SQLSRV Driver pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fe3ac42280791083d5443b1bf004908a301971e5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6b23f80859a572ea8bb3f96a0460d0f5eba0183a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916015"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410955"
 ---
-# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV
+# <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procédure : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique montre comment appeler une procédure stockée dans laquelle un seul paramètre a été défini en tant que paramètre de sortie. Quand vous récupérez un paramètre de sortie ou d’entrée/sortie, tous les résultats retournés par la procédure stockée doivent être consommés pour que la valeur de paramètre retournée soit accessible.  
   
 > [!NOTE]  
-> Les variables initialisées ou mises à jour avec la valeur **null**, **DateTime**ou des types de flux ne peuvent pas être utilisées comme paramètres de sortie.  
+>  Les variables initialisées ou mises à jour avec la valeur **Null**, **DateTime**ou des types de flux ne peuvent pas être utilisées comme paramètres de sortie.  
   
 Une troncation de données peut se produire quand des types de flux comme SQLSRV_SQLTYPE_VARCHAR('max') sont utilisés comme paramètres de sortie. Les types de flux ne sont pas pris en charge comme paramètres de sortie. Pour les types autres que types de flux, une troncation de données peut se produire si la longueur du paramètre de sortie n’est pas spécifiée ou si la longueur spécifiée n’est pas assez élevée pour le paramètre de sortie.  
   
@@ -150,9 +151,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Voir aussi  
-[Guide pratique pour spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Procédure : Spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
+[Procédure : Récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)
 
 [Récupération de données](../../connect/php/retrieving-data.md)  
   

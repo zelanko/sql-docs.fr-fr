@@ -1,4 +1,5 @@
 ---
+description: Stocker des données chiffrées du serveur de rapports (Configuration Manager)
 title: Stocker des données chiffrées du serveur de rapports (Configuration Manager) | Microsoft Docs
 ms.date: 10/24/2019
 ms.prod: reporting-services
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 94161a531c922642fa1c4cf34dc4a683073b957d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 70ca863145814a8d0e4e2e07903a69352af2b812
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080822"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88446059"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Clés de chiffrement SSRS - Stocker des données chiffrées du serveur de rapports
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke des valeurs chiffrées dans la base de données du serveur de rapports et dans les fichiers de configuration. La plupart des valeurs chiffrées sont des informations d'identification utilisées pour accéder à des sources de données externes fournissant des données aux rapports. Cette rubrique indique quelles valeurs sont chiffrées et décrit la fonctionnalité de chiffrement utilisée dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], ainsi que les autres types de données confidentielles stockées qu'il convient de connaître.  

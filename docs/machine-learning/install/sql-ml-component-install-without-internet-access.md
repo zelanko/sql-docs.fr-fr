@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247978"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88487642"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installer les composants de machine learning SQL Server R et Python sur un ordinateur sans accès à Internet
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Par défaut, les programmes d’installation se connectent aux sites de téléchargement Microsoft pour obtenir les composants nécessaires à jour pour le machine learning sur SQL Server. Si les contraintes de pare-feu empêchent le programme d’installation d’y accéder, vous pouvez utiliser un appareil connecté à Internet pour télécharger les fichiers, transférer ces fichiers vers un serveur hors connexion, puis exécuter le programme d’installation.
 
@@ -215,4 +215,4 @@ Une installation hors connexion initiale de SQL Server R Services nécessite la 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir de l’aide sur les messages ou entrées de journal que vous ne connaissez pas, consultez [FAQ sur la mise à niveau et l’installation - Machine Learning Services](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md).
+Pour utiliser Machine Learning Services pour exécuter des scripts Python et R dans la base de données, consultez [Installer SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).

@@ -16,12 +16,12 @@ ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362d2643557229b64961217d9a5b5b3c4f784bff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 727dc40389d803cc81bb07011f799bc2d44365a0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88360695"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076667"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Référence Transact-SQL (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,14 +60,14 @@ Par exemple, cette rubrique s’applique à toutes les versions et contient l’
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-Autre exemple, l’étiquette suivante indique une rubrique qui s’applique uniquement à Azure SQL Data Warehouse et Parallel Data Warehouse.
+Autre exemple, l’étiquette suivante indique une rubrique qui s’applique uniquement à Azure Synapse Analytics et Parallel Data Warehouse.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 
 Dans certains cas, la rubrique est utilisée par un produit ou service, mais les arguments ne sont pas tous pris en charge. Dans ce cas, des sections **S'applique à** supplémentaires sont insérées dans les descriptions des arguments appropriés dans le corps de la rubrique.  
  
-## <a name="get-help-from-the-msdn-forum"></a>Obtenir de l’aide sur le forum MSDN  
-Pour une aide en ligne, consultez le [Forum Transact-SQL MSDN](https://social.msdn.microsoft.com/Forums/home).  
+## <a name="get-help-from-microsoft-q--a"></a>Obtenir de l’aide des questions et réponses de Microsoft  
+Pour obtenir une aide en ligne, consultez le [Forum Transact-SQL questions et réponses de Microsoft](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
  
 ## <a name="see-other-language-references"></a>Consulter d’autres informations de référence du langage
 La documentation SQL comprend les autres informations de référence du langage suivantes :

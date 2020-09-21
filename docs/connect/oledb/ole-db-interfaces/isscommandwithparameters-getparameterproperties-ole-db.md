@@ -1,6 +1,6 @@
 ---
 title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs
-description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
+description: ISSCommandWithParameters::GetParameterProperties retourne un tableau de structures de jeu de propriétés dans OLE DB Driver pour SQL Server, un pour chaque paramètre UDT ou XML.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - GetParameterProperties method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 288657a0871046168e7319d5c650a12eab61c6ce
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 8631c9c1beed054b57fd368dd567e3568c213b50
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006754"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862142"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,13 +43,13 @@ HRESULT GetParameterProperties(
  Pointeur vers la mémoire qui contient le nombre de structures SSPARAMPROPS retournées dans *prgParamProperties*.  
   
  *prgParamProperties*[out]  
- Pointeur vers la mémoire dans laquelle est retourné un tableau de structures SSPARAMPROPS. Le fournisseur attribue la mémoire pour les structures et retourne l’adresse à cette mémoire. Le consommateur libère la mémoire avec **IMalloc::Free** lorsqu’il n’a plus besoin des structures. Avant d’appeler **IMalloc::Free** pour *prgParamProperties*, le consommateur doit également appeler **VariantClear** pour la propriété *vValue* de chaque structure DBPROP afin d’empêcher une fuite de mémoire dans les cas où la variante contient un type référence (BSTR, par exemple). Si *pcParams* a la valeur zéro en sortie ou qu’il se produit une erreur autre que DB_E_ERRORSOCCURRED, le fournisseur n’alloue aucune mémoire et garantit que *prgParamProperties* est un pointeur Null en sortie.  
+ Pointeur vers la mémoire dans laquelle est retourné un tableau de structures SSPARAMPROPS. Le fournisseur attribue la mémoire pour les structures et retourne l’adresse à cette mémoire. Le contrôle serveur consommateur libère la mémoire avec `IMalloc::Free` lorsqu’il n’a plus besoin des structures. Avant d’appeler `IMalloc::Free` pour *prgParamProperties*, le contrôle serveur consommateur doit également appeler `VariantClear` pour la propriété *vValue* de chaque structure DBPROP afin d’empêcher une fuite de mémoire dans les cas où la variante contient un type référence (BSTR, par exemple). Si *pcParams* a la valeur zéro en sortie ou qu’il se produit une erreur autre que DB_E_ERRORSOCCURRED, le fournisseur n’alloue aucune mémoire et garantit que *prgParamProperties* est un pointeur Null en sortie.  
   
 ## <a name="return-code-values"></a>Codet de retour  
- La méthode **GetParameterProperties** retourne les mêmes codes d’erreur que la méthode OLE DB **ICommandProperties::GetProperties** principale, si ce n’est que DB_S_ERRORSOCCURRED et DB_E_ERRORSOCCURED ne peuvent pas être déclenchés.  
+ La méthode `GetParameterProperties` retourne les mêmes codes d’erreur que la méthode `ICommandProperties::GetProperties` OLE DB si ce n’est que DB_S_ERRORSOCCURRED et DB_E_ERRORSOCCURED ne peuvent pas être déclenchés.  
   
 ## <a name="remarks"></a>Notes  
- La méthode **ISSCommandWithParameters::GetParameterProperties** se comporte de façon cohérente par rapport à **GetParameterInfo**. Si [ISSCommandWithParameters::SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) ou **SetParameterInfo** n’ont pas été appelés ou ont été appelés avec cParams égal à zéro, **GetParameterInfo** dérive les informations de paramètre et les retourne. Si **ISSCommandWithParameters::SetParameterProperties** ou **SetParameterInfo** ont été appelés pour au moins un paramètre, **ISSCommandWithParameters::GetParameterProperties** retourne uniquement des propriétés pour les paramètres pour lesquels **ISSCommandWithParameters::SetParameterProperties** a été appelé. Si **ISSCommandWithParameters::SetParameterProperties** est appelé après **ISSCommandWithParameters::GetParameterProperties** ou **GetParameterInfo**, les appels suivants à **ISSCommandWithParameters::GetParameterProperties** retournent les valeurs substituées des paramètres pour lesquels **ISSCommandWithParameters::SetParameterProperties** a été appelé.  
+ La méthode `ISSCommandWithParameters::GetParameterProperties` se comporte de manière cohérente par rapport à `GetParameterInfo`. Si [`ISSCommandWithParameters::SetParameterProperties`](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) ou `SetParameterInfo` n’ont pas été appelés ou ont été appelés avec cParams égal à zéro, `GetParameterInfo` dérive les informations de paramètre et les retourne. Si `ISSCommandWithParameters::SetParameterProperties` ou `SetParameterInfo` ont été appelés pour au moins un paramètre, la méthode `ISSCommandWithParameters::GetParameterProperties` retourne des propriétés uniquement pour les paramètres pour lesquels `ISSCommandWithParameters::SetParameterProperties` a été appelé. Si `ISSCommandWithParameters::SetParameterProperties` est appelée après `ISSCommandWithParameters::GetParameterProperties` ou `GetParameterInfo`, les appels suivants à `ISSCommandWithParameters::GetParameterProperties` retournent les valeurs substituées pour les paramètres pour lesquels la méthode `ISSCommandWithParameters::SetParameterProperties` a été appelée.  
   
  La structure SSPARAMPROPS est défini comme suit :  
   

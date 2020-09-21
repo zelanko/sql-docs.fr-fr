@@ -26,20 +26,20 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1898259aef928b749396d0560965aea1d2816624
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 018bce8226fc534694b230c18bb2f272787ec144
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246618"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076764"
 ---
 # <a name="sqlcmd-utility"></a>Utilitaire sqlcmd
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> Pour SQL Server 2014 et les versions antérieure, consultez [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014).
+> Pour SQL Server 2014 et les versions antérieure, consultez [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >
 > Pour utiliser sqlcmd sur Linux, consultez [Installer sqlcmd et bcp sur Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -54,25 +54,25 @@ L’utilitaire utilise ODBC pour exécuter des lots Transact-SQL.
 
 ## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Télécharger la dernière version de l’utilitaire sqlcmd
 
-**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x64) (2,6 Mo)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x86) (2,3 Mo)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Télécharger sqlcmd pour x64](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x64) (2,6 Mo)](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![Télécharger sqlcmd pour x86](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15 pour SQL Server (x86) (2,3 Mo)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 Les outils en ligne de commande sont en disponibilité générale (GA), mais ils sont publiés avec le package d’installation de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 **Informations sur la version**
 
-Numéro de version : 15.0 <br>
-Numéro de build : 15.0.1300.359<br>
-Date de publication : 13 mars 2019
+Numéro de version : 15.0.2<br>
+Numéro de build : 15.0.2000.5<br>
+Date de publication : 11 septembre 2020
 
 La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour les fonctionnalités SQL Database, SQL Data Warehouse et Always Encrypted.
 Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour SQL Database et SQL Data Warehouse.
 
 **Configuration requise** Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
-Ce composant nécessite [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+Ce composant nécessite [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).
  
-Pour vérifier la version de SQLCMD, exécutez la commande `sqlcmd -?` et vérifiez que 15.0.1300.359 ou une version ultérieure est en cours d’utilisation.
+Pour vérifier la version de SQLCMD, exécutez la commande `sqlcmd -?` et vérifiez que la version 15.0.2000.5 ou une version ultérieure est utilisée.
 
 > [!NOTE]
 > La version 13.1 ou une version ultérieure est requise pour prendre en charge les authentifications Always Encrypted (`-g`) et Azure Active Directory (`-G`). (Plusieurs versions de sqlcmd.exe peuvent être installées sur votre ordinateur. Assurez-vous d’utiliser la version correcte. Pour déterminer la version, exécutez `sqlcmd -?`.)
@@ -89,8 +89,8 @@ Actuellement, **sqlcmd** ne requiert pas d’espace entre l’option de ligne de
 
  Autres rubriques : 
 
-- [Démarrer l’utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
-- [Utiliser l'utilitaire sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Démarrer l’utilitaire sqlcmd](../ssms/scripting/sqlcmd-start-the-utility.md)
+- [Utiliser l'utilitaire sqlcmd](../ssms/scripting/sqlcmd-use-the-utility.md)
   
 ## <a name="syntax"></a>Syntaxe
 
@@ -169,11 +169,11 @@ L’option **-E** ignore les éventuels paramètres de variables d’environneme
 Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d’informations, consultez [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Uniquement les clés principales stockées dans le magasin de certificats Windows sont prises en charge. Le commutateur -g nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`.
 
 **-G**  
-Ce commutateur est utilisé par le client durant la connexion à SQL Database ou à SQL Data Warehouse pour indiquer que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Cette option définit la variable de script **sqlcmd** SQLCMDUSEAAD = true. Le commutateur -G nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`. Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). L’option -A n’est pas prise en charge avec l’option -G.
+Ce commutateur est utilisé par le client durant la connexion à SQL Database ou à SQL Data Warehouse pour indiquer que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Cette option définit la variable de script **sqlcmd** SQLCMDUSEAAD = true. Le commutateur -G nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`. Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). L’option -A n’est pas prise en charge avec l’option -G.
 
 > [!IMPORTANT]
 > L’option `-G` s’applique uniquement à Azure SQL Database et à Azure Data Warehouse.
-> L’authentification intégrée et interactive AAD n’est actuellement prise en charge ni sur Linux ni sur macOS.
+> L’authentification interactive AAD n’est actuellement prise en charge ni sur Linux ni sur macOS. L’authentification intégrée AAD requiert [Microsoft ODBC Driver 17 pour SQL Server](https://aka.ms/downloadmsodbcsql) version 17.6.1 ou ultérieure et un environnement Kerberos correctement configuré.
 
 - **Nom d’utilisateur et mot de passe Azure Active Directory :** 
 
@@ -211,7 +211,7 @@ Ce commutateur est utilisé par le client durant la connexion à SQL Database ou
 
     L’authentification interactive Azure AD pour Azure SQL Database et SQL Data Warehouse vous permet d’utiliser une méthode interactive qui prend en charge l’authentification multifacteur. Pour plus d’informations, consultez [Authentification interactive Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   L’authentification Azure AD interactive requiert **sqlcmd**, [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) ou version ultérieure, ainsi qu’[ODBC, version 17.2 ou version ultérieure](https://www.microsoft.com/download/details.aspx?id=56567).  
+   L’authentification Azure AD interactive requiert **sqlcmd**, [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) ou version ultérieure, ainsi qu’[ODBC, version 17.2 ou version ultérieure](https://aka.ms/downloadmsodbcsql).  
 
    Pour activer l’authentification interactive, fournissez l’option -G avec le nom d’utilisateur (-U) uniquement, sans mot de passe.
 
@@ -235,7 +235,7 @@ Ce commutateur est utilisé par le client durant la connexion à SQL Database ou
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
 
-   Si des utilisateurs invités existent dans un Azure AD spécifique et font partie d’un groupe qui existe dans la base de données SQL et qui dispose d’autorisations de base de données pour exécuter la commande sqlcmd, leur alias d’utilisateur invité est utilisé (par exemple, *keith0@adventureworks.com* ).
+   S’il existe des utilisateurs invités dans un Azure AD spécifique faisant partie d’un groupe qui existe dans SQL Database et qui dispose d’autorisations de base de données pour exécuter la commande sqlcmd, leur alias d’utilisateur invité est utilisé (par exemple, *keith0@adventureworks.com* ).
 
   >[!IMPORTANT]
   >Il existe un problème connu lors de l’utilisation des options `-G` et `-U` avec SQLCMD, où mettre l’option `-U` avant l’option `-G` peut entraîner l’échec de l’authentification. Commencez toujours par l’option `-G` suivie de l’option `-U`.
@@ -251,7 +251,7 @@ sessions **sqlcmd**.
  Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si **-K** n’est pas spécifié, l’utilitaire sqlcmd ne prend pas en charge la connectivité sur un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Secondaires actifs : réplica secondaire lisible (groupes de disponibilité AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _multisubnet_failover_  
- Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité SQL Server ou d’une instance de cluster de basculement SQL Server. **-M** accélère la détection et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **-M** , **-M** est désactivé. Pour plus d’informations sur [Écouteurs, connectivité client et basculement d’application](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), et [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité AlwaysOn)](https://msdn.microsoft.com/library/ff878253.aspx).
+ Spécifiez toujours **-M** en cas de connexion à l’écouteur de groupe de disponibilité d’un groupe de disponibilité SQL Server ou d’une instance de cluster de basculement SQL Server. **-M** accélère la détection et la connexion au serveur (actuellement) actif. Si vous ne spécifiez pas l’option **-M** , **-M** est désactivé. Pour plus d’informations sur [Écouteurs, connectivité client et basculement d’application](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Création et configuration des groupes de disponibilité &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering de basculement et groupes de disponibilité AlwaysOn (SQL Server)](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), et [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité AlwaysOn)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
   
  **-N**  
  Ce commutateur est utilisé par le client pour demander une connexion chiffrée.  
@@ -612,7 +612,7 @@ Pour utiliser **sqlcmd** de façon interactive, tapez **sqlcmd** dans l’invite
 |**GO** [*count*]|**:List**|  
 |[ **:** ] **RESET**|**:Error**|  
 |[ **:** ] **ED**|**:Out**|  
-|[ **:** ] **!!**|**:Perftrace**|  
+|[**:**] **!!**|**:Perftrace**|  
 |[ **:** ] **QUIT**|**:Connect**|  
 |[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
@@ -928,9 +928,5 @@ Utilisez les méthodes suivantes pour optimiser la sécurité et l'efficacité.
 - [Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
 - [Gérer les étapes de travail](~/ssms/agent/manage-job-steps.md)   
 - [Créer une étape de travail CmdExec](~/ssms/agent/create-a-cmdexec-job-step.md)  
-
-## <a name="feedback"></a>Commentaires
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum des outils clients SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

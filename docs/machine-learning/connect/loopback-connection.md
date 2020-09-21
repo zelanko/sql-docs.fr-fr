@@ -1,26 +1,26 @@
 ---
-title: Connexion de bouclage SQL
+title: Connexion de bouclage SQL dans Python et R
 description: Découvrez comment utiliser une connexion de bouclage pour vous reconnecter à SQL Server sur ODBC afin de lire ou d’écrire des données dans un script Python ou R exécuté à partir de sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/21/2019
+ms.date: 08/20/2020
 ms.topic: conceptual
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00938d1fe628c4984a55cb5c0b76e6910293808a
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
+ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86482590"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714137"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Connexion de bouclage à SQL Server à partir d’un script Python ou R
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Découvrez comment utiliser une connexion de bouclage pour vous reconnecter à SQL Server sur [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) afin de lire ou d’écrire des données à partir d’un script Python ou R exécuté à partir de `sp_execute_external_script`. Vous pouvez l’utiliser lorsque vous n’êtes pas en mesure d’utiliser les arguments **InputDataSet** et **OutputDataSet** de `sp_execute_external_script`.
+Découvrez comment utiliser une connexion de bouclage avec [Machine Learning Services](../sql-server-machine-learning-services.md) pour vous reconnecter à SQL Server sur [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) afin de lire ou d’écrire des données à partir d’un script Python ou R exécuté à partir de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). Vous pouvez l’utiliser lorsque vous n’êtes pas en mesure d’utiliser les arguments **InputDataSet** et **OutputDataSet** de `sp_execute_external_script`.
 
 ## <a name="connection-string"></a>Chaîne de connexion
 

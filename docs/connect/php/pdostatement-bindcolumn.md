@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::bindColumn | Microsoft Docs
+title: PDOStatement::bindColumn
+description: Référence API pour la fonction PDOStatement::bindColumn dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbdcea53-d23d-4769-89a0-95c7cf4d5390
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8362edccaf1e2c2a296b7e62f91958170c0bedb6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dd62d4436c5718801dee7b273773b87f6b47eec6
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918921"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645879"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,13 +33,13 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 #### <a name="parameters"></a>Paramètres  
 $*column* : numéro (mixte) de la colonne (index de base 1) ou nom de la colonne dans le jeu de résultats.  
   
-&$*param* : nom (mixte) de la variable PHP à laquelle la colonne va être liée.  
+&$*param* : nom (mixte) de la variable PHP auquel la colonne va être liée.  
   
-$*type* : type de données facultatif du paramètre, représenté par une constante PDO::PARAM_* constant.  
+$*type* : type de données facultatif du paramètre, représenté par une constante PDO::PARAM_*.  
   
-$*maxLen*: entier facultatif, non utilisé par les pilotes Microsoft SQL Server pour PHP.  
+$*maxLen* : Nombre entier facultatif, non utilisé par les Pilotes Microsoft SQL Server pour PHP.  
   
-$*driverdata* : paramètres mixte(s) facultatif(s) du pilote. Par exemple, vous pouvez spécifier PDO::SQLSRV_ENCODING_UTF8 pour lier la colonne à une variable en tant que chaîne encodée au format UTF-8.  
+$*driverdata* : paramètre(s) mixte(s) facultatif(s) du pilote. Par exemple, vous pouvez spécifier PDO::SQLSRV_ENCODING_UTF8 pour lier la colonne à une variable en tant que chaîne encodée au format UTF-8.  
   
 ## <a name="return-value"></a>Valeur de retour  
 TRUE en cas de réussite ; sinon, FALSE.  
@@ -46,7 +47,7 @@ TRUE en cas de réussite ; sinon, FALSE.
 ## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 Cet exemple montre comment une variable peut être liée à une colonne dans un jeu de résultats.  
   
 ```  

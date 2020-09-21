@@ -1,7 +1,8 @@
 ---
-title: PDOStatement::fetchAll | Microsoft Docs
+title: PDOStatement::fetchAll
+description: Référence API pour la fonction PDOStatement::fetchAll dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 71b4bd02d09ee8ab9b4637d0d555cc5b862d84a8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0c3ab50febea25e68b634d2f2afeb6a20b71bf82
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928594"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645095"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +43,7 @@ Tableau des lignes restantes dans le jeu de résultats, ou false si l’appel de
 ## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
   
 ```  
 <?php  

@@ -1,6 +1,6 @@
 ---
 title: Objets BLOB et OLE (pilote OLE DB) | Microsoft Docs
-description: Objets BLOB et OLE
+description: Découvrez comment l’interface ISequentialStream prend en charge l’accès du contrôle serveur consommateur aux types de données SQL Server en tant qu’objets binaires volumineux dans OLE DB Driver pour SQL Server.
 ms.custom: ''
 ms.date: 05/25/2020
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - storage object [OLE DB]
 - OLE DB Driver for SQL Server, BLOBs
 - large data, OLE objects
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 54f8b4c38c22bcb32b039d9f0f0887c298051302
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 50c19527b536da0a61d8aa6c7c76ec34010ea268
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942778"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861415"
 ---
 # <a name="blobs-and-ole-objects"></a>Objets BLOB et OLE
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

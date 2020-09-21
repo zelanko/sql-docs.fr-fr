@@ -1,6 +1,6 @@
 ---
 title: Utilisation de types définis par l’utilisateur | Microsoft Docs
-description: Utilisation de types définis par l’utilisateur avec OLE DB Driver pour SQL Server
+description: OLE DB Driver pour SQL Server prend en charge les types définis par l’utilisateur comme types binaires avec des informations de métadonnées, ce qui vous permet de les gérer en tant qu’objets.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, user-defined types
 - data access [OLE DB Driver for SQL Server], user-defined types
 - ISSCommandWithParameters interface
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 53dc061002141039a84931168cb1a4492a793c1b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 32f1d88d7fad962e1a8aac7b82f8e672fa8e5942
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006827"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860619"
 ---
 # <a name="using-user-defined-types"></a>Utilisation des types définis par l'utilisateur
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

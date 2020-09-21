@@ -1,7 +1,8 @@
 ---
-title: Comparer les fonctions d’exécution| Microsoft Docs
+title: Comparaison entre les fonctions d’exécution
+description: Cette rubrique répertorie les différentes fonctions d’exécution de requête lors de l’utilisation des pilotes Microsoft pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 68575f3a0227c6400ed5d927ff603b66bd6f440d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 33d7ebe420dd59d4f659dbe2ce6c784b49b89d04
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80925867"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680744"
 ---
 # <a name="comparing-execution-functions"></a>Comparaison des fonctions d’exécution
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,14 +33,14 @@ Si vous utilisez le pilote PDO_SQLSRV, vous pouvez exécuter une requête avec l
   
 -   [PDO::exec](../../connect/php/pdo-exec.md)  
   
--   [PDO::query](../../connect/php/pdo-query.md)  
+-   [PDO::Query](../../connect/php/pdo-query.md)  
   
 -   [PDO::prepare](../../connect/php/pdo-prepare.md) et [PDOStatement::execute](../../connect/php/pdostatement-execute.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Informations de référence sur le pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
+[Référence de pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
 [Guide de programmation pour les pilotes Microsoft pour PHP pour SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

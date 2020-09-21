@@ -1,4 +1,5 @@
 ---
+description: Installer Reporting Services 2016 à partir de l’invite de commandes - SSRS
 title: Installer Reporting Services 2016 à partir de l’invite de commandes - SSRS | Microsoft Docs
 ms.date: 01/09/2018
 ms.prod: reporting-services
@@ -10,12 +11,12 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c4597a19b3fbcde0a5b4f6a82cb2398b6776128
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e4d02c4130ae089ba7b625688b8e4c6c227cc1c5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "62513671"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88498062"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Installer Reporting Services 2016 à partir de l’invite de commandes
 
@@ -36,7 +37,7 @@ ms.locfileid: "62513671"
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
   
--   Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+-   L’[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]opérateur  
   
 -   SQL Server Agent, qui est requis pour les fonctionnalités d’abonnement associées à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -86,6 +87,6 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
 [Paramètres SysPrep](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
-[Installer Power Pivot à partir de l’invite de commandes](https://msdn.microsoft.com/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
+[Installer Power Pivot à partir de l’invite de commandes](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013#bkmk_install)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

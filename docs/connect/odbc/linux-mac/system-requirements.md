@@ -2,7 +2,7 @@
 title: Configuration requise (ODBC Driver pour SQL Server)
 description: Cette rubrique répertorie la configuration requise pour ODBC Driver pour SQL Server sur Linux et les systèmes d’exploitation macOS.
 ms.custom: ''
-ms.date: 03/18/2020
+ms.date: 08/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01a5dd44d111fd72d76db244c8135d3bdde00ec8
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 74b7bf1680dd956dfca85917939ad24a3559d7de
+ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391752"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87934458"
 ---
 # <a name="system-requirements-linux-and-macos"></a>Configuration requise (Linux et macOS)
 
@@ -36,28 +36,28 @@ La compatibilité des versions SQL avec les pilotes Linux et macOS est identique
 
 Les versions 17, 13.1 et 13 des pilotes Linux et macOS sont prises en charge sur l’architecture 64 bits des systèmes d’exploitation suivants :
 
-|Systèmes d’exploitation pris en charge     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
-|-------------------------------|----|----|----|----|----|----|----|--|
-|Apple OS X 10.11 (El Capitan)  | |O|O|O|O|O|O|O|
-|Apple macOS 10.12 (Sierra)     | |O|O|O|O|O|O|O|
-|Apple macOS 10.13 (High Sierra)|O|O|O|O|O|O|O|O|
-|Apple macOS 10.14 (Mojave)     |O|O|O| | | | | |
-|Apple macOS 10.15 (Catalina)   |O| | | | | | | |
-|Alpine Linux 3.11              |O| | | | | | | |
-|Debian Linux 8                 | |O|O|O|O|O|O|O|
-|Debian Linux 9                 |O|O|O|O|O|O|O|O|
-|Debian Linux 10                |O|O| | | | | | |
-|Oracle Linux 8                 |O| | | | | | | |
-|Red Hat Enterprise Linux 6      |O|O|O|O|O|O|O|O|
-|Red Hat Enterprise Linux 7      |O|O|O|O|O|O|O|O|
-|RedHat Enterprise Linux 8      |O|O| | | | | | |
-|SUSE Linux Enterprise Server 11<sup>1</sup>|O|O|O|O|O|O|O|O|
-|SUSE Linux Enterprise Server 12|O|O|O|O|O|O|O|O|
-|SUSE Linux Enterprise Server 15|O|O|O| | | | | |
-|Ubuntu Linux 14.04             | |O|O|O|O|O|O|O|
-|Ubuntu Linux 16.04             |O|O|O|O|O|O|O|O|
-|Ubuntu Linux 18.04             |O|O|O|O| | | | |
-|Ubuntu Linux 19.10             |O| | | | | | | |
+|Version du pilote&nbsp;&#8594;<br />Système d’exploitation &#8595;     |17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
+|-------------------------------|----|----|----|----|----|----|----|----|---|
+|Apple OS X 10.11 (El Capitan)  |    |    |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|Apple macOS 10.12 (Sierra)     |    |    |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|Apple macOS 10.13 (High Sierra)|Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|Apple macOS 10.14 (Mojave)     |Oui |Oui |Oui |Oui |    |    |    |    |   |
+|Apple macOS 10.15 (Catalina)   |Oui |Oui |    |    |    |    |    |    |   |
+|Alpine Linux 3.11              |Oui |Oui |    |    |    |    |    |    |   |
+|Debian Linux 8                 |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|Debian Linux 9                 |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|Debian Linux 10                |Oui |Oui |Oui |    |    |    |    |    |   |
+|Oracle Linux 8                 |Oui |Oui |    |    |    |    |    |    |   |
+|Red Hat Enterprise Linux 6      |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|Red Hat Enterprise Linux 7      |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|RedHat Enterprise Linux 8      |Oui |Oui |Oui |    |    |    |    |    |   |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|SUSE Linux Enterprise Server 12|Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|SUSE Linux Enterprise Server 15|Oui |Oui |Oui |Oui |    |    |    |    |   |
+|Ubuntu Linux 14.04             |    |    |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|Ubuntu Linux 16.04             |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui |Oui|
+|Ubuntu Linux 18.04             |Oui |Oui |Oui |Oui |Oui |    |    |    |   |
+|Ubuntu Linux 20.04             |Oui |    |    |    |    |    |    |    |   |
 
 <sup>1</sup> ODBC Driver 17 prend uniquement en charge SUSE Linux Enterprise Server 11 SP4.
 

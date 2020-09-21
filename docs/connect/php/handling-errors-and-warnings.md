@@ -1,7 +1,8 @@
 ---
-title: Gérer les erreurs et les avertissements | Microsoft Docs
+title: Gestion des erreurs et des avertissements
+description: Cette rubrique fournit des informations sur la gestion des erreurs et avertissements lors de l’utilisation de Microsoft SQLSRV Driver pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 464daee0f6c6bbb18b63b7a7cc9fab9cad827fdb
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 28aba75d57c8bec09478266f2231900cd53197cf
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916595"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680714"
 ---
 # <a name="handling-errors-and-warnings"></a>Gestion des erreurs et des avertissements
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,8 +29,8 @@ Les rubriques de cette section fournissent des informations sur la gestion des e
   
 |Rubrique|Description|  
 |---------|---------------|  
-|[Guide pratique pour configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Montre comment modifier les paramètres de configuration pour la gestion des erreurs et des avertissements.|  
-|[Guide pratique pour gérer les erreurs et les avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Montre comment gérer séparément les erreurs et les avertissements.|  
+|[Procédure : Configurer la gestion des erreurs et des avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)|Montre comment modifier les paramètres de configuration pour la gestion des erreurs et des avertissements.|  
+|[Procédure : Gérer les erreurs et les avertissements à l’aide du pilote SQLSRV](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md)|Montre comment gérer séparément les erreurs et les avertissements.|  
   
 ## <a name="reference"></a>Informations de référence  
 [sqlsrv_errors](../../connect/php/sqlsrv-errors.md)  

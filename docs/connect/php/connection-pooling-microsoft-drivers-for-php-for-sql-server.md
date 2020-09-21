@@ -1,7 +1,8 @@
 ---
-title: Regroupement de connexions (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
+title: Regroupement de connexions (Microsoft Drivers for PHP for SQL Server)
+description: Découvrez les détails du regroupement des connexions lorsque vous utilisez les Pilotes Microsoft pour PHP pour SQL Server et comment l’expérience peut varier en fonction de votre système d’exploitation.
 ms.custom: ''
-ms.date: 08/01/2018
+ms.date: 08/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 714a3436cc79f3568e14c5e2609e16fd408f288e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 147e744a69850a5c76b9706c03a96fa67d2efb5f
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80900985"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435265"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Regroupement de connexions (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +29,7 @@ Voici des points importants à noter sur le regroupement de connexions dans [!IN
   
 -   Par défaut, le regroupement de connexions est activé dans Windows. Dans Linux et macOS, les connexions sont regroupées uniquement si le regroupement de connexions est activé pour ODBC (voir [Activation/désactivation du regroupement de connexions](#enablingdisabling-connection-pooling)). Quand le regroupement de connexions est activé et que vous vous connectez à un serveur, le pilote tente d’utiliser une connexion regroupée avant d’en créer une nouvelle. Si une connexion équivalente est introuvable dans le regroupement, une nouvelle connexion est créée et ajoutée à ce regroupement. Le pilote détermine si les connexions sont équivalentes, par comparaison avec des chaînes de connexion.  
   
--   Quand une connexion du regroupement est utilisée, l’état de la connexion est réinitialisé.  
+-   Quand une connexion du regroupement est utilisée, l’état de la connexion est réinitialisé (Windows uniquement).  
   
 -   La fermeture de la connexion retourne la connexion au regroupement.  
   
@@ -39,8 +40,12 @@ Pour plus d’informations sur le regroupement de connexions, consultez [Regroup
 Vous pouvez forcer le pilote à créer une connexion (au lieu de rechercher une connexion équivalente dans le pool de connexions) en affectant à l’attribut *ConnectionPooling* de la chaîne de connexion la valeur **false** (ou 0).  
   
 Si l’attribut *ConnectionPooling* est omis de la chaîne de connexion ou si sa valeur est **true** (ou 1), le pilote crée uniquement une connexion si aucune connexion équivalente n’existe dans le pool de connexions.  
+
+> [!NOTE]  
+> MARS (Multiple Active Result Sets) est désactivé par défaut. Lorsque MARS et le regroupement sont utilisés, pour que MARS fonctionne correctement, le pilote nécessite plus de temps pour réinitialiser la connexion sur la *première* requête, ignorant ainsi tout délai d’attente de requête spécifié. Toutefois, le paramètre du délai d’attente de la requête prendra effet dans les requêtes suivantes.
   
-Pour plus d’informations sur les autres attributs de connexion, consultez [Connection Options](../../connect/php/connection-options.md).  
+Si nécessaire, vérifiez [Procédure : Désactiver MARS (Multiple Active Resultsets)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md). Pour plus d’informations sur les autres attributs de connexion, consultez [Connection Options](../../connect/php/connection-options.md).  
+
 ### <a name="linux-and-macos"></a>Linux et macOS
 L’attribut *ConnectionPooling* ne peut pas être utilisé pour activer/désactiver le regroupement de connexions. 
 
@@ -51,7 +56,7 @@ La définition de `Pooling` sur `Yes` et une valeur de `CPTimeout` positive dans
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
+[ODBC Driver 17 for SQL Server]
 CPTimeout=<int value>
 ```
   
@@ -61,9 +66,9 @@ Au minimum, le fichier odbcinst.ini devrait ressembler à l’exemple suivant :
 [ODBC]
 Pooling=Yes
 
-[ODBC Driver 13 for SQL Server]
-Description=Microsoft ODBC Driver 13 for SQL Server
-Driver=/opt/microsoft/msodbcsql/lib64/libmsodbcsql-13.1.so.3.0
+[ODBC Driver 17 for SQL Server]
+Description=Microsoft ODBC Driver 17 for SQL Server
+Driver=/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.5.so.2.1
 UsageCount=1
 CPTimeout=120
 ```
@@ -75,7 +80,7 @@ Pooling=No
 ```
 
 ## <a name="remarks"></a>Notes
-- Sur Linux ou macOS, toutes les connexions sont regroupées si le regroupement est activé dans le fichier odbcinst.ini. Cela signifie que l’option de connexion ConnectionPooling n’a aucun effet. Pour désactiver le regroupement, définissez Pooling=No dans le fichier odbcinst.ini et rechargez les pilotes.
+- Sous Linux ou macOS, le regroupement des connexions n’est pas recommandé avec unixODBC < 2.3.7. Toutes les connexions sont regroupées si le regroupement est activé dans le fichier Odbcinst.ini, ce qui signifie que l’option de connexion ConnectionPooling n’a aucun effet. Pour désactiver le regroupement, définissez Pooling=No dans le fichier odbcinst.ini et rechargez les pilotes. 
   - unixODBC <= 2.3.4 (Linux et macOS) risque de ne pas renvoyer les informations de diagnostic appropriées, notamment les messages d’erreur, les avertissements et les messages informatifs
   - Pour cette raison, les pilotes SQLSRV et PDO_SQLSRV risquent de ne pas récupérer correctement les données de type Long (XML, binaires, par exemple) sous forme de chaînes. Pour contourner le problème, les données de type Long peuvent être extraites en tant que flux de données. Consultez l’exemple ci-dessous pour SQLSRV.
 
@@ -125,7 +130,7 @@ function getColumn($conn)
 
 
 ## <a name="see-also"></a>Voir aussi  
-[Guide pratique pour se connecter à l’aide de l’authentification Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
+[Procédure : Se connecter avec l’authentification Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
-[Guide pratique pour se connecter à l’aide de l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
+[Procédure : Se connecter avec l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  
   

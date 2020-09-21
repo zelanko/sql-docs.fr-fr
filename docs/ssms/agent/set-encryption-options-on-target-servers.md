@@ -1,4 +1,5 @@
 ---
+description: Définir des options de chiffrement sur des serveurs cibles
 title: Définir des options de chiffrement sur des serveurs cibles
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,18 +16,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ee53a4f973537dad629a24bb442e8a1076eebd11
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 832b73c751a6c475afd75769c4cf18d8e2e609a5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85644528"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88418065"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>Définir des options de chiffrement sur des serveurs cibles
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Si vous ne pouvez pas utiliser de certificat pour les communications chiffrées TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer) entre des serveurs maîtres et l’ensemble ou une partie de vos serveurs cibles, mais que vous souhaitez chiffrer le canal entre ces serveurs, configurez le serveur cible de façon à utiliser le niveau de sécurité requis.  
   

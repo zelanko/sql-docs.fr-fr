@@ -1,6 +1,6 @@
 ---
 title: Créer des tables SQL Server (pilote OLE DB) | Microsoft Docs
-description: Création de tables SQL Server à l’aide d’OLE DB Driver pour SQL Server
+description: Découvrez comment la fonction ITableDefinition::CreateTable dans le OLE DB Driver pour SQL Server permet aux consommateurs de créer des tables SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - DBCOLUMNDESC usage
 - adding tables
 - CreateTable function
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 2fbc22968180eda12bee592a507178c97eaec74e
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 9205ab77737b2b03d512f37c4e4bdf74031df6a1
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977806"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88858847"
 ---
 # <a name="creating-sql-server-tables"></a>Création de tables SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

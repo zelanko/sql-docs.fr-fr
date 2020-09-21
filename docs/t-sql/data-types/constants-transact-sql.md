@@ -2,7 +2,7 @@
 description: Constantes (Transact-SQL)
 title: Constantes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2017
+ms.date: 09/09/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd464b8b08948d913dc003df0b488fd85f5bdda7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
+ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422933"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90027280"
 ---
 # <a name="constants-transact-sql"></a>Constantes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,9 +46,12 @@ ms.locfileid: "88422933"
 Une constante, également appelée valeur littérale ou scalaire, est un symbole représentant une valeur de donnée spécifique. Le format d'une constante dépend du type de données dont elle représente la valeur.
   
 ## <a name="character-string-constants"></a>Constantes de type chaîne de caractères
-Une constante de type chaîne de caractères est placée entre des guillemets simples. Elle se compose de caractères alphanumériques (a-z, A-Z et 0-9) ainsi que de caractères spéciaux tels que le point d'exclamation (!), l'arobase (@) et le dièse (#). Les constantes de type chaîne de caractères reçoivent le classement par défaut de la base de données active, sauf si la clause COLLATE est utilisée pour spécifier un classement. Les chaînes de caractères tapées par l'utilisateur sont analysées au moyen de la page de codes de l'ordinateur et sont converties, le cas échéant, dans la page de codes par défaut de la base de données.
+Une constante de type chaîne de caractères est placée entre des guillemets simples. Elle se compose de caractères alphanumériques (a-z, A-Z et 0-9) ainsi que de caractères spéciaux tels que le point d'exclamation (!), l'arobase (@) et le dièse (#). Le classement par défaut de la base de données active est attribué aux constantes de la chaîne de caractères. Si la clause COLLATE est utilisée, la conversion vers la page de codes par défaut de la base de données se produit toujours avant la conversion vers le classement spécifié par la clause COLLATE. Les chaînes de caractères tapées par l'utilisateur sont analysées au moyen de la page de codes de l'ordinateur et sont converties, le cas échéant, dans la page de codes par défaut de la base de données.
+
+> [!NOTE]
+> Lorsqu’un [classement UTF8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) est spécifié à l’aide de la clause COLLATE, la conversion vers la page de code par défaut de la base de données se produit toujours avant la conversion du classement spécifié par la clause COLLATE. La conversion n’est pas effectuée directement vers le classement Unicode spécifié. Pour plus d'informations, consultez [Chaîne Unicode](#unicode-strings).
   
-Si l'option QUOTED_IDENTIFIER a été désactivée (OFF) pour une connexion, les chaînes de caractères peuvent également être placées entre des guillemets doubles. Notez que le fournisseur Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et le pilote ODBC utilisent automatiquement SET QUOTED_IDENTIFIER ON. Il est recommandé d'utiliser des guillemets simples.
+Si l'option QUOTED_IDENTIFIER a été désactivée (OFF) pour une connexion, les chaînes de caractères peuvent également être placées entre des guillemets doubles. Notez que [OLE DB Driver pour SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) et [ODBC Driver pour SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) Microsoft utilisent automatiquement `SET QUOTED_IDENTIFIER ON`. Il est recommandé d'utiliser des guillemets simples.
   
 Si un guillemet simple est inséré dans une chaîne de caractères placée entre des guillemets simples, celui-ci doit être représenté par deux guillemets simples. Ceci n'est pas nécessaire dans une chaîne insérée entre des guillemets doubles.
   
@@ -64,18 +67,23 @@ Voici des exemples de chaînes de caractères :
   
 Les chaînes vides sont représentées par deux guillemets simples, sans aucun caractère ou espace entre eux. En mode de compatibilité 6.x, une chaîne vide est traitée comme un espace simple.
   
-Les constantes de chaînes de caractères prennent en charge les classements évolués.
+Les constantes de chaînes de caractères prennent en charge les [classements](../../relational-databases/collations/collation-and-unicode-support.md) améliorés.
   
 > [!NOTE]  
->  Les constantes de caractères dont la taille est supérieure à 8 000 octets sont des données de type **varchar(max)**.  
+> Les constantes de caractères dont la taille est supérieure à 8 000 octets sont des données de type **varchar(max)**.  
   
 ## <a name="unicode-strings"></a>Chaînes Unicode
-Une chaîne Unicode a le même format qu'une chaîne de caractères, mais celle-ci est précédée de l'identificateur N (N correspond à National Language dans la norme SQL-92). Le préfixe N doit être en majuscule. Par exemple, 'Michel' est une constante de type caractère tandis que N'Michel' est une constante Unicode. Les constantes Unicode sont interprétées comme des données Unicode et ne sont pas évaluées à l'aide d'une page de codes. Les constantes Unicode présentent un classement, qui contrôle essentiellement les comparaisons et le respect de la casse. Les constantes Unicode reçoivent le classement par défaut de la base de données active, sauf si la clause COLLATE est utilisée pour spécifier un classement. Les données Unicode sont stockées en utilisant 2 octets par caractère, alors que les données de type caractère utilisent 1 octet par caractère. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
+Une chaîne Unicode a le même format qu'une chaîne de caractères, mais celle-ci est précédée de l'identificateur N (N correspond à National Language dans la norme SQL-92). 
+
+> [!IMPORTANT]  
+> Le préfixe N doit être en majuscule. 
+
+Par exemple, `'Michél'` est une constante de type caractère tandis que `N'Michél'` est une constante Unicode. Les constantes Unicode sont interprétées comme des données Unicode et ne sont pas évaluées à l'aide d'une page de codes. Les constantes Unicode présentent un classement, qui contrôle essentiellement les comparaisons et le respect de la casse. Le classement par défaut de la base de données active est attribué aux constantes Unicode. Si la clause COLLATE est utilisée, la conversion vers le classement par défaut de la base de données se produit toujours avant la conversion vers le classement spécifié par la clause COLLATE. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
   
 Les constantes de chaînes Unicode prennent en charge les classements évolués.
   
 > [!NOTE]  
->  Les constantes Unicode dont la taille est supérieure à 8 000 octets sont des données de type **nvarchar(max)**.  
+> Les constantes Unicode dont la taille est supérieure à 8 000 octets sont des données de type **nvarchar(max)**.  
   
 ## <a name="binary-constants"></a>Constantes binaires
 Une constante binaire a le préfixe `0x` et se compose d'une chaîne de nombres hexadécimaux. La chaîne n'est pas entourée de guillemets.
@@ -200,11 +208,12 @@ Expressions **money** signées :
 ```
   
 ## <a name="enhanced-collations"></a>Classements évolués  
-SQL Server gère les constantes de chaînes de caractères et Unicode qui prennent en charge les classements évolués. Pour plus d’informations, consultez la clause [COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9).
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] prend en charge les constantes de type caractère et chaîne Unicode qui prennent en charge des classements améliorés. Pour plus d’informations, consultez la clause [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md).
   
 ## <a name="see-also"></a>Voir aussi
 [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
-  
+[Opérateurs &#40;Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)
+[Support du classement et Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
+[Priorité de classement](../../t-sql/statements/collation-precedence-transact-sql.md)    
   

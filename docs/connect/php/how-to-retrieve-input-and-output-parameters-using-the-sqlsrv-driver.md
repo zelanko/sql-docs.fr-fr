@@ -1,7 +1,8 @@
 ---
-title: Guide pratique pour récupérer des paramètres d’e/s avec le pilote SQLSRV | Microsoft Docs
+title: 'Procédure : récupérer des paramètres d’E/S à l’aide du pilote SQLSRV'
+description: Cette rubrique explique comment récupérer des paramètres d’entrée et de sortie à l’aide de procédures stockées et de Microsoft SQLSRV Driver pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 04/12/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -11,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 9a7c5f60-67f9-4968-a3a8-c256ee481da2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2bad5942e98271638b4b929d55c54c1562629e44
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8ce35c6c0b3025a328c71de657fd1e89358379be
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916075"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680684"
 ---
-# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV
+# <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>Procédure : Récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique montre comment utiliser le pilote SQLSRV pour appeler une procédure stockée dans laquelle un paramètre a été défini comme paramètre d’entrée/sortie, et comment récupérer les résultats. Quand vous récupérez un paramètre de sortie ou d’entrée/sortie, tous les résultats retournés par la procédure stockée doivent être consommés pour que la valeur de paramètre retournée soit accessible.  
   
 > [!NOTE]  
-> Les variables initialisées ou mises à jour avec la valeur **null**, **DateTime**ou des types de flux ne peuvent pas être utilisées comme paramètres de sortie.  
+>  Les variables initialisées ou mises à jour avec la valeur **Null**, **DateTime**ou des types de flux ne peuvent pas être utilisées comme paramètres de sortie.  
   
 ## <a name="example-1"></a>Exemple 1
 L’exemple suivant appelle une procédure stockée qui soustrait des heures de congé utilisées des heures de congé disponibles d’un employé spécifié. La variable qui représente les heures de congé utilisées, *$vacationHrs*, est passée à la procédure stockée comme paramètre d’entrée. Après la mise à jour des heures de congé disponibles, la procédure stockée utilise le même paramètre pour retourner le nombre d’heures de congé restantes.  
@@ -152,9 +153,9 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Voir aussi  
-[Guide pratique pour spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
+[Procédure : Spécifier la direction du paramètre à l’aide du pilote SQLSRV](../../connect/php/how-to-specify-parameter-direction-using-the-sqlsrv-driver.md)
 
-[Guide pratique pour récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Procédure : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [Récupération de données](../../connect/php/retrieving-data.md)  
   

@@ -1,4 +1,5 @@
 ---
+description: Utiliser des objets de performance
 title: Utiliser des objets de performance
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d86b710c38fb02a14e2b1baf4f6cf50a2d992e32
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 372390ed9f6c893c1762ca635e5aa9b5f3e3c9ff
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755023"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88480241"
 ---
 # <a name="use-performance-objects"></a>Utiliser des objets de performance
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent comprend des compteurs et des objets de performance qui permettent de surveiller le fonctionnement du service. Ces objets de performance vous permettent d'utiliser un outil Windows, en l'occurrence l'Analyseur de performances, pour identifier la tâche réalisée en arrière-plan par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Par exemple, vous pouvez identifier le nombre de travaux actifs en cours d'exécution par le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent afin de déterminer ceux qui sont bloqués.  
   
@@ -42,8 +43,8 @@ Le tableau suivant décrit la dénomination des objets de performance du service
   
 |Type d’instance|Nom d’objet|  
 |-----------------|---------------|  
-|Default|**SQLAgent:** _objet_:_compteur_|  
-|named|**SQLAgent$**<br /> **&#42;nom_instance&#42; :** _objet_:_compteur_|  
+|Par défaut|**SQLAgent:**_objet_:_compteur_|  
+|named|**SQLAgent$**<br /> **&#42;nom_instance&#42; :**_objet_:_compteur_|  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comprend les objets de performance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent suivants.  
   

@@ -1,4 +1,5 @@
 ---
+description: Alertes
 title: Alertes
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -23,19 +24,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 338493592a01031542d316df2c454bb09ff9b68d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7fa31500bd90ab993f58a2e27e1a41c937ad0370
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755310"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320265"
 ---
 # <a name="alerts"></a>Alertes
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Les événements sont générés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et entrés dans le journal des applications [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent lit le journal des applications et compare les événements qui y sont écrits aux alertes que vous avez définies. Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent trouve une correspondance, il déclenche une alerte, qui est une réponse automatisée à un événement. Outre l'analyse des événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut aussi analyser les conditions de performance, ainsi que les événements WMI (Windows Management Instrumentation).  
   

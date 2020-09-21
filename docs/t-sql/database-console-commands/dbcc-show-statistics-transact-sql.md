@@ -34,25 +34,32 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6c14ef618f8f2e64a4b3a59f7bd29dfaf327b6a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bff0a596c457ee5ce24b665be3897f86e625b3b0
+ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459899"
+ms.lasthandoff: 09/14/2020
+ms.locfileid: "90076714"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-DBCC SHOW_STATISTICS affiche les statistiques d'optimisation de la requête actuelle pour une table ou une vue indexée. L'optimiseur de requête utilise des statistiques pour estimer le nombre de lignes, également appelé cardinalité, dans le résultat de la requête, ce qui lui permet de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête pourrait utiliser des estimations de cardinalité afin de choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index dans le plan de requête. Cela permettrait d'améliorer les performances des requêtes car le recours à une analyse d'index monopolisant de nombreuses ressources serait ainsi évité.
+DBCC SHOW_STATISTICS affiche les statistiques d'optimisation de la requête actuelle pour une table ou une vue indexée. L’optimiseur de requête utilise des statiques pour estimer la cardinalité ou le nombre de lignes dans le résultat de la requête, ce qui lui permet de créer un plan de requête de haute qualité. Par exemple, l'optimiseur de requête peut utiliser des estimations de cardinalité afin de choisir l'opérateur de recherche d'index plutôt que l'opérateur d'analyse d'index dans le plan de requête. Cela permettrait d'améliorer les performances des requêtes car le recours à une analyse d'index monopolisant de nombreuses ressources serait ainsi évité.
   
-L'optimiseur de requête stocke des statistiques pour une table ou vue indexée dans un objet des statistiques. Pour une table, l'objet des statistiques est créé sur un index ou sur une liste de colonnes de table. L'objet des statistiques inclut un en-tête contenant des métadonnées sur les statistiques, un histogramme indiquant la distribution des valeurs dans la première colonne clé de l'objet des statistiques, et un vecteur de densité destiné à mesurer la corrélation entre les colonnes. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut calculer des estimations de cardinalité avec n’importe laquelle des données de l’objet des statistiques.
+L'optimiseur de requête stocke des statistiques pour une table ou vue indexée dans un objet des statistiques. Pour une table, l'objet des statistiques est créé sur un index ou sur une liste de colonnes de table. L'objet des statistiques inclut un en-tête contenant des métadonnées sur les statistiques, un histogramme indiquant la distribution des valeurs dans la première colonne clé de l'objet des statistiques, et un vecteur de densité destiné à mesurer la corrélation entre les colonnes. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut calculer des estimations de cardinalité avec n’importe laquelle des données de l’objet des statistiques. Pour plus d’informations, consultez [Statistics](../../relational-databases/statistics/statistics.md) et [Estimation de la cardinalité (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md).
   
 DBCC SHOW_STATISTICS affiche l'en-tête, l'histogramme et le vecteur de densité en fonction des données stockées dans l'objet des statistiques. La syntaxe vous permet de spécifier une table ou une vue indexée ainsi qu’un nom d'index cible, un nom de statistique ou un nom de colonne. Cette rubrique explique comment afficher les statistiques et comment comprendre les résultats affichés.
-  
-Pour plus d’informations, consultez [Statistiques](../../relational-databases/statistics/statistics.md).
-  
+
+> [!IMPORTANT]
+> À compter de SP1 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la vue de gestion dynamique [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) est disponible pour récupérer par programme les informations d’en-tête contenues dans l’objet de statistiques pour les statistiques non incrémentielles.
+
+> [!IMPORTANT]
+> À compter de SP2 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et de SP1 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la vue de gestion dynamique [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md) est disponible pour récupérer par programme les informations d’en-tête contenues dans l’objet de statistiques pour les statistiques non incrémentielles.
+
+> [!IMPORTANT]
+> À compter de SP1 CU2 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la vue de gestion dynamique [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) est disponible pour récupérer par programme les informations d’histogramme contenues dans l’objet de statistiques.
+
 ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe
@@ -67,10 +74,10 @@ DBCC SHOW_STATISTICS ( table_or_indexed_view_name , target )
 ```  
   
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
 
 DBCC SHOW_STATISTICS ( table_name , target )   
-    [ WITH {STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
+    [ WITH { STAT_HEADER | DENSITY_VECTOR | HISTOGRAM } [ ,...n ] ]  
 [;]
 ```
 
@@ -106,7 +113,7 @@ Le tableau suivant décrit les colonnes retournées dans le jeu de résultats lo
 |Lignes|Nombre total de lignes dans la table ou la vue indexée au moment de la dernière mise à jour des statistiques. Si les statistiques sont filtrées ou correspondent à un index filtré, le nombre de lignes peut être inférieur à celui de la table. Pour plus d’informations, consultez [Statistiques](../../relational-databases/statistics/statistics.md).|  
 |Lignes échantillonnées|Nombre total de lignes échantillonnées pour le calcul des statistiques. Si Rows Sampled < Rows, l'histogramme et les résultats de densité affichés sont des estimations basées sur les lignes échantillonnées.|  
 |Étapes|Nombre d'étapes dans l'histogramme. Chaque étape couvre une plage de valeurs de colonnes suivie d'une valeur de colonne de limite supérieure. Les étapes d'histogramme sont définies sur la première colonne clé des statistiques. Le nombre maximal d'étapes est 200.|  
-|Densité|La formule 1 / *valeurs distinctes* est utilisée pour toutes les valeurs de la première colonne clé de l’objet de statistiques, à l’exception des valeurs limites de l’histogramme. Cette valeur Density n'est pas utilisée par l'optimiseur de requête ; elle est affichée pour la compatibilité descendante avec les versions antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|Densité|La formule 1 / *valeurs distinctes* est utilisée pour toutes les valeurs de la première colonne clé de l’objet de statistiques, à l’exception des valeurs limites de l’histogramme. Cette valeur de Densité n'est pas utilisée par l'optimiseur de requête ; elle est affichée pour la compatibilité descendante avec les versions antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |Longueur moyenne d'une clé|Nombre moyen d'octets par valeur pour toutes les colonnes clés de l'objet de statistiques.|  
 |String Index|La valeur Yes indique que l'objet de statistiques contient des statistiques de résumé de chaîne pour améliorer les estimations de cardinalité des prédicats de requête qui utilisent l'opérateur LIKE ; c'est le cas par exemple de `WHERE ProductName LIKE '%Bike'`. Les statistiques de résumé de chaîne sont stockées à l’écart de l’histogramme et créées sur la première colonne clé de l’objet des statistiques quand il est de type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text** ou **ntext**.|  
 |Expression de filtre|Prédicat pour le sous-ensemble des lignes de table incluses dans l'objet de statistiques. NULL = statistiques non filtrées. Pour plus d’informations sur les prédicats filtrés, consultez [Créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md). Pour plus d’informations sur les statistiques filtrées, consultez [Statistiques](../../relational-databases/statistics/statistics.md).|  
@@ -162,15 +169,15 @@ L'optimiseur de requête utilise des densités afin d'améliorer les estimations
 |(CustomerId, ItemId, Price)|Lignes avec des valeurs correspondantes pour CustomerId, ItemId et Price|  
   
 ## <a name="restrictions"></a>Restrictions  
- DBCC SHOW_STATISTICS ne fournit pas de statistiques pour les index spatiaux ou columnstore optimisés en mémoire xVelocity.  
+ DBCC SHOW_STATISTICS ne fournit pas de statistiques pour les index spatiaux ni columnstore à mémoire optimisée.  
   
 ## <a name="permissions-for-ssnoversion-and-sssds"></a>Autorisations pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-Pour afficher l’objet de statistiques, l’utilisateur doit disposer de l’autorisation SELECT sur la table.
+Pour afficher l’objet de statistiques, l’utilisateur doit disposer de l’autorisation `SELECT` sur la table.
 Remarquez que les conditions suivantes doivent être remplies pour que les autorisations SELECT permettent d'exécuter la commande :
 -   Les utilisateurs doivent posséder des autorisations sur toutes les colonnes dans l'objet de statistiques.  
 -   Les utilisateurs doivent posséder une autorisation sur toutes les colonnes dans une condition de filtre (le cas échéant).  
 -   La table ne peut pas avoir une stratégie de sécurité de niveau ligne.
--   Si l’une des colonnes d’un objet de statistiques est masquée par des règles Dynamic Data Masking, l’utilisateur doit disposer de l’autorisation UNMASK en plus de l’autorisation SELECT
+-   Si l’une des colonnes d’un objet de statistiques est masquée par des règles Dynamic Data Masking, l’utilisateur doit disposer, en plus de l’autorisation `SELECT`, de l’autorisation `UNMASK`.
 
 Dans les versions antérieures à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe `sysadmin`, du rôle de base de données fixe `db_owner` ou du rôle de base de données fixe `db_ddladmin`.
 
@@ -178,10 +185,7 @@ Dans les versions antérieures à [!INCLUDE[ssSQL11](../../includes/sssql11-md.m
  > Pour rétablir le comportement antérieur à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1, utilisez l’indicateur de trace 9485.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>Autorisations pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-DBCC SHOW_STATISTICS nécessite l’autorisation SELECT sur la table ou l’appartenance à l’un des rôles suivants :
--   rôle serveur fixe sysadmin  
--   rôle de base de données fixe db_owner  
--   rôle de base de données fixe db_ddladmin  
+DBCC SHOW_STATISTICS exige l’autorisation `SELECT` sur la table ou l’appartenance au rôle serveur fixe `sysadmin`, au rôle de base de données fixe `db_owner` ou au rôle de base de données fixe `db_ddladmin`.  
   
 ## <a name="limitations-and-restrictions-for-sssdw-and-sspdw"></a>Limitations et restrictions pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC SHOW_STATISTICS affiche les statistiques stockées dans la base de données shell au niveau du nœud de contrôle. Il n’affiche pas les statistiques créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur les nœuds de calcul.
@@ -234,3 +238,4 @@ Les résultats indiquent l’en-tête, le vecteur de densité et une partie de l
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  
 [sys.dm_db_stats_histogram (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+[sys.dm_db_incremental_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)   

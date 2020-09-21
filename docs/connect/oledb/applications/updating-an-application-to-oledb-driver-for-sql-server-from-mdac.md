@@ -1,6 +1,6 @@
 ---
-title: Mise à jour d’une application vers OLE DB Driver pour SQL Server à partir de MDAC | Microsoft Docs
-description: Mise à jour d’une application vers OLE DB Driver pour SQL Server à partir de MDAC
+title: Mise à jour d’une application vers OLE DB Driver pour SQL Server à partir de MDAC
+description: Découvrez les modifications apportées par l’ancien fournisseur OLE DB pour SQL Server et le nouveau OLE DB Driver pour SQL Server et ce que vous devez savoir pour mettre à jour le nouveau pilote.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, vs. MDAC
 - data access [OLE DB Driver for SQL Server], vs. MDAC
 - OLE DB Driver for SQL Server, updating applications
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 94e7db522cca98bf04cdb46ced06eb469e2cd1a6
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b531dbde34faab6995a3e4765156ccaa71f4324e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007021"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860661"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Mise à jour d’une application vers OLE DB Driver pour SQL Server à partir de MDAC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

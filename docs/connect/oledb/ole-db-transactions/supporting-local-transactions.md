@@ -1,6 +1,6 @@
 ---
-title: Prise en charge des transactions locales | Microsoft Docs
-description: Transactions locales dans le pilote OLE DB pour SQL Server
+title: Prise en charge des transactions locales (pilote OLE DB)
+description: Découvrez comment OLE DB Driver pour SQL Server prend en charge des transactions locales et comment utiliser ITransactionLocal pour un contrôle plus précis de l’étendue de la transaction locale.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - ITransactionLocal interface
 - OLE DB Driver for SQL Server, transactions
 - local transactions [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 13e0337ff4ccc8a6797d9fdd23a61d637a37688b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5923c9f475a20fe31963b907f9e7cc76ef68bb04
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011243"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861893"
 ---
 # <a name="supporting-local-transactions"></a>Prise en charge des transactions locales
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

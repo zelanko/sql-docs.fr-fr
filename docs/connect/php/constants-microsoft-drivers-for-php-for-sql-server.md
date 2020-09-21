@@ -1,5 +1,6 @@
 ---
-title: Constantes (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
+title: Constantes (Microsoft Drivers for PHP for SQL Server)
+description: En savoir plus sur les constantes définies dans les Pilotes Microsoft SQLSRV et PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c54021d6165d0fbf221c7af1c4f10235efb55820
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 771a14e8705af72f57571503c2dba9012c2e9879
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928079"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435255"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +57,7 @@ Les valeurs pouvant être passées à PDO::SQLSRV_ATTR_ENCODING sont
 |PDO::SQLSRV_ENCODING_UTF8|Les données sont dans l’encodage UTF-8. Il s’agit de l’encodage par défaut.|  
 |PDO::SQLSRV_ENCODING_DEFAULT|Utilise PDO::SQLSRV_ENCODING_SYSTEM si cela est spécifié durant la connexion.<br /><br />Utiliser l’encodage de la connexion s’il est spécifié dans une instruction de préparation.|  
   
-### <a name="query-timeout"></a>Délai de requête  
+### <a name="query-timeout"></a>Délai d’expiration de la requête  
 L’attribut PDO::SQLSRV_ATTR_QUERY_TIMEOUT est un entier non négatif quelconque représentant le délai d’expiration, en secondes. Zéro (0) est la valeur par défaut, ce qui signifie aucun délai d’expiration.  
   
 Vous pouvez spécifier l’attribut PDO::SQLSRV_ATTR_QUERY_TIMEOUT avec [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), [PDO::setAttribute](../../connect/php/pdo-setattribute.md) et [PDO::prepare](../../connect/php/pdo-prepare.md).  
@@ -71,7 +72,7 @@ Vous pouvez modifier le comportement de mise en forme décimale par défaut avec
 
 ### <a name="handling-date-and-time-fetches"></a>Récupération (fetch) de la date et de l’heure de gestion
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE spécifie s’il faut récupérer les types de date et d’heure sous forme d’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Si vous conservez la valeur false, le comportement par défaut consiste à les retourner sous forme de chaînes. Cet attribut peut être défini au niveau de la connexion ou de l’instruction avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md) ou [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), mais l’attribut d’instruction remplacera l’attribut de connexion correspondant. Pour plus d’informations, consultez [Guide pratique pour récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
+PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE spécifie s’il faut récupérer les types de date et d’heure sous forme d’objets [DateTime PHP](http://php.net/manual/en/class.datetime.php). Si vous conservez la valeur false, le comportement par défaut consiste à les retourner sous forme de chaînes. Cet attribut peut être défini au niveau de la connexion ou de l’instruction avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md) ou [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), mais l’attribut d’instruction remplacera l’attribut de connexion correspondant. Pour plus d’informations, consultez [Procédure : Récupérer des types date et heure sous forme d’objets datetime PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 Les sections qui suivent répertorient les constantes utilisées par le pilote SQLSRV.  
@@ -143,7 +144,7 @@ Le tableau suivant répertorie les constantes utilisées pour décrire des types
 |SQLSRV_PHPTYPE_INT|Integer|  
 |SQLSRV_PHPTYPE_DATETIME|Datetime|  
 |SQLSRV_PHPTYPE_FLOAT|Float|  
-|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
+|SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|Flux|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
 1. **SQLSRV_PHPTYPE_STREAM** et **SQLSRV_PHPTYPE_STRING** acceptent un paramètre qui spécifie l’encodage du flux. Le tableau suivant répertorie les constantes SQLSRV qui sont des paramètres acceptables et fournit une description de l’encodage correspondant.  
@@ -223,7 +224,7 @@ Le tableau suivant répertorie les constantes SQLTYPE qui acceptent des paramèt
 |SQLSRV_SQLTYPE_CHAR,<br /><br />SQLSRV_SQLTYPE_VARCHAR|charCount|1 - 8000|  
 |SQLSRV_SQLTYPE_NCHAR,<br /><br />SQLSRV_SQLTYPE_NVARCHAR|charCount|1 - 4000|  
 |SQLSRV_SQLTYPE_BINARY,<br /><br />SQLSRV_SQLTYPE_VARBINARY|byteCount|1 - 8000|  
-|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|precision|1 - 38|  
+|SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|précision|1 - 38|  
 |SQLSRV_SQLTYPE_DECIMAL,<br /><br />SQLSRV_SQLTYPE_NUMERIC|scale|1 - précision|  
   
 ### <a name="transaction-isolation-level-constants"></a>Constantes de niveau d’isolation de la transaction  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a50f4a4a81267d8bb515fd4890d1d3fe66fb75a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ddea06e3cfb348ef6355f95137ce93ea459dced
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715549"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042790"
 ---
 # <a name="mirroring-states-sql-server"></a>États de la mise en miroir (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85715549"
 |état de la mise en miroir|Description|  
 |---------------------|-----------------|  
 |SYNCHRONIZING|Le contenu de la base de données en miroir est décalé par rapport à celui de la base de données principale. Le serveur principal envoie des enregistrements de journal au serveur miroir, qui applique les modifications à la base de données miroir pour la restaurer par progression.<br /><br /> Lors du démarrage d'une session de mise en miroir de base de données, la base de données est dans l'état SYNCHRONIZING. Le serveur principal sert la base de données et le serveur miroir essaie de rattraper son retard.|  
-|SYNCHRONIZED|Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la mise en miroir devient SYNCHRONIZED. La base de données reste dans cet état aussi longtemps que le serveur principal continue d'envoyer des modifications au serveur miroir et que le serveur miroir continue d'appliquer les modifications à la base de données miroir.<br /><br /> Si la sécurité des transactions a la valeur FULL, le basculement automatique et le basculement manuel sont tous les deux pris en charge dans l'état SYNCHRONIZED ; aucune perte de données ne se produit après un basculement.<br /><br /> Si la sécurité des transactions est désactivée, une perte de données est toujours possible, même dans l'état SYNCHRONIZED.|  
+|SYNCHRONIZED|Lorsque le serveur miroir a rattrapé suffisamment de retard par rapport au serveur principal, l'état de la mise en miroir devient SYNCHRONIZED. La base de données reste dans cet état aussi longtemps que le serveur principal continue d'envoyer des modifications au serveur miroir et que le serveur miroir continue d'appliquer les modifications à la base de données miroir.<br /><br /> Si la sécurité des transactions a la valeur FULL, le basculement automatique et le basculement manuel sont tous les deux pris en charge dans l'état SYNCHRONIZED ; aucune perte de données ne se produit après un basculement.<br /><br /> Si la sécurité des transactions est désactivée, une perte de données est toujours possible, même dans l'état SYNCHRONIZED.<br /><br /> Dans SQL Server Management Studio, l’état de la base de données s’affiche comme Restauration. Pour l’état réel, demander la colonne `mirroring_state_desc` dans [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md) |  
 |SUSPENDED|La copie miroir de la base de données n'est pas disponible. La base de données principale fonctionne sans envoyer de journaux au serveur miroir, condition qualifiée d’ *exécution exposée*. Cet état est observé après un basculement.<br /><br /> Une session peut également prendre l'état SUSPENDED à la suite d'erreurs de répétition ou si l'administrateur suspend la session.<br /><br /> L'état SUSPENDED est un état permanent qui persiste lors des arrêts et des démarrages des partenaires.|  
 |PENDING_FAILOVER|Cet état est observé uniquement sur le serveur principal lorsqu'un basculement a commencé, mais que le serveur n'est pas passé par le rôle de miroir.<br /><br /> Une fois le basculement déclenché, la base de données principale passe à l'état PENDING_FAILOVER, met rapidement un terme à toutes les connexions utilisateur et adopte le rôle de miroir peu de temps après.|  
 |DISCONNECTED|Le partenaire a perdu la communication avec l'autre partenaire.|  

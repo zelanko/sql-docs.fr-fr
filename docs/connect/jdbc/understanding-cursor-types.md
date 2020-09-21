@@ -1,4 +1,5 @@
 ---
+description: Présentation des types de curseurs
 title: Présentation des types de curseurs | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2019
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4f4d3db7-4f76-450d-ab63-141237a4f034
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 638cffa911d3d19859bac9101d083b3658f700e8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b47569f0580b8e39ce84b9093dc38718845617c1
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902348"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88395905"
 ---
 # <a name="understanding-cursor-types"></a>Présentation des types de curseurs
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -89,16 +90,16 @@ ms.locfileid: "80902348"
 ## <a name="cursor-updating"></a>Mise à jour du curseur  
  Les mises à jour sur place sont prises en charge pour les curseurs où le type de curseur et l'accès simultané prennent en charge les mises à jour. Si le curseur n’est pas positionné sur une ligne pouvant être mise à jour dans le jeu de résultats (aucun appel de méthode get\<Type> n’a réussi), un appel à une méthode update\<Type> lève une exception avec le message « Le jeu de résultat n’a pas de ligne actuelle ». La spécification JDBC stipule qu'une exception survient lorsqu'une méthode de mise à jour est appelée pour une colonne d'un curseur qui est CONCUR_READ_ONLY. Dans les situations où la ligne ne peut pas être mise à jour, par exemple à cause d’un conflit d’accès simultané optimiste comme une mise à jour ou une suppression en concurrence, l’exception peut ne pas survenir avant un appel à [insertRow](../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md), [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) ou [deleteRow](../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md).  
   
- Après un appel à update\<Type>, la colonne affectée est accessible pour get\<Type> uniquement une fois que updateRow ou [cancelRowUpdates](../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md) a été appelée. Cela évite les problèmes selon lesquels une colonne est mise à jour en utilisant un type différent du type retourné par le serveur, et les appels d'accesseur Get suivants pourraient appeler des conversions de type côté client donnant des résultats inexacts. Les appels à get\<Type> lèvent alors une exception avec le message « Impossible d’accéder aux colonnes mises à jour tant que updateRow() ou cancelRowUpdates() n’a pas été appelé ».  
+ Après un appel à update\<Type>, la colonne affectée est accessible pour get\<Type> uniquement une fois que updateRow ou [cancelRowUpdates](../../connect/jdbc/reference/cancelrowupdates-method-sqlserverresultset.md) a été appelé. Cela évite les problèmes selon lesquels une colonne est mise à jour en utilisant un type différent du type retourné par le serveur, et les appels d'accesseur Get suivants pourraient appeler des conversions de type côté client donnant des résultats inexacts. Les appels à get\<Type> lèvent alors une exception avec le message « Impossible d’accéder aux colonnes mises à jour tant que updateRow() ou cancelRowUpdates() n’a pas été appelé ».  
   
 > [!NOTE]  
 >  Si la méthode updateRow est appelée quand aucune colonne n’a été mise à jour, le pilote JDBC lève une exception avec un message indiquant que updateRow() a été appelée alors qu’aucune colonne n’a été mise à jour.  
   
- Après l’appel à [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md), une exception est levée si une méthode autre que get\<Type>, update\<Type>, insertRow et des méthodes de positionnement de curseur (y compris [moveToCurrentRow](../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)) sont appelées sur le jeu de résultats. La méthode moveToInsertRow place le jeu de résultats en mode insertion et les méthodes de positionnement de curseur mettent fin au mode insertion. Les appels de positionnement de curseur relatif déplacent le curseur relativement à la position où il était avant l’appel de moveToInsertRow. Après les appels de positionnement de curseur, la position de curseur de destination finale devient la nouvelle position de curseur.  
+ Après l’appel de [moveToInsertRow](../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md), une exception est levée si une méthode autre que get\<Type>, update\<Type>, insertRow et des méthodes de positionnement de curseur (y compris [moveToCurrentRow](../../connect/jdbc/reference/movetocurrentrow-method-sqlserverresultset.md)) sont appelées sur le jeu de résultats. La méthode moveToInsertRow place le jeu de résultats en mode insertion et les méthodes de positionnement de curseur mettent fin au mode insertion. Les appels de positionnement de curseur relatif déplacent le curseur relativement à la position où il était avant l’appel de moveToInsertRow. Après les appels de positionnement de curseur, la position de curseur de destination finale devient la nouvelle position de curseur.  
   
  Si l’appel de positionnement de curseur effectué lors du mode insertion ne réussit pas, la position du curseur après l’appel ayant échoué est la position de curseur d’origine avant l’appel de ToInsertRow. Si insertRow échoue, le curseur reste sur la ligne d’insertion et il reste en mode insertion.  
   
- Les colonnes dans la ligne d'insertion sont initialement dans un état non initialisé. Les appels à la méthode update\<Type définissent l’état de colonne à « initialisée ». Un appel à la méthode get\<Type> pour une colonne non initialisée lève une exception. Un appel à la méthode insertRow retourne toutes les colonnes dans la ligne d’insertion à un état non initialisé.  
+ Les colonnes dans la ligne d'insertion sont initialement dans un état non initialisé. Les appels à la méthode update\<Type> définissent l’état de colonne sur « initialisé ». Un appel à la méthode get\<Type> pour une colonne non initialisée lève une exception. Un appel à la méthode insertRow retourne toutes les colonnes dans la ligne d’insertion à un état non initialisé.  
   
  Si des colonnes ne sont pas initialisées lorsque la méthode insertRow est appelée, la valeur par défaut pour la colonne est insérée. S'il n'y a aucune valeur par défaut mais que la colonne est nullable, la valeur NULL est insérée. S'il n'y a aucune valeur par défaut et que la colonne n'est pas nullable, le serveur retourne une erreur et une exception est levée.  
   

@@ -1,6 +1,6 @@
 ---
 title: Types de données (pilote OLE DB) | Microsoft Docs
-description: Types de données (OLE DB)
+description: Découvrez comment OLE DB Driver pour SQL Server mappe des types de données SQL Server sur des types OLE DB pour la liaison de paramètres/colonnes et la création de tables à l’aide de ITableDefinition.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, data types
 - data types [OLE DB]
 - OLE DB, data types
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 28ff4bfc3262803ba8bafcb405e477a1692cb93f
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: cf62e63ba0912c6fb6ccfa8d2aa9352838ebca19
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977749"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862376"
 ---
 # <a name="data-types-ole-db"></a>Types de données (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

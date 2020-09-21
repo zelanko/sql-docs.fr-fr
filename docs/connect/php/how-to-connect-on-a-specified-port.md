@@ -1,5 +1,6 @@
 ---
-title: 'Procédure : Se connecter sur un port spécifié | Microsoft Docs'
+title: 'Procédure : Se connecter sur un port spécifié'
+description: Découvrez comment se connecter à une base de données configurée sur un port spécifique à l’aide des Pilotes Microsoft SQLSRV et PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 44df1e9c8809fed016a5c041d34f0f46cae83654
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: b55f12bbfe4bbe255af2d62c2ed0c5ab3f968e98
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916495"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435235"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Procédure : Se connecter sur un port spécifié
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,5 +53,5 @@ Cette rubrique explique comment se connecter à SQL Server sur un port spécifi�
 
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
-[Informations de référence sur le pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
+[Référence de pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

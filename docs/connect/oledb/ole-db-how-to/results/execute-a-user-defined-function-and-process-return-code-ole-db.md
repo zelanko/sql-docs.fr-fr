@@ -1,6 +1,6 @@
 ---
 title: Exécuter une fonction définie par l’utilisateur et traiter le code de retour (OLE DB) | Microsoft Docs
-description: Exécuter une fonction définie par l’utilisateur et traiter le code de retour avec OLE DB Driver pour SQL Server
+description: Consultez comment exécuter une fonction définie par l’utilisateur et imprimer un code de retour avec OLE DB Driver pour SQL Server. Cet exemple utilise l’exemple de base de données AdventureWorks.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a1acbc1aaca3a4618ac0f74da0cc85c628b04d79
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 47b35cd2dfee25b1ab2d9a8e9c2810749f59a80e
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86012521"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860295"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Exécuter une fonction définie par l'utilisateur et traiter le code de retour (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,6 +1,6 @@
 ---
 title: IBCPSession::BCPExec (pilote OLE DB) | Microsoft Docs
-description: IBCPSession::BCPExec (OLE DB)
+description: La méthode IBCPSession::BCPExec copie les données d’un fichier utilisateur vers une table de base de données, ou vice versa, dans OLE DB Driver pour SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ apiname:
 apitype: COM
 helpviewer_keywords:
 - BCPExec method
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: b9a9da726b3bab967863569a70c66d31fe3a00e3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 87e7b6e3d53f865ff4c5495729951d9045edb483
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244589"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861957"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ HRESULT BCPExec(
  S_OK  
   
  E_FAIL  
- Une erreur spécifique au fournisseur s’est produite. Pour obtenir des informations détaillées, utilisez l’interface [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
+ Une erreur spécifique au fournisseur s’est produite. Pour obtenir des informations détaillées, utilisez l’interface [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15).  
   
  E_UNEXPECTED  
  L'appel à la méthode était inattendu. Par exemple, la méthode **BCPInit** n'a pas été appelée avant cette méthode. Se produit également si l'opération a été abandonnée suite à l'utilisation de l'option BCP_OPTION_ABORT et que la méthode **BCPExec** a été appelée ensuite.  

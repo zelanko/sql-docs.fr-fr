@@ -1,4 +1,5 @@
 ---
+description: Opérateurs
 title: Opérateurs
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -24,18 +25,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a500a4c03562d024bb64a65053fe1afc374844c8
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9727e0ac0270b32fe4df943e6ab91d2748cc7994
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87246438"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88319015"
 ---
 # <a name="operators"></a>Opérateurs
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Les opérateurs sont des alias pour les personnes ou les groupes qui peuvent recevoir une notification électronique à la fin des travaux ou en cas d'alertes. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent prend en charge la notification des administrateurs par le biais des opérateurs. Les opérateurs activent les fonctions de notification et de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9d373e347df9207a3cbea8bd0fc1682a865323c2
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 4eea801493f87b2c6e11cdca0d42143d54f08bff
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458951"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988429"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Sources de données prises en charge par Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] récupère des données de rapport dans des sources de données par l’intermédiaire d’une couche de données extensibles et modulaire qui utilise des extensions pour le traitement des données. Pour récupérer des données de rapport à partir d’une source de données, vous devez sélectionner une extension pour le traitement des données qui prend en charge le type de source de données, la version du logiciel s’exécutant sur la source de données ainsi que la plateforme de la source de données ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]32 bits ou 64 bits).  

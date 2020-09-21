@@ -2,7 +2,7 @@
 title: Utilisation du pilote JDBC | Microsoft Docs
 description: Cette section fournit des instructions de démarrage rapide pour la création d'une connexion simple à une base de données SQL Seveur à l'aide du pilote Microsoft JDBC pour SQL Server.
 ms.custom: ''
-ms.date: 03/24/2020
+ms.date: 08/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8d1c14f81c22442f37ec026310edf228124e8911
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: e042e1604c9a59bc823272743ed675b682882c94
+ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488295"
+ms.lasthandoff: 08/27/2020
+ms.locfileid: "89042552"
 ---
 # <a name="using-the-jdbc-driver"></a>Utilisation du pilote JDBC
 
@@ -27,6 +27,8 @@ Cette section fournit des instructions de démarrage rapide pour la création d�
 ## <a name="choosing-the-right-jar-file"></a>Choix du fichier JAR approprié
 
 Microsoft JDBC Driver fournit différents fichiers JAR à utiliser en correspondance avec les paramètres Java Runtime Environment (JRE) choisis :
+
+Microsoft JDBC Driver 8.4 pour SQL Server fournit les fichiers bibliothèque de classes **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** et **mssql-jdbc-8.4.1.jre14.jar**.
 
 Microsoft JDBC Driver 8.2 pour SQL Server fournit les fichiers bibliothèque de classes **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** et **mssql-jdbc-8.2.2.jre13.jar**.
 
@@ -64,7 +66,32 @@ Avec JDBC Driver 7.4, incluez dans le **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jd
 
 Si vous utilisez le pilote JDBC 8.2, définissez le classpath sur **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar** ou **mssql-jdbc-8.2.2.jre13.jar**.
 
+Si vous utilisez JDBC Driver 8.4, définissez le classpath sur **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** ou **mssql-jdbc-8.4.1.jre14.jar**.
+
 S’il manque une entrée correspondant au bon fichier JAR dans le classpath, l’application lève l’exception courante `Class not found`.  
+
+### <a name="for-microsoft-jdbc-driver-84"></a>Pour Microsoft JDBC Driver 8.4
+
+Les fichiers **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** ou **mssql-jdbc-8.4.1.jre14.jar** sont installés aux emplacements suivants :
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre8.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre11.jar
+
+\<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-8.4.1.jre14.jar
+```
+
+L’extrait de code suivant est un exemple de l’instruction CLASSPATH utilisée pour une application Windows :
+
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.4 for SQL Server\sqljdbc_8.4\enu\mssql-jdbc-8.4.1.jre11.jar`
+
+L’extrait de code suivant est un exemple de l’instruction CLASSPATH utilisée pour une application Unix/Linux :
+
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.4/enu/mssql-jdbc-8.4.1.jre11.jar`
+
+Vérifiez que l’instruction CLASSPATH ne contient qu’un seul [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], par exemple **mssql-jdbc-8.4.1.jre8.jar**, **mssql-jdbc-8.4.1.jre11.jar** ou **mssql-jdbc-8.4.1.jre14.jar**.
+
 
 ### <a name="for-microsoft-jdbc-driver-82"></a>Pour Microsoft JDBC Driver 8.2
 

@@ -1,7 +1,8 @@
 ---
-title: Types de données PHP par défaut | Microsoft Docs
+title: Types de données PHP par défaut
+description: Cette rubrique répertorie tous les types de données PHP par défaut avec leurs types de données SQL Server correspondants lors de l’utilisation de Microsoft SQLSRV Driver pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e3f5210d54fdd5a0a693f9cb7fdf8a7d4fc0f183
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c1e1cf91baf80fd6298eaaca9c9e12a0b5858d9f
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928027"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680788"
 ---
 # <a name="default-php-data-types"></a>Types de données PHP par défaut
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +30,7 @@ Quand les données sont retournées à l’aide du pilote PDO_SQLSRV, le type de
   
 Le reste de cette rubrique traite des types de données par défaut qui utilisent le pilote SQLSRV.  
   
-Le tableau suivant répertorie le type de données SQL Server (type des données récupérées à partir du serveur), le type de données PHP par défaut (type de données vers lequel les données sont converties) et l’encodage par défaut pour les flux et les chaînes. Pour savoir comment spécifier des types de données en récupérant des données du serveur, consultez [Guide pratique pour spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md).  
+Le tableau suivant répertorie le type de données SQL Server (type des données récupérées à partir du serveur), le type de données PHP par défaut (type de données vers lequel les données sont converties) et l’encodage par défaut pour les flux et les chaînes. Pour plus d’informations sur la manière de spécifier des types de données lors de la récupération de données à partir du serveur, consultez [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
 |Type SQL Server|Type PHP par défaut|Encodage par défaut|  
 |-------------------|--------------------|--------------------|  
@@ -77,7 +78,7 @@ Le tableau suivant répertorie le type de données SQL Server (type des données
   
 3.  Les données sont retournées à partir du serveur sous la forme d’un flux d’octets bruts sans encodage ni traduction.  
 
-4.  Les types de date et d’heure peuvent être récupérés sous forme de chaînes. Pour plus d’informations, consultez [Procédure : Récupérer des types date et heure sous forme de chaînes à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
+4.  Les types de date et d’heure peuvent être récupérés sous forme de chaînes. Pour plus d’informations, consultez [Procédure : récupérer des types de date et heure sous forme de chaînes à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).  
 
 5.  Il s’agit d’un type hérité mappé sur le type varbinary(max).
 
@@ -97,13 +98,13 @@ Les types de données qui sont nouveaux dans SQL Server 2008 et qui existent en
   
 |Fonctionnalité|Prise en charge PHP|  
 |-----------|---------------|  
-|Paramètre table|Non|  
-|Colonnes éparses|Partiel|  
+|Paramètre table|No|  
+|Colonnes éparses|Partial|  
 |Compression de bits Null|Oui|  
 |Types CLR volumineux définis par l’utilisateur (UDT)|Oui|  
-|Nom de principal du service|Non|  
+|Nom de principal du service|No|  
 |MERGE|Oui|  
-|FILESTREAM|Partiel|  
+|FILESTREAM|Partial|  
   
 Une prise en charge partielle des types signifie que vous ne pouvez pas interroger par programme le type de la colonne.  
   

@@ -3,25 +3,25 @@ title: Gérer avec Resource Governor
 description: Découvrez comment utiliser Resource Governor pour gérer le processeur, les E/S physiques et l’allocation des ressources de mémoire pour les charges de travail Python et R dans SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 10/02/2019
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f5a567ee0d4937341bb6d9f62a75955635118d1c
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 55fd9d7c699523856ad2623298c62d6f986904a5
+ms.sourcegitcommit: 5da46e16b2c9710414fe36af9670461fb07555dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881970"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "89283550"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>Gérer les charges de travail Python et R avec Resource Governor dans SQL Server Machine Learning Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Découvrez comment utiliser [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) pour gérer le processeur, les E/S physiques et l’allocation des ressources de mémoire pour les charges de travail Python et R dans SQL Server Machine Learning Services.
 
-Les algorithmes d’apprentissage automatique dans Python et R nécessitent en général beaucoup ressources de calcul. En fonction des priorités de votre charge de travail, vous devrez peut-être augmenter ou diminuer les ressources disponibles pour Machine Learning Services.
+Les algorithmes d’apprentissage automatique dans Python et R nécessitent beaucoup ressources de calcul. En fonction des priorités de votre charge de travail, vous devrez peut-être augmenter ou diminuer les ressources disponibles pour Machine Learning Services.
 
 Pour plus d’informations générales, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).
 

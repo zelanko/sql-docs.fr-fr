@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 49bf5ae8b9ab88859bedaf114242b1dcf64bb641
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: ed931eb7a77026e4902f5591def3496eb30851bf
+ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732178"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89569939"
 ---
 # <a name="sql-server-help-and-feedback"></a>Aide et commentaires pour SQL Server
 
@@ -29,23 +29,11 @@ Les clients sans plan de support peuvent demander de l’aide à la communauté 
 
 ## <a name="ask-community-for-help"></a>Demander de l’aide à la communauté
 
-Si vous voulez obtenir une assistance auprès de la communauté SQL Server, vous disposez de plusieurs options !
+Si vous voulez obtenir une assistance auprès de la communauté SQL Server, vous disposez de plusieurs options.
 
+### <a name="microsoft-q--a"></a>Questions fréquentes Microsoft
 
-### <a name="msdn-forums"></a>Forums MSDN
-
-Il existe de nombreux forums MSDN qui peuvent vous aider à répondre à vos questions sur SQL Server. 
-- [Moteur de base de données SQL Server](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatabaseengine&filter=alltypes&sort=lastpostdesc)
-- [Installation et mise à niveau](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)
-- [Haute disponibilité et récupération d’urgence](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldisasterrecovery%2Csqldatabasemirroring&filter=alltypes&sort=lastpostdesc)
-- [Outils SQL Server](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools%2Cssdt&filter=alltypes&sort=lastpostdesc) 
-- [Sécurité](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsecurity&filter=alltypes&sort=lastpostdesc)
-- [Réplication](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreplication&filter=alltypes&sort=lastpostdesc)
-- [Transact-SQL (T-SQL)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql)
-- [SQL Server Integration Services (SSIS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Reporting Services (SSRS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlreportingservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Analysis Services (SSAS)](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlanalysisservices&filter=alltypes&sort=lastpostdesc)
-- [SQL Server Data Warehouse](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatawarehousing&filter=alltypes&sort=lastpostdesc)
+Vous pouvez également obtenir de l’aide en recherchant et en publiant des questions sur [Questions et réponses Microsoft](https://docs.microsoft.com/answers/products/sql-server).
 
 ### <a name="communities"></a>Communautés
 
@@ -56,7 +44,7 @@ Quelques communautés peuvent vous aider à résoudre vos problèmes avec SQL Se
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [Obtenir de l’aide de la communauté avec le hashtag #sqlhelp sur Twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
  
-## <a name="feedback"></a>Commentaires
+## <a name="feedback-suggestions"></a>Suggestions et commentaires
 
 Vous pouvez envoyer des suggestions d’amélioration et signaler des bogues pour :
 
@@ -91,8 +79,8 @@ Les comptes Twitter suivants fournissent des informations sur SQL Server :
 
 Les blogs SQL Server suivants recensent les dernières informations sur SQL Server : 
 
-- [Blog SQL Server](https://cloudblogs.microsoft.com/sqlserver/)
-- [SQL Repl Talk](https://blogs.msdn.microsoft.com/repltalk/)
+- [Blog SQL Server](https://cloudblogs.microsoft.com/sqlserver/)
+- [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
 - [SQL Tiger Team](https://blogs.msdn.microsoft.com/sql_server_team/)
 - [Équipe de support technique SQL](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
 

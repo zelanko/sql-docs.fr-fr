@@ -1,7 +1,8 @@
 ---
-title: Guide pratique pour spécifier la direction des paramètres avec le pilote SQLSRV | Microsoft Docs
+title: 'Procédure : spécifier la direction du paramètre à l’aide du pilote SQLSRV'
+description: Découvrez comment spécifier la direction du paramètre lors de l’appel d’une procédure stockée à l’aide du Pilote Microsoft SQLSRV pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 85a106a8e6a7f9afcac449b241b0255a16c51233
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f085fc40ded15310b81d6a447f30676ed011e7f8
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80915925"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680240"
 ---
-# <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Procédure : spécifier la direction du paramètre à l’aide du pilote SQLSRV
+# <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Procédure : Spécifier la direction du paramètre à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direction du paramètre quand vous appelez une procédure stockée. La direction des paramètres est spécifiée lors de la construction d’un tableau de paramètres (étape 3) transmis à [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou à [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
@@ -43,7 +44,7 @@ Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direc
     ```  
   
     > [!NOTE]  
-    > Les variables initialisées ou mises à jour avec la valeur **null**, **DateTime**ou des types de flux ne peuvent pas être utilisées comme paramètres de sortie.  
+    >  Les variables initialisées ou mises à jour avec la valeur **Null**, **DateTime**ou des types de flux ne peuvent pas être utilisées comme paramètres de sortie.  
   
 3.  Utilisez vos variables PHP de l’étape 2 pour créer ou mettre à jour un tableau de valeurs de paramètre correspondant, dans l’ordre, aux espaces réservés de paramètre dans la chaîne Transact-SQL. Spécifiez la direction de chaque paramètre dans le tableau. La direction de chaque paramètre peut se déterminer de deux manières : par défaut (pour les paramètres d’entrée) ou à l’aide de constantes **SQLSRV_PARAM_\*** (pour les paramètres de sortie et les paramètres bidirectionnels). Par exemple, le code suivant spécifie le paramètre *$employeeId* comme paramètre d’entrée et le paramètre *$usedVacationHours* comme paramètre bidirectionnel :  
   
@@ -83,7 +84,7 @@ Cette rubrique décrit l’utilisation du pilote SQLSRV pour spécifier la direc
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
-[Guide pratique pour récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+[Procédure : Récupérer des paramètres de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
-[Guide pratique pour récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
+[Procédure : Récupérer des paramètres d’entrée et de sortie à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   

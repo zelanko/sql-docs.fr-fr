@@ -1,6 +1,6 @@
 ---
 title: Métadonnées de paramètre et d'ensemble de lignes (pilote OLE DB)
-description: Métadonnées de paramètre et d’ensemble de lignes
+description: En savoir plus sur le type DBBINDING et les membres de type associés aux améliorations de date et d’heure OLE DB Driver pour SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - metadata [OLE DB]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: a3356134c542cf90c194924a8fbfc44b357c7123
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 5f48366cc887d2c06c3f230cf6bf8f84d767b798
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244896"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862022"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Métadonnées - Paramètres et ensembles de lignes
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

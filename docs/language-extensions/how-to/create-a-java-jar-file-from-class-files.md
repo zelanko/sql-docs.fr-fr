@@ -1,6 +1,6 @@
 ---
 title: Créer un fichier jar Java à partir de fichiers class
-description: Découvrir comment créer un fichier jar Java à partir de fichiers class
+description: Empaquetez vos fichiers de classes en un fichier jar quand vous utilisez les extensions de langage SQL Server pour exécuter du code Java.
 author: dphansen
 ms.author: davidph
 ms.date: 11/05/2019
@@ -8,15 +8,15 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a105dde9046167257a86705f678466872785b4be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c324fca6893af35cafe6e9f65eccd0e8a0e478f9
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735088"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88180280"
 ---
 # <a name="create-a-java-jar-file-from-class-files"></a>Créer un fichier jar Java à partir de fichiers class
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Découvrez comment packager vos fichiers de classes en un fichier jar quand vous utilisez les [extensions de langage SQL Server](../language-extensions-overview.md) pour exécuter du code Java. Nous vous recommandons de packager vos fichiers.
 

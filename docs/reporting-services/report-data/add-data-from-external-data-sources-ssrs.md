@@ -10,12 +10,12 @@ ms.author: maggies
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 7f1dec73677f0893bd7777efb2786af8eb0d4e5f
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: bf02fc6f015b16b708e78d73f763d7adc758bc1d
+ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458998"
+ms.lasthandoff: 08/07/2020
+ms.locfileid: "87988410"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Ajouter des données à partir de sources de données externes (SSRS)
   Pour récupérer des données à partir d'une source de données externe, vous utilisez une connexion de données. Les informations de connexion de données sont fournies habituellement par le propriétaire de la source de données externe, qui est chargé d'accorder les autorisations nécessaires et de spécifier les types d'informations d'identification à utiliser. Les informations de connexion de données sont enregistrées en tant que source de données de rapport. Le type de source de données spécifie l'extension de données à utiliser pour récupérer les données.  
@@ -83,7 +83,7 @@ ms.locfileid: "86458998"
 |[Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
 |[Type de connexion PowerPivot &#40;SSRS&#41;](../../reporting-services/report-data/power-pivot-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|  
 |[Type de connexion de liste SharePoint &#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Liste SharePoint|  
-|[Type de connexion SQL Azure &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|[Type de connexion Azure SQL &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |[Type de connexion à un entrepôt de données SQL Server Parallel Data Warehouse &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|  
 |[Type de connexion SAP NetWeaver BI &#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)|SAP NetWeaver BI|  
 |[Type de connexion Hyperion Essbase &#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)|Hyperion Essbase|  

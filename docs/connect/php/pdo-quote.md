@@ -1,7 +1,8 @@
 ---
-title: PDO::quote | Microsoft Docs
+title: PDO::quote
+description: Référence API pour la fonction PDO::quote dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: db661eea0ea4b3b46e3a73f7e1f4609267bbae41
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cc39e175c46317428836af6562abc9af3d02dd9
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919068"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88645541"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +31,7 @@ string PDO::quote( $string[, $parameter_type ] )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-$*string*: chaîne à placer entre guillemets.  
+$*string* : chaîne à placer entre guillemets.  
   
 $*parameter_type* : symbole (entier) facultatif indiquant le type de données.  La valeur par défaut est PDO::PARAM_STR.  
 
@@ -69,7 +70,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 
 Le script suivant montre quelques exemples de la façon dont les types de chaînes étendus affectent PDO::quote() avec PHP 7.2 +.
 

@@ -1,4 +1,5 @@
 ---
+description: Assistant Source de données, écran 4 (ODBC Driver pour SQL Server)
 title: Assistant Source de données, écran 4 (ODBC Driver for SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e35eae2e827b1fb0885eeaf5c953f64bddc7c3d9
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6d1f72323f3db7db1f0f9c0084ef3da9de034490
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80927943"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88462181"
 ---
 # <a name="data-source-wizard-screen-4"></a>Assistant Source de données, écran 4
 
@@ -67,7 +68,7 @@ Spécifie le nombre de nouvelles tentatives de connexion après un échec.
 
 Spécifie le nombre de secondes entre les nouvelles tentatives de connexion. Pour plus d’informations sur ce fonctionnement et sur les options **Nombre de nouvelles tentatives de connexion**, consultez [Résilience de connexion dans Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
-### <a name="back"></a>Retour
+### <a name="back"></a>Précédent
 
 Cliquez sur ce bouton pour revenir à la page précédente de l’Assistant.
 

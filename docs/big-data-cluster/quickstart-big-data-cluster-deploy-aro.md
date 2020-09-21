@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea5c622385b4350fb74362451eef3bb061d78fbc
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
+ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160157"
+ms.lasthandoff: 07/31/2020
+ms.locfileid: "87472335"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>Déploiement d’un cluster Big Data SQL Server sur Azure Red Hat OpenShift (ARO) avec un script Python
 
@@ -24,6 +24,10 @@ Dans ce tutoriel, vous allez utiliser un exemple de script de déploiement Pytho
 
 > [!TIP]
 > ARO n’est qu’une option d’hébergement de Kubernetes parmi d’autres pour un cluster Big Data. Pour découvrir les autres options de déploiement et savoir comment les personnaliser, consultez [Guide pratique pour déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes](deployment-guidance.md).
+
+
+> [!WARNING]
+> Les volumes persistants créés avec la classe de stockage intégrée *managed-premium* ont une stratégie de récupération *Delete (Supprimer)* . Lorsque vous supprimez le cluster Big Data SQL Server, les revendications de volumes persistants sont supprimées, puis les volumes persistants le sont. Vous devez créer des classes de stockage personnalisées en utilisant le provisionneur azure-disk avec une stratégie de récupération *Conserver*, comme décrit dans [Stockage de concepts](/azure/aks/concepts-storage/#storage-classes). Le script ci-dessous utilise la classe de stockage *managed-premium*. Pour plus d’informations, consultez la rubrique [Persistance des données](concept-data-persistence.md).
 
 Le déploiement de cluster Big Data par défaut utilisé ici se compose d’une instance principale SQL, d’une instance de pool de calcul, de deux instances de pool de données et de deux instances de pool de stockage. Les données sont conservées avec des volumes persistants Kubernetes qui utilisent les classes de stockage par défaut d’ARO. La configuration par défaut utilisée dans ce tutoriel est adaptée aux environnements de développement et de test.
 

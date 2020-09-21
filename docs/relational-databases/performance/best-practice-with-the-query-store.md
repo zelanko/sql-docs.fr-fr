@@ -2,10 +2,9 @@
 title: Bonnes pratiques relatives au Magasin des requêtes | Microsoft Docs
 description: Découvrez les bonnes pratiques relatives à l’utilisation du Magasin des requêtes SQL Server avec votre charge de travail, telles que l’utilisation des versions les plus récentes de SQL Server Management Studio et de Query Performance Insight.
 ms.custom: ''
-ms.date: 03/04/2020
+ms.date: 09/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: carlrab
 ms.technology: performance
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 721cb6dca81681fec19d30a30ae0067bb4df1745
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: c19088caa9942d3eafaf6ccf8c6195851f05c27f
+ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970080"
+ms.lasthandoff: 09/12/2020
+ms.locfileid: "90042816"
 ---
 # <a name="best-practices-with-query-store"></a>Bonnes pratiques relatives au Magasin des requêtes
 
@@ -421,7 +420,7 @@ Les plans d’exécution référencent les objets avec des noms en trois parties
 
 Si vous renommez une base de données, le forçage de plan échoue, ce qui entraîne une recompilation dans toutes les exécutions de requête suivantes.
 
-## <a name="use-trace-flags-on-mission-critical-servers"></a><a name="Recovery"></a> Utiliser des indicateurs de trace sur des serveurs stratégiques
+## <a name="using-query-store-in-mission-critical-servers"></a><a name="Recovery"></a> Utilisation du Magasin des requêtes dans des serveurs stratégiques
 
 Les indicateurs de trace globaux 7745 et 7752 peuvent être utilisés pour améliorer la disponibilité des bases de données à l’aide du Magasin des requêtes. Pour plus d’informations, consultez [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
@@ -432,7 +431,10 @@ Les indicateurs de trace globaux 7745 et 7752 peuvent être utilisés pour amél
 > À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], ce comportement est contrôlé par le moteur, et l’indicateur de trace 7752 n’a pas d’effet.
 
 > [!IMPORTANT]
-> Si vous utilisez le Magasin des requêtes pour avoir un aperçu juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer dès que possible les correctifs de scalabilité des performances figurant dans [KB 4340759](https://support.microsoft.com/help/4340759).
+> Si vous utilisez le Magasin des requêtes pour avoir des aperçus juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], prévoyez d’installer dès que possible les correctifs de scalabilité des performances figurant dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 ([KB 4340759](https://support.microsoft.com/help/4340759)). Sans ces améliorations, lorsque la base de données est sous des charges de travail lourdes, une contention de verrouillages spinlock peut se produire et les performances du serveur peuvent devenir lentes. En particulier, vous pouvez constater une contention importante sur le verrouillage spinlock `QUERY_STORE_ASYNC_PERSIST` ou `SPL_QUERY_STORE_STATS_COOKIE_CACHE`. Une fois cette amélioration appliquée, le Magasin des requêtes n’entraîne plus de contention de verrouillages spinlock.
+
+> [!IMPORTANT]
+> Si vous utilisez le Magasin des requêtes pour avoir des aperçus juste-à-temps de la charge de travail dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], prévoyez d’installer dès que possible les correctifs de scalabilité des performances figurant dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU22. Sans cette amélioration, lorsque la base de données est sous des charges de travail ad hoc lourdes, le Magasin des requêtes peut utiliser une grande quantité de mémoire et les performances du serveur peuvent devenir lentes. Une fois cette amélioration appliquée, le Magasin des requêtes impose des limites internes à la quantité de mémoire que ses différents composants peuvent utiliser et peut automatiquement changer le mode d’opération en lecture seule jusqu’à ce que la mémoire soit suffisamment retournée au [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. Notez que les limites de mémoire interne du Magasin des requêtes ne sont pas documentées, car elles sont sujettes à modification.  
 
 ## <a name="see-also"></a>Voir aussi
 

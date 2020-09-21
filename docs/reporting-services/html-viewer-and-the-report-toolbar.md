@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 825e169f3819cc19b042715662f4ec554f02d65b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b413cf8f3fd5b8e85a94e5ed26add2717dcc2376
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247198"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396476"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visionneuse HTML et barre d'outils Rapport
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit une visionneuse HTML utilisée pour afficher des rapports sur demande lorsqu'ils sont demandés auprès du serveur de rapports. La visionneuse HTML offre une infrastructure pour afficher les rapports au format HTML. Elle comporte une barre d'outils Rapport, une section de paramétrage, une section sur les informations d'identification et un explorateur de documents. Cette barre d'outils offre des fonctionnalités qui permettent d'utiliser votre rapport, notamment des options d'exportation qui permettent d'afficher votre rapport dans d'autres formats que le format HTML. La section de paramètre et l'explorateur de documents sont affichés uniquement lorsque vous ouvrez des rapports configurés pour utiliser des paramètres et une commande d'explorateur de documents.  
@@ -35,7 +35,7 @@ ms.locfileid: "87247198"
   
  Le tableau ci-dessous décrit les fonctionnalités couramment utilisées de la barre d'outils Rapport. Chaque fonctionnalité est identifiée par la commande que vous utilisez pour y accéder.  
   
-|Utilisez cette icône ou cette commande||À|  
+|Icône ou contrôle|Nom|Description|  
 |------------------------------|-|--------|  
 |![Commandes de navigation entre les pages](../reporting-services/media/htmlviewer-pagenav.gif "Commandes de navigation entre les pages")|**Commandes de navigation entre les pages**|Ouvrir la première ou la dernière page d'un rapport, faire défiler un rapport page par page et ouvrir une page particulière d'un rapport. Pour afficher une page spécifique, tapez le numéro de page et appuyez sur Entrée.|  
 |![Commandes d'affichage des pages](../reporting-services/media/htmlviewer-pagesize.gif "Commandes d'affichage des pages")|**Commandes d'affichage des pages**|Agrandir ou réduire la taille de la page d'un rapport. Outre les modifications des pourcentages, vous pouvez sélectionner **Largeur de page** pour ajuster la longueur horizontale d’une page d’un rapport à la fenêtre du navigateur ou **Page entière** pour ajuster la longueur verticale d’un rapport à la fenêtre du navigateur. **Internet Explorer 5.5 et versions ultérieures prennent en charge l'option** Zoom [!INCLUDE[msCoName](../includes/msconame-md.md)] .|  

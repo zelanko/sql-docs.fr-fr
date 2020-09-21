@@ -14,16 +14,24 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: cf563e5d074f9e4629eb3b9f63304104167394a4
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: fb686e3c70723cf847853ad558f47cf37da23972
+ms.sourcegitcommit: bc10ec0be5ddfc5f0bc220a9ac36c77dd6b80f1d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091803"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87544302"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste des bogues corrigés
 
 Cette page contient la liste des bogues résolus dans chaque version, à partir du pilote [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC 17 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+### <a name="bug-fixes-in-the-msconame-odbc-driver-176-for-ssnoversion"></a>Correctifs de bogues dans la version 17.6 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Corriger l’erreur ADAL lors de l’authentification avec un compte fédéré (Windows)
+- Résolution du problème à cause duquel le pilote cesse de répondre lorsqu’un délai d’attente se produit pendant une opération de notification asynchrone
+- Correction du nombre de références du pilote lors de la mise à niveau dans Alpine Linux
+- Correction de la version de dépendance libc6 pour Ubuntu
+- Ajout des définitions manquantes à msodbcsql.h Linux/Mac
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-17522-for-ssnoversion-alpine-linux-only"></a>Correctifs de bogues dans la version 17.5.2.2 de [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Alpine Linux uniquement)
 

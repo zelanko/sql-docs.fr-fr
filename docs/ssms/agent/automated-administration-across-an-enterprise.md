@@ -1,4 +1,5 @@
 ---
+description: Administration automatisée à l'échelle d'une entreprise
 title: Administration automatisée à l'échelle d'une entreprise
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,18 +22,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17356ab4630dfb981fd359caa48a22dac51f6c94
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 447e1c66d9e94f654414ae1c7205772097fe575f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749199"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88468869"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Administration automatisée à l'échelle d'une entreprise
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Le fait d’automatiser l’administration sur plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est appelé *administration multiserveur*. Utilisez l'administration multiserveur dans les cas suivants :  
   

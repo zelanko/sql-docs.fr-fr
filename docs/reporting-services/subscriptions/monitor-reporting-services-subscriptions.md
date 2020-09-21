@@ -15,20 +15,27 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d5c5b4965489544cfd1f6ee5ccfb1ce4170381bf
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 05ee90e9ccbf781e0145665b8f1dd06ca2fb8d45
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742034"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396081"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Analyser les abonnements Reportions Services
   Vous pouvez surveiller les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir de l'interface utilisateur, de Windows PowerShell ou des fichiers journaux. Les options de surveillance à votre disposition dépendent du mode de serveur de rapports que vous exécutez.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.|  
-  
+**[!INCLUDE[applies](../../includes/applies-md.md)]**
+
+:::row:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif  
+    :::column-end:::
+    :::column:::
+        [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mode SharePoint  
+    :::column-end:::
+:::row-end:::
+
  **Dans cet article :**  
   
 -   [Interface utilisateur en mode natif](#bkmk_native_mode)  
@@ -48,17 +55,17 @@ ms.locfileid: "80742034"
 |------------|-----------------|  
 |Nouvel abonnement|Apparaît la première fois que vous créez l'abonnement.|  
 |Inactif|Apparaît lorsqu'un abonnement ne peut pas être traité. Pour plus d'informations, consultez « Gestion des abonnements inactifs », plus loin dans cet article.|  
-|Terminé : \<*nombre*> traité(s) sur un total de \<*nombre*> ; \<*nombre*> erreurs.|Indique l'état de l'exécution d'un abonnement piloté par les données. Ce message provient du processeur de planification et de livraison.|  
-|\<*nombre*> traités|Nombre de notifications que le processeur de planification et de livraison a réussi à remettre ou n'essaie plus de remettre. Lorsqu'une remise pilotée par les données est terminée, le nombre de notifications traitées doit être égal au nombre total de notifications générées.|  
-|\<*nombre*> au total|Nombre total de notifications générées pour la dernière remise de l'abonnement.|  
-|\<*nombre*> erreurs|Nombre de notifications que le processeur de planification et de livraison n'a pas réussi à remettre ou n'essaie plus de remettre.|  
+|Effectué : \<*number*> traités sur un total de \<*number*> ; \<*number*> erreurs.|Indique l'état de l'exécution d'un abonnement piloté par les données. Ce message provient du processeur de planification et de livraison.|  
+|\<*number*> traités|Nombre de notifications que le processeur de planification et de livraison a réussi à remettre ou n'essaie plus de remettre. Lorsqu'une remise pilotée par les données est terminée, le nombre de notifications traitées doit être égal au nombre total de notifications générées.|  
+|Total de \<*number*>|Nombre total de notifications générées pour la dernière remise de l'abonnement.|  
+|\<*number*> erreurs|Nombre de notifications que le processeur de planification et de livraison n'a pas réussi à remettre ou n'essaie plus de remettre.|  
 |Échec de l'envoi du message électronique : le transport a échoué dans sa connexion au serveur.|Indique que le serveur de rapports ne s'est pas connecté au serveur de messagerie ; ce message provient de l'extension de remise par messagerie électronique.|  
-|Le fichier \<*nom_fichier*> a été écrit dans \<chemin>.|Indique que la remise à l'emplacement du partage de fichiers a réussi ; ce message provient de l'extension de remise dans un partage de fichiers.|  
+|Le fichier \<*filename*> a été écrit dans \<path>.|Indique que la remise à l'emplacement du partage de fichiers a réussi ; ce message provient de l'extension de remise dans un partage de fichiers.|  
 |Une erreur inconnue s'est produite lors de l'écriture du fichier.|Indique que la remise à l'emplacement du partage de fichiers a échoué ; ce message provient de l'extension de remise dans un partage de fichiers.|  
-|Échec lors de la connexion au dossier de destination, \<chemin>. Assurez-vous que le dossier de destination ou le partage de fichiers existe.|Indique que le dossier que vous avez spécifié n'a pas pu être trouvé ; ce message provient de l'extension de remise dans un partage de fichiers.|  
-|Impossible d’écrire le fichier \<nom_fichier> dans \<chemin>. Nouvelle tentative d'écriture en cours.|Indique que le fichier n'a pas pu être mis à jour avec une version plus récente ; ce message provient de l'extension de remise dans un partage de fichiers.|  
-|Échec lors de l’écriture dans le fichier \<nom_fichier>: \<message>|Indique que la remise à l'emplacement du partage de fichiers a échoué ; ce message provient de l'extension de remise dans un partage de fichiers.|  
-|\<messages d’état personnalisés>|Messages d'état indiquant le succès ou l'échec de la remise. Ces messages proviennent des extensions de remise. Si vous utilisez une extension de remise tierce ou personnalisée, d'autres messages d'état peuvent apparaître.|  
+|Échec lors de la connexion au dossier de destination, \<path>. Assurez-vous que le dossier de destination ou le partage de fichiers existe.|Indique que le dossier que vous avez spécifié n'a pas pu être trouvé ; ce message provient de l'extension de remise dans un partage de fichiers.|  
+|impossible d’écrire le fichier \<filename> sur \<path>. Nouvelle tentative d'écriture en cours.|Indique que le fichier n'a pas pu être mis à jour avec une version plus récente ; ce message provient de l'extension de remise dans un partage de fichiers.|  
+|Échec d'écriture du fichier \<filename> : \<message>|Indique que la remise à l'emplacement du partage de fichiers a échoué ; ce message provient de l'extension de remise dans un partage de fichiers.|  
+|\<custom status messages>|Messages d'état indiquant le succès ou l'échec de la remise. Ces messages proviennent des extensions de remise. Si vous utilisez une extension de remise tierce ou personnalisée, d'autres messages d'état peuvent apparaître.|  
   
  Les administrateurs de serveur de rapports peuvent également surveiller les abonnements standard en cours de traitement. Les abonnements pilotés par les données ne peuvent pas être analysés. Pour plus d’informations, consultez [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -95,9 +102,8 @@ ms.locfileid: "80742034"
 ### <a name="sharepoint-uls-log-files"></a>Fichiers journaux ULS SharePoint  
  Les informations associées aux abonnements sont écrites dans le journal ULS SharePoint. Pour plus d’informations sur la configuration d’événements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour le journal ULS, consultez [Activer des événements Reporting Services pour le journal des traces SharePoint &#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md).  Voici un exemple d'entrée de journal ULS relative aux abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
-||||||||  
-|-|-|-|-|-|-|-|  
 |Date|Process|Domaine|Category|Level|Correlation|Message|  
+|-|-|-|-|-|-|-|  
 |5/21/2019 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(empty)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: Boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="use-powershell-to-monitor-subscriptions"></a><a name="bkmk_use_powershell"></a> Utiliser PowerShell pour surveiller les abonnements  

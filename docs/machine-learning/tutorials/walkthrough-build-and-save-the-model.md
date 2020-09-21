@@ -1,6 +1,6 @@
 ---
 title: 'Didacticiel R : Créer et enregistrer le modèle'
-description: Didacticiel expliquant comment créer un modèle de langage R utilisé pour l’analyse dans la base de données SQL Server.
+description: Découvrez plus d’informations sur la création d’un modèle de Machine Learning en langage R utilisé pour l’analytique de base de données SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 11/26/2018
@@ -9,15 +9,15 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ae0de4af29dd68e71300de52875044a8c2d64b4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
+ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730427"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "88178706"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Créer un modèle R et l’enregistrer dans SQL Server (procédure pas à pas)
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Dans cette leçon, vous allez découvrir comment créer un modèle Machine Learning et enregistrer le modèle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En enregistrant un modèle, vous pouvez l’appeler directement à partir du code [!INCLUDE[tsql](../../includes/tsql-md.md)], à l’aide de la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ou de la [fonction PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 

@@ -1,6 +1,6 @@
 ---
 title: Configuration requise pour OLE DB Driver pour SQL Server
-description: Répertorie la configuration requise pour OLE DB Driver pour SQL Server.
+description: Découvrez les composants requis logiciels nécessaires pour utiliser les fonctionnalités d’accès aux données de SQL Server telles que MARS dans OLE DB Driver pour SQL Server.
 ms.custom: ''
 ms.date: 03/18/2020
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], system requirements
 - OLE DB Driver for SQL Server, system requirements
 - MSOLEDBSQL, system requirements
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 9c9bbda0480d4d1e85da3962392fe14a241e4840
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: c86f62f98e81ce3c4fdd86e1e79e8f73e1422851
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393017"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861817"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Configuration requise pour OLE DB Driver pour SQL Server
 

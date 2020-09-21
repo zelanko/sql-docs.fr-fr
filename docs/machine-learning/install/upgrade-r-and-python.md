@@ -1,53 +1,46 @@
 ---
-title: Mettre à niveau les composants Python et R
-description: Mettez à niveau Python et R dans SQL Server Machine Learning Services ou SQL Server R Services à l’aide de sqlbindr.exe pour établir une liaison avec Machine Learning Server.
+title: Mettre à niveau les runtimes Python et R (liaison)
+description: Mettez à niveau les runtimes Python et R dans SQL Server Machine Learning Services ou SQL Server R Services à l’aide de sqlbindr.exe pour établir une liaison avec Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/03/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 918ab8c2b1e643196e99cd11ff92c07c3978e078
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
+ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900075"
+ms.lasthandoff: 09/11/2020
+ms.locfileid: "90009375"
 ---
-# <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>Mettre à niveau les composants Machine Learning (Python et R) dans les instances SQL Server
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+# <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Mettre à niveau le runtime Python et R avec la liaison dans SQL Server Machine Learning Services
+[!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-L’intégration de Python et R dans SQL Server comprend des packages open source et des packages propriétaires Microsoft.
-                                                                               
-Maintenance de SQL Server standard :
-                                                                               
-- Les packages sont mis à jour en fonction du cycle de publication SQL Server.
-- Les correctifs de bogues sont appliqués aux packages existants à la version actuelle.
-- Aucune mise à niveau majeure de la version.
+Cet article explique comment utiliser le processus d’installation appelé **liaison** pour mettre à niveau les runtimes R ou Python dans [SQL Server 2016 R Services](../r/sql-server-r-services.md) ou [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
 
-Vous pouvez vous procurer des [versions plus récentes de Python et R](#version-map) via une *liaison* à **Microsoft Machine Learning Server**. La version s’applique à la fois à SQL Server Machine Learning Services (dans la base de données) et à SQL Server R Services (dans la base de données).
+> [!IMPORTANT]
+> Cet article décrit une ancienne méthode de mise à niveau des runtimes R et Python appelée *liaison*. Si vous avez installé la **Mise à jour cumulative (CU) 14 ou une version ultérieure pour SQL Server 2016 Service Pack (SP) 2** ou la **Mise à jour cumulative 22 ou une version ultérieure pour SQL Server 2017**, découvrez comment [changer le runtime R ou Python par défaut vers une version plus récente](change-default-language-runtime-version.md) à la place.
 
-La possibilité d’obtenir des packages plus récents est préférable si vous travaillez dans un domaine lié aux données, comme un scientifique des données.
+Vous pouvez vous procurer des [versions plus récentes de Python et R](#version-map) via une *liaison* à Microsoft Machine Learning Server. La version s’applique à la fois à SQL Server Machine Learning Services (dans la base de données) et à SQL Server R Services (dans la base de données).
 
 ## <a name="what-is-binding"></a>Qu’est-ce qu’une liaison ?
 
-La liaison est un processus d’installation qui permute le contenu de vos dossiers R_SERVICES et PYTHON_SERVICES avec des fichiers exécutables, des bibliothèques et des outils plus récents de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+La liaison est un processus d’installation qui permute le contenu de vos dossiers **R_SERVICES** et **PYTHON_SERVICES** avec des fichiers exécutables, des bibliothèques et des outils plus récents de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
 
-Les composants chargés inclus dans le modèle de maintenance ont été modifiés.
-
-Les mises à jour du service correspondent à la [chronologie de la prise en charge pour Microsoft R Server & Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) sur le [cycle de vie moderne](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+Les composants chargés inclus dans le modèle de maintenance ont été modifiés. Les mises à jour du service correspondent à la [chronologie de la prise en charge pour Microsoft R Server & Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) sur le [cycle de vie moderne](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 À l’exception des versions de composant et des mises à jour de service, la liaison ne modifie pas les bases de votre installation :
 
 - L’intégration de Python et de R fait toujours partie d’une instance du moteur de base de données.
 - La gestion des licences est inchangée (aucun coût supplémentaire n’est associé à la liaison).
-- Les stratégies de prise en charge de SQL Server sont toujours valables pour le moteur de base de données. 
+- Les stratégies de prise en charge de SQL Server sont toujours valables pour le moteur de base de données.
 
 Le reste de cet article décrit le mécanisme de liaison et son fonctionnement pour chaque version de SQL Server.
 
 > [!NOTE]
-> La liaison s’applique uniquement aux instances (dans la base de données) qui sont liées à des instances SQL Server. Dans ce cas, la liaison n’est pas nécessaire pour une installation (autonome).
+> La liaison s’applique uniquement aux instances dans la base de données qui sont liées à des instances SQL Server. Dans ce cas, la liaison n’est pas nécessaire pour une installation autonome.
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 **Considérations relatives à la liaison SQL Server 2016**
@@ -55,7 +48,7 @@ Le reste de cet article décrit le mécanisme de liaison et son fonctionnement p
 Pour les clients SQL Server R 2016 R Services, la liaison fournit les éléments suivants :
 
 - Packages R mis à niveau.
-- Les nouveaux packages ne font pas partie de l’installation d’origine ([MicrosoftML](https://  docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
+- Les nouveaux packages ne font pas partie de l’installation d’origine ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
 - [Modèles](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) de Machine Learning préformés pour l’analyse des sentiments et la détection d’images.
 
 Toutes les liaisons peuvent être actualisées à chaque nouvelle version majeure et mineure de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
@@ -83,17 +76,17 @@ Microsoft R Open (MRO) sur R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 [**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
 
-Composant |Version initiale | Machine Learning Server 9.3 | | | |
-----------|----------------|---------|-|-|-|-|
-Microsoft R Open (MRO) sur R | R 3.3.3 | R 3.4.3 | | | |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
-Anaconda 4.2 sur Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
-[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[modèles pré-entraînés](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
+Composant |Version initiale | Machine Learning Server 9.3 |
+----------|----------------|---------|
+Microsoft R Open (MRO) sur R | R 3.3.3 | R 3.4.3 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 |
+Anaconda 4.2 sur Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3|
+[microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3|
+[modèles pré-entraînés](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3|
 ::: moniker-end
 
 ## <a name="how-component-upgrade-works"></a>Fonctionnement de la mise à niveau des composants

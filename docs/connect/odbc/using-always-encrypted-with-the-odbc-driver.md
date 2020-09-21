@@ -2,19 +2,19 @@
 title: Utilisation d’Always Encrypted avec ODBC Driver
 description: Découvrez comment développer des applications ODBC à l’aide d’Always Encrypted et de Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 05/06/2020
+ms.date: 09/01/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 938dba82797db23a9199c2c03fa8ec3c8bd010da
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886296"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288181"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -41,7 +41,7 @@ Configurez Always Encrypted dans votre base de données. Pour cela, vous devez m
 Le moyen le plus simple d’activer à la fois le chiffrement des paramètres et le déchiffrement des colonnes chiffrées des jeux de résultats consiste à affecter la valeur **Enabled** au mot clé de chaîne de connexion `ColumnEncryption`. Voici un exemple de chaîne de connexion activant Always Encrypted :
 
 ```
-SQLWCHAR *connString = L"Driver={ODBC Driver 13 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
+SQLWCHAR *connString = L"Driver={ODBC Driver 17 for SQL Server};Server={myServer};Trusted_Connection=yes;ColumnEncryption=Enabled;";
 ```
 
 Vous pouvez aussi activer Always Encrypted dans la configuration de source de données, à l’aide des mêmes clé et valeur (qui seront remplacées par le paramètre de chaîne de connexion, s’il est présent), ou par programmation avec l’attribut de préconnexion `SQL_COPT_SS_COLUMN_ENCRYPTION`. Procéder de cette façon substitue la valeur définie dans la chaîne de connexion ou la source de données :
@@ -309,6 +309,8 @@ Cette section décrit les outils intégrés d’optimisation des performances da
 
 Si Always Encrypted est activé pour une connexion, le pilote appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête afin de savoir si des paramètres doivent être chiffrés. Si c’est le cas, elle retourne pour chaque paramètre des informations relatives au chiffrement qui permettent au pilote de les chiffrer. Ce comportement garantit un haut niveau de transparence à l’application cliente : L’application et le développeur d’applications n’ont pas besoin de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées au pilote dans les paramètres.
 
+À partir de la version 17.6, le pilote met également en cache les métadonnées de chiffrement pour les instructions préparées, ce qui améliore les performances en autorisant les appels suivants à `SQLExecute` pour ne pas nécessiter d’aller-retour supplémentaire pour récupérer les métadonnées de chiffrement.
+
 ### <a name="per-statement-always-encrypted-behavior"></a>Comportement d’Always Encrypted par instruction
 
 Pour contrôler l’impact sur les performances de la récupération des métadonnées de chiffrement pour les requêtes paramétrables, vous pouvez modifier le comportement d’Always Encrypted pour chaque requête s’il a été activé sur la connexion. De cette façon, `sys.sp_describe_parameter_encryption` est appelé uniquement pour les requêtes dont les paramètres ciblent des colonnes chiffrées. Notez toutefois que, de cette façon, vous réduisez la transparence du chiffrement. Si vous chiffrez des colonnes supplémentaires dans votre base de données, vous devrez peut-être modifier le code de votre application pour l’aligner sur les modifications du schéma.
@@ -330,6 +332,8 @@ Si la plupart des requêtes d’une application cliente accèdent à des colonne
 - Affectez la valeur `SQL_CE_DISABLED` à l’attribut `SQL_SOPT_SS_COLUMN_ENCRYPTION` sur les instructions qui n’accèdent à aucune colonne chiffrée. Cela empêchera à la fois l’appel à `sys.sp_describe_parameter_encryption` et les tentatives de déchiffrement des valeurs du jeu de résultats.
     
 - Affectez la valeur `SQL_CE_RESULTSETONLY` à l’attribut `SQL_SOPT_SS_COLUMN_ENCRYPTION` sur les instructions qui n’ont aucun paramètre exigeant un chiffrement, mais qui récupèrent des données à partir de colonnes chiffrées. Cela empêchera l’appel à `sys.sp_describe_parameter_encryption` et le chiffrement des paramètres. Les résultats contenant des colonnes chiffrées continueront à être déchiffrés.
+
+- Utilisez des instructions préparées pour les requêtes qui seront exécutées plusieurs fois. Préparez la requête avec `SQLPrepare` et enregistrez le descripteur d’instruction, puis réutilisez-le avec `SQLExecute` chaque fois qu’il est exécuté. Il s’agit de l’approche recommandée pour les performances, même en l’absence de colonnes chiffrées et permet au pilote de tirer parti des métadonnées mises en cache.
 
 ## <a name="always-encrypted-security-settings"></a>Paramètres de sécurité d’Always Encrypted
 
@@ -395,7 +399,7 @@ Le pilote prend en charge l’authentification auprès d’Azure Key Vault avec 
 
 Pour autoriser le pilote à utiliser des clés CMK stockées dans Azure Key Vault pour le chiffrement de colonne, utilisez les mots clés de chaîne de connexion uniquement suivants :
 
-|Type d'informations d'identification| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
+|Type d'informations d'identification|<code>KeyStoreAuthentication</code>|<code>KeyStorePrincipalId</code>|<code>KeyStoreSecret</code>|
 |-|-|-|-|
 |Nom d'utilisateur/mot de passe| `KeyVaultPassword`|Nom d’utilisateur principal|Mot de passe|
 |ID client/secret| `KeyVaultClientSecret`|ID client|Secret|
@@ -408,13 +412,13 @@ Les chaînes de connexion suivantes montrent comment s’authentifier auprès d�
 **ID client/secret** :
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
 **Nom d'utilisateur/Mot de passe** :
 
 ```
-DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
+DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
 ```
 
 **Identité managée (affectée par le système)**
@@ -596,7 +600,7 @@ Si vous utilisez l’utilitaire **bcp** : pour contrôler le paramètre `Column
 
 Le tableau suivant fournit un résumé des actions en cas d’opération sur une colonne chiffrée :
 
-|`ColumnEncryption`|Direction BCP|Description|
+|<code>ColumnEncryption</code>|Direction BCP|Description|
 |----------------|-------------|-----------|
 |`Disabled`|OUT (vers le client)|Récupère le texte chiffré. Le type de données observé est **varbinary(max)** .|
 |`Enabled`|OUT (vers le client)|Récupère le texte en clair. Le pilote déchiffre les données de colonne.|
@@ -641,7 +645,7 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 
 |Champ IPD|Taille/Type|Valeur par défaut|Description|
 |-|-|-|-|  
-|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (deux octets)|0|Quand ce champ a la valeur 0 (valeur par défaut) : la décision de chiffrer ce paramètre est déterminé par la disponibilité des métadonnées de chiffrement.<br><br>Quand ce champ a une valeur différente de zéro : si les métadonnées de chiffrement sont disponibles pour ce paramètre, il est chiffré. Sinon, la requête échoue avec l’erreur [CE300] [Microsoft][ODBC Driver 13 for SQL Server] chiffrement obligatoire [Microsoft] [ODBC Driver 13 pour SQL Server] Le chiffrement obligatoire a été spécifié pour un paramètre, mais aucune métadonnée de chiffrement n’a été fournie par le serveur.|
+|`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (deux octets)|0|Quand ce champ a la valeur 0 (valeur par défaut) : la décision de chiffrer ce paramètre est déterminé par la disponibilité des métadonnées de chiffrement.<br><br>Quand ce champ a une valeur différente de zéro : si les métadonnées de chiffrement sont disponibles pour ce paramètre, il est chiffré. Sinon, la requête échoue avec l’erreur [CE300] [Microsoft][ODBC Driver 17 for SQL Server]Le chiffrement obligatoire a été spécifié pour un paramètre, mais aucune métadonnée de chiffrement n’a été fournie par le serveur.|
 
 ### <a name="bcp_control-options"></a>Options de bcp_control
 

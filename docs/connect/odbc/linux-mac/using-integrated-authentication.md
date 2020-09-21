@@ -1,8 +1,8 @@
 ---
 title: Utilisation de l’authentification intégrée
-descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
+description: Le Pilote Microsoft ODBC pour SQL Server sur Linux et macOS prend en charge des connexions qui utilisent l’authentification Kerberos intégrée.
 ms.custom: ''
-ms.date: 01/20/2017
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,24 +13,26 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b1be7086c66ed6450e8e23f90c0804274bc6b37d
+ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629619"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "89288208"
 ---
 # <a name="using-integrated-authentication"></a>Utilisation de l’authentification intégrée
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS prend en charge les connexions qui utilisent l’authentification intégrée Kerberos. Il prend en charge le centre de distribution de clés (KDC) MIT Kerberos et fonctionne avec l’interface GSSAPI (Generic Security Services Application Program Interface) et les bibliothèques Kerberos v5.
-  
+
+Depuis la version 17.6, le pilote prend également en charge l’authentification intégrée avec Azure Active Directory à l’aide d’un compte fédéré, nonobstant les limitations de la bibliothèque système. Pour plus d’informations, consultez [Utilisation d’Azure Active Directory](../using-azure-active-directory.md).
+
 ## <a name="using-integrated-authentication-to-connect-to-ssnoversion-from-an-odbc-application"></a>Utilisation de l’authentification intégrée pour se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d’une application ODBC  
 
 Vous pouvez activer l’authentification intégrée Kerberos en spécifiant **Trusted_Connection=yes** dans la chaîne de connexion **SQLDriverConnect** ou **SQLConnect**. Par exemple :  
 
 ```
-Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes  
+Driver='ODBC Driver 17 for SQL Server';Server=your_server;Trusted_Connection=yes  
 ```
   
 Quand vous vous connectez avec un nom de source de données, vous pouvez également ajouter **Trusted_Connection=yes** à l’entrée de ce dernier dans `odbc.ini`.

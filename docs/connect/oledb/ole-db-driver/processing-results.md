@@ -1,6 +1,6 @@
 ---
 title: Traitement des résultats (pilote OLE DB)
-description: Traitement des résultats
+description: Découvrez comment un contrôle serveur consommateur OLE DB Driver pour SQL Server obtient et accède aux données d’un ensemble de lignes produit par une commande ou généré par un fournisseur.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - OLE DB, processing results
 - rowsets [SQL Server], results processing
 - results [OLE DB Driver for SQL Server]
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: c4455ccc2a44567cfe7ed0709966810b145a5ff6
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: 3cea6c2ef9cfdab250966cbd809be44e6506e4dc
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244821"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88861532"
 ---
 # <a name="processing-results"></a>Traitement des résultats
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

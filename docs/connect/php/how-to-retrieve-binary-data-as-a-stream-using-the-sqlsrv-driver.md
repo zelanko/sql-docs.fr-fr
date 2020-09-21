@@ -1,7 +1,8 @@
 ---
-title: Guide pratique pour récupérer des données binaires sous la forme d’un flux à l’aide du pilote SQLSRV | Microsoft Docs
+title: 'Procédure : récupérer des données binaires sous la forme d’un flux à l’aide du pilote SQLSRV'
+description: Cette rubrique explique comment récupérer des données binaires sous forme d’un flux lors de l’utilisation de Microsoft SQLSRV Driver pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 631983a89549913863a5bd284e951b518831bc76
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d509eaf083cf7a16e83506ecf54d99daa8883a62
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916155"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680624"
 ---
-# <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Procédure : récupérer des données binaires sous la forme d’un flux à l’aide du pilote SQLSRV
+# <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Procédure : Récupérer des données binaires sous la forme d’un flux à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 La récupération de données sous forme de flux est disponible uniquement dans le pilote SQLSRV du [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], et non dans le pilote PDO_SQLSRV.  
@@ -29,7 +30,7 @@ La récupération de données sous forme de flux est disponible uniquement dans 
   
 L’utilisation de flux pour récupérer des données binaires, comme des images, permet d’éviter l’utilisation de grandes quantités de mémoire de script en récupérant des blocs de données au lieu de charger l’objet entier dans la mémoire de script.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant récupère des données binaires, à savoir une image dans ce cas, à partir de la table *Production.ProductPhoto* de la base de données AdventureWorks. L’image est récupérée sous forme de flux et affichée dans le navigateur.  
   
 La récupération de données d’image sous forme de flux s’effectue à l’aide de [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) et [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) avec le type de retour spécifié en tant que flux binaire. Le type de retour est spécifié à l’aide de la constante **SQLSRV_PHPTYPE_STREAM**. Pour plus d’informations sur les constantes **sqlsrv**, consultez [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  

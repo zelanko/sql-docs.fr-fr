@@ -1,4 +1,5 @@
 ---
+description: Configurer l’authentification de base sur le serveur de rapports
 title: Configurer une authentification de base sur le serveur de rapports | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b2b130f85b556d6fdeb2e3c0c3c4a32644a80d6
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625868"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88492639"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurer l’authentification de base sur le serveur de rapports
   Par défaut, Reporting Services accepte les demandes qui spécifient l'authentification Negotiate et NTLM. Si votre déploiement inclut des applications clientes ou des navigateurs qui utilisent l'authentification de base, vous devez l'ajouter à la liste des types pris en charge. De plus, si vous voulez utiliser le Générateur de rapports, vous devez activer l'accès anonyme aux fichiers Générateur de rapports.  
@@ -36,7 +37,7 @@ ms.locfileid: "81625868"
   
 1.  Ouvrez RSReportServer.config dans un éditeur de texte.  
   
-     Le fichier se trouve à l’emplacement *\<lecteur>:* \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
+     Le fichier se trouve à l'emplacement *\<drive> :*  \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer.  
   
 2.  Recherchez \<**Authentication**>.  
   
@@ -69,7 +70,7 @@ ms.locfileid: "81625868"
   
      Notez que vous ne pouvez pas utiliser **Custom** avec d'autres types d'authentification.  
   
-5.  Remplacez les valeurs vides par \<**Realm**> ou \<**DefaultDomain**> par les valeurs qui sont valides pour votre environnement.  
+5.  Remplacez des valeurs vides pour \<**Realm**> ou\<**DefaultDomain**> par des valeurs valides pour votre environnement.  
   
 6.  Enregistrez le fichier .  
   

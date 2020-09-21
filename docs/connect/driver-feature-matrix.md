@@ -2,19 +2,19 @@
 title: Matrice de prise en charge des fonctionnalités des pilotes
 description: Découvrez les fonctionnalités courantes prises en charge dans les pilotes pour SQL Server et où trouver des informations à leur sujet.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-daenge
-ms.openlocfilehash: a879b3784b19de4e7d30e1af213953b8e592abf9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4071353214f7ffde54ecd1097defaa6c60aa19d6
+ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84947889"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87823354"
 ---
 # <a name="driver-feature-support-matrix-for-microsoft-sql-server"></a>Matrice de prise en charge des fonctionnalités des pilotes pour Microsoft SQL Server
 
@@ -60,8 +60,8 @@ Nous aimerions que tous les pilotes prennent en charge l’ensemble des fonction
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Oui](odbc/using-always-encrypted-with-the-odbc-driver.md) | [Oui](odbc/using-always-encrypted-with-the-odbc-driver.md) | [Oui](jdbc/using-always-encrypted-with-the-jdbc-driver.md) |
 | [Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Oui](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [Oui](odbc/using-always-encrypted-with-the-odbc-driver.md#enabling-always-encrypted-with-secure-enclaves) | [Oui](jdbc/using-always-encrypted-with-the-jdbc-driver.md) | |
 | [Authentification par jeton d’accès Azure Active Directory](/azure/active-directory/develop/access-tokens) | [Oui](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Oui](odbc/using-azure-active-directory.md#authenticating-with-an-access-token) | [Oui](jdbc/connecting-using-azure-active-directory-authentication.md#connecting-using-access-token) | [Oui](oledb/features/using-azure-active-directory.md) |
-| [Authentification par mot de passe Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) |  [Oui](odbc/using-azure-active-directory.md) | [Oui](odbc/using-azure-active-directory.md)<sup>[1](#note1)</sup> | [Oui](jdbc/connecting-using-azure-active-directory-authentication.md) | [Oui](oledb/features/using-azure-active-directory.md) |
-| [Authentification intégrée Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](odbc/using-azure-active-directory.md) | | [Oui](jdbc/connecting-using-azure-active-directory-authentication.md) | [Oui](oledb/features/using-azure-active-directory.md) |
+| [Authentification par mot de passe Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) |  [Oui](odbc/using-azure-active-directory.md) | [Oui](odbc/using-azure-active-directory.md) | [Oui](jdbc/connecting-using-azure-active-directory-authentication.md) | [Oui](oledb/features/using-azure-active-directory.md) |
+| [Authentification intégrée Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](odbc/using-azure-active-directory.md) | [Oui](odbc/using-azure-active-directory.md) | [Oui](jdbc/connecting-using-azure-active-directory-authentication.md) | [Oui](oledb/features/using-azure-active-directory.md) |
 | [Authentification interactive (MFA) Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](odbc/using-azure-active-directory.md) | | | [Oui](oledb/features/using-azure-active-directory.md) |
 | [Authentification Managed Identity Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Oui](odbc/using-azure-active-directory.md) | [Oui](odbc/using-azure-active-directory.md) | [Oui](jdbc/connecting-using-azure-active-directory-authentication.md) | [Oui](oledb/features/using-azure-active-directory.md) |
 | [Authentification par principal de service Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
@@ -75,14 +75,14 @@ Nous aimerions que tous les pilotes prennent en charge l’ensemble des fonction
 | [Résolution transparente d’adresses IP réseau](odbc/using-transparent-network-ip-resolution.md) | [Oui](odbc/using-transparent-network-ip-resolution.md) | [Oui](odbc/using-transparent-network-ip-resolution.md) | [Oui](jdbc/setting-the-connection-properties.md) | [Oui](oledb/features/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-| <a id="table3"></a>Fonctionnalité | [Pilotes pour PHP pour SQL Server sur Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Pilotes pour PHP pour SQL Server sur Linux et macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[2](#note2)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyodbc (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[2](#note2)</sup> |
+| <a id="table3"></a>Fonctionnalité | [Pilotes pour PHP pour SQL Server sur Windows](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Pilotes pour PHP pour SQL Server sur Linux et macOS](php/microsoft-php-driver-for-sql-server.md)<sup>[1](#note1)</sup> | [Tedious (Node.js)](node-js/node-js-driver-for-sql-server.md) | [pyODBC (Python)](python/pyodbc/python-sql-driver-pyodbc.md)<sup>[1](#note1)</sup> |
 | :-- | :-- | :-- | :-- | :-- |
 | [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md) | [Oui](php/using-always-encrypted-php-drivers.md) | [Oui](php/using-always-encrypted-php-drivers.md) | | Oui |
 | [Always Encrypted avec enclaves sécurisées](../relational-databases/security/encryption/always-encrypted-enclaves.md) | [Oui](php/always-encrypted-secure-enclaves.md) | [Oui](php/always-encrypted-secure-enclaves.md) | | Oui |
 | [Authentification par jeton d’accès Azure Active Directory](/azure/active-directory/develop/access-tokens) | [Oui](php/azure-active-directory.md) | [Oui](php/azure-active-directory.md) | [Oui](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Oui |
-| [Authentification par mot de passe Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](php/azure-active-directory.md) | [Oui](php/azure-active-directory.md)<sup>[1](#note1)</sup> | [Oui](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Oui |
-| [Authentification intégrée Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Oui<sup>[3](#note3)</sup> |
-| [Authentification interactive (MFA) Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Oui<sup>[3](#note3)</sup> |
+| [Authentification par mot de passe Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](php/azure-active-directory.md) | [Oui](php/azure-active-directory.md) | [Oui](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Oui |
+| [Authentification intégrée Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | [Oui](php/azure-active-directory.md) | [Oui](php/azure-active-directory.md) | | Oui |
+| [Authentification interactive (MFA) Azure Active Directory](/azure/sql-database/sql-database-aad-authentication) | | | | Oui<sup>[2](#note2)</sup> |
 | [Authentification Managed Identity Azure Active Directory](/azure/active-directory/managed-identities-azure-resources/overview) | [Oui](php/azure-active-directory.md) | [Oui](php/azure-active-directory.md) | [Oui](https://tediousjs.github.io/tedious/api-connection.html#function_newConnection) | Oui |
 | [Authentification par principal de service Azure Active Directory](/azure/active-directory/develop/app-objects-and-service-principals) | | | | |
 | [Authentification Windows intégrée](/windows-server/security/windows-authentication/windows-authentication-overview) | [Oui](php/how-to-connect-using-windows-authentication.md) | [Oui](odbc/linux-mac/using-integrated-authentication.md) | | Oui |
@@ -95,11 +95,9 @@ Nous aimerions que tous les pilotes prennent en charge l’ensemble des fonction
 | [Résolution transparente d’adresses IP réseau](odbc/using-transparent-network-ip-resolution.md) | [Oui](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | [Oui](php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) | | [Oui](odbc/using-transparent-network-ip-resolution.md) |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<a id="note1"></a><sup>1</sup> Ni l’authentification fédérée Active Directory sans synchronisation de hachage de mot de passe ni l’authentification directe ne sont prises en charge sur Linux et macOS.
+<a id="note1"></a><sup>1</sup> Étant donné que ces pilotes s’appuient sur Microsoft ODBC Driver for SQL Server, il est nécessaire d’utiliser également une version de ce pilote qui prend en charge la fonctionnalité.
 
-<a id="note2"></a><sup>2</sup> Étant donné que ces pilotes s’appuient sur Microsoft ODBC Driver for SQL Server, il est nécessaire d’utiliser également une version de ce pilote qui prend en charge la fonctionnalité.
-
-<a id="note3"></a><sup>3</sup> Uniquement sur Windows.
+<a id="note2"></a><sup>2</sup> Uniquement sur Windows.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

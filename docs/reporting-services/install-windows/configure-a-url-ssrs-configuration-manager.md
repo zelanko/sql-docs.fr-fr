@@ -1,4 +1,5 @@
 ---
+description: Configurer une URL (Gestionnaire de configuration de SSRS)
 title: Configurer une URL (Configuration Manager) | Microsoft Docs
 ms.date: 05/26/2016
 ms.prod: reporting-services
@@ -9,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: ea8162493584be5d4cb9d312c57af16ff40d08a2
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487168"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88427091"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
   Avant de pouvoir utiliser le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] ou le service web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l’option **Installer mais ne pas configurer le serveur** dans la page Options d’installation du serveur de rapports dans l’Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application.  
@@ -68,7 +69,7 @@ ms.locfileid: "81487168"
   
     -   **::1** désigne l'adresse de bouclage au format IPv6.  
   
-    -   Les adresses IP spécifiques apparaissent également dans cette liste. Les adresses IP peuvent être aux formats IPv4 et IPv6. *Nnn.nnn.nnn.nnn* est l’adresse IPv4 32 bits d’une carte réseau sur votre ordinateur. Les adresses IPv6 ont une taille de 128 bits et sont formées de huit champs de 4 octets séparés par le signe deux-points : <préfixe\<:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Les adresses IP spécifiques apparaissent également dans cette liste. Les adresses IP peuvent être aux formats IPv4 et IPv6. *Nnn.nnn.nnn.nnn* est l’adresse IPv4 32 bits d’une carte réseau sur votre ordinateur. Les adresses IPv6 ont une taille de 128 bits et sont formées de huit champs de 4 octets séparés par le signe deux-points : \<prefix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Si vous avez plusieurs cartes ou si votre réseau prend en charge les adresses IPv4 et les adresses IPv6, vous visualisez plusieurs adresses IP. Si vous sélectionnez une seule adresse IP, elle limitera l'accès de l'application à la seule adresse IP (et à tout nom d'hôte qu'un serveur de noms de domaine mappe sur cette adresse). Vous ne pouvez pas utiliser localhost pour accéder à un serveur de rapports, et vous ne pouvez pas utiliser les adresses IP des autres cartes réseau installées sur le serveur de rapports. En général, si vous sélectionnez cette valeur, c'est parce que vous configurez plusieurs réservations d'URL qui spécifient aussi des adresses IP explicites ou des noms d'hôte (par exemple, un premier pour une carte réseau utilisée pour les connexions intranet et un second utilisé pour les connexions extranet).  
   

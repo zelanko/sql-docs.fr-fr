@@ -1,6 +1,6 @@
 ---
-title: Ajouter, supprimer des nœuds dans un cluster de basculement
-description: Cet article explique comment ajouter et supprimer des nœuds dans une instance de cluster de basculement SQL Server existante.
+title: Ajouter, supprimer des nœuds dans une instance cluster de basculement
+description: Cet article explique comment ajouter ou supprimer des nœuds dans une instance de cluster de basculement SQL Server Always On existante.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.reviewer: ''
@@ -18,35 +18,37 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9ae9ae1f58bf615362e16ebffef8926437c99a9f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 9162dba1861193bba542feb51bc4c793c2c7d011
+ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900505"
+ms.lasthandoff: 07/30/2020
+ms.locfileid: "87435577"
 ---
-# <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server (programme d'installation)
+# <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Ajouter ou supprimer des nœuds dans une instance de cluster de basculement (installation)
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Utilisez cette procédure pour gérer les nœuds d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existante.  
+
+ Utilisez cette procédure pour gérer les nœuds d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existante.  
   
- Pour mettre à jour ou supprimer un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez être un administrateur local autorisé à se connecter en tant que service sur tous les nœuds du cluster de basculement. Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant.  
+ Pour mettre à jour ou supprimer une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez être un administrateur local autorisé à se connecter en tant que service sur tous les nœuds du cluster de basculement Windows Server (WSFC) sous-jacent. Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui a les autorisations de lecture et d'exécution sur le partage distant.  
   
- Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . N'exécutez pas le programme d'installation sur le nœud actif.  
+ Pour ajouter un nœud à une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existante, vous devez exécuter la Configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. N'exécutez pas le programme d'installation sur le nœud actif.  
   
- Pour supprimer un nœud d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud à supprimer dans l'instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Pour supprimer un nœud d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existante, vous devez exécuter la Configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud à supprimer dans l'instance de cluster de basculement de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Pour afficher les étapes de procédure pour ajouter ou supprimer des nœuds, sélectionnez une des opérations suivantes :  
   
--   [Ajouter un nœud à un cluster de basculement SQL Server existant](#Add)  
+-   [Ajouter un nœud à une instance de cluster de basculement Always On existante](#Add)  
   
--   [Supprimer un nœud d'un cluster de basculement SQL Server existant](#Remove)  
+-   [Supprimer un nœud à une instance de cluster de basculement Always On existante](#Remove)  
   
 > [!IMPORTANT]  
->  La lettre de lecteur du système d'exploitation pour les emplacements d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre sur tous les nœuds ajoutés au cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+>  La lettre de lecteur du système d'exploitation pour les emplacements d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit correspondre sur tous les nœuds ajoutés à l’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ##  <a name="add-node"></a><a name="Add"></a> Ajouter un nœud  
   
-#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster"></a>Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant  
+#### <a name="to-add-a-node-to-an-existing-ssnoversion-failover-cluster-instance"></a>Pour ajouter un nœud à une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existante  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   
@@ -66,7 +68,7 @@ ms.locfileid: "85900505"
   
 8.  Dans la page Configuration du nœud de clusters, utilisez la zone de liste déroulante pour spécifier le nom de l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui sera modifiée pendant cette opération d'installation.  
   
-9. Dans la page Configuration du serveur - Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez sélectionnées. Pour les installations de cluster de basculement, les informations de nom de compte et de type de démarrage seront préremplies dans cette page, en fonction des paramètres indiqués pour le nœud actif. Vous devez fournir des mots de passe pour chaque compte. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. Dans la page Configuration du serveur - Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez sélectionnées. Pour les installations d’instance de cluster de basculement, les informations de nom de compte et de type de démarrage seront préremplies dans cette page, en fonction des paramètres indiqués pour le nœud actif. Vous devez fournir des mots de passe pour chaque compte. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Note de sécurité** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -86,7 +88,7 @@ ms.locfileid: "85900505"
   
 ##  <a name="remove-node"></a><a name="Remove"></a> Supprimer un nœud  
   
-#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster"></a>Pour supprimer un nœud d'un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant  
+#### <a name="to-remove-a-node-from-an-existing-ssnoversion-failover-cluster-instance"></a>Pour supprimer un nœud d'une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existante  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Dans le dossier racine, double-cliquez sur setup.exe. Pour effectuer l'installation à partir d'un partage réseau, recherchez le dossier racine sur le partage, puis double-cliquez sur Setup.exe.  
   

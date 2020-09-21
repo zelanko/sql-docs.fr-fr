@@ -1,6 +1,6 @@
 ---
 title: Authentification Kerberos intégrée (OLE DB) | Microsoft Docs
-description: Authentification Kerberos intégrée (OLE DB)
+description: Découvrez comment obtenir une authentification mutuelle Kerberos en utilisant OLE DB dans OLE DB Driver pour SQL Server avec cet exemple.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -8,14 +8,14 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: reference
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 1fc52cf1cd0ca2b4e7b04e998f7e8f278cc522e3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: d14c3b3b6bd872a529bbe20ab41d650120f406ab
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87244742"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88860528"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Authentification Kerberos intégrée (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

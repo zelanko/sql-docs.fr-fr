@@ -1,7 +1,8 @@
 ---
-title: Classe PDO | Microsoft Docs
+title: Classe PDO
+description: Référence API pour la classe PDO dans le Pilote Microsoft PDO_SQLSRV pour PHP pour SQL Server.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: fbacc1c79789a21b0dbb76ff6f13007ad6368d22
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9efde910074d92b35fbe6338f79f71ac87d11d80
+ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80919440"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88646223"
 ---
 # <a name="pdo-class"></a>Classe PDO
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +41,7 @@ La classe PDO contient les méthodes suivantes :
   
 [PDO::errorCode](../../connect/php/pdo-errorcode.md)  
   
-[PDO::errorInfo](../../connect/php/pdo-errorinfo.md)  
+[PDO::ErrorInfo](../../connect/php/pdo-errorinfo.md)  
   
 [PDO::exec](../../connect/php/pdo-exec.md)  
   
@@ -52,18 +53,18 @@ La classe PDO contient les méthodes suivantes :
   
 [PDO::prepare](../../connect/php/pdo-prepare.md)  
   
-[PDO::query](../../connect/php/pdo-query.md)  
+[PDO::Query](../../connect/php/pdo-query.md)  
   
 [PDO::quote](../../connect/php/pdo-quote.md)  
   
-[PDO::rollback](../../connect/php/pdo-rollback.md)  
+[PDO::Rollback](../../connect/php/pdo-rollback.md)  
   
 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)  
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
-[Informations de référence sur le pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
+[Référence de pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
 [Vue d’ensemble de Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 

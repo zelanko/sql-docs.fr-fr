@@ -1,6 +1,6 @@
 ---
-title: Découverte du type de paramètre table | Microsoft Docs
-description: Détection des types des paramètres table avec OLE DB Driver pour SQL Server
+title: Détection des types de paramètre table (pilote OLE DB)
+description: Apprenez comment un contrôle serveur consommateur peut découvrir les informations de métadonnées pour chaque colonne individuelle du paramètre table dans OLE DB Driver pour SQL Server.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,16 +10,16 @@ ms.technology: connectivity
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, type discovery
-author: pmasl
-ms.author: pelopes
-ms.openlocfilehash: 06e0de0ad5fb0b4b8b7fd90144769ca9f9133928
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+author: David-Engel
+ms.author: v-daenge
+ms.openlocfilehash: b330de20afa6bc1264bda74ea6d326e938e63501
+ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003330"
+ms.lasthandoff: 08/25/2020
+ms.locfileid: "88862490"
 ---
-# <a name="table-valued-parameter-type-discovery"></a>Découverte du type de paramètre table
+# <a name="table-valued-parameter-type-discovery-ole-db-driver"></a>Détection des types de paramètre table (pilote OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

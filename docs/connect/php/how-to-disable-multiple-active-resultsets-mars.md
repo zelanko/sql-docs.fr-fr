@@ -1,7 +1,8 @@
 ---
-title: Guide pratique pour désactiver MARS (Multiple Active Result Set) | Microsoft Docs
+title: 'Procédure : désactiver MARS (Multiple Active Result Set)'
+description: Découvrez comment désactiver le support MARS (Multiple Active Result Set) lors de l’utilisation des pilotes Microsoft pour PHP pour SQL Server
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/10/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 1912ad05-d0a4-40ff-8888-0d85bb36a807
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2fb65eee416fd82ae36b020049d318a2c5d2333d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 544d64a8c81342fbb3592371098a5e2ddec60ee5
+ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916325"
+ms.lasthandoff: 08/20/2020
+ms.locfileid: "88680694"
 ---
-# <a name="how-to-disable-multiple-active-resultsets-mars"></a>Procédure : désactiver MARS (Multiple Active Result Set)
+# <a name="how-to-disable-multiple-active-resultsets-mars"></a>Procédure : Désactiver MARS (Multiple Active Result Set)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Si vous avez besoin de vous connecter à une source de données SQL Server qui n’active pas MARS (Multiple Active Result Sets), vous pouvez utiliser l’option de connexion MultipleActiveResultSets pour désactiver ou activer MARS.  
@@ -39,7 +40,7 @@ Si vous avez besoin de vous connecter à une source de données SQL Server qui n
   
     La connexion ne peut pas traiter cette opération, car il existe une instruction avec des résultats en attente.  Pour rendre la connexion disponible pour d’autres requêtes, extrayez tous les résultats, annulez l’instruction ou libérez-la. Pour plus d’informations sur l’option de connexion MultipleActiveResultSets, consultez [Connection Options](../../connect/php/connection-options.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant montre comment désactiver la prise en charge de MARS, à l’aide du pilote SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ```  
@@ -59,7 +60,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
 L’exemple suivant montre comment désactiver la prise en charge de MARS, à l’aide du pilote PDO_SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
 ```  

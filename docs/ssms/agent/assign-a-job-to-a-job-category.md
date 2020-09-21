@@ -1,4 +1,5 @@
 ---
+description: Affecter un travail à une catégorie de travaux
 title: Affecter un travail à une catégorie de travaux
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -18,19 +19,19 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 70adaeed56ef0d209f83ba16d74f476a4e3f7d75
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5eb8916235521a4afcaa5df60776ef2778cda2ca
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755326"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "88320185"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Affecter un travail à une catégorie de travaux
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart des fonctionnalités SQL Server Agent sont prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Database Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Cette rubrique décrit comment affecter des travaux de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent aux catégories de travaux dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects.  
   
@@ -53,7 +54,7 @@ Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Ag
   
 4.  Cliquez avec le bouton droit sur le travail à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -** _nom\_travail_, dans la liste **Catégorie**, sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
+5.  Dans la boîte de dialogue **Propriétés du travail -**_nom\_travail_, dans la liste **Catégorie**, sélectionnez la catégorie de travaux que vous voulez affecter au travail.  
   
 6.  Cliquez sur **OK**.  
   
