@@ -13,12 +13,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2892e881434cad1fca2686b6522938584b221045
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4deccd8bcfd4650a8f670969d1ec112f9f99d08d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447465"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990240"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,20 +41,20 @@ ms.locfileid: "88447465"
 |database_id|**int**|Identificateur de la base de données utilisée par le contexte explicite (par exemple, utilisez DB_X).|Consultez ID dans [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Contient le texte complet de la demande, tel qu’il est soumis par l’utilisateur.|Tout texte de requête ou de requête valide. Les requêtes dont la taille est supérieure à 4000 octets sont tronquées.|  
 |resource_class|**nvarchar(20**|Groupe de charge de travail utilisé pour cette demande. |Classes de ressources statiques</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de ressources dynamiques</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|Importance du paramètre de requête exécutée sur.  Il s’agit de l’importance relative d’une demande dans ce groupe de charges de travail et entre les groupes de charge de travail pour les ressources partagées.  L’importance spécifiée dans le classifieur remplace le paramètre d’importance du groupe de charge de travail.</br>S’applique à : Azure SQL Data Warehouse|NULL</br>low</br>below_normal</br>normal (par défaut)</br>above_normal</br>high|
-|group_name|**sysname** |Pour les demandes qui utilisent des ressources, group_name est le nom du groupe de charge de travail sous lequel la requête s’exécute.  Si la demande n’utilise pas de ressources, group_name a la valeur null.</br>S’applique à : Azure SQL Data Warehouse|
+|importance|**nvarchar(128)**|Importance du paramètre de requête exécutée sur.  Il s’agit de l’importance relative d’une demande dans ce groupe de charges de travail et entre les groupes de charge de travail pour les ressources partagées.  L’importance spécifiée dans le classifieur remplace le paramètre d’importance du groupe de charge de travail.</br>S’applique à : Azure SQL Data Warehouse.|NULL</br>low</br>below_normal</br>normal (par défaut)</br>above_normal</br>high|
+|group_name|**sysname** |Pour les demandes qui utilisent des ressources, group_name est le nom du groupe de charge de travail sous lequel la requête s’exécute.  Si la demande n’utilise pas de ressources, group_name a la valeur null.</br>S’applique à : Azure SQL Data Warehouse.|
 |classifier_name|**sysname**|Pour les demandes qui utilisent des ressources, nom du classifieur utilisé pour assigner des ressources et leur importance.||
-|resource_allocation_percentage|**décimal (5, 2)**|Pourcentage de ressources allouées à la demande.</br>S’applique à : Azure SQL Data Warehouse|
-|result_cache_hit|**decimal**|Indique si une requête terminée a utilisé le cache du jeu de résultats.  </br>S’applique à : Azure SQL Data Warehouse| 1 = accès au cache de l’ensemble de résultats </br> 0 = absence dans le cache du jeu de résultats </br> Valeurs négatives = raisons pour lesquelles la mise en cache du jeu de résultats n’a pas été utilisée.  Pour plus d’informations, consultez la section Notes.|
+|resource_allocation_percentage|**décimal (5, 2)**|Pourcentage de ressources allouées à la demande.</br>S’applique à : Azure SQL Data Warehouse.|
+|result_cache_hit|**int**|Indique si une requête terminée a utilisé le cache du jeu de résultats.  </br>S’applique à : Azure SQL Data Warehouse.| 1 = accès au cache de l’ensemble de résultats </br> 0 = absence dans le cache du jeu de résultats </br> Valeurs entières négatives = raisons pour lesquelles la mise en cache du jeu de résultats n’a pas été utilisée.  Pour plus d’informations, consultez la section Notes.|
 ||||
   
 ## <a name="remarks"></a>Notes 
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section métadonnées dans la rubrique [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
- Le result_cache_hit est un masque de masque de l’utilisation d’une requête du cache de jeu de résultats.  Cette colonne peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes :  
+La valeur entière négative dans la colonne result_cache_hit est une valeur bitmap de toutes les raisons appliquées pour lesquelles le jeu de résultats d’une requête ne peut pas être mis en cache.  Cette colonne peut être [| (Opérateur or au niveau du bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes :  
   
-|Valeur hexadécimale (décimale)|Description|  
-|-----------|-----------------|  
+|Valeur            |Description  |  
+|-----------------|-----------------|  
 |**1**|Accès au cache du jeu de résultats|  
 |**0x00** (**0**)|Absence dans le cache du jeu de résultats|  
 |-**0x01** (**-1**)|La mise en cache du jeu de résultats est désactivée sur la base de données.|  
@@ -63,8 +63,10 @@ ms.locfileid: "88447465"
 |-**0x08** (**-8**)|La mise en cache du jeu de résultats est désactivée en raison des prédicats de sécurité au niveau des lignes.|  
 |-**0x10** (**-16**)|La mise en cache du jeu de résultats est désactivée en raison de l’utilisation d’une table système, d’une table temporaire ou d’une table externe dans la requête.|  
 |-**0x20** (**-32**)|La mise en cache du jeu de résultats est désactivée, car la requête contient des constantes d’exécution, des fonctions définies par l’utilisateur ou des fonctions non déterministes.|  
-|-**0x40** (**-64**)|La mise en cache du jeu de résultats est désactivée, car la taille estimée du jeu de résultats est >10 Go.|  
-|-**0x80** (**-128**)|La mise en cache du jeu de résultats est désactivée, car le jeu de résultats contient des lignes de grande taille (>64 Ko).|  
+|-**0x40**(**-64**)|La mise en cache du jeu de résultats est désactivée, car la taille estimée du jeu de résultats est >10 Go.|  
+|-**0x80**(**-128**) |La mise en cache du jeu de résultats est désactivée, car le jeu de résultats contient des lignes de grande taille (>64 Ko).|  
+|-**0x100**(**-256**) |La mise en cache du jeu de résultats est désactivée en raison de l’utilisation du masquage des données dynamiques granulaires.|  
+
   
 ## <a name="permissions"></a>Autorisations
 
