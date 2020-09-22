@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63ef4a797c8e396d3ce3ca4b4db21d44519b8525
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 584fcb85f71d253fd2ecc471d64c58579cf2c233
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549477"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688376"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89549477"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   
    | DISABLE  
@@ -238,7 +237,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  Un index de recherche en texte intégral est créé sur `table_1` avec une liste de propriétés de recherche `spl_1` :  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1,   
        CHANGE_TRACKING OFF, NO POPULATION;   
@@ -246,13 +245,13 @@ ALTER FULLTEXT INDEX ON table_name
   
 2.  Un remplissage complet est exécuté sur l'index de recherche en texte intégral :  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 START FULL POPULATION;  
     ```  
   
 3.  L'index de recherche en texte intégral est associé ultérieurement à une liste de propriétés de recherche différente, `spl_2`, à l'aide de l'instruction suivante :  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_2;  
     ```  
   
@@ -262,14 +261,14 @@ ALTER FULLTEXT INDEX ON table_name
   
 1.  Un index de recherche en texte intégral est créé sur `table_1` avec une liste de propriétés de recherche `spl_1`, suivi d’un remplissage complet automatique (comportement par défaut) :  
   
-    ```  
+    ```sql  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
        WITH SEARCH PROPERTY LIST=spl_1;   
     ```  
   
 2.  La liste des propriétés de recherche est désactivée, comme suit :  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1   
        SET SEARCH PROPERTY LIST OFF WITH NO POPULATION;   
     ```  
@@ -278,7 +277,7 @@ ALTER FULLTEXT INDEX ON table_name
   
      Par exemple, l’instruction suivante ré-associe l’index de recherche en texte intégral à la liste des propriétés de recherche d’origine, `spl_1` :  
   
-    ```  
+    ```sql  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
     ```  
   
@@ -300,7 +299,7 @@ ALTER FULLTEXT INDEX ON table_name
 ### <a name="a-setting-manual-change-tracking"></a>R. Définition du suivi des modifications manuel  
  L'exemple ci-après définit le suivi des modifications manuel sur l'index de recherche en texte intégral sur la table `JobCandidate`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate  
@@ -317,7 +316,7 @@ GO
 > [!NOTE]  
 >  Pour obtenir un exemple qui crée la liste de propriétés `DocumentPropertyList`, consultez [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -331,7 +330,7 @@ GO
   
  L'exemple suivant supprime la liste de propriétés `DocumentPropertyList` de l'index de recherche en texte intégral sur le `Production.Document`. Dans cet exemple, il n'est pas urgent de supprimer les propriétés de l'index. Par conséquent, l'option WITH NO POPULATION est spécifiée. Toutefois, la recherche au niveau de propriété est autorisée plus longtemps par rapport à cet index de recherche en texte intégral.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON Production.Document   
@@ -342,7 +341,7 @@ GO
 ### <a name="d-starting-a-full-population"></a>D. Démarrage d'un remplissage complet  
  L’exemple suivant démarre un remplissage complet sur l’index de recherche en texte intégral sur la table `JobCandidate`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER FULLTEXT INDEX ON HumanResources.JobCandidate   

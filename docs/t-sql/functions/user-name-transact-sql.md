@@ -25,12 +25,12 @@ ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb4be6c95f60be21e594b98725a636aebce62bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 13c27b4f23e6361592a72082c94fb033a96ce0d7
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467701"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570673"
 ---
 # <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88467701"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 USER_NAME ( [ id ] )  
 ```  
   
@@ -65,7 +65,7 @@ USER_NAME ( [ id ] )
 ### <a name="a-using-user_name"></a>R. Utilisation de USER_NAME  
  L'exemple suivant retourne le nom de l'utilisateur ayant l'ID `13`.  
   
-```  
+```sql  
 SELECT USER_NAME(13);  
 GO  
 ```  
@@ -73,7 +73,7 @@ GO
 ### <a name="b-using-user_name-without-an-id"></a>B. Utilisation de USER_NAME sans ID  
  Le code exemple suivant recherche le nom de l'utilisateur actuel sans spécifier un ID.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 ```  
@@ -90,7 +90,7 @@ dbo
 ### <a name="c-using-user_name-in-the-where-clause"></a>C. Utilisation de USER_NAME dans la clause WHERE  
  Le code exemple suivant recherche dans `sysusers` la ligne dans laquelle le nom est égal au résultat de l'application de la fonction système `USER_NAME` à l'utilisateur identifié par le numéro `1`.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 GO  
 ```  
@@ -108,7 +108,7 @@ dbo
 ### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D. Appel de USER_NAME pendant un emprunt d'identité avec EXECUTE AS  
  Le code exemple suivant illustre le comportement de `USER_NAME` pendant l'emprunt d'identité.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 EXECUTE AS USER = 'Zelig';  
@@ -134,7 +134,7 @@ DBO
 ### <a name="e-using-user_name-without-an-id"></a>E. Utilisation de USER_NAME sans ID  
  Le code exemple suivant recherche le nom de l'utilisateur actuel sans spécifier un ID.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 ```  
   
@@ -148,7 +148,7 @@ User7
 ### <a name="f-using-user_name-in-the-where-clause"></a>F. Utilisation de USER_NAME dans la clause WHERE  
  Le code exemple suivant recherche dans `sysusers` la ligne dans laquelle le nom est égal au résultat de l'application de la fonction système `USER_NAME` à l'utilisateur identifié par le numéro `1`.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 ```  
   

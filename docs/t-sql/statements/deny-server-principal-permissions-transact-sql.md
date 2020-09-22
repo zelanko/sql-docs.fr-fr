@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0b3dbb2766d1e42fd1812e9eba5d92c40b324a25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b58e181d5defd9ecdd7d4581fe42d0565f8830f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478913"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688622"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY – refus d'autorisations du principal de serveur (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -130,7 +130,7 @@ GO
 ### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Refus d’une autorisation VIEW DEFINITION avec l’option CASCADE  
  Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`EricKurjan` est refusée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`RMeyyappan`. L'option `CASCADE` indique que l'autorisation `VIEW DEFINITION` sur `EricKurjan` sera également refusée aux principaux auxquels `RMeyyappan` a accordé cette autorisation.  
   
-```  
+```sql  
 USE master;  
 DENY VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan   
     CASCADE;  
@@ -140,7 +140,7 @@ GO
 ### <a name="c-denying-view-definition-permission-on-a-server-role"></a>C. Refus d'une autorisation VIEW DEFINITION sur un rôle de serveur  
  L'exemple suivant refuse `VIEW DEFINITION` sur le rôle de serveur `Sales` au rôle de serveur `Auditors`.  
   
-```  
+```sql 
 USE master;  
 DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;  
 GO   

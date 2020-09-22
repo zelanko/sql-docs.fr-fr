@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5e14ff0dce201a195fa7a064cc7df604b52b8370
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0f798856f7074aef0318f98d5d9c7415fe3e2846
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544320"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688232"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -117,14 +117,14 @@ ALTER RESOURCE GOVERNOR
 ### <a name="a-starting-the-resource-governor"></a>R. Démarrage du gouverneur de ressources  
  Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé pour la première fois, le gouverneur de ressources est désactivé. L'exemple suivant permet de démarrer le gouverneur de ressources. Après l'exécution de l'instruction, le gouverneur de ressources s'exécute et peut utiliser les groupes de charges de travail et pools de ressources prédéfinis.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
 ### <a name="b-assigning-new-sessions-to-the-default-group"></a>B. Attribution de nouvelles sessions au groupe par défaut  
  L'exemple suivant assigne toutes les nouvelles sessions au groupe de charges de travail par défaut en supprimant toute fonction classifieur existante de la configuration du gouverneur de ressources. Lorsqu'aucune fonction n'est désignée comme fonction classifieur, toutes les nouvelles sessions sont assignées au groupe de charges de travail par défaut. Cette modification s'applique uniquement aux nouvelles sessions. Les sessions existantes ne sont pas affectées.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR WITH (CLASSIFIER_FUNCTION = NULL);  
 GO  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
@@ -133,7 +133,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ### <a name="c-creating-and-registering-a-classifier-function"></a>C. Création et enregistrement d'une fonction classifieur  
  L'exemple suivant crée une nouvelle fonction classifieur nommée `dbo.rgclassifier_v1`. La fonction classifie chaque nouvelle session sur la base du nom d'utilisateur ou du nom d'application et assigne les demandes et requêtes de session à un groupe de charges de travail spécifique. Les sessions qui ne sont pas mappées aux noms d'utilisateur ou d'application spécifiés sont assignés au groupe de charges de travail par défaut. La fonction classifieur est ensuite enregistrée et la modification de configuration est appliquée.  
   
-```  
+```sql  
 -- Store the classifier function in the master database.  
 USE master;  
 GO  
@@ -178,14 +178,14 @@ GO
 ### <a name="d-resetting-statistics"></a>D. Réinitialisation des statistiques  
  L'exemple suivant réinitialise tout le groupe de charges de travail et les statistiques de pool de ressources.  
   
-```  
+```sql 
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
 ### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. Définition de l'option MAX_OUTSTANDING_IO_PER_VOLUME  
  L'exemple suivant affecte la valeur 20 à l'option MAX_OUTSTANDING_IO_PER_VOLUME.  
   
-```  
+```sql  
 ALTER RESOURCE GOVERNOR  
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  

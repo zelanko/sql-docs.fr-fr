@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e2912d3bb0608a105c4f68c857b2ea679a86c2f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417065"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688342"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Transactions (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -114,7 +114,8 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. Restauration d’une transaction  
  L’exemple suivant montre l’effet de la restauration d’une transaction.  Dans cet exemple, l’instruction ROLLBACK restaure l’instruction INSERT, mais la table créée continue d’exister.  
   
-```sql  
+
+```sql
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

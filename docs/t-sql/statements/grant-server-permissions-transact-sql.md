@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a208dc9a99f18a9bfad061afc9caae7f3e859add
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 23ff7a537598cde913635d427bdbd58388e16803
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444633"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570527"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT – octroi d'autorisations de serveur (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -150,7 +150,7 @@ GRANT permission [ ,...n ]
 ### <a name="a-granting-a-permission-to-a-login"></a>R. Octroi d'une autorisation à une connexion  
  Dans l'exemple ci-dessous, l'autorisation `CONTROL SERVER` est accordée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`TerryEminhizer`.  
   
-```  
+```sql  
 USE master;  
 GRANT CONTROL SERVER TO TerryEminhizer;  
 GO  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Octroi d'une autorisation qui possède l'autorisation GRANT  
  Dans l'exemple suivant, l'autorisation `ALTER ANY EVENT NOTIFICATION` est accordée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`JanethEsteves` avec le droit d'accorder cette autorisation à une autre connexion.  
   
-```  
+```sql  
 USE master;  
 GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;  
 GO  
@@ -168,7 +168,7 @@ GO
 ### <a name="c-granting-a-permission-to-a-server-role"></a>C. Octroi d'une autorisation à un rôle de serveur  
  L'exemple suivant crée deux rôles de serveur nommés `ITDevAdmin` et `ITDevelopers`. Il accorde l'autorisation `ALTER ANY DATABASE` au rôle de serveur défini par l'utilisateur `ITDevAdmin`, notamment l'option `WITH GRANT` afin que le rôle de serveur `ITDevAdmin` puisse réaffecter l'autorisation `ALTER ANY DATABASE` L'exemple accorde ensuite à `ITDevelopers` l'autorisation d'utiliser l'autorisation `ALTER ANY DATABASE` du rôle de serveur `ITDevAdmin`.  
   
-```  
+```sql  
 USE master;  
 CREATE SERVER ROLE ITDevAdmin ;  
 CREATE SERVER ROLE ITDevelopers ;  

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a203d4a3b3d1b8f945779fe9b255f2c3a8cfcd5e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e1fce1957dce037d33f1906ecea59b24292b813b
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538149"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688572"
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -250,7 +250,7 @@ AS { sql_statement
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée un déclencheur DML dans la base de données AdventureWorks 2012. Ce déclencheur envoie un message défini par l’utilisateur au client quand un utilisateur tente d’ajouter ou de changer les données de la table `SalesPersonQuotaHistory`. Le déclencheur est ensuite modifié à l'aide de l'instruction `ALTER TRIGGER` pour n'appliquer le déclencheur qu'aux activités `INSERT`. Ce déclencheur est utile car il rappelle à l'utilisateur qui met à jour ou insère des lignes dans cette table de notifier également le département `Compensation` .  
   
-```  
+```sql  
 CREATE TRIGGER Sales.bonus_reminder  
 ON Sales.SalesPersonQuotaHistory  
 WITH ENCRYPTION  

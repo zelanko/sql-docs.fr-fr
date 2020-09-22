@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: aa614b7b0496c1547f85106758f6ff5d7dd2835a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb9a8dbb4b67a514d56febaed13a33d7f7eb2a8a
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444756"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688649"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,8 +42,7 @@ ms.locfileid: "88444756"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```syntaxsql
 CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expression  
 ```  
   
@@ -84,7 +83,7 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
 ### <a name="a-creating-xml-schema-collection-in-the-database"></a>R. Création d'une collection de schémas XML dans la base de données  
  Le code exemple suivant crée la collection de schémas XML `ManuInstructionsSchemaCollection`. La collection comporte un seul espace de noms.  
   
-```  
+```sql  
 -- Create a sample database in which to load the XML schema collection.  
 CREATE DATABASE SampleDB;  
 GO  
@@ -176,7 +175,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Spécification de plusieurs espaces de noms de schémas dans une collection de schémas  
  Vous pouvez spécifier plusieurs schémas XML lorsque vous créez une collection de schémas XML. Par exemple :  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
 <!-- Contents of schema here -->    
@@ -188,7 +187,7 @@ CREATE XML SCHEMA COLLECTION MyCollection AS N'
   
  Le code exemple suivant crée la collection de schémas XML `ProductDescriptionSchemaCollection` qui inclut deux espaces de noms de schémas XML.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION ProductDescriptionSchemaCollection AS   
 '<xsd:schema targetNamespace="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"  
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain"   
@@ -234,7 +233,7 @@ GO
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importation d'un schéma qui ne spécifie aucun espace de noms cible  
  Si un schéma qui ne contient pas d’attribut **targetNamespace** est importé dans une collection, ses composants sont associés à l’espace de noms cible composé d’une chaîne de caractères vide (voir l’exemple ci-dessous). Notez que si vous n'associez pas au moins un schéma importé dans la collection, plusieurs composants de schéma (éventuellement non liés entre eux) seront associés à l'espace de noms de la chaîne vide par défaut.  
   
-```  
+```sql  
 -- Create a collection that contains a schema with no target namespace.  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema"  xmlns:ns="http://ns">  
@@ -254,7 +253,7 @@ WHERE  sys.xml_schema_namespaces.name='';
 ### <a name="d-using-an-xml-schema-collection-and-batches"></a>D. Utilisation d'une collection de schémas et de traitements XML  
  Une collection de schémas ne peut pas être référencée dans le traitement où elle a été créée. Si vous essayez de faire référence à une collection dans le traitement où celle-ci a été créée, vous obtenez un message d'erreur indiquant que la collection n'existe pas. L'exemple suivant fonctionne ; vous obtiendrez toutefois une erreur si vous supprimez `GO` et essayez par la suite de faire référence à la collection de schémas XML pour entrer une variable `xml` dans le même traitement.  
   
-```  
+```sql  
 CREATE XML SCHEMA COLLECTION mySC AS '  
 <schema xmlns="http://www.w3.org/2001/XMLSchema">  
       <element name="root" type="string"/>  

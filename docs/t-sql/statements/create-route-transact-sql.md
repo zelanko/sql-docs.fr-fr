@@ -28,12 +28,12 @@ ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2c8b24889e99f5f0f3cdbaaad377a2d4e99f2da3
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5eea276766b848033fc0fd8cd7487e7451c779ca
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549329"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688340"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -45,7 +45,6 @@ ms.locfileid: "89549329"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
 WITH    
@@ -73,7 +72,7 @@ WITH
  BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  Spécifie la base de données qui héberge le service cible. Le paramètre *broker_instance_identifier* doit être l’identificateur de l’instance Service Broker pour la base de données distante et peut être obtenu en exécutant la requête suivante dans la base de données sélectionnée :  
   
-```  
+```sql  
 SELECT service_broker_guid  
 FROM sys.databases  
 WHERE database_id = DB_ID()  
@@ -93,7 +92,7 @@ Spécifie l'adresse réseau pour cet itinéraire. *next_hop_address* spécifie u
   
  Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -114,7 +113,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
-```  
+```sql  
 SELECT tcpe.port  
 FROM sys.tcp_endpoints AS tcpe  
 INNER JOIN sys.service_broker_endpoints AS ssbe  
@@ -145,7 +144,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 ### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>R. Création d'un itinéraire TCP/IP à l'aide d'un nom DNS  
  L'exemple suivant crée un itinéraire vers le service `//Adventure-Works.com/Expenses`. L'itinéraire spécifie que les messages vers ce service utilisent le protocole TCP jusqu'au port `1234` de l'hôte identifié par le nom DNS `www.Adventure-Works.com`. Le serveur cible remet les messages au fur et à mesure de leur réception à l'instance de Service Broker identifiée par l'identificateur unique `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql 
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -156,7 +155,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. Création d'un itinéraire TCP/IP à l'aide d'un nom NetBIOS  
  L'exemple suivant crée un itinéraire vers le service `//Adventure-Works.com/Expenses`. L'itinéraire spécifie que les messages vers ce service utilisent le protocole TCP jusqu'au port `1234` de l'hôte identifié par le nom NetBIOS `SERVER02`. Au fur et à mesure de leur réception, le serveur cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remet les messages à l'instance de base de données identifiée par l'identificateur unique `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH   
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -167,7 +166,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="c-creating-a-tcpip-route-by-using-an-ip-address"></a>C. Création d'un itinéraire TCP/IP à l'aide d'une adresse IP  
  L'exemple suivant crée un itinéraire vers le service `//Adventure-Works.com/Expenses`. L'itinéraire spécifie que les messages vers ce service utilisent le protocole TCP jusqu'au port `1234` de l'hôte identifié par l'adresse IP `192.168.10.2`. Au fur et à mesure de leur réception, le serveur cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remet les messages à l'instance Service Broker identifiée par l'identificateur unique `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -178,7 +177,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="d-creating-a-route-to-a-forwarding-broker"></a>D. Création d'un itinéraire vers un Service Broker de transfert  
  L'exemple suivant crée un itinéraire vers le Service Broker de transfert du serveur `dispatch.Adventure-Works.com`. Étant donné que le nom du service et l'identificateur de l'instance de Service Broker ne sont pas spécifiés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise cet itinéraire pour les services pour lesquels aucun autre itinéraire n'est défini.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     ADDRESS = 'TCP://dispatch.Adventure-Works.com' ;   
@@ -187,7 +186,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="e-creating-a-route-to-a-local-service"></a>E. Création d'un itinéraire vers un service local  
  L'exemple suivant crée un itinéraire vers le service `//Adventure-Works.com/LogRequests` dans la même instance que l'itinéraire.  
   
-```  
+```sql  
 CREATE ROUTE LogRequests  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/LogRequests',  
@@ -197,7 +196,7 @@ CREATE ROUTE LogRequests
 ### <a name="f-creating-a-route-with-a-specified-lifetime"></a>F. Création d'un itinéraire avec une durée de vie spécifique  
  L'exemple suivant crée un itinéraire vers le service `//Adventure-Works.com/Expenses`. La durée de vie de l'itinéraire est de `259200` secondes, soit 72 heures.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -208,7 +207,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="g-creating-a-route-to-a-mirrored-database"></a>G. Création d'un itinéraire vers une base de données miroir  
  L'exemple suivant crée un itinéraire vers le service `//Adventure-Works.com/Expenses`. Le service est hébergé par une base de données miroir. Les bases de données miroir se trouvent aux adresses suivantes : `services.Adventure-Works.com:1234` et `services-mirror.Adventure-Works.com:1234`.  
   
-```  
+```sql  
 CREATE ROUTE ExpenseRoute  
     WITH  
     SERVICE_NAME = '//Adventure-Works.com/Expenses',  
@@ -220,7 +219,7 @@ CREATE ROUTE ExpenseRoute
 ### <a name="h-creating-a-route-that-uses-the-service-name-for-routing"></a>H. Création d'un itinéraire qui utilise le nom du service pour le routage  
  L'exemple suivant crée un itinéraire qui utilise le nom du service pour déterminer l'adresse réseau d'envoi des messages. La priorité d'un itinéraire qui spécifie `'TRANSPORT'` comme adresse réseau est inférieure à celle des autres itinéraires.  
   
-```  
+```sql  
 CREATE ROUTE TransportRoute  
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  

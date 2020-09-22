@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8be1d18c6caae4751ab1168f99aa7b5192510185
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fae275453fd14afacc700150c93cc6a091141a11
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444712"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688620"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY – refus d'autorisations d'objet (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -145,7 +145,7 @@ Les exemples suivants utilisent la base de données AdventureWorks.
 ### <a name="a-denying-select-permission-on-a-table"></a>R. Refus d'une autorisation SELECT sur une table  
  Dans l’exemple ci-dessous, l’autorisation `SELECT` est refusée à l’utilisateur `RosaQdM` sur la table `Person.Address`.  
   
-```  
+```sql  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -153,7 +153,7 @@ GO
 ### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>B. Refus d'une autorisation EXECUTE sur une procédure stockée  
  Dans l'exemple ci-dessous, l'autorisation `EXECUTE` sur la procédure stockée `HumanResources.uspUpdateEmployeeHireInfo` est refusée à un rôle d'application nommé `Recruiting11`.  
   
-```  
+```sql  
 DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
 GO   
@@ -162,7 +162,7 @@ GO
 ### <a name="c-denying-references-permission-on-a-view-with-cascade"></a>C. Refus d'une autorisation REFERENCES sur une vue avec l'option CASCADE  
  Dans l'exemple ci-dessous, l'autorisation `REFERENCES` sur la colonne `BusinessEntityID` dans la vue `HumanResources.vEmployee` est refusée à l'utilisateur `Wanida` avec l'option `CASCADE`.  
   
-```  
+```sql  
 DENY REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida CASCADE;  
 GO  

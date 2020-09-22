@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6b55f70cd23047de6fa1b344cbe1c9c89ab3a94c
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: 04b6198310edf171e6370fc9a3465ce068f5fa8c
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027310"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688825"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -68,7 +68,7 @@ Crée une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e
 
 ## <a name="simple-syntax"></a>Syntaxe simple
 
-```
+```syntaxsql
 -- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -78,7 +78,7 @@ CREATE TABLE
 
 ## <a name="full-syntax"></a>Syntaxe complète
 
-```
+```syntaxsql
 -- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }

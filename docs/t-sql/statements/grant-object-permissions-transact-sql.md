@@ -17,12 +17,12 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5cca05a701f7ec0255536c496ae5288cd1105835
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1282bdd6c1bfb103a42336fc62289d1949bda07c
+ms.sourcegitcommit: 76d31f456982dabb226239b424eaa7139d8cc6c1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472270"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90570584"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT – octroi d'autorisations d'objet (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -160,7 +160,7 @@ PRIVILEGES
 ### <a name="a-granting-select-permission-on-a-table"></a>R. Octroi d'une autorisation SELECT sur une table  
  Dans l'exemple ci-dessous, l'autorisation `SELECT` est accordée à l'utilisateur `RosaQdM` sur la table `Person.Address` dans la base de données `AdventureWorks2012`.  
   
-```  
+```sql  
 GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -168,7 +168,7 @@ GO
 ### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>B. Octroi d'une autorisation EXECUTE sur une procédure stockée  
  Dans l'exemple ci-dessous, l'autorisation `EXECUTE` sur la procédure stockée `HumanResources.uspUpdateEmployeeHireInfo` est accordée à un rôle d'application nommé `Recruiting11`.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
@@ -178,7 +178,7 @@ GO
 ### <a name="c-granting-references-permission-on-a-view-with-grant-option"></a>C. Octroi d'une autorisation REFERENCES sur une vue avec l'option GRANT OPTION  
  Dans l'exemple ci-dessous, l'autorisation `REFERENCES` sur la colonne `BusinessEntityID` dans la vue `HumanResources.vEmployee` est accordée à l'utilisateur `Wanida` avec l'option `GRANT OPTION`.  
   
-```  
+```sql  
 GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida WITH GRANT OPTION;  
 GO  
@@ -187,7 +187,7 @@ GO
 ### <a name="d-granting-select-permission-on-a-table-without-using-the-object-phrase"></a>D. Octroi d'une autorisation SELECT sur une table sans utilisation de l'expression OBJECT  
  Dans l'exemple ci-dessous, l'autorisation `SELECT` est accordée à l'utilisateur `RosaQdM` sur la table `Person.Address` dans la base de données `AdventureWorks2012`.  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -195,7 +195,7 @@ GO
 ### <a name="e-granting-select-permission-on-a-table-to-a-domain-account"></a>E. Octroi d'une autorisation SELECT sur une table à un compte de domaine  
  Dans l'exemple ci-dessous, l'autorisation `SELECT` est accordée à l'utilisateur `AdventureWorks2012\RosaQdM` sur la table `Person.Address` dans la base de données `AdventureWorks2012`.  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO [AdventureWorks2012\RosaQdM];  
 GO  
 ```  
@@ -203,7 +203,7 @@ GO
 ### <a name="f-granting-execute-permission-on-a-procedure-to-a-role"></a>F. Octroi d'une autorisation EXECUTE sur une procédure à un rôle  
  L'exemple suivant crée un rôle, puis accorde une autorisation `EXECUTE` au rôle sur la procédure `uspGetBillOfMaterials` dans la base de données `AdventureWorks2012`.  
   
-```  
+```sql  
 CREATE ROLE newrole ;  
 GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;  
 GO  

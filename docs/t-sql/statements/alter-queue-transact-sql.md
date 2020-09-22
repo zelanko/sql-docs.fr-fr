@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fa1828f1a6c684c0028ed3ada229aca3811a88a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5a8ba9a6a1dbc0f1c6e6c6312c627f83335bbe09
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541486"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688228"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -76,7 +76,6 @@ WITH
 {  
    ( MAXDOP = max_degree_of_parallelism )  
 }  
-  
 ```  
   
 
@@ -180,14 +179,14 @@ Contrairement à REORGANIZE sur les tables utilisateur, REORGANIZE sur une file 
 ### <a name="a-making-a-queue-unavailable"></a>R. Mise en indisponibilité d'une file d'attente  
  L'exemple suivant indique comment rendre la file d'attente `ExpenseQueue` indisponible pour la réception des messages.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH STATUS = OFF ;  
 ```  
   
 ### <a name="b-changing-the-activation-stored-procedure"></a>B. Modification de la procédure stockée d'activation  
  L'exemple suivant modifie la procédure stockée lancée par la file d'attente. La procédure stockée s'exécute sous l'utilisateur qui a lancé l'instruction `ALTER QUEUE`.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = new_stored_proc,  
@@ -197,14 +196,14 @@ ALTER QUEUE ExpenseQueue
 ### <a name="c-changing-the-number-of-queue-readers"></a>C. Modification du nombre de lecteurs de file d'attente  
  L'exemple suivant définit à `7` le nombre maximal d'instances de la procédure stockée que [!INCLUDE[ssSB](../../includes/sssb-md.md)] lance pour cette file d'attente.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH ACTIVATION (MAX_QUEUE_READERS = 7) ;  
 ```  
   
 ### <a name="d-changing-the-activation-stored-procedure-and-the-execute-as-account"></a>D. Modification de la procédure stockée d'activation et du compte EXECUTE AS  
  L'exemple suivant modifie la procédure stockée lancée par [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Cette procédure stockée s'exécute en tant qu'utilisateur `SecurityAccount`.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue  
     WITH ACTIVATION (  
         PROCEDURE_NAME = AdventureWorks2012.dbo.new_stored_proc ,  
@@ -214,7 +213,7 @@ ALTER QUEUE ExpenseQueue
 ### <a name="e-setting-the-queue-to-retain-messages"></a>E. Configuration de la file d'attente pour la conservation des messages  
  L'exemple suivant configure la file d'attente pour qu'elle conserve les messages. La file d'attente conserve tous les messages envoyés ou reçus des services utilisant cette file d'attente, jusqu'à ce que la conversation contenant le message s'achève.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue WITH RETENTION = ON ;  
 ```  
   
@@ -231,7 +230,7 @@ ALTER QUEUE ExpenseQueue WITH ACTIVATION (DROP) ;
   
  L’exemple suivant reconstruit des index de file d’attente.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)   
 ```  
   
@@ -241,7 +240,7 @@ ALTER QUEUE ExpenseQueue REBUILD WITH (MAXDOP = 2)
   
  L’exemple suivant réorganise des index de file d’attente.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue REORGANIZE   
 ```  
   
@@ -249,7 +248,7 @@ ALTER QUEUE ExpenseQueue REORGANIZE
   
 **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures.  
   
-```  
+```sql  
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0febaf92d4bdc58ce4e714391c8d4789158a986f
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 9ac1ddf48ec23f72fcfd500988c9eb05ce0b94ab
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86392787"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688104"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,6 @@ ms.locfileid: "86392787"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 CREATE DATABASE AUDIT SPECIFICATION audit_specification_name  
 {  
     FOR SERVER AUDIT audit_name   
@@ -99,7 +98,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>R. Auditer SELECT et INSERT dans une table pour n’importe quel principal de base de données 
  L’exemple suivant crée un audit du serveur nommé `Payrole_Security_Audit`, puis une spécification d’audit de la base de données nommée `Payrole_Security_Audit` qui audite les instructions `SELECT` et `INSERT` par l’utilisateur `dbo`, pour la table `HumanResources.EmployeePayHistory` dans la base de données `AdventureWorks2012`.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.  
@@ -126,7 +125,7 @@ GO
 ### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. Auditer le DML (INSERT, UPDATE ou DELETE) dans _tous_ les objets du schéma _sales_ d’un rôle de base de données  
  L’exemple suivant crée un audit du serveur nommé `DataModification_Security_Audit`, puis une spécification d’audit de la base de données nommée `Audit_Data_Modification_On_All_Sales_Tables` qui audite les instructions `INSERT`, `UPDATE` et `DELETE` par les utilisateurs d’un nouveau rôle de base de données `SalesUK`, pour tous les objets du schéma `Sales` de la base de données `AdventureWorks2012`.  
   
-```  
+```sql  
 USE master ;  
 GO  
 -- Create the server audit.

@@ -18,12 +18,12 @@ ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 574a33d253fd66b2ed6117d03f889bf195627fcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 21b259f692a324e163ed74b32366f6c8ec21a90f
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479181"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688361"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "88479181"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
@@ -70,7 +69,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
 ### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>R. Modification du mot de passe d’informations d’identification délimitées à la base de données  
  L’exemple suivant modifie le secret stocké dans les informations d’identification délimitées à la base de données nommées `Saddles`. Les informations d’identification délimitées à la base de données contiennent la connexion Windows `RettigB` et son mot de passe. Le nouveau mot de passe est ajouté aux informations d’identification délimitées à la base de données à l’aide de la clause SECRET.  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',   
     SECRET = 'sdrlk8$40-dksli87nNN8';  
 GO  
@@ -79,7 +78,7 @@ GO
 ### <a name="b-removing-the-password-from-a-credential"></a>B. Suppression du mot de passe d'une information d'identification  
  Le code exemple suivant supprime le mot de passe des informations d’identification délimitées à la base de données nommées `Frames`. Les informations d’identification délimitées à la base de données contiennent la connexion Windows `Aboulrus8` et un mot de passe. Après l’exécution de l’instruction, le mot de passe des informations d’identification délimitées à la base de données a la valeur NULL car l’option SECRET n’est pas spécifiée.  
   
-```  
+```sql  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  
 GO  
 ```  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 919b355458d7a3b975906f5bc6f5cb72322fdc2a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ae8e04d348f6a3146030d4f0bf8856b2d343b682
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544231"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688173"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,7 +40,6 @@ ms.locfileid: "89544231"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
     [ INCREMENT BY <constant> ]  
@@ -93,7 +92,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ### <a name="permissions"></a>Autorisations  
  Exige l’autorisation **ALTER** sur la séquence ou l’autorisation **ALTER** sur le schéma. Pour accorder l’autorisation**ALTER** sur la séquence, utilisez **ALTER ON OBJECT** dans le format suivant :  
   
-```  
+```sql  
 GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]  
 ```  
   
@@ -108,7 +107,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ### <a name="a-altering-a-sequence"></a>R. Modification d'une séquence  
  L’exemple suivant crée un schéma nommé Test et une séquence nommée TestSeq à l’aide du type de données **int**, avec une plage comprise entre 100 et 200. La séquence démarre à 125 et est incrémentée de 25 chaque fois qu'un nombre est généré. Étant donné que la séquence est configurée pour se répéter, lorsque la valeur dépasse la valeur maximale de 200, la séquence redémarre à la valeur minimale de 100.  
   
-```  
+```sql  
 CREATE SCHEMA Test ;  
 GO  
   
@@ -126,7 +125,7 @@ GO
   
  L’exemple suivant modifie la séquence TestSeq pour que la plage soit comprise entre 50 et 200. La séquence redémarre la série de numérotation à 100 et est incrémentée de 50 chaque fois qu'un nombre est généré.  
   
-```  
+```sql  
 ALTER SEQUENCE Test. TestSeq  
     RESTART WITH 100  
     INCREMENT BY 50  
@@ -143,25 +142,25 @@ GO
 ### <a name="b-restarting-a-sequence"></a>B. Redémarrage d'une séquence  
  L’exemple suivant crée une séquence nommée CountBy1. La séquence utilise les valeurs par défaut.  
   
-```  
+```sql  
 CREATE SEQUENCE Test.CountBy1 ;  
 ```  
   
  Pour générer une valeur de séquence, le propriétaire exécute ensuite l'instruction suivante :  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1  
 ```  
   
  La valeur retournée -9 223 372 036 854 775 808 est la plus petite valeur possible pour le type de données **bigint**. Le propriétaire se rend compte qu’il souhaitait que la séquence démarre à 1, mais qu’il n’a pas indiqué la clause **START WITH** au moment de la création de la séquence. Pour corriger cette erreur, le propriétaire exécute l'instruction suivante.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1 RESTART WITH 1 ;  
 ```  
   
  Puis le propriétaire exécute une nouvelle fois l'instruction suivante pour générer un numéro séquentiel.  
   
-```  
+```sql  
 SELECT NEXT VALUE FOR Test.CountBy1;  
 ```  
   
@@ -169,11 +168,10 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  La séquence CountBy1 a été créée à l’aide de la valeur par défaut NO CYCLE ; elle cesse donc de fonctionner après avoir généré le nombre 9 223 372 036 854 775 807. Les appels suivants à l'objet séquence retourneront l'erreur 11728. L'instruction suivante modifie l'objet séquence en vue d'une répétition et définit un cache de 20.  
   
-```  
+```sql  
 ALTER SEQUENCE Test.CountBy1  
     CYCLE  
-    CACHE 20 ;  
-  
+    CACHE 20 ; 
 ```  
   
  Maintenant lorsque l'objet séquence atteint 9 223 372 036 854 775 807, il entame un cycle de répétition et le nombre suivant à l'issue du cycle correspond à la valeur minimale du type de données, à savoir -9 223 372 036 854 775 808.  

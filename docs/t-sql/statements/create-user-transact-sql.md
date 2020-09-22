@@ -30,12 +30,12 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54734c9b463ab6450e0f5793d637b32d9e60553e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0f7889af18a605ae5c6b02c8eaaac573fec1abc
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467265"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688835"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 
@@ -354,13 +354,13 @@ Pour les utilisateurs de base de données autonome [!INCLUDE[ssSDS_md](../../inc
 ### <a name="a-creating-a-database-user-based-on-a-sql-server-login"></a>R. Création d'un utilisateur de base de données basé sur un compte de connexion SQL Server  
  L'exemple suivant crée d'abord un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommé `AbolrousHazem`, puis crée un utilisateur de base de données correspondant nommé `AbolrousHazem` dans `AdventureWorks2012`.  
   
-```  
+```sql  
 CREATE LOGIN AbolrousHazem   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khy';  
 ```   
 Changez de base de données utilisateur. Par exemple, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez l’instruction `USE AdventureWorks2012`. Dans [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vous devez établir une nouvelle connexion à la base de données utilisateur.
 
-```   
+```sql   
 CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;  
 GO   
 ```  
@@ -368,7 +368,7 @@ GO
 ### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. Création d'un utilisateur de base de données avec un schéma par défaut  
  L'exemple suivant crée d'abord une connexion serveur nommée `WanidaBenshoof` avec un mot de passe, puis crée un utilisateur de base de données correspondant nommé `Wanida` avec le schéma par défaut `Marketing`.  
   
-```  
+```sql  
 CREATE LOGIN WanidaBenshoof   
     WITH PASSWORD = '8fdKJl3$nlNv3049jsKK';  
 USE AdventureWorks2012;  
@@ -382,7 +382,7 @@ GO
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE CERTIFICATE CarnationProduction50  
     WITH SUBJECT = 'Carnation Production Facility Supervisors',  
@@ -395,7 +395,7 @@ GO
 ###  <a name="d-creating-and-using-a-user-without-a-login"></a><a name="withoutLogin"></a> D. Création et utilisation d'un utilisateur sans connexion  
  L'exemple suivant crée un utilisateur de base de données `CustomApp` qui n'est mappé à aucune connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'exemple accorde ensuite à un utilisateur `adventure-works\tengiz0` l'autorisation d'emprunter l'identité de l'utilisateur `CustomApp`.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 CREATE USER CustomApp WITHOUT LOGIN ;  
 GRANT IMPERSONATE ON USER::CustomApp TO [adventure-works\tengiz0] ;  
@@ -404,14 +404,14 @@ GO
   
  Pour utiliser les informations d'identification `CustomApp`, l'utilisateur `adventure-works\tengiz0` exécute l'instruction suivante.  
   
-```  
+```sql  
 EXECUTE AS USER = 'CustomApp' ;  
 GO  
 ```  
   
  Pour revenir aux informations d'identification `adventure-works\tengiz0`, l'utilisateur exécute l'instruction suivante.  
   
-```  
+```sql  
 REVERT ;  
 GO  
 ```  
@@ -421,7 +421,7 @@ GO
   
 **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures. Cet exemple fonctionne dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] si DEFAULT_LANGUAGE est supprimé.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER Carlo  
@@ -436,7 +436,7 @@ GO
   
 **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER [Contoso\Fritz] ;  
@@ -448,12 +448,11 @@ GO
   
 **S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'  
-, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;  
-  
+, SID = 0x01050000000000090300000063FF0451A9E7664BA705B10E37DDC4B7;
 ```  
   
 ### <a name="h-creating-a-user-to-copy-encrypted-data"></a>H. Création d’un utilisateur pour copier des données chiffrées  
@@ -461,7 +460,7 @@ CREATE USER CarmenW WITH PASSWORD = 'a8ea v*(Rd##+'
   
 **S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures, [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql  
 CREATE USER [Chin]   
 WITH   
       DEFAULT_SCHEMA = dbo  

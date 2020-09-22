@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: efef9df2254c9f0c27e23733e24afaddf23f4435
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 95c7f778abe9417a108e4df6982b73d3037f5ae9
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479194"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688765"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88479194"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 ALTER CRYPTOGRAPHIC PROVIDER provider_name   
     [ FROM FILE = path_of_DLL ]  
     ENABLE | DISABLE  
@@ -83,21 +83,21 @@ Lorsque le fichier d'en-tête utilisé pour créer la DLL de fournisseur EKM est
  L’exemple suivant modifie un fournisseur de services de chiffrement, appelé `SecurityProvider` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en ajoutant une version plus récente d’un fichier .dll. Cette nouvelle version est nommée `c:\SecurityProvider\SecurityProvider_v2.dll` et est installée sur le serveur. Le certificat du fournisseur doit être installé sur le serveur.  
   
 1. Désactivez le fournisseur pour effectuer la mise à niveau. Cela met fin à toutes les sessions de chiffrement ouvertes.  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 DISABLE;  
 GO  
 ```  
 
 2. Mettez à niveau le fichier .dll du fournisseur. Le GUID doit être identique à celui de la version précédente, mais la version peut être différente.  
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider  
 FROM FILE = 'c:\SecurityProvider\SecurityProvider_v2.dll';  
 GO  
 ```  
 
 3. Activez le fournisseur mis à niveau.   
-```  
+```sql  
 ALTER CRYPTOGRAPHIC PROVIDER SecurityProvider   
 ENABLE;  
 GO  

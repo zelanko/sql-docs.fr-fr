@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b279b48adb0a72060d9e7700c57f25782eb83587
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 39b9fdbb63a515f74640ff1e4c18366652584980
+ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496912"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "90688795"
 ---
 # <a name="close-symmetric-key-transact-sql"></a>CLOSE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,7 @@ CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }
 ### <a name="a-closing-a-symmetric-key"></a>R. Fermeture d'une clé symétrique  
  L'exemple suivant ferme la clé symétrique `ShippingSymKey04`.  
   
-```  
+```sql  
 CLOSE SYMMETRIC KEY ShippingSymKey04;  
 GO  
 ```  
@@ -68,7 +68,7 @@ GO
 ### <a name="b-closing-all-symmetric-keys"></a>B. Fermeture de toutes les clés symétriques  
  L'exemple suivant ferme toutes les clés symétriques ouvertes dans la session active, mais aussi la clé principale de la base de données qui a été ouverte explicitement.  
   
-```  
+```sql  
 CLOSE ALL SYMMETRIC KEYS;  
 GO  
 ```  
