@@ -19,12 +19,12 @@ ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: f1e2134b008d07a12043c4b1bd4fbf6dc0986d90
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5ca659670cb68bafa10f758bc2a7997243f5c1a8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546150"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990122"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
@@ -43,7 +43,7 @@ sp_describe_undeclared_parameters
 ```  
 
 > [!Note] 
-> Pour utiliser cette procédure stockée dans Azure Synapse Analytics (anciennement SQL DW), le niveau de compatibilité d’une base de données doit être supérieur à 10. 
+> Pour utiliser cette procédure stockée dans Azure Synapse Analytics (anciennement SQL DW), définissez le niveau de compatibilité de la base de données sur 20 ou plus.   Pour vous désabonner, définissez le niveau de compatibilité de la base de données sur 10.
 
 ## <a name="arguments"></a>Arguments  
 `[ \@tsql = ] 'Transact-SQL\_batch'` Une ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être de type **nvarchar (**_n_**)** ou **nvarchar (max)**.  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c3877214c5df16b8c9bf48f9ee20bd2ec83109d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa461859dcc7d2adc359139e4740ea9272161bf8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88397565"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989939"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88397565"
   
  Cette fonction d'énumération est créée lorsqu'une table source est activée pour la capture des données modifiées. Le nom de fonction est dérivé et utilise le format **CDC. fn_cdc_get_all_changes_**_capture_instance_ où *capture_instance* est la valeur spécifiée pour l’instance de capture lorsque la table source est activée pour la capture de données modifiées.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +54,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  *to_lsn*  
  Valeur LSN qui représente le point de terminaison supérieur de la plage de numéros séquentiels dans le journal à inclure dans le jeu de résultats. *to_lsn* est **de type binaire (10)**.  
   
- Seules les lignes du [CDC. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) table de modifications dont la valeur est comprise dans **_ _ $ start_lsn** inférieure ou égale à *from_lsn* ou égale à *to_lsn* sont incluses dans le jeu de résultats.  
+ Seules les lignes du [CDC. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) table de modifications avec une valeur dans **_ _ $ start_lsn** supérieure ou égale à *from_lsn* et inférieure ou égale à *to_lsn* sont incluses dans le jeu de résultats.  
   
  <row_filter_option> :: = {All | All Update Old}  
  Option qui régit le contenu des colonnes de métadonnées aussi bien que les lignes retournées dans le jeu de résultats.  
