@@ -12,12 +12,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c62f1f2ef34bd5ba1a59a642ac8d07db2dbe259
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed9bec3042903f22c4a4c71ac4f07520062e60c9
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247074"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989902"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -273,35 +273,31 @@ GO
 |Agrégation de flux|`SELECT count(CustomerID) FROM dbo.Customer`|Notez que l'opérateur Hash Match n'est pas pris en charge pour l'agrégation. Par conséquent, toutes les agrégations dans les procédures stockées compilées en mode natif utilisent l'opérateur Stream Aggregate, même si le plan pour la même requête en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété utilise l'opérateur Hash Match.|  
   
 ## <a name="column-statistics-and-joins"></a>Statistiques et jointures de colonne  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les statistiques des valeurs des colonnes clés d’index pour vous aider à estimer le coût de certaines opérations, comme les analyses d’index et les recherches d’index. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée également des statistiques sur les colonnes clés qui ne sont pas des index si vous les créez explicitement ou si l’optimiseur de requête les crée en réponse à une requête avec un prédicat). La mesure principale de l'estimation de coût est le nombre de lignes traitées par un seul opérateur. Notez que pour les tables sur disque, le nombre de pages auxquelles un opérateur spécifique accède est important pour l'estimation du coût. Toutefois, comme le nombre de pages n'est pas important pour les tables mémoire optimisées (il est toujours de zéro), cette description se focalisera sur le nombre de lignes. L'estimation démarre avec les opérateurs de recherche d'index et d'analyse dans le plan, et est ensuite étendue pour inclure les autres opérateurs, comme l'opérateur de jointure. Le nombre estimé de lignes à traiter par un opérateur de jointure dépend de l'estimation des opérateurs d'index, de recherche et d'analyse sous-jacents. Pour l'accès [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées, vous pouvez observer le plan d'exécution réel pour voir la différence entre le nombre de lignes estimé et le nombre de lignes réel pour les opérateurs du plan.  
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve les statistiques des valeurs des colonnes clés d’index pour vous aider à estimer le coût de certaines opérations, comme les analyses d’index et les recherches d’index. ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée également des statistiques sur les colonnes clés qui ne sont pas des index si vous les créez explicitement ou si l’optimiseur de requête les crée en réponse à une requête avec un prédicat). La mesure principale de l'estimation de coût est le nombre de lignes traitées par un seul opérateur. Notez que pour les tables sur disque, le nombre de pages auxquelles un opérateur spécifique accède est important pour l'estimation du coût. Toutefois, comme le nombre de pages n'est pas important pour les tables mémoire optimisées (il est toujours de zéro), cette description se focalisera sur le nombre de lignes. L'estimation démarre avec les opérateurs de recherche d'index et d'analyse dans le plan, et est ensuite étendue pour inclure les autres opérateurs, comme l'opérateur de jointure. Le nombre estimé de lignes à traiter par un opérateur de jointure dépend de l'estimation des opérateurs d'index, de recherche et d'analyse sous-jacents. Pour l'accès [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées, vous pouvez observer le plan d'exécution réel pour voir la différence entre le nombre de lignes estimé et le nombre de lignes réel pour les opérateurs du plan.  
   
- Exemple de la figure 1 :  
+Exemple de la figure 1 :  
   
--   L'analyse d'index cluster sur la table Customer a estimé 91 lignes, pour 91 réelles.  
+- L'analyse d'index cluster sur la table Customer a estimé 91 lignes, pour 91 réelles.  
+- L'analyse d'index non cluster sur la table CustomerID a estimé 830 lignes, pour 830 réelles.  
+- L'opérateur Merge Join a estimé 815 lignes, pour 830 réelles.  
   
--   L'analyse d'index non cluster sur la table CustomerID a estimé 830 lignes, pour 830 réelles.  
+Les estimations des analyses d'index sont exactes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve le nombre de lignes pour les tables sur disque. Les estimations des analyses complètes de la table et de l'index sont toujours exactes. L'estimation de la jointure est aussi relativement exacte.  
   
--   L'opérateur Merge Join a estimé 815 lignes, pour 830 réelles.  
+Si ces estimations changent, le coût des différents choix de plan change aussi. Par exemple, si un des côtés de la jointure a un nombre estimé de lignes de 1, ou seulement quelques lignes, l'utilisation de jointures de boucles imbriquées est moins coûteuse. Considérez la requête suivante :  
   
- Les estimations des analyses d'index sont exactes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve le nombre de lignes pour les tables sur disque. Les estimations des analyses complètes de la table et de l'index sont toujours exactes. L'estimation de la jointure est aussi relativement exacte.  
-  
- Si ces estimations changent, le coût des différents choix de plan change aussi. Par exemple, si un des côtés de la jointure a un nombre estimé de lignes de 1, ou seulement quelques lignes, l'utilisation de jointures de boucles imbriquées est moins coûteuse.  
-  
- Voici le plan de la requête :  
-  
-```  
+```sql
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
- Après la suppression de toutes les lignes, à part une dans la table Customer :  
+Après avoir supprimé toutes les lignes, sauf une dans la table `Customer`, le plan de requête suivant est généré :  
   
- ![Statistiques et jointures de colonne.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Statistiques et jointures de colonne.")  
+![Statistiques et jointures de colonne.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Statistiques et jointures de colonne.")  
   
- À propos de ce plan de requête :  
+À propos de ce plan de requête :  
   
--   L'opérateur Hash Match a été remplacé par un opérateur de jointure physique Nested Loops.  
-  
--   L'analyse complète d'un index sur IX_CustomerID a été remplacée par une recherche d'index. Cela a abouti à l'analyse de 5 lignes, au lieu des 830 lignes requises pour l'analyse complète de l'index.  
+- L'opérateur Hash Match a été remplacé par un opérateur de jointure physique Nested Loops.  
+- L'analyse complète d'un index sur IX_CustomerID a été remplacée par une recherche d'index. Cela a abouti à l'analyse de 5 lignes, au lieu des 830 lignes requises pour l'analyse complète de l'index.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables à mémoire optimisée](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  

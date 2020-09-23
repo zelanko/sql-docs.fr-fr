@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: 6aff6f8a35a28b76ad3bbfb92079bbaa9659cd7b
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1d917c3f205f6b4b8d5872cf0b853316ed6e913d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569949"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990129"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur SUSE Linux Enterprise Server
 
@@ -145,6 +145,12 @@ Pour configurer SQL Server sur SLES, exécutez les commandes suivantes dans un t
 
    ```bash
    sudo zypper --gpg-auto-import-keys refresh 
+   ```
+   
+   Pour vous assurer que la clé de signature du package Microsoft est installée sur votre système, utilisez la commande suivante pour importer la clé : 
+   
+   ```bash
+   sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
    ```
    
 3. Exécutez les commandes suivantes pour installer SQL Server :

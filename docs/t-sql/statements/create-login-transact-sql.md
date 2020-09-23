@@ -28,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75866a02dee75aaaccb77e2f870b38222471d8c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b21487a6cfbe896dd81194710784a6cc148d389
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88444809"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024261"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -316,7 +316,7 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Arguments
 
-*login_name* Spécifie le nom de la connexion créée. Les bases de données uniques et mises en pool dans Azure SQL Database et les bases de données dans Azure Synapse Analytics (anciennement Azure SQL Data Warehouse) prennent uniquement en charge les connexions SQL. Pour créer des comptes pour les utilisateurs Azure Active Directory ou pour créer des comptes d’utilisateur non associés à une connexion, utilisez l’instruction [CREATE USER](create-user-transact-sql.md). Pour plus d’informations, consultez [Gérer des connexions dans Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+*login_name* Spécifie le nom de la connexion créée. Les bases de données uniques et mises en pool dans Azure SQL Database et les bases de données dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] prennent uniquement en charge les connexions SQL. Pour créer des comptes pour les utilisateurs Azure Active Directory ou pour créer des comptes d’utilisateur non associés à une connexion, utilisez l’instruction [CREATE USER](create-user-transact-sql.md). Pour plus d’informations, consultez [Gérer des connexions dans Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
 PASSWORD **='** password* *'* Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
 

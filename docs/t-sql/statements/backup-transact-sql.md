@@ -47,12 +47,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b2c1984b18596a8c1c527113232c7637d309359
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: afcf2e560b5fd4300c02ddf6bcc548ef68fdc05b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480855"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024568"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -309,7 +309,7 @@ ENCRYPTION Utilisé pour spécifier le chiffrement d’une sauvegarde. Vous pouv
 - `TRIPLE_DES_3KEY`
 - `NO_ENCRYPTION`
 
-Si vous choisissez de chiffrer, vous devez également spécifier le chiffreur à l'aide des options de chiffreur :
+Si vous choisissez de chiffrer, vous devez également spécifier le chiffreur à l'aide des options de chiffreur :
 
 - `SERVER CERTIFICATE` = Encryptor_Name
 - `SERVER ASYMMETRIC KEY` = Encryptor_Name
@@ -1209,7 +1209,7 @@ Par exemple :
 
 Nécessite l’autorisation **BACKUP DATABASE** ou l’appartenance au rôle de base de données fixe **db_backupoperator**. La base de données MASTER peut uniquement être sauvegardée par un utilisateur standard ayant reçu le rôle de base de données fixe **db_backupoperator**. La base de données MASTER peut uniquement être sauvegardée par un **administrateur système**, un administrateur d’infrastructure ou un membre du rôle serveur fixe **sysadmin**.
 
-Nécessite un compte Windows doté d’un droit d’accès, de création et d’écriture sur le répertoire de sauvegarde. Vous devez aussi stocker le nom de compte et le mot de passe Windows dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Pour ajouter ces informations d’identification réseau à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez la procédure stockée [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
+Nécessite un compte Windows doté d’un droit d’accès, de création et d’écriture sur le répertoire de sauvegarde. Vous devez aussi stocker le nom de compte et le mot de passe Windows dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Pour ajouter ces informations d’identification réseau à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez la procédure stockée [sp_pdw_add_network_credentials [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).
 
 Pour plus d’informations sur la gestion des informations d’identification dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], consultez la section [Sécurité](#Security).
 
@@ -1222,14 +1222,14 @@ Des erreurs BACKUP DATABASE se produisent dans les conditions suivantes :
 - La base de données n’existe pas.
 - Le répertoire cible existe déjà sur le partage réseau.
 - Le partage réseau cible n’est pas disponible.
-- Le partage réseau cible n’a pas suffisamment d’espace pour la sauvegarde. La commande BACKUP DATABASE ne vérifie pas la présence d’un espace disque suffisant avant de lancer la sauvegarde, ce qui peut entraîner une erreur d’espace disque insuffisant lors de l’exécution de BACKUP DATABASE. Quand l’espace disque est insuffisant, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] annule la commande BACKUP DATABASE. Pour réduire la taille de votre base de données, exécutez [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md).
+- Le partage réseau cible n’a pas suffisamment d’espace pour la sauvegarde. La commande BACKUP DATABASE ne vérifie pas la présence d’un espace disque suffisant avant de lancer la sauvegarde, ce qui peut entraîner une erreur d’espace disque insuffisant lors de l’exécution de BACKUP DATABASE. Quand l’espace disque est insuffisant, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] annule la commande BACKUP DATABASE. Pour réduire la taille de votre base de données, exécutez [DBCC SHRINKLOG ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - Un lancement de sauvegarde a été tenté dans une transaction.
 
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 ## <a name="general-remarks"></a>Remarques d'ordre général
 
-Avant d’effectuer une sauvegarde de base de données, utilisez [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) pour réduire la taille de votre base de données.
+Avant d’effectuer une sauvegarde de base de données, utilisez [DBCC SHRINKLOG ([!INCLUDE[ssPDW](../../includes/sspdw-md.md)])](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) pour réduire la taille de votre base de données. 
 
 Une sauvegarde [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] est stockée sous la forme d’un ensemble de fichiers regroupés dans un même répertoire.
 
@@ -1288,9 +1288,9 @@ L’accès réseau au répertoire de sauvegarde est basé sur la sécurité stan
 > [!IMPORTANT]
 > Pour réduire les risques de sécurité liés à vos données, il vous est conseillé de désigner un compte Windows qui servira uniquement aux opérations de sauvegarde et de restauration. Autorisez ce compte à accéder à l’emplacement de sauvegarde et à aucun autre emplacement.
 
-Vous devez stocker le nom d’utilisateur et le mot de passe dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] en exécutant la procédure stockée [sp_pdw_add_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md). [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] utilise le Gestionnaire d’informations d’identification Windows pour stocker et chiffrer les noms d’utilisateur et les mots de passe sur le nœud de contrôle et les nœuds de calcul. Les informations d’identification ne sont pas sauvegardées avec la commande BACKUP DATABASE.
+Vous devez stocker le nom d’utilisateur et le mot de passe dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] en exécutant la procédure stockée [ sp_pdw_add_network_credentials[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md). [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] utilise le Gestionnaire d’informations d’identification Windows pour stocker et chiffrer les noms d’utilisateur et les mots de passe sur le nœud de contrôle et les nœuds de calcul. Les informations d’identification ne sont pas sauvegardées avec la commande BACKUP DATABASE.
 
-Pour supprimer les informations d’identification réseau de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], consultez [sp_pdw_remove_network_credentials - SQL Data Warehouse](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
+Pour supprimer les informations d’identification réseau de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], consultez [sp_pdw_remove_network_credentials[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).
 
 Pour répertorier toutes les informations d’identification réseau stockées dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez la vue de gestion dynamique [sys.dm_pdw_network_credentials](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).
 

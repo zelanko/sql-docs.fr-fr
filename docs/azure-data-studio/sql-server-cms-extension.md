@@ -1,22 +1,22 @@
 ---
 title: Extension de serveurs SQL Server Central Management
-description: Découvrez comment installer et utiliser l’extension Serveurs de gestion centralisée SQL Server (préversion), qui permet de regrouper des serveurs et d’appliquer des actions au groupe.
-ms.reviewer: alayu, maghan, sstein
+description: Découvrez comment installer et utiliser l’extension SQL Server des serveurs de gestion centralisée. Extension pour le regroupement de serveurs et l’application d’actions au groupe.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
+ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 3024a9c61fb51063b50f8fde769e7bdbb5608fbf
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: a465785caecf5deda919e7f89565294e7be4c9b6
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766048"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914993"
 ---
-# <a name="sql-server-central-management-servers-extension-preview"></a>Extension de serveurs SQL Server Central Management (préversion)
+# <a name="sql-server-central-management-servers-extension-preview"></a>Extension de serveurs de gestion centralisée SQL Server (préversion)
 
 L’extension de serveurs de gestion centralisée permet aux utilisateurs de stocker une liste d'instances de SQL Server. Cette liste est organisée en un ou plusieurs groupes. Les actions prises en utilisant un groupe de serveurs de gestion centralisée s'appliquent à tous les serveurs du groupe.
 

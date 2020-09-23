@@ -37,7 +37,7 @@
       href: ../machine-learning/install/sql-pretrained-models-install.md
     - name: Modifier le runtime R et Python par défaut
       href: ../machine-learning/install/change-default-language-runtime-version.md
-    - name: Mettre à niveau Python et R
+    - name: Mise à niveau de Python et du runtime R avec liaison
       href: ../machine-learning/install/upgrade-r-and-python.md
     - name: Notebooks Azure Data Studio
       href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md

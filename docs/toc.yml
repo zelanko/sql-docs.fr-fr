@@ -10124,6 +10124,18 @@
       href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
     - name: SQL Server sur une machine virtuelle Azure >
       href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+- name: SQL Server avec Azure Arc (préversion)
+  items:
+    - name: Vue d’ensemble
+      href: sql-server/azure-arc/overview.md
+    - name: Se connecter
+      href: sql-server/azure-arc/connect.md
+    - name: Connecter à grande échelle
+      href: sql-server/azure-arc/connect-at-scale.md
+    - name: Évaluer
+      href: sql-server/azure-arc/assess.md
+    - name: Configurer Advanced Data Security
+      href: sql-server/azure-arc/configure-advanced-data-security.md
 - name: Ressources
   items:
     - name: Documentation SQL Server hors connexion

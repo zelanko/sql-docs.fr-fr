@@ -4,16 +4,16 @@ description: Cet article fournit les meilleures pratiques en matière de perform
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/14/2017
+ms.date: 09/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1b2a4f55908f249d9f574d392dea26932648e58d
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85887837"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989912"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Meilleures pratiques en matière de performances et lignes directrices de configuration pour SQL Server sur Linux
 
@@ -85,7 +85,7 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>Paramètres de noyau pour l’espace d’adressage virtuel
 
-La valeur par défaut de **vm. max _map_count** (65536) peut ne pas être suffisamment élevée pour une installation SQL Server. Modifiez cette valeur (qui est une limite supérieure) à 256 Ko.
+La valeur par défaut de **vm. max _map_count** (65536) peut ne pas être suffisamment élevée pour une installation SQL Server. Pour cette raison, remplacez la valeur de **vm.max_map_count** par 262144 pour un déploiement SQL Server, et reportez-vous à la section [Paramètres Linux proposés à l’aide d’un profil MSSQL optimisé](#proposed-linux-settings-using-a-tuned-mssql-profile) pour affiner les paramètres de ce noyau. La valeur maximale pour vm.max_map_count est 2147483647.
 
 ```bash
 sysctl -w vm.max_map_count=262144
@@ -112,7 +112,7 @@ vm.dirty_ratio = 80
 vm.dirty_expire_centisecs = 500
 vm.dirty_writeback_centisecs = 100
 vm.transparent_hugepages=always
-# For , use
+# For multi-instance SQL deployments, use
 # vm.transparent_hugepages=madvice
 vm.max_map_count=1600000
 net.core.rmem_default = 262144
@@ -152,12 +152,12 @@ Utilisez l'attribut **noatime** avec tout système de fichiers utilisé pour sto
 Cette option doit être activée par défaut pour la plupart des installations Linux. Nous vous recommandons d’utiliser les performances les plus cohérentes pour garder cette option de configuration activée. Toutefois, en cas d’activité de pagination sollicitant une grande quantité de mémoire (par exemple, dans le cadre de déploiements SQL Server avec plusieurs instances ou d’une exécution de SQL Server avec d’autres applications nécessitant une grande quantité de mémoire sur le serveur), nous vous suggérons de tester les performances de vos applications après l’exécution de la commande 
 
 ```bash
-echo madvice > /sys/kernel/mm/transparent_hugepage/enabled
+echo madvise > /sys/kernel/mm/transparent_hugepage/enabled
 ```
 ou en modifiant le profil MSSQL Tuned avec la ligne
 
 ```bash
-vm.transparent_hugepages=madvice
+vm.transparent_hugepages=madvise
 ```
 et en activant le profil MSSQL après la modification
 ```bash

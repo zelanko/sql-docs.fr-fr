@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a73fde3a0d1c254709d63a85f7a7028c8da30891
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728487"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989821"
 ---
 # <a name="backup-encryption"></a>Chiffrement de sauvegarde
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,8 +35,14 @@ ms.locfileid: "85728487"
 > Il est très important de sauvegarder le certificat ou la clé asymétrique, et de préférence dans un emplacement autre que le fichier de sauvegarde pour lequel il a été utilisé pour le chiffrement. Sans certificat ou clé asymétrique, vous ne pouvez pas restaurer la sauvegarde, ce qui rend le fichier de sauvegarde inutilisable.  
   
  **Restauration de la sauvegarde chiffrée :** Une restauration SQL Server ne nécessite pas de spécifier des paramètres de chiffrement pendant les restaurations. Elle nécessite que le certificat ou la clé asymétrique qui a servi à chiffrer le fichier de sauvegarde soit disponible sur l'instance sur laquelle vous effectuez la restauration. Le compte d'utilisateur qui effectue la restauration doit avoir l'autorisation **VIEW DEFINITION** sur le certificat ou la clé. Si vous restaurez la sauvegarde chiffrée dans une autre instance, vous devez vous assurer que le certificat est disponible sur cette instance.  
-  
- Si vous restaurez une sauvegarde d'une base de données chiffrée par chiffrement transparent des données (TDE), le certificat de chiffrement transparent des données doit être disponible sur l'instance sur laquelle vous effectuez la restauration.  
+La séquence de restauration d’une base de données chiffrée vers un nouvel emplacement est la suivante :
+
+1. [BACKUP CERTIFICATE (Transact-SQL)](../../t-sql/statements/backup-certificate-transact-sql.md) dans l’ancienne base de données
+1. [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) dans le nouvel emplacement de la base de données MASTER
+1. [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md) à partir du certificat de sauvegarde de l’ancienne base de données importée vers un emplacement sur le nouveau serveur
+1. [Restaurer une base de données à un nouvel emplacement (SQL Server)](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
+
+ Si vous restaurez une sauvegarde d'une base de données chiffrée par chiffrement transparent des données (TDE), le certificat de chiffrement transparent des données doit être disponible sur l'instance sur laquelle vous effectuez la restauration. Pour plus d’informations, consultez [Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server](../../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md).
   
 ##  <a name="benefits"></a><a name="Benefits"></a> Avantages  
   

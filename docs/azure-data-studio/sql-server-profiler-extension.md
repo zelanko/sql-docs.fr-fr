@@ -1,20 +1,20 @@
 ---
 title: Extension SQL Server Profiler
-description: Découvrez comment installer et utiliser l’extension SQL Server Profiler (préversion), une solution de suivi SQL Server facile à utiliser et similaire à SSMS Profiler.
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu, maghan, sstein
+description: Découvrez comment installer et utiliser l’extension de SQL Server Profiler. Solution de suivi de SQL Server facile à utiliser, similaire au Profiler SSMS.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: e3ab5a83f8ea4a8715101debdbdf5d292761d7b6
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 95402bc323de9e190135a20a323cb009f8eaa042
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765778"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914985"
 ---
 # <a name="sql-server-profiler-extension-preview"></a>Extension SQL Server Profiler (préversion)
 
@@ -28,24 +28,25 @@ L’extension SQL Server Profiler (préversion) fournit une solution de suivi de
 - Surveiller les performances de SQL Server en vue de paramétrer les charges de travail.
 - Mise en corrélation des compteurs de performances pour diagnostiquer des problèmes.
 
-
 ## <a name="install-the-sql-server-profiler-extension"></a>Installer l’extension SQL Server Profiler
 
 1. Pour ouvrir le gestionnaire d’extensions et accéder aux extensions disponibles, sélectionnez l’icône d’extensions ou sélectionnez **Extensions** dans le menu **Affichage**.
 2. Sélectionnez une extension disponible pour afficher ses détails.
 
-   ![Gestionnaire d’extensions du profileur](media/extensions/sql-server-profiler-extension/profiler-extension.png)
+    ![Gestionnaire d’extension du Profiler](media/extensions/sql-server-profiler-extension/profiler-extension.png)
 
-1. Sélectionnez l’extension de votre choix et **installez-la**.
-2. Sélectionnez **Recharger** pour activer l’extension (nécessaire uniquement la première fois que vous installez une extension).
+3. Sélectionnez l’extension de votre choix et **installez-la**.
+4. Sélectionnez **Recharger** pour activer l’extension (nécessaire uniquement la première fois que vous installez une extension).
 
 ## <a name="start-profiler"></a>Démarrer le profileur
 
 1. Pour démarrer le profileur, commencez par établir une connexion à un serveur sous l’onglet Serveurs.
 2. Une fois que vous avez créé une connexion, appuyez sur **Alt + P** pour lancer le profileur.
 3. Pour démarrer le profileur, appuyez sur **Alt + S**. Vous pouvez maintenant commencer à voir les événements étendus.
-    ![Gestionnaire d’extensions du profileur](media/extensions/sql-server-profiler-extension/view-profiler.png)    
-1. Pour arrêter le profileur, appuyez sur **Alt + S**. Cette touche de raccourci est un bouton bascule.
+
+    ![Afficher le profileur](media/extensions/sql-server-profiler-extension/view-profiler.png)
+
+4. Pour arrêter le profileur, appuyez sur **Alt + S**. Cette touche de raccourci est un bouton bascule.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e3c5df24d4d4e5897ad8f48384ac1bc5d49f9e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688279"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024391"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -81,7 +81,7 @@ ALTER AUTHORIZATION
 
     
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse  
+-- Syntax for Azure Synapse Analytics  
   
 ALTER AUTHORIZATION ON    
     [ <class_type> :: ] <entity_name>     
@@ -129,7 +129,7 @@ ALTER AUTHORIZATION ON
     
 |Classe|Produit|    
 |-|-|    
-|OBJECT|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|OBJECT|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
 |ASSEMBLY|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |ASYMMETRIC KEY|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |AVAILABILITY GROUP |**S’APPLIQUE À** : SQL Server 2012 et versions ultérieures.|
@@ -143,7 +143,7 @@ ALTER AUTHORIZATION ON
 |REMOTE SERVICE BINDING|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
 |ROLE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |ROUTE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
-|SCHEMA|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
+|SCHEMA|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
 |SEARCH PROPERTY LIST|**S’APPLIQUE À** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    
 |SERVER ROLE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
 |SERVICE|**S’APPLIQUE À** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.|    
@@ -216,7 +216,7 @@ Le nouveau principal de propriétaire doit être l’un des éléments suivants�
 -   Un utilisateur géré (et pas un groupe) ou une application présents dans Azure AD.    
 
 > [!NOTE]  
-> Si le nouveau propriétaire est un utilisateur Azure Active Directory, il ne peut pas exister comme utilisateur dans la base de données dans laquelle le nouveau propriétaire sera le nouveau propriétaire de la base de données (DBO). Un tel utilisateur Azure AD doit tout d’abord être supprimé de la base de données avant d’exécuter l’instruction ALTER AUTHORIZATION qui affecte la propriété de la base de données au nouvel utilisateur. Pour plus d’informations sur la configuration d’un utilisateur Azure Active Directory avec SQL Database, consultez [Connexion à SQL Database ou à SQL Data Warehouse à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
+> Si le nouveau propriétaire est un utilisateur Azure Active Directory, il ne peut pas exister comme utilisateur dans la base de données dans laquelle le nouveau propriétaire sera le nouveau propriétaire de la base de données (DBO). Un tel utilisateur Azure AD doit tout d’abord être supprimé de la base de données avant d’exécuter l’instruction ALTER AUTHORIZATION qui affecte la propriété de la base de données au nouvel utilisateur. Pour plus d’informations sur la configuration d’utilisateur Azure AD avec SQL Database, consultez [Connexion à SQL Database ou [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] en utilisant l’authentification Azure AD](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
 **Configuration requise pour la personne qui exécute l’instruction ALTER AUTHORIZATION :**  
 Vous devez vous connecter à la base de données cible pour changer le propriétaire de cette base de données.  

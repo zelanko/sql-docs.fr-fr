@@ -2,7 +2,7 @@
 description: CREATE TABLE (Transact-SQL)
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ''
-ms.date: 09/04/2020
+ms.date: 09/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -48,12 +48,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 04b6198310edf171e6370fc9a3465ce068f5fa8c
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 1f7e6cc805953007bb83eb5a50db5a39aea9e37b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688825"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024578"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -62,7 +62,7 @@ ms.locfileid: "90688825"
 Crée une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 > [!NOTE]
-> Pour en savoir plus sur la syntaxe de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consultez [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
+> Pour la syntaxe [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consultez [CREATE TABLE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
 
 ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -239,12 +239,12 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
         | OFF ( MIGRATION_STATE = PAUSED )
       }
     ]   
-    [ DATA_DELETION =  {OFF | ON }  
-          [(    
-              [ FILTER_COLUMN = column_name ],   
-              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
-                      | MONTH | MONTHS | YEAR | YEARS }}]    
-          )]
+    [ DATA_DELETION = ON  
+          {( 
+             FILTER_COLUMN = column_name,   
+             RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                              | MONTH | MONTHS | YEAR | YEARS }
+        )}  
      ]
 }
   
@@ -803,13 +803,9 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED } **S’applique à**: [!INCLUDE
 
 - Spécifiez `PAUSED` pour interrompre ou reporter la migration des données. Pour plus d’informations, consultez [Suspension et reprise de la migration de données - Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-[ DATA_DELETION =  {OFF | ON }  
-          [(  
-              [ FILTER_COLUMN = column_name ],   
-              [ RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS }}]    
-          )]  
-     ]  
-**S’applique à :** Azure SQL Edge *uniquement*
+[DATA_DELETION = ON  
+    {( FILTER_COLUMN = column_name,   
+           RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS | MONTH | MONTHS | YEAR | YEARS } )}] **Applies to:** Azure SQL Edge *uniquement*
 
 Active le nettoyage basé sur la stratégie de rétention des données anciennes dans les tables d’une base de données. Pour plus d’informations, consultez [Activer et désactiver la rétention des données](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). Les paramètres suivants doivent être spécifiés pour que la rétention des données soit activée. 
 

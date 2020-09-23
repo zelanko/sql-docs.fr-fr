@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d8d3a22e-1ff8-48a4-891f-4c8619437e24
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5537f7629fce9ebe17b686b149839b7f317695fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ecaa9b760ccbfa0bf0538b4b069f45c166cd0111
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470885"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989962"
 ---
 # <a name="mssqlserver_605"></a>MSSQLSERVER_605
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ Un niveau de gravité de 12 indique une potentielle erreur temporaire, c'est-à-
   
 -   Le système d'exploitation informe prématurément [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu'une opération d'E/S vient de se terminer. Le message d'erreur est affiché même si aucune altération des données n'a lieu.  
   
-Une requête est exécutée avec l'indicateur d'optimiseur NOLOCK ou le niveau d'isolement des transactions est défini avec la valeur READ UNCOMMITTED. Lorsqu'une requête utilisant NOLOCK ou READ UNCOMMITTED tente de lire des données qui ont été déplacées ou modifiées par un autre utilisateur, une erreur 605 se produit. Pour vérifier qu'il s'agit bien d'une erreur 605 temporaire, réexécutez la requête ultérieurement. Pour plus d’informations, consultez l’article [235880](https://support.microsoft.com/kb/235880/en-us) de la Base de connaissances : « Vous recevez un message d’erreur « Erreur 605 » lorsque vous exécutez une requête avec l’indicateur d’optimiseur NOLOCK ou vous le niveau d’isolement de transaction définissez à READ UNCOMMITTED dans SQL Server ».  
+ - Une requête est exécutée avec l'indicateur d'optimiseur NOLOCK ou le niveau d'isolement des transactions est défini avec la valeur READ UNCOMMITTED. Lorsqu'une requête utilisant le niveau d’isolation de la transaction NOLOCK ou READ UNCOMMITTED tente de lire des données qui ont été déplacées ou modifiées par un autre utilisateur, une erreur 605 se produit. Pour vérifier qu'il s'agit bien d'une erreur 605 temporaire, réexécutez la requête ultérieurement. 
   
 Généralement, si l'erreur se produit lors de l'accès aux données, mais que les opérations DBCC CHECKDB qui suivent s'exécutent sans erreur, l'erreur 605 était probablement temporaire.  
   

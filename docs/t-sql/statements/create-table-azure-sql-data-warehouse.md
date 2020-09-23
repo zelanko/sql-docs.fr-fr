@@ -1,6 +1,6 @@
 ---
-description: CREATE TABLE (Azure SQL Data Warehouse)
-title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs
+description: CREATE TABLE (Azure Synapse Analytics)
+title: CREATE TABLE (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.service: sql-data-warehouse
@@ -12,23 +12,23 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: df8d395f6d799f817a02943e59f98a29ac79aa29
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 106be8b84605016e3fa0d9217d75355f7109221e
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467228"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989815"
 ---
-# <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
+# <a name="create-table-azure-synapse-analytics"></a>CREATE TABLE (Azure Synapse Analytics)
 
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Crée une table dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
-Pour comprendre les tables et savoir comment les utiliser, consultez [Les tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/).
+Pour comprendre les tables et savoir comment les utiliser, consultez [Tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-overview/).
 
 > [!NOTE]
->  Sauf indication contraire, les informations relatives à SQL Data Warehouse contenues dans cet article s’appliquent à SQL Data Warehouse et à Parallel Data Warehouse.
+>  Les discussions sur les [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] dans cet article s’appliquent à la fois à [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , sauf indication contraire.
 
  ![Icône Lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien d’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
@@ -59,14 +59,14 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 <table_option> ::=
     {
-       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+       CLUSTERED COLUMNSTORE INDEX --default for Azure Synapse Analytics 
       | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
     {
         DISTRIBUTION = HASH ( distribution_column_name )
-      | DISTRIBUTION = ROUND_ROBIN -- default for SQL Data Warehouse
+      | DISTRIBUTION = ROUND_ROBIN -- default for Azure Synapse Analytics
       | DISTRIBUTION = REPLICATE -- default for Parallel Data Warehouse
     }
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
@@ -90,11 +90,11 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | smallint  
     | tinyint  
     | bit  
-    | nvarchar [ ( n | max ) ]  -- max applies only to SQL Data Warehouse 
+    | nvarchar [ ( n | max ) ]  -- max applies only to Azure Synapse Analytics 
     | nchar [ ( n ) ]  
-    | varchar [ ( n | max )  ] -- max applies only to SQL Data Warehouse  
+    | varchar [ ( n | max )  ] -- max applies only to Azure Synapse Analytics  
     | char [ ( n ) ]  
-    | varbinary [ ( n | max ) ] -- max applies only to SQL Data Warehouse  
+    | varbinary [ ( n | max ) ] -- max applies only to Azure Synapse Analytics  
     | binary [ ( n ) ]  
     | uniqueidentifier  
 ```  
@@ -109,7 +109,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  Schéma de la table. La définition du *schéma* est facultative. Si cet argument est vide, le schéma par défaut est utilisé.  
   
  *table_name*  
- Nom de la nouvelle table. Pour créer une table temporaire locale, faites précéder le nom de la table de #.  Pour obtenir des explications et des conseils sur les tables temporaires, consultez [Tables temporaires dans Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/). 
+ Nom de la nouvelle table. Pour créer une table temporaire locale, faites précéder le nom de la table de #.  Pour obtenir des explications et des aides sur les tables temporaires, consultez [des tables temporaires dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-temporary/). 
 
  *column_name*  
  Nom d’une colonne de table.
@@ -132,7 +132,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 ### <a name="table-structure-options"></a><a name="TableOptions"></a> Options de structure de table
 
-Pour obtenir des conseils sur le choix du type de table, consultez [Indexation de tables dans Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
+Pour obtenir de l’aide sur le choix du type de table, consultez [Indexation de tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
  `CLUSTERED COLUMNSTORE INDEX` 
  
@@ -147,7 +147,7 @@ Stocke la table sous forme d’index cluster columnstore. L’index cluster colu
   
 ### <a name="table-distribution-options"></a><a name="TableDistributionOptions"></a> Options de distribution de table
 
-Pour savoir comment choisir la meilleure méthode de distribution et comment utiliser les tables distribuées, consultez [Distribution des tables dans Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
+Pour comprendre comment choisir la meilleure méthode de distribution et utiliser des tables distribuées, consultez [Distribution de tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-distribute/).
 
 `DISTRIBUTION = HASH` ( *distribution_column_name* ) Affecte chaque ligne à une distribution en hachant la valeur stockée dans *distribution_column_name*. L’algorithme est déterministe, ce qui signifie qu’il hache toujours la même valeur pour la même distribution.  La colonne de distribution doit être définie comme étant une valeur NOT NULL, car toutes les lignes de valeur NULL sont affectées à la même distribution.
 
@@ -156,7 +156,7 @@ Pour savoir comment choisir la meilleure méthode de distribution et comment uti
 `DISTRIBUTION = REPLICATE` Stocke une copie de la table sur chaque nœud de calcul. Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], la table est stockée dans une base de données de distribution sur chaque nœud de calcul. Pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], la table est stockée dans un groupe de fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui englobe le nœud de calcul. Il s'agit du comportement par défaut pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="table-partition-options"></a><a name="TablePartitionOptions"></a> Options de partitions de table
-Pour obtenir des conseils sur l’utilisation de partitions de table, consultez [Partitionnement des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
+Pour obtenir de l’aide sur les partitions de table, consultez [Partitionnement de tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
 Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de table horizontales qui vous permettent d’effectuer des opérations sur des sous-ensembles de lignes, que la table soit stockée sous forme de segment de mémoire, d’index cluster ou d’index cluster columnstore. Contrairement aux colonnes de distribution, les partitions de table ne déterminent dans quelle distribution chaque ligne est stockée. En revanche, elles déterminent la façon dont les lignes sont regroupées et stockées dans chaque distribution.  
@@ -172,9 +172,9 @@ Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de ta
 
 ### <a name="ordered-clustered-columnstore-index-option"></a>Option Index columnstore cluster ordonné 
 
-L’index columnstore cluster est l’index par défaut pour la création de tables dans Azure SQL Data Warehouse.  Les données d’un index columnstore cluster ne sont pas triées avant d’être compressées dans des segments columnstore.  Lors de la création d’un index columnstore cluster avec ORDER, les données sont triées avant d’être ajoutées aux segments d’index et les performances des requêtes peuvent être améliorées. Pour plus d’informations, consultez [Réglage des performances avec un index columstore cluster ordonné](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest).  
+Index columnstore en cluster (CCI) est la valeur par défaut pour la création de tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  Les données d’un index columnstore cluster ne sont pas triées avant d’être compressées dans des segments columnstore.  Lors de la création d’un index columnstore cluster avec ORDER, les données sont triées avant d’être ajoutées aux segments d’index et les performances des requêtes peuvent être améliorées. Pour plus d’informations, consultez [Réglage des performances avec un index columstore cluster ordonné](/azure/sql-data-warehouse/performance-tuning-ordered-cci?view=azure-sqldw-latest).  
 
-Un index columnstore cluster ordonné peut être créé sur les colonnes de tout type de données pris en charge dans Azure SQL Data Warehouse à l’exception des colonnes de type chaîne.  
+Une CCI ordonnée peut être créée sur les colonnes de tous les types de données pris en charge dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] à l’exception des colonnes de type chaîne.  
 
 Les utilisateurs peuvent interroger la colonne **column_store_order_ordinal** dans **sys.index_columns** pour obtenir la ou les colonnes sur lesquelles une table est ordonnée et la séquence dans le classement.  
 
@@ -182,7 +182,7 @@ Pour plus d’informations, consultez [Optimisation des performances avec un ind
 
 ### <a name="data-type"></a><a name="DataTypes"></a> Type de données
 
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] prend en charge les types de données les plus couramment utilisés. Vous trouverez ci-dessous la liste des types de données pris en charge, les détails les concernant, ainsi que leur taille de stockage (en octets). Pour mieux comprendre les types de données et comment les utiliser, consultez [Types de données pour les tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] prend en charge les types de données les plus couramment utilisés. Vous trouverez ci-dessous la liste des types de données pris en charge, les détails les concernant, ainsi que leur taille de stockage (en octets). Pour mieux comprendre les types de données et savoir comment les utiliser, consultez [Types de données pour les tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
 Pour obtenir un tableau des conversions des types de données, consultez la section Conversions implicites de la rubrique [CAST et CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 
@@ -306,14 +306,14 @@ La création d’une table partitionnée nécessite une autorisation dans le rô
 <a name="GeneralRemarks"></a>  
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  
-Les limites minimale et maximale sont indiquées dans la rubrique [Limites de la capacité de SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/). 
+Pour les limites minimales et maximales, consultez [[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] limites de capacité](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-service-capacity-limits/). 
  
 ### <a name="determining-the-number-of-table-partitions"></a>Détermination du nombre de partitions dans une table
 Chaque table définie par l’utilisateur est divisée en plusieurs tables de plus petite taille qui sont stockées dans des emplacements distincts appelés distributions. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] utilise 60 distributions. Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], le nombre de distributions varie en fonction du nombre de nœuds de calcul.
  
 Chaque distribution contient toutes les partitions de table. Par exemple, s’il existe 60 distributions et quatre partitions de table plus une partition vide, il y aura 300 partitions (5 x 60 = 300). Si la table est un index cluster columnstore, il n’y aura qu’un seul index columnstore par partition, ce qui signifie qu’il y aura 300 index columnstore.
 
-Nous vous recommandons d’utiliser moins de partitions de table de sorte que chaque index columnstore contienne suffisamment de lignes pour pouvoir profiter des avantages liés aux index columnstore. Pour plus d’informations, consultez [Partitionnement des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) et [Indexation des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
+Nous vous recommandons d’utiliser moins de partitions de table de sorte que chaque index columnstore contienne suffisamment de lignes pour pouvoir profiter des avantages liés aux index columnstore. Pour plus d’informations, consultez [Partitionnement des tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) et [Indexation des tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
 ### <a name="rowstore-table-heap-or-clustered-index"></a>Table rowstore (segment de mémoire ou index cluster)
 
@@ -327,7 +327,7 @@ Pour changer une table rowstore en table columnstore, supprimez tous les index e
 
 Pour plus d’informations, voir les articles suivants :
 - [Synthèse des fonctionnalités des index columnstore en fonction des versions](https://msdn.microsoft.com/library/dn934994/)
-- [Indexation des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
+- [Indexation des tables dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Description des index columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md) 
 
 <a name="LimitationsRestrictions"></a>  
@@ -593,7 +593,7 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>Voir aussi
  
-[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[CREATE TABLE AS SELECT &#40;Azure Synapse Analytics&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
 [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 

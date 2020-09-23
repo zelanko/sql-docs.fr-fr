@@ -47,12 +47,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ce5edfba05262da83060030aa00117a81e730e24
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d7d731d320c51b70bf73ea76361f9dba283ea38c
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544355"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024488"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 
@@ -149,7 +149,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 ```  
   
 ```syntaxsql
--- Syntax for SQL Data Warehouse and Parallel Data Warehouse 
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse 
   
 ALTER INDEX { index_name | ALL }  
     ON   [ schema_name. ] table_name  
@@ -663,7 +663,7 @@ Si `ALL` est spécifié, les index relationnels, aussi bien cluster que non clus
 Pour plus d’informations, consultez [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
 
 > [!IMPORTANT]
-> Pour une table Azure SQL Data Warehouse avec un index cluster columnstore en cluster ordonné, `ALTER INDEX REORGANIZE` trie à nouveau les données. Pour trier à nouveau l’utilisation de données `ALTER INDEX REBUILD`.
+> Pour une table [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] avec un index Columnstore ordonné en cluster, `ALTER INDEX REORGANIZE` ne trie pas les données à nouveau. Pour trier à nouveau l’utilisation de données `ALTER INDEX REBUILD`.
   
 ## <a name="disabling-indexes"></a><a name="disabling-indexes"></a> Désactivation des index  
 Désactiver un index permet d'éviter l'accès à l'index, et dans le cas d'index cluster, aux données de la table sous-jacente par les utilisateurs. La définition de l'index est conservée dans le catalogue système. Désactiver un index, qu'il soit non cluster ou cluster, sur une vue supprime physiquement les données de l'index. Désactiver un index cluster permet d'éviter l'accès aux données mais celles-ci ne sont plus mises à jour dans l'arborescence binaire (appelé également arbre B) jusqu'à ce que l'index soit supprimé ou reconstruit. Pour afficher l’état d’un index, qu’il soit activé ou désactivé, lancez une requête sur la colonne **is_disabled** dans la vue de catalogue **sys.indexes**.  

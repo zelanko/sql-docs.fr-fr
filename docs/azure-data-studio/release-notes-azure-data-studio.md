@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 08/12/2020
-ms.openlocfilehash: 39deeb94ffa5fb3292f3402c836ec55eb826ebd3
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.date: 09/22/2020
+ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766188"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90989982"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
-**[Téléchargez et installez la dernière version !](./download-azure-data-studio.md?view=sql-server-ver15)**
+**[Téléchargez et installez la dernière version !](./download-azure-data-studio.md)**
+
+## <a name="september-2020"></a>Septembre 2020
+
+22 septembre 2020, version &nbsp; / &nbsp; : 1.22.0
+
+&nbsp;
+
+| Modifier | Détails |
+| ------ | ------- |
+| Nouvelles fonctionnalités des notebooks | <br/> &bull; &nbsp; Prend en charge la nouvelle modification des cellules de texte en fonction de la mise en forme du texte enrichi et de la conversion transparente en la démarque, également appelée barre d’outils WYSIWYG (tel écrit, tel écran) <br/> &bull; &nbsp; Prend en charge le noyau Kusto <br/> &bull; &nbsp; Prend en charge l’épinglage des notebooks <br/> &bull; &nbsp; Ajout de la prise en charge de la nouvelle version des books Jupyter <br/> &bull; &nbsp; Raccourcis Jupyter améliorés <br/> &bull; &nbsp; Améliorations du chargement des performances |
+| Extension des projets SQL Database | L’extension de projets de SQL Database apporte un développement de base de données basé sur le projet à Azure Data Studio. Dans cette version préliminaire, vous pouvez créer et publier des projets SQL à partir de Azure Data Studio. |
+| Extension Kusto (KQL) | Offre des expériences Kusto natives dans Azure Data Studio pour l’exploration de données et l’analytique des données par rapport à une grande quantité de données de streaming en temps réel stockées dans Azure Data Explorer. Cette version préliminaire prend en charge la connexion et la navigation dans les clusters Azure Data Explorer, l’écriture de requêtes KQL et la création de notebooks avec le noyau Kusto. |
+| Extension Azure Arc | Les utilisateurs peuvent essayer la version préliminaire publique d’Azure Arc via Azure Data Studio. notamment : <br/> &bull; &nbsp; Déployer un contrôleur de données <br/> &bull; &nbsp; Déployer Postgres <br/> &bull; &nbsp; Déployer Managed Instance pour Azure Arc <br/> &bull; &nbsp; Se connecter au contrôleur de données <br/> &bull; &nbsp; Accéder aux tableaux de bord de service de données <br/> &bull; &nbsp; Book Azure Arc Jupyter |
+| Options de déploiement | <br/> &bull; &nbsp; Azure SQL Database Edge <br/> (Edge nécessite l’extension de déploiement Azure SQL Edge) |
+| GA extension d’importation SQL Server | Annonce de GA de l’extension d’importation SQL Server, les fonctionnalités ne sont plus disponibles en version préliminaire. Cette extension facilite l’importation des fichiers csv/txt. En savoir plus sur l’extension dans [cet article](sql-server-import-extension.md). |
+| Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed) |
 
 ## <a name="august-2020"></a>Août 2020
 
@@ -76,7 +92,7 @@ ms.locfileid: "88766188"
 | :----- | :------ |
 | Ajout d’Azure Data Studio à l’intégration du portail Azure | Les utilisateurs peuvent désormais démarrer directement dans le portail Azure à partir d’une connexion Azure SQL Database, d’Azure Postgres et bien plus encore. |
 | Nouvelles fonctionnalités des notebooks | &bull;&nbsp; Nouvelle barre d’outils du notebook <br/> &bull; &nbsp; Nouvelle barre d’outils de modification de cellule <br/> &bull; &nbsp; Mises à jour de l’expérience utilisateur de l’Assistant des dépendances Python <br/> &bull; &nbsp; Meilleur espacement pour les notebooks |
-| Annonce de l’extension de l’API SQL Assessment | Cette extension ajoute l’évaluation de bonnes pratiques SQL Server à ADS. Elle expose l’API SQL Assessment, auparavant uniquement disponible dans le module PowerShell SqlServer et SMO, pour vous permettre d’évaluer vos instances SQL Server et de recevoir des suggestions à leur sujet de la part de l’équipe SQL Server. Découvrez en plus sur l’API SQL Assessment et ce qu’elle peut faire [dans cet article.](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15) |
+| Annonce de l’extension de l’API SQL Assessment | Cette extension ajoute l’évaluation de bonnes pratiques SQL Server à ADS. Elle expose l’API SQL Assessment, auparavant uniquement disponible dans le module PowerShell SqlServer et SMO, pour vous permettre d’évaluer vos instances SQL Server et de recevoir des suggestions à leur sujet de la part de l’équipe SQL Server. Découvrez en plus sur l’API SQL Assessment et ce qu’elle peut faire [dans cet article.](../tools/sql-assessment-api/sql-assessment-api-overview.md) |
 | [Améliorations de l’extension Machine Learning](https://go.microsoft.com/fwlink/?linkid=2129918) | Prend désormais en charge Azure SQL Managed Instance. |
 | Améliorations de l’extension de virtualisation de données | Prend désormais en charge MongoDB et Teradata |
 | Correctifs de bogues d’extension Postgres | Azure MFA corrigée |
@@ -417,10 +433,10 @@ ms.locfileid: "88766188"
 | :----- | :------ |
 | Ajout de [l’extension PostgreSQL pour Azure Data Studio](postgres-extension.md) | Fonctionnalités prises en charge : <br/>&bull; &nbsp; Boîte de dialogue Connexion <br/>&bull; &nbsp; Explorateur d’objets <br/>&bull; &nbsp; Éditeur de requête <br/>&bull; &nbsp; Graphiques <br/>&bull; &nbsp; Tableaux de bord <br/>&bull; &nbsp; Extraits de code <br/>&bull; &nbsp; Modification des données <br/>&bull; &nbsp; Notebooks |
 | Ajout de notebooks SQL | Ajout de la prise en charge du noyau SQL à la visionneuse de notebook intégrée : <br/>&bull; &nbsp; Prise en charge de T-SQL <br/>&bull; &nbsp; Prise en charge de PGSQL |
-| Ajout de l’extension PowerShell  | Apporte l’expérience de [l'extension PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) de VS Code.  |
+| Ajout de l’extension PowerShell | Apporte l’expérience de [l'extension PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) de VS Code.  |
 | Ajout de l’extension dacpac SQL Server  | Place l’assistant application de la couche Données de l’extension d’importation SQL Server dans une nouvelle extension.  |
 | Ajout de l’extension de la communauté QueryPlan.show | Ajoute la prise en charge de l’intégration pour visualiser les plans de requête  |
-| Extension SQL Server 2019 en préversion mise à jour | &bull; &nbsp; La prise en charge de Jupyter Notebook, en particulier les noyaux Python3 et Spark, a été déplacée dans l’outil Azure Data Studio principal. <br/>&bull; &nbsp; Résolution des bogues dans l’assistant de données externes  |
+| Extension SQL Server 2019 en préversion mise à jour | &bull; &nbsp; La prise en charge de Jupyter Notebook, en particulier les noyaux Python3 et Spark, a été déplacée dans l’outil Azure Data Studio principal. <br/>&bull; &nbsp; Résolution des bogues dans l’assistant de données externes |
 | Bogues et problèmes résolus. | Consultez [Bogues et problèmes, sur GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -446,11 +462,11 @@ ms.locfileid: "88766188"
 
 | Modifier | Détails |
 | :----- | :------ |
-| Ajout du pack d’extension **Pack d’administration pour SQL Server**. | Il est ainsi plus facile d’installer les extensions SQL Server liées à l’administration. notamment :<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Ajout du pack d’extension **Pack d’administration pour SQL Server**. | Il est ainsi plus facile d’installer les extensions SQL Server liées à l’administration. notamment :<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md) |
 | Ajout de la prise en charge du filtrage des événements étendus dans l’extension Profiler. | &nbsp; |
 | Ajout de la fonctionnalité Enregistrer au format XML qui permet d’enregistrer les résultats T-SQL au format XML. | &nbsp; |
 | Ajout des améliorations apportées à l’assistant d’application de la couche Données. | &bull; &nbsp; Ajout du bouton Générer le script<br/>&bull; &nbsp; Ajout d’une vue pour signaler les pertes de données potentielles lors du déploiement. |
-| Met à jour vers l’extension SQL Server 2019 (préversion). | Consultez [Extension de virtualisation de données](data-virtualization-extension.md?view=sql-server-ver15). |
+| Met à jour vers l’extension SQL Server 2019 (préversion). | Consultez [Extension de virtualisation de données](data-virtualization-extension.md). |
 | Diffusion en continu des résultats activée par défaut pour les requêtes de longue durée. | &nbsp; |
 | Bogues et problèmes résolus. | Consultez [Bogues et problèmes, sur GitHub](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1). |
 | &nbsp; | &nbsp; |
@@ -478,7 +494,7 @@ ms.locfileid: "88766188"
 | Ajout de la prise en charge de l’authentification Azure Active Directory. | &nbsp; |
 | Annonce d’Idera SQL DM Performance Insights (préversion). | &nbsp; |
 | Prise en charge de l’assistant d’application de la couche Données dans l’extension SQL Server Import. | &nbsp; |
-| Faites une mise à jour vers l’extension SQL Server 2019 (préversion). | Consultez [Extension de virtualisation de données](data-virtualization-extension.md?view=sql-server-ver15). |
+| Faites une mise à jour vers l’extension SQL Server 2019 (préversion). | Consultez [Extension de virtualisation de données](data-virtualization-extension.md). |
 | Améliorations apportées à SQL Server Profiler. | &nbsp; |
 | Les résultats sont diffusés en continu pour les requêtes volumineuses (préversion). | &nbsp; |
 | Extensions de la communauté : sp_executesql sur sql et nouvelle base de données. | &nbsp; |
@@ -493,7 +509,7 @@ ms.locfileid: "88766188"
 
 | Modifier | Détails |
 | :----- | :------ |
-| Faites une mise à jour vers l’extension SQL Server 2019 (préversion). | Consultez [Extension de virtualisation de données](data-virtualization-extension.md?view=sql-server-ver15). |
+| Faites une mise à jour vers l’extension SQL Server 2019 (préversion). | Consultez [Extension de virtualisation de données](data-virtualization-extension.md). |
 | Présentation de l’extension Coller le plan. | &nbsp; |
 | Présentation de l’extension de requêtes à couleurs, notamment le thème de l’éditeur SSMS. | &nbsp; |
 | Correctifs dans les extensions SQL Server Agent, Profiler et Import. | &nbsp; |
@@ -523,7 +539,7 @@ ms.locfileid: "88766188"
 | Présentation d’Azure Resource Explorer pour parcourir Azure SQL Database. | &nbsp; |
 | Améliorez la robustesse de la connectivité de l’Explorateur d’objets et de l’éditeur de requête. | &nbsp; |
 | Améliorations des extensions de l’agent SQL. | &nbsp; |
-| Faites une mise à jour vers l’extension SQL Server 2019 (préversion). | Consultez [Extension de virtualisation de données](data-virtualization-extension.md?view=sql-server-ver15). |
+| Faites une mise à jour vers l’extension SQL Server 2019 (préversion). | Consultez [Extension de virtualisation de données](data-virtualization-extension.md). |
 | &nbsp; | &nbsp; |
 
 ### <a name="bug-fixes-october-2018"></a>Résolution de bogues, octobre 2018

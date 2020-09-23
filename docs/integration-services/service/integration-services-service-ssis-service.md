@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 08fd5b99d4ffe74bb409db65093a3148dc5f786b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 465aef4e631602a645bbeff5b437cb2f09994d3c
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487702"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990398"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
 
@@ -368,16 +368,14 @@ Lorsque vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.
   
 6.  Redémarrez le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-### <a name="connecting-by-using-a-local-account"></a>Connexion à l'aide d'un compte local  
- Si vous travaillez sous un compte Windows local sur un ordinateur client, vous pouvez vous connecter au service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un ordinateur distant uniquement si un compte local porte le même nom et mot de passe et si les droits appropriés existent sur l'ordinateur distant.  
+### <a name="connecting-by-using-a-local-account"></a>Connexion à l'aide d'un compte local
+
+Si vous travaillez sous un compte Windows local sur un ordinateur client, vous pouvez vous connecter au service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un ordinateur distant uniquement si un compte local porte le même nom et mot de passe et si les droits appropriés existent sur l'ordinateur distant.  
   
-### <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Par défaut, le service SSIS ne prend pas en charge la délégation  
-Par défaut, le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne prend pas en charge la délégation des informations d’identification (fonctionnalité parfois appelée « double saut »). Dans ce scénario, vous opérez sur un ordinateur client, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s’exécute sur un deuxième ordinateur et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute sur un troisième. Dans un premier temps, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] transmet avec succès vos informations d’identification de l’ordinateur client au deuxième ordinateur sur lequel le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s’exécute. En revanche, le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ne peut pas déléguer vos informations d’identification du deuxième ordinateur au troisième sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute.
+### <a name="ssis-windows-service-doesnt-support-delegation"></a>Le service Windows SSIS ne prend pas en charge la délégation
 
-Vous pouvez activer la délégation des informations d’identification en octroyant le droit **Approuver cet utilisateur pour la délégation à tous les services (Kerberos uniquement)** au compte de service SQL Server, qui lance le service Integration Services (ISServerExec.exe) en tant que processus enfant. Avant d’octroyer ce droit, demandez-vous s’il est conforme aux exigences de sécurité de votre organisation.
+SSIS ne prend pas en charge la délégation d’informations d'identification, parfois appelée « double saut ». Dans ce scénario, vous opérez sur un ordinateur client, SSIS est installé sur un deuxième ordinateur et SQL Server sur un troisième ordinateur. Bien que SSMS transmette correctement vos informations d’identification de l’ordinateur client au deuxième ordinateur (où SSIS est en cours d’exécution), SSIS ne peut pas déléguer vos informations d’identification du deuxième ordinateur au troisième ordinateur (où SQL Server est en cours d’exécution).
 
-Pour plus d’informations, consultez [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Faire fonctionner Kerberos et la délégation entre domaines avec un package SSIS).
- 
 ## <a name="configure-the-firewall"></a>Configurer le pare-feu
   
  Le système de Pare-feu Windows permet d’empêcher l’accès non autorisé à des ressources informatiques via une connexion réseau. Pour accéder à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à travers ce pare-feu, vous devez configurer le pare-feu de façon à autoriser l’accès.  

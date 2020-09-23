@@ -1,22 +1,22 @@
 ---
 title: Extension SQL Server Agent
-description: Découvrez comment installer et utiliser l’extension SQL Server Agent (préversion) pour Azure Data Studio, qui permet de gérer les travaux et les configurations SQL Agent.
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu, maghan, sstein
+description: Découvrez comment installer et utiliser l’extension SQL Server Agent pour Azure Data Studio, qui permet de gérer les travaux et les configurations SQL Agent.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 207388fed1ea2465fb965457640b5e1fb0d162cf
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: d83248137a803c9a7404fff8c9c9742e97d7cca3
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766158"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90913863"
 ---
-# <a name="sql-server-agent-extension-preview"></a>Extension SQL Server Agent (préversion)
+# <a name="sql-server-agent-extension-preview"></a>Extension SQL Server Agent (Préversion)
 
 L’extension SQL Server Agent (préversion) est une extension pour la gestion et le dépannage des travaux et de la configuration de l’agent SQL. Cette extension est actuellement en préversion.
 
@@ -47,4 +47,4 @@ Quand vous vous connectez à l’extension SQL Server Agent, la première chose 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur SQL Server Agent, [consultez notre documentation.](../ssms/agent/sql-server-agent.md?view=sql-server-2017)
+Pour en savoir plus sur SQL Server Agent, [consultez notre documentation.](../ssms/agent/sql-server-agent.md)

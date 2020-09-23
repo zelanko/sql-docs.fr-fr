@@ -16,12 +16,12 @@ ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3806092674dde608bed9a962bcf939ac0379b374
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 571d611fe49e590d65f0f9749660844328f6c9c1
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457701"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990172"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
 
@@ -85,7 +85,7 @@ GO
   
 Pour une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie au niveau de compatibilité 120 ou plus, l’activation de l’[indicateur de trace 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) force le système à utiliser la version 70 de l’estimation de la cardinalité.  
   
-**Estimation de cardinalité héritée :** Pour une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définie au niveau de compatibilité 120 et plus, la version 70 de l’estimation de la cardinalité peut être activée à l’aide de l’instruction [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+**Estimation de cardinalité héritée :** Pour un ensemble de bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] défini au niveau de compatibilité 120 et plus, la version 70 de l’estimation de la cardinalité peut être activée à l’aide de l’instruction [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
 ```sql  
 ALTER DATABASE SCOPED CONFIGURATION 

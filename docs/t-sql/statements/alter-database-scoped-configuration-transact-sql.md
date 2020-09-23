@@ -3,7 +3,7 @@ title: ALTER DATABASE SCOPED CONFIGURATION
 description: Activez plusieurs paramètres de configuration de base de données au niveau de chaque base de données.
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: seo-lt-2019
-ms.date: 10/31/2019
+ms.date: 09/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: f395ef15f82b4975a3df677abea227e181835e83
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9b3710606df63baaf85134be47fb0fe1643c72f3
+ms.sourcegitcommit: 6d9b6eb2437e780c7881cc516e03c1182fb6892e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537086"
+ms.lasthandoff: 09/15/2020
+ms.locfileid: "90565084"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -153,7 +153,7 @@ Vous pouvez utiliser l'option MAXDOP pour limiter le nombre de processeurs à ut
 Pour définir cette option au niveau de l’instance, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 
 > [!NOTE]
-> Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la valeur affectée à la configuration du **degré maximal de parallélisme** au niveau du serveur est toujours 0. MAXDOP peut être configuré pour chaque base de données, comme décrit dans cet article. Pour obtenir des recommandations sur la configuration optimale de MAXDOP, consultez la section [Ressources supplémentaires](#additional-resources).
+> Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], la configuration de l’étendue de base de données MAXDOP pour les nouvelles bases de données de pools élastiques et uniques est définie sur 8 par défaut. MAXDOP peut être configuré pour chaque base de données, comme décrit dans cet article. Pour obtenir des recommandations sur la configuration optimale de MAXDOP, consultez la section [Ressources supplémentaires](#additional-resources).
 
 > [!TIP]
 > Pour définir cette option au niveau de la requête, utilisez l’[indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) **MAXDOP**.    

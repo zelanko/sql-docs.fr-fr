@@ -23,12 +23,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72f2f72300982473696132d327881a2f2b867dd9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ce8bbe0982d193a871f89023f803e5719b74771b
+ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426831"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91024369"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -53,7 +53,7 @@ WITH IDENTITY = 'identity_name'
 
 *credential_name* : Spécifie le nom des informations d’identification délimitées à la base de données à créer. *credential_name* ne peut pas commencer par le signe dièse (#). Les informations d'identification système commencent avec ##.
 
-IDENTITY **=’** _identity\_name_ **’**  : Spécifie le nom du compte à utiliser lors d’une connexion en dehors du serveur. Pour importer un fichier à partir du stockage Blob Azure avec une clé partagée, le nom de l’identité doit être `SHARED ACCESS SIGNATURE`. Pour charger des données dans SQL DW, n’importe quelle valeur valide peut être utilisée pour l’identité. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+IDENTITY **=’** _identity\_name_ **’**  : Spécifie le nom du compte à utiliser lors d’une connexion en dehors du serveur. Pour importer un fichier à partir du stockage Blob Azure avec une clé partagée, le nom de l’identité doit être `SHARED ACCESS SIGNATURE`. Pour charger des données dans SQL DW, n’importe quelle valeur valide peut être utilisée pour l’identité. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1). Lorsque vous utilisez Kerberos (Windows Active Directory ou MIT KDC), n’utilisez pas le nom de domaine dans l’argument IDENTITY. Il doit s’agir simplement du nom du compte.
 
 > [!NOTE]
 > WITH IDENTITY n’est pas requis si le conteneur dans le stockage Blob Azure est activé pour l’accès anonyme. Pour obtenir un exemple d’interrogation du stockage Blob Azure, consultez [Importation dans une table à partir d’un fichier stocké dans le stockage Blob Azure](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
@@ -121,7 +121,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. Création d’informations d’identification délimitées à la base de données pour la connectivité de PolyBase à Azure Data Lake Store
 
-L’exemple suivant crée des informations d’identification délimitées à la base de données qui peuvent être utilisées pour créer une [source de données externe](../../t-sql/statements/create-external-data-source-transact-sql.md), qui peut être utilisée par PolyBase dans Azure SQL Data Warehouse.
+L’exemple suivant crée des informations d’identification délimitées à la base de données qui peuvent être utilisées pour créer une [source de données externe](../../t-sql/statements/create-external-data-source-transact-sql.md), qui peut être utilisée par PolyBase dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].
 
 Azure Data Lake Store utilise une application Azure Active Directory pour l’authentification entre services.
 [Créez une application AAD](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-authenticate-using-active-directory) et documentez vos paramètres client_id, OAuth_2.0_Token_EndPoint et Key avant d’essayer de créer des informations d’identification délimitées à la base de données.
