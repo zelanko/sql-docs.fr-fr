@@ -1,20 +1,20 @@
 ---
 title: Paramètres de l’utilisateur et de l’espace de travail
 description: Découvrez comment utiliser les paramètres pour personnaliser l’éditeur, l’interface utilisateur et le comportement fonctionnel d’Azure Data Studio selon vos préférences.
-ms.custom: seodec18
-ms.date: 09/24/2018
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 2196bd9c4445f700fd1a697db3edcb5879b1f44b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746159"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114520"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modifier les paramètres de l’utilisateur et de l’espace de travail
 
@@ -55,7 +55,6 @@ Le fichier de paramètres de l’espace de travail se trouve sous le dossier `.A
 Azure Data Studio mémorise les modifications non enregistrées apportées aux fichiers lorsque vous quittez par défaut. Il s’agit de la même fonctionnalité de sortie à chaud que dans Visual Studio Code.
 
 Par défaut, la sortie à chaud est désactivée. Activez la sortie à chaud en modifiant le paramètre `files.hotExit`. Pour plus d’informations, consultez [Sortie à chaud (dans la documentation de Visual Studio code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
-
 
 ## <a name="tab-color"></a>Couleur de l’onglet
 

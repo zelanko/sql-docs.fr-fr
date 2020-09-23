@@ -23,12 +23,12 @@ ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24f2ee56f66a6f72efe67e04f7c421b74d392e8f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16532428288ad69146a80aa028640f4ea20bbc7e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88306730"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114738"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "88306730"
   
 ### <a name="a-finding-a-row-by-using-a-simple-equality"></a>R. Recherche d'une ligne en utilisant une égalité simple  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -63,7 +63,7 @@ WHERE LastName = 'Smith' ;
   
 ### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. Recherche de lignes qui contiennent une valeur incluse dans une chaîne  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -73,7 +73,7 @@ WHERE LastName LIKE ('%Smi%');
   
 ### <a name="c-finding-rows-by-using-a-comparison-operator"></a>C. Recherche de lignes à l'aide d'un opérateur de comparaison  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -83,7 +83,7 @@ WHERE EmployeeKey  <= 500;
   
 ### <a name="d-finding-rows-that-meet-any-of-three-conditions"></a>D. Recherche de lignes qui répondent à l'une des trois conditions  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -93,7 +93,7 @@ WHERE EmployeeKey = 1 OR EmployeeKey = 8 OR EmployeeKey = 12;
   
 ### <a name="e-finding-rows-that-must-meet-several-conditions"></a>E. Recherche de lignes qui doivent répondre à plusieurs conditions  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -103,7 +103,7 @@ WHERE EmployeeKey <= 500 AND LastName LIKE '%Smi%' AND FirstName LIKE '%A%';
   
 ### <a name="f-finding-rows-that-are-in-a-list-of-values"></a>F. Recherche de lignes qui figurent dans une liste de valeurs  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
@@ -113,7 +113,7 @@ WHERE LastName IN ('Smith', 'Godfrey', 'Johnson');
   
 ### <a name="g-finding-rows-that-have-a-value-between-two-values"></a>G. Recherche de lignes dont la valeur est comprise entre deux valeurs  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT EmployeeKey, LastName  
