@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 928cdcd92ceb2bfc6ace1be7d5cd6b1c785d5f48
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c914c69646f99fdcb3ff4a214d37faa61feef3b6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88366265"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116727"
 ---
 # <a name="error_line-transact-sql"></a>ERROR_LINE (Transact-SQL)
 
@@ -56,7 +56,7 @@ Quand elle est appelée dans un bloc CATCH, `ERROR_LINE` retourne
 -   le numéro de la ligne dans un sous-programme si l’erreur s’est produite dans une procédure stockée ou un déclencheur ;  
 -   NULL si l’appel a lieu en dehors de l’étendue d’un bloc CATCH.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 Un appel à `ERROR_LINE` peut se produire n’importe où dans l’étendue d’un bloc CATCH.  
   
 `ERROR_LINE` retourne le numéro de la ligne de survenue de l’erreur. Cela se produit quel que soit l’emplacement de l’appel à `ERROR_LINE` dans l’étendue du bloc CATCH et quel que soit le nombre d’appels à `ERROR_LINE`. Ce comportement contraste avec celui de fonctions comme @@ERROR. @@ERROR retourne un numéro d’erreur dans l’instruction immédiatement après celle qui a provoqué une erreur ou dans la première instruction d’un bloc CATCH.  
@@ -68,7 +68,7 @@ Dans les blocs CATCH imbriqués, `ERROR_LINE` retourne le numéro de ligne de l�
 ### <a name="a-using-error_line-in-a-catch-block"></a>R. Utilisation de ERROR_LINE dans un bloc CATCH  
 L’exemple de code suivant présente une instruction `SELECT` qui génère une erreur de division par zéro. `ERROR_LINE` retourne le numéro de la ligne où l’erreur s’est produite.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-using-error_line-in-a-catch-block-with-a-stored-procedure"></a>B. Utilisation de ERROR_LINE dans un bloc CATCH avec une procédure stockée  
 L’exemple suivant illustre une procédure stockée qui génère une erreur de division par zéro. `ERROR_LINE` retourne le numéro de la ligne où l’erreur s’est produite.  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -109,7 +109,7 @@ GO
 ### <a name="c-using-error_line-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilisation de ERROR_LINE dans un bloc CATCH avec d'autres outils de traitement des erreurs  
 L’exemple de code suivant présente une instruction `SELECT` qui génère une erreur de division par zéro. `ERROR_LINE` retourne le numéro de la ligne où l’erreur s’est produite et les informations relatives à l’erreur elle-même.  
   
-```  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

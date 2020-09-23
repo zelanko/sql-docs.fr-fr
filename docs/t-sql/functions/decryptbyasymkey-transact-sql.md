@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b1c19a02d6cd965181f9ea94338e0669a3ec45df
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e68ad7dbd0e0998fdffee08abde97446352990c4
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422783"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115515"
 ---
 # <a name="decryptbyasymkey-transact-sql"></a>DECRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,8 +36,7 @@ Cette fonction utilise une clé asymétrique pour déchiffrer les données chiff
   
 ## <a name="syntax"></a>Syntaxe  
   
-```syntaxsql
-  
+```syntaxsql  
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  
 ```  
@@ -69,8 +68,8 @@ Le chiffrement/déchiffrement à clé asymétrique a un coût élevé par rappor
 ## <a name="examples"></a>Exemples  
 Cet exemple déchiffre le texte chiffré à l’origine avec la clé asymétrique `JanainaAsymKey02`. Cette clé asymétrique était stockée dans `AdventureWorks2012.ProtectedData04`. L’exemple déchiffrait les données retournées avec la clé asymétrique `JanainaAsymKey02`. L’exemple utilisait le mot de passe `pGFD4bb925DGvbd2439587y` pour déchiffrer cette clé asymétrique. L’exemple convertissait le texte en clair retourné en type **nvarchar**.  
   
-```  
-SELECT CONVERT(nvarchar(max),  
+```sql
+SELECT CONVERT(NVARCHAR(max),  
     DecryptByAsymKey( AsymKey_Id('JanainaAsymKey02'),   
     ProtectedData, N'pGFD4bb925DGvbd2439587y' ))   
 AS DecryptedData   

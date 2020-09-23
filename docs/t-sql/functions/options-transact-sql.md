@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d5c7f6e-157b-4231-bbb4-4645a11078b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12e2d3418a021a3ffee5db530d35f0fc8522dec1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aba9b19dd9788eef4f322db198dd7f8f3789a8c8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417225"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115872"
 ---
 # <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88417225"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 @@OPTIONS  
 ```  
   
@@ -59,7 +59,7 @@ ms.locfileid: "88417225"
 ### <a name="a-demonstration-of-how-changes-affect-behavior"></a>R. Démonstration de l'impact des modifications sur le comportement  
  L’exemple suivant illustre la différence de comportement de concaténation avec deux paramétrages différents de l’option **CONCAT_NULL_YIELDS_NULL**.  
   
-```  
+```sql  
 SELECT @@OPTIONS AS OriginalOptionsValue;  
 SET CONCAT_NULL_YIELDS_NULL OFF;  
 SELECT 'abc' + NULL AS ResultWhen_OFF, @@OPTIONS AS OptionsValueWhen_OFF;  
@@ -71,7 +71,7 @@ SELECT 'abc' + NULL AS ResultWhen_ON, @@OPTIONS AS OptionsValueWhen_ON;
 ### <a name="b-testing-a-client-nocount-setting"></a>B. Test du paramètre NOCOUNT d'un client  
  L’exemple suivant définit `NOCOUNT``ON`, puis teste la valeur de `@@OPTIONS`. L’option `NOCOUNT``ON` empêche le message relatif au nombre de lignes affectées d’être renvoyé au client demandeur pour chaque instruction d’une session. La fonction `@@OPTIONS` a pour valeur `512` (0x0200). Ceci représente l'option NOCOUNT. Cet exemple teste si l'option NOCOUNT est activée sur le client. Vous pouvez vous en servir pour rechercher les différences de performances sur un ordinateur client.  
   
-```  
+```sql  
 SET NOCOUNT ON  
 IF @@OPTIONS & 512 > 0   
 RAISERROR ('Current user has SET NOCOUNT turned on.', 1, 1)  

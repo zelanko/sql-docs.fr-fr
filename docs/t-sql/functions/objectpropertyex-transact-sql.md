@@ -23,12 +23,12 @@ ms.assetid: be36b3e3-3309-4332-bfb5-c7e9cf8dc8bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 197b3c2f473a9711f2bf79e94d400f85224d8235
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0d2e9cd5f22c0aea8b44c0e7db527be893c732f8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445674"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116648"
 ---
 # <a name="objectpropertyex-transact-sql"></a>OBJECTPROPERTYEX (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88445674"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 OBJECTPROPERTYEX ( id , property )  
 ```  
   
@@ -178,7 +178,7 @@ OBJECTPROPERTYEX ( id , property )
 ## <a name="remarks"></a>Remarques  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] considère que *object_id* se situe dans le contexte de la base de données active. Une requête référençant un *object_id* dans une autre base de données retourne NULL ou des résultats incorrects. Par exemple, dans la requête qui suit, le contexte de la base de données active est la base de données MASTER. [!INCLUDE[ssDE](../../includes/ssde-md.md)] va tenter de renvoyer la valeur de propriété de l’*object_id* spécifié dans cette base de données et non pas dans la base de données spécifiée dans la requête. La requête retourne des résultats incorrects car la vue `vEmployee` ne se trouve pas dans la base de données MASTER.  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'AdventureWorks2012.HumanResources.vEmployee'), 'IsView');  
@@ -196,7 +196,7 @@ GO
 ### <a name="a-finding-the-base-type-of-an-object"></a>R. Recherche du type de base d'un objet  
  L'exemple qui suit crée un SYNONYM `MyEmployeeTable` pour la table `Employee` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], puis renvoie le type de base du SYNONYM.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SYNONYM MyEmployeeTable FOR HumanResources.Employee;  
@@ -216,18 +216,17 @@ U
 ### <a name="b-returning-a-property-value"></a>B. Renvoi d'une valeur de propriété  
  L'exemple suivant renvoie le nombre de déclencheurs UPDATE sur la table spécifiée.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID(N'HumanResources.Employee'), N'TABLEUPDATETRIGGERCOUNT');  
 GO  
-  
 ```  
   
 ### <a name="c-finding-tables-that-have-a-foreign-key-constraint"></a>C. Recherche de tables comportant une contrainte FOREIGN KEY  
  L'exemple suivant utilise la propriété `TableHasForeignKey` pour retourner toutes les tables comportant une contrainte FOREIGN KEY.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT name, object_id, schema_id, type_desc  
@@ -235,7 +234,6 @@ FROM sys.objects
 WHERE OBJECTPROPERTYEX(object_id, N'TableHasForeignKey') = 1  
 ORDER BY name;  
 GO  
-  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -243,7 +241,7 @@ GO
 ### <a name="d-finding-the-base-type-of-an-object"></a>D. Recherche du type de base d’un objet  
  L’exemple suivant retourne le type de base de l’objet `dbo.DimReseller`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OBJECTPROPERTYEX ( object_id(N'dbo.DimReseller'), N'BaseType')AS BaseType;  

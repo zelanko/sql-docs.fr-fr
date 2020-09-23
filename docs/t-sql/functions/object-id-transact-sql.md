@@ -27,12 +27,12 @@ ms.assetid: f89286db-440f-4218-a828-30881ce3077a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34139155f6d5e7f58657a5f8e8adf6ac2d4ecbf3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0d939b4b198d72722ce5130a3339e299d69f06d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417245"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115966"
 ---
 # <a name="object_id-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -82,7 +82,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ### <a name="a-returning-the-object-id-for-a-specified-object"></a>R. Renvoi de l'identificateur d'un objet spécifié  
  L'exemple suivant renvoie l'ID d'objet de la table `Production.WorkOrder` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECT_ID(N'AdventureWorks2012.Production.WorkOrder') AS 'Object ID';  
@@ -92,7 +92,7 @@ GO
 ### <a name="b-verifying-that-an-object-exists"></a>B. Vérification de l'existence d'un objet  
  L'exemple suivant vérifie l'existence d'une table spécifiée en vérifiant que la table a un identificateur d'objet. Si la table existe, elle est supprimée. Si elle n'existe pas, l'instruction `DROP TABLE` n'est pas exécutée.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'dbo.AWBuildVersion', N'U') IS NOT NULL  
@@ -106,9 +106,9 @@ GO
 > [!IMPORTANT]  
 >  Lorsque vous utilisez les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] DB_ID et OBJECT_ID pour obtenir la valeur d'un paramètre, assurez-vous toujours que l'ID retourné est valide. Si le nom de la base de données ou de l'objet est introuvable, par exemple s'il n'existe pas ou n'est pas correctement orthographié, les deux fonctions retournent la valeur NULL. La fonction **sys.dm_db_index_operational_stats** interprète la valeur NULL comme une valeur générique qui désigne toutes les bases de données ou tous les objets. Comme il peut s'agir d'une opération non intentionnelle, les exemples fournis dans cette section présentent une méthode sûre pour déterminer les ID de base de données et d'objet.  
   
-```  
-DECLARE @db_id int;  
-DECLARE @object_id int;  
+```sql  
+DECLARE @db_id INT;  
+DECLARE @object_id INT;  
 SET @db_id = DB_ID(N'AdventureWorks2012');  
 SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
 IF @db_id IS NULL   
@@ -131,7 +131,7 @@ GO
 ### <a name="d-returning-the-object-id-for-a-specified-object"></a>D. Renvoi de l’identificateur d’un objet spécifié  
  L'exemple suivant renvoie l'ID d'objet de la table `FactFinance` de la base de données [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
-```  
+```sql  
 SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   

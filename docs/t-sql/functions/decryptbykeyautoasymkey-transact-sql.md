@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5521d4cf-740c-4ede-98b6-4ba90b84e32d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7ceee96130e9ec4fef0f50b493944f71d68e6eff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4ac2905d7466b8a2aa3e8a823ab25f89d98ae96f
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479685"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115202"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,6 @@ Cette fonction déchiffre les données chiffrées. Pour ce faire, elle commence 
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 DecryptByKeyAutoAsymKey ( akey_ID , akey_password   
     , { 'ciphertext' | @ciphertext }  
   [ , { add_authenticator | @add_authenticator }   
@@ -89,7 +88,7 @@ Nécessite l’autorisation `VIEW DEFINITION` sur la clé symétrique et `CONTRO
 ## <a name="examples"></a>Exemples
 L’exemple suivant montre comment `DECRYPTBYKEYAUTOASYMKEY` peut simplifier le code de déchiffrement. Ce code doit s’exécuter sur une base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] qui n’a pas encore de clé principale de base de données.  
 
-```  
+```sql  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'mzkvdMlk979438teag$$ds987yghn)(*&4fdg^';  

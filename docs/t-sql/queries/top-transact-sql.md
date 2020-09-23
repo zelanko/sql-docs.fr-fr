@@ -22,12 +22,12 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7dbaf282383bfeb83efc1b7ccf6f74ad90ed1764
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 121f3d656a0d40bf97fbf01a47b92e47be9c6adb
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445301"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116640"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ Limite les lignes retournées dans un jeu de résultats de la requête à un nom
  
  La syntaxe pour SQL Server et Azure SQL Database est la suivante :
 
-```sql  
+```syntaxsql  
 [   
     TOP (expression) [PERCENT]  
     [ WITH TIES ]  
@@ -49,7 +49,7 @@ Limite les lignes retournées dans un jeu de résultats de la requête à un nom
 
 La syntaxe pour Azure SQL Data Warehouse et Parallel Data Warehouse est la suivante :
 
-```sql  
+```syntaxsql  
 [   
     TOP ( expression )   
     [ WITH TIES ]  
@@ -92,7 +92,7 @@ Lorsqu’elle est spécifiée dans l’instruction MERGE, la clause TOP s’appl
 Soyez vigilant lorsque vous spécifiez la clause TOP dans une requête contenant un opérateur UNION, UNION ALL, EXCEPT ou INTERSECT. Il est possible d’écrire une requête qui retourne des résultats inattendus car l’ordre dans lequel les clauses TOP et ORDER BY sont traitées logiquement n’est pas toujours intuitif lorsque ces opérateurs sont utilisés dans une opération de sélection. Par exemple, d'après le tableau et les données qui suivent, supposez que vous souhaitez renvoyer la voiture rouge la moins chère et la voiture bleue la moins chère. Autrement dit, la berline rouge et le fourgon bleu.  
   
 ```sql  
-CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
+CREATE TABLE dbo.Cars(Model VARCHAR(15), Price MONEY, Color VARCHAR(10));  
 INSERT dbo.Cars VALUES  
     ('sedan', 10000, 'red'), ('convertible', 15000, 'blue'),   
     ('coupe', 20000, 'red'), ('van', 8000, 'blue');  
@@ -190,7 +190,7 @@ L'exemple suivant utilise une variable pour spécifier le nombre d'employés ret
 ```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @p AS int = 10;  
+DECLARE @p AS INT = 10;  
 SELECT TOP(@p)JobTitle, HireDate, VacationHours  
 FROM HumanResources.Employee  
 ORDER BY VacationHours DESC;  
@@ -265,10 +265,10 @@ IF OBJECT_ID ('dbo.EmployeeSales', 'U') IS NOT NULL
     DROP TABLE dbo.EmployeeSales;  
 GO  
 CREATE TABLE dbo.EmployeeSales  
-( EmployeeID   nvarchar(11) NOT NULL,  
-  LastName     nvarchar(20) NOT NULL,  
-  FirstName    nvarchar(20) NOT NULL,  
-  YearlySales  money NOT NULL  
+( EmployeeID   NVARCHAR(11) NOT NULL,  
+  LastName     NVARCHAR(20) NOT NULL,  
+  FirstName    NVARCHAR(20) NOT NULL,  
+  YearlySales  MONEY NOT NULL  
  );  
 GO  
 INSERT TOP(5)INTO dbo.EmployeeSales  

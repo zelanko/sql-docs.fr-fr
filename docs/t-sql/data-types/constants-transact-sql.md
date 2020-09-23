@@ -33,12 +33,12 @@ ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b8b68b99fa522b69401eab47d54e40cdf8621c2
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: 0a715f64c0d6c1adf8ec3bc55b851848dfd1ae2e
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027280"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115368"
 ---
 # <a name="constants-transact-sql"></a>Constantes (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -57,7 +57,7 @@ Si un guillemet simple est inséré dans une chaîne de caractères placée entr
   
 Voici des exemples de chaînes de caractères :
   
-```sql
+```
 'Cincinnati'  
 'O''Brien'  
 'Process X is 50% complete.'  
@@ -90,7 +90,7 @@ Une constante binaire a le préfixe `0x` et se compose d'une chaîne de nombres 
   
 Voici des exemples de chaînes binaires :
   
-```sql
+```
 0xAE  
 0x12Ef  
 0x69048AEFDD010E  
@@ -108,7 +108,7 @@ Les constantes **datetime** sont représentées à l’aide de valeurs de date l
   
 Voici des exemples de constantes **datetime** :
   
-```sql
+```
 'December 5, 1985'  
 '5 December, 1985'  
 '851205'  
@@ -117,7 +117,7 @@ Voici des exemples de constantes **datetime** :
   
 Exemples de constantes datetime :
   
-```sql
+```
 '14:30:24'  
 '04:24 PM'  
 ```  
@@ -127,7 +127,7 @@ Les constantes **entières** sont représentées par une chaîne de nombres qui 
   
 Voici des exemples de constantes **entières** :
   
-```sql
+```
 1894  
 2  
 ```  
@@ -137,7 +137,7 @@ Les constantes **décimales** sont représentées par une chaîne de nombres qui
   
 Voici des exemples de constantes **décimales** :
   
-```sql
+```
 1894.1204  
 2.0  
 ```  
@@ -147,7 +147,7 @@ Les constantes de type **float** et **real** sont représentées par la notation
   
 Voici des exemples de valeurs **float** ou **real** :
   
-```sql
+```
 101.5E5  
 0.5E-2  
 ```  
@@ -162,7 +162,7 @@ Les constantes de type **money** sont représentées par une chaîne de nombres 
   
 Voici des exemples de constantes **money** :
   
-```sql
+```
 $12  
 $542023.14  
 ```  
@@ -172,7 +172,7 @@ Les constantes de type **uniqueidentifier** correspondent à une chaîne représ
   
 Les deux exemples ci-après spécifient le même identificateur globalement unique (GUID) :
   
-```sql
+```
 '6F9619FF-8B86-D011-B42D-00C04FC964FF'  
 0xff19966f868b11d0b42d00c04fc964ff  
 ```  
@@ -182,27 +182,27 @@ Pour indiquer si un nombre est positif ou négatif, appliquez l’opérateur una
   
 Expressions **integer** signées :  
   
-```sql
+```
 +145345234
 -2147483648
 ```
 Expressions **decimal** signées :  
   
-```sql
+```
 +145345234.2234
 -2147483648.10
 ```
   
 Expressions **float** signées :  
   
-```sql
+```
 +123E-3
 -12E5
 ```
   
 Expressions **money** signées :  
   
-```sql
+```
 -$45.56
 +$423456.99
 ```

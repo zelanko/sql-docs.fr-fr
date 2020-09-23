@@ -22,12 +22,12 @@ ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0354d701b2f6037fa9f7489dcc67f344e987dbdc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 07e79295f8beab364037a6ef7143d95745d3fb30
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459857"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116763"
 ---
 # <a name="dense_rank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ Cette fonction retourne le rang de chaque ligne dans une partition de jeu de ré
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 DENSE_RANK ( ) OVER ( [ <partition_by_clause> ] < order_by_clause > )  
 ```  
   
@@ -66,7 +66,7 @@ L’ordre de tri utilisé pour l’ensemble de la requête détermine l’ordre 
 ### <a name="a-ranking-rows-within-a-partition"></a>R. Classement des lignes d'une partition  
 L’exemple suivant classe les produits de l’inventaire par les emplacements d’inventaire spécifiés, en fonction de leurs quantités. `DENSE_RANK` partitionne le jeu de résultats par `LocationID` et classe logiquement le jeu de résultats par `Quantity`. Notez que les produits 494 et 495 ont la même quantité. Étant donné que tous les deux ont la même valeur de quantité, ils ont tous les deux la valeur de rang 1.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -103,7 +103,7 @@ ProductID   Name                               LocationID Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Classement de toutes les lignes dans un jeu de résultats  
 L’exemple suivant retourne les dix principaux employés classés en fonction de leur salaire. Comme l’instruction `SELECT` n’a pas spécifié de clause `PARTITION BY`, la fonction `DENSE_RANK` a été appliquée à toutes les lignes du jeu de résultats.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP(10) BusinessEntityID, Rate,   
@@ -138,7 +138,7 @@ L’exemple suivant présente les quatre fonctions de classement
 
 utilisées dans la même requête. Reportez-vous aux rubriques consacrées à chaque fonction de classement pour obtenir des exemples qui leur sont spécifiques.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT p.FirstName, p.LastName  
@@ -180,7 +180,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ### <a name="d-ranking-rows-within-a-partition"></a>D : Classement des lignes d'une partition  
 L’exemple suivant classe les commerciaux de chaque secteur de vente en fonction de leurs ventes totales. `DENSE_RANK` partitionne l’ensemble de lignes par `SalesTerritoryGroup` et trie le jeu de résultats par `SalesAmountQuota`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryGroup,  

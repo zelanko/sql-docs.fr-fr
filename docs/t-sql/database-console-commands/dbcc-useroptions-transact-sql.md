@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 565ab112-7af1-4c18-a579-07cdb332f539
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 0b5e147a87e6559d1d3bd2782d46bf09a783297a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9a80a6bdaa75d01f63f22244f93225a9b32ba93d
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417555"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115557"
 ---
 # <a name="dbcc-useroptions-transact-sql"></a>DBCC USEROPTIONS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -38,7 +38,7 @@ Renvoie les options SET qui sont actives (définies) pour la connexion courante.
   
 ## <a name="syntax"></a>Syntaxe  
   
-```sql
+```syntaxsql
 DBCC USEROPTIONS  
 [ WITH NO_INFOMSGS ]  
 ```  
@@ -52,8 +52,7 @@ Supprime tous les messages d'information dont les niveaux de gravité sont compr
 ## <a name="result-sets"></a>Jeux de résultats  
 DBCC USEROPTIONS renvoie une colonne pour le nom de l'option SET et une colonne pour la valeur de l'option (les valeurs et entrées peuvent varier) :
 
-```sql
-
+```
 Set Option                   Value`  
 ---------------------------- ---------------------------`  
 textsize                     64512 
@@ -73,7 +72,7 @@ isolation level              read committed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 DBCC USEROPTIONS signale un niveau d'isolation 'read committed snapshot' lorsque l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON et que le niveau d'isolation des transactions a la valeur 'read committed'. Le niveau d'isolation réel est lecture validée.
   
 ## <a name="permissions"></a>Autorisations  

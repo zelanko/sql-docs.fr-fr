@@ -25,12 +25,12 @@ ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46cfbc293d9808b98e75883d4031c7b7ffb2363d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a62baf237cef1e0a918068e60d9267d6e0097fd5
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417385"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116767"
 ---
 # <a name="error_procedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
@@ -43,7 +43,7 @@ Cette fonction retourne le nom de la procédure stockée ou du déclencheur où 
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 ERROR_PROCEDURE ( )  
 ```  
   
@@ -69,7 +69,7 @@ Si elle est appelée dans un bloc CATCH, `ERROR_PROCEDURE` retourne le nom de la
 ### <a name="a-using-error_procedure-in-a-catch-block"></a>R. Utilisation d'ERROR_PROCEDURE dans un bloc CATCH  
 L’exemple suivant illustre une procédure stockée qui génère une erreur de division par zéro. `ERROR_PROCEDURE` retourne le nom de la procédure stockée où l’erreur s’est produite.  
   
-```  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -90,7 +90,10 @@ BEGIN CATCH
     SELECT ERROR_PROCEDURE() AS ErrorProcedure;  
 END CATCH;  
 GO  
+```  
 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+```  
 -----------
 
 (0 row(s) affected)
@@ -100,14 +103,13 @@ ErrorProcedure
 usp_ExampleProc
 
 (1 row(s) affected)
-
 ```  
+
   
 ### <a name="b-using-error_procedure-in-a-catch-block-with-other-error-handling-tools"></a>B. Utilisation d'ERROR_PROCEDURE dans un bloc CATCH avec d'autres outils de gestion des erreurs  
 L’exemple suivant illustre une procédure stockée qui génère une erreur de division par zéro. Outre le nom de la procédure stockée où l’erreur s’est produite, la procédure stockée retourne des informations sur cette erreur.  
   
-```  
-  
+```sql
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_ExampleProc', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -133,8 +135,11 @@ BEGIN CATCH
         ERROR_MESSAGE() AS ErrorMessage,  
         ERROR_LINE() AS ErrorLine;  
         END CATCH;  
-GO  
+GO
+``` 
 
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+``` 
 -----------
 
 (0 row(s) affected)
@@ -144,8 +149,8 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorMessage             
 8134        16            1           usp_ExampleProc  Divide by zero error encountered.  6
 
 (1 row(s) affected)
-
-```  
+``` 
+ 
   
 ## <a name="see-also"></a>Voir aussi  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   

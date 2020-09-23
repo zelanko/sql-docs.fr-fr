@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 203b53928ee41dcc75194cef6171959cdc08dd71
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d7d3c9e8fa3e67a4ee6ba5c2eb2590ee65c18b2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479781"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115579"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,7 +47,6 @@ Réduit la taille de fichier journal ou de données de la base de données activ
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 DBCC SHRINKFILE   
 (  
     { file_name | file_id }   
@@ -158,7 +157,7 @@ C'est en général le fichier journal qui ne semble pas se réduire. La raison e
 
 Une transaction qui s’exécute sous un [niveau d’isolement basé sur le contrôle de version de ligne](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) peut bloquer les opérations de réduction. Par exemple, si une opération de suppression de grande envergure sous un niveau d'isolation basé sur le contrôle de version de ligne se déroule parallèlement à une opération DBCC SHRINK DATABASE, l'opération de réduction attend la fin de l'opération de suppression pour continuer. Dans ce cas, les opérations DBCC SHRINKFILE et DBCC SHRINKDATABASE envoient un message d'information (5202 pour SHRINKDATABASE et 5203 pour SHRINKFILE) au journal des erreurs de SQL Server. Ce message est consigné toutes les cinq minutes pendant la première heure, puis toutes les heures. Par exemple, si le journal des erreurs contient le message d'erreur suivant, l'erreur suivante se produit :
   
-```sql
+```
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  

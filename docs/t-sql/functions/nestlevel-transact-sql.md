@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a6c28eca6f0496e8e66deef9a26aa4e7ef45ea81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ace461eeba0207eccf95ba29ff278f72ddd72074
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445731"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115128"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88445731"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 @@NESTLEVEL  
 ```  
   
@@ -55,7 +55,7 @@ ms.locfileid: "88445731"
 ### <a name="a-using-nestlevel-in-a-procedure"></a>R. Utilisation de @@NESTLEVEL dans une procédure  
  L'exemple suivant crée deux procédures : une qui appelle l'autre et une qui affiche le paramètre `@@NESTLEVEL` de chacune d'entre elles.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'usp_OuterProc', N'P')IS NOT NULL  
@@ -90,7 +90,7 @@ Inner Level
 ### <a name="b-calling-nestlevel"></a>B. Appel de @@NESTLEVEL  
  L’exemple suivant montre la différence entre les valeurs renvoyées par les commandes `SELECT`, `EXEC` et `sp_executesql` lorsque chacune d’elles appelle `@@NESTLEVEL`.  
   
-```  
+```sql  
 CREATE PROC usp_NestLevelValues AS  
     SELECT @@NESTLEVEL AS 'Current Nest Level';  
 EXEC ('SELECT @@NESTLEVEL AS OneGreater');   

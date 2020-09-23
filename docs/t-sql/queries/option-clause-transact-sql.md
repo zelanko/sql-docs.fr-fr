@@ -22,12 +22,12 @@ ms.assetid: f47e2f3f-9302-4711-9d66-16b1a2a7ffe3
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 362909e9cd98536d97751787820a5df0c08ed101
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 93981415431e8f42e653f5538ca8dd164f482ba2
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459152"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116302"
 ---
 # <a name="option-clause-transact-sql"></a>Clause OPTION (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +74,7 @@ OPTION ( <query_option> [ ,...n ] )
 ### <a name="a-using-an-option-clause-with-a-group-by-clause"></a>R. Utilisation d’une clause OPTION avec une clause GROUP BY  
  L'exemple suivant montre comment la clause `OPTION` est utilisée avec une clause `GROUP BY`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
@@ -91,7 +91,7 @@ GO
 ### <a name="b-select-statement-with-a-label-in-the-option-clause"></a>B. Instruction SELECT avec une étiquette dans la clause OPTION  
  L’exemple suivant montre une instruction SELECT [!INCLUDE[ssDW](../../includes/ssdw-md.md)] simple avec une étiquette dans la clause OPTION.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT * FROM FactResellerSales  
@@ -101,7 +101,7 @@ SELECT * FROM FactResellerSales
 ### <a name="c-select-statement-with-a-query-hint-in-the-option-clause"></a>C. Instruction SELECT avec un indicateur de requête dans la clause OPTION  
  L’exemple suivant montre une instruction SELECT qui utilise un indicateur de requête HASH JOIN dans la clause OPTION.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -113,7 +113,7 @@ OPTION (HASH JOIN);
 ### <a name="d-select-statement-with-a-label-and-multiple-query-hints-in-the-option-clause"></a>D. Instruction SELECT avec une étiquette et plusieurs indicateurs de requête dans la clause OPTION  
  L’exemple suivant est une instruction SELECT [!INCLUDE[ssDW](../../includes/ssdw-md.md)] qui contient une étiquette et plusieurs indicateurs de requête. Quand la requête est exécutée sur les nœuds de calcul, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] applique une jointure de hachage ou une jointure de fusion, selon la stratégie optimale déterminée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT COUNT (*) FROM dbo.DimCustomer a  
@@ -125,7 +125,7 @@ OPTION ( Label = 'CustJoin', HASH JOIN, MERGE JOIN);
 ### <a name="e-using-a-query-hint-when-querying-a-view"></a>E. Utilisation d’un indicateur de requête pour interroger un affichage  
  L’exemple suivant crée un affichage nommé CustomerView, puis utilise un indicateur de requête HASH JOIN dans une requête qui fait référence à un affichage et une table.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView  
@@ -137,14 +137,13 @@ INNER JOIN dbo.FactInternetSales b
 ON (a.CustomerKey = b.CustomerKey)  
 OPTION (HASH JOIN);  
   
-DROP VIEW CustomerView;  
-  
+DROP VIEW CustomerView;
 ```  
   
 ### <a name="f-query-with-a-subselect-and-a-query-hint"></a>F. Requête avec une sous-sélection et un indicateur de requête  
  L’exemple suivant montre une requête qui contient une sous-sélection et un indicateur de requête. L’indicateur de requête est appliqué globalement. Les indicateurs de requête ne doivent pas être ajoutés à l’instruction de sous-sélection.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 CREATE VIEW CustomerView AS  
@@ -160,7 +159,7 @@ OPTION (HASH JOIN);
 ### <a name="g-force-the-join-order-to-match-the-order-in-the-query"></a>G. Forcer la correspondance entre l’ordre de jointure et l’ordre dans la requête  
  L’exemple suivant utilise l’indicateur FORCE ORDER pour forcer le plan de requête à utiliser l’ordre de jointure spécifié par la requête. Cela permet d’améliorer les performances de certaines requêtes, mais pas de toutes les requêtes.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 -- Obtain partition numbers, boundary values, boundary value types, and rows per boundary  
@@ -181,7 +180,7 @@ OPTION ( FORCE ORDER )
 ### <a name="h-using-externalpushdown"></a>H. Utilisation de l’indicateur EXTERNALPUSHDOWN  
  L’exemple suivant force l’envoi (pushdown) de la clause WHERE au travail MapReduce sur la table Hadoop externe.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 1000000  
 OPTION (FORCE EXTERNALPUSHDOWN);  
@@ -189,7 +188,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);
   
  L’exemple suivant empêche l’envoi (pushdown) de la clause WHERE au travail MapReduce sur la table Hadoop externe. Toutes les lignes sont retournées à PDW où la clause WHERE est appliquée.  
   
-```  
+```sql
 SELECT ID FROM External_Table_AS A   
 WHERE ID < 10  
 OPTION (DISABLE EXTERNALPUSHDOWN);  

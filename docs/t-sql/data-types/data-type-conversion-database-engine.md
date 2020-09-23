@@ -22,12 +22,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e778bdf4adc24b95d5ffa1d8eb438222117c07c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2b99cb9371269b70dc36eae6361f2d6a805da774
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88368555"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115038"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversion de types de données (moteur de base de données)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -64,7 +64,7 @@ Le graphique ci-dessus illustre toutes les conversions implicites et explicites 
 Par exemple, le script suivant définit une variable de type `varchar`, assigne une valeur de type `int` à la variable, puis sélectionne une concaténation de la variable avec une chaîne.
 
 ```sql
-DECLARE @string varchar(10);
+DECLARE @string VARCHAR(10);
 SET @string = 1;
 SELECT @string + ' is a string.'
 ```
@@ -74,7 +74,7 @@ La valeur `int` de `1` étant convertie en `varchar`, l’instruction `SELECT` r
 L’exemple suivant illustre un script similaire avec à la place une variable `int` :
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + ' is not a string.'
 ```
@@ -87,7 +87,7 @@ Dans ce cas, l’instruction `SELECT` génère l’erreur suivante :
 Afin d’évaluer l’expression `@notastring + ' is not a string.'`, SQL Server suit les règles de priorité des types de données pour effectuer la conversion implicite avant le calcul du résultat de l’expression. Étant donné que le type `int` a une priorité plus élevée que `varchar`, SQL Server tente de convertir la chaîne en entier et échoue parce que cette chaîne ne peut pas être convertie en entier. Si l’expression fournit une chaîne pouvant être convertie, l’instruction réussit, comme dans l’exemple suivant :
 
 ```sql
-DECLARE @notastring int;
+DECLARE @notastring INT;
 SET @notastring = '1';
 SELECT @notastring + '1'
 ```

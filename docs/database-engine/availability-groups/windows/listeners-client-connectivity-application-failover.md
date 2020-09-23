@@ -1,12 +1,12 @@
 ---
 title: Se connecter à un écouteur de groupe de disponibilité
 description: Cet article contient des informations sur le processus de connexion à un écouteur de groupe de disponibilité Always On, notamment sur la connexion au réplica principal et à un réplica secondaire en lecture seule, et sur l’utilisation de TLS/SSL et Kerberos.
-ms.custom: seodec18
+ms.custom: contperfq1
 ms.date: 02/27/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - read-only routing
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25b22aa23d773765f98cf3610d57bb041ba2205b
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746179"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116937"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Se connecter à un écouteur de groupe de disponibilité Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

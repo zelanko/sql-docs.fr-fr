@@ -29,12 +29,12 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 57cab52a5edfde4e7469243d7d57ede2e22c0161
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 82a558d445d93e007b9402425426815922c7043b
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076617"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115595"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
@@ -152,7 +152,7 @@ Prenez en compte les informations suivantes lorsque vous envisagez de réduire u
 ## <a name="troubleshooting"></a>Dépannage  
 Les opérations de réduction peuvent être bloquées par une transaction en cours d’exécution sous un [niveau d’isolation basé sur le contrôle de version de ligne](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md). Par exemple, si une opération de suppression de grande envergure sous un niveau d’isolation basé sur le contrôle de version de ligne se déroule parallèlement à une opération DBCC SHRINK DATABASE, l’opération de réduction attend la fin de l’opération de suppression pour réduire la taille des fichiers. Dans ce cas, les opérations DBCC SHRINKFILE et DBCC SHRINKDATABASE envoient un message d’information (5202 pour SHRINKDATABASE et 5203 pour SHRINKFILE). Ce message s’affiche dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les cinq minutes au cours de la première heure, puis toutes les heures. Par exemple, si le journal des erreurs contient le message d'erreur :  
   
-```sql
+```
 DBCC SHRINKDATABASE for database ID 9 is waiting for the snapshot   
 transaction with timestamp 15 and other snapshot transactions linked to   
 timestamp 15 or with timestamps older than 109 to finish.  
@@ -186,7 +186,7 @@ DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);
 ```  
 ### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>C. Réduction d’une base de données Azure Synapse Analytics
 
-```
+```sql
 DBCC SHRINKDATABASE (database_A);
 DBCC SHRINKDATABASE (database_B, 10); 
 
