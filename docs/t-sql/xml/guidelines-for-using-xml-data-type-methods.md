@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 25452e6ae26e8375799a344f459473db446c2d5e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e8a429071f406be0309d89bbb9ea0253b86905a8
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88355965"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91112313"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Instructions pour l'utilisation des méthodes de type de données XML
 
@@ -33,7 +33,7 @@ Cette rubrique décrit comment utiliser les méthodes de type de données **xml*
 Les méthodes de type de données **xml** ne peuvent pas être utilisées dans l’instruction PRINT, comme l’illustre l’exemple ci-dessous. Les méthodes de type de données **xml** sont traitées comme des sous-requêtes et les sous-requêtes ne sont pas autorisées dans l’instruction PRINT. Par conséquent, l'exemple ci-dessous retourne une erreur :
 
 ```sql
-DECLARE @x xml
+DECLARE @x XML
 SET @x = '<root>Hello</root>'
 PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treated as a subquery (select top 1 col from table)
 ```
@@ -41,10 +41,10 @@ PRINT @x.value('/root[1]', 'varchar(20)') -- will not work because this is treat
 Une solution consiste à affecter le résultat de la méthode **value()** à une variable de type **xml**, puis à spécifier la variable dans la requête.
 
 ```sql
-DECLARE @x xml
-DECLARE @c varchar(max)
+DECLARE @x XML
+DECLARE @c VARCHAR(max)
 SET @x = '<root>Hello</root>'
-SET @c = @x.value('/root[1]', 'varchar(11)')
+SET @c = @x.value('/root[1]', 'VARCHAR(11)')
 PRINT @c
 ```
 
@@ -77,8 +77,8 @@ Les étapes d'emplacement, les paramètres de fonction et les opérateurs qui r�
 Dans cet exemple, la méthode **nodes()** génère une ligne distincte pour chaque élément `<book>`. La méthode **value()** qui est évaluée sur un nœud `<book>` extrait la valeur de `@genre` qui, puisqu’il s’agit d’un attribut, est un singleton.
 
 ```sql
-SELECT nref.value('@genre', 'varchar(max)') LastName
-FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
+SELECT nref.value('@genre', 'VARCHAR(max)') LastName
+FROM T CROSS APPLY xCol.nodes('//book') AS R(nref)
 ```
 
 Le schéma XML sert à vérifier le type en cas de code XML typé. Si un nœud est spécifié en tant que singleton dans le schéma XML, le compilateur utilise cette information et aucune erreur ne se produit. Dans le cas contraire, un nombre ordinal sélectionnant un nœud unique est requis. En particulier, l’utilisation de l’axe descendant-or-self (//), comme dans `/book//title`, perd l’inférence de cardinalité de singleton pour l’élément `<title>`, même si le schéma XML le spécifie ainsi. Vous devez par conséquent le réécrire sous la forme `(/book//title)[1]`.
@@ -90,22 +90,22 @@ Il faut toujours garder à l’esprit la différence entre `//first-name[1]` et 
 La requête suivante porte sur une colonne XML non typée et génère une erreur de compilation statique. La raison en est que **value()** attend un nœud singleton comme premier argument, et que le compilateur ne peut pas déterminer si un seul et unique nœud `<last-name>` est rencontré au moment de l’exécution :
 
 ```sql
-SELECT xCol.value('//author/last-name', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 L'exemple suivant vous montre une solution à envisager :
 
 ```sql
-SELECT xCol.value('//author/last-name[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('//author/last-name[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Cependant, cette solution ne permet pas de remédier à l’erreur, car il peut y avoir plusieurs nœuds `<author>` dans chaque instance XML. Réécrit ainsi, l'exemple fonctionne :
 
 ```sql
-SELECT xCol.value('(//author/last-name/text())[1]', 'nvarchar(50)') LastName
-FROM   T
+SELECT xCol.value('(//author/last-name/text())[1]', 'NVARCHAR(50)') LastName
+FROM T
 ```
 
 Cette requête renvoie la valeur du premier élément `<last-name>` de chaque instance XML.
