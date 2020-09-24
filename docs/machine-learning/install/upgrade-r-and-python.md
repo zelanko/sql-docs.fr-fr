@@ -3,31 +3,29 @@ title: Mettre à niveau les runtimes Python et R (liaison)
 description: Mettez à niveau les runtimes Python et R dans SQL Server Machine Learning Services ou SQL Server R Services à l’aide de sqlbindr.exe pour établir une liaison avec Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/17/2020
+ms.date: 09/16/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 63bd14d9229d276966a3e118d097316a3ab58a4f
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: f6b7d5b0dbff20961b6f719e0e0f3360433712f8
+ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009375"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90990112"
 ---
 # <a name="upgrade-python-and-r-runtime-with-binding-in-sql-server-machine-learning-services"></a>Mettre à niveau le runtime Python et R avec la liaison dans SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-Cet article explique comment utiliser le processus d’installation appelé **liaison** pour mettre à niveau les runtimes R ou Python dans [SQL Server 2016 R Services](../r/sql-server-r-services.md) ou [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
+Cet article explique comment utiliser le processus d’installation appelé **liaison** pour mettre à niveau les runtimes R ou Python dans [SQL Server 2016 R Services](../r/sql-server-r-services.md) ou [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md). Vous pouvez vous procurer des [versions plus récentes de Python et R](#version-map) via une *liaison* à [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 > [!IMPORTANT]
 > Cet article décrit une ancienne méthode de mise à niveau des runtimes R et Python appelée *liaison*. Si vous avez installé la **Mise à jour cumulative (CU) 14 ou une version ultérieure pour SQL Server 2016 Service Pack (SP) 2** ou la **Mise à jour cumulative 22 ou une version ultérieure pour SQL Server 2017**, découvrez comment [changer le runtime R ou Python par défaut vers une version plus récente](change-default-language-runtime-version.md) à la place.
 
-Vous pouvez vous procurer des [versions plus récentes de Python et R](#version-map) via une *liaison* à Microsoft Machine Learning Server. La version s’applique à la fois à SQL Server Machine Learning Services (dans la base de données) et à SQL Server R Services (dans la base de données).
-
 ## <a name="what-is-binding"></a>Qu’est-ce qu’une liaison ?
 
-La liaison est un processus d’installation qui permute le contenu de vos dossiers **R_SERVICES** et **PYTHON_SERVICES** avec des fichiers exécutables, des bibliothèques et des outils plus récents de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
+La liaison est un processus d’installation qui remplace le contenu de vos dossiers **R_SERVICES** et **PYTHON_SERVICES** par des fichiers exécutables, des bibliothèques et des outils plus récents de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server).
 
 Les composants chargés inclus dans le modèle de maintenance ont été modifiés. Les mises à jour du service correspondent à la [chronologie de la prise en charge pour Microsoft R Server & Machine Learning Server](https://docs.microsoft.com/machine-learning-server/resources-servicing-support) sur le [cycle de vie moderne](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 

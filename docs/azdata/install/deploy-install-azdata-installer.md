@@ -1,7 +1,7 @@
 ---
 title: Installer azdata avec Windows Installer
-titleSuffix: SQL Server big data clusters
-description: Découvrez comment installer l’outil azdata pour installer et gérer ensuite des clusters Big Data SQL Server à l’aide du programme d’installation.
+titleSuffix: ''
+description: Découvrez comment installer l’outil azdata avec le programme d’installation.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 60d3b60f98a93cb6b724cd569fb2871adec3f1ce
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: a33e43386c44ec2ab60166ef57a502fc592c8d73
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733879"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914961"
 ---
 # <a name="install-azdata-to-manage-big-data-clusters-2019-with-windows-installer"></a>Installer `azdata` pour gérer [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] avec Windows Installer
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/azdata.md)]
 
-Cet article explique comment installer `azdata` pour les clusters Big Data SQL Server 2019 sur Windows. Avant la disponibilité de l’installation de Windows, l’installation d’`azdata` nécessitait `pip`.
+Cet article explique comment installer `azdata` sur Windows. Avant la disponibilité de l’installation de Windows, l’installation d’`azdata` nécessitait `pip`.
 
 >Pour Linux (Ubuntu), consultez les informations relatives à l’[installation d’`azdata` à l’aide du programme d’installation](./deploy-install-azdata-linux-package.md).
 
@@ -70,3 +70,5 @@ Le programme à désinstaller s’appelle `Azdata CLI`. Sélectionnez cette appl
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations sur les clusters Big Data, consultez [Que sont les [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)] ?](../../big-data-cluster/big-data-cluster-overview.md)
+
+Utiliser azdata avec les [services de données dotés d’Azure Arc](/azure/azure-arc/data/)

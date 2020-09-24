@@ -1,38 +1,41 @@
 ---
 title: Informations de référence sur azdata
 titleSuffix: SQL Server big data clusters
-description: Utilisez cet article de référence pour comprendre les commandes SQL dans l’outil azdata, en particulier les nombreuses commandes azdata.
+description: Article de référence sur les commandes azdata.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
-ms.date: 06/22/2020
+ms.reviewer: seanw
+ms.date: 09/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 86b164b4188601af5bcec4aa304701a48b5a5636
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: eba0d35e76a328947747a9ab1857efe81ba90783
+ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89733569"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "90914719"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+S'applique à l'`azdata`
 
-L’article suivant fournit des références sur les commandes `sql` disponibles dans l’outil `azdata`. Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata]().
+L’article suivant fournit des informations de référence sur les commandes **sql ** dans l’outil **azdata**. Pour plus d’informations sur les commandes **azdata**, consultez [azdata reference](reference-azdata.md)
 
 ## <a name="commands"></a>Commandes
-| Commande | Description |
+
+|Commande|Description|
 | --- | --- |
+|[azdata notebook](reference-azdata-notebook.md) | Commandes permettant d’afficher, d’exécuter et de gérer des notebooks à partir d’un terminal. |
+|[azdata extension](reference-azdata-extension.md) | Gérez et mettez à jour les extensions CLI. |
+|[azdata arc](reference-azdata-arc.md) | Commandes pour l’utilisation d’Azure Arc pour Azure Data Services. |
 |[azdata app](reference-azdata-app.md) | Créer, supprimer, exécuter et gérer des applications. |
 |[azdata bdc](reference-azdata-bdc.md) | Sélectionner, gérer et utiliser des clusters Big Data SQL Server. |
-|[azdata sql](reference-azdata-sql.md) | L’interface CLI SQL Database permet à l’utilisateur d’interagir avec SQL Server via T-SQL. |
+|[azdata sql](reference-azdata-sql.md) | L’interface CLI SQL DB permet à l’utilisateur d’interagir avec SQL Server via T-SQL. |
 [azdata login](#azdata-login) | Connectez-vous au point de terminaison du contrôleur du cluster et définissez son espace de noms en tant que contexte actif. Pour utiliser un mot de passe pour la connexion, vous devez définir la variable d’environnement AZDATA_PASSWORD.
 [azdata logout](#azdata-logout) | Se déconnecter du cluster.
 |[azdata context](reference-azdata-context.md) | Commandes de gestion du contexte. |
-|[azdata extension](reference-azdata-extension.md) | Gérez et mettez à jour les extensions CLI. |
-|[azdata notebook](reference-azdata-notebook.md) | Commandes permettant d’afficher, d’exécuter et de gérer des notebooks à partir d’un terminal. |
+|[azdata postgres](reference-azdata-postgres.md) | Exécuteur de requêtes postgres et interpréteur de commandes interactif. |
 ## <a name="azdata-login"></a>azdata login
 Quand votre cluster est déployé, il indique le point de terminaison du contrôleur lors du déploiement, que vous devez utiliser pour vous connecter.  Si vous ne connaissez pas le point de terminaison du contrôleur, vous pouvez vous connecter en faisant en sorte que la configuration Kube de votre cluster se trouve sur votre système dans l’emplacement par défaut <user home>/.kube/config ou en utilisant la variable d’environnement KUBECONFIG, par exemple exportez KUBECONFIG=path/to/.kube/configg.  Lorsque vous vous connectez, cet espace de noms de cluster est défini sur votre contexte actif.
 ```bash
@@ -41,7 +44,7 @@ azdata login [--auth]
              
 [--accept-eula -a]  
              
-[--namespace -n]  
+[--namespace -ns]  
              
 [--username -u]  
              
@@ -60,7 +63,7 @@ Connectez-vous en utilisant Active Directory avec un principal explicite.
 ```bash
 azdata login --auth ad --principal johndoe@COSTOSO.COM --endpoint https://<ip or domain name>:30080
 ```
-Se connecter de façon interactive. Le nom du cluster est toujours demandé s’il n’est pas spécifié comme argument. Si les variables d’environnement AZDATA_USERNAME, AZDATA_PASSWORD et ACCEPT_EULA sont définies sur votre système, ces valeurs ne vous sont pas demandées. Si vous avez la configuration Kube sur votre système ou si vous utilisez la variable d’environnement KUBECONFIG pour spécifier le chemin de la configuration, l’expérience interactive tente d’abord d’utiliser la configuration, puis vous demande les informations si la configuration échoue.
+Se connecter de façon interactive. Le nom du cluster est toujours demandé s’il n’est pas spécifié comme argument. Si les variables d’environnement AZDATA_USERNAME, AZDATA_PASSWORD et ACCEPT_EULA sont définies sur votre système, elles ne vous sont pas demandées. Si vous avez la configuration Kube sur votre système ou si vous utilisez la variable d’environnement KUBECONFIG pour spécifier le chemin de la configuration, l’expérience interactive tente d’abord d’utiliser la configuration, puis vous demande les informations si la configuration échoue.
 ```bash
 azdata login
 ```
@@ -79,7 +82,7 @@ La stratégie d’authentification. Authentification de base ou Active Directory
 Point de terminaison du contrôleur du cluster « https://host:port  ». Si vous ne voulez pas utiliser cet argument, vous pouvez utiliser la configuration Kube sur votre machine. Vérifiez que la configuration se trouve à l’emplacement par défaut <user home>/.kube/config ou utilisez la variable d’environnement KUBECONFIG.
 #### `--accept-eula -a`
 Acceptez-vous les termes du contrat de licence ? [oui/non]. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « oui ». Les termes du contrat de licence pour ce produit sont visibles à l’adresse https://aka.ms/eula-azdata-en.
-#### `--namespace -n`
+#### `--namespace -ns`
 Espace de noms du plan de contrôle du cluster.
 #### `--username -u`
 Utilisateur du compte. Si vous ne voulez pas utiliser cet argument, vous pouvez définir la variable d’environnement AZDATA_USERNAME.
@@ -120,4 +123,7 @@ Augmentez le niveau de détail de la journalisation. Utilisez --debug pour des j
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les autres commandes `azdata`, consultez [Informations de référence sur azdata](). Pour plus d’informations sur l’installation de l’outil `azdata`, consultez [Installer azdata pour gérer les clusters Big Data SQL Server 2019](../install/deploy-install-azdata.md).
+Pour plus d’informations sur les autres commandes **azdata**, consultez [azdata reference](reference-azdata.md). 
+
+Pour plus d’informations sur l’installation de l’outil **azdata**, consultez [Installer azdata](..\install\deploy-install-azdata.md).
+
