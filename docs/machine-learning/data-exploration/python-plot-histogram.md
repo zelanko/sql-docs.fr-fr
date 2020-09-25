@@ -1,19 +1,20 @@
 ---
 title: Création d’un histogramme pour l’exploration de données avec Python
+titleSuffix: SQL machine learning
 description: Découvrez comment créer un histogramme pour visualiser les données avec Python.
 author: cawrites
 ms.author: chadam
 ms.date: 07/14/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions'
-ms.openlocfilehash: d4ec56f02dd038d87e8b4e8e4c8597b7ba047ffa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 1a946efdd8da5a64d2475164a1b8057c7b41554f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179809"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226831"
 ---
 # <a name="plot-histograms-in-python"></a>Création d’histogrammes en Python 
 [!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]

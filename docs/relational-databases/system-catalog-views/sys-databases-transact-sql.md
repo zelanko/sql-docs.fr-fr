@@ -21,12 +21,12 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab1c584d736208ba871983a6169684607dcb5627
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9e298052726e033724d20d6b1695b1accda4c6ec
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550569"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227123"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
@@ -115,7 +115,7 @@ Si une base de données n’est pas `ONLINE` , ou `AUTO_CLOSE` a `ON` la valeur 
 |**is_federation_member**|**bit**|Indique si la base de données est membre d'une fédération.<br /> **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|Indique si la base de données est étirée.<br /> 0 = la base de données n’est pas compatible avec Stretch.<br /> 1 = la base de données est compatible avec Stretch.<br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )<br /> Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |**is_mixed_page_allocation_on**|**bit**|Indique si les tables et les index de la base de données peuvent allouer des pages initiales à partir d’extensions mixtes.<br /> 0 = les tables et les index de la base de données allouent toujours les pages initiales des extensions uniformes.<br /> 1 = les tables et les index de la base de données peuvent allouer des pages initiales à partir d’extensions mixtes.<br /> Pour plus d’informations, consultez l' `SET MIXED_PAGE_ALLOCATION` option des [options ALTER database SET &#40;&#41;Transact-SQL ](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /> **S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] )|  
-|**is_temporal_retention_enabled**|**bit**|Indique si la tâche de nettoyage de la stratégie de rétention temporelle est activée.<br /><br />1 = la rétention temporelle est activée<br />0 = la rétention temporelle est désactivée<br />**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
+|**is_temporal_history_retention_enabled**|**bit**|Indique si la tâche de nettoyage de la stratégie de rétention temporelle est activée.<br /><br />1 = la rétention temporelle est activée<br />0 = la rétention temporelle est désactivée<br />**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type**|**int**|Le paramètre de classement du catalogue :<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Le paramètre de classement du catalogue :<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|
 |**physical_database_name**|**nvarchar(128)**|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nom physique de la base de données. Pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] , ID courant pour les bases de données sur un serveur. <br />**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|

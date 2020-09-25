@@ -21,24 +21,23 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c7bc3d91eafbfa72149c5c228afe409b044b089
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d3a7142e60b1abb4f820caf2f75f8ebdec3a0d8a
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427841"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227394"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Utilisé pour déterminer si le réplica actuel est le réplica principal par défaut.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```syntaxsql
 sys.fn_hadr_is_primary_replica ( 'dbname' )  
 ```  
   
@@ -52,13 +51,12 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
 ## <a name="remarks"></a>Notes  
  Utilisez cette fonction pour déterminer aisément si l'instance locale héberge le réplica principal de la base de données de disponibilité spécifiée. L'exemple de code devrait ressembler à ce qui suit :  
   
-```  
+```sql
 If sys.fn_hadr_is_primary_replica ( @dbname ) <> 1   
 BEGIN  
 -- If this is not the primary replica, exit (probably without error).  
 END  
 -- If this is the primary replica, continue to do the backup.  
-  
 ```  
   
 ## <a name="examples"></a>Exemples  
@@ -66,7 +64,7 @@ END
 ### <a name="a-using-sysfn_hadr_is_primary_replica"></a>R. Utilisation de sys.fn_hadr_is_primary_replica  
  L'exemple suivant retourne 1 si la base de données spécifiée sur l'instance locale est le réplica principal.  
   
-```  
+```sql
 SELECT sys.fn_hadr_is_primary_replica ('TestDB');  
 GO  
 ```    

@@ -22,15 +22,15 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b43c386f803c1d9fea8a1e7645d1764ece3a7eef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3021389a5223cd45ef7fb2b0b2dba72c51ba7235
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493032"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226862"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Crée ou met à jour les règles de pare-feu au niveau de la base de données pour votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Les règles de pare-feu de base de données peuvent être configurées pour la base de données **Master** et les bases de données utilisateur sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Les règles de pare-feu de base de données sont particulièrement utiles lors de l’utilisation des utilisateurs de base de données Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
