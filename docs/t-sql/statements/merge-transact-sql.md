@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 63770bce9243775e8c9c218371f016a23555b146
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89549007"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227298"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -483,6 +483,9 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. Utilisation de MERGE pour effectuer une opération INSERT ou UPDATE sur une table d’arêtes cible dans une base de données de graphes
 
 Dans cet exemple, vous créez des tables de nœuds `Person` et `City` et une table d’arêtes `livesIn`. Vous utilisez l’instruction MERGE sur l’arête `livesIn` et insérez une nouvelle ligne si l’arête n’existe pas encore entre une `Person` et `City`. Si l’arête existe déjà, vous mettez simplement à jour l’attribut StreetAddress sur l’arête `livesIn`.
+
+> [!NOTE]
+> L’exemple suivant s’applique à SQL Server à partir de 2019.
 
 ```sql
 -- CREATE node and edge tables

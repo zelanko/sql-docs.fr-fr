@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 439c723463516ad046c6a37a6d327b289efc9eb6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d263df7b2b76684f121ce9e699fc619370e3ee1
+ms.sourcegitcommit: c0f92739c81221fbcdb7c40b53a71038105df44f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471165"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91210624"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,21 +29,23 @@ ms.locfileid: "88471165"
   
  **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+   - **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
      [Composants requis](#Prerequisites)  
   
--   **Procédures :**  
+   - **Procédures :**  
   
      [Reconstruire des bases de données système](#RebuildProcedure)  
   
      [Reconstruire la base de données resource](#Resource)  
   
-     [Créer une nouvelle base de données msdb](#CreateMSDB)  
+     [Créer une nouvelle base de données msdb](#CreateMSDB) 
+
+     [Régénérer la base de données tempdb](#RebuildTempdb)  
   
--   **Suivi :**  
+   - **Suivi :**  
   
      [Corriger les erreurs liées à la reconstruction](#Troubleshoot)  
   
@@ -55,15 +57,15 @@ ms.locfileid: "88471165"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
  Avant de reconstruire les bases de données système, effectuez les tâches suivantes pour être certain de pouvoir restaurer les bases de données système avec leurs paramètres actuels.  
   
-1.  Enregistrez toutes les valeurs de configuration à l'échelle du serveur.  
+1. Enregistrez toutes les valeurs de configuration à l'échelle du serveur.  
   
-    ```  
+    ```SQL  
     SELECT * FROM sys.configurations;  
     ```  
   
 2.  Enregistrez tous les correctifs logiciels appliqués à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le classement actuel. Vous devez réappliquer ces correctifs logiciels après avoir reconstruit les bases de données système.  
   
-    ```  
+    ```SQL  
     SELECT  
     SERVERPROPERTY('ProductVersion ') AS ProductVersion,  
     SERVERPROPERTY('ProductLevel') AS ProductLevel,  
@@ -74,7 +76,7 @@ ms.locfileid: "88471165"
   
 3.  Enregistrez l'emplacement actuel de tous les fichiers de données et fichiers journaux des bases de données système. La reconstruction des bases de données système installe toutes les bases de données système à leur emplacement d'origine. Si vous avez déplacé des fichiers de données ou des fichiers journaux de bases de données système, vous devrez à nouveau les déplacer.  
   
-    ```  
+    ```SQL  
     SELECT name, physical_name AS current_file_location  
     FROM sys.master_files  
     WHERE database_id IN (DB_ID('master'), DB_ID('model'), DB_ID('msdb'), DB_ID('tempdb'));  
@@ -158,6 +160,7 @@ ms.locfileid: "88471165"
 6.  Dans la page **Prêt à réparer** , cliquez sur **Réparer**. La page Terminé indique que l'opération est terminée.  
   
 ##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a> Créer une nouvelle base de données msdb  
+
  Si la base de données **msdb** est endommagée et que vous ne possédez pas de sauvegarde de la base de données **msdb** , vous pouvez créer une nouvelle base de données **msdb** à l'aide du script **instmsdb** .  
   
 > [!WARNING]  
@@ -186,6 +189,33 @@ ms.locfileid: "88471165"
 9. Recréez le contenu de l'utilisateur stocké dans la base de données **msdb** , tel que les travaux, l'alerte, etc.  
   
 10. Sauvegardez la base de données **msdb** .  
+
+##  <a name="rebuild-the-tempdb-database"></a><a name="RebuildTempdb"></a> Régénérer la base de données tempdb  
+
+Si la base de données **tempdb** est endommagée et que le moteur de base de données ne démarre pas, vous pouvez régénérer **tempdb** sans avoir à régénérer toutes les bases de données système.
+  
+1. Renommez les fichiers tempdb.mdf et templog.ldf actuels, s’ils ne sont pas manquants. 
+1. Démarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d’une invite de commandes à l’aide de la commande suivante. 
+
+   ```sql
+   sqlservr -c -f -T3608 -T4022 -s <instance> -mSQLCMD
+   ```
+
+   Pour un nom d’instance par défaut, utilisez MSSQLSERVER, pour l’instance nommée, utilisez MSSQL$<instance_name>. L’indicateur de trace 4022 désactive l’exécution des procédures stockées de démarrage. L’option -mSQLCMD autorise uniquement [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) à se connecter au serveur (consultez [Autres options de démarrage](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options))
+
+   > [!Note] 
+   > Assurez-vous que la fenêtre d’invite de commandes reste ouverte après le démarrage du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La fermeture de la fenêtre d’invite de commandes met fin au processus.
+
+1. Connectez-vous au serveur à l’aide de **sqlcmd**, puis utilisez la procédure stockée suivante pour réinitialiser l’état de la base de données tempdb.
+
+   ```sql
+   exec master..sp_resetstatus Tempdb
+   ```
+
+1. Arrêtez le serveur en appuyant sur CTRL+C dans la fenêtre d’invite de commandes
+
+1. Redémarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cela crée un nouvel ensemble de fichiers de base de données tempdb et récupère la base de données tempdb.
+
   
 ##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Corriger les erreurs liées à la reconstruction  
  Les erreurs de syntaxe et autres erreurs d'exécution sont affichées dans la fenêtre d'invite de commandes. Vérifiez que l'instruction Setup ne comporte pas les erreurs de syntaxe suivantes :  

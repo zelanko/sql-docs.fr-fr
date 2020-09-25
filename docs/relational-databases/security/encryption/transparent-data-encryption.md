@@ -19,12 +19,12 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d1ba3c44a911130a4f86eb5be3789657b24288b
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: 8cf9e3f2273cf4b85365d7c44f9587e02c62b984
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86380882"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227048"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
 
@@ -119,7 +119,7 @@ GO
 Les opérations de chiffrement et de déchiffrement sont planifiées sur des threads d'arrière-plan par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour consulter l’état de ces opérations, utilisez les vues catalogue et les vues de gestion dynamique décrits dans le tableau plus loin dans cet article.
 
 > [!CAUTION]
-> Les fichiers de sauvegarde de base de données pour lesquelles TDE est activé sont aussi chiffrés avec la clé de chiffrement de base de données. Ainsi, quand vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Par conséquent, au-delà de la sauvegarder de la base de données, pensez à conserver les sauvegardes des certificats de serveur. Si les certificats ne sont plus disponibles, vous perdrez des données.
+> Les fichiers de sauvegarde pour les bases de données pour lesquelles TDE est activé sont également chiffrés avec la clé de chiffrement de la base de données. Ainsi, quand vous restaurez ces sauvegardes, le certificat qui protège la clé de chiffrement de base de données doit être disponible. Par conséquent, au-delà de la sauvegarder de la base de données, pensez à conserver les sauvegardes des certificats de serveur. Si les certificats ne sont plus disponibles, vous perdrez des données.
 >
 > Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 

@@ -22,12 +22,12 @@ ms.assetid: 1485c375-921a-42af-a871-bb333cc08d3e
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f19c8184168b2fd553062d1a888aa619ee164483
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3588c21ff18120c390c6ecb4484d02bc7f83dbb9
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307226"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227488"
 ---
 # <a name="transactions-transact-sql"></a>Transactions (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88307226"
  Uniquement applicable aux ensembles de résultats MARS (Multiple Active Result Sets), une transaction [!INCLUDE[tsql](../../includes/tsql-md.md)] explicite ou implicite qui démarre sous une session MARS devient une transaction dont l'étendue est définie par traitement. Une transaction dont l'étendue est définie par traitement qui n'est pas validée ou restaurée à la fin du traitement est automatiquement restaurée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 > [!NOTE] 
-> Pour les considérations spéciales relatives aux produits Data Warehouse, consultez [Transactions (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+> Pour plus d’informations sur les éléments à prendre en compte sur les produits Data Warehouse, consultez [Transactions (Azure Synapse Analytics)](transactions-sql-data-warehouse.md).   
 
 ## <a name="in-this-section"></a>Dans cette section  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les instructions de transaction suivantes :  

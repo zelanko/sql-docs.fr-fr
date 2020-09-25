@@ -24,12 +24,12 @@ ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 1ae261b89d375ac13914c87674bdfc43cd0751e9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d263f8db7e95cbc5e961d5b4d3879ce53ce99d47
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547696"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227315"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "89547696"
  Spécifie que le contexte d'exécution dont l'identité est empruntée est une connexion. L'étendue de l'emprunt d'identité est au niveau du serveur.  
   
 > [!NOTE]  
->  Cette option n’est pas disponible dans une base de données autonome, dans SQL Database ni dans SQL Data Warehouse.  
+>  Cette option n’est pas disponible dans une base de données autonome ou SQL Database ou [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
  Utilisateur  
  Spécifie que le contexte dont l'identité doit être empruntée est un utilisateur de la base de données active. L'étendue de l'emprunt d'identité est limitée à la base de données active. Le changement de contexte vers un utilisateur de base de données n'hérite pas des autorisations de cet utilisateur au niveau serveur.  
@@ -96,7 +96,7 @@ ms.locfileid: "89547696"
  Dans un module, il spécifie que les instructions de ce module sont exécutées dans le contexte de l'appelant du module.
 En dehors d'un module, cette instruction n'a pas d'effet.
  > [!NOTE]  
->  Cette option n’est pas disponible dans SQL Data Warehouse.  
+>  Cette option n'est pas disponible dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)].  
   
 ## <a name="remarks"></a>Notes  
  Le changement dans le contexte d'exécution reste en vigueur jusqu'à ce que se produise l'une des actions suivantes :  
@@ -146,7 +146,7 @@ Si l’utilisateur est orphelin (la connexion associée n’existant plus) et qu
 ###  <a name="a-using-execute-as-and-revert-to-switch-context"></a><a name="_exampleA"></a> A. Utilisation de EXECUTE AS et REVERT pour changer de contexte  
  L'exemple suivant crée une pile d'exécutions de contexte à l'aide de plusieurs principaux. L'instruction `REVERT` est ensuite utilisée pour réinitialiser le contexte d'exécution à l'appelant précédent. L'instruction `REVERT` est exécutée plusieurs fois en remontant la pile jusqu'à ce que le contexte d'exécution soit défini pour l'appelant d'origine.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 --Create two temporary principals  
@@ -190,7 +190,7 @@ GO
 ### <a name="b-using-the-with-cookie-clause"></a>B. Utilisation de la clause WITH COOKIE  
  L’exemple suivant définit le contexte d’exécution d’une session sur un utilisateur spécifié et précise la clause WITH NO REVERT COOKIE = @*varbinary_variable*. L'instruction `REVERT` doit spécifier la valeur passée à la variable `@cookie` dans l'instruction `EXECUTE AS` pour ramener le contexte à l'appelant. Pour exécuter cet exemple, la connexion `login1` et l'utilisateur `user1` créés dans l'exemple A doivent exister.  
   
-```  
+```sql
 DECLARE @cookie varbinary(8000);  
 EXECUTE AS USER = 'user1' WITH COOKIE INTO @cookie;  
 -- Store the cookie in a safe location in your application.  

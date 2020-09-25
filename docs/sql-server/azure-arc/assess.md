@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 59a6ff65e25878aefe08cfd87bf1f9e36da7366b
-ms.sourcegitcommit: d56f1eca807c55cf606a6316f3872585f014fec1
+ms.openlocfilehash: 9412348f0d4e76313557b326c18fcb7b2e7087d8
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90942710"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145358"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Configurer SQL Assessment à la demande pour l’instance SQL Server avec Azure Arc
 
@@ -76,3 +76,5 @@ Microsoft Monitoring Agent analyse le dossier de travail toutes les 15 minutes e
 ## <a name="next-steps"></a>Étapes suivantes
 
 Pour plus d’informations, consultez la section [Prérequis des évaluations à la demande du hub de services](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents) du document SQL Server.
+
+Pour bénéficier d’une prise en charge complète pour SQL Assessment à la demande, un abonnement au support Premier ou Unified est requis. Pour plus d’informations, consultez [Support Premier Azure](https://azure.microsoft.com/support/plans/premier).

@@ -1,6 +1,6 @@
 ---
-description: Transactions (SQL Data Warehouse)
-title: Transactions (SQL Data Warehouse) | Microsoft Docs
+title: Transactions (Azure Synapse Analytics)
+description: Une transaction est un groupe d’une ou plusieurs instructions de base de données entièrement validées ou restaurées.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4928358ca724108611f91e36a480a7bade6d747e
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688342"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227465"
 ---
-# <a name="transactions-sql-data-warehouse"></a>Transactions (SQL Data Warehouse)
+# <a name="transactions-azure-synapse-analytics"></a>Transactions (Azure Synapse Analytics)
+
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Une transaction est un groupe d’une ou plusieurs instructions de base de données entièrement validées ou restaurées. Chaque transaction est atomique, cohérente, isolée et durable (ACID). Si la transaction réussit, toutes les instructions qu’elle contient sont validées. Si la transaction échoue, autrement dit si au moins une des instructions du groupe échoue, la totalité du groupe est restauré.  
@@ -93,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Il n’est plus possible de restaurer une transaction après l’émission d’une instruction COMMIT, car les modifications de données ont été définitivement enregistrées dans la base de données.  
   
- Les commandes [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) et [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) ne sont pas utilisables dans une transaction explicite.  
+ Les commandes [CREATE DATABASE &#40; Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) et [DROP DATABASE &#40; Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) ne peuvent pas être utilisées dans une transaction explicite.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] n’a pas de mécanisme de partage de transaction. Cela implique qu’à tout moment, une seule session peut travailler sur une même transaction dans le système.  
   
@@ -114,8 +115,7 @@ COMMIT;
 ### <a name="b-rolling-back-a-transaction"></a>B. Restauration d’une transaction  
  L’exemple suivant montre l’effet de la restauration d’une transaction.  Dans cet exemple, l’instruction ROLLBACK restaure l’instruction INSERT, mais la table créée continue d’exister.  
   
-
-```sql
+```sql  
 CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  

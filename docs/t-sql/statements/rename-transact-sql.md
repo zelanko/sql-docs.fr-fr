@@ -10,12 +10,12 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3959d2bbf06cbb5ab106cc805e37f700d3be624f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 97cabcda2e5b680e9fe2d5d6a4f0ce2130e19a27
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88357515"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226879"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -23,12 +23,12 @@ ms.locfileid: "88357515"
 Renomme une table créée par l’utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renomme une table créée par l’utilisateur, une colonne dans une table ou une base de données créée par l’utilisateur dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
 > [!NOTE]
-> Pour renommer une base de données dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], utilisez [ALTER DATABASE (Azure SQL Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016-au7). Pour renommer une base de données dans Azure SQL Database, utilisez l’instruction [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current). Pour renommer une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez la procédure stockée [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
+> Pour renommer une base de données dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], utilisez [ALTER DATABASE ([!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)])](alter-database-transact-sql.md?view=aps-pdw-2016-au7&preserve-view=true). Pour renommer une base de données dans Azure SQL Database, utilisez l’instruction [ALTER DATABASE (Azure SQL Database)](alter-database-transact-sql.md?view=azuresqldb-mi-current&preserve-view=true). Pour renommer une base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez la procédure stockée [sp_renamedb](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md).
 
 ## <a name="syntax"></a>Syntaxe
 
 ```syntaxsql
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 
 -- Rename a table.
 RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ] table_name TO new_table_name
@@ -61,7 +61,7 @@ Modifiez le nom d’une table définie par l’utilisateur. Spécifiez la table 
 RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 **S’APPLIQUE À : ** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Modifiez le nom d’une base de données définie par l’utilisateur, de *database_name* à *new_database_name*. Vous ne pouvez pas utiliser les noms de base de données réservés [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ci-dessous pour renommer une base de données :
+Modifiez le nom d’une base de données définie par l’utilisateur, de *database_name* à *new_database_name*. Vous ne pouvez pas renommer une base de données en [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] les noms de base de données réservés suivants :
 
 - master
 - model
@@ -93,7 +93,7 @@ Vous ne pouvez pas renommer une table externe, des index ou des vues. Au lieu de
 
 ### <a name="cannot-rename-a-table-in-use"></a>Impossible de renommer une table utilisée
 
-Vous ne pouvez pas renommer une table ou une base de données en cours d’utilisation. Pour renommer une table, vous avez besoin d’un verrou exclusif au niveau de la table. Si la table est en cours d’utilisation, vous pouvez être amené à terminer les sessions qui utilisent la table. Pour terminer une session, vous pouvez utiliser la commande KILL. Utilisez KILL avec précaution, car lorsqu’une session se termine, le travail non validé est annulé. Les sessions dans SQL Data Warehouse ont le préfixe « SID ». Vous devez inclure le préfixe « SID » et le numéro de session lorsque vous appelez la commande KILL. Cet exemple présente une liste de sessions actives ou inactives, puis termine la session « SID1234 ».
+Vous ne pouvez pas renommer une table ou une base de données en cours d’utilisation. Pour renommer une table, vous avez besoin d’un verrou exclusif au niveau de la table. Si la table est en cours d’utilisation, vous pouvez être amené à terminer les sessions qui utilisent la table. Pour terminer une session, vous pouvez utiliser la commande KILL. Utilisez KILL avec précaution, car lorsqu’une session se termine, le travail non validé est annulé. Les sessions dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] sont précédées du préfixe « SID ». Vous devez inclure le préfixe « SID » et le numéro de session lorsque vous appelez la commande KILL. Cet exemple présente une liste de sessions actives ou inactives, puis termine la session « SID1234 ».
 
 ### <a name="rename-column-restrictions"></a>Restrictions relatives au renommage de colonnes
 
@@ -156,7 +156,7 @@ ALTER SCHEMA dbo TRANSFER OBJECT::product.item;
 
 **S’APPLIQUE À :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Il est important de se rappeler qu’une table en cours d’utilisation ne peut pas être renommée. Le renommage d’une table nécessite un verrou exclusif au niveau de la table. Si la table est en cours d’utilisation, vous serez peut-être amené à terminer la session qui utilise la table. Pour terminer une session, vous pouvez utiliser la commande KILL. Utilisez KILL avec précaution, car lorsqu’une session se termine, le travail non validé est annulé. Les sessions dans SQL Data Warehouse ont le préfixe « SID ». Vous devez inclure le préfixe « SID » et le numéro de session lorsque vous appelez la commande KILL. Cet exemple présente une liste de sessions actives ou inactives, puis termine la session « SID1234 ».
+Vous ne pouvez pas renommer une table pendant qu’elle est en cours d’utilisation. Le renommage d’une table nécessite un verrou exclusif au niveau de la table. Si la table est en cours d’utilisation, vous serez peut-être amené à terminer la session qui utilise la table. Pour terminer une session, vous pouvez utiliser la commande KILL. Utilisez KILL avec précaution, car lorsqu’une session se termine, le travail non validé est annulé. Les sessions dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] sont précédées du préfixe « SID ». Vous devez inclure le préfixe « SID » et le numéro de session lorsque vous appelez la commande KILL. Cet exemple présente une liste de sessions actives ou inactives, puis termine la session « SID1234 ».
 
 ```sql
 -- View a list of the current sessions
