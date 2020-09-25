@@ -2,7 +2,7 @@
 title: Connexion avec l'authentification Azure Active Directory
 description: Découvrez comment développer des applications Java qui utilisent la fonctionnalité d’authentification Azure Active Directory avec le pilote JDBC Microsoft pour SQL Server.
 ms.custom: ''
-ms.date: 06/17/2020
+ms.date: 09/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae19b292788af43226de12a342e870768ad2ac26
-ms.sourcegitcommit: a4ee6957708089f7d0dda15668804e325b8a240c
+ms.openlocfilehash: 04e52a1a84bb37fccd90f9ff32e0fdadde8fb2af
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87899013"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91117136"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connexion avec l'authentification Azure Active Directory
 
@@ -33,7 +33,7 @@ Les propriétés de connexion pour la prise en charge de l’authentification Az
     * **ActiveDirectoryIntegrated**
         * Prise en charge depuis la version de pilote **v6.0**, l’authentification `authentication=ActiveDirectoryIntegrated` peut être utilisée pour se connecter à Azure SQL Database/Data Warehouse à l’aide de l’authentification intégrée. Pour utiliser ce mode d’authentification, vous devez fédérer les services de fédération Active Directory (AD FS) locaux avec Azure Active Directory dans le cloud. Une fois la configuration terminée, vous pouvez vous connecter en ajoutant la bibliothèque Native « mssql-jdbc_auth-\<version>-\<arch>.dll » au chemin de la classe d’application sur le système d’exploitation Windows ou en configurant un ticket Kerberos pour le support de l’authentification multiplateforme. Vous pourrez accéder à Azure SQL Database/SQL Data Warehouse sans être invité à entrer des informations d’identification lorsque vous vous connecterez à un ordinateur joint au domaine.
     * **ActiveDirectoryPassword**
-        * Prise en charge depuis la version de pilote **v6.0**, l’authentification `authentication=ActiveDirectoryPassword` peut être utilisée pour se connecter à Azure SQL Database/Data Warehouse à l’aide d’un nom de principal et d’un mot de passe Azure AD.
+        * Prise en charge depuis la version de pilote **v6.0**, `authentication=ActiveDirectoryPassword` peut être utilisée pour se connecter à Azure SQL Database/Data Warehouse à l’aide d’un nom de principal et d’un mot de passe Azure AD.
     * **SqlPassword**
         * Utilisez `authentication=SqlPassword` pour vous connecter à un serveur SQL Server avec les propriétés userName/user et password.
     * **NotSpecified**
@@ -113,7 +113,7 @@ Pour plus d’informations, consultez [Définir le ticket Kerberos sur Windows, 
 > [!NOTE]
 >  Si vous utilisez une version antérieure du pilote, activez ce [lien](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) pour les dépendances respectives requises pour utiliser ce mode d’authentification. 
 
-L’exemple suivant montre comment utiliser le mode `authentication=ActiveDirectoryIntegrated`. Exécutez cet exemple sur un ordinateur joint au domaine qui est fédéré avec Azure Active Directory. Un utilisateur de base de données autonome représentant votre principal Azure AD ou l’un des groupes dont vous faites partie doit exister dans la base de données et doit disposer de l’autorisation CONNECT. 
+L’exemple suivant montre comment utiliser le mode `authentication=ActiveDirectoryIntegrated`. Exécutez cet exemple sur un ordinateur joint au domaine qui est fédéré avec Azure Active Directory. Un utilisateur de base de données autonome représentant votre utilisateur Azure AD, ou l’un des groupes dont vous faites partie, doit exister dans la base de données et doit disposer de l’autorisation CONNECT. 
 
 Avant de générer et d’exécuter l’exemple, sur l’ordinateur client (sur lequel vous souhaitez exécuter l’exemple), téléchargez la bibliothèque [Azure-ActiveDirectory-Library-for-Java](https://github.com/AzureAD/azure-activedirectory-library-for-java) et ses dépendances, et incluez-les dans le chemin de la build Java
 

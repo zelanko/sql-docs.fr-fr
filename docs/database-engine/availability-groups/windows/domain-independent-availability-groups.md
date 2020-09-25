@@ -6,23 +6,23 @@ ms.date: 09/25/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
-ms.topic: conceptual
+ms.topic: how-to
 helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894489"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116234"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Créer un groupe de disponibilité indépendant du domaine
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Les groupes de disponibilité AlwaysOn exigent un cluster de basculement Windows Server (cluster WSFC) sous-jacent. Le déploiement d’un cluster WSFC via Windows Server 2012 R2 a toujours nécessité que les serveurs participant à un cluster WSFC, également connu sous le nom de nœuds, soient joints au même domaine. Pour plus d’informations sur Active Directory Domain Services (AD DS), reportez-vous [ici](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
+Les groupes de disponibilité AlwaysOn (AGs) exigent un cluster de basculement Windows Server (cluster WSFC) sous-jacent. Le déploiement d’un cluster WSFC via Windows Server 2012 R2 a toujours nécessité que les serveurs participant à un cluster WSFC, également connu sous le nom de nœuds, soient joints au même domaine. Pour plus d’informations sur Active Directory Domain Services (AD DS), reportez-vous [ici](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 
 La dépendance entre WSFC et AD DS est plus complexe que ce qui a été précédemment déployé avec une configuration de mise en miroir de bases de données, étant donné que la mise en miroir de bases de données peut être déployée sur plusieurs centres de données à l’aide de certificats, sans de telles dépendances.  Un groupe de disponibilité traditionnel couvrant plusieurs centres de données requiert que tous les serveurs soient joints au même domaine Active Directory. Des domaines différents, même des domaines approuvés, ne fonctionnent pas. Tous les serveurs doivent être des nœuds du même cluster WSFC. Cette configuration est représentée dans la figure suivante. SQL Server 2016 a également des groupes de disponibilité distribués qui peuvent aussi atteindre cet objectif d’une manière différente.
 

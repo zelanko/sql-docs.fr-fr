@@ -11,16 +11,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
+- PMO
+- Partitioned Memory Objects
+- cmemthread
+- AWE
+- SPA, Single Page Allocator
+- MPA, Multi Page Allocator
+- memory allocation, SQL Server
+- memory pressure, SQL Server
+- stack size, SQL Server
+- buffer manager, SQL Server
+- buffer pool, SQL Server
+- resource monitor, SQL Server
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4681cdb7dbca293501902caec456a3e08eac5ba7
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8677c1e3fff32a5ea2ae43f6437f0d219180123c
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243691"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91116217"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
 
@@ -62,7 +74,7 @@ L’utilisation d’AWE et du privilège de verrouillage des pages en mémoire v
 |Privilège de verrouillage des pages en mémoire du système d’exploitation (permet de verrouiller la mémoire physique, empêchant ainsi la pagination par le système d’exploitation de la mémoire verrouillée). <sup>6</sup> |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] éditions Standard, Entreprise et Développeur : requis pour que le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise le mécanisme AWE. La mémoire allouée par le biais du mécanisme AWE ne peut pas être dépaginée. <br> L'accord de ce privilège sans l'activation de AWE n'a aucun effet sur le serveur. | Option uniquement utilisée en cas de nécessité, à savoir s’il y a des raisons de penser que le processus sqlservr est hors page. Dans ce cas, l’erreur 17890, qui ressemble à l’exemple ci-dessous, est signalée dans le journal des erreurs : `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`|
 
 <sup>1</sup> les versions 32 bits ne sont pas disponibles à partir de la version [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
-<sup>2</sup> /3gb est un paramètre d’amorçage de système d’exploitation. Pour plus d'informations, consultez la MSDN Library.  
+<sup>2</sup> /3gb est un paramètre d’amorçage de système d’exploitation.  
 <sup>3</sup> WOW64 (Windows on Windows 64) est un mode dans lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 32 bits s’exécute sur un système d’exploitation 64 bits.  
 <sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] édition Standard prend en charge jusqu’à 128 Go. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition prend en charge le maximum du système d’exploitation.  
 <sup>5</sup> Notez que l’option sp_configure awe enabled est présente sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]64 bits, mais qu’elle est ignorée.    
@@ -94,7 +106,7 @@ Le tableau suivant indique si un type spécifique d’allocation de mémoire est
 |Allocation de page unique|Oui|Oui, regroupées dans des allocations de pages de « toute taille »|
 |Allocation de plusieurs pages|Non|Oui, regroupées dans des allocations de pages de « toute taille »|
 |Allocation du CLR|Non|Oui|
-|Mémoire de piles de threads|Non|Non |
+|Mémoire de piles de threads|Non|Non|
 |Allocations directes de Windows|Non|Non|
 
 À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer plus de mémoire que la valeur spécifiée dans le paramètre max server memory. Ce comportement peut se produire quand la valeur de **_Mémoire totale du serveur (Ko)_** a déjà atteint le paramètre **_Mémoire du serveur cible (Ko)_** (comme spécifié par la mémoire maximum du serveur). Si la mémoire libre contiguë est insuffisante pour répondre aux demandes de mémoire de plusieurs pages (plus de 8 Ko) en raison de la fragmentation de la mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut procéder à une surallocation au lieu de rejeter la demande de mémoire. 
@@ -319,6 +331,19 @@ La protection de la somme de contrôle, introduite dans [!INCLUDE[ssVersion2005]
 
 ## <a name="understanding-non-uniform-memory-access"></a>Présentation de l'accès NUMA (Non-uniform Memory Access)
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est compatible avec la technologie NUMA (Non-Uniform Memory Access) et fonctionne correctement avec l'accès NUMA matériel sans configuration particulière. À mesure que la vitesse et le nombre de processeurs augmentent, il devient de plus en plus difficile de réduire le temps de réponse de la mémoire requis pour exploiter cette puissance de traitement supplémentaire. Pour contourner ce problème, les fournisseurs de matériel proposent des caches L3 de grande capacité, mais cette solution présente des limites. L’architecture NUMA fournit une solution évolutive à ce problème. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a été conçu pour tirer parti des ordinateurs reposant sur la technologie NUMA sans qu’il soit nécessaire d’apporter des modifications aux applications. Pour plus d’informations, consultez [Procédure : Configurer SQL Serveur pour utiliser Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md).
+
+## <a name="dynamic-partition-of-memory-objects"></a>Partition dynamique d’objets mémoire
+Les allocateurs de tas, appelés objets mémoire dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], permettent à [!INCLUDE[ssde_md](../includes/ssde_md.md)] d’allouer de la mémoire à partir du tas. Celles-ci peuvent être suivies à l’aide de la vue de gestion dynamique [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md). CMemThread est un type d’objet mémoire thread-safe qui autorise les allocations de mémoire simultanées à partir de plusieurs threads. Pour un suivi correct, les objets CMemThread s’appuient sur des constructions de synchronisation (un mutex) pour s’assurer qu’un seul thread met à jour des éléments d’information critiques à la fois. 
+
+> [!NOTE]
+> Le type d’objet CMemThread est utilisé dans tout la base de code [!INCLUDE[ssde_md](../includes/ssde_md.md)] pour de nombreuses allocations, et peut être partitionné globalement, par nœud ou par UC.   
+
+Toutefois, l’utilisation de mutex peut entraîner une contention si de nombreux threads sont alloués à partir du même objet mémoire d’une manière hautement simultanée. Par conséquent, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a le concept d’objets de mémoire partitionnée (PMO) et chaque partition est représentée par un objet CMemThread unique. Le partitionnement d’un objet mémoire est défini statiquement et ne peut pas être modifié après la création. Comme les modèles d’allocation de mémoire varient largement en fonction des aspects tels que l’utilisation du matériel et de la mémoire, il est impossible de trouver le modèle de partitionnement parfait au préalable. Dans la grande majorité des cas, l’utilisation d’une partition unique suffira, mais dans certains scénarios cela peut entraîner une contention qui peut être évitée uniquement avec un objet mémoire fortement partitionné. Il n’est pas souhaitable de partitionner chaque objet mémoire, car davantage de partitions peuvent entraîner d’autres inefficacités et augmenter la fragmentation de la mémoire.
+
+> [!NOTE]
+> Avant [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], l’indicateur de trace 8048 peut être utilisé pour forcer un PMO basé sur des nœuds à devenir un PMO basé sur le processeur. À compter de SP2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], ce comportement est dynamique et contrôlé par le moteur.
+
+À compter de SP2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], le [!INCLUDE[ssde_md](../includes/ssde_md.md)] peut détecter de manière dynamique la contention sur un objet CMemThread spécifique et promouvoir l’objet en une implémentation par nœud ou par processeur. Une fois promu, le PMO reste promu jusqu’au redémarrage du processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La contention de CMemThread peut être détectée par la présence des hautes attentes CMEMTHREAD dans la DMV [sys.dm_os_wait_stats](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) et en observant les colonnes de la DMV [sys.dm_os_memory_objects](../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) *contention_factor*, *partition_type*, *exclusive_allocations_count*et *waiting_tasks_count*.
 
 ## <a name="see-also"></a>Voir aussi
 [Mémoire du serveur (option de configuration de serveur)](../database-engine/configure-windows/server-memory-server-configuration-options.md)   

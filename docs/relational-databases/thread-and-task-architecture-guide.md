@@ -2,7 +2,7 @@
 title: Guide d’architecture de thread et de tâche | Microsoft Docs
 description: En savoir plus sur l’architecture des threads et des tâches dans SQL Server, notamment la planification des tâches, l’ajout à chaud du processeur et les meilleures pratiques pour l’utilisation d’ordinateurs avec plus de 64 UC.
 ms.custom: ''
-ms.date: 07/06/2020
+ms.date: 09/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,16 +11,24 @@ ms.topic: conceptual
 helpviewer_keywords:
 - guide, thread and task architecture
 - thread and task architecture guide
+- task scheduling
+- working threads
+- Large Deficit First scheduling
+- LDF scheduling
+- scheduling, SQL Server
+- tasks, SQL Server
+- threads, SQL Server
+- quantum, SQL Server
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3efda2f67cc2772739a7eaf0a8f1b0dbf947d421
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: f2500a95946ee1a8226763ebd7983edd2a9f81c6
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076804"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91114595"
 ---
 # <a name="thread-and-task-architecture-guide"></a>guide d’architecture de thread et de tâche
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -59,6 +67,14 @@ Le nombre de threads de travail générés pour chaque tâche dépend de ce qui 
 Un **planificateur**, également appelé planificateur SOS, gère les threads de travail nécessitant un temps de traitement pour effectuer le travail résultant de tâches. Chaque planificateur est mappé à un processeur (UC) individuel. La durée pendant laquelle un Worker peut rester actif dans un planificateur est appelée quantum de système d’exploitation, avec un maximum de 4 ms. Une fois que son temps de quantum a expiré, un thread de travail consacre son temps à d’autres threads ayant besoin d’accéder aux ressources de l’UC et change d’état. Cette coopération entre les Workers pour optimiser l’accès aux ressources de l’UC est appelée **planification coopérative**, également connue sous le nom de planification non préemptive. À son tour, la modification de l’état du Worker est propagée à la tâche associée à ce Worker ainsi qu’à la requête associée à la tâche. Pour plus d’informations sur les états des Workers, consultez [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Pour plus d’informations sur les planificateurs, consultez [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
 En résumé, une **requête** peut générer une ou plusieurs **tâches** pour effectuer des unités de travail. Chaque tâche est assignée à un **thread de travail** qui est responsable de l’exécution de la tâche. Chaque thread de travail doit être planifié (placé sur un **planificateur**) pour l’exécution active de la tâche. 
+
+> [!NOTE]
+> Examinez le cas suivant :   
+> -  Worker 1 est une tâche de longue durée, par exemple une requête Read qui utilise des tables en lecture anticipée sur des tables en mémoire. Worker 1 trouve les pages de données requises qui se trouvent déjà dans le pool de mémoires tampons. Il n’est donc pas nécessaire d’attendre les opérations d’E/S et peut consommer son quantum complet avant de générer.   
+> -  Worker 2 exécute des tâches subordonnées plus courtes et, par conséquent, doit être généré avant l’épuisement de son quantum complet.     
+>
+> Dans ce scénario et jusqu’à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], Worker 1 est autorisé à monopoliser le planificateur en faisant plus de temps quantum global.   
+> À partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], la planification coopérative prend en compte la planification du déficit volumineux (LDF). Avec la planification LDF, les modèles d’utilisation quantum sont surveillés et un thread de travail ne monopolise pas un planificateur. Dans le même scénario, Worker 2 est autorisé à consommer des quantums répétitifs avant que Worker 1 ne soit autorisé à plus de quantum, ce qui empêche Worker 1 de monopoliser le planificateur dans un modèle peu convivial.
 
 ### <a name="scheduling-parallel-tasks"></a>Planification de tâches parallèles
 Imaginez une [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] configurée avec MaxDOP 8, et l’affinité du processeur est configurée pour 24 UC (planificateurs) sur les nœuds NUMA 0 et 1. Les planificateurs de 0 à 11 appartiennent au nœud NUMA 0, les planificateurs de 12 à 23 appartiennent au nœud NUMA 1. Une application envoie la requête suivante (request) au [!INCLUDE[ssde_md](../includes/ssde_md.md)] :
@@ -229,7 +245,7 @@ Nous vous recommandons de ne pas utiliser Trace SQL ni SQL Server Profiler dans 
 > [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] pour les charges de travail Analysis Services n’est PAS déprécié et continuera à être pris en charge.
 
 ### <a name="setting-the-number-of-tempdb-data-files"></a>Définition du nombre de fichiers de données TempDB
-Le nombre de fichiers dépend du nombre de processeurs (logiques) sur l’ordinateur. En règle générale, si le nombre de processeurs logiques est inférieur ou égal à huit, utilisez le même nombre de fichiers de données que de processeurs logiques. Si le nombre de processeurs logiques est supérieur à huit, utilisez huit fichiers de données et, si le conflit persiste, augmentez le nombre de fichiers de données par multiples de quatre pour réduire le conflit à un niveau acceptable ou bien modifiez la charge de travail/le code. N’oubliez pas non plus les autres recommandations pour TempDB, disponibles dans [Optimisation des performances de TempDB dans SQL Server](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server). 
+Le nombre de fichiers dépend du nombre de processeurs (logiques) sur l’ordinateur. En règle générale, si le nombre de processeurs logiques est inférieur ou égal à huit, utilisez le même nombre de fichiers de données que de processeurs logiques. Si le nombre de processeurs logiques est supérieur à huit, utilisez huit fichiers de données et, si le conflit persiste, augmentez le nombre de fichiers de données par multiples de quatre pour réduire le conflit à un niveau acceptable ou bien modifiez la charge de travail/le code. N’oubliez pas non plus les autres suggestions pour tempdb, disponibles dans [Optimisation des performances de tempdb dans SQL Server](../relational-databases/databases/tempdb-database.md#optimizing-tempdb-performance-in-sql-server). 
 
 Toutefois, en prenant soigneusement en compte les besoins de concurrence de TempDB, vous pouvez réduire les frais généraux de gestion de la base de données. Par exemple, si un système comporte 64 unités centrales et qu'habituellement seules 32 requêtes utilisent tempdb, l'augmentation du nombre de fichiers tempdb à 64 n'améliorera pas les performances.
 

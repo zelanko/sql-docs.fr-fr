@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c08893006e0b2edf093477259ebed788d49097
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 75af471239529587cf51b151c04a541a612949c0
+ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989992"
+ms.lasthandoff: 09/24/2020
+ms.locfileid: "91145388"
 ---
 # <a name="sql-server-2019-big-data-clusters-release-notes"></a>Notes de publication des clusters Big Data SQL Server 2019
 
@@ -62,7 +62,7 @@ Pour obtenir la liste complète, consultez [Quels sont les outils requis ?](dep
 
 La table suivante énumère l’historique des mises en production pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 
-| Version <sup>1</sup> | Version BDC  | `azdata`Version <sup>2</sup> | Date de publication |
+| Libérer | Version BDC  | `azdata` Version <sup>1</sup> | Date de publication |
 |----------------------|--------------|-------------------------------|--------------|
 | [CU6](#cu6)          | 15.0.4053.23 | 20.0.1                        | 2020-08-04   |
 | [CU5](#cu5)          | 15.0.4043.16 | 20.0.0                        | 2020-06-22   |
@@ -72,9 +72,7 @@ La table suivante énumère l’historique des mises en production pour [!INCLUD
 | [CU1](#cu1)          | 15.0.4003.23 | 15.0.4003                     | 07-01-2020   |
 | [GDR1](#rtm)         | 15.0.2070.34 | 15.0.2070                     | 04-11-2019   |
 
-<sup>1</sup>Pas de mise à jour des Clusters Big Data SQL Server 2019 pour la CU7.
-
-<sup>2</sup> `azdata` version reflète la version de l’outil au moment de la mise en production CU. `azdata` peut également être libéré indépendamment de la version du serveur. par conséquent, vous pouvez recevoir des versions plus récentes lorsque vous installez les packages les plus récents. Les versions plus récentes sont compatibles avec les versions de CU précédemment publiées.
+La version <sup>1</sup> `azdata` reflète la version de l’outil au moment de la mise en production CU. `azdata` peut également être libéré indépendamment de la version du serveur. par conséquent, vous pouvez recevoir des versions plus récentes lorsque vous installez les packages les plus récents. Les versions plus récentes sont compatibles avec les versions de CU précédemment publiées.
 
 ## <a name="how-to-install-updates"></a>Comment installer les mises à jour
 

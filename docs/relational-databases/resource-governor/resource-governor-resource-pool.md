@@ -1,5 +1,5 @@
 ---
-title: Pool de ressources du gouverneur de ressources | Microsoft Docs
+title: Pool de ressources du gouverneur de ressources
 description: SQL Server Resource Governor spécifie des limites sur la quantité de processeur, les E/S physiques et la mémoire que les demandes d’application entrantes peuvent utiliser avec le pool de ressources.
 ms.custom: ''
 ms.date: 10/20/2017
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bfc4c3eb6562c6424ecff4cfa8f311afe0a3510c
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: fa28f69fea78c3ccf09b0b41357ab156ed72c608
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457819"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91115670"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,11 +35,13 @@ ms.locfileid: "86457819"
   
 -   **CAP_CPU_PERCENT**  
   
-     Ce paramètre définit une limite maximale inconditionnelle d'utilisation de la bande passante de l'UC pour toutes les demandes exécutées dans le pool de ressources. Les charges de travail associées au pool peuvent utiliser la capacité de l'UC au-delà de la valeur de MAX_CPU_PERCENT si elle est disponible, mais pas au-delà de la valeur de CAP_CPU_PERCENT. En reprenant l'exemple ci-dessus, supposons que le service marketing soit facturé en fonction de son utilisation des ressources. Il souhaite une facturation prédictible et ne veut pas payer pour plus de 30 % de l'UC. Pour garantir cette exigence, il suffit de définir CAP_CPU_PERCENT à 30 pour le pool de ressources marketing.  
+     Le paramètre CAP_CPU_PERCENT définit une limite maximale inconditionnelle d'utilisation de la bande passante de l'UC pour toutes les demandes exécutées dans le pool de ressources. Les charges de travail associées au pool peuvent utiliser la capacité de l'UC au-delà de la valeur de MAX_CPU_PERCENT si elle est disponible, mais pas au-delà de la valeur de CAP_CPU_PERCENT. En reprenant l'exemple ci-dessus, supposons que le service marketing soit facturé en fonction de son utilisation des ressources. Il souhaite une facturation prédictible et ne veut pas payer pour plus de 30 % de l'UC. Pour garantir cette exigence, il suffit de définir CAP_CPU_PERCENT à 30 pour le pool de ressources marketing.  
   
 -   **MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT**  
   
-     Ces paramètres spécifient la quantité de mémoire minimale et maximale réservée au pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. La mémoire dont il est question ici correspond à la mémoire allouée à l'exécution des requêtes, et non à la mémoire du pool de mémoires tampons (des pages d'index et de données, par exemple). Définir une valeur minimale de mémoire pour un pool signifie que vous vous assurez que le pourcentage de mémoire spécifié est disponible pour toutes les demandes qui peuvent s'exécuter dans ce pool de ressources. Il s'agit d'un différentiateur important comparé à MIN_CPU_PERCENT, car dans ce cas, la mémoire peut rester dans le pool de ressources en question même lorsque celui-ci ne reçoit aucune demande dans les groupes de charges de travail associés. Par conséquent, il est essentiel de faire preuve de la plus grande vigilance lors de l'utilisation de ce paramètre, car cette mémoire ne pourra pas être utilisée par un autre pool, même en l'absence de demandes actives. Définir une valeur maximale de la mémoire pour un pool signifie que lorsque des requêtes s'exécutent dans ce pool, elles n'obtiennent jamais plus que ce pourcentage de mémoire globale.  
+     Ces paramètres spécifient la quantité de mémoire minimale et maximale réservée au pool de ressources qui ne peut pas être partagée avec d'autres pools de ressources. Pour des base de données sans tables à mémoire optimisée, la mémoire dont il est question ici correspond à la mémoire allouée à l'exécution des requêtes, et non à la mémoire du pool de mémoires tampons (des pages d'index et de données, par exemple). Définir une valeur minimale de mémoire pour un pool signifie que vous vous assurez que le pourcentage de mémoire spécifié est disponible pour toutes les demandes qui peuvent s'exécuter dans ce pool de ressources. Il s'agit d'un différentiateur important comparé à MIN_CPU_PERCENT, car dans ce cas, la mémoire peut rester dans le pool de ressources en question même lorsque celui-ci ne reçoit aucune demande dans les groupes de charges de travail associés. Par conséquent, il est essentiel de faire preuve de la plus grande vigilance lors de l'utilisation de ce paramètre, car cette mémoire ne pourra pas être utilisée par un autre pool, même en l'absence de demandes actives. Définir une valeur maximale de la mémoire pour un pool signifie que lorsque des requêtes s'exécutent dans ce pool, elles n'obtiennent jamais plus que ce pourcentage de mémoire globale.
+
+     Afin de régir la mémoire pour les tables à mémoire optimisée avec Resource Governor, vous devez lier la base de données à un pool de ressources distinct. Pour plus d’informations, consultez [Lier une base de données avec des tables à mémoire optimisée à un pool de ressources](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).
   
 -   **AFFINITY**  
   
@@ -118,7 +120,7 @@ Les pools de ressources définis par l'utilisateur sont ceux que vous créez pou
   
 ## <a name="resource-pool-tasks"></a>Tâches du pool de ressources  
   
-|Description de la tâche|Rubrique|  
+|Description de la tâche|Article|  
 |----------------------|-----------|  
 |Décrit comment créer un pool de ressources.|[Créer un pool de ressources](../../relational-databases/resource-governor/create-a-resource-pool.md)|  
 |Décrit comment modifier les paramètres du pool de ressources.|[Modifier les paramètres de pool de ressources](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  

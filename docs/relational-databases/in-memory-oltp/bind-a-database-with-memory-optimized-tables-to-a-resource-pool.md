@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b51ae675af9c37cf7a347830520f0782d801cfea
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ff3d2de93c28d106cf24cd72b72c5d2e3346d287
+ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537736"
+ms.lasthandoff: 09/23/2020
+ms.locfileid: "91111005"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Lier une base de données avec des tables optimisées en mémoire à un pool de ressources
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -166,7 +166,7 @@ GO
 ##  <a name="percent-of-memory-available-for-memory-optimized-tables-and-indexes"></a><a name="bkmk_PercentAvailable"></a> Pourcentage de mémoire disponible pour les tables et index mémoire optimisés  
  Si vous mappez une base de données avec des tables mémoire optimisées et une charge de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au même pool de ressources, Resource Governor définit un seuil interne pour l'utilisation de l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)] afin que les utilisateurs du pool ne rencontrent aucun conflit au niveau de l'utilisation du pool. D'une manière générale, le seuil d'utilisation de l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)] représente environ 80 % du pool. Le tableau suivant montre les seuils réels pour différentes capacités de mémoire.  
   
- Lorsque vous créez un pool de ressources dédié pour la base de données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , vous devez estimer la quantité de mémoire physique dont vous avez besoin pour les tables en mémoire compte tenu de la croissance des versions de ligne et des données. Après avoir estimé la mémoire nécessaire, créez un pool de ressources avec un pourcentage de la mémoire cible allouée à l’instance SQL comme indiqué par la colonne « committed_target_kb » dans la DMV `sys.dm_os_sys_info` (reportez-vous à [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)). Par exemple, créez un pool de ressources P1 avec 40 % de la mémoire totale disponible sur l'instance. Parmi ces 40 %, le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] obtient un pourcentage plus petit pour enregistrer les données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Cela a pour but de s'assurer que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ne consomme pas toute la mémoire de ce pool.  Cette valeur de pourcentage inférieur dépend de la mémoire allouée cible. Le tableau suivant décrit la mémoire disponible pour la base de données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dans un pool de ressources (nommé ou par défaut) avant qu'une situation d'insuffisance de mémoire soit déclenchée.  
+ Lorsque vous créez un pool de ressources dédié pour la base de données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , vous devez estimer la quantité de mémoire physique dont vous avez besoin pour les tables en mémoire compte tenu de la croissance des versions de ligne et des données. Après avoir estimé la mémoire nécessaire, créez un pool de ressources avec un pourcentage de la mémoire cible allouée à l’instance SQL comme indiqué par la colonne « committed_target_kb » dans la DMV [`sys.dm_os_sys_info`](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md). Par exemple, créez un pool de ressources P1 avec 40 % de la mémoire totale disponible sur l'instance. Parmi ces 40 %, le moteur [!INCLUDE[hek_2](../../includes/hek-2-md.md)] obtient un pourcentage plus petit pour enregistrer les données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] .  Cela a pour but de s'assurer que [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ne consomme pas toute la mémoire de ce pool.  Cette valeur de pourcentage inférieur dépend de la mémoire allouée cible. Le tableau suivant décrit la mémoire disponible pour la base de données [!INCLUDE[hek_2](../../includes/hek-2-md.md)] dans un pool de ressources (nommé ou par défaut) avant qu'une situation d'insuffisance de mémoire soit déclenchée.  
   
 |Mémoire validée cible|Pourcentage disponible pour les tables en mémoire|  
 |-----------------------------|---------------------------------------------|  
@@ -204,7 +204,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 259         PoolIMOLTP 0                  100                3845          1356           2307  
 ```  
   
- Pour plus d’informations consultez [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+ Pour plus d’informations, consultez [sys.dm_resource_governor_resource_pools (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
  Si vous ne liez pas votre base de données à un pool de ressources nommé, elle est liée au pool « par défaut ». Étant donné que le pool de ressources par défaut est utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la plupart des autres allocations, vous ne pourrez pas surveiller la mémoire consommée par les tables mémoire optimisées à l'aide de la DMV sys.dm_resource_governor_resource_pools précisément pour la base de données.  
   
