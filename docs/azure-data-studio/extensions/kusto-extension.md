@@ -1,20 +1,20 @@
 ---
 title: Extension Kusto (KQL) pour Azure Data Studio
 description: Cet article explique comment vous pouvez connecter et interroger les clusters Azure Data Explorer avec Azure Data Studio.
-ms.topic: conceptual
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 3df020725458318aa1c3936b2b4430582ace8997
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 52f8bb103aad960750a74be1a4e35b0d1d5be5d7
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226824"
+ms.locfileid: "91364066"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Extension Kusto (KQL) pour Azure Data Studio (préversion)
 

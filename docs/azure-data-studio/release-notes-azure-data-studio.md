@@ -3,18 +3,18 @@ title: Notes de publication
 description: Cet article contient des notes de publication pour les versions d’Azure Data Studio allant de novembre 2017 jusqu’à présent. Pour la plupart des problèmes résumés ici, il existe des liens menant à des informations supplémentaires.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: overview
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
 ms.date: 09/22/2020
-ms.openlocfilehash: 1eaeb177fbd4cdc16190cbbc40efc76a3b468ac5
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: aa55d393955eecaa4ba9af947985622334c59141
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989982"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364192"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
