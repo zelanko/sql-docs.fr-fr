@@ -24,12 +24,12 @@ ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 571cd20813376fd3ed25bb89cf49890f8d75f718
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 39c6ae00a1416727740d09f2aab3436f8ef616e7
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111856"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379794"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,7 +40,7 @@ Retourne une partie d'une expression de type caractère, binaire, texte ou image
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 SUBSTRING ( expression ,start , length )  
 ```  
   
@@ -78,7 +78,7 @@ SUBSTRING ( expression ,start , length )
 ### <a name="a-using-substring-with-a-character-string"></a>R. Utilisation de SUBSTRING avec une chaîne de caractères  
  L'exemple suivant illustre la manière de retourner uniquement une partie d'une chaîne de caractères. À partir de la table `sys.databases`, cette requête retourne les noms de base de données système dans la première colonne, la première lettre de la base de données dans la deuxième colonne et les troisième et quatrième caractères dans la colonne finale.  
   
-```  
+```sql
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
 SUBSTRING(name, 3, 2) AS ThirdAndFourthCharacters
 FROM sys.databases  
@@ -98,7 +98,7 @@ WHERE database_id < 5;
   
  Voici comment afficher les deuxième, troisième et quatrième caractères de la constante de chaîne `abcdef` :  
   
-```  
+```sql
 SELECT x = SUBSTRING('abcdef', 2, 3);  
 ```  
   
@@ -119,7 +119,7 @@ bcd
   
  L’exemple suivant montre comment retourner les 10 premiers caractères de chaque colonne de données **text** et **image** de la table `pub_info` de la base de données `pubs`. Les données **text** sont retournées en tant que données **varchar** et les données **image** sont retournées en tant que **varbinary**.  
   
-```  
+```sql
 USE pubs;  
 SELECT pub_id, SUBSTRING(logo, 1, 10) AS logo,   
    SUBSTRING(pr_info, 1, 10) AS pr_info  
@@ -139,7 +139,7 @@ WHERE pub_id = '1756';
   
  L’exemple suivant illustre l’effet de SUBSTRING sur les données **text** et **ntext**. D'abord, cet exemple crée, dans la base de données `pubs`, une nouvelle table nommée `npub_info`. Ensuite, l'exemple crée la colonne `pr_info` dans la table `npub_info` à partir des 80 premiers caractères de la colonne `pub_info.pr_info` puis ajoute le caractère `ü` en guise de premier caractère. Pour finir, une opération `INNER JOIN` extrait tous les numéros d’identification de serveur de publication et le `SUBSTRING` des deux colonnes d’informations de serveur de publication **text** et **ntext**.  
   
-```  
+```sql
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
       WHERE table_name = 'npub_info')  
    DROP TABLE npub_info;  
@@ -149,7 +149,7 @@ USE pubs;
 GO  
 CREATE TABLE npub_info  
 (  
- pub_id char(4) NOT NULL  
+ pub_id CHAR(4) NOT NULL  
     REFERENCES publishers(pub_id)  
     CONSTRAINT UPKCL_npubinfo PRIMARY KEY CLUSTERED,  
 pr_info ntext NULL  
@@ -184,7 +184,7 @@ ORDER BY pr.pub_id ASC;
 ### <a name="c-using-substring-with-a-character-string"></a>C. Utilisation de SUBSTRING avec une chaîne de caractères  
  L'exemple suivant illustre la manière de retourner uniquement une partie d'une chaîne de caractères. À partir de la table `dbo.DimEmployee`, cette requête retourne les noms de famille dans une colonne avec seulement la première initiale des prénoms dans la seconde colonne.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT LastName, SUBSTRING(FirstName, 1, 1) AS Initial  
@@ -205,7 +205,7 @@ Barreto de Mattos    P
   
  L’exemple suivant montre comment retourner les deuxième, troisième et quatrième caractères de la constante chaîne `abcdef`.  
   
-```  
+```sql
 USE ssawPDW;  
   
 SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;  

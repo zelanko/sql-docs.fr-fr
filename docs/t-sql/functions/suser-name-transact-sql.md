@@ -25,12 +25,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d97f42c1da9420a79f3ed45bd4fb5d6071220
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1044f594889c8d7a6698c0ffc5a09692ed734a47
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88307975"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379768"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,8 +41,7 @@ Retourne le nom d'identification de l'utilisateur pour la connexion.
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```syntaxsql
 SUSER_NAME ( [ server_user_id ] )   
 ```  
   
@@ -68,7 +67,7 @@ SUSER_NAME peut être utilisé dans une liste de sélection, dans une clause WHE
 ## <a name="examples"></a>Exemples  
 Dans l'exemple suivant, la procédure retourne le nom d'identification de la connexion utilisateur `1`.  
   
-```  
+```sql
 SELECT SUSER_NAME(1);  
 ```  
   

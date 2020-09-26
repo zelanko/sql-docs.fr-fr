@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 433ff155da65471abe8b3ebde3df437b0a3f55ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2524b2e828615ee1e413f36bd77cd8ebc3fa8b77
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88362055"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380554"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "88362055"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```syntaxsql
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
@@ -73,7 +72,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
 ### <a name="a-verifying-that-signed-data-has-not-been-tampered-with"></a>R. Vérification de la non-falsification des données signées  
  L'exemple suivant vérifie si les informations contenues dans `Signed_Data` ont été modifiées depuis leur signature à l'aide du certificat `Shipping04`. La signature est stockée dans `DataSignature`. Le certificat, `Shipping04`, est transmis à `Cert_ID` qui retourne l'ID du certificat dans la base de données. Si `VerifySignedByCert` retourne la valeur 1, la signature est correcte. Si `VerifySignedByCert` retourne la valeur 0, les données de `Signed_Data` sont différentes de celles utilisées pour générer `DataSignature`. Dans ce cas, soit les données de `Signed_Data` ont été modifiées depuis leur signature, soit les données de `Signed_Data` ont été signées avec un certificat différent.  
   
-```  
+```sql
 SELECT Data, VerifySignedByCert( Cert_Id( 'Shipping04' ),  
     Signed_Data, DataSignature ) AS IsSignatureValid  
 FROM [AdventureWorks2012].[SignedData04]   
@@ -84,7 +83,7 @@ GO
 ### <a name="b-returning-only-records-that-have-a-valid-signature"></a>B. Obtention des seuls enregistrements dont la signature est valide  
  Cette requête retourne uniquement les enregistrements qui n'ont pas été modifiés depuis leur signature à l'aide du certificat `Shipping04`.  
   
-```  
+```sql
 SELECT Data FROM [AdventureWorks2012].[SignedData04]   
 WHERE VerifySignedByCert( Cert_Id( 'Shipping04' ), Data,   
     DataSignature ) = 1   

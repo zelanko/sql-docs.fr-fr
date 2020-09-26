@@ -22,12 +22,12 @@ ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 365ef62b6b5437956e6dd2753b3f83de300d32b3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5d34379bacee3a8d01f8f28c11930aefc5c00ab5
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467795"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379834"
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="examples"></a>Exemples  
  L'exemple suivant convertit une expression constituée de cinq chiffres et d'une virgule décimale en chaîne de caractères à six positions. La partie fractionnaire du nombre est arrondie à une décimale.  
   
-```  
+```sql
 SELECT STR(123.45, 6, 1);  
 GO  
 ```  
@@ -82,7 +82,7 @@ GO
   
  Lorsque l'expression a une longueur supérieure à la longueur spécifiée, la chaîne renvoie `**` pour la longueur spécifiée.  
   
-```  
+```sql
 SELECT STR(123.45, 2, 2);  
 GO  
 ```  
@@ -98,7 +98,7 @@ GO
   
  Même lorsque des données numériques sont imbriquées dans `STR`, le résultat correspond à des données de type caractère avec le format spécifié.  
   
-```  
+```sql
 SELECT STR (FLOOR (123.45), 8, 3);
 GO  
 ```  
