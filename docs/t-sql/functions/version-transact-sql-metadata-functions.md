@@ -14,12 +14,12 @@ ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b7c153456f92783b26bda05a99e848b48909ced8
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 1866248cf8f60f55ab0fd0d809c1ce55f7d24f59
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076701"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380524"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Fonctions de métadonnées Transact SQL
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "90076701"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql
 -- Azure Synapse Analytics and Parallel Data Warehouse  
 VERSION ( )  
 ```  
@@ -43,7 +43,7 @@ Vous devez spécifier un nom de table dans une clause [FROM](../../t-sql/queries
 ## <a name="examples"></a>Exemples  
 L’exemple suivant retourne le numéro de version.  
   
-```  
+```sql
 SELECT VERSION();  
 ```  
   

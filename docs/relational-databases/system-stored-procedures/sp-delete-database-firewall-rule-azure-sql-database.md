@@ -19,15 +19,15 @@ ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 087b1128615b13baddf46a5632f9d152080143e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 191ad1687b5be623616821dbde338495304d70a6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447284"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379750"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Supprime le paramètre de pare-feu de niveau base de données de votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Les règles de pare-feu de base de données peuvent être configurées et supprimées pour la base de données Master, ainsi que pour les bases de données utilisateur sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] .   
   
@@ -46,7 +46,7 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
 ## <a name="permissions"></a>Autorisations  
  Seul le nom de connexion du principal au niveau du serveur créé par le processus de configuration ou un principal Azure Active Directory affecté en tant qu’administrateur peut supprimer les règles de pare-feu au niveau de la base de données.  
   
-## <a name="example"></a>Exemple  
+## <a name="example"></a> Exemple  
  L’exemple suivant supprime le paramètre de pare-feu au niveau de la base de données nommé `Example DB Setting 1` .
   
 ```  

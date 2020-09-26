@@ -21,12 +21,12 @@ ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2aecf91c7df7c434e476d2fee835217c1db0718
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7e361eba9ad7256cb067d0c6726ca1467af26b48
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467805"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379854"
 ---
 # <a name="stdev-transact-sql"></a>STDEV (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88467805"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```    
+```syntaxsql    
 -- Aggregate Function Syntax   
 STDEV ( [ ALL | DISTINCT ] expression )  
   
@@ -73,7 +73,7 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### <a name="a-using-stdev"></a>A. Utilisation de STDEV  
  Dans l'exemple suivant, la procédure retourne l'écart type pour toutes les valeurs de bonus de la table `SalesPerson` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 SELECT STDEV(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -84,7 +84,7 @@ GO
 ### <a name="b-using-stdev"></a>B. Utilisation de STDEV  
  L’exemple suivant renvoie l’écart-type de toutes les valeurs de quota de ventes de la table `dbo.FactSalesQuota`. La première colonne contient l’écart-type de toutes les valeurs distinctes, alors que la seconde colonne contient l’écart-type de toutes les valeurs, y compris des valeurs en double.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT STDEV(DISTINCT SalesAmountQuota)AS Distinct_Values, STDEV(SalesAmountQuota) AS All_Values  
@@ -102,7 +102,7 @@ Distinct_Values   All_Values
 ### <a name="c-using-stdev-with-over"></a>C. Utilisation de STDEV avec OVER  
  L’exemple suivant renvoie l’écart-type des valeurs de quota de ventes pour chaque trimestre d’une année civile. Notez que la clause ORDER BY dans la clause OVER trie la fonction STDEV et que la clause ORDER BY de l’instruction SELECT trie les résultats.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

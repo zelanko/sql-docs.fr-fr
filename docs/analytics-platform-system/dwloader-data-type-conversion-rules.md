@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ce48c3352ffbd0a1c112f7fd60db2f0d85c6e6
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401179"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379558"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Règles de conversion de type de données pour dwloader-Parallel Data Warehouse
 Cette rubrique décrit les formats de données d’entrée et les conversions de types de données implicites prises en charge par le [chargeur de ligne de commande dwloader](dwloader.md) lorsqu’il charge des données dans PDW. Les conversions de données implicites se produisent lorsque les données d’entrée ne correspondent pas au type de données dans la table cible SQL Server PDW. Utilisez ces informations lors de la conception de votre processus de chargement pour vous assurer que vos données seront chargées correctement dans SQL Server PDW.  
@@ -129,7 +129,7 @@ Le tableau suivant définit le format et les règles par défaut pour le chargem
 |Littéral décimal|fffnn.fffn<br /><br />Exemple : 1234,5678|Une valeur supérieure à 1 ou inférieure à 0 est convertie en 1. Par exemple, les valeurs 123,45 et-123,45 sont converties en 1.|  
   
 ### <a name="decimal-data-type"></a>Type de données decimal  
-Le tableau suivant définit les règles de chargement des valeurs littérales dans une colonne de type **Decimal** (*p, s*). Les règles de conversion de données sont les mêmes que pour les SQL Server. Pour plus d’informations, consultez [conversion de type de données (moteur de base de données)](https://go.microsoft.com/fwlink/?LinkId=202128) sur MSDN.  
+Le tableau suivant définit les règles de chargement des valeurs littérales dans une colonne de type **Decimal** (*p, s*). Les règles de conversion de données sont les mêmes que pour les SQL Server. Pour plus d’informations, consultez [conversion de type de données (moteur de base de données)](/previous-versions/sql/sql-server-2008-r2/ms191530(v=sql.105)) sur MSDN.  
   
 |Type de données d’entrée|Exemples de données d’entrée|  
 |-------------------|-----------------------|  
@@ -170,10 +170,10 @@ Le tableau suivant définit le format et les règles par défaut pour le chargem
   
 |Type de données d’entrée|Exemples de données d’entrée|Conversion en types de données caractères|  
 |---------------|-------------------|----------------------------------|  
-|Littéral de chaîne|Format : 'chaîne de caractères'<br /><br />Exemple : « ABC »| NA |  
-|Littéral de chaîne Unicode|Format : N’character chaîne'<br /><br />Exemple : N’abc'| NA |  
-|Littéral d’entier|Format : ffffffffffn<br /><br />Exemple : 321312313123| NA |  
-|Littéral décimal|Format : FFFFFF. fffffff<br /><br />Exemple : 12344,34455| NA |  
+|Littéral de chaîne|Format : 'chaîne de caractères'<br /><br />Exemple : « ABC »| N/D |  
+|Littéral de chaîne Unicode|Format : N’character chaîne'<br /><br />Exemple : N’abc'| N/D |  
+|Littéral d’entier|Format : ffffffffffn<br /><br />Exemple : 321312313123| N/D |  
+|Littéral décimal|Format : FFFFFF. fffffff<br /><br />Exemple : 12344,34455| N/D |  
 |Littéral Money|Format : $ffffff. fffnn<br /><br />Exemple : $123456,99|Le symbole monétaire facultatif n’est pas inséré avec la valeur. Pour insérer le symbole monétaire, insérez la valeur en tant que littéral de chaîne. Cela correspond au format du chargeur, qui traite chaque littéral comme un littéral de chaîne.<br /><br />Les virgules ne sont pas autorisées.<br /><br />Si le nombre de chiffres après la virgule décimale dépasse 2, la valeur est arrondie à la valeur la plus proche. Par exemple, la valeur 123,946789 est insérée sous la forme 123,95.<br /><br />Seul le style par défaut 0 (aucune virgule et 2 chiffres après la virgule décimale) est autorisé lors de l’utilisation de la fonction CONVERT pour insérer des littéraux Money.|  
   
 ### <a name="general-remarks"></a>Remarques d'ordre général  
@@ -185,4 +185,3 @@ Le tableau suivant définit le format et les règles par défaut pour le chargem
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 
 -->
-  
