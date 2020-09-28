@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 9412348f0d4e76313557b326c18fcb7b2e7087d8
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: f3d2051e7003407a4ba7cbb3fb2ff8682ec6ee8f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145358"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227322"
 ---
 # <a name="configure-on-demand-sql-assessment-for-azure-arc-enabled-sql-server-instance"></a>Configurer SQL Assessment à la demande pour l’instance SQL Server avec Azure Arc
 
@@ -37,7 +37,7 @@ Vous pouvez activer SQL Assessment pour vos instances SQL Server en procédant c
 
    ![Sélection de SQL Assessment](media/assess/sql-assessment-heading-sql-server-arc.png)
 
-1. Spécifiez un répertoire de travail sur la machine de collecte de données. Pendant la collecte et l’analyse, les données sont stockées temporairement dans ce dossier. Si le dossier n’existe pas, il est créé automatiquement.
+1. Spécifiez un répertoire de travail sur la machine de collecte de données. `C:\sql_assessment\work_dir` est utilisé par défaut. Pendant la collecte et l’analyse, les données sont stockées temporairement dans ce dossier. Si le dossier n’existe pas, il est créé automatiquement.
 
 1. Cliquez sur __Télécharger le script de configuration__ et copiez le script téléchargé sur la machine cible.
 

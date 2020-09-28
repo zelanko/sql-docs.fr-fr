@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a147dc29131e8764b723bc981567faae9593f369
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136769"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91227159"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Installer un CLR personnalisé R pour SQL Server
 
@@ -52,7 +52,7 @@ Les extensions de langage utilisent l’infrastructure d’extensibilité pour e
 
 1. Sous l’onglet **Installation**, sélectionnez **Nouvelle installation autonome de SQL Server ou ajout de fonctionnalités à une installation existante**.
 
-    ![Installation SQL Server 2019 CU3 ou version ultérieure](../install/media/2019setup-installation-page-mlsvcs.png)
+    ![Installation de SQL Server 2019 CU3 ou version ultérieure](../install/media/2019setup-installation-page-mlsvcs.png)
 
 1. Dans la page **Sélection de fonctionnalités** , sélectionnez les options suivantes :
 
@@ -164,7 +164,7 @@ Vous pouvez également cliquer avec le bouton droit sur le service de SQL Server
 
 ## <a name="download-r-language-extension"></a>Téléchargez l’extension pour langage R
 
-Téléchargez le fichier zip contenant l’extension de langage R [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143953).
+Téléchargez le [fichier zip contenant l’extension de langage R pour Windows](https://github.com/microsoft/sql-server-language-extensions/releases). Il est recommandé d’utiliser la version de production. Optez pour la version de débogage en développement ou en test, car elle fournit des informations de journalisation détaillées permettant d’examiner les erreurs.
 
 ## <a name="register-external-language"></a>Inscrire le langage externe
 
@@ -211,7 +211,7 @@ Utilisez les commandes suivantes pour installer les extensions de langage, selon
 
 ### <a name="ubuntu"></a>Ubuntu
 > [!Tip]
-> Si possible, `sudo apt-get update` pour actualiser les packages sur le système avant l’installation. Ubuntu n’a peut-être pas l’option de transport HTTPS apt. Pour l’installer, utilisez `sudo apt-get install apt-transport-https`.
+> Si possible, `sudo apt-get update` pour actualiser les packages sur le système avant l’installation. Ubuntu n’a peut-être pas l’option de transport https apt. Pour l’installer, utilisez `sudo apt-get install apt-transport-https`.
 
 ```bash
 # Install as root or sudo
@@ -343,7 +343,7 @@ sudo systemctl restart mssql-launchpadd
 
 ## <a name="download-r-language-extension"></a>Téléchargez l’extension pour langage R
 
-Téléchargez le fichier zip contenant l’extension de langage R [R-lang-extension.zip](https://go.microsoft.com/fwlink/?linkid=2143954).
+Téléchargez le [fichier zip contenant l’extension de langage R pour Linux](https://github.com/microsoft/sql-server-language-extensions/releases). Il est recommandé d’utiliser la version de production. Optez pour la version de débogage en développement ou en test, car elle fournit des informations de journalisation détaillées permettant d’examiner les erreurs.
 
 ## <a name="register-external-language"></a>Inscrire le langage externe
 

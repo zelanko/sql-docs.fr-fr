@@ -10,12 +10,12 @@ metadata:
   author: markingmyname
   ms.author: maghan
   ms.date: 05/09/2020
-  ms.openlocfilehash: c17887d2415fa5e7ea072426a1825aa7a51f73b0
-  ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+  ms.openlocfilehash: dfa93f660ca6e5a70dc81da3be4cbd25834b28d8
+  ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
   ms.translationtype: HT
   ms.contentlocale: fr-FR
-  ms.lasthandoff: 09/23/2020
-  ms.locfileid: "91111190"
+  ms.lasthandoff: 09/25/2020
+  ms.locfileid: "91364026"
 landingContent:
 - title: À propos d’Azure Data Studio
   linkLists:
@@ -56,13 +56,15 @@ landingContent:
   - linkListType: how-to-guide
     links:
     - text: Notebooks dans Azure Data Studio
-      url: notebooks-guidance.md
-    - text: Guide pratique pour utiliser le noyau SQL
-      url: notebooks-tutorial-sql-kernel.md
-    - text: Guide pratique pour utiliser le noyau Python
-      url: notebooks-tutorial-python-kernel.md
-    - text: Extension Kqlmagic dans Azure Data Studio
-      url: notebooks-kqlmagic.md
+      url: notebooks/notebooks-guidance.md
+    - text: Noyau SQL
+      url: notebooks/notebooks-sql-kernel.md
+    - text: Noyau Python
+      url: notebooks/notebooks-python-kernel.md
+    - text: Noyau Kusto
+      url: notebooks/notebooks-kusto-kernel.md
+    - text: Kqlmagic dans Azure Data Studio
+      url: notebooks/notebooks-kqlmagic.md
 - title: Extensions
   linkLists:
   - linkListType: concept
@@ -71,13 +73,15 @@ landingContent:
       url: extensions/add-extensions.md
     - text: Étendre les fonctionnalités en créant des extensions Azure Data Studio
       url: extensions/extension-authoring.md
+    - text: Extension Jupyter Book
+      url: extensions/jupyter-book-extension.md
+    - text: Kusto (KQL)
+      url: extensions/kusto-extension.md
+    - text: Extension Notebook
+      url: extensions/notebook-extension.md
     - text: Extension PostgreSQL
       url: extensions/postgres-extension.md
     - text: Prise en charge de l’éditeur PowerShell
       url: extensions/powershell-extension.md
-    - text: Explorateur de données Azure
-      url: extensions/kusto-extension.md
-    - text: Extension Notebook
-      url: extensions/notebook-extension.md
-    - text: Extension Jupyter Book
-      url: extensions/jupyter-book-extension.md
+    - text: Extension Assistant
+      url: extensions/wizard-extension.md

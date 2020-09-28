@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (préversion)
 titleSuffix: (Azure Synapse Analytics) - SQL Server
 description: Utilisez l’instruction COPY dans Azure Synapse Analytics pour le chargement à partir de comptes de stockage externes.
-ms.date: 08/05/2020
+ms.date: 09/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 68c4e1d526a1385dee1a5868bbf382b25e21d797
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024558"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380834"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -136,13 +136,19 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
 *CREDENTIAL (IDENTITY = ‘’, SECRET = ‘’)*</br>
 *CREDENTIAL* spécifie le mécanisme d’authentification pour accéder au compte de stockage externe. Voici les méthodes d’authentification :
 
-|                          |                CSV                |              Parquet               |                ORC                 |
-| :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
-|  **Stockage Blob Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (point de terminaison blob)/MSI (point de terminaison dfs)/SERVICE PRINCIPAL/KEY/AAD | SAS (point de terminaison blob)/MSI (point de terminaison dfs)/SERVICE PRINCIPAL/KEY/AAD |
+|                          |                CSV                |                      Parquet                       |                        ORC                         |
+| :----------------------: | :-------------------------------: | :------------------------------------------------: | :------------------------------------------------: |
+|  **Stockage Blob Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
+1 : Vous devez utiliser le point de terminaison d’objet blob ( **.blob**.core.windows.net) dans le chemin d’accès de votre emplacement externe.
 
-Avec l’authentification à l’aide d’AAD ou auprès d’un compte de stockage public, vous n’êtes pas tenu de spécifier CREDENTIAL. 
+2 : Vous devez utiliser le point de terminaison dfs ( **.dfs**.core.windows.net) dans le chemin d’accès de votre emplacement externe.
+
+> [!NOTE]  
+>
+> - Avec l’authentification à l’aide d’AAD ou auprès d’un compte de stockage public, vous n’êtes pas tenu de spécifier CREDENTIAL. 
+>  - Si votre compte de stockage est associé à un réseau virtuel, vous devez vous authentifier à l’aide de MSI (Managed Identity).
 
 - Authentification avec la signature d’accès partagé (SAS)
   

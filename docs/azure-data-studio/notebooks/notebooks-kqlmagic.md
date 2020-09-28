@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 04/27/2020
-ms.openlocfilehash: f927f2259c96b0b42e184d0f4b0ee7e49cd5df01
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 61b87d2dae44f30f84b513f6809ba8597de7712f
+ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136708"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91226969"
 ---
 # <a name="kqlmagic-in-azure-data-studio"></a>Kqlmagic dans Azure Data Studio
 
@@ -107,6 +107,10 @@ Cette section explique comment exécuter l’analyse des données à l’aide de
    ```python
    %kql azureDataExplorer://code;cluster='help';database='Samples'
    ```
+
+    > [!Note]
+    > Si vous utilisez votre propre cluster ADX, vous devez préciser la région dans la chaîne de connexion :   
+    ```%kql azuredataexplorer://code;cluster='mycluster.westus';database='mykustodb'```
 
    Utilisez la connexion de l’appareil pour vous authentifier. Copiez le code à partir de la sortie et sélectionnez **authentifier** pour ouvrir un navigateur dans lequel vous devez coller le code. Une fois l’authentification terminée, vous pouvez revenir à Azure Data Studio pour continuer avec le reste du script.
 

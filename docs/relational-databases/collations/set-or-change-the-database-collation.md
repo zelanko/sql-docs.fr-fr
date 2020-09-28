@@ -14,19 +14,19 @@ ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 22c6da8545c07424f95b83a56d406fceffeb6d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e2103871e039484a12234a7e26a2783125e9ffae
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465560"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364226"
 ---
 # <a name="set-or-change-the-database-collation"></a>Définir ou changer le classement de la base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Cette rubrique explique comment définir et modifier le classement de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si aucun classement n'est spécifié, celui du serveur est utilisé.  
+  Cette rubrique explique comment définir et modifier le classement de base de données à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Si aucun classement n'est spécifié, celui du serveur est utilisé.  
   
 > [!IMPORTANT]
-> La modification du classement d’une base de données n’est pas explicitement interdite dans Azure SQL Database. Cela implique toutefois un verrou exclusif sur la base de données, et d’autres processus utilisateur et traitements en arrière-plan (par exemple, l’arrière-plan qui prend les sauvegardes) risquent de maintenir les verrous de base de données et d’empêcher la modification. L’instruction `ALTER DATABASE COLLATE` n’est pas prise en charge dans Azure SQL Database.
+> L’instruction `ALTER DATABASE COLLATE` n’est pas prise en charge dans Azure SQL Database.
 
  **Dans cette rubrique**  
   

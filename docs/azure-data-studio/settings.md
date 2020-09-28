@@ -3,18 +3,18 @@ title: Paramètres de l’utilisateur et de l’espace de travail
 description: Découvrez comment utiliser les paramètres pour personnaliser l’éditeur, l’interface utilisateur et le comportement fonctionnel d’Azure Data Studio selon vos préférences.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: conceptual
+ms.topic: how-to
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 05ed5f644b26c970383197376bce481a96ba5742
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 06e9efa72ef82d8335db4b7ec6b8941c95501790
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114520"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364180"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modifier les paramètres de l’utilisateur et de l’espace de travail
 
@@ -22,8 +22,8 @@ Il est facile de configurer Azure Data Studio à votre convenance grâce aux par
 
 Azure Data Studio fournit deux étendues différentes pour les paramètres :
 
-* **Utilisateur** Ces paramètres s’appliquent globalement à toute instance d’Azure Data Studio que vous ouvrez.
-* **Espace de travail** Les paramètres de l’espace de travail sont des paramètres spécifiques à un dossier sur votre ordinateur et sont disponibles uniquement lorsque le dossier est ouvert dans la barre latérale de l’Explorateur. Les paramètres définis sur cette étendue remplacent l’étendue Utilisateur.
+* **Utilisateur** : ces paramètres s’appliquent globalement à toute instance d’Azure Data Studio que vous ouvrez.
+* **Espace de travail** : les paramètres de l’espace de travail sont des paramètres spécifiques à un dossier sur votre ordinateur et sont disponibles uniquement lorsque le dossier est ouvert dans la barre latérale de l’Explorateur. Les paramètres définis sur cette étendue remplacent l’étendue Utilisateur.
 
 ## <a name="creating-user-and-workspace-settings"></a>Création des paramètres de l’utilisateur et de l’espace de travail
 
@@ -37,7 +37,7 @@ L’exemple suivant désactive les numéros de ligne dans l’éditeur et config
 
 Les modifications apportées aux paramètres sont rechargées par Azure Data Studio après l’enregistrement du fichier `settings.json` modifié.
 
-> [!NOTE] 
+> [!NOTE]
 > Les paramètres d’espace de travail sont utiles pour partager des paramètres spécifiques au projet dans une équipe.
 
 ## <a name="settings-file-locations"></a>Emplacements des fichiers de paramètres

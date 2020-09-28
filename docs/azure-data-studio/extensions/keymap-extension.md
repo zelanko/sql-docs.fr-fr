@@ -3,24 +3,24 @@ title: Créer une extension de mappage de touches
 description: Ce tutoriel montre comment créer une extension de mappage de touches pour ajouter des fonctionnalités personnalisées à Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.topic: how-to
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu
 ms.custom: ''
 ms.date: 08/28/2020
-ms.openlocfilehash: b1e1b5fb4d21e153133e76ff612f54c8153e0772
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 76fd809993b47f3ae3dad363887eb9ac735e6b0b
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111663"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364076"
 ---
 # <a name="create-an-azure-data-studio-keymap-extension"></a>Créer une extension de mappage de touches Azure Data Studio
 
 Ce didacticiel montre comment créer une extension Azure Data Studio. L’extension crée des liaisons de clé SSMS familières dans Azure Data Studio.
 
-Dans ce didacticiel, vous apprendrez à :
+Dans cet article, vous apprendrez comment :
 > [!div class="checklist"]
 > - Créer un projet d’extension
 > - Installer le générateur d’extensions
@@ -41,7 +41,7 @@ Azure Data Studio repose sur la même infrastructure que Visual Studio Code, ain
 
 ## <a name="install-the-extension-generator"></a>Installer le générateur d’extensions
 
-Pour simplifier le processus de création d’extensions, nous avons créé un [générateur d’extensions](https://code.visualstudio.com/docs/extensions/yocode) à l’aide de Yeoman. Pour l’installer, exécutez la commande suivante à partir de l’invite de commandes :
+Pour simplifier le processus de création d’extensions, nous avons créé un [générateur d’extensions](https://code.visualstudio.com/docs/extensions/yocode) à l’aide de Yeoman. Pour l’installer, exécutez le code dans l’invite de commandes ci-dessous :
 
 ```console
 `npm install -g yo generator-azuredatastudio`
@@ -85,7 +85,7 @@ Il est facile de trouver et de remplacer ces combinaisons de touches. Exécutez 
 
 **Étape 2 : Ajouter des raccourcis à l’extension**
 
-Pour ajouter des raccourcis à l’extension, ouvrez le fichier *package.json* (dans l’extension) et remplacez la section `contributes` par ce qui suit :
+Pour ajouter des raccourcis à l’extension, ouvrez le fichier *package.json* (dans l’extension) et remplacez la section `contributes` par le code ci-dessous :
 
 ```json
 "contributes": {
@@ -134,7 +134,7 @@ Les mappages de clés sont une des extensions les plus rapides à créer. Ainsi,
 
 ## <a name="package-your-extension"></a>Empaqueter votre extension
 
-Pour partager votre extension avec d’autres personnes, vous devez l’empaqueter dans un fichier unique. Il peut être publié sur le marketplace d’extensions Azure Data Studio ou partagé avec votre équipe ou votre communauté. Pour ce faire, vous devez installer un autre package npm à partir de la ligne de commande :
+Pour partager votre extension avec d’autres personnes, vous avez besoin de l’empaqueter dans un fichier unique. Ce fichier peut être publié sur le marketplace d’extensions Azure Data Studio ou partagé avec votre équipe ou votre communauté. Pour ce faire, vous devez installer un autre package npm à partir de la ligne de commande :
 
 ```console
 `npm install -g vsce`
@@ -158,7 +158,7 @@ Une fois cette opération effectuée, mon fichier ssmskeymap-0.1.0.vsix a été 
 
 ## <a name="publish-your-extension-to-the-marketplace"></a>Publier votre extension sur le marketplace
 
-Le marketplace d’extensions Azure Data Studio n’est pas encore totalement implémenté, mais le processus actuel consiste à héberger l’extension VSIX quelque part (par exemple une page de publication GitHub), puis à envoyer une demande de tirage mettant à jour [ce fichier JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) avec vos informations sur l’extension.
+Le marketplace d’extension Azure Data Studio est en cours de construction, mais le processus actuel consiste à héberger l’extension VSIX quelque part (par exemple, une page de version GitHub), puis à envoyer une demande de mise à jour de la demande de tirage de [ce fichier JSON](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) avec les informations de votre extension.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -174,7 +174,7 @@ Dans ce didacticiel, vous avez appris à :
 
 Nous espérons qu’après avoir lu cela, vous serez inspiré pour créer votre propre extension pour Azure Data Studio. Nous prenons en charge les insights de tableau de bord (de jolis graphiques qui s’exécutent sur SQL Server), un certain nombre d’API spécifiques à SQL et un ensemble de points d’extension existants hérités de Visual Studio Code.
 
-Si vous avez une idée mais que vous ne savez pas par où commencer, veuillez ouvrir un problème ou envoyer un tweet à l’équipe [azuredatastudio](https://twitter.com/azuredatastudio).
+Si vous avez une idée mais que vous ne savez pas par où commencer, ouvrez un problème ou envoyer un tweet à l’équipe [azuredatastudio](https://twitter.com/azuredatastudio).
 
 Vous pouvez toujours vous reporter au [guide pour les extensions Visual Studio Code](https://code.visualstudio.com/docs/extensions/overview), car il couvre toutes les API et tous les modèles existants.
 

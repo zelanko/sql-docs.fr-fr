@@ -17,12 +17,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 52cba9eb53b02e416e0274608f6437ee483c26b3
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 9fd89016895d2e106e6c9ff9dcab4873824c7515
+ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87107518"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "91364236"
 ---
 # <a name="replication-snapshot-agent"></a>Agent d'instantané de réplication
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
@@ -181,6 +181,9 @@ snapshot [ -?]
   
  **-MaxBcpThreads** _number_of_threads_  
  Spécifie le nombre d'opérations de copie en bloc pouvant être effectuées en parallèle. Le nombre maximal de threads et de connexions ODBC pouvant exister simultanément est, en privilégiant la valeur la plus petite, **MaxBcpThreads** ou le nombre de demandes de copie en bloc qui apparaissent dans la transaction de synchronisation dans la base de données de distribution. **MaxBcpThreads** doit avoir une valeur supérieure à **0** et n'a aucune limite supérieure codée en dur. La valeur par défaut correspond au double du nombre de processeurs.  
+ 
+ > [!NOTE]
+ > Si l’objet répliqué a un filtre, l’agent de capture instantanée va générer un fichier BCP pour cet article au lieu de générer plusieurs fichiers BCP. 
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  
  Indique si les suppressions non pertinentes sont envoyées à l'Abonné. Les suppressions non pertinentes sont des commandes DELETE qui sont envoyées aux Abonnés pour les lignes qui n'appartiennent pas à la partition de l'Abonné. Les suppressions non pertinentes n'affectent ni l'intégrité ni la convergence des données, mais elles peuvent générer un trafic réseau inutile. La valeur par défaut de **MaxNetworkOptimization** est **0**. Le fait d'attribuer à **MaxNetworkOptimization** la valeur **1** réduit le risque d'obtention de suppressions non pertinentes, minimisant ainsi le trafic réseau et maximisant l'optimisation du réseau. L'attribution de la valeur **1** à ce paramètre peut aussi augmenter le stockage des métadonnées et entraîner une réduction des performances au niveau du serveur de publication si plusieurs niveaux de filtres de jointure et des filtres de sous-ensemble complexes sont présents. Vous devez évaluer avec soin votre topologie de réplication et attribuer uniquement à **MaxNetworkOptimization** la valeur **1** si le trafic réseau des suppressions non pertinentes est trop élevé.  
