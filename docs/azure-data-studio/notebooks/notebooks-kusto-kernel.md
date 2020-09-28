@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: efcea597a431d33cfbd2978e36f3b95d27986772
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226959"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91379594"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Créer et exécuter un notebook Kusto (KQL) (Préversion)
 
-Cet article vous montre comment créer et exécuter un [notebook Azure Data Studio](../notebooks-guidance.md) à l’aide de l’[extension Kusto (KQL)](../extensions/kusto-extension.md), en vous connectant à un cluster Azure Data Explorer.
+Cet article vous montre comment créer et exécuter un [notebook Azure Data Studio](./notebooks-guidance.md) à l’aide de l’[extension Kusto (KQL)](../extensions/kusto-extension.md), en vous connectant à un cluster Azure Data Explorer.
 
 Avec l’extension Kusto (KQL), vous pouvez choisir l’option de noyau **Kusto**.
 
@@ -104,11 +104,14 @@ Si vous exécutez un script qui retourne un résultat, vous pouvez enregistrer c
 
 :::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Enregistrer le résultat":::
 
-## <a name="limitations-and-considerations"></a>Considérations et limitations
+## <a name="known-issues"></a>Problèmes connus
 
-- Vous devez choisir une base de données pour votre cluster Azure Data Explorer avant d’exécuter une requête Kusto.
-- Si vous laissez votre cluster Azure Data Explorer inactif pendant trop longtemps, il peut se déconnecter.
-    - Solution de contournement : Déconnectez-vous du cluster et reconnectez-vous.
+| Détails | Solution de contournement |
+|---------|------------|
+| [Le résultat de la requête affiche uniquement les en-têtes de colonnes](https://github.com/microsoft/azuredatastudio/issues/12565). | N/A |
+
+Vous pouvez envoyer une [requête de fonctionnalités](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=feature_request.md&title=) pour fournir des commentaires à l’équipe produit.  
+Vous pouvez signaler un [bogue](https://github.com/microsoft/azuredatastudio/issues/new?assignees=&labels=&template=bug_report.md&title=) pour fournir des commentaires à l’équipe produit.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -18,12 +18,12 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 88f809409337557603120cc87a24874319a96c9a
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: f0e3fc990d2da5c651003224a8d6f60234f02c78
+ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392187"
+ms.lasthandoff: 09/26/2020
+ms.locfileid: "91380074"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
 
@@ -348,7 +348,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Créez une table externe Azure Synapse à partir de la table Sales créée.
+Créez une table externe Azure Synapse à partir de la table Sales que vous venez de créer.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<user_password>';
@@ -363,7 +363,7 @@ CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<your_table_name>', DATA_SOURCE=
 AS SELECT * FROM sales;
 ```
 
-Accordez SELECT pour la table externe des trois utilisateurs.
+Accordez SELECT pour les trois utilisateurs sur la table externe Sales_ext que vous avez créée.
 
 ```sql
 GRANT SELECT ON Sales_ext TO Sales1;  
