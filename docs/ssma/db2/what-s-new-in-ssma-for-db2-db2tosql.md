@@ -4,22 +4,34 @@ description: Découvrez les modifications apportées à Assistant Migration SQL 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 9706f1f2313594ded00cc0fa7e1335bb194b8313
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 8f84892230de6e7070933657cd25636a2fc697d8
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87862476"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498222"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Nouveautés de SSMA pour DB2 (DB2ToSQL)
 
 Cet article répertorie les Assistant Migration SQL Server (SSMA) pour les modifications DB2 dans chaque version.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+En plus de plusieurs améliorations visant à garantir une plus grande accessibilité pour les personnes handicapées, la version v 8.14 de SSMA pour DB2 requiert une mise à niveau de projet, car elle stocke désormais la version complète du serveur source/cible dans les métadonnées du projet.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+La version v 8.13 de SSMA pour DB2 contient les modifications suivantes :
+
+* Prise en charge des index uniques filtrés
+* Considérer les casts de type implicite lors de la conversion des appels de procédure et de fonction
+* Améliorer la journalisation de la chaîne de connexion source pour aider à résoudre les problèmes de connexion
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -33,7 +45,7 @@ La version v 8.12 de SSMA pour DB2 contient les modifications suivantes :
 La version 8.11 de SSMA pour DB2 contient les modifications suivantes :
 
 * Prise en charge de DB2 pour i (v 7.1 et versions ultérieures)
-* Traduction de `SQLSTATE` et`SQLCODE`
+* Traduction de `SQLSTATE` et `SQLCODE`
 * Message d’erreur de conversion pour les opérateurs secondaires dans une fonction
 * Utiliser la bibliothèque MSAL.NET pour l’authentification Azure Active Directory interactive
 

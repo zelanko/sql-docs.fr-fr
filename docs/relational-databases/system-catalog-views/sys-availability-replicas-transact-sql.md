@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0a06e9b6-a1e4-4293-867b-5c3f5a8ff62c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 645d927a66deba3d19c44872a28abc16b2054fd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fc41c7e1a848ffd7b57012f0fbb1093a9115da3e
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539730"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498265"
 ---
 # <a name="sysavailability_replicas-transact-sql"></a>sys.availability_replicas (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,8 +57,8 @@ Si l'instance de serveur locale ne peut pas communiquer avec le cluster de bascu
 |**modify_date**|**datetime**|Date de la dernière modification du réplica.<br /><br /> NULL = Le réplica ne se trouve pas sur cette instance de serveur.|  
 |**backup_priority**|**int**|Représente la priorité spécifiée par l'utilisateur pour l'exécution des sauvegardes sur ce réplica par rapport aux autres réplicas dans le même groupe de disponibilité. La valeur est un entier compris entre 0 et 100.<br /><br /> Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur des réplicas secondaires &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar (256)**|Point de terminaison de connectivité (URL) du réplica de disponibilité en lecture seule. Pour plus d’informations, consultez [Configurer le routage en lecture seule pour un groupe de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
-|**seeding_mode**|**tinyint**|Valeurs possibles : </br></br> 0 : Manuel </br></br> 1 : automatique|
-|**seeding_mode_desc**|**nvarchar(60)**|Décrit le mode d’amorçage. </br></br> MANUAL </br></br> AUTOMATIC|
+|**seeding_mode**|**tinyint**|Valeurs possibles : </br></br> 0 : automatique </br></br> 1 : Manuel|
+|**seeding_mode_desc**|**nvarchar(60)**|Décrit le mode d’amorçage. </br></br> AUTOMATIC </br></br>MANUAL|
   
 ## <a name="security"></a>Sécurité  
   

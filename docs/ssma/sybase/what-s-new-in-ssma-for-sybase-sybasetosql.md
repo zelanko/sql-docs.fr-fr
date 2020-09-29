@@ -4,22 +4,33 @@ description: Découvrez les modifications apportées à Assistant Migration SQL 
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 7/31/2020
+ms.date: 9/28/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: alexiva
-ms.openlocfilehash: 8391c9642bb7ee0849ea4627b42ac580c4d44d20
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: fdbe37ddb915e64c5f947a64078e574a8eed8bbd
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864706"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497793"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Nouveautés de SSMA pour SAP ASE (SybaseToSQL)
 
 Cet article répertorie les modifications apportées à Assistant Migration SQL Server (SSMA) pour SAP ASE (anciennement SSMA pour Sybase) dans chaque version.
+
+## <a name="ssma-v814"></a>SSMA v 8.14
+
+En plus de plusieurs améliorations visant à garantir une plus grande accessibilité pour les personnes handicapées, la version v 8.14 de SSMA pour SAP ASE requiert une mise à niveau de projet, car elle stocke désormais la version complète du serveur source/cible dans les métadonnées du projet.
+
+## <a name="ssma-v813"></a>SSMA v 8.13
+
+La version v 8.13 de SSMA pour SAP ASE contient les modifications suivantes :
+
+* Considérer les casts de type implicite lors de la conversion des appels de procédure et de fonction
+* Améliorer la journalisation de la chaîne de connexion source pour aider à résoudre les problèmes de connexion
 
 ## <a name="ssma-v812"></a>SSMA v 8.12
 
@@ -328,7 +339,7 @@ La version de novembre 2006 de SSMA pour Sybase contient les modifications suiva
   * Recherche les valeurs NULL dans les expressions d’égalité.
   * Tables proxy.
   * Numéros d’erreur des messages utilisateur pour `RAISERROR` .
-  * `UPDATE`instructions qui contiennent des identificateurs non résolus.
+  * `UPDATE` instructions qui contiennent des identificateurs non résolus.
 * Ajout d’une nouvelle option de migration qui vous permet de spécifier comment SSMA doit gérer les dates qui sont en dehors de la [!INCLUDE [ssNoVersion](../../includes/ssnoversion-md.md)] plage de dates.
 * Ajout d’un paramètre **SQL mis en forme** sous l’onglet **SQL** , qui met en forme le code pour une meilleure lisibilité.
 * Les correctifs de bogues, notamment :

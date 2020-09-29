@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b31883200fdbee9aa4039fca75e4b034ab75cebf
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 2138e06195e8f8c34a5f8f9abde96306c2d92cc5
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89543824"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498164"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89543824"
 |**audit_file_size**|**bigint**|Taille approximative du fichier d'audit, en octets. Rempli uniquement pour les fichiers d'audit.|  
   
 ## <a name="permissions"></a>Autorisations  
- Les principaux doivent avoir les autorisations **View Server State** et **Select** .  
+ Les principaux doivent avoir l’autorisation **View Server State** .  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
