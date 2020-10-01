@@ -25,12 +25,12 @@ manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 502e9674d97addf23c89f4e24eb676c36f1d36fd
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23137d46453189bb5a04c2860ab79c0c66e8d78f
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497725"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603465"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 
@@ -83,8 +83,7 @@ Il existe quelques [problèmes connus](release-notes-ssms.md#known-issues-186) d
 
 Cet article s’applique à la dernière version de SSMS uniquement. Pour télécharger des versions précédentes de SSMS, consultez [Versions précédentes de SSMS](../ssms/release-notes-ssms.md#previous-ssms-releases).
 
-> [!NOTE]
-> En décembre 2021, les versions de SSMS antérieures à 18.6 ne s’authentifieront plus via Azure Active Directory avec MFA. Pour continuer à utiliser l’authentification Azure Active Directory avec MFA, installez ou mettez à jour vers la version SSMS 18.6 ou ultérieure.
+[!INCLUDE[ssms-connect-azure-ad](../includes/ssms-connect-azure-ad.md)]
 
 ## <a name="unattended-install"></a>Installation sans assistance
 

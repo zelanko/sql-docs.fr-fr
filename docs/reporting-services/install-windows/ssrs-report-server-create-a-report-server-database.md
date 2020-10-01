@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/16/2019
-ms.openlocfilehash: a0ff8c253af6165602b626da9aedbba09bb819f8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 9/2/2020
+ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253307"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603385"
 ---
 # <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports, Gestionnaire de configuration SSRS  
 
@@ -84,8 +84,6 @@ La page des **options d’installation du serveur de rapports** n’offre que l�
 - [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
-- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
 
 Si vous créez la base de données du serveur de rapports sur un ordinateur distant, configurez la connexion de manière à employer un compte d'utilisateur de domaine ou un compte de service pouvant accéder au réseau. Si vous utilisez une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante, réfléchissez aux informations d'identification que le serveur de rapports devra utiliser pour se connecter à l'instance. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   

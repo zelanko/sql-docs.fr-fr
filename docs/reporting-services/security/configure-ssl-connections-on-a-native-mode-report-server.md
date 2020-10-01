@@ -1,7 +1,7 @@
 ---
 description: Configurer des connexions TLS sur un serveur de rapports en mode natif
 title: Configurer des connexions TLS sur un serveur de rapports en mode natif | Microsoft Docs
-ms.date: 05/14/2019
+ms.date: 09/27/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -11,15 +11,18 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3362783a3558c2ce6d74e68d666bbf791957046a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6d978ab86f2e6f6a1ed85345685eb1da00928a6
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498037"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603350"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Configurer des connexions TLS sur un serveur de rapports en mode natif
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le mode natif utilise le service HTTP SSL (Secure Sockets Layer) pour définir des connexions chiffrées à un serveur de rapports. Le protocole TLS (Transport Layer Security) était précédemment appelé protocole SSL (Secure Sockets Layer). Si le fichier de certificat (.cer) est installé dans un magasin de certificats local sur le serveur de rapports, vous pouvez lier le certificat à une réservation d’URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour prendre en charge des connexions de serveur de rapports sur un canal chiffré.  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Le mode natif utilise le service HTTP SSL (Secure Sockets Layer) pour définir des connexions chiffrées à un serveur de rapports. Le protocole TLS (Transport Layer Security) était précédemment appelé protocole SSL (Secure Sockets Layer). Si le fichier de certificat (.cer) est installé dans un magasin de certificats local sur le serveur de rapports, vous pouvez lier le certificat à une réservation d’URL [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour prendre en charge des connexions de serveur de rapports sur un canal chiffré.  
   
 > [!TIP]  
 >  Pour plus d'informations, consultez la documentation SharePoint si vous utilisez le mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint. Par exemple, [Comment activer TLS sur une application Web SharePoint 2010](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application).  

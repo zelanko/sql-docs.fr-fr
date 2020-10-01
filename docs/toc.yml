@@ -4378,11 +4378,7 @@
         - name: Collecte des données d’utilisation et de diagnostic
           items:
             - name: Avenant à la déclaration de confidentialité de SQL Server
-              items:
-                - name: "SQL Server\_2017 et antérieur"
-                  href: sql-server/sql-server-privacy.md
-                - name: "SQL Server\_2019"
-                  href: sql-server/sql-server-privacy-ver15.md
+              href: sql-server/sql-server-privacy.md
             - name: Configurer les données d’utilisation et de diagnostic SQL Server
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: Configurer les données d’utilisation et de diagnostic des outils
