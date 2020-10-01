@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dd3b2d26b79cf612c18a201a2b077323b1b68420
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823241"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624796"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation à l’aide de DMA
 
@@ -36,7 +36,7 @@ Les instructions pas à pas suivantes vous aident à utiliser le Assistant Migra
   - [Power bi Desktop](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Modules Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Télécharger et extraire :
-  - Les [rapports DMA Power bi modèle](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - Les [rapports DMA Power bi modèle](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - [Script LoadWarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Chargement des modules PowerShell
@@ -64,7 +64,7 @@ Pour charger les modules, procédez comme suit :
 
     PowerShell doit maintenant charger ces modules automatiquement lors du démarrage d’une nouvelle session PowerShell.
 
-## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Créer un inventaire des serveurs SQL
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a> Créer un inventaire des serveurs SQL
 
 Avant d’exécuter le script PowerShell pour évaluer vos serveurs SQL, vous devez créer un inventaire des serveurs SQL que vous souhaitez évaluer.
 
@@ -126,12 +126,12 @@ Les paramètres associés à la fonction dmaDataCollector sont décrits dans le 
 |Paramètre  |Description |
 |---------|---------|
 |**getServerListFrom** | Votre inventaire. Les valeurs possibles sont **SqlServer** et **CSV**.<br/>Pour plus d’informations, consultez [créer un inventaire des serveurs SQL](#create-inventory). |
-|**csvPath** | Chemin d’accès à votre fichier d’inventaire CSV.  Utilisé uniquement lorsque **getServerListFrom** a la valeur **CSV**. |
-|**Nom du serveur** | Nom de l’instance de SQL Server de l’inventaire lors de l’utilisation de **SqlServer** dans le paramètre **getServerListFrom** . |
+|**csvPath** | Chemin d’accès à votre fichier d’inventaire CSV.  Utilisé uniquement lorsque **getServerListFrom** a la valeur  **CSV**. |
+|**serverName** | Nom de l’instance de SQL Server de l’inventaire lors de l’utilisation de **SqlServer** dans le paramètre **getServerListFrom** . |
 |**databaseName** | Base de données hébergeant la table d’inventaire. |
 |**useInstancesOnly** | Indicateur binaire pour spécifier s’il faut utiliser une liste d’instances à des fins d’évaluation.  Si la valeur est 0, la table DatabaseInventory sera utilisée pour générer la liste des cibles d’évaluation. |
 |**AssessmentName** | Nom de l’évaluation DMA. |
-|**TargetPlatform** | Type de cible d’évaluation que vous souhaitez effectuer.  Les valeurs possibles sont **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, **SqlServerWindows2019**et **SqlServerLinux2019**.  |
+|**TargetPlatform** | Type de cible d’évaluation que vous souhaitez effectuer.  Les valeurs possibles sont **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**et **SqlServerLinux2019**.  |
 |**AuthenticationMethod** | La méthode d’authentification pour la connexion aux cibles de SQL Server que vous souhaitez évaluer. Les valeurs possibles **SQLAuth** sont SQLAuth **et l'** interversion. |
 |**OutputLocation** | Répertoire dans lequel stocker le fichier de sortie de l’évaluation JSON. En fonction du nombre de bases de données en cours d’évaluation et du nombre d’objets dans les bases de données, les évaluations peuvent prendre beaucoup de temps. Le fichier sera écrit une fois toutes les évaluations terminées. |
 
@@ -150,7 +150,7 @@ Les paramètres associés à la fonction dmaProcessor sont décrits dans le tabl
 |Paramètre  |Description |
 |---------|---------|
 |**processTo** | Emplacement dans lequel le fichier JSON sera traité. Les valeurs possibles sont **SqlServer** et **AzureSQLDatabase**. |
-|**Nom du serveur** | Instance SQL Server vers laquelle les données seront traitées.  Si vous spécifiez **AzureSQLDatabase** pour le paramètre **processTo** , ajoutez uniquement le nom du SQL Server (n’incluez pas. Database.Windows.net). Vous serez invité à entrer deux connexions quand vous ciblez Azure SQL Database ; la première est celle de vos informations d’identification de locataire Azure, tandis que la seconde est votre connexion d’administrateur pour le SQL Server Azure. |
+|**serverName** | Instance SQL Server vers laquelle les données seront traitées.  Si vous spécifiez **AzureSQLDatabase** pour le paramètre **processTo** , ajoutez uniquement le nom du SQL Server (n’incluez pas. Database.Windows.net). Vous serez invité à entrer deux connexions quand vous ciblez Azure SQL Database ; la première est celle de vos informations d’identification de locataire Azure, tandis que la seconde est votre connexion d’administrateur pour le SQL Server Azure. |
 |**CreateDMAReporting** | Base de données de mise en lots à créer pour traiter le fichier JSON.  Si la base de données que vous spécifiez existe déjà et que vous définissez ce paramètre sur un, les objets ne sont pas créés.  Ce paramètre est utile pour recréer un objet unique qui a été supprimé. |
 |**CreateDataWarehouse** | Crée l’entrepôt de données qui sera utilisé par le rapport Power BI. |
 |**databaseName** | Nom de la base de données DMAReporting. |
@@ -274,7 +274,7 @@ Cette section est la partie principale du rapport, qui indique la disponibilité
 
 - InstanceDatabase
 - ChangeCategory
-- Intitulé
+- Titre
 - ObjectType
 - ImpactedObjectName
 
