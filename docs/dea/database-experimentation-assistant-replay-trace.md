@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 8df03adc67cb4ae97e099ad31d4af42c34a8533c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: fa37fb348aa94e59ac3816d523cc5a30bc314713
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951224"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636169"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Relire une trace dans Assistant Expérimentation de base de données
 
@@ -122,7 +122,7 @@ Ouvrez un fichier de trace cible et affichez-le dans le générateur de profils 
 
 **Q : quels événements de trace sont collectés par la DEA pendant la relecture ?**
 
-La DEA capture les événements de trace qui contiennent des informations relatives aux performances. La configuration de capture se trouve dans le script StartReplayCaptureTrace. Sql. Ces événements sont typiques SQL Server événements de trace répertoriés dans la [documentation de référence sp_trace_setevent (Transact-SQL)](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql).
+La DEA capture les événements de trace qui contiennent des informations relatives aux performances. La configuration de capture se trouve dans le script StartReplayCaptureTrace. Sql. Ces événements sont typiques SQL Server événements de trace répertoriés dans la [documentation de référence sp_trace_setevent (Transact-SQL)](../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).
 
 ## <a name="troubleshoot-trace-replay"></a>Résoudre les problèmes de relecture de trace
 
@@ -139,7 +139,7 @@ Vous pouvez obtenir plus de détails dans les journaux de% temp% \\ DEA. Si le p
 
 - Vérifiez que le service du contrôleur de Distributed Replay est en cours d’exécution sur l’ordinateur contrôleur. Pour vérifier, utilisez les outils de gestion Distributed Replay (exécutez la commande `dreplay.exe status -f 1` ).
 - Si la relecture est démarrée à distance :
-  - Vérifiez que l’ordinateur qui exécute la DEA peut effectuer un test ping sur le contrôleur. Vérifiez que les paramètres du pare-feu autorisent les connexions en suivant les instructions de la page **configurer l’environnement de relecture** . Pour plus d’informations, consultez l’article [SQL Server Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/sql-server-distributed-replay?view=sql-server-2017).
+  - Vérifiez que l’ordinateur qui exécute la DEA peut effectuer un test ping sur le contrôleur. Vérifiez que les paramètres du pare-feu autorisent les connexions en suivant les instructions de la page **configurer l’environnement de relecture** . Pour plus d’informations, consultez l’article [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md?view=sql-server-2017).
   - Assurez-vous que le lancement à distance DCOM et l’activation à distance sont autorisés pour l’utilisateur du contrôleur de Distributed Replay.
   - Assurez-vous que les droits d’utilisateur de l’accès à distance DCOM sont autorisés pour l’utilisateur du contrôleur de Distributed Replay.
 

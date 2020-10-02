@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 4caf97a9afb4a40ba82e2fe6730d46dbdcbea7f6
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 67b427e7d1d73b072ce2ec319bfc3cbcbbcfddf9
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951534"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636099"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturer une trace dans Assistant Expérimentation de base de données
 
@@ -133,7 +133,7 @@ Si une erreur s’affiche lorsque vous exécutez une capture de trace, vérifiez
 
 - Le nom de l’ordinateur exécutant SQL Server est valide. Pour confirmer, essayez de vous connecter à l’ordinateur qui exécute SQL Server à l’aide de SQL Server Management Studio (SSMS).
 - La configuration de votre pare-feu ne bloque pas les connexions à l’ordinateur exécutant SQL Server.
-- L’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
+- L’utilisateur dispose des autorisations répertoriées dans le [Forum aux questions sur la relecture](./database-experimentation-assistant-replay-trace.md?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - Le nom de la trace ne suit pas la Convention de substitution standard (capture \_ 1). Essayez plutôt les noms de trace comme capture \_ 1a ou Capture1.
 
 Voici quelques-unes des erreurs possibles et des solutions pour les résoudre :
@@ -145,7 +145,7 @@ Voici quelques-unes des erreurs possibles et des solutions pour les résoudre :
 |Une trace de DEA est actuellement en cours d’exécution sur le serveur cible.|Une trace active est déjà en cours d’exécution sur le serveur cible. Vous ne pouvez pas démarrer une nouvelle trace lorsqu’une trace au niveau du serveur est déjà en cours d’exécution.|  
 |Impossible d’ouvrir la base de données demandée pour la capture de la trace. Cette erreur peut être due à un nom de base de données incorrect.|La base de données spécifiée n’existe pas ou n’est pas accessible à l’utilisateur actuel. Utilisez le nom correct de la base de données.|  
 
-Si vous voyez d’autres erreurs libellées *code d’erreur SQL*, consultez [moteur de base de données des erreurs](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) pour obtenir des descriptions détaillées.
+Si vous voyez d’autres erreurs libellées *code d’erreur SQL*, consultez [moteur de base de données des erreurs](../relational-databases/errors-events/database-engine-events-and-errors.md) pour obtenir des descriptions détaillées.
 
 ## <a name="see-also"></a>Voir aussi
 

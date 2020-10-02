@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: pochiraju
 ms.author: rajpo
 ms.reviewer: mathoma
-ms.openlocfilehash: 7519b35bb89704acad32f3dfe46c2f916b4dc441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 2e3490f1a381bbe3a27f9860df2884c759387c39
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87951354"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636089"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Configurer Distributed Replay pour Assistant Expérimentation de base de données
 
@@ -53,7 +53,7 @@ Pour configurer le service de contrôleur :
    `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
 
-Pour obtenir d’autres options de configuration, consultez [configurer Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+Pour obtenir d’autres options de configuration, consultez [configurer Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## <a name="configure-dcom"></a>Configurer DCOM
 
@@ -93,7 +93,7 @@ Avant de configurer le service client, utilisez des outils de mise en réseau te
 
     Si la configuration est réussie, le journal affiche le message **enregistré avec le contrôleur <le \> nom du contrôleur**.
 
-Pour obtenir d’autres options de configuration, consultez [configurer Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+Pour obtenir d’autres options de configuration, consultez [configurer Distributed Replay](../tools/distributed-replay/configure-distributed-replay.md).
 
 ## <a name="set-up-distributed-replay-administration-tools"></a>Configurer les outils d’administration Distributed Replay
 
