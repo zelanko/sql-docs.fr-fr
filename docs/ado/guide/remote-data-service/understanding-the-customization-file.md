@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b097d54015d9f48140aafb6feb360b8013edeaf
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 25f4837fb73f15c8626a0b2a558f38badb1f36ed
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977390"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91721290"
 ---
 # <a name="understanding-the-customization-file"></a>Présentation du fichier de personnalisation
 Chaque en-tête de section du fichier de personnalisation se compose de crochets (**[]**) contenant un type et un paramètre. Les quatre types de section sont indiqués par les chaînes littérales **Connect**, **SQL**, **UserList**ou **logs**. Le paramètre est la chaîne littérale, la valeur par défaut, un identificateur spécifié par l’utilisateur ou rien.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](/dotnet/framework/wcf/).  
   
  Par conséquent, chaque section est marquée avec l’un des en-têtes de section suivants :  
   
@@ -45,7 +45,7 @@ identifier
 |Élément|Description|  
 |----------|-----------------|  
 |**connect**|Chaîne littérale qui modifie une chaîne de connexion.|  
-|**Server**|Chaîne littérale qui modifie une chaîne de commande.|  
+|**sql**|Chaîne littérale qui modifie une chaîne de commande.|  
 |**userlist**|Chaîne littérale qui modifie les droits d’accès d’un utilisateur spécifique.|  
 |**logs**|Chaîne littérale qui spécifie un enregistrement de fichier journal d’erreurs opérationnelles.|  
 |**default**|Chaîne littérale qui est utilisée si aucun identificateur n’est spécifié ou trouvé.|  
