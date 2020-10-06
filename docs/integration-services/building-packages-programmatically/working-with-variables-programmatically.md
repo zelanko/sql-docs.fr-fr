@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8691874f1dc93371730b22f9ccaaa3d62cf84521
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2847f43835f70e2c1dd0f78cc58af551d728702f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394995"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725130"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilisation de variables par programmation
 
@@ -41,15 +41,15 @@ ms.locfileid: "88394995"
   
 -   Remplissage de valeurs de paramètres pour des instructions Transact-SQL au moment de l’exécution.  
   
--   Contrôle du flux d'une boucle Foreach. Pour plus d’informations, consultez [Ajouter une énumération à un flux de contrôle](https://msdn.microsoft.com/library/f212b5fb-3cc4-422e-9b7c-89eb769a812a).  
+-   Contrôle du flux d'une boucle Foreach. Pour plus d’informations, consultez [Ajouter une énumération à un flux de contrôle](../control-flow/foreach-loop-container.md).  
   
--   Contrôle d'une contrainte de précédence par son utilisation dans une expression. Une contrainte de précédence peut inclure des variables dans la définition de contrainte. Pour plus d’informations, consultez [Ajouter des expressions aux contraintes de précédence](https://msdn.microsoft.com/library/5574d89a-a68e-4b84-80ea-da93305e5ca1).  
+-   Contrôle d'une contrainte de précédence par son utilisation dans une expression. Une contrainte de précédence peut inclure des variables dans la définition de contrainte. Pour plus d’informations, consultez [Ajouter des expressions aux contraintes de précédence](../control-flow/precedence-constraints.md).  
   
--   Contrôle de la répétition conditionnelle d'un conteneur de boucles For. Pour plus d’informations, consultez [Ajouter une itération à un flux de contrôle](https://msdn.microsoft.com/library/eb3a7494-88ae-4165-9d0f-58715eb1734a).  
+-   Contrôle de la répétition conditionnelle d'un conteneur de boucles For. Pour plus d’informations, consultez [Ajouter une itération à un flux de contrôle](../control-flow/for-loop-container.md).  
   
 -   Création d’expressions qui incluent des valeurs de variables.  
   
--   Vous pouvez créer des variables personnalisées pour tous les types de conteneurs : packages, conteneurs de **boucles Foreach**, conteneurs de **boucles For**, conteneurs de **séquences**, TaskHosts et gestionnaires d’événements. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+-   Vous pouvez créer des variables personnalisées pour tous les types de conteneurs : packages, conteneurs de **boucles Foreach**, conteneurs de **boucles For**, conteneurs de **séquences**, TaskHosts et gestionnaires d’événements. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../integration-services-ssis-variables.md).  
   
 ## <a name="scope"></a>Étendue  
  Chaque conteneur possède sa propre collection <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Lorsqu'une nouvelle variable est créée, elle se trouve dans la portée de son conteneur parent. Le conteneur de packages se trouvant au sommet de la hiérarchie de conteneurs, les variables avec une portée de package fonctionnent comme les variables globales et sont visibles pour tous les conteneurs contenus dans le package. La collection de variables du conteneur est également accessible par les enfants du conteneur via la collection <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, en utilisant le nom de variable ou l'index de la variable dans la collection.  
@@ -231,10 +231,9 @@ End Module
  L'expression doit être une expression valide qui utilise la syntaxe d'expression [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Les littéraux sont autorisés dans les expressions variables, en plus des opérateurs et fonctions que la syntaxe d'expression fournit, mais les expressions ne peuvent pas référencer d'autres variables ou colonnes. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
 ## <a name="configuration-files"></a>Fichiers de configuration  
- Si un fichier de configuration inclut une variable personnalisée, la variable peut être mise à jour au moment de l'exécution. Cela signifie que lorsque le package s'exécute, la valeur de la variable qui se trouvait à l'origine dans le package est remplacée par une nouvelle valeur provenant du fichier de configuration. Cette technique de remplacement s'avère utile lorsqu'un package est déployé sur plusieurs serveurs qui requièrent des valeurs de variables différentes. Par exemple, une variable peut spécifier combien de fois un conteneur de **boucles Foreach** répète son flux de travail, répertorier les destinataires auxquels un gestionnaire d’événements envoie des e-mails lorsqu’une erreur est déclenchée ou changer le nombre d’erreurs pouvant se produire avant que le package n’échoue. Ces variables sont fournies de manière dynamique dans des fichiers de configuration pour chaque environnement. Par conséquent, seules les variables accessibles en lecture/écriture sont autorisées dans les fichiers de configuration. Pour plus d’informations, consultez [Créer des configurations de package](../../integration-services/packages/create-package-configurations.md).  
+ Si un fichier de configuration inclut une variable personnalisée, la variable peut être mise à jour au moment de l'exécution. Cela signifie que lorsque le package s'exécute, la valeur de la variable qui se trouvait à l'origine dans le package est remplacée par une nouvelle valeur provenant du fichier de configuration. Cette technique de remplacement s'avère utile lorsqu'un package est déployé sur plusieurs serveurs qui requièrent des valeurs de variables différentes. Par exemple, une variable peut spécifier combien de fois un conteneur de **boucles Foreach** répète son flux de travail, répertorier les destinataires auxquels un gestionnaire d’événements envoie des e-mails lorsqu’une erreur est déclenchée ou changer le nombre d’erreurs pouvant se produire avant que le package n’échoue. Ces variables sont fournies de manière dynamique dans des fichiers de configuration pour chaque environnement. Par conséquent, seules les variables accessibles en lecture/écriture sont autorisées dans les fichiers de configuration. Pour plus d’informations, consultez [Créer des configurations de package](../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
- [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)  
-  
+ [Utiliser des variables dans des packages](../integration-services-ssis-variables.md)  
   

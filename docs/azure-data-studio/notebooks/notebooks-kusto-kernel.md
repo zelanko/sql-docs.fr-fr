@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 416fd5aabb07db3deed1d4d78769249a99113216
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: a8379e10e8c3e3af64381e9a4536b253e203964e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379594"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725123"
 ---
 # <a name="create-and-run-a-kusto-kql-notebook-preview"></a>Créer et exécuter un notebook Kusto (KQL) (Préversion)
 
@@ -28,7 +28,7 @@ Actuellement, cette fonctionnalité est uniquement disponible en tant que versio
 
 Si vous n’avez pas d’abonnement Azure, créez un [compte Azure gratuit](https://azure.microsoft.com/free/) avant de commencer.
 
-- [Un cluster Azure Data Explorer avec une base de données à laquelle vous pouvez vous connecter](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [Un cluster Azure Data Explorer avec une base de données à laquelle vous pouvez vous connecter](/azure/data-explorer/create-cluster-database-portal).
 - [Azure Data Studio](../download-azure-data-studio.md)
 - [Extension Kusto (KQL) pour Azure Data Studio](../extensions/kusto-extension.md).
 
@@ -44,7 +44,7 @@ Les étapes suivantes montrent comment créer un fichier de notebook dans Azure 
 
 3. Pour **Noyau**, sélectionnez *Kusto*. Vérifiez que le menu **Attacher à** est défini sur le nom et la base de données du cluster. Pour cet article, nous utilisons le cluster help.kusto.windows.net avec des exemples de données de la base de données.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Définir Noyau et Attacher à":::
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Ouvrir un notebook":::
 
 Vous pouvez enregistrer le notebook à l’aide de la commande **Enregistrer** ou **Enregistrer sous** du menu **Fichier**.
 
@@ -56,14 +56,14 @@ Pour changer la connexion Kusto pour un notebook :
 
 1. Sélectionnez le menu **Attacher à** dans la barre d’outils du notebook, puis sélectionnez **Changer la connexion**.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="modifier les connexions":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="Ouvrir un notebook":::
 
    > [!Note]
    > Assurez-vous que la valeur de la base de données est remplie. La base de données doit être spécifiée pour les notebooks Kusto.
 
 2. Vous pouvez maintenant sélectionner un serveur de connexion récent ou entrer de nouveaux détails de connexion pour vous connecter.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Sélectionnez un autre cluster":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Ouvrir un notebook":::
 
    > [!Note]
    > Spécifiez le nom du cluster sans `https://`.
@@ -76,7 +76,7 @@ Par exemple :
 
 1. Ajoutez une nouvelle cellule de code en sélectionnant la commande **+ Code** dans la barre d’outils.
 
-   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Bloc de code du noyau Kusto":::
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Ouvrir un notebook":::
 
 2. Copiez et collez l’exemple suivant dans la cellule, puis cliquez sur **Exécuter la cellule**. Cet exemple interroge les données StormEvents pour un type d’événement spécifique.
 
@@ -85,7 +85,7 @@ Par exemple :
     | where EventType == "Waterspout"
    ```
 
-   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Exécuter la cellule":::
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Ouvrir un notebook":::
 
 ## <a name="save-the-result-or-show-chart"></a>Enregistrer le résultat ou afficher le graphique
 
@@ -102,7 +102,7 @@ Si vous exécutez un script qui retourne un résultat, vous pouvez enregistrer c
     | limit 10
 ```
 
-:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Enregistrer le résultat":::
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Ouvrir un notebook":::
 
 ## <a name="known-issues"></a>Problèmes connus
 
@@ -118,6 +118,6 @@ Vous pouvez signaler un [bogue](https://github.com/microsoft/azuredatastudio/iss
 Découvrez-en plus sur les notebooks :
 
 - [Extension Kusto (KQL) pour Azure Data Studio](../extensions/kusto-extension.md)
-- [Guide pratique pour utiliser les notebooks dans Azure Data Studio](../notebooks-guidance.md)
-- [Créer et exécuter un notebook Python](../notebooks-tutorial-python-kernel.md)
-- [Créer et exécuter un notebook SQL Server](../notebooks-tutorial-sql-kernel.md)
+- [Guide pratique pour utiliser les notebooks dans Azure Data Studio](./notebooks-guidance.md)
+- [Créer et exécuter un notebook Python](./notebooks-python-kernel.md)
+- [Créer et exécuter un notebook SQL Server](./notebooks-sql-kernel.md)

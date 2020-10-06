@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f24efc5f72b0be5b362e3af12ce8b7f21fd7d51b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 41bb72eefbfac24da8c390cea2bb9fa741e7255f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480251"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727825"
 ---
 # <a name="what-is-an-always-on-availability-group"></a>Qu’est-ce qu’un groupe de disponibilité Always On ?
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -100,7 +100,7 @@ Le mode de disponibilité est une propriété de chaque réplica de disponibilit
   
     -   **Basculement automatique** (sans perte de données)  
   
-         Un basculement automatique se produit en réponse à un échec qui provoque la transition d'un réplica secondaire synchronisé vers le rôle principal (avec protection garantie des données). Lorsque le réplica principal précédent devient disponible, il adopte le rôle secondaire. Le basculement automatique nécessite qu'à la fois le réplica principal et le réplica secondaire cible s'exécutent en mode de validation synchrone avec le mode de basculement défini sur « Automatique ». En outre, le réplica secondaire doit déjà être synchronisé, posséder le quorum WSFC et remplir les conditions spécifiées par la [stratégie de basculement souple](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)du groupe de disponibilité.  
+         Un basculement automatique se produit en réponse à un échec qui provoque la transition d'un réplica secondaire synchronisé vers le rôle principal (avec protection garantie des données). Lorsque le réplica principal précédent devient disponible, il adopte le rôle secondaire. Le basculement automatique nécessite qu'à la fois le réplica principal et le réplica secondaire cible s'exécutent en mode de validation synchrone avec le mode de basculement défini sur « Automatique ». En outre, le réplica secondaire doit déjà être synchronisé, posséder le quorum WSFC et remplir les conditions spécifiées par la [stratégie de basculement souple](./configure-flexible-automatic-failover-policy.md)du groupe de disponibilité.  
   
         > [!IMPORTANT]  
         >  Les instances de cluster de basculement (FCI) SQL Server ne prennent pas en charge le basculement automatique par les groupes de disponibilité. Par conséquent, tout réplica de disponibilité hébergé par une instance de cluster de basculement ne peut être configuré que pour un basculement manuel.  
@@ -156,11 +156,11 @@ Le mode de disponibilité est une propriété de chaque réplica de disponibilit
   
 -   **Blogs :**  
   
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
+     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
-     [Blogs de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
-     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://docs.microsoft.com/archive/blogs/psssql/)  
+     [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](/archive/blogs/psssql/)  
   
 -   **Vidéos :**  
   
@@ -170,9 +170,9 @@ Le mode de disponibilité est une propriété de chaque réplica de disponibilit
   
 -   **Livres blancs :**  
   
-     [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
-     [Livres blancs de Microsoft pour SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Livres blancs de Microsoft pour SQL Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/13146.white-paper-gallery-for-sql-server.aspx#[Category]SQLServer2012)  
   
      [Livres blancs de l'équipe de consultants clients de SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
@@ -188,4 +188,3 @@ Le mode de disponibilité est une propriété de chaque réplica de disponibilit
  [Secondaires actifs : sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
-   

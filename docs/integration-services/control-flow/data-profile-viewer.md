@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a2ee5f6f01a098c2e8a67b09e915a947010d5758
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 19b96ce10fc5579e86fde10b4c3331b0da060050
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484616"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724960"
 ---
 # <a name="data-profile-viewer"></a>Visionneuse du profil des données
 
@@ -69,7 +69,7 @@ ms.locfileid: "88484616"
 >   
 >  Si vous descendez dans la hiérarchie à partir d'un fichier de sortie qui n'a pas été créé récemment, les requêtes d'exploration risquent de retourner un autre ensemble de lignes que celui à partir duquel la sortie d'origine a été calculée.  
   
- Pour plus d’informations sur l’interface utilisateur de la visionneuse du profil des données, consultez [Aide F1 de la visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer-f1-help.md).  
+ Pour plus d’informations sur l’interface utilisateur de la visionneuse du profil des données, consultez [Aide F1 de la visionneuse du profil des données]().  
   
 ## <a name="data-profile-viewer-f1-help"></a>Aide F1 de la Visionneuse du profil des données
   Utilisez la Visionneuse du profil des données pour afficher la sortie de la tâche de profilage des données.  
@@ -246,4 +246,3 @@ ms.locfileid: "88484616"
   
  **Count**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
-  

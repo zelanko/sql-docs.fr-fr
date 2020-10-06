@@ -166,6 +166,4 @@ Le port TCP sur le pare-feu doit être ouvert pour le port de l’écouteur.
 >[!IMPORTANT]
 >Pour la mise en production SQL Server 2017, la seule méthode d’authentification prise en charge pour le point de terminaison de mise en miroir de bases de données est `CERTIFICATE`. L’option `WINDOWS` sera activée dans une mise en production ultérieure.
 
-Pour plus d’informations, consultez [Point de terminaison de mise en miroir de bases de données (SQL Server)](https://msdn.microsoft.com/library/ms179511.aspx).
-
-
+Pour plus d’informations, consultez [Point de terminaison de mise en miroir de bases de données (SQL Server)](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md).

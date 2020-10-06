@@ -17,12 +17,12 @@ f1_keywords:
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343ebe85334869f97b374e5386c05b47fbc8b48e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ca689a290e266c3e8476034ba0c8e7ec4737cef4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478055"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724290"
 ---
 # <a name="advanced-editor"></a>Éditeur avancé
 
@@ -47,11 +47,11 @@ ms.locfileid: "88478055"
   
  Les propriétés affichées dépendent des composants. Pour plus d'informations sur les propriétés qu'il est possible d'afficher dans l' **Éditeur avancé**, consultez les rubriques suivantes :  
   
--   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](./data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriétés personnalisées des transformations](../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
--   [Propriétés du chemin](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)  
+-   [Propriétés du chemin](./data-flow/integration-services-paths.md)  
   
  Pour plus d'informations sur le composant spécifique que vous modifiez, consultez la description du composant dans la section « Composants des flux de données » de la documentation Objets et concepts d' [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
   
@@ -59,5 +59,4 @@ ms.locfileid: "88478055"
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
-  
   

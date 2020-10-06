@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 193280bb5e7f702336bf31fde363db08f437cc9b
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 7bbd02e21b369732da72d7dbd7563d32f81c2a46
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91113328"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727930"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurer un écouteur Always On pour un groupe de disponibilité
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -196,11 +196,11 @@ ms.locfileid: "91113328"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help**  dans l’environnement PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help**  dans l’environnement PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
--   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
 ## <a name="troubleshooting"></a>Dépannage  
   
@@ -306,21 +306,21 @@ Start-Clustergroup yourListenerGroupName
   
         3.  Ajoutez une dépendance à la ressource du groupe de disponibilité WSFC.  
   
-         Pour plus d’informations sur les boîtes de dialogue et les onglets du gestionnaire de cluster de basculement, consultez [Interface utilisateur : composant logiciel enfichable du gestionnaire de cluster de basculement](https://technet.microsoft.com/library/cc772502.aspx).  
+         Pour plus d’informations sur les boîtes de dialogue et les onglets du gestionnaire de cluster de basculement, consultez [Interface utilisateur : composant logiciel enfichable du gestionnaire de cluster de basculement](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772502(v=ws.11)).  
   
     -   **Utilisation de Windows PowerShell pour les clusters de basculement :**  
   
         1.  Utilisez [Add-ClusterResource](https://technet.microsoft.com/library/ee460983.aspx) pour créer les ressources de nom réseau et d’adresse IP.  
   
-        2.  Utilisez [Start-ClusterResource](https://technet.microsoft.com/library/ee461056.aspx) pour démarrer la ressource de nom réseau.  
+        2.  Utilisez [Start-ClusterResource](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461056(v=technet.10)) pour démarrer la ressource de nom réseau.  
   
-        3.  Utilisez [Add-ClusterResourceDependency](https://technet.microsoft.com/library/ee461014.aspx) pour définir la dépendance entre le nom réseau et la ressource existante du groupe de disponibilité SQL Server.  
+        3.  Utilisez [Add-ClusterResourceDependency](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461014(v=technet.10)) pour définir la dépendance entre le nom réseau et la ressource existante du groupe de disponibilité SQL Server.  
   
-         Pour plus d'informations sur l'utilisation de Windows PowerShell pour les clusters de basculement, consultez [Présentation des commandes du Gestionnaire de serveurs](https://technet.microsoft.com/library/cc732757.aspx#BKMK_wps).  
+         Pour plus d'informations sur l'utilisation de Windows PowerShell pour les clusters de basculement, consultez [Présentation des commandes du Gestionnaire de serveurs](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732757(v=ws.11)#BKMK_wps).  
   
 2.  Démarrez l'écoute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nouvel écouteur. Après avoir créé l'écouteur supplémentaire, connectez-vous à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica principal du groupe de disponibilité et utilisez [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou PowerShell pour modifier le port d'écoute.  
   
- Pour plus d’informations, consultez [Créer plusieurs écouteurs pour le même groupe de disponibilité](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/03/how-to-create-multiple-listeners-for-same-availability-group-goden-yao/) (blog de l’équipe de SQL Server Always On).  
+ Pour plus d’informations, consultez [Créer plusieurs écouteurs pour le même groupe de disponibilité](/archive/blogs/sqlalwayson/how-to-create-multiple-listeners-for-same-availability-group-goden-yao) (blog de l’équipe de SQL Server Always On).  
   
  
   
@@ -329,4 +329,3 @@ Start-Clustergroup yourListenerGroupName
 Maintenant que vous avez créé l’écouteur, configurez votre application pour la [connecter à l’écouteur](listeners-client-connectivity-application-failover.md). Vous pouvez également examiner différentes [stratégies de supervision des groupes de disponibilité](monitoring-of-availability-groups-sql-server.md) pour garantir l’intégrité de votre groupe de disponibilité.
 
 Vous pouvez aussi [afficher les propriétés d’un écouteur](view-availability-group-listener-properties-sql-server.md) ou découvrir comment [supprimer l’écouteur](remove-an-availability-group-listener-sql-server.md), si nécessaire. 
-  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6fc6be0059b1e49c5db9cf2ced79e66c6b523b5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 633dd8288a9168422d0e5187caa1265615911a8a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478249"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726693"
 ---
 # <a name="analysis-services-connection-manager"></a>Gestionnaire de connexions Analysis Services
 
@@ -31,7 +31,7 @@ ms.locfileid: "88478249"
   
  Les tâches (telles que la tâche DDL d’exécution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et la tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) et les destinations (telles que la destination Apprentissage du modèle d’exploration de données) utilisent un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- Pour plus d’informations sur les bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas).  
+ Pour plus d’informations sur les bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](/analysis-services/multidimensional-models/multidimensional-model-databases-ssas).  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Configuration du gestionnaire de connexions Analysis Services  
  Quand vous ajoutez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à un package, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée un gestionnaire de connexions résolu en une connexion [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] au moment de l’exécution, définit les propriétés du gestionnaire de connexions et ajoute le gestionnaire de connexions à la collection **Connexions** sur le package. La propriété **ConnectionManagerType** du gestionnaire de connexions a pour valeur **MSOLAP100**.  
@@ -45,7 +45,7 @@ ms.locfileid: "88478249"
 -   Si vous vous connectez à une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], spécifiez le mode d'authentification.  
 
 > [!NOTE]    
->  Si vous utilisez SSIS dans Azure Data Factory (ADF) et que vous souhaitez vous connecter à une instance d’Azure Analysis Services (AAS), vous ne pouvez pas utiliser un compte avec l’authentification multifacteur (MFA) activée. Au lieu de cela, vous devez utiliser un compte qui ne nécessite aucune interactivité/authentification MFA ou un principal du service. Pour utiliser ce dernier, rendez-vous [ici](https://docs.microsoft.com/azure/analysis-services/analysis-services-service-principal) pour en créer un et lui affecter le rôle d’administrateur de serveur. Sélectionnez ensuite **Utiliser un nom d’utilisateur et un mot de passe spécifiques** pour ouvrir une session sur le serveur dans votre gestionnaire de connexions et, pour finir, entrez vos `User name: app:YourApplicationID` et `Password: YourAuthorizationKey`.
+>  Si vous utilisez SSIS dans Azure Data Factory (ADF) et que vous souhaitez vous connecter à une instance d’Azure Analysis Services (AAS), vous ne pouvez pas utiliser un compte avec l’authentification multifacteur (MFA) activée. Au lieu de cela, vous devez utiliser un compte qui ne nécessite aucune interactivité/authentification MFA ou un principal du service. Pour utiliser ce dernier, rendez-vous [ici](/azure/analysis-services/analysis-services-service-principal) pour en créer un et lui affecter le rôle d’administrateur de serveur. Sélectionnez ensuite **Utiliser un nom d’utilisateur et un mot de passe spécifiques** pour ouvrir une session sur le serveur dans votre gestionnaire de connexions et, pour finir, entrez vos `User name: app:YourApplicationID` et `Password: YourAuthorizationKey`.
   
 -   Indiquez si la connexion créée à partir du gestionnaire de connexions est conservée au moment de l'exécution.  
   
@@ -56,5 +56,4 @@ ms.locfileid: "88478249"
 -   [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> et [Ajout de connexions par programme](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md).  
-  
   

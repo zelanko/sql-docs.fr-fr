@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d622a00995ec8a371ef531994e4f18c61173a20
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 25c17b0d61c5e1f58932eb6abc035e7862dcbe6e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477978"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728058"
 ---
 # <a name="data-sources-for-ssisnoversion-packages"></a>Sources de données des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477978"
   
 > **REMARQUE :** Vous pouvez ajouter des sources de données uniquement aux projets qui sont configurés pour utiliser le modèle de déploiement de package. Si un projet est configuré pour utiliser le modèle de déploiement de projet, vous utilisez les gestionnaires de connexions créés au niveau du projet pour partager les connexions, au lieu d'utiliser les sources de données.  
 >   
->  Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Pour plus d’informations sur la conversion d’un projet en modèle de déploiement de projet, consultez [Déployer des projets sur le serveur Integration Services](https://msdn.microsoft.com/library/hh231102.aspx).  
+>  Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Pour plus d’informations sur la conversion d’un projet en modèle de déploiement de projet, consultez [Déployer des projets sur le serveur Integration Services](../packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  L'utilisation de sources de données dans les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] présente les avantages suivants :  
   
@@ -47,5 +47,4 @@ ms.locfileid: "88477978"
  Un objet source de données représente une connexion simple à une source de données et fournit un accès aux objets de la banque de données qu'il référence. Par exemple, un objet de source de données qui se connecte à l’exemple de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]AdventureWorks inclut les 60 tables de cette base de données.  
   
  Il n'existe aucune dépendance entre une source de données et les gestionnaires de connexions qui la référencent. Si une source de données ne fait plus partie d'un projet, les packages restent valides car les informations relatives à la source de données, comme son type de connexion et sa chaîne de connexion, sont incluses dans la définition du package.  
-  
   

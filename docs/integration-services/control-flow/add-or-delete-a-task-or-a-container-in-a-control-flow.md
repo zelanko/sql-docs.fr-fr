@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc573bfaf7f68102631e4e65c607e76062c147ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 41a59d34bd6b84388f9fc32443b703bdf94f3239
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88350065"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728097"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle
 
@@ -100,9 +100,9 @@ Vous pouvez définir la plupart des propriétés des tâches et des conteneurs �
   
 4.  Sur l’aire de conception de l’onglet **Flux de contrôle** , cliquez avec le bouton droit sur la tâche ou le conteneur, puis cliquez sur **Modifier** pour ouvrir l’éditeur de tâche ou de conteneur correspondant.  
   
-     Pour plus d’informations sur la configuration du conteneur de boucles For, consultez [Configurer un conteneur de boucles For](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+     Pour plus d’informations sur la configuration du conteneur de boucles For, consultez [Configurer un conteneur de boucles For](./for-loop-container.md).  
   
-     Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
+     Pour plus d’informations sur la configuration du conteneur de boucles Foreach, consultez [Configurer un conteneur de boucles Foreach](./foreach-loop-container.md).  
   
     > [!NOTE]  
     >  Le conteneur de séquences ne possède pas d'éditeur personnalisé.  
@@ -119,5 +119,4 @@ Vous pouvez définir la plupart des propriétés des tâches et des conteneurs �
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Conteneurs Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
-  
   

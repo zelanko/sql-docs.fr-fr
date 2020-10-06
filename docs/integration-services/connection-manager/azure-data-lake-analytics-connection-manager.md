@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: 87c4b6ca0ccb53087c2c4532631edfde9d0e6516
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d40fea72f0c39bf932146de239f4713dbe5eb247
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918570"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726664"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Gestionnaire de connexions Azure Data Lake Analytics
 
@@ -43,15 +43,15 @@ Le gestionnaire de connexions Data Lake Analytics est un composant de [SQL Serve
    a. Si vous sélectionnez l’option d’authentification **Identité de l’utilisateur Azure AD** :
    
       i. Renseignez les champs **Nom d’utilisateur** et **Mot de passe**.    
-      ii. Sélectionnez **Tester la connexion** pour tester la connexion. Si l’administrateur client ou vous-même n’avez pas déjà autorisé SSIS à accéder à votre compte Data Lake Analytics, sélectionnez **Accepter** à l’invite. Pour plus d’informations sur cette procédure de consentement, consultez [Intégration d’applications dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+      ii. Sélectionnez **Tester la connexion** pour tester la connexion. Si l’administrateur client ou vous-même n’avez pas déjà autorisé SSIS à accéder à votre compte Data Lake Analytics, sélectionnez **Accepter** à l’invite. Pour plus d’informations sur cette procédure de consentement, consultez [Intégration d’applications dans Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
    > [!NOTE] 
    > Lorsque vous sélectionnez l’option d’authentification **Identité de l’utilisateur Azure AD**, l’authentification multifacteur et l’authentification de compte Microsoft ne sont pas prises en charge.
     
    b. Si vous sélectionnez l’option d’authentification **Identité du service Azure AD** :
    
-      i. Créez une application et un principal du service Azure AD pour accéder au compte Data Lake Analytics. Pour plus d’informations sur cette option d’authentification, consultez [Utiliser le portail pour créer une application Active Directory et un principal du service qui peuvent accéder aux ressources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).    
-      ii. Affectez les autorisations nécessaires pour permettre à cette application Azure AD d’accéder à votre compte Data Lake Analytics. Découvrez comment accorder des autorisations à votre compte Data Lake Analytics avec l’[Assistant Ajout d’utilisateurs](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
+      i. Créez une application et un principal du service Azure AD pour accéder au compte Data Lake Analytics. Pour plus d’informations sur cette option d’authentification, consultez [Utiliser le portail pour créer une application Active Directory et un principal du service qui peuvent accéder aux ressources](/azure/azure-resource-manager/resource-group-create-service-principal-portal).    
+      ii. Affectez les autorisations nécessaires pour permettre à cette application Azure AD d’accéder à votre compte Data Lake Analytics. Découvrez comment accorder des autorisations à votre compte Data Lake Analytics avec l’[Assistant Ajout d’utilisateurs](/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
       iii. Renseignez les valeurs des champs **ID d’application**, **Clé d’authentification**, et **ID de locataire**.    
       iv. Sélectionnez **Tester la connexion** pour tester la connexion.  
 
@@ -59,5 +59,4 @@ Le gestionnaire de connexions Data Lake Analytics est un composant de [SQL Serve
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Afficher les propriétés du gestionnaire de connexions
 Les propriétés du gestionnaire de connexions que vous avez créées apparaissent dans la fenêtre **Propriétés** .  
-  
   

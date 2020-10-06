@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a6e5f2051a0e6937cd26d9ceec06d42ccbeb201
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 537dbc1d60fc707f3d00aacd85e1ec5e335519c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91115662"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727980"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Configurer un groupe de disponibilité distribué Always On  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -177,7 +177,7 @@ GO
 ```  
   
 > [!NOTE]  
->  **LISTENER_URL** spécifie l’écouteur pour chaque groupe de disponibilité, ainsi que le point de terminaison de mise en miroir de bases de données du groupe de disponibilité. Dans cet exemple, il s’agit du port `5022` (et non du port `60173` qui a permis de créer l’écouteur). Si vous utilisez un équilibreur de charge, par exemple dans Azure, [ajoutez une règle d’équilibrage de charge pour le port du groupe de disponibilité distribué](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Ajoutez la règle pour le port d’écoute, en plus du port de l’instance SQL Server. 
+>  **LISTENER_URL** spécifie l’écouteur pour chaque groupe de disponibilité, ainsi que le point de terminaison de mise en miroir de bases de données du groupe de disponibilité. Dans cet exemple, il s’agit du port `5022` (et non du port `60173` qui a permis de créer l’écouteur). Si vous utilisez un équilibreur de charge, par exemple dans Azure, [ajoutez une règle d’équilibrage de charge pour le port du groupe de disponibilité distribué](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). Ajoutez la règle pour le port d’écoute, en plus du port de l’instance SQL Server. 
 
 ### <a name="cancel-automatic-seeding-to-forwarder"></a>Annuler l’amorçage automatique du redirecteur
 
@@ -392,5 +392,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
 
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
-  
   

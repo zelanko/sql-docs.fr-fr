@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac2fe67316f32d372c4f8faddef32af1bcc7f805
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a0bcf32babdb30c59a43305edffd3f1718354ac0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116234"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727890"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Créer un groupe de disponibilité indépendant du domaine
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
-Les groupes de disponibilité AlwaysOn (AGs) exigent un cluster de basculement Windows Server (cluster WSFC) sous-jacent. Le déploiement d’un cluster WSFC via Windows Server 2012 R2 a toujours nécessité que les serveurs participant à un cluster WSFC, également connu sous le nom de nœuds, soient joints au même domaine. Pour plus d’informations sur Active Directory Domain Services (AD DS), reportez-vous [ici](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
+Les groupes de disponibilité AlwaysOn (AGs) exigent un cluster de basculement Windows Server (cluster WSFC) sous-jacent. Le déploiement d’un cluster WSFC via Windows Server 2012 R2 a toujours nécessité que les serveurs participant à un cluster WSFC, également connu sous le nom de nœuds, soient joints au même domaine. Pour plus d’informations sur Active Directory Domain Services (AD DS), reportez-vous [ici](/previous-versions/windows/it-pro/windows-server-2003/cc759073(v=ws.10)).
 
 La dépendance entre WSFC et AD DS est plus complexe que ce qui a été précédemment déployé avec une configuration de mise en miroir de bases de données, étant donné que la mise en miroir de bases de données peut être déployée sur plusieurs centres de données à l’aide de certificats, sans de telles dépendances.  Un groupe de disponibilité traditionnel couvrant plusieurs centres de données requiert que tous les serveurs soient joints au même domaine Active Directory. Des domaines différents, même des domaines approuvés, ne fonctionnent pas. Tous les serveurs doivent être des nœuds du même cluster WSFC. Cette configuration est représentée dans la figure suivante. SQL Server 2016 a également des groupes de disponibilité distribués qui peuvent aussi atteindre cet objectif d’une manière différente.
 
 
 ![Cluster WSFC couvrant deux centres de données connectés au même domaine][1]
 
-Windows Server 2012 R2 a introduit un [cluster détaché d’Active Directory](https://technet.microsoft.com/library/dn265970.aspx), une forme spécialisée de cluster de basculement Windows Server utilisable avec les groupes de disponibilité. Ce type de cluster WSFC exige quand même que les nœuds soient joints au même domaine Active Directory, mais dans ce cas, le cluster WSFC utilise DNS, mais pas le domaine. Puisqu’un domaine est toujours impliqué, un cluster détaché d’Active Directory n’offre pas encore une expérience entièrement libre de domaine.
+Windows Server 2012 R2 a introduit un [cluster détaché d’Active Directory](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970(v=ws.11)), une forme spécialisée de cluster de basculement Windows Server utilisable avec les groupes de disponibilité. Ce type de cluster WSFC exige quand même que les nœuds soient joints au même domaine Active Directory, mais dans ce cas, le cluster WSFC utilise DNS, mais pas le domaine. Puisqu’un domaine est toujours impliqué, un cluster détaché d’Active Directory n’offre pas encore une expérience entièrement libre de domaine.
 
 Windows Server 2016 a introduit un nouveau type de cluster de basculement Windows Server basé sur les principes d’un cluster détaché d’Active Directory, un cluster de groupe de travail. Un cluster de groupe de travail permet à SQL Server 2016 de déployer un groupe de disponibilité par-dessus un cluster WSFC qui ne requiert pas AD DS. SQL Server requiert l’utilisation de certificats pour la sécurité du point de terminaison, à l’instar du scénario de mise en miroir de bases de données.  Ce type de groupe de disponibilité est appelé groupe de disponibilité indépendant du domaine. Le déploiement d’un groupe de disponibilité avec un cluster de groupe de travail sous-jacent prend en charge les combinaisons suivantes pour les nœuds qui composent le cluster WSFC :
 - Aucun nœud n’est joint à un domaine.
@@ -47,7 +47,7 @@ Un groupe de disponibilité indépendant du domaine ne sert pas seulement dans l
 ![Vue générale d’un groupe de disponibilité Standard Edition][3]
 
 Le déploiement d’un groupe de disponibilité indépendant du domaine implique quelques inconvénients connus :
-- Les seuls types de témoins disponibles pour une utilisation avec le quorum sont le disque et le [cloud](https://technet.microsoft.com/windows-server-docs/failover-clustering/deploy-cloud-witness), ce qui est une nouveauté dans Windows Server 2016. Le disque pose problème car il n’existe très probablement aucune utilisation de disque partagé par le groupe de disponibilité.
+- Les seuls types de témoins disponibles pour une utilisation avec le quorum sont le disque et le [cloud](/windows-server/failover-clustering/deploy-cloud-witness), ce qui est une nouveauté dans Windows Server 2016. Le disque pose problème car il n’existe très probablement aucune utilisation de disque partagé par le groupe de disponibilité.
 - La variante du cluster de groupe de travail sous-jacente d’un cluster WSFC ne peut être créée qu’à l’aide de PowerShell, mais elle peut alors être administré à l’aide du Gestionnaire du cluster de basculement.
 - Si Kerberos est requis, vous devez déployer un cluster WSFC standard attaché à un domaine Active Directory. Un groupe de disponibilité indépendant du domaine n’est alors probablement pas possible.
 - Quand bien même vous pouvez configurer un écouteur, celui-ci doit être inscrit dans DNS pour être utilisable. Comme indiqué ci-dessus, il n’existe aucune prise en charge de Kerberos pour l’écouteur.
@@ -80,7 +80,7 @@ Un suffixe DNS commun est nécessaire pour le cluster de groupe de travail d’u
 La création d’un groupe de disponibilité indépendant du domaine n’est pas réalisable entièrement avec SQL Server Management Studio. Quand bien même la création du groupe de disponibilité indépendant du domaine ressemble trait pour trait à celle d’un groupe de disponibilité normal, certains aspects (tels que la création des certificats) sont uniquement possibles avec Transact-SQL. L’exemple ci-dessous illustre une configuration de groupe de disponibilité avec deux réplicas : un réplica principal et un réplica secondaire. 
 
 1. [En suivant les instructions indiquées par ce lien](https://techcommunity.microsoft.com/t5/Failover-Clustering/Workgroup-and-Multi-domain-clusters-in-Windows-Server-2016/ba-p/372059), déployez un cluster de groupe de travail composé de tous les serveurs inclus dans le groupe de disponibilité. Vérifiez que le suffixe DNS commun est déjà configuré avant de configurer le cluster de groupe de travail.
-2. [Activez la fonctionnalité Groupes de disponibilité Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) sur chaque instance membre du groupe de disponibilité. Un redémarrage de chaque instance SQL Server est alors nécessaire.
+2. [Activez la fonctionnalité Groupes de disponibilité Always On](./enable-and-disable-always-on-availability-groups-sql-server.md) sur chaque instance membre du groupe de disponibilité. Un redémarrage de chaque instance SQL Server est alors nécessaire.
 3. Chaque instance qui héberge le réplica principal a besoin d’une clé principale de base de données. Si aucune clé principale n’existe déjà, exécutez la commande suivante :
 
    ```sql
@@ -172,4 +172,4 @@ La création d’un groupe de disponibilité indépendant du domaine n’est pas
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png
 [2]: ./media/diag-workgroup-cluster-two-nodes-joined.png
 [3]: ./media/diag-high-level-view-ag-standard-edition.png
-[4]: ./media/diag-successful-dns-suffix.png 
+[4]: ./media/diag-successful-dns-suffix.png

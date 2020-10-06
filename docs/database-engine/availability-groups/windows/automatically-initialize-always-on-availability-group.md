@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 07b5dd0889c4379a8586f071416e5d4a8a21fb6e
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a8dea3150b7dbdbb1b69e82f80723e5651681ef8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114633"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726524"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>Utiliser l’amorçage automatique pour initialiser un groupe de disponibilité Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -286,5 +286,4 @@ Avant d’ajouter une base de données à un groupe de disponibilité par amorç
 
 [CREATE AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/create-availability-group-transact-sql.md)
 
-[Guide de surveillance et de résolution des problèmes des groupes de disponibilité Always On](https://technet.microsoft.com/library/dn135328.aspx)
-
+[Guide de surveillance et de résolution des problèmes des groupes de disponibilité Always On](/previous-versions/sql/sql-server-guides/dn135328(v=sql.110))

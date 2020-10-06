@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c483cab97fe4eb218ef1e823f53ed4cb6a7fd5f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8ee2ebd23e6be8b78eee221b3e55485633b38786
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457569"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724539"
 ---
 # <a name="control-flow"></a>Flux de contrôle
 
@@ -62,7 +62,7 @@ ms.locfileid: "88457569"
   
 -   Ajout de gestionnaires de connexions.  
   
-     De nombreuses tâches ont besoin d'une connexion à une source de données. Vous devez ajouter au package les gestionnaires de connexions requis par la tâche. En fonction du type d'énumérateur qu'il utilise, le conteneur de boucles Foreach peut également exiger un gestionnaire de connexions. Vous pouvez ajouter les gestionnaires de connexions au moment de la création de l'élément de flux de contrôle ou avant de commencer à construire le flux de contrôle. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+     De nombreuses tâches ont besoin d'une connexion à une source de données. Vous devez ajouter au package les gestionnaires de connexions requis par la tâche. En fonction du type d'énumérateur qu'il utilise, le conteneur de boucles Foreach peut également exiger un gestionnaire de connexions. Vous pouvez ajouter les gestionnaires de connexions au moment de la création de l'élément de flux de contrôle ou avant de commencer à construire le flux de contrôle. Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](../connection-manager/integration-services-ssis-connections.md).  
   
  Le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] propose également de nombreuses fonctionnalités disponibles au moment de la conception permettant de gérer l’aire de conception et de faire en sorte que le flux de contrôle s’auto-documente.  
   
@@ -70,8 +70,7 @@ ms.locfileid: "88457569"
   
 -   [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 -   [Grouper ou dissocier des composants](../../integration-services/group-or-ungroup-components.md)  
-  
   

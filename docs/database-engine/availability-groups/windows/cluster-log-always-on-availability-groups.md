@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1240bc202344762a48f4dde8e32b69789f1c0f46
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 754169b501dbc468e0e48f04e71534db61d80192
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91114133"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726490"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Générer et analyser le fichier CLUSTER.LOG pour un groupe de disponibilité Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "91114133"
   
 1.  À l’aide de la commande `cluster /log /g` à partir de l’invite de commandes. Cette commande génère les journaux de cluster dans le répertoire \windows\cluster\reports sur chaque nœud WSFC. L’avantage de cette méthode est que vous pouvez spécifier le niveau de détail dans les journaux générés à l’aide de l’option `/level`. L’inconvénient, c’est que vous ne pouvez pas spécifier le répertoire de destination pour les journaux de cluster générés. Pour plus d’informations, consultez [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283).  
   
-2.  Utilisez l’applet de commande PowerShell [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx). L’avantage de cette méthode est que vous pouvez générer le journal de cluster de tous les nœuds dans un seul répertoire de destination (sur le nœud où vous exécutez l’applet de commande). L’inconvénient, c’est que vous ne pouvez pas spécifier le niveau de détail dans les journaux générés.  
+2.  Utilisez l’applet de commande PowerShell [Get-ClusterLog](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee461045(v=technet.10)). L’avantage de cette méthode est que vous pouvez générer le journal de cluster de tous les nœuds dans un seul répertoire de destination (sur le nœud où vous exécutez l’applet de commande). L’inconvénient, c’est que vous ne pouvez pas spécifier le niveau de détail dans les journaux générés.  
   
  Les commandes PowerShell suivantes génèrent les journaux de cluster de tous les nœuds de cluster au cours des 15 dernières minutes et les placent dans le répertoire actif. Exécutez les commandes dans une fenêtre PowerShell avec des privilèges administratifs.  
   
@@ -55,7 +55,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 8.  Recliquez avec le bouton droit sur la ressource de groupe de disponibilité, puis cliquez sur **Mettre cette ressource en ligne**.  
   
 ## <a name="availability-group-resource-events"></a>Événements de la ressource de groupe de disponibilité  
- Le tableau ci-dessous montre les différents genres d’événements que vous pouvez voir dans CLUSTER.LOG et qui appartiennent à la ressource de groupe de disponibilité. Pour plus d’informations sur le RHS (sous-système d’hébergement de ressources) et le RCM (moniteur de contrôle de ressource) dans WSFC, consultez [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx).  
+ Le tableau ci-dessous montre les différents genres d’événements que vous pouvez voir dans CLUSTER.LOG et qui appartiennent à la ressource de groupe de disponibilité. Pour plus d’informations sur le RHS (sous-système d’hébergement de ressources) et le RCM (moniteur de contrôle de ressource) dans WSFC, consultez [Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](/archive/blogs/askcore/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters).  
   
 |Identificateur|Source|Exemple de CLUSTER.LOG|  
 |----------------|------------|------------------------------|  
@@ -76,5 +76,4 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 3.  Affectez à **SeparateMonitor** la valeur **1**.  
   
 4.  Redémarrez le service en cluster pour votre groupe de disponibilité dans le cluster WSFC.  
-  
   

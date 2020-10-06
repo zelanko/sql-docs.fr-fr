@@ -9,16 +9,16 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: fe620c08da690a61d41a0fef5f18132c246ef739
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: 2ffe3945f8dd7e8c0ce9cf504c09622ca1a20331
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379614"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725188"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Extension Kusto (KQL) pour Azure Data Studio (préversion)
 
-L’extension Kusto (KQL) pour [Azure Data Studio](../what-is.md) vous permet de connecter et d’interroger les [clusters Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview).
+L’extension Kusto (KQL) pour [Azure Data Studio](../what-is.md) vous permet de connecter et d’interroger les [clusters Azure Data Explorer](/azure/data-explorer/data-explorer-overview).
 
 Les utilisateurs peuvent écrire et exécuter des requêtes KQL et créer des notebooks avec le [noyau Kusto](../notebooks/notebooks-kusto-kernel.md) terminé avec IntelliSense.
 
@@ -33,7 +33,7 @@ Si vous n’avez pas d’abonnement Azure, créez un [compte Azure gratuit](http
 Les prérequis suivants sont également obligatoires :
 
 - [Azure Data Studio installé](../download-azure-data-studio.md).
-- [Un cluster et une base de données Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [Un cluster et une base de données Azure Data Explorer](/azure/data-explorer/create-cluster-database-portal).
 
 ## <a name="install-the-kusto-kql-extension"></a>Installer l’extension Kusto (KQL)
 
@@ -55,7 +55,7 @@ Pour installer l’extension Kusto (KQL) dans Azure Data Studio, procédez comme
 
 Localisez votre cluster Azure Data Explorer dans le [portail Azure](https://ms.portal.azure.com/#home), puis recherchez l’URI du cluster.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="Extension Kusto":::
 
 Toutefois, vous pouvez immédiatement utiliser le cluster *help.kusto.windows.net*.
 
@@ -82,7 +82,7 @@ Pour configurer un cluster Azure Data Explorer auquel se connecter, procédez co
     7. Laissez le champ **Nom (facultatif)** vide.
         1. Vous pouvez utiliser ce champ pour attribuer un alias à votre serveur.
 
-    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Détails de la connexion":::
+    :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Extension Kusto":::
 
 ## <a name="how-to-query-an-azure-data-explorer-database-in-azure-data-studio"></a>Comment interroger une base de données Azure Data Explorer dans Azure Data Studio
 
@@ -104,7 +104,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-Pour plus d’informations sur l’écriture de requêtes KQL, consultez [Écrire des requêtes pour Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language)
+Pour plus d’informations sur l’écriture de requêtes KQL, consultez [Écrire des requêtes pour Azure Data Explorer](/azure/data-explorer/write-queries#overview-of-the-query-language)
 
 ## <a name="view-extension-settings"></a>Consulter les paramètres de l’extension
 
@@ -120,13 +120,13 @@ Pour modifier les paramètres de l’extension Kusto, procédez comme suit.
 
 Vos paramètres d’extension ressemblent à ceci :
 
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Paramètres de l’extension Kusto (KQL)":::
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Extension Kusto":::
 
 ## <a name="sanddance-visualization"></a>Visualisation SandDance
 
-L’extension [SandDance](https://docs.microsoft.com/sql/azure-data-studio/sanddance-extension) et l’extension Kusto (KQL) dans Azure Data Studio offrent une visualisation interactive riche. Dans le jeu de résultats de la requête KQL, sélectionnez le bouton **Visualiseur** pour lancer [SandDance](https://sanddance.js.org/).
+L’extension [SandDance](../sanddance-extension.md) et l’extension Kusto (KQL) dans Azure Data Studio offrent une visualisation interactive riche. Dans le jeu de résultats de la requête KQL, sélectionnez le bouton **Visualiseur** pour lancer [SandDance](https://sanddance.js.org/).
 
-:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Visualisation SandDance":::
+:::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Extension Kusto":::
 
 ## <a name="known-issues"></a>Problèmes connus
 
@@ -145,6 +145,6 @@ Vous pouvez signaler un [bogue](https://github.com/microsoft/azuredatastudio/iss
 
 - [Créer et exécuter un notebook Kusto](../notebooks/notebooks-kusto-kernel.md)
 - [Notebook Kqlmagic dans Azure Data Studio](../notebooks/notebooks-kqlmagic.md)
-- [Aide-mémoire SQL vers Kusto](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
-- [Qu’est-ce que l’Explorateur de données Azure ?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)
+- [Aide-mémoire SQL vers Kusto](/azure/data-explorer/kusto/query/sqlcheatsheet)
+- [Qu’est-ce que l’Explorateur de données Azure ?](/azure/data-explorer/data-explorer-overview)
 - [Utilisation des visualisations SandDance](https://sanddance.js.org/)

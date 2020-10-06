@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 051a2c558675d4d80b0b414668fcd3c4cb824478
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33586839b3efb0c8c93786a2e020228a44dc6bbc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477940"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726665"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Gestionnaire de connexions de nettoyage DQS
 
@@ -31,8 +31,7 @@ ms.locfileid: "88477940"
 >  Le gestionnaire de connexions de nettoyage DQS prend en charge uniquement l'authentification Windows.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation. Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur de transformation de nettoyage DQS](../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+ Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation. Pour plus d’informations sur les propriétés que vous pouvez définir dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Éditeur de transformation de nettoyage DQS](../data-flow/transformations/dqs-cleansing-transformation.md).  
   
  Pour plus d’informations sur la configuration d’un gestionnaire de connexions par programmation, consultez la documentation de la classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> dans le Guide du développeur.  
-  
   

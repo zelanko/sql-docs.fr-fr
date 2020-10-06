@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21ef6f741ebfdd035630a40aba431c08a1ff9341
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: beb42ea05e69b9c806b0a0306b91e9c333bdd631
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431031"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725955"
 ---
 # <a name="data-flow-task"></a>tâche de flux de données
 
@@ -108,7 +108,7 @@ ms.locfileid: "88431031"
   
  Pour plus d’informations sur la façon de définir ces propriétés dans la fenêtre **Propriétés** , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-data-flow-task"></a>Configuration par programmation de la tâche de flux de données  
  Pour plus d'informations sur l'ajout par programmation d'une tâche de flux de données à un package et sur la définition des propriétés de flux de données, cliquez sur la rubrique suivante :  
@@ -116,9 +116,8 @@ ms.locfileid: "88431031"
 -   [Ajout de la tâche de flux de données par programmation](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+ [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Vidéo, [Distributeur de données équilibrées](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
-  
+ Vidéo, [Distributeur de données équilibrées](/previous-versions/dn912438(v=msdn.10)), sur technet.microsoft.com.  
   

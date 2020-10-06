@@ -13,12 +13,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 ms.reviewer: maghan
-ms.openlocfilehash: e128b510c9bd40eedd89f7750c65bbd03a7d8670
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aff32d53b663aa34b036fcfdb9202f7dadcd1ff5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477979"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724531"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Gestionnaire de connexions Azure Data Lake Store
 
@@ -45,7 +45,7 @@ Le gestionnaire de connexions Azure Data Lake Store est un composant de [SQL Ser
     1.  Si vous sélectionnez l’option d’authentification **Identité de l’utilisateur Azure AD**, effectuez les étapes suivantes :
         1. Renseignez les champs **Nom d’utilisateur** et **Mot de passe**. 
     
-        2. Sélectionnez **Tester la connexion** pour tester la connexion. Si l’administrateur du locataire ou vous-même n’avez pas préalablement autorisé SSIS à accéder à vos données Data Lake Storage Gen1, sélectionnez **Accepter** quand vous y êtes invité. Pour plus d’informations sur cette procédure de consentement, consultez [Intégration d’applications dans Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
+        2. Sélectionnez **Tester la connexion** pour tester la connexion. Si l’administrateur du locataire ou vous-même n’avez pas préalablement autorisé SSIS à accéder à vos données Data Lake Storage Gen1, sélectionnez **Accepter** quand vous y êtes invité. Pour plus d’informations sur cette procédure de consentement, consultez [Intégration d’applications dans Azure Active Directory](/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
         > [!NOTE] 
         > Lorsque vous sélectionnez l’option d’authentification **Identité de l’utilisateur Azure AD**, l’authentification multifacteur et l’authentification de compte Microsoft ne sont pas prises en charge.
@@ -53,7 +53,7 @@ Le gestionnaire de connexions Azure Data Lake Store est un composant de [SQL Ser
     2. Si vous sélectionnez l’option d’authentification **Identité du service Azure AD**, effectuez les étapes suivantes :
         1. Créez une application et un principal du service Azure Active Directory (AAD) pour accéder aux données Data Lake Storage Gen1.
     
-        2. Affectez les autorisations appropriées pour permettre à cette application AAD d’accéder à vos ressources Data Lake Storage Gen1. Pour plus d’informations sur cette option d’authentification, consultez [Utiliser le portail pour créer une application Active Directory et un principal du service qui peuvent accéder aux ressources](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+        2. Affectez les autorisations appropriées pour permettre à cette application AAD d’accéder à vos ressources Data Lake Storage Gen1. Pour plus d’informations sur cette option d’authentification, consultez [Utiliser le portail pour créer une application Active Directory et un principal du service qui peuvent accéder aux ressources](/azure/azure-resource-manager/resource-group-create-service-principal-portal).
     
         3. Renseignez les champs **ID client**, **Clé secrète** et **Nom du locataire**.
     
@@ -63,5 +63,4 @@ Le gestionnaire de connexions Azure Data Lake Store est un composant de [SQL Ser
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Afficher les propriétés du gestionnaire de connexions
 Les propriétés du gestionnaire de connexions que vous avez créées apparaissent dans la fenêtre **Propriétés** .  
-  
   

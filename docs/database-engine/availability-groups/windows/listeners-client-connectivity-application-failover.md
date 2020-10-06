@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ff79d4838b5982edf658dbb35cc40fa3d29e803
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 36828d66fb91f60bf920c18324c7e7ace479452b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116937"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727857"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Se connecter à un écouteur de groupe de disponibilité Always On 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ Les connexions sont automatiquement routées vers le réplica en lecture seule s
  
 -   Au moins un réplica secondaire est configuré pour l’accès en lecture seule, et chaque réplica secondaire en lecture seule ainsi que le réplica principal sont [configurés pour prendre en charge le routage en lecture seule](configure-read-only-routing-for-an-availability-group-sql-server.md). 
 
--   La chaîne de connexion référence une base de données impliquée dans le groupe de disponibilité. Une alternative serait que la connexion utilisée ait la base de données configurée comme base de données par défaut. Pour plus d’informations, consultez [cet article sur le fonctionnement de l’algorithme avec le routage en lecture seule](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/).
+-   La chaîne de connexion référence une base de données impliquée dans le groupe de disponibilité. Une alternative serait que la connexion utilisée ait la base de données configurée comme base de données par défaut. Pour plus d’informations, consultez [cet article sur le fonctionnement de l’algorithme avec le routage en lecture seule](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).
 
 -   La chaîne de connexion fait référence à un écouteur de groupe de disponibilité, et l’intention de l’application de la connexion entrante est définie en lecture seule (par exemple, à l’aide du mot clé **Application Intent=ReadOnly** dans les chaînes de connexion ODBC ou OLEDB, ou dans les attributs ou les propriétés de connexion). 
 
@@ -198,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp\svclogin2
 
 Une fois que vous êtes connecté à l’écouteur, vous pouvez décharger les [charges de travail en lecture seule](overview-of-always-on-availability-groups-sql-server.md) et les [sauvegardes](configure-backup-on-availability-replicas-sql-server.md) vers le réplica secondaire afin d’améliorer les performances. Vous pouvez également examiner différentes [stratégies de supervision des groupes de disponibilité](monitoring-of-availability-groups-sql-server.md) pour garantir l’intégrité de votre groupe de disponibilité. 
 
-Pour plus d’informations sur les groupes de disponibilité, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 
+Pour plus d’informations sur les groupes de disponibilité, consultez [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).

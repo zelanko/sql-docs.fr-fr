@@ -9,16 +9,16 @@ ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: a541b994b33355fb5df8ebf856681d588e82cc2d
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 3bcdd76cf143c94dc1e200a21972d00419f26b96
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111741"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725210"
 ---
 # <a name="azure-arc-extension-for-azure-data-studio-preview"></a>Extension Azure Arc pour Azure Data Studio (préversion)
 
-L’[extension Azure Arc (préversion)](https://aka.ms/azurearcdata-docs) est une extension permettant de créer et de gérer des ressources Azure Arc Data Services.
+L’[extension Azure Arc (préversion)](/azure/azure-arc/data/) est une extension permettant de créer et de gérer des ressources Azure Arc Data Services.
 
 **Les actions principales sont les suivantes :**
 - Créer une ressource
@@ -61,4 +61,4 @@ Une fois connecté, vous pouvez afficher les ressources déployées sur le contr
 Ces tableaux de bord fournissent des informations supplémentaires sur la ressource, y compris la possibilité de l’ouvrir dans le portail Azure.
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour en savoir plus sur Azure Arc Data Services, [consultez notre documentation.](https://aka.ms/azurearcdata-docs)
+Pour en savoir plus sur Azure Arc Data Services, [consultez notre documentation.](/azure/azure-arc/data/)

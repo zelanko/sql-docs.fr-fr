@@ -9,16 +9,16 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 89732af2b2fc5926193519b4a6508b97ac998c88
-ms.sourcegitcommit: 63aef5a96905f0b026322abc9ccb862ee497eebe
+ms.openlocfilehash: 74901a5360e4b9badcc7569211bfaea90d2b94a3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91364116"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725220"
 ---
 # <a name="deploy-azure-sql-edge-with-azure-data-studio-preview"></a>Déployer Azure SQL Edge avec Azure Data Studio (préversion)
 
-[Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/overview) est un moteur de base de données relationnelle optimisé pour les déploiements IoT et Azure IoT Edge. Il offre des fonctionnalités permettant de créer une couche de traitement et de stockage des données hautes performances pour les solutions et applications IoT. Cet article explique comment déployer une instance Azure SQL Edge avec Azure Data Studio et les scénarios de déploiement pris en charge par l’assistant de déploiement.  
+[Azure SQL Edge](/azure/azure-sql-edge/overview) est un moteur de base de données relationnelle optimisé pour les déploiements IoT et Azure IoT Edge. Il offre des fonctionnalités permettant de créer une couche de traitement et de stockage des données hautes performances pour les solutions et applications IoT. Cet article explique comment déployer une instance Azure SQL Edge avec Azure Data Studio et les scénarios de déploiement pris en charge par l’assistant de déploiement.  
 
 Les scénarios suivants sont pris en charge par les différents assistants de déploiement d’Azure Data Studio :
 
@@ -76,11 +76,11 @@ Si vous le souhaitez, un fichier dacpac peut être compressé et déployé sur l
 
 ## <a name="multiple-devices-of-an-azure-iot-hub"></a>Plusieurs appareils d’un IoT Hub Azure
 
-Si vous disposez d’un IoT Hub et d’appareils connectés, Azure SQL Edge peut être déployé sur l’appareil en fonction du groupe de ressources, du nom de l’IoT Hub et de la [condition cible](https://docs.microsoft.com/azure/iot-edge/module-deployment-monitoring#target-condition) de sélectionner un ou plusieurs appareils.
+Si vous disposez d’un IoT Hub et d’appareils connectés, Azure SQL Edge peut être déployé sur l’appareil en fonction du groupe de ressources, du nom de l’IoT Hub et de la [condition cible](/azure/iot-edge/module-deployment-monitoring#target-condition) de sélectionner un ou plusieurs appareils.
 L’adresse IP fournie dans l’assistant de déploiement est utilisée pour générer un lien connexion rapide sous le notebook.
 
 Si vous le souhaitez, un fichier dacpac peut être compressé et déployé sur la nouvelle instance Azure SQL Edge au cours du processus.  Si un fichier dacpac est fourni, un compte de stockage Blob Azure est créé dans le même groupe de ressources.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [En savoir plus sur Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/)
+- [En savoir plus sur Azure SQL Edge](/azure/azure-sql-edge/)

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08ef8be56e34d7f0e62a02c5a9819f0f5c41344b
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: 03c89633fa5b61a8d08e78bd90a06a5f8497be75
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87362674"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727855"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Superviser les performances des groupes de disponibilité Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "87362674"
 > [!IMPORTANT]  
 >  Si un groupe de disponibilité contient plusieurs bases de données de disponibilité, celle avec la valeur Tfailover la plus élevée devient la valeur de limitation pour la conformité au RTO.  
   
- Le temps de détection d’échec (Tdetection) est le temps qu’il faut au système pour détecter la défaillance. Ce temps dépend des paramètres au niveau du cluster et non des réplicas de disponibilité individuels. En fonction de la condition de basculement automatique configurée, un basculement peut être déclenché comme réponse instantanée à une erreur interne SQL Server critique (par exemple, des verrouillages spinlock orphelins). Dans ce cas, la vitesse de détection peut être identique à celle de l’envoi du rapport d’erreurs [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) au cluster WSFC (l’intervalle par défaut est égal à 1/3 du délai d’expiration du contrôle d’intégrité). Un basculement peut également être déclenché en raison du dépassement d’un délai d’expiration, notamment celui associé au contrôle d’intégrité (30 secondes par défaut) ou celui associé au bail entre la DLL de ressource et l’instance SQL Server (20 secondes par défaut). Dans ce cas, le temps de détection est égal à l’intervalle du délai d’expiration. Pour plus d’informations, consultez [Stratégie flexible pour le basculement automatique d’un groupe de disponibilité &#40;SQL Server&#41;](https://msdn.microsoft.com/library/hh710061(SQL.120).aspx).  
+ Le temps de détection d’échec (Tdetection) est le temps qu’il faut au système pour détecter la défaillance. Ce temps dépend des paramètres au niveau du cluster et non des réplicas de disponibilité individuels. En fonction de la condition de basculement automatique configurée, un basculement peut être déclenché comme réponse instantanée à une erreur interne SQL Server critique (par exemple, des verrouillages spinlock orphelins). Dans ce cas, la vitesse de détection peut être identique à celle de l’envoi du rapport d’erreurs [sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) au cluster WSFC (l’intervalle par défaut est égal à 1/3 du délai d’expiration du contrôle d’intégrité). Un basculement peut également être déclenché en raison du dépassement d’un délai d’expiration, notamment celui associé au contrôle d’intégrité (30 secondes par défaut) ou celui associé au bail entre la DLL de ressource et l’instance SQL Server (20 secondes par défaut). Dans ce cas, le temps de détection est égal à l’intervalle du délai d’expiration. Pour plus d’informations, consultez [Stratégie flexible pour le basculement automatique d’un groupe de disponibilité &#40;SQL Server&#41;](./configure-flexible-automatic-failover-policy.md?viewFallbackFrom=sql-server-2014).  
   
  Pour que le réplica secondaire soit prêt pour le basculement, il suffit que la restauration par progression rattrape son retard et arrive à la fin du journal. Le temps de restauration par progression, Tredo, est calculé à l’aide de la formule suivante :  
   
@@ -310,7 +310,7 @@ Il est possible d’interroger les vues DMV [sys.dm_hadr_database_replica_states
 
   
 ##  <a name="monitoring-for-rto-and-rpo"></a>Supervision du RTO et du RPO  
- Cette section montre comment monitorer les métriques RTO et RPO des groupes de disponibilité. Cette démonstration est similaire au tutoriel de l’interface graphique utilisateur présenté dans [The Always On health model, part 2: Extending the health model](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Modèle d’intégrité Always On Partie 2 : Extension du modèle d’intégrité).  
+ Cette section montre comment monitorer les métriques RTO et RPO des groupes de disponibilité. Cette démonstration est similaire au tutoriel de l’interface graphique utilisateur présenté dans [The Always On health model, part 2: Extending the health model](/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (Modèle d’intégrité Always On Partie 2 : Extension du modèle d’intégrité).  
   
  Les éléments de calcul du temps de basculement et du risque de perte de données dans [Estimation du temps de basculement (RTO)](#estimating-failover-time-rto) et [Estimation du risque de perte de données (RPO)](#estimating-potential-data-loss-rpo) sont proposés sous forme de métriques dans la facette de gestion de stratégie **État du réplica de base de données** (consultez [Afficher les facettes de gestion basée sur des stratégies sur un objet SQL Server](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)). Vous pouvez monitorer ces deux métriques selon une planification et recevoir une alerte quand elles dépassent le RTO et le RPO, respectivement.  
   
@@ -454,4 +454,4 @@ Pour créer les stratégies, suivez les instructions ci-dessous sur toutes les i
 |hadr_worker_pool_task|`alwayson`|Débogage|Principal|  
 |hadr_dump_primary_progress|`alwayson`|Débogage|Principal|  
 |hadr_dump_log_progress|`alwayson`|Débogage|Principal|  
-|hadr_undo_of_redo_log_scan|`alwayson`|Analytiques|Secondary|  
+|hadr_undo_of_redo_log_scan|`alwayson`|Analytiques|Secondary|

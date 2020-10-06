@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5940e7b45288913bbda4930c267f1f806ed4937d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: da836cc7f53f4a4d83aae28ea2a41ec646ca3bd0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477976"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728066"
 ---
 # <a name="azure-subscription-connection-manager"></a>Gestionnaire de connexions d’abonnement Azure
 
@@ -40,12 +40,11 @@ ms.locfileid: "88477976"
   
 3.  Choisissez **Emplacement du magasin de certificats de gestion** et **Nom du magasin de certificats de gestion** dans les listes déroulantes.  
   
-4.  Entrez l’**empreinte numérique du certificat de gestion** ou cliquez sur **Parcourir...** pour choisir un certificat dans le magasin sélectionné. Le certificat doit être téléchargé en tant que certificat de gestion pour l’abonnement. Pour ce faire, cliquez sur **Télécharger** dans la page suivante du portail Azure (voir cet [article MSDN](https://msdn.microsoft.com/library/azure/gg551722.aspx) pour plus de détails).  
+4.  Entrez l’**empreinte numérique du certificat de gestion** ou cliquez sur **Parcourir...** pour choisir un certificat dans le magasin sélectionné. Le certificat doit être téléchargé en tant que certificat de gestion pour l’abonnement. Pour ce faire, cliquez sur **Télécharger** dans la page suivante du portail Azure (voir cet [article MSDN](/previous-versions/azure/gg551722(v=azure.100)) pour plus de détails).  
   
      ![SSIS-AzureSettings-ManagementCertificate](../../integration-services/connection-manager/media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   
 5.  Cliquez sur **Tester la connexion** pour tester la connexion.  
   
 6.  Cliquez sur **OK** pour fermer la boîte de dialogue.  
-  
   

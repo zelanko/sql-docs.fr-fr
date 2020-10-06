@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3307c81165731907f8252c99ebb03b057ca6af74
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab1215ca58f64c6e28f78e423bdee5a66b4c46b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457536"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725926"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
 
@@ -67,7 +67,7 @@ ms.locfileid: "88457536"
  Par défaut, la propriété ExecuteOutOfProcess de la tâche d’exécution du package a la valeur **False**, et le package enfant s’exécute dans le même processus que le package parent. Si vous affectez la valeur **True**à cette propriété, le package enfant s'exécute dans un processus indépendant. Cela peut ralentir le lancement du package enfant. En outre, si vous affectez la valeur **True**à la propriété, vous ne pouvez pas déboguer le package dans une installation d’outils uniquement. Vous devez installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Pour plus d’informations, consultez [Installer Integration Services](../../integration-services/install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Extension des transactions  
- La transaction que le package parent utilise peut être étendue au package enfant ; par conséquent, le travail réalisé par les deux packages peut être validé ou annulé. Par exemple, les insertions dans une base de données effectuées par le package parent peuvent être validées ou annulées, en fonction de celles réalisées par le package enfant, et vice versa. Pour plus d'informations, consultez [Inherited Transactions](https://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c).  
+ La transaction que le package parent utilise peut être étendue au package enfant ; par conséquent, le travail réalisé par les deux packages peut être validé ou annulé. Par exemple, les insertions dans une base de données effectuées par le package parent peuvent être validées ou annulées, en fonction de celles réalisées par le package enfant, et vice versa. Pour plus d'informations, consultez [Inherited Transactions](../integration-services-transactions.md).  
   
 ## <a name="propagating-logging-details"></a>Propagation des détails de la journalisation  
  Le package enfant exécuté par la tâche d'exécution de package peut ou non être configuré de manière à utiliser la journalisation, mais il transfère toujours les détails du journal au package parent. Si la tâche d'exécution de package est configurée de manière à utiliser la journalisation, elle consigne les informations détaillées du journal à partir du package enfant. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "88457536"
   
 -   **Paramètres**  
   
-     Vous pouvez configurer la tâche d'exécution des packages pour mapper les variables ou paramètres de package parent (ou les paramètres du projet) aux paramètres de package enfant. Le projet doit utiliser le modèle de déploiement de projet et le package enfant doit être contenu dans le même projet qui contient le package parent. Pour plus d'informations, consultez [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md).  
+     Vous pouvez configurer la tâche d'exécution des packages pour mapper les variables ou paramètres de package parent (ou les paramètres du projet) aux paramètres de package enfant. Le projet doit utiliser le modèle de déploiement de projet et le package enfant doit être contenu dans le même projet qui contient le package parent. Pour plus d'informations, consultez [Execute Package Task Editor]().  
   
     > [!NOTE]  
     >  Si le paramètre de package enfant ne respecte pas la casse et s'il est mappé à un paramètre parent qui respecte la casse, le package enfant ne peut pas s'exécuter.  
@@ -118,7 +118,7 @@ ms.locfileid: "88457536"
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="configuring-the-execute-package-task-programmatically"></a>Configuration de la tâche d'exécution de package par programmation  
  Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
@@ -224,5 +224,4 @@ ms.locfileid: "88457536"
   
  **Remove**  
  Cliquez pour supprimer un mappage entre un paramètre ou une variable et un paramètre de package enfant.  
-  
   
