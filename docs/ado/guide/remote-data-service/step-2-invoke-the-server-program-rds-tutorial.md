@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4771957c1895f6ac861d04f63a43e32a77e3d931
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: a9238fa208a5ce415986fee05045dc7ea34e0d67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977590"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723000"
 ---
 # <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Étape 2 : Appeler le programme serveur (tutoriel RDS)
 Lorsque vous appelez une méthode sur le *proxy*client, le programme réel sur le serveur exécute la méthode. Dans cette étape, vous allez exécuter une requête sur le serveur.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](/dotnet/framework/wcf/).  
   
  **Partie A** Si vous n’avez pas utilisé [RDSServer. DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) dans ce didacticiel, la méthode la plus pratique pour effectuer cette étape consiste à utiliser les [services Bureau à distance. DataControl](../../reference/rds-api/datacontrol-object-rds.md) . **RDS. DataControl** combine l’étape précédente de la création d’un proxy, avec cette étape, émettant la requête.  
   

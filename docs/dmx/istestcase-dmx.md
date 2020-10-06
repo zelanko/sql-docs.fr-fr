@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 11795005d0a2a7cf97a515278a30a586ff640ef0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c0bc9e4ffe7da1f81bbd246e9cbfa7398bfec50e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352275"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726143"
 ---
 # <a name="istestcase-dmx"></a>IsTestCase (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,12 +37,12 @@ IsTestCase()
  Vous pouvez déterminer si un jeu de test a été créé sur une structure d'exploration de données particulière en consultant la valeur des propriétés <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxCases%2A> et <xref:Microsoft.AnalysisServices.MiningStructure.HoldoutMaxPercent%2A>.  
   
 > [!NOTE]  
->  L’extraction doit être activée sur le modèle si vous souhaitez utiliser les fonctions IsTrainingCase ou IsTestCase pour retourner des détails sur les cas d’un modèle particulier. Pour plus d’informations, consultez [Activer l’extraction pour un modèle d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
+>  L’extraction doit être activée sur le modèle si vous souhaitez utiliser les fonctions IsTrainingCase ou IsTestCase pour retourner des détails sur les cas d’un modèle particulier. Pour plus d’informations, consultez [Activer l’extraction pour un modèle d’exploration de données](/analysis-services/data-mining/enable-drillthrough-for-a-mining-model).  
   
  Pour retourner les cas qui font partie du jeu de données d’apprentissage, utilisez la fonction [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md).  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant utilise la `Targeted Mailing` structure d’exploration de données qui est créée dans le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne tous les cas de la structure qui sont utilisés pour le test.  
+ L’exemple suivant utilise la `Targeted Mailing` structure d’exploration de données qui est créée dans le didacticiel sur l' [exploration de données de base](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). La requête retourne tous les cas de la structure qui sont utilisés pour le test.  
   
 ```  
 SELECT *  
@@ -54,7 +54,6 @@ WHERE IsTestCase()
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
- [Requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries)   
- [Jeux de données d'apprentissage et de test](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets)  
-  
+ [Requêtes d’exploration de données](/analysis-services/data-mining/data-mining-queries)   
+ [Jeux de données d'apprentissage et de test](/analysis-services/data-mining/training-and-testing-data-sets)  
   

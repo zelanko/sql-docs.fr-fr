@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9658b148d2ce76d5e73f5deaf3abfa9542e79771
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f688c3e4ce2fb3eed4089554eea21bf5f3820bb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491538"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726260"
 ---
 # <a name="data-types-dmx"></a>Types de données (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "88491538"
   
 -   Date  
   
- Pour plus d’informations sur les types de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pris en charge par, consultez [types de données &#40;&#41;d’exploration de données ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
+ Pour plus d’informations sur les types de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pris en charge par, consultez [types de données &#40;&#41;d’exploration de données ](/analysis-services/data-mining/data-types-data-mining).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Informations de référence sur l’opérateur de&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-operator-reference.md)   
@@ -46,5 +46,4 @@ ms.locfileid: "88491538"
  [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

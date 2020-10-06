@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 1d9dc4c4030330e7065d6f8531af967dcf88baa3
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 440d6d12ed639d158ad0309209b60daa56e08322
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472365"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727780"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Bonnes pratiques pour l’exécution de l’Assistant Migration de données
 Cet article fournit des informations sur les meilleures pratiques pour l’installation, l’évaluation et la migration.
@@ -40,6 +40,6 @@ N’installez pas et n’exécutez pas le Assistant Migration de données direct
 
 - Activez le chiffrement de la connexion lors de la connexion aux serveurs source et cible. L’utilisation du chiffrement TLS augmente la sécurité des données transmises sur les réseaux entre Assistant Migration de données et l’instance de SQL Server, ce qui est particulièrement utile lors de la migration de connexions SQL. Si le chiffrement TLS n’est pas utilisé et que le réseau est compromis par une personne malveillante, les connexions SQL en cours de migration peuvent être interceptées et/ou modifiées à la volée par l’attaquant.
 
-    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances, car la surcharge supplémentaire requise pour chiffrer et déchiffrer les paquets. Pour plus d’informations, consultez [chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances, car la surcharge supplémentaire requise pour chiffrer et déchiffrer les paquets. Pour plus d’informations, consultez [chiffrement des connexions à SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)).
     
 - Vérifiez les contraintes non fiables sur la base de données source et la base de données cible avant de migrer les données. Après la migration, analysez de nouveau la base de données cible pour voir si des contraintes n’ont pas été approuvées dans le cadre du déplacement des données. Corrigez les contraintes non fiables en fonction des besoins. Si vous laissez les contraintes non approuvées, vous risquez d’obtenir des plans d’exécution médiocres, et cela peut affecter les performances.

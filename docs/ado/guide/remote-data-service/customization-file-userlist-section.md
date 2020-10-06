@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 38eb55c77f98711910e303bf6f511df26f7cecf7
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: b09e5f9356ad196e03c970623369d4918a6f5506
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978210"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724750"
 ---
 # <a name="customization-file-userlist-section"></a>Fichier de personnalisation, section UserList
 La section **UserList** concerne la section **Connect** avec le même paramètre *identificateur* de section.  
@@ -27,7 +27,7 @@ La section **UserList** concerne la section **Connect** avec le même paramètre
  Cette section peut contenir une *entrée d’accès utilisateur*qui spécifie des droits d’accès pour l’utilisateur spécifié et remplace l' *entrée d’accès* *par défaut* dans la section de **connexion** correspondante.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Syntaxe  
  Une entrée d’accès utilisateur se présente sous la forme suivante :  

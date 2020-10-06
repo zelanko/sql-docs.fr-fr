@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f357ec4390c6006ba4b522404dc7f15cc4f627f
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 657250e54c9ea3564e826f2113a94625027fc4a1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977810"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724890"
 ---
 # <a name="rds-usage-and-security"></a>Utilisation et sécurité de RDS
 Utilisez les informations de cette section pour configurer votre serveur et utiliser les services Bureau à distance rapidement. Cette section comprend des étapes de configuration spécifiques que vous devrez peut-être effectuer lors de l’implémentation de RDS, décrit certaines des relations clés entre les services Bureau à distance et d’autres technologies et aide à identifier les solutions aux problèmes que vous pouvez rencontrer lors de la configuration d’une solution RDS.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](/dotnet/framework/wcf/).  
   
  Cette section contient les rubriques suivantes :  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 02e95e2620799e596bc5deaeb203bbc8c2c1a4e1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df70a8726e9abc56d677c48ba8f3f995814866d4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496283"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727640"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Sélectionnez à partir du &lt; modèle &gt; . CONTENU (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste de colonnes séparées par des virgules, dérivées de l'ensemble de lignes du schéma Content.  
@@ -41,10 +41,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Identificateur du modèle  
   
  *expression de condition*  
- facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ Facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ Facultatif. Expression retournant une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  **Select from** _\<model>_ **. **L’instruction content retourne le contenu qui est spécifique à chaque algorithme. Imaginons par exemple que vous souhaitez utiliser les descriptions de toutes les règles d'un modèle de règles d'association dans une application personnalisée. Vous pouvez utiliser une **sélection à partir de \<model> . Instruction CONTENT** pour retourner des valeurs dans la colonne NODE_RULE du modèle.  
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Le tableau suivant répertorie les colonnes incluses dans le contenu du modèle d'exploration de données.  
   
 > [!NOTE]  
->  Les algorithmes peuvent interpréter les colonnes différemment afin de représenter le contenu de manière appropriée. Pour obtenir une description du contenu du modèle d’exploration de données pour chaque algorithme et des conseils sur l’interprétation et l’interrogation du contenu du modèle d’exploration de données pour chaque type de modèle, consultez [Mining Model content &#40;Analysis Services-data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
+>  Les algorithmes peuvent interpréter les colonnes différemment afin de représenter le contenu de manière appropriée. Pour obtenir une description du contenu du modèle d’exploration de données pour chaque algorithme et des conseils sur l’interprétation et l’interrogation du contenu du modèle d’exploration de données pour chaque type de modèle, consultez [Mining Model content &#40;Analysis Services-data mining&#41;](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  
   
 |Colonne de l'ensemble de lignes CONTENT|Description|  
 |---------------------------|-----------------|  
@@ -102,7 +102,7 @@ WHERE ISDESCENDANT('0')
   
  Résultats attendus :  
   
- S'agissant d'un modèle d'arbre de décision, les descendants du nœud parent du modèle incluent un nœud de statistiques marginales unique, un nœud qui représente l'attribut prédictible et plusieurs nœuds qui contiennent des attributs d'entrée et des valeurs. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services – Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
+ S'agissant d'un modèle d'arbre de décision, les descendants du nœud parent du modèle incluent un nœud de statistiques marginales unique, un nœud qui représente l'attribut prédictible et plusieurs nœuds qui contiennent des attributs d'entrée et des valeurs. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services – Exploration de données&#41;](/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining).  
   
 ## <a name="using-the-flattened-keyword"></a>Utilisation du mot clé FLATTENED  
  Le contenu du modèle d'exploration de données contient fréquemment des informations intéressantes sur le modèle dans les colonnes de table imbriquée. Le mot clé FLATTENED vous permet de récupérer les données d'une colonne de table imbriquée sans utiliser de fournisseur qui prend en charge les ensembles de lignes hiérarchiques.  
@@ -147,5 +147,4 @@ WHERE NODE_TYPE = 26
  [SÉLECTIONNER &#40;&#41;DMX ](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

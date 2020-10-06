@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d6b93097b3a21e3858139146b50f15ddc79c6569
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 2842d51c09585a9b954761ac31484e4cf717a9b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978130"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724720"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>Configuration d’un espace TempDB suffisant
 Si des erreurs se produisent lors de la gestion des objets [Recordset](../../reference/ado-api/recordset-object-ado.md) qui nécessitent un espace de traitement sur Microsoft SQL Server 6,5, vous devrez peut-être augmenter la taille de tempdb. (Certaines requêtes nécessitent un espace de traitement temporaire ; par exemple, une requête avec une clause ORDER BY requiert un tri de l’ensemble d' **enregistrements**, ce qui nécessite un espace temporaire.)  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](/dotnet/framework/wcf/).  
   
 > [!IMPORTANT]
 >  Lisez cette procédure avant d’effectuer les actions, car il n’est pas aussi facile de réduire un appareil une fois qu’il est développé.  

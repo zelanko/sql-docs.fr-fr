@@ -15,19 +15,19 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f6ff98a4f17aa39f1b7b85959a68c0f54973a41e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2e05c41cfa226fc2cdc6d2050657b607430f4ef7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473895"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91723885"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Cela supprime les informations d’identification réseau stockées dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] pour accéder à un partage de fichiers réseau. Par exemple, utilisez cette procédure stockée pour supprimer l’autorisation d' [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] effectuer des opérations de sauvegarde et de restauration sur un serveur qui réside dans votre propre réseau.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -35,7 +35,9 @@ ms.locfileid: "88473895"
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_remove_network_credentials 'target_server_name'  
-```  
+```
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## <a name="arguments"></a>Arguments  
  '*target_server_name*'  
@@ -56,7 +58,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  Cette procédure stockée supprime les informations d’identification réseau du compte NetworkService pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Le compte NetworkService exécute chaque instance de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le nœud de contrôle et les nœuds de calcul. Par exemple, lorsqu’une opération de sauvegarde s’exécute, le nœud de contrôle et chaque nœud de calcul utilisent les informations d’identification du compte NetworkService pour accéder au serveur cible.  
   
 ## <a name="metadata"></a>Métadonnées  
- Pour répertorier toutes les informations d’identification et vérifier que les informations d’identification ont été supprimées, utilisez [sys. dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+ Pour répertorier toutes les informations d’identification et vérifier que les informations d’identification ont été supprimées, utilisez [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
  Pour ajouter des informations d’identification, utilisez [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   

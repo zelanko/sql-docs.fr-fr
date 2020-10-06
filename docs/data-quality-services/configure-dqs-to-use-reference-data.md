@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b20f19032a298805c8958d269adffd8a9600a58a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ea7b94d092565827bbd0086f7f4d122ce219fac
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449951"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725415"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurer DQS pour utiliser des données de référence
 
@@ -33,7 +33,7 @@ ms.locfileid: "88449951"
 ## <a name="before-you-begin"></a>Avant de commencer  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
- Pour utiliser des données de référence de Marketplace, vous devez disposer d'une clé de compte Marketplace valide. Pour plus d’informations sur la création d’une clé de compte Marketplace, consultez [créer votre compte](https://go.microsoft.com/fwlink/?LinkId=212936) ( https://go.microsoft.com/fwlink/?LinkId=212936) . Vous pouvez également créer une clé de compte de la Place de marché à partir de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Pour ce faire, cliquez sur **Configuration** sous **Administration** dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], puis cliquez sur **Créer un ID de compte DataMarket** sous l'onglet **Données de référence**.  
+ Pour utiliser des données de référence de Marketplace, vous devez disposer d'une clé de compte Marketplace valide. Pour plus d’informations sur la création d’une clé de compte Marketplace, consultez [créer votre compte](/previous-versions/azure/ff717655(v=azure.100)) ( https://go.microsoft.com/fwlink/?LinkId=212936) . Vous pouvez également créer une clé de compte de la Place de marché à partir de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Pour ce faire, cliquez sur **Configuration** sous **Administration** dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], puis cliquez sur **Créer un ID de compte DataMarket** sous l'onglet **Données de référence**.  
   
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
   
@@ -84,5 +84,4 @@ ms.locfileid: "88449951"
   
 ##  <a name="follow-up-after-configuring-dqs-to-use-reference-data"></a><a name="FollowUp"></a> Suivi : après avoir configuré DQS pour utiliser des données de référence  
  Vous devez maintenant mapper les domaines de base de connaissances requis aux données de référence disponibles auprès des fournisseurs de données que vous venez de configurer. Pour ce faire, consultez [Attacher un domaine ou un domaine composite à des données de référence](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ba2a5e81b7ae19b431f35b3fe0eac291718c4df3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6169d898479637d8f8c0a74aececd56cf1f62eb7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431181"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727810"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -37,7 +37,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *structure*  
+ *arborescence*  
  Nom de la structure d'exploration de données à laquelle le modèle d'exploration de données sera ajouté.  
   
  *model*  
@@ -56,10 +56,10 @@ USING <algorithm> [(<parameter list>)]
  Nom d'un algorithme d'exploration de données, tel que défini par le fournisseur.  
   
 > [!NOTE]  
->  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [DMSCHEMA_MINING_SERVICES ensemble de lignes](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [propriétés d’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [DMSCHEMA_MINING_SERVICES ensemble de lignes](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [propriétés d’exploration de données](/analysis-services/server-properties/data-mining-properties).  
   
  *liste de paramètres*  
- facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
+ Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *critères de filtre*  
  Expression de filtre appliquée aux colonnes dans la table de cas.  
@@ -97,7 +97,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>Nom de colonne et alias  
- Le nom de colonne que vous utilisez dans la liste de définitions de colonnes doit être identique à celui utilisé dans la structure d'exploration de données. Toutefois, vous pouvez éventuellement définir un alias pour représenter la colonne de structure dans le modèle d'exploration de données. Vous pouvez également créer plusieurs définitions de colonne pour la même colonne de structure et attribuer un alias et une utilisation de prédiction différents à chaque copie de la colonne. Par défaut, le nom de la colonne de structure est utilisé si vous ne définissez pas d'alias. Pour plus d’informations, consultez [créer un alias pour une colonne de modèle](https://docs.microsoft.com/analysis-services/data-mining/create-an-alias-for-a-model-column).  
+ Le nom de colonne que vous utilisez dans la liste de définitions de colonnes doit être identique à celui utilisé dans la structure d'exploration de données. Toutefois, vous pouvez éventuellement définir un alias pour représenter la colonne de structure dans le modèle d'exploration de données. Vous pouvez également créer plusieurs définitions de colonne pour la même colonne de structure et attribuer un alias et une utilisation de prédiction différents à chaque copie de la colonne. Par défaut, le nom de la colonne de structure est utilisé si vous ne définissez pas d'alias. Pour plus d’informations, consultez [créer un alias pour une colonne de modèle](/analysis-services/data-mining/create-an-alias-for-a-model-column).  
   
  Pour les colonnes de table imbriquée, vous spécifiez le nom de la table imbriquée, vous spécifiez le type de données **table**, puis vous fournissez la liste des colonnes imbriquées à inclure dans le modèle, placées entre parenthèses.  
   
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |Clause|Description|  
 |-|-|  
-|**PRÉSENTATION**|Cette colonne peut être prédite par le modèle, et ses valeurs peuvent être utilisées comme entrée pour prédire la valeur d'autres colonnes prédictibles.|  
+|**PREDICT**|Cette colonne peut être prédite par le modèle, et ses valeurs peuvent être utilisées comme entrée pour prédire la valeur d'autres colonnes prédictibles.|  
 |**PREDICT_ONLY**|Cette colonne peut être prédite par le modèle, mais ses valeurs ne peuvent pas être utilisées dans des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
   
 ## <a name="filter-criteria-expressions"></a>Expressions de critères de filtre  
@@ -129,15 +129,15 @@ USING <algorithm> [(<parameter list>)]
   
  Les expressions de critères de filtre sont des prédicats DMX simplifiées, semblables à une clause WHERE. Les expressions de filtre se limitent à des formules qui utilisent des opérateurs mathématiques de base, des scalaires et des noms de colonne. L'opérateur EXISTS fait figure d'exception, car il prend la valeur True si au moins une ligne est retournée pour la sous-requête. Les prédicats peuvent être combinés en utilisant les opérateurs logiques communs AND, OR et NOT.  
   
- Pour plus d’informations sur les filtres utilisés avec les modèles d’exploration de données, consultez [filtres pour les modèles d’exploration de données &#40;Analysis Services des&#41;d’exploration de données ](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Pour plus d’informations sur les filtres utilisés avec les modèles d’exploration de données, consultez [filtres pour les modèles d’exploration de données &#40;Analysis Services des&#41;d’exploration de données ](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
 > [!NOTE]  
 >  Les colonnes dans un filtre doivent être des colonnes de structure d'exploration de données. Vous ne pouvez pas créer de filtre sur une colonne de modèle ou une colonne en tant qu'alias.  
   
- Pour plus d’informations sur les opérateurs DMX et la syntaxe, consultez [colonnes du modèle d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ Pour plus d’informations sur les opérateurs DMX et la syntaxe, consultez [colonnes du modèle d’exploration de données](/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="parameter-definition-list"></a>Liste des définitions des paramètres  
- Vous pouvez ajuster les performances et la fonctionnalité d'un modèle en ajoutant des paramètres d'algorithme à la liste des paramètres. Les paramètres que vous pouvez utiliser dépendent de l'algorithme que vous spécifiez dans la clause USING. Pour obtenir la liste des paramètres associés à chaque algorithme, consultez [algorithmes d’exploration de données &#40;Analysis Services-exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Vous pouvez ajuster les performances et la fonctionnalité d'un modèle en ajoutant des paramètres d'algorithme à la liste des paramètres. Les paramètres que vous pouvez utiliser dépendent de l'algorithme que vous spécifiez dans la clause USING. Pour obtenir la liste des paramètres associés à chaque algorithme, consultez [algorithmes d’exploration de données &#40;Analysis Services-exploration de données&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
  La syntaxe de la liste des paramètres est la suivante :  
   
@@ -204,5 +204,4 @@ USING Microsoft_Decision Trees
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

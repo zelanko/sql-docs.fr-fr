@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b16ed1f153259f1301f78d82291c677337677643
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624796"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727800"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation à l’aide de DMA
 
@@ -32,9 +32,9 @@ Les instructions pas à pas suivantes vous aident à utiliser le Assistant Migra
   - [Assistant Migration de données](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 ou version ultérieure.
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 ou version ultérieure.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 ou version ultérieure.
-  - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,0 ou version ultérieure.
+  - [SSMS](../ssms/download-sql-server-management-studio-ssms.md) 17,0 ou version ultérieure.
   - [Power bi Desktop](/power-bi/fundamentals/desktop-get-the-desktop).
-  - [Modules Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Modules Azure PowerShell](/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Télécharger et extraire :
   - Les [rapports DMA Power bi modèle](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/4/PowerBI-Reports.zip).
   - [Script LoadWarehouse](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
@@ -274,7 +274,7 @@ Cette section est la partie principale du rapport, qui indique la disponibilité
 
 - InstanceDatabase
 - ChangeCategory
-- Titre
+- Intitulé
 - ObjectType
 - ImpactedObjectName
 

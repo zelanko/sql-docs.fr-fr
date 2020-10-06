@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6d20c04b6771b0f6a5893868d7484d2cae6ae47f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 289a25088c61988382093f50526546bf5036a510
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466521"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727660"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Sélectionnez à partir du &lt; modèle &gt; . CAS (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste d'expressions séparées par des virgules. Une expression peut comprendre des identificateurs de colonne, des fonctions définies par l'utilisateur, des fonctions VBA, etc.  
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ Facultatif. Expression retournant une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  Si l'extraction est activée à la fois sur le modèle d'exploration de données et la structure d'exploration de données, les utilisateurs membres d'un rôle qui a des autorisations d'extraction sur le modèle et la structure peuvent accéder aux colonnes de la structure d'exploration de données qui ne sont pas incluses dans le modèle d'exploration de données. Par conséquent, pour protéger des données sensibles ou des informations personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder l’autorisation **AllowDrillThrough** sur une structure d’exploration de données uniquement lorsque cela est nécessaire.  
@@ -62,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  L’utilisation de la fonction [IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md) dans la clause **Where** renvoie uniquement les cas associés au nœud spécifié par la colonne NODE_UNIQUE_NAME de l’ensemble de lignes de schéma.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants sont basés sur le publipostage ciblé de la structure d’exploration de données, qui est basé sur la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données et ses modèles d’exploration de données associés. Pour plus d’informations, consultez le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Les exemples suivants sont basés sur le publipostage ciblé de la structure d’exploration de données, qui est basé sur la [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] base de données et ses modèles d’exploration de données associés. Pour plus d’informations, consultez le didacticiel sur l' [exploration de données de base](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Exemple 1 : Extraction dans des cas de modèles et des colonnes de structure  
  L'exemple suivant retourne les colonnes de tous les cas qui ont été utilisés pour tester le modèle Targeted Mailing. Si la structure d'exploration de données sur laquelle le modèle est construit ne possède pas de jeu de données du test d'exclusion, cette requête retourne 0 cas. Vous pouvez utiliser la liste d'expressions pour retourner uniquement les colonnes dont vous avez besoin.  
@@ -85,12 +85,11 @@ AND IsInNode('002')
  Pour retourner une colonne de structure, les autorisations d'extraction doivent être activées à la fois sur le modèle d'exploration de données et sur la structure d'exploration de données.  
   
 > [!NOTE]  
->  La prise en charge de l'extraction varie selon le type de modèle d'exploration de données. Pour plus d’informations sur les modèles qui prennent en charge l’extraction, consultez [requêtes d’extraction &#40;&#41;d’exploration de données ](https://docs.microsoft.com/analysis-services/data-mining/drillthrough-queries-data-mining).  
+>  La prise en charge de l'extraction varie selon le type de modèle d'exploration de données. Pour plus d’informations sur les modèles qui prennent en charge l’extraction, consultez [requêtes d’extraction &#40;&#41;d’exploration de données ](/analysis-services/data-mining/drillthrough-queries-data-mining).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SÉLECTIONNER &#40;&#41;DMX ](../dmx/select-dmx.md)   
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

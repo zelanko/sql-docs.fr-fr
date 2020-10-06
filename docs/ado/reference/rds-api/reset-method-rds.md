@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fb8d10d857e164832b852a78a4f8b2082b304990
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: fcebd112b389fe98b69b25852ef0504e88890261
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981310"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724258"
 ---
 # <a name="reset-method-rds"></a>Reset, méthode (RDS)
 Exécute le tri ou le filtre sur un **jeu d’enregistrements** côté client en fonction des propriétés de tri et de filtre spécifiées.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +39,7 @@ DataControl.Reset(value)
  Variable objet qui représente un objet [RDS. DataControl](./datacontrol-object-rds.md) .  
   
  *value*  
- facultatif. Valeur **booléenne** qui est **true** (valeur par défaut) si vous souhaitez filtrer sur l’ensemble de lignes « filtré » actuel. **False** indique que vous filtrez sur l’ensemble de lignes d’origine, en supprimant toutes les options de filtre précédentes.  
+ Facultatif. Valeur **booléenne** qui est **true** (valeur par défaut) si vous souhaitez filtrer sur l’ensemble de lignes « filtré » actuel. **False** indique que vous filtrez sur l’ensemble de lignes d’origine, en supprimant toutes les options de filtre précédentes.  
   
 ## <a name="remarks"></a>Notes  
  Les propriétés [SortColumn](./sortcolumn-property-rds.md), [SortDirection](./sortdirection-property-rds.md), [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md)et [FilterColumn](./filtercolumn-property-rds.md) fournissent des fonctionnalités de tri et de filtrage sur le cache côté client. La fonctionnalité de tri commande les enregistrements par valeurs d’une colonne. La fonctionnalité de filtrage affiche un sous-ensemble d’enregistrements basés sur des critères de recherche, tandis que le [jeu d’enregistrements](../ado-api/recordset-object-ado.md) complet est conservé dans le cache. La méthode de **réinitialisation** exécute les critères et remplace le **jeu d’enregistrements** actuel par un **jeu d’enregistrements**pouvant être mis à jour.  

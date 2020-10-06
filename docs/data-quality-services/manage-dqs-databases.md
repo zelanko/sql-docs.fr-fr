@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2384aab12163f54aa458c857c5b006861572f3fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ec9540ae9d2b8317cbd49b947345e811b70896a7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462125"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724678"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
@@ -42,7 +42,7 @@ ms.locfileid: "88462125"
 -   Le mode de récupération par défaut des bases de données DQS est défini sur **Simple**. En mode de récupération simple, les transactions sont journalisées de façon minimale et la troncation du journal se produit automatiquement une fois que la transaction est terminée pour libérer de l'espace dans le journal des transactions (fichier .ldf). Pour plus d’informations sur le mode de récupération simple, consultez [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md).  
   
 > [!IMPORTANT]
->  -   En mode de récupération simple, lorsque les enregistrements du journal restent actifs longtemps (par exemple, lors d'une longue transaction), la troncation peut être différée et peut donc entraîner la saturation du journal des transactions. Par ailleurs, la troncation du journal ne réduit pas la taille du fichier journal physique (fichier .ldf). Pour réduire la taille d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d’informations sur la résolution des problèmes liés au journal des transactions, consultez [Journal des transactions &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) ou l’article du support Microsoft à l’adresse [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
+>  -   En mode de récupération simple, lorsque les enregistrements du journal restent actifs longtemps (par exemple, lors d'une longue transaction), la troncation peut être différée et peut donc entraîner la saturation du journal des transactions. Par ailleurs, la troncation du journal ne réduit pas la taille du fichier journal physique (fichier .ldf). Pour réduire la taille d'un fichier journal physique, vous devez réduire le fichier journal. Pour plus d’informations sur la résolution des problèmes liés au journal des transactions, consultez [Journal des transactions &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) ou l’article du support Microsoft à l’adresse [https://go.microsoft.com/fwlink/?LinkId=237446](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md).  
 > -   Vous devez effectuer régulièrement une sauvegarde complète ou différentielle des bases de données DQS et sauvegarder le journal des transactions pour récupérer les données jusqu'à une date et une heure spécifiques. Pour plus d’informations, consultez [Sauvegardes complètes de bases de données &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) et [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="detachattach-the-dqs-databases"></a><a name="DetachAttach"></a> Attacher et détacher les bases de données DQS  
@@ -59,5 +59,4 @@ ms.locfileid: "88462125"
   
 ## <a name="see-also"></a>Voir aussi  
  [administration de dqs](../data-quality-services/dqs-administration.md)  
-  
   

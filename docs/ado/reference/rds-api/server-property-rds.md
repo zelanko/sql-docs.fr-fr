@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 43a92ce6f71d8c9ad4cca25f1c657150b28bde27
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ad10cbb434c1fda57f684438499bf6e4b885cf9b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88981260"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724237"
 ---
 # <a name="server-property-rds"></a>Server, propriété (RDS)
 Indique le nom du Internet Information Services (IIS) et le protocole de communication.  
@@ -29,7 +29,7 @@ Indique le nom du Internet Information Services (IIS) et le protocole de communi
  Vous pouvez définir la propriété de **serveur** au moment du design dans les balises d’objet du[RDS. DataControl](./datacontrol-object-rds.md) , ou au moment de l’exécution dans le code de script.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](/dotnet/framework/wcf/).  
   
 ## <a name="syntax"></a>Syntaxe  
  **HTTP**  
@@ -112,7 +112,7 @@ DataControl.Server=""
  Valeur de **chaîne** qui contient un chemin d’accès Internet ou intranet, ou un nom d’ordinateur, si le serveur se trouve sur un ordinateur distant ; ou une chaîne vide si le serveur se trouve sur l’ordinateur local.  
   
  *port*  
- facultatif. Port utilisé pour se connecter à un serveur exécutant IIS. Le numéro de port est défini dans Internet Explorer (dans le menu **affichage** , cliquez sur **options**, puis sélectionnez l’onglet **connexion** ) ou IIS.  
+ Facultatif. Port utilisé pour se connecter à un serveur exécutant IIS. Le numéro de port est défini dans Internet Explorer (dans le menu **affichage** , cliquez sur **options**, puis sélectionnez l’onglet **connexion** ) ou IIS.  
   
  *DataControl*  
  Variable objet qui représente un objet **RDS. DataControl** .  

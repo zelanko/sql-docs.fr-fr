@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa0697e7f4acbae9fbc25ba3e14bccb4a468499
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 560c5968b3343f2553bc117ebbbdcf06938cc49f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88977510"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91722950"
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Étape 5 : DataControl devient utilisable (tutoriel RDS)
 L’objet **Recordset** retourné peut être utilisé. Vous pouvez l’examiner, le parcourir ou le modifier comme n’importe quel autre **jeu d’enregistrements**. Ce que vous pouvez faire avec le **Recordset** dépend de votre environnement. Visual Basic et Visual C++ disposent de contrôles visuels qui peuvent utiliser un **jeu d’enregistrements** directement ou indirectement avec l’aide d’un contrôle d’activation des données.  
   
 > [!IMPORTANT]
->  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  À compter de Windows 8 et de Windows Server 2012, les composants serveur RDS ne sont plus inclus dans le système d’exploitation Windows (pour plus d’informations, consultez le livre de recettes sur la compatibilité avec Windows 8 et [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) ). Les composants clients RDS seront supprimés dans une prochaine version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent RDS doivent migrer vers le [service de données WCF](/dotnet/framework/wcf/).  
   
  Par exemple, si vous affichez une page Web dans Microsoft Internet Explorer, vous souhaiterez peut-être afficher les données de l’objet **Recordset** dans un contrôle visuel. Les contrôles visuels d’une page Web ne peuvent pas accéder directement à un objet **Recordset** . Toutefois, ils peuvent accéder à l’objet **Recordset** via le [RDS. DataControl](../../reference/rds-api/datacontrol-object-rds.md). **RDS. DataControl** devient utilisable par un contrôle visuel lorsque sa propriété [SourceRecordset](../../reference/rds-api/recordset-sourcerecordset-properties-rds.md) est définie sur l’objet **Recordset** .  
   

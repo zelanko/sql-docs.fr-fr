@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6197fc8508e1334e5f8afdcb14aeaf7488890159
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bd6830e46f10ba20642d1975f293b72b768f7e5b
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414085"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726250"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Guide de référence du langage DMX (Data Mining Extensions)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88414085"
   
  La spécification définit la base de l'exploration de données comme étant l'objet virtuel de modèle d'exploration de données. L'objet de modèle d'exploration de données encapsule tout ce qui est connu concernant un modèle d'exploration de données particulier. L'objet de modèle d'exploration de données est structuré comme une table SQL, avec des colonnes, des types de données et des méta-informations qui décrivent le modèle. Cette structure vous permet d'employer le langage DMX, qui est une extension du langage SQL, pour créer des modèles et les utiliser.  
   
- **Pour plus d’informations, procédez comme suit :** [structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
+ **Pour plus d’informations, procédez comme suit :** [structures d’exploration de données &#40;Analysis Services d’exploration de données&#41;](/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
 ##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a> Instructions DMX  
  Vous pouvez utiliser des instructions DMX pour créer, traiter, supprimer, copier, explorer et effectuer des prévisions dans des modèles d'exploration de données. Il existe deux types d'instructions DMX : les instructions de définition de données et les instructions de manipulation de données. Chaque type d'instruction permet d'effectuer différentes sortes de tâches.  
@@ -109,5 +109,4 @@ ms.locfileid: "88414085"
  [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

@@ -9,19 +9,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3886cd500282d34ef07145913e036a6ab4ad4852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e9108fc9bc53361a15d144f1f11afa62f9d5a97
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394855"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726043"
 ---
 # <a name="usage-dmx"></a>Utilisation (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Lorsque vous utilisez les extensions DMX (Data Mining Extensions) pour définir un nouveau modèle d’exploration de données dans [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous devez spécifier comment l’algorithme d’exploration de données qui génère le modèle utilisera chaque colonne. Vous pouvez spécifier une colonne comme étant l'un des types suivants :  
   
--   **Clé**  
+-   **Key**  
   
 -   **Séquence clé**  
   
@@ -37,10 +37,10 @@ ms.locfileid: "88394855"
   
  Les colonnes spécifiées en tant que type de **prédiction** sont utilisées comme colonnes d’entrée et de sortie. Les colonnes spécifiées en tant que **PredictOnly** sont utilisées uniquement comme colonnes de sortie. Il est possible que des algorithmes spécifiques considèrent les colonnes de type Predict différemment.  
   
- Pour plus d’informations sur les types d’utilisation de colonne [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pris en charge par, consultez [colonnes de modèle d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
+ Pour plus d’informations sur les types d’utilisation de colonne [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pris en charge par, consultez [colonnes de modèle d’exploration de données](/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -50,5 +50,4 @@ ms.locfileid: "88394855"
  [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

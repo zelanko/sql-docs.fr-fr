@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 73ec65fc7de346ada1232bee7a03dce2aedffa68
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a229aacb9110bdd5eefa9dc3987ce39fec8a1e66
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466625"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726605"
 ---
 # <a name="set-domain-properties"></a>Définir des propriétés de domaine
 
@@ -41,7 +41,7 @@ ms.locfileid: "88466625"
   
 2.  Définissez des propriétés sur un nouveau domaine après sa création comme décrit dans [Create a Domain](../data-quality-services/create-a-domain.md).  
   
-3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-setting-domain-properties"></a><a name="FollowUp"></a> Suivi : après avoir défini les propriétés de domaine  
  Après avoir défini les propriétés de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
@@ -90,5 +90,4 @@ ms.locfileid: "88466625"
   
 ###  <a name="disable-syntax-error-algorithms"></a><a name="Syntax"></a> Désactiver les algorithmes d’erreur de syntaxe  
  Si le type de données est **Chaîne**, activez cette case à cocher pour spécifier que les erreurs de syntaxe ne sont pas identifiées par DQS dans le domaine lors du nettoyage. Activez cette case à cocher lorsque l'identification des erreurs de syntaxe pour ce domaine n'est pas nécessaire. Par exemple, l'identification des erreurs de syntaxe peut ne pas être importante pour un numéro de série. Ce contrôle est uniquement disponible pour le type de données chaîne. DQS ne recherche pas les erreurs de syntaxe dans les types de données autres que chaîne.  
-  
   

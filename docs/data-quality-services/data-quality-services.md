@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: dc765b9cca33e249e4efda60bad08781eee35b15
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bea20a1eb563df3d2af9cddf640359673b05dc57
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462147"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725359"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -28,28 +28,27 @@ ms.locfileid: "88462147"
  Pour obtenir des informations sur l'installation de DQS, consultez [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Pour effectuer une mise à niveau de votre version existante de DQS vers [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consultez [Upgrade Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
   
  **Parcourir le contenu par zone**  
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [Data Quality client application](../data-quality-services/data-quality-client-application.md)  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [Data Quality client application](../data-quality-services/data-quality-client-application.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [bases de connaissances et domaines DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [projets de qualité des données](../data-quality-services/data-quality-projects-dqs.md)  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [projets de qualité des données](../data-quality-services/data-quality-projects-dqs.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [nettoyage des données](../data-quality-services/data-cleansing.md)  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [nettoyage des données](../data-quality-services/data-cleansing.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [correspondance de données](../data-quality-services/data-matching.md)  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [correspondance de données](../data-quality-services/data-matching.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [Data Services de référence dans DQS](../data-quality-services/reference-data-services-in-dqs.md)  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [Data Services de référence dans DQS](../data-quality-services/reference-data-services-in-dqs.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [profilage des données et NOTIFICATIONs dans DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [profilage des données et NOTIFICATIONs dans DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [administration de DQS](../data-quality-services/dqs-administration.md)  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [administration de DQS](../data-quality-services/dqs-administration.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [sécurité DQS](../data-quality-services/dqs-security.md)  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") [sécurité DQS](../data-quality-services/dqs-security.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation de Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Concepts Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
- [Ressources DQS](https://technet.microsoft.com/sqlserver/hh780961)   
- [Centre de ressources SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
-  
+ [Ressources DQS](../sql-server/index.yml)   
+ [Centre de ressources SQL Server](/previous-versions/sql/sql-server-2012/hh231622(v=sql.110))  
   

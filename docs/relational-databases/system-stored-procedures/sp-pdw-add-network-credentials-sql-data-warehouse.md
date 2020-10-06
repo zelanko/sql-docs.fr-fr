@@ -13,19 +13,19 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 47782250a0acf14ce0e8b63a2b631acfce9b3583
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d4fea3d262eea3e4e329809137720e94a7af5d93
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88473987"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724060"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Cela stocke les informations d’identification réseau dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et les associe à un serveur. Par exemple, utilisez cette procédure stockée pour accorder des [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] autorisations de lecture/écriture appropriées pour effectuer des opérations de sauvegarde et de restauration de base de données sur un serveur cible, ou pour créer une sauvegarde d’un certificat utilisé pour TDE.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique")[Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,7 +34,9 @@ ms.locfileid: "88473987"
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="arguments"></a>Arguments  
  '*target_server_name*'  
  Spécifie le nom d’hôte ou l’adresse IP du serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] accédera à ce serveur à l’aide des informations d’identification de nom d’utilisateur et de mot de passe transmises à cette procédure stockée.  

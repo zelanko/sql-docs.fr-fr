@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 9762c84ba42a3d35d0d9ebbcbb3ffb5f114ac1c8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: bfb2db2c6ec11fa765d3554aef3daf853a305fa6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480400"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725412"
 ---
 # <a name="create-a-domain-rule"></a>Créer une règle de domaine
 
@@ -98,7 +98,7 @@ ms.locfileid: "89480400"
   
 2.  Cliquez sur **Ignorer toutes les modifications** pour supprimer toutes les modifications que vous avez apportées aux règles de domaine, rétablissant ainsi les règles précédemment appliquées ; les modifications apportées après la dernière application des règles ne s'appliqueront plus. La validité de chaque valeur du domaine sera mise à jour pour être conforme aux règles précédemment appliquées, pas aux modifications ignorées.  
   
-3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a> Suivi : après la création d’une règle de domaine  
  Après avoir créé une règle de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
@@ -131,7 +131,6 @@ ms.locfileid: "89480400"
 |La valeur ne correspond pas au modèle|Seules les valeurs qui ne correspondent pas au modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.|Exemple d'opérande : A1 (la valeur ne doit pas correspondre à un modèle d'un caractère *quelconque* , suivi par un chiffre *quelconque* ).<br /><br /> Valeurs valides : AB1, A, A:5<br /><br /> Valeurs non valides : B7, c9|  
 |La valeur contient le modèle|Seules les valeurs qui contiennent le modèle de caractères, chiffres ou caractères spéciaux de l'opérande sont valides.|Exemple d'opérande : AA-12 (la valeur contient un modèle de deux caractères *quelconques* suivis d'un tiret (-), qui est encore suivi de deux chiffres *quelconques* ).<br /><br /> Valeurs valides : AAA-01, ab-975<br /><br /> Valeur non valide : A7, AA-6, C-45, AA ; 98|  
 |La valeur ne contient pas le modèle|Seules les valeurs qui ne contiennent pas le modèle de caractères de l'opérande sont valides.|Exemple d'opérande : AB-12 (la valeur ne doit pas contenir un modèle de deux caractères *quelconques* suivis d'un tiret (-), qui est encore suivi de deux chiffres *quelconques* ).<br /><br /> Valeurs valides : A7, AA-6, C-45, aa;98<br /><br /> Valeur non valide : AAA-01, ab-975|  
-|La valeur correspond à l'expression régulière|Seules les valeurs qui correspondent à l'expression régulière de l'opérande sont considérées comme valides.<br /><br /> N’incluez pas les caractères « ^ » ou « $ » dans l’expression régulière, car DQS ajoute automatiquement ces caractères à une clause contenant une valeur correspondant à l’expression régulière. (Vous pouvez également placer l’expression régulière contenant les points d’ancrage « ^ » et « $ » entre parenthèses). Pour plus d’informations sur les expressions régulières, consultez [éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=225561).|Exemple d'opérande : [1-5]+ (chaque caractère doit être un chiffre numérique de 1 à 5, présent une ou plusieurs fois)<br /><br /> Valeurs valides : 123, 12345, 14352<br /><br /> Valeurs non valides : 456, ABC|  
+|La valeur correspond à l'expression régulière|Seules les valeurs qui correspondent à l'expression régulière de l'opérande sont considérées comme valides.<br /><br /> N’incluez pas les caractères « ^ » ou « $ » dans l’expression régulière, car DQS ajoute automatiquement ces caractères à une clause contenant une valeur correspondant à l’expression régulière. (Vous pouvez également placer l’expression régulière contenant les points d’ancrage « ^ » et « $ » entre parenthèses). Pour plus d’informations sur les expressions régulières, consultez [éléments du langage des expressions régulières](/dotnet/standard/base-types/regular-expression-language-quick-reference).|Exemple d'opérande : [1-5]+ (chaque caractère doit être un chiffre numérique de 1 à 5, présent une ou plusieurs fois)<br /><br /> Valeurs valides : 123, 12345, 14352<br /><br /> Valeurs non valides : 456, ABC|  
 |La valeur ne correspond pas à une expression régulière|Seules les valeurs qui ne correspondent pas à l'expression régulière de l'opérande sont considérées comme valides.|Exemple d'opérande : [1-5]+ (la chaîne ne doit pas être composée seulement des chiffres numériques de 1 à 5)<br /><br /> Valeurs valides : 456, ABC<br /><br /> Valeur non valide : 123, 123456, 14352|  
-  
   

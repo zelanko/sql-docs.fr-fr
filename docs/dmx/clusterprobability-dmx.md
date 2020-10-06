@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f27a901bbb45c48996c82bbedbbb3691c1a6cbc2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb2cc218ff18b23237c561a3cac1a9a68373f3ae
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431111"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726295"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,7 +41,7 @@ ClusterProbability([<Node_Caption>])
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Pour plus d’informations sur l’utilisation de cette syntaxe, consultez [SELECT FROM &#60;model&#62;. CONTENU &#40;&#41;DMX ](../dmx/select-from-model-content-dmx.md). Pour plus d’informations sur l’ensemble de lignes de schéma du contenu du modèle d’exploration de données, consultez [DMSCHEMA_MINING_MODEL_CONTENT rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
+ Pour plus d’informations sur l’utilisation de cette syntaxe, consultez [SELECT FROM &#60;model&#62;. CONTENU &#40;&#41;DMX ](../dmx/select-from-model-content-dmx.md). Pour plus d’informations sur l’ensemble de lignes de schéma du contenu du modèle d’exploration de données, consultez [DMSCHEMA_MINING_MODEL_CONTENT rowset](/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
  Si un \<node caption> n’est pas spécifié, la fonction retourne la probabilité que les cas d’entrée appartiennent au cluster le plus probable. Utilisez la fonction **cluster** pour retourner le cluster le plus probable.  
   
@@ -66,5 +66,4 @@ NATURAL PREDICTION JOIN
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
-  
   

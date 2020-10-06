@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13655aadf5f95b776b83e48791e4f423d6ccc355
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 02b85cc4197b0ffafef7a83566e4041a7d290548
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422262"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727670"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -85,7 +85,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Le troisième exemple indique comment utiliser le paramètre EXTEND_MODEL_CASES pour mettre à jour un modèle d'exploration de données avec de nouvelles données.  
   
- Pour en savoir plus sur l’utilisation des modèles de séries chronologiques, consultez le didacticiel sur l’exploration de données, [leçon 2 : génération d’un scénario de prévision &#40;exploration intermédiaire de l’exploration de données&#41;](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) et le [didacticiel DMX sur la prédiction de série chronologique](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Pour en savoir plus sur l’utilisation des modèles de séries chronologiques, consultez le didacticiel sur l’exploration de données, [leçon 2 : génération d’un scénario de prévision &#40;exploration intermédiaire de l’exploration de données&#41;](/previous-versions/sql/sql-server-2016/ms169846(v=sql.130)) et le [didacticiel DMX sur la prédiction de série chronologique](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130)).  
   
 > [!NOTE]  
 >  Vous pouvez obtenir des résultats différents de votre modèle ; les résultats des exemples suivants sont fournis uniquement pour illustrer le format de résultat.  
@@ -119,7 +119,7 @@ OR [Model Region] = 'M200 Pacific'
 ### <a name="example-2-adding-new-data-and-using-replace_model_cases"></a>Exemple 2 : ajout de nouvelles données et utilisation de REPLACE_MODEL_CASES  
  Supposez que vous constatez que les données étaient incorrectes pour une région particulière et que vous souhaitez utiliser les modèles dans le modèle, tout en ajustant les prédictions pour qu'elles correspondent aux nouvelles données. Ou il se peut que vous constatiez qu'une autre région a des tendances plus fiables et que vous souhaitiez appliquer le modèle le plus fiable aux données d'une région différente.  
   
- Dans de tels scénarios, vous pouvez utiliser le paramètre REPLACE_MODEL_CASES et spécifier un nouveau jeu de données à utiliser comme données d'historique. De cette façon, les projections seront basées sur les modèles dans le modèle spécifié, mais continueront de manière fluide à partir de la fin des nouveaux points de données. Pour une procédure pas à pas complète de ce scénario, consultez [prédictions de série chronologique avancées &#40;didacticiel sur l’exploration de données intermédiaire&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
+ Dans de tels scénarios, vous pouvez utiliser le paramètre REPLACE_MODEL_CASES et spécifier un nouveau jeu de données à utiliser comme données d'historique. De cette façon, les projections seront basées sur les modèles dans le modèle spécifié, mais continueront de manière fluide à partir de la fin des nouveaux points de données. Pour une procédure pas à pas complète de ce scénario, consultez [prédictions de série chronologique avancées &#40;didacticiel sur l’exploration de données intermédiaire&#41;](/previous-versions/sql/sql-server-2016/cc879290(v=sql.130)).  
   
  La requête PREDICTION JOIN suivante illustre la syntaxe pour remplacer des données et élaborer de nouvelles prédictions. Pour les données de remplacement, l'exemple extrait la valeur des colonnes Amount et Quantity et multiplie chacune par deux :  
   
@@ -254,7 +254,6 @@ OR [Model Region] = 'M200 North America'
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Exemples de requêtes de modèle de série chronologique](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
+ [Exemples de requêtes de modèle de série chronologique](/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
-  
   

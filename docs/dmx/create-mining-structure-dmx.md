@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 06f013ccb5c33dfbaba2fe0a0e102a448c17e036
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ab738433380302e0f3d8bc70113aa2a8d13f7ac8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414025"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726280"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -35,7 +35,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *structure*  
+ *arborescence*  
  Nom unique de la structure.  
   
  *liste de définitions de colonnes*  
@@ -65,7 +65,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ## <a name="remarks"></a>Notes  
  Vous définissez une structure d'exploration de données en spécifiant une liste de colonnes, en spécifiant éventuellement des relations hiérarchiques entre les colonnes, puis en partitionnant éventuellement la structure d'exploration de données en jeux de données d'apprentissage et de test.  
   
- Le mot clé SESSION facultatif indique que la structure est une structure temporaire que vous pouvez utiliser uniquement pour la durée de la session active. Une fois la session terminée, la structure, ainsi que tous les modèles sur celle-ci, seront supprimés. Pour créer des modèles et des structures d’exploration de données temporaires, vous devez d’abord définir la propriété de base de données AllowSessionMiningModels,. Pour plus d’informations, consultez [Propriétés de l’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+ Le mot clé SESSION facultatif indique que la structure est une structure temporaire que vous pouvez utiliser uniquement pour la durée de la session active. Une fois la session terminée, la structure, ainsi que tous les modèles sur celle-ci, seront supprimés. Pour créer des modèles et des structures d’exploration de données temporaires, vous devez d’abord définir la propriété de base de données AllowSessionMiningModels,. Pour plus d’informations, consultez [Propriétés de l’exploration de données](/analysis-services/server-properties/data-mining-properties).  
   
 ## <a name="column-definition-list"></a>Liste des définitions de colonnes  
  Pour définir une structure d'exploration de données, fournissez les informations suivantes pour chaque colonne de la liste des définitions de colonnes :  
@@ -96,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Pour la liste des types de données, types de contenu, distributions de colonnes et indicateurs de modélisation à utiliser pour définir une colonne de structure, consultez les rubriques suivantes :  
   
--   [Types de données &#40;Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Types de données &#40;Exploration de données&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [Types de contenu &#40;exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Types de contenu &#40;exploration de données&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distributions de colonnes &#40;exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distributions de colonnes &#40;exploration de données&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Indicateurs de modélisation &#40;exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Indicateurs de modélisation &#40;exploration de données&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Vous pouvez définir plusieurs valeurs d'indicateur de modélisation pour une colonne. Toutefois, vous ne pouvez avoir qu'un seul type de contenu et qu'un seul type de données pour une colonne.  
   
@@ -113,7 +113,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Indique une hiérarchie de valeur. La cible d'une colonne RELATED TO peut être une colonne clé dans une table imbriquée, une colonne de valeurs discrètes dans la ligne de cas ou une autre colonne RELATED TO qui indique une hiérarchie plus profonde.  
   
 ## <a name="holdout-parameters"></a>Paramètres d'exclusion  
- Lorsque vous spécifiez des paramètres d'exclusion, vous créez une partition des données de structure. Le montant que vous spécifiez pour l'exclusion est réservé pour le test, et les données restantes sont utilisées pour l'apprentissage. Par défaut, si vous créez une structure d'exploration de données à l'aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la partition d'exclusion qui est créée contient 30 pour cent de données de test et 70 pour cent de données d'apprentissage. Pour plus d'informations, voir [Training and Testing Data Sets](https://docs.microsoft.com/analysis-services/data-mining/training-and-testing-data-sets).  
+ Lorsque vous spécifiez des paramètres d'exclusion, vous créez une partition des données de structure. Le montant que vous spécifiez pour l'exclusion est réservé pour le test, et les données restantes sont utilisées pour l'apprentissage. Par défaut, si vous créez une structure d'exploration de données à l'aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la partition d'exclusion qui est créée contient 30 pour cent de données de test et 70 pour cent de données d'apprentissage. Pour plus d'informations, voir [Training and Testing Data Sets](/analysis-services/data-mining/training-and-testing-data-sets).  
   
  Si vous créez une structure d'exploration de données à l'aide des extensions DMX (Data Mining Extensions), vous devez spécifier manuellement la création d'une partition d'exclusion.  
   
@@ -182,5 +182,4 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

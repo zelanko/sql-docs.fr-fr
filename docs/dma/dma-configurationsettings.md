@@ -14,26 +14,26 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: bc6805426251e87a8db3dcf4ad9da6343ac0ea12
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 64c18c32cde0c29c120c8cb1b2d976bd983c774a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885996"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727790"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurer les paramètres de Assistant Migration de données
 
-Vous pouvez ajuster certains comportements de Assistant Migration de données en définissant les valeurs de configuration dans le fichier DMA. exe. config. Cet article décrit les valeurs de configuration de clé.
+Vous pouvez ajuster certains comportements de Assistant Migration de données en définissant les valeurs de configuration dans le fichier dma.exe.config. Cet article décrit les valeurs de configuration de clé.
 
-Vous pouvez trouver le fichier DMA. exe. config pour l’application de bureau Assistant Migration de données et l’utilitaire de ligne de commande, dans les dossiers suivants sur votre ordinateur.
+Vous pouvez trouver le fichier dma.exe.config pour l’application de bureau Assistant Migration de données et l’utilitaire de ligne de commande, dans les dossiers suivants sur votre ordinateur.
 
 - Application de bureau
 
-  % ProgramFiles% \\ Assistant Migration de données Microsoft \\ DMA. exe. config
+  % ProgramFiles% \\ Assistant Migration de données Microsoft \\dma.exe.config
 
 - Utilitaire de ligne de commande
 
-  % ProgramFiles% \\ Assistant Migration de données Microsoft \\ dmacmd. exe. config 
+  % ProgramFiles% \\ Assistant Migration de données Microsoft \\dmacmd.exe.config 
 
 Veillez à enregistrer une copie du fichier de configuration d’origine avant d’apporter des modifications. Après avoir apporté des modifications, redémarrez Assistant Migration de données pour que les nouvelles valeurs de configuration prennent effet.
 
@@ -111,7 +111,7 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database : seuil de recommandation
 
-Avec [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), vous pouvez étendre dynamiquement les données transactionnelles à chaud et à froid de Microsoft SQL Server 2016 vers Azure. Stretch Database cible les bases de données transactionnelles avec de grandes quantités de données à froid. La recommandation Stretch Database, sous recommandation relative aux fonctionnalités de stockage, identifie d’abord les tables qu’elle estime tirera parti de cette fonctionnalité, puis identifie les modifications qui doivent être apportées pour activer la table pour cette fonctionnalité.
+Avec [SQL Server Stretch Database](../sql-server/stretch-database/stretch-database.md), vous pouvez étendre dynamiquement les données transactionnelles à chaud et à froid de Microsoft SQL Server 2016 vers Azure. Stretch Database cible les bases de données transactionnelles avec de grandes quantités de données à froid. La recommandation Stretch Database, sous recommandation relative aux fonctionnalités de stockage, identifie d’abord les tables qu’elle estime tirera parti de cette fonctionnalité, puis identifie les modifications qui doivent être apportées pour activer la table pour cette fonctionnalité.
 
 À partir de Assistant Migration de données v 2.0, vous pouvez contrôler ce seuil pour qu’une table qualifie la fonctionnalité de Stretch Database à l’aide de la valeur de configuration recommendedNumberOfRows. La valeur par défaut est 100 000 lignes. Si vous souhaitez analyser les capacités d’étirement pour des tables encore plus petites, diminuez la valeur en conséquence.
 
@@ -130,7 +130,7 @@ Avec [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/str
 
 ## <a name="sql-connection-timeout"></a>Délai de connexion SQL
 
-Vous pouvez contrôler le délai d’expiration de la [connexion SQL](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) pour les instances source et cible lors de l’exécution d’une évaluation ou d’une migration, en définissant la valeur du délai d’attente de la connexion sur un nombre de secondes spécifié. La valeur par défaut est 15 secondes.
+Vous pouvez contrôler le délai d’expiration de la [connexion SQL](/dotnet/api/system.data.sqlclient.sqlconnection.connectiontimeout) pour les instances source et cible lors de l’exécution d’une évaluation ou d’une migration, en définissant la valeur du délai d’attente de la connexion sur un nombre de secondes spécifié. La valeur par défaut est de 15 secondes.
 
 ```
 <appSettings>

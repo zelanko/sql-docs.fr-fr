@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fedb3472755a8147e10aef046c7a7fc435b356cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9dbceb416cea3e64200708639a771989f900be3e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500762"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726105"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;requête de données sources&gt;
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -54,6 +54,5 @@ ms.locfileid: "88500762"
 ## <a name="see-also"></a>Voir aussi  
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Informations de référence sur les instructions DMX&#41; &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-statements.md)   
- [Tables imbriquées &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
-  
+ [Tables imbriquées &#40;Analysis Services d’exploration de données&#41;](/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   

@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: eb96c88be0b92752e514eb34ac59233d4fae36a3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf85cb8b432dcc6bf72208c12b934291bc72b049
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450018"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724639"
 ---
 # <a name="change-domain-values"></a>Modifier les valeurs de domaine
 
@@ -101,7 +101,7 @@ ms.locfileid: "88450018"
   
 11. **Supprimer les valeurs du domaine sélectionné**: pour supprimer une ou plusieurs valeurs existantes du domaine, sélectionnez les valeurs dans la table de valeurs, puis cliquez sur l'icône **Supprimer les valeurs du domaine sélectionné** . Comme une entrée DQS_NULL ne peut pas être supprimée, si vous choisissez plusieurs valeurs à supprimer et qu'une entrée DQS_NULL est l'une d'entre elles, l'opération échoue.  
   
-12. Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+12. Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-changing-domain-values"></a><a name="FollowUp"></a> Suivi : Après avoir modifié les valeurs de domaine  
  Après avoir modifié les valeurs de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
@@ -136,5 +136,4 @@ ms.locfileid: "88450018"
   
 ##  <a name="how-to-handle-null-equivalents"></a><a name="Null"></a> Comment gérer les équivalents des valeurs Null  
  Chaque table des valeurs dans l'onglet **Valeurs du domaine** inclut une valeur DQS_NULL. Une valeur Null dans une source de données apparaît comme SQL_NULL dans la table des valeurs. Vous pouvez définir un ou plusieurs équivalents de valeurs Null comme synonymes de DQS_NULL. Dans ce cas, l'ensemble des valeurs Null et équivalents de valeurs Null est traité comme DQS_NULL.  
-  
   

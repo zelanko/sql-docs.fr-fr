@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8023287277edafb2d054cafe7ae5ab09512f93ab
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22fe85d0e51de59d0b25b6a3eb89d29edf655ee4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352995"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726180"
 ---
 # <a name="general-prediction-functions-dmx"></a>Fonctions de prédiction générales (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "88352995"
   
 -   [StructureColumn&#41;DMX &#40;](../dmx/structurecolumn-dmx.md)  
   
- Les algorithmes individuels peuvent prendre en charge des fonctions supplémentaires. Pour obtenir la liste des fonctions prises en charge par chaque type de modèle, consultez [requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).  
+ Les algorithmes individuels peuvent prendre en charge des fonctions supplémentaires. Pour obtenir la liste des fonctions prises en charge par chaque type de modèle, consultez [requêtes d’exploration de données](/analysis-services/data-mining/data-mining-queries).  
   
 ## <a name="functions-specific-to-select-syntax"></a>Fonctions spécifiques à la syntaxe SELECT  
  Le tableau suivant répertorie les fonctions que vous pouvez utiliser pour chaque type d’instruction **Select** .  
@@ -70,12 +70,12 @@ ms.locfileid: "88352995"
 |Type de requête|Fonctions prises en charge|Notes|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM \<model>](../dmx/select-distinct-from-model-dmx.md)|[RangeMin&#41;DMX &#40;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid&#41;DMX &#40;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax&#41;DMX &#40;](../dmx/rangemax-dmx.md)|Ces fonctions peuvent être utilisées pour fournir des valeurs maximales, des valeurs minimales et des moyennes pour toute colonne contenant un type de données numérique, que la colonne soit continue ou ait été discrétisée.|  
-|[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Cette fonction récupère les nœuds enfants pour le nœud spécifié dans le modèle. Elle peut être utilisée, par exemple, pour parcourir les nœuds dans le contenu du modèle d'exploration de données. La disposition des nœuds dans le contenu du modèle d'exploration de données dépend du type de modèle. Pour plus d’informations sur la structure de chaque type de modèle d’exploration de données, consultez [Mining Model Content &#40;Analysis Services-data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Si vous avez enregistré le contenu du modèle d’exploration de données en tant que dimension, vous pouvez également utiliser d’autres fonctions MDX (Multidimensional Expressions) qui sont disponibles pour l’interrogation d’une hiérarchie d’attribut.|  
+|[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Cette fonction récupère les nœuds enfants pour le nœud spécifié dans le modèle. Elle peut être utilisée, par exemple, pour parcourir les nœuds dans le contenu du modèle d'exploration de données. La disposition des nœuds dans le contenu du modèle d'exploration de données dépend du type de modèle. Pour plus d’informations sur la structure de chaque type de modèle d’exploration de données, consultez [Mining Model Content &#40;Analysis Services-data mining&#41;](/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Si vous avez enregistré le contenu du modèle d’exploration de données en tant que dimension, vous pouvez également utiliser d’autres fonctions MDX (Multidimensional Expressions) qui sont disponibles pour l’interrogation d’une hiérarchie d’attribut.|  
 |[SELECT FROM \<model>.CASES](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [Classe ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase&#41;DMX &#40;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase&#41;DMX &#40;](../dmx/istestcase-dmx.md)|La fonction lag est prise en charge uniquement pour les modèles de série chronologique.<br /><br /> La fonction IsTestCase est prise en charge dans les modèles basés sur une structure créée à l’aide de l’option exclusion pour créer un jeu de données de test. Si le modèle n'est pas basé sur une structure avec le jeu de test d'exclusion, tous les cas sont traités comme des cas d'apprentissage.|  
 |[SELECT FROM \<model>.SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Dans ce contexte, la fonction IsInNode retourne un cas qui appartient à un ensemble de cas d’exemple idéaux.|  
 |Sélectionnez à partir de \<model> . PMML|Non applicable. Utilisez plutôt des fonctions de requête XML.|Les représentations PMML ne sont prises en charge que pour les types de modèles suivants :<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  
-|[SELECT FROM \<model> PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
-|[SÉLECTIONNER DANS \<model>](../dmx/select-from-model-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
+|[SELECT FROM \<model> PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](/analysis-services/data-mining/data-mining-queries).|  
+|[SÉLECTIONNER DANS \<model>](../dmx/select-from-model-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](/analysis-services/data-mining/data-mining-queries).|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   
@@ -86,5 +86,4 @@ ms.locfileid: "88352995"
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

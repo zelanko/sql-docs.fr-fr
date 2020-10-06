@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 52b28158c59e12886f8058883c65654b23ece9e0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 968b1c10f8eb054f6527253bd358e97eaa396637
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466537"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727720"
 ---
 # <a name="modeling-flags-dmx"></a>Indicateurs de modélisation (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "88466537"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les indicateurs de modélisation suivants :  
   
- **NON NULL**  
+ **NOT NULL**  
  Les valeurs de la colonne d'attribut ne doivent jamais contenir de valeur NULL. Une erreur est générée si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rencontre une valeur NULL pour la colonne d’attribut au cours du processus d’apprentissage du modèle. Cet indicateur est défini sur une colonne de structure d'exploration de données.  
   
  **RÉGRESSEUR**  
@@ -49,10 +49,10 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
   
  Pour obtenir un exemple de la syntaxe permettant de spécifier un indicateur de modélisation sur une colonne de modèle d’exploration de données, consultez [ALTER Mining STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
- Pour plus d’informations sur l’utilisation des colonnes du modèle d’exploration de données, consultez [colonnes du modèle d’exploration](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)de données.  
+ Pour plus d’informations sur l’utilisation des colonnes du modèle d’exploration de données, consultez [colonnes du modèle d’exploration](/analysis-services/data-mining/mining-model-columns)de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Informations de référence sur la&#41; DMX &#40;Data Mining Extensions](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;les éléments de la syntaxe DMX&#41;](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
@@ -62,5 +62,4 @@ WHERE SERVICE_NAME = 'Microsoft_Linear_Regression'
  [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
-  
   

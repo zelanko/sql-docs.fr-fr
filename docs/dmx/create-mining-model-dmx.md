@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 76cddca642fd25bb7e67ec7817c3fe3d1d9da9d7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 35382c7d1d7301d35d8517b62bac352a4ae9fb47
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462034"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726293"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -48,10 +48,10 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Nom d'un algorithme d'exploration de données, tel que défini par le fournisseur actuel.  
   
 > [!NOTE]  
->  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [DMSCHEMA_MINING_SERVICES ensemble de lignes](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [propriétés d’exploration de données](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [DMSCHEMA_MINING_SERVICES ensemble de lignes](/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [propriétés d’exploration de données](/analysis-services/server-properties/data-mining-properties).  
   
  *liste de paramètres*  
- facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
+ Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *chaîne XML*  
  (Pour une utilisation avancée uniquement.) Un modèle encodé XML (PMML). La chaîne doit être entourée de guillemets simples (').  
@@ -95,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Pour la liste des types de données, types de contenu, distributions de colonnes et indicateurs de modélisation à utiliser pour définir une colonne, consultez les rubriques suivantes :  
   
--   [Types de données &#40;Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Types de données &#40;Exploration de données&#41;](/analysis-services/data-mining/data-types-data-mining)  
   
--   [Types de contenu &#40;exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Types de contenu &#40;exploration de données&#41;](/analysis-services/data-mining/content-types-data-mining)  
   
--   [Distributions de colonnes &#40;exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Distributions de colonnes &#40;exploration de données&#41;](/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Indicateurs de modélisation &#40;exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Indicateurs de modélisation &#40;exploration de données&#41;](/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Vous pouvez ajouter une clause à l'instruction pour décrire la relation entre deux colonnes. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge l’utilisation de la \<Column relationship> clause suivante.  
   
@@ -112,7 +112,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 |Clause \<prediction>|Description|  
 |---------------------------|-----------------|  
-|**PRÉSENTATION**|Cette colonne peut être prédite par le modèle, et elle peut être fournie à des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
+|**PREDICT**|Cette colonne peut être prédite par le modèle, et elle peut être fournie à des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
 |**PREDICT_ONLY**|Cette colonne peut être prédite par le modèle, mais ses valeurs ne peuvent pas être utilisées dans des cas d'entrée pour prédire la valeur d'autres colonnes prédictibles.|  
   
 ### <a name="parameter-definition-list"></a>Liste des définitions des paramètres  
@@ -122,12 +122,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- Pour obtenir la liste des paramètres associés à chaque algorithme, consultez [algorithmes d’exploration de données &#40;Analysis Services-exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Pour obtenir la liste des paramètres associés à chaque algorithme, consultez [algorithmes d’exploration de données &#40;Analysis Services-exploration de données&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
 ## <a name="remarks"></a>Notes  
  Si vous souhaitez créer un modèle qui a un jeu de données de test intégré, vous devez utiliser l'instruction CREATE MINING STRUCTURE suivie de ALTER MINING STRUCTURE. Toutefois, les types de modèles ne prennent pas tous en charge un jeu de données d'exclusion. Pour plus d’informations, consultez [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
- Pour obtenir une procédure pas à pas de création d’un modèle d’exploration de données à l’aide de l’instruction CREATEMODEL, consultez le [didacticiel DMX sur la prédiction de série chronologique](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Pour obtenir une procédure pas à pas de création d’un modèle d’exploration de données à l’aide de l’instruction CREATEMODEL, consultez le [didacticiel DMX sur la prédiction de série chronologique](/previous-versions/sql/sql-server-2016/cc879270(v=sql.130)).  
   
 ## <a name="naive-bayes-example"></a>Exemple de modèle Naive Bayes  
  L'exemple suivant utilise l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes pour créer un modèle d'exploration de données. La colonne Bike Buyer (Acheteur de vélo) est définie comme l'attribut prédictible.  
@@ -191,5 +191,4 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

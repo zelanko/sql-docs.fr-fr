@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c6050a387af893e984b95c036181b7f16a269dc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: eafe865a5d997b0f01a510fc0fad30646a732825
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491539"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726240"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -33,7 +33,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
  *model*  
  Identificateur du modèle  
   
- *structure*  
+ *arborescence*  
  Identificateur de la structure  
   
 ## <a name="remarks"></a>Notes  
@@ -41,13 +41,13 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
  Le tableau ci-dessous décrit le résultat obtenu en utilisant différentes formes de la syntaxe.  
   
-|.|Résultats|  
+|Instruction|Résultats|  
 |---------------|------------|  
 |SUPPRIMER DE LA STRUCTURE D’EXPLORATION DE DONNÉES*\<structure>*<br /><br /> or<br /><br /> SUPPRIMER de la STRUCTURE d’exploration de données *\<structure>* . HUMIDITÉ|Exécute ProcessClear sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données et de ses modèles d'exploration de données associés.|  
 |SUPPRIMER de la STRUCTURE d’exploration de données *\<structure>* . PARFOIS|Exécute ProcessClearStructureOnly sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données, en laissant ses modèles d'exploration de données associés intacts. Une fois la structure d'exploration de données supprimée, l'extraction dans les modèles d'exploration de données associés échoue.|  
 |SUPPRIMER DU MODÈLE D’EXPLORATION DE DONNÉES*\<model>*<br /><br /> or<br /><br /> SUPPRIMER du modèle d’exploration de données *\<model>* . HUMIDITÉ|Exécute ProcessClear sur le modèle d’exploration de données, mais laisse les valeurs d’État intactes. Les valeurs d'état correspondent aux états possibles d'une colonne. Par exemple, les valeurs d'état d'une colonne Gender seraient Male ou Female.|  
   
- Pour plus d’informations sur les types de traitement, consultez [élément Type &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/type-element-xmla).  
+ Pour plus d’informations sur les types de traitement, consultez [élément Type &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/type-element-xmla).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant supprime tout le contenu du modèle NB_Sample.  
@@ -60,5 +60,4 @@ DELETE FROM NB_Sample.CONTENT
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

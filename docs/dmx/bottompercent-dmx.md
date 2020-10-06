@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 04bfd39b8b1d94ec02f12ee599bfb0a21652b15c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4601399a2476b71f789b497fd022c60030def5e4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88431161"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727730"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -45,7 +45,7 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
  La fonction **BottomPercent** retourne les lignes les plus basses dans l’ordre croissant de classement. Le classement est basé sur la valeur évaluée de l' \<rank expression> argument pour chaque ligne, de telle sorte que la somme des \<rank expression> valeurs soit au moins égale au pourcentage spécifié par l' \<percent> argument. **BottomPercent** retourne le plus petit nombre d’éléments possible tout en respectant la valeur de pourcentage spécifiée.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous avez créé dans le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous avez créé dans le didacticiel sur l' [exploration de données de base](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
  Pour comprendre le fonctionnement de BottomPercent, il peut être utile d’exécuter d’abord une requête de prédiction qui retourne uniquement la table imbriquée.  
   
@@ -58,7 +58,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  Dans cet exemple, la valeur fournie en tant qu'entrée contient un guillemet simple et doit donc être placée dans une séquence d'échappement en la préfaçant avec un autre guillemet simple. Si vous n'êtes pas certain de la syntaxe permettant d'insérer un caractère d'échappement, vous pouvez utiliser le Générateur de requêtes de prédiction pour créer la requête. Lorsque vous sélectionnez la valeur dans la liste déroulante, le caractère d'échappement requis est inséré pour vous. Pour plus d’informations, consultez [créer une requête singleton dans le concepteur d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  Dans cet exemple, la valeur fournie en tant qu'entrée contient un guillemet simple et doit donc être placée dans une séquence d'échappement en la préfaçant avec un autre guillemet simple. Si vous n'êtes pas certain de la syntaxe permettant d'insérer un caractère d'échappement, vous pouvez utiliser le Générateur de requêtes de prédiction pour créer la requête. Lorsque vous sélectionnez la valeur dans la liste déroulante, le caractère d'échappement requis est inséré pour vous. Pour plus d’informations, consultez [créer une requête singleton dans le concepteur d’exploration de données](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Résultats de l'exemple :  
   
@@ -116,5 +116,4 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>Voir aussi  
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)  
-  
   

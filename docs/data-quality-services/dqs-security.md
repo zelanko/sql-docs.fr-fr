@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: dd320306e757a969b684bd6654a6cc0431cb717c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c576147845d5e6c2186def8eb79b7424f332a40
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487787"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725318"
 ---
 # <a name="dqs-security"></a>Sécurité DQS
 
@@ -41,6 +41,5 @@ ms.locfileid: "88487787"
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit comment créer un utilisateur et accorder des rôles DQS à l'aide de SQL Server Management Studio.|[Gérer des utilisateurs DQS dans SSMS](https://msdn.microsoft.com/library/955af01d-00da-4c51-9311-f3848749df54)|  
-  
+|Décrit comment créer un utilisateur et accorder des rôles DQS à l'aide de SQL Server Management Studio.|[Gérer des utilisateurs DQS dans SSMS](./data-quality-services-features-and-tasks.md)|  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 393d9d10fd882f1dedfbaac012b2dbd0ec200a3b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bffd325b4c940302ebcc4fef67c17f5f76c03a00
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88450008"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724653"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Ajout de connaissances à une base de connaissances
 
@@ -44,14 +44,14 @@ ms.locfileid: "88450008"
   
 -   Pour plus d'informations dans la documentation, consultez [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md).  
   
--   Pour obtenir une vidéo qui montre comment effectuer une découverte des connaissances, cliquez [ici](https://msdn.microsoft.com/sqlserver/hh323825.aspx).  
+-   Pour obtenir une vidéo qui montre comment effectuer une découverte des connaissances, cliquez [ici](../sql-server/index.yml).  
   
 ##  <a name="manage-data-values-in-a-domain"></a><a name="ManageDomain"></a> Gérer des valeurs de données dans un domaine  
  DQS vous permet de modifier et d'augmenter de façon interactive les métadonnées qui sont générées par l'activité de découverte des connaissances assistée par ordinateur. Vous effectuez ces opérations dans l'activité Gestion de l'arborescence du domaine, où vous pouvez appliquer une modification à une valeur de données spécifique.  
   
 -   Pour plus d'informations dans la documentation, consultez [Change Domain Values](../data-quality-services/change-domain-values.md).  
   
--   Pour obtenir une vidéo qui montre comment effectuer la gestion de l'arborescence du domaine, cliquez [ici](https://msdn.microsoft.com/sqlserver/hh323825.aspx). Notez que dans cette vidéo, vous modifiez des valeurs de domaine dans la page Gestion de l'arborescence du domaine de l'Assistant de découverte des connaissances. Vous pouvez également effectuer ces étapes dans la page Valeurs du domaine de l'activité Gestion de l'arborescence du domaine.  
+-   Pour obtenir une vidéo qui montre comment effectuer la gestion de l'arborescence du domaine, cliquez [ici](../sql-server/index.yml). Notez que dans cette vidéo, vous modifiez des valeurs de domaine dans la page Gestion de l'arborescence du domaine de l'Assistant de découverte des connaissances. Vous pouvez également effectuer ces étapes dans la page Valeurs du domaine de l'activité Gestion de l'arborescence du domaine.  
   
 ##  <a name="import-knowledge-from-a-dqs-file"></a><a name="DQSFile"></a> Importer des connaissances à partir d’un fichier. DQS  
  Vous pouvez importer un domaine à partir d'un fichier de données .dqs vers une base de connaissances existante, ou importer la totalité d'une base de connaissances d'un fichier .dqs vers une nouvelle base de connaissances. Pour ce faire, vous devez d'abord exporter un domaine ou une base de connaissances existant vers un fichier .dqs. Un fichier .dqs contenant un domaine inclut toutes les données du domaine ; un fichier .dqs contenant une base de connaissances contient toutes les informations de la base de connaissances, y compris les domaines et la stratégie de correspondance.  
@@ -72,5 +72,4 @@ ms.locfileid: "88450008"
  DQS est fourni avec une base de connaissances prégénérée appelée Données DQS, qui contient des domaines pour des données relatives à des sociétés et adresses des États-Unis. Cette base de connaissances peut être utilisée pour démarrer rapidement un projet sans créer une nouvelle base de connaissances. La base de connaissances Données DQS est en lecture seule, mais le gestionnaire de données peut créer une base de connaissances à partir de celle-ci.  
   
 -   Pour plus d'informations dans la documentation, consultez [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  
-  
   

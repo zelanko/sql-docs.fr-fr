@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b182e4a3a842065152b050ed1b428d71b7d0cf07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a08ec4809b281205386abad429afe339e0dbb1d1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426121"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727698"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -81,9 +81,8 @@ NATURAL PREDICTION JOIN
  La différence entre ces résultats montre l'effet de la normalisation. La valeur brute pour **CaseLikelihood** suggère que la probabilité de la casse est d’environ 20 pour cent ; Toutefois, lorsque vous normalisez les résultats, il devient évident que la probabilité de la casse est très faible.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
-  
   

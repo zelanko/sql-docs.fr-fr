@@ -15,18 +15,18 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4a4b9567865132d355a6285ecc046bfe6b4a3f7a
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864936"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726340"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Évaluer la préparation d’un SQL Server de données qui migrent vers Azure SQL Database à l’aide de la Assistant Migration de données
 
 La migration de centaines d’instances de SQL Server et de milliers de bases de données vers Azure SQL Database, notre offre PaaS (Platform as a service), est une tâche considérable. Pour simplifier autant que possible le processus, vous devez être certain de votre disponibilité relative pour la migration. Identifier les fruits à faible baisse, y compris les serveurs et les bases de données qui sont entièrement prêts ou qui nécessitent un minimum d’effort pour préparer la migration, facilite et accélère vos efforts.
 
-Cet article fournit des instructions pas à pas pour tirer parti de la [Assistant Migration de données](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017) pour résumer les résultats de préparation et les faire apparaître sur le Hub [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
+Cet article fournit des instructions pas à pas pour tirer parti de la [Assistant Migration de données](./dma-overview.md?view=sql-server-2017) pour résumer les résultats de préparation et les faire apparaître sur le Hub [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview) .
 
 >
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player?WT.mc_id=dataexposed-c9-niner]
@@ -59,7 +59,7 @@ Un projet de Azure Migrate est utilisé pour stocker les métadonnées de décou
 
     | **Zone géographique**  | **Région de l’emplacement de stockage** |
     | ------------- | ------------- |
-    | Asia | Asie Sud-Est ou Asie Est |
+    | Asie | Asie Sud-Est ou Asie Est |
     | Europe | Europe Sud ou Europe Ouest |
     | Royaume-Uni | Royaume-Uni Sud ou Royaume-Uni Ouest |
     | États-Unis | USA Centre ou USA Ouest 2 |
@@ -101,7 +101,7 @@ Une fois que vous avez créé un projet de migration, sous **Outils d’évaluat
 
     Si vous effectuez la mise à niveau de votre instance locale de SQL Server vers une version ultérieure de SQL Server ou vers SQL Server hébergé sur une machine virtuelle Azure, définissez le type de serveur source et cible sur **SQL Server**. Définissez le type de serveur cible sur **Azure SQL Managed instance** pour une évaluation de la disponibilité cible du Azure SQL Database (PaaS).
 
-3. Sélectionnez **Create** (Créer).
+3. Sélectionnez **Créer**.
 
    ![Interface Azure Migrate Assistant Migration de données](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 

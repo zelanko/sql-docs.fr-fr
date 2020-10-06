@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5388b3a4d59a80f3e4b030313cde4a5ea9361a3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 37a7a0e8be59136eb3ab6e0454c7910b9c9e3198
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88352915"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726160"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Traite l'objet d'exploration de données spécifié. Pour plus d’informations sur le traitement des modèles d’exploration de données et des structures d’exploration de données, consultez [exigences et considérations relatives au traitement &#40;&#41;d’exploration de données ](https://docs.microsoft.com/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
+  Traite l'objet d'exploration de données spécifié. Pour plus d’informations sur le traitement des modèles d’exploration de données et des structures d’exploration de données, consultez [exigences et considérations relatives au traitement &#40;&#41;d’exploration de données ](/analysis-services/data-mining/processing-requirements-and-considerations-data-mining).  
   
  Si une structure d'exploration de données est spécifiée, l'instruction traite la structure et tous ses modèles d'exploration de données associés. Si un modèle d'exploration de données est spécifié, l'instruction traite uniquement le modèle.  
   
@@ -35,7 +35,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Identificateur du modèle  
   
- *structure*  
+ *arborescence*  
  Identificateur de la structure  
   
  *colonnes de modèle mappées*  
@@ -49,7 +49,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  En utilisant la deuxième forme de syntaxe, insérez INTO *\<object>* . COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans l’apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
   
- Si vous utilisez **insert into** avec un modèle d’exploration de données ou une structure d’exploration de données, et que vous laissez les \<mapped model columns> \<source data query> arguments et, l’instruction se comporte comme **ProcessDefault**, en utilisant des liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [options et paramètres de traitement &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). L’exemple suivant illustre la syntaxe :  
+ Si vous utilisez **insert into** avec un modèle d’exploration de données ou une structure d’exploration de données, et que vous laissez les \<mapped model columns> \<source data query> arguments et, l’instruction se comporte comme **ProcessDefault**, en utilisant des liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [options et paramètres de traitement &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services). L’exemple suivant illustre la syntaxe :  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -59,7 +59,7 @@ INSERT INTO [MINING MODEL] <model>
   
  Le tableau ci-dessous donne une description du résultat de différentes formes de l'instruction, en fonction de l'état des objets.  
   
-|.|État des objets|Résultats|  
+|Instruction|État des objets|Résultats|  
 |---------------|----------------------|------------|  
 |INSÉRER DANS LE MODÈLE D’EXPLORATION DE DONNÉES*\<model>*|La structure d'exploration de données est traitée.|Le modèle d'exploration de données est traité.|  
 ||La structure d'exploration de données n'est pas traitée.|Le modèle et la structure d'exploration de données sont traités.|  
@@ -124,5 +124,4 @@ AS [Models]
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

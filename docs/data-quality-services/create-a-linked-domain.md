@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b2fb5b1a57b39a91735e213385c7756a7bb05984
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dbe71b94bfc71cca727f34bb6a4fd4e532455bd
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487862"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725376"
 ---
 # <a name="create-a-linked-domain"></a>Créer un domaine lié
 
@@ -63,7 +63,7 @@ ms.locfileid: "88487862"
   
 6.  Si nécessaire, vous pouvez modifier le nom ou la description du domaine lié sous l'onglet Propriétés du domaine.  
   
-7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+7.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="map-two-fields-to-linked-domains"></a><a name="Map"></a> Mapper deux champs à des domaines liés  
   
@@ -100,5 +100,4 @@ ms.locfileid: "88487862"
 -   Vous ne pouvez pas créer un domaine lié ou un domaine composite lié à un domaine composite.  
   
 -   Lorsque vous double-cliquez sur un domaine lié sous n'importe lequel des onglets Gestion de l'arborescence du domaine, le domaine s'ouvre pour modification, avec la chaîne de nom indiquant qu'il s'agit d'un domaine lié.  
-  
   

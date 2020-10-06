@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ecc213e023483245fb8b40a55de749c23ae16a84
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbeaa08cd118e032465f8456c0d7d7e111562f88
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426161"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727691"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -92,9 +92,8 @@ NATURAL PREDICTION JOIN
  [PredictStdev&#41;DMX &#40;](../dmx/predictstdev-dmx.md)   
  [PredictSupport&#41;DMX &#40;](../dmx/predictsupport-dmx.md)   
  [PredictVariance&#41;DMX &#40;](../dmx/predictvariance-dmx.md)   
- [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Algorithmes d’exploration de données &#40;Analysis Services d’exploration de données&#41;](/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Informations de référence sur les fonctions DMX&#41; Data Mining Extensions &#40;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)  
-  
   

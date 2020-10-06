@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: a0fa41dfff8edc6ddddeb420027a436f235e54a4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f45a4a1d0e709c6b8eb9bb7217d268420f31d07
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88353335"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726230"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -41,9 +41,9 @@ EXISTS(<subquery>)
  La liste des colonnes que vous ajoutez à l'argument de sous-requête d'EXISTS est inappropriée ; la fonction vérifie uniquement l'existence d'une ligne qui remplit la condition.  
   
 ## <a name="examples"></a>Exemples  
- Vous pouvez utiliser EXISTS et NOT EXISTS pour vérifier des conditions dans une table imbriquée. Cela est utile lors de la création d'un filtre qui contrôle les données utilisées pour l'apprentissage ou le test d'un modèle d'exploration de données. Pour plus d’informations, consultez [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Vous pouvez utiliser EXISTS et NOT EXISTS pour vérifier des conditions dans une table imbriquée. Cela est utile lors de la création d'un filtre qui contrôle les données utilisées pour l'apprentissage ou le test d'un modèle d'exploration de données. Pour plus d’informations, consultez [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
- L’exemple suivant est basé sur la `[Association]` structure et le modèle d’exploration de données que vous avez créés dans le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne uniquement les cas où le client a acheté au moins un produit Patch Kit.  
+ L’exemple suivant est basé sur la `[Association]` structure et le modèle d’exploration de données que vous avez créés dans le didacticiel sur l' [exploration de données de base](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). La requête retourne uniquement les cas où le client a acheté au moins un produit Patch Kit.  
   
 ```  
 SELECT * FROM [Association].CASES  
@@ -58,6 +58,5 @@ WHERE [[Model] = 'Patch kit'
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
- [Syntaxe de filtre de modèle et exemples &#40;Analysis Services - Exploration de données&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
-  
+ [Syntaxe de filtre de modèle et exemples &#40;Analysis Services - Exploration de données&#41;](/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   

@@ -14,12 +14,12 @@ ms.assetid: ''
 author: chugugrace
 ms.author: chugu
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9a7b077c3046b2f0c7e50b7ec20f68a5544e91e1
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 1dcae45aef82859a961202ff30c3daca18e909b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87822194"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726312"
 ---
 # <a name="perform-a-sql-server-integration-service-migration-assessment-with-data-migration-assistant"></a>Effectuer une évaluation de la migration du service d’intégration SQL Server avec Assistant Migration de données
 
@@ -73,6 +73,6 @@ La catégorie de problèmes de compatibilité fournit des fonctionnalités parti
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Vue d’ensemble de la migration des charges de travail SSIS locales vers SSIS dans ADF](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Migrer les packages SQL Server Integration Services vers une instance managée Azure SQL Managed Instance](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
-- [Redéployer des packages SQL Server Integration Services vers Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)
+- [Vue d’ensemble de la migration des charges de travail SSIS locales vers SSIS dans ADF](/azure/data-factory/scenario-ssis-migration-overview)
+- [Migrer les packages SQL Server Integration Services vers une instance managée Azure SQL Managed Instance](/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Redéployer des packages SQL Server Integration Services vers Azure SQL Database](/azure/dms/how-to-migrate-ssis-packages)

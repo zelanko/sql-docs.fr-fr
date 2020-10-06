@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e4a14565a0ac4b2aba19dd1ef0dfbbfdc4454b1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf8afcdf84c5d33e91971c58dff5c1f93c68fd08
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500914"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726126"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Sélectionnez à partir de la &lt; structure &gt; . PARFOIS
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -40,21 +40,21 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste d'expressions séparées par des virgules.  
   
  Une expression peut inclure des identificateurs de colonne, des fonctions définies par l'utilisateur et des fonctions VBA.  
   
- *structure*  
+ *arborescence*  
  Nom de la structure.  
   
  *expression de condition*  
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ Facultatif. Expression retournant une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  Si l'extraction est activée à la fois sur le modèle et sur la structure, les membres d'un rôle qui dispose d'autorisations d'extraction sur la structure d'exploration de données et le modèle d'exploration de données peuvent retourner des colonnes de structure qui n'étaient pas incluses dans le modèle en utilisant la syntaxe suivante :  
@@ -66,7 +66,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
  Par conséquent, pour protéger des données sensibles ou des informations personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder l’autorisation **AllowDrillThrough** sur une structure d’exploration de données ou un modèle d’exploration de données uniquement lorsque cela est nécessaire.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants sont basés sur la structure d’exploration de données, le publipostage ciblé, qui est basé sur la [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] base de données et les modèles d’exploration de données associés. Pour plus d’informations, consultez le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ Les exemples suivants sont basés sur la structure d’exploration de données, le publipostage ciblé, qui est basé sur la [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] base de données et les modèles d’exploration de données associés. Pour plus d’informations, consultez le didacticiel sur l' [exploration de données de base](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
 ### <a name="example-1-drill-through-to-structure-cases"></a>Exemple 1 : Extraction dans des cas de structure  
  L'exemple suivant retourne une liste des 500 clients les plus anciens dans la structure d'exploration de données Targeted Mailing. La requête retourne toutes les colonnes dans le modèle d'exploration de données, mais restreint les lignes aux clients qui ont acheté un vélo et les classe par âge. Vous pouvez aussi modifier la liste d'expressions pour retourner uniquement les colonnes dont vous avez besoin.  
@@ -94,5 +94,4 @@ WHERE IsTestCase();
  [Instructions de définition de données DMX&#41; Data Mining Extensions &#40;](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   

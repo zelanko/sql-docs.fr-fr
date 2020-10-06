@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2406141d9ffe5846e4dd26e75d471391992d1490
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc9127339e23443ea76c8f68820a96261991556c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88395185"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726071"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -38,7 +38,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
  La fonction **Tops** retourne les lignes les plus hauts dans l’ordre décroissant de classement en fonction de la valeur évaluée de l' \<rank expression> argument pour chaque ligne, de telle sorte que la somme des \<rank expression> valeurs soit au moins égale au total spécifié par l' \<sum> argument. **Tops** retourne le plus petit nombre d’éléments possible tout en respectant la valeur de somme spécifiée.  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous générez à l’aide du didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
+ L’exemple suivant crée une requête de prédiction sur le modèle d’association que vous générez à l’aide du didacticiel sur l' [exploration de données de base](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)).  
   
  Pour comprendre comment fonctionne le pourcentage de fonctionnement, il peut être utile d’exécuter d’abord une requête de prédiction qui retourne uniquement la table imbriquée.  
   
@@ -51,7 +51,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  Dans cet exemple, la valeur fournie en tant qu'entrée contient un guillemet simple et doit donc être placée dans une séquence d'échappement en la préfaçant avec un autre guillemet simple. Si vous n'êtes pas certain de la syntaxe permettant d'insérer un caractère d'échappement, vous pouvez utiliser le Générateur de requêtes de prédiction pour créer la requête. Lorsque vous sélectionnez la valeur dans la liste déroulante, le caractère d'échappement requis est inséré pour vous. Pour plus d’informations, consultez [créer une requête singleton dans le concepteur d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
+>  Dans cet exemple, la valeur fournie en tant qu'entrée contient un guillemet simple et doit donc être placée dans une séquence d'échappement en la préfaçant avec un autre guillemet simple. Si vous n'êtes pas certain de la syntaxe permettant d'insérer un caractère d'échappement, vous pouvez utiliser le Générateur de requêtes de prédiction pour créer la requête. Lorsque vous sélectionnez la valeur dans la liste déroulante, le caractère d'échappement requis est inséré pour vous. Pour plus d’informations, consultez [créer une requête singleton dans le concepteur d’exploration de données](/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer).  
   
  Résultats de l'exemple :  
   
@@ -103,5 +103,4 @@ NATURAL PREDICTION JOIN
  [Fonctions &#40;&#41;DMX ](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;&#41;DMX ](../dmx/general-prediction-functions-dmx.md)   
  [&#41;DMX &#40;](../dmx/toppercent-dmx.md)  
-  
   

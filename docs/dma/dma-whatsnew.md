@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-ms.openlocfilehash: 19753cddaba236d0de75e492962bd6c8ad2675e2
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 11bbf0a39ed9a9bbaa19992f98e4e23d50d6fbe9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988499"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727758"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Nouveautés de Data Migration Assistant
 
@@ -83,7 +83,7 @@ Le flux de travail d’évaluation vous aide à détecter les problèmes suivant
   - Changements de comportement : les objets de schéma signalés peuvent continuer à fonctionner, mais ils peuvent présenter un comportement différent, par exemple une dégradation des performances.
   - Problèmes d’information : ces objets n’ont pas d’impact sur la migration, mais peuvent avoir été dépréciés des versions SQL Server.
 
-Une fois l’évaluation terminée, utilisez notre [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) pour effectuer la migration de vos bases de données SQL Server vers SQL Managed instance.  DMS prend en charge les migrations de base de données [hors connexion](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (ponctuelles) et [en ligne](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (temps d’arrêt minimal) vers SQL Managed instance.
+Une fois l’évaluation terminée, utilisez notre [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) pour effectuer la migration de vos bases de données SQL Server vers SQL Managed instance.  DMS prend en charge les migrations de base de données [hors connexion](/azure/dms/tutorial-sql-server-to-managed-instance) (ponctuelles) et [en ligne](/azure/dms/tutorial-sql-server-managed-instance-online) (temps d’arrêt minimal) vers SQL Managed instance.
 
 ## <a name="data-migration-assistant-v40"></a>Assistant Migration de données v 4.0
 
@@ -141,7 +141,7 @@ Si le fichier de sauvegarde physique se trouve sur un ordinateur exécutant :
 
 ### <a name="migrating-windows-logins"></a>Migration des connexions Windows
 
-Tandis que la migration des connexions Active Directory (AD) est officiellement prise en charge par SQL Server 2017 sur Linux, elle nécessite une configuration supplémentaire pour fonctionner correctement. Reportez-vous à l’article [Active Directory l’authentification avec SQL Server sur Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) pour obtenir des informations détaillées sur la configuration des connexions Active Directory sur SQL Server 2017 sur Linux. Après avoir effectué la configuration requise, l’installation est terminée et vous pouvez migrer Active Directory connexions comme d’habitude. L’authentification SQL standard fonctionne comme prévu sans aucune configuration supplémentaire.
+Tandis que la migration des connexions Active Directory (AD) est officiellement prise en charge par SQL Server 2017 sur Linux, elle nécessite une configuration supplémentaire pour fonctionner correctement. Reportez-vous à l’article [Active Directory l’authentification avec SQL Server sur Linux](../linux/sql-server-linux-active-directory-authentication.md) pour obtenir des informations détaillées sur la configuration des connexions Active Directory sur SQL Server 2017 sur Linux. Après avoir effectué la configuration requise, l’installation est terminée et vous pouvez migrer Active Directory connexions comme d’habitude. L’authentification SQL standard fonctionne comme prévu sans aucune configuration supplémentaire.
 
 ## <a name="data-migration-assistant-v32"></a>Assistant Migration de données v 3.2
 

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3a8c65f6d0321ae74d18d32bd3c5208bbc2df5b8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: caefcdc2e081c0e8d0e7bee329d4dc5d4d5cfa22
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88413265"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727650"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt; Model &gt; (DMX)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -31,7 +31,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- facultatif. Entier spécifiant le nombre de lignes à retourner.  
+ Facultatif. Entier spécifiant le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste séparée par des virgules des identificateurs des colonnes associées (dérivées du modèle) ou expressions.  
@@ -43,7 +43,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- facultatif. Expression qui retourne une valeur scalaire.  
+ Facultatif. Expression retournant une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  L’instruction **Select distinct from** ne fonctionne qu’avec une seule colonne ou avec un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
@@ -63,7 +63,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continue|Point milieu des valeurs de la colonne|  
   
 ## <a name="discrete-column-example"></a>Exemple de colonne discrète  
- L’exemple de code suivant est basé sur le `[TM Decision Tree]` modèle que vous créez dans le didacticiel sur l' [exploration de données de base](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne les valeurs uniques qui existent dans la colonne discrète `Gender`.  
+ L’exemple de code suivant est basé sur le `[TM Decision Tree]` modèle que vous créez dans le didacticiel sur l' [exploration de données de base](/previous-versions/sql/sql-server-2016/ms167167(v=sql.130)). La requête retourne les valeurs uniques qui existent dans la colonne discrète `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -103,7 +103,7 @@ FROM [TM Decision Tree]
  L'exemple de code suivant retourne le point milieu et les valeurs maximales et minimales de chaque compartiment créé par l'algorithme pour la colonne, [`Yearly Income]`. Pour reproduire les résultats de cet exemple, vous devez créer une nouvelle structure d'exploration de données identique à `[Targeted Mailing]`. Dans l’Assistant, modifiez le type de contenu de la `Yearly Income` colonne de **continue** en **discrétisation**.  
   
 > [!NOTE]  
->  Vous pouvez également modifier le modèle d'exploration de données créé dans le Didacticiel sur l'exploration de données de base afin de discrétiser la colonne de structure d'exploration de données, [`Yearly Income]`. Pour plus d’informations sur la façon de procéder, consultez [modifier la discrétisation d’une colonne dans un modèle d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model). Toutefois, le fait de modifier le discrétisation de la colonne force le retraitement de la structure d'exploration de données et modifie les résultats des autres modèles créés à l'aide de cette structure.  
+>  Vous pouvez également modifier le modèle d'exploration de données créé dans le Didacticiel sur l'exploration de données de base afin de discrétiser la colonne de structure d'exploration de données, [`Yearly Income]`. Pour plus d’informations sur la façon de procéder, consultez [modifier la discrétisation d’une colonne dans un modèle d’exploration de données](/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model). Toutefois, le fait de modifier le discrétisation de la colonne force le retraitement de la structure d'exploration de données et modifie les résultats des autres modèles créés à l'aide de cette structure.  
   
 ```  
 SELECT DISTINCT [Yearly Income] AS [Bucket Average],   
@@ -138,5 +138,4 @@ FROM [TM Decision Tree]
  [SÉLECTIONNER &#40;&#41;DMX ](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;les instructions de manipulation de données DMX&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
-  
   
