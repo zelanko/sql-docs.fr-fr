@@ -27,12 +27,12 @@ ms.assetid: 8c805ae2-91ed-4133-96f6-9835c908f373
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1f3c3e7cf586cfe70fc1e8d4198a6708c36d68b
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: ae54518c8ff2d7a7ad4b6f55dd3b16ce9d0528eb
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024391"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529440"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -215,7 +215,6 @@ Le nouveau principal de propriétaire doit être l’un des éléments suivants�
 -   Un utilisateur fédéré (et pas un groupe) présent dans Azure AD.  
 -   Un utilisateur géré (et pas un groupe) ou une application présents dans Azure AD.    
 
-> [!NOTE]  
 > Si le nouveau propriétaire est un utilisateur Azure Active Directory, il ne peut pas exister comme utilisateur dans la base de données dans laquelle le nouveau propriétaire sera le nouveau propriétaire de la base de données (DBO). Un tel utilisateur Azure AD doit tout d’abord être supprimé de la base de données avant d’exécuter l’instruction ALTER AUTHORIZATION qui affecte la propriété de la base de données au nouvel utilisateur. Pour plus d’informations sur la configuration d’utilisateur Azure AD avec SQL Database, consultez [Connexion à SQL Database ou [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] en utilisant l’authentification Azure AD](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).   
   
 **Configuration requise pour la personne qui exécute l’instruction ALTER AUTHORIZATION :**  

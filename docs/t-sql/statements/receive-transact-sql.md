@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3b79e3a75f0b3590bcc0485a4d24b2a001bd8390
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b299ace817088af33732d9e4a9984d7978709f6c
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548961"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498183"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "89548961"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
         <column_specifier> [ ,...n ]  
@@ -183,14 +182,14 @@ ms.locfileid: "89548961"
 ### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>R. Réception de toutes les colonnes de tous les messages d'un groupe de conversations  
  L'exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations suivant disponible dans la file d'attente `ExpenseQueue`. L'instruction retourne les messages en tant que jeu de résultats.  
   
-```  
+```sql  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>B. Réception des colonnes spécifiées de tous les messages d'un groupe de conversations  
  L'exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations suivant disponible dans la file d'attente `ExpenseQueue`. L'instruction retourne les messages en tant que jeu de résultats qui contient les colonnes `conversation_handle`, `message_type_name` et `message_body`.  
   
-```  
+```sql  
 RECEIVE conversation_handle, message_type_name, message_body  
 FROM ExpenseQueue ;  
 ```  
@@ -198,14 +197,14 @@ FROM ExpenseQueue ;
 ### <a name="c-receiving-the-first-available-message-in-the-queue"></a>C. Réception du premier message disponible de la file d'attente  
  L'exemple suivant montre comment recevoir le premier message disponible de la file d'attente `ExpenseQueue` en tant que jeu de résultats.  
   
-```  
+```sql  
 RECEIVE TOP (1) * FROM ExpenseQueue ;  
 ```  
   
 ### <a name="d-receiving-all-messages-for-a-specified-conversation"></a>D. Réception de tous les messages d'une conversation spécifique  
  L'exemple suivant montre comment recevoir tous les messages disponibles de la conversation spécifiée dans la file d'attente `ExpenseQueue` en tant que jeu de résultats.  
   
-```  
+```sql  
 DECLARE @conversation_handle UNIQUEIDENTIFIER ;  
   
 SET @conversation_handle = <retrieve conversation from database> ;  
@@ -218,7 +217,7 @@ WHERE conversation_handle = @conversation_handle ;
 ### <a name="e-receiving-messages-for-a-specified-conversation-group"></a>E. Réception des messages d'un groupe de conversations spécifique  
  L'exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations spécifié dans la file d'attente `ExpenseQueue` en tant que jeu de résultats.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 SET @conversation_group_id =   
@@ -232,7 +231,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="f-receiving-into-a-table-variable"></a>F. Réception dans une variable de table  
  L'exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations spécifié dans la file d'attente `ExpenseQueue` dans une variable de table.  
   
-```  
+```sql  
 DECLARE @conversation_group_id UNIQUEIDENTIFIER ;  
   
 DECLARE @procTable TABLE(  
@@ -264,7 +263,7 @@ WHERE conversation_group_id = @conversation_group_id ;
 ### <a name="g-receiving-messages-and-waiting-indefinitely"></a>G. Réception des messages et délai d'attente indéfini  
  L’exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations suivant disponible dans la file d’attente `ExpenseQueue`. L'instruction attend qu'au moins un message soit disponible, puis retourne un jeu de résultats qui contient toutes les colonnes des messages.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue) ;  
@@ -273,7 +272,7 @@ WAITFOR (
 ### <a name="h-receiving-messages-and-waiting-for-a-specified-interval"></a>H. Réception des messages et intervalle d'attente spécifié  
  L’exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations suivant disponible dans la file d’attente `ExpenseQueue`. L'instruction attend 60 secondes ou qu'au moins un message soit disponible, selon ce qui se produit en premier. L'instruction retourne un jeu de résultats qui contient toutes les colonnes des messages, si au moins un message est disponible. Dans le cas contraire, l'instruction retourne un jeu de résultats vide.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE *  
     FROM ExpenseQueue ),  
@@ -283,7 +282,7 @@ TIMEOUT 60000 ;
 ### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>I. Réception de messages, modification du type d'une colonne  
  L’exemple suivant montre comment recevoir tous les messages disponibles du groupe de conversations suivant disponible dans la file d’attente `ExpenseQueue`. Si le type de message indique que le message contient un document XML, l'instruction convertit le corps du message en document XML.  
   
-```  
+```sql  
 WAITFOR (  
     RECEIVE message_type_name,  
         CASE  
@@ -297,7 +296,7 @@ TIMEOUT 60000 ;
 ### <a name="j-receiving-a-message-extracting-data-from-the-message-body-retrieving-conversation-state"></a>J. Réception d'un message, extraction de données du corps du message, récupération de l'état de la conversation  
  L'exemple suivant montre comment recevoir les messages disponibles suivants du groupe de conversations suivant disponible dans la file d'attente `ExpenseQueue`. Si le message est de type `//Adventure-Works.com/Expenses/SubmitExpense`, l'instruction extrait l'ID de l'employé et une liste d'éléments du corps du message. L'instruction récupère également l'état de la conversation dans la table `ConversationState`.  
   
-```  
+```sql  
 WAITFOR(  
     RECEIVE   
     TOP(1)  

@@ -15,12 +15,12 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7704b286c89942ccb7b6345789514b11a9ec3765
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 113b8dfd288eccff391f9c72df3647955770b916
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227153"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498065"
 ---
 # <a name="permissions-grant-deny-revoke-azure-synapse-analytics-parallel-data-warehouse"></a>Autorisations : GRANT, DENY, REVOKE (Azure Synapse Analytics, Parallel Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -269,55 +269,55 @@ REVOKE
 ### <a name="a-granting-a-server-level-permission-to-a-login"></a>R. Accord d’une autorisation de niveau serveur à une connexion  
  Les deux instructions suivantes accordent une autorisation de niveau serveur à une connexion.  
   
-```  
+```sql  
 GRANT CONTROL SERVER TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
 ### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Accord d’une autorisation de niveau serveur à une connexion  
  L’exemple suivant accorde une autorisation de niveau serveur sur une connexion à un principal de serveur (une autre connexion).  
   
-```  
+```sql  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
 ### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. Accord d’une autorisation de niveau base de données à un utilisateur  
  L’exemple suivant accorde une autorisation de niveau base de données sur un utilisateur à un principal de base de données (un autre utilisateur).  
   
-```  
+```sql  
 GRANT VIEW DEFINITION ON USER::[Ted] TO Mary;  
 ```  
   
 ### <a name="d-granting-denying-and-revoking-a-schema-permission"></a>D. Accord, refus et révocation d’une autorisation de schéma  
  L’instruction **GRANT** suivante accorde à Yuen la possibilité de sélectionner des données dans une table ou une vue dans le schéma dbo.  
   
-```  
+```sql  
 GRANT SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  L’instruction **DENY** suivante empêche Yuen de sélectionner des données dans une table ou une vue dans le schéma dbo. Yuen ne peut pas lire les données, même s’il obtient l’autorisation d’une autre manière, par exemple, par le biais d’une appartenance au rôle.  
   
-```  
+```sql  
 DENY SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
  L’instruction **REVOKE** suivante supprime l’autorisation **DENY**. Les autorisations explicites de Yuen sont neutres désormais. Yuen peut sélectionner des données dans n’importe quelle table par le biais d’une autre autorisation implicite comme une appartenance à un rôle.  
   
-```  
+```sql  
 REVOKE SELECT ON SCHEMA::dbo TO [Yuen];  
 ```  
   
 ### <a name="e-demonstrating-the-optional-object-clause"></a>E. Démonstration de la clause facultative OBJECT::  
  Comme OBJECT est la classe par défaut d’une instruction d’autorisation, les deux instructions suivantes sont identiques. La clause **OBJECT::** est facultative.  
   
-```  
+```sql  
 GRANT UPDATE ON OBJECT::dbo.StatusTable TO [Ted];  
 ```  
   
-```  
+```sql  
 GRANT UPDATE ON dbo.StatusTable TO [Ted];  
 ```  
   

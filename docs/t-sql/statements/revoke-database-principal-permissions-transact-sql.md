@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8114ca6e50f28c4c603285affd05478c297bf881
-ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.openlocfilehash: 5926b71c2626ddea858190b6a135151abaa28586
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/20/2020
-ms.locfileid: "86485140"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497784"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de principal de base de données (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,6 @@ ms.locfileid: "86485140"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -165,7 +164,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>R. Révocation d'une autorisation CONTROL sur un utilisateur à partir d'un autre utilisateur  
  Dans l'exemple ci-dessous, l'autorisation `CONTROL` sur l'utilisateur [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]`Wanida` est révoquée pour l'utilisateur `RolandX`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE CONTROL ON USER::Wanida FROM RolandX;  
 GO  
@@ -174,7 +173,7 @@ GO
 ### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. Révocation d'une autorisation VIEW DEFINITION sur un rôle à partir d'un utilisateur auquel l'autorisation avait été accordée avec l'option WITH GRANT OPTION  
  Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]`SammamishParking` est révoquée pour l'utilisateur de base de données `JinghaoLiu`. L'option `CASCADE` est spécifiée car l'utilisateur `JinghaoLiu` avait obtenu l'autorisation `VIEW DEFINITION` avec l'option `WITH GRANT OPTION`.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 REVOKE VIEW DEFINITION ON ROLE::SammamishParking   
     FROM JinghaoLiu CASCADE;  
@@ -186,7 +185,7 @@ GO
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
-```  
+```sql  
 USE AdventureWorks2012;  
 REVOKE IMPERSONATE ON USER::HamithaL FROM AccountsPayable17;  
 GO    

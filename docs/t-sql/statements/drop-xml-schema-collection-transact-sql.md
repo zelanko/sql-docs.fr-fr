@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f644ba5a1e42c309cc481d2ba7b42e6973d940e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77977886f4ccfca9fa41e4bdb685ac76ff96ff99
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496712"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497854"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ Supprime toute la collection de schémas XML et tous ses composants.
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```syntaxsql
 DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier  
 ```  
   
@@ -53,7 +52,7 @@ Identifie le nom du schéma relationnel. Si cet argument n'est pas spécifié, l
 *sql_identifier*  
 Nom de la collection de schémas XML à supprimer.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
 La suppression d'une collection de schémas XML est une opération transactionnelle. Lorsque vous supprimez une collection de schémas XML dans une transaction et que vous annulez cette transaction par la suite, la collection n'est pas supprimée.  
   
 Vous ne pouvez pas supprimer une collection de schémas XML en cours d'utilisation. Donc, la collection à supprimer ne peut pas être :  
@@ -64,7 +63,7 @@ Vous ne pouvez pas supprimer une collection de schémas XML en cours d'utilisat
   
 -   référencée dans une fonction ou une procédure stockée liée à un schéma. Par exemple, la fonction suivante verrouille la collection de schémas XML `MyCollection` car elle spécifie `WITH SCHEMABINDING`. Si vous la supprimez, il n'y a aucun verrou sur XML SCHEMA COLLECTION.  
   
-    ```  
+    ```sql  
     CREATE FUNCTION dbo.MyFunction()  
     RETURNS int  
     WITH SCHEMABINDING  
@@ -82,7 +81,7 @@ La suppression d'une collection de schémas XML nécessite l'autorisation DROP 
 ## <a name="examples"></a>Exemples  
 Le code exemple suivant montre comment supprimer une collection de schémas XML.  
   
-```  
+```sql  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  
 GO  
 ```  

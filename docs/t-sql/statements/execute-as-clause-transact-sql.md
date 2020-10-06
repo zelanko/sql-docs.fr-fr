@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 999773d8e8406dac20f86e9f19a2b886a4988619
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e41272ce78e5bfb0dd1a0f746a11d6700ac11c59
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88358405"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498157"
 ---
 # <a name="execute-as-clause-transact-sql"></a>Clause EXECUTE AS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,7 +60,6 @@ Queues
 ```  
   
 ```syntaxsql
-  
 -- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
@@ -155,7 +154,7 @@ DDL Triggers with Database Scope
   
  Lorsque l'instruction `CREATE PROCEDURE` suivante est exécutée, l'utilisateur `CompanyDomain\SqlUser1` est implicitement créé en tant que principal dans la base de données `Sales`.  
   
-```  
+```sql  
 USE Sales;  
 GO  
 CREATE PROCEDURE dbo.usp_Demo  
@@ -170,7 +169,7 @@ GO
   
  Supposons que `SqlUser2` appelle la procédure stockée suivante.  
   
-```  
+```sql  
 CREATE PROCEDURE dbo.usp_Demo  
 WITH EXECUTE AS 'SqlUser1'  
 AS  
@@ -202,7 +201,7 @@ GO
 ## <a name="examples"></a>Exemples  
  Le code exemple suivant crée une procédure stockée dans la base de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et affecte le contexte d'exécution à `OWNER`.  
   
-```  
+```sql  
 CREATE PROCEDURE HumanResources.uspEmployeesInDepartment   
 @DeptValue int  
 WITH EXECUTE AS OWNER  
@@ -221,7 +220,6 @@ GO
 -- Execute the stored procedure by specifying department 5.  
 EXECUTE HumanResources.uspEmployeesInDepartment 5;  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

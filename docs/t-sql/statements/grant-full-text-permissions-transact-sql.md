@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e466840015f0b5d82a8e6430434239db6655ee81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d966e11f3bb545ec4ac71a412958fc36de6885ee
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472225"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497741"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT - Autorisations relatives au texte intégral (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,7 @@ AS *granting_principal*
 ### <a name="a-granting-permissions-to-a-full-text-catalog"></a>R. Octroi d'autorisations à un catalogue de texte intégral  
  L'exemple suivant accorde à `Ted` l'autorisation `CONTROL` pour le catalogue de texte intégral `ProductCatalog`.  
   
-```  
+```sql  
 GRANT CONTROL  
     ON FULLTEXT CATALOG :: ProductCatalog  
     TO Ted ;  
@@ -147,7 +147,7 @@ GRANT CONTROL
 ### <a name="b-granting-permissions-to-a-stoplist"></a>B. Octroi d'autorisations à une liste de mots vides  
  L'exemple suivant accorde à `Mary` l'autorisation `VIEW DEFINITION` pour la liste de mots vides de texte intégral `ProductStoplist`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON FULLTEXT STOPLIST :: ProductStoplist  
     TO Mary ;  

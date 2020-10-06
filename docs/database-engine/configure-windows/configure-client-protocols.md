@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5cca0b54c983fe7a4ef122a45070e53d2143a05e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cdb6f1d2db5a2a390f75a4215dce490625fcc699
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85697974"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669566"
 ---
 # <a name="configure-client-protocols"></a>configurer des protocoles clients
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "85697974"
   
 -   Configurer une application cliente spécifique de manière à ce qu'elle utilise un protocole réseau particulier, en créant un alias. Pour plus d’informations, consultez [Créer ou supprimer un alias de serveur devant être utilisé par un client &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md).  
   
--   Certaines applications clientes, telles que sqlcmd.exe, peuvent spécifier le protocole dans la chaîne de connexion. Pour plus d’informations, consultez [Se connecter au moteur de base de données avec sqlcmd](../../relational-databases/scripting/sqlcmd-connect-to-the-database-engine.md).  
+-   Certaines applications clientes, telles que sqlcmd.exe, peuvent spécifier le protocole dans la chaîne de connexion. Pour plus d’informations, consultez [Se connecter au moteur de base de données avec sqlcmd](../../ssms/scripting/sqlcmd-connect-to-the-database-engine.md).  
   
 ##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
   
@@ -68,5 +68,4 @@ ms.locfileid: "85697974"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer l’option de configuration du serveur remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  
-  
   

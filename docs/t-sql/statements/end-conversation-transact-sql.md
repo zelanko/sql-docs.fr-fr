@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6eafb66e4cc5f14803027d26f88dbf4baafbcd0c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 94fcbdfe06b99e0fb66cb6d462512c7d2a283914
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540633"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497938"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -42,7 +42,6 @@ ms.locfileid: "89540633"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  
      | [ WITH CLEANUP ]  
@@ -96,14 +95,14 @@ END CONVERSATION conversation_handle
 ### <a name="a-ending-a-conversation"></a>R. Fin d'une conversation  
  Cet exemple met fin au dialogue spécifié par `@dialog_handle`.  
   
-```  
+```sql 
 END CONVERSATION @dialog_handle ;  
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>B. Fin d'une conversation avec une erreur  
  L'exemple suivant met fin au dialogue spécifié par `@dialog_handle` avec une erreur si l'instruction de traitement signale une erreur. Notez qu'il s'agit d'une approche très simplifiée de la gestion des erreurs qui ne convient pas à certaines applications.  
   
-```  
+```sql  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  
         @ErrorSave INT,  
         @ErrorDesc NVARCHAR(100) ;  
@@ -128,7 +127,7 @@ COMMIT TRANSACTION ;
 ### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. Nettoyage d'une conversation qui ne peut pas se terminer normalement  
  Cet exemple met fin au dialogue spécifié par `@dialog_handle`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supprime immédiatement tous les messages de la file d'attente du service et de la file d'attente de transmission, sans en notifier le service distant. Dans la mesure où le service distant n’est pas averti, utilisez cette solution dans le seul cas où le service distant n’est pas en mesure de recevoir de message **EndDialog** ou **Error**.  
   
-```  
+```sql  
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   

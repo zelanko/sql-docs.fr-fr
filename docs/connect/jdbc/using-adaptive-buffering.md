@@ -1,6 +1,6 @@
 ---
-description: Utilisation de la mise en mémoire tampon adaptative
-title: Utilisation de la mise en mémoire tampon adaptative | Microsoft Docs
+title: Utilisation de la mise en mémoire tampon adaptative
+description: Découvrez comment la mise en mémoire tampon adaptative élimine la surcharge des curseurs de serveur lors de la récupération de données de valeur élevée à l’aide du pilote Microsoft JDBC pour SQL Server.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 720baad5c144148fae222bc19bb268aa9adae463
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f0e31c679ab1c85e5bbee9f3e66336c20e86521
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487942"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603391"
 ---
 # <a name="using-adaptive-buffering"></a>Utilisation de la mise en mémoire tampon adaptative
 
