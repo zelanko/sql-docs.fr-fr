@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c31375615a55d6ae8dfa12e9ffddfe921c066c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 11492d2488fabdc4128844bca60c3ecbfac58ad6
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042840"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670683"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Résoudre les problèmes : Dépassement de RPO du groupe de disponibilité
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -70,7 +70,7 @@ Pour remédier à ce problème, essayez d’augmenter votre bande passante rése
  Le risque de perte de données est éliminé dès que le bloc de journal est renforcé sur le fichier journal. Il est donc impératif d’isoler le fichier journal du fichier de données. Si le fichier journal et le fichier de données sont mappés au même disque dur, la charge de travail de création de rapports caractérisée par des lectures intensives sur le fichier de données consomme les mêmes ressources d’E/S que l’opération de renforcement du journal. Si cette dernière est lente, l’envoi des accusés de réception au réplica principal peut ralentir, ce qui peut entraîner une activation excessive du contrôle de flux et de longs délais d’attente au niveau du contrôle flux.  
   
 ### <a name="diagnosis-and-resolution"></a>Diagnostic et résolution  
- Si vous avez déterminé que le réseau n’est pas affecté par une latence élevée ou un débit faible, examinez le réplica secondaire à la recherche de contentions au niveau des E/S. Les requêtes de [SQL Server : Minimiser les E/S disque](https://technet.microsoft.com/magazine/jj643251.aspx) sont utiles pour identifier les contentions. Des exemples dérivés de cet article sont proposés ci-dessous à toutes fins utiles.  
+ Si vous avez déterminé que le réseau n’est pas affecté par une latence élevée ou un débit faible, examinez le réplica secondaire à la recherche de contentions au niveau des E/S. Les requêtes de [SQL Server : Minimiser les E/S disque](/previous-versions/technet-magazine/jj643251(v=msdn.10)) sont utiles pour identifier les contentions. Des exemples dérivés de cet article sont proposés ci-dessous à toutes fins utiles.  
   
  Le script suivant vous permet de voir le nombre de lectures et d’écritures sur chaque fichier de données et de journal pour chaque base de données de disponibilité en cours d’exécution sur une instance de SQL Server. Les résultats sont triés selon le temps moyen de blocage des E/S, en millisecondes. Notez qu’il s’agit d’un cumul des valeurs générées depuis le dernier démarrage de l’instance du serveur. Vous devez donc calculer la différence entre deux mesures après un certain temps.  
   
@@ -127,6 +127,5 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
  Si vous identifiez un goulot d’étranglement au niveau des E/S et que vous avez placé le fichier journal et le fichier de données sur le même disque dur, la première chose à faire consiste à placer le fichier de données et le fichier journal sur des disques distincts. Cette pratique empêche la charge de travail de création de rapports de perturber le chemin de transfert du réplica principal au tampon journal et sa capacité à renforcer la transaction sur le réplica secondaire.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Résolution des problèmes de performances dans SQL Server (s’applique à SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [Résolution des problèmes de performances dans SQL Server (s’applique à SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

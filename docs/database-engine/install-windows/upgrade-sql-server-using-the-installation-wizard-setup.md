@@ -14,12 +14,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 27f8f9e04bc78fb382a2f40826bc67215839460d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900205"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670237"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation (Installation)
 
@@ -46,7 +46,7 @@ L’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 Vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine doté des autorisations de lecture et d'exécution sur le partage distant, et qui représente un administrateur local.  
   
 > [!WARNING]  
->  N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour plus d’informations sur l’ajout de fonctionnalités à une instance mise à niveau de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server &#40;Installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+>  N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour plus d’informations sur l’ajout de fonctionnalités à une instance mise à niveau de [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server &#40;Installation&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
   
  Si vous procédez à une mise à niveau de [!INCLUDE[ssDE](../../includes/ssde-md.md)], passez en revue [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md) , puis effectuez les tâches suivantes, en fonction de votre environnement :  
   
@@ -120,7 +120,7 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
   
      Lorsque vous avez terminé de spécifier les informations de connexion pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , cliquez sur **Suivant**.  
   
-15. Dans la page des options de mise à niveau de recherche en texte intégral, spécifiez les options de mise à niveau pour les bases de données mises à niveau. Pour plus d’informations, consultez [Options de mise à niveau de recherche en texte intégral](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+15. Dans la page des options de mise à niveau de recherche en texte intégral, spécifiez les options de mise à niveau pour les bases de données mises à niveau. Pour plus d’informations, consultez [Options de mise à niveau de recherche en texte intégral](./install-sql-server.md).  
   
 16. La fenêtre Règles de fonctionnalité avancera automatiquement si toutes les règles passent.  
   
@@ -143,6 +143,5 @@ Vous devez exécuter le programme d'installation en tant qu'administrateur. Si v
   
 ## <a name="see-also"></a>Voir aussi  
  [Mettre à niveau SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
- [Compatibilité descendante_supprimé](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
-  
+ [Compatibilité descendante_supprimé](/previous-versions/sql/sql-server-2016/cc280407(v=sql.130))  
   

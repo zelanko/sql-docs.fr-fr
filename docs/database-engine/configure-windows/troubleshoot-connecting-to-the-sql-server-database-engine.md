@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbd46a6a2de2e46841eb8cc7b40542d8073e82c6
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: ceca51cf35e1a2e061d841336f0ab7a91b97dc9a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988641"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670730"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -193,7 +193,7 @@ Une fois que vous pouvez vous connecter à l’aide de TCP sur le même ordinate
    - Démarrez le service SQL Server Browser. Consultez les instructions pour [démarrer le navigateur dans le Gestionnaire de configuration SQL Server](#startbrowser).
    - Le service SQL Server Browser est bloqué par le pare-feu. Ouvrez le port UDP 1434 dans le pare-feu. Revenez à la section [Ouverture d’un port dans le pare-feu](#open-a-port-in-the-firewall). Assurez-vous que vous ouvrez un port UDP et non un port TCP.
    - Les informations du port UDP 1434 sont bloquées par un routeur. Les communications UDP (protocole UDP) ne sont pas conçues pour passer par des routeurs. Cela empêche le réseau d’être rempli par un trafic de faible priorité. Vous pouvez peut-être configurer votre routeur pour transférer le trafic UDP, ou vous pouvez choisir de toujours fournir le numéro de port quand vous vous connectez.
-   - Si l’ordinateur client utilise Windows 7 ou Windows Server 2008 (ou un système d’exploitation plus récent), le trafic UDP peut être supprimé par le système d’exploitation client, car la réponse du serveur est retournée à partir d’une adresse IP différente de celle de la requête. Il s’agit d’une fonctionnalité de sécurité qui bloque le « mappage de source libre ». Pour plus d’informations, consultez la section **Adresses IP de serveurs multiples** de la rubrique de la documentation en ligne [Dépannage : expiration du délai d’attente](https://msdn.microsoft.com/library/ms190181.aspx). Il s’agit d’un article de SQL Server 2008 R2, mais les principes s’appliquent toujours. Vous pouvez peut-être configurer le client pour utiliser l’adresse IP correcte, ou vous pouvez choisir de toujours fournir le numéro de port quand vous vous connectez.
+   - Si l’ordinateur client utilise Windows 7 ou Windows Server 2008 (ou un système d’exploitation plus récent), le trafic UDP peut être supprimé par le système d’exploitation client, car la réponse du serveur est retournée à partir d’une adresse IP différente de celle de la requête. Il s’agit d’une fonctionnalité de sécurité qui bloque le « mappage de source libre ». Pour plus d’informations, consultez la section **Adresses IP de serveurs multiples** de la rubrique de la documentation en ligne [Dépannage : expiration du délai d’attente](/previous-versions/sql/sql-server-2008-r2/ms190181(v=sql.105)). Il s’agit d’un article de SQL Server 2008 R2, mais les principes s’appliquent toujours. Vous pouvez peut-être configurer le client pour utiliser l’adresse IP correcte, ou vous pouvez choisir de toujours fournir le numéro de port quand vous vous connectez.
 
 3. Une fois que vous pouvez vous connecter à l’aide de l’adresse IP (ou de l’adresse IP et du nom de l’instance pour une instance nommée), essayez de vous connecter en utilisant le nom de l’ordinateur (ou le nom de l’ordinateur et le nom de l’instance pour une instance nommée). Placez `tcp:` devant le nom de l’ordinateur pour forcer une connexion TCP/IP. Par exemple, pour l’instance par défaut sur un ordinateur nommé `ACCNT27`utilisez `tcp:ACCNT27` . Pour une instance nommée appelée `PAYROLL`sur cet ordinateur, utilisez `tcp:ACCNT27\PAYROLL` . Si vous pouvez vous connecter à l’aide de l’adresse IP, mais pas avec le nom de l’ordinateur, vous avez un problème de résolution de noms. Revenez à la section **Test de la connectivité TCP/IP**, section 4.
 

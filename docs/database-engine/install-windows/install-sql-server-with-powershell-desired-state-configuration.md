@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f33fff4f29650e54803d47dc2188ec67d5594f89
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 5a9770cd648fe804ee973878adee27b2d55080d0
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472381"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671062"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>Installer SQL Server avec la configuration d’état souhaité PowerShell
 
@@ -44,7 +44,7 @@ Dans la plupart des cas, DSC sert à gérer les prérequis. Toutefois, pour cett
 
 ## <a name="install-the-sqlserverdsc-dsc-resource"></a>Installer la ressource SqlServerDsc de DSC
 
-Téléchargez la ressource DSC [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) à partir de [PowerShell Gallery](https://www.powershellgallery.com/) à l’aide de l’applet de commande [Install-Module](https://docs.microsoft.com/powershell/module/powershellget/Install-Module?view=powershell-5.1). 
+Téléchargez la ressource DSC [SqlServerDsc](https://www.powershellgallery.com/packages/SqlServerDsc) à partir de [PowerShell Gallery](https://www.powershellgallery.com/) à l’aide de l’applet de commande [Install-Module](/powershell/module/powershellget/Install-Module?view=powershell-5.1). 
 
 > [!NOTE]
 > Pour installer le module, vérifiez que PowerShell est exécuté **en tant qu’administrateur**.
@@ -71,7 +71,7 @@ Dismount-DiskImage -ImagePath 'C:\en_sql_server_2017_enterprise_x64_dvd_11293666
 
 ### <a name="configuration"></a>Configuration
 
-Créez la fonction de configuration qui sera appelée pour générer les documents [MOF (Managed Object Format)](https://docs.microsoft.com/windows/desktop/WmiSdk/managed-object-format--mof-) :
+Créez la fonction de configuration qui sera appelée pour générer les documents [MOF (Managed Object Format)](/windows/desktop/WmiSdk/managed-object-format--mof-) :
 
 ```PowerShell
 Configuration SQLInstall
@@ -180,7 +180,7 @@ Quand la configuration est appliquée, la sortie détaillée affiche des informa
 
 ### <a name="dsc"></a>DSC
 
-Les applets de commande [Test-DscConfiguration](https://docs.microsoft.com/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) peuvent déterminer si l’état actuel du serveur correspond à l’état souhaité. Dans ce cas, il s’agit de l’installation SQL Server. Le résultat de **Test-DscConfiguration** doit être **True** :
+Les applets de commande [Test-DscConfiguration](/powershell/module/psdesiredstateconfiguration/test-dscconfiguration) peuvent déterminer si l’état actuel du serveur correspond à l’état souhaité. Dans ce cas, il s’agit de l’installation SQL Server. Le résultat de **Test-DscConfiguration** doit être **True** :
 
 ```PowerShell
 PS C:\> Test-DscConfiguration

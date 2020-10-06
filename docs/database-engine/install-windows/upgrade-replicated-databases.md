@@ -17,12 +17,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d7db0240ce9a94a5a7bb8431a79c9a66b468471d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900224"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670931"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Mettre à niveau ou corriger des bases de données répliquées
 
@@ -135,4 +135,4 @@ Si vous envisagez de mettre à niveau votre instance SQL Server vers SQL Server
  [Compatibilité descendante de la réplication](../../relational-databases/replication/replication-backward-compatibility.md)   
  [Mises à niveau de la version et de l'édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Mise à niveau vers SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
- [Mise à niveau d’une topologie de réplication vers SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)
+ [Mise à niveau d’une topologie de réplication vers SQL Server 2016](/archive/blogs/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016)

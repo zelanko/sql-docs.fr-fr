@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848ac8820ec5150c8c3fc058f77ffa4261ed8aa2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6b63ae0e77cc521d6d882eab340cbfa3b761e41d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902361"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670382"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord du groupe de disponibilité Always On (SQL Server Management Studio)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -331,7 +331,7 @@ Le rapport de latence du groupe de disponibilité est un outil de rapport basé 
 
 SQL Agent exécute la collecte de données et doit être activé sur le réplica principal et au moins sur l’un des réplicas secondaires. Affichez le rapport en cliquant avec le bouton droit sur le groupe de disponibilité > Rapports > Rapports standard dans l’**Explorateur d’objets** de SQL Server Management Studio.  
 
-Pour plus d’informations, consultez [Rapports de latence du groupe de disponibilité AlwaysOn (SQL Server)](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+Pour plus d’informations, consultez [Rapports de latence du groupe de disponibilité AlwaysOn (SQL Server)](/archive/blogs/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports).
 
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -340,5 +340,4 @@ Pour plus d’informations, consultez [Rapports de latence du groupe de disponib
 ## <a name="see-also"></a>Voir aussi  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Outils pour superviser les groupes de disponibilité Always On](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
-  
   

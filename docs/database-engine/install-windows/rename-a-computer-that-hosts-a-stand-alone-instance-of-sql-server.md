@@ -20,12 +20,12 @@ ms.assetid: bbaf1445-b8a2-4ebf-babe-17d8cf20b037
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1ce257e0e40af3d3ba207d4709c5e67f5bfbb619
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0426ae38b00a939ff852af21b3a3b376b4c236f3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900320"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671020"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Renommer un ordinateur qui héberge une instance autonome de SQL Server
 
@@ -111,9 +111,8 @@ Les procédures suivantes ne vous permettent pas de renommer une instance de [!I
   
  **Configurations de serveur lié** - Les configurations de serveur lié seront affectées par l’opération d’attribution d’un nouveau nom à l’ordinateur. Utilisez **sp_addlinkedserver** ou **sp_setnetname** pour mettre à jour les références de nom d’ordinateur. Pour plus d’informations, consultez [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou [sp_setnetname &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md).  
   
- **Noms d’alias client** - Les alias client qui utilisent des canaux nommés seront affectés par l’opération d’attribution d’un nouveau nom à l’ordinateur. Par exemple, si un alias « PROD_SRVR » a été créé pour désigner SRVR1 et utilise le protocole de canaux nommés, le nom de canal ressemblera à `\\SRVR1\pipe\sql\query`. Après avoir renommé l'ordinateur, le chemin d'accès du canal nommé ne sera plus valide. Pour plus d’informations sur les canaux nommés, consultez [Création d’une chaîne de connexion valide à l’aide de canaux nommés](https://go.microsoft.com/fwlink/?LinkId=111063).  
+ **Noms d’alias client** - Les alias client qui utilisent des canaux nommés seront affectés par l’opération d’attribution d’un nouveau nom à l’ordinateur. Par exemple, si un alias « PROD_SRVR » a été créé pour désigner SRVR1 et utilise le protocole de canaux nommés, le nom de canal ressemblera à `\\SRVR1\pipe\sql\query`. Après avoir renommé l'ordinateur, le chemin d'accès du canal nommé ne sera plus valide. Pour plus d’informations sur les canaux nommés, consultez [Création d’une chaîne de connexion valide à l’aide de canaux nommés](/previous-versions/sql/sql-server-2008/ms189307(v=sql.100)).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server](../../database-engine/install-windows/install-sql-server.md)  
-  
   

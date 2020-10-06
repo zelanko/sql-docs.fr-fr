@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ba50d65054b0a72424955f5d669a15d2c1846b67
-ms.sourcegitcommit: 780a81c02bc469c6e62a9c307e56a973239983b6
+ms.openlocfilehash: d147177be88db5bba50955711a8585ff11d872d9
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90027290"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670962"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Activez les connexions chiffrées dans le moteur de base de données
 
@@ -74,7 +74,7 @@ L’activation du chiffrement TLS améliore la sécurité des données transmise
 > Pour utiliser le chiffrement à l'aide d'un cluster de basculement, installez le certificat du serveur avec le nom DNS complet du serveur virtuel sur tous les nœuds du cluster de basculement. Si, par exemple, vous disposez d'un cluster à deux nœuds nommés ***test1.\*\<your company>\*.com*** et ***test2.\*\<your company>\*.com***, ainsi que d'un serveur virtuel nommé ***virtsql***, vous devez installer un certificat pour ***virtsql.\*\<your company>\*.com*** sur les deux nœuds. Vous pouvez définir la valeur de l’option **Forcer le chiffrement** dans la zone de propriété **Protocoles pour virtsql** de **Configuration du réseau SQL Server** sur **Oui**.
 
 > [!NOTE]
-> Si vous créez des connexions chiffrées entre un indexeur de la Recherche Azure et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une machine virtuelle Azure, consultez [Configurer une connexion à partir d’un indexeur de la Recherche Azure à SQL Server sur une machine virtuelle Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
+> Si vous créez des connexions chiffrées entre un indexeur de la Recherche Azure et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une machine virtuelle Azure, consultez [Configurer une connexion à partir d’un indexeur de la Recherche Azure à SQL Server sur une machine virtuelle Azure](/azure/search/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers). 
 
 ## <a name="certificate-requirements"></a>Configuration requise des certificats
 
@@ -126,7 +126,7 @@ Si vous utilisez [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[
 
 > [!IMPORTANT]
 > Pour les environnements de production, nous vous recommandons de vous procurer un certificat approuvé auprès d’une autorité de certification.    
-> À des fins de test, un certificat auto-signé peut aussi être utilisé. Pour créer un certificat auto-signé, voir l’[applet de commande PowerShell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate) ou la [commande certreq](https://docs.microsoft.com/windows-server/administration/windows-commands/certreq_1).
+> À des fins de test, un certificat auto-signé peut aussi être utilisé. Pour créer un certificat auto-signé, voir l’[applet de commande PowerShell New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) ou la [commande certreq](/windows-server/administration/windows-commands/certreq_1).
   
 ## <a name="install-across-multiple-servers"></a>Installation sur plusieurs serveurs
 
@@ -187,4 +187,4 @@ Les données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuven
 
 + [Prise en charge de TLS 1.2 pour Microsoft SQL Server](https://support.microsoft.com/kb/3135244)     
 + [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)     
-+ [Applet de commande PowerShell New-SelfSignedCertificate](https://docs.microsoft.com/powershell/module/pkiclient/new-selfsignedcertificate)
++ [Applet de commande PowerShell New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)

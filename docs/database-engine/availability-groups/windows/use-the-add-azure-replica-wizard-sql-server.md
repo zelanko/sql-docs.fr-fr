@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93f20096c1ccce60b5ea0e2299725a4037f71ae3
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e712528cc3716f054b498e4f322c64ea4873918d
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894179"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670661"
 ---
 # <a name="configure-azure-vm-as-a-secondary-replica-in-an-availability-group"></a>Configurer une machine virtuelle Azure comme réplica secondaire dans un groupe de disponibilité
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "85894179"
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel.  
   
--   Vous devez travailler dans un environnement informatique hybride où votre sous-réseau local dispose d’un réseau privé virtuel (VPN) de site à site avec Azure. Pour plus d’informations, consultez [Configurer un réseau privé virtuel (VPN) de site à site dans le portail de gestion](https://azure.microsoft.com/documentation/articles/vpn-gateway-site-to-site-create).  
+-   Vous devez travailler dans un environnement informatique hybride où votre sous-réseau local dispose d’un réseau privé virtuel (VPN) de site à site avec Azure. Pour plus d’informations, consultez [Configurer un réseau privé virtuel (VPN) de site à site dans le portail de gestion](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-classic-portal).  
   
 -   Votre groupe de disponibilité doit contenir des réplicas de disponibilité locaux.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "85894179"
   
 1.  Commencez par télécharger un certificat de gestion pour votre abonnement Azure. Cliquez sur **Télécharger** pour ouvrir la page de connexion.  
   
-2.  Connectez-vous à Microsoft Azure avec votre compte Microsoft ou votre compte professionnel ou scolaire. Votre compte Microsoft ou votre compte d’organisation  a le format d’une adresse e-mail, comme HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Pour en savoir plus sur les informations d’identification Azure, consultez les rubriques suivantes : [Microsoft Account for Organizations FAQ (FAQ sur les comptes Microsoft pour les organisations)](https://technet.microsoft.com/jj592903) et [Résolution des problèmes de connexion avec votre compte d’organisation](https://support.microsoft.com/kb/2756852).  
+2.  Connectez-vous à Microsoft Azure avec votre compte Microsoft ou votre compte professionnel ou scolaire. Votre compte Microsoft ou votre compte d’organisation  a le format d’une adresse e-mail, comme HYPERLINK "mailto:patc@contoso.com" patc@contoso.com. Pour en savoir plus sur les informations d’identification Azure, consultez les rubriques suivantes : [Microsoft Account for Organizations FAQ (FAQ sur les comptes Microsoft pour les organisations)](/previous-versions/jj592903(v=msdn.10)) et [Résolution des problèmes de connexion avec votre compte d’organisation](https://support.microsoft.com/kb/2756852).  
   
 3.  Connectez-vous ensuite à votre abonnement en cliquant sur **Connexion**. Une fois que vous êtes connecté, les listes déroulantes sont remplies avec vos paramètres Azure, tels que **Réseau virtuel** et **Sous-réseau de réseau virtuel**.  
   
@@ -107,5 +107,4 @@ ms.locfileid: "85894179"
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Ajouter un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
-  
   

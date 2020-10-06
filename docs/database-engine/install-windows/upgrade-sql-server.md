@@ -13,19 +13,19 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8689e210cd0faf265fc1dcf96705a87cecccf5ed
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: dc4877a76b314baf13353e6fe979210244d81c48
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900209"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670230"
 ---
 # <a name="upgrade-sql-server"></a>Mettre à niveau SQL Server
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
  
  Vous pouvez mettre à niveau des instances de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ss2016](../../includes/sssql15-md.md)] ou [!INCLUDE[ss2017](../../includes/sssqlv14-md.md)] directement vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], vous devez effectuer une mise à niveau côte à côte ou une migration pour passer à SQL Server 2019, car il n’existe aucun chevauchement commun entre un système d’exploitation standard pris en charge. Avant d’exécuter le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour procéder à la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], examinez les articles suivants traitant de la mise à niveau, ainsi que les notes de publication.  
   
-   - Pour plus d’informations sur la mise à niveau à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], consultez [Effectuez-vous une mise à niveau à partir de SQL Server 2005 ?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md).  
+   - Pour plus d’informations sur la mise à niveau à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], consultez [Effectuez-vous une mise à niveau à partir de SQL Server 2005 ?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md).  
    - [Notes de publication de SQL Server 2016](../../sql-server/sql-server-2016-release-notes.md) 
    - [Notes de publication de SQL Server 2017](../../sql-server/sql-server-2017-release-notes.md) 
   
@@ -34,7 +34,7 @@ Cette section contient les articles suivants :
   
 -   [Mises à niveau de la version et de l’édition prises en charge](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)  
 -   [Préparer la mise à niveau en exécutant Data Migration Assistant](../../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md)  
--   [Effectuez-vous une mise à niveau à partir de SQL Server 2005 ?](../../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md)  
+-   [Effectuez-vous une mise à niveau à partir de SQL Server 2005 ?](../../sql-server/end-of-support/sql-server-end-of-life-overview.md)  
 -   [Mettre à niveau Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)  
 -   [Mettre à niveau le moteur de base de données](../../database-engine/install-windows/upgrade-database-engine.md)  
 -   [Mettre à niveau Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)  
@@ -55,6 +55,5 @@ Cette section contient les articles suivants :
  [Mettre à niveau des bases de données répliquées](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Mettre à niveau Master Data Services](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=436)   
- [Compatibilité descendante](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
-  
+ [Compatibilité descendante](../discontinued-database-engine-functionality-in-sql-server.md)  
   

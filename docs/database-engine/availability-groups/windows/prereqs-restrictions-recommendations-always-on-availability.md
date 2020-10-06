@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8a2a54ac42cef552fa24af5d10171eda899163e5
-ms.sourcegitcommit: dec2e2d3582c818cc9489e6a824c732b91ec3aeb
+ms.openlocfilehash: 38c643bf5faac76d895181476b7d92c469445c26
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88092013"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670122"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88092013"
 ###  <a name="permissions-windows-system"></a><a name="PermissionsWindows"></a> Autorisations (système Windows)  
  Pour administrer un cluster WSFC, l'utilisateur doit être administrateur système sur chaque nœud de cluster.  
   
- Pour plus d’informations sur le compte d’administration du cluster, consultez [Annexe A : Configuration requise pour le cluster de basculement](https://technet.microsoft.com/library/dd197454.aspx).  
+ Pour plus d’informations sur le compte d’administration du cluster, consultez [Annexe A : Configuration requise pour le cluster de basculement](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197454(v=ws.10)).  
   
 ###  <a name="related-tasks-windows-system"></a><a name="RelatedTasksWindows"></a> Tâches associées (système Windows)  
   
@@ -103,7 +103,7 @@ ms.locfileid: "88092013"
   
 -   [Mise en route de Windows PowerShell sur un cluster de basculement](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
--   [Commandes de ressource de cluster et applets de commande Windows PowerShell équivalentes](https://msdn.microsoft.com/library/ee619744.aspx#BKMK_resource)  
+-   [Commandes de ressource de cluster et applets de commande Windows PowerShell équivalentes](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee619744(v=ws.10)#BKMK_resource)  
   
 ###  <a name="related-content-windows-system"></a><a name="RelatedContentWS"></a> Contenu connexe (système Windows)  
   
@@ -131,10 +131,10 @@ ms.locfileid: "88092013"
   
 |Configuration requise|Liens|  
 |------------------|-----------|  
-|Cet ordinateur hôte doit être un nœud WSFC. Les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité d’un groupe de disponibilité donné résident sur des nœuds distincts du cluster. Un groupe de disponibilité peut temporairement chevaucher deux clusters pendant sa migration vers un autre cluster. SQL Server 2016 introduit les groupes de disponibilité distribués. Dans un groupe de disponibilité distribué, deux groupes de disponibilité résident sur des clusters différents.|[Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clustering de basculement et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Groupes de disponibilité distribués (groupes de disponibilité Always On)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
+|Cet ordinateur hôte doit être un nœud WSFC. Les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité d’un groupe de disponibilité donné résident sur des nœuds distincts du cluster. Un groupe de disponibilité peut temporairement chevaucher deux clusters pendant sa migration vers un autre cluster. SQL Server 2016 introduit les groupes de disponibilité distribués. Dans un groupe de disponibilité distribué, deux groupes de disponibilité résident sur des clusters différents.|[Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clustering de basculement et groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Groupes de disponibilité distribués (groupes de disponibilité Always On)](./distributed-availability-groups.md)|  
 |Si vous souhaitez qu'un groupe de disponibilité utilise Kerberos :<br /><br /> Toutes les instances de serveur qui hébergent un réplica de disponibilité pour le groupe de disponibilité doivent utiliser le même compte de service SQL Server.<br /><br /> L'administrateur de domaine doit inscrire manuellement un nom de principal de service (SPN) avec Active Directory sur le compte de service SQL Server pour le nom de réseau virtuel (VNN) de l'écouteur de groupe de disponibilité. Si le SPN est inscrit sur un compte différent du compte de service SQL Server, l'authentification échoue.<br /><br /> <br /><br /> <b>\*\* Important \*\*</b> Si vous modifiez le compte de service SQL Server, l’administrateur de domaine devra réinscrire le SPN manuellement.|[Inscrire un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Brève explication :**<br /><br /> Kerberos et les SPN assurent une authentification mutuelle. Le SPN est mappé au compte Windows qui démarre les services SQL Server. Si l'inscription du SPN n'est pas effectuée correctement ou échoue, la couche de sécurité Windows ne peut pas déterminer le compte associé au SPN et l'authentification Kerberos ne peut pas être utilisée.<br /><br /> <br /><br /> Remarque : NTLM n'est pas soumis à cette condition.|  
 |Si vous envisagez d'utiliser une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour héberger un réplica de disponibilité, assurez-vous de comprendre les restrictions relatives à l'instance de cluster de basculement et de respecter les conditions préalables requises pour cette dernière.|[Prérequis et restrictions concernant l’utilisation d’une instance de cluster de basculement SQL Server afin d’héberger un réplica de disponibilité](#FciArLimitations) (plus loin dans cet article)|  
-|Pour participer à un groupe de disponibilité AlwaysOn, chaque instance de serveur doit exécuter la même version de SQL Server.|Éditions et fonctionnalités prises en charge pour [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016?view=sql-server-2016), [SQL 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017?view=sql-server-2017).|  
+|Pour participer à un groupe de disponibilité AlwaysOn, chaque instance de serveur doit exécuter la même version de SQL Server.|Éditions et fonctionnalités prises en charge pour [SQL 2014](/previous-versions/sql/2014/getting-started/features-supported-by-the-editions-of-sql-server-2014?view=sql-server-2014), [SQL 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md?view=sql-server-2016), [SQL 2017](../../../sql-server/editions-and-components-of-sql-server-2017.md?view=sql-server-2017).|  
 |Toutes les instances de serveur qui hébergent des réplicas de disponibilité pour un groupe de disponibilité doivent utiliser le même classement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Définir ou modifier le classement du serveur](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |Activez la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur chaque instance de serveur qui hébergera un réplica de disponibilité pour un groupe de disponibilité. Sur un ordinateur donné, vous pouvez activer autant d'instances de serveur que vous le souhaitez pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , dans la limite du nombre pris en charge par votre installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Activer et désactiver les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Important \*\*</b> Si vous supprimez et recréez un cluster WSFC, vous devez désactiver puis réactiver la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur chaque instance de serveur qui était activée pour les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur le cluster d’origine.|  
 |Chaque instance de serveur nécessite un point de terminaison de mise en miroir de bases de données. Notez que ce point de terminaison est partagé par tous les réplicas de disponibilité, ainsi que par tous les serveurs partenaires et témoins de mise en miroir de bases de données sur l'instance de serveur.<br /><br /> Si une instance de serveur que vous sélectionnez pour héberger un réplica de disponibilité s’exécute sous un compte d’utilisateur de domaine et n’a pas encore de point de terminaison de mise en miroir de bases de données, l’ [Assistant Nouveau groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md) (ou l’ [Assistant Ajouter un réplica au groupe de disponibilité](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)) peut créer le point de terminaison et accorder l’autorisation CONNECT au compte de service de l’instance de serveur. Toutefois, si le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s'exécute en tant que compte intégré, tel que Système local, Service local ou Service réseau, ou comme compte qui n'appartient pas au domaine, vous devez utiliser des certificats pour l'authentification du point de terminaison, et l'Assistant ne peut pas créer un point de terminaison de mise en miroir de bases de données sur l'instance de serveur. Dans ce cas, nous recommandons de créer les points de terminaison de mise en miroir de bases de données manuellement avant de lancer l'Assistant.<br /><br /> <br /><br /> <b>\*\* Note de sécurité \*\*</b> La sécurité du transport pour les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est la même que pour la mise en miroir de bases de données.|[Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)<br /><br /> [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)|  
@@ -166,7 +166,7 @@ ms.locfileid: "88092013"
 
 -  SQL Server 2019 a introduit une restauration par progression parallèle pour les bases de données de groupe de disponibilité à mémoire optimisée. Dans SQL Server 2016 et 2017, les tables basées sur disque n’utilisent pas l’opération de restauration par progression parallèle si une base de données dans un groupe de disponibilité est également optimisée en mémoire. 
   
- Pour plus d’informations, consultez [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (blog des ingénieurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CSS).  
+ Pour plus d’informations, consultez [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases) (blog des ingénieurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CSS).  
   
 ###  <a name="permissions-server-instance"></a><a name="PermissionsSI"></a> Autorisations (instance de serveur)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "88092013"
   
 ###  <a name="related-content-server-instance"></a><a name="RelatedContentSI"></a> Contenu connexe (instance serveur)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ##  <a name="network-connectivity-recommendations"></a><a name="NetworkConnect"></a> Recommandations relatives à la connectivité réseau  
  Nous vous recommandons vivement d'utiliser les mêmes liaisons réseau pour les communications entre les nœuds de cluster WSFC et les communications entre les réplicas de disponibilité.  L'utilisation de liaisons réseau distinctes peut provoquer des comportements inattendus en cas d'échec de certaines liaisons (et ce, même de façon intermittente).  
@@ -209,14 +209,14 @@ ms.locfileid: "88092013"
 ###  <a name="restrictions-fcis"></a><a name="RestrictionsFCI"></a> Restrictions (instances de cluster de basculement)  
   
 > [!NOTE]  
-> Les instances de cluster de basculement prennent en charge les volumes partagés de cluster. Pour plus d'informations sur les volumes partagés de cluster, consultez [Présentation des volumes partagés de cluster dans un cluster de basculement](https://technet.microsoft.com/library/dd759255.aspx).  
+> Les instances de cluster de basculement prennent en charge les volumes partagés de cluster. Pour plus d'informations sur les volumes partagés de cluster, consultez [Présentation des volumes partagés de cluster dans un cluster de basculement](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759255(v=ws.11)).  
   
 -   **Les nœuds de cluster d’une instance de cluster de basculement peuvent héberger un seul réplica pour un groupe de disponibilité donné :**  si vous ajoutez un réplica de disponibilité sur une instance de cluster de basculement, les nœuds WSFC qui sont des propriétaires d'instance de cluster de basculement potentiels ne peuvent pas héberger un autre réplica pour le même groupe de disponibilité.  Pour éviter de possibles conflits, il est recommandé de configurer les propriétaires possibles pour l’instance de cluster de basculement. Cela empêchera qu’un cluster WSFC tente d’héberger deux réplicas de disponibilité d’un même groupe de disponibilité.
   
      Par ailleurs, chacun des autres réplicas doit être hébergé par une instance de SQL Server 2016 résidant sur un autre nœud du même cluster WSFC. La seule exception survient lors de la migration vers un autre cluster : un groupe de disponibilité peut temporairement chevaucher deux clusters. 
 
   >[!WARNING]
-  > Le fait d’utiliser le Gestionnaire du cluster de basculement pour déplacer une *instance de cluster de basculement* hébergeant un groupe de disponibilité vers un nœud qui héberge *déjà* un réplica du même groupe de disponibilité, peut entraîner la perte du réplica du groupe de disponibilité, l’empêchant ainsi d’être en ligne sur le nœud cible. Un même nœud d’un cluster de basculement ne peut pas héberger plusieurs réplicas du même groupe de disponibilité. Pour plus d’informations à ce sujet et sur la récupération, consultez le blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/). 
+  > Le fait d’utiliser le Gestionnaire du cluster de basculement pour déplacer une *instance de cluster de basculement* hébergeant un groupe de disponibilité vers un nœud qui héberge *déjà* un réplica du même groupe de disponibilité, peut entraîner la perte du réplica du groupe de disponibilité, l’empêchant ainsi d’être en ligne sur le nœud cible. Un même nœud d’un cluster de basculement ne peut pas héberger plusieurs réplicas du même groupe de disponibilité. Pour plus d’informations à ce sujet et sur la récupération, consultez le blog [Replica unexpectedly dropped in availability group](/archive/blogs/alwaysonpro/issue-replica-unexpectedly-dropped-in-availability-group). 
 
   
 -   **Les instances de cluster de basculement ne prennent pas en charge le basculement automatique par les groupes de disponibilité :**  par conséquent, un réplica de disponibilité hébergé par une instance de cluster de basculement peut être configuré pour un basculement manuel uniquement.  
@@ -234,14 +234,14 @@ ms.locfileid: "88092013"
 |Tâche|Article|  
 |----------|-----------|  
 |Installation d'un cluster de basculement SQL Server|[Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Mise à niveau sur place de votre cluster de basculement SQL Server existant|[Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
+|Mise à niveau sur place de votre cluster de basculement SQL Server existant|[Mettre à niveau une instance de cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
 |Maintenance de votre cluster de basculement SQL Server existant|[Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)|  
   
 ###  <a name="related-content-fcis"></a><a name="RelatedContentFCIs"></a> Contenu connexe (instances de cluster de basculement)  
   
 -   [Clustering de basculement et groupes de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)  
   
--   [Guide de l’architecture Always On : Création d’une solution haute disponibilité et de récupération d’urgence en utilisant des instances de cluster de basculement et des groupes de disponibilité](https://technet.microsoft.com/library/jj215886.aspx)  
+-   [Guide de l’architecture Always On : Création d’une solution haute disponibilité et de récupération d’urgence en utilisant des instances de cluster de basculement et des groupes de disponibilité](/previous-versions/sql/sql-server-2012/jj215886(v=msdn.10))  
   
 ##  <a name="availability-group-prerequisites-and-restrictions"></a><a name="PrerequisitesForAGs"></a> Conditions préalables requises et restrictions pour les groupes de disponibilité  
  **Dans cette section :**  
@@ -381,11 +381,11 @@ ms.locfileid: "88092013"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
--   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [Guide de solutions Microsoft SQL Server Always On pour la haute disponibilité et la récupération d’urgence](/previous-versions/sql/sql-server-2012/hh781257(v=msdn.10))  
   
--   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](/archive/blogs/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
@@ -394,5 +394,4 @@ ms.locfileid: "88092013"
   
     
   
---------------------------------------------------  
-
+--------------------------------------------------

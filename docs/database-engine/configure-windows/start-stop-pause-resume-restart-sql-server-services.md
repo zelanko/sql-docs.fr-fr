@@ -41,12 +41,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 385e0a0d6873f8480c3d99efe9700ef938fc3abf
-ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
+ms.openlocfilehash: e971592b20dd2321e4265752cb8b01c38387b639
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87363029"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670752"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Démarrer, arrêter, suspendre, reprendre, redémarrer les services SQL Server
 
@@ -342,7 +342,7 @@ Pour plus d’informations sur l’instruction **SHUTDOWN**, consultez [SHUTDOWN
   
 ##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> Utilisation de la classe ServiceController
 
-Vous pouvez utiliser la classe ServiceController pour contrôler le service SQL Server ou tout autre service Windows. Pour obtenir un exemple sur la façon de procéder, consultez [ServiceController, classe](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
+Vous pouvez utiliser la classe ServiceController pour contrôler le service SQL Server ou tout autre service Windows. Pour obtenir un exemple sur la façon de procéder, consultez [ServiceController, classe](/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>Gérer le service SQL Server sur Linux
 
@@ -366,7 +366,7 @@ Vous pouvez arrêter, démarrer ou redémarrer le service SQL Server en fonction
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Vue d’ensemble de la documentation d’installation de SQL Server](https://msdn.microsoft.com/library/2620439a-f9d3-4b3c-9968-48f60b4bb9a5)
+- [Vue d’ensemble de la documentation d’installation de SQL Server](../install-windows/install-sql-server.md)
 - [Afficher et lire les fichiers journaux d'installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md)
 - [Démarrage de SQL Server avec une configuration minimale](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)

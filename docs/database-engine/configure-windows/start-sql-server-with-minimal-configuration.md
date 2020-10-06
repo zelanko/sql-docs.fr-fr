@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e6e301cd7dc29cc5e2a2cffc34066369ed67d57a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ae9ee2f231367ebf577f0c5c70e5e64ce32d6cc
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85763996"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670762"
 ---
 # <a name="start-sql-server-with-minimal-configuration"></a>Démarrage de SQL Server avec une configuration minimale
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "85763996"
 
 -   `tempdb` est configuré à la plus petite taille possible.
 
--   L’audit sera désactivé, mais la DDL d’audit peut toujours être émise. Dans la pratique, **-m** doit suffire dans la plupart des cas nécessitant une reconfiguration de l’audit SQL Server. Pour plus d’informations sur la sécurité dans la configuration de l’audit, consultez [Audit dans SQL Server](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
+-   L’audit sera désactivé, mais la DDL d’audit peut toujours être émise. Dans la pratique, **-m** doit suffire dans la plupart des cas nécessitant une reconfiguration de l’audit SQL Server. Pour plus d’informations sur la sécurité dans la configuration de l’audit, consultez [Audit dans SQL Server](/previous-versions/sql/sql-server-2008/dd392015(v=sql.100)#security).
   
  N'oubliez pas ensuite de revenir à l'option de démarrage appropriée, d'arrêter le serveur, puis de le redémarrer.  
   
@@ -44,11 +44,10 @@ ms.locfileid: "85763996"
 >  Utilisez l’utilitaire **sqlcmd** et la connexion administrateur dédiée (DAC) pour vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous utilisez une connexion par défaut, arrêtez le service SQL Server Agent avant de vous connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode de configuration minimale. Sinon, le service SQL Server Agent utilise la connexion et bloque votre connexion à SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer, arrêter ou suspendre le service SQL Server Agent](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
+ [Démarrer, arrêter ou suspendre le service SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Connexion de diagnostic pour les administrateurs de base de données](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md)  
-  
   

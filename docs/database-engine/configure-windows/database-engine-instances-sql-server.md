@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69d363980f09ecf0bd732bafc119bd5dd511d29f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772601"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670722"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instances du moteur de base de données (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "85772601"
 |Explique comment gérer le service associé à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Sont traitées des actions telles que le démarrage et l'arrêt du service, ou la configuration des options de démarrage.|[Gérer les services du moteur de base de données](../../database-engine/configure-windows/manage-the-database-engine-services.md)|  
 |Indique comment effectuer des tâches de configuration réseau du serveur, telles que l'activation des protocoles, la modification du port ou du canal utilisé par un protocole, la configuration du chiffrement, la configuration du service SQL Server Browser, l'affichage ou le masquage du moteur de base de données SQL Server sur le réseau et l'inscription du nom SPN.|[Configuration réseau du serveur](../../database-engine/configure-windows/server-network-configuration.md)|  
 |Explique comment effectuer des tâches de configuration réseau client, telles que la configuration des protocoles clients et la création ou la suppression d'un alias de serveur.|[Configuration du réseau client](../../database-engine/configure-windows/client-network-configuration.md)|  
-|Décrit les éditeurs de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que vous pouvez utiliser pour concevoir, déboguer et exécuter des scripts tels que des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Explique également comment coder des scripts Windows PowerShell de manière à ce qu'ils fonctionnent avec les composants SQL Server.|[Scripts du moteur de base de données](../../relational-databases/scripting/database-engine-scripting.md)|  
+|Décrit les éditeurs de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] que vous pouvez utiliser pour concevoir, déboguer et exécuter des scripts tels que des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Explique également comment coder des scripts Windows PowerShell de manière à ce qu'ils fonctionnent avec les composants SQL Server.|[Scripts du moteur de base de données](../../ssms/scripting/database-engine-scripting.md)|  
 |Explique comment utiliser des plans de maintenance pour spécifier un flux de travail concernant les tâches d'administration communes pour une instance. Les flux de travail incluent des tâches telles que la sauvegarde des bases de données et la mise à jour des statistiques pour améliorer les performances.|[Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)|  
 |Explique comment utiliser Resource Governor pour gérer la consommation des ressources et les charges de travail en limitant le temps processeur et la mémoire à disposition des demandes d'applications.|[gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)|  
 |Explique comment les applications de base de données peuvent utiliser la messagerie de base de données pour envoyer des messages électroniques à partir du [!INCLUDE[ssDE](../../includes/ssde-md.md)].|[Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)|  
@@ -55,7 +55,6 @@ ms.locfileid: "85772601"
   
 ## <a name="see-also"></a>Voir aussi  
  [Application sqlservr](../../tools/sqlservr-application.md)   
- [Fonctionnalités de base de données](../../relational-databases/database-features.md)   
- [Fonctionnalités entre les instances du moteur de base de données](../../relational-databases/database-engine-cross-instance-features.md)  
-  
+ [Fonctionnalités de base de données](../../relational-databases/databases/databases.md)   
+ [Fonctionnalités entre les instances du moteur de base de données](../../relational-databases/databases/databases.md)  
   

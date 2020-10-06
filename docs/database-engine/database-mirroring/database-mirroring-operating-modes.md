@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9fdcdc937ba8509f67b71352dd1b87d8f98f92d7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 505f09118b4c1b4598936e59c57ce2202a4ddd55
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631415"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670846"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modes de fonctionnement de la mise en miroir de bases de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "85631415"
  Cette section décrit le fonctionnement asynchrone de la mise en miroir de bases de données, lorsqu'il convient d'utiliser le mode hautes performances, et explique comment réagir en cas de défaillance du serveur principal.  
   
 > [!NOTE]  
->  La plupart des éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prennent uniquement en charge la mise en miroir de bases de données synchrone (« niveau complet sécurité uniquement »). Pour plus d’informations sur les éditions qui prennent en charge la mise en miroir de bases de données, consultez « Haute disponibilité (Always On) » dans [Éditions et fonctionnalités prises en charge de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+>  La plupart des éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prennent uniquement en charge la mise en miroir de bases de données synchrone (« niveau complet sécurité uniquement »). Pour plus d’informations sur les éditions qui prennent en charge la mise en miroir de bases de données, consultez « Haute disponibilité (Always On) » dans [Éditions et fonctionnalités prises en charge de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).
   
  Si la sécurité des transactions est désactivée (OFF), la session de mise en miroir de bases de données fonctionne de manière asynchrone. Le fonctionnement asynchrone ne prend en charge qu’un seul mode d’opération : le mode hautes performances. Ce mode améliore les performances au détriment de la haute disponibilité. Le mode hautes performances utilise uniquement le serveur principal et le serveur miroir. Les problèmes survenant sur le serveur miroir n'ont jamais d'impact sur le serveur principal. En cas de perte du serveur principal, la base de données miroir est marquée comme DISCONNECTED, mais est disponible en état de secours semi-automatique.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "85631415"
  Le mode hautes performances peut être utile dans un scénario de récupération après sinistre dans lequel le principal et le serveur miroir sont considérablement éloignés et où vous ne souhaitez pas que de petites erreurs affectent le serveur principal.  
   
 > [!NOTE]  
->  La copie des journaux de transaction peut être un supplément à la mise en miroir de base de données et constitue une alternative favorable à la mise en miroir de base de données asynchrone. Pour plus d’informations sur les avantages de la copie des journaux de transaction, consultez [Solutions haute disponibilité &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md). Pour plus d’informations sur l’utilisation de l’envoi de journaux avec la mise en miroir de bases de données, consultez [Mise en miroir de bases de données et copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
+>  La copie des journaux de transaction peut être un supplément à la mise en miroir de base de données et constitue une alternative favorable à la mise en miroir de base de données asynchrone. Pour plus d’informations sur les avantages de la copie des journaux de transaction, consultez [Solutions haute disponibilité &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md). Pour plus d’informations sur l’utilisation de l’envoi de journaux avec la mise en miroir de bases de données, consultez [Mise en miroir de bases de données et copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md).  
   
 ###  <a name="the-impact-of-a-witness-on-high-performance-mode"></a><a name="WitnessImpactOnHighPerf"></a> Impact d'un témoin sur le mode hautes performances  
  Si vous utilisez Transact-SQL pour configurer le mode hautes performances, chaque fois que la propriété SAFETY est désactivée (OFF), nous vous conseillons vivement d'affecter également la valeur OFF à la propriété WITNESS. Un témoin peut coexister avec le mode hautes performances, mais le témoin ne fournit aucun avantage et introduit un risque.  
@@ -287,5 +287,4 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Témoin de mise en miroir de base de données](../../database-engine/database-mirroring/database-mirroring-witness.md)  
-  
   

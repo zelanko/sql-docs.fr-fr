@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bddfd0b06bfc64d68534548cfb90ea09ed2d4076
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 30d666e4793501831dc4fc4a06d3ae6c4a24f3cc
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87235983"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670357"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Changements cassants dans les fonctionnalités du moteur de base de données de SQL Server 2016
 
@@ -48,7 +48,7 @@ Pour plus d’informations sur les modifications avec rupture dans [!INCLUDE[ssS
 
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [Compatibilité descendante du moteur de base de données SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)   
+ [Compatibilité descendante du moteur de base de données SQL Server](./discontinued-database-engine-functionality-in-sql-server.md)   
  [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [Améliorations de SQL Server 2016 ou SQL Server 2017 sur Windows dans le traitement de certains types de données et les opérations peu courantes](https://support.microsoft.com/help/4010261)   
+ [Améliorations de SQL Server 2016 ou SQL Server 2017 sur Windows dans le traitement de certains types de données et les opérations peu courantes](https://support.microsoft.com/help/4010261)

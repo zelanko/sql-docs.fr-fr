@@ -24,17 +24,17 @@ ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2841f36d3f9e4498763f6b0862e2fa0cfaa2e4a9
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: 5a22d4bf95b7d6bfc7c6a5e00c5613b04a80749e
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87863398"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670772"
 ---
 # <a name="service-broker"></a>Service Broker
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fournit une prise en charge native de la messagerie et de la mise en file d’attente dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index). Les développeurs peuvent créer plus facilement des applications perfectionnées qui utilisent les composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates, et créer des applications fiables et distribuées.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] fournit une prise en charge native de la messagerie et de la mise en file d’attente dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index). Les développeurs peuvent créer plus facilement des applications perfectionnées qui utilisent les composants de [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour la communication entre des bases de données disparates, et créer des applications fiables et distribuées.  
   
 ## <a name="when-to-use-service-broker"></a>Quand utiliser Service Broker ?
 
@@ -90,7 +90,7 @@ FROM ExpenseQueue;
   
 -   [Instructions DDL &#40;Data Definition Language &#41; &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md) pour les instructions CREATE, ALTER et DROP  
   
--   [Instructions de Service Broker](../../t-sql/statements/service-broker-statements.md)  
+-   [Instructions de Service Broker](../../t-sql/statements/statements.md)  
   
 -   [Affichages catalogue relatifs à Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/service-broker-catalog-views-transact-sql.md)  
   
@@ -98,7 +98,7 @@ FROM ExpenseQueue;
   
 -   [Utilitaire ssbdiagnose &#40;Service Broker&#41;](../../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md)  
   
- Consultez la [documentation précédemment publiée](https://go.microsoft.com/fwlink/?LinkId=231312) pour les concepts [!INCLUDE[ssSB](../../includes/sssb-md.md)] et pour les tâches de gestion et de développement. Cette documentation n'est pas reproduite dans la documentation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en raison de quelques modifications apportées dans [!INCLUDE[ssSB](../../includes/sssb-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Consultez la [documentation précédemment publiée](/previous-versions/sql/sql-server-2008-r2/bb522893(v=sql.105)) pour les concepts [!INCLUDE[ssSB](../../includes/sssb-md.md)] et pour les tâches de gestion et de développement. Cette documentation n'est pas reproduite dans la documentation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en raison de quelques modifications apportées dans [!INCLUDE[ssSB](../../includes/sssb-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## <a name="whats-new-in-service-broker"></a>Nouveautés dans Service Broker  
  Aucune modification importante n'a été introduite dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  Les modifications suivantes ont été introduites dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
@@ -107,7 +107,7 @@ FROM ExpenseQueue;
 
 - Service Broker entre instances n’est pas pris en charge. 
  - `sys.routes` – Prérequis : sélectionnez l’adresse à partir de sys.routes. L’adresse doit être LOCAL sur tous les itinéraires. Voir [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
- - `CREATE ROUTE` - vous ne pouvez pas utiliser `CREATE ROUTE` avec `ADDRESS` si la valeur de celle-ci est différente de `LOCAL`. Voir [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `CREATE ROUTE` - vous ne pouvez pas utiliser `CREATE ROUTE` avec `ADDRESS` si la valeur de celle-ci est différente de `LOCAL`. Voir [CREATE ROUTE](../../t-sql/statements/create-route-transact-sql.md).
  - `ALTER ROUTE` – `ALTER ROUTE` n’est pas utilisable avec `ADDRESS` autre que `LOCAL`. Voir [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>Les messages peuvent être envoyés à des services cibles (multidiffusion).  
@@ -125,6 +125,4 @@ FROM ExpenseQueue;
   
 ## <a name="next-steps"></a>Étapes suivantes
 
-L’utilisation la plus courante de Service Broker concerne les [notifications d’événements](../../relational-databases/service-broker/event-notifications.md). Découvrez comment [Implémenter des notifications d'événements](../../relational-databases/service-broker/implement-event-notifications.md), [Configurer la sécurité du dialogue](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md) ou [Obtenir plus d’informations](../../relational-databases/service-broker/get-information-about-event-notifications.md). 
-
-
+L’utilisation la plus courante de Service Broker concerne les [notifications d’événements](../../relational-databases/service-broker/event-notifications.md). Découvrez comment [Implémenter des notifications d'événements](../../relational-databases/service-broker/implement-event-notifications.md), [Configurer la sécurité du dialogue](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md) ou [Obtenir plus d’informations](../../relational-databases/service-broker/get-information-about-event-notifications.md).

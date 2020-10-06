@@ -11,12 +11,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ad18b9f946bbf7fb8817f84a2bb06274edc8753
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 1de1d21208319773552d315714306abe3530f871
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883526"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670417"
 ---
 # <a name="install-sql-server-powershell"></a>Installer SQL Server PowerShell
 [!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
@@ -35,10 +35,9 @@ Vous installez le logiciel qui fournit la prise en charge de [!INCLUDE[ssNoVersi
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] prend en charge le démarrage de sessions Windows PowerShell à partir de l’arborescence de l’Explorateur d’objets. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent prend en charge les étapes de travail Windows PowerShell.  
   
-PowerShell est installé et configuré dans Windows Server 2012 et Windows 8, et versions ultérieures. Pour plus d’informations sur l’installation de Windows PowerShell, consultez [Installation de Windows PowerShell](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell).  
+PowerShell est installé et configuré dans Windows Server 2012 et Windows 8, et versions ultérieures. Pour plus d’informations sur l’installation de Windows PowerShell, consultez [Installation de Windows PowerShell](/powershell/scripting/install/installing-windows-powershell).  
 
 Pour plus d'informations, consultez les pages suivantes :   
 
-- [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
-  
+- [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   

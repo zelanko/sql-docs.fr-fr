@@ -11,12 +11,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1cc02299cda600a9c82e121f8b588b49d9bd64b1
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 40114f51a3012f5f60564a57e63a2f3e0bc8bdab
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442801"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670431"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installer SQL Server sur Server Core
 
@@ -24,7 +24,7 @@ ms.locfileid: "87442801"
 
 Vous pouvez installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core.   
   
-L’option d’installation Server Core offre l’environnement minimal requis pour l’exécution de certains rôles de serveurs spécifiques. Cela permet de réduire les besoins en maintenance et gestion et l'exposition aux attaques de ces rôles de serveur. Pour plus d’informations sur Server Core, consultez [Installer Server Core](https://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core). Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consultez [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
+L’option d’installation Server Core offre l’environnement minimal requis pour l’exécution de certains rôles de serveurs spécifiques. Cela permet de réduire les besoins en maintenance et gestion et l'exposition aux attaques de ces rôles de serveur. Pour plus d’informations sur Server Core, consultez [Installer Server Core](/windows-server/get-started/getting-started-with-server-core). Pour plus d’informations sur Server Core implémenté sur [!INCLUDE[win8srv](../../includes/win8srv-md.md)], consultez [Server Core for Windows Server 2012](https://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (https://msdn.microsoft.com/library/hh846323(VS.85).aspx).  
   
  Pour obtenir la liste des systèmes d’exploitation pris en charge, consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
@@ -77,7 +77,7 @@ L’option d’installation Server Core offre l’environnement minimal requis p
  Sur les installations Server Core, la mise à niveau depuis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] vers [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] n'est pas prise en charge.  
   
 ## <a name="install"></a>Installer  
- [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] ne prend pas en charge l'installation avec l'Assistant d'installation sur le système d'exploitation de Server Core. Lors de l'installation sous Server Core, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le mode silencieux complet via le paramètre /Q ou le mode silencieux simple via le paramètre /QS. Pour plus d’informations, consultez [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] ne prend pas en charge l'installation avec l'Assistant d'installation sur le système d'exploitation de Server Core. Lors de l'installation sous Server Core, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le mode silencieux complet via le paramètre /Q ou le mode silencieux simple via le paramètre /QS. Pour plus d’informations, consultez [Installer SQL Server à partir de l’invite de commandes](./install-sql-server-from-the-command-prompt.md).  
   
  Indépendamment de la méthode d'installation, vous êtes invité à confirmer l'acceptation des termes de la licence de logiciel en tant que personne physique ou pour le compte d'une entité, sauf si votre utilisation du logiciel est régie par un accord distinct, tel qu'un accord de concession de licence en volume de [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou un accord tiers avec un éditeur de logiciels ou un fabricant OEM.  
   
@@ -324,13 +324,11 @@ Si vous fermez accidentellement l'invite de commandes, vous pouvez démarrer une
 3.  Dans la boîte de dialogue **Créer une nouvelle tâche** , tapez **cmd** dans le champ **Ouvrir** , [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installer SQL Server à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
- [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Installer SQL Server à l’aide d’un fichier de configuration](./install-sql-server-using-a-configuration-file.md)   
+ [Installer SQL Server à partir de l’invite de commandes](./install-sql-server-from-the-command-prompt.md)   
  [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
- [Installer Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
- [Configurer une installation Server Core de Windows Server 2016 avec Sconfig.cmd](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
+ [Installer Server Core](/windows-server/get-started/getting-started-with-server-core)   
+ [Configurer une installation Server Core de Windows Server 2016 avec Sconfig.cmd](/windows-server/get-started/sconfig-on-ws2016)   
  [Applets de commande de cluster de basculement dans Windows PowerShell](/powershell/module/failoverclusters/)
 
   
-  
-

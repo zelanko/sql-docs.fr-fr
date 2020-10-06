@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a738c1eb308ccafa0c744a66d069cbefee46ad26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 804cf6d89a67441228caead33cbc8969db530d6c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500933"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671052"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>Transactions - Groupes de disponibilité Always On et mise en miroir de bases de données
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,9 +42,9 @@ Pour configurer un groupe de disponibilité pour les transactions distribuées, 
 
 Pour plus d’informations, consultez :
 
-- [Guide d’Administration de DTC](https://msdn.microsoft.com/library/ms681291.aspx)
-- [Guide du développeur de DTC](https://msdn.microsoft.com/library/ms679938.aspx)
-- [Informations de référence pour les programmeurs de DTC](https://msdn.microsoft.com/library/ms686108.aspx)
+- [Guide d’Administration de DTC](/previous-versions/windows/desktop/ms681291(v=vs.85))
+- [Guide du développeur de DTC](/previous-versions/windows/desktop/ms679938(v=vs.85))
+- [Informations de référence pour les programmeurs de DTC](/previous-versions/windows/desktop/ms686108(v=vs.85))
 
 ## <a name="sql-server-2016-sp1-and-before-support-for-cross-database-transactions-within-the-same-sql-server-instance"></a>SQL Server 2016 SP1 et versions antérieures : Prise en charge des transactions entre bases de données dans la même instance de SQL Server  
 
@@ -93,5 +93,4 @@ SQL Server 2016 introduit la possibilité d’utiliser des transactions distribu
   
 ## <a name="next-steps"></a>Étapes suivantes  
  [Groupes de disponibilité Always On : Interopérabilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
-  
   

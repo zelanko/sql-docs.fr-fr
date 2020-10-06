@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 391215275c97dba05fb7a3df0692a5a48e9fe58a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888019"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670672"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Résoudre les problèmes : Dépassement de RTO du groupe de disponibilité
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -64,6 +64,5 @@ from sys.dm_hadr_database_replica_states
  Si le thread de restauration par progression prend effectivement du retard, vous devez rechercher la cause racine de la dégradation des performances sur le réplica secondaire. En cas de contention au niveau des E/S avec la charge de travail de création de rapports, vous pouvez utiliser [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) pour contrôler les cycles d’UC utilisés par la charge de travail de création de rapports afin de contrôler indirectement, dans une certaine mesure, les cycles d’E/S entrepris. Par exemple, si votre charge de travail de création de rapports utilise 10 % de l’UC et que la charge de travail est liée aux E/S, vous pouvez utiliser Resource Governor pour limiter l’utilisation des ressources de l’UC à 5 % afin de restreindre la charge de travail de lecture et réduire l’impact sur les E/S.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Résolution des problèmes de performances dans SQL Server (s’applique à SQL Server 2012)](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
-  
+ [Résolution des problèmes de performances dans SQL Server (s’applique à SQL Server 2012)](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 39d0c98d-75af-4dd1-b908-30d31af56f2a
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e88eed3b4b49b15f65ad888725374d953b87806b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b33827f37d02edf783c4688c9ad08cd4673706e7
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480359"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670882"
 ---
 # <a name="sql-server-error-log-always-on-availability-groups"></a>Journal des erreurs SQL Server (groupes de disponibilité Always On)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "89480359"
 -   État de connectivité des bases de données de disponibilité entre les réplicas principal et secondaire    
 -   États des points de terminaison de groupe de disponibilité    
 -   États des écouteurs de groupe de disponibilité    
--   État du bail entre la DLL de ressource SQL Server (en cours d’exécution dans le cluster WSFC) et l’instance SQL Server (pour plus d’informations, consultez [How It Works: SQL Server Always On lease timeout](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout) (Fonctionnement : délai d’expiration de bail Always On SQL Server))    
+-   État du bail entre la DLL de ressource SQL Server (en cours d’exécution dans le cluster WSFC) et l’instance SQL Server (pour plus d’informations, consultez [How It Works: SQL Server Always On lease timeout](/archive/blogs/psssql/how-it-works-sql-server-alwayson-lease-timeout) (Fonctionnement : délai d’expiration de bail Always On SQL Server))    
 -   Événements d’erreur dans le groupe de disponibilité  
 
 Les symptômes suivants doivent vous inciter à passer en revue le journal des erreurs SQL Server :  
@@ -38,5 +38,4 @@ Les symptômes suivants doivent vous inciter à passer en revue le journal des e
 -   Groupe de disponibilité dans un état indéterminé  
   
 Pour plus d’informations, consultez [Afficher le journal des erreurs SQL Server &#40;SQL Server Management Studio&#41;](~/relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md).  
-  
   

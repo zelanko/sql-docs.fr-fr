@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8c4bd90a73c0723baf716b5c503f18d1f690d77e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2d897301336c7697b658fbf40837b23b0a2e3797
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394215"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719795"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformation de recherche en mode Cache complet - Gestionnaire de connexions du cache
 
@@ -28,7 +28,7 @@ ms.locfileid: "88394215"
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache complet et un gestionnaire de connexions du cache. En mode Cache complet, le dataset de référence est chargé dans le cache avant l'exécution de la transformation de recherche.  
   
 > [!NOTE]  
->  Le gestionnaire de connexions du cache ne prend pas en charge les types de données de l'objet BLOB (Binary Large Object) DT_TEXT, DT_NTEXT et DT_IMAGE. Si le dataset de référence contient un type de données d'objet BLOB, le composant échoue lorsque vous exécutez le package. Vous pouvez utiliser l' **Éditeur du gestionnaire de connexions du cache** pour modifier des types de données de colonne. Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+>  Le gestionnaire de connexions du cache ne prend pas en charge les types de données de l'objet BLOB (Binary Large Object) DT_TEXT, DT_NTEXT et DT_IMAGE. Si le dataset de référence contient un type de données d'objet BLOB, le composant échoue lorsque vous exécutez le package. Vous pouvez utiliser l' **Éditeur du gestionnaire de connexions du cache** pour modifier des types de données de colonne. Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](./cache-connection-manager.md).  
   
  La transformation de recherche effectue des recherches en joignant les données des colonnes d'entrée d'une source de données connectée aux colonnes d'un dataset de référence. Pour plus d’informations, voir [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "88394215"
   
 -   [conteneur de séquences](../../integration-services/control-flow/sequence-container.md)  
   
- Pour savoir comment implémenter la transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions du cache, consultez la vidéo [Procédure : implémenter une transformation de recherche en mode Cache complet (Vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Pour savoir comment implémenter la transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions du cache, consultez la vidéo [Procédure : implémenter une transformation de recherche en mode Cache complet (Vidéo liée à SQL Server)](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100)).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Pour implémenter une transformation de recherche en mode Cache complet dans un seul package en utilisant le gestionnaire de connexions du cache et une source de données dans le flux de données  
   
@@ -85,7 +85,7 @@ ms.locfileid: "88394215"
      Pour les colonnes qui ne sont pas des index, la position d'index est 0. Pour les colonnes d'index, la position d'index est un nombre séquentiel, positif.  
   
     > [!NOTE]  
-    >  Lorsque la transformation de recherche est configurée pour utiliser un gestionnaire de connexions du cache, seules les colonnes d'index dans le dataset de référence peuvent être mappées avec des colonnes d'entrée. En outre, toutes les colonnes d'index doivent être mappées. Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Lorsque la transformation de recherche est configurée pour utiliser un gestionnaire de connexions du cache, seules les colonnes d'index dans le dataset de référence peuvent être mappées avec des colonnes d'entrée. En outre, toutes les colonnes d'index doivent être mappées. Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](./cache-connection-manager.md).  
   
 6.  Pour enregistrer le cache dans un fichier, dans **l’Éditeur du gestionnaire de connexions du cache**, sous l’onglet **Général** , configurez le gestionnaire de connexions du cache en définissant les options suivantes :  
   
@@ -98,7 +98,7 @@ ms.locfileid: "88394215"
     > [!NOTE]  
     >  Le niveau de protection du package ne s'applique pas au fichier cache. Si le fichier cache contient des informations sensibles, utilisez une liste de contrôle d'accès (ACL) pour restreindre l'accès à l'emplacement ou au dossier dans lequel vous stockez le fichier. Vous devez autoriser l'accès à certains comptes uniquement. Pour plus d’informations, consultez [Accéder aux fichiers utilisés par des packages](../../integration-services/security/security-overview-integration-services.md#files).  
   
-7.  Configurez la transformation du cache selon vos besoins. Pour plus d’informations, consultez [Éditeur de transformation du cache &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) et [Éditeur de transformation du cache &#40;page Mappages&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configurez la transformation du cache selon vos besoins. Pour plus d’informations, consultez [Éditeur de transformation du cache &#40;page Gestionnaire de connexions&#41;](../data-flow/transformations/cache-transform.md) et [Éditeur de transformation du cache &#40;page Mappages&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  Dans le second flux de données, ajoutez une transformation de recherche, puis configurez la transformation en effectuant les tâches suivantes :  
   
@@ -127,7 +127,7 @@ ms.locfileid: "88394215"
   
     8.  Dans la liste **Colonnes de recherche disponibles** , sélectionnez des colonnes. Ensuite, dans la liste **Opération de recherche** , indiquez si les valeurs des colonnes de recherche doivent remplacer les valeurs des colonnes d’entrée ou si elles sont écrites dans une nouvelle colonne.  
   
-    9. Pour configurer la sortie d’erreur, cliquez sur la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Pour configurer la sortie d’erreur, cliquez sur la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Cliquez sur **OK** pour enregistrer les modifications que vous avez apportées à la transformation de recherche.  
   
@@ -161,9 +161,9 @@ ms.locfileid: "88394215"
      Pour les colonnes qui ne sont pas des index, la position d'index est 0. Pour les colonnes d'index, la position d'index est un nombre séquentiel, positif.  
   
     > [!NOTE]  
-    >  Lorsque la transformation de recherche est configurée pour utiliser un gestionnaire de connexions du cache, seules les colonnes d'index dans le dataset de référence peuvent être mappées avec des colonnes d'entrée. En outre, toutes les colonnes d'index doivent être mappées. Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Lorsque la transformation de recherche est configurée pour utiliser un gestionnaire de connexions du cache, seules les colonnes d'index dans le dataset de référence peuvent être mappées avec des colonnes d'entrée. En outre, toutes les colonnes d'index doivent être mappées. Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](./cache-connection-manager.md).  
   
-7.  Configurez la transformation du cache selon vos besoins. Pour plus d’informations, consultez [Éditeur de transformation du cache &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) et [Éditeur de transformation du cache &#40;page Mappages&#41;](../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+7.  Configurez la transformation du cache selon vos besoins. Pour plus d’informations, consultez [Éditeur de transformation du cache &#40;page Gestionnaire de connexions&#41;](../data-flow/transformations/cache-transform.md) et [Éditeur de transformation du cache &#40;page Mappages&#41;](../data-flow/transformations/cache-transform.md).  
   
 8.  Effectuez l'une des opérations suivantes pour renseigner le gestionnaire de connexions du cache utilisé dans le second package :  
   
@@ -213,7 +213,7 @@ ms.locfileid: "88394215"
   
     8.  Dans la liste **Colonnes de recherche disponibles** , sélectionnez des colonnes. Ensuite, dans la liste **Opération de recherche** , indiquez si les valeurs des colonnes de recherche doivent remplacer les valeurs des colonnes d’entrée ou si elles sont écrites dans une nouvelle colonne.  
   
-    9. Pour configurer la sortie d’erreur, cliquez sur la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Pour configurer la sortie d’erreur, cliquez sur la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Cliquez sur **OK** pour enregistrer les modifications que vous avez apportées à la transformation de recherche.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "88394215"
      Pour les colonnes qui ne sont pas des index, la position d'index est 0. Pour les colonnes d'index, la position d'index est un nombre séquentiel, positif.  
   
     > [!NOTE]  
-    >  Lorsque la transformation de recherche est configurée pour utiliser un gestionnaire de connexions du cache, seules les colonnes d'index dans le dataset de référence peuvent être mappées avec des colonnes d'entrée. En outre, toutes les colonnes d'index doivent être mappées. Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](../../integration-services/connection-manager/cache-connection-manager-editor.md).  
+    >  Lorsque la transformation de recherche est configurée pour utiliser un gestionnaire de connexions du cache, seules les colonnes d'index dans le dataset de référence peuvent être mappées avec des colonnes d'entrée. En outre, toutes les colonnes d'index doivent être mappées. Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](./cache-connection-manager.md).  
   
 7.  Sous l’onglet **Flux de contrôle** , ajoutez une tâche de flux de données au package, puis ajoutez une transformation de recherche au flux de données.  
   
@@ -278,7 +278,7 @@ ms.locfileid: "88394215"
   
     8.  Dans la liste **Colonnes de recherche disponibles** , sélectionnez des colonnes. Ensuite, dans la liste **Opération de recherche** , indiquez si les valeurs des colonnes de recherche doivent remplacer les valeurs des colonnes d’entrée ou si elles sont écrites dans une nouvelle colonne.  
   
-    9. Pour configurer la sortie d’erreur, cliquez sur la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md).  
+    9. Pour configurer la sortie d’erreur, cliquez sur la page **Sortie d’erreur** et définissez les options de gestion des erreurs. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Sortie d’erreur&#41;](../data-flow/transformations/lookup-transformation.md).  
   
     10. Cliquez sur **OK** pour enregistrer les modifications que vous avez apportées à la transformation de recherche.  
   
@@ -288,5 +288,4 @@ ms.locfileid: "88394215"
  [Implémenter une transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Implémenter une recherche en mode Aucun cache ou Cache partiel](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

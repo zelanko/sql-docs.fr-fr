@@ -13,12 +13,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 79356d7b1a193b57625ceae1f545442b4ac80f23
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 8638c87129cfcc567296c0cf20b6b4a9f2f2b08a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883252"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670453"
 ---
 # <a name="install-sql-server-database-engine"></a>Installer le moteur de base de données SQL Server
 
@@ -73,13 +73,12 @@ Les fonctionnalités suivantes sont installées quand vous sélectionnez **Moteu
   
 
 > [!NOTE]  
->  Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour installer les exemples de bases de données et les exemples de code, consultez [Exemples Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md). Pour des exemples plus anciens, consultez le [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
+>  Par défaut, les exemples de bases de données et les exemples de code ne sont pas installés dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour installer les exemples de bases de données et les exemples de code, consultez [Exemples Microsoft SQL Server](../../samples/sql-samples-where-are.md). Pour des exemples plus anciens, consultez le [CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
 
   
 ## <a name="see-also"></a>Voir aussi  
  [Éditions et fonctionnalités prises en charge de SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md)   
  [Planification d'une installation SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Solutions haute disponibilité &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [Solutions haute disponibilité &#40;SQL Server&#41;](../sql-server-business-continuity-dr.md)   
  [Mettre à niveau SQL Server à l’aide de l’Assistant Installation &#40;Installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
-  
   

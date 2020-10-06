@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2554a93ab1b7be6dc0a81c0ddb63797b8146a444
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472446"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91669851"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal (groupes de disponibilité Always On)
 
@@ -155,7 +155,7 @@ Dans le diagramme suivant, le réplica principal a fait l’objet d’un bascule
 
 ## <a name="sql-server-instance-offline"></a>Instance SQL Server hors connexion
 
-Si l’instance de SQL Server qui est spécifiée dans la chaîne de connexion n’est pas disponible (en cas de panne), la connexion échoue, quel que soit le rôle que joue le réplica sur le serveur cible. Pour éviter les temps d’arrêt prolongés du service, configurez un autre `FailoverPartner` dans la chaîne de connexion. L’application doit implémenter une logique de nouvelle tentative puisque les réplicas principaux et secondaires seront hors connexion pendant le basculement. Pour plus d’informations sur les chaînes de connexion, consultez [SqlConnection.ConnectionString, propriété](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
+Si l’instance de SQL Server qui est spécifiée dans la chaîne de connexion n’est pas disponible (en cas de panne), la connexion échoue, quel que soit le rôle que joue le réplica sur le serveur cible. Pour éviter les temps d’arrêt prolongés du service, configurez un autre `FailoverPartner` dans la chaîne de connexion. L’application doit implémenter une logique de nouvelle tentative puisque les réplicas principaux et secondaires seront hors connexion pendant le basculement. Pour plus d’informations sur les chaînes de connexion, consultez [SqlConnection.ConnectionString, propriété](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -163,4 +163,4 @@ Si l’instance de SQL Server qui est spécifiée dans la chaîne de connexion n
  
 [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 
-[Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md) 
+[Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)

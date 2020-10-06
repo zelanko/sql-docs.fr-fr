@@ -13,12 +13,12 @@ f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6a67889df1635e2654adc80151e33a1c137985d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6e09a6cdf6f8d863e57d2de0749e29b33c989eea
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426001"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719428"
 ---
 # <a name="sap-bw-connection-manager"></a>Gestionnaire de connexions SAP BW
 
@@ -50,12 +50,12 @@ ms.locfileid: "88426001"
   
  Si vous ne connaissez pas toutes les valeurs requises pour configurer le gestionnaire de connexions, adressez-vous à votre administrateur SAP.  
   
- Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server 2008 Integration Services avec SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkID=137090). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
+ Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server 2008 Integration Services avec SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
   
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Utilisation du concepteur SSIS pour configurer la source  
  Pour plus d'informations sur les propriétés du gestionnaire de connexions SAP BW que vous pouvez définir dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Éditeur du gestionnaire de connexions SAP BW](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md)  
+-   [Éditeur du gestionnaire de connexions SAP BW]()  
   
 ## <a name="sap-bw-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SAP BW
   Utilisez l' **Éditeur du gestionnaire de connexions SAP BW** pour spécifier les propriétés à utiliser pour se connecter à un système SAP Netweaver BW version 7.  
@@ -154,5 +154,4 @@ ms.locfileid: "88426001"
   
 ## <a name="see-also"></a>Voir aussi  
  [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
-  
   

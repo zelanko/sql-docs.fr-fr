@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c602fd39-db93-4717-8f3a-5a98b940f9cc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 67131a066a9885547e04ff58c80cd9f05d365051
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 74014a2fe98646a5a25d337719636c3471562ff3
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85888002"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670650"
 ---
 # <a name="determine-why-changes-from-primary-replica-are-not-reflected-on-secondary-replica-for-an-always-on-availability-group"></a>Déterminer pourquoi les changements apportés au réplica principal ne sont pas répercutés sur le réplica secondaire dans un groupe de disponibilité Always On
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -127,6 +127,5 @@ from sys.dm_hadr_database_replica_states
  Si le thread de restauration par progression prend effectivement du retard, vous devez rechercher la cause racine de la dégradation des performances sur le réplica secondaire. En cas de contention au niveau des E/S avec la charge de travail de création de rapports, vous pouvez utiliser [Resource Governor](~/relational-databases/resource-governor/resource-governor.md) pour contrôler les cycles d’UC utilisés par la charge de travail de création de rapports afin de contrôler indirectement, dans une certaine mesure, les cycles d’E/S entrepris. Par exemple, si votre charge de travail de création de rapports utilise 10 % de l’UC et que la charge de travail est liée aux E/S, vous pouvez utiliser Resource Governor pour limiter l’utilisation des ressources de l’UC à 5 % afin de restreindre la charge de travail de lecture et réduire l’impact sur les E/S.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- [Résolution des problèmes de performances dans SQL Server 2008](https://msdn.microsoft.com/library/dd672789(v=sql.100).aspx)
-  
+ [Résolution des problèmes de performances dans SQL Server 2008](/previous-versions/sql/sql-server-2008/dd672789(v=sql.100))
   

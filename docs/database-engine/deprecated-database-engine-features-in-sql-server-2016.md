@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0b8dd6ffa60bdf43b4e6d112ba26de959005f549
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729439"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670532"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
@@ -50,7 +50,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Category|Fonctionnalité déconseillée|Remplacement|Nom de la fonctionnalité|ID de la fonctionnalité|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Sauvegarde et restauration|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD est toujours déconseillé. BACKUP { DATABASE &#124; LOG } WITH PASSWORD et BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD ont été retirés.|None|BACKUP DATABASE ou LOG WITH PASSWORD<br /><br /> BACKUP DATABASE ou LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|Niveaux de compatibilité|Mettez à niveau à partir de la version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quand le [support](https://aka.ms/sqllifecycle) n’est plus assuré pour une version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le niveau de compatibilité de base de données associé est marqué comme étant déprécié. Cependant, nous continuons le plus longtemps possible d’assurer le support des applications certifiées sur n’importe quel niveau de compatibilité de base de données pris en charge de façon à faciliter la mise à niveau. Pour plus d’informations sur les niveaux de compatibilité, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Niveau de compatibilité 100 de la base de données|108|  
+|Niveaux de compatibilité|Mettez à niveau à partir de la version 100 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|Quand le [support](/lifecycle/products/?products=sql-server) n’est plus assuré pour une version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le niveau de compatibilité de base de données associé est marqué comme étant déprécié. Cependant, nous continuons le plus longtemps possible d’assurer le support des applications certifiées sur n’importe quel niveau de compatibilité de base de données pris en charge de façon à faciliter la mise à niveau. Pour plus d’informations sur les niveaux de compatibilité, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Niveau de compatibilité 100 de la base de données|108|  
 |Objets de base de données|Possibilité de retourner les jeux de résultats à partir de déclencheurs|None|Le déclencheur retourne des résultats|12|  
 |Chiffrement|Le chiffrement à l'aide de RC4 ou RC4_128 est déconseillé et est planifié pour être supprimé dans la prochaine version. Le déchiffrement de RC4 et RC4_128 n'est pas déconseillé.|Utilisez un autre algorithme de chiffrement, par exemple AES.|Algorithme de chiffrement déconseillé|253|  
 |Algorithmes de hachage|L’utilisation de MD2, MD4, MD5, SHA et SHA-1 est dépréciée.|Utilisez SHA2_256 ou SHA2_512 à la place. Des algorithmes plus anciens continueront de fonctionner, mais ils déclencheront un événement de dépréciation.|Algorithme de hachage déconseillé|None|  
@@ -174,5 +174,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 > Le paramètre **OUTPUT** de cookie pour **sp_setapprole** est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(50)** . Si les développeurs ont alloué **varbinary(50)** , l’application peut nécessiter des modifications si la taille de retour des cookies augmente dans une future version. Bien qu'il ne s'agisse pas d'un problème de suppression de fonctionnalités, ce phénomène est mentionné dans cette rubrique car les réglages de l'application sont similaires. Pour plus d’informations, consultez [sp_setapprole &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)     
- [Fonctionnalités dépréciées du moteur de base de données dans SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)    
+ [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2016](./discontinued-database-engine-functionality-in-sql-server.md)     
+ [Fonctionnalités dépréciées du moteur de base de données dans SQL Server 2017](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)

@@ -16,12 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 180a0a75b36ff945b672a730783b80766753a1b6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 41cfd3a4bcb4077c37a0d2801652d8bf6dfedc9f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900295"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91671012"
 ---
 # <a name="supported-version--edition-upgrades-sql-server-2017"></a>Mises à niveau de version et d’édition prises en charge (SQL Server 2017)
 
@@ -47,7 +47,7 @@ ms.locfileid: "85900295"
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] est disponible seulement pour les plateformes 64 bits. La mise à niveau interplateforme n'est pas prise en charge. Vous ne pouvez pas mettre à niveau une instance 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une instance native 64 bits à l'aide du programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez toutefois sauvegarder ou détacher des bases de données d'une instance 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis les restaurer ou les attacher sur une nouvelle instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (64 bits) si les bases de données ne sont pas publiées dans la réplication. Vous devez recréer toute connexion et tout autre objet utilisateur dans les bases de données système master, msdb et model.  
   
--   Vous ne pouvez pas ajouter de nouvelles fonctionnalités pendant la mise à niveau de votre instance existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après avoir mis à niveau une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], vous pouvez ajouter des fonctionnalités via le programme d'installation de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]. Pour plus d’informations, consultez [Ajouter des fonctionnalités à une instance de SQL Server &#40;Installation&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+-   Vous ne pouvez pas ajouter de nouvelles fonctionnalités pendant la mise à niveau de votre instance existante de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Après avoir mis à niveau une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], vous pouvez ajouter des fonctionnalités via le programme d'installation de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]. Pour plus d’informations, consultez [Ajouter des fonctionnalités à une instance de SQL Server &#40;Installation&#41;](./add-features-to-an-instance-of-sql-server-setup.md).  
  
 -   Les clusters de basculement ne sont pas pris en charge en mode WOW.  
     
@@ -185,5 +185,4 @@ Pour obtenir des instructions détaillées sur la façon d’effectuer une mise 
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  
  [Mise à niveau vers SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)  
-  
   

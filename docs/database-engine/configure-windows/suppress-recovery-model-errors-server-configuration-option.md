@@ -10,18 +10,18 @@ ms.technology: configuration
 ms.topic: conceptual
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 73681a19df18a7bdae9c49b78c283a8345820322
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 942dfc62bd55d1843babb78d89b95ad602f3d938
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88496228"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670742"
 ---
 # <a name="suppress-recovery-model-errors-server-configuration-option"></a>Supprimer les erreurs de mode de récupération (option de configuration de serveur)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md](../../includes/tsql-appliesto-xxxxxx-asdbmi-xxxx-xxx-md.md)]
 
-Les [modes de récupération](https://docs.microsoft.com/sql/relational-databases/backup-restore/recovery-models-sql-server) de SQL Server contrôlent la maintenance du journal des transactions. Le mode de récupération complète garantit qu’aucun travail n’est perdu suite à la perte ou à l’endommagement d’un fichier de données, et il prend en charge la récupération à un point arbitraire dans le temps dans la stratégie de conservation de sauvegarde. Le mode de récupération complète est le mode par défaut et le seul mode de récupération pris en charge dans SQL Managed Instance. Toute tentative de modification du mode de récupération dans SQL Managed Instance retourne un message d’erreur.
+Les [modes de récupération](../../relational-databases/backup-restore/recovery-models-sql-server.md) de SQL Server contrôlent la maintenance du journal des transactions. Le mode de récupération complète garantit qu’aucun travail n’est perdu suite à la perte ou à l’endommagement d’un fichier de données, et il prend en charge la récupération à un point arbitraire dans le temps dans la stratégie de conservation de sauvegarde. Le mode de récupération complète est le mode par défaut et le seul mode de récupération pris en charge dans SQL Managed Instance. Toute tentative de modification du mode de récupération dans SQL Managed Instance retourne un message d’erreur.
 
 Utilisez l’option de configuration avancée **Supprimer les erreurs de mode de récupération** pour spécifier si les commandes de modification du mode de récupération de base de données, exécutées sur SQL Managed Instance, renvoient des erreurs ou des avertissements uniquement. Lorsque cette option a la valeur 1 (activé) sur SQL Managed Instance, l’exécution de la commande ALTER DATABASE SET RECOVERY ne change pas le mode de récupération de la base de données, et ne retourne pas d’erreur mais un message d’avertissement. Lorsque cette option a la valeur 0 (désactivé) sur SQL Managed Instance, l’exécution de la commande ALTER DATABASE SET RECOVERY retourne un message d’erreur.
 

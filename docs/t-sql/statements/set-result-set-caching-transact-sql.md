@@ -15,12 +15,12 @@ helpviewer_keywords: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: fda398df7a9b06cf50419e899c9b0c9975855478
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: f8247062993b33a669477be7d71363efa45ead32
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91226389"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670543"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>DÉFINIR LA MISE EN CACHE DU JEU DE RÉSULTATS (Transact-SQL) 
 
@@ -37,7 +37,9 @@ S'applique à l'[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 ```syntaxsql
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## <a name="remarks"></a>Notes  
 
 Exécutez cette commande quand vous êtes connecté à la base de données utilisateur pour laquelle vous souhaitez configurer le paramètre result_set_caching.

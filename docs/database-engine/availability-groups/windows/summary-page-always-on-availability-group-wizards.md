@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 78fa87e1e36aef2752a6781410adfc5f1384802f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: e3370f19992d439f13c06c5e2327cb47f93fc15a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85900732"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670892"
 ---
 # <a name="summary-page-always-on-availability-group-wizards"></a>Page Résumé (Assistants Groupe de disponibilité AlwaysOn)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85900732"
  **Annuler**  
  Cliquez pour annuler l'Assistant. Sur la page **Résumé**, l’annulation de l’Assistant provoque sa fermeture sans effectuer aucune action.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [&#91;Retour en haut&#93;](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [&#91;Retour en haut&#93;](#Top)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tâches associées  
   
@@ -54,9 +54,8 @@ ms.locfileid: "85900732"
   
 -   [Utiliser l’Assistant Basculer le groupe de disponibilité &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [&#91;Retour en haut&#93;](#Top)  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [&#91;Retour en haut&#93;](#Top)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
-  
   

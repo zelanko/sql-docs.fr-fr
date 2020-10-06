@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8c2fb5fcd6c7f9902f52481a1e66350f4543a85a
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87110209"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670302"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installer SQL Server à l’aide d’un fichier de configuration
 
@@ -66,7 +66,7 @@ FEATURES=SQL,Tools
 3. Annulez l'exécution du programme d'installation sans réellement terminer l'installation afin de générer le fichier INI. 
   
     > [!NOTE]  
-    >  L'infrastructure d'installation écrit tous les paramètres appropriés pour les actions exécutées, à l'exception des informations sensibles comme les mots de passe. Le paramètre /IAcceptSQLServerLicenseTerms n'est pas écrit dans le fichier de configuration et requiert soit une modification du fichier de configuration, soit une valeur à fournir à l'invite de commandes. Pour plus d’informations, consultez [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). De plus, une valeur est incluse pour les paramètres booléens pour lesquels une valeur n'est généralement pas fournie via l'invite de commandes. 
+    >  L'infrastructure d'installation écrit tous les paramètres appropriés pour les actions exécutées, à l'exception des informations sensibles comme les mots de passe. Le paramètre /IAcceptSQLServerLicenseTerms n'est pas écrit dans le fichier de configuration et requiert soit une modification du fichier de configuration, soit une valeur à fournir à l'invite de commandes. Pour plus d’informations, consultez [Installer SQL Server à partir de l’invite de commandes](./install-sql-server-from-the-command-prompt.md). De plus, une valeur est incluse pour les paramètres booléens pour lesquels une valeur n'est généralement pas fournie via l'invite de commandes. 
   
 ## <a name="using-the-configuration-file-to-install-ssnoversion"></a>Utilisation du fichier de configuration pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
 
@@ -145,8 +145,7 @@ Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPA
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Installer SQL Server à partir de l’invite de commandes](./install-sql-server-from-the-command-prompt.md)   
  [Installation d’un cluster de basculement SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Mettre à niveau une instance de cluster de basculement SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
-  
   

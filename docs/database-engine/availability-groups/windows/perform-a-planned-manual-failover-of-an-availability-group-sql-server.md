@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 646db60d22175c298a686bed903fdd9246c2a59f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 43b80003afbb83090aa7575aa038f6bebe7958a4
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897026"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670897"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Effectuer un basculement manuel planifié d’un groupe de disponibilité Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -94,7 +94,7 @@ Un basculement manuel planifié est pris en charge seulement quand le réplica p
 2. Utilisez l’applet de commande **Switch-SqlAvailabilityGroup** . 
   
     > [!NOTE] 
-    >  Pour voir la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Pour plus d’informations, consultez [Obtenir de l’aide pour SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md). 
+    >  Pour voir la syntaxe d’une applet de commande, utilisez l’applet de commande **Get-Help** dans l’environnement [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Pour plus d’informations, consultez [Obtenir de l’aide pour SQL Server PowerShell](../../../powershell/sql-server-powershell.md). 
   
      L’exemple suivant montre un basculement manuel du groupe de disponibilité *MyAg* vers le réplica secondaire dont le chemin est spécifié : 
   
@@ -104,8 +104,8 @@ Un basculement manuel planifié est pris en charge seulement quand le réplica p
   
     Pour configurer et utiliser le fournisseur SQL Server PowerShell : 
   
-    -   [Fournisseur SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md) 
-    -   [Obtenir de l’aide pour SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md) 
+    -   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md) 
+    -   [Obtenir de l’aide pour SQL Server PowerShell](../../../powershell/sql-server-powershell.md) 
 
 ##  <a name="follow-up-after-you-manually-fail-over-an-availability-group"></a><a name="FollowUp"></a> Suivi : Après avoir basculé manuellement un groupe de disponibilité 
  Si vous avez effectué le basculement en dehors de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] du groupe de disponibilité, ajustez les votes de quorum des nœuds du clustering de basculement Windows Server afin de refléter la nouvelle configuration du groupe de disponibilité. Pour plus d’informations, consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md). 
@@ -121,5 +121,4 @@ Un basculement manuel planifié est pris en charge seulement quand le réplica p
  * [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [Basculement et modes de basculement &#40;groupes de disponibilité AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 
  * [Effectuer un basculement manuel forcé d’un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md) 
-  
   
