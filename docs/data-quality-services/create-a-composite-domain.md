@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2ea7a9297f7a2f5e05a23bcab32b10922847882b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2da6f9cf82d189647d8b13ec864403134d6af571
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449892"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91728027"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
 
@@ -90,7 +90,7 @@ ms.locfileid: "88449892"
   
 5.  Si vous avez sélectionné **Délimiteurs** pour la méthode d'analyse, vous pouvez également sélectionner **Utiliser l'analyse de Base de connaissances**. Pour plus d’informations, consultez [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
-6.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
+6.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](/previous-versions/sql/sql-server-2016/hh510411(v=sql.130)).  
   
 ##  <a name="follow-up-after-creating-a-composite-domain"></a><a name="FollowUp"></a> Suivi : après la création d’un domaine composite  
  Après avoir créé un domaine composite, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
@@ -103,5 +103,4 @@ ms.locfileid: "88449892"
  L'analyse basée sur les connaissances peut être utilisée lorsque le domaine composite est constitué de domaines de chaînes ou d'un mélange de différents types de domaines (int, date, heure, etc.). Si la source de données est composée de différents types de données, l'analyse doit être effectuée en premier pour les types de données qui ne sont pas des chaînes, puis comme décrit ci-dessus selon la connaissance de domaine pour le reste des données.  
   
  Lorsque vous utilisez l'analyse basée sur les connaissances et qu'il y a moins de valeurs dans les données sources que de domaines dans le domaine composite, DQS placera une valeur Null dans le domaine manquant. Lorsqu'il y a plus de valeurs dans les données sources que de domaines dans le domaine composite, DQS ajoutera les données supplémentaires à l'une des colonnes. Si plusieurs domaines ont les mêmes valeurs, la source de données sera analysée sur le premier domaine correspondant.  
-  
   
