@@ -34,12 +34,12 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae9077610031075f71564eb5938b2a1415842827
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b012aa98d5dd1042a8e6a02ab4e91747ab512667
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454791"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753701"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ CONTAINSTABLE
 ## <a name="remarks"></a>Notes  
  Les prédicats et les fonctions de texte intégral s'appliquent à une table unique, ce qui est implicite dans le prédicat FROM. Pour effectuer des recherches sur plusieurs tables, utilisez une table jointe dans votre clause FROM afin de baser votre recherche sur un jeu de résultats qui est le produit de deux tables ou plus.  
   
- La table retournée a une colonne nommée **Key** qui contient des valeurs de clé de texte intégral. Chaque table indexée de texte intégral possède une colonne dont les valeurs sont uniques, et les valeurs retournées dans la colonne **clé** sont les valeurs de clés de texte intégral des lignes qui correspondent aux critères de sélection spécifiés dans la condition de recherche Contains. La propriété **TableFulltextKeyColumn** , obtenue à partir de la fonction OBJECTPROPERTYEX, fournit l’identité de cette colonne clé unique. Pour obtenir l’ID de la colonne associée à la clé de texte intégral de l’index de recherche en texte intégral, utilisez **sys. fulltext_indexes**. Pour plus d’informations, consultez [sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ La table retournée a une colonne nommée **Key** qui contient des valeurs de clé de texte intégral. Chaque table indexée de texte intégral possède une colonne dont les valeurs sont uniques, et les valeurs retournées dans la colonne **clé** sont les valeurs de clés de texte intégral des lignes qui correspondent aux critères de sélection spécifiés dans la condition de recherche Contains. La propriété **TableFulltextKeyColumn** , obtenue à partir de la fonction OBJECTPROPERTYEX, fournit l’identité de cette colonne clé unique. Pour obtenir l’ID de la colonne associée à la clé de texte intégral de l’index de recherche en texte intégral, utilisez **sys.fulltext_indexes**. Pour plus d’informations, consultez [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Pour obtenir les lignes qui vous intéressent dans la table originale, spécifiez une jointure avec les lignes CONTAINSTABLE. La clause FROM d'une instruction SELECT utilisant la fonction CONTAINSTABLE se présente généralement comme suit :  
   
@@ -284,10 +284,9 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Limiter les résultats de recherche avec le rang](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
- [Créer des requêtes de recherche en texte intégral &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+ [Créer des requêtes de recherche en texte intégral &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-full-text-search-queries-visual-database-tools.md)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [Exécuter une requête avec une recherche en texte intégral](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
-  
   

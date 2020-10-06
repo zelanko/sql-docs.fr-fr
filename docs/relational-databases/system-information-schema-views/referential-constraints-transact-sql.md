@@ -20,12 +20,12 @@ ms.assetid: 5d358f18-0a85-4b55-af4b-98d5f4cd1020
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c52f6d3c89051bd07143180410a0040c9d01144d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 42ebb05e1ec3bf70426cb0cef662623e2beb57f7
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548459"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753941"
 ---
 # <a name="referential_constraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -47,10 +47,9 @@ ms.locfileid: "89548459"
 |**DELETE_RULE**|**varchar (** 11 **)**|Action entreprise lorsqu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] viole l'intégrité référentielle définie par cette contrainte. Retourne l'une des valeurs suivantes : <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Si NO ACTION est spécifié sur une instruction ON DELETE de cette contrainte, la suppression de la clé primaire référencée dans la contrainte n'est pas propagée vers la clé étrangère. Si la suppression d'une clé primaire enfreint l'intégrité référentielle car au moins une clé étrangère contient la même valeur, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'apporte aucune modification aux tables parentes et de référence. Par ailleurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère une erreur.<br /><br /> Si CASCADE est spécifié sur une instruction ON DELETE de cette contrainte, toute modification de valeur de la clé primaire est automatiquement propagée vers la valeur de la clé étrangère.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues système &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Vues système &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)   
  [Vues de schémas d’informations &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. foreign_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
-  
+ [sys.foreign_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-foreign-keys-transact-sql.md)  
   
