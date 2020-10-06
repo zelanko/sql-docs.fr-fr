@@ -1,7 +1,7 @@
 ---
 title: Présentation de l’espace de noms Microsoft.Data.SqlClient
-description: Page de présentation de l’espace de noms Microsoft.Data.SqlClient.
-ms.date: 06/23/2019
+description: Découvrez l’espace de noms Microsoft.Data.SqlClient et la façon dont il est préférable de se connecter à SQL pour les applications .NET.
+ms.date: 09/29/2020
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 3a4f0611d3708aba9557deb81ab702f29e7a7462
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334586"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529350"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Présentation de l’espace de noms Microsoft.Data.SqlClient
 
@@ -59,7 +59,7 @@ Pour plus d’informations, consultez [Guide pratique pour activer le suivi d’
 
 #### <a name="enabling-managed-networking-on-windows"></a>Activation de la mise en réseau gérée sur Windows
 
-Un nouveau commutateur AppContext, **Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows**, permet d’utiliser une implémentation SNI gérée sur Windows à des fins de test et de débogage. Il modifie le comportement du pilote de façon à utiliser une indication SNI gérée dans les projets .NET Core 2.1 (et versions ultérieures) et .NET Standard 2.0 (et versions ultérieures) sur Windows, éliminant ainsi toutes les dépendances vis-à-vis de bibliothèques natives pour la bibliothèque Microsoft.Data.SqlClient.
+Un nouveau commutateur AppContext, **« Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows »** , permet d’utiliser une implémentation SNI managée sur Windows à des fins de test et de débogage. Il modifie le comportement du pilote de façon à utiliser une indication SNI gérée dans les projets .NET Core 2.1 (et versions ultérieures) et .NET Standard 2.0 (et versions ultérieures) sur Windows, éliminant ainsi toutes les dépendances vis-à-vis de bibliothèques natives pour la bibliothèque Microsoft.Data.SqlClient.
 
 ```csharp
 AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.UseManagedNetworkingOnWindows", true);
@@ -206,11 +206,11 @@ namespace Microsoft.Data.SqlClient.DataClassification
 
 ### <a name="utf-8-support"></a>Prise en charge d’UTF-8
 
-Le support UTF-8 ne requiert aucune modification du code de l’application. Ces modifications SqlClient optimisent la communication client-serveur lorsque le serveur prend en charge l’encodage UTF-8 et que le classement de la colonne sous-jacente est en UTF-8. Consultez la section UTF-8 sous [Nouveautés de SQL Server préversion de 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
+La prise en charge d’UTF-8 ne nécessite aucun changement du code de l’application. Ces modifications SqlClient optimisent la communication client-serveur lorsque le serveur prend en charge l’encodage UTF-8 et que le classement de la colonne sous-jacente est en UTF-8. Consultez la section UTF-8 sous [Nouveautés de SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md).
 
 ### <a name="always-encrypted-with-enclaves"></a>Always Encrypted avec enclaves
 
-En général, la documentation existante qui utilise System.Data.SqlClient sur .NET Framework **et les fournisseurs de magasin de clés principales de colonne intégrés** doit désormais fonctionner également avec .NET Core.
+En général, la documentation existante qui utilise System.Data.SqlClient sur .NET Framework **et les fournisseurs de magasin de clés principales de colonne intégrés** doivent désormais fonctionner également avec .NET Core.
 
  [Développer à l’aide d’Always Encrypted avec le fournisseur de données .NET Framework](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 

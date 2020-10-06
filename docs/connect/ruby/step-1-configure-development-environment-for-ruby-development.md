@@ -1,6 +1,6 @@
 ---
 title: 'Étape 1 : Configurer un environnement pour Ruby'
-description: Apprenez à configurer votre environnement de développement pour Ruby.
+description: L’étape 1 de ce guide de démarrage implique l’installation de Ruby et d’un pilote ODBC pour SQL Server dans votre environnement de développement.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 700b0c1979b0eccc1544afb59296fba867e24c53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a6412015000a5f9dda09ea5d489c8080fd2e1c09
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634595"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603364"
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement Ruby
 Vous devrez configurer votre environnement de développement avec les conditions préalables pour développer une application à l’aide du pilote Ruby pour SQL Server.    

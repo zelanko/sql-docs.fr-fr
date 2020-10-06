@@ -1,7 +1,7 @@
 ---
 description: Avenant à la déclaration de confidentialité de SQL Server
 title: Avenant à la déclaration de confidentialité de SQL Server | Microsoft Docs
-ms.date: 01/19/2019
+ms.date: 09/30/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: mikeray
@@ -11,21 +11,23 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0a4675d04349da1a8b1e92ce62b8dde3cbabb542
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9e2619cf1bfc8994481c6f310977c77a7292911
+ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480685"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "91603415"
 ---
 # <a name="sql-server-privacy-supplement"></a>Avenant à la déclaration de confidentialité de SQL Server
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-Cet article résume les fonctionnalités Internet qui peuvent collecter et envoyer à Microsoft des données anonymes de diagnostic et d’utilisation des fonctionnalités. SQL Server peut collecter des informations informatiques standard, et les données sur l’utilisation et les performances peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité du produit. Si vous installez SQL Server sur une machine virtuelle sur le service Microsoft Azure, des informations sur l’environnement peuvent être envoyées à Microsoft afin que Microsoft puisse inscrire votre ressource de machine virtuelle SQL Server auprès du fournisseur de ressources au sein de votre abonnement Azure, comme décrit plus en détail [ici](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). Dans le cadre de l’inscription de la ressource de machine virtuelle SQL Server, l’extension de l’agent IaaS SQL Server peut être installée sur votre machine virtuelle, comme décrit [ici](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). Cet article fait office d’addendum à la [déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) générale. La classification des données dans cet article s’applique uniquement aux versions du produit SQL Server local. Elle ne s'applique pas aux éléments suivants :
+Cet article résume les fonctionnalités Internet qui peuvent collecter et envoyer à Microsoft des données anonymes de diagnostic et d’utilisation des fonctionnalités. SQL Server peut collecter des informations informatiques standard, et les données sur l’utilisation et les performances peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité du produit.
+
+Cet article fait office d’addendum à la [déclaration de confidentialité Microsoft](https://go.microsoft.com/fwlink/?LinkId=521839) générale. La classification des données dans cet article s’applique uniquement aux versions du produit SQL Server local. Elle ne s'applique pas aux éléments suivants :
 
 - Azure SQL Database
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-telemetry-ssms.md)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Assistant Migration de base de données
@@ -115,13 +117,27 @@ Données nécessaires pour fournir des services Internet, d’après le CLUF de 
 |Les clients avec leur consentement peuvent envoyer via les Commentaires des utilisateurs du contenu client à Microsoft. |Limité à un usage interne Microsoft sans accès à des tiers. |Les clients avec leur consentement peuvent envoyer via les Commentaires des utilisateurs du contenu client à Microsoft. |
 |Les éléments cartographiques Power View et SQL Reporting Services peuvent envoyer des données pour l’utilisation de Bing Maps. |Limité aux données de session |- |
 
+## <a name="organization-identifiable-information-oii"></a>Informations d’identification de l’organisation (OII)
+
+Données reçues d’une organisation ou générées par son utilisation du produit.
+-   Peuvent être liées à une organisation.
+-   Sans contenu.
+
+### <a name="examples-of-organization-identifiable-information"></a>Exemples d’informations d’identification d’une organisation
+-   Nom de l’organisation (par exemple : Microsoft Corp.)
+
+### <a name="permitted-usage-scenarios"></a>Scénarios d’usages autorisés
+|Scénario  |Restrictions d’accès  |Conditions de rétention|
+|---------|---------|---------|
+| Microsoft peut collecter des données d’utilisation génériques des instances SQL Server s’exécutant dans Machines virtuelles Azure, dans le but exprès de fournir aux clients des avantages facultatifs dans Azure pour l’utilisation de SQL Server dans Machines virtuelles Azure. | Microsoft peut exposer les données au client, par exemple via le portail Azure, afin d’aider les clients qui exécutent SQL Server dans Machines virtuelles Azure à accéder aux avantages spécifiques à l’exécution de SQL Server dans Azure. </br></br>Microsoft n’utilisera pas ces données pour la gestion des licences d’audits sans le consentement préalable du client. | 90 jours minimum, 3 ans maximum |
+
 ## <a name="system-metadata"></a>Métadonnées système
 
 Données générées au cours de l’exécution du serveur.  Les données ne contiennent pas de contenu client.
 
 ### <a name="examples-of-system-metadata"></a>Exemples de métadonnées système
 
-Les éléments suivants sont considérés comme des métadonnées système quand ils n’ont pas de contenu client, de métadonnées d'objet, de données de contrôle d’accès client ou d’informations EUII :
+Les éléments suivants sont considérés comme des métadonnées système quand ils n’incluent pas de contenu client, de métadonnées d’objet, de données de contrôle d’accès du client ou d’informations d’identification de l’utilisateur final (EUII) :
 
 - GUID de la base de données
 - Code de hachage du nom de l’ordinateur
@@ -134,7 +150,7 @@ Les éléments suivants sont considérés comme des métadonnées système quand
 - Noms d’événement et codes d’erreur
 - Paramètres matériels et identification, tels que le fabricant OEM
 
-Microsoft examine les valeurs des noms d’application définies par d’autres programmes qui utilisent SQL Server (exemple : Sharepoint ou des programmes packagés tiers et inclut ces informations dans Métadonnées système qui sont envoyées à Microsoft quand Données d’utilisation est activé). Les clients ne doivent pas placer de données personnelles, comme les informations d’identification de l’utilisateur final, dans les champs Métadonnées système ni créer d’applications conçues pour stocker des données personnelles dans ces champs. 
+Microsoft examine les valeurs de nom d’application définies par d’autres programmes qui utilisent SQL Server (exemple : SharePoint ou des programmes packagés tiers) et inclut ces informations dans les métadonnées système envoyées à Microsoft quand les données d’utilisation sont activées. Les clients ne doivent pas placer de données personnelles, comme les informations d’identification de l’utilisateur final, dans les champs Métadonnées système ni créer d’applications conçues pour stocker des données personnelles dans ces champs. 
 
 ### <a name="permitted-usage-scenarios"></a>Scénarios d’usages autorisés
 

@@ -9,13 +9,13 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 ms.reviewer: drswkier; sstein
-ms.date: 07/06/2020
-ms.openlocfilehash: dbf4c4de7e8bdcb945f2c11c0b63f7cf75ce318b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.date: 09/29/2020
+ms.openlocfilehash: 52a67ff5c77bebb1fb122af29759b9a440ef6931
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989442"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91498217"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -136,7 +136,7 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |---|---|---|---|
 |**/Action:**|**/a**|Publish|Indique l'action à effectuer. |
 |**/AccessToken:**|**/at**|{string}| Dans le cadre de l'authentification par jeton, spécifie le jeton d'accès à utiliser pour se connecter à la base de données cible. |
-|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Spécifie la méthode d’authentification à utiliser pour accéder à Azure Key Vault. |
+|**/AzureKeyVaultAuthMethod:**|**/akv**|{Interactive&#124;ClientIdSecret}|Spécifie la méthode d’authentification utilisée pour accéder à Azure KeyVault si une opération de publication comprend les modifications apportées à une table/colonne chiffrée. |
 |**/ClientId:**|**/cid**|{string}|Spécifie l'ID du client à utiliser dans l'authentification auprès d'Azure Key Vault quand c'est nécessaire. |
 |**/DeployScriptPath:**|**/dsp**|{string}|Spécifie un chemin d’accès de fichier facultatif pour la sortie du script de déploiement. Dans les déploiements Azure, s’il existe des commandes TSQL permettant de créer et de modifier la base de données MASTER, un script est écrit dans le même chemin d’accès, mais avec le nom de fichier de sortie « NomFichier_Master.sql ». |
 |**/DeployReportPath:**|**/drp**|{string}|Spécifie un chemin d’accès de fichier facultatif pour la sortie du fichier XML du rapport de déploiement. |

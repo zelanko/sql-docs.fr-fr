@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
-ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
-ms.translationtype: MT
+ms.openlocfilehash: a443b615a6a04b588ed6dc84c6a8a4f6ed12e2f0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83721518"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726754"
 ---
 ## <a name="specifying-application-intent"></a>Spécification de l'intention d'application
 
@@ -31,9 +31,9 @@ Lorsqu’une connexion choisit **ReadOnly**, elle est affectée à l’une des c
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
     - Une base de données peut autoriser ou interdire les charges de travail en lecture sur la base de données AlwaysOn ciblée. Ce choix est contrôlé à l’aide de la clause **ALLOW_CONNECTIONS** des instructions Transact-SQL **PRIMARY_ROLE** et **SECONDARY_ROLE**.
 
-- [Géoréplication](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
+- [Géoréplication](/azure/sql-database/sql-database-geo-replication-overview)
 
-- [Scale-out en lecture](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
+- [Scale-out en lecture](/azure/sql-database/sql-database-read-scale-out)
 
 Si aucune cible spéciale n’est disponible, la base de données normale est utilisée pour la lecture.
 
@@ -54,5 +54,4 @@ Le routage en lecture seule est une fonctionnalité qui permet de garantir la di
 
 Il est possible que plusieurs connexions utilisant toutes le routage en lecture seule ne se connectent pas toutes au même réplica en lecture seule. Les modifications apportées à la synchronisation de base de données ou à la configuration du routage du serveur peuvent entraîner des connexions clientes à différents réplicas en lecture seule. Vous pouvez vous assurer que toutes les demandes de lecture seule se connectent au même réplica en lecture seule. Pour vous en assurer, ne passez *pas* un écouteur de groupe de disponibilité au mot clé de chaîne de connexion de **Serveur**. Au lieu de cela, spécifiez le nom de l'instance en lecture seule.
 
-Le routage en lecture seule peut prendre plus de temps que la connexion au serveur principal. Le délai plus long est dû au fait que le routage en lecture seule se connecte d’abord à la base de données principale, puis recherche la meilleure base de données secondaire lisible disponible. En raison de ces différentes étapes, vous devez augmenter le délai de connexion à au moins 30 secondes.
-
+Le routage en lecture seule peut prendre plus de temps que la connexion au serveur principal. Le délai plus long est dû au fait que le routage en lecture seule se connecte d’abord à la base de données principale, puis recherche la meilleure base de données secondaire lisible disponible. En raison de ces multiples étapes, vous devez augmenter le délai d’expiration de la connexion à au moins 30 secondes.

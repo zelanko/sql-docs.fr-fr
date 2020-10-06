@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dce5cf7e83be47bda2bcfef17b4602eb5f2fb49e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: d6a8f6d48800dfd47454d92a7dca0a5a0b58b80f
+ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238393"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91497717"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -127,20 +127,20 @@ Par défaut, les ports standard utilisés par SQL Server et les services de mote
   
  L’alternative à la configuration d’une instance nommée pour l’écoute sur un port fixe est de créer une exception dans le pare-feu pour un programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tel que **sqlservr.exe** (pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Cette approche peut être pratique, mais le numéro de port n’apparaît pas dans la colonne **Port local** de la page **Règles de trafic entrant** quand vous utilisez le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité. Cela peut rendre plus difficile le fait d'auditer quels ports sont ouverts. Un autre élément à prendre en compte est qu’un Service Pack ou une mise à jour cumulative peut modifier le chemin vers le fichier exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ce qui risque d’invalider la règle de pare-feu.  
   
-##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>Pour ajouter une exception de programme au pare-feu à l’aide du Pare-feu Windows avec fonctions avancées de sécurité
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-defender-firewall-with-advanced-security"></a>Pour ajouter une exception de programme au pare-feu à l’aide du pare-feu Windows Defender avec fonctions de sécurité avancée
   
-1. Dans le menu Démarrer, tapez *wf.msc*. Sélectionnez **Pare-feu Windows avec fonctions avancées de sécurité**.
+1. Dans le menu Démarrer, tapez *wf.msc*. Appuyez sur Entrée ou sélectionnez le résultat de la recherche wf.msc pour ouvrir le **Pare-feu Windows Defender avec sécurité avancée**.
 1. Dans le volet gauche, sélectionnez **Règles de trafic entrant**.
-1. Dans le volet droit, sous **Actions**, sélectionnez **Nouvelle règle**. L’**Assistant Nouvelle règle de trafic entrant** s’ouvre.
+1. Dans le volet droit, sous **Actions**, sélectionnez **Nouvelle règle...** L’**Assistant Nouvelle règle de trafic entrant** s’ouvre.
 1. Dans **Type de règle**, sélectionnez **Programme**. Sélectionnez **Suivant**.
 1. Dans **Programme**, sélectionnez **Ce chemin d’accès de programme**. Sélectionnez **Parcourir** pour localiser votre instance de SQL Server. Le programme se nomme sqlservr.exe. Il se trouve normalement à l’emplacement suivant :
 
-   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+   `C:\Program Files\Microsoft SQL Server\MSSQL15.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
    Sélectionnez **Suivant**.
 
-1. Dans **Action**, cliquez sur **Autoriser la connexion**.  
-1. Dans Profil, incluez les trois profils. Sélectionnez **Suivant**.
+1. Dans **Action**, sélectionnez **Autoriser la connexion**. Sélectionnez **Suivant**.
+1. Dans **Profil**, incluez les trois profils. Sélectionnez **Suivant**.
 1. Dans **Nom**, tapez un nom pour la règle. Sélectionnez **Terminer**.
 
 Pour plus d’informations sur les points de terminaison, consultez [Configurer le moteur de base de données de manière à écouter sur plusieurs ports TCP](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) et [Affichages catalogue de points de terminaison &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md). 
