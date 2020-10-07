@@ -6030,8 +6030,6 @@
       items:
         - name: Nouveautés
           href: dma/dma-whatsnew.md
-        - name: Évaluer SQL Database
-          href: dma/dma-assesssqlonprem.md
         - name: Évaluer SQL Server Integration Services (SSIS)
           href: dma/dma-assess-ssis.md
         - name: Enregistrer et charger des évaluations
@@ -6044,8 +6042,6 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: Migrer des connexions SQL Server
           href: dma/dma-migrateserverlogins.md
-        - name: Évaluer un patrimoine de données SQL Server pour le préparer à Azure SQL Database
-          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: Meilleures pratiques
           href: dma/dma-bestpractices.md
         - name: Consolider les rapports d’évaluation
@@ -6056,6 +6052,14 @@
           href: dma/dma-commandline.md
         - name: Configurer les paramètres
           href: dma/dma-configurationsettings.md
+        - name: Évaluer la préparation Azure SQL DB
+          items:
+            - name: Créer une évaluation
+              href: dma/dma-assesssqlonprem.md
+            - name: Utiliser l’interface graphique utilisateur DMA
+              href: dma/dma-assess-sql-data-estate-to-sqldb.md
+            - name: Utiliser la ligne de commande DMA
+              href: dma/dma-assess-sql-data-estate-to-sqldb-commandline.md
     - name: Assistant Migration SQL Server (SSMA)
       href: ssma/toc.yml
 - name: 'Gérer, superviser et optimiser'
