@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e955b167d1ce496ca14585d16c470502e9bffbe
-ms.sourcegitcommit: 22f687e9e8b4f37b877b2d19c5090dade8fa26d0
+ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85334022"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636139"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -58,6 +58,9 @@ ms.locfileid: "85334022"
 |**diskadmin**|Le rôle serveur fixe **diskadmin** permet de gérer les fichiers disque.|  
 |**dbcreator**|Les membres du rôle serveur fixe **dbcreator** peuvent créer, modifier, supprimer et restaurer n’importe quelle base de données.|  
 |**public**|Chaque connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] appartient au rôle serveur **public**. Lorsqu'un principal de serveur ne s'est pas vu accorder ou refuser des autorisations spécifiques sur un objet sécurisable, l'utilisateur hérite des autorisations accordées à public sur cet objet. Vous ne devez affecter des autorisations publiques à un objet que lorsque vous souhaitez que ce dernier soit disponible pour tous les utilisateurs. Vous ne pouvez pas modifier l’appartenance au rôle public.<br /><br /> **Remarque :** **public** est implémenté différemment des autres rôles. Les autorisations peuvent être accordées, refusées ou révoquées à partir des rôles serveur fixes public.|  
+  
+> [!IMPORTANT] 
+> La plupart des autorisations fournies par les rôles serveur suivants ne s’appliquent pas Synapse SQL - **processadmin**, **serveradmin**, **setupadmin** et **diskadmin**.
   
 ## <a name="permissions-of-fixed-server-roles"></a>Autorisations des rôles serveur fixes  
  Certaines autorisations sont assignées à chaque rôle serveur fixe. Le graphique suivant présente les autorisations attribuées aux rôles serveur.   

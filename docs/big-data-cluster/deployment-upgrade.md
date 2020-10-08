@@ -9,12 +9,12 @@ ms.date: 09/02/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 009853cd960a49ec559edd1d8a619e458102364d
-ms.sourcegitcommit: c5f0c59150c93575bb2bd6f1715b42716001126b
+ms.openlocfilehash: 6aa01e932003fb1ca650e4b7bf135ff8266b6457
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89392171"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725848"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Guide pratique pour effectuer la mise à niveau de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -60,10 +60,10 @@ Cette section explique comment mettre à niveau une version de SQL Server BDC pr
 1. Mettez à jour `azdata`.
 
    Suivez les instructions d’installation de `azdata`. 
-   - [Windows installer](deploy-install-azdata-installer.md)
-   - [Linux avec apt](deploy-install-azdata-linux-package.md)
-   - [Linux avec yum](deploy-install-azdata-yum.md)
-   - [Linux avec zypper](deploy-install-azdata-zypper.md)
+   - [Windows installer](../azdata/install/deploy-install-azdata-installer.md)
+   - [Linux avec apt](../azdata/install/deploy-install-azdata-linux-package.md)
+   - [Linux avec yum](../azdata/install/deploy-install-azdata-yum.md)
+   - [Linux avec zypper](../azdata/install/deploy-install-azdata-zypper.md)
 
    >[!NOTE]
    >Si `azdata` a été installé avec `pip` vous devez le supprimer manuellement avant de procéder à l’installation avec Windows Installer ou le gestionnaire de package Linux.

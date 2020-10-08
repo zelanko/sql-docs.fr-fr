@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c8dad935a404d682cf5c627a09795bf257efc209
-ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
+ms.openlocfilehash: 9d12d25873d7963a29afd66802f40e3074150e77
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/21/2020
-ms.locfileid: "86553024"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725880"
 ---
 # <a name="deploy-big-data-clusters-2019-on-openshift-on-premises-and-azure-red-hat-openshift"></a>Déploiement de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur OpenShift en local et sur Azure Red Hat OpenShift
 
@@ -88,7 +88,7 @@ Cet article décrit la procédure de déploiement propre à la plateforme OpenSh
 
 ## <a name="deploy-big-data-cluster"></a>Déploiement d’un cluster Big Data
 
-1. Installez la dernière version de [azdata](deploy-install-azdata.md).
+1. Installez la dernière version de [azdata](../azdata/install/deploy-install-azdata.md).
 
 1. Clonez l’un des fichiers de configuration intégrés pour OpenShift, en fonction de votre environnement cible (OpenShift local ou ARO) et du scénario de déploiement. Pour connaître les paramètres propres à OpenShift dans les fichiers de configuration intégrés, consultez la section *Paramètres propres à OpenShift dans les fichiers de configuration de déploiement* ci-dessous. Pour plus d’informations sur les fichiers de configuration disponibles, consultez [Aide au déploiement](deployment-guidance.md).
 

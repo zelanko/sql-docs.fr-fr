@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6e85889a3a1118ab60595a9b0c6bd614b6071829
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: bcf42d76f855e6fc722caa18f3c0d3c3672f9ec7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88772438"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725840"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebook"></a>Déployer un cluster Big Data SQL Server avec un notebook Azure Data Studio
 
@@ -23,7 +23,7 @@ ms.locfileid: "88772438"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fournit une extension pour Azure Data Studio qui inclut des notebooks de déploiement. Un notebook de déploiement comprend la documentation et le code que vous pouvez utiliser dans Azure Data Studio pour créer un cluster Big Data SQL Server.
 
-Implémentés à l’origine sous forme de projet open source, les [notebooks](../azure-data-studio/notebooks-guidance.md) ont été implémentés dans [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Vous pouvez utiliser un marquage Markdown pour le texte des cellules de texte et un des noyaux disponibles pour écrire du code dans les cellules de code.
+Implémentés à l’origine sous forme de projet open source, les [notebooks](../azure-data-studio/notebooks/notebooks-guidance.md) ont été implémentés dans [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md?view=sql-server-ver15). Vous pouvez utiliser un marquage Markdown pour le texte des cellules de texte et un des noyaux disponibles pour écrire du code dans les cellules de code.
 
 Vous pouvez utiliser des notebooks pour déployer des clusters Big Data pour [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -35,7 +35,7 @@ Les prérequis suivants sont obligatoires pour lancer également le notebook :
 
 En plus de ce qui précède, le déploiement d’un cluster Big Data SQL Server 2019 nécessite également :
 
-* [azdata](deploy-install-azdata.md)
+* [azdata](../azdata/install/deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)
 * [Azure CLI (en cas de déploiement sur Azure)](/cli/azure/install-azure-cli?view=azure-cli-latest)
 

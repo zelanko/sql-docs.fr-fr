@@ -3,16 +3,16 @@ title: Notes de publication pour SQL Server 2019 sur Linux
 description: Cet article contient les notes de publication et fonctionnalités prises en charge pour SQL Server 2019 s’exécutant sur Linux. Les notes de publication sont incluses dans la mise en production la plus récente et dans plusieurs mises en production précédentes.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/02/2020
+ms.date: 10/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: b5a0f9825a44e1f0d1a4d19ba5fc86a9b9fa9630
-ms.sourcegitcommit: 658c2e0ad958009ce7f041ba1ec0b4af06887497
+ms.openlocfilehash: 8ee707f13c8b02669486f5fab0106cb9357be232
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91145398"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636109"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Notes de publication pour SQL Server 2019 sur Linux
 
@@ -35,6 +35,8 @@ Le tableau suivant liste l’historique de publication des versions de SQL Serve
 
 | Libérer                   | Version       | Date de publication |
 |---------------------------|---------------|--------------|
+| [CU8](#cu8)               |               |              |
+| [CU7 (Supprimé)](https://support.microsoft.com/help/4570012)     | 15.0.4063.15  | 2020-09-02   |
 | [CU6](#cu6)               | 15.0.4053.23  | 2020-08-04   |
 | [CU5](#cu5)               | 15.0.4043.16  | 2020-06-22   |
 | [CU4](#cu4)               | 15.0.4033.1   | 31-03-2020   |
@@ -56,6 +58,10 @@ Si vous mettez à jour des packages SQL Server existants, exécutez la commande 
 - [Installer SQL Server 2019 Machine Learning Services pour prendre en charge R et Python sur Linux](sql-server-linux-setup-machine-learning.md)
 - [Installer le package PolyBase](../relational-databases/polybase/polybase-linux-setup.md)
 - [Activer SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu8"></a><a id="cu8"></a> CU8
+
+La mise à jour cumulative 8 (CU8) pour SQL Server 2019 (15.x) n’a pas encore été publiée.
 
 ## <a name="cu6-july-2020"></a><a id="cu6"></a> CU6 (juillet 2020)
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 9d4dd55daf26c9f927e23c0f269a084c711d0481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 107e25f9d4307532e4d1bd6d413e05347fc5209b
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215742"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624736"
 ---
 # <a name="type-mapping-with-polybase"></a>Mappage des types avec PolyBase
 
@@ -64,7 +64,8 @@ Pour les tables externes qui référencent des fichiers provenant de sources de 
 | Type de données Oracle | Type SQL Server | 
 | -------------    | --------------- |
 |Float             |Float            |
-|NUMBER            |Decimal          |
+|NUMBER            |Float            |
+|NUMBER (p,s)      |Decimal (p, s)   |
 |LONG              |nvarchar         |
 |BINARY_FLOAT      |Real             | 
 |BINARY_DOUBLE     |Float            | 
@@ -95,17 +96,17 @@ Pour les tables externes qui référencent des fichiers provenant de sources de 
 | Type de données BSON     | Type SQL Server |
 | ------------------ | --------------- |
 | Double             | Float           |
-| String             | nvarchar        |
+| Chaîne             | nvarchar        |
 | Données binaires        | nvarchar        |
 | ID de l'objet          | nvarchar        |
-| Boolean            | bit             |
+| Booléen            | bit             |
 | Date               | Datetime2       |
 | Entier de 32 bits     | Int             |
 | Timestamp          | nvarchar        |
-| Entier de 64 bits     | BigInt          |
+| Entier 64 bits     | BigInt          |
 |Decimal 128         | Decimal         | 
 | DBPointer          | nvarchar        |
-| Javascript         | nvarchar        |
+| JavaScript         | nvarchar        |
 | Clé maximale            | nvarchar        |
 | Clé minimale            | nvarchar        |
 | Symbole             | nvarchar        |
@@ -137,9 +138,9 @@ MongoDB utilise les documents BSON pour stocker les enregistrements de données.
 |VARGRAPHIC          |nvarchar         |
 |DATE                |Date             |
 |timestamp           |Datetime2        |
-|TEMPS                |Temps             |
+|TIME                |Temps             |
 |TIME WITH TIME ZONE |Temps             |
-|TIMESTAMP WITH TIME ZONE|Temps         |
+|TIMESTAMP WITH TIME ZONE|Heure         |
 
 ::: moniker-end
 

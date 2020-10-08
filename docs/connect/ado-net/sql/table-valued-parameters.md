@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b88af5ea6f20f11fdb3551c82f70e109abedee09
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 02b05f65928aad5f0022d31e00847baeeb42e75c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918607"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725550"
 ---
 # <a name="table-valued-parameters"></a>Paramètres table
 
@@ -34,8 +34,8 @@ Pour plus d’informations sur les paramètres table, consultez les ressources s
   
 |Ressource|Description|  
 |--------------|-----------------|  
-|[Paramètres table (moteur de base de données)](https://go.microsoft.com/fwlink/?LinkId=98363) dans la Documentation en ligne de SQL Server|Décrit comment créer et utiliser des paramètres table.|  
-|[Types de tables définis par l'utilisateur](https://go.microsoft.com/fwlink/?LinkId=98364) dans la Documentation en ligne de SQL Server|Décrit les types de tables définis par l’utilisateur qui permettent de déclarer des paramètres table.|  
+|[Paramètres table (moteur de base de données)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) dans la Documentation en ligne de SQL Server|Décrit comment créer et utiliser des paramètres table.|  
+|[Types de tables définis par l'utilisateur](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) dans la Documentation en ligne de SQL Server|Décrit les types de tables définis par l’utilisateur qui permettent de déclarer des paramètres table.|  
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Passage de plusieurs lignes dans les versions précédentes de SQL Server  
 Avant l’introduction des paramètres table dans SQL Server 2008, les options permettant de passer plusieurs lignes de données à une procédure stockée ou à une commande SQL paramétrée étaient limitées. Un développeur peut choisir parmi les options suivantes pour transmettre plusieurs lignes au serveur :  
@@ -49,7 +49,7 @@ Avant l’introduction des paramètres table dans SQL Server 2008, les options 
 - Utilisez le programme utilitaire `bcp` ou l’objet <xref:Microsoft.Data.SqlClient.SqlBulkCopy> pour charger de nombreuses lignes de données dans une table. Bien que cette technique soit très efficace, elle ne prend pas en charge le traitement côté serveur à moins que les données ne soient chargées dans une table temporaire ou une variable table.  
   
 ## <a name="creating-table-valued-parameter-types"></a>Création de types de paramètre table  
-Les paramètres table sont basés sur des structures de table fortement typées qui sont définies à l’aide d’instructions Transact-SQL CREATE TYPE. Vous devez créer un type de table et définir la structure dans SQL Server avant de pouvoir utiliser les paramètres table dans vos applications clientes. Pour plus d’informations sur la création des types de table, consultez [Types de table définis par l’utilisateur](https://go.microsoft.com/fwlink/?LinkID=98364) dans la Documentation en ligne de SQL Server.  
+Les paramètres table sont basés sur des structures de table fortement typées qui sont définies à l’aide d’instructions Transact-SQL CREATE TYPE. Vous devez créer un type de table et définir la structure dans SQL Server avant de pouvoir utiliser les paramètres table dans vos applications clientes. Pour plus d’informations sur la création des types de table, consultez [Types de table définis par l’utilisateur](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) dans la Documentation en ligne de SQL Server.  
   
 L’instruction suivante crée un type table nommé CategoryTableType qui se compose de colonnes CategoryID et CategoryName :  
   

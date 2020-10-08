@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6835fbc893b45214cf8ea6f7b6a02d8f1e1df773
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 68bfdb9d087539efaf05d9f3f78bb5348d2a2831
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988740"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624832"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -85,6 +85,9 @@ La sauvegarde d’une base de données volumineuse dans Stockage Blob est soumis
   
 -   SQL Server limite la taille de sauvegarde maximale prise en charge en utilisant un objet blob de pages à 1 To. La taille de sauvegarde prise en charge avec des objets blob de blocs est limitée à environ 200 Go (50 000 blocs * 4 Mo de MAXTRANSFERSIZE). Les objets blob de blocs prennent en charge l’entrelacement pour prendre en charge des tailles de sauvegarde sensiblement plus importantes.  
   
+    > [!IMPORTANT]  
+    >  Bien que la taille de sauvegarde maximale prise en charge par un seul objet blob de blocs soit de 200 Go, il est possible pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’écrire dans des tailles de bloc plus petites, ce qui peut amener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à atteindre la limite de 50 000 blocs avant le transfert de l’intégralité de la sauvegarde. Divisez les sauvegardes en plusieurs fichiers (même si elles sont inférieures à 200 Go) pour éviter la limite du nombre de blocs, en particulier si vous utilisez des sauvegardes différentielles ou non compressées.
+
 -   Vous pouvez émettre des instructions de sauvegarde ou de restauration à l’aide de TSQL, SMO, des applets de commande PowerShell, ou de l’Assistant Restauration ou Sauvegarde de SQL Server Management Studio.   
   
 -   La création d'un nom d'unité logique n'est pas prise en charge. Par conséquent, l'ajout d'une URL comme unité de sauvegarde à l'aide de sp_dumpdevice ou de SQL Server Management Studio n'est pas pris en charge.  

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 2648f8efbae6cc6665ea3ab984b27012a2a1ebc7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1fae73102dbbb29b6772213c4d021c273271458a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920426"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725633"
 ---
 # <a name="enabling-query-notifications"></a>Activation de notifications de requête
 
@@ -40,23 +40,23 @@ Les notifications de requêtes sont prises en charge uniquement pour les instruc
   
 **Documentation SQL Server**  
   
-- [Création d’une requête pour notification](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+- [Création d’une requête pour notification](/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
-- [Considérations relatives à sécurité pour Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
+- [Considérations relatives à sécurité pour Service Broker](/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
-- [Sécurité et protection (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
+- [Sécurité et protection (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522911(v=sql.105))  
   
-- [Considérations relatives à la sécurité pour Notifications Services](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
+- [Considérations relatives à la sécurité pour Notifications Services](/previous-versions/sql/sql-server-2005/ms172604(v=sql.90))  
   
-- [Autorisations associées aux notifications de requêtes](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
+- [Autorisations associées aux notifications de requêtes](/previous-versions/sql/sql-server-2008-r2/ms188311(v=sql.105))  
   
-- [Considérations d’ordre international pour Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
+- [Considérations d’ordre international pour Service Broker](/previous-versions/sql/sql-server-2005/ms166028(v=sql.90))  
   
-- [Considérations sur la conception de la solution (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
+- [Considérations sur la conception de la solution (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522899(v=sql.105))  
   
-- [Centre d’informations du développeur Service Broker](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
+- [Centre d’informations du développeur Service Broker](/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
-- [Guide du développeur (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+- [Guide du développeur (Service Broker)](/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>Activation des notifications de requêtes pour exécuter un exemple de code  
 Pour activer Service Broker sur la base de données **AdventureWorks** à l’aide de SQL Server Management Studio, exécutez l’instruction Transact-SQL suivante :  

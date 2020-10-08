@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: ed42778724b468892ff72203695e976d176459b2
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243423"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725565"
 ---
 # <a name="sql-server-express-security"></a>Sécurité de SQL Server Express
 
@@ -42,8 +42,8 @@ Pour plus d’informations sur SQL Server Express, consultez les ressources suiv
   
 |Ressource|Description|
 |-|-|  
-|[Documentation en ligne de SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentation complète pour SQL Server 2005 Express Edition.|  
-|[Instances d’utilisateur pour les non-administrateurs](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) dans la Documentation en ligne de SQL Server|Explique comment créer et déployer des instances utilisateur.|  
+|[Documentation en ligne de SQL Server 2005 Express Edition](/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Documentation complète pour SQL Server 2005 Express Edition.|  
+|[Instances d’utilisateur pour les non-administrateurs](/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) dans la Documentation en ligne de SQL Server|Explique comment créer et déployer des instances utilisateur.|  
 |[Instances d’utilisateur SQL Server Express](sql-server-express-user-instances.md)|Décrit les fonctionnalités de l’instance utilisateur dans une application ADO.NET. Fournit des informations sur l’activation d’une instance utilisateur, la connexion à une instance utilisateur à l’aide d’une <xref:Microsoft.Data.SqlClient.SqlConnection>, la durée de vie d’une instance utilisateur et les scénarios d’instance utilisateur.|  
   
 ## <a name="next-steps"></a>Étapes suivantes

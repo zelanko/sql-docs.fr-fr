@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: ec60fe007ff784c2ff19ad82bd9d212f685ef6d6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728408"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726681"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -157,7 +157,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> Il est recommandé d’utiliser des chaînes en entrée pour lier des valeurs à une [colonne décimale ou numérique](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) pour des raisons de précision et d’exactitude, car PHP n’offre qu’une précision limitée pour les [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Il en va de même pour les colonnes bigint, en particulier si les valeurs sont en dehors de la plage des [entiers](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> Il est recommandé d’utiliser des chaînes en entrée pour lier des valeurs à une [colonne décimale ou numérique](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) pour des raisons de précision et d’exactitude, car PHP n’offre qu’une précision limitée pour les [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Il en va de même pour les colonnes bigint, en particulier si les valeurs sont en dehors de la plage des [entiers](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a> Exemple  
 Cet exemple de code montre comment lier une valeur décimale comme paramètre d’entrée.  
@@ -184,7 +184,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a> Exemple
-Cet exemple de code montre comment créer une table de types [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) et extraire les données insérées.
+Cet exemple de code montre comment créer une table de types [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) et extraire les données insérées.
 
 ```
 <?php
@@ -252,4 +252,3 @@ Second field:  test_data
 
 [Utilisation de paramètres directionnels](../../connect/php/using-directional-parameters.md)  
 
-  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 84d4ac45655231430d444781738d47de57f732b8
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 18bd2254052364c746ad88e972a57bdfc7bfbf5f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480769"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725440"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,10 +59,9 @@ UUID conid = ((ISQLServerConnection)cn).getClientConnectionId();
   
  **getClientConnectionID** fonctionne quelle que soit la version du serveur auquel vous vous connectez, mais les journaux des événements étendus et l’entrée des erreurs de tampon en anneau de connectivité ne seront pas présents dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2008 R2 et les versions antérieures.  
   
- Vous pouvez également localiser l'ID de connexion dans le journal des événements étendus si l'échec concerne le serveur et si l'événement étendu permet l'enregistrement de l'ID de connexion. Vous pouvez également trouver l’ID de connexion dans la mémoire tampon de l’anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon de l’anneau de connectivité](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) pour certaines erreurs de connexion. Si l'ID de connexion n'est pas dans la mémoire tampon de l'anneau de connexion, vous pouvez supposer qu'il s'agit d'une erreur réseau.  
+ Vous pouvez également localiser l'ID de connexion dans le journal des événements étendus si l'échec concerne le serveur et si l'événement étendu permet l'enregistrement de l'ID de connexion. Vous pouvez également trouver l’ID de connexion dans la mémoire tampon de l’anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon de l’anneau de connectivité](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) pour certaines erreurs de connexion. Si l'ID de connexion n'est pas dans la mémoire tampon de l'anneau de connexion, vous pouvez supposer qu'il s'agit d'une erreur réseau.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
-  
   

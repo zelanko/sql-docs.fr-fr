@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fd2a061d3eba753530f7f86b858563b2168157a2
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: c3a609c9d9cdf4f01fea153fa85316920b674e88
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042800"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670310"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurer les comptes de service Windows et les autorisations
 
@@ -72,7 +72,6 @@ Chaque service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repr
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|C:\Windows\SysWOW64\SQLServerManager12.msc|
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|
-|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|
 
 ## <a name="services-installed-by-ssnoversion"></a><a name="Service_Details"></a> Services installés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -172,7 +171,7 @@ Les comptes de service administrés, les comptes de service administrés de grou
 
   Pour utiliser un gMSA pour SQL Server 2014 ou version ultérieure, le système d’exploitation doit être Windows Server 2012 R2 ou version ultérieure. Les serveurs avec Windows Server 2012 R2 nécessitent l’application de l’article [2998082 de la Base de connaissances](https://support.microsoft.com/kb/2998082) afin que les services puissent se connecter sans interruption immédiatement après la modification du mot de passe.
 
-  Pour plus d’informations, consultez [Comptes de service administrés de groupe](https://technet.microsoft.com/library/hh831782.aspx)
+  Pour plus d’informations, consultez [Comptes de service administrés de groupe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831782(v=ws.11))
 
   > [!NOTE]
   > Le gMSA doit être créé dans Active Directory par l'administrateur de domaine avant que le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puisse l'utiliser pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
@@ -195,7 +194,7 @@ Les comptes de service administrés, les comptes de service administrés de grou
 
 Pour plus d’informations sur les comptes de service administrés et les comptes virtuels, consultez la section **Concepts liés aux comptes de service administrés et aux comptes virtuels** du [Guide pas à pas des comptes de service](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx) et du [Forum aux questions des comptes de service administrés](https://technet.microsoft.com/library/ff641729\(WS.10\).aspx).
 
-**Note de sécurité :** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Utilisez un [MSA](#MSA) ou un [compte virtuel](#VA_Desc) quand cela est possible. Lorsque MSA et les comptes virtuels ne sont pas possibles, utilisez un compte d'utilisateur ou compte de domaine doté de privilèges minimaux au lieu d'un compte partagé pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilisez des comptes distincts pour différents services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . N'accordez aucune autorisation supplémentaire au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni aux groupes de services. Les autorisations seront accordées par le biais de l'appartenance aux groupes ou accordées directement à un SID de service, lorsqu'un SID de service est pris en charge.
+**Note de sécurité :** [!INCLUDE[ssNoteLowRights](../../includes/ssnotelowrights-md.md)] Utilisez un [MSA](#MSA), un [gMSA](#GMSA) ou un [compte virtuel](#VA_Desc) quand c’est possible. Quand des comptes MSA, gMSA et virtuels ne sont pas possibles, utilisez un compte d’utilisateur ou un compte de domaine avec des privilèges faibles au lieu d’un compte partagé pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez des comptes distincts pour différents services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . N'accordez aucune autorisation supplémentaire au compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni aux groupes de services. Les autorisations seront accordées par le biais de l'appartenance aux groupes ou accordées directement à un SID de service, lorsqu'un SID de service est pris en charge.
 
 ### <a name="automatic-startup"></a><a name="Auto_Start"></a> Démarrage automatique
 
@@ -223,7 +222,7 @@ Le tableau suivant répertorie les services [!INCLUDE[ssNoVersion](../../include
 |R Services ou Machine Learning Services|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
 |Moteur PolyBase| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
 
-\*Pour obtenir plus d’informations et un exemple de syntaxe pour des installations sans assistance, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).
+\*Pour obtenir plus d’informations et un exemple de syntaxe pour des installations sans assistance, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../install-windows/install-sql-server-from-the-command-prompt.md).
 
 \*\*Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est désactivé sur les instances de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] et [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] avec Advanced Services.
 
@@ -249,7 +248,7 @@ Cette section décrit les autorisations configurées par le programme d’instal
 
 ### <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> Configuration du service et contrôle d’accès
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] active un SID par service pour chacun de ses services pour fournir une isolation de service et une défense en profondeur. Le SID par service est dérivé du nom du service et est propre à ce service. Par exemple, un nom de SID pour un service [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être **NT Service\MSSQL$** _\<InstanceName>_ . L'isolation de service permet l'accès à des objets spécifiques sans devoir exécuter un compte à privilèges élevés ni affaiblir la protection de sécurité de l'objet. Un service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut limiter l'accès à ses ressources via une entrée de contrôle d'accès qui contient un SID de service.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] active un SID par service pour chacun de ses services pour fournir une isolation de service et une défense en profondeur. Le SID par service est dérivé du nom du service et est propre à ce service. Par exemple, un nom de SID de service pour une instance nommée du service [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut être **NT Service\MSSQL$** _\<InstanceName>_ . L'isolation de service permet l'accès à des objets spécifiques sans devoir exécuter un compte à privilèges élevés ni affaiblir la protection de sécurité de l'objet. Un service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut limiter l'accès à ses ressources via une entrée de contrôle d'accès qui contient un SID de service.
 
 > [!NOTE]
 > Sur Windows 7 et [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (et versions ultérieures) le SID par service peut être le compte virtuel utilisé par le service.
@@ -426,7 +425,7 @@ Le tableau suivant indique les autorisations nécessaires pour que les services 
 |Assistant Paramétrage du[!INCLUDE[ssDE](../../includes/ssde-md.md)]|Règle les bases de données pour des performances de requête optimales.|À la première utilisation, un utilisateur doté des informations d'identification d'administrateur système doit initialiser l'application. Après l’initialisation, les utilisateurs dbo peuvent utiliser l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour paramétrer uniquement les tables qui leur appartiennent. Pour plus d'informations, consultez « Initialisation de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|
 
 > [!IMPORTANT]
-> Avant de procéder à une mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], activez l’authentification Windows pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent et vérifiez la configuration par défaut requise : le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être membre du groupe sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> Avant de procéder à une mise à niveau de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], activez SQL Server Agent et vérifiez la configuration par défaut requise : le compte de service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit être membre du rôle serveur fixe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin**.
 
 ### <a name="registry-permissions"></a><a name="Registry"></a> Autorisations de Registre
 
@@ -446,7 +445,7 @@ Le Registre maintient également le mappage d'un ID d'instance sur un nom d'inst
 
 Windows Management Instrumentation (WMI) doit être en mesure de se connecter au [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour cette prise en charge, le SID par service du fournisseur WMI Windows (**NT SERVICE\winmgmt**) est configuré dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-Le fournisseur WMI SQL requiert les autorisations suivantes :
+Le fournisseur WMI SQL nécessite les autorisations minimales suivantes :
 
 - Appartenance aux rôles de base de données fixes **db_ddladmin** ou **db_owner** dans la base de données msdb.
 - Autorisation**CREATE DDL EVENT NOTIFICATION** dans le serveur.
@@ -485,11 +484,11 @@ Pendant l'installation, le programme d'installation [!INCLUDE[ssNoVersion](../..
 
 #### <a name="sa-account"></a><a name="sa"></a> Compte sa
 
-Le compte **sa** est toujours présent sous la forme d'une connexion de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et est un membre du rôle serveur fixe **sysadmin** . Quand le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est installé en utilisant uniquement l’authentification Windows (c’est-à-dire quand l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas activée), la connexion **sa** est toujours présente, mais elle est désactivée. Pour plus d’informations sur l’activation du compte **sa** , consultez [Modifier le mode d’authentification du serveur](../../database-engine/configure-windows/change-server-authentication-mode.md).
+Le compte **sa** est toujours présent sous la forme d'une connexion de [!INCLUDE[ssDE](../../includes/ssde-md.md)] et est un membre du rôle serveur fixe **sysadmin** . Quand le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est installé en utilisant seulement l’authentification Windows (c’est-à-dire quand l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas activée), la connexion **sa** est toujours présente, mais elle est désactivée, et le mot de passe est complexe et aléatoire. Pour plus d’informations sur l’activation du compte **sa** , consultez [Modifier le mode d’authentification du serveur](../../database-engine/configure-windows/change-server-authentication-mode.md).
 
 #### <a name="sql-server-per-service-sid-login-and-privileges"></a><a name="Logins"></a> Connexion et privilèges SID par service SQL Server
 
-Le SID par service du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est mis en service comme une connexion du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . La connexion SID par service est membre du rôle serveur fixe **sysadmin** .
+Le SID par service (parfois aussi appelé « principal de sécurité de service » (SID)) du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est provisionné en tant que connexion [!INCLUDE[ssDE](../../includes/ssde-md.md)]. La connexion SID par service est membre du rôle serveur fixe **sysadmin** . Pour plus d’informations sur les SID par service, consultez [Utilisation des SID de service pour accorder des autorisations à des services dans SQL Server](../../relational-databases/security/using-service-sids-to-grant-permissions-to-services-in-sql-server.md).
 
 #### <a name="sql-server-agent-login-and-privileges"></a><a name="Agent"></a> Connexion et privilèges de SQL Server Agent
 
@@ -513,9 +512,9 @@ Le compte spécifié pendant l'installation est approvisionné comme un membre d
 
 ### <a name="ssas-provisioning"></a><a name="SSAS"></a> Approvisionnement SSAS
 
-Les configurations requises pour le compte de service[!INCLUDE[ssAS](../../includes/ssas-md.md)] varient selon le déploiement du serveur. Si vous installez [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], le programme d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert que vous configuriez le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de façon à ce qu'il soit exécuté sous un compte de domaine. Les comptes de domaine sont obligatoires pour prendre en charge la fonctionnalité de compte géré intégrée à SharePoint. Pour cette raison, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas un compte de service par défaut, tel qu'un compte virtuel, pour une installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Pour plus d’informations sur la configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, consultez [Configuration des comptes de service Power Pivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).
+Les configurations requises pour le compte de service[!INCLUDE[ssAS](../../includes/ssas-md.md)] varient selon le déploiement du serveur. Si vous installez [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], le programme d'installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiert que vous configuriez le service [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de façon à ce qu'il soit exécuté sous un compte de domaine. Les comptes de domaine sont obligatoires pour prendre en charge la fonctionnalité de compte géré intégrée à SharePoint. Pour cette raison, le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne fournit pas un compte de service par défaut, tel qu'un compte virtuel, pour une installation [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Pour plus d’informations sur la configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, consultez [Configuration des comptes de service Power Pivot](/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts).
 
-Pour toutes les autres installations [!INCLUDE[ssAS](../../includes/ssas-md.md)] autonomes, vous pouvez configurer le service pour qu'il s'exécute sous un compte de domaine, un compte système intégré, un compte géré ou un compte virtuel. Pour plus d’informations sur la configuration de compte, consultez [Configurer les comptes de service &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services).
+Pour toutes les autres installations [!INCLUDE[ssAS](../../includes/ssas-md.md)] autonomes, vous pouvez configurer le service pour qu'il s'exécute sous un compte de domaine, un compte système intégré, un compte géré ou un compte virtuel. Pour plus d’informations sur la configuration de compte, consultez [Configurer les comptes de service &#40;Analysis Services&#41;](/analysis-services/instances/configure-service-accounts-analysis-services).
 
 Pour les installations en cluster, vous devez spécifier un compte de domaine ou un compte système intégré. Les comptes gérés ou les comptes virtuels ne sont pas pris en charge pour les clusters de basculement [!INCLUDE[ssAS](../../includes/ssas-md.md)] .
 
@@ -551,18 +550,18 @@ Cette section contient des informations supplémentaires sur les services [!INCL
 
 ### <a name="description-of-service-accounts"></a><a name="Serv_Accts"></a> Description des comptes de service
 
-Le compte de service est le compte utilisé pour démarrer un service Windows, comme le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
+Le compte de service est le compte utilisé pour démarrer un service Windows, comme le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Pour exécuter SQL Server, il n’est pas nécessaire d’ajouter le compte de service en tant que compte de connexion à SQL Server en plus du SID de service, qui est toujours présent et est membre du rôle de serveur fixe **sysadmin**.
 
 #### <a name="accounts-available-with-any-operating-system"></a><a name="Any_OS"></a> Comptes disponibles avec tout système d’exploitation
 
-En plus des nouveaux comptes [MSA](#MSA) et [comptes virtuels](#VA_Desc) décrits précédemment, les comptes suivants peuvent être utilisés.
+En plus des nouveaux comptes[MSA](#MSA), [gMSA](#GMSA) et [virtuels](#VA_Desc) décrits précédemment, les comptes suivants peuvent être utilisés.
 
 <a name="Domain_User"></a> **Compte d’utilisateur de domaine**
 
 Si le service doit interagir avec des services réseau, des ressources de domaine telles que des partages de fichiers, ou s'il utilise des connexions de serveur liées à d'autres ordinateurs qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez utiliser un compte de domaine doté de privilèges minimaux. De nombreuses activités de serveur à serveur ne peuvent être exécutées qu'avec un compte d'utilisateur de domaine. Ce compte doit être créé au préalable via l'administration de domaine dans votre environnement.
 
 > [!NOTE]
-> Si vous configurez l'application pour utiliser un compte de domaine, vous pouvez isoler les privilèges pour l'application, mais vous devez gérer les mots de passe manuellement ou créer une solution personnalisée pour la gestion de ces mots de passe. De nombreuses applications serveur utilisent cette stratégie pour améliorer la sécurité, mais elle requiert une administration supplémentaire et est plus complexe. Dans ces déploiements, les administrateurs du service passent beaucoup de temps à exécuter des tâches de maintenance telles que la gestion des mots de passe du service et des noms de principal du service (SPN), qui sont obligatoires pour l'authentification Kerberos. De plus, ces tâches de maintenance peuvent interrompre le service.
+> Si vous configurez le serveur SQL Server pour utiliser un compte de domaine, vous pouvez isoler les privilèges pour le service, mais vous devez gérer les mots de passe manuellement ou créer une solution personnalisée pour la gestion de ces mots de passe. De nombreuses applications serveur utilisent cette stratégie pour améliorer la sécurité, mais elle requiert une administration supplémentaire et est plus complexe. Dans ces déploiements, les administrateurs du service passent beaucoup de temps à exécuter des tâches de maintenance telles que la gestion des mots de passe du service et des noms de principal du service (SPN), qui sont obligatoires pour l'authentification Kerberos. De plus, ces tâches de maintenance peuvent interrompre le service.
 
 <a name="Local_User"></a> **Comptes d’utilisateurs locaux**
 
@@ -570,7 +569,10 @@ Si l'ordinateur ne fait pas partie d'un domaine, un compte d'utilisateur local s
 
 <a name="Local_Service"></a> **Compte de service local**
 
-Le compte de service local est un compte intégré qui bénéficie du même niveau d'accès aux ressources et aux objets que les membres du groupe Utilisateurs. Cet accès limité constitue une mesure de sécurité pour le système, au cas où le fonctionnement de services ou de processus individuels serait compromis. Les services qui s'exécutent en tant que compte de service local accèdent aux ressources réseau dans le cadre d'une session Null, sans informations d'identification. Sachez que le compte de service local n'est pas pris en charge pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le service local n'est pas pris en charge comme compte exécutant ces services, car il s'agit d'un service partagé et les autres services exécutés sous le service local disposent de droits d'accès d'administrateur système à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le nom réel du compte est **NT AUTHORITY\LOCAL SERVICE**.
+Le compte de service local est un compte intégré qui bénéficie du même niveau d'accès aux ressources et aux objets que les membres du groupe Utilisateurs. Cet accès limité constitue une mesure de sécurité pour le système, au cas où le fonctionnement de services ou de processus individuels serait compromis. Les services qui s'exécutent en tant que compte de service local accèdent aux ressources réseau dans le cadre d'une session Null, sans informations d'identification. 
+> [!NOTE]
+> Le compte de service local n’est pas pris en charge pour les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Le service local n'est pas pris en charge comme compte exécutant ces services, car il s'agit d'un service partagé et les autres services exécutés sous le service local disposent de droits d'accès d'administrateur système à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Le nom réel du compte est **NT AUTHORITY\LOCAL SERVICE**.
 
 <a name="Network_Service"></a> **Compte de service réseau**
 

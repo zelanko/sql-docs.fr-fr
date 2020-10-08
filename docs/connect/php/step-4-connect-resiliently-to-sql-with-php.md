@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: b2222c72be6a499e9a60424d1a7cc508904b8f33
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528346"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726650"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>Étape 4 : Se connecter de manière résiliente à SQL avec PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-Le programme de démonstration est conçu de sorte qu’une erreur temporaire (autrement dit, tout code d’erreur comportant le préfixe « 08 », tel qu’indiqué dans cette [annexe](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) survenue lors d’une tentative de connexion aboutit à une nouvelle tentative. Mais une erreur temporaire au cours de la commande de requête oblige le programme à ignorer la connexion et à en créer une nouvelle, avant de réessayer la commande de requête. Nous ne recommandons pas ni ne déconseillons ce choix de conception. Le programme de démonstration illustre quelques aspects de la flexibilité de conception qui vous sont accessibles.  
+Le programme de démonstration est conçu de sorte qu’une erreur temporaire (autrement dit, tout code d’erreur comportant le préfixe « 08 », tel qu’indiqué dans cette [annexe](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)) survenue lors d’une tentative de connexion aboutit à une nouvelle tentative. Mais une erreur temporaire au cours de la commande de requête oblige le programme à ignorer la connexion et à en créer une nouvelle, avant de réessayer la commande de requête. Nous ne recommandons pas ni ne déconseillons ce choix de conception. Le programme de démonstration illustre quelques aspects de la flexibilité de conception qui vous sont accessibles.  
   
 La longueur de cet exemple de code est due essentiellement à la logique de l’exception catch.   
   

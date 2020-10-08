@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f8fc0f34c860c9919d56d3d2c4645e9fea8bb428
-ms.sourcegitcommit: 9be0047805ff14e26710cfbc6e10d6d6809e8b2c
+ms.openlocfilehash: 341b021bbc582b2273f7601bfb993b4db40a4590
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "89042398"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725450"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matrice de support de Microsoft JDBC Driver pour SQL Server
 
@@ -81,7 +81,7 @@ Les pilotes Microsoft JDBC suivants bénéficient d’un support jusqu’à la d
   
  <sup>2</sup> Le support d’Azure SQL Database a été introduite dans le pilote 3.0 sous la forme d’un correctif. Nous recommandons aux clients d’Azure SQL Database d’utiliser la dernière version disponible du pilote.  
   
- <sup>3</sup> Microsoft SQL Server JDBC Driver version 2.0 et Microsoft SQL Server 2005 JDBC Driver version 1.2 peuvent se connecter à SQL Server 2008 comme client de bas niveau. Quand des conversions de bas niveau sont autorisées, les applications peuvent exécuter des requêtes et effectuer des mises à jour sur les nouveaux types de données SQL Server 2008, comme date, time, datetime2, datetimeoffset et FILESTREAM. Pour plus d’informations sur l’utilisation de ces nouveaux types de données avec le pilote JDBC, consultez  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145198) et  [Working with SQL Server 2008 FileStream using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145199). Pour plus d’informations sur la compatibilité de bas niveau de ces nouveaux types de données, consultez les rubriques  [Utilisation des données de date et d’heure](https://go.microsoft.com/fwlink/?LinkId=145211)et  [FILESTREAM Support](https://go.microsoft.com/fwlink/?LinkId=145212) dans la documentation en ligne de SQL Server.  
+ <sup>3</sup> Microsoft SQL Server JDBC Driver version 2.0 et Microsoft SQL Server 2005 JDBC Driver version 1.2 peuvent se connecter à SQL Server 2008 comme client de bas niveau. Quand des conversions de bas niveau sont autorisées, les applications peuvent exécuter des requêtes et effectuer des mises à jour sur les nouveaux types de données SQL Server 2008, comme date, time, datetime2, datetimeoffset et FILESTREAM. Pour plus d’informations sur l’utilisation de ces nouveaux types de données avec le pilote JDBC, consultez  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](/archive/blogs/jdbcteam/) et  [Working with SQL Server 2008 FileStream using JDBC Driver](/archive/blogs/jdbcteam/). Pour plus d’informations sur la compatibilité de bas niveau de ces nouveaux types de données, consultez les rubriques  [Utilisation des données de date et d’heure](/previous-versions/sql/sql-server-2008-r2/ms180878(v=sql.105))et  [FILESTREAM Support](../../relational-databases/native-client/features/filestream-support.md) dans la documentation en ligne de SQL Server.  
   
  <sup>4</sup> Support des connexions entre Microsoft JDBC Driver et Parallel Data Warehouse a été introduit dans Microsoft JDBC Driver 4.0 pour SQL Server et l’appliance Microsoft SQL Server 2008 R2 Parallel Data Warehouse mise à jour 3.  
   

@@ -14,12 +14,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 2aec52249b366eac2057fe8cde5e3829e5125a5d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0f38c60868785a9487e848fd9617e2b2feedf481
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85893106"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670056"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85893106"
   
  L'un des principaux avantages d'utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec des sources de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] réside dans l'exploitation de réplicas secondaires accessibles en lecture en tant que source de données de rapports tandis que, dans le même temps, les réplicas secondaires permettent le basculement vers une base de données principale.  
   
- Pour obtenir des informations générales sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez le [Forum aux questions sur Always On pour SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
+ Pour obtenir des informations générales sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez le [Forum aux questions sur Always On pour SQL Server 2012 (../../../sql-server/index.yml)](../../../sql-server/index.yml).  
 
 ##  <a name="requirements-for-using-reporting-services-and-always-on-availability-groups"></a><a name="bkmk_requirements"></a> Conditions préalables requises pour l’utilisation de Reporting Services et des groupes de disponibilité Always On  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et Power BI Report Server utilisent le composant .Net Framework 4.0 et prennent en charge les propriétés de chaîne de connexion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les utiliser avec des sources de données.  
@@ -125,7 +125,7 @@ ms.locfileid: "85893106"
   
 -   ReportServerTempDB  
   
- Le mode natif ne prend pas en charge et n'utilise pas les bases de données d'alerte et les fonctionnalités qui y sont associées. Pour configurer les serveurs de rapports en mode natif, faites appel au Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . En mode SharePoint, configurez le nom de la base de données de l’application de service pour qu’il corresponde au nom du « point d’accès client » que vous avez créé dans le cadre de la configuration de SharePoint. Pour plus d’informations sur la configuration de SharePoint avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Configurer et gérer des groupes de disponibilité SQL Server pour le serveur SharePoint (https://go.microsoft.com/fwlink/?LinkId=245165)](https://go.microsoft.com/fwlink/?LinkId=245165).  
+ Le mode natif ne prend pas en charge et n'utilise pas les bases de données d'alerte et les fonctionnalités qui y sont associées. Pour configurer les serveurs de rapports en mode natif, faites appel au Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . En mode SharePoint, configurez le nom de la base de données de l’application de service pour qu’il corresponde au nom du « point d’accès client » que vous avez créé dans le cadre de la configuration de SharePoint. Pour plus d’informations sur la configuration de SharePoint avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Configurer et gérer des groupes de disponibilité SQL Server pour SharePoint Server (/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14))](/previous-versions/office/sharepoint-server-2010/hh913923(v=office.14)).  
   
 > [!NOTE]
 >  Les serveurs de rapports en mode SharePoint utilisent un processus de synchronisation entre les bases de données d'application de service [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et les bases de données de contenu SharePoint. Il est important de conserver les bases de données de serveur de rapports et les bases de données de contenu ensemble. Pensez à les configurer dans les mêmes groupes de disponibilité afin qu'elles soient basculées et récupérées en tant qu'ensemble. Examinez le cas suivant :  
@@ -181,5 +181,3 @@ ms.locfileid: "85893106"
  [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
-  
-

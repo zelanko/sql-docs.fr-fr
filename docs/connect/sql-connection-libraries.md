@@ -8,16 +8,16 @@ ms.custom: ''
 ms.topic: article
 ms.date: 03/06/2020
 ms.author: v-daenge
-ms.openlocfilehash: c2f282e9ba4c3b182640989e2365e9be70a258da
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 8d5c44c11d9f5158abc52634f648a4159f86c143
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988510"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726610"
 ---
 # <a name="connection-modules-for-microsoft-sql-database"></a>Modules de connexion pour les bases de données SQL Microsoft
 
-Cet article fournit des liens de téléchargement de modules de connexion ou de *pilotes* permettant aux programmes clients d’interagir avec [Microsoft SQL Server](../relational-databases/database-features.md) et son équivalent dans le cloud, [Azure SQL Database](/azure/sql-database/). Les pilotes sont disponibles pour un large éventail de langages de programmation, sur les systèmes d’exploitation suivants :
+Cet article fournit des liens de téléchargement de modules de connexion ou de *pilotes* permettant aux programmes clients d’interagir avec [Microsoft SQL Server](../relational-databases/databases/databases.md) et son équivalent dans le cloud, [Azure SQL Database](/azure/sql-database/). Les pilotes sont disponibles pour un large éventail de langages de programmation, sur les systèmes d’exploitation suivants :
 
 - Linux
 - macOS
@@ -54,7 +54,7 @@ Le tableau suivant présente des exemples d’infrastructures de Mappage Objet R
 
 | Langage | Téléchargement du pilote ORM |
 | :------- | :------------------ |
-| C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x ou version ultérieure)](https://docs.microsoft.com/ef/) |
+| C# | [Entity Framework Core](/ef/core/)<br />[Entity Framework (6.x ou version ultérieure)](/ef/) |
 | Java | [Mettre en veille prolongée](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, inclus dans l’installation de Laravel](https://laravel.com/docs/) |
 | Node.js | [Sequelize ORM](https://sequelize.org/) |
@@ -85,7 +85,7 @@ Le tableau suivant présente des exemples d’infrastructures de Mappage Objet R
 
 ## <a name="related-links"></a>Liens connexes
 
-- [Exemples de code de connexion à Azure SQL Database dans le cloud, avec Java et d’autres langages](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java).
+- [Exemples de code de connexion à Azure SQL Database dans le cloud, avec Java et d’autres langages](/azure/sql-database/sql-database-connect-query-java).
 
 <!--
 Image references, **obsolete** markdown syntax alternative:

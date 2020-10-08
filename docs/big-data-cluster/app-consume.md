@@ -10,12 +10,12 @@ ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 45c89f83ca8d478eac40be867bbde946ce8e51d8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 12767b789fee400130990f6451a8a29e5bce6605
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681029"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725090"
 ---
 # <a name="consume-an-app-deployed-on-big-data-clusters-2019-using-a-restful-web-service"></a>Consommer une application déployée sur [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] avec un service web RESTful
 
@@ -26,7 +26,7 @@ Cet article décrit comment consommer une application déployée sur un cluster 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
 - [Cluster Big Data SQL Server](deployment-guidance.md)
-- [Utilitaire de ligne de commande azdata](deploy-install-azdata.md)
+- [Utilitaire de ligne de commande azdata](../azdata/install/deploy-install-azdata.md)
 - Application déployée avec [azdata](app-create.md) ou l’[extension de déploiement d’application](app-deployment-extension.md)
 
 > [!NOTE]

@@ -15,12 +15,12 @@ ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3346d217228bf6ca914b6ae1aa31af0883383908
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: ec430a256e07cfee21a14bbe3fe97426b044b4fd
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173240"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636129"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>External scripts enabled (option de configuration de serveur)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -42,6 +42,10 @@ Vous devez activer l’option de scripts externes activés avant de pouvoir exé
     [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] prend en charge les langages R et Python.
 
     Installez la fonctionnalité **Machine Learning Services** pendant l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour permettre l’exécution de scripts externes. Veillez à sélectionner au moins un langage lors de l’installation initiale : R ou Python, ou les deux.
+    
++ Pour [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] et ultérieur, [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] prend en charge tous les langages R, Python, Java et autres langages de tiers.
+
+Installez les services Machine Learning et la fonctionnalité Extensions de langage lors de l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour permettre l’exécution de scripts externes pour les langages pris en charge.
 
 ## <a name="additional-requirements"></a>Autres conditions requises
 

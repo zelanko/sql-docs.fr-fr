@@ -11,12 +11,12 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0da2cd346f2f71b190d4192646bc58a70c116933
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08fb58f77382dae2d6455cc181c983798c89050a
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730422"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529410"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
 
@@ -24,7 +24,7 @@ ms.locfileid: "85730422"
 
 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle de conception d’application qui prodigue des ressources de performances aux données relativement récentes. Ce modèle peut s’appliquer quand les données actuelles sont lues ou mises à jour de façon beaucoup plus fréquente que les données plus anciennes. Dans ce cas, les données actuelles sont dites *actives* ou *chaudes*, tandis que les données plus anciennes sont dites *froides*.
 
-L’idée principale est de stocker les données *chaudes* dans une table à mémoire optimisée. Par exemple, toutes les semaines ou tous les mois, les données plus anciennes devenues *froides* sont déplacées vers une table partitionnée. Les données de la table partitionnée sont stockées sur un lecteur ou autre disque dur, et non en mémoire.
+L’idée principale est de stocker les données *chaudes* dans une table à mémoire optimisée. Toutes les semaines ou tous les mois, les données plus anciennes devenues *froides* sont déplacées vers une table partitionnée. Les données de la table partitionnée sont stockées sur un lecteur ou autre disque dur, et non en mémoire.
 
 En règle générale, cette conception se sert d’une clé **DateHeure** pour permettre au processus de déplacement de distinguer efficacement les données chaudes des données froides.
 

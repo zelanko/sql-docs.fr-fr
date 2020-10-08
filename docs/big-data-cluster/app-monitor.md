@@ -10,12 +10,12 @@ ms.date: 08/16/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1cb2262d5e12c9b898abee0b928b1c63307fb065
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: fa5ae6a8834659f7a1098cd9d8fbaee6beef359e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681011"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725033"
 ---
 # <a name="monitor-applications-with-azdata-and-grafana-dashboard"></a>Surveiller les applications avec azdata et le tableau de bord Grafana
 
@@ -26,7 +26,7 @@ Cet article explique comment surveiller une application à l’intérieur d’un
 ## <a name="prerequisites"></a>Prérequis
 
 - [Cluster Big Data SQL Server 2019](deployment-guidance.md)
-- [Utilitaire de ligne de commande azdata](deploy-install-azdata.md)
+- [Utilitaire de ligne de commande azdata](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Fonctionnalités
 

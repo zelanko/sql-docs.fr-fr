@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 960f689f39007b4fbe4d7aa01d935ef1aaf640cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1f2d9b12cb2042b1e67e13057345056cfcb0105f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88438401"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725500"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Fonctionnalités internationales du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,15 +55,14 @@ ms.locfileid: "88438401"
 ## <a name="collation-support"></a>Prise en charge du classement  
  Le pilote JDBC version 3.0 prend en charge tous les classements pris en charge par [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] et [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], ainsi que les nouveaux classements ou les nouvelles versions des noms de classements Windows introduits dans [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)].  
   
- Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](https://go.microsoft.com/fwlink/?LinkId=131366) et [Nom de classement Windows (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=131367) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour plus d’informations sur les classements, consultez [Prise en charge d’Unicode et du classement](/previous-versions/sql/sql-server-2008-r2/ms143503(v=sql.105)) et [Nom de classement Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="using-international-domain-names-idn"></a>Utilisation de noms de domaine internationaux (IDN)  
  Le pilote JDBC 6.0 pour SQL Server prend en charge l’utilisation de noms de domaine internationaux et peut convertir un nom de serveur Unicode en codage compatible avec le format ASCII (Punycode) si nécessaire pendant une connexion.  Si les noms de domaines internationaux sont stockés dans le système DNS (Domain Name System) en tant que chaînes ASCII au format Punycode (spécifié par la RFC 3490), activez la conversion du nom de serveur Unicode en affectant la valeur « True » à la propriété serverNameAsACE.  Sinon, si le service DNS est configuré pour autoriser l’utilisation de caractères Unicode, affectez la valeur « false » (valeur par défaut) à la propriété serverNameAsACE.  Pour les versions antérieures du pilote JDBC, vous pouvez aussi convertir le nom du serveur au format Punycode avec les méthodes [IDN.toASCII de Java](https://docs.oracle.com/javase/8/docs/api/java/net/IDN.html) avant de définir cette propriété pour une connexion.  
   
 > [!NOTE]  
->  La plupart des logiciels de résolution écrits pour les plateformes autres que Windows sont basés sur les normes DSN Internet. Il est donc plus probable qu’ils utilisent le format Punycode pour les noms de domaines internationaux, alors qu’un serveur DNS Windows sur un réseau privé peut être configuré pour autoriser l’utilisation des caractères UTF-8 en fonction du serveur.  Pour plus d’informations, consultez [Prise en charge des caractères Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
+>  La plupart des logiciels de résolution écrits pour les plateformes autres que Windows sont basés sur les normes DSN Internet. Il est donc plus probable qu’ils utilisent le format Punycode pour les noms de domaines internationaux, alors qu’un serveur DNS Windows sur un réseau privé peut être configuré pour autoriser l’utilisation des caractères UTF-8 en fonction du serveur.  Pour plus d’informations, consultez [Prise en charge des caractères Unicode](/previous-versions/windows/it-pro/windows-server-2003/cc738403(v=ws.10)).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation du pilote JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
   

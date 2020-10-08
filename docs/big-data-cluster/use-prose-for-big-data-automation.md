@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning-bdc
-ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9768c406ca94cd16e8e9075bd5247434b8359d5c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243440"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725760"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Data wrangling avec l’accélérateur de code PROSE
 
@@ -37,7 +37,7 @@ Dans la version actuelle, l’accélérateur de code peut générer intelligemme
 - Correction des types de données dans un dataframe.
 - Recherche d’expressions régulières représentant des modèles dans une liste de chaînes.
 
-Pour obtenir une vue d’ensemble générale des méthodes de l’accélérateur de code, consultez la [documentation](https://aka.ms/prose-codeaccelerator-overview).
+Pour obtenir une vue d’ensemble générale des méthodes de l’accélérateur de code, consultez la [documentation](/python/api/overview/azure/prose/intro).
 
 ## <a name="reading-data-from-a-file-to-a-dataframe"></a>Lecture de données à partir d’un fichier dans un dataframe
 
@@ -86,7 +86,7 @@ def read_file(file):
     return df
  ```
 
-L’accélérateur de code peut générer du code pour charger des fichiers délimités, JSON et de largeur fixe sur un dataframe. Pour la lecture de fichiers de largeur fixe, le `ReadFwfBuilder` utilise éventuellement un fichier de schéma explicite qu’il peut analyser pour obtenir les positions de colonne. Pour plus d’informations, consultez la [documentation](https://aka.ms/prose-codeaccelerator-docs).
+L’accélérateur de code peut générer du code pour charger des fichiers délimités, JSON et de largeur fixe sur un dataframe. Pour la lecture de fichiers de largeur fixe, le `ReadFwfBuilder` utilise éventuellement un fichier de schéma explicite qu’il peut analyser pour obtenir les positions de colonne. Pour plus d’informations, consultez la [documentation](/python/api/overview/azure/prose/intro).
 
 ## <a name="fixing-data-types-in-a-dataframe"></a>Correction des types de données dans un dataframe
 
@@ -106,7 +106,7 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-Pour plus d’informations, consultez la [documentation](https://aka.ms/prose-codeaccelerator-fixtypes).
+Pour plus d’informations, consultez la [documentation](/python/api/overview/azure/prose/fixdatatypes).
 
 ## <a name="identifying-patterns-in-strings"></a>Identification des modèles dans les chaînes
 
@@ -143,4 +143,4 @@ Voici les expressions régulières générées par le `FindPatternsBuilder` pour
 ^Unknown$
 ```
 
-En plus de la génération d’expressions régulières, le `FindPatternsBuilder` peut également générer du code pour le clustering des valeurs en fonction des regex générés. Il peut également déclarer que toutes les valeurs d’une colonne sont conformes aux expressions régulières générées. Pour en savoir plus et pour découvrir d’autres scénarios utiles, consultez la [documentation](https://aka.ms/prose-codeaccelerator-findpatterns).
+En plus de la génération d’expressions régulières, le `FindPatternsBuilder` peut également générer du code pour le clustering des valeurs en fonction des regex générés. Il peut également déclarer que toutes les valeurs d’une colonne sont conformes aux expressions régulières générées. Pour en savoir plus et pour découvrir d’autres scénarios utiles, consultez la [documentation](/python/api/overview/azure/prose/findpatterns).

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: be42913b07f037b002123bedb6d285f41b52c9a3
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393167"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725634"
 ---
 # <a name="handling-null-values"></a>Traitement des valeurs Null
 
@@ -26,7 +26,7 @@ ms.locfileid: "86393167"
 Une valeur Null dans une base de données relationnelle est utilisée lorsque la valeur d’une colonne est inconnue ou manquante. Une valeur Null n’est ni une chaîne vide (pour les types de données caractère ou DateHeure), ni une valeur zéro (pour les types de données numériques). La spécification SQL-92 ANSI indique qu’une valeur Null doit être la même pour tous les types de données, de sorte que toutes les valeurs Null sont gérées de manière cohérente. L’espace de noms <xref:System.Data.SqlTypes> fournit une sémantique Null en implémentant l’interface <xref:System.Data.SqlTypes.INullable>. Chacun des types de données de <xref:System.Data.SqlTypes> a sa propre propriété `IsNull` et une valeur `Null` qui peut être assignée à une instance de ce type de données.  
   
 > [!NOTE]
->  La version .NET Framework 2.0 et la version .NET Core 1.0 ont introduit le support des types Nullable, qui permettent aux programmeurs d’étendre un type valeur pour représenter toutes les valeurs du type sous-jacent. Ces types Nullable CLR représentent une instance de la structure <xref:System.Nullable>. Cette fonctionnalité est particulièrement utile lorsque les types valeur sont boxed et unboxed, ce qui offre une meilleure compatibilité avec les types d’objets. Les types Nullable CLR ne sont pas destinés au stockage des valeurs Null de base de données, car une valeur Null SQL ANSI ne se comporte pas de la même façon qu’une référence `null` (ou `Nothing` dans Visual Basic). Pour travailler avec les valeurs Null SQL ANSI de la base de données, utilisez les valeurs Null <xref:System.Data.SqlTypes> au lieu de <xref:System.Nullable>. Pour plus d’informations sur l’utilisation des types Nullables CLR dans C#, consultez [Types Nullables](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/) et pour C#, consultez [Utilisation des types Nullables](https://docs.microsoft.com/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/).  
+>  La version .NET Framework 2.0 et la version .NET Core 1.0 ont introduit le support des types Nullable, qui permettent aux programmeurs d’étendre un type valeur pour représenter toutes les valeurs du type sous-jacent. Ces types Nullable CLR représentent une instance de la structure <xref:System.Nullable>. Cette fonctionnalité est particulièrement utile lorsque les types valeur sont boxed et unboxed, ce qui offre une meilleure compatibilité avec les types d’objets. Les types Nullable CLR ne sont pas destinés au stockage des valeurs Null de base de données, car une valeur Null SQL ANSI ne se comporte pas de la même façon qu’une référence `null` (ou `Nothing` dans Visual Basic). Pour travailler avec les valeurs Null SQL ANSI de la base de données, utilisez les valeurs Null <xref:System.Data.SqlTypes> au lieu de <xref:System.Nullable>. Pour plus d’informations sur l’utilisation des types Nullables CLR dans C#, consultez [Types Nullables](/dotnet/csharp/programming-guide/nullable-types/) et pour C#, consultez [Utilisation des types Nullables](/dotnet/csharp/programming-guide/nullable-types/using-nullable-types/).  
   
 ## <a name="nulls-and-three-valued-logic"></a>Valeurs Null et logique ternaire  
 L’autorisation de valeurs Null dans les définitions de colonne introduit une logique ternaire dans votre application. Une comparaison peut évaluer entre une et trois conditions :  

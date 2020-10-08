@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 099bf39d869caf8e42575393276e1a7e5ddadb68
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457252"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91719410"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastructure du profilage de requête
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -126,7 +126,7 @@ WITH (MAX_MEMORY=4096 KB,
 
 Une nouvelle DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) est introduite pour retourner l’équivalent du dernier plan d’exécution réel connu pour la plupart des requêtes. Elle s’appelle *Dernières statistiques de plan de requête*. Les dernières statistiques de plan de requête peuvent être activées au niveau de la base de données à l’aide de la [configuration étendue à la base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LAST_QUERY_PLAN_STATS : `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
-Un nouvel événement étendu *query_post_execution_plan_profile* collecte l’équivalent d’un plan d’exécution réel basé sur le profilage léger, contrairement à *query_post_execution_showplan* qui utilise le profilage standard. Un exemple de session avec l’événement étendu *query_post_execution_plan_profile* peut être configuré comme dans l’exemple ci-dessous :
+Un nouvel événement étendu *query_post_execution_plan_profile* collecte l’équivalent d’un plan d’exécution réel basé sur le profilage léger, contrairement à *query_post_execution_showplan* qui utilise le profilage standard. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] offre également cet événement à compter de CU14. Un exemple de session avec l’événement étendu *query_post_execution_plan_profile* peut être configuré comme dans l’exemple ci-dessous :
 
 ```sql
 CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
@@ -180,7 +180,7 @@ La table suivante récapitule les actions pour activer le profilage standard ou 
 |---------------|---------------|---------------|
 |Global|session xEvent avec le XE; `query_post_execution_showplan` commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Indicateur de trace 7412; commençant par SP1 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|
 |Global|Trace SQL et SQL Server Profiler avec l’événement de trace `Showplan XML`; commençant par SQL Server 2000|session xEvent avec le XE; `query_thread_profile` commençant par SP2 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|
-|Global|-|session xEvent avec le XE; `query_post_execution_plan_profile` commençant par [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|Global|-|Session xEvent avec `query_post_execution_plan_profile` XE ; à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU14 et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
 |session|Utiliser `SET STATISTICS XML ON`; commençant par SQL Server 2000|Utiliser l’indicateur de requête `QUERY_PLAN_PROFILE` avec une session xEvent avec le XE; `query_plan_profile` commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
 |session|Utiliser `SET STATISTICS PROFILE ON`; commençant par SQL Server 2000|-|
 |session|Cliquer sur le bouton [Statistiques des requêtes en direct](../../relational-databases/performance/live-query-statistics.md) dans SSMS; commençant par SP2 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|-|

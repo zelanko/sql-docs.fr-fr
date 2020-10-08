@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 37f49a006b0fe17120af2309f9b3991ab594ebda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1ea5d3c83667dbd194e9fb82ae7bce2e815d479b
+ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423713"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91412760"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importer une stratégie de gestion basée sur des stratégies
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,4 +46,4 @@ ms.locfileid: "88423713"
 
 
 ## <a name="example-policies"></a>Exemples de stratégies
- Les exemples de stratégies ne sont pas inclus dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], mais des exemples de stratégies distribuées précédemment sont accessibles en installant [SQL Server Management Studio v17](../../ssms/release-notes-ssms.md#previous-ssms-releases).  Une fois SQL Server Management Studio v17 installé, vous trouverez des exemples de stratégies dans `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Policies`. Ces stratégies peuvent être importées et utilisées comme base pour vos propres stratégies de gestion basée sur des stratégies.
+ Des exemples de stratégies sont disponibles dans le [dépôt d’exemples de code SQL Server](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/epm-framework/sample-policies). Ces stratégies peuvent être importées et utilisées comme base pour vos propres stratégies de gestion basée sur des stratégies.

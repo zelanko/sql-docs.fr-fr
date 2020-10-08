@@ -15,12 +15,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1129420a821c7cbce65a094a75512fd5baa54d1a
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d1b9e9e71fc425ca978d3050e8fdfd72a1c39d7f
+ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899706"
+ms.lasthandoff: 10/02/2020
+ms.locfileid: "91670434"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Installer SQL Server à partir de l’Assistant Installation (programme d’installation)
 
@@ -32,8 +32,8 @@ Cet article fournit une procédure d’installation pas à pas d’une nouvelle 
 
 Pour les autres façons d’installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez :  
 
-* [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
-* [Installer SQL Server à l’aide d’un fichier de configuration](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)  
+* [Installer SQL Server à partir de l’invite de commandes](./install-sql-server-from-the-command-prompt.md)  
+* [Installer SQL Server à l’aide d’un fichier de configuration](./install-sql-server-using-a-configuration-file.md)  
 * [Installer SQL Server à l’aide de SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
 * [Créer un nouveau cluster de basculement SQL Server &#40;Installation&#41;](../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)  
 * [Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation &#40;Installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
@@ -70,7 +70,7 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
 1. Sur la page **Termes du contrat de licence**, consultez le contrat de licence. Si vous acceptez, cochez la case **J’accepte les termes du contrat de licence**, puis sélectionnez **Suivant**.  
     
    > [!NOTE]
-   > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
+   > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 1. Dans la page **Règles globales**, l’installation passera automatiquement à la page **Mises à jour du produit** s'il n'existe aucune erreur de règle.  
   
@@ -238,7 +238,7 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
    > Si une clé de produit de licence Enterprise Server/CAL est entrée et que l’ordinateur a plus de 20 cœurs physiques, ou 40 cœurs logiques lorsque l’hyper-threading est activé, un avertissement s’affiche lors de l’installation. Vous pouvez quand même continuer l’installation en activant la case à cocher **Cochez cette case pour confirmer cette limite et continuer ou cliquez sur Précédent/Annuler pour entrer une licence de produit Enterprise Core prenant en charge la valeur maximale du système d'exploitation** ou cliquez sur **Précédent** et entrez une clé de licence prenant en charge le nombre maximal de processeurs du système d’exploitation.
 
    > [!NOTE]
-   > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
+   > SQL Server transmet des informations sur votre expérience d’installation, ainsi que d’autres données de performances et d’utilisation pour aider Microsoft à améliorer le produit. Pour plus d’informations sur le traitement de données SQL Server et les contrôles de confidentialité, consultez la [déclaration de confidentialité](https://privacy.microsoft.com/privacystatement) et [Configurer SQL Server pour envoyer des commentaires à Microsoft](../../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md).
 
 1. Dans la page **Règles globales**, l’installation passera automatiquement à la page **Mises à jour du produit** s'il n'existe aucune erreur de règle.  
   
@@ -306,11 +306,11 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
   
 1. Utilisez la page **Configuration du moteur de base de données - Configuration du serveur** pour spécifier les options suivantes :  
   
-    * **Mode de sécurité** : Sélectionnez **Authentification Windows** ou **Authentification en mode mixte** pour votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous sélectionnez **Mode d'authentification mixte**, vous devez fournir un mot de passe fort pour le compte administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré.  
+    * **Mode de sécurité** : Sélectionnez **Authentification Windows** ou **Authentification en mode mixte** pour votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous sélectionnez **Mode d’authentification mixte**, vous devez fournir un mot de passe fort pour le compte administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (sa) intégré.  
   
        Lorsque la connexion réussie d'un périphérique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est établie, le mécanisme de sécurité est le même pour l'authentification Windows et l’authentification en mode mixte. Pour plus d’informations, consultez la [page Configuration du moteur de base de données - Configuration du serveur](../../sql-server/install/instance-configuration.md#serverconfig).
   
-    * **Administrateurs SQL Server** : Vous devez spécifier au moins un administrateur système pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour ajouter le compte sous lequel l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, sélectionnez **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, sélectionnez **Ajouter** ou **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposent des privilèges d'administrateur pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    * **Administrateurs SQL Server** : Vous devez spécifier au moins un administrateur système pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour ajouter le compte sous lequel l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute, sélectionnez **Ajouter l'utilisateur actuel**. Pour ajouter ou supprimer des comptes dans la liste des administrateurs système, sélectionnez **Ajouter** ou **Supprimer**, puis modifiez la liste des utilisateurs, groupes ou ordinateurs qui disposent des privilèges d'administrateur pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Vous pouvez également ajouter un groupe de domaine Windows pour établir un groupe d’administrateurs SQL partagé dans Active Directory avec un accès sysadmin à SQL Server. 
   
      Utilisez la page **Configuration du moteur de base de données - Répertoires de données** pour spécifier les répertoires d'installation non définis par défaut. Pour installer sur les répertoires par défaut, sélectionnez **Suivant**.  
   
@@ -326,14 +326,14 @@ Cela ne s’applique pas à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-m
     > [!NOTE]  
     > Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - MaxDOP](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop). 
+    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - MaxDOP](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#maxdop). 
 
      Utilisez la page de **configuration du moteur de base de données - Mémoire** pour spécifier les valeurs **min server memory** and **max server memory** utilisées par cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] après le démarrage. Vous pouvez utiliser les valeurs par défaut, les valeurs recommandées calculées ou spécifiez manuellement vos propres valeurs une fois que vous avez choisi l’option **Recommandé**.
      
     > [!NOTE]  
     > Cette page est uniquement disponible dans le programme d’installation à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. 
     
-    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - Mémoire](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory). 
+    Pour plus d’informations, consultez la [page de configuration du moteur de base de données - Mémoire](../../sql-server/install/instance-configuration.md?view=sql-server-ver15#memory). 
 
      Utilisez la page **Configuration du moteur de base de données - FILESTREAM** pour activer FILESTREAM pour votre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez la [page Configuration du moteur de base de données - FILESTREAM](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
@@ -411,4 +411,4 @@ Pour réduire la surface d'exposition d'un système, [!INCLUDE[ssNoVersion](../.
 * [Réparer une installation défectueuse de SQL Server](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)
 * [Afficher et lire les fichiers journaux d’installation de SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 * [Effectuer une mise à niveau de SQL Server à l’aide de l’Assistant Installation &#40;Installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
-* [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 
+* [Installer SQL Server à partir de l’invite de commandes](./install-sql-server-from-the-command-prompt.md)

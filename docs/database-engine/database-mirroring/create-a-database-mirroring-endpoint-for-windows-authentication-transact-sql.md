@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 15b7fe1a4a8ad78402226814e46ffc9d47964439
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c364aab699f49a4a9c4814a572a6a7295273650b
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789727"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529445"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Créer un point de terminaison de mise en miroir de bases de données pour l'authentification Windows (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "85789727"
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
  Les méthodes d'authentification et de chiffrement d'instance de serveur sont établies par l'administrateur système.  
   
-> [!IMPORTANT]  
+> [!WARNING]  
 >  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
- Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Requiert l’autorisation `CREATE ENDPOINT` ou l’appartenance au rôle serveur fixe `sysadmin`. Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
@@ -58,15 +58,16 @@ ms.locfileid: "85789727"
   
 3.  Déterminez s'il existe déjà un point de terminaison de mise en miroir de base de données à l'aide de l'instruction suivante :  
   
-    ```  
+    ```sql  
     SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
     ```  
   
     > [!IMPORTANT]  
     >  S'il existe déjà un point de terminaison de mise en miroir de base de données pour l'instance de serveur, utilisez-le pour toutes les autres sessions établies sur l'instance de serveur.  
   
-4.  Pour utiliser Transact-SQL afin de créer un point de terminaison qui sera utilisé avec l'authentification Windows, utilisez une instruction CREATE ENDPOINT. L'instruction prend la forme générale suivante :  
+4.  Pour utiliser Transact-SQL afin de créer un point de terminaison qui sera utilisé avec l’authentification Windows, utilisez une instruction `CREATE ENDPOINT`. L'instruction prend la forme générale suivante :  
   
+     ```syntaxsql
      CREATE ENDPOINT *\<endpointName>*  
   
      STATE=STARTED  
@@ -81,17 +82,18 @@ ms.locfileid: "85789727"
   
      ]  
   
-     [ [ **,** ] ENCRYPTION = **REQUIRED**  
+     [ [**,**] ENCRYPTION = **REQUIRED**  
   
      [ ALGORITHM { *\<algorithm>* } ]  
   
      ]  
   
-     [ **,** ] ROLE = *\<role>*  
+     [**,**] ROLE = *\<role>*  
   
      )  
-  
-     where  
+     ```
+     
+     Où :  
   
     -   *\<endpointName>* représente le nom unique du point de terminaison de mise en miroir de base de données de l'instance de serveur.  
   
@@ -101,7 +103,7 @@ ms.locfileid: "85789727"
   
          Un numéro de port peut servir une fois seulement pour chaque ordinateur. Un point de terminaison de mise en miroir de bases de données peut utiliser n'importe quel point disponible sur le système local lors de la création du point de terminaison. Pour identifier les ports en cours d'utilisation par les points de terminaison TCP, utilisez l'instruction Transact-SQL suivante :  
   
-        ```  
+        ```sql  
         SELECT name, port FROM sys.tcp_endpoints;  
         ```  
   
@@ -124,12 +126,12 @@ ms.locfileid: "85789727"
   
          AES RC4 spécifie que ce point de terminaison va négocier l'algorithme de chiffrement et donner la préférence à l'algorithme AES. RC4 AES spécifie que ce point de terminaison va négocier l'algorithme de chiffrement et donner la préférence à l'algorithme RC4. Si les deux points de terminaison spécifient les deux algorithmes mais dans des ordres différents, le point de terminaison acceptant la connexion a le dernier mot. Entrez le même algorithme de manière explicite pour éviter les erreurs de connexion entre les différents serveurs.
   
-        > [!NOTE]  
+        > [!WARNING]  
         >  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
     -   *\<role>* définit le ou les rôles que le serveur peut endosser. La spécification de ROLE est obligatoire. Toutefois, le rôle du point de terminaison concerne uniquement la mise en miroir de bases de données. Pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], le rôle du point de terminaison est ignoré.  
   
-         Pour qu'une instance de serveur puisse occuper un rôle pour une session de mise en miroir de base de données et un rôle différent pour une autre session, spécifiez ROLE=ALL. Pour restreindre la fonction d'une instance de serveur à partenaire ou témoin, spécifiez ROLE=PARTNER ou ROLE=WITNESS respectivement.  
+         Pour qu'une instance de serveur puisse occuper un rôle pour une session de mise en miroir de base de données et un rôle différent pour une autre session, spécifiez ROLE=ALL. Pour restreindre la fonction d’une instance de serveur à partenaire ou à témoin, spécifiez `ROLE = PARTNER` ou `ROLE = WITNESS`, respectivement.  
   
         > [!NOTE]  
         >  Pour plus d’informations sur les options de mise en miroir de bases de données des différentes éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -155,7 +157,7 @@ ms.locfileid: "85789727"
 > [!IMPORTANT]  
 >  Chaque instance de serveur ne peut disposer que d'un seul point de terminaison. Ainsi, pour utiliser une instance de serveur tour à tour comme partenaire dans certaines sessions ou témoin dans d'autres, spécifiez ROLE=ALL.  
   
-```  
+```sql  
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  

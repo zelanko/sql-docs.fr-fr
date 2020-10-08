@@ -12,12 +12,12 @@ ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 053cd5f7aebf3b84de1bf08104b13aa30488704b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e26440be66b89ff789890169751a18500f465c00
+ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537707"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "91529370"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Meilleures pratiques pour appeler des procédures stockées compilées en mode natif
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "89537707"
   
 -   exécutées fréquemment ;  
   
--   réputées très rapides.  
+-   Doit normalement être rapide.  
   
- L'avantage lié à l'utilisation d'une procédure stockée compilée en mode natif augmente avec le nombre de lignes et la quantité de logique qui est traitée par la procédure. Par exemple, une procédure stockée compilée en mode natif présentera de meilleures performances si elle utilise un ou plusieurs des éléments suivants :  
+ L'avantage lié à l'utilisation d'une procédure stockée compilée en mode natif augmente avec le nombre de lignes et la quantité de logique qui est traitée par la procédure. Par exemple, une procédure stockée compilée en mode natif aura de meilleures performances si elle utilise un ou plusieurs des composants suivants :  
   
 -   Agrégation.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "89537707"
   
  Si vous devez traiter une seule ligne, l'utilisation d'une procédure stockée compilée en mode natif peut ne pas fournir un avantage en matière de performances.  
   
- Pour éviter que le serveur soit contraint de mettre en correspondance les noms des paramètres et les types de conversion :  
+ Pour éviter que le serveur soit contraint de mapper les noms des paramètres et les types de conversion :  
   
 -   Faites correspondre les types de paramètres transmis à la procédure avec les types dans la définition de la procédure.  
   
--   Utilisez des paramètres (sans nom) ordinaux lorsque vous appelez des procédures stockées compilées en mode natif. Pour une exécution optimale, n'utilisez pas de paramètres nommés.  
+-   Utilisez des paramètres (sans nom) ordinaux lorsque vous appelez des procédures stockées compilées en mode natif. Pour une exécution optimale, n’utilisez pas de paramètres nommés.  
   
  L’utilisation de paramètres inefficaces avec des procédures stockées compilées en mode natif peut être détectée par le XEvent **natively_compiled_proc_slow_parameter_passing** :
  - Types incompatibles : **reason=parameter_conversion**

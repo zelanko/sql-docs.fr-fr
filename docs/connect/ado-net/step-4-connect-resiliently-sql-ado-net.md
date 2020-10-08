@@ -13,12 +13,12 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a70b5449d1af02c3b367a204e2e32dfb32281d72
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: d2a300ce4565d9eb6104dd73c89a7b30b7aa1e8e
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391764"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725532"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Étape 4 : Connexion résiliente à SQL avec ADO.NET
 
@@ -41,7 +41,7 @@ Les classes ADO.NET pour la connexion à votre serveur Microsoft SQL Server loca
   
 Votre programme doit faire la distinction entre les erreurs temporaires et les erreurs persistantes. Les erreurs temporaires sont des conditions d’erreur qui peuvent être effacées dans un laps de temps réduit, par exemple des problèmes réseau temporaires.  Par exemple, une erreur persistante est si votre programme a une faute de frappe dans le nom de la base de données cible, dans ce cas, l’erreur « base de données introuvable » est conservée et ne risque pas d’être vidée dans un laps de temps réduit.  
   
-La liste des erreurs classées comme erreurs temporaires est disponible sur [Messages d’erreur pour les applications client SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+La liste des erreurs classées comme erreurs temporaires est disponible sur [Messages d’erreur pour les applications client SQL Database](/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Étape 2 : Créer et exécuter un exemple d’application  
   
@@ -319,4 +319,4 @@ Pour prouver que le code gère correctement les erreurs persistantes, exécutez 
   
 ## <a name="next-steps"></a>Étapes suivantes  
   
-Pour découvrir d’autres meilleures pratiques et recommandations en matière de conception, visitez [Connexion à SQL Database : liens, meilleures pratiques et règles de conception](https://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Pour découvrir d’autres meilleures pratiques et recommandations en matière de conception, visitez [Connexion à SQL Database : liens, meilleures pratiques et règles de conception](/azure/azure-sql/database/develop-overview)

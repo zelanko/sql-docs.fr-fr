@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 28711d123d4084c973d301f7fa93c9f5d598986f
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: b0acdd99ed178329210bdab83e4492b7a4bfc2a7
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380834"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624816"
 ---
 # <a name="copy-transact-sql"></a>COPY (Transact-SQL)
 
@@ -99,7 +99,7 @@ Désigne l’emplacement où sont placés les fichiers de données. Actuellement
 - *Emplacement externe* pour ADLS Gen2 : https://<account>. dfs.core.windows.net/<container>/<path>
 
 > [!NOTE]  
-> Le point de terminaison Blob est disponible pour ADLS Gen2 pour la compatibilité descendante. Utilisez le point de terminaison **Blob** pour obtenir de meilleures performances.
+> Le point de terminaison .blob est également disponible pour la ADLS Gen2 et produit actuellement les meilleures performances. Utilisez le point de terminaison .blob quand .dfs n’est pas nécessaire pour votre méthode d’authentification.
 
 - *Account* : nom du compte de stockage
 
@@ -141,14 +141,15 @@ Les emplacements de fichiers multiples peuvent uniquement être spécifiés à p
 |  **Stockage Blob Azure**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |                      SAS/KEY                       |                      SAS/KEY                       |
 | **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob<sup>1</sup>)/MSI (dfs<sup>2</sup>)/SERVICE PRINCIPAL/KEY/AAD |
 
-1 : Vous devez utiliser le point de terminaison d’objet blob ( **.blob**.core.windows.net) dans le chemin d’accès de votre emplacement externe.
+1 : Le point de terminaison .blob ( **.blob**.core.windows.net) dans le chemin de votre emplacement externe est nécessaire pour cette méthode d’authentification.
 
-2 : Vous devez utiliser le point de terminaison dfs ( **.dfs**.core.windows.net) dans le chemin d’accès de votre emplacement externe.
+2 : Le point de terminaison .dfs ( **.dfs**.core.windows.net) dans le chemin de votre emplacement externe est nécessaire pour cette méthode d’authentification.
+
 
 > [!NOTE]  
 >
 > - Avec l’authentification à l’aide d’AAD ou auprès d’un compte de stockage public, vous n’êtes pas tenu de spécifier CREDENTIAL. 
->  - Si votre compte de stockage est associé à un réseau virtuel, vous devez vous authentifier à l’aide de MSI (Managed Identity).
+> - Si votre compte de stockage est associé à un réseau virtuel, vous devez vous authentifier à l’aide de MSI (Managed Identity).
 
 - Authentification avec la signature d’accès partagé (SAS)
   
@@ -428,9 +429,6 @@ Le tableau ci-dessous indique les nombres de fichiers conseillés. Une fois le n
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-parquet-or-orc-files"></a>Quelles sont les recommandations de fractionnement de fichiers pour la commande COPY lors du chargement de fichiers Parquet ou ORC ?
 Il n’est pas nécessaire de fractionner les fichiers Parquet et ORC car la commande COPY le fait automatiquement. Les fichiers Parquet et ORC du compte de stockage Azure doivent avoir une taille de 256 Mo ou plus pour obtenir des performances optimales. 
-
-### <a name="when-will-the-copy-command-be-generally-available"></a>Quand la commande COPY sera-t-elle en disponibilité générale ?
-La commande COPY sera en disponibilité générale à la fin de cette année (2020). 
 
 ### <a name="are-there-any-limitations-on-the-number-or-size-of-files"></a>Existe-t-il des restrictions quant au nombre ou à la taille des fichiers ?
 Il n’existe aucune limite quant au nombre ou à la taille des fichiers ; toutefois, pour des performances optimales, nous recommandons des fichiers d’au moins 4 Mo.

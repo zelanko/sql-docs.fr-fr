@@ -1,8 +1,8 @@
 ---
 description: ALTER DATABASE (Transact-SQL)
 title: ALTER DATABASE (Transact-SQL)| Microsoft Docs
-ms.custom: ''
-ms.date: 08/27/2020
+ms.custom: references_regions
+ms.date: 09/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -27,12 +27,12 @@ ms.assetid: 15f8affd-8f39-4021-b092-0379fc6983da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f16a17c1705846936f7de6a13038b8aab6674393
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5f41b3cc0e5a9d895d83c6696105bdded8302217
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538105"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725910"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -327,6 +327,7 @@ ALTER DATABASE { database_name | CURRENT }
 {
     MODIFY NAME = new_database_name
   | MODIFY ( <edition_options> [, ... n] )
+  | MODIFY BACKUP_STORAGE_REDUNDANCY = { 'LOCAL' | 'ZONE' | 'GEO' }
   | SET { <option_spec> [ ,... n ] WITH <termination>}
   | ADD SECONDARY ON SERVER <partner_server_name>
     [WITH ( <add-secondary-option>::=[, ... n] ) ]
@@ -425,6 +426,11 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > La modification d’EDITION échoue si la propriété MAXSIZE de la base de données a une valeur située en dehors de la plage valide prise en charge par cette édition.
 
+MODIFY (BACKUP_STORAGE_REDUNDANCY **=** ['LOCAL' \| 'ZONE' \| 'GEO']) modifie la redondance du stockage des sauvegardes pour restauration à un point dans le temps et des sauvegardes pour conservation à long terme (si elles sont configurées) de la base de données. Les modifications sont appliquées à toutes les sauvegardes futures. Les sauvegardes existantes continuent à utiliser le paramètre précédent. 
+
+> [!IMPORTANT]
+> L’option BACKUP_STORAGE_REDUNDANCY pour Azure SQL Database est disponible en préversion publique seulement dans la région Azure Asie Sud-Est.  
+
 MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) Spécifie la taille maximale de la base de données. La taille maximale doit être conforme au jeu de valeurs valide pour la propriété EDITION de la base de données. Le fait de modifier la taille maximale de la base de données peut entraîner la modification de la propriété EDITION de la base de données.
 
 > [!NOTE]
@@ -454,7 +460,7 @@ MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB) Spécifie la ta
 |500 Go|N/A|√|√|√ (D)|√|
 |750 Go|N/A|√|√|√|√|
 |1 024 Go|N/A|√|√|√|√ (D)|
-|À partir de 1 024 Go jusqu’à 4 096 Go par incréments de 256 Go*|NON APPLICABLE|NON APPLICABLE|N/A|N/A|√|
+|À partir de 1 024 Go jusqu’à 4 096 Go par incréments de 256 Go*|N/A|N/A|N/A|N/A|√|
 
 \* P11 et P15 autorisent MAXSIZE jusqu’à 4 To, 1 024 Go étant la taille par défaut. P11 et P15 peuvent utiliser jusqu’à 4 To de stockage inclus sans frais supplémentaires. Au niveau Premium, une valeur MAXSIZE supérieure à 1 To est actuellement disponible dans les régions suivantes : USA Est 2, USA Ouest, US Gov Virginie, Europe Ouest, Allemagne Centre, Asie Sud-Est, Japon Est, Australie Est, Canada Centre et Canada Est. Pour plus d’informations sur les limitations des ressources du modèle DTU, consultez [Limites des ressources DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
@@ -594,6 +600,9 @@ Crée une base de données secondaire de géoréplication de même nom sur un se
 > [!IMPORTANT]
 > Actuellement, le niveau de service Hyperscale ne prend pas en charge la géoréplication.
 
+> [!IMPORTANT]
+> Par défaut, la base de données secondaire est créée avec la même redondance du stockage des sauvegardes que celle de la base de données primaire ou de la base de données source. La modification de la redondance du stockage des sauvegardes lors de la création de la base de données secondaire n’est pas prise en charge via T-SQL. 
+
 WITH ALLOW_CONNECTIONS { **ALL** | NO } Quand ALLOW_CONNECTIONS n’est pas spécifié, il est défini sur ALL par défaut. S’il est défini sur ALL, il s’agit d’une base de données en lecture seule qui autorise toutes les connexions disposant des autorisations nécessaires.
 
 WITH SERVICE_OBJECTIVE { `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_3`, `GP_GEN4_4`, `GP_GEN4_5`, `GP_GEN4_6`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_7`, `GP_GEN4_8`, `GP_GEN4_9`, `GP_GEN4_10`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1`, `BC_GEN4_2`, `BC_GEN4_3`, `BC_GEN4_4`, `BC_GEN4_5`, `BC_GEN4_6`, `BC_GEN4_7`, `BC_GEN4_8`, `BC_GEN4_9`, `BC_GEN4_10`, `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_6`, `GP_Gen5_8`, `GP_Gen5_10`, `GP_Gen5_12`, `GP_Gen5_14`, `GP_Gen5_16`, `GP_Gen5_18`, `GP_Gen5_20`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_40`, `GP_Gen5_80`, `GP_Fsv2_8`, `GP_Fsv2_10`, `GP_Fsv2_12`, `GP_Fsv2_14`, `GP_Fsv2_16`, `GP_Fsv2_18`, `GP_Fsv2_20`, `GP_Fsv2_24`, `GP_Fsv2_32`, `GP_Fsv2_36`, `GP_Fsv2_72`, `GP_S_Gen5_1`, `GP_S_Gen5_2`, `GP_S_Gen5_4`, `GP_S_Gen5_6`, `GP_S_Gen5_8`, `GP_S_Gen5_10`, `GP_S_Gen5_12`, `GP_S_Gen5_14`, `GP_S_Gen5_16`, `GP_S_Gen5_18`, `GP_S_Gen5_20`, `GP_S_Gen5_24`, `GP_S_Gen5_32`, `GP_S_Gen5_40`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_6`, `BC_Gen5_8`, `BC_Gen5_10`, `BC_Gen5_12`, `BC_Gen5_14`, `BC_Gen5_16`, `BC_Gen5_18`, `BC_Gen5_20`, `BC_Gen5_24`, `BC_Gen5_32`,`BC_Gen5_40`, `BC_Gen5_80`, `BC_M_8`, `BC_M_10`, `BC_M_12`, `BC_M_14`, `BC_M_16`, `BC_M_18`, `BC_M_20`, `BC_M_24`, `BC_M_32`, `BC_M_64`, `BC_M_128` }
@@ -716,6 +725,14 @@ Met à jour une base de données unique vers l’édition Standard (niveau de se
 
 ```sql
 ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJECTIVE = 'S0');
+```
+
+### <a name="h-update-the-backup-storage-redundancy-of-a-database"></a>H. Mettre à jour la redondance du stockage des sauvegardes d’une base de données
+
+Met à jour la redondance du stockage des sauvegardes d’une base de données en « redondant interzone ». Toutes les sauvegardes ultérieures de cette base de données utiliseront le nouveau paramètre. Ceci comprend les sauvegardes pour restauration à un point dans le temps et les sauvegardes pour conservation à long terme (si elles sont configurées). 
+
+```sql
+ALTER DATABASE db1 MODIFY BACKUP_STORAGE_REDUNDANCY = 'ZONE'
 ```
 
 ## <a name="see-also"></a>Voir aussi
@@ -904,7 +921,8 @@ En raison de sa longueur, la syntaxe d’ALTER DATABASE est divisée en plusieur
 
 ## <a name="syntax"></a>Syntaxe
 
-```console
+### <a name="sql-pool"></a>[Pool SQL](#tab/sqlpool)
+```syntaxsql
 ALTER DATABASE { database_name | CURRENT }
 {
   MODIFY NAME = new_database_name
@@ -927,6 +945,42 @@ ALTER DATABASE { database_name | CURRENT }
           | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
       }
 ```
+### <a name="sql-on-demand-preview"></a>[SQL à la demande (préversion)](#tab/sqlod)
+```syntaxsql
+ALTER DATABASE { database_name | Current } 
+{ 
+    COLLATE collation_name 
+  | SET { <optionspec> [ ,...n ] } 
+} 
+[;] 
+
+<optionspec> ::= 
+{ 
+    <auto_option> 
+  | <sql_option> 
+}  
+
+<auto_option> ::= 
+{ 
+    AUTO_CREATE_STATISTICS { OFF | ON [ ( INCREMENTAL = { ON | OFF } ) ] } 
+  | AUTO_UPDATE_STATISTICS { ON | OFF } 
+  | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF } 
+} 
+
+<sql_option> ::= 
+{ 
+    ANSI_NULL_DEFAULT { ON | OFF } 
+  | ANSI_NULLS { ON | OFF } 
+  | ANSI_PADDING { ON | OFF } 
+  | ANSI_WARNINGS { ON | OFF } 
+  | ARITHABORT { ON | OFF } 
+  | COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 } 
+  | CONCAT_NULL_YIELDS_NULL { ON | OFF } 
+  | NUMERIC_ROUNDABORT { ON | OFF } 
+  | QUOTED_IDENTIFIER { ON | OFF } 
+} 
+```
+---
 
 ## <a name="arguments"></a>Arguments
 

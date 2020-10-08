@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 98d2ffca0ca9f8bab6f481ddf654bd388ecba4d7
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 6d9b75ea8c722ca753e831811226b8128df15266
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922251"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725505"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "82922251"
   
  Vous pouvez obtenir l'ID de connexion du client programmatiquement avec l’[interface ISQLServerConnection](../../connect/jdbc/reference/isqlserverconnection-interface.md). L'ID de connexion sera également présent dans toutes les exceptions liées à la connexion.  
   
- En cas d’erreur de connexion, l’ID de connexion client dans les informations de trace des diagnostics intégrés du serveur et dans la mémoire tampon en anneau de connectivité peut aider à corréler les connexions clientes aux connexions sur le serveur. Pour plus d’informations sur les traces des diagnostics intégrés, consultez [Traçage de l’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805). Notez que cet article contient également des informations sur la trace des accès aux données, qui ne s'applique pas à [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ; consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md) pour plus d'informations sur la création d'une trace d'accès aux données avec [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
+ En cas d’erreur de connexion, l’ID de connexion client dans les informations de trace des diagnostics intégrés du serveur et dans la mémoire tampon en anneau de connectivité peut aider à corréler les connexions clientes aux connexions sur le serveur. Pour plus d’informations sur les traces des diagnostics intégrés, consultez [Traçage de l’accès aux données](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)). Notez que cet article contient également des informations sur la trace des accès aux données, qui ne s'applique pas à [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ; consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md) pour plus d'informations sur la création d'une trace d'accès aux données avec [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  Le pilote JDBC envoie également un ID d'activité spécifique au thread. L'ID d'activité est capturé dans les sessions d'événements étendus si les sessions sont démarrées alors que l'option TRACK_CAUSAILITY est activée. En cas de problèmes de performance avec une connexion active, vous pouvez obtenir l'ID d'activité de la trace du client (champ ActivityID), puis le localiser dans la sortie d'événements étendus. L’ID d’activité dans les événements étendus est un GUID sur 16 octets (différent du GUID de l’ID de connexion cliente) suivi d’un numéro séquentiel sur 4 octets. Le numéro séquentiel représente l'ordre d'une demande dans un thread. L'ActivityId est envoyé pour les instructions de lot SQL et les requêtes RPC. Pour activer l'envoi d'ActivityId au serveur, vous devez d'abord spécifier la paire de valeur/clé suivante dans le fichier Logging.Properties :  
   
@@ -54,4 +54,4 @@ add target ring_buffer with (track_causality=on)
   
 ## <a name="see-also"></a>Voir aussi
 
-[Diagnostic de problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+[Diagnostic de problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)

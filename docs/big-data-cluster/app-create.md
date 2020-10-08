@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 08e19f1c78b14e57aa50fa23bc10379c6f662351
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88681028"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725080"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>Comment déployer une application sur un cluster Big Data SQL Server
 
@@ -44,7 +44,7 @@ Les types d’applications suivants sont pris en charge :
 ## <a name="prerequisites"></a>Prérequis
 
 - [Cluster Big Data SQL Server 2019](deployment-guidance.md)
-- [Utilitaire de ligne de commande azdata](deploy-install-azdata.md)
+- [Utilitaire de ligne de commande azdata](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Fonctionnalités
 

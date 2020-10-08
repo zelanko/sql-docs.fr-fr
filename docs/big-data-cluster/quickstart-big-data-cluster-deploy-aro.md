@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fe4b026047ea98350283c1beedf87988d39df4bd
-ms.sourcegitcommit: 4b775a3ce453b757c7435cc2a4c9b35d0c5a8a9e
+ms.openlocfilehash: f74a46d13c907bd81e3afe4af7ba8db38a515e00
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/31/2020
-ms.locfileid: "87472335"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725771"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>Déploiement d’un cluster Big Data SQL Server sur Azure Red Hat OpenShift (ARO) avec un script Python
 
@@ -37,7 +37,7 @@ Le déploiement de cluster Big Data par défaut utilisé ici se compose d’une 
 - [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
 - [Python 3.0 minimum](https://www.python.org/downloads)
 - [Interface CLI `az`](/cli/azure/install-azure-cli/)
-- [Interface CLI `azdata`](deploy-install-azdata.md)
+- [Interface CLI `azdata`](../azdata/install/deploy-install-azdata.md)
 - **Azure Data Studio**
 
 ## <a name="log-in-to-your-azure-account"></a>Se connecter à votre compte Azure

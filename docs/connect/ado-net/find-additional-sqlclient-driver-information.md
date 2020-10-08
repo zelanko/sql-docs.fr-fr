@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 26ee3500511ca937e0712b9338ba9a796b3a8a45
-ms.sourcegitcommit: 6b3569977b034554883a94d73d1c4df6e2f74fe2
+ms.openlocfilehash: 1ae61c177686f072729c1763974c1cdc3d00baa7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85106890"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725710"
 ---
 # <a name="finding-additional-sqlclient-driver-information"></a>Recherche d’informations supplémentaires sur le pilote SqlClient
 
@@ -32,7 +32,7 @@ Pour plus d’informations sur le Fournisseur de données Microsoft SqlClient et
 |--------------|-----------------|  
 |[Référentiel GitHub de runtimes .NET](https://github.com/dotnet/runtime)|Ce référentiel contient l’implémentation de la bibliothèque pour .NET Core.|
 |[Fournisseur de données Microsoft SqlClient pour le référentiel SQL Server GitHub](https://github.com/dotnet/SqlClient)|Ce référentiel contient le code source pour le pilote SqlClient.|  
-|[Navigateur d’API .NET](https://docs.microsoft.com/dotnet/api/)|Ce site contient des informations sur l’API .NET pour le pilote.|  
+|[Navigateur d’API .NET](/dotnet/api/)|Ce site contient des informations sur l’API .NET pour le pilote.|  
   
 ## <a name="next-steps"></a>Étapes suivantes
- [Vue d’ensemble du pilote SqlClient](overview-sqlclient-driver.md)  
+ [Vue d’ensemble du pilote SqlClient](overview-sqlclient-driver.md)

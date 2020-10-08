@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10c3e83451efd0f7ac5868fd25d540191821b72c
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765768"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725868"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
@@ -80,7 +80,7 @@ Avant de déployer un cluster Big Data SQL Server 2019, commencez par [installe
 - `azdata`
 - `kubectl`
 - Azure Data Studio
-- [Extension de virtualisation de données](../azure-data-studio/data-virtualization-extension.md) pour Azure Data Studio
+- [Extension de virtualisation de données](../azure-data-studio/extensions/data-virtualization-extension.md) pour Azure Data Studio
 
 
 ## <a name="deployment-overview"></a><a id="deploy"></a> Vue d’ensemble du déploiement
@@ -255,7 +255,7 @@ Une fois le script de déploiement terminé, vous pouvez obtenir les adresses de
    > [!TIP]
    > Si vous n’avez pas changé le nom par défaut durant le déploiement, utilisez `-n mssql-cluster` dans la commande précédente. `mssql-cluster` est le nom par défaut du cluster Big Data.
 
-1. Connectez-vous au cluster Big Data avec [azdata login](reference-azdata.md). Affectez au paramètre `--endpoint` l’adresse IP externe du point de terminaison du contrôleur.
+1. Connectez-vous au cluster Big Data avec [azdata login](../azdata/reference/reference-azdata.md). Affectez au paramètre `--endpoint` l’adresse IP externe du point de terminaison du contrôleur.
 
    ```bash
    azdata login --endpoint https://<ip-address-of-controller-svc-external>:30080 --username <user-name>
@@ -266,7 +266,7 @@ Une fois le script de déploiement terminé, vous pouvez obtenir les adresses de
    > [!TIP]
    > Si vous êtes l’administrateur du cluster Kubernetes et que vous avez accès au fichier de configuration du cluster (fichier de configuration Kube), vous pouvez configurer le contexte actuel pour qu’il pointe vers le cluster Kubernetes ciblé. Dans ce cas, vous pouvez vous connecter avec `azdata login -n <namespaceName>`, où `namespace` est le nom du cluster Big Data. Vous êtes invité à fournir des informations d’identification si elles ne sont pas spécifiées dans la commande de connexion.
    
-1. Exécutez [azdata bdc endpoint list](reference-azdata-bdc-endpoint.md) pour obtenir une liste comprenant la description de chaque point de terminaison ainsi que les adresses IP et ports correspondants. 
+1. Exécutez [azdata bdc endpoint list](../azdata/reference/reference-azdata-bdc-endpoint.md) pour obtenir une liste comprenant la description de chaque point de terminaison ainsi que les adresses IP et ports correspondants. 
 
    ```bash
    azdata bdc endpoint list -o table
@@ -298,7 +298,7 @@ kubectl get svc -n <your-big-data-cluster-name>
 
 ## <a name="verify-the-cluster-status"></a><a id="status"></a> Vérifier l’état du cluster
 
-Après le déploiement, vous pouvez vérifier l’état du cluster à l’aide de la commande [azdata bdc status show](reference-azdata-bdc-status.md).
+Après le déploiement, vous pouvez vérifier l’état du cluster à l’aide de la commande [azdata bdc status show](../azdata/reference/reference-azdata-bdc-status.md).
 
 ```bash
 azdata bdc status show
@@ -381,7 +381,7 @@ Bdc: ready                                                                      
 
 Vous pouvez également obtenir un état plus détaillé avec les commandes suivantes :
 
-- [azdata bdc control status show](reference-azdata-bdc-control-status.md) retourne l’état d’intégrité de tous les composants associés au service de gestion de contrôle
+- [azdata bdc control status show](../azdata/reference/reference-azdata-bdc-control-status.md) retourne l’état d’intégrité de tous les composants associés au service de gestion de contrôle
 ```
 azdata bdc control status show
 ```

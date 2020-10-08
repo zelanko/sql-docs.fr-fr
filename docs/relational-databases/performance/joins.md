@@ -18,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f659e5aff803fd670082277430d795074b23470e
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: c672ae4cf447f60f486eaaca8a50a1d79c3cd4b4
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511311"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726007"
 ---
 # <a name="joins-sql-server"></a>Jointures (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -263,7 +263,7 @@ Une jointure logique doit respecter certaines conditions pour être assimilée �
 - Le niveau de compatibilité de la base de données est de 140 ou supérieur.
 - La requête est une instruction `SELECT` (les instructions de modification des données ne sont pas éligibles).
 - La jointure est éligible pour être exécutée par une jointure de boucles imbriquées indexées ou par un algorithme physique de jointure hachée.
-- La jointure hachée utilise le mode batch, qui est activé quand un index columnstore est présent dans la requête globale, quand la jointure référence directement la table d’index columnstore ou par le biais de l’utilisation de la [fonctionnalité Mode Batch sur Rowstore](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
+- La jointure hachée utilise le mode batch, qui est activé quand un index columnstore est présent dans la requête globale, quand la jointure référence directement la table d’index columnstore ou via l’utilisation du [mode Batch sur rowstore](./intelligent-query-processing.md#batch-mode-on-rowstore).
 - Les solutions alternatives générées de la jointure de boucles imbriquées et de la jointure hachée doivent avoir le même premier enfant (référence externe).
 
 ### <a name="adaptive-threshold-rows"></a>Lignes du seuil adaptatif

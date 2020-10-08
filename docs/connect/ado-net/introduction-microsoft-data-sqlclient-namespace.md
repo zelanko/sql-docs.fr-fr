@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: c3af23cb3816ad45fa75516633749d1f011c930d
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: d72beeaf5b7652e040dd5bbe5f20373e655f822a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529350"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725700"
 ---
 # <a name="introduction-to-microsoftdatasqlclient-namespace"></a>Présentation de l’espace de noms Microsoft.Data.SqlClient
 
@@ -77,7 +77,7 @@ AppContext.SetSwitch("Switch.Microsoft.Data.SqlClient.TruncateScaledDecimal", tr
 
 #### <a name="new-connection-string-property-synonyms"></a>Nouveaux synonymes des propriétés de chaîne de connexion
 
-De nouveaux synonymes ont été ajoutés pour les propriétés de chaîne de connexion existantes suivantes afin d’éviter toute confusion liée à l’espacement entre les propriétés comportant plusieurs mots. Les anciens noms des propriétés resteront pris en charge à des fins de compatibilité descendante, mais les nouvelles propriétés de chaîne de connexion seront désormais incluses lors de l’extraction de la chaîne de connexion auprès de [SqlConnectionStringBuilder](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder).
+De nouveaux synonymes ont été ajoutés pour les propriétés de chaîne de connexion existantes suivantes afin d’éviter toute confusion liée à l’espacement entre les propriétés comportant plusieurs mots. Les anciens noms des propriétés resteront pris en charge à des fins de compatibilité descendante, mais les nouvelles propriétés de chaîne de connexion seront désormais incluses lors de l’extraction de la chaîne de connexion auprès de [SqlConnectionStringBuilder](/dotnet/api/microsoft.data.sqlclient.sqlconnectionstringbuilder).
 
 |Propriété de chaîne de connexion existante|Nouveau synonyme|
 |-----------------------------------|-----------|
@@ -214,11 +214,11 @@ En général, la documentation existante qui utilise System.Data.SqlClient sur .
 
  [Développer à l’aide d’Always Encrypted avec le fournisseur de données .NET Framework](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
- [Always Encrypted : Protéger les données sensibles et stocker les clés de chiffrement dans le magasin de certificats Windows](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+ [Always Encrypted : Protéger les données sensibles et stocker les clés de chiffrement dans le magasin de certificats Windows](/azure/sql-database/sql-database-always-encrypted)
 
 ### <a name="authentication"></a>Authentification
 
-Vous pouvez spécifier différents modes d’authentification à l’aide de l’option de chaîne de connexion _Authentification_. Pour plus d’informations, consultez la [documentation de SqlAuthenticationMethod](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
+Vous pouvez spécifier différents modes d’authentification à l’aide de l’option de chaîne de connexion _Authentification_. Pour plus d’informations, consultez la [documentation de SqlAuthenticationMethod](/dotnet/api/system.data.sqlclient.sqlauthenticationmethod?view=netframework-4.7.2).
 
 > [!NOTE]
 > Les fournisseurs de magasins de clés personnalisés, comme le fournisseur d’Azure Key Vault, devront être mis à jour pour prendre en charge Microsoft.Data.SqlClient. De même, les fournisseurs d’enclaves devront également être mis à jour pour prendre en charge Microsoft.Data.SqlClient.

@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 646eb9359dc5e7dfaad77bc3746fbfdf9ed9ce7a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f44991b2ea59d3f6cf6e1cf5a2bd653f270aa1ad
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920366"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91725580"
 ---
 # <a name="sql-server-express-user-instances"></a>Instances d’utilisateur SQL Server Express
 
@@ -143,7 +143,7 @@ Les scénarios d’instance utilisateur sont les suivants :
   
 - Toute application mono-utilisateur où le partage de données n’est pas requis.  
   
-- Déploiement ClickOnce. Si .NET Framework 2.0 (ou version ultérieure) ou .NET Core 1.0 (ou version ultérieure) et SQL Server Express sont déjà installés sur l’ordinateur cible, le package d’installation téléchargé suite à une action ClickOnce peut être installé et utilisé par des utilisateurs qui ne sont pas administrateurs. Notez qu’un administrateur doit installer SQL Server Express s’il fait partie de l’installation. Pour plus d'informations, consultez [Déploiement ClickOnce pour Windows Forms](https://docs.microsoft.com/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
+- Déploiement ClickOnce. Si .NET Framework 2.0 (ou version ultérieure) ou .NET Core 1.0 (ou version ultérieure) et SQL Server Express sont déjà installés sur l’ordinateur cible, le package d’installation téléchargé suite à une action ClickOnce peut être installé et utilisé par des utilisateurs qui ne sont pas administrateurs. Notez qu’un administrateur doit installer SQL Server Express s’il fait partie de l’installation. Pour plus d'informations, consultez [Déploiement ClickOnce pour Windows Forms](/dotnet/framework/winforms/clickonce-deployment-for-windows-forms).
   
 - Hébergement ASP.NET dédié à l’aide de l’authentification Windows. Une seule instance SQL Server Express peut être hébergée sur un intranet. L’application se connecte à l’aide du compte Windows ASPNET, et non à l’aide de l’emprunt d’identité. Les instances utilisateur ne doivent pas être utilisées pour les scénarios d’hébergement tiers ou partagé, où toutes les applications partagent la même instance utilisateur et ne sont plus isolées les unes des autres.  
   
