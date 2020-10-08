@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_object_stats (Transact-SQL)
-title: sys. dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_object_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 07300b59-3cab-4d3e-8138-5ea8f584f88f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7ba94c5561f43aac191c06f032cc18d34ea5bac
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f6d6c0d191022099e027b29a5be1b34b592da31f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542195"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834125"
 ---
 # <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Retourne le nombre de lignes affectées par l'opération sur chaque objet [!INCLUDE[hek_2](../../includes/hek-2-md.md)] depuis le dernier redémarrage de la base de données. Les statistiques sont mises à jour lorsque l'opération s'exécute, que la transaction soit validée ou restaurée.  
   
- sys.dm_db_xtp_object_stats vous permet d'identifier les tables mémoire optimisées qui changent le plus. Vous pouvez décider de supprimer des index non utilisés ou rarement utilisés sur la table, car chaque index affecte les performances. S'il y a des index de hachage, vous devez réévaluer périodiquement le nombre de compartiments. Pour plus d'informations, consultez [Determining the Correct Bucket Count for Hash Indexes](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5).  
+ sys.dm_db_xtp_object_stats vous permet d'identifier les tables mémoire optimisées qui changent le plus. Vous pouvez décider de supprimer des index non utilisés ou rarement utilisés sur la table, car chaque index affecte les performances. S'il y a des index de hachage, vous devez réévaluer périodiquement le nombre de compartiments. Pour plus d'informations, consultez [Determining the Correct Bucket Count for Hash Indexes](/previous-versions/sql/).  
   
  sys.dm_db_xtp_object_stats vous permet d'identifier les tables mémoire optimisées qui ont des conflits de lecture-lecture, pouvant affecter les performances de votre application. Par exemple, si vous utilisez une logique de nouvelle tentative des transactions, il est possible que la même instruction doive être exécutée plus d'une fois. En outre, vous pouvez utiliser ces informations pour identifier les tables (et par conséquent la logique métier) qui nécessite une gestion des erreurs de lecture-lecture.  
   
@@ -56,5 +56,4 @@ ms.locfileid: "89542195"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de gestion dynamique des tables à mémoire optimisée &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

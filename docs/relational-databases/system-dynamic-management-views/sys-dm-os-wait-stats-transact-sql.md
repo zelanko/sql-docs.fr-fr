@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_wait_stats (Transact-SQL)
-title: sys. dm_os_wait_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/19/2020
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 678c6710e17d8383077be4acff8921268e9a0b6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bdf67ebe15b869cb295c3090fe24ed5cd4f50413
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89532133"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834228"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Retourne des informations sur toutes les attentes subies par les threads qui se sont exécutés. Vous pouvez utiliser cette vue agrégée pour diagnostiquer les problèmes de performance liés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et également liés à des requêtes et des traitements spécifiques. [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fournit des informations similaires par session.  
+Retourne des informations sur toutes les attentes subies par les threads qui se sont exécutés. Vous pouvez utiliser cette vue agrégée pour diagnostiquer les problèmes de performance liés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et également liés à des requêtes et des traitements spécifiques. [sys.dm_exec_session_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) fournit des informations similaires par session.  
   
 > [!NOTE] 
-> Pour appeler cette valeur à partir de ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] **, utilisez le nom **sys. dm_pdw_nodes_os_wait_stats**.  
+> Pour appeler cette valeur à partir de ** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ou **, utilisez le nom **sys.dm_pdw_nodes_os_wait_stats**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -136,7 +136,7 @@ Cette commande remet tous les compteurs à 0.
 |BROKER_TRANSMISSION_OBJECT |À usage interne uniquement <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |BROKER_TRANSMISSION_TABLE |À usage interne uniquement <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |BROKER_TRANSMISSION_WORK |À usage interne uniquement <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
-|BROKER_TRANSMITTER |Se produit lorsque l’émetteur de Service Broker est en attente de travail. Service Broker a un composant appelé émetteur qui planifie l’envoi des messages de plusieurs boîtes de dialogue sur un ou plusieurs points de terminaison de connexion. L’émetteur a 2 threads dédiés à cet effet. Ce type d’attente est facturé lorsque ces threads émetteurs attendent que des messages de boîte de dialogue soient envoyés à l’aide des connexions de transport. Des valeurs élevées de waiting_tasks_count pour ce type d’attente fonctionnent par intermittence pour ces threads émetteurs et ne sont pas des indications de problèmes de performances. Si Service Broker n’est pas utilisé du tout, waiting_tasks_count doit être 2 (pour les 2 threads émetteurs) et wait_time_ms doit être le double de la durée depuis le démarrage de l’instance. Consultez les [statistiques d’attente de service Broker](https://blogs.msdn.microsoft.com/sql_service_broker/2008/12/01/service-broker-wait-types).|
+|BROKER_TRANSMITTER |Se produit lorsque l’émetteur de Service Broker est en attente de travail. Service Broker a un composant appelé émetteur qui planifie l’envoi des messages de plusieurs boîtes de dialogue sur un ou plusieurs points de terminaison de connexion. L’émetteur a 2 threads dédiés à cet effet. Ce type d’attente est facturé lorsque ces threads émetteurs attendent que des messages de boîte de dialogue soient envoyés à l’aide des connexions de transport. Des valeurs élevées de waiting_tasks_count pour ce type d’attente fonctionnent par intermittence pour ces threads émetteurs et ne sont pas des indications de problèmes de performances. Si Service Broker n’est pas utilisé du tout, waiting_tasks_count doit être 2 (pour les 2 threads émetteurs) et wait_time_ms doit être le double de la durée depuis le démarrage de l’instance. Consultez les [statistiques d’attente de service Broker](/archive/blogs/sql_service_broker/service-broker-wait-types).|
 |BUILTIN_HASHKEY_MUTEX |Peut se produire après le démarrage d'une instance, pendant l'initialisation des structures de données internes. Ne se reproduira plus lorsque les structures de données auront été initialisées.| 
 |CHANGE_TRACKING_WAITFORCHANGES |À usage interne uniquement <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |CHECK_PRINT_RECORD |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
@@ -331,7 +331,7 @@ Cette commande remet tous les compteurs à 0.
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |Une tâche en arrière-plan attend la fin du démarrage d'une tâche en arrière-plan qui traite les notifications de clustering de basculement Windows Server. À usage interne uniquement <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |Une tâche en arrière-plan attend la fin d'une tâche en arrière-plan qui traite les notifications de clustering de basculement Windows Server. À usage interne uniquement <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |HADR_PARTNER_SYNC |Attente de contrôle de concurrence sur la liste des serveurs partenaires. <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
-|HADR_READ_ALL_NETWORKS |En attente de l'obtention de l'accès en lecture ou en écriture à la liste des réseaux WSFC. À usage interne uniquement Remarque : le moteur conserve une liste de réseaux WSFC utilisés dans les vues de gestion dynamique (par exemple, sys. dm_hadr_cluster_networks) ou pour valider Always On instructions Transact-SQL qui font référence à des informations réseau WSFC. Cette liste est mise à jour lors du démarrage du moteur, des notifications liées à WSFC et du redémarrage interne du Always On (par exemple, la perte et la réobtention du quorum WSFC). Les tâches sont généralement bloquées lorsqu'une mise à jour est en cours dans cette liste. <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
+|HADR_READ_ALL_NETWORKS |En attente de l'obtention de l'accès en lecture ou en écriture à la liste des réseaux WSFC. À usage interne uniquement Remarque : le moteur conserve une liste de réseaux WSFC utilisés dans les vues de gestion dynamique (par exemple sys.dm_hadr_cluster_networks) ou pour valider Always On instructions Transact-SQL qui font référence à des informations réseau WSFC. Cette liste est mise à jour lors du démarrage du moteur, des notifications liées à WSFC et du redémarrage interne du Always On (par exemple, la perte et la réobtention du quorum WSFC). Les tâches sont généralement bloquées lorsqu'une mise à jour est en cours dans cette liste. <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |En attente de la connexion de la base de données secondaire à la base de données primaire avant d'effectuer la récupération. Il s'agit d'une attente prévue, qui peut se prolonger si la connexion à la base de données primaire est lente à établir. <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |La récupération de base de données attend que la base de données secondaire termine la phase de rétablissement et d'initialisation afin de la ramener au point de journal commun avec la base de données primaire. Il s'agit d'une attente prévue à la suite d'un basculement. La progression de l'annulation peut faire l'objet d'un suivi au moyen du Moniteur système Windows (perfmon.exe) et des vues de gestion dynamique. <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
 |HADR_REPLICAINFO_SYNC |En attente d'un contrôle de concurrence pour mettre à jour l'état de réplica actuel. <br /><br /> **S’applique à** : [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] et versions ultérieures.| 
@@ -381,12 +381,12 @@ Cette commande remet tous les compteurs à 0.
 |KTM_ENLISTMENT |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
 |KTM_RECOVERY_MANAGER |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
 |KTM_RECOVERY_RESOLUTION |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
-|LATCH_DT |Se produit pendant l'attente d'un verrou en mode de destruction. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
-|LATCH_EX |Se produit pendant l'attente d'un verrou exclusif. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
-|LATCH_KP |Se produit pendant l'attente d'un verrou de maintien. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_DT |Se produit pendant l'attente d'un verrou en mode de destruction. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys.dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_EX |Se produit pendant l'attente d'un verrou exclusif. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys.dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_KP |Se produit pendant l'attente d'un verrou de maintien. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys.dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
 |LATCH_NL |Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.| 
-|LATCH_SH |Se produit pendant l'attente d'un verrou de partage. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
-|LATCH_UP |Se produit pendant l'attente d'un verrou de mise à jour. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys. dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_SH |Se produit pendant l'attente d'un verrou de partage. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys.dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
+|LATCH_UP |Se produit pendant l'attente d'un verrou de mise à jour. Cela n'inclut pas les verrous internes de tampons ni les verrous internes de marque de transaction. La liste des attentes de VERROUs \_ \* est disponible dans sys.dm_os_latch_stats. Notez que sys.dm_os_latch_stats regroupe les attentes LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX et LATCH_DT.| 
 |LAZYWRITER_SLEEP |Se produit lorsque des tâches d’écriture différée sont suspendues. Il s'agit d'une mesure de la durée consacrée aux tâches en arrière-plan qui attendent. Ne considérez pas cet état lorsque vous cherchez des blocages d'utilisateur.| 
 |LCK_M_BU |Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour en bloc.| 
 |LCK_M_BU_ABORT_BLOCKERS |Se produit lorsqu'une tâche attend pour acquérir un verrou de mise à jour en bloc avec des blocages d'abandon. (En relation avec l’option d’attente basse priorité de ALTER TABLE et ALTER INDEX.), <br /><br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions ultérieures.| 
@@ -1024,12 +1024,11 @@ Cette commande remet tous les compteurs à 0.
   
 -   ddl_with_wait_at_low_priority  
   
- Pour obtenir une matrice de compatibilité des verrous, consultez [sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
+ Pour obtenir une matrice de compatibilité des verrous, consultez [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
     
  [SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
- [sys. dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
-  
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_db_wait_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   

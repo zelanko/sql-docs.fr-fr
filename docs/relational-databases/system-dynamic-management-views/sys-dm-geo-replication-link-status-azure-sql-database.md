@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 433bcea8a7d0a1f719aac9f76a782f666113189f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d105ddedeafa8a82c068fce90f3e29bc4622f57
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548469"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834249"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -48,10 +48,10 @@ ms.locfileid: "89548469"
 |last_commit|**datetimeoffset**|Heure de la dernière transaction validée dans la base de données. S’il est récupéré sur la base de données primaire, il indique l’heure de la dernière validation sur la base de données primaire. S’il est récupéré sur la base de données secondaire, il indique l’heure de la dernière validation sur la base de données secondaire. En cas de récupération sur la base de données secondaire lorsque le réplica principal du lien de réplication est arrêté, il indique jusqu’à quel point la base de données secondaire a été capturée.|
   
 > [!NOTE]  
->  Si la relation de réplication se termine en supprimant la base de données secondaire (section 4,2), la ligne de cette base de données dans la vue **sys. dm_geo_replication_link_status** disparaît.  
+>  Si la relation de réplication se termine en supprimant la base de données secondaire (section 4,2), la ligne de cette base de données dans la vue **sys.dm_geo_replication_link_status** disparaît.  
   
 ## <a name="permissions"></a>Autorisations  
- Tout compte avec view_database_state autorisation peut interroger **sys. dm_geo_replication_link_status**.  
+ Tout compte avec view_database_state autorisation peut interroger **sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Exemple  
  Affichez les retards de réplication et l’heure de la dernière réplication de mes bases de données secondaires.  
@@ -66,8 +66,7 @@ FROM sys.dm_geo_replication_link_status;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
- [sys. geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [sys. dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
+ [ALTER DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [sys.geo_replication_links &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
+ [sys.dm_operation_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)   
  [sp_wait_for_database_copy_sync](../system-stored-procedures/active-geo-replication-sp-wait-for-database-copy-sync.md)
-  

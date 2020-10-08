@@ -1,6 +1,6 @@
 ---
 description: sys.dm_clr_appdomains (Transact-SQL)
-title: sys. dm_clr_appdomains (Transact-SQL) | Microsoft Docs
+title: sys.dm_clr_appdomains (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ac0a451dd88d79ab1847d4c5414fadeb01724e3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 7f1357535d22306f09f8378e8e71aef6801975ae
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545340"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834099"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,11 +33,11 @@ ms.locfileid: "89545340"
   
  Il existe plusieurs types d'objets de base de données managés d'intégration CLR. Pour obtenir des informations générales sur ces objets, consultez [génération d’objets de base de données avec intégration du Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Chaque fois que ces objets sont exécutés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un **AppDomain** sous lequel il peut charger et exécuter le code requis. Le niveau d’isolation d’un **AppDomain** est un **AppDomain** par base de données par propriétaire. Autrement dit, tous les objets CLR appartenant à un utilisateur sont toujours exécutés dans le même **AppDomain** par base de données (si un utilisateur inscrit des objets de base de données CLR dans différentes bases de données, les objets de base de données CLR s’exécuteront dans différents domaines d’application). Un **AppDomain** n’est pas détruit une fois l’exécution du code terminée. Il est mis en cache dans la mémoire pour les prochaines exécutions. Les performances en sont alors améliorées.  
   
- Pour plus d’informations, consultez [domaines d’application](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ Pour plus d’informations, consultez [domaines d’application](../../sql-server/what-s-new-in-sql-server-2016.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary (8)**|Adresse de l' **AppDomain**. Tous les objets de base de données gérés appartenant à un utilisateur sont toujours chargés dans le même **AppDomain**. Vous pouvez utiliser cette colonne pour rechercher tous les assemblys actuellement chargés dans cet **AppDomain** dans **sys. dm_clr_loaded_assemblies**.|  
+|**appdomain_address**|**varbinary (8)**|Adresse de l' **AppDomain**. Tous les objets de base de données gérés appartenant à un utilisateur sont toujours chargés dans le même **AppDomain**. Vous pouvez utiliser cette colonne pour rechercher tous les assemblys actuellement chargés dans cet **AppDomain** dans **sys.dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|ID de l' **AppDomain**. Chaque **AppDomain** a un ID unique.|  
 |**appdomain_name**|**varchar (386)**|Nom de l' **AppDomain** comme assigné par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**creation_time**|**datetime**|Heure de création de l' **AppDomain** . Étant donné que les **AppDomains** sont mis en cache et réutilisés pour de meilleures performances, **creation_time** n’est pas nécessairement l’heure à laquelle le code a été exécuté.|  
@@ -110,7 +110,6 @@ where appdomain_id = 15);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+ [sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Vues de gestion dynamique liées au Common Language Runtime &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
-  
   

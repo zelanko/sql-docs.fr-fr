@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_xtp_index_stats (Transact-SQL)
-title: sys. dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,19 +21,19 @@ ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f407fcd44885f052368d34d6f2451794383bf51
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 3e6cf5401a48623df1a5b0c2338cf9d1c7287231
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542234"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833790"
 ---
 # <a name="sysdm_db_xtp_index_stats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Contient les statistiques collectées depuis le dernier redémarrage de la base de données.  
   
- Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) et [instructions pour l’utilisation d’index sur des tables optimisées en mémoire](https://msdn.microsoft.com/library/16ef63a4-367a-46ac-917d-9eebc81ab29b).  
+ Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md) et [instructions pour l’utilisation d’index sur des tables optimisées en mémoire](/previous-versions/sql/sql-server-2016/dn133166(v=sql.130)).  
 
   
 |Nom de la colonne|Type de données|Description|  
@@ -62,5 +62,4 @@ ms.locfileid: "89542234"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de gestion dynamique des tables à mémoire optimisée &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_external_operations (Transact-SQL)
-title: sys. dm_exec_external_operations (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_external_operations (Transact-SQL)
+title: sys.dm_exec_external_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,29 +23,28 @@ ms.assetid: d268217a-85b8-4b7f-9cd1-87865eba2be1
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb27c27e680e253cbafc0d30a4e4db0cd6d9ed4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: aa130e88ec3f87c8964153528ffa65d23b798c40
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548532"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834411"
 ---
-# <a name="sysdm_exec_external_operations-transact-sql"></a>sys. dm_exec_external_operations (Transact-SQL)
+# <a name="sysdm_exec_external_operations-transact-sql"></a>sys.dm_exec_external_operations (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Capture des informations sur les opérations Polybase externes.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Identificateur de requête unique associé à la requête Polybase|Consultez ID dans [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Index de l’étape de la requête|Consultez step_index dans [sys. dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|execution_id|**nvarchar(32)**|Identificateur de requête unique associé à la requête Polybase|Consultez l’ID dans [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Index de l’étape de la requête|Consultez step_index dans [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
 |type de operation_|**nvarchar(128)**|Décrit une opération Hadoop ou une autre opération externe|'Opération Hadoop externe'|  
 |nom de l’operation_|**nvarchar(4000)**|Indique comment l’état du travail en pourcentage (combien est l’entrée consommée)|0-1-multiplié par le facteur 100 (terminé)|  
 |progression de la map_|**float**|Indique comment l’état d’une tâche réduire en pourcentage, le cas échéant|0-1-multiplié par le facteur 100 (terminé)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résolution des problèmes de Polybase avec les vues de gestion dynamique](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Résolution des problèmes de Polybase avec les vues de gestion dynamique](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

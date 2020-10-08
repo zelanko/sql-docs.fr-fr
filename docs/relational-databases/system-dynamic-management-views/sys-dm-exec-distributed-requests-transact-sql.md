@@ -1,6 +1,6 @@
 ---
-description: sys. dm_exec_distributed_requests (Transact-SQL)
-title: sys. dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
+description: sys.dm_exec_distributed_requests (Transact-SQL)
+title: sys.dm_exec_distributed_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2794dfd106c00531c1c1cff96571dbb59c0b67a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 4ceec8dbac1d66a516ad80e2e029fce2d5f405fc
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548593"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834375"
 ---
-# <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-SQL)
+# <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE [sqlserver2016-asa-pdw](../../includes/applies-to-version/sqlserver2016-asa-pdw.md)]
 
   Contient des informations sur toutes les demandes actuellement ou récemment actives dans les requêtes Polybase. Elle répertorie une ligne par requête/requête.  
   
- En fonction de l’ID de session et de demande, un utilisateur peut récupérer les requêtes distribuées réelles générées pour être exécutées, via sys. dm_exec_distributed_requests. Par exemple, une requête impliquant des tables SQL et SQL externes régulières sera décomposée en différentes instructions/demandes exécutées sur les différents nœuds de calcul. Pour suivre les étapes distribuées sur tous les nœuds de calcul, nous introduisons un ID d’exécution « global » qui peut être utilisé pour effectuer le suivi de toutes les opérations sur les nœuds de calcul associés à une requête et un opérateur particuliers, respectivement.  
+ En fonction de l’ID de session et de demande, un utilisateur peut récupérer les demandes distribuées réelles générées pour être exécutées, via sys.dm_exec_distributed_requests. Par exemple, une requête impliquant des tables SQL et SQL externes régulières sera décomposée en différentes instructions/demandes exécutées sur les différents nœuds de calcul. Pour suivre les étapes distribuées sur tous les nœuds de calcul, nous introduisons un ID d’exécution « global » qui peut être utilisé pour effectuer le suivi de toutes les opérations sur les nœuds de calcul associés à une requête et un opérateur particuliers, respectivement.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
@@ -48,8 +48,7 @@ ms.locfileid: "89548593"
 |total_elapsed_time|**int**|Temps écoulé durant l’exécution depuis le début de la demande, en millisecondes.|Entre 0 et la différence entre start_time et end_time. Si total_elapsed_time dépasse la valeur maximale d’un entier, total_elapsed_time sera toujours la valeur maximale. Cette condition génère l’avertissement « la valeur maximale a été dépassée ». La valeur maximale en millisecondes est équivalente à 24,8 jours.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résolution des problèmes de Polybase avec les vues de gestion dynamique](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [Résolution des problèmes de Polybase avec les vues de gestion dynamique](/previous-versions/sql/sql-server-2016/mt146389(v=sql.130))   
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vues de gestion dynamique liées à la base de données &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
-  
   

@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_request_steps (Transact-SQL)
-title: sys. dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
+description: sys.dm_pdw_request_steps (Transact-SQL)
+title: sys.dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/19/2020
 ms.prod: sql
@@ -13,28 +13,28 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4144e068354d43e2e8a5f9ea5bd6af7ad40a0e6d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68224be467a0f35526730cea2336c7148281da9c
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489734"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834139"
 ---
-# <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps (Transact-SQL)
+# <a name="sysdm_pdw_request_steps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contient des informations sur toutes les étapes qui composent une requête ou une requête donnée dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Elle répertorie une ligne par étape de requête.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|request_id et step_index constituent la clé de cette vue.<br /><br /> ID numérique unique associé à la demande.|Consultez request_id dans [sys. dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|request_id et step_index constituent la clé de cette vue.<br /><br /> ID numérique unique associé à la demande.|Consultez request_id dans [sys.dm_pdw_exec_requests &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|request_id et step_index constituent la clé de cette vue.<br /><br /> Position de cette étape dans la séquence d’étapes qui composent la demande.|0 à (n-1) pour une demande avec n étapes.|  
-|operation_type|**nvarchar(35)**|Type d’opération représenté par cette étape.|**Opérations du plan de requête DMS :** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Opérations du plan de requête SQL :** 'OnOperation', 'RemoteOperation'<br /><br /> **Autres opérations de plan de requête :** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Opérations externes pour les lectures :** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Opérations externes pour MapReduce :** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Opérations externes pour les écritures :** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Pour plus d’informations, consultez « comprendre les plans de requête » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  Un plan de requête peut également être affecté par les paramètres de base de données.  Pour plus d’informations, consultez [options ALTER DATABASE SET](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql-set-options?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json&view=azure-sqldw-latest) .|  
+|operation_type|**nvarchar(35)**|Type d’opération représenté par cette étape.|**Opérations du plan de requête DMS :** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **Opérations du plan de requête SQL :** 'OnOperation', 'RemoteOperation'<br /><br /> **Autres opérations de plan de requête :** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **Opérations externes pour les lectures :** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **Opérations externes pour MapReduce :** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **Opérations externes pour les écritures :** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> Pour plus d’informations, consultez « comprendre les plans de requête » dans le [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] . <br /><br />  Un plan de requête peut également être affecté par les paramètres de base de données.  Pour plus d’informations, consultez [options ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md?bc=%252fazure%252fsql-data-warehouse%252fbreadcrumb%252ftoc.json&toc=%252fazure%252fsql-data-warehouse%252ftoc.json&view=azure-sqldw-latest) .|  
 |distribution_type|**nvarchar(32)**|Type de distribution que cette étape doit subir.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
 |location_type|**nvarchar(32)**|Emplacement d’exécution de l’étape.|« COMPUTE », « Control », « DMS »|  
 |status|**nvarchar(32)**|État de cette étape.|En attente, en cours d’exécution, terminé, en échec, UndoFailed, PendingCancel, annulé, annulé, abandonné|  
-|error_id|**nvarchar (36)**|ID unique de l’erreur associée à cette étape, le cas échéant.|Consultez error_id de [sys. dm_pdw_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). NULL si aucune erreur ne s’est produite.|  
-|start_time|**datetime**|Heure à laquelle l’étape a démarré l’exécution.|Inférieure ou égale à l’heure actuelle et supérieure ou égale à end_compile_time de la requête à laquelle cette étape appartient. Pour plus d’informations sur les requêtes, consultez [sys. dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|error_id|**nvarchar (36)**|ID unique de l’erreur associée à cette étape, le cas échéant.|Consultez error_id de [sys.dm_pdw_errors &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). NULL si aucune erreur ne s’est produite.|  
+|start_time|**datetime**|Heure à laquelle l’étape a démarré l’exécution.|Inférieure ou égale à l’heure actuelle et supérieure ou égale à end_compile_time de la requête à laquelle cette étape appartient. Pour plus d’informations sur les requêtes, consultez [sys.dm_pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |end_time|**datetime**|Heure à laquelle cette étape s’est terminée, a été annulée ou a échoué.|Inférieure ou égale à l’heure actuelle et supérieure ou égale à start_time. Affectez la valeur NULL pour les étapes en cours d’exécution ou en attente.|  
 |total_elapsed_time|**int**|Durée totale d’exécution de l’étape de la requête, en millisecondes.|Entre 0 et la différence entre end_time et start_time. 0 pour les étapes en file d’attente.<br /><br /> Si total_elapsed_time dépasse la valeur maximale d’un entier, total_elapsed_time sera toujours la valeur maximale. Cette condition génère l’avertissement « la valeur maximale a été dépassée ».<br /><br /> La valeur maximale en millisecondes est équivalente à 24,8 jours.|  
 |row_count|**bigint**|Nombre total de lignes modifiées ou retournées par cette demande.|Nombre de lignes affectées par l’étape.  Supérieur ou égal à zéro pour les étapes de l’opération de données.  -1 pour les étapes qui ne fonctionnent pas sur les données.|  
@@ -44,5 +44,4 @@ ms.locfileid: "88489734"
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
-  
   

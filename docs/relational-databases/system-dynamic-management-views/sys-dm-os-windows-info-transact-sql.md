@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_windows_info (Transact-SQL)
-title: sys. dm_os_windows_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_windows_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -19,36 +19,36 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ba205fe097367dc273d22d49d54f51a31cedbbfc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: b04ca0605a7487ba684889f4f0e84b3114d75744
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89531682"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834388"
 ---
 # <a name="sysdm_os_windows_info-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Retourne une ligne qui affiche les informations relatives à la version du système d'exploitation Windows.  
   
-  S’applique uniquement aux SQL Server s’exécutant sur Windows. Pour voir des instructions similaires pour les SQL Server s’exécutant sur un hôte non-Windows, par exemple Linux, utilisez [sys. dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+  S’applique uniquement aux SQL Server s’exécutant sur Windows. Pour voir des instructions similaires pour les SQL Server s’exécutant sur un hôte non-Windows, par exemple Linux, utilisez [sys.dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar (256)**|Pour Windows, retourne le numéro de version. Pour obtenir la liste des valeurs et des descriptions, consultez [version du système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). Ne peut pas avoir la valeur NULL.|  
 |**windows_service_pack_level**|**nvarchar (256)**| Pour Windows, retourne le nombre de Service Pack. Ne peut pas avoir la valeur NULL. |  
-|**windows_sku**|**int**|Pour Windows, retourne l’ID de référence (SKU) Windows. Pour obtenir la liste des ID et des descriptions des références SKU, consultez [fonction GetProductInfo](https://msdn.microsoft.com/library/ms724358.aspx). Accepte la valeur null. |  
-|**os_language_version**|**int**| Pour Windows, retourne l’identificateur de paramètres régionaux (LCID) Windows du système d’exploitation. Pour obtenir la liste des valeurs et des descriptions des LCID, consultez [ID de paramètres régionaux attribués par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur NULL.|  
+|**windows_sku**|**int**|Pour Windows, retourne l’ID de référence (SKU) Windows. Pour obtenir la liste des ID et des descriptions des références SKU, consultez [fonction GetProductInfo](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo). Accepte la valeur null. |  
+|**os_language_version**|**int**| Pour Windows, retourne l’identificateur de paramètres régionaux (LCID) Windows du système d’exploitation. Pour obtenir la liste des valeurs et des descriptions des LCID, consultez [ID de paramètres régionaux attribués par Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c). Ne peut pas avoir la valeur NULL.|  
   
   
 ## <a name="permissions"></a>Autorisations  
-L’autorisation SELECT sur sys. dm_os_windows_info est accordée au rôle public par défaut. En cas de révocation, requiert l’autorisation VIEW SERVER STATE sur le serveur.  
+L’autorisation SELECT sur sys.dm_os_windows_info est accordée par défaut au rôle public. En cas de révocation, requiert l’autorisation VIEW SERVER STATE sur le serveur.  
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions
-Pour afficher les instructions relatives à SQL exécuté sur un hôte non-Windows, par exemple Linux, utilisez [sys. dm_os_host_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
+Pour afficher les instructions relatives à SQL exécuté sur un hôte non-Windows, par exemple Linux, utilisez [sys.dm_os_host_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant retourne toutes les colonnes de la vue **sys. dm_os_windows_info** .  
+ L’exemple suivant retourne toutes les colonnes de la vue **sys.dm_os_windows_info** .  
   
 ```  
 SELECT windows_release, windows_service_pack_level, windows_sku, os_language_version  
@@ -67,5 +67,3 @@ FROM sys.dm_os_windows_info;
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys.dm_os_host_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md)  
   
-  
-

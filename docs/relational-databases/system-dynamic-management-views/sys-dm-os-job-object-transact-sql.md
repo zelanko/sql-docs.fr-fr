@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_job_object (Azure SQL Database)
-title: sys. dm_os_job_object (Azure SQL Database) | Microsoft Docs
+title: sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2020
 ms.service: sql-database
@@ -20,12 +20,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3ed298216393b59d723eb58cac783f9836ce93d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c8ee9c4054a9bb39f7eebcd30aa0fa9c85d7bde7
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88489843"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834074"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -57,5 +57,4 @@ Sur SQL Managed Instance, requiert l' `VIEW SERVER STATE` autorisation. Sur SQL 
  
 ## <a name="see-also"></a>Voir aussi  
 
-Pour plus d’informations sur les instances gérées, consultez [SQL Managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
-  
+Pour plus d’informations sur les instances gérées, consultez [SQL Managed instance](/azure/sql-database/sql-database-managed-instance).

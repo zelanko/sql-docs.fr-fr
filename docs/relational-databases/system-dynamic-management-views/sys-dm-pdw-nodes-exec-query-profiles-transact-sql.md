@@ -1,5 +1,5 @@
 ---
-title: sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL) | Microsoft Docs
 description: Vue de gestion dynamique qui peut être utilisée pour surveiller la progression des requêtes de l’entrepôt de données en temps réel pendant l’exécution de la requête.
 ms.custom: ''
 ms.date: 10/14/2019
@@ -13,14 +13,14 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cb63045fa1a34898e9c195e7a5c75bdf6b34b15a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: cd4f8ad0ae52876015df815089733f49a37d2f35
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87394344"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834334"
 ---
-# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys. dm_pdw_nodes_exec_query_profiles (Transact-SQL)
+# <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Surveille la progression des requêtes de l’entrepôt de données en temps réel pendant l’exécution de la requête.   
@@ -34,7 +34,7 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |session_id|**smallint**|Identifie la session dans laquelle cette requête s'exécute. Référence dm_exec_sessions.session_id.|  
 |request_id|**int**|Identifie la demande cible. Référence dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|Jeton qui identifie de façon unique le lot ou la procédure stockée dont fait partie la requête. Référence dm_exec_query_stats.sql_handle.|  
-|plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot exécuté et dont le plan réside dans le cache du plan, ou qui est en cours d’exécution. Référence dm_exec_query_stats. plan_handle.|  
+|plan_handle|**varbinary(64)**|Jeton qui identifie de façon unique un plan d’exécution de requête pour un lot exécuté et dont le plan réside dans le cache du plan, ou qui est en cours d’exécution. Fait référence à dm_exec_query_stats. plan_handle.|  
 |physical_operator_name|**nvarchar (256)**|Nom de l'opérateur physique.|  
 |node_id|**int**|Identifie un nœud d'opérateur dans l'arborescence de requête.|  
 |thread_id|**int**|Fait la distinction entre les threads (pour une requête parallèle) qui appartiennent au même nœud d'opérateur de requête.|  
@@ -69,7 +69,7 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |estimated_read_row_count|**bigint**|**S’applique à :** À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Nombre de lignes dont la lecture est estimée par un opérateur avant l’application du prédicat résiduel.|  
   
 ## <a name="remarks"></a>Notes  
-Les mêmes remarques dans [sys. dm_exec_query_profiles](https://docs.microsoft.com/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql?view=sql-server-ver15) s’appliquent.  
+Les mêmes remarques dans [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) s’appliquent.  
 
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
@@ -79,4 +79,4 @@ Les mêmes remarques dans [sys. dm_exec_query_profiles](https://docs.microsoft.c
    
 
  ## <a name="next-steps"></a>Étapes suivantes
- Pour obtenir des conseils supplémentaires en matière de développement, consultez l’article [Vue d’ensemble sur le développement SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ Pour obtenir des conseils supplémentaires en matière de développement, consultez l’article [Vue d’ensemble sur le développement SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).

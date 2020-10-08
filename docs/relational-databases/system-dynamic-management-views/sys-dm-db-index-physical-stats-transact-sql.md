@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_index_physical_stats (Transact-SQL)
-title: sys. dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9633305e5d60a9ccbdfcf57f966353792c24a12a
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: dd4c4946b5e62b9e7f06ca2beea8e75732f17e43
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89518741"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91833858"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "89518741"
   Renvoie les informations de taille et de fragmentation pour les données et les index de la table ou de la vue spécifiée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour un index, une ligne est retournée pour chaque niveau de l'arbre B (B-tree) dans chaque partition. Pour un segment de mémoire, une ligne est retournée pour l'unité d'allocation IN_ROW_DATA de chaque partition. Pour les données LOB, une ligne est retournée pour l'unité d'allocation LOB_DATA de chaque partition. S'il existe des données en dépassement de capacité des lignes dans la table, une ligne est retournée pour l'unité d'allocation ROW_OVERFLOW_DATA dans chaque partition. Ne retourne pas d'informations sur les index ColumnStore xVelocity avec mémoire optimisée.  
   
 > [!IMPORTANT]
-> Si vous interrogez **sys. dm_db_index_physical_stats** sur une instance de serveur qui héberge un [réplica secondaire accessible en lecture](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)Always on, vous pouvez rencontrer un problème de blocage de rétablissement. Ce problème est dû au fait que la vue de gestion dynamique acquiert un verrou IS sur la table ou la vue utilisateur spécifiée qui peut bloquer les demandes d'un thread de phase de restauration par progression concernant un verrou X sur la table ou vue utilisateur en question.  
+> Si vous interrogez des **sys.dm_db_index_physical_stats** sur une instance de serveur qui héberge un [réplica secondaire accessible en lecture](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)Always on, vous pouvez rencontrer un problème de blocage de rétablissement. Ce problème est dû au fait que la vue de gestion dynamique acquiert un verrou IS sur la table ou la vue utilisateur spécifiée qui peut bloquer les demandes d'un thread de phase de restauration par progression concernant un verrou X sur la table ou vue utilisateur en question.  
   
- **sys. dm_db_index_physical_stats** ne retourne pas d’informations sur les index optimisés en mémoire. Pour plus d’informations sur l’utilisation des index optimisés en mémoire, consultez [sys. dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+ **sys.dm_db_index_physical_stats** ne retourne pas d’informations sur les index optimisés en mémoire. Pour plus d’informations sur l’utilisation des index optimisés en mémoire, consultez [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -111,7 +111,7 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Taille moyenne des enregistrements en octets.<br /><br /> Pour un index, la taille moyenne des enregistrements s'applique au niveau actuel de l'arbre B (B-tree) dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour un segment de mémoire, il s'agit de la taille moyenne des enregistrements dans l'unité d'allocation IN_ROW_DATA.<br /><br /> Pour les unités d'allocation LOB_DATA ou ROW_OVERFLOW_DATA, il s'agit de la taille moyenne des enregistrements dans toute l'unité d'allocation.<br /><br /> NULL lorsque *mode* = Limited.|  
 |forwarded_record_count|**bigint**|Nombre d'enregistrements d'un segment de mémoire qui contiennent des pointeurs avant vers un autre emplacement de données. (Cet état se produit pendant une mise à jour, lorsque l'espace disponible est insuffisant pour stocker la nouvelle ligne à l'emplacement d'origine.)<br /><br /> NULL pour toute unité d'allocation différente des unités d'allocation IN_ROW_DATA d'un segment de mémoire.<br /><br /> NULL pour les segments de mémoire lorsque *mode* = Limited.|  
 |compressed_page_count|**bigint**|Nombre de pages compressées.<br /><br /> Pour les segments de mémoire, les pages allouées récemment ne sont pas compressées avec le mode PAGE. Un segment de mémoire est compressé avec le mode PAGE sous deux conditions spéciales : lorsque les données sont importées en bloc ou lorsqu'un segment de mémoire est reconstruit. Les opérations DML par défaut qui provoquent des allocations de page ne sont pas compressées avec le mode PAGE. Reconstruisez un segment de mémoire lorsque la valeur compressed_page_count dépasse le seuil que vous souhaitez.<br /><br /> Pour les tables qui ont un index cluster, la valeur compressed_page_count indique l'efficacité de la compression PAGE.|  
-|hobt_id|bigint|Pour les index ColumnStore uniquement, il s’agit de l’ID d’un ensemble de lignes qui effectue le suivi des données ColumnStore internes pour une partition. Les ensembles de lignes sont stockés sous forme de tas de données ou d’arborescences binaires. Ils ont le même ID d’index que l’index ColumnStore parent. Pour plus d’informations, consultez [sys. internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si <br /><br /> **S’applique à**: SQL Server 2016 et versions ultérieures, Azure SQL Database, Managed instance SQL Azure|  
+|hobt_id|bigint|Pour les index ColumnStore uniquement, il s’agit de l’ID d’un ensemble de lignes qui effectue le suivi des données ColumnStore internes pour une partition. Les ensembles de lignes sont stockés sous forme de tas de données ou d’arborescences binaires. Ils ont le même ID d’index que l’index ColumnStore parent. Pour plus d’informations, consultez [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL si <br /><br /> **S’applique à**: SQL Server 2016 et versions ultérieures, Azure SQL Database, Managed instance SQL Azure|  
 |column_store_delete_buffer_state|TINYINT| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRAINAGE<br /><br /> 3 = VIDAGE<br /><br /> 4 = RETRAIT<br /><br /> 5 = PRÊT<br /><br />**S’applique à**: SQL Server 2016 et versions ultérieures, Azure SQL Database, Managed instance SQL Azure|  
 |column_store_delete_buff_state_desc|| NON valide : l’index parent n’est pas un index ColumnStore.<br /><br /> Les scanneurs et les relecteurs ouverts utilisent cette.<br /><br /> DRAINAGE-les suppressions s’impriment, mais les scanneurs l’utilisent encore.<br /><br /> Le vidage du tampon est fermé et les lignes de la mémoire tampon sont écrites dans le bitmap de suppression.<br /><br /> Mise hors service : les lignes du tampon de suppression fermé ont été écrites dans le bitmap de suppression, mais la mémoire tampon n’a pas été tronquée, car les scanneurs l’utilisent encore. Les nouveaux scanneurs n’ont pas besoin d’utiliser la mémoire tampon de mise hors service, car la mémoire tampon ouverte est suffisante.<br /><br /> PRÊT : ce tampon de suppression est prêt à être utilisé. <br /><br /> **S’applique à**: SQL Server 2016 et versions ultérieures, Azure SQL Database, Managed instance SQL Azure|  
 |version_record_count|**bigint**|Il s’agit du nombre d’enregistrements de version de ligne en cours de conservation dans cet index.  Ces versions de ligne sont gérées par la fonctionnalité [de récupération de base de données accélérée](../../relational-databases/accelerated-database-recovery-concepts.md) . <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
@@ -125,7 +125,7 @@ sys.dm_db_index_physical_stats (
  La fonction de gestion dynamique sys.dm_db_index_physical_stats remplace l'instruction DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Modes d'analyse  
- Le mode d'exécution de la fonction détermine le niveau de l'analyse effectuée pour obtenir les données statistiques utilisées par la fonction. le *mode* est spécifié sous la forme Limited, SAMPLED ou detailed. La fonction traverse les chaînes de pages des unités d'allocation qui composent les partitions spécifiées de la table ou de l'index. sys. dm_db_index_physical_stats nécessite uniquement un verrou de table intentionnel (IS), quel que soit le mode dans lequel il s’exécute.  
+ Le mode d'exécution de la fonction détermine le niveau de l'analyse effectuée pour obtenir les données statistiques utilisées par la fonction. le *mode* est spécifié sous la forme Limited, SAMPLED ou detailed. La fonction traverse les chaînes de pages des unités d'allocation qui composent les partitions spécifiées de la table ou de l'index. sys.dm_db_index_physical_stats nécessite uniquement un verrou de table intentionnel (IS), quel que soit le mode dans lequel il s’exécute.  
   
  Le mode LIMITED est le mode plus rapide : il analyse le plus petit nombre de pages. Pour un index, seules les pages de niveau parent de l'arbre B (B-tree) (autrement dit, les pages au-dessus du niveau feuille) sont analysées. Pour un segment de mémoire, les pages PFS et IAM associées sont examinées et les pages de données d'un segment de mémoire sont analysées en mode LIMITED.  
   
@@ -138,7 +138,7 @@ sys.dm_db_index_physical_stats (
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Utilisation de fonctions système pour spécifier des valeurs de paramètres  
  Vous pouvez utiliser les [!INCLUDE[tsql](../../includes/tsql-md.md)] fonctions [DB_ID](../../t-sql/functions/db-id-transact-sql.md) et [object_id](../../t-sql/functions/object-id-transact-sql.md) pour spécifier une valeur pour les paramètres *database_id* et *object_id* . Toutefois, la transmission de valeurs non valides à ces fonctions peut entraîner des résultats imprévisibles. Par exemple, si le nom de la base de données ou de l'objet est introuvable car il n'existe pas ou il est mal orthographié, les deux fonctions retournent la valeur NULL. La fonction sys.dm_db_index_physical_stats interprète NULL comme une valeur générique qui spécifie toutes les bases de données ou tous les objets.  
   
- En outre, la fonction OBJECT_ID est traitée avant l’appel de la fonction sys. dm_db_index_physical_stats et est donc évaluée dans le contexte de la base de données active, et non dans la base de données spécifiée dans *database_id*. Il est possible que la fonction OBJECT_ID retourne une valeur NULL ; ou, si le nom d'objet existe dans le contexte de la base de données active et la base de données spécifiée, un message d'erreur peut être retourné. Les exemples suivants présentent ces résultats inattendus.  
+ En outre, la fonction OBJECT_ID est traitée avant l’appel de la fonction sys.dm_db_index_physical_stats et est donc évaluée dans le contexte de la base de données active, et non dans la base de données spécifiée dans *database_id*. Il est possible que la fonction OBJECT_ID retourne une valeur NULL ; ou, si le nom d'objet existe dans le contexte de la base de données active et la base de données spécifiée, un message d'erreur peut être retourné. Les exemples suivants présentent ces résultats inattendus.  
   
 ```  
 USE master;  
@@ -175,7 +175,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>Bonne pratique  
- Vérifiez systématiquement qu'un ID valide est retourné lorsque vous utilisez DB_ID ou OBJECT_ID. Par exemple, lorsque vous utilisez OBJECT_ID, spécifiez un nom en trois parties, tel que `OBJECT_ID(N'AdventureWorks2012.Person.Address')` , ou testez la valeur retournée par les fonctions avant de les utiliser dans la fonction sys. dm_db_index_physical_stats. Les exemples A et B qui suivent illustrent une méthode sûre pour déterminer des ID de bases de données et d'objets.  
+ Vérifiez systématiquement qu'un ID valide est retourné lorsque vous utilisez DB_ID ou OBJECT_ID. Par exemple, lorsque vous utilisez OBJECT_ID, spécifiez un nom en trois parties, tel que `OBJECT_ID(N'AdventureWorks2012.Person.Address')` , ou testez la valeur retournée par les fonctions avant de les utiliser dans la fonction sys.dm_db_index_physical_stats. Les exemples A et B qui suivent illustrent une méthode sûre pour déterminer des ID de bases de données et d'objets.  
   
 ## <a name="detecting-fragmentation"></a>Détection de la fragmentation  
  La fragmentation a lieu lors de la modification des données (instructions INSERT, UPDATE et DELETE) effectuées sur la table, et donc dans les index définis sur la table. Comme ces modifications ne sont généralement pas distribuées équitablement entre les lignes de la table et des index, le remplissage de chaque page peut varier dans le temps. Pour les requêtes qui analysent tout ou partie des index d'une table, ce type de fragmentation peut entraîner des lectures de pages supplémentaires. Cela perturbe l'analyse parallèle des données.  
@@ -434,10 +434,8 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Vues système &#40;&#41;Transact-SQL ](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [Vues système &#40;&#41;Transact-SQL ](../../t-sql/language-reference.md)  
   
-  
-

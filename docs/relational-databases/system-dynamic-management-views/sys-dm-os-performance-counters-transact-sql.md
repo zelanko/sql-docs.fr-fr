@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_performance_counters (Transact-SQL)
-title: sys. dm_os_performance_counters (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_performance_counters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37986b315d8910ee11c191266ec28827d23bdb8b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: bf8f1d6f2b9ae0e724e23238dea494ad0cb4529f
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542190"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834244"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "89542190"
   Renvoie une ligne par compteur de performance maintenu par le serveur. Pour plus d’informations sur chaque compteur de performance, consultez [utiliser des objets SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
 > [!NOTE]  
->  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_performance_counters**.  
+>  Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_os_performance_counters**.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "89542190"
 |**counter_name**|**nchar(128)**|Nom du compteur. Pour obtenir plus d’informations sur un compteur, il s’agit du nom de la rubrique à sélectionner dans la liste des compteurs [utilisés SQL Server objets](../../relational-databases/performance-monitor/use-sql-server-objects.md). |  
 |**instance_name**|**nchar(128)**|Nom d'une instance particulière du compteur. Contient souvent le nom de la base de données.|  
 |**cntr_value**|**bigint**|Valeur actuelle du compteur.<br /><br /> **Remarque :** Pour les compteurs par seconde, cette valeur est cumulative. La valeur de la fréquence doit se calculer en échantillonnant la valeur à des intervalles de temps discrets. La différence entre deux valeurs prélevées successives est égale à la fréquence de l'intervalle de temps utilisé.|  
-|**cntr_type**|**int**|Type de compteur défini par l'architecture de performances Windows. Pour plus d’informations sur les types de compteurs de performance, consultez [types de compteurs de performance WMI](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) sur docs ou la documentation de Windows Server.|  
+|**cntr_type**|**int**|Type de compteur défini par l'architecture de performances Windows. Pour plus d’informations sur les types de compteurs de performance, consultez [types de compteurs de performance WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types) sur docs ou la documentation de Windows Server.|  
 |**pdw_node_id**|**int**|**S’applique à**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] , [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificateur du nœud sur lequel cette distribution se trouve.|  
   
 ## <a name="remarks"></a>Notes  
@@ -76,6 +76,3 @@ WHERE cntr_type = 65792 OR cntr_type = 272696320 OR cntr_type = 537003264;
   [SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.sysperfinfo &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)  
   
-  
-
-

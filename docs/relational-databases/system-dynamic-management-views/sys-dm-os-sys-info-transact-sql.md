@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_sys_info (Transact-SQL)
-title: sys. dm_os_sys_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -23,19 +23,19 @@ ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 56df59d84dafd1f19e74cadcca586e4da9e1c084
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5419919b14c15615cb84d124387c98e9ba2e90a5
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539339"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834436"
 ---
 # <a name="sysdm_os_sys_info-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Retourne un ensemble diversifié d'informations utiles sur l'ordinateur et sur les ressources dont dispose et que consomme [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
-> **Remarque :** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_sys_info**.  
+> **Remarque :** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_os_sys_info**.  
   
 |Nom de la colonne|Type de données|Description et remarques spécifiques à la version |  
 |-----------------|---------------|-----------------|  
@@ -68,7 +68,7 @@ ms.locfileid: "89539339"
 |**process_kernel_time_ms**|**bigint**|**S’applique à :** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et versions ultérieures<br /><br /> Durée totale en millisecondes passée par tous les threads [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode noyau. Cette valeur peut être plus grande qu'une horloge de processeur unique parce qu'elle inclut l'heure pour tous les processeurs sur le serveur. N'accepte pas la valeur NULL.|  
 |**process_user_time_ms**|**bigint**|**S’applique à :** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et versions ultérieures<br /><br /> Durée totale en millisecondes passée par tous les threads [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode utilisateur. Cette valeur peut être plus grande qu'une horloge de processeur unique parce qu'elle inclut l'heure pour tous les processeurs sur le serveur. N'accepte pas la valeur NULL.|  
 |**time_source**|**int**|**S’applique à :** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et versions ultérieures<br /><br /> Indique l'API que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise pour récupérer la durée totale d'exécution. N'accepte pas la valeur NULL.<br /><br /> 0 = QUERY_PERFORMANCE_COUNTER<br /><br /> 1 = MULTIMEDIA_TIMER|  
-|**time_source_desc**|**nvarchar(60)**|**S’applique à :** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et versions ultérieures<br /><br /> Décrit la colonne **time_source** . N'accepte pas la valeur NULL.<br /><br /> QUERY_PERFORMANCE_COUNTER = l’API [QueryPerformanceCounter](https://go.microsoft.com/fwlink/?LinkId=163095) récupère le temps horloge.<br /><br /> MULTIMEDIA_TIMER = l’API de [minuteur multimédia](https://go.microsoft.com/fwlink/?LinkId=163094) qui récupère le temps horloge.|  
+|**time_source_desc**|**nvarchar(60)**|**S’applique à :** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et versions ultérieures<br /><br /> Décrit la colonne **time_source** . N'accepte pas la valeur NULL.<br /><br /> QUERY_PERFORMANCE_COUNTER = l’API [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) récupère le temps horloge.<br /><br /> MULTIMEDIA_TIMER = l’API de [minuteur multimédia](/previous-versions//ms713418(v=vs.85)) qui récupère le temps horloge.|  
 |**virtual_machine_type**|**int**|**S’applique à :** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et versions ultérieures<br /><br /> Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dans un environnement virtualisé.  N'accepte pas la valeur NULL.<br /><br /> 0 = AUCUN<br /><br /> 1 = HYPERVISOR<br /><br /> 2 = OTHER|  
 |**virtual_machine_type_desc**|**nvarchar(60)**|**S’applique à :** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et versions ultérieures<br /><br /> Décrit la colonne **virtual_machine_type** . N'accepte pas la valeur NULL.<br /><br /> NONE = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas exécuté sur une machine virtuelle.<br /><br /> Hyperviseur = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute à l’intérieur d’un ordinateur virtuel hébergé par un système d’exploitation exécutant hyperviseur (un système d’exploitation hôte qui utilise la virtualisation d’assistance matérielle).<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute à l’intérieur d’un ordinateur virtuel hébergé par un système d’exploitation qui n’utilise pas l’assistant matériel tel que Microsoft Virtual PC.|  
 |**softnuma_configuration**|**int**|**S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et versions ultérieures<br /><br /> Spécifie la façon dont les nœuds NUMA sont configurés. N'accepte pas la valeur NULL.<br /><br /> 0 = désactivé indique la valeur par défaut du matériel<br /><br /> 1 = soft-NUMA automatisé<br /><br /> 2 = soft-NUMA manuel via le registre|  
@@ -90,7 +90,3 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requie
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server vues de gestion dynamique liées au système d’exploitation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
-  
-
-
-

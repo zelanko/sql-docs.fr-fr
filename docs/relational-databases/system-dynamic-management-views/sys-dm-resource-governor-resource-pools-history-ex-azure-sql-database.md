@@ -1,6 +1,6 @@
 ---
-description: sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
-title: sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
+description: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+title: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 62aec7de63493a94ea05f91883e506d0fc0f6f7b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cbc5d23a7c7843a2186cd951fd5bb16079489d3
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88481787"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834324"
 ---
-# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
@@ -119,7 +119,7 @@ L’exemple suivant retourne la quantité maximale de données de taux de journa
 select snapshot_time, name, max_log_rate_kb, delta_log_bytes_used from sys.dm_resource_governor_resource_pools_history_ex where name like 'UserPool%' order by snapshot_time desc
 ```
 
-L’exemple suivant retourne des informations similaires en tant que sys. elastic_pool_resource_stats sans avoir à se connecter au maître logique
+L’exemple suivant retourne des informations similaires en tant que sys.elastic_pool_resource_stats sans avoir à se connecter au maître logique
 
 ```sql
 select snapshot_time, name, cap_vcores_used_percent,
@@ -135,6 +135,6 @@ select snapshot_time, name, cap_vcores_used_percent,
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Gouvernance du taux de journal des traductions](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Limites des ressources DTU des pools élastiques](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Limites des ressources vCore des pools élastiques](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Gouvernance du taux de journal des traductions](/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
+- [Limites des ressources DTU des pools élastiques](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Limites des ressources vCore des pools élastiques](/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

@@ -1,6 +1,6 @@
 ---
 description: sys.dm_os_child_instances (Transact-SQL)
-title: sys. dm_os_child_instances (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1bef3074-0ccc-48fa-8f3d-14f3d99df86b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9c148c6d3bab448d89294eba4af7ebec8cd2cf6c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 81cceff6a1336fadecb84f1d70c5f41c7625dc07
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539356"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834451"
 ---
 # <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,11 +35,11 @@ ms.locfileid: "89539356"
   
 > **IMPORTANT !** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Les informations retournées par **sys. dm_os_child_instances** peuvent être utilisées pour déterminer l’état de chaque instance utilisateur (heart_beat) et pour obtenir le nom du canal (instance_pipe_name) qui peut être utilisé pour créer une connexion à l’instance utilisateur à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de sqlcmd. Vous pouvez vous connecter à une instance utilisateur uniquement lorsque cette dernière a été démarrée par un processus externe, tel qu'une application cliente. Les outils de gestion de SQL Server ne peuvent pas démarrer une instance utilisateur.  
+ Les informations retournées par **sys.dm_os_child_instances** peuvent être utilisées pour déterminer l’état de chaque instance utilisateur (heart_beat) et pour obtenir le nom du canal (instance_pipe_name) qui peut être utilisé pour créer une connexion à l’instance utilisateur à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de sqlcmd. Vous pouvez vous connecter à une instance utilisateur uniquement lorsque cette dernière a été démarrée par un processus externe, tel qu'une application cliente. Les outils de gestion de SQL Server ne peuvent pas démarrer une instance utilisateur.  
   
 > **Remarque :** Les instances utilisateur sont une fonctionnalité de [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] uniquement.  
 > 
-> **Remarque** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_os_child_instances**.  
+> **Remarque** Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_os_child_instances**.  
   
 |Colonne|Type de données|Description|  
 |------------|---------------|-----------------|  
@@ -60,9 +60,5 @@ ms.locfileid: "89539356"
  Pour plus d’informations sur la vue de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] documentation en ligne de.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instances d'utilisateur pour les non administrateurs](https://msdn.microsoft.com/85385aae-10fb-4f8b-9eeb-cce2ee7da019)  
+ [Instances d'utilisateur pour les non administrateurs](/previous-versions/sql/)  
   
-  
-
-
-
