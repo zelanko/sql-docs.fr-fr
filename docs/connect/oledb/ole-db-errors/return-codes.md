@@ -22,12 +22,12 @@ helpviewer_keywords:
 - errors [OLE DB], return codes
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 18d2b3f5029e70379f0692a919aa8fe6cd4ed10b
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: fe59f14e43a32d6c6b3239c24f1be665e7bbad82
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862247"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727180"
 ---
 # <a name="return-codes"></a>Codes de retour
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "88862247"
 
   Au niveau le plus élémentaire, une fonction membre réussit ou échoue. À un niveau plus précis, une fonction peut réussir, mais son succès peut ne pas être ce que le développeur d'applications prévoyait.  
   
- Pour plus d’informations sur les codes de retour OLE DB, consultez [Codes de retour (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=101631).  
+ Pour plus d’informations sur les codes de retour OLE DB, consultez [Codes de retour (OLE DB)](/previous-versions/windows/desktop/ms725451(v=vs.85)).  
   
  Lorsqu'une fonction membre OLE DB Driver pour SQL Server retourne S_OK, la fonction a réussi.  
   
@@ -50,5 +50,4 @@ ms.locfileid: "88862247"
   
 ## <a name="see-also"></a>Voir aussi  
  [Erreurs](../../oledb/ole-db-errors/errors.md)  
-  
   

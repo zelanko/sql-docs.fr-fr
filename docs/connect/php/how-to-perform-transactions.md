@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c5a04b2a68c47b85ce89512f4ae772fb6c9408b9
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: 13eae20e5a8e51a7a46473ef62e98c03c195e382
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680634"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726823"
 ---
 # <a name="how-to-perform-transactions"></a>Procédure : Effectuer des transactions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -156,7 +156,6 @@ Pour mieux mettre l’accent sur le comportement de la transaction, aucune recom
 ## <a name="see-also"></a>Voir aussi  
 [Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[Transactions (moteur de base de données)](https://msdn.microsoft.com/library/ms190612.aspx)
+[Transactions (moteur de base de données)](/previous-versions/sql/sql-server-2008-r2/ms190612(v=sql.105))
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  
-  

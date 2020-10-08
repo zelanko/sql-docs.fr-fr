@@ -13,12 +13,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 01adeff5f66d1d37309967147b00f63b1d5b75a4
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: d456e16308944d8678d5938e0e56d094a0afa196
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860252"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727040"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Récupérer des lignes à l'aide de signets (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860252"
   Le consommateur attribue au champ **dwFlag** de la structure de liaison la valeur DBCOLUMNSINFO_ISBOOKMARK pour indiquer que la colonne est utilisée comme signet. Le consommateur définit également la propriété d'ensemble de lignes DBPROP_BOOKMARKS avec la valeur VARIANT_TRUE. Cela permet à la colonne 0 d'être présente dans l'ensemble de lignes. **IRowsetLocate::GetRowsAt** est ensuite utilisé pour extraire les lignes, en commençant par la ligne spécifiée par un offset à partir d'un signet.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-retrieve-rows-using-bookmarks"></a>Pour extraire des lignes à l'aide de signets  
   
@@ -385,5 +385,4 @@ int ProcessResultSet() {
    return 0;  
 }  
 ```  
-  
   

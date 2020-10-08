@@ -15,12 +15,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 00bf7bad226fc793c17a80a0e10e86c970aae195
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 3676f8daad2e597510323577a67f37c9a901f2b0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862134"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726925"
 ---
 # <a name="ole-db-driver-for-sql-server-ole-db-interfaces"></a>Interfaces OLE DB Driver pour SQL Server (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88862134"
   
  La référence de programmation du pilote OLE DB pour SQL Server ne documente pas la totalité des interfaces et des méthodes OLE DB, mais uniquement les interfaces et les méthodes qui exposent un comportement spécifique au fournisseur lors de l’utilisation du pilote OLE DB pour SQL Server.  
   
- Pour une description complète des principales interfaces et méthodes OLE DB, consultez [OLE DB Programmer’s Reference](https://go.microsoft.com/fwlink/?LinkId=45232).  
+ Pour une description complète des principales interfaces et méthodes OLE DB, consultez [OLE DB Programmer’s Reference](/previous-versions/windows/desktop/ms713643(v=vs.85)).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -39,5 +39,4 @@ ms.locfileid: "88862134"
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f369b492536ee432385e3babef0e42924f86926d
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: f335fef3f9918ebcd04362cd6b1edf2df6a29dfc
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195145"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727296"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Prise en charge des noms de principaux du service (SPN) dans les connexions clientes
 
@@ -41,9 +41,9 @@ ms.locfileid: "89195145"
   
  Pour plus d'informations sur Kerberos, consultez les articles suivants :  
   
--   [Kerberos Technical Supplement for Windows (en anglais)](https://go.microsoft.com/fwlink/?LinkId=101449)  
+-   [Kerberos Technical Supplement for Windows (en anglais)](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
--   [Microsoft Kerberos (en anglais)](https://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos (en anglais)](/windows/win32/secauthn/microsoft-kerberos)  
   
 ## <a name="usage"></a>Utilisation  
  Le tableau suivant décrit les scénarios les plus courants dans lesquels les applications clientes peuvent activer l'authentification sécurisée.  
@@ -110,4 +110,3 @@ ms.locfileid: "89195145"
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Inscrire un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

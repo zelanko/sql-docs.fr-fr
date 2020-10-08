@@ -14,19 +14,19 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bd5237556ec0bbe1bf4101cb5adde9734088217c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: cca9bd078060ee9a03df996a62353d051c9625b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860187"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726900"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>Quand utiliser OLE DB Driver pour SQL Server
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver pour SQL Server est une technologie que vous pouvez utiliser pour accéder aux données dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Pour en savoir plus sur les différentes technologies d’accès aux données, consultez [Data Access Technologies Road Map](https://go.microsoft.com/fwlink/?LinkID=179186).  
+  OLE DB Driver pour SQL Server est une technologie que vous pouvez utiliser pour accéder aux données dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Pour en savoir plus sur les différentes technologies d’accès aux données, consultez [Data Access Technologies Road Map](../connect-history.md).  
   
  Avant d’utiliser OLE DB Driver for SQL Server comme technologie d’accès aux données de votre application, vous devez prendre en compte plusieurs facteurs.  
   
@@ -43,5 +43,4 @@ ms.locfileid: "88860187"
 ## <a name="see-also"></a> Voir aussi  
  [OLE DB Driver pour SQL Server](oledb-driver-for-sql-server.md)  
  [Rubriques de procédures liées à OLE DB](ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

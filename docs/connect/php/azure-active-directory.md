@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ac1e598b5599caa9020ed795d1bffd185887ad76
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625459"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726890"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Se connecter à l’aide de l’authentification Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) est une technologie de gestion centralisée des identifiants utilisateur qui représente une solution de substitution à [l’authentification SQL Server](how-to-connect-using-sql-server-authentication.md). Elle rend possible la connexion à Microsoft Azure SQL Database et à SQL Data Warehouse avec des identités fédérées dans Azure AD à l’aide d’un nom d’utilisateur et d’un mot de passe, de l’authentification intégrée Windows ou d’un jeton d’accès Azure AD. Les pilotes PHP pour SQL Server offrent une prise en charge partielle de ces fonctionnalités.
+[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) est une technologie de gestion centralisée des identifiants utilisateur qui représente une solution de substitution à [l’authentification SQL Server](how-to-connect-using-sql-server-authentication.md). Elle rend possible la connexion à Microsoft Azure SQL Database et à SQL Data Warehouse avec des identités fédérées dans Azure AD à l’aide d’un nom d’utilisateur et d’un mot de passe, de l’authentification intégrée Windows ou d’un jeton d’accès Azure AD. Les pilotes PHP pour SQL Server offrent une prise en charge partielle de ces fonctionnalités.
 
 Pour utiliser Azure AD, employez le mot clé **Authentication** ou le mot clé **AccessToken** (mutuellement exclusifs), comme le montre le tableau suivant. Pour plus d’informations techniques, consultez [Utiliser Azure Active Directory avec le pilote ODBC](../odbc/using-azure-active-directory.md).
 
@@ -32,7 +32,7 @@ Pour utiliser Azure AD, employez le mot clé **Authentication** ou le mot clé *
 |**Authentification**|Non défini (par défaut)|Mode d’authentification déterminé par les autres mots clés. Pour plus d’informations, consultez [Connection Options](connection-options.md). |
 ||`SqlPassword`|Authentification directe auprès d’une instance SQL Server (qui peut être une instance Azure) à l’aide d’un nom d’utilisateur et d’un mot de passe, qui doivent être transmis dans chaîne de connexion avec les mots clés **UID** et **PWD**. |
 ||`ActiveDirectoryPassword`|Authentification avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et d’un mot de passe, qui doivent être transmis dans chaîne de connexion avec les mots clés **UID** et **PWD**. |
-||`ActiveDirectoryMsi`|Authentification avec une identité managée affectée par le système ou par l’utilisateur (version 17.3.1.1 ou ultérieure du pilote ODBC requise). Pour obtenir une vue d’ensemble et des tutoriels, consultez [À quoi correspondent les identités managées pour les ressources Azure ?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview).|
+||`ActiveDirectoryMsi`|Authentification avec une identité managée affectée par le système ou par l’utilisateur (version 17.3.1.1 ou ultérieure du pilote ODBC requise). Pour obtenir une vue d’ensemble et des tutoriels, consultez [À quoi correspondent les identités managées pour les ressources Azure ?](/azure/active-directory/managed-identities-azure-resources/overview).|
 
 Le mot clé **Authentication** affecte les paramètres de sécurité de la connexion. S’il est défini dans la chaîne de connexion, le mot clé **Encrypt** a alors par défaut la valeur true, ce qui signifie que le client demandera un chiffrement. Par ailleurs, le certificat de serveur sera validé indépendamment du paramètre de chiffrement, sauf si **TrustServerCertificate** a la valeur true (**false** par défaut). Cette fonctionnalité est à distinguer de l’ancienne méthode de connexion, moins sécurisée, selon laquelle le certificat de serveur n’était validé que si le chiffrement était spécifiquement demandé dans la chaîne de connexion.
 
@@ -237,4 +237,4 @@ try {
 ## <a name="see-also"></a>Voir aussi
 [Utilisation d’Azure Active Directory avec ODBC Driver](../odbc/using-azure-active-directory.md)
 
-[Que sont les identités managées pour les ressources Azure ?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+[Que sont les identités managées pour les ressources Azure ?](/azure/active-directory/managed-identities-azure-resources/overview)

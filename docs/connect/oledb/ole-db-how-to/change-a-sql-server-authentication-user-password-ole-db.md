@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ba388925b96be073ed72208b2e795ea0b292cf17
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: f1ce60f3b96036ff9483782379728ad6e57e3288
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860138"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727138"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Modifier un mot de passe utilisateur d'authentification SQL Server (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "88860138"
   Cet exemple explique comment utiliser OLE DB pour modifier le mot de passe d'un compte d'utilisateur sous Authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ## <a name="example"></a>Exemple  
  Avant la génération, mettez à jour le code C++ pour spécifier l'ID d'utilisateur, l’ancien mot de passe et le nouveau mot de passe.  
@@ -324,5 +324,4 @@ void DumpErrorInfo (IUnknown* pObjectWithError, REFIID IID_InterfaceWithError, B
       pISupportErrorInfo->Release();  
 }  
 ```  
-  
   

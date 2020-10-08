@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 543b717031ff3217b2c71a636d0d3efd38cd8238
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: a01e79c34caeae849c103c2f8f9cbf967e078016
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860244"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727044"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Envoyer des données BLOB vers SQL SERVER en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88860244"
  <b id="conversion_note">[1] :</b> Bien que les conversions ne soient pas possibles, les traductions entre UTF-8 et la page de codes de classement de bases de données peuvent toujours se produire si le serveur ne prend pas en charge UTF-8. Pour plus d’informations, consultez [Support UFT-8 dans OLE DB Driver pour SQL Server](../features/utf-8-support-in-oledb-driver-for-sql-server.md).
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ## <a name="example"></a>Exemple  
  Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  pour créer la table utilisée par l'application.  
@@ -485,5 +485,4 @@ void wmain() {
 use master  
 drop table fltest  
 ```  
-  
   

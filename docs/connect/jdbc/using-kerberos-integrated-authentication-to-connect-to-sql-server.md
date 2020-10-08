@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ecbffed0e29bc3a36a1129dbade504c9b03484c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d015565b114641f2c44c28da1f2dc03e4fdda773
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414595"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727514"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Utilisation de l'authentification intégrée Kerberos pour se connecter à SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-À compter de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], les applications peuvent utiliser la propriété de connexion **authenticationScheme** pour indiquer qu’elles souhaitent se connecter à une base de données à l’aide de l’authentification intégrée Kerberos de type 4. Consultez [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md) pour en savoir plus sur les propriétés de connexion. Pour plus d’informations sur Kerberos, consultez [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758).
+À compter de [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], les applications peuvent utiliser la propriété de connexion **authenticationScheme** pour indiquer qu’elles souhaitent se connecter à une base de données à l’aide de l’authentification intégrée Kerberos de type 4. Consultez [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md) pour en savoir plus sur les propriétés de connexion. Pour plus d’informations sur Kerberos, consultez [Microsoft Kerberos](/windows/win32/secauthn/microsoft-kerberos).
 
 Lors de l’utilisation de l’authentification intégrée avec le **Krb5LoginModule** Java, vous pouvez configurer le module à l’aide de la [classe Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
@@ -74,7 +74,7 @@ Pour plus d'informations sur les noms des principaux du service (SPN), consultez
 
 - [Inscrire un nom de principal du service pour les connexions Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)
 
-- [Utilisation de Kerberos avec SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
+- [Utilisation de Kerberos avec SQL Server](/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Avant la version 6.2 du pilote JDBC, pour utiliser correctement l’approbation de domaine croisé, vous deviez définir explicitement le **serverSpn**.

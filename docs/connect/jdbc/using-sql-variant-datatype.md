@@ -11,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf29942e5d427a4a4852a6d1a856d81765690050
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 198c8a21fcea9a1386effe8d30c8d954180d6dc5
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88414525"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727482"
 ---
 # <a name="using-sql_variant-data-type"></a>Utilisation du type de données SQL_variant
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-À partir de la version 6.3.0, le pilote JDBC prend en charge le type de données sql_variant. sql_variant est également pris en charge lors de l’utilisation de fonctionnalités telles que les paramètres table et BulkCopy avec certaines limitations mentionnées plus loin dans cette page. Tous les types de données ne peuvent pas être stockés dans le type de données sql_variant. Pour obtenir la liste des types de données pris en charge avec sql_variant, consultez la [Documentation](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) de SQL Server.
+À partir de la version 6.3.0, le pilote JDBC prend en charge le type de données sql_variant. sql_variant est également pris en charge lors de l’utilisation de fonctionnalités telles que les paramètres table et BulkCopy avec certaines limitations mentionnées plus loin dans cette page. Tous les types de données ne peuvent pas être stockés dans le type de données sql_variant. Pour obtenir la liste des types de données pris en charge avec sql_variant, consultez la [Documentation](../../t-sql/data-types/sql-variant-transact-sql.md) de SQL Server.
 
 ##  <a name="populating-and-retrieving-a-table"></a>Remplissage et extraction d’une table :
 En supposant qu’il existe une table avec une colonne sql_variant comme suit :
@@ -95,4 +95,4 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Présentation des types de données du pilote JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

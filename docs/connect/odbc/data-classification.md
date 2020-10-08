@@ -14,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: d2f33c6b753b227bf8c6d7aed2c66dd7a09d8433
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 38439c3eff4eee2eef3b3e39f7b2b2b5454b2bec
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88466871"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727445"
 ---
 # <a name="data-classification"></a>Classification des données
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "88466871"
 ## <a name="overview"></a>Vue d’ensemble
 Dans le cadre de la gestion des données sensibles, SQL Server et Azure SQL Server ont introduit la possibilité de fournir des colonnes de base de données avec des métadonnées de sensibilité permettant à l’application cliente de gérer différents types de données sensibles (telles que la santé, la finance, etc.) conformément aux stratégies de protection des données.
 
-Pour plus d’informations sur la façon d’attribuer une classification à des colonnes, consultez [Découverte et classification des données SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+Pour plus d’informations sur la façon d’attribuer une classification à des colonnes, consultez [Découverte et classification des données SQL](../../relational-databases/security/sql-data-discovery-and-classification.md?view=sql-server-2017).
 
 Le pilote Microsoft ODBC 17.2 permet la récupération de ces métadonnées via SQLGetDescField à l’aide de l’identificateur de champ SQL_CA_SS_DATA_CLASSIFICATION.
 
@@ -264,4 +264,3 @@ La valeur de la version actuellement prise en charge de la classification des do
 ```
 ret = SQLGetConnectAttr(dbc, SQL_COPT_SS_DATACLASSIFICATION_VERSION, (SQLPOINTER)&dataClassVersion, SQL_IS_INTEGER, 0);
 ```
-

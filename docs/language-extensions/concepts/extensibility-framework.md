@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 44f32695e91c3c273b024b9f8d7259c59b43014d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 51780bbb0184bdd950e36eef45877da576cd2576
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180306"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765687"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Architecture d’extensibilité dans les extensions de langage SQL Server
 
@@ -58,7 +58,7 @@ Les composants incluent un service **Launchpad**, qui permet d’appeler les run
 |-------------------|-----------|---------------------|
 | JavaLauncher.dll pour Java | Extension Java | SQL Server 2019 |
 
-Le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s’exécute sous **SQLRUserGroup**, qui utilise [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation) pour l’isolation d’exécution.
+Le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s’exécute sous **SQLRUserGroup**, qui utilise [AppContainers](/windows/desktop/secauthz/appcontainer-isolation) pour l’isolation d’exécution.
 
 Un service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] distinct est créé pour chaque instance de moteur de base de données à laquelle vous avez ajouté des extensions de langage machine SQL Server. Il existe un service Launchpad pour chaque instance de moteur de base de données. Ainsi, si vous avez plusieurs instances prenant en charge des scripts externes, vous disposez d’un service Launchpad pour chacune d’entre elles. Une instance de moteur de base de données est liée au service Launchpad créé pour celle-ci. À chaque appel de script externe dans une procédure stockée ou dans du code T-SQL, le service SQL Server appelle le service Launchpad créé pour la même instance.
 
@@ -86,7 +86,7 @@ Les protocoles de communication entre les composants et les plateformes de donn�
 
 + **Autres protocoles**
 
-  Les processus qui peuvent avoir besoin de travailler dans des « blocs » ou de transférer des données en retour à un client distant peuvent aussi utiliser le [format de fichier XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Le transfert de données proprement dit s’effectue via des objets blob encodés.
+  Les processus qui peuvent avoir besoin de travailler dans des « blocs » ou de transférer des données en retour à un client distant peuvent aussi utiliser le [format de fichier XDF](/machine-learning-server/r/concept-what-is-xdf). Le transfert de données proprement dit s’effectue via des objets blob encodés.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -9,18 +9,21 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 637a4c7d5eef6b40008a2903d4840783dcb48b12
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088959"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753511"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sauvegarder et restaurer des bases de données SQL Server sur Linux
 
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Vous pouvez effectuer des sauvegardes de bases de données à partir de SQL Server 2017 sur Linux avec de nombreuses options différentes. Sur un serveur Linux, vous pouvez utiliser **sqlcmd** pour vous connecter à SQL Server et effectuer des sauvegardes. À partir de Windows, vous pouvez vous connecter à SQL Server sur Linux et effectuer des sauvegardes avec l’interface utilisateur. La fonctionnalité de sauvegarde est la même sur toutes les plateformes. Par exemple, vous pouvez sauvegarder les bases de données localement, sur des lecteurs distants ou sur le [service de stockage blob Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
+
+> [!IMPORTANT]
+> SQL Server sur Linux prend en charge seulement la sauvegarde vers Stockage Blob Azure avec des objets blob de blocs. L’utilisation d’une clé de stockage pour la sauvegarde et la restauration entraîne l’utilisation d’un objet blob de pages, ce qui n’est pas pris en charge. Utilisez à la place une signature d’accès partagé. Pour plus d’informations sur les objets blob de blocs et les objets blob de pages, consultez [Sauvegarde sur un objet blob de blocs et sur un objet blob de pages](../relational-databases/backup-restore/sql-server-backup-to-url.md#blockbloborpageblob).
 
 ## <a name="backup-a-database"></a>Sauvegarder une base de données
 

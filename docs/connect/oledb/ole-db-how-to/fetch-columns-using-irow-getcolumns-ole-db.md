@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IRow interface
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c22a948cad5fdc2b41f1ac14b73d728be06b9c3f
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 005748886f0a0e3b6e35b97ac02d1ca77b290b0c
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860611"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727140"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88860611"
 -   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et que **cbMaxLen** est défini sur 0, l’appel à **IRow**- **>GetColumns()** retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler **IRow->GetColumns()** sur la même colonne pour extraire les données réelles.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-fetch-columns-using-irowgetcolumns"></a>Pour extraire des colonnes avec IRow::GetColumns  
   
@@ -522,5 +522,4 @@ go
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures liées à OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
-  
   

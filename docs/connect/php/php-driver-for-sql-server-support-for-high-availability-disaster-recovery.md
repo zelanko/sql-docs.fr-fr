@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8e0386a6aba186924ee345bd9d5b470bd0bd6c56
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 875c5944a0b74c7140843388da1e783e9f2ba5b8
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88478001"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726755"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Prise en charge des fonctionnalités de récupération d’urgence/haute disponibilité
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ Cette rubrique aborde la prise en charge par [!INCLUDE[ssDriverPHP](../../includ
 
 La propriété de connexion **MultiSubnetFailover** indique que l’application est déployée dans un groupe de disponibilité ou une instance de cluster de basculement et que le pilote tente de se connecter à la base de données sur l’instance SQL Server principale en essayant toutes les adresses IP. Spécifiez toujours **MultiSubnetFailover=True** lorsque vous vous connectez à un écouteur de groupe de disponibilité SQL Server ou à une instance de cluster de basculement SQL Server. Si l’application est connectée à une base de données AlwaysOn en basculement, la connexion d’origine sera interrompue. L’application devra établir une nouvelle connexion pour continuer de fonctionner après le basculement.
 
-Pour plus d’informations sur groupes de disponibilité AlwaysOn, consultez la page Docs [Haute disponibilité et récupération d’urgence](https://docs.microsoft.com/sql/relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery).
+Pour plus d’informations sur groupes de disponibilité AlwaysOn, consultez la page Docs [Haute disponibilité et récupération d’urgence](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>Résolution d’adresses IP réseau transparente
 
@@ -72,4 +72,3 @@ Le pilote retournera une erreur si la mise en miroir de bases de données est ut
 
 ## <a name="see-also"></a>Voir aussi  
 [Connexion au serveur](../../connect/php/connecting-to-the-server.md)  
-  

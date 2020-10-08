@@ -10,19 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 28b07fa4befbae597fd3356d5abe83cf1631763e
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 96873ca61bd7121316d8b7d947443a90d7d953b6
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480937"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727327"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accès aux informations de diagnostic dans le journal des événements étendus
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], OLE DB Driver pour SQL Server et le traçage de l’accès aux données ([Traçage de l’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805)) ont été mis à jour pour faciliter l’obtention d’informations de diagnostic sur les échecs de connexion à partir de la mémoire tampon en anneau de connectivité, ainsi que d’informations de performance d’application depuis le journal des événements étendus.  
+  À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], OLE DB Driver pour SQL Server et le traçage de l’accès aux données ([Traçage de l’accès aux données](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))) ont été mis à jour pour faciliter l’obtention d’informations de diagnostic sur les échecs de connexion à partir de la mémoire tampon en anneau de connectivité, ainsi que d’informations de performance d’application depuis le journal des événements étendus.  
   
  Pour plus d’informations sur la lecture du journal des événements étendus, consultez [Afficher des données de session d’événements](../../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md). 
 
@@ -31,7 +31,7 @@ ms.locfileid: "89480937"
 >  Cette fonctionnalité n'est conçue qu'à des fins de dépannage et de diagnostic et peut ne pas convenir à des fins d'audit ou de sécurité.  
   
 ## <a name="remarks"></a>Notes  
- Pour les opérations de connexion, OLE DB Driver pour SQL Server envoie un ID de connexion client. En cas d’échec de la connexion, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) et rechercher le champ **ClientConnectionID** pour obtenir les informations de diagnostic sur l’échec de la connexion. Les ID de connexion du client sont enregistrés dans la mémoire tampon en anneau uniquement en cas d'erreur. (Si une connexion échoue avant d'envoyer le paquet de préconnexion, un ID de connexion client ne sera pas généré.) L'ID de connexion client est un GUID à 16 octets. Vous pouvez également rechercher l’ID de connexion client dans la cible de sortie d’événements étendus, si l’action **client_connection_id** est ajoutée aux événements dans une session d’événements étendus. Vous pouvez activer le traçage de l’accès aux données et réexécuter la commande de connexion, puis observer le champ **ClientConnectionID** dans la trace d’accès aux données pour une opération ayant échoué, si vous avez besoin d’une aide supplémentaire pour le diagnostic.  
+ Pour les opérations de connexion, OLE DB Driver pour SQL Server envoie un ID de connexion client. En cas d’échec de la connexion, vous pouvez accéder à la mémoire tampon en anneau de connectivité ([Résolution des problèmes de connectivité dans SQL Server 2008 avec la mémoire tampon en anneau de connectivité](/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) et rechercher le champ **ClientConnectionID** pour obtenir les informations de diagnostic sur l’échec de la connexion. Les ID de connexion du client sont enregistrés dans la mémoire tampon en anneau uniquement en cas d'erreur. (Si une connexion échoue avant d'envoyer le paquet de préconnexion, un ID de connexion client ne sera pas généré.) L'ID de connexion client est un GUID à 16 octets. Vous pouvez également rechercher l’ID de connexion client dans la cible de sortie d’événements étendus, si l’action **client_connection_id** est ajoutée aux événements dans une session d’événements étendus. Vous pouvez activer le traçage de l’accès aux données et réexécuter la commande de connexion, puis observer le champ **ClientConnectionID** dans la trace d’accès aux données pour une opération ayant échoué, si vous avez besoin d’une aide supplémentaire pour le diagnostic.  
    
   
  OLE DB Driver pour SQL Server envoie également un ID d'activité spécifique au thread. L'ID d'activité est capturé dans les sessions d'événements étendus si les sessions sont démarrées alors que l'option TRACK_CAUSAILITY est activée. En cas de problèmes de performance avec une connexion active, vous pouvez obtenir l’ID d’activité de la trace d’accès aux données du client (champ **ActivityID**), puis le localiser dans la sortie d’événements étendus. L'ID d'activité dans les événements étendus est un GUID à 16 octets (différent du GUID de l'ID de connexion client) ajouté avec un numéro de séquence de quatre octets. Le numéro séquentiel représente l'ordre d'une demande dans un thread et indique l'ordre relatif du traitement par lot et des instructions RPC pour le thread. **ActivityID** est éventuellement envoyé pour les instructions par lots SQL et les demandes RPC quand le traçage de l’accès aux données est activé et que le 18ème bit dans le mot de configuration de traçage est activé.  
@@ -217,5 +217,4 @@ class Bid2Etw_MSOLEDBSQL_1_Trace_TextW : Bid2Etw_MSOLEDBSQL_1_Trace
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs](../../oledb/ole-db-errors/errors.md)  
-  
   

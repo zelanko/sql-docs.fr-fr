@@ -20,12 +20,12 @@ helpviewer_keywords:
 - modifying passwords
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: afd00e1de90941c3e5c1ff069c1f1413dfc9f2df
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 61134cf281a5e3aa7eab8c2404f2d3dbfac13972
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861503"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727317"
 ---
 # <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88861503"
   Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À compter de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], OLE DB Driver pour SQL Server prend en charge l'expiration du mot de passe par programme via le pilote OLE DB, et via les modifications des boîtes de dialogue **Connexion SQL Server**.  
   
 > [!NOTE]  
->  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../../relational-databases/security/strong-passwords.md).  
+>  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Codes d'erreur des connexions SQL Server  
  Lorsqu'une connexion ne peut pas être établie en raison de problèmes d'authentification, l'un des codes d'erreur SQL Server suivants est disponible pour aider l'application à établir le diagnostic et la récupération.  
@@ -94,5 +94,4 @@ ms.locfileid: "88861503"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

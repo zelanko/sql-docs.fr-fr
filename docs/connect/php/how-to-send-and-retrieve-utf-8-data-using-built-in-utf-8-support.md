@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: bf7ec186a6a233d12034114f88b98efea50e72f9
-ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
+ms.openlocfilehash: d62ab2a7715360b8cceeecccada01717d87471c0
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86381012"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726810"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Procédure : Envoyer et récupérer des données UTF-8 à l’aide de la prise en charge UTF-8 intégrée
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -126,7 +126,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Pour plus d’informations sur le stockage des données Unicode, voir [Utiliser des données Unicode](https://msdn.microsoft.com/library/ms175180.aspx).  
+Pour plus d’informations sur le stockage des données Unicode, voir [Utiliser des données Unicode](/previous-versions/sql/sql-server-2008-r2/ms175180(v=sql.105)).  
   
 ## <a name="example"></a>Exemple  
 L’exemple suivant est similaire au premier exemple, mais au lieu de spécifier le jeu de caractères UTF-8 sur la connexion, il montre comment spécifier le jeu de caractères UTF-8 sur la colonne.  
@@ -231,4 +231,3 @@ sqlsrv_close( $conn);
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Exemple d’application &#40;pilote SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-  

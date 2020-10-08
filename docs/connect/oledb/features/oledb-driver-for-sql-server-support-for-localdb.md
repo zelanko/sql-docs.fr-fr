@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4c7f5ac94ff64ef32aaee793c59529ad0377b2f5
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: bcb768c0beea3ce836586bc718e1b7757da7ce72
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860684"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727310"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>Prise en charge de la base de données locale par OLE DB Driver pour SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88860684"
   
 -   [Référence SQL Server Express LocalDB](../../../relational-databases/sql-server-express-localdb-reference.md)  
   
--   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
+-   [SQL Server 2016 Express LocalDB](../../../database-engine/configure-windows/sql-server-express-localdb.md)  
   
  Pour résumer, LocalDB vous permet d'effectuer les opérations suivantes :  
   
@@ -47,5 +47,4 @@ SERVER=(localdb)\v11.0
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
-  
   

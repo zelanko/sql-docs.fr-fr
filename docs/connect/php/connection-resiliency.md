@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8b425d57a0b1aee0c01db62d3fd1b77eb59c8aed
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4008dd4f023170b50bdf28f1f026da9ee892f970
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632949"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726860"
 ---
 # <a name="idle-connection-resiliency"></a>Résilience des connexions inactives
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,7 +45,7 @@ La résilience de connexion s’applique lorsque la connexion est inactive. Les 
 
 ## <a name="example"></a>Exemple
 
-Le code suivant se connecte à une base de données et exécute une requête. La connexion est interrompue en arrêtant la session et une nouvelle requête est tentée à l’aide de la connexion interrompue. Cet exemple utilise l’exemple de base de données [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
+Le code suivant se connecte à une base de données et exécute une requête. La connexion est interrompue en arrêtant la session et une nouvelle requête est tentée à l’aide de la connexion interrompue. Cet exemple utilise l’exemple de base de données [AdventureWorks](/previous-versions/sql/sql-server-2008/ms124501(v=sql.100)).
 
 Dans cet exemple, nous spécifions un curseur mis en mémoire tampon avant d’interrompre la connexion. Sinon, la connexion ne serait pas rétablie, car il y aurait un curseur actif côté serveur : la connexion ne serait donc pas inactive en cas d’interruption. Toutefois, nous appellerions dans ce cas sqlsrv_free_stmt() avant d’interrompre la connexion pour libérer le curseur, et la connexion serait correctement rétablie.
 

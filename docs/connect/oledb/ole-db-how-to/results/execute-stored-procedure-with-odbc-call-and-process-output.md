@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ODBC CALL syntax
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 99c2603e310807ad3f15618082579de434f6dd75
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: dea00388e5014791ae861ad175418670f06d6666
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88860314"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727105"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécuter une procédure stockée avec ODBC CALL et traiter la sortie
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "88860314"
   Les procédures stockées [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont par conséquent pas accessibles à l'application tant que l'ensemble de lignes n'a pas été complètement libéré. Si la commande retourne plusieurs résultats, les données des paramètres de sortie sont disponibles quand **IMultipleResults::GetResult** retourne DB_S_NORESULT ou quand l’interface **IMultipleResults** est complètement libérée (selon l’événement qui se produit en premier).  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d’identification persistantes, chiffrez-les avec [l’API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d’identification persistantes, chiffrez-les avec [l’API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Pour traiter des codes de retour et des paramètres de sortie  
   
@@ -359,5 +359,4 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives au traitement des résultats &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

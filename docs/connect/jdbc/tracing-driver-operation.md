@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b89be9709f04e995ed560e291a5199cebfd2bd75
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: c25f97d79477497d60d458c994ef5dbdc102463d
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86393127"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727537"
 ---
 # <a name="tracing-driver-operation"></a>Suivi du fonctionnement du pilote
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "86393127"
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge l’utilisation du suivi (ou de la journalisation) pour aider à résoudre les problèmes liés au pilote JDBC dans votre application. Pour permettre l’utilisation du suivi, le pilote JDBC utilise les API de journalisation de java.util.logging, qui offrent un ensemble de classes pour la création d’objets Logger et LogRecord.  
   
 > [!NOTE]  
->  Pour le composant natif (sqljdbc_xa.dll) fourni avec le pilote JDBC, le suivi est activé par le système de diagnostic intégré BID (Built-In Diagnostics). Pour obtenir des informations sur le système de diagnostic intégré BID, consultez [Data Access Tracing in SQL Server (Suivi de l’accès aux données dans SQL Server)](https://go.microsoft.com/fwlink/?LinkId=70042).  
+>  Pour le composant natif (sqljdbc_xa.dll) fourni avec le pilote JDBC, le suivi est activé par le système de diagnostic intégré BID (Built-In Diagnostics). Pour obtenir des informations sur le système de diagnostic intégré BID, consultez [Data Access Tracing in SQL Server (Suivi de l’accès aux données dans SQL Server)](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100)).  
   
  Quand vous développez votre application, vous pouvez appeler des objets Logger, qui à leur tour créent des objets LogRecord, lesquels sont ensuite transmis aux objets Handler pour traitement. Les objets Logger et Handler utilisent tous deux des niveaux de journalisation et, éventuellement, des filtres de journalisation pour réguler les LogRecord traités. Une fois les opérations de journalisation terminées, les objets Handler peuvent éventuellement utiliser des objets Formatter pour publier les informations du journal.  
   
@@ -161,5 +161,4 @@ com.microsoft.sqlserver.jdbc.level=FINEST
   
 ## <a name="see-also"></a>Voir aussi  
  [Diagnostic de problèmes avec le pilote JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
-  
   

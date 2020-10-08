@@ -10,12 +10,12 @@ ms.topic: how-to
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc9b71fc08356731cdc3e536cea9c6ad17b651fe
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 074a66a094b08f843eed67cfb0276f8c9e635a63
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116977"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753748"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mécanismes et recommandations liés aux délais d’attente concernant les baux, les clusters et le contrôle d’intégrité pour les groupes de disponibilité Always On 
 
@@ -157,7 +157,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
  | Délai d’expiration du bail </br> **Par défaut : 20000** | Empêcher le Split-Brain | Principal et cluster </br> (HADR) | [Objets d’événement Windows](/windows/desktop/Sync/event-objects)| Utilisé dans les deux | Absence de réponse du système d’exploitation, mémoire virtuelle faible, pagination de la plage de travail, génération d’un vidage sur incident, UC invariable, WSFC hors service (perte de quorum) | Ressource de groupe de disponibilité hors connexion-en ligne, basculement |  
  | Délai d’expiration de session </br> **Par défaut : 10000** | Informer de l’existence d’un problème de communication entre le principal et le secondaire | Secondaire et principal </br> (HADR) | [Sockets TCP (messages envoyés via le point de terminaison DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | Utilisé dans aucun des deux | Problèmes de communication </br> réseau sur le secondaire - hors service, absence de réponse du système d’exploitation, contention de ressources | Secondaire - DÉCONNECTÉ | 
- |Délai d’attente HealthCheck  </br> **Par défaut : 30000** | Indiquer le délai d’expiration lors d’une tentative de détermination de l’état du réplica principal | Cluster et principal </br> (ICF et HADR) | [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) T-SQL | Utilisé dans les deux | Conditions d’échec réunies, absence de réponse du système d’exploitation, mémoire virtuelle faible, plage de travail tronquée, génération d’un vidage sur incident, WSFC (perte de quorum), problèmes de planificateur (planificateurs bloqués)| Ressource de groupe de disponibilité hors connexion-en ligne ou basculement, redémarrage/basculement de l’ICF |  
+ |Délai d’attente HealthCheck  </br> **Par défaut : 30000** | Indiquer le délai d’expiration lors d’une tentative de détermination de l’état du réplica principal | Cluster et principal </br> (ICF et HADR) | [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) T-SQL | Utilisé dans les deux | Conditions d’échec réunies, absence de réponse du système d’exploitation, mémoire virtuelle faible, plage de travail tronquée, génération d’un vidage sur incident, WSFC (perte de quorum), problèmes de planificateur (planificateurs bloqués)| Ressource de groupe de disponibilité hors connexion-en ligne ou basculement, redémarrage/basculement de FCI |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Voir aussi    

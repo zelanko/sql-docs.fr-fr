@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OLE DB, creating applications
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 49a9f20904c5719960cbffc7ca94c825def7231c
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: ed150ea18d1141e6116efe177e65836c235cf703
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88862334"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727213"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Création d’une application de pilote OLE DB pour SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88862334"
 3.  Traitement des résultats.  
   
 > [!NOTE]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d’identification persistantes, chiffrez-les avec [l’API de chiffrement Win32 cryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d’identification persistantes, chiffrez-les avec [l’API de chiffrement Win32 cryptoAPI](/windows/win32/seccng/cng-portal).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
@@ -51,5 +51,4 @@ ms.locfileid: "88862334"
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation OLE DB Driver pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
-  
   

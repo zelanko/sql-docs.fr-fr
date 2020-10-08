@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d618706cd05796079904c971cdf7b0c32485c1d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 47bcfa16712e0ef227da7c7ae53de14aa42deacb
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886286"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726770"
 ---
 # <a name="support-for-localdb"></a>Prise en charge de la base de données locale
 
@@ -76,7 +76,7 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
     . 'database=myData', NULL, NULL);
 ```
 
-Pour obtenir des instructions sur l’installation de la base de données locale, consultez la [documentation sur la base de données locale](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Si vous utilisez sqlcmd.exe pour modifier des données dans votre instance de base de données locale, vous aurez besoin de [l’utilitaire sqlcmd](../../tools/sqlcmd-utility.md).
+Pour obtenir des instructions sur l’installation de la base de données locale, consultez la [documentation sur la base de données locale](../../database-engine/configure-windows/sql-server-express-localdb.md). Si vous utilisez sqlcmd.exe pour modifier des données dans votre instance de base de données locale, vous aurez besoin de [l’utilitaire sqlcmd](../../tools/sqlcmd-utility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

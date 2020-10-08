@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6d77fb9fcfdc720c4053688f8f0dcf759af15c8
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: b111dd925a98c4f0380dfceb0a09ddffadb96592
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680724"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726818"
 ---
 # <a name="formatting-decimal-strings-and-money-values-sqlsrv-driver"></a>Mise en forme des chaînes décimales et valeurs monétaires (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Pour préserver la précision, [les types décimaux ou numériques](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) sont toujours récupérés sous forme de chaînes avec des précisions et des échelles exactes. Si une valeur est inférieure à 1, le zéro non significatif est manquant. C’est identique aux champs money et smallmoney, car il s’agit de champs décimaux avec une échelle fixe égale à 4.
+Pour préserver la précision, [les types décimaux ou numériques](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) sont toujours récupérés sous forme de chaînes avec des précisions et des échelles exactes. Si une valeur est inférieure à 1, le zéro non significatif est manquant. C’est identique aux champs money et smallmoney, car il s’agit de champs décimaux avec une échelle fixe égale à 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Ajouter des zéros non significatifs s’ils sont manquants
 À partir de la version 5.6.0, l’option `FormatDecimals` est ajoutée aux niveaux de connexion et d’instruction sqlsrv, ce qui permet à l’utilisateur de mettre en forme des chaînes décimales. Cette option attend une valeur booléenne (true ou false) et affecte uniquement la mise en forme des valeurs décimales ou numériques dans les résultats récupérés. En d’autres termes, l’option `FormatDecimals` n’a aucun effet sur les autres opérations, telles que l’insertion ou la mise à jour.

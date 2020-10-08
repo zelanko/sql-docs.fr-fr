@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c92a21cc-8e53-43d0-a4bf-542c77c100c9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e29418276e6209f669ae57160809120d61e19a05
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 58b6882fe4f0fce4ddf948121cb6ad35e5828fd7
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645074"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726740"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -72,7 +72,7 @@ print $metadata['name'];
   
 ## <a name="sensitivity-data-classification-metadata"></a>Métadonnées de classification des données sensibles
 
-À compter de la version 5.8.0, un nouvel attribut d’instruction `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` permet aux utilisateurs d’accéder aux [métadonnées de classification des données sensibles](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-ver15&tabs=t-sql#subheading-4) dans Microsoft SQL Server 2019 avec `PDOStatement::getColumnMeta`, ce qui implique d’utiliser la version 17.4.2 ou une version ultérieure de Microsoft ODBC Driver.
+À compter de la version 5.8.0, un nouvel attribut d’instruction `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` permet aux utilisateurs d’accéder aux [métadonnées de classification des données sensibles](../../relational-databases/security/sql-data-discovery-and-classification.md?tabs=t-sql&view=sql-server-ver15#subheading-4) dans Microsoft SQL Server 2019 avec `PDOStatement::getColumnMeta`, ce qui implique d’utiliser la version 17.4.2 ou une version ultérieure de Microsoft ODBC Driver.
 
 Il est à noter que l’attribut `PDO::SQLSRV_ATTR_DATA_CLASSIFICATION` a la valeur `false` par défaut. En revanche, s’il a la valeur `true`, le champ de tableau mentionné plus haut, `flags`, est rempli avec les métadonnées de classification des données sensibles, le cas échéant. 
 
@@ -136,4 +136,3 @@ Si nous modifions l’extrait de code ci-dessus en affectant à `PDO::SQLSRV_ATT
 [PDOStatement, classe](../../connect/php/pdostatement-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
-  

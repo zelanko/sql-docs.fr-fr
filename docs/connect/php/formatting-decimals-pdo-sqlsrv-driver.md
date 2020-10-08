@@ -11,17 +11,17 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ae61b239fca2a923645b9de963309c62a3919b3d
-ms.sourcegitcommit: d1051f05a7db81ec62d9785bb6af572408f3d4e0
+ms.openlocfilehash: db9392b523be8777a96e4d262cfca5acccc8f406
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88680654"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91726840"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdo_sqlsrv-driver"></a>Mise en forme des chaînes décimales et valeurs monétaires (pilote PDO_SQLSR)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Pour préserver la précision, [les types décimaux ou numériques](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) sont toujours récupérés sous forme de chaînes avec des précisions et des échelles exactes. Si une valeur est inférieure à 1, le zéro non significatif est manquant. C’est identique aux champs money et smallmoney, car il s’agit de champs décimaux avec une échelle fixe égale à 4.
+Pour préserver la précision, [les types décimaux ou numériques](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) sont toujours récupérés sous forme de chaînes avec des précisions et des échelles exactes. Si une valeur est inférieure à 1, le zéro non significatif est manquant. C’est identique aux champs money et smallmoney, car il s’agit de champs décimaux avec une échelle fixe égale à 4.
 
 ## <a name="add-leading-zeroes-if-missing"></a>Ajouter des zéros non significatifs s’ils sont manquants
 À partir de la version 5.6.0, l’attribut de connexion ou d’instruction `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` permet à l’utilisateur de mettre en forme des chaînes décimales. Cet attribut attend une valeur booléenne (true ou false) et affecte uniquement la mise en forme des valeurs décimales ou numériques dans les résultats récupérés. En d’autres termes, cet attribut n’a aucun effet sur les autres opérations, telles que l’insertion ou la mise à jour.

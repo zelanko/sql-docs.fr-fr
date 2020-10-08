@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 303131cd528abee1884c2454a46df3380528ebad
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 378403eec3b99d8f916a92fc768f1277a7b18572
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288181"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727390"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -63,7 +63,7 @@ Notez que l’activation d’Always Encrypted ne suffit pas à la réussite du c
 > [!NOTE]
 > Sur Linux et macOS, la version 1.0.1 ou une version ultérieure d’OpenSSL est nécessaire pour pouvoir utiliser Always Encrypted avec des enclaves sécurisées.
 
-À partir de la version 17.4, le pilote prend en charge Always Encrypted avec enclaves sécurisées. Pour permettre l’utilisation de l’enclave lors de la connexion à SQL Server 2019 (ou version ultérieure), définissez le nom de source de données `ColumnEncryption`, la chaîne de connexion ou l’attribut de connexion sur le nom du type d’enclave et le protocole d’attestation, ainsi que les données d’attestation associées, séparées par une virgule. Dans la version 17.4, seul le type d’enclave [Sécurité basée sur la virtualisation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) avec le protocole d’attestation [Service Guardian hôte](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server), indiqué par `VBS-HGS`, est pris en charge ; pour l’utiliser, spécifiez l’URL du serveur d’attestation, par exemple :
+À partir de la version 17.4, le pilote prend en charge Always Encrypted avec enclaves sécurisées. Pour permettre l’utilisation de l’enclave lors de la connexion à SQL Server 2019 (ou version ultérieure), définissez le nom de source de données `ColumnEncryption`, la chaîne de connexion ou l’attribut de connexion sur le nom du type d’enclave et le protocole d’attestation, ainsi que les données d’attestation associées, séparées par une virgule. Dans la version 17.4, seul le type d’enclave [Sécurité basée sur la virtualisation](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) avec le protocole d’attestation [Service Guardian hôte](/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server), indiqué par `VBS-HGS`, est pris en charge ; pour l’utiliser, spécifiez l’URL du serveur d’attestation, par exemple :
 
 ```
 Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
@@ -383,7 +383,7 @@ ODBC Driver for SQL Server est fourni avec les fournisseurs de magasins de clés
 
 ### <a name="using-the-azure-key-vault-provider"></a>Utilisation d’Azure Key Vault Provider
 
-Azure Key Vault (AKV) est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. ODBC Driver for SQL Server sur Linux, macOS et Windows inclut un fournisseur de magasin de clés principales de colonne intégré pour Azure Key Vault. Pour plus d’informations sur la configuration d’un coffre de clés Azure pour Always Encrypted, consultez [Azure Key Vault – Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step), [Qu’est-ce qu’Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) et [Créer et stocker des clés principales de colonne (Azure Key Vault)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
+Azure Key Vault (AKV) est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. ODBC Driver for SQL Server sur Linux, macOS et Windows inclut un fournisseur de magasin de clés principales de colonne intégré pour Azure Key Vault. Pour plus d’informations sur la configuration d’un coffre de clés Azure pour Always Encrypted, consultez [Azure Key Vault – Step by Step](/archive/blogs/kv/azure-key-vault-step-by-step), [Qu’est-ce qu’Azure Key Vault ?](/azure/key-vault/general/overview) et [Créer et stocker des clés principales de colonne (Azure Key Vault)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md#creating-column-master-keys-in-azure-key-vault).
 
 > [!NOTE]
 > Le pilote ODBC prend en charge uniquement l’authentification Azure Key Vault directe auprès d’Azure Active Directory. Si vous utilisez l’authentification Azure Active Directory auprès d’Azure Key Vault et que votre configuration Active Directory exige l’authentification auprès d’un point de terminaison ADFS (Active Directory Federation Services), l’authentification risque d’échouer.
@@ -395,7 +395,7 @@ Le pilote prend en charge l’authentification auprès d’Azure Key Vault avec 
 
 - ID client/secret : avec cette méthode, les informations d’identification sont un ID de client d’application et un secret d’application.
 
-- Identité managée (17.5.2+) – affectée par le système ou l’utilisateur ; consultez [Identités managées pour les ressources Azure](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/) pour plus d’informations.
+- Identité managée (17.5.2+) – affectée par le système ou l’utilisateur ; consultez [Identités managées pour les ressources Azure](/azure/active-directory/managed-identities-azure-resources/) pour plus d’informations.
 
 Pour autoriser le pilote à utiliser des clés CMK stockées dans Azure Key Vault pour le chiffrement de colonne, utilisez les mots clés de chaîne de connexion uniquement suivants :
 

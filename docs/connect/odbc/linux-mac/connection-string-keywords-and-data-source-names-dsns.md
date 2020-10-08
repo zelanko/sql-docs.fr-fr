@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f667fc06ffe7ced9241e8bfdd2a00caba3b8b2a5
-ms.sourcegitcommit: 5f658b286f56001b055a8898d97e74906516dc99
+ms.openlocfilehash: 8bc808e2e25a1f421712f6146fd13e8f6adafac3
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2020
-ms.locfileid: "90009335"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727433"
 ---
 # <a name="connecting-to-sql-server"></a>Connexion à SQL Server
 
@@ -77,7 +77,7 @@ Vous pouvez utiliser le protocole TLS (Transport Layer Security), anciennement S
 
 L’activation du chiffrement renforce la sécurité au détriment des performances.
 
-Pour plus d’informations, consultez [Chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?LinkId=220900) et [Utilisation du chiffrement sans validation](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Pour plus d’informations, consultez [Chiffrement des connexions à SQL Server](/previous-versions/sql/sql-server-2008-r2/ms189067(v=sql.105)) et [Utilisation du chiffrement sans validation](../../../relational-databases/native-client/features/using-encryption-without-validation.md).
 
 Quels que soient les paramètres pour **Encrypt** et **TrustServerCertificate**, les informations d’identification de connexion serveur (nom d’utilisateur et mot de passe) sont toujours chiffrées. Le tableau suivant montre l’effet des paramètres **Encrypt** et **TrustServerCertificate** .  
 

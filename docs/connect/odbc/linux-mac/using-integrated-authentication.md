@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b1be7086c66ed6450e8e23f90c0804274bc6b37d
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 4f53290d9b9a1ecd161ef02161f29c172297a93f
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288208"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727411"
 ---
 # <a name="using-integrated-authentication"></a>Utilisation de l’authentification intégrée
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -128,7 +128,7 @@ L’heure sur l’ordinateur Linux ou macOS et l’heure sur le centre de distri
 
 Si l’authentification Kerberos échoue, le pilote ODBC sur Linux ou macOS n’utilise pas l’authentification NTLM.  
 
-Pour plus d’informations sur l’authentification de vos ordinateurs Linux ou macOS avec Active Directory, consultez [Authentifier les clients de Linux à Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048). Pour plus d’informations sur la configuration de Kerberos, consultez la [documentation MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Pour plus d’informations sur l’authentification de vos ordinateurs Linux ou macOS avec Active Directory, consultez [Authentifier les clients de Linux à Active Directory](/previous-versions/technet-magazine/dd228986(v=msdn.10)#id0060048). Pour plus d’informations sur la configuration de Kerberos, consultez la [documentation MIT Kerberos](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Voir aussi  
 [Instructions de programmation](programming-guidelines.md)

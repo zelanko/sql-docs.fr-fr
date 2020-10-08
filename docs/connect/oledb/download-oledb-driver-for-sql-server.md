@@ -7,12 +7,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cb1d1cff13865981f30495ac406495593a778180
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 4424f11e4b8d31c964d024b3ecaf90bec0cd7c21
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076774"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727340"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Télécharger Microsoft OLE DB Driver pour SQL Server
 
@@ -35,7 +35,7 @@ Microsoft OLE DB Driver 18.4 pour SQL Server est la version la plus récente en 
 - Publication : 30 mai 2020
 
 > [!Note]
-> Si vous accédez à cette page à partir d’une version autre que l’anglais et que vous souhaitez voir le contenu le plus à jour, consultez la [version anglaise (États-Unis) du site](https://aka.ms/downloadmsoledbsqlusenglish). Vous pouvez télécharger différentes langues à partir du site en version anglaise (États-Unis) en sélectionnant [Langues disponibles](#available-languages).
+> Si vous accédez à cette page à partir d’une version autre que l’anglais et que vous souhaitez voir le contenu le plus à jour, consultez la [version anglaise (États-Unis) du site](). Vous pouvez télécharger différentes langues à partir du site en version anglaise (États-Unis) en sélectionnant [Langues disponibles](#available-languages).
 
 ## <a name="available-languages"></a>Langues disponibles
 

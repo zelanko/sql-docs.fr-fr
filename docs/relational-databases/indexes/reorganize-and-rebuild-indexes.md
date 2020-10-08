@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7cdc5c87275af6056e9044ed534d6e916772a3dc
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a7c29522d20a3d263c602884daa0277a8e1a2095
+ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537056"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91753526"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Remédiez à la fragmentation des index en les réorganisant ou en les regénérant
 
@@ -86,7 +86,7 @@ De même, la suppression de la fragmentation dans un segment de mémoire (une ta
 
 <sup>2</sup> La reconstruction d’un index peut être exécutée en ligne ou hors connexion. La réorganisation d'un index s'effectue toujours en ligne. Pour obtenir le même niveau de disponibilité qu'avec l'option de réorganisation, vous devez reconstruire les index en ligne. Pour plus d’informations, consultez [INDEX](#rebuild-an-index) et [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md).
 
-Les index avec une fragmentation inférieure ou égale à 5 % n’ont pas besoin d’être défragmentés, car l’avantage de la suppression d’un volume de fragmentation aussi réduit est quasiment toujours largement contrebalancé par le coût de processeur induit pour réorganiser ou regénérer l’index. Par ailleurs, la regénération ou la réorganisation de petits index rowstore ne réduit généralement pas vraiment la fragmentation. Jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (compris), le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alloue de l’espace à l’aide d’étendues mixtes. Par conséquent, les pages de petits index sont parfois stockées sur des étendues mixtes. Les extensions mixtes sont partagées par huit objets maximum ; par conséquent, la fragmentation dans un petit index peut ne pas être réduite après sa réorganisation ou sa reconstruction. Consultez également [Considérations spécifiques à la regénération d’index rowstore](#considerations-specific-to-rebuilding-rowstore-indexes). Pour plus d’informations sur les étendues, consultez [Guide d’architecture des pages et des étendues](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
+Les index avec une fragmentation inférieure ou égale à 5 % n’ont pas besoin d’être défragmentés, car l’avantage de la suppression d’un volume de fragmentation aussi réduit est quasiment toujours largement contrebalancé par le coût lié au processeur induit pour réorganiser ou regénérer l’index. Par ailleurs, la regénération ou la réorganisation de petits index rowstore ne réduit généralement la fragmentation réelle. Jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (compris), le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alloue de l’espace à l’aide d’étendues mixtes. Par conséquent, les pages de petits index sont parfois stockées sur des étendues mixtes. Les extensions mixtes sont partagées par huit objets maximum ; par conséquent, la fragmentation dans un petit index peut ne pas être réduite après sa réorganisation ou sa reconstruction. Consultez également [Considérations spécifiques à la regénération d’index rowstore](#considerations-specific-to-rebuilding-rowstore-indexes). Pour plus d’informations sur les étendues, consultez [Guide d’architecture des pages et des étendues](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Détection de la fragmentation sur les index columnstore
 

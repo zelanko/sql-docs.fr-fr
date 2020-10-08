@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: af86eae9866960c58ec9967f32a45998e5a91106
-ms.sourcegitcommit: e4c36570c34cd7d7ae258061351bce6e54ea49f6
+ms.openlocfilehash: 403c134c6e627ba1eb6c18cd2ba5341e54d65975
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88147580"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727250"
 ---
 # <a name="sql-server-login-dialog-box"></a>Boîte de dialogue de connexion SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,14 +27,14 @@ Lorsque vous tentez de vous connecter sans spécifier suffisamment d’informati
 > [!NOTE]  
 > Le comportement de l’invite de la boîte de dialogue de connexion de SQL Server est contrôlé par la propriété d’initialisation `DBPROP_INIT_PROMPT`. Pour plus d'informations, consultez les pages suivantes :
 > - [Propriétés d’initialisation et d’autorisation](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
-> - [Guide du programmeur OLE DB](https://go.microsoft.com/fwlink/?linkid=2067702)
+> - [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms714342(v=vs.85))
 
 ![Capture d’écran de la boîte de dialogue de connexion SQL Server](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>Options
 |Option|Description|
 |---   |---        |
-|Serveur|Nom d'une instance de SQL Server sur votre réseau. Tapez le nom serveur\instance dans la zone **Serveur**, ou sélectionnez-en un dans la liste. Vous pouvez si vous le souhaitez créer un alias de serveur sur l’ordinateur client avec le **Gestionnaire de configuration SQL Server** et taper ce nom dans la zone **Serveur**. <br/><br/>Vous pouvez entrer "(local)" lorsque vous utilisez le même ordinateur que SQL Server. Vous pouvez alors vous connecter à une instance locale de SQL Server, même s’il s’agit d’une version de SQL Server qui n’est pas en réseau.<br/><br/>Pour plus d'informations sur les noms de serveurs de différents types de réseau, consultez [Installation de SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541).|
+|Serveur|Nom d'une instance de SQL Server sur votre réseau. Tapez le nom serveur\instance dans la zone **Serveur**, ou sélectionnez-en un dans la liste. Vous pouvez si vous le souhaitez créer un alias de serveur sur l’ordinateur client avec le **Gestionnaire de configuration SQL Server** et taper ce nom dans la zone **Serveur**. <br/><br/>Vous pouvez entrer "(local)" lorsque vous utilisez le même ordinateur que SQL Server. Vous pouvez alors vous connecter à une instance locale de SQL Server, même s’il s’agit d’une version de SQL Server qui n’est pas en réseau.<br/><br/>Pour plus d'informations sur les noms de serveurs de différents types de réseau, consultez [Installation de SQL Server](../../../database-engine/install-windows/install-sql-server.md).|
 |Mode d'authentification|Vous pouvez sélectionner les options d’authentification suivantes dans la liste déroulante :<br/><ul><li>`Windows Authentication:` Authentification à SQL Server à l’aide des informations d’identification du compte Windows de l’utilisateur connecté.</li><li>`SQL Server Authentication:` Authentification à l’aide de l’ID de connexion et du mot de passe.</li><li>`Active Directory - Integrated:` Authentification intégrée avec une identité Azure Active Directory. Ce mode peut également être utilisé pour l’authentification Windows à SQL Server.</li><li>`Active Directory - Password:` Authentification par ID d’utilisateur et mot de passe avec une identité Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` Authentification interactive avec une identité Azure Active Directory. Ce mode prend en charge Azure Multi-Factor Authentication (MFA).</li></ul>|
 |SPN du serveur|Si vous utilisez une connexion approuvée, vous pouvez spécifier un nom de principal de service (SPN) pour le serveur.|
 |Nom d'accès|Spécifie l’ID de connexion à utiliser pour la connexion. La zone de texte ID de connexion est activée uniquement si `Authentication Mode` est défini sur `SQL Server Authentication`, `Active Directory - Password` ou `Active Directory - Universal with MFA support`.|

@@ -9,17 +9,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04e883861bfd14d5a5b69a080e1ed41bfeccd147
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 901410fb36080d39436a3a908a0ffd9260c5b513
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180293"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765796"
 ---
 # <a name="how-to-call-the-java-runtime-in-sql-server-language-extensions"></a>Guide pratique pour appeler le runtime Java dans les extensions de langage SQL Server
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Les [extensions de langage SQL Server](../language-extensions-overview.md) utilisent la procédure stockée système [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) en tant qu’interface pour appeler le runtime Java. 
+Les [extensions de langage SQL Server](../language-extensions-overview.md) utilisent la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) en tant qu’interface pour appeler le runtime Java. 
 
 Cet article décrit de manière pratique les détails relatifs à l’implémentation des classes et méthodes Java qui s’exécutent sur SQL Server.
 
@@ -56,7 +56,7 @@ Voici quelques principes de base liés à l’exécution de Java sur SQL Server.
 
 ### <a name="call-java-class"></a>Appeler la classe Java
 
-La procédure stockée système [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) est l’interface utilisée pour appeler le runtime Java. L’exemple suivant montre une procédure stockée système `sp_execute_external_script` qui utilise l’extension Java, et des paramètres qui permettent de spécifier le chemin, le script et votre code personnalisé.
+La procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) est l’interface utilisée pour appeler le runtime Java. L’exemple suivant montre une procédure stockée système `sp_execute_external_script` qui utilise l’extension Java, et des paramètres qui permettent de spécifier le chemin, le script et votre code personnalisé.
 
 > [!NOTE]
 > Notez que vous n’avez pas besoin de définir la méthode à appeler. Par défaut, une méthode appelée **execute** est appelée. Cela signifie que vous devez suivre le [kit SDK d’extensibilité pour Java dans SQL Server](extensibility-sdk-java-sql-server.md), et implémenter une méthode execute dans votre classe Java.
@@ -90,7 +90,7 @@ Une fois que vous avez compilé votre classe ou vos classes Java, et créé un f
 
 ## <a name="use-external-library"></a>Utiliser une bibliothèque externe
 
-Dans SQL Server 2019 version Release Candidate 1, vous pouvez utiliser des bibliothèques externes pour le langage Java sur Windows et Linux. Vous pouvez compiler vos classes dans un fichier .jar, et charger le fichier .jar ainsi que d’autres dépendances dans la base de données à l’aide de l’instruction DDL [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+Dans SQL Server 2019 version Release Candidate 1, vous pouvez utiliser des bibliothèques externes pour le langage Java sur Windows et Linux. Vous pouvez compiler vos classes dans un fichier .jar, et charger le fichier .jar ainsi que d’autres dépendances dans la base de données à l’aide de l’instruction DDL [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 Exemple de chargement d’un fichier .jar avec une bibliothèque externe :
 
@@ -113,7 +113,7 @@ EXEC sp_execute_external_script
 with result sets ((column1 int))
 ```
 
-Pour plus d’informations, consultez [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+Pour plus d’informations, consultez [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md).
 
 ## <a name="loopback-connection-to-sql-server"></a>Connexion de bouclage à SQL Server
 

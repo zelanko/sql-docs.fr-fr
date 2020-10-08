@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data sources [OLE DB]
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9b165f5ceb5e8f08539cb48473a6f3d701623f6a
-ms.sourcegitcommit: c95f3ef5734dec753de09e07752a5d15884125e2
+ms.openlocfilehash: 327a4ca587a577bdca3fe8f42748998f29060146
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88861385"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727139"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Énumérer des sources de données OLE DB (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88861385"
 
   Cet exemple montre comment utiliser l'objet énumérateur pour répertorier les sources de données disponibles.  
   
- Pour répertorier les sources de données visibles pour l’énumérateur MSOLEDBSQL, le consommateur appelle la méthode [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312). Cette méthode retourne un ensemble de lignes dotées d'informations sur les sources de données actuellement visibles.  
+ Pour répertorier les sources de données visibles pour l’énumérateur MSOLEDBSQL, le consommateur appelle la méthode [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)). Cette méthode retourne un ensemble de lignes dotées d'informations sur les sources de données actuellement visibles.  
   
  Selon la bibliothèque réseau utilisée, le système recherche les sources de données dans le domaine approprié. Pour les canaux nommés, il s'agit du domaine auquel le client est connecté. Pour AppleTalk, il s'agit de la zone par défaut. Pour SPX/IPX, il s'agit de la liste des installations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponibles dans la base de données Bindery. Pour BANYAN VINES, il s'agit des installations [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] disponibles dans le réseau local. Les sockets Multiprotocol et TCP/IP ne sont pas pris en charge.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88861385"
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Pour énumérer des sources de données OLE DB  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   
