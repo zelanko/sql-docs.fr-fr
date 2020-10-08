@@ -1,6 +1,6 @@
 ---
-description: sys. sp_cleanup_temporal_history (Transact-SQL)
-title: sys. sp_cleanup_temporal_history | Microsoft Docs
+description: sys.sp_cleanup_temporal_history (Transact-SQL)
+title: sys.sp_cleanup_temporal_history | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.service: sql-database
@@ -10,18 +10,18 @@ ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3b47fd6b0ee5a06ae1ce585f583a699a530e350b
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1eb0487c46b0ef3d16c7a8286292fce5cef11538
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545787"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809145"
 ---
-# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history (Transact-SQL)
+# <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact-SQL)
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 Supprime toutes les lignes de la table d’historique temporelle correspondant à la configuration HISTORY_RETENTION période au sein d’une même transaction.
 
@@ -54,7 +54,7 @@ Il est toujours recommandé de s’appuyer sur une tâche en arrière-plan inter
 
 ## <a name="permissions"></a>Autorisations
 
-Requiert db_owner autorisations.
+Requiert les autorisations db_owner.
 
 ## <a name="example"></a>Exemple
 
@@ -66,4 +66,4 @@ select @rowcnt
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Stratégie de rétention des tables temporelles](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)
+[Stratégie de rétention des tables temporelles](/azure/sql-database/sql-database-temporal-tables-retention-policy)

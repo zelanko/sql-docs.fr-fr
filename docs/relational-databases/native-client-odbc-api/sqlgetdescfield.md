@@ -15,12 +15,12 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51c126eb194c9fd2c20d30a475dbba0c8ab0bea2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e81ed53721914502d1a4c90aeff9c55808588c7f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88486867"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810535"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "88486867"
   
  Pour plus d’informations, consultez la rubrique [prise en charge des colonnes éparses &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 typedef struct tagCOMPUTEBYLIST  
@@ -154,8 +154,7 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
- [SQLGetDescField fonction)](https://go.microsoft.com/fwlink/?LinkId=59351)   
+## <a name="see-also"></a>Voir aussi  
+ [SQLGetDescField fonction)](../../odbc/reference/syntax/sqlgetdescfield-function.md)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

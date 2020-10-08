@@ -1,6 +1,6 @@
 ---
 description: sys.availability_groups (Transact-SQL)
-title: sys. availability_groups (Transact-SQL) | Microsoft Docs
+title: sys.availability_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d68c407a7a9e34cf5362f34e749f414a99130bd
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: eabda9900b854037eca713ac343e04e930eea1e2
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537509"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810191"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "89537509"
 |**basic_features**|**bit**|Spécifie s’il s’agit d’un groupe de disponibilité de base. Pour plus d’informations, consultez [Groupes de disponibilité de base &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Spécifie si la prise en charge de DTC a été activée pour ce groupe de disponibilité. L’option **DTC_SUPPORT** de **Create Availability Group** contrôle ce paramètre.|  
 |**db_failover**|**bit**|Spécifie si le groupe de disponibilité prend en charge le basculement des conditions d’intégrité de la base de données. L’option **DB_FAILOVER** de **Create Availability Group** contrôle ce paramètre.|  
-|**is_distributed**|**bit**|Spécifie s’il s’agit d’un groupe de disponibilité distribué. Pour plus d’informations, consultez [Groupes de disponibilité distribués &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|
+|**is_distributed**|**bit**|Spécifie s’il s’agit d’un groupe de disponibilité distribué. Pour plus d’informations, consultez [Groupes de disponibilité distribués &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups.md).|
 |**cluster_type**|**tinyint**|0 : cluster de basculement Windows Server <br/><br/>1 : cluster externe (par exemple, le stimulateur Linux)<br/><br/>2 : aucun|
 |**cluster_type_desc**|**nvarchar(60)**|Description textuelle du type de cluster|
 |**required_synchronized_secondaries_to_commit**|**int**| Nombre de réplicas secondaires qui doivent se trouver dans un état synchronisé pour qu’une validation soit terminée|
@@ -75,5 +75,4 @@ ms.locfileid: "89537509"
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Surveiller les groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Surveiller des groupes de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
   

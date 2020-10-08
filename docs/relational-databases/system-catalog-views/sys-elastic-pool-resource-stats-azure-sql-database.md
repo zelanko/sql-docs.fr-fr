@@ -19,12 +19,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 485ba65479e002a960e3e15bf7ce8d0cc9032e0b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 39db2d1bd2d3525e1dc2902c11e362d70b212ebd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990162"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809860"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "90990162"
 |**max_session_percent**|**décimal (5, 2)**|Nombre maximal de sessions simultanées en pourcentage de la limite du pool.|  
 |**elastic_pool_dtu_limit**|**int**|Nombre maximal de DTU de pool élastique pour ce pool élastique au cours de cet intervalle.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|Espace de stockage de pool élastique maximal pour ce pool élastique (en Mo) au cours de cet intervalle.|
-|**avg_allocated_storage_percent**|**décimal (5, 2)**|Pourcentage d’espace de données alloué par toutes les bases de données dans le pool élastique.  Il s’agit du rapport entre l’espace de données alloué et la taille maximale des données pour le pool élastique.  Pour plus d’informations [, consultez Gestion de l’espace de fichiers dans SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**décimal (5, 2)**|Pourcentage d’espace de données alloué par toutes les bases de données dans le pool élastique.  Il s’agit du rapport entre l’espace de données alloué et la taille maximale des données pour le pool élastique.  Pour plus d’informations [, consultez Gestion de l’espace de fichiers dans SQL Database](/azure/sql-database/sql-database-file-space-management)|  
   
 ## <a name="remarks"></a>Notes
 
- Cette vue existe dans la base de données Master du serveur SQL Database. Vous devez être connecté à la base de données Master pour interroger **sys. elastic_pool_resource_stats**.  
+ Cette vue existe dans la base de données Master du serveur SQL Database. Vous devez être connecté à la base de données Master pour interroger **sys.elastic_pool_resource_stats**.  
   
 ## <a name="permissions"></a>Autorisations
 
@@ -80,9 +80,8 @@ ORDER BY end_time DESC;
 
 ## <a name="see-also"></a>Voir aussi
 
- [Maîtriser la croissance explosive avec les bases de données élastiques](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)   
- [Créer et gérer un pool de bases de données élastiques SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)   
- [sys. resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [sys. dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
-  
+ [Maîtriser la croissance explosive avec les bases de données élastiques](/azure/azure-sql/database/elastic-pool-overview)   
+ [Créer et gérer un pool de bases de données élastiques SQL Database](/azure/azure-sql/database/elastic-pool-overview)   
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys.dm_db_resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)  
   

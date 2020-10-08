@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8824e427b71c26a8b6145db7cf60bbfc110e9ed5
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: f0bdba9e6d1e91560f78ea3eb91c8cf8aa419b5d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934375"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809535"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Architecture de l’intégration du CLR - Environnement hébergé CLR
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "87934375"
  Un code de type sécurisé est un code qui accède aux structures de mémoire uniquement de façons bien définies. Prenons par exemple une référence d'objet valide, le code de type sécurisé peut accéder à la mémoire à des offsets fixes correspondant aux membres de champ réels. Cependant, si le code accède à la mémoire à des offsets arbitraires dans ou hors de la plage de mémoire qui appartient à l'objet, il n'est pas de type sécurisé. Lorsque des assemblys sont chargés dans le CLR, avant que le langage MSIL soit compilé à l'aide de la compilation juste-à-temps (JIT), le runtime effectue une phase de vérification qui examine le code pour déterminer s'il est de type sécurisé. Le code qui réussit cette vérification est appelé code de type sécurisé vérifié.  
   
 ###### <a name="application-domains"></a>Domaines d'application  
- Le CLR prend en charge la notion de domaines d'application comme des zones d'exécution au sein d'un processus hôte dans lesquelles des assemblys de code managé peuvent être chargés et exécutés. La limite du domaine d'application assure l'isolement entre les assemblys. Les assemblys sont isolés quant à la visibilité des variables statiques et des membres de données et à la capacité d'appeler dynamiquement le code. Les domaines d'application correspondent également au mécanisme de chargement et de déchargement du code. Le code peut être déchargé à partir de la mémoire seulement en déchargeant le domaine d'application. Pour plus d’informations, consultez [domaines d’application et sécurité de l’intégration du CLR](https://docs.microsoft.com/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014).  
+ Le CLR prend en charge la notion de domaines d'application comme des zones d'exécution au sein d'un processus hôte dans lesquelles des assemblys de code managé peuvent être chargés et exécutés. La limite du domaine d'application assure l'isolement entre les assemblys. Les assemblys sont isolés quant à la visibilité des variables statiques et des membres de données et à la capacité d'appeler dynamiquement le code. Les domaines d'application correspondent également au mécanisme de chargement et de déchargement du code. Le code peut être déchargé à partir de la mémoire seulement en déchargeant le domaine d'application. Pour plus d’informations, consultez [domaines d’application et sécurité de l’intégration du CLR](/previous-versions/sql/2014/database-engine/dev-guide/application-domains-and-clr-integration-security?view=sql-server-2014).  
   
 ###### <a name="code-access-security-cas"></a>Sécurité d'accès du code  
  Le système de sécurité du CLR offre un moyen pour à contrôler quels types d'opérations le code managé peut effectuer en assignant des autorisations au code. Les autorisations d'accès au code sont assignées en fonction de l'identité du code (par exemple, la signature de l'assembly ou l'origine du code).  
@@ -154,7 +154,7 @@ Thread.EndThreadAffinity();
 ###### <a name="security-permission-sets"></a>Sécurité : jeux d'autorisations  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet aux utilisateurs de spécifier les exigences de fiabilité et de sécurité du code déployé dans la base de données. Lorsque les assemblys sont téléchargés dans la base de données, l’auteur de l’assembly peut spécifier l’un des trois jeux d’autorisations pour cet assembly : SAFE, EXTERNAL_ACCESS et UNSAFE.  
   
-|Fonctionnalités|SAFE|EXTERNAL_ACCESS|UNSAFE|  
+|Fonctionnalité|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
 |Sécurité d'accès du code|Exécution uniquement|Exécution + accès aux ressources externes|Non restreint|  
 |Restrictions du modèle de programmation|Oui|Oui|Sans restriction|  
@@ -174,10 +174,9 @@ Thread.EndThreadAffinity();
   
  Dans de telles considérations, nous déconseillons d'utiliser des variables statiques et des membres de données statiques de classes utilisées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour les assemblys SAFE et EXTERNAL_ACCESS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examine les métadonnées de l'assembly au moment de la création de l'assembly et échoue dans la création de tels assemblys s'il détecte l'utilisation de membres de données et de variables statiques.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]interdit également les appels à .NET Framework API qui sont annotées avec les attributs de protection de l’hôte **SharedState**, **Synchronization**et **ExternalProcessMgmt** . Cela empêche les assemblys SAFE et EXTERNAL_ACCESS d'appeler des API qui activent l'état de partage, d'effectuer une synchronisation et d'affecter l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [restrictions du modèle de programmation](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)de l’intégration du CLR.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interdit également les appels à .NET Framework API qui sont annotées avec les attributs de protection de l’hôte **SharedState**, **Synchronization**et **ExternalProcessMgmt** . Cela empêche les assemblys SAFE et EXTERNAL_ACCESS d'appeler des API qui activent l'état de partage, d'effectuer une synchronisation et d'affecter l'intégrité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [restrictions du modèle de programmation](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)de l’intégration du CLR.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [Performances de l'intégration du CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
-  
   

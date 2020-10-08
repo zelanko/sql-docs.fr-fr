@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: b820003b3039a8561dd299a7fb85c1d52b043bda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447187"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810188"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -165,14 +165,14 @@ Vous pouvez contrôler les ressources utilisées par les scripts externes en con
 
 ### <a name="monitor-script-execution"></a>Surveiller l’exécution du script
 
-Surveiller l’exécution du script à l’aide de [sys. dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) et [sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
+Surveiller l’exécution du script à l’aide de [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) et [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ### <a name="parameters-for-partition-modeling"></a>Paramètres pour la modélisation de partition
 
 Vous pouvez définir deux paramètres supplémentaires qui activent la modélisation sur des données partitionnées, où les partitions sont basées sur une ou plusieurs colonnes que vous fournissez, qui segmentent naturellement un jeu de données en partitions logiques créées et utilisées uniquement pendant l’exécution du script. Les colonnes contenant des valeurs répétitives pour l’âge, le sexe, la région géographique, la date ou l’heure, sont quelques exemples qui se prêtent à des jeux de données partitionnés.
 
-Les deux paramètres sont **input_data_1_partition_by_columns** et **input_data_1_order_by_columns**, où le deuxième paramètre est utilisé pour trier le jeu de résultats. Les paramètres sont passés comme entrées à `sp_execute_external_script` avec le script externe qui s’exécute une fois pour chaque partition. Pour plus d’informations et d’exemples, consultez [Didacticiel : créer des modèles basés sur une partition](https://docs.microsoft.com/sql/machine-learning/tutorials/r-tutorial-create-models-per-partition).
+Les deux paramètres sont **input_data_1_partition_by_columns** et **input_data_1_order_by_columns**, où le deuxième paramètre est utilisé pour trier le jeu de résultats. Les paramètres sont passés comme entrées à `sp_execute_external_script` avec le script externe qui s’exécute une fois pour chaque partition. Pour plus d’informations et d’exemples, consultez [Didacticiel : créer des modèles basés sur une partition](../../machine-learning/tutorials/r-tutorial-create-models-per-partition.md).
 
 Vous pouvez exécuter le script en parallèle en spécifiant `@parallel=1` . Si la requête d’entrée peut être parallélisée, vous devez définir dans le `@parallel=1` cadre de vos arguments sur `sp_execute_external_script` . Par défaut, l’optimiseur de requête fonctionne sous `@parallel=1` sur des tables contenant plus de 256 lignes, mais si vous souhaitez gérer cela explicitement, ce script comprend le paramètre comme une démonstration.
 
@@ -334,4 +334,4 @@ Pour calculer les scores, vous pouvez également utiliser la fonction [PREDICT](
 + [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md)   
 + [SQL Server, objet External Scripts](../../relational-databases/performance-monitor/sql-server-external-scripts-object.md)  
 + [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)  
-+ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 
++ [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)

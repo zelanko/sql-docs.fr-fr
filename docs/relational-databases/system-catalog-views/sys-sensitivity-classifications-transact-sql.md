@@ -1,6 +1,6 @@
 ---
 description: sys.sensitivity_classifications (Transact-SQL)
-title: sys. sensitivity_classifications (Transact-SQL) | Microsoft Docs
+title: sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs
 ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 5f1dfa43dba7848732e57acf4abf8cfa915be255
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475305"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809345"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -40,8 +40,8 @@ Retourne une ligne pour chaque élément classifié dans la base de données.
 |-----------------|---------------|-----------------|  
 |**class**|**int**|Identifie la classe de l’élément sur lequel la classification existe. Aura toujours la valeur 1 (représentant une colonne)|  
 |**class_desc**|**varchar (16)**|Description de la classe de l’élément sur lequel la classification existe. aura toujours la valeur *OBJECT_OR_COLUMN*|  
-|**major_id**|**int**|Représente l’ID de la table contenant la colonne classifiée, correspondant à sys. all_objects. object_id|  
-|**minor_id**|**int**|Représente l’ID de la colonne sur laquelle la classification existe, correspondant à sys. all_columns. column_id|   
+|**major_id**|**int**|Représente l’ID de la table contenant la colonne classifiée, correspondant à sys. All _Objects. object_id|  
+|**minor_id**|**int**|Représente l’ID de la colonne sur laquelle la classification existe, correspondant à sys. All _columns. column_id|   
 |**label**|**sysname**|Étiquette (lisible) affectée à la classification de sensibilité|  
 |**label_id**|**sysname**|ID associé à l’étiquette, qui peut être utilisé par un système de protection des informations tel que Azure Information Protection (AIP)|  
 |**information_type**|**sysname**|Type d’information (lisible) affecté à la classification de sensibilité|  
@@ -87,4 +87,4 @@ left join sys.all_columns on sys.sensitivity_classifications.major_id = sys.all_
 
 [DROP SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/drop-sensitivity-classification-transact-sql.md)
 
-[Prise en main de SQL Information Protection](https://aka.ms/sqlip)
+[Prise en main de SQL Information Protection](/azure/azure-sql/database/data-discovery-and-classification-overview)

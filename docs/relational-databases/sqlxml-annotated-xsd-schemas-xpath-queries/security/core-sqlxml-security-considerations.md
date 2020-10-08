@@ -14,18 +14,18 @@ ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40f3ef6735bb2de27fd4fda07c3f508717f52515
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9841e46f97248413f142886193d9c2afedbe4e04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790683"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809786"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Considérations de base relatives à la sécurité SQLXML
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Vous trouverez ci-après des instructions de sécurité relatives à l'utilisation de SQLXML pour l'accès aux données.  
   
--   Le fournisseur SQLXMLOLEDB expose une propriété **StreamFlags** qui vous permet de définir des indicateurs indiquant les fonctionnalités SQLXML qui doivent être activées ou désactivées pour chaque instance spécifique. Vous pouvez utiliser cette propriété pour personnaliser votre utilisation de SQLXML et vous assurer que seuls les composants de votre choix sont activés. Pour plus d’informations, consultez [fournisseur SQLXMLOLEDB &#40;SQLXML 4,0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110).  
+-   Le fournisseur SQLXMLOLEDB expose une propriété **StreamFlags** qui vous permet de définir des indicateurs indiquant les fonctionnalités SQLXML qui doivent être activées ou désactivées pour chaque instance spécifique. Vous pouvez utiliser cette propriété pour personnaliser votre utilisation de SQLXML et vous assurer que seuls les composants de votre choix sont activés. Pour plus d’informations, consultez [fournisseur SQLXMLOLEDB &#40;SQLXML 4,0&#41;](../data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md).  
   
 -   Lorsque des erreurs SQLXML se produisent et sont retournées, elles peuvent contenir des informations sur le schéma de base de données, notamment des noms de table, des noms de colonne ou des informations de type. Faites preuve de vigilance lorsque vous traitez ces erreurs afin que les informations concernant votre installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne puissent pas être facilement détectées par des utilisateurs à qui ces informations ne sont pas destinées ou qui n'en ont pas besoin.  
   
@@ -53,5 +53,4 @@ ms.locfileid: "85790683"
   
 ## <a name="see-also"></a>Voir aussi  
  [Considérations relatives à la sécurité SQLXML 4.0](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
-  
   

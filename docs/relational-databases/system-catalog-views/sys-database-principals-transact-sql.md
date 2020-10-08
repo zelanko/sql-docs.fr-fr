@@ -1,6 +1,6 @@
 ---
 description: sys.database_principals (Transact-SQL)
-title: sys. database_principals (Transact-SQL) | Microsoft Docs
+title: sys.database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5f5069c17300f6559181f0cd0a4038f7b2e3651
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f23d179e0a3864d9408ab24571270007eff6254e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88469964"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810783"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "88469964"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nom du principal, unique dans la base de données.|  
 |**principal_id**|**int**|ID du principal, unique dans la base de données.|  
-|**type**|**Char(1**|Type de principal :<br /><br /> A = rôle d'application<br /><br /> C = utilisateur mappé à un certificat<br /><br /> E = utilisateur externe de Azure Active Directory<br /><br /> G = groupe Windows<br /><br /> K = utilisateur mappé à une clé asymétrique<br /><br /> R = rôle de base de données<br /><br /> S = utilisateur SQL<br /><br /> U = utilisateur Windows<br /><br /> X = groupe externe du groupe Azure Active Directory ou des applications|  
+|**type**|**char(1)**|Type de principal :<br /><br /> A = rôle d'application<br /><br /> C = utilisateur mappé à un certificat<br /><br /> E = utilisateur externe de Azure Active Directory<br /><br /> G = groupe Windows<br /><br /> K = utilisateur mappé à une clé asymétrique<br /><br /> R = rôle de base de données<br /><br /> S = utilisateur SQL<br /><br /> U = utilisateur Windows<br /><br /> X = groupe externe du groupe Azure Active Directory ou des applications|  
 |**type_desc**|**nvarchar(60)**|Description du type de principal.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Nom à utiliser lorsque le nom SQL ne spécifie pas de schéma. Null pour les principaux qui ne sont pas de type S, U ou A.|  
 |**create_date**|**datetime**|Heure de création du principal.|  
 |**modify_date**|**datetime**|Heure de la dernière modification du principal.|  
 |**owning_principal_id**|**int**|Identificateur du principal qui possède ce principal. Tous les rôles de base de données fixes sont détenus par **dbo** par défaut.|  
-|**sid**|**varbinary (85)**|SID (identificateur de sécurité) du principal.  NULL pour SYS et INFORMATION SCHEMAS.|  
+|**sid**|**varbinary(85)**|SID (identificateur de sécurité) du principal.  NULL pour SYS et INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Avec la valeur 1, cette ligne représente une entrée pour un des rôles de base de données fixes : db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
 |**authentication_type**|**int**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Signifie le type d'authentification. Voici les valeurs possibles et leurs descriptions.<br /><br /> 0 : aucune authentification<br />1 : authentification de l’instance<br />2 : authentification de base de données<br />3 : authentification Windows<br />4 : authentification Azure Active Directory|  
 |**authentication_type_desc**|**nvarchar(60)**|**S’applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures.<br /><br /> Description du type d'authentification. Voici les valeurs possibles et leurs descriptions.<br /><br /> NONE : aucune authentification<br />INSTANCE : authentification de l’instance<br />BASE de données : authentification de base de données<br />WINDOWS : authentification Windows<br />EXTERNE : authentification Azure Active Directory|  
@@ -127,8 +127,5 @@ JOIN sys.schemas AS s
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Utilisateurs de base de données à relation contenant-contenu-rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
- [Connexion à SQL Database avec l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
+ [Connexion à SQL Database avec l’authentification Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview)  
   
-  
-
-

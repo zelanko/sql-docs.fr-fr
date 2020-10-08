@@ -15,12 +15,12 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ea15c94c0fa4231be4d34c486c4aaf139f083fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20463fcf61f5d9842f4e5a84814970c57d4712f3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428301"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809268"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "88428301"
   
  Les améliorations du moteur de base de données qui commencent par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permettent d’obtenir des descriptions plus précises des résultats attendus. Ces résultats plus précis peuvent différer des valeurs retournées par SQLDescribeParam dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Découverte des métadonnées](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- Nouveauté de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , *ParameterSizePtr* retourne maintenant une valeur qui s’aligne sur la définition de la taille, en caractères, de la colonne ou de l’expression du marqueur de paramètre correspondant, tel que défini dans la [spécification ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* pouvait être la valeur correspondante de **SQL_DESC_OCTET_LENGTH** pour le type, ou une valeur de taille de colonne non pertinente qui a été fournie à SQLBindParameter pour un type, dont la valeur doit être ignorée (**SQL_INTEGER**, par exemple).  
+ Nouveauté de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , *ParameterSizePtr* retourne maintenant une valeur qui s’aligne sur la définition de la taille, en caractères, de la colonne ou de l’expression du marqueur de paramètre correspondant, tel que défini dans la [spécification ODBC](../../odbc/reference/appendixes/column-size.md). Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* pouvait être la valeur correspondante de **SQL_DESC_OCTET_LENGTH** pour le type, ou une valeur de taille de colonne non pertinente qui a été fournie à SQLBindParameter pour un type, dont la valeur doit être ignorée (**SQL_INTEGER**, par exemple).  
   
  Le pilote ne prend pas en charge l’appel de SQLDescribeParam dans les situations suivantes :  
   
@@ -91,7 +91,6 @@ SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);
  **SQLDescribeParam** prend en charge les grands types CLR définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLDescribeParam, fonction](https://go.microsoft.com/fwlink/?LinkId=59339)   
+ [SQLDescribeParam, fonction](../../odbc/reference/syntax/sqldescribeparam-function.md)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

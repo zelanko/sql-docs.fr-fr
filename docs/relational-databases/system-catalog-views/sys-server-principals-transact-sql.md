@@ -1,6 +1,6 @@
 ---
 description: sys.server_principals (Transact-SQL)
-title: sys. server_principals (Transact-SQL) | Microsoft Docs
+title: sys.server_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3d8a54afa21c46a7881b95d100c4c7746c6e3f8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88377295"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809335"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -37,8 +37,9 @@ ms.locfileid: "88377295"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nom du principal. Nom unique dans un serveur.|  
 |**principal_id**|**int**|Numéro d'identification du principal. Nom unique dans un serveur.|  
-|**sid**|**varbinary (85)**|SID (Security-IDentifier) du principal. S'il s'agit d'un principal Windows, correspond au SID Windows.|  
-|**type**|**Char(1**|Type de principal :<br /><br /> S = Nom de connexion SQL<br /><br /> U = Connexion Windows<br /><br /> G = groupe Windows<br /><br /> R = Rôle SQL Server<br /><br /> C = Connexion mappée sur un certificat<br /><br /> K = Connexion mappée sur une clé asymétrique|  
+|**sid**|**varbinary(85)**|SID (Security-IDentifier) du principal. S'il s'agit d'un principal Windows, correspond au SID Windows.|  
+|**type**|**char(1)**|Type de principal :<br /><br /> S = Nom de connexion SQL<br /><br /> U = Connexion Windows<br /><br /> G = groupe Windows<br /><br /> R = Rôle SQL Server<br /><br /> C = Connexion mappée sur un certificat<br /><br /> E = connexion externe à partir de Azure Active Directory<br /><br /> X = groupe externe du groupe Azure Active Directory ou des applications
+<br /><br /> K = Connexion mappée sur une clé asymétrique|  
 |**type_desc**|**nvarchar(60)**|Description du type de principal :<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Connexion désactivée.|  
 |**create_date**|**datetime**|Heure de création du principal.|  
@@ -58,7 +59,7 @@ ms.locfileid: "88377295"
  La requête suivante répertorie les autorisations explicitement accordées ou refusées aux principaux de serveur.  
   
 > [!IMPORTANT]  
->  Les autorisations des rôles serveur fixes (autres que public) n’apparaissent pas dans sys. server_permissions. Par conséquent, les principaux de serveur peuvent avoir des autorisations supplémentaires non répertoriées ici.  
+>  Les autorisations des rôles serveur fixes (autres que public) n’apparaissent pas dans sys.server_permissions. Par conséquent, les principaux de serveur peuvent avoir des autorisations supplémentaires non répertoriées ici.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

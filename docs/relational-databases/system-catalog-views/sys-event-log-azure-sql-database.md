@@ -1,6 +1,6 @@
 ---
 description: sys.event_log (Azure SQL Database)
-title: sys. event_log (Azure SQL Database) | Microsoft Docs
+title: sys.event_log (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.service: sql-database
@@ -21,12 +21,12 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d819bde874fb5e81a7b6b670ebdeca61d18f127c
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d75c8cb02c64b5965fd5a6fe084b065c3dc8ba65
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539651"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809845"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
@@ -35,7 +35,7 @@ ms.locfileid: "89539651"
   Retourne des [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] connexions de base de données, des échecs de connexion et des blocages. Utilisez ces informations pour suivre ou dépanner l'activité de base de données avec [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 > [!CAUTION]  
-> Pour les installations ayant un grand nombre de bases de données ou un grand nombre de connexions, l’activité dans sys. event_log peut entraîner des limitations en matière de performances, une utilisation élevée du processeur et éventuellement entraîner des échecs de connexion. Les requêtes de sys. event_log peuvent contribuer au problème. Microsoft travaille à la résolution de ce problème. En attendant, pour réduire l’impact de ce problème, limitez les requêtes de sys. event_log. Les utilisateurs du plug-in NewRelic SQL Server doivent visiter [Microsoft Azure SQL Database paramétrage du plug-in & optimisation des performances](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) pour obtenir des informations de configuration supplémentaires.  
+> Pour les installations ayant un grand nombre de bases de données ou un grand nombre de connexions, l’activité dans les sys.event_log peut entraîner des limitations en matière de performances, une utilisation élevée du processeur et éventuellement entraîner des échecs de connexion. Les requêtes de sys.event_log peuvent contribuer au problème. Microsoft travaille à la résolution de ce problème. En attendant, pour réduire l’impact de ce problème, limitez les requêtes de sys.event_log. Les utilisateurs du plug-in NewRelic SQL Server doivent visiter [Microsoft Azure SQL Database paramétrage du plug-in & optimisation des performances](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) pour obtenir des informations de configuration supplémentaires.  
   
  La vue `sys.event_log` contient les colonnes suivantes.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "89539651"
 
  Les événements enregistrés par chaque ligne de cette vue sont identifiés par une catégorie (**event_category**), un type d’événement (**event_type**) et un sous-type (**event_subtype**). Le tableau suivant répertorie les types d'événements regroupés dans cette vue.  
   
- Pour les événements de la catégorie **connectivité** , les informations de résumé sont disponibles dans la vue sys. database_connection_stats.  
+ Pour les événements de la catégorie **connectivité** , les informations de résumé sont disponibles dans la vue sys.database_connection_stats.  
   
 > [!NOTE]  
 > Cette vue ne contient pas tous les événements possibles de base de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)] qui peuvent se produire, uniquement ceux qui sont répertoriés ici. Des catégories, types d'événements et sous-types supplémentaires peuvent être ajoutés dans les versions ultérieures de [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -77,12 +77,12 @@ ms.locfileid: "89539651"
 |**connectivité**|**connection_failed**|9|**reconfiguration**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La connexion a échoué car la base de données était en cours de reconfiguration.|  
 |**connectivité**|**connection_terminated**|0|**idle_connection_timeout**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La connexion est restée inactive plus longtemps que ne l'autorise le seuil défini pour le système.|  
 |**connectivité**|**connection_terminated**|1|**reconfiguration**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été interrompue en raison d'une reconfiguration de la base de données.|  
-|**connectivité**|**limitation**|*\<reason code>*|**reason_code**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La demande est limitée.  Code de raison de la limitation : *\<reason code>* . Pour plus d’informations, consultez [limitation du moteur](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40549|**long_transaction**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin, car elle contient une transaction à long terme. Essayez de diminuer la durée de la transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin car elle a acquis trop de verrous. Essayez de lire ou de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été arrêtée en raison d’une utilisation excessive de TEMPDB. Essayez de modifier votre requête afin de réduire l'utilisation de l'espace de table temporaire. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin en raison d'une utilisation de l'espace pour le journal de transactions excessive. Essayez de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**connectivité**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin en raison d'une utilisation de mémoire excessive. Essayez de modifier votre requête afin que le nombre de lignes à traiter soit moins important. Pour plus d’informations, consultez [limites des ressources](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
+|**connectivité**|**limitation**|*\<reason code>*|**reason_code**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La demande est limitée.  Code de raison de la limitation : *\<reason code>* . Pour plus d’informations, consultez [limitation du moteur](/previous-versions/azure/dn338079(v=azure.100)).|  
+|**connectivité**|**throttling_long_transaction**|40549|**long_transaction**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin, car elle contient une transaction à long terme. Essayez de diminuer la durée de la transaction. Pour plus d’informations, consultez [limites des ressources](/previous-versions/azure/dn338081(v=azure.100)).|  
+|**connectivité**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin car elle a acquis trop de verrous. Essayez de lire ou de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites des ressources](/previous-versions/azure/dn338081(v=azure.100)).|  
+|**connectivité**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a été arrêtée en raison d’une utilisation excessive de TEMPDB. Essayez de modifier votre requête afin de réduire l'utilisation de l'espace de table temporaire. Pour plus d’informations, consultez [limites des ressources](/previous-versions/azure/dn338081(v=azure.100)).|  
+|**connectivité**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin en raison d'une utilisation de l'espace pour le journal de transactions excessive. Essayez de modifier moins de lignes au cours d'une transaction. Pour plus d’informations, consultez [limites des ressources](/previous-versions/azure/dn338081(v=azure.100)).|  
+|**connectivité**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Remarque : s’applique uniquement à Azure SQL Database v11.*<br /><br /> La session a pris fin en raison d'une utilisation de mémoire excessive. Essayez de modifier votre requête afin que le nombre de lignes à traiter soit moins important. Pour plus d’informations, consultez [limites des ressources](/previous-versions/azure/dn338081(v=azure.100)).|  
 |**rotation**|**deadlock**|0|**deadlock**|2|Un blocage s'est produit.|  
   
 ## <a name="permissions"></a>Autorisations
@@ -231,5 +231,4 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>Voir aussi
 
- [Événements étendus dans une base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
- 
+ [Événements étendus dans une base de données SQL Azure](/azure/azure-sql/database/xevent-db-diff-from-svr)  

@@ -15,12 +15,12 @@ ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da7192553da45a8b8971203f4d76fa3bd869afc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68d230ed9696188ea0ff1c3aee1ab16007494984
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428251"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810551"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "88428251"
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>Prise en charge SQLGetData pour les types CLR volumineux définis par l'utilisateur  
  **SQLGetData** prend en charge les grands types CLR définis par l’utilisateur (UDT). Pour plus d’informations, consultez [types CLR volumineux définis par l’utilisateur &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 SQLHDBC     hDbc = NULL;  
@@ -97,8 +97,7 @@ while (SQLFetch(hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
- [Fonction SQLGetData](https://go.microsoft.com/fwlink/?LinkId=59350)   
+## <a name="see-also"></a>Voir aussi  
+ [Fonction SQLGetData](../../odbc/reference/syntax/sqlgetdata-function.md)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

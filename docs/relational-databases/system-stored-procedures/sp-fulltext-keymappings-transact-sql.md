@@ -21,19 +21,19 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c426c12b38adc491e42b9392d7a36c47f3fd46f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cfac86a5cb8000203873f2434212bf2b50749a6d
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536412"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810095"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Retourne des mappages entre identificateurs de document (DocIds) et valeurs de clé de texte intégral. La colonne ID de colonne contient des valeurs pour un entier **bigint** mappé à une valeur de clé de texte intégral particulière dans une table indexée de texte intégral. Les valeurs de DocId qui répondent à une condition de recherche sont transmises du moteur de texte intégral au moteur de base de données, où elles sont mappées aux valeurs de clé de texte intégral de la table de base interrogée. La colonne clé de texte intégral est un index unique qui est requis sur une seule colonne de la table.  
   
- ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +50,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
  Identificateur de document (DocId) interne qui correspond à la valeur de la clé. Une valeur *docid* non valide ne retourne pas de résultat.  
   
  *key*  
- Valeur de la clé de texte intégral pour une table spécifiée. Une valeur *key* non valide ne retourne pas de résultat. Pour plus d’informations sur les valeurs de clés de texte intégral, consultez [gérer les index de recherche en texte intégral](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Valeur de la clé de texte intégral pour une table spécifiée. Une valeur *key* non valide ne retourne pas de résultat. Pour plus d’informations sur les valeurs de clés de texte intégral, consultez [gérer les index de recherche en texte intégral](../search/create-and-manage-full-text-indexes.md).  
   
 > [!IMPORTANT]  
 >  Pour plus d'informations sur l'utilisation d'un, de deux ou de trois paramètres, consultez « Remarques » plus loin dans cette rubrique.  
@@ -75,7 +75,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 |Cette liste de paramètres...|A ce résultat...|  
 |--------------------------|----------------------|  
-|*table_id*|En cas d’appel avec uniquement le paramètre *table_id* , sp_fulltext_keymappings retourne toutes les valeurs de clé de texte intégral de la table de base spécifiée, ainsi que le code d’ID qui correspond à chaque clé. Cela inclut des clés qui sont en attente de suppression.<br /><br /> Cette fonction est utile pour la résolution de divers problèmes. Elle est particulièrement utile pour afficher le contenu d'index de recherche en texte intégral lorsque la clé de texte intégral sélectionnée n'est pas un type de données integer. Cela implique de joindre les résultats de sp_fulltext_keymappings avec les résultats de **sys. dm_fts_index_keywords_by_document**. Pour plus d’informations, consultez [sys. dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> En général, toutefois, nous vous recommandons, si possible, d'exécuter sp_fulltext_keymappings avec les paramètres qui spécifient une clé de de texte intégral spécifique ou DocId. C'est beaucoup plus efficace que retourner un mappage de clés entier, surtout pour une table très volumineuse pour laquelle le coût de performance lié au retour d'un mappage de clés entier peut être conséquent.|  
+|*table_id*|En cas d’appel avec uniquement le paramètre *table_id* , sp_fulltext_keymappings retourne toutes les valeurs de clé de texte intégral de la table de base spécifiée, ainsi que le code d’ID qui correspond à chaque clé. Cela inclut des clés qui sont en attente de suppression.<br /><br /> Cette fonction est utile pour la résolution de divers problèmes. Elle est particulièrement utile pour afficher le contenu d'index de recherche en texte intégral lorsque la clé de texte intégral sélectionnée n'est pas un type de données integer. Cela implique de joindre les résultats de sp_fulltext_keymappings avec les résultats de **sys.dm_fts_index_keywords_by_document**. Pour plus d’informations, consultez [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> En général, toutefois, nous vous recommandons, si possible, d'exécuter sp_fulltext_keymappings avec les paramètres qui spécifient une clé de de texte intégral spécifique ou DocId. C'est beaucoup plus efficace que retourner un mappage de clés entier, surtout pour une table très volumineuse pour laquelle le coût de performance lié au retour d'un mappage de clés entier peut être conséquent.|  
 |*table_id*, *ID* de la|Si seuls les *table_id* et *ID* du type de donnée sont spécifiés, l' *ID* du type doit être non null et spécifier un ID de l’ID valide dans la table spécifiée. Cette fonction est utile pour isoler la clé de texte intégral personnalisée de la table de base qui correspond au DocId d'un index de recherche en texte intégral particulier.|  
 |*table_id*, NULL, *clé*|Si trois paramètres sont présents, le deuxième paramètre doit être NULL, et la *clé* doit être non null et spécifier une valeur de clé de texte intégral valide à partir de la table spécifiée. Cette fonction est utile pour isoler le DocId qui correspond à une clé de texte intégral particulière de la table de base.|  
   
@@ -139,5 +139,4 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de recherche en texte intégral et de recherche sémantique &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
-  
   

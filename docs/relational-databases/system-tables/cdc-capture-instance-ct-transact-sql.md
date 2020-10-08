@@ -18,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0515c57b3c3249cc748c2ab96a12c2c1ef35d700
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 5d0a2dae85606a5e1cb0ffd5f86776e7aae25680
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89538374"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809779"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Table de modifications créée lorsque la capture de données modifiées est activée sur une table source. La table retourne une ligne pour chaque opération d'insertion et de suppression effectuée sur la table source, et deux lignes pour chaque opération de mise à jour effectuée sur la table source. Lorsque le nom de la table de modifications n'est pas spécifié au moment de l'activation de la table source, le nom est dérivé. Le format du nom est CDC. *capture_instance*_CT où *capture_instance* est le nom de schéma de la table source et le nom de la table source au format *schema_table*. Par exemple, si la table **Person. Address** dans l’exemple de base de données **AdventureWorks** est activée pour la capture de données modifiées, le nom de la table de modifications dérivée serait **CDC. Person_Address_CT**.  
   
- Nous vous recommandons de ne **pas interroger directement les tables système**. Au lieu de cela, exécutez les fonctions [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) et [CDC. fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>.  
+ Nous vous recommandons de ne **pas interroger directement les tables système**. Au lieu de cela, exécutez les fonctions [cdc.fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) [et CDC.fn_cdc_get_net_changes_<](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) capture_instance.  
   
 
   
@@ -46,7 +46,7 @@ ms.locfileid: "89538374"
   
 ## <a name="remarks"></a>Notes  
 
-La colonne `__$command_id` a été introduite dans une mise à jour cumulative des versions 2012 à 2016. Pour obtenir des informations sur la version et le téléchargement, consultez l’article 3030352 de la base de connaissances à [l’adresse suivante : la table de modifications n’est pas correctement ordonnée pour les lignes mises à jour après activation de la capture de données modifiées pour une base de données Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Pour plus d’informations, consultez les fonctionnalités de capture de données [modifiées peuvent s’arrêter après la mise à niveau vers la dernière mise à jour cumulative pour SQL Server 2012, 2014 et 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+La colonne `__$command_id` a été introduite dans une mise à jour cumulative des versions 2012 à 2016. Pour obtenir des informations sur la version et le téléchargement, consultez l’article 3030352 de la base de connaissances à [l’adresse suivante : la table de modifications n’est pas correctement ordonnée pour les lignes mises à jour après activation de la capture de données modifiées pour une base de données Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Pour plus d’informations, consultez les fonctionnalités de capture de données [modifiées peuvent s’arrêter après la mise à niveau vers la dernière mise à jour cumulative pour SQL Server 2012, 2014 et 2016](/archive/blogs/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016).
 
 ## <a name="captured-column-data-types"></a>Types de données de la colonne capturée.  
  Les colonnes capturées incluses dans cette table ont les mêmes type de données et valeur que leurs colonnes sources correspondantes avec les exceptions suivantes :  
@@ -63,9 +63,9 @@ La colonne `__$command_id` a été introduite dans une mise à jour cumulative d
  Par défaut, la taille maximale qui peut être ajoutée à une colonne capturée dans une seule instruction INSERT, UPDATE, WRITETEXT ou UPDATETEXT est de 65 536 octets ou 64 Ko. Pour augmenter cette taille afin de prendre en charge des données LOB plus volumineuses, utilisez l' [option de configuration de serveur configurer l’option max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) pour spécifier une taille maximale supérieure. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
 ## <a name="data-definition-language-modifications"></a>Modifications du langage de définition de données (DDL)  
- Les modifications DDL de la table source, telles que l’ajout ou la suppression de colonnes, sont enregistrées dans la table [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Ces modifications ne sont pas appliquées à la table de modifications. Autrement dit, la définition de la table de modifications reste constante. Lors de l'insertion de lignes dans la table de modifications, le processus de capture ignore les colonnes qui n'apparaissent pas dans la liste des colonnes capturées associées à la table source. Si une colonne apparaît dans la liste des colonnes capturées qui n'est plus dans la table source, une valeur Null est assignée à la colonne.  
+ Les modifications DDL de la table source, telles que l’ajout ou la suppression de colonnes, sont enregistrées dans la table [CDC.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Ces modifications ne sont pas appliquées à la table de modifications. Autrement dit, la définition de la table de modifications reste constante. Lors de l'insertion de lignes dans la table de modifications, le processus de capture ignore les colonnes qui n'apparaissent pas dans la liste des colonnes capturées associées à la table source. Si une colonne apparaît dans la liste des colonnes capturées qui n'est plus dans la table source, une valeur Null est assignée à la colonne.  
   
- La modification du type de données d’une colonne dans la table source est également enregistrée dans la table [CDC. ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Toutefois, cette modification altère la définition de la table de modifications. Le type de données de la colonne capturée dans la table de modifications est modifié lorsque le processus de capture rencontre l'enregistrement du journal pour la modification DDL apportée à la table source.  
+ La modification du type de données d’une colonne dans la table source est également enregistrée dans la table [CDC.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) . Toutefois, cette modification altère la définition de la table de modifications. Le type de données de la colonne capturée dans la table de modifications est modifié lorsque le processus de capture rencontre l'enregistrement du journal pour la modification DDL apportée à la table source.  
   
  Si vous devez modifier le type de données d'une colonne capturée dans la table source d'une façon qui réduit la taille du type de données, utilisez la procédure suivante pour vous assurer que la colonne équivalente dans la table de modifications peut être correctement modifiée.  
   
@@ -83,7 +83,6 @@ La colonne `__$command_id` a été introduite dans une mise à jour cumulative d
  Pour les opérations d'insertion et de suppression, tous les bits du masque de mise à jour sont définis. Pour les opérations de mise à jour, le masque de mise à jour sera modifié dans les lignes de mise à jour nouvelles et anciennes pour refléter les colonnes qui ont changé pendant la mise à jour.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys. sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
-  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   

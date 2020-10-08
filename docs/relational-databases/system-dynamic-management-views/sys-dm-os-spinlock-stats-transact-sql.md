@@ -1,6 +1,6 @@
 ---
-description: sys. dm_os_spinlock_stats (Transact-SQL)
-title: sys. dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
+description: sys.dm_os_spinlock_stats (Transact-SQL)
+title: sys.dm_os_spinlock_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql-non-specified
@@ -23,14 +23,14 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: 053dc2ccc68a7e0479ad1e37a181a25b0cefcc53
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 31f89519a70612ba22c2fda79218d9d92153109f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042750"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810105"
 ---
-# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
+# <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
 
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -51,11 +51,11 @@ Retourne des informations sur toutes les attentes de verrouillages spinlock orga
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiert l' `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux Premium, requiert l' `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] les niveaux standard et de base, nécessite l'  **administrateur du serveur** ou un compte d' **administrateur Azure Active Directory** .    
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  
- sys. dm_os_spinlock_stats peut être utilisé pour identifier la source de contention de verrouillage SpinLock. Dans certains cas, vous pouvez être en mesure de résoudre ou de réduire la contention des verrouillages spinlock. Il peut toutefois arriver que vous soyez obligé de contacter le Support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ sys.dm_os_spinlock_stats peut être utilisé pour identifier la source de contention de verrouillage SpinLock. Dans certains cas, vous pouvez être en mesure de résoudre ou de réduire la contention des verrouillages spinlock. Il peut toutefois arriver que vous soyez obligé de contacter le Support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Vous pouvez réinitialiser le contenu de sys. dm_os_spinlock_stats à l’aide de `DBCC SQLPERF` comme suit :  
+ Vous pouvez réinitialiser le contenu de sys.dm_os_spinlock_stats à l’aide `DBCC SQLPERF` de comme suit :  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -413,6 +413,7 @@ GO
 
  [Quand est-ce que le verrouillage SpinLock est un pilote important d’utilisation du processeur dans SQL Server ?](https://techcommunity.microsoft.com/t5/SQL-Server-Support/When-is-Spinlock-a-Significant-Driver-of-CPU-utilization-in-SQL/ba-p/530142)
 
+ [Diagnostic et résolution de contention de verrouillage SpinLock sur SQL Server](../diagnose-resolve-spinlock-contention.md)
   
   
 

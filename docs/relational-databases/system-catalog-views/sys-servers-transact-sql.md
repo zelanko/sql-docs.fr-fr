@@ -21,12 +21,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: bcead6ebe4064dc43e97d0c0aa9d74920f69bbb8
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a3befa2740bd11fcd88233cef3000deec0d7006e
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539570"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809321"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "89539570"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID local du serveur lié.|  
 |**name**|**sysname**|Lorsque **server_id** = 0, la valeur retournée est le nom du serveur.<br /><br /> Lorsque **server_id** > 0, la valeur retournée est le nom local du serveur lié.|  
-|**production**|**sysname**|Nom de produit du serveur lié. La valeur « SQL Server » indique une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**product**|**sysname**|Nom de produit du serveur lié. La valeur « SQL Server » indique une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**moteur**|**sysname**|Nom du fournisseur OLE DB permettant de se connecter au serveur lié.<br /><br />À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , la valeur « sqlncli » est mappée au [pilote Microsoft OLE DB pour SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) par défaut. Dans les versions antérieures, la valeur « SQLNCLI » est mappée au [fournisseur de OLE DB SQL Server Native Client (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Propriété de connexion à la source de données OLE DB.|  
 |**location**|**nvarchar(4000)**|Propriété de connexion de l'emplacement OLE DB. NULL si aucun.|  
@@ -60,7 +60,7 @@ ms.locfileid: "89539570"
 |**is_nonsql_subscriber**|**bit**|Le serveur est un abonné de réplication non-SQL Server.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Si la valeur est 1, l'appel d'une procédure stockée distante démarre une transaction distribuée et enregistre la transaction dans MS DTC. Pour plus d’informations, consultez [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Date de la dernière modification des informations de serveur.|  
-|**is_rda_server**|**bit**|**S’applique à :** À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Le serveur est activé pour l’archivage des données à distance (étendu). Pour plus d’informations, consultez [activer la Stretch Database sur le serveur](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer).|
+|**is_rda_server**|**bit**|**S’applique à :** À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Le serveur est activé pour l’archivage des données à distance (étendu). Pour plus d’informations, consultez [activer la Stretch Database sur le serveur](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Autorisations  
  La valeur de **provider_string** est toujours null, sauf si l’appelant dispose de l’autorisation ALTER ANY Linked Server.  
@@ -80,4 +80,3 @@ ms.locfileid: "89539570"
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
- 

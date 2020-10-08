@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8199df81aca3688855b771923f6fa19a0e4f33db
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e1d72f658cf957a9dfb78eae4186cdd35d6e9849
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727634"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809565"
 ---
 # <a name="clr-integration-architecture----performance"></a>Architecture de l’intégration du CLR - Performances
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -35,8 +35,8 @@ ms.locfileid: "85727634"
 ### <a name="fast-transitions-between-sql-server-and-clr"></a>Transitions rapides entre SQL Server et CLR  
  Le processus de compilation génère une fonction pointeur qui peut être appelée au moment de l'exécution à partir du code natif. Dans le cas de fonctions scalaires définies par l'utilisateur, cet appel de fonction se produit ligne par ligne. Pour réduire le coût de la transition entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR, les instructions qui contiennent un appel managé possèdent une étape de démarrage pour identifier le domaine d'application cible. Cette étape d'identification réduit le coût de la transition pour chaque ligne.  
   
-## <a name="performance-considerations"></a>Considérations relatives aux performances  
- Les éléments suivants résument les considérations sur les performances spécifiques à l'intégration du CLR dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez «[utilisation de l’intégration du CLR dans SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)» sur le site Web MSDN. Vous trouverez des informations générales sur les performances du code managé dans la rubrique «[amélioration des performances et de l’évolutivité des applications .net](https://go.microsoft.com/fwlink/?LinkId=50333)» sur le site Web MSDN.  
+## <a name="performance-considerations"></a>Considérations sur les performances  
+ Les éléments suivants résument les considérations sur les performances spécifiques à l'intégration du CLR dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez «[utilisation de l’intégration du CLR dans SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/ms345136(v=sql.90))» sur le site Web MSDN. Vous trouverez des informations générales sur les performances du code managé dans la rubrique «[amélioration des performances et de l’évolutivité des applications .net](/previous-versions/msp-n-p/ff649152(v=pandp.10))» sur le site Web MSDN.  
   
 ### <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur  
  Les fonctions CLR tirent parti d'un chemin d'accès d'appel plus rapide que celui des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] définies par l'utilisateur. En outre, le code managé possède un avantage décisif en termes de performances par rapport à [!INCLUDE[tsql](../../includes/tsql-md.md)] quant au code procédural, au calcul et à la manipulation de chaînes. Les fonctions CLR gourmandes en calculs et n'effectuant pas d'accès aux données sont mieux écrites en code managé. Toutefois, les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutent l'accès aux données plus efficacement que l'intégration du CLR.  
@@ -53,7 +53,7 @@ ms.locfileid: "85727634"
  Lorsque les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] doivent parcourir des données qui sont plus aisément exprimées en tableau, le code managé peut être utilisé avec des gains de performance significatifs.  
   
 ### <a name="string-data"></a>Données de type chaîne  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]les données de type caractère, telles que **varchar**, peuvent être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, les données XML du serveur sont accessibles par le biais d’une interface de streaming retournée par **SQLXML. CreateReader ()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les données de type caractère, telles que **varchar**, peuvent être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, les données XML du serveur sont accessibles par le biais d’une interface de streaming retournée par **SQLXML. CreateReader ()**.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>Différences entre le CLR et les procédures stockées étendues  
  Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les API System. Data. SqlServer prennent en charge des types de données tels que **XML**, **varchar (max)**, **nvarchar (max)** et **varbinary (max)**, introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , tandis que les API ODS n’ont pas été étendues pour prendre en charge les nouveaux types de données.  
@@ -66,7 +66,7 @@ ms.locfileid: "85727634"
 >  Il est recommandé de ne pas développer de nouvelles procédures stockées étendues, parce que cette fonctionnalité a été déconseillée.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Sérialisation native pour les types définis par l'utilisateur  
- Les types définis par l'utilisateur (UDT) sont conçus comme mécanisme d'extensibilité du système de types scalaires. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implémente un format de sérialisation pour les UDT appelé **format. Native**. Pendant la compilation, la structure du type est examinée pour générer un langage MSIL personnalisé pour cette définition de type particulière.  
+ Les types définis par l'utilisateur (UDT) sont conçus comme mécanisme d'extensibilité du système de types scalaires. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implémente un format de sérialisation pour les UDT appelé **format. Native**. Pendant la compilation, la structure du type est examinée pour générer un langage MSIL personnalisé pour cette définition de type particulière.  
   
  La sérialisation native est l'implémentation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La sérialisation définie par l'utilisateur appelle une méthode définie par le créateur du type pour effectuer la sérialisation. **Format.** la sérialisation native doit être utilisée dans la mesure du possible pour des performances optimales.  
   
@@ -79,6 +79,5 @@ ms.locfileid: "85727634"
  Pour que le garbage collection managé s'effectue et évolue correctement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], évitez une allocation importante et unique. Les allocations d'une taille supérieure à 88 Ko sont placées sur le tas des objets volumineux, ce qui provoque une exécution du garbage collection et une évolution bien moins performantes que nombre d'allocations plus réduites. Par exemple, si vous devez allouer un grand tableau multidimensionnel, il est préférable d'allouer un tableau en escalier.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types CLR définis par l'utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
-  
+ [Types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   

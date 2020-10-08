@@ -1,6 +1,6 @@
 ---
-description: Affichages catalogue Change Tracking-sys. change_tracking_tables
-title: sys. change_tracking_tables (Transact-SQL) | Microsoft Docs
+description: Affichages catalogue Change Tracking-sys.change_tracking_tables
+title: sys.change_tracking_tables (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: 97ec69b6-0d49-4d98-82f0-d3e77ba1ad2b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b865d0d62f1029f3c8ebb976e8ed9cb5b8f0dd7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9f0fb1b5ad1c004f1f4aba688c29138282b71f38
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537555"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809615"
 ---
-# <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>Affichages catalogue Change Tracking-sys. change_tracking_tables
+# <a name="change-tracking-catalog-views---syschange_tracking_tables"></a>Affichages catalogue Change Tracking-sys.change_tracking_tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retourne une seule ligne pour chaque table incluse dans la base de données active pour laquelle le suivi des modifications est activé.  
@@ -47,7 +47,6 @@ ms.locfileid: "89537555"
   
 ## <a name="see-also"></a>Voir aussi  
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   
- [Affichages catalogue Change Tracking &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/6e8fd949-5560-4b34-879f-4e25aa24b183)   
+ [Affichages catalogue Change Tracking &#40;Transact-SQL&#41;](./catalog-views-transact-sql.md)   
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)  
-  
   

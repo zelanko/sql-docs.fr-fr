@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 75521866bd7fb151921e972bf4ee1d49089dd5a6
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a891da3459e82bbb8c218fd68693840f141da93f
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885909"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810831"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Génération d'objets de base de données à l'aide de l'intégration du CLR (Common Language Runtime)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -57,22 +57,21 @@ ms.locfileid: "85885909"
  [Types de données SQL Server dans le .NET Framework](../../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
  Vue d'ensemble de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et de leurs équivalents .NET Framework.  
   
- [Vue d'ensemble des attributs personnalisés de l'intégration du CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)  
+ [Vue d'ensemble des attributs personnalisés de l'intégration du CLR](./clr-integration-custom-attributes-for-clr-routines.md)  
  Fournit des informations sur les attributs personnalisés de l'intégration du CLR.  
   
- [Fonctions CLR définies par l'utilisateur](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
+ [Fonctions CLR définies par l’utilisateur](../../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)  
  Explique comment implémenter et utiliser les différents types de fonctions CLR : fonctions table, scalaires et d'agrégation définies par l'utilisateur.  
   
- [Types CLR définis par l'utilisateur](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Types CLR définis par l’utilisateur](../../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
  Explique comment implémenter et utiliser les types CLR définis par l'utilisateur.  
   
- [Procédures stockées CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
+ [Procédures stockées du CLR](/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
  Explique comment implémenter et utiliser les procédures stockées CLR.  
   
- [Déclencheurs CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)  
+ [Déclencheurs CLR](/dotnet/framework/data/adonet/sql/clr-triggers)  
  Explique comment implémenter et utiliser les déclencheurs CLR.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de l’intégration du Common Language Runtime &#40;CLR&#41;](../../../relational-databases/clr-integration/common-language-runtime-integration-overview.md)  
-  
   

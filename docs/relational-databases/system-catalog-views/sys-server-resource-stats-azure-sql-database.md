@@ -1,6 +1,6 @@
 ---
-description: sys. server_resource_stats (Azure SQL Database)
-title: sys. server_resource_stats (Azure SQL Database) | Microsoft Docs
+description: sys.server_resource_stats (Azure SQL Database)
+title: sys.server_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
@@ -19,19 +19,19 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: ed975dd768bc9d7979dd254fddec715ed07b3b2f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 57d0a8e10eb79213de7eb29a2d18ea8837d7f908
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542495"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809317"
 ---
-# <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL Database)
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Retourne les données d’utilisation de l’UC, d’e/s et de stockage pour Azure SQL Managed Instance. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Une ligne est créée pour chaque rapport de 15 secondes. Les données retournées incluent l’utilisation du processeur, la taille de stockage, l’utilisation des e/s et la référence SKU. Les données historiques sont conservées pendant environ 14 jours.
 
-La vue **sys. server_resource_stats** a des définitions différentes selon la version du Managed instance Azure SQL à laquelle la base de données est associée. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.
+La vue **sys.server_resource_stats** a des définitions différentes selon la version du Managed instance Azure SQL à laquelle la base de données est associée. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.
  
   
  Le tableau suivant décrit les colonnes disponibles dans un serveur v12 :  
@@ -54,13 +54,13 @@ La vue **sys. server_resource_stats** a des définitions différentes selon la v
 
  
 > [!TIP]  
->  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [Managed instance niveaux de service](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
+>  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [Managed instance niveaux de service](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
     
 ## <a name="permissions"></a>Autorisations  
  Cette vue est disponible pour tous les rôles d’utilisateur disposant d’autorisations pour se connecter à la base de données **Master** .  
   
 ## <a name="remarks"></a>Notes  
- Les données retournées par **sys. server_resource_stats** sont exprimées sous la forme du total utilisé en octets ou en mégaoctets (exprimés dans les noms de colonnes) autres que avg_cpu, exprimé sous la forme d’un pourcentage des limites maximales autorisées pour le niveau de service/niveau de performances que vous exécutez.  
+ Les données retournées par **sys.server_resource_stats** sont exprimées sous la forme du total utilisé en octets ou en mégaoctets (exprimés dans les noms de colonnes) autres que avg_cpu, exprimé sous la forme d’un pourcentage des limites maximales autorisées pour le niveau de service/niveau de performances que vous exécutez.  
  
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne toutes les bases de données dont la moyenne s'établit à au moins 80 % de l'utilisation du calcul au cours de la dernière semaine.  
@@ -78,4 +78,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Voir aussi  
- [Niveaux de service Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+ [Niveaux de service Managed Instance](/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

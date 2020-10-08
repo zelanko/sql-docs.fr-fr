@@ -26,12 +26,12 @@ ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c043425e8db0ce36776e8fec938e3b083d230c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fa45ac2a57ff4f59dc3f3367dc2c66f638f2516b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733650"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811063"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Utilisation de codes de mise à jour (updategrams) pour modifier des données dans SQLXML 4.0
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -64,10 +64,9 @@ ms.locfileid: "85733650"
  [Gestion des problèmes d’accès concurrentiel de la base de données dans codes &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  Décrit les divers niveaux de protection possibles pour gérer des problèmes d'accès concurrentiel dans les codes de mise à jour (updategrams) et fournit des exemples.  
   
- [Exemples d’applications mise à jour &#40;SQLXML 4,0&#41;](https://msdn.microsoft.com/library/d2287e10-4007-4ba4-ad84-4e2b6adfede5)  
+ [Exemples d’applications mise à jour &#40;SQLXML 4,0&#41;]()  
  Fournit des exemples d'applications qui utilisent des codes de mise à jour (updategrams).  
   
  [Instructions et limitations de XML codes &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
  Répertorie certains éléments à retenir lors de l'utilisation de codes de mise à jour (updategrams).  
-  
   
