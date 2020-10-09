@@ -15,11 +15,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b941262f9d0be6ed46b403c4525ce5a144547530
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d71c4b453ca9e3f48f5ac2d4d7cbcf46da1d26e8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004688"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869381"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Exécution de procédures stockées - Traiter les codes de retour et les paramètres de sortie
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86004688"
   Les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont pas disponibles pour l'application tant que [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) n'a pas retourné SQL_NO_DATA. Si une erreur est retournée à partir d’une procédure stockée, appelez SQLMoreResults pour passer au résultat suivant jusqu’à ce que SQL_NO_DATA soit retourné.  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez conserver des informations d’identification, vous devez les chiffrer avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Pour traiter des codes de retour et des paramètres de sortie  
   
@@ -195,5 +196,4 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
 [Appeler des procédures stockées &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-call-stored-procedures.md)  
-  
   
