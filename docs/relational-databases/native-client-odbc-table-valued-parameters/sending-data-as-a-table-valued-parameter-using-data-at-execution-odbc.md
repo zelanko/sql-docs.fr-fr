@@ -1,6 +1,6 @@
 ---
 description: Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
-title: Paramètre table, données en cours d’exécution (ODBC)
+title: Paramètre Table-Valued, données en cours d’exécution (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 72fc2ad3db6c6eddde0124fc2144fa6faca6f058
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48823426052fec8f16989facc77a676ed8d3e2c6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499129"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868214"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cela est similaire à la procédure [All in Memory](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , mais utilise des données en cours d’exécution pour le paramètre table.  
   
- Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser des paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser des paramètres de Table-Valued &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
  Dans cet exemple, lorsque SQLExecute ou SQLExecDirect est appelé, le pilote retourne SQL_NEED_DATA. L’application appelle ensuite SQLParamData à plusieurs reprises jusqu’à ce que le pilote retourne une valeur autre que SQL_NEED_DATA. Le pilote retourne *ParameterValuePtr* pour informer l’application du paramètre pour lequel il demande des données. L’application appelle SQLPutData pour fournir les données de paramètre avant l’appel suivant à SQLParamData. Pour un paramètre table, l’appel à SQLPutData indique le nombre de lignes préparées pour le pilote (dans cet exemple, toujours 1). Lorsque toutes les lignes de la table ont été passées au pilote, SQLPutData est appelé pour indiquer qu’aucune ligne n’est disponible.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "88499129"
   
  Lorsque SQLPutData est appelé pour une valeur de table, *DataPtr* est utilisé pour le nombre de lignes disponibles (dans cet exemple, toujours 1). *StrLen_or_IndPtr* doit toujours être égal à 0. Lorsque toutes les lignes de la valeur de table ont été passées, SQLPutData est appelé avec une valeur *DataPtr* de 0.  
   
-## <a name="prerequisite"></a>Prérequis  
+## <a name="prerequisite"></a>Configuration requise  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
   
 ```sql
@@ -582,6 +582,5 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de programmation de paramètres table ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [Exemples de programmation de paramètres table ODBC](./table-valued-parameters-odbc.md)  
   

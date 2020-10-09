@@ -16,12 +16,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b98ce67e61c1fe6f9370508d34cecc8d9289a44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15ce6ea1c72bee64ad8fe96e70b9a7c513c623e6
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420263"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868270"
 ---
 # <a name="installing-smo"></a>Installation de SMO
 
@@ -40,9 +40,8 @@ Il s’agit d’un remplacement de SharedManagementObjects.msi, qui a été pré
 
 ## <a name="installing-the-package"></a>Installation du package
 
-Consultez [NuGet démarrage rapide-utilisation d’un package](https://docs.microsoft.com/nuget/quickstart/use-a-package) pour obtenir des instructions et des exemples d’installation et d’utilisation d’un package NuGet. 
+Consultez [NuGet démarrage rapide-utilisation d’un package](/nuget/quickstart/use-a-package) pour obtenir des instructions et des exemples d’installation et d’utilisation d’un package NuGet. 
   
-## <a name="system-requirements"></a>Configuration système requise
+## <a name="system-requirements"></a>Configuration requise
   
  SMO requiert [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] l’exécution de 4,0 ou .net Core 2,0, donc toutes les applications qui l’utilisent doivent s’assurer que cette version ou une version ultérieure est installée sur les ordinateurs clients. Certains binaires natifs installés avec les bibliothèques SMO NetFx nécessitent également l’installation du runtime VC 2013. ce Runtime n’est pas inclus dans le package. Vous pouvez télécharger le package Redist approprié à votre architecture cible à partir de https://www.microsoft.com/download/details.aspx?id=40784
-  

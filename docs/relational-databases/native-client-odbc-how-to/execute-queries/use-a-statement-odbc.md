@@ -14,12 +14,12 @@ ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d3a6cead69651eedec63d9c34e24674ec6dd6ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1610a48081c8eb8e4cab0829527516e9ee44246
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470418"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867705"
 ---
 # <a name="use-a-statement-odbc"></a>Utiliser une instruction (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,21 +27,21 @@ ms.locfileid: "88470418"
     
 ### <a name="to-use-a-statement"></a>Pour utiliser une instruction  
   
-1.  Appelez [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) avec SQL_HANDLE_STMT comme *HandleType* de manière à allouer un descripteur d’instruction.  
+1.  Appelez [SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md) avec SQL_HANDLE_STMT comme *HandleType* de manière à allouer un descripteur d’instruction.  
   
 2.  Si vous le souhaitez, appelez [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) pour définir des options d’instruction ou [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) pour obtenir des attributs d’instruction.  
   
      Pour utiliser des curseurs côté serveur, vous devez affecter aux attributs de curseur des valeurs autres que leurs valeurs par défaut.  
   
-3.  Si vous le souhaitez et si l'instruction doit être exécutée plusieurs fois, préparez son exécution avec la fonction [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360).  
+3.  Si vous le souhaitez et si l'instruction doit être exécutée plusieurs fois, préparez son exécution avec la fonction [SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md).  
   
-4.  Si vous le souhaitez et si l'instruction a des marqueurs de paramètres liés, liez ces marqueurs de paramètres à des variables de programme à l'aide de [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Si l'instruction a été préparée, vous pouvez appeler [SQLNumParams](https://go.microsoft.com/fwlink/?LinkId=58404) et [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number et characteristics of the parameters.  
+4.  Si vous le souhaitez et si l'instruction a des marqueurs de paramètres liés, liez ces marqueurs de paramètres à des variables de programme à l'aide de [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Si l'instruction a été préparée, vous pouvez appeler [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md) et [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) to find the number et characteristics of the parameters.  
   
 5.  Exécutez une instruction directement en utilisant SQLExecDirect.  
   
      \- ou -  
   
-     Si l'instruction a été préparée, exécutez-la plusieurs fois à l'aide de [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400).  
+     Si l'instruction a été préparée, exécutez-la plusieurs fois à l'aide de [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md).  
   
      \- ou -  
   
@@ -75,5 +75,4 @@ ms.locfileid: "88470418"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

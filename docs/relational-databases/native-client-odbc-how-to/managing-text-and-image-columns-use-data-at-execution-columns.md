@@ -14,12 +14,12 @@ ms.assetid: 4eae58d1-03d4-40ca-8aa1-9b3ea10a38cf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02b21f406a010d55724f73562361d1bc92486d8c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ae7ada6dd2eea49f407731cb8ef985c9f12405b2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420543"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868921"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-columns"></a>Gestion des colonnes texte et image - Utiliser des colonnes de données à l’exécution
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,15 +33,15 @@ ms.locfileid: "88420543"
   
     -   Pour le quatrième paramètre, entrez un identificateur de colonne défini par le programme.  
   
-2.  L'appel de [SQLSetPos](https://go.microsoft.com/fwlink/?LinkId=58407) retourne SQL_NEED_DATA, ce qui indique que les colonnes de données en cours d'exécution sont prêtes à être traitées.  
+2.  L'appel de [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) retourne SQL_NEED_DATA, ce qui indique que les colonnes de données en cours d'exécution sont prêtes à être traitées.  
   
 3.  Pour chaque colonne de données en cours d'exécution :  
   
-    -   Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour obtenir le pointeur du tableau de colonne. SQL_NEED_DATA est retourné s'il existe une autre colonne de données en cours d'exécution.  
+    -   Appelez [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) pour obtenir le pointeur du tableau de colonne. SQL_NEED_DATA est retourné s'il existe une autre colonne de données en cours d'exécution.  
   
     -   Appelez [SQLPutData](../../relational-databases/native-client-odbc-api/sqlputdata.md) une ou plusieurs fois pour envoyer les données de la colonne jusqu'à ce que toute la longueur soit envoyée.  
   
-4.  Appelez [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) pour indiquer que toutes les données de la dernière colonne de données en cours d'exécution ont été envoyées. SQL_NEED_DATA n'est pas retourné.  
+4.  Appelez [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) pour indiquer que toutes les données de la dernière colonne de données en cours d'exécution ont été envoyées. SQL_NEED_DATA n'est pas retourné.  
 
 ## <a name="example"></a>Exemple  
  L'exemple suivant montre comment lire des données de type caractères SQL_LONG variables à l'aide de SQLGetData. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
@@ -188,6 +188,5 @@ GO
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Rubriques de procédures relatives à la gestion des colonnes de texte et d’image &#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
-  
+ [Rubriques de procédures relatives à la gestion des colonnes de texte et d’image &#40;ODBC&#41;](./odbc-how-to-topics.md)  
   

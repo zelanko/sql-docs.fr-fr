@@ -14,12 +14,12 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48143270af2a56f9662d742ec41e5984972b30c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d61cdfb974a59f61fe53ba65656d49002a816d32
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490842"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868865"
 ---
 # <a name="processing-results---process-results"></a>Traitement des résultats - Traiter les résultats
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,7 @@ Le traitement des résultats dans une application ODBC implique d’abord de dé
   
 3.  Pour chaque ligne de l'ensemble de résultats :  
   
-    -   Appelez [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) pour obtenir la ligne suivante.  
+    -   Appelez [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) pour obtenir la ligne suivante.  
   
     -   Si les colonnes dépendantes sont utilisées, utilisez les données à présent disponibles dans les mémoires tampons des colonnes dépendantes.  
   
@@ -42,15 +42,15 @@ Le traitement des résultats dans une application ODBC implique d’abord de dé
   
     -   Appelez plusieurs fois **SQLGetData** pour obtenir des données à partir d'une colonne text ou image.  
   
-4.  Quand [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) signale la fin du jeu de résultats en retournant SQL_NO_DATA, appelez [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) pour déterminer si un autre jeu de résultats est disponible.  
+4.  Quand [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) signale la fin du jeu de résultats en retournant SQL_NO_DATA, appelez [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) pour déterminer si un autre jeu de résultats est disponible.  
   
     -   S'il retourne SQL_SUCCESS, un autre jeu de résultats est disponible.  
   
     -   S'il retourne SQL_NO_DATA, aucun autre jeu de résultats n'est disponible.  
   
-    -   S’il retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) pour déterminer si la sortie à partir d’une instruction PRINT ou RAISERROR est disponible.  
+    -   S’il retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR, appelez [SQLGetDiagRec](../../odbc/reference/syntax/sqlgetdiagrec-function.md) pour déterminer si la sortie à partir d’une instruction PRINT ou RAISERROR est disponible.  
   
-         Si des paramètres d'instruction liés sont utilisés pour les paramètres de sortie ou la valeur de retour d'une procédure stockée, utilisez les données à présent disponibles dans les mémoires tampons de paramètres liés. Par ailleurs, quand des paramètres liés sont utilisés, chaque appel à [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) ou à [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) aura exécuté l’instruction SQL *S* fois, où *S* est le nombre d’éléments présents dans le tableau de paramètres liés. Cela signifie qu’il y aura *S* jeux de résultats à traiter, où chaque jeu de résultats comprend tous les jeux de résultats, les paramètres de sortie et les codes de retour habituellement retournés par une exécution unique de l’instruction SQL.  
+         Si des paramètres d'instruction liés sont utilisés pour les paramètres de sortie ou la valeur de retour d'une procédure stockée, utilisez les données à présent disponibles dans les mémoires tampons de paramètres liés. Par ailleurs, quand des paramètres liés sont utilisés, chaque appel à [SQLExecute](../../odbc/reference/syntax/sqlexecute-function.md) ou à [SQLExecDirect](../../odbc/reference/syntax/sqlexecdirect-function.md) aura exécuté l’instruction SQL *S* fois, où *S* est le nombre d’éléments présents dans le tableau de paramètres liés. Cela signifie qu’il y aura *S* jeux de résultats à traiter, où chaque jeu de résultats comprend tous les jeux de résultats, les paramètres de sortie et les codes de retour habituellement retournés par une exécution unique de l’instruction SQL.  
   
     > [!NOTE]  
     >  Lorsqu'un jeu de résultats contient des lignes calculées, chaque ligne calculée est rendue disponible comme un jeu de résultats distinct. Ces jeux de résultats calculés sont intercalés au sein des lignes normales et séparent les lignes normales en plusieurs jeux de résultats.  
@@ -60,9 +60,8 @@ Le traitement des résultats dans une application ODBC implique d’abord de dé
 6.  Si un autre jeu de résultats est disponible, allez à l’étape 1.  
 
 > [!NOTE]  
->  Pour annuler le traitement d’un jeu de résultats avant que [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) ne retourne SQL_NO_DATA, appelez [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
+>  Pour annuler le traitement d’un jeu de résultats avant que [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) ne retourne SQL_NO_DATA, appelez [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Récupérer les informations du jeu de résultats &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
-  
   

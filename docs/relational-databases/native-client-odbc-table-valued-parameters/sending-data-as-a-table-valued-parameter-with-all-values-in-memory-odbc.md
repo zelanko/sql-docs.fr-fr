@@ -1,6 +1,6 @@
 ---
 description: Envoi de données comme paramètre table avec toutes les valeurs en mémoire (ODBC)
-title: Paramètre table, valeurs en mémoire (ODBC)
+title: Paramètre Table-Valued, valeurs en mémoire (ODBC)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 676d0c40ca7c064945284d5a486ec0cda698688d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a95b9d9feca9f2bb3ac896c45aa30f18f5d23ad7
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499069"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868180"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Envoi de données comme paramètre table avec toutes les valeurs en mémoire (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Cette rubrique décrit comment envoyer des données à une procédure stockée comme paramètre table lorsque toutes les valeurs sont en mémoire. Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser des paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  Cette rubrique décrit comment envoyer des données à une procédure stockée comme paramètre table lorsque toutes les valeurs sont en mémoire. Pour obtenir un autre exemple illustrant les paramètres table, consultez [utiliser des paramètres de Table-Valued &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
-## <a name="prerequisite"></a>Prérequis  
+## <a name="prerequisite"></a>Configuration requise  
  Cette procédure suppose que la commande [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante a été exécutée sur le serveur :  
   
 ```sql
@@ -130,6 +130,5 @@ from @Items
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de programmation de paramètres table ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
-  
+ [Exemples de programmation de paramètres table ODBC](./table-valued-parameters-odbc.md)  
   

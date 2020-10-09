@@ -14,19 +14,19 @@ ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a27332a7948c535b768f6507aad81ca72bbcbb26
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8fc37fff75c3ba078c104e87af38cbcc03954563
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455976"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867994"
 ---
 # <a name="enumerate-sql-server-native-client-ole-db-data-sources-ole-db"></a>Énumérer les sources de données SQL Server Native Client OLE DB (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Cet exemple montre comment utiliser l'objet énumérateur pour répertorier les sources de données disponibles.  
   
- Pour répertorier les sources de données visibles pour l'énumérateur SQLOLEDB, le consommateur appelle la méthode [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) . Cette méthode retourne un ensemble de lignes dotées d'informations sur les sources de données actuellement visibles.  
+ Pour répertorier les sources de données visibles pour l'énumérateur SQLOLEDB, le consommateur appelle la méthode [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) . Cette méthode retourne un ensemble de lignes dotées d'informations sur les sources de données actuellement visibles.  
   
  Selon la bibliothèque réseau utilisée, le système recherche les sources de données dans le domaine approprié. Pour les canaux nommés, il s'agit du domaine auquel le client est connecté. Pour AppleTalk, il s'agit de la zone par défaut. Pour SPX/IPX, il s'agit de la liste des installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles dans la base de données Bindery. Pour BANYAN VINES, il s'agit des installations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles dans le réseau local. Les sockets Multiprotocol et TCP/IP ne sont pas pris en charge.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "88455976"
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>Pour énumérer des sources de données OLE DB  
   
@@ -280,5 +280,4 @@ SAFE_EXIT:
    return TRUE;  
 }  
 ```  
-  
   

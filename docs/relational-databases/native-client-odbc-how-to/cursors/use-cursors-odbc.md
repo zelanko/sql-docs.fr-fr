@@ -14,12 +14,12 @@ ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7fbb647cc83c9d98aedc15531c919c54f9ae7d53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b8d8b297afe44f990b7d0fa685ffa4aff51accf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494071"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867782"
 ---
 # <a name="use-cursors-odbc"></a>Utiliser des curseurs (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,17 +31,17 @@ ms.locfileid: "88494071"
   
      Définissez les attributs SQL_ATTR_CURSOR_TYPE et SQL_ATTR_CONCURRENCY (option par défaut).  
   
-     ou  
+     — ou \emdash  
   
      Définissez les attributs SQL_CURSOR_SCROLLABLE et SQL_CURSOR_SENSITIVITY.  
   
 2.  Appelez [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) pour définir la taille de l’ensemble de lignes en utilisant l’attribut SQL_ATTR_ROW_ARRAY_SIZE.  
   
-3.  Vous pouvez également appeler [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) pour définir un nom de curseur si des mises à jour positionnées seront effectuées à l’aide de la clause WHERE CURRENT OF.  
+3.  Vous pouvez également appeler [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) pour définir un nom de curseur si des mises à jour positionnées seront effectuées à l’aide de la clause WHERE CURRENT OF.  
   
 4.  Exécutez l'instruction SQL.  
   
-5.  Vous pouvez également appeler [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) pour obtenir le nom de curseur si des mises à jour positionnées seront effectuées à l’aide de la clause WHERE CURRENT OF et si un nom de curseur n’a pas été fourni avec [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) à l’étape 3.  
+5.  Vous pouvez également appeler [SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) pour obtenir le nom de curseur si des mises à jour positionnées seront effectuées à l’aide de la clause WHERE CURRENT OF et si un nom de curseur n’a pas été fourni avec [SQLSetCursorName](../../../odbc/reference/syntax/sqlsetcursorname-function.md) à l’étape 3.  
   
 6.  Appelez [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) pour obtenir le nombre de colonnes (C) dans l’ensemble de lignes.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "88494071"
   
     -   S'il retourne SQL_NO_DATA, aucun autre jeu de résultats n'est disponible.  
   
-    -   S’il retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) pour déterminer si la sortie à partir d’une instruction PRINT ou RAISERROR est disponible.  
+    -   S’il retourne SQL_SUCCESS_WITH_INFO ou SQL_ERROR, appelez [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) pour déterminer si la sortie à partir d’une instruction PRINT ou RAISERROR est disponible.  
   
      Si des paramètres d'instruction liés sont utilisés pour les paramètres de sortie ou la valeur de retour d'une procédure stockée, utilisez les données à présent disponibles dans les mémoires tampons de paramètres liés.  
   
-     Quand des paramètres liés sont utilisés, chaque appel à [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) ou à [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) aura exécuté l’instruction SQL S fois, où S est le nombre d’éléments présents dans le tableau de paramètres liés. Cela signifie qu'il y aura S jeux de résultats à traiter, où chaque jeu de résultats comprend l'ensemble des jeux de résultats, des paramètres de sortie et des codes de retour habituellement retournés par une exécution unique de l'instruction SQL.  
+     Quand des paramètres liés sont utilisés, chaque appel à [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) ou à [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) aura exécuté l’instruction SQL S fois, où S est le nombre d’éléments présents dans le tableau de paramètres liés. Cela signifie qu'il y aura S jeux de résultats à traiter, où chaque jeu de résultats comprend l'ensemble des jeux de résultats, des paramètres de sortie et des codes de retour habituellement retournés par une exécution unique de l'instruction SQL.  
   
      Notez que lorsqu'un jeu de résultats contient des lignes calculées, chaque ligne calculée est rendue disponible comme un jeu de résultats distinct. Ces jeux de résultats calculés sont intercalés au sein des lignes normales et séparent les lignes normales en plusieurs jeux de résultats.  
   
@@ -77,5 +77,4 @@ ms.locfileid: "88494071"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives à l’utilisation des curseurs &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
-  
   

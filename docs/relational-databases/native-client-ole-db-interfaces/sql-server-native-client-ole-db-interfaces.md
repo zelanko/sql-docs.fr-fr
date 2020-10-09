@@ -17,12 +17,12 @@ ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efd4e1f3692ebe6c78625a14cfc81d66f552ebaa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f0bfbd52a5a150b1630d92d5e2612b8f0fa69f2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490755"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91865331"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>Interfaces (OLE DB) de SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -31,13 +31,12 @@ ms.locfileid: "88490755"
   
  Cette [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] référence de programmation du fournisseur OLE DB Native Client ne documente pas toutes les interfaces et méthodes OLE DB, mais uniquement les interfaces et les méthodes qui présentent un comportement spécifique au fournisseur lors de l’utilisation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client.  
   
- Pour une description complète des principales interfaces et méthodes OLE DB, consultez [OLE DB Programmer’s Reference](https://go.microsoft.com/fwlink/?LinkId=45232).  
+ Pour une description complète des principales interfaces et méthodes OLE DB, consultez [OLE DB Programmer’s Reference](/previous-versions/windows/desktop/ms713643(v=vs.85)).  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
+-   [Interfaces &#40;OLE DB&#41;]()  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
-  
   

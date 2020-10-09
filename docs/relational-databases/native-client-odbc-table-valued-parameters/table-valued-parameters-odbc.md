@@ -1,6 +1,6 @@
 ---
 description: Paramètres table (ODBC)
-title: Paramètres table (ODBC) | Microsoft Docs
+title: Paramètres de Table-Valued (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f263b0ade88e21f79182f2667714de2e1a105155
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4b82ec830d04f89fd4a166a999673a6182429a66
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420503"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867861"
 ---
 # <a name="table-valued-parameters-odbc"></a>Paramètres table (ODBC)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   La prise en charge des paramètres table par ODBC permet à une application cliente d'envoyer plus efficacement des données paramétrables au serveur par l'envoi de plusieurs lignes au serveur en un seul appel.  
   
- Pour plus d’informations sur les paramètres table sur le serveur, consultez [utiliser des paramètres table &#40;Moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
+ Pour plus d’informations sur les paramètres table sur le serveur, consultez [utiliser des paramètres de Table-Valued &#40;Moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).  
   
  Dans ODBC, vous pouvez envoyer des paramètres table au serveur de deux manières :  
   
@@ -77,12 +77,8 @@ ms.locfileid: "88420503"
   
  [Récapitulatif des API de paramètre table ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/odbc-table-valued-parameter-api-summary.md)  
  Répertorie les fonctions ODBC qui prennent en charge les paramètres table.  
-  
- [Exemples de programmation de paramètres table ODBC](https://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
- Décrit comment réaliser des tâches courantes.  
-  
+
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Paramètres table &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)  
-  
   

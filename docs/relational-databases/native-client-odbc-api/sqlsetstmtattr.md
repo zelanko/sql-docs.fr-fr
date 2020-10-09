@@ -15,12 +15,12 @@ ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3909eca1ac7b61da6d9d29ecbe0f4283065b122b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 043e8e62174f286ad229485ecce4e4db0990557a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420773"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868455"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "88420773"
   
 |Valeur *ValuePtr*|Description|  
 |----------------------|-----------------|  
-|SQL_DP_ON|Par défaut. Après l’appel de la [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la préparation de l’instruction est différée jusqu’à ce que **SQLExecute** soit appelé ou que l’opération de métapropriété (**SQLDescribeCol** ou **SQLDescribeParam**) soit exécutée.|  
+|SQL_DP_ON|Par défaut. Après l’appel de la [fonction SQLPrepare](../../odbc/reference/syntax/sqlprepare-function.md), la préparation de l’instruction est différée jusqu’à ce que **SQLExecute** soit appelé ou que l’opération de métapropriété (**SQLDescribeCol** ou **SQLDescribeParam**) soit exécutée.|  
 |SQL_DP_OFF|L’instruction est préparée dès que **SQLPrepare** est exécuté.|  
   
 ### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
@@ -149,7 +149,6 @@ ms.locfileid: "88420773"
  Si une fonction de catalogue autre que SQLTables, SQLColumns ou SQLPrimaryKeys est appelée lorsque SQL_SOPT_SS_NAME_SCOPE a une valeur autre que SQL_SS_NAME_SCOPE_TABLE, SQL_ERROR est retourné. Un enregistrement de diagnostic est généré avec SQLSTATE HY010 et le message « Erreur de séquence de fonction (SQL_SOPT_SS_NAME_SCOPE n'est pas défini avec la valeur SQL_SS_NAME_SCOPE_TABLE) ».  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLGetStmtAttr fonction)](https://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr fonction)](../../odbc/reference/syntax/sqlgetstmtattr-function.md)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   

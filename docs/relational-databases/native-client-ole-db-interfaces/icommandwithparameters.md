@@ -12,12 +12,12 @@ ms.assetid: 66644c70-def7-46d8-8c47-b883292a0288
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 196bbc6f5dddffe5c88906e27f192fe6bf28ff46
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0ecf207fa32d103042fd5888f3f416cffd4563bd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475667"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868315"
 ---
 # <a name="icommandwithparameters-native-client-ole-db-provider"></a>ICommandWithParameters (fournisseur OLE DB Native Client)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -27,6 +27,5 @@ ms.locfileid: "88475667"
  Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], lors de l’appel d’ICommandWithParameters::SetParameterInfo, la valeur passée au paramètre *pwszName* doit être un identificateur valide. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Interfaces &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)  
-  
+ [Interfaces &#40;OLE DB&#41;](./sql-server-native-client-ole-db-interfaces.md)  
   

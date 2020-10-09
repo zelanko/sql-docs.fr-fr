@@ -1,6 +1,6 @@
 ---
-description: Exécuter une fonction définie par l’utilisateur SQL Server Native Client et traiter le code de retour (OLE DB)
-title: Fonction définie par l’utilisateur, code de retour (OLE DB)
+description: Exécuter une fonction de User-Defined SQL Server Native Client et traiter le code de retour (OLE DB)
+title: Fonction User-Defined, code de retour (OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e50cdc551c609f5a30e7b70aa844cb4e46739070
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b0f9f31caa5b026df62d509db5c276e60839877b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475731"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866645"
 ---
-# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>Exécuter une fonction définie par l’utilisateur SQL Server Native Client et traiter le code de retour (OLE DB)
+# <a name="execute-a-sql-server-native-client-user-defined-function-and-process-return-code-ole-db"></a>Exécuter une fonction de User-Defined SQL Server Native Client et traiter le code de retour (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Dans cet exemple, une fonction définie par l'utilisateur est exécutée et le code de retour est imprimé. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
@@ -29,7 +29,7 @@ ms.locfileid: "88475731"
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference).  
   
 ## <a name="example"></a>Exemple  
  Exécutez la première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) pour créer la procédure stockée utilisée par l'application.  
@@ -369,5 +369,4 @@ go
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives au traitement des résultats &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
-  
   

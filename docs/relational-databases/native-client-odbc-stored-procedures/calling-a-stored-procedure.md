@@ -20,11 +20,12 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a8ebd8eb539190c65e1e1a97ce55579eb93f180
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 2b96446e0d73da09bb6dbbb547c6a0171cb20170
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86004654"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867039"
 ---
 # <a name="calling-a-stored-procedure"></a>Appel d'une procédure stockée
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "86004654"
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge à la fois la séquence d’échappement ODBC Call et l' [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction [Execute](../../t-sql/language-elements/execute-transact-sql.md) pour exécuter des procédures stockées ; la séquence d’échappement ODBC Call est la méthode recommandée. L'utilisation de la syntaxe ODBC permet à une application de récupérer les codes de retour de procédures stockées et le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est également optimisé pour utiliser un protocole initialement développé pour envoyer des appels de procédure distante (RPC) entre des ordinateurs qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
   
 > [!NOTE]  
->  Lors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’appel de procédures stockées à l’aide de paramètres nommés avec ODBC (pour plus d’informations, consultez [liaison de paramètres par nom (paramètres nommés)](https://go.microsoft.com/fwlink/?LinkID=209721)), les noms de paramètres doivent commencer par le \@ caractère «». Il s'agit d'une restriction spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applique cette restriction plus strictement que MDAC (Microsoft Data Access Components).  
+>  Lors [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l’appel de procédures stockées à l’aide de paramètres nommés avec ODBC (pour plus d’informations, consultez [liaison de paramètres par nom (paramètres nommés)](../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)), les noms de paramètres doivent commencer par le \@ caractère «». Il s'agit d'une restriction spécifique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applique cette restriction plus strictement que MDAC (Microsoft Data Access Components).  
   
  La séquence d'échappement ODBC CALL permettant d'appeler une procédure est la suivante :  
   
@@ -42,11 +43,11 @@ ms.locfileid: "86004654"
   
  Une procédure peut avoir zéro, un ou plusieurs paramètres. Elle peut également retourner une valeur (comme l'indique le marqueur de paramètre optionnel ?= au début de la syntaxe). Si un paramètre est un paramètre d'entrée ou d'entrée/sortie, ce peut être un littéral ou un marqueur de paramètre. Si le paramètre est un paramètre de sortie, ce doit être un marqueur de paramètre car la sortie est inconnue. Les marqueurs de paramètres doivent être liés à [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) avant l’exécution de l’instruction d’appel de procédure.  
   
- Les paramètres d'entrée et d'entrée/sortie peuvent être omis dans les appels de procédure. Si une procédure est appelée avec des parenthèses mais sans paramètre, le pilote instruit la source de données d'utiliser la valeur par défaut comme premier paramètre. Par exemple :  
+ Les paramètres d'entrée et d'entrée/sortie peuvent être omis dans les appels de procédure. Si une procédure est appelée avec des parenthèses mais sans paramètre, le pilote instruit la source de données d'utiliser la valeur par défaut comme premier paramètre. Exemple :  
   
  {**call** _PROCEDURE_NAME_**()**}  
   
- Si la procédure n'a pas de paramètre, elle peut échouer. Si une procédure est appelée sans parenthèses, le pilote n'envoie aucune valeur de paramètre. Par exemple :  
+ Si la procédure n'a pas de paramètre, elle peut échouer. Si une procédure est appelée sans parenthèses, le pilote n'envoie aucune valeur de paramètre. Exemple :  
   
  {**call** _PROCEDURE_NAME_}  
   
@@ -95,5 +96,4 @@ ms.locfileid: "86004654"
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de procédures stockées](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5264929258fb03c7572de1459a57fb86dbd99ee
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bf661d045b24c3844513356a2cdd081c05ff2620
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88328955"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867919"
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Exécuter directement une instruction (ODBC)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,9 +29,9 @@ ms.locfileid: "88328955"
   
 1.  Si l'instruction contient des marqueurs de paramètres, utilisez [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md) pour lier chaque paramètre à une variable de programme. Remplissez les variables de programme de valeurs de données, puis configurez tous les paramètres de données en cours d'exécution.  
   
-2.  Appelez [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction.  
+2.  Appelez [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) pour exécuter l'instruction.  
   
-3.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+3.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) et [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
 
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>Pour exécuter plusieurs fois une instruction au moyen d'une liaison de paramètre selon les colonnes  
   
@@ -57,9 +57,9 @@ ms.locfileid: "88328955"
   
      Mettez les valeurs de données S et les longueurs de données S dans les tableaux de paramètres liés.  
   
-3.  Appelez [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction. Le pilote exécute efficacement l'instruction S fois, une fois pour chaque jeu de paramètres.  
+3.  Appelez [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) pour exécuter l'instruction. Le pilote exécute efficacement l'instruction S fois, une fois pour chaque jeu de paramètres.  
   
-4.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+4.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) et [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-row-wise-parameter-binding"></a>Pour exécuter plusieurs fois une instruction au moyen d'une liaison de paramètre selon les lignes  
   
@@ -83,13 +83,12 @@ ms.locfileid: "88328955"
   
 4.  Remplissez le tableau de tampons de paramètres liés avec les valeurs de données.  
   
-5.  Appelez [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) pour exécuter l'instruction. Le pilote exécute efficacement l'instruction S fois, une fois pour chaque jeu de paramètres.  
+5.  Appelez [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) pour exécuter l'instruction. Le pilote exécute efficacement l'instruction S fois, une fois pour chaque jeu de paramètres.  
   
-6.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=58405) et [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+6.  Si vous utilisez des paramètres d'entrée de données en cours d'exécution, [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md) retourne SQL_NEED_DATA. Envoyez les données par segments à l'aide de [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md) et [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
- **Remarque** En règle générale, la liaison selon les colonnes et les lignes est davantage employée avec les fonctions [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) et [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) qu'avec [SQLExecDirect](https://go.microsoft.com/fwlink/?LinkId=58399).  
+ **Remarque** En règle générale, la liaison selon les colonnes et les lignes est davantage employée avec les fonctions [SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md) et [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md) qu'avec [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Rubriques de procédures relatives à l’exécution de requêtes &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
-  
   

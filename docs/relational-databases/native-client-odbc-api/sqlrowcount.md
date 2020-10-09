@@ -15,12 +15,12 @@ ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11156b3b3080c537f1fb65eee081632ce7f3c1e3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 81d32f5f577d9c594556c477620e89435cf66226
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423961"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869129"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "88423961"
  Lorsqu’une [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction INSERT, Update, Delete ou Merge avec une clause OUTPUT est exécutée, SQLRowCount ne retourne pas le nombre de lignes affectées tant que toutes les lignes du jeu de résultats générés par la clause OUTPUT n’ont pas été consommées. Pour consommer ces lignes, vous appelez SQLFetch ou SQLFetchScroll. SQLResultCols retourne-1 jusqu’à ce que toutes les lignes de résultat soient consommées. Une fois SQLFetch ou SQLFetchScroll retournée SQL_NO_DATA, l’application doit appeler SQLRowCount pour déterminer le nombre de lignes affectées avant d’appeler SQLMoreResults pour passer au résultat suivant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLRowCount fonction)](https://go.microsoft.com/fwlink/?LinkId=59367)   
+ [SQLRowCount fonction)](../../odbc/reference/syntax/sqlrowcount-function.md)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
-  
   
