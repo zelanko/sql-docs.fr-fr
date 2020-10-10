@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2da3363a9458d29f15a865bad2a3137736c7beff
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fe9f659a3ce6c58ce54cb322c05e11ce82444dfa
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540086"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890889"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>Propriété FlagIndex (classe ClientSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient la valeur d'index de l'indicateur.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -43,9 +43,8 @@ object.FlagIndex [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur u**Int32** qui spécifie la valeur d’index de l’indicateur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

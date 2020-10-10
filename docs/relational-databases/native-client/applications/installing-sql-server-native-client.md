@@ -1,5 +1,5 @@
 ---
-title: En cours d'installation
+title: Installation de
 description: SQL Server Native Client 11,0 est installé avec SQL Server 2016. En savoir plus sur l’emplacement d’installation des composants. Il existe également un programme d’installation redistribuable.
 ms.custom: ''
 ms.date: 07/15/2016
@@ -22,11 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 310fe1e7c2c42de405459becbde88334caf12dd5
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 8a3047db0cedf165016257961ea9c27474a941ef
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005729"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892329"
 ---
 # <a name="installing-sql-server-native-client"></a>Installation de SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,7 +52,7 @@ Vous pouvez également obtenir sqlncli.msi à partir de la page web de SQL Serve
   
  Outre l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dans le cadre de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un programme d'installation redistribuable nommé sqlncli.msi se trouve sur le disque d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], à l'emplacement suivant : `%CD%\Setup\`.  
   
- Vous pouvez distribuer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client par le biais de sqlncli.msi. Vous pouvez être amené à installer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client lorsque vous déployez une application. Une façon d'installer plusieurs packages dans ce qui paraît à l'utilisateur être une installation unique consiste à utiliser la technologie des programmes de chaînage et d'amorçage. Pour plus d’informations, consultez [Création d’un package de programme d’amorçage personnalisé pour Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) et [Ajout de composants requis personnalisés](https://go.microsoft.com/fwlink/?LinkId=115668).  
+ Vous pouvez distribuer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client par le biais de sqlncli.msi. Vous pouvez être amené à installer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client lorsque vous déployez une application. Une façon d'installer plusieurs packages dans ce qui paraît à l'utilisateur être une installation unique consiste à utiliser la technologie des programmes de chaînage et d'amorçage. Pour plus d’informations, consultez [Création d’un package de programme d’amorçage personnalisé pour Visual Studio 2005](/previous-versions/aa730839(v=vs.80)) et [Ajout de composants requis personnalisés](/visualstudio/deployment/creating-bootstrapper-packages).  
   
  Les versions x64 et Itanium de sqlncli.msi installent également la version 32 bits de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Si votre application vise une plateforme autre que celle sur laquelle elle a été développée, vous pouvez télécharger les versions de sqlncli.msi pour x64, Itanium et x86 à partir du Centre de téléchargement Microsoft.  
   
@@ -71,6 +72,5 @@ Vous pouvez également obtenir sqlncli.msi à partir de la page web de SQL Serve
   
 ## <a name="see-also"></a>Voir aussi  
  [Création d’applications avec SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
- [Rubriques de procédures relatives à l'installation](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
-  
+ [Rubriques de procédures relatives à l'installation](/previous-versions/sql/)  
   

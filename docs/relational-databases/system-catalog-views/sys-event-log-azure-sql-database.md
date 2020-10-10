@@ -21,16 +21,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d75c8cb02c64b5965fd5a6fe084b065c3dc8ba65
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 67c111b15728f92e3a6f0ac8dac830fe32f2f8da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809845"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892399"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
-[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
+[!INCLUDE[Azure SQL Database](../../includes/applies-to-version/asdb.md)]
 
   Retourne des [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] connexions de base de données, des échecs de connexion et des blocages. Utilisez ces informations pour suivre ou dépanner l'activité de base de données avec [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -89,7 +89,7 @@ ms.locfileid: "91809845"
 
  Les utilisateurs autorisés à accéder à la base de données **Master** disposent d’un accès en lecture seule à cette vue.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ### <a name="event-aggregation"></a>Agrégation d'événements
 
@@ -172,7 +172,7 @@ WHERE event_type = 'throttling'
     AND end_time <= '2011-09-25 11:00:00';  
 ```
 
-### <a name="db-scoped-extended-event"></a>Événement étendu de la portée de la base de DB
+### <a name="db-scoped-extended-event"></a>Événement étendu DB-Scoped
 
  Utilisez l’exemple de code suivant pour configurer la session d’événements étendus de la base de code (XEvent) :  
 

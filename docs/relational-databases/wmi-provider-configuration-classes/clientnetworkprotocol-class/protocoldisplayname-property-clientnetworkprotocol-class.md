@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: af194304-5600-48b5-9e93-c2fa95594909
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 71a76870ac25eb7c918bd13e91a5b8c10287ae84
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e0779c737456a9b898895cab2b187fa090b0a6fc
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537288"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91888947"
 ---
 # <a name="protocoldisplayname-property-clientnetworkprotocol-class"></a>Propriété ProtocolDisplayName (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Obtient le nom complet du protocole réseau client spécifié par la [Configuration des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx).  
+  Obtient le nom complet du protocole réseau client spécifié par la [Configuration des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -43,9 +43,8 @@ object.ProtocolDisplayName [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le nom complet du protocole réseau client.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configuration des bibliothèques réseau et des protocoles réseau clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

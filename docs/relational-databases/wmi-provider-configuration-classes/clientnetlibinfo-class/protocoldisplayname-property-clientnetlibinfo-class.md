@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: b90755fd-7cac-4bdb-8e45-e95119a7665c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8a72a93faf6e66985cd2c19dc426f724b0fba13
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d34a04a6014351e1953ef3fd0a081a1f2e9d4abd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540781"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890929"
 ---
 # <a name="protocoldisplayname-property-clientnetlibinfo-class"></a>Propriété ProtocolDisplayName (classe ClientNetLibInfo)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient ou définit le nom utilisé pour afficher le protocole.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -43,9 +43,8 @@ object.ProtocolDisplayName [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le nom complet utilisé pour le protocole.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

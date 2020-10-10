@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: bce69ab9-ea5b-43fd-8114-08b1b5890755
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 772e6c3eac9a6e6b9434e2cbb9e76f884cc031aa
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 73430317142354c33b973ee5dca6f0748ba1d6cb
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537202"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889172"
 ---
 # <a name="setdisable-method-clientnetworkprotocol-class"></a>Méthode SetDisable (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Désactive le protocole réseau client spécifié par la [Configuration des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx).  
+  Désactive le protocole réseau client spécifié par la [Configuration des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md).  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -43,9 +43,8 @@ object.SetDisable()
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configuration des bibliothèques réseau et des protocoles réseau clients](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configuration des bibliothèques réseau et des protocoles réseau clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

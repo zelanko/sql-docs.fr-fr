@@ -22,12 +22,12 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54eaac3f4b8a5e8cc8ab6de6c0b0c75fb54c22c3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c67769e4afd62c4b69628a263f3485ee63081a2a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428181"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892009"
 ---
 # <a name="changing-sql-server-native-client-passwords-programmatically"></a>Modification des mots de passe SQL Server Native Client par programmation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88428181"
   Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À compter de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge la gestion de l’expiration du mot de passe par programme via le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client et le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client, ainsi que par les modifications apportées aux boîtes de dialogue de **SQL Server connexion** .  
   
 > [!NOTE]  
->  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../../relational-databases/security/strong-passwords.md).  
+>  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](/windows/win32/seccrypto/cryptography-reference). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Codes d'erreur des connexions SQL Server  
  Lorsqu'une connexion ne peut pas être établie en raison de problèmes d'authentification, l'un des codes d'erreur SQL Server suivants est disponible pour aider l'application à établir le diagnostic et la récupération.  
@@ -120,5 +120,4 @@ ms.locfileid: "88428181"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
-  
   

@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ea0b09b3a20322065648efd3692d835b7c16ac9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 1496143b862037ae8a4d0593ac3cc412dfd0b56e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89521241"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91889173"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Méthode SetOrderValue (classe ClientNetworkProtocol)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sélectionne le protocole avec la valeur d'ordre spécifiée dans la liste de protocoles du client.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -49,9 +49,8 @@ object.SetOrderValue(OrderValue)
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés de protocoles clients (onglet Ordre)](https://technet.microsoft.com/library/ms187884.aspx)  
-  
+ [Propriétés de protocoles clients (onglet Ordre)](../../../tools/configuration-manager/client-protocols-properties-order-tab.md)  
   

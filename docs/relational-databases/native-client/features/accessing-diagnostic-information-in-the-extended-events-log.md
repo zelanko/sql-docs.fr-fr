@@ -10,19 +10,19 @@ ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51dc4f1def0f612c0eb074ae1111a177e27c1413
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 71219302c9180000ee14c18f0d7f90c9557c3673
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042760"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891989"
 ---
 # <a name="accessing-sql-server-native-client-diagnostic-information-in-the-extended-events-log"></a>Accès SQL Server Native Client informations de diagnostic dans le journal des événements étendus
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivi Native Client et d’accès aux données ([suivi d’accès aux données](https://go.microsoft.com/fwlink/?LinkId=125805)) a été mis à jour pour faciliter l’extraction des informations de diagnostic sur les échecs de connexion à partir de la mémoire tampon en anneau de connectivité et des informations sur les performances de l’application à partir du journal des événements étendus.  
+  À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivi Native Client et d’accès aux données ([suivi d’accès aux données](/previous-versions/sql/sql-server-2008/cc765421(v=sql.100))) a été mis à jour pour faciliter l’extraction des informations de diagnostic sur les échecs de connexion à partir de la mémoire tampon en anneau de connectivité et des informations sur les performances de l’application à partir du journal des événements étendus.  
   
- Pour plus d’informations sur la lecture du journal des événements étendus, consultez [Afficher des données de session d’événements](https://msdn.microsoft.com/library/ac742a01-2a95-42c7-b65e-ad565020dc49).  
+ Pour plus d’informations sur la lecture du journal des événements étendus, consultez [Afficher des données de session d’événements](../../extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).  
   
 > [!NOTE]  
 >  Cette fonctionnalité n'est conçue qu'à des fins de dépannage et de diagnostic et peut ne pas convenir à des fins d'audit ou de sécurité.  
@@ -215,5 +215,4 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des erreurs et des messages](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
-  
   

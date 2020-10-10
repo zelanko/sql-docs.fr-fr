@@ -16,12 +16,12 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e50be9c92fdf887fbf11ae5e301c8c21b55be62c
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: f500e41737bf3c1c17ada377f533bd1241d0db4b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247588"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892289"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections-in-sql-server-native-client"></a>Prise en charge du nom de principal du service (SPN) dans les connexions clientes dans SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -40,11 +40,11 @@ ms.locfileid: "87247588"
   
  Pour plus d'informations sur Kerberos, consultez les articles suivants :  
   
--   [Supplément technique Kerberos pour Windows](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
+-   [Kerberos Technical Supplement for Windows (en anglais)](/previous-versions/msp-n-p/ff649429(v=pandp.10))  
   
--   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
+-   [Microsoft Kerberos (en anglais)](/windows/win32/secauthn/microsoft-kerberos)  
   
-## <a name="usage"></a>Usage  
+## <a name="usage"></a>Utilisation  
  Le tableau suivant décrit les scénarios les plus courants dans lesquels les applications clientes peuvent activer l'authentification sécurisée.  
   
 |Scénario|Description|  
@@ -72,7 +72,7 @@ ms.locfileid: "87247588"
  Le nouveau comportement de connexion est implémenté par le client ; par conséquent, il n'est pas spécifique à une version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Serveurs liés et délégation  
- Lorsque des serveurs liés sont créés, le paramètre ** \@ provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) peut être utilisé pour spécifier les noms principaux de service du serveur et du partenaire de basculement. Les avantages de ce choix sont les mêmes que pour la spécification de noms principaux de service dans les chaînes de connexion des clients : davantage de simplicité et de fiabilité pour l'établissement des connexions qui utilisent l'authentification Kerberos.  
+ Lorsque des serveurs liés sont créés, le paramètre **\@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) peut être utilisé pour spécifier les noms principaux de service du serveur et du serveur partenaire de basculement. Les avantages de ce choix sont les mêmes que pour la spécification de noms principaux de service dans les chaînes de connexion des clients : davantage de simplicité et de fiabilité pour l'établissement des connexions qui utilisent l'authentification Kerberos.  
   
  La délégation avec des serveurs liés requiert l'authentification Kerberos.  
   
@@ -94,13 +94,13 @@ ms.locfileid: "87247588"
   
 |Syntaxe|Description|  
 |------------|-----------------|  
-|MSSQLSvc/*FQDN*|Nom principal de service par défaut, généré par le fournisseur, pour une instance par défaut lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *FQDN* est un nom de domaine complet.|  
+|MSSQLSvc/*fqdn*|Nom principal de service par défaut, généré par le fournisseur, pour une instance par défaut lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *fqdn* est un nom de domaine complet.|  
 |MSSQLSvc/*fqdn*:*port*|Nom principal de service par défaut, généré par le fournisseur, lorsque le protocole TCP est utilisé.<br /><br /> *port* est un numéro de port TCP.|  
-|MSSQLSvc/*FQDN*:*nom_instance*|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *InstanceName* est le nom d’une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*fqdn*:*InstanceName*|Nom principal de service par défaut, généré par le fournisseur, pour une instance nommée lorsqu'un autre protocole que TCP est utilisé.<br /><br /> *InstanceName* est le nom d’une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|Nom principal de service mappé aux comptes d'ordinateur intégrés qui sont inscrits automatiquement par Windows.|  
-|*Nom d’utilisateur* @ *Domaine*|Spécification directe d'un compte de domaine.<br /><br /> *Username* est un nom de compte d'utilisateur Windows.<br /><br /> *Domain* est un nom de domaine ou nom de domaine complet Windows.|  
-|*Nomordinateur* $@ *Domaine*|Spécification directe d'un compte d'ordinateur.<br /><br /> (Si le serveur auquel vous vous connectez s'exécute sous les comptes LOCAL SYSTEM ou NETWORK SERVICE, pour obtenir l'authentification Kerberos, **ServerSPN** peut être au format *MachineName*$@*Domain* .)|  
-|*KDCKey* / *Nomordinateur*|Nom principal de service spécifié par l'utilisateur.<br /><br /> *KDCKey* est une chaîne alphanumérique conforme aux règles d'une clé du centre de distribution de clés.|  
+|*Username*@*Domain*|Spécification directe d'un compte de domaine.<br /><br /> *Username* est un nom de compte d'utilisateur Windows.<br /><br /> *Domain* est un nom de domaine ou nom de domaine complet Windows.|  
+|*MachineName*$@*Domain*|Spécification directe d'un compte d'ordinateur.<br /><br /> (Si le serveur auquel vous vous connectez s'exécute sous les comptes LOCAL SYSTEM ou NETWORK SERVICE, pour obtenir l'authentification Kerberos, **ServerSPN** peut être au format *MachineName*$@*Domain* .)|  
+|*KDCKey*/*MachineName*|Nom principal de service spécifié par l'utilisateur.<br /><br /> *KDCKey* est une chaîne alphanumérique conforme aux règles d'une clé du centre de distribution de clés.|  
   
 ## <a name="odbc-and-ole-db-syntax-supporting-spns"></a>Syntaxe ODBC et OLE DB prenant en charge les noms principaux de service  
  Pour plus d'informations spécifiques à la syntaxe, consultez les rubriques suivantes :  
@@ -114,4 +114,3 @@ ms.locfileid: "87247588"
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
 [Inscrire un nom de principal du service pour les connexions Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
-  

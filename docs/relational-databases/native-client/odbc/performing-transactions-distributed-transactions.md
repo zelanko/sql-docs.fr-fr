@@ -18,11 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7732b2e0f975ad1cd026a75f9614b3cb59ec7d8
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b20ac97f52b9429c1d3ab0b0db5230100af2e19f
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009747"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892259"
 ---
 # <a name="create-a-distributed-transaction"></a>Créer une transaction distribuée
 
@@ -59,7 +60,7 @@ _(1)_ MSDTC peut être appelé sans ODBC. Dans ce cas, MSDTC devient le gestionn
 
 Supposons que votre application ODBC C++ native client est inscrite dans une transaction distribuée. Ensuite, l’application est inscrite dans une deuxième transaction distribuée. Dans ce cas, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC native client conserve la transaction distribuée d’origine et s’inscrit dans la nouvelle transaction distribuée.
 
-Pour plus d’informations, consultez le [Guide de référence du programmeur DTC](https://docs.microsoft.com/previous-versions/windows/desktop/ms686108\(v=vs.85\)).
+Pour plus d’informations, consultez le [Guide de référence du programmeur DTC](/previous-versions/windows/desktop/ms686108(v=vs.85)).
 
 ## <a name="c-alternative-for-sql-database-in-the-cloud"></a>Alternative C# pour SQL Database dans le Cloud
 

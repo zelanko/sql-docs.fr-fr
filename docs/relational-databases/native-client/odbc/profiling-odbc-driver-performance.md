@@ -21,12 +21,12 @@ ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 172557586f7198bcc6151fd58f12faa0683f4fc0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db94d769171bd5335253611758da5234f6d5a7c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428121"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892269"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profilage des performances du pilote ODBC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -72,7 +72,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Réseau  
   
--   Temps  
+-   Heure  
   
  Dans le tableau suivant, les descriptions des champs de la structure de données SQLPERF s'appliquent également aux statistiques enregistrées dans le fichier journal de performance.  
   
@@ -86,7 +86,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SQLSelects|Nombre d'instructions SELECT traitées après SQL_PERF_START.|  
 |SQLSelectRows|Nombre de lignes sélectionnées après SQL_PERF_START.|  
 |Transactions|Nombre de transactions utilisateur après SQL_PERF_START, y compris les restaurations. Lorsqu'une application ODBC s'exécute avec SQL_AUTOCOMMIT_ON, chaque commande est considérée comme une transaction.|  
-|SQLPrepares|Nombre d’appels de [fonction SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360) après SQL_PERF_START.|  
+|SQLPrepares|Nombre d’appels de [fonction SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md) après SQL_PERF_START.|  
 |ExecDirects|Nombre d’appels **SQLExecDirect** après SQL_PERF_START.|  
 |SQLExecutes|Nombre d’appels **SQLExecute** après SQL_PERF_START.|  
 |CursorOpens|Nombre de fois où le pilote a ouvert un curseur côté serveur après SQL_PERF_START.|  
@@ -124,5 +124,4 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Native Client &#40;&#41;ODBC ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [Rubriques de procédures relatives au profilage des performances du pilote ODBC &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
-  
   

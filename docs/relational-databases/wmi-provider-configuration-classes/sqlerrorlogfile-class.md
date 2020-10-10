@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f74e8efc28591bb951d52aa7e242ee259810ff8f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 11c22c1756e580cc194db336fed4e192f5b67e3b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540026"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891639"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ class SQLErrorLogFile
 |LogFileSize|Type de données : **UInt32**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Taille du fichier journal, en octets.|  
 |Nom|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> <br /><br /> Nom du fichier journal.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 | Type | Nom |
 | ---- | ---- |
@@ -95,10 +95,9 @@ Next
   
      ** \<Drive> : \Program Files\Microsoft SQL Server\MSSQL11** **. \<InstanceName> \MSSQL\Log**  
   
- Si vous vous connectez via un pare-feu, vérifiez qu'une exception est définie dans le pare-feu pour WMI sur les ordinateurs cibles distants. Pour plus d’informations, consultez [connexion à WMI à distance à partir de Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
+ Si vous vous connectez via un pare-feu, vérifiez qu'une exception est définie dans le pare-feu pour WMI sur les ordinateurs cibles distants. Pour plus d’informations, consultez [connexion à WMI à distance à partir de Windows Vista](/windows/win32/wmisdk/connecting-to-wmi-remotely-starting-with-vista).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SqlErrorLogEvent, classe](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   
  [Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md)  
-  
   

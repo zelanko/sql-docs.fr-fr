@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1e7cb88f8fbb942678c2aaf785a4b04a9297c74f
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 02703ceb13fdd04e0a90fee6b7c996a2fa632b73
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545199"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891949"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Classe SqlServiceAdvancedProperty
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -31,9 +31,8 @@ ms.locfileid: "89545199"
   
  La [propriété AdvancedProperties (classe SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) fait référence à un tableau d’objets de [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) .  
   
- La classe de [démarrage et d’arrêt de services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) représente des propriétés qui sont uniques au service. Ces propriétés ne figurent pas dans la liste de propriétés associée à la classe de [classe SqlService](https://technet.microsoft.com/library/ms186497.aspx) . La classe de [classe SqlServiceAdvancedProperty](https://technet.microsoft.com/library/ms182447.aspx) permet la représentation de propriétés de chaîne, numériques ou booléennes. Vous pouvez utiliser cette classe pour afficher les propriétés uniques du service spécifié.  
+ La classe de [démarrage et d’arrêt de services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) représente des propriétés qui sont uniques au service. Ces propriétés ne figurent pas dans la liste de propriétés associée à la classe de [classe SqlService](../sqlservice-class/sqlservice-class.md) . La `SqlServiceAdvancedProperty Class` classe autorise la représentation de propriétés de chaîne, numériques ou booléennes. Vous pouvez utiliser cette classe pour afficher les propriétés uniques du service spécifié.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrage, arrêt et interruption de services](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
-  
   

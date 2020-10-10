@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 5b478582-9389-4923-a914-0df2d8333b0e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: de72ccb7342266b58d90c7949b92bdd2053cffb4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: fbf2678182a72f0782eea785a757580f7cf578c0
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523532"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890939"
 ---
 # <a name="filename-property-clientnetlibinfo-class"></a>Propriété FileName (classe ClientNetLibInfo)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient le nom d'un fichier de bibliothèque réseau cliente.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -43,9 +43,8 @@ object.FileName [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur de chaîne qui spécifie le nom du fichier de bibliothèque réseau cliente.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 715a36cc672e48b7b900d9acf167c8637109db91
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 0d5c9e6f61cbdaf44d295e22e9d2775ffefeadcd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540079"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891559"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>Propriété FlagValue (classe ClientSettingsGeneralFlag)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient la valeur de l'indicateur.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -43,9 +43,8 @@ object.FlagValue [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur booléenne qui spécifie la valeur de l'indicateur.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

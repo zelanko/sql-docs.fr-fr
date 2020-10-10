@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 076c91605c245ad49f6c51a2a656d48c7dba2109
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f65cd55570312a4d86e795d224c900fa7517236e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545161"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891239"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilisation de WQL avec le fournisseur WMI pour les événements de serveur
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -50,7 +50,7 @@ CREATE EVENT NOTIFICATION SQLWEP_76CF38C1_18BB_42DD_A7DC_C8820155B0E9
 GO  
 ```  
   
- L'argument de la clause `FROM` de la requête WQL (`DDL_DATABASE_LEVEL_EVENTS`) peut être n'importe quel événement valide sur lequel il est possible de créer une notification d'événements. Les arguments des clauses `SELECT` et `WHERE` peuvent spécifier n'importe quelle propriété d'événement associée à un événement ou à son événement parent. Pour obtenir la liste des événements et des propriétés d’événement valides, consultez [notifications d’événements (moteur de base de données)](https://technet.microsoft.com/library/ms182602.aspx).  
+ L'argument de la clause `FROM` de la requête WQL (`DDL_DATABASE_LEVEL_EVENTS`) peut être n'importe quel événement valide sur lequel il est possible de créer une notification d'événements. Les arguments des clauses `SELECT` et `WHERE` peuvent spécifier n'importe quelle propriété d'événement associée à un événement ou à son événement parent. Pour obtenir la liste des événements et des propriétés d’événement valides, consultez [notifications d’événements (moteur de base de données)](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105)).  
   
  La syntaxe WQL suivante est prise en charge explicitement par le fournisseur WMI pour les événements serveur. Une syntaxe WQL additionnelle peut être spécifiée, mais elle n'est pas spécifique à ce fournisseur et est analysée à la place par le service hôte WMI. Pour plus d'informations sur le langage de requêtes WMI (WQL), consultez la documentation WQL sur MSDN (Microsoft Developer Network).  
   
@@ -74,7 +74,7 @@ WHERE where_condition
  Spécifie que toutes les propriétés associées à un événement sont interrogées.  
   
  *event_type*  
- Est un événement sur lequel une notification d'événements peut être créée. Pour obtenir la liste des événements disponibles, consultez [fournisseur WMI pour les classes et propriétés d’événements de serveur](https://technet.microsoft.com/library/ms186449.aspx). Notez que les noms de *type d’événement* correspondent aux mêmes *event_type*  |  *event_group* qui peuvent être spécifiés quand vous créez manuellement une notification d’événement à l’aide de l’événement créer une notification d’événements. CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS et TRC_DATABASE sont des exemples de *type d’événement* .  
+ Est un événement sur lequel une notification d'événements peut être créée. Pour obtenir la liste des événements disponibles, consultez [fournisseur WMI pour les classes et propriétés d’événements de serveur](./wmi-provider-for-server-events-classes-and-properties.md). Notez que les noms de *type d’événement* correspondent aux mêmes *event_type*  |  *event_group* qui peuvent être spécifiés quand vous créez manuellement une notification d’événement à l’aide de l’événement créer une notification d’événements. CREATE_TABLE, LOCK_DEADLOCK, DDL_USER_EVENTS et TRC_DATABASE sont des exemples de *type d’événement* .  
   
 > [!NOTE]  
 >  Certaines procédures stockées système qui exécutent des opérations de type DDL peuvent également déclencher des notifications d'événements. Testez vos notifications d'événements pour déterminer leur réponse aux procédures stockées du système qui sont exécutées. Par exemple, l’instruction CREATe TYPE et la procédure stockée **sp_addtype** déclenchent toutes deux une notification d’événement qui est créée sur un événement CREATE_TYPE. Toutefois, la procédure stockée **sp_rename** ne déclenche pas de notifications d’événements. Pour plus d’informations, consultez[événements DDL](../../relational-databases/triggers/ddl-events.md).  
@@ -84,7 +84,7 @@ WHERE where_condition
   
  Seul l' `=` opérande peut être utilisé avec **DatabaseName**, **SchemaName**et **ObjectName**. D'autres expressions ne peuvent pas être utilisées avec ces propriétés d'événement.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  La *where_condition* de la syntaxe du fournisseur WMI pour les événements de serveur détermine les éléments suivants :  
   
 -   Portée par laquelle le fournisseur tente de récupérer les *event_type*spécifiées : le niveau serveur, le niveau base de données ou le niveau objet (le seul objet pris en charge actuellement est la file d’attente). En dernier ressort, cette étendue détermine le type de notification d'événements créé dans la base de données cible. Ce processus est appelé inscription de notification d'événements.  
@@ -111,9 +111,9 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
  Notez que certains événements ne peuvent pas être interrogés dans quelque étendue que ce soit. Par exemple, une requête WQL sur un événement de trace tel que Lock_Deadlock ou un groupe d'événements de trace tel que TRC_LOCKS ne peut être inscrite qu'au niveau serveur. De même, l'événement CREATE_ENDPOINT et le groupe d'événements DDL_ENDPOINT_EVENTS ne peuvent également être inscrits qu'au niveau serveur. Pour plus d’informations sur l’étendue appropriée pour l’inscription des événements, consultez [conception de notifications d’événements](https://technet.microsoft.com/library/ms175854\(v=sql.105\).aspx). Une tentative d’inscription d’une requête WQL dont les *event_type* peuvent uniquement être inscrits au niveau du serveur est toujours effectuée au niveau du serveur. L'inscription réussit si le client WMI a les autorisations requises. Sinon, une erreur est retournée au client. Dans certains cas, cependant, vous pouvez encore utiliser la clause WHERE comme filtre pour les événements de niveau serveur en fonction des propriétés qui correspondent à l'événement. Par exemple, de nombreux événements de trace ont une propriété **DatabaseName** qui peut être utilisée dans la clause WHERE comme filtre.  
   
- Les notifications d’événements d’étendue de serveur sont créées dans la base de données **Master** et peuvent être interrogées pour les métadonnées à l’aide de l’affichage catalogue [sys. server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) .  
+ Les notifications d’événements d’étendue de serveur sont créées dans la base de données **Master** et peuvent être interrogées pour les métadonnées à l’aide de l’affichage catalogue [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) .  
   
- Les notifications d’événements au niveau de la base de données ou de l’étendue objet sont créées dans la base de données spécifiée et peuvent être interrogées pour les métadonnées à l’aide de l’affichage catalogue [sys. event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) . (Vous devez préfixer l'affichage catalogue avec le nom correspondant de la base de données.)  
+ Les notifications d’événements au niveau de la base de données ou de l’étendue objet sont créées dans la base de données spécifiée et peuvent être interrogées pour les métadonnées à l’aide de l’affichage catalogue [sys.event_notifications](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md) . (Vous devez préfixer l'affichage catalogue avec le nom correspondant de la base de données.)  
   
 ## <a name="examples"></a>Exemples  
   
@@ -142,7 +142,6 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fournisseur WMI pour les concepts des événements de serveur](https://technet.microsoft.com/library/ms180560.aspx)   
- [Notifications d'événements (moteur de base de données)](https://technet.microsoft.com/library/ms182602.aspx)  
-  
+ [Fournisseur WMI pour les concepts des événements de serveur](./wmi-provider-for-server-events-concepts.md)   
+ [Notifications d'événements (moteur de base de données)](/previous-versions/sql/sql-server-2008-r2/ms182602(v=sql.105))  
   

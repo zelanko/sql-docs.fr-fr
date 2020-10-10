@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ee827ab5ca4291ce127a5cf92cd8b7df6afdbc32
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: becbfa26cab11ce9b43d768a0777d7e0a959611c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89523309"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890709"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propriété Size (classe ClientNetLibInfo)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Obtient la taille de la bibliothèque réseau cliente en kilo-octets.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```  
   
@@ -43,9 +43,8 @@ object.Size [= value]
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur uint32 qui spécifie la taille du fichier de bibliothèque réseau cliente en Ko.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d3acca52f0139cf0f7ef6085470a5d9e2b839494
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 48ecf56931682da1ba0cc7ee1e379ad5146479db
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89550893"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891629"
 ---
 # <a name="sqlserveralias-class"></a>Classe SqlServerAlias
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -38,6 +38,5 @@ ms.locfileid: "89550893"
  **Remarque :** la [classe SqlServerAlias](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) hérite la méthode **Put** de la classe Provider. Toutefois, elle ne retourne pas de résultats comme indiqué par la méthode **Provider::Put** . Pour plus d'informations, consultez la documentation relative à WMI.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des protocoles clients](https://technet.microsoft.com/library/ms181035.aspx)  
-  
+ [Configurer des protocoles clients](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
