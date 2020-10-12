@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c9757642736362745bd37607cacf74eeee962125
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 9868b414d627c7ea98504120432c0c3a662d463b
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87824064"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956550"
 ---
 # <a name="installation-and-configuration"></a>Installation et configuration
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -57,9 +57,9 @@ Pour restaurer une sauvegarde sur une instance de SQL Server, vous pouvez utilis
 Pour importer un BacPac dans un nouveau SQL Database, vous pouvez utiliser Management Studio.
 
 1. facultatif Si vous n’avez pas encore de SQL Server dans Azure, accédez au [portail Azure](https://portal.azure.com/) et créez un SQL Database. Dans le processus de création d’une base de données, vous allez créer un serveur. Notez le serveur.
-   - Consultez [ce didacticiel](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) pour créer une base de données en quelques minutes
+   - Consultez [ce didacticiel](/azure/azure-sql/database/single-database-create-quickstart) pour créer une base de données en quelques minutes
 2. Ouvrez SQL Server Management Studio et connectez-vous à votre serveur dans Azure.
-3. Cliquez avec le bouton droit sur le nœud **bases de données** , puis sélectionnez **Importer une application de la couche données**.
+3. Cliquez avec le bouton droit sur le nœud **bases de données** , puis sélectionnez **Importer Data-Tier application**.
 4. Dans **Importer les paramètres** , sélectionnez **Importer à partir du disque local** et sélectionnez le BacPac de l’exemple de base de données à partir de votre système de fichiers.
 5. Sous **paramètres de la base de données** , modifiez le nom de la base de données en *wideworldimporters* et sélectionnez l’édition cible et l’objectif de service à utiliser.
 6. Cliquez sur **suivant** et sur **Terminer** pour lancer le déploiement. Quelques minutes sont à effectuer sur P1. Si vous souhaitez un niveau tarifaire inférieur, il est recommandé d’importer dans une nouvelle base de données P1, puis de modifier le niveau tarifaire au niveau souhaité.
@@ -68,10 +68,10 @@ Pour importer un BacPac dans un nouveau SQL Database, vous pouvez utiliser Manag
 
 ### <a name="full-text-indexing"></a>Indexation de texte intégral
 
-L’exemple de base de données peut utiliser l’indexation de texte intégral. Toutefois, cette fonctionnalité n’est pas installée par défaut avec SQL Server, vous devez la sélectionner lors de l’installation de SQL Server (elle est activée par défaut dans Azure SQL Database). Par conséquent, une étape consécutive à l’installation est requise.
+L’exemple de base de données peut utiliser l’indexation de Full-Text. Toutefois, cette fonctionnalité n’est pas installée par défaut avec SQL Server, vous devez la sélectionner lors de l’installation de SQL Server (elle est activée par défaut dans Azure SQL Database). Par conséquent, une étape consécutive à l’installation est requise.
 
 1. Dans SQL Server Management Studio, connectez-vous à la base de données WideWorldImporters et ouvrez une nouvelle fenêtre de requête.
-2. Exécutez la commande T-SQL suivante pour activer l’utilisation de l’indexation de texte intégral dans la base de données :`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Exécutez la commande T-SQL suivante pour activer l’utilisation de Full-Text indexation dans la base de données :  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
@@ -90,9 +90,8 @@ Dans Azure SQL Database, l’audit est configuré par le biais du [portail Azure
 
 S’applique à : Azure SQL Database
 
-La sécurité au niveau des lignes n’est pas activée par défaut dans le téléchargement BacPac de WideWorldImporters. Pour activer la sécurité au niveau des lignes dans la base de données, exécutez la procédure stockée suivante :
+Row-Level la sécurité n’est pas activée par défaut dans le téléchargement BacPac de WideWorldImporters. Pour activer Row-Level la sécurité dans la base de données, exécutez la procédure stockée suivante :
 
 ```sql
 EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
 ```
-

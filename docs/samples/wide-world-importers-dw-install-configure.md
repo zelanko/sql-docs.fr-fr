@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2f640415ecdc2ae4a48220aeec2a2c78ed79807c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18d4e9c18c4848a0857c1afb146b0d0405f418ce
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488542"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956560"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>Installation et configuration de WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -56,9 +56,9 @@ Pour restaurer une sauvegarde sur une instance de SQL Server, vous pouvez utilis
 Pour importer un BacPac dans un nouveau SQL Database, vous pouvez utiliser Management Studio.
 
 1. facultatif Si vous n’avez pas encore de SQL Server dans Azure, accédez au [portail Azure](https://portal.azure.com/) et créez un SQL Database. Dans le processus de création d’une base de données, vous allez créer un serveur. Notez le serveur.
-   - Consultez [ce didacticiel](https://azure.microsoft.com/documentation/articles/sql-database-get-started/) pour créer une base de données en quelques minutes
+   - Consultez [ce didacticiel](/azure/azure-sql/database/single-database-create-quickstart) pour créer une base de données en quelques minutes
 2. Ouvrez SQL Server Management Studio et connectez-vous à votre serveur dans Azure.
-3. Cliquez avec le bouton droit sur le nœud **bases de données** , puis sélectionnez **Importer une application de la couche données**.
+3. Cliquez avec le bouton droit sur le nœud **bases de données** , puis sélectionnez **Importer Data-Tier application**.
 4. Dans **Importer les paramètres** , sélectionnez **Importer à partir du disque local** et sélectionnez le BacPac de l’exemple de base de données à partir de votre système de fichiers.
 5. Sous **paramètres de la base de données** , modifiez le nom de la base de données en *WideWorldImportersDW* et sélectionnez l’édition cible et l’objectif de service à utiliser.
 6. Cliquez sur **suivant** et sur **Terminer** pour lancer le déploiement. L’exécution de cette opération nécessite quelques minutes. Lorsque vous spécifiez un objectif de service inférieur à S2, il peut prendre plus de temps.

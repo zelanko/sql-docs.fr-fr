@@ -1,6 +1,6 @@
 ---
 description: sys.sql_logins (Transact-SQL)
-title: sys. sql_logins (Transact-SQL) | Microsoft Docs
+title: sys.sql_logins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bfa2b330d03b7480021487983e9ff1a3a210ad11
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fc8e947c60f8a1225b9079cbd55ec9d8a617b712
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88375505"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91957000"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -35,20 +35,21 @@ ms.locfileid: "88375505"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**\<inherited columns>**|--|Hérite de **sys. server_principals**.|  
+|**\<inherited columns>**|--|Hérite de **sys.server_principals**.|  
 |**is_policy_checked**|**bit**|La stratégie de mot de passe est vérifiée.|  
 |**is_expiration_checked**|**bit**|Vérification de l'expiration du mot de passe.|  
 |**password_hash**|**varbinary(256)**|Hachage du mot de passe SQL. Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.|  
   
- Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Les colonnes `owning_principal_id` et ne `is_fixed_role` sont pas héritées de sys. server_principals.
+ Pour obtenir la liste des colonnes héritées par cette vue, consultez [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Les colonnes `owning_principal_id` et ne `is_fixed_role` sont pas héritées de sys.server_principals.
   
 ## <a name="remarks"></a>Notes  
- Pour afficher à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’authentification et les connexions d’authentification Windows, consultez [sys. Server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ Pour afficher à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’authentification et les connexions d’authentification Windows, consultez [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- Quand les utilisateurs de base de données à relation contenant-contenu sont activés, les connexions peuvent être établies sans connexions. Pour identifier ces comptes, consultez  [sys. database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
+ Quand les utilisateurs de base de données à relation contenant-contenu sont activés, les connexions peuvent être établies sans connexions. Pour identifier ces comptes, consultez  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
  Toute connexion d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut voir son propre nom de connexion et la connexion d'administrateur système (sa). Pour voir d'autres connexions, vous devez disposer de l'autorisation ALTER ANY LOGIN, ou d'une autorisation sur la connexion.  
+ Pour afficher le contenu de la colonne password_hash, l’autorisation CONTROL SERVER est requise.
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

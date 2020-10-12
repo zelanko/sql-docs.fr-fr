@@ -19,12 +19,12 @@ ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: dd9ba41579e8d1c0bac76bb634e9074bf9e5c670
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e02f07a78dc5f3022bfd1f374738f22b326ca94e
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89536631"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91955860"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -83,7 +83,7 @@ RECONFIGURE
 |**minimum**|**int**|Valeur minimale de l'option de configuration.|  
 |**maximum**|**int**|Valeur maximale de l'option de configuration.|  
 |**config_value**|**int**|Valeur à laquelle l’option de configuration a été définie à l’aide de **sp_configure** (valeur dans **sys.configurations. Value**). Pour plus d’informations sur ces options, consultez [options de configuration du serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md) et [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
-|**run_value**|**int**|Valeur en cours d’exécution de l’option de configuration (valeur dans **sys.configurations. value_in_use**).<br /><br /> Pour plus d’informations, consultez [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
+|**run_value**|**int**|Valeur en cours d’exécution de l’option de configuration (valeur dans **sys.configurations.value_in_use**).<br /><br /> Pour plus d’informations, consultez [sys.configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
 ## <a name="remarks"></a>Notes  
  Utilisez **sp_configure** pour afficher ou modifier les paramètres au niveau du serveur. Pour modifier les paramètres au niveau de la base de données, utilisez ALTER DATABASE. Pour modifier uniquement les paramètres qui ont une incidence sur la session de l'utilisateur actuel, utilisez l'instruction SET.  
@@ -112,7 +112,10 @@ RECONFIGURE
  Pour plus d’informations, consultez [REconfigure &#40;&#41;Transact-SQL ](../../t-sql/language-elements/reconfigure-transact-sql.md).  
   
 ## <a name="advanced-options"></a>Options avancées  
- Certaines options de configuration, telles que le **masque d’affinité** et l' **intervalle de récupération**, sont désignées comme options avancées. Par défaut, ces options ne sont ni affichables ni modifiables. Pour les rendre disponibles, affectez la valeur 1 à l’option de configuration **ShowAdvandedOptions** .  
+ Certaines options de configuration, telles que le **masque d’affinité** et l' **intervalle de récupération**, sont désignées comme options avancées. Par défaut, ces options ne sont ni affichables ni modifiables. Pour les rendre disponibles, attribuez la valeur 1 à l’option de configuration **afficher les options avancées** . 
+ 
+> [!CAUTION]  
+> Lorsque l’option **afficher les options avancées** a la valeur 1, ce paramètre s’applique à tous les utilisateurs. Il est recommandé d’utiliser uniquement cet État temporairement et de revenir à 0 lorsque vous avez terminé avec la tâche qui a requis l’affichage des options avancées.  
   
  Pour plus d’informations sur les options de configuration et leurs paramètres, consultez [options de configuration du serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
