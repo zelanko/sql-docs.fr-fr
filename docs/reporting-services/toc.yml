@@ -2,7 +2,7 @@
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
 - name: Bienvenue dans SQL Server >
   href: ../sql-server/index.yml
-- name: Vue d'ensemble
+- name: Vue d’ensemble
   items:
     - name: Nouveautés de Reporting Services
       href: ../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md
@@ -145,23 +145,23 @@
           href: ../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
         - name: Héberger une base de données du serveur de rapports dans un cluster de basculement SQL Server
           href: ../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-    - name: Gestionnaire de configurations de Reporting Services (mode natif)
+    - name: Report Server Configuration Manager (mode natif)
       href: ../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md
       items:
-        - name: Configurer le compte de service Report Server (Gestionnaire de configuration de SSRS)
+        - name: Configurer le compte de service Report Server
           href: ../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-        - name: Configurer des URL de serveurs de rapports (Gestionnaire de configuration de SSRS)
+        - name: Configurer des URL de serveurs de rapports
           href: ../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
           items:
-            - name: À propos des réservations et de l’inscription d’URL (Gestionnaire de configuration de SSRS)
+            - name: À propos des réservations et de l'inscription d'URL
               href: ../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-            - name: Configurer une URL (Gestionnaire de configuration de SSRS)
+            - name: Configurer une URL
               href: ../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-            - name: Syntaxe de réservation d’URL (Gestionnaire de configuration de SSRS)
+            - name: Syntaxe de réservation d'URL
               href: ../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-            - name: URL des fichiers de configuration (Gestionnaire de configuration de SSRS)
+            - name: URL des fichiers de configuration
               href: ../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-            - name: Réservations d’URL pour les déploiements de serveur de rapports multi-instance (Gestionnaire de configuration de SSRS)
+            - name: Réservations d'URL pour les déploiements de serveur de rapports multi-instance
               href: ../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
         - name: Créer une base de données
           href: ../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md
@@ -171,7 +171,7 @@
           href: ../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md
         - name: 'Paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de configuration)'
           href: ../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-        - name: Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
+        - name: Configurer le compte d'exécution sans assistance
           href: ../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
         - name: Clés de chiffrement SSRS - Gérer les clés de chiffrement
           href: ../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
@@ -188,7 +188,7 @@
               href: ../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
         - name: Paramètres d'abonnement et compte de partage de fichiers (Gestionnaire de configuration)
           href: ../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md
-        - name: Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif (Gestionnaire de configuration de SSRS)
+        - name: Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
           href: ../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
         - name: Intégration de Power BI
           href: ../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md
