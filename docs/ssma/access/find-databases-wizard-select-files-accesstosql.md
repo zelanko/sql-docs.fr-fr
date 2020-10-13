@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2b1aeed74dc475d3e14130ace1772ce5f604d63b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 973d2ec0a740e07aac94a4f44ab08051294d5128
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488322"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985010"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Assistant Rechercher des bases de données (sélectionner des fichiers) (AccessToSQL)
 La page Sélectionner des fichiers de l’Assistant Rechercher des bases de données répertorie les fichiers qui ont été trouvés lors de la recherche. Pour sélectionner un fichier à ajouter à SSMA, sélectionnez la ligne qui contient le nom de fichier. Lorsque vous avez terminé de sélectionner des fichiers, cliquez sur **suivant** pour afficher la page vérifier la sélection.  
@@ -52,5 +52,4 @@ Date et heure de création de la base de données.
 Date et heure de la dernière mise à jour de la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Référence de l’interface utilisateur (accès)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Référence de l’interface utilisateur (accès)](./user-interface-reference-accesstosql.md)  

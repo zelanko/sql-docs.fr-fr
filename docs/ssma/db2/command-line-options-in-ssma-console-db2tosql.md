@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5dde1168e8107f01f06d5e60fb2b1853d47abc43
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3dfef8a72c8c578b468ebcf34372e603579d13ed
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472522"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987435"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Options de ligne de commande dans la console SSMA (DB2ToSQL)
 Microsoft vous fournit des options de ligne de commande Set robustes pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes sections.  
@@ -120,7 +120,7 @@ Cela désigne le dossier des paramètres de l’environnement du projet pour le 
 ### <a name="secure-password-option--psecurepassword"></a>Option de mot de passe sécurisé :-p/SecurePassword  
 Cette option indique le mot de passe chiffré pour les connexions au serveur. Elle diffère de toutes les autres options : l’option n’exécute aucun script et ne permet pas d’effectuer des activités liées à la migration, mais elle permet de gérer le chiffrement des mots de passe pour les connexions serveur utilisées dans le projet de migration.  
   
-Vous ne pouvez pas entrer une autre option ou un autre mot de passe en tant que paramètre de ligne de commande. Dans le cas contraire, une erreur est générée. Pour plus d’informations, reportez-vous à la section [gestion des mots de passe](https://msdn.microsoft.com/56d546e3-8747-4169-aace-693302667e94) .  
+Vous ne pouvez pas entrer une autre option ou un autre mot de passe en tant que paramètre de ligne de commande. Dans le cas contraire, une erreur est générée. Pour plus d’informations, reportez-vous à la section [gestion des mots de passe](./managing-passwords-db2tosql.md) .  
   
 Les sous-options suivantes sont prises en charge pour `-p/securepassword` :  
   
@@ -170,4 +170,3 @@ L’étape suivante dépend des exigences de votre projet :
 2.  Pour générer des rapports, consultez [génération de rapports &#40;&#41;DB2ToSQL ](../../ssma/db2/generating-reports-db2tosql.md).  
   
 3.  Pour résoudre les problèmes dans la console, consultez [troubleshooting &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
-  

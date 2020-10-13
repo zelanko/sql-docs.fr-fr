@@ -1,6 +1,6 @@
 ---
-description: sp_special_columns_100 (SQL Data Warehouse)
-title: sp_special_columns_100 (SQL Data Warehouse) | Microsoft Docs
+description: sp_special_columns_100 (Azure Synapse Analytics)
+title: sp_special_columns_100 (Azure Synapse Analytics)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
@@ -14,14 +14,14 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7089187cc0eaa6c0cc3667d8bbf34aeca93bc3f2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 605bc7a9a446139a637d5e960643fd49e3ca62a7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725040"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987810"
 ---
-# <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
+# <a name="sp_special_columns_100-azure-synapse-analytics"></a>sp_special_columns_100 (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Retourne le jeu optimal de colonnes qui identifie de façon unique une ligne d'une table. Retourne également les colonnes automatiquement mises à jour lorsqu'une transaction met à jour une valeur dans la ligne.  
@@ -31,7 +31,7 @@ ms.locfileid: "91725040"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 sp_special_columns_100 [ @table_name = ] 'table_name'     
      [ , [ @table_owner = ] 'table_owner' ]   
@@ -77,7 +77,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Étendue réelle de l'identificateur de ligne. Peut prendre les valeurs 0, 1 ou 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 0. Ce champ retourne toujours une valeur.<br /><br /> 0 = SQL_SCOPE_CURROW. La validité du numéro d'identification de ligne est garantie uniquement pendant qu'il est positionné sur cette ligne. Il se peut qu'une sélection ultérieure qui utiliserait le numéro d'identification de la ligne ne retourne pas de ligne si celle-ci a été mise à jour ou supprimée au cours d'une autre transaction.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. La validité du numéro d'identification de ligne est garantie pour la durée de la transaction en cours.<br /><br /> 2 = SQL_SCOPE_SESSION. L'identificateur de ligne est valide pour la durée de la session (parmi les limites de transaction).|  
-|COLUMN_NAME|**sysname**|Nom de colonne de chaque colonne de la *table*retournée. Ce champ retourne toujours une valeur.|  
+|COLUMN_NAME|**sysname**|Nom de colonne de chaque colonne de la *table* retournée. Ce champ retourne toujours une valeur.|  
 |DATA_TYPE|**smallint**|Type de données ODBC SQL.|  
 |TYPE_NAME|**sysname**|Nom du type de données dépendant de la source de données ; par exemple, **char**, **varchar**, **Money**ou **Text**.|  
 |PRECISION|**Int**|Précision de la colonne dans la source de données. Ce champ retourne toujours une valeur.|  

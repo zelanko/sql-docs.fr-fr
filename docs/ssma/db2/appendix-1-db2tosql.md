@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d6bd27b4c437d2dded9941feec3cedaa3ccd4ccb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9b1d9148572823e8cd274fe2812e46b2a84320a3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468881"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988155"
 ---
 # <a name="appendix---1-db2tosql"></a>Annexe-1 (DB2ToSQL)
 Affichage rapide des options de ligne de commande de la console SSMA :  
   
-|SL. Non.|Commutateur|Nécessaire ?|Argument de commutateur|Valeurs autorisées|  
+|SL. Non.|Basculer|Requis ?|Argument de commutateur|Valeurs autorisées|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/script|Oui|scriptfile|Nom de fichier XML valide.<br /><br />Fichier de définition de script de console.|  
 |2|-v/variable|Non|variablevaluefile|Nom de fichier XML valide.<br /><br />Si des variables sont utilisées dans un fichier de script, ce fichier doit être spécifié.|  
@@ -32,5 +32,4 @@ Affichage rapide des options de ligne de commande de la console SSMA :
 |8|-?|Non|Non applicable|Non applicable|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Exécution de la console SSMA](./executing-the-ssma-console-db2tosql.md)  

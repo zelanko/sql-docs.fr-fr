@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 2454ec9d594977a89ddf867645bc7e2d8fe26e57
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2dbcef29550276241cb638b6224914e43e2e88ec
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454151"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988458"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Utilisation de projets SSMA (DB2ToSQL)
 Pour migrer des bases de données DB2 vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez d’abord créer un projet SSMA. Le projet est un fichier qui contient les informations suivantes :  
@@ -116,10 +116,9 @@ Lorsque vous ouvrez un projet, il est déconnecté de DB2 et de [!INCLUDE[ssNoVe
 3.  Pour vous reconnecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dans le menu **fichier** , cliquez sur **se reconnecter à SQL Server**.  
   
 ## <a name="next-step"></a>étape suivante  
-L’étape suivante du processus de migration consiste à [se connecter à la base de données DB2](https://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  
+L’étape suivante du processus de migration consiste à [se connecter à la base de données DB2](./connecting-to-db2-database-db2tosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration de bases de données DB2 vers SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
 [Connexion à la base de données DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
 [Connexion à SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
-  

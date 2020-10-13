@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: dc47389afdd9b8241a0d06960baf592639daa6cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3069d1cff693ead8a6acf3af7f9644c4a3d6ab43
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88372855"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988665"
 ---
 # <a name="managing-passwords-accesstosql"></a>Gestion des mots de passe (AccessToSQL)
 Cette section concerne la sécurisation des mots de passe de base de données et la procédure d’importation ou d’exportation sur plusieurs serveurs :  
@@ -132,5 +132,4 @@ L’application console SSMA vous permet d’exporter les mots de passe de base 
 7. Veuillez confirmer le mot de passe : xxxxxxxx  
 
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA (accès)](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
-  
+[Exécution de la console SSMA (accès)](./executing-the-ssma-console-accesstosql.md)  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 597de64479014e44f38c7073b6bc88e76a3137b4
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 12c51ce9a3b4bdd83a1d1c4c7295f2ff438bc707
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934130"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987715"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Ajout et suppression de fichiers de base de données Access (AccessToSQL)
 Pour migrer des données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous devez ajouter une ou plusieurs bases de données Access au projet SSMA. Ces bases de données doivent être Access 97 ou versions ultérieures. Si vous avez des bases de données d’une version antérieure d’Access, vous devez convertir les bases de données vers une version plus récente. Pour ce faire, vous devez ouvrir et enregistrer les bases de données dans Access 97 ou une version ultérieure avant de les ajouter à SSMA.  
@@ -85,7 +85,7 @@ Si vous souhaitez ajouter plusieurs bases de données Access de différents doss
   
     Vous pouvez utiliser les boutons **Sélectionner tout** et **Effacer tout** en haut de la liste pour sélectionner ou effacer toutes les bases de données. Vous pouvez maintenir la touche CTRL enfoncée pour sélectionner plusieurs bases de données, ou maintenir la touche Maj enfoncée pour sélectionner une plage de bases de données.  
   
-7.  Cliquez sur **Next**.  
+7.  Cliquez sur **Suivant**.  
   
 8.  Dans la page vérifier, cliquez sur **Terminer**.  
   
@@ -129,9 +129,8 @@ Vous pouvez supprimer une base de données Access d’un projet en procédant co
 2.  Cliquez avec le bouton droit sur la base de données, puis sélectionnez **Supprimer la base de données**.  
   
 ## <a name="next-step"></a>étape suivante  
-L’étape suivante du processus de migration consiste à [se connecter à SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
+L’étape suivante du processus de migration consiste à [se connecter à SQL Server](../sybase/connecting-to-sql-server-sybasetosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration de bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Création et gestion de projets](creating-and-managing-projects-accesstosql.md)  
-  

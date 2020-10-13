@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 641edbb3db15387543645fcab7a375b2985a01d6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 58cc5fc2f06419293b58fa6a38d6d75a8f750897
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463427"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987885"
 ---
 # <a name="generating-reports-mysqltosql"></a>Génération de rapports (MySQLToSQL)
 Les rapports de certaines activités effectuées à l’aide de commandes sont générés dans la console SSMA au niveau de l’arborescence d’objets.  
@@ -141,5 +141,4 @@ La commande **Refresh-from-Database** a un paramètre **Report-Errors-to** qui s
 -   échec du script  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA (MySQL)](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
-  
+[Exécution de la console SSMA (MySQL)](./executing-the-ssma-console-mysqltosql.md)  

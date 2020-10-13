@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 48054f25a5c7156a6d9d25d4770d19437d9dbadf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8c39bc03cb6a1da09c7be6aac41c18b9d3bbd871
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454301"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987525"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Paramètres du projet (mappage de type) (AccessToSQL)
 Les paramètres de projet de mappage de type vous permettent de définir des mappages de types par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour des objets de base de données individuels. Pour plus d’informations, consultez [mappage des types de données source et cible](mapping-source-and-target-data-types-accesstosql.md).  
@@ -55,7 +55,7 @@ Le tableau suivant montre le mappage par défaut entre les types de données sou
 |**integer**|**smallint**|  
 |**long**|**int**|  
 |**autorise**|**varbinary(max)**|  
-|**mémo**|**nvarchar(max)**|  
+|**champs**|**nvarchar(max)**|  
 |**MEMO** -pour Access 97|**varchar(max)**|  
 |**single**|**real**|  
 |**texte [ \* .. \* ]**|**nvarchar [ \* ]**|  
@@ -75,5 +75,4 @@ Cliquez pour réinitialiser tous les mappages de type de données aux paramètre
   
 ## <a name="see-also"></a>Voir aussi  
 [Mappage de types de données sources et cibles](mapping-source-and-target-data-types-accesstosql.md)  
-[Référence de l’interface utilisateur (accès)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Référence de l’interface utilisateur (accès)](./user-interface-reference-accesstosql.md)  

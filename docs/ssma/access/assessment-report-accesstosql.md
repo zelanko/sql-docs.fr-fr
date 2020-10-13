@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: ba6f53aa-0049-4c49-8bb8-607a8bfaa737
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 5f1058947591fdd454ce181b2d098f88b183cbe1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6c747f50c9216626e710318175cf5e53a0624d7a
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497825"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987655"
 ---
 # <a name="assessment-report-accesstosql"></a>Rapport d’évaluation (AccessToSQL)
 La fenêtre rapport d’évaluation affiche les résultats de la conversion des objets de base de données en [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe et peut également vous aider à estimer la complexité et le coût de vos projets de migration.  
   
-Pour créer un rapport d’évaluation, sélectionnez les objets à convertir dans l’Explorateur de métadonnées source, cliquez avec le bouton droit sur **bases de données**, puis sélectionnez **créer un rapport**. Vous pouvez également afficher ce rapport automatiquement après la conversion de schémas. Toutefois, le nom du rapport sera un rapport de conversion. Pour plus d’informations, consultez [paramètres du projet (GUI) (SSMA commun)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693).  
+Pour créer un rapport d’évaluation, sélectionnez les objets à convertir dans l’Explorateur de métadonnées source, cliquez avec le bouton droit sur **bases de données**, puis sélectionnez **créer un rapport**. Vous pouvez également afficher ce rapport automatiquement après la conversion de schémas. Toutefois, le nom du rapport sera un rapport de conversion. Pour plus d’informations, consultez [paramètres du projet (GUI) (SSMA commun)](../sybase/project-settings-gui-sybasetosql.md).  
   
 ## <a name="options"></a>Options  
 **Volet Explorateur**  
@@ -38,5 +38,4 @@ Affiche les erreurs, avertissements et messages d’information qui ont été g�
 Pour afficher les détails d’un message, cliquez sur **Erreurs**, **avertissements**ou **messages**, puis développez un message. SSMA affiche la liste des objets qui ont cette erreur. Cliquez sur un objet pour afficher tous les détails de la conversion de l’objet.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Référence de l’interface utilisateur (accès)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Référence de l’interface utilisateur (accès)](./user-interface-reference-accesstosql.md)  

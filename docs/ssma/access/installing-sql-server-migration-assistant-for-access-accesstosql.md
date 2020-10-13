@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 97974e649c27e8cf1182baa3b168d3490371a4cf
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 1313699a3d82e0dbced8469f251a0a105f296246
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411627"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985225"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Installation de Assistant Migration SQL Server pour Access (AccessToSQL)
 
@@ -39,8 +39,8 @@ ms.locfileid: "86411627"
 Avant d’installer SSMA, assurez-vous que votre système répond aux exigences suivantes :
 
 - Windows 7 ou une version ultérieure, ou Windows Server 2008 ou une version ultérieure.
-- [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 ou une version ultérieure.
-- La [!INCLUDE[msCoName](../../includes/msconame_md.md)] version de .NET Framework 4.7.2 ou une version ultérieure. Le .NET Framework est disponible dans [Microsoft .net Guide](https://docs.microsoft.com/dotnet/framework/).
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3,1 ou une version ultérieure.
+- La [!INCLUDE[msCoName](../../includes/msconame_md.md)] version de .NET Framework 4.7.2 ou une version ultérieure. Le .NET Framework est disponible dans [Microsoft .net Guide](/dotnet/framework/).
 - Accès et autorisations suffisantes sur l’ordinateur qui héberge l’instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] dans laquelle vous allez migrer des données et des objets de base de données.
 - Microsoft Data Access Object (DAO) Provider version 12,0 ou 14,0. Vous pouvez installer le fournisseur DAO à partir de Microsoft Office produit 2010/2007 ou le télécharger à partir du site Web de Microsoft.
 - 4 Go de RAM (recommandé).
@@ -59,7 +59,7 @@ Pour installer SSMA :
 
    Si la configuration requise n’est pas installée, un message s’affiche pour indiquer que vous devez d’abord installer les composants requis. Assurez-vous que vous avez installé tous les composants requis, puis réexécutez le programme d’installation.
 
-3. Lisez le contrat de licence utilisateur final ; Si vous acceptez, sélectionnez **J’accepte le contrat**, puis cliquez sur **suivant**.
+3. Lisez le contrat de licence End-User ; Si vous acceptez, sélectionnez **J’accepte le contrat**, puis cliquez sur **suivant**.
 4. Dans la page **choisir le type d’installation** , cliquez sur par **défaut**.
 5. Sur la page **prêt pour l’installation** , vous pouvez activer ou désactiver la télémétrie et les vérifications automatiques des mises à jour à chaque démarrage de l’outil. Cliquez sur **Installer** pour commencer l'installation.
   

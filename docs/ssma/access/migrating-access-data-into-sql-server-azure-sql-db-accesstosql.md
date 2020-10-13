@@ -19,18 +19,18 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: c44f7af6972c316322d4a81b7de9fa13b77205a0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc1cdb31969eb94c29a6c58f974aef92c5cdfc62
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488292"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988653"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-database-accesstosql"></a>Migration de données Access vers SQL Server Azure SQL Database (AccessToSQL)
 Une fois que vous avez créé avec succès les objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez migrer des données d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 ## <a name="setting-migration-options"></a>Définition des options de migration  
-Avant de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, passez en revue les options de migration de projet dans la boîte de dialogue **paramètres du projet** . Dans cette boîte de dialogue, vous pouvez définir la taille de lot de migration, le verrouillage de table, la vérification des contraintes, le déclenchement du déclencheur d’insertion, l’identité et la gestion des valeurs NULL, et comment gérer les dates qui se trouvent en dehors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plage. Pour plus d’informations, consultez [paramètres du projet (migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d).  
+Avant de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, passez en revue les options de migration de projet dans la boîte de dialogue **paramètres du projet** . Dans cette boîte de dialogue, vous pouvez définir la taille de lot de migration, le verrouillage de table, la vérification des contraintes, le déclenchement du déclencheur d’insertion, l’identité et la gestion des valeurs NULL, et comment gérer les dates qui se trouvent en dehors de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] plage. Pour plus d’informations, consultez [paramètres du projet (migration)](./project-settings-migration-accesstosql.md).  
   
 ## <a name="migrating-data"></a>Migration des données  
 La migration des données est une opération de chargement en bloc qui déplace des lignes de données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure dans des transactions. Le nombre de lignes à charger dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure dans chaque transaction est configuré dans les paramètres du projet.  
@@ -57,4 +57,3 @@ Si vous avez accès à des applications de base de données que vous souhaitez c
 ## <a name="see-also"></a>Voir aussi  
 [Migration de bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Définition des options de conversion et de migration](setting-conversion-and-migration-options-accesstosql.md)  
-  

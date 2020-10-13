@@ -13,23 +13,23 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 9fa753d472c5a7ead39faf88bc2479bc1caa9bc3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 16b6c68c520291b0f9ae6613940832c0fa77af68
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497740"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988165"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-database-mysqltosql"></a>Migration de données MySQL vers SQL Server Azure SQL Database (MySQLToSQL)
 Une fois que vous avez synchronisé avec succès les objets convertis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous pouvez migrer des données de MySQL vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 > [!IMPORTANT]  
-> Si le moteur utilisé est le moteur de migration des données côté serveur, avant de migrer les données, vous devez installer le pack d’extension SSMA pour MySQL et les fournisseurs MySQL sur l’ordinateur qui exécute SSMA. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service agent doit également être en cours d’exécution. Pour plus d’informations sur l’installation du pack d’extension, consultez [installation des composants SSMA sur SQL Server (MySQL to SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1) .  
+> Si le moteur utilisé est le moteur de migration des données côté serveur, avant de migrer les données, vous devez installer le pack d’extension SSMA pour MySQL et les fournisseurs MySQL sur l’ordinateur qui exécute SSMA. Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service agent doit également être en cours d’exécution. Pour plus d’informations sur l’installation du pack d’extension, consultez [installation des composants SSMA sur SQL Server (MySQL to SQL)](./installing-ssma-components-on-sql-server-mysqltosql.md) .  
   
 ## <a name="setting-migration-options"></a>Définition des options de migration  
 Avant de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, passez en revue les options de migration de projet dans la boîte de dialogue **paramètres du projet** .  
   
--   À l’aide de cette boîte de dialogue, vous pouvez définir des options telles que la taille de lot de migration, le verrouillage de table, la vérification des contraintes, la gestion des valeurs NULL et la gestion des valeurs d’identité. Pour plus d’informations sur les paramètres de migration de projet, consultez [paramètres du projet (migration)](https://msdn.microsoft.com/2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9).  
+-   À l’aide de cette boîte de dialogue, vous pouvez définir des options telles que la taille de lot de migration, le verrouillage de table, la vérification des contraintes, la gestion des valeurs NULL et la gestion des valeurs d’identité. Pour plus d’informations sur les paramètres de migration de projet, consultez [paramètres du projet (migration)](./project-settings-migration-mysqltosql.md).  
   
     Pour plus d’informations sur les **paramètres de migration de données étendues**, consultez [paramètres de migration de données](data-migration-settings-mysqltosql.md) .  
   
@@ -50,7 +50,7 @@ Avant de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnovers
   
 **Migration des données côté serveur :**  
   
--   Pendant la migration des données côté serveur, le moteur réside sur la base de données cible. Il est installé par le biais du pack d’extension. Pour plus d’informations sur la façon d’installer le pack d’extension, consultez [installation de composants SSMA sur SQL Server (MySQL to SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1) .  
+-   Pendant la migration des données côté serveur, le moteur réside sur la base de données cible. Il est installé par le biais du pack d’extension. Pour plus d’informations sur la façon d’installer le pack d’extension, consultez [installation de composants SSMA sur SQL Server (MySQL to SQL)](./installing-ssma-components-on-sql-server-mysqltosql.md) .  
   
 -   Pour lancer la migration côté serveur, sélectionnez l’option **moteur de migration de données côté serveur** dans la boîte de dialogue **paramètres du projet** .  
   
@@ -99,15 +99,14 @@ Pour afficher les messages de migration, assurez-vous que le volet de sortie est
   
 5.  Dans la boîte de dialogue **connexion à MySQL** , entrez les informations d’identification de connexion, puis cliquez sur **se connecter**. Pour plus d’informations sur la connexion à MySQL, consultez [se connecter à mysql &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
   
-    Si la base de données cible est SQL Server, entrez les informations d’identification de connexion dans la boîte de dialogue **se connecter à SQL Server** , puis cliquez sur **se connecter**. Pour plus d’informations sur la connexion à SQL Server, consultez [se connecter à SQL Server](https://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536)  
+    Si la base de données cible est SQL Server, entrez les informations d’identification de connexion dans la boîte de dialogue **se connecter à SQL Server** , puis cliquez sur **se connecter**. Pour plus d’informations sur la connexion à SQL Server, consultez [se connecter à SQL Server](../sybase/connecting-to-sql-server-sybasetosql.md)  
   
     Si la base de données cible est SQL Azure, entrez les informations d’identification de connexion dans la boîte de dialogue **se connecter à SQL Azure** , puis cliquez sur **se connecter**. Pour plus d’informations sur la connexion à SQL Azure, consultez [se connecter à Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-azure-sql-db-mysqltosql.md)  
   
-    Les messages s’affichent dans le volet de **sortie** . Une fois la migration terminée, le **rapport de migration des données** s’affiche. Si des données n’ont pas été migrées, cliquez sur la ligne qui contient les erreurs, puis cliquez sur **Détails**. Lorsque vous avez terminé avec le rapport, cliquez sur **Fermer**. Pour plus d’informations sur le rapport de migration de données, consultez [rapport de migration des données (SSMA commun)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    Les messages s’affichent dans le volet de **sortie** . Une fois la migration terminée, le **rapport de migration des données** s’affiche. Si des données n’ont pas été migrées, cliquez sur la ligne qui contient les erreurs, puis cliquez sur **Détails**. Lorsque vous avez terminé avec le rapport, cliquez sur **Fermer**. Pour plus d’informations sur le rapport de migration de données, consultez [rapport de migration des données (SSMA commun)](../sybase/data-migration-report-sybasetosql.md)  
   
 > [!NOTE]  
 > Lorsque SQL Express Edition est utilisé comme base de données cible, seule la migration des données côté client est autorisée et la migration des données côté serveur n’est pas prise en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration de bases de données MySQL vers SQL Server Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
-  

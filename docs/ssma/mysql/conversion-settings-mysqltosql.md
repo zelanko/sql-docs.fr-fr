@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 7547984e97bb47a640c162743fe0b069b38f7dff
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1652913173dcd7427515db8c74d15afc75077820
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418465"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988635"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Paramètres de conversion (MySQLToSQL)
 L’onglet **« paramètres »** permet à l’utilisateur de définir des paramètres au niveau du nœud. L’onglet sera disponible dans les nœuds de la métabase suivants :  
@@ -76,5 +76,4 @@ Ces paramètres sont disponibles en fonction du type de nœud de la métabase. P
     3.  Les paramètres définis par l’utilisateur sont enregistrés dans le fichier de préférences en cascade en cliquant sur le bouton **appliquer** .  
   
 ## <a name="see-also"></a>Voir aussi  
-[Paramètres du projet (conversion) (MySQL vers SQL)](https://msdn.microsoft.com/7ad5fe44-6445-4ba8-a457-5af792631f11)  
-  
+[Paramètres du projet (conversion) (MySQL vers SQL)](./project-settings-conversion-mysqltosql.md)  

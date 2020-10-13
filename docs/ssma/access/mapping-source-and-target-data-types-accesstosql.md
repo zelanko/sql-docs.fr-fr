@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: d95c7b5d429aeba2425c9deb63af1df4ab0f6ac8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 92ce9298b6d3752a4b60e98918404c2116423973
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497846"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988675"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mappage des types de données source et cible (AccessToSQL)
 Les types de base de données Access diffèrent des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données. Lorsque vous convertissez des objets de base de données Access en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous devez spécifier comment mapper les types de données de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les procédures suivantes.  
   
 ## <a name="default-mappings"></a>Mappages par défaut  
-SSMA possède un ensemble de mappages de types de données par défaut. Pour obtenir la liste des mappages par défaut, consultez [paramètres du projet (mappage de type)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
+SSMA possède un ensemble de mappages de types de données par défaut. Pour obtenir la liste des mappages par défaut, consultez [paramètres du projet (mappage de type)](./project-settings-type-mapping-accesstosql.md).  
   
 ## <a name="customizing-data-type-mappings"></a>Personnalisation des mappages de types de données  
 La boîte de dialogue **paramètres du projet** vous permet de personnaliser la façon dont les types sont mappés pour toutes les bases de données et les objets de base de données d’un projet. Les mappages de type pour un projet s’appliquent à toutes les bases de données et objets de base de données qui n’ont pas de mappages de types personnalisés.  
@@ -93,4 +93,3 @@ L’étape suivante du processus de migration consiste [à convertir les objets 
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration de bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
-  

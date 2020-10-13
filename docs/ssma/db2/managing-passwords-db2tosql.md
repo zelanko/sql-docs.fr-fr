@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 25a6063863355fe40f36ab00bf7473d5d3d690d2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f68af2ae2176ed4860f92a829544c7ff463254e9
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472478"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987415"
 ---
 # <a name="managing-passwords-db2tosql"></a>Gestion des mots de passe (DB2ToSQL)
 Cette section concerne la sécurisation des mots de passe de base de données et la procédure d’importation ou d’exportation sur plusieurs serveurs :  
@@ -108,13 +108,13 @@ La _fonctionnalité d’importation_ lit les informations d’ID de serveur et d
 
 2. Entrez le mot de passe pour protéger le fichier exporté.
 
-3. Exécutez : &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`
+3. Exécutez l’instruction suivante : &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -export all "machine1passwords.file"`
 
 4. Entrez le mot de passe pour protéger le fichier exporté : xxxxxxxx
 
 5. Confirmez le mot de passe : xxxxxxxx
 
-6. Exécutez : &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`
+6. Exécutez l’instruction suivante : &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -e "DB2DB_1_1,Sql_1" "machine2passwords.file"`
 
 7. Entrez le mot de passe pour protéger le fichier exporté : xxxxxxxx
 
@@ -126,18 +126,17 @@ La _fonctionnalité d’importation_ lit les informations d’ID de serveur et d
 
 2. Entrez le mot de passe pour protéger le fichier importé.
 
-3. Exécutez : &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`
+3. Exécutez l’instruction suivante : &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -securepassword -import all "machine1passwords.file"`
 
 4. Entrez le mot de passe pour importer les serveurs à partir d’un fichier chiffré : xxxxxxxx
 
 5. Confirmez le mot de passe : xxxxxxxx
 
-6. Exécutez : &nbsp;`C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`
+6. Exécutez l’instruction suivante : &nbsp; `C:\SSMA\SSMAforDB2Console.EXE -p -i "DB2DB_1,Sql_1" "machine2passwords.file"`
 
 7. Entrez le mot de passe pour importer les serveurs à partir d’un fichier chiffré : xxxxxxxx
 
 8. Confirmer le mot de passe : xxxxxxxx
 
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
-  
+[Exécution de la console SSMA](./executing-the-ssma-console-db2tosql.md)  

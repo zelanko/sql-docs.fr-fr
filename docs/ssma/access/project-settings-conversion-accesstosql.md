@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 49df8709518a9654ca5c286c4381b274546007cd
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 63952d4e46b1c25e49e7f29f8da1e23543232cb7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88488263"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988505"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>Paramètres du projet (conversion) (AccessToSQL)
 Les paramètres du projet de conversion vous permettent de configurer la façon dont les objets sont convertis à partir des objets de base de données Access vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Azure SQL Database objets.  
@@ -112,5 +112,4 @@ Affiche un message dans le rapport d’évaluation et dans le volet sortie lorsq
 -   **Mode complet**: true  
   
 ## <a name="see-also"></a>Voir aussi  
-[Référence de l’interface utilisateur (accès)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-  
+[Référence de l’interface utilisateur (accès)](./user-interface-reference-accesstosql.md)  
