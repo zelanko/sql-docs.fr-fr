@@ -13,12 +13,12 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d4b82259c992000578a4fcca1c5807cf551dc9d0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3fc54fedce772b267cf19a9396672b61cf6e6254
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498564"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867776"
 ---
 # <a name="export-and-import-databases-using-always-encrypted"></a>Exporter et importer des bases de données avec Always Encrypted 
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -34,8 +34,8 @@ Si vous avez une application configurée pour interroger des colonnes chiffrées
 Pour des informations détaillées sur l’exportation et l’importation d’une base de données, consultez :
 - [Exporter une application de la couche Données](../../data-tier-applications/export-a-data-tier-application.md)
 - [Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur](../../data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)
-- [Exporter une base de données Azure SQL vers un fichier BACPAC](https://docs.microsoft.com/azure/sql-database/sql-database-export)
-- [Importer un fichier BACPAC vers une base de données dans Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-import)
+- [Exporter une base de données Azure SQL vers un fichier BACPAC](/azure/sql-database/sql-database-export)
+- [Importer un fichier BACPAC vers une base de données dans Azure SQL Database](/azure/sql-database/sql-database-import)
 - [SqlPackage.exe](../../../tools/sqlpackage.md)
 
 ## <a name="permissions-for-migrating-databases-with-encrypted-columns"></a>Autorisations pour la migration des bases de données avec des colonnes chiffrées

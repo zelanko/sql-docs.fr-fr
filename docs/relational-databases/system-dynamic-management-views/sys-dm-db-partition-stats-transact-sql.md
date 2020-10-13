@@ -1,6 +1,6 @@
 ---
 description: sys.dm_db_partition_stats (Transact-SQL)
-title: sys. dm_db_partition_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/28/2020
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3099e86d00f0541fc4c5b3408ec8708d04042b3e
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a1fd58cef1e99a1c7648ea8ad73657b7dc02be01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89544769"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006019"
 ---
 # <a name="sysdm_db_partition_stats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,11 +34,11 @@ ms.locfileid: "89544769"
   Renvoie le nombre de pages et de lignes de chaque partition de la base de données active.  
   
 > [!NOTE]  
-> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys. dm_pdw_nodes_db_partition_stats**. La partition_id dans sys. dm_pdw_nodes_db_partition_stats diffère de la partition_id de l’affichage catalogue sys. partitions pour Azure SQL Data Warehouse.
+> Pour appeler cette valeur à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , utilisez le nom **sys.dm_pdw_nodes_db_partition_stats**. La partition_id dans sys.dm_pdw_nodes_db_partition_stats diffère de la partition_id de l’affichage catalogue sys. partitions pour Azure Synapse Analytics.
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|ID de la partition. Unique dans la base de données. Il s’agit de la même valeur que la **partition_id** dans l’affichage catalogue **sys. partitions** , à l’exception de Azure SQL Data Warehouse.|  
+|**partition_id**|**bigint**|ID de la partition. Unique dans la base de données. Il s’agit de la même valeur que la **partition_id** dans l’affichage catalogue **sys. partitions** , à l’exception d’Azure Synapse Analytics.|  
 |**object_id**|**int**|ID d'objet de la table ou de la vue indexée à laquelle appartient la partition.|  
 |**index_id**|**int**|ID du segment de mémoire ou de l'index auquel appartient la partition.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = Index cluster<br /><br /> > 1 = Index non-cluster|  
 |**partition_number**|**int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.|  
@@ -67,7 +67,7 @@ ms.locfileid: "89544769"
  Le nombre total pour une table ou un index s'obtient en ajoutant les nombres obtenus pour l'ensemble des partitions concernées.  
   
 ## <a name="permissions"></a>Autorisations  
- Requiert `VIEW DATABASE STATE` les `VIEW DEFINITION` autorisations et pour interroger la vue de gestion dynamique **sys. dm_db_partition_stats** . Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Requiert `VIEW DATABASE STATE` `VIEW DEFINITION` les autorisations et pour interroger la vue de gestion dynamique **sys.dm_db_partition_stats** . Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;&#41;Transact-SQL ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemples  
   

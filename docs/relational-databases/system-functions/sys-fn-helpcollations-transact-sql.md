@@ -1,6 +1,6 @@
 ---
 description: sys.fn_helpcollations (Transact-SQL)
-title: sys. fn_helpcollations (Transact-SQL) | Microsoft Docs
+title: sys.fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66b0a9ad6c68e209cbcf21a05ef015f43535ec4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bec27f5d1f49abb1b05beaa1b17509c6cdf1ca5b
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427831"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006564"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88427831"
 
   Retourne une liste de tous les classements pris en charge.  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ fn_helpcollations ()
  L'exemple suivant retourne le nom de tous les classements commençant par la lettre `L` et correspondant à des classements de tri binaire.
 
 > [!Note]
-> Azure SQL Data Warehouse requêtes sur fn_helpcollations () doivent être exécutées dans la base de données Master.  
+> Les requêtes Azure Synapse Analytics sur fn_helpcollations () doivent être exécutées dans la base de données Master.  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  
@@ -85,4 +85,4 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
 
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
-[Prise en charge des classements de base de données pour Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
+[Prise en charge du classement de base de données pour Azure Synapse Analytics](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  

@@ -14,18 +14,18 @@ ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4110d523762a147a569caaf03d71dbdc4567c5c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a4ffeb0300e8211110ba3a8b303ff21b230626b9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720696"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866907"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutoriel : configurer la réplication entre un serveur et des clients mobiles (fusion)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 La réplication de fusion constitue une bonne solution au problème de transfert des données entre un serveur central et des clients mobiles qui ne sont connectés que de façon occasionnelle. Grâce aux Assistants de réplication, vous pouvez aisément configurer et administrer une topologie de réplication de fusion. 
 
-Ce didacticiel vous explique comment configurer une topologie de réplication pour des clients mobiles. Pour plus d’informations sur la réplication de fusion, consultez la [présentation de la réplication de fusion](https://docs.microsoft.com/sql/relational-databases/replication/merge/merge-replication).
+Ce didacticiel vous explique comment configurer une topologie de réplication pour des clients mobiles. Pour plus d’informations sur la réplication de fusion, consultez la [présentation de la réplication de fusion](./merge/merge-replication.md).
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
 Dans ce tutoriel, vous allez découvrir comment utiliser la réplication de fusion pour publier des données issues d’une base de données centrale dans un ou plusieurs comptes d’utilisateurs mobiles, afin que chaque utilisateur obtienne le sous-ensemble de données filtré dont il a besoin. 
@@ -48,14 +48,14 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management S
   
 - Sur le serveur d’abonné (destination), installez une édition quelconque de SQL Server, sauf SQL Server Express ou SQL Server Compact. La publication créée dans ce tutoriel ne prend pas en charge SQL Server Express ou SQL Server Compact. 
 
-- Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installez [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md).
 - Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Téléchargez l’[exemple de base de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Pour obtenir des instructions sur la restauration d’une base de données dans SSMS, consultez [Restauration d’une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).  
+- Téléchargez l’[exemple de base de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Pour obtenir des instructions sur la restauration d’une base de données dans SSMS, consultez [Restauration d’une base de données](../backup-restore/restore-a-database-backup-using-ssms.md).  
  
   
 >[!NOTE]
 > - La réplication n’est pas prise en charge sur les instances de SQL Server qui sont séparées de plus de deux versions. Pour plus d’informations, consultez [Supported SQL Server Versions in Replication Topology](https://blogs.msdn.microsoft.com/repltalk/2016/08/12/suppported-sql-server-versions-in-replication-topology/) (Versions de SQL prises en charge dans la topologie de réplication).
-> - Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’un identifiant de connexion membre du rôle serveur fixe **sysadmin**. Pour plus d’informations sur ce rôle, consultez [Rôles de niveau serveur](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
+> - Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’un identifiant de connexion membre du rôle serveur fixe **sysadmin**. Pour plus d’informations sur ce rôle, consultez [Rôles de niveau serveur](../security/authentication-access/server-level-roles.md).  
   
   
 **Durée estimée pour terminer ce didacticiel : 60 minutes**  
@@ -91,7 +91,7 @@ Dans cette leçon, vous allez créer une publication de fusion à l’aide de [!
    >
    > Si vous utilisez une build antérieure à SQL Server 2017, un message s’affiche au bas de l’écran pour vous signaler que l’utilisation de cette colonne dans une réplication bidirectionnelle peut entraîner une perte de données. Pour les besoins de ce tutoriel, vous pouvez ignorer ce message. Toutefois, vous ne devez pas répliquer ce type de données dans un environnement de production, sauf si vous utilisez la build prise en charge.
    > 
-   > Pour plus d’informations sur la réplication du type de données **hierarchyid**, consultez [Utilisation de colonnes hierarchyid dans les tables répliquées](https://docs.microsoft.com/sql/t-sql/data-types/hierarchyid-data-type-method-reference#using-hierarchyid-columns-in-replicated-tables).
+   > Pour plus d’informations sur la réplication du type de données **hierarchyid**, consultez [Utilisation de colonnes hierarchyid dans les tables répliquées](../../t-sql/data-types/hierarchyid-data-type-method-reference.md#using-hierarchyid-columns-in-replicated-tables).
     
   
 7. Dans la page **Filtrer les lignes de la table**, sélectionnez **Ajouter**, puis **Ajouter un filtre**.  
@@ -281,7 +281,6 @@ Pour plus d'informations, consultez les pages suivantes :
 - [Initialiser un abonnement avec un instantané](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [Synchroniser les données](../../relational-databases/replication/synchronize-data.md)  
 - [Synchroniser un abonnement par extraction](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
-  
   
   
   

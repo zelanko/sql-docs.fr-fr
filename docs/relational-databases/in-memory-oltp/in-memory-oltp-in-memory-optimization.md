@@ -15,12 +15,12 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0575e8b5072dccf3c197180bec3941ca3585ba6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42f9feb302418cd42cd49cd53dc866dbdccc2301
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723127"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867682"
 ---
 # <a name="in-memory-oltp-and-memory-optimization"></a>OLTP en mémoire et optimisation de la mémoire
 
@@ -42,7 +42,7 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
 > [!NOTE]  
 >  **Faites un essai**  
 >   
->  L’OLTP en mémoire est disponible dans les pools élastiques et les bases de données SQL Azure des niveaux Premium et Critique pour l’entreprise. Pour prendre en main l’OLTP en mémoire et Columnstore dans Azure SQL Database, consultez [Optimize Performance using In-Memory Technologies in SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-in-memory/)(Optimiser les performances à l’aide des technologies en mémoire dans SQL Database).  
+>  L’OLTP en mémoire est disponible dans les pools élastiques et les bases de données SQL Azure des niveaux Premium et Critique pour l’entreprise. Pour prendre en main l’OLTP en mémoire et Columnstore dans Azure SQL Database, consultez [Optimize Performance using In-Memory Technologies in SQL Database](/azure/azure-sql/in-memory-oltp-overview)(Optimiser les performances à l’aide des technologies en mémoire dans SQL Database).  
   
 
 ## <a name="in-this-section"></a>Contenu de cette section  
@@ -53,18 +53,18 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
 |[Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Plongez directement au cœur de l’OLTP en mémoire.|
 |[Vue d’ensemble et scénarios d’utilisation](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Vue d’ensemble de l’OLTP en mémoire et des scénarios où l’utilisation de cette technologie offre des avantages en matière de performances.|
 |[Conditions requises pour l’utilisation des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Décrit les configurations matérielle et logicielle requises et fournit des instructions pour l'utilisation des tables optimisées en mémoire.|  
-|[Exemples de code OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Contient des exemples de code qui montrent comment créer et utiliser une table optimisée en mémoire.|  
-|[Tables à mémoire optimisée](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Présente les tables optimisées en mémoire.|  
-|[Variables de table optimisée en mémoire](https://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|  
-|[Index sur des tables optimisées en mémoire](https://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|Présente les index optimisés en mémoire.|  
-|[Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|Présente les procédures stockées compilées en mode natif.|  
-|[Gestion de la mémoire pour l’OLTP en mémoire](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|Comprendre et gérer l'utilisation de la mémoire sur votre système.|  
+|[Exemples de code OLTP en mémoire](./sample-database-for-in-memory-oltp.md)|Contient des exemples de code qui montrent comment créer et utiliser une table optimisée en mémoire.|  
+|[Tables à mémoire optimisée](./sample-database-for-in-memory-oltp.md)|Présente les tables optimisées en mémoire.|  
+|[Variables de table optimisée en mémoire](./faster-temp-table-and-table-variable-by-using-memory-optimization.md)|L'exemple de code illustre comment utiliser une variable de table optimisée en mémoire plutôt qu'une variable de table traditionnelle pour réduire l'utilisation de tempdb.|  
+|[Index sur des tables optimisées en mémoire](/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables)|Présente les index optimisés en mémoire.|  
+|[Procédures stockées compilées en mode natif](./a-guide-to-query-processing-for-memory-optimized-tables.md)|Présente les procédures stockées compilées en mode natif.|  
+|[Gestion de la mémoire pour l’OLTP en mémoire](/previous-versions/sql/sql-server-2016/dn465872(v=sql.130))|Comprendre et gérer l'utilisation de la mémoire sur votre système.|  
 |[Création et gestion du stockage des objets à mémoire optimisée](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|Traite des fichiers de données et delta, qui stockent les informations sur les transactions dans les tables optimisées en mémoire.|  
-|[Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|Décrit la sauvegarde, la restauration et la récupération des tables optimisées en mémoire.|  
+|[Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))|Décrit la sauvegarde, la restauration et la récupération des tables optimisées en mémoire.|  
 |[Prise en charge de Transact-SQL pour OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|Décrit la prise en charge [!INCLUDE[tsql](../../includes/tsql-md.md)] pour l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
 |[Prise en charge de la haute disponibilité pour les bases de données OLTP en mémoire](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|Décrit les groupes de disponibilité et le clustering de basculement dans l' [!INCLUDE[hek_2](../../includes/hek-2-md.md)].|  
-|[Prise en charge d'OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|Répertorie les nouveautés et les mises à jour en matière de syntaxe et de fonctionnalités prenant en charge les tables optimisées en mémoire.|  
-|[Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|Explique comment migrer les tables sur disque vers des tables optimisées en mémoire.|  
+|[Prise en charge d'OLTP en mémoire par SQL Server](./transact-sql-support-for-in-memory-oltp.md)|Répertorie les nouveautés et les mises à jour en matière de syntaxe et de fonctionnalités prenant en charge les tables optimisées en mémoire.|  
+|[Migration vers OLTP en mémoire](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)|Explique comment migrer les tables sur disque vers des tables optimisées en mémoire.|  
 | &nbsp; | &nbsp; |
 
 ## <a name="links-to-other-websites"></a>Liens vers d’autres sites web
@@ -75,13 +75,13 @@ Cette section fournit des liens vers d’autres sites web qui contiennent des in
 
 - [In-Memory OLTP Performance Demo v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
--   [Livre blanc technique sur les mécanismes internes de la fonction OLTP en mémoire SQL Server](https://msdn.microsoft.com/library/mt764316.aspx)  
+-   [Livre blanc technique sur les mécanismes internes de la fonction OLTP en mémoire SQL Server](./sql-server-in-memory-oltp-internals-for-sql-server-2016.md)  
 
 -   [Comparaison des fonctionnalités de Columnstore et d’OLTP en mémoire SQL Server](https://download.microsoft.com/download/D/0/0/D0075580-6D72-403D-8B4D-C3BD88D58CE4/SQL_Server_2016_In_Memory_OLTP_and_Columnstore_Comparison_White_Paper.pdf)
 
--   Nouveautés d’OLTP en mémoire dans SQL Server 2016, [partie 1](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2015/11/12/in-memory-oltp-whats-new-in-sql2016-ctp3/) et [partie 2](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3/)
+-   Nouveautés d’OLTP en mémoire dans SQL Server 2016, [partie 1](/archive/blogs/sqlserverstorageengine/in-memory-oltp-whats-new-in-sql2016-ctp3) et [partie 2](/archive/blogs/sqlserverstorageengine/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)
   
--   [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx)  
+-   [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](/previous-versions/dn673538(v=msdn.10))  
   
 -   [Blog OLTP en mémoire](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)  
 
@@ -135,6 +135,5 @@ Les étapes générales présentées dans la vidéo sont les suivantes :
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités de base de données](../../relational-databases/database-features.md)  
-  
+ [Fonctionnalités de base de données](../databases/databases.md)  
   

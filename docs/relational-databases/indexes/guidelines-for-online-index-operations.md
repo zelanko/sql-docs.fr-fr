@@ -19,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e7467127593b5a853bf5c26df75e9bc52ff12e4
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 047ca1b9ebb3a9157dfe9cbea2ececb898f6b478
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480925"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867675"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Instructions pour les opérations d’index en ligne
 
@@ -38,7 +38,7 @@ Lorsque vous effectuez des opérations en ligne sur les index, les directives su
 - L’exécution des index peut reprendre là où elle s’est arrêtée après une défaillance inattendue, un basculement de base de données ou une commande **PAUSE**. Consultez [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) et [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).
 
 > [!NOTE]  
-> Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> Les opérations d’index en ligne ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions](../../sql-server/editions-and-components-of-sql-server-2016.md).  
 
 Le tableau suivant présente les opérations d’index réalisables en ligne, les index qui sont exclus de ces opérations en ligne et les restrictions d’index pouvant être reprises. Des restrictions supplémentaires sont également incluses.  
 
@@ -81,11 +81,11 @@ Comme les structures source et cible sont conservées pendant l'opération en li
   
 Même si les opérations en ligne sont préférables, vous devez évaluer votre environnement et les conditions spécifiques requises. Il peut être plus approprié d'exécuter hors connexion des opérations sur les index. Ce faisant, les utilisateurs disposent d'un accès restreint aux données pendant l'opération, mais l'opération est réalisée plus vite et consomme moins de ressources.  
   
-Sur les ordinateurs multiprocesseurs qui exécutent SQL Server 2016, les instructions d’index peuvent, à l’instar d’autres requêtes, utiliser davantage de processeurs pour réaliser les opérations d’analyse et de tri associées à l’instruction d’index. Vous pouvez utiliser l'option d'index MAXDOP pour contrôler le nombre de processeurs dédiés à l'opération d'index en ligne. De cette manière, vous pouvez équilibrer les ressources utilisées par l'opération d'index avec celles des utilisateurs simultanés. Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md). Pour plus d’informations sur les éditions de SQL Server qui prennent en charge les opérations d’index parallèles, consultez [Fonctionnalités prises en charge par les éditions](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+Sur les ordinateurs multiprocesseurs qui exécutent SQL Server 2016, les instructions d’index peuvent, à l’instar d’autres requêtes, utiliser davantage de processeurs pour réaliser les opérations d’analyse et de tri associées à l’instruction d’index. Vous pouvez utiliser l'option d'index MAXDOP pour contrôler le nombre de processeurs dédiés à l'opération d'index en ligne. De cette manière, vous pouvez équilibrer les ressources utilisées par l'opération d'index avec celles des utilisateurs simultanés. Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md). Pour plus d’informations sur les éditions de SQL Server qui prennent en charge les opérations d’index parallèles, consultez [Fonctionnalités prises en charge par les éditions](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 Du fait qu'un verrou S ou Sch-M lock est conservé dans la phase finale de l'opération sur un index, soyez prudent lorsque vous exécutez une opération en ligne sur un index dans une transaction utilisateur explicite, telle qu'un blocage BEGIN TRANSACTION...COMMIT. Cette action maintient le verrou jusqu'à la fin de la transaction, gênant ainsi l'accès concurrentiel des utilisateurs.  
   
-La reconstruction d'index en ligne peut augmenter la fragmentation lorsqu'elle est autorisée à s'exécuter avec les options `MAX DOP > 1` et `ALLOW_PAGE_LOCKS = OFF` . Pour plus d’informations, consultez [Fonctionnement : La reconstruction d’index en ligne peut entraîner une fragmentation accrue](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation).  
+La reconstruction d'index en ligne peut augmenter la fragmentation lorsqu'elle est autorisée à s'exécuter avec les options `MAX DOP > 1` et `ALLOW_PAGE_LOCKS = OFF` . Pour plus d’informations, consultez [Fonctionnement : La reconstruction d’index en ligne peut entraîner une fragmentation accrue](/archive/blogs/psssql/how-it-works-online-index-rebuild-can-cause-increased-fragmentation).  
   
 ## <a name="transaction-log-considerations"></a>Considérations relatives au journal des transactions
 
@@ -134,4 +134,4 @@ ELEVATE_ONLINE et ELEVATE_RESUMABLE s’appliquent uniquement aux instructions D
 - [Fonctionnement des opérations d'index en ligne](../../relational-databases/indexes/how-online-index-operations-work.md)  
 - [Exécuter des opérations en ligne sur les index](../../relational-databases/indexes/perform-index-operations-online.md)  
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)  
-- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)  
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

@@ -10,17 +10,17 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d039034a5c76f5f7e98b2eed84f92c27a039832d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3c1f91effdea8225df62e3782e43ff5e863d827c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493820"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866698"
 ---
 # <a name="query-columns-using-always-encrypted-with-azure-data-studio"></a>Interroger des colonnes en utilisant Always Encrypted avec Azure Data Studio
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-Cet article explique comment interroger des colonnes chiffrées avec [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) en utilisant [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is). Avec Azure Data Studio, vous pouvez :
+Cet article explique comment interroger des colonnes chiffrées avec [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) en utilisant [Azure Data Studio](../../../azure-data-studio/what-is.md). Avec Azure Data Studio, vous pouvez :
 - Récupérer des valeurs de chiffrement stockées dans des colonnes chiffrées. 
 - Récupérer des valeurs de texte brut stockées dans des colonnes chiffrées.  
 - Envoyez des valeurs en texte en clair ciblant des colonnes chiffrées (par exemple, dans des instructions `INSERT` ou `UPDATE` et en tant que paramètre de recherche de clauses `WHERE` dans des instructions `SELECT`). 
@@ -113,7 +113,7 @@ Pour activer (désactiver) Always Encrypted :
 
 ## <a name="parameterization-for-always-encrypted"></a>Paramétrage pour Always Encrypted
 
-Le paramétrage d’Always Encrypted est une fonctionnalité d’Azure Data Studio 18.1 qui convertit automatiquement les variables Transact-SQL en paramètres de requête (instances de [SqlParameter Class](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter)). Cela permet au fournisseur de données [Microsoft.NET Framework pour SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) sous-jacent de détecter les données ciblant les colonnes chiffrées et de chiffrer ces données avant de les envoyer à la base de données.
+Le paramétrage d’Always Encrypted est une fonctionnalité d’Azure Data Studio 18.1 qui convertit automatiquement les variables Transact-SQL en paramètres de requête (instances de [SqlParameter Class](/dotnet/api/microsoft.data.sqlclient.sqlparameter)). Cela permet au fournisseur de données [Microsoft.NET Framework pour SQL Server](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md) sous-jacent de détecter les données ciblant les colonnes chiffrées et de chiffrer ces données avant de les envoyer à la base de données.
   
 Sans le paramétrage, le fournisseur de données .Microsoft.NET Framework transmet chaque instruction créée dans la fenêtre de requête en tant que requête non paramétrée. Si la requête contient des littéraux ou des variables Transact-SQL qui ciblent des colonnes chiffrées, le fournisseur de données .NET Framework pour SQL Server ne peut pas les détecter et les chiffrer avant d’envoyer la requête à la base de données. Par conséquent, la requête échoue en raison d’une incompatibilité de type (entre la variable littérale en texte brut Transact-SQL et la colonne chiffrée). Par exemple, sans paramétrage, la requête suivante échoue, supposant que la colonne `SSN` est chiffrée.   
 
@@ -180,7 +180,7 @@ DECLARE @Number int = 1.1 -- the type of the literal does not match the type of 
 
 Azure Data Studio utilise la technologie Intellisense pour vous indiquer quelles variables peuvent être paramétrées avec succès et quelles tentatives de paramétrage échouent (et pourquoi).   
 
-Une déclaration de variable pouvant être paramétrée avec succès est marquée avec un trait de soulignement d’avertissement dans la fenêtre de requête. Si vous placez le curseur sur une instruction de déclaration marquée avec un trait de soulignement de message, vous verrez les résultats du processus de paramétrage, y compris les valeurs des propriétés clés de l’objet [SqlParameter](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter) résultant (sur lequel la variable est mappée) : [SqlDbType](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue). Vous pouvez également voir la liste complète de toutes les variables correctement paramétrées dans l’affichage **Problème**. Pour ouvrir l’affichage**Problèmes**, sélectionnez **Afficher** > **Problèmes**.    
+Une déclaration de variable pouvant être paramétrée avec succès est marquée avec un trait de soulignement d’avertissement dans la fenêtre de requête. Si vous placez le curseur sur une instruction de déclaration marquée avec un trait de soulignement de message, vous verrez les résultats du processus de paramétrage, y compris les valeurs des propriétés clés de l’objet [SqlParameter](/dotnet/api/microsoft.data.sqlclient.sqlparameter) résultant (sur lequel la variable est mappée) : [SqlDbType](/dotnet/api/microsoft.data.sqlclient.sqlparameter.dbtype), [Size](/dotnet/api/microsoft.data.sqlclient.sqlparameter.size), [Precision](/dotnet/api/microsoft.data.sqlclient.sqlparameter.precision), [Scale](/dotnet/api/microsoft.data.sqlclient.sqlparameter.scale), [SqlValue](/dotnet/api/microsoft.data.sqlclient.sqlparameter.sqlvalue). Vous pouvez également voir la liste complète de toutes les variables correctement paramétrées dans l’affichage **Problème**. Pour ouvrir l’affichage**Problèmes**, sélectionnez **Afficher** > **Problèmes**.    
 
 
 

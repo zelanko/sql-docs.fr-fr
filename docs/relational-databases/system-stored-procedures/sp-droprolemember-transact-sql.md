@@ -19,12 +19,12 @@ ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af77dc8f8ac53b650b0c04de3ffc46e00df97483
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 2ef98244eec97fda5d0d11220348dbd4f14dcf61
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670372"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006522"
 ---
 # <a name="sp_droprolemember-transact-sql"></a>sp_droprolemember (Transact-SQL)
 
@@ -35,7 +35,7 @@ ms.locfileid: "91670372"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez à la place [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) .  
   
- ![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
 
@@ -46,7 +46,7 @@ sp_droprolemember [ @rolename = ] 'role' ,
      [ @membername = ] 'security_account'  
 ```  
 
-### <a name="syntax-for-both-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Syntaxe pour les Azure SQL Data Warehouse et les Data Warehouse parallèles
+### <a name="syntax-for-both-azure-synapse-analytics-and-parallel-data-warehouse"></a>Syntaxe pour Azure Synapse Analytics et Parallel Data Warehouse
 
 ```syntaxsql  
 sp_droprolemember 'role' ,  

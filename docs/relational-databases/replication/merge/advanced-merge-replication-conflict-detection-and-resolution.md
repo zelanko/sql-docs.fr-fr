@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a031fdb7c4a71c26990d26a524e5a75ac784565
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3a894198a994f98f9bcb2586c9b1b6a1428f562c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901871"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867913"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Réplication de fusion avancée - Détection et résolution des conflits
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -124,7 +124,7 @@ Résoudre les conflits de réplication de fusion
  Le moyen le plus direct d’afficher les conflits consiste à utiliser la Visionneuse des conflits de réplication, disponible à partir de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit également les procédures stockées qui permettent l’interrogation des tables conflictuelles). L'Outil de résolution des conflits et le programme de résolution interactif sont des outils similaires, mais le second permet de résoudre des conflits au moment de la synchronisation tandis que le premier affiche les conflits après leur résolution. Si les métadonnées en conflit sont toujours disponibles dans les tables système (les métadonnées en conflit sont conservées par défaut pendant 14 jours), vous pouvez supplanter les résultats de la résolution des conflits dans l'Outil de résolution des conflits ; si, en revanche, une intervention directe est régulièrement demandée, pensez à utiliser le Programme de résolution interactif.  
   
 > [!NOTE]  
->  Les conflits qui concernent des enregistrements logiques ne sont pas affichés dans l'Outil de résolution des conflits. Pour afficher des informations sur ces conflits, utilisez des procédures stockées de réplication. Pour plus d’informations, consultez [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Les conflits qui concernent des enregistrements logiques ne sont pas affichés dans l'Outil de résolution des conflits. Pour afficher des informations sur ces conflits, utilisez des procédures stockées de réplication. Pour plus d’informations, consultez [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md).  
   
  L'Outil de résolution des conflits affiche des informations issues de trois tables système :  
   
@@ -148,9 +148,8 @@ Résoudre les conflits de réplication de fusion
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Afficher et résoudre les conflits de données pour les publications de fusion &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)  
   
--   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication : [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication : [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../view-and-resolve-data-conflicts-for-merge-publications.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Synchroniser les données](../../../relational-databases/replication/synchronize-data.md)  
-  
   

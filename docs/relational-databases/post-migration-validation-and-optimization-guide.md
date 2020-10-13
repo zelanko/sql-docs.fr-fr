@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 6af3d91a76dd1964b7ef2e929392f85eb4b9245c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5324b953f70a9f0f64a4988c50ae02d1653d94f5
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482482"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891129"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
 
@@ -38,7 +38,7 @@ Quand vous migrez d’une ancienne version de [!INCLUDE[ssNoVersion](../includes
 
 Cela vient du fait qu’à compter de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], tous les changements de l’optimiseur de requête sont liés au [niveau de compatibilité de base de données](../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) le plus récent, de sorte que les plans ne sont pas changés au moment même de la mise à niveau, mais quand un utilisateur remplace l’option de base de données `COMPATIBILITY_LEVEL` par la plus récente. Cette fonctionnalité, en association avec le magasin de requêtes, vous offre un niveau de contrôle élevé sur les performances des requêtes dans le processus de mise à niveau. 
 
-Pour plus d’informations sur les changements apportés à l’optimiseur de requête dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consultez [Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014](https://msdn.microsoft.com/library/dn673537.aspx).
+Pour plus d’informations sur les changements apportés à l’optimiseur de requête dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], consultez [Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014](/previous-versions/dn673537(v=msdn.10)).
 
 ### <a name="steps-to-resolve"></a>Étapes de résolution
 
@@ -67,7 +67,7 @@ Un problème peut se produire quand la première compilation n’a pas utilisé 
 5.  Réécrivez la requête pour utiliser le conseil `DISABLE_PARAMETER_SNIFFING`. Même effet qu’avec la technique de la variable locale en désactivant totalement la détection de paramètres, sauf si `OPTION(RECOMPILE)`, `WITH RECOMPILE` ou `OPTIMIZE FOR <value>` est utilisé.
 
 > [!TIP] 
-> Tirez parti de la fonctionnalité d’analyse de plan de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour déterminer rapidement s’il s’agit d’un problème. Plus d’informations disponibles [ici](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier/).
+> Tirez parti de la fonctionnalité d’analyse de plan de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour déterminer rapidement s’il s’agit d’un problème. Plus d’informations disponibles [ici](/archive/blogs/sql_server_team/new-in-ssms-query-performance-troubleshooting-made-easier).
 
 ## <a name="missing-indexes"></a><a name="MissingIndexes"></a> Index manquants
 
@@ -166,8 +166,8 @@ Les fonctions table retournent un type de données de table qui peut représente
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecture supplémentaire
 
  [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  
-[Tables à mémoire optimisée](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+[Tables à mémoire optimisée](./in-memory-oltp/sample-database-for-in-memory-oltp.md)  
 [Fonctions définies par l'utilisateur](../relational-databases/user-defined-functions/user-defined-functions.md)  
-[Variables de table et estimations de lignes - Partie 1](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/11/30/table-variables-and-row-estimations-part-1/)  
-[Variables de table et estimations de lignes - Partie 2](https://blogs.msdn.microsoft.com/blogdoezequiel/2012/12/09/table-variables-and-row-estimations-part-2/)  
+[Variables de table et estimations de lignes - Partie 1](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-1)  
+[Variables de table et estimations de lignes - Partie 2](/archive/blogs/blogdoezequiel/table-variables-and-row-estimations-part-2)  
 [Mise en mémoire cache et réutilisation du plan d'exécution](../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse)

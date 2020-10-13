@@ -13,12 +13,12 @@ ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 089d8f5a3c39cd29e04a342e19c29bfbafc7b712
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d3339525dbf67ee6dd1a4e4ae3b75215dd2c05d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404075"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868066"
 ---
 # <a name="install-and-configure-semantic-search"></a>Installer et configurer la recherche sémantique
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -78,7 +78,7 @@ GO
   
  **2. Attachez la base de données des statistiques linguistiques de sémantique.**
    
- Attachez la base de données à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou en appelant [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) avec la syntaxe **FOR ATTACH**. Pour plus d’informations, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
+ Attachez la base de données à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou en appelant [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) avec la syntaxe **FOR ATTACH**. Pour plus d’informations, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
  Par défaut, le nom de la base de données est **semanticsdb**. Vous pouvez éventuellement donner un nom différent à la base de données lorsque vous l'attachez. Vous devez spécifier ce nom lorsque vous inscrivez la base de données à l'étape suivante.  
   
@@ -146,5 +146,4 @@ GO
   
 ###  <a name="install-the-latest-filters-for-microsoft-office-and-other-microsoft-document-types"></a><a name="office"></a> Installer les derniers filtres pour Microsoft Office et d’autres types de documents Microsoft  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe les analyseurs lexicaux et les générateurs de formes dérivées [!INCLUDE[msCoName](../../includes/msconame-md.md)] les plus récents, mais n'installe pas les filtres les plus récents pour les documents [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office et d'autres types de documents [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Ces filtres sont nécessaires pour l'indexation des documents créés avec les versions récentes de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office et d'autres applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour télécharger les filtres les plus récents, consultez [Microsoft Office 2010 Filter Packs](https://www.microsoft.com/download/details.aspx?id=17062). (Il n’existe apparemment pas de version Filter Pack pour Office 2013 et Office 2016.)
-  
   

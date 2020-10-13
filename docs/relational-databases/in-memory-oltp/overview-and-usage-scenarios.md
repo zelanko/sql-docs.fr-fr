@@ -12,12 +12,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4f98e06aa52d2fe7e3c0a911f793a038c8dee9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d9502743c1765561fd82f52e601983ec0bb8cc9c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722416"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867112"
 ---
 # <a name="overview-and-usage-scenarios"></a>Vue d’ensemble et scénarios d’utilisation
 
@@ -29,7 +29,7 @@ Cet article présente la technologie OLTP en mémoire dans [!INCLUDE[ssNoVersion
 
 ## <a name="in-memory-oltp-overview"></a>Vue d’ensemble de l’OLTP en mémoire
 
-L’OLTP en mémoire peut offrir des gains de performance considérables pour les charges de travail appropriées. Un client, BWIN, a réussi à [atteindre 1,2 million de requêtes par seconde](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/) avec une seule machine exécutant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], en tirant profit de l’OLTP en mémoire. Un autre client, Quorum, est parvenu à doubler sa charge de travail tout en [réduisant son utilisation des ressources de 70 %](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), grâce à la fonctionnalité OLTP en mémoire disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Si certains clients ont constaté un gain de performances multiplié par 30 dans certains cas, les gains réellement obtenus dépendent de la charge de travail.
+L’OLTP en mémoire peut offrir des gains de performance considérables pour les charges de travail appropriées. Un client, BWIN, a réussi à [atteindre 1,2 million de requêtes par seconde](/archive/blogs/sqlcat/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale) avec une seule machine exécutant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], en tirant profit de l’OLTP en mémoire. Un autre client, Quorum, est parvenu à doubler sa charge de travail tout en [réduisant son utilisation des ressources de 70 %](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database), grâce à la fonctionnalité OLTP en mémoire disponible dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Si certains clients ont constaté un gain de performances multiplié par 30 dans certains cas, les gains réellement obtenus dépendent de la charge de travail.
 
 Mais d’où proviennent exactement ces gains de performance ? En substance, l’OLTP en mémoire améliore les performances de traitement transactionnel en rendant l’accès aux données et l’exécution des transactions plus efficaces, et en supprimant la contention de verrous et de verrous internes entre les transactions exécutées simultanément. Cette technologie n’est pas rapide parce qu’elle est en mémoire, mais parce qu’elle est optimisée à travers la présence des données en mémoire. Les algorithmes de stockage des données, d’accès et de traitement ont été entièrement repensés pour tirer parti des dernières améliorations en matière de calcul en mémoire et haute simultanéité.
 
@@ -122,11 +122,11 @@ Les variables de table et les tables non durables optimisées en mémoire rédui
 
 #### <a name="implementation-considerations"></a>Considérations relatives à l’implémentation
 
-Pour commencer, consultez : [Improving temp table and table variable performance using memory optimization.](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/) (Amélioration des performances des tables temporaires et des variables de table à l’aide de l’optimisation de la mémoire.)
+Pour commencer, consultez : [Improving temp table and table variable performance using memory optimization.](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization) (Amélioration des performances des tables temporaires et des variables de table à l’aide de l’optimisation de la mémoire.)
 
 #### <a name="customer-case-studies"></a>Études de cas clients
 
-- Un client est parvenu à améliorer les performances de 40 % simplement en remplaçant les paramètres table traditionnels par des paramètres table à mémoire optimisée : [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/) (Intégration de données IoT haute vitesse à l’aide de l’OLTP en mémoire dans Azure)
+- Un client est parvenu à améliorer les performances de 40 % simplement en remplaçant les paramètres table traditionnels par des paramètres table à mémoire optimisée : [High Speed IoT Data Ingestion Using In-Memory OLTP in Azure](/archive/blogs/sqlserverstorageengine/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure) (Intégration de données IoT haute vitesse à l’aide de l’OLTP en mémoire dans Azure)
 - SentryOne a considérablement amélioré sa capacité d’ingestion des données grâce à une latence quasi nulle dans sa solution de supervision. Pour cela, l’entreprise a remplacé les tables tempdb par les tables OLTP en mémoire, dans le cadre de ses améliorations de scalabilité d’entreprise : [Solution provider breaks through performance ceiling with data monitoring innovation.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure) (Un fournisseur de solution atteint des performances inédites en innovant dans le domaine de la supervision des données.)
 
 ### <a name="etl-extract-transform-load"></a>ETL (extraction, transformation, chargement)
@@ -222,12 +222,12 @@ GO
 
 ## <a name="resources-to-learn-more"></a>Ressources supplémentaires
 
-- [Technologies OLTP en mémoire pour des performances T-SQL plus rapides](https://msdn.microsoft.com/library/mt694156.aspx)
+- [Technologies OLTP en mémoire pour des performances T-SQL plus rapides](./survey-of-initial-areas-in-in-memory-oltp.md)
 - Vous trouverez la démonstration des performances avec l’OLTP en mémoire ici : [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 - [Vidéo de 17 minutes expliquant l’OLTP en mémoire et présentant la démonstration](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)
 - [Script pour activer l’OLTP en mémoire et définir les options recommandées](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)
 - [Documentation principale sur l’OLTP en mémoire](in-memory-oltp-in-memory-optimization.md)
 - [Avantages en matière de performances et d’utilisation des ressources de l’OLTP en mémoire dans Azure SQL Database](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
-- [Improving temp table and table variable performance using memory optimization (Amélioration des performances des tables temporaires et des variables de table à l’aide de l’optimisation de la mémoire)](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
-- [Optimiser les performances à l’aide des technologies en mémoire dans SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
+- [Improving temp table and table variable performance using memory optimization (Amélioration des performances des tables temporaires et des variables de table à l’aide de l’optimisation de la mémoire)](/archive/blogs/sqlserverstorageengine/improving-temp-table-and-table-variable-performance-using-memory-optimization)
+- [Optimiser les performances à l’aide des technologies en mémoire dans SQL Database](/azure/sql-database/sql-database-in-memory)
 - [Tables temporelles avec version gérée par le système avec tables à mémoire optimisée](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)

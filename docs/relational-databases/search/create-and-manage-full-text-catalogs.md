@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d876cbff20f80261bbd7737d72f0117acb8f3ac6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f95811113261f10701e0fcfc41c70e348891f6a9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88482291"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868091"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Créer et gérer des catalogues de texte intégral
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -46,7 +46,7 @@ GO
   
 3.  Sélectionnez **Nouveau catalogue de recherche en texte intégral**.  
   
-4.  Dans la boîte de dialogue **Nouveau catalogue de recherche en texte intégral** , précisez les informations relatives au catalogue que vous recréez. Pour plus d’informations, consultez [Recherche en texte intégral &#40;page Général&#41;](https://docs.microsoft.com/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
+4.  Dans la boîte de dialogue **Nouveau catalogue de recherche en texte intégral** , précisez les informations relatives au catalogue que vous recréez. Pour plus d’informations, consultez [Recherche en texte intégral &#40;page Général&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md).  
   
     > [!NOTE]  
     >  Les ID de catalogues de texte intégral commencent à 00005 et sont incrémentés d'une unité à chaque fois qu'un catalogue est créé.  

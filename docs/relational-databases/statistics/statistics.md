@@ -24,12 +24,12 @@ ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbe55bf680ffbb80dca592d9bbdf63d86aaa793c
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: dc2c5467768aa92badb1a74e90a9f940eb0732e3
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91116569"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810525"
 ---
 # <a name="statistics"></a>Statistiques
 
@@ -121,7 +121,7 @@ ORDER BY s.name;
 Vous pouvez utiliser les conseils suivants pour activer l’indicateur de trace 2371 dans votre environnement pré-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] :
 
  - Si vous n’avez pas constaté de problèmes de performances dus à des statistiques obsolètes, il n’est pas nécessaire d’activer cet indicateur de trace.
- - Si vous utilisez des systèmes SAP, activez cet indicateur de trace.  Pour plus d’informations, reportez-vous à ce [blog](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
+ - Si vous utilisez des systèmes SAP, activez cet indicateur de trace.  Pour plus d’informations, reportez-vous à ce [blog](/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371).
  - Si vous exécutez des tâches nocturnes pour mettre à jour les statistiques car la mise à jour automatique actuelle n’est pas déclenchée assez fréquemment, vous pouvez activer l’indicateur de trace 2371 pour réduire le seuil.
   
 L'optimiseur de requête vérifie s'il existe des statistiques obsolètes avant de compiler une requête et avant d'exécuter un plan de requête mis en cache. Avant de compiler une requête, l'optimiseur de requête utilise les colonnes, les tables et les vues indexées du prédicat de requête pour identifier les statistiques susceptibles d'être obsolètes. Avant d'exécuter un plan de requête mis en cache, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] vérifie que le plan de requête fait référence à des statistiques à jour.  
@@ -406,4 +406,4 @@ GO
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)   
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

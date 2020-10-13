@@ -1,6 +1,6 @@
 ---
 description: sys.sql_expression_dependencies (Transact-SQL)
-title: sys. sql_expression_dependencies (Transact-SQL) | Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d4aabba6bd3608b4a4392b47e64ee37d7498d80
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 012d3d8b944b162e317bee53f4f25dcaaf5a1541
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89548648"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006426"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "89548648"
   
 -   Entités des bases de données croisées et entre serveurs. Les noms d'entités sont signalés ; toutefois, les ID d'entité ne sont pas résolus.  
   
--   Dépendances au niveau des colonnes sur les entités liées au schéma. Les dépendances au niveau des colonnes pour les objets non liés au schéma peuvent être retournées à l’aide de [sys. dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).  
+-   Dépendances au niveau des colonnes sur les entités liées au schéma. Les dépendances au niveau des colonnes pour les objets non liés au schéma peuvent être retournées à l’aide de [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md).  
   
 -   Déclencheurs DDL au niveau du serveur dans le contexte de la base de données master.  
   
@@ -69,12 +69,12 @@ ms.locfileid: "89548648"
  Le tableau suivant répertorie les types des entités pour lesquelles les informations de dépendance sont créées et gérées. Les informations de dépendance ne sont pas créées ni gérées pour les règles, les valeurs par défaut, les tables temporaires, les procédures stockées temporaires ou les objets système.  
 
 > [!NOTE]
-> Azure SQL Data Warehouse et Parallel Data Warehouse prennent en charge les tables, les vues, les statistiques filtrées et les types d’entité de procédures stockées Transact-SQL dans cette liste.  Les informations de dépendance sont créées et gérées uniquement pour les tables, les vues et les statistiques filtrées.  
+> Azure Synapse Analytics et Parallel Data Warehouse prennent en charge les tables, les vues, les statistiques filtrées et les types d’entité de procédures stockées Transact-SQL dans cette liste.  Les informations de dépendance sont créées et gérées uniquement pour les tables, les vues et les statistiques filtrées.  
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
 |Table de charge de travail|Oui*|Oui|  
-|Vue|Oui|Oui|  
+|Affichage|Oui|Oui|  
 |Index filtré|Oui**|Non|  
 |Statistiques filtrées|Oui**|Non|  
 |Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Oui|Oui|  
@@ -86,7 +86,7 @@ ms.locfileid: "89548648"
 |Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
 |Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
 |Procédures stockées étendues|Non|Oui|  
-|File d'attente|Non|Oui|  
+|File d’attente|Non|Oui|  
 |Synonyme|Non|Oui|  
 |Type (alias et type CLR défini par l'utilisateur)|Non|Oui|  
 |Collection de schémas XML|Non|Oui|  

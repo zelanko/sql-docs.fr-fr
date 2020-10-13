@@ -1,6 +1,6 @@
 ---
 description: sys.index_columns (Transact-SQL)
-title: sys. index_columns (Transact-SQL) | Microsoft Docs
+title: sys.index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dccbbac037400f0addda79c3fc61adfb0b971f3d
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: e77661ec4ddd9a53a5279dd433d20ab58e4263d0
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546799"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006526"
 ---
 # <a name="sysindex_columns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "89546799"
 |**key_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes clés.<br /><br /> 0 = N'est pas une colonne clé, ou est un index XML, un index columnstore ou un index spatial.<br /><br /> Remarque : un index XML ou spatial ne peut pas être une clé, car les colonnes sous-jacentes ne sont pas comparables, ce qui signifie que leurs valeurs ne peuvent pas être triées.|  
 |**partition_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes de partitionnement. Un index cluster columnstore peut avoir au plus une colonne de partitionnement.<br /><br /> 0 = N'est pas une colonne de partitionnement.|  
 |**is_descending_key**|**bit**|1 = Colonne clé d'index avec un ordre de tri descendant.<br /><br /> 0 = Colonne clé d'index avec un ordre de tri croissant, ou il s'agit d'une colonne qui fait partie d'un index de hachage.|  
-|**is_included_column**|**bit**|1 = la colonne est une colonne non-clé ajoutée à l’index à l’aide de la clause CREATe INDEX INCLUDe, ou la colonne fait partie d’un index ColumnStore.<br /><br /> 0 = Colonne non incluse.<br /><br /> Les colonnes ajoutées implicitement parce qu’elles font partie de la clé de clustering ne sont pas répertoriées dans **sys. index_columns**.<br /><br /> Les colonnes ajoutées implicitement car il s'agit de colonnes de partitionnement sont retournées avec la valeur 0.| 
-|**column_store_order_ordinal**</br> S’applique à : Azure SQL Data Warehouse (version préliminaire)|**tinyint**|Ordinal (de base 1) au sein d’un ensemble de colonnes de commande dans un index ColumnStore ordonné ordonné en clusters.|
+|**is_included_column**|**bit**|1 = la colonne est une colonne non-clé ajoutée à l’index à l’aide de la clause CREATe INDEX INCLUDe, ou la colonne fait partie d’un index ColumnStore.<br /><br /> 0 = Colonne non incluse.<br /><br /> Les colonnes ajoutées implicitement parce qu’elles font partie de la clé de clustering ne sont pas répertoriées dans **sys.index_columns**.<br /><br /> Les colonnes ajoutées implicitement car il s'agit de colonnes de partitionnement sont retournées avec la valeur 0.| 
+|**column_store_order_ordinal**</br> S’applique à : Azure Synapse Analytics (version préliminaire)|**tinyint**|Ordinal (de base 1) au sein d’un ensemble de colonnes de commande dans un index ColumnStore ordonné ordonné en clusters.|
   
 ## <a name="permissions"></a>Autorisations
 

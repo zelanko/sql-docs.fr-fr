@@ -12,12 +12,12 @@ ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfeb8126553a1a5990ed7ccfd8a836117f3328b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ed92a4bce43ec105992bfd41dbde825d72fc2a22
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784010"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867604"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Vue d’ensemble de la gestion de clés pour Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,7 @@ Quand les clés Always Encrypted sont gérées sans séparation des rôles, une 
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>Outils de gestion des clés Always Encrypted
 
-Vous pouvez gérer les clés Always Encrypted à l’aide de [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) et [PowerShell](../../scripting/sql-server-powershell.md):
+Vous pouvez gérer les clés Always Encrypted à l’aide de [SQL Server Management Studio (SSMS)](../../../ssms/sql-server-management-studio-ssms.md) et [PowerShell](../../../powershell/sql-server-powershell.md):
 
 - **SQL Server Management Studio (SSMS)**  : fournit des boîtes de dialogue et des Assistants qui combinent des tâches impliquant l’accès au magasin de clés et l’accès à la base de données. SSMS ne prend pas en charge la séparation des rôles, mais il simplifie la configuration des clés. Pour plus d’informations sur la gestion des clés à l’aide de SSMS, consultez :
     - [Provisionner des clés Always Encrypted à l’aide de SQL Server Management Studio](configure-always-encrypted-keys-using-ssms.md)
@@ -101,9 +101,5 @@ Pour qu’Always Encrypted soit efficace contre ces types d’attaques, votre pr
 
 ## <a name="see-also"></a>Voir aussi
 - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Didacticiel pour l’Assistant Always Encrypted (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
-- [Didacticiel pour l’Assistant Always Encrypted (Magasin de certificats Windows)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
-
-
-
-
+- [Didacticiel pour l’Assistant Always Encrypted (Azure Key Vault)](/azure/azure-sql/database/always-encrypted-azure-key-vault-configure)
+- [Didacticiel pour l’Assistant Always Encrypted (Magasin de certificats Windows)](/azure/azure-sql/database/always-encrypted-certificate-store-configure)

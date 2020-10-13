@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 8921009e0c16b799da40940ead5ef49643538b6a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 00a34797c1253418230f5c40a57c2ce5e2948949
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001170"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866665"
 ---
 # <a name="prepare-data-for-bulk-export-or-import"></a>Préparer des données à une exportation ou une importation en bloc
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "86001170"
   
      Pour effectuer une importation en bloc des données d'un fichier de table [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro ou Visual FoxPro (.dbf) ou d'un fichier de feuille de calcul [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xls), vous devez convertir les données en un fichier CSV conforme aux limitations décrites précédemment. L'extension de fichier est en général .csv. Vous pouvez alors utiliser ce fichier .csv comme fichier de données dans une opération d'importation en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     Sur les systèmes 32 bits (SQL Server 2014 et versions antérieures), il est possible d’importer des données CSV dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans optimisation de l’importation en bloc en utilisant [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) avec le fournisseur OLE DB pour Jet. Jet traite les fichiers texte comme des tables, à l'aide du schéma défini par un fichier schema.ini situé dans le même répertoire que la source de données.  Pour des données CSV, l’un des paramètres du fichier schema.ini doit être « FORMAT=CSVDelimited ». Pour utiliser cette solution, vous devez comprendre le fonctionnement de Jet Text IISAM (syntaxe de sa chaîne de connexion, utilisation de schema.ini, options de configuration du Registre, etc.).  Les meilleures sources d'informations sont l'Aide de Microsoft Access et les articles de la Base de connaissances. Pour plus d’informations, consultez [Initialisation du pilote de source de données texte](https://msdn.microsoft.com/library/office/ff834391.aspx), [Comment utiliser une requête distribuée de SQL Server 7.0 avec un serveur lié aux bases de données Access sécurisés](https://go.microsoft.com/fwlink/?LinkId=128504), [Procédure : utiliser le fournisseur Jet OLE DB 4.0 pour se connecter aux bases de données ISAM](https://go.microsoft.com/fwlink/?LinkId=128505), et [Comment ouvrir des fichiers texte délimités à l’aide de Text IIsam du fournisseur Jet](https://go.microsoft.com/fwlink/?LinkId=128501).  
+     Sur les systèmes 32 bits (SQL Server 2014 et versions antérieures), il est possible d’importer des données CSV dans une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans optimisation de l’importation en bloc en utilisant [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) avec le fournisseur OLE DB pour Jet. Jet traite les fichiers texte comme des tables, à l'aide du schéma défini par un fichier schema.ini situé dans le même répertoire que la source de données.  Pour des données CSV, l’un des paramètres du fichier schema.ini doit être « FORMAT=CSVDelimited ». Pour utiliser cette solution, vous devez comprendre le fonctionnement de Jet Text IISAM (syntaxe de sa chaîne de connexion, utilisation de schema.ini, options de configuration du Registre, etc.).  Les meilleures sources d'informations sont l'Aide de Microsoft Access et les articles de la Base de connaissances. Pour plus d’informations, consultez [Initialisation du pilote de source de données texte](/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver), [Comment utiliser une requête distribuée de SQL Server 7.0 avec un serveur lié aux bases de données Access sécurisés](https://go.microsoft.com/fwlink/?LinkId=128504), [Procédure : utiliser le fournisseur Jet OLE DB 4.0 pour se connecter aux bases de données ISAM](https://go.microsoft.com/fwlink/?LinkId=128505), et [Comment ouvrir des fichiers texte délimités à l’aide de Text IIsam du fournisseur Jet](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  En outre, l'importation en bloc de données depuis un fichier de données vers une table requiert le respect des points suivants :  
   
@@ -97,5 +97,4 @@ ms.locfileid: "86001170"
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)   
  [Utiliser le format natif pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
-  
   

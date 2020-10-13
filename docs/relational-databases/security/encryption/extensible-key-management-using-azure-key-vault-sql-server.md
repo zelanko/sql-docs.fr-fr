@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 71145a184d13ad4ca4393cd1468293e40f0ad594
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3b4cb86e387e076ac6dab0ca86642a3cb7860cd3
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896854"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867836"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gestion de clés extensible à l'aide d'Azure Key Vault (SQL Server)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "85896854"
    
  Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sert de pont entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et Azure Key Vault. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut donc optimiser l’extensibilité, les hautes performances et la haute disponibilité du service Azure Key Vault. L’illustration suivante représente le fonctionnement de la hiérarchie de clé dans l’architecture du fournisseur EKM avec Azure Key Vault et le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-  Azure Key Vault peut être utilisé avec des installations de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des machines virtuelles [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure et sur des serveurs locaux. Le service de coffre de clés offre également la possibilité d'utiliser des modules de sécurité matériels étroitement contrôlés et surveillés pour augmenter le niveau de protection des clés de chiffrement asymétriques. Pour plus d’informations sur le coffre de clés, consultez [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401).  
+  Azure Key Vault peut être utilisé avec des installations de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des machines virtuelles [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure et sur des serveurs locaux. Le service de coffre de clés offre également la possibilité d'utiliser des modules de sécurité matériels étroitement contrôlés et surveillés pour augmenter le niveau de protection des clés de chiffrement asymétriques. Pour plus d’informations sur le coffre de clés, consultez [Azure Key Vault](/azure/key-vault/general/basic-concepts).  
   
  L'illustration suivante résume le flux du processus de la gestion de clés extensible à l'aide du coffre de clés. (Les numéros des étapes du processus dans l’image ne correspondent pas aux numéros des étapes d’installation qui suivent l’image.)  
   
@@ -56,5 +56,4 @@ ms.locfileid: "85896854"
   
 ## <a name="see-also"></a>Voir aussi  
  [Résolution des problèmes et maintenance du connecteur SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
   

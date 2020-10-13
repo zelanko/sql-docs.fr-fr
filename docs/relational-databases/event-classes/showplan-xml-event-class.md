@@ -13,12 +13,12 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00aaf0a6a479901c72da0e8142191d59abc6ecc4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6114ecb7fc4ce386b9b86719031c80a0c815f149
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88329975"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866793"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML (classe d'événements)
 [!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "88329975"
   
  Lorsque la classe d'événements Showplan XML est incluse dans une trace, la charge de gestion induite compromet les performances de façon significative. Showplan XML stocke un plan de requête qui est créé lors de l'optimisation de la requête. Pour minimiser la charge de gestion associée, limitez l'utilisation de cette classe d'événements aux traces qui analysent des problèmes spécifiques pendant de brèves périodes de temps.  
   
- Les documents Showplan XML ont un schéma qui leur est associé. Ce schéma se trouve sur le [site web de Microsoft](https://go.microsoft.com/fwlink/?LinkId=41740) ou dans votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Les documents Showplan XML ont un schéma qui leur est associé. Ce schéma se trouve sur le [site web de Microsoft](/previous-versions/aa720019(v=vs.71)) ou dans votre installation [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="showplan-xml-event-class-data-columns"></a>Colonnes de données de la classe d'événements Showplan XML  
   
@@ -64,5 +64,4 @@ ms.locfileid: "88329975"
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)  
-  
   

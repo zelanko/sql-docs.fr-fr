@@ -12,12 +12,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93cbaac67010b89f3aca07abb11b7e59459cb4c4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: c54b396ea05fd78abfe7c05026d23e37a0f18585
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537052"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866952"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -26,7 +26,7 @@ Les tables mémoire optimisées nécessitent suffisamment de mémoire pour conse
 
 Si vous créez une table à mémoire optimisée ou migrez une table existante basée sur disque vers une table à mémoire optimisée [!INCLUDE[hek_2](../../includes/hek-2-md.md)], il est important d’estimer avec justesse les besoins en mémoire de chaque table, de façon à provisionner le serveur avec suffisamment de mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
   
-Si vous envisagez d’effectuer une migration à partir de tables sur disque vers des tables optimisées en mémoire, avant de poursuivre la lecture de cette rubrique, consultez [Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) pour obtenir des conseils sur les tables les plus judicieuses à faire migrer. Toutes les rubriques sous [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md) fournissent des conseils sur la migration à partir de tables sur disque vers des tables optimisées en mémoire. 
+Si vous envisagez d’effectuer une migration à partir de tables sur disque vers des tables optimisées en mémoire, avant de poursuivre la lecture de cette rubrique, consultez [Déterminer si une table ou une procédure stockée doit être déplacée vers l’OLTP en mémoire](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) pour obtenir des conseils sur les tables les plus judicieuses à faire migrer. Toutes les rubriques sous [Migration vers OLTP en mémoire](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md) fournissent des conseils sur la migration à partir de tables sur disque vers des tables optimisées en mémoire. 
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>Conseils de base pour l’estimation des besoins en mémoire
 
@@ -132,7 +132,7 @@ SELECT COUNT(DISTINCT [Col2])
   
 Si vous créez une table, vous devrez évaluer la taille du tableau ou regrouper les données de votre test avant le déploiement.  
   
-Pour plus d’informations sur le fonctionnement des index de hachage dans les tables optimisées en mémoire [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , consultez [Index de hachage](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+Pour plus d’informations sur le fonctionnement des index de hachage dans les tables optimisées en mémoire [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , consultez [Index de hachage](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130)).  
   
 #### <a name="setting-the-hash-index-array-size"></a>Définition de la taille du tableau d'index de hachage  
   
@@ -194,5 +194,4 @@ Les calculs ci-dessus estiment les besoins en mémoire de la table, telle qu'ell
   
 ## <a name="see-also"></a>Voir aussi
 
-[Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-
+[Migration vers OLTP en mémoire](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)

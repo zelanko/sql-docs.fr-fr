@@ -10,12 +10,12 @@ ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 0c2ab60111951167bffb4d3bafd04bca27f23a4d
-ms.sourcegitcommit: b93beb4f03aee2c1971909cb1d15f79cd479a35c
+ms.openlocfilehash: 23bd7c70522d1d691e4670c43bb7f07b5534c379
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91497967"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005749"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Nouveautés de SSMA pour Oracle (OracleToSQL)
 
@@ -73,7 +73,7 @@ La version v 8.9 de SSMA pour Oracle contient les modifications suivantes :
 * Ajout de la prise en charge du `ALTER TRIGGER` / `ALTER INDEX` langage DDL de base (activation/désactivation, etc.)
 * Conversion améliorée pour les colonnes qui correspondent aux noms de fonctions intégrées
 * Générer des index uniques filtrés pour les `NULL` colonnes pouvant être activées
-* Conversion de déclaration de variable améliorée pour Azure SQL Data Warehouse
+* Conversion de déclaration de variable améliorée pour Azure Synapse Analytics
 * Correction du problème avec les caractères spéciaux dans le nom du projet
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
@@ -85,7 +85,7 @@ La version v 8.8 de SSMA pour Oracle comprend les éléments suivants :
 * Amélioration de la conversion des `OVER PARTITION` clauses analytiques
 * Nouvelle conversion pour la `LEAD` fonction analytique
 * Nouvelle conversion pour les clauses de factorisation de la sous-requête
-* Nouvelle `REPLICATE` option de distribution pour Azure SQL Data Warehouse
+* Nouvelle `REPLICATE` option de distribution pour Azure Synapse Analytics
 * Nouvel analyseur de syntaxe Oracle pour améliorer les performances de conversion
 
 ## <a name="ssma-v87"></a>SSMA v 8.7
@@ -251,7 +251,7 @@ La version 7.5 de SSMA pour Oracle contient les modifications suivantes :
 
 La version 7.4 de SSMA pour Oracle contient les modifications suivantes :
 
-* SSMA pour Oracle prend désormais en charge Azure SQL Data Warehouse comme plateforme cible pour la migration.
+* SSMA pour Oracle prend désormais en charge Azure Synapse Analytics en tant que plateforme cible pour la migration.
 
   ![Fenêtre Nouveau projet](../media/new-project.png)
   * Prend en charge les options de stockage Data Warehouse, comme indiqué dans l’image suivante :
@@ -397,7 +397,7 @@ La version d’avril 2011 de SSMA pour Oracle contient les modifications suivant
 * Amélioration des performances de migration des données avec `Simple` et les `Bulk` modes de récupération journalisés.
 * Ajout de la prise en charge de la compatibilité descendante des projets créés par des versions antérieures de SSMA (v 4.0 et v 4.2).
 * Ajout de la possibilité d’installer SSMA pour le produit Oracle v 5.0 côte à côte (SxS) avec les versions antérieures de SSMA (v 4.0 et v 4.2).
-* Ajout de la prise en charge de la création de rapports pour les types définis par l’utilisateur (y compris le sous-type,,, la `VARRAY` `NESTED TABLE` table des objets et la vue objet) et leur utilisation dans les blocs PL/SQL avec des messages d’erreur spéciaux.
+* Ajout de la prise en charge des types de User-Defined de création de rapports (y compris le sous-type,,, la `VARRAY` `NESTED TABLE` table objet et la vue objet) et leur utilisation dans les blocs PL/SQL avec des messages d’erreur spéciaux.
 
 ## <a name="july-2010"></a>Juillet 2010
 
@@ -405,7 +405,7 @@ La version de 2010 de SSMA pour Oracle a été ajoutée :
 
 * Prise en charge de la migration vers SQL Server 2008 R2.
 * Nouvelle application console SSMA pour l’exécution à partir de la ligne de commande.
-* Prise en charge de la migration des données à l’aide des moteurs de migration de données côté serveur et côté client.
+* La prise en charge de la migration des données à l’aide des Server-Side et des moteurs de migration de données Client-Side.
 * Prise en charge de l’instruction « Custom SELECT » dans la migration de données.
 * Prise en charge de la migration à partir d’Oracle 11g R2.
 

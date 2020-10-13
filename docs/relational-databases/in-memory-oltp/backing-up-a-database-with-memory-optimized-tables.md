@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f4fafa88b228551aabab01cdb34bd5f119db5fa0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ef4d351d9eb1cdfc58cfe78696b21451163c42c9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89537743"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867333"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sauvegarde d'une base de données avec des tables mémoire optimisées
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -70,6 +70,5 @@ ms.locfileid: "89537743"
  Si les tables mémoire optimisées représentent une partie significative de la taille de votre base de données, la sauvegarde différentielle peut considérablement réduire la taille de votre sauvegarde. Pour les charges de travail OLTP typiques, les sauvegardes différentielles seront considérablement inférieures aux sauvegardes de base de données complètes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

@@ -13,12 +13,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: c891b2089225de1560a8371440524846b7a96163
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d02424e5e33823956977c8b32d1ab4e996df5526
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465011"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867463"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Activer la recherche sémantique sur les tables et les colonnes
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="add-a-semantic-index-by-using-sql-server-management-studio"></a>Ajouter un index sémantique à l'aide de SQL Server Management Studio  
- Vous pouvez modifier les colonnes activées pour l’indexation de texte intégral et sémantique dans la page **Colonnes d’index de recherche en texte intégral** de la boîte de dialogue **Propriétés d’index de recherche en texte intégral** . Pour plus d’informations, consultez [Gérer les index de recherche en texte intégral](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Vous pouvez modifier les colonnes activées pour l’indexation de texte intégral et sémantique dans la page **Colonnes d’index de recherche en texte intégral** de la boîte de dialogue **Propriétés d’index de recherche en texte intégral** . Pour plus d’informations, consultez [Gérer les index de recherche en texte intégral](./create-and-manage-full-text-indexes.md).  
 
 ## <a name="alter-a-semantic-index"></a>Modifier un index sémantique
   
@@ -184,7 +184,7 @@ GO
 ```  
   
  ### <a name="drop-a-semantic-index-by-using-sql-server-management-studio"></a>Supprimer un index sémantique à l'aide de SQL Server Management Studio  
- Vous pouvez modifier les colonnes activées pour l’indexation de texte intégral et sémantique dans la page **Colonnes d’index de recherche en texte intégral** de la boîte de dialogue **Propriétés d’index de recherche en texte intégral** . Pour plus d’informations, consultez [Gérer les index de recherche en texte intégral](https://msdn.microsoft.com/library/28ff17dc-172b-4ac4-853f-990b5dc02fd1).  
+ Vous pouvez modifier les colonnes activées pour l’indexation de texte intégral et sémantique dans la page **Colonnes d’index de recherche en texte intégral** de la boîte de dialogue **Propriétés d’index de recherche en texte intégral** . Pour plus d’informations, consultez [Gérer les index de recherche en texte intégral](./create-and-manage-full-text-indexes.md).  
   
 ###  <a name="requirements-and-restrictions-for-dropping-a-semantic-index"></a><a name="dropreq"></a> Requirements and restrictions for dropping a semantic index  
   
@@ -281,5 +281,4 @@ GO
 ##  <a name="issue-searching-on-specific-column-returns-no-results"></a><a name="IssueNoResults"></a> Problème : La recherche sur une colonne spécifique ne retourne aucun résultat  
  **Est-ce qu'un LCID non-Unicode a été spécifié pour une langue Unicode ?**  
  Il est possible d'activer l'indexation sémantique sur un type de colonne non-Unicode avec un LCID de langue qui comporte uniquement des termes Unicode, tels que LCID 1049 pour le russe. Dans ce cas, aucun résultat ne sera jamais retourné des index sémantiques sur cette colonne.  
-  
   

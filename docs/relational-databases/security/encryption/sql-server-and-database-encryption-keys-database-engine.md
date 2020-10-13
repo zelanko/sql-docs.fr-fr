@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 82cd5d463b74fb432b781d6fd721badaa1e836c1
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: c73439c6fd7015bcd6bbae61d4164348331deb17
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279335"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866595"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server et clés de chiffrement de base de données (moteur de base de données)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -68,7 +68,7 @@ La clé principale du service ne peut être ouverte que par le compte de service
 >  Si vous perdez tout accès aux clés décrites précédemment, vous perdez l'accès aux objets, connexions et données sécurisés par ces clés. Vous pouvez restaurer la clé principale de service, comme décrit dans les liens répertoriés ici, ou vous pouvez revenir au système de chiffrement d'origine pour récupérer l'accès. Il n'existe aucune « porte dérobée » pour récupérer l'accès.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Clé principale du service](../../../relational-databases/security/encryption/service-master-key.md)  
+ [Clé principale du service]()  
  Fournit une brève explication pour la clé principale de service et les meilleures pratiques associées.  
   
  [Gestion de clés extensible &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
@@ -105,5 +105,4 @@ La clé principale du service ne peut être ouverte que par le compte de service
  [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
-  
   

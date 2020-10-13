@@ -24,12 +24,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d37eb7cd82ceeba6ae844c82dea5763564c689dd
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 4021751337e7c49b22d6ec8bc2d24cc4e144e763
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809345"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006007"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -62,7 +62,7 @@ Retourne une ligne pour chaque élément classifié dans la base de données.
 L’exemple suivant retourne une table qui répertorie le nom de la table, le nom de la colonne, l’étiquette, l’ID de l’étiquette, le type d’informations, l’ID du type d’information, le rang et la description du rang pour chaque colonne classifiée de la base de données.
 
 > [!NOTE]
-> L’étiquette est un mot clé pour Azure SQL Data Warehouse.
+> Étiquette est un mot clé pour Azure Synapse Analytics.
 
 ```sql
 SELECT

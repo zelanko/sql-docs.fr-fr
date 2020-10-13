@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 4d6e28a0e86a240d03ab4cdccac843488ff84446
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834760"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869304"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,7 +57,7 @@ Après un incident matériel ou une défaillance de disque touchant les fichiers
 Lorsque vous restaurez chaque sauvegarde de journal, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] réapplique toutes les modifications enregistrées dans le journal pour restaurer par progression toutes les transactions. Lorsque la dernière sauvegarde de journal a été restaurée, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] utilise les informations des journaux pour restaurer toutes les transactions qui n'ont pas été terminées à ce stade. Pour plus d’informations, consultez [Vue d’ensemble de la restauration et de la récupération (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery).
 
 ### <a name="supporting-transactional-replication"></a>Prise en charge de la réplication transactionnelle
-L’Agent de lecture du journal surveille le journal des transactions de chaque base de données configurée pour la réplication transactionnelle et copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution. Pour plus d’informations sur la réplication transactionnelle, consultez [Fonctionnement de la réplication transactionnelle](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
+L’Agent de lecture du journal surveille le journal des transactions de chaque base de données configurée pour la réplication transactionnelle et copie les transactions devant être répliquées à partir du journal des transactions dans la base de données de distribution. Pour plus d’informations sur la réplication transactionnelle, consultez [Fonctionnement de la réplication transactionnelle](/previous-versions/sql/sql-server-2008-r2/ms151706(v=sql.105)).
 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Prise en charge des solutions de récupération d’urgence et de haute disponibilité
 Les solutions à serveur de secours, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], les mises en miroir de base de données et les copies des journaux de transactions dépendent fortement du journal des transactions. 
@@ -192,5 +192,4 @@ Quand la réplication transactionnelle est activée, les opérations `SELECT INT
 [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)    
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
-  
   

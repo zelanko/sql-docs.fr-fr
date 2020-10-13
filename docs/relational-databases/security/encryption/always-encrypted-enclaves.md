@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 27ccecb8293adff8fe5f2aaa3062a871d745c587
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: e33b72c93022a02538c143f976d4114589998b6f
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435446"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867248"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted avec enclaves sécurisées
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -125,7 +125,7 @@ Si une instance de SQL Server échoue, ses bases de données peuvent être laiss
 > [!IMPORTANT]
 > Microsoft recommande fortement d'activer la [Récupération de base de données accélérée (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) pour votre base de données **avant** de créer le premier index sur une colonne prenant en charge les enclaves avec un chiffrement aléatoire.
 
-Avec le [processus de récupération de base de données traditionnel](https://docs.microsoft.com/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (qui suit le modèle de récupération [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)), pour annuler une modification apportée à un index, SQL Server doit attendre qu’une application fournisse la clé de chiffrement de colonne pour la colonne de l’enclave, ce qui peut prendre un certain temps. L’ADR réduit notablement le nombre d’opérations d’annulation qui doivent être reportées parce qu’une clé de chiffrement de colonne n’est pas disponible dans le cache au sein de l’enclave. Par conséquent, elle augmente sensiblement la disponibilité de la base de données en réduisant au minimum le risque de blocage d’une nouvelle transaction. Avec ADR activée, SQL Server peut toujours avoir besoin d’une clé de chiffrement de colonne pour effectuer le nettoyage d’anciennes versions de données. Cependant, cette tâche d’arrière-plan n’affecte pas la disponibilité des transactions de la base de données ou des utilisateurs. Toutefois, vous pouvez voir les messages d’erreur dans le journal des erreurs, qui indiquent des opérations de nettoyage ayant échoué parce qu’il manquait une clé de chiffrement de colonne.
+Avec le [processus de récupération de base de données traditionnel](/azure/sql-database/sql-database-accelerated-database-recovery#the-current-database-recovery-process) (qui suit le modèle de récupération [ARIES](https://people.eecs.berkeley.edu/~brewer/cs262/Aries.pdf)), pour annuler une modification apportée à un index, SQL Server doit attendre qu’une application fournisse la clé de chiffrement de colonne pour la colonne de l’enclave, ce qui peut prendre un certain temps. L’ADR réduit notablement le nombre d’opérations d’annulation qui doivent être reportées parce qu’une clé de chiffrement de colonne n’est pas disponible dans le cache au sein de l’enclave. Par conséquent, elle augmente sensiblement la disponibilité de la base de données en réduisant au minimum le risque de blocage d’une nouvelle transaction. Avec ADR activée, SQL Server peut toujours avoir besoin d’une clé de chiffrement de colonne pour effectuer le nettoyage d’anciennes versions de données. Cependant, cette tâche d’arrière-plan n’affecte pas la disponibilité des transactions de la base de données ou des utilisateurs. Toutefois, vous pouvez voir les messages d’erreur dans le journal des erreurs, qui indiquent des opérations de nettoyage ayant échoué parce qu’il manquait une clé de chiffrement de colonne.
 
 ### <a name="indexes-on-enclave-enabled-columns-using-deterministic-encryption"></a>Index sur des colonnes prenant en charge les enclaves à l’aide d’un chiffrement déterministe
 
@@ -187,5 +187,3 @@ Les limitations suivantes sont spécifiques à Always Encrypted avec enclaves s�
 - [Interroger des colonnes en utilisant Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-query-columns.md)
 - [Activer Always Encrypted avec enclaves sécurisées pour les colonnes chiffrées existantes](always-encrypted-enclaves-enable-for-encrypted-columns.md)
 - [Créer et utiliser des index sur des colonnes à l’aide d’Always Encrypted avec enclaves sécurisées](always-encrypted-enclaves-create-use-indexes.md)
-
-

@@ -12,12 +12,12 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72c4b76489628e29825a7a212232a8f4aad99fde
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8ddfdf4456f3195d2d9d15c2a7f63fffc5b574fa
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546987"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810458"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
 
@@ -25,7 +25,7 @@ ms.locfileid: "89546987"
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 
-Les tables temporelles à système par version pour les [tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sont conçues pour fournir une solution rentable dans des scénarios où [l’audit de données et l’analyse à un moment donné](https://msdn.microsoft.com/library/mt631669.aspx) sont nécessaires sur des données collectées à l’aide de charges de travail OLTP en mémoire. Elles offrent un débit transactionnel élevé et une simultanéité sans verrouillage, ainsi que la possibilité de stocker un grand nombre de données d’historique pouvant être interrogées facilement.
+Les tables temporelles à système par version pour les [tables optimisées en mémoire](../in-memory-oltp/sample-database-for-in-memory-oltp.md) sont conçues pour fournir une solution rentable dans des scénarios où [l’audit de données et l’analyse à un moment donné](./temporal-table-usage-scenarios.md) sont nécessaires sur des données collectées à l’aide de charges de travail OLTP en mémoire. Elles offrent un débit transactionnel élevé et une simultanéité sans verrouillage, ainsi que la possibilité de stocker un grand nombre de données d’historique pouvant être interrogées facilement.
 
 ## <a name="overview"></a>Vue d’ensemble
 
@@ -43,7 +43,7 @@ Les points suivants sur les tables temporelles à système par version avec tabl
 
 - Seules les tables durables optimisées en mémoire peuvent être des tables à système par version (**DURABILITY = SCHEMA_AND_DATA**).
 - La table d’historique de la table à système par version optimisée en mémoire doit être sur disque, qu’elle soit créée par l’utilisateur final ou le système.
-- Les requêtes qui affectent uniquement la table active (en mémoire) peuvent être utilisées dans des [modules T-SQL compilés en mode natif](https://msdn.microsoft.com/library/dn133184.aspx). Les requêtes temporelles utilisant la clause FOR SYSTEM TIME ne sont pas prises en charge dans les modules compilés en mode natif. L’utilisation de la clause FOR SYSTEM TIME avec les tables optimisées en mémoire dans les requêtes ad hoc et les modules non natifs est prise en charge.
+- Les requêtes qui affectent uniquement la table active (en mémoire) peuvent être utilisées dans des [modules T-SQL compilés en mode natif](../in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md). Les requêtes temporelles utilisant la clause FOR SYSTEM TIME ne sont pas prises en charge dans les modules compilés en mode natif. L’utilisation de la clause FOR SYSTEM TIME avec les tables optimisées en mémoire dans les requêtes ad hoc et les modules non natifs est prise en charge.
 - Quand **SYSTEM_VERSIONING = ON**, une table de mise en lots interne optimisée en mémoire est automatiquement créée pour accepter les dernières modifications apportées à la table à système par version qui résultent d’opérations de mise à jour et de suppression sur la table optimisée en mémoire actuelle.
 - Les données de la table de mise en lots interne optimisée en mémoire sont régulièrement déplacées vers la table d’historique sur disque par la tâche de vidage de données asynchrones. Ce mécanisme de vidage des données vise à maintenir les mémoires tampons internes à moins de 10 % de la consommation de mémoire de leurs objets parents. Vous pouvez suivre la consommation de mémoire totale de la table temporelle à système par version optimisée en mémoire en interrogeant [sys.dm_db_xtp_memory_consumers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-memory-consumers-transact-sql.md) et en résumant les données de la table de mise en lots interne optimisée en mémoire et de la table temporelle actuelle.
 - Vous pouvez appliquer un vidage des données en appelant [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md).
