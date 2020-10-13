@@ -19,12 +19,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: dad86600ba067bd0e03eb0e9b8a05be49593bf7d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 54c462ee83fe972eccc9347e8a9f41e570511239
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423383"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869403"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -69,7 +69,7 @@ Utilisez [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stopl
   
     -   **Créer à partir d'une liste de mots vides de texte intégral existante**  
   
-     Pour plus d’informations, consultez [Nouvelle liste de mots vides de texte intégral &#40;page Général&#41;](https://msdn.microsoft.com/library/97f8e82d-82ab-4525-91c9-1ee3ae217309).  
+     Pour plus d’informations, consultez [Nouvelle liste de mots vides de texte intégral &#40;page Général&#41;](/previous-versions/sql/sql-server-2016/cc280518(v=sql.130)).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ Utilisez [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements
   
 4.  Cliquez avec le bouton droit sur la liste de mots vides dont vous souhaitez modifier les propriétés, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue [Propriétés de la liste de mots vides de texte intégral](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
+5.  Dans la boîte de dialogue [Propriétés de la liste de mots vides de texte intégral](/previous-versions/sql/sql-server-2016/cc280415(v=sql.130)) :  
   
     1.  Dans la zone de liste **Action** , sélectionnez l’une des actions suivantes : **Ajouter un mot vide**, **Supprimer le mot vide**, **Supprimer tous les mots vides**ou **Effacer la liste de mots vides**.  
   
@@ -139,6 +139,5 @@ Utilisez l’option de configuration de serveur [Transformer les mots parasites]
   
 ## <a name="upgrade-noise-words-from-sql-server-2005"></a>Mettre à niveau des mots parasites à partir de SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Les mots parasites ont été remplacés par les mots vides. Lorsqu'une base de données est mise à niveau à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], les fichiers de mots parasites ne sont plus utilisés. Toutefois, les fichiers de mots parasites sont stockés dans le dossier FTDATA\ FTNoiseThesaurusBak, et vous pouvez les utiliser ultérieurement lors de la mise à jour ou de la génération des listes de mots vides correspondantes. Pour plus d’informations sur la mise à niveau de fichiers de mots parasites en listes de mots vides, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
-  
   
   

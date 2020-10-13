@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: b2fcf4a523331260cea82a8537d83c891ea4a1c4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411375"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869161"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Planifier l’attestation du Service Guardian hôte
 
@@ -42,7 +42,7 @@ L’ordinateur exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversi
 ### <a name="high-availability"></a>Haute disponibilité
 
 La fonctionnalité Service Guardian hôte installe et configure automatiquement un cluster de basculement.
-Dans un environnement de production, il est recommandé d’utiliser trois serveurs Service Guardian hôte pour la haute disponibilité. Pour plus d’informations sur la façon dont le quorum du cluster est déterminé et sur les configurations alternatives, notamment des clusters à deux nœuds avec un témoin externe, reportez-vous à la [documentation du cluster de basculement](https://docs.microsoft.com/windows-server/failover-clustering/manage-cluster-quorum).
+Dans un environnement de production, il est recommandé d’utiliser trois serveurs Service Guardian hôte pour la haute disponibilité. Pour plus d’informations sur la façon dont le quorum du cluster est déterminé et sur les configurations alternatives, notamment des clusters à deux nœuds avec un témoin externe, reportez-vous à la [documentation du cluster de basculement](/windows-server/failover-clustering/manage-cluster-quorum).
 
 Un stockage partagé n’est pas nécessaire entre les nœuds du Service Guardian hôte. Une copie de la base de données d’attestation est stockée sur chaque serveur Service Guardian hôte et est automatiquement répliquée sur le réseau par le service de cluster.
 
@@ -67,7 +67,7 @@ Le Service Guardian hôte prend en charge deux modes d’attestation avec [!INCL
 En général, nous faisons les recommandations suivantes :
 
 - Pour les **serveurs de production physiques**, nous recommandons d’utiliser l’attestation TPM pour les garanties supplémentaires qu’elle fournit.
-- Pour les **serveurs de production virtuels**, nous recommandons d’utiliser l’attestation de clé d’hôte dans la mesure où la plupart des machines virtuelles ne disposent ni de modules TPM virtuels ni d’un démarrage sécurisé. Si vous utilisez une machine virtuelle bénéficiant d’une sécurité renforcée comme une [machine virtuelle locale dotée d’une protection maximale](https://aka.ms/shieldedvms), vous pouvez opter pour le mode TPM. Dans tous les déploiements virtualisés, le processus d’attestation analyse uniquement votre environnement de machine virtuelle (pas la plateforme de virtualisation sous la machine virtuelle).
+- Pour les **serveurs de production virtuels**, nous recommandons d’utiliser l’attestation de clé d’hôte dans la mesure où la plupart des machines virtuelles ne disposent ni de modules TPM virtuels ni d’un démarrage sécurisé. Si vous utilisez une machine virtuelle bénéficiant d’une sécurité renforcée comme une [machine virtuelle locale dotée d’une protection maximale](/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node), vous pouvez opter pour le mode TPM. Dans tous les déploiements virtualisés, le processus d’attestation analyse uniquement votre environnement de machine virtuelle (pas la plateforme de virtualisation sous la machine virtuelle).
 - Dans les **scénarios de développement/test**, nous recommandons d’utiliser l’attestation de clé d’hôte car elle est plus facile à configurer.
 
 ### <a name="trust-model"></a>Modèle d’approbation
@@ -114,7 +114,7 @@ Ne joignez pas le ou les ordinateurs du Service Guardian hôte à un domaine ava
 
 ### <a name="ssnoversion-md-computer-prerequisites"></a>Prérequis pour l’ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
-Le ou les ordinateurs exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doivent répondre à la [Configuration requise pour l’installation de SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) et à la [Configuration matérielle requise pour Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
+Le ou les ordinateurs exécutant [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] doivent répondre à la [Configuration requise pour l’installation de SQL Server](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) et à la [Configuration matérielle requise pour Hyper-V](/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements).
 
 Ces conditions requises incluent :
 
@@ -124,7 +124,7 @@ Ces conditions requises incluent :
   - Intel VT-x avec Extended Page Tables.
   - AMD-V avec Rapid Virtualization Indexing.
   - Si vous exécutez [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] sur une machine virtuelle, l’hyperviseur et le processeur physique doivent offrir des fonctionnalités de virtualisation imbriquées. Pour plus d’informations sur les garanties lors de l’exécution d’enclaves VBS dans une machine virtuelle, consultez la section [Modèle d’approbation](#trust-model).
-    - Sur Hyper-V 2016 ou ultérieur, [activez les extensions de virtualisation imbriquée sur le processeur de la machine virtuelle](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
+    - Sur Hyper-V 2016 ou ultérieur, [activez les extensions de virtualisation imbriquée sur le processeur de la machine virtuelle](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization).
     - Dans Azure, sélectionnez une taille de machine virtuelle qui prend en charge la virtualisation imbriquée. Toutes les machines virtuelles de la série v3 prennent en charge la virtualisation imbriquée, notamment Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
     - Sur VMware vSphere 6.7 ou ultérieur, activez la prise en charge de la sécurité basée sur la virtualisation pour la machine virtuelle, comme le décrit la [documentation VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
     - D’autres hyperviseurs et clouds publics peuvent prendre en charge les fonctionnalités de virtualisation imbriquées qui permettent aussi l’utilisation d’Always Encrypted avec enclaves VBS. Consultez les instructions relatives à la compatibilité et à la configuration dans la documentation de votre solution de virtualisation.

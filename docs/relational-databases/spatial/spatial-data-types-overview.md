@@ -16,12 +16,12 @@ ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: befee8aca5a1c9d7a66015a02c8851c56d0e5a8a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f0939dd9a38e049fc0db732c1635fdb73b686f04
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464905"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809530"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
 
@@ -74,7 +74,7 @@ Les segments d'arc de cercle pour les types geography sont définis sur le plan 
 
 Dans le système planaire (monde en deux dimensions), les mesures de distances et de surfaces sont données dans la même unité de mesure que les coordonnées. Avec le type de données **geometry**, la distance entre (2, 2) et (5, 6) est cinq unités, quelles que soient les unités utilisées.  
 
-Dans un système ellipsoïdal, ou monde sphérique, les coordonnées sont données en degrés de latitude et de longitude. Toutefois, les longueurs et surfaces sont généralement mesurées en mètres et en mètres carrés, bien que la mesure puisse dépendre de l’[identificateur de référence spatiale](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) de l’instance **geography**. L’unité de mesure la plus courante pour le type de données **geography** est le mètre.  
+Dans un système ellipsoïdal, ou monde sphérique, les coordonnées sont données en degrés de latitude et de longitude. Toutefois, les longueurs et surfaces sont généralement mesurées en mètres et en mètres carrés, bien que la mesure puisse dépendre de l’[identificateur de référence spatiale](./spatial-reference-identifiers-srids.md) de l’instance **geography**. L’unité de mesure la plus courante pour le type de données **geography** est le mètre.  
 
 ### <a name="orientation-of-spatial-data"></a>Orientation des données spatiales
 
@@ -201,10 +201,10 @@ Les instances**CurvePolygon** peuvent utiliser des instances **CircularString** 
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Données spatiales (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
-- [Référence de méthodes de type de données geometry](https://msdn.microsoft.com/library/bb933973.aspx)
-- [Référence de méthodes de type de données geography](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)
+- [Données spatiales (SQL Server)](./spatial-data-sql-server.md)
+- [Référence de méthodes de type de données geometry](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+- [Référence de méthodes de type de données geography](../../t-sql/spatial-geography/spatial-types-geography.md)
 - [STNumCurves &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)
 - [STNumCurves &#40;type de données geography&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)
 - [STGeomFromText &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)
-- [STGeomFromText &#40;type de données geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
+- [STGeomFromText &#40;type de données geography&#41;](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)

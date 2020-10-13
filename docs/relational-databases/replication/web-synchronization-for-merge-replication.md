@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9139d4e5b0ab2df1074774dc90af44bc711804ad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e7ddce7f64c33d0646f3d79aa91b75f05ff11ffe
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88404475"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869278"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Synchronisation Web pour la réplication de fusion
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88404475"
   
  Le service informatique de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] a configuré chaque ordinateur portable avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et activé la réplication de fusion pour utiliser la synchronisation Web. L'Agent de fusion de chaque ordinateur portable contient une adresse URL qui pointe vers les composants de réplication installés sur un ordinateur exécutant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS). Ces composants synchronisent l'Abonné avec le serveur de publication. Chaque représentant peut désormais se connecter par le biais d'une connexion Internet disponible sans avoir recours à une connexion d'accès à distance, et peut charger et télécharger les données appropriées. La connexion Internet utilise TLS (Transport Layer Security), anciennement SSL (Secure Sockets Layer), un réseau privé virtuel (VPN) n'est donc pas nécessaire.  
   
- Pour obtenir des informations sur la façon de configurer les composants requis pour la synchronisation Web, consultez [configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md), [Configurer IIS pour la synchronisation Web](../../relational-databases/replication/configure-iis-for-web-synchronization.md) et [Configurer IIS 7 pour la synchronisation Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
+ Pour obtenir des informations sur la façon de configurer les composants requis pour la synchronisation Web, consultez [configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md), [Configurer IIS pour la synchronisation Web](./configure-iis-7-for-web-synchronization.md) et [Configurer IIS 7 pour la synchronisation Web](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md).  
   
 > [!NOTE]  
 >  La synchronisation Web est conçue pour synchroniser des données avec des ordinateurs portables, des périphériques de poche et d'autres clients. Elle n'est pas conçue pour des applications de serveur à serveur pour des volumes élevés.  
@@ -85,5 +85,4 @@ ms.locfileid: "88404475"
 ## <a name="see-also"></a>Voir aussi  
  [Configurer la synchronisation web](../../relational-databases/replication/configure-web-synchronization.md)   
  [Topologies pour la synchronisation web](../../relational-databases/replication/topologies-for-web-synchronization.md)  
-  
   

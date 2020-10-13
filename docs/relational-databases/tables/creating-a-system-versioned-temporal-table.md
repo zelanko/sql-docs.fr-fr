@@ -12,12 +12,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 035b1793515779102b9b6b24d0377a4d33cba3c1
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 3c2be314863112cfb7d0a22e9000fc71d7991454
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990393"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809295"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Création d’une table temporelle avec versions gérées par le système
 
@@ -84,7 +84,7 @@ La table de l’historique est créée à l’aide des règles appliquées à la
 
 - Le nom du schéma est obligatoire pour le paramètre **HISTORY_TABLE** .
 - Si le schéma spécifié n’existe pas, l’instruction **CREATE TABLE** échoue.
-- Si la table spécifiée par le paramètre **HISTORY_TABLE** existe déjà, elle est validée par rapport à la table temporelle nouvellement créée sur les plans [de la cohérence du schéma et de la cohérence des données temporelles](https://msdn.microsoft.com/library/dn935015.aspx). Si vous spécifiez une table de l’historique non valide, l’instruction **CREATE TABLE** échoue.
+- Si la table spécifiée par le paramètre **HISTORY_TABLE** existe déjà, elle est validée par rapport à la table temporelle nouvellement créée sur les plans [de la cohérence du schéma et de la cohérence des données temporelles](./temporal-tables.md). Si vous spécifiez une table de l’historique non valide, l’instruction **CREATE TABLE** échoue.
 
 ## <a name="creating-a-temporal-table-with-a-user-defined-history-table"></a>Création d’une table temporelle avec une table de l’historique définie par l’utilisateur
 
@@ -207,4 +207,4 @@ ALTER TABLE ProjectTaskCurrent
 - [Modification des données dans une table temporelle avec version gérée par le système](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)
 - [Interrogation des données dans une table temporelle avec version gérée par le système](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)
 - [Modification du schéma d’une table temporelle à version contrôlée par le système](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)
-- [Arrêt du contrôle de version du système sur une table temporelle avec contrôle de version par le système](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
+- [Arrêt du contrôle de version du système sur une table temporelle avec contrôle de version par le système](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)

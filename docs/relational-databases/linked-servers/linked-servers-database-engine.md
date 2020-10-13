@@ -20,12 +20,12 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: b471d7e0f6ab13c5718e1ec37a87d423e7115f94
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea8f2b873b8990a00bc61cd8ce45c192feefaaa5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88420923"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869414"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
 
@@ -34,7 +34,7 @@ ms.locfileid: "88420923"
   Les serveurs liés permettent au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et à [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] de lire des données à partir des sources de données distantes et d’exécuter des commandes sur les serveurs de base de données distants (par exemple des sources de données OLE DB) en dehors de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En général, les serveurs liés sont configurés pour permettre au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui inclut des tables situées dans une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou un autre produit de base de données comme Oracle. De nombreux types de sources de données OLE DB peuvent être configurés comme serveurs liés, notamment [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel et Azure CosmosDB.
 
 > [!NOTE]
-> Les serveurs liés sont disponibles dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. Ils ne sont pas activés dans les pools élastiques et Singleton [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il existe certaines [contraintes dans Managed Instance qui sont décrites ici](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Les serveurs liés sont disponibles dans [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. Ils ne sont pas activés dans les pools élastiques et Singleton [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il existe certaines [contraintes dans Managed Instance qui sont décrites ici](/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## <a name="when-to-use-linked-servers"></a>Quand utiliser des serveurs liés ?
 
@@ -76,7 +76,7 @@ Généralement, les serveurs liés sont utilisés pour le traitement des requêt
 > Lorsqu'un fournisseur OLE DB est utilisé, le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit disposer d'autorisations de lecture et d'exécution sur le répertoire et sur tous les sous-répertoires correspondants dans lequel le fournisseur est installé. Cela inclut les fournisseurs mis en production par Microsoft, ainsi que tous les fournisseurs tiers.
 
 > [!NOTE]
-> Les serveurs liés prennent en charge l’authentification directe Active Directory au moment de l’utilisation de la délégation totale. À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, l’authentification directe avec délégation contrainte est également prise en charge. Toutefois, la [délégation contrainte basée sur les ressources](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) n’est pas prise en charge.
+> Les serveurs liés prennent en charge l’authentification directe Active Directory au moment de l’utilisation de la délégation totale. À partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, l’authentification directe avec délégation contrainte est également prise en charge. Toutefois, la [délégation contrainte basée sur les ressources](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) n’est pas prise en charge.
 
 ## <a name="managing-providers"></a>Gestion des fournisseurs  
 Un ensemble d'options permettent de contrôler la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charge et utilise des fournisseurs OLE DB spécifiés dans le Registre.  
@@ -107,5 +107,4 @@ Vous pouvez également définir des serveurs liés à l'aide de [!INCLUDE[ssManS
   
 ## <a name="related-content"></a>Contenu associé  
  [sys.servers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
- [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)

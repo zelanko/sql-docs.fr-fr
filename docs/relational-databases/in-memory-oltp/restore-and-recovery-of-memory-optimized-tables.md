@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73edcacffe6267d6a2692018a106a4eb055817e6
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 740636f90882f32ec42722e2f36cdd2932747025
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551246"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868685"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauration et récupération de tables à mémoire optimisée
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -68,6 +68,5 @@ Les tables à mémoire optimisée peuvent généralement être chargées dans la
 -   Les grandes tables à mémoire optimisée avec un ou plusieurs index non-cluster peuvent entraîner une utilisation élevée du processeur. Contrairement à un index de hachage dont le nombre de compartiments est défini lors de la création, les index non-cluster grossissent de manière dynamique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
-  
+ [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](/previous-versions/sql/sql-server-2016/dn624160(v=sql.130))  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 77d47d7492b9c4973d58113c80e5cca737315282
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 53d2ea62bebcce1df978a8b4e539c56408a9f673
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540836"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809190"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Scénarios d’utilisation de table temporelle
 
@@ -59,7 +59,7 @@ Diverses options pour créer une table avec gestion système des versions tempor
 
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>Activation de la gestion système des versions sur une table existante en vue d’un audit des données
 
-Si vous avez besoin d’effectuer un audit des données dans des bases de données existantes, utilisez ALTER TABLE pour convertir les tables non temporelles en tables avec version système. Pour préserver votre application, ajoutez des colonnes de période avec l’option HIDDEN, comme expliqué dans [Modifier une table non temporelle pour la convertir en table temporelle versionnée par le système](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3). L’exemple suivant illustre l’activation de la gestion système des versions sur une table Employee existante appartenant à une base de données de ressources humaines hypothétique :
+Si vous avez besoin d’effectuer un audit des données dans des bases de données existantes, utilisez ALTER TABLE pour convertir les tables non temporelles en tables avec version système. Pour préserver votre application, ajoutez des colonnes de période avec l’option HIDDEN, comme expliqué dans [Modifier une table non temporelle pour la convertir en table temporelle versionnée par le système](./creating-a-system-versioned-temporal-table.md). L’exemple suivant illustre l’activation de la gestion système des versions sur une table Employee existante appartenant à une base de données de ressources humaines hypothétique :
 
 ```sql
 /*

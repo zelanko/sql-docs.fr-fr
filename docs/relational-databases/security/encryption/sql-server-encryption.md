@@ -16,12 +16,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d749c2707c78aa452bdb6a55f2f2d477ea0fb465
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 702b7f39a3435255432474542b74a8d1f210284d
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720436"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869239"
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -61,7 +61,7 @@ Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../include
  [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)  
  Vue d'ensemble du processus permettant de mieux sécuriser la plateforme [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et du travail avec des utilisateurs et des objets sécurisables.  
 
-[Une vue d’ensemble des fonctionnalités de sécurité d’Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview)
+[Une vue d’ensemble des fonctionnalités de sécurité d’Azure SQL Database](/azure/sql-database/sql-database-security-overview)
 </br>Vue d’ensemble de la sécurité d’Azure SQL Database pour la protection des données, le contrôle d’accès et la surveillance proactive.
   
  [Fonctions de chiffrement &#40;Transact-SQL&#41;](../../../t-sql/functions/cryptographic-functions-transact-sql.md)  
@@ -88,5 +88,4 @@ Vous pouvez utiliser le chiffrement dans [!INCLUDE[ssNoVersion](../../../include
  [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)     
  [Activer les connexions chiffrées dans le moteur de base de données](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)    
-  
   

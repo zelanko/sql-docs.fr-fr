@@ -16,12 +16,12 @@ ms.author: genemi
 ms.reviewer: maghan
 ms.date: 04/16/2020
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18e0b44567d2e6a06dfc243231aebe6f9be11222
-ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
+ms.openlocfilehash: b2cc5e7de4b96bbd85ebe36e3173189d08258139
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91624786"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869422"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Démarrage rapide : Événements étendus dans SQL Server
 
@@ -49,13 +49,13 @@ Cet article :
 Les blogs et autres fils de conversation informelle font parfois référence aux événements étendus par l’abréviation *xevents*.
 
 > [!NOTE]
-> Pour plus d’informations sur les événements étendus dans Azure SQL Database, y compris des exemples de code, consultez [Événements étendus dans la base de données SQL](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/).
+> Pour plus d’informations sur les événements étendus dans Azure SQL Database, y compris des exemples de code, consultez [Événements étendus dans la base de données SQL](/azure/azure-sql/database/xevent-db-diff-from-svr).
 
 ## <a name="preparations-before-demo"></a>Préparations avant la démonstration
 
 Les prérequis suivants sont incontournables pour effectuer réellement la démonstration qui suit.
 
-1. [Télécharger SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+1. [Télécharger SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
    Chaque mois, vous devez installer la dernière mise à jour mensuelle de SSMS.
 2. Connectez-vous à Microsoft SQL Server 2014 ou une version ultérieure.
@@ -359,7 +359,7 @@ Les scénarios spécifiques des sessions d’événements dont le but est d’é
 - [Trouver les objets comportant le plus de verrous](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - Ce scénario utilise l’objet package0.histogram cible, qui traite les données d’événement brutes avant de vous les afficher.
 - [Déterminer quelles requêtes détiennent des verrous](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)
-  - Ce scénario utilise l’objet [package0.pair_matching cible](https://msdn.microsoft.com/library/3c87dcfb-543a-4bd8-a73d-1390bdf4ffa3), où la paire d’événements comporte sqlserver.lock_acquire et lock_release.
+  - Ce scénario utilise l’objet [package0.pair_matching cible](/previous-versions/sql/sql-server-2016/ff878062(v=sql.130)), où la paire d’événements comporte sqlserver.lock_acquire et lock_release.
 
 ## <a name="terms-and-concepts-in-extended-events"></a>Termes et concepts liés aux événements étendus
 
@@ -541,7 +541,7 @@ Voici des liens vers la documentation relative à ces instructions SELECT et les
 - Détails de la fonction intégrée [HAS_PERMS_BY_NAME (Transact-SQL)](../../t-sql/functions/has-perms-by-name-transact-sql.md)
 - [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)
 - [GRANT – octroi d'autorisations de serveur (Transact-SQL)](../../t-sql/statements/grant-server-permissions-transact-sql.md)
-- [sys.server_principals (Transact-SQL)](https://msdn.microsoft.com/library/ms188786.aspx)
+- [sys.server_principals (Transact-SQL)](../system-catalog-views/sys-server-principals-transact-sql.md)
 - Blog : [Autorisations de moteur de base de données effectives](https://social.technet.microsoft.com/wiki/contents/articles/15180.effective-database-engine-permissions.aspx)
 - [Poster](https://aka.ms/sql-permissions-poster)zoomable, au format PDF, qui présente la hiérarchie de toutes les autorisations SQL Server.
 

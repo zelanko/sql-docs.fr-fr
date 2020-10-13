@@ -12,12 +12,12 @@ ms.assetid: e442303d-4de1-494e-94e4-4f66c29b5fb9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fbaf3147eaa9cf8c68e0d0b8b3ee0510c6b4ef7
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 76768274921bceb17ba9ea05c73850f449441082
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89540818"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810129"
 ---
 # <a name="temporal-tables"></a>Tables temporelles
 
@@ -35,7 +35,7 @@ SQL Server 2016 introduit la prise en charge des tables temporelles (également
   - [Tables temporelles avec version gérée par le système avec tables à mémoire optimisée](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
   - [Scénarios d’utilisation de table temporelle](../../relational-databases/tables/temporal-table-usage-scenarios.md)
 
-  - [Prise en main des tables temporelles dans Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)
+  - [Prise en main des tables temporelles dans Azure SQL Database](/azure/azure-sql/temporal-tables)
 
 - **Exemples :**
 

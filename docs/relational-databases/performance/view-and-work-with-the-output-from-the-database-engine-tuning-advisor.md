@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c6a6dace6d14ea38aa411924f0c74dfec2218f77
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 0116bfc2b0b87ca6079c2c25fe63d40ec12f0273
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458571"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890909"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor-dta"></a>Voir et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données (DTA)
 
@@ -45,7 +45,7 @@ ms.locfileid: "86458571"
  Cette interface permet en outre d’afficher les résultats du paramétrage générés par l’utilitaire de ligne de commande **dta** .  
   
 > [!NOTE]  
->  Si vous utilisez l’utilitaire de ligne de commande **dta** et précisez que les résultats doivent être écrits dans un fichier XML par le biais de l’argument **-ox** , vous pouvez ouvrir et consulter le fichier de sortie XML en cliquant sur **Ouvrir un fichier** dans le menu **Fichier** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be). Pour plus d’informations sur l’utilitaire de ligne de commande **dta** , consultez [Utilitaire dta](../../tools/dta/dta-utility.md).  
+>  Si vous utilisez l’utilitaire de ligne de commande **dta** et précisez que les résultats doivent être écrits dans un fichier XML par le biais de l’argument **-ox** , vous pouvez ouvrir et consulter le fichier de sortie XML en cliquant sur **Ouvrir un fichier** dans le menu **Fichier** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Use SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md). Pour plus d’informations sur l’utilitaire de ligne de commande **dta** , consultez [Utilitaire dta](../../tools/dta/dta-utility.md).  
   
 #### <a name="to-view-tuning-recommendations-with-the-database-engine-tuning-advisor-gui"></a>Pour afficher les recommandations de paramétrage dans l'interface de l'Assistant Paramétrage du moteur de base de données  
   
@@ -392,5 +392,4 @@ ms.locfileid: "86458571"
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [Utilitaire dta](../../tools/dta/dta-utility.md)  
-  
   

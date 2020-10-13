@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: c1327c908a034f524140ed8b9282766e328f75b9
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 02b4935c7608bb6912274ee017371f519df7bdf8
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91719410"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890770"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastructure du profilage de requête
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -84,7 +84,7 @@ WITH (MAX_MEMORY=4096 KB,
 ```
 
 > [!NOTE]
-> Pour plus d’informations sur la surcharge de performances liée au profilage de requête, consultez le billet de blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
+> Pour plus d’informations sur la surcharge de performances liée au profilage de requête, consultez le billet de blog [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere). 
 
 Lors de l’exécution d’une session d’événements étendus qui utilise l’événement *query_thread_profile*, la vue de gestion dynamique [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md) est également renseignée à l’aide du profilage léger, ce qui active les statistiques des requêtes actives pour tous les sessions, à l’aide du [Moniteur d’activité](../../relational-databases/performance-monitor/activity-monitor.md) ou par interrogation directe de la vue de gestion dynamique.
 
@@ -212,4 +212,4 @@ Pour plus d’informations sur la surcharge de performances liée au profilage d
  [Indicateurs de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)    
  [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md)    
- [Statistiques des requêtes dynamiques](../../relational-databases/performance/live-query-statistics.md)      
+ [Statistiques des requêtes dynamiques](../../relational-databases/performance/live-query-statistics.md)

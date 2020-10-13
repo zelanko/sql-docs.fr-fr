@@ -15,12 +15,12 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4d5d881ff7628c094b8d6880406650387c0cff48
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730859"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868577"
 ---
 # <a name="memory-optimization-advisor"></a>Conseiller d'optimisation de la mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "85730859"
   
 -   Migrer une table et les données vers une table mémoire optimisée (si toutes les fonctionnalités sont prises en charge).  
     
- Pour plus d’informations sur les méthodologies de migration, consultez [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Pour plus d’informations sur les méthodologies de migration, consultez [OLTP en mémoire - Modèles de charge de travail courants et considérations relatives à la migration](/previous-versions/dn673538(v=msdn.10)).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Procédure pas à pas d'utilisation du Conseiller d'optimisation de la mémoire  
  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table que vous souhaitez convertir, puis sélectionnez **Conseiller d’optimisation de la mémoire**. Ce faisant, vous affichez la page d'accueil du **Conseiller d'optimisation de la mémoire de la table**.  
@@ -99,7 +99,7 @@ ms.locfileid: "85730859"
   
  S’il n’existe aucune clé primaire et que la table est migrée vers une table non durable, cet écran ne s’affiche pas.  
   
- Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar**et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Collations and Code Pages](https://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
+ Pour les colonnes textuelles (colonnes avec des types **char**, **nchar**, **varchar**et **nvarchar**), vous devez sélectionner un classement approprié. L'OLTP en mémoire prend uniquement en charge les classements BIN2 pour les colonnes d'une table mémoire optimisée, mais ne prend pas en charge les classements présentant des caractères supplémentaires. Consultez [Collations and Code Pages](./introduction-to-memory-optimized-tables.md) pour plus d'informations sur les classements pris en charge et l'impact potentiel d'une modification du classement.  
   
  Vous pouvez configurer les paramètres suivants pour la clé primaire :  
   
@@ -113,7 +113,7 @@ ms.locfileid: "85730859"
   
 -   Index NONCLUSTERED. Ce type d'index est idéal pour les index avec de nombreuses requêtes de plage. Vous pouvez configurer l'ordre de tri de chaque colonne dans la liste **Trier par colonne et ordre** .  
   
- Pour connaître le type d’index le plus approprié pour votre clé primaire, consultez [Index de hachage](https://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e).  
+ Pour connaître le type d’index le plus approprié pour votre clé primaire, consultez [Index de hachage](/previous-versions/sql/sql-server-2016/dn133190(v=sql.130)).  
   
  Cliquez sur **Suivant** après avoir effectué vos choix de clé primaire.  
   
@@ -130,6 +130,5 @@ ms.locfileid: "85730859"
  Une fois le traitement terminé, actualisez l’ **Explorateur d’objets** pour afficher la nouvelle table optimisée en mémoire et l’ancienne table sur disque. Vous pouvez conserver l'ancienne table ou la supprimer, à votre convenance personnelle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migration vers OLTP en mémoire](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

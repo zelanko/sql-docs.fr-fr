@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f51c01570aa5149e24ca1cb37af4b6bafe35ee0f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 95b7165fb16832b8b76e6a9c7a331433d49ff0a9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737817"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809635"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Supprimer des fichiers blob de sauvegarde avec des baux actifs
 
@@ -24,7 +24,7 @@ ms.locfileid: "85737817"
 
 En cas de sauvegarde vers ou de restauration à partir du stockage Microsoft Azure, SQL Server acquiert un bail infini pour verrouiller l’accès exclusif à l’objet blob. Lorsque le processus de sauvegarde ou de restauration est terminé, le bail est libéré. Si une sauvegarde ou une restauration échoue, le processus de sauvegarde tente de nettoyer tout objet blob non valide. Toutefois, si la sauvegarde échoue en raison d'un problème de connectivité du réseau prolongé, le processus de sauvegarde peut ne pas être à nouveau en mesure d'accéder à l'objet blob et celui-ci peut rester orphelin. Par conséquent, l’objet blob ne peut pas être écrit ou supprimé tant que le bail n’a pas été libéré. Cette rubrique explique comment libérer (résilier) le bail et supprimer l’objet blob.
   
-Pour plus d’informations sur les types de baux, consultez cet [article](https://go.microsoft.com/fwlink/?LinkId=275664).  
+Pour plus d’informations sur les types de baux, consultez cet [article](/rest/api/storageservices/Lease-Blob).  
   
 Si l’opération de sauvegarde échoue, elle peut générer un fichier de sauvegarde non valide. Le fichier de sauvegarde d'objet blob peut également avoir un bail actif, ce qui empêche sa suppression ou son remplacement. Pour supprimer ou remplacer ces objets blob, le bail doit d’abord être libéré (résilié). En cas d’échec de sauvegarde, nous vous recommandons de nettoyer les baux et de supprimer les objets blob. Vous pouvez également périodiquement nettoyer les baux et supprimer les objets blob dans le cadre de vos tâches de gestion du stockage.  
   
@@ -36,7 +36,7 @@ Les étapes suivantes décrivent la procédure de nettoyage après l'échec d'un
   
 1. **Identifier des objets blob avec baux :** si vous avez un script ou un processus qui exécute les processus de sauvegarde, vous pouvez capturer l’erreur dans le script ou le processus, et l’utiliser pour nettoyer les objets blob.  Vous pouvez également utiliser les propriétés LeaseStats et LeastState pour identifier les objets blob associés à des baux. Une fois que vous avez identifié les objets blob, consultez la liste et vérifiez la validité du fichier de sauvegarde avant de supprimer l’objet blob.  
   
-1. **Résiliation du bail :** une demande autorisée peut résilier le bail sans fournir d’ID de bail. Pour plus d’informations, consultez [cet article](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+1. **Résiliation du bail :** une demande autorisée peut résilier le bail sans fournir d’ID de bail. Pour plus d’informations, consultez [cet article](/rest/api/storageservices/Lease-Blob) .  
   
     > [!TIP]  
     > SQL Server génère un ID de bail pour établir un accès exclusif pendant l'opération de restauration. L'ID de bail de la restauration est BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -46,7 +46,7 @@ Les étapes suivantes décrivent la procédure de nettoyage après l'échec d'un
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Exemple de script PowerShell  
   
 > [!IMPORTANT]
-> Si vous exécutez PowerShell 2.0, vous pouvez rencontrer des problèmes lors du chargement de l'assembly Microsoft WindowsAzure.Storage.dll. Nous vous recommandons de mettre à niveau [Powershell](https://docs.microsoft.com/powershell/) pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante afin de créer ou modifier le fichier powershell.exe.config pour charger les assemblies .NET 2.0 et .NET 4.0 au moment de l’exécution avec les informations suivantes :  
+> Si vous exécutez PowerShell 2.0, vous pouvez rencontrer des problèmes lors du chargement de l'assembly Microsoft WindowsAzure.Storage.dll. Nous vous recommandons de mettre à niveau [Powershell](/powershell/) pour résoudre le problème. Vous pouvez également utiliser la solution de contournement suivante afin de créer ou modifier le fichier powershell.exe.config pour charger les assemblies .NET 2.0 et .NET 4.0 au moment de l’exécution avec les informations suivantes :  
 >
 > ```xml
 > <?xml version="1.0"?>
@@ -128,4 +128,4 @@ if($lockedBlobs.Count -gt 0)
   
 ## <a name="see-also"></a>Voir aussi
 
-[Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+[Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)

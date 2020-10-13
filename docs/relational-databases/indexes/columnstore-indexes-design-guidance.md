@@ -12,12 +12,12 @@ ms.assetid: fc3e22c2-3165-4ac9-87e3-bf27219c820f
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e601f2b89000902647631fda9ee46a90a92e5b39
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c2af78d5af858f6faad29c8baaf260610f377cb4
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88409175"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868652"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Index columnstore - Guide de conception
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -66,7 +66,7 @@ N’utilisez pas d’index cluster columnstore quand :
 * La table nécessite des types de données varchar(max), nvarchar(max) ou varbinary(max). Ou alors concevez l’index columnstore afin qu’il n’inclut pas ces colonnes.
 * Les données de table ne sont pas permanentes. Utilisez plutôt un segment de mémoire ou une table temporaire quand vous avez besoin de stocker et de supprimer les données rapidement.
 * La table a moins d’un million de lignes par partition. 
-* Plus de 10 % des opérations sur la table sont des mises à jour et des suppressions. Un nombre élevé de mises à jour et de suppressions provoquent une fragmentation. La fragmentation affecte le taux de compression et les performances de requête jusqu’à ce que vous exécutiez une opération appelée « Réorganisation », qui force toutes les données dans le columnstore et supprime la fragmentation. Pour plus d’informations, consultez [Réduction de la fragmentation d’index dans les index columnstore](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/).
+* Plus de 10 % des opérations sur la table sont des mises à jour et des suppressions. Un nombre élevé de mises à jour et de suppressions provoquent une fragmentation. La fragmentation affecte le taux de compression et les performances de requête jusqu’à ce que vous exécutiez une opération appelée « Réorganisation », qui force toutes les données dans le columnstore et supprime la fragmentation. Pour plus d’informations, consultez [Réduction de la fragmentation d’index dans les index columnstore](/archive/blogs/sqlserverstorageengine/columnstore-index-defragmentation-using-reorganize-command).
 
 Pour plus d’informations, consultez [Index columnstore - Entreposage des données](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md).
 
@@ -100,7 +100,7 @@ Pour ajouter des ressources de traitement supplémentaires, vous pouvez exécute
 
 Pour plus d’informations, consultez [Bien démarrer avec les index columnstore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).
 
-Pour plus d’informations sur le choix du meilleur index columnstore, consultez le blog de Sunil Agarwal intitulé [Quel est l’index columnstore le plus adapté à ma charge de travail ?](https://blogs.msdn.microsoft.com/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload).
+Pour plus d’informations sur le choix du meilleur index columnstore, consultez le blog de Sunil Agarwal intitulé [Quel est l’index columnstore le plus adapté à ma charge de travail ?](/archive/blogs/sql_server_team/columnstore-index-which-columnstore-index-is-right-for-my-workload).
 
 ## <a name="use-table-partitions-for-data-management-and-query-performance"></a>Utiliser des partitions de table pour les performances de requête et la gestion des données
 Les index columnstore prennent en charge le partitionnement, qui est un bon moyen de gérer et d’archiver les données. Le partitionnement améliore également les performances de requête en limitant les opérations à une ou plusieurs partitions.
@@ -130,7 +130,7 @@ Exemple :
 * Chargez 1 000 000 lignes dans une partition ou une table non partitionnée. Vous obtenez un rowgroup compressé avec 1 000 000 lignes. C’est parfait pour bénéficier d’une compression des données et de performances de requête élevées.
 * Chargez 1 000 000 lignes uniformément dans 10 partitions. Chaque partition reçoit 100 000 lignes, ce qui est inférieur au seuil minimal pour la compression columnstore. Ainsi, l’index columnstore peut avoir 10 rowgroups delta avec 100 000 lignes dans chaque. Il existe des moyens de forcer les rowgroups delta dans le columnstore. Toutefois, s’il s’agit des seules lignes de l’index columnstore, les rowgroups compressés seront trop petits pour bénéficier d’un meilleur niveau de performance de compression et de requête.
 
-Pour plus d’informations sur le partitionnement, voir le blog de Sunil Agarwal intitulé [Dois-je partitionner mon index columnstore ?](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/10/04/columnstore-index-should-i-partition-my-columnstore-index/).
+Pour plus d’informations sur le partitionnement, voir le blog de Sunil Agarwal intitulé [Dois-je partitionner mon index columnstore ?](/archive/blogs/sqlserverstorageengine/columnstore-index-should-i-partition-my-columnstore-index).
 
 ## <a name="choose-the-appropriate-data-compression-method"></a>Choisir la méthode de compression des données appropriée
 L’index columnstore propose deux options pour la compression des données : la compression columnstore et la compression d’archive. Vous pouvez choisir l’option de compression quand vous créez l’index, ou la changer ultérieurement à l’aide de [ALTER INDEX... REBUILD](../../t-sql/statements/alter-index-transact-sql.md).
@@ -193,4 +193,3 @@ Pour créer un index columnstore vide pour :
 * [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], consultez [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md).
 
 Pour plus d’informations sur la façon de convertir un segment de mémoire rowstore ou un index B-tree existant dans un index columnstore cluster, ou pour créer un index columnstore non-cluster, consultez [CREATE COLUMNSTORE INDEX (Transact-SQL)](../../t-sql/statements/create-columnstore-index-transact-sql.md).
-

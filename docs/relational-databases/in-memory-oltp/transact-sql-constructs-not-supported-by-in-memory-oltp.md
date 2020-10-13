@@ -12,12 +12,12 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04bc3b16152307b5d5ed4a3437934e5c7ce6a45a
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753206"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868785"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -28,13 +28,13 @@ ms.locfileid: "85753206"
   
  Pour plus d'informations sur les fonctionnalités prises en charge avec les tables optimisées en mémoire et les procédures stockées compilées en mode natif, consultez :  
   
--   [Problèmes de migration pour les procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
+-   [Problèmes de migration pour les procédures stockées compilées en mode natif](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 -   [Prise en charge de Transact-SQL pour OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
 -   [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)  
   
--   [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [Procédures stockées compilées en mode natif](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   
 ## <a name="databases-that-use-in-memory-oltp"></a>Bases de données qui utilisent OLTP en mémoire  
  Le tableau suivant répertorie les fonctionnalités [!INCLUDE[tsql](../../includes/tsql-md.md)] non prises en charge, ainsi que les mots clés qui peuvent apparaître dans le texte du message d’une erreur impliquant une base de données OLTP en mémoire. Ce tableau indique également la résolution de l’erreur.  
@@ -110,7 +110,7 @@ ms.locfileid: "85753206"
 |Fonctionnalité|COMPUTE|La clause **COMPUTE** n'est pas prise en charge. Supprimez-la de la requête.|  
 |Fonctionnalité|SELECT INTO|La clause **INTO** n'est pas prise en charge avec l'instruction **SELECT** . Réécrivez la requête ainsi : **INSERT INTO** _Table_ **SELECT**.|  
 |Fonctionnalité|liste de colonnes d'insertion incomplète|En général, les instructions INSERT doivent spécifier des valeurs pour toutes les colonnes de la table.<br /><br /> Toutefois, nous prenons en charge les contraintes DEFAULT et les colonnes IDENTITY(1,1) sur les tables optimisées en mémoire. Ces colonnes peuvent être (et c’est une obligation dans le cas des colonnes IDENTITY) omises de la liste des colonnes INSERT.|  
-|Fonctionnalité|*Fonction*|Certaines fonctions intégrées ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Supprimez la fonction rejetée de la procédure stockée. Pour plus d’informations sur les fonctions intégrées prises en charge, consultez<br />[Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md), ou<br />[Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Fonctionnalité|*Fonction*|Certaines fonctions intégrées ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Supprimez la fonction rejetée de la procédure stockée. Pour plus d’informations sur les fonctions intégrées prises en charge, consultez<br />[Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md), ou<br />[Procédures stockées compilées en mode natif](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Fonctionnalité|CASE|**S’applique à :** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] et SQL Server à partir de [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Les expressions **CASE** ne sont pas prises en charge dans les requêtes des procédures stockées compilées en mode natif. Créez des requêtes pour chaque cas. Pour plus d’informations, consultez [Implémentation d’une expression CASE dans une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] et SQL Server (à partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]) prennent en charge les expressions CASE.|  
 |Fonctionnalité|INSERT EXECUTE|Supprimez la référence.|  
 |Fonctionnalité|Exécutez|Prise en charge uniquement pour exécuter des procédures stockées compilées en mode natif et des fonctions définies par l’utilisateur.|  
@@ -147,7 +147,7 @@ ms.locfileid: "85753206"
 |Opérateur|TSEQUAL|Cet opérateur n'est pas pris en charge. Supprimez **TSEQUAL** de la procédure stockée compilée en mode natif.|  
 |Opérateur|LIKE|Cet opérateur n'est pas pris en charge. Supprimez **LIKE** de la procédure stockée compilée en mode natif.|  
 |Opérateur|NEXT VALUE FOR|Les séquences ne peuvent pas être référencées dans les procédures stockées compilées en mode natif. Obtenez la valeur en utilisant [!INCLUDE[tsql](../../includes/tsql-md.md)]interprété, puis passez-la dans la procédure stockée compilée en mode natif. Pour plus d’informations, consultez [Implémentation d’IDENTITY dans une table mémoire optimisée](../../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md).|  
-|Option Set|*option*|Les options SET peuvent être modifiées dans les procédures stockées compilées en mode natif. Certaines options peuvent être définies avec l'instruction BEGIN ATOMIC. Pour plus d'informations, consultez la section sur les blocs atomiques dans [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).|  
+|Option Set|*option*|Les options SET peuvent être modifiées dans les procédures stockées compilées en mode natif. Certaines options peuvent être définies avec l'instruction BEGIN ATOMIC. Pour plus d'informations, consultez la section sur les blocs atomiques dans [Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md).|  
 |Opérande|TABLESAMPLE|Cet opérateur n'est pas pris en charge. Supprimez **TABLESAMPLE** de la procédure stockée compilée en mode natif.|  
 |Option|RECOMPILE|Les procédures stockées compilées en mode natif sont compilées au moment de la création. Supprimez **RECOMPILE** de la définition de procédure.<br /><br /> Vous pouvez exécuter sp_recompile sur une procédure stockée compilée en mode natif, ce qui entraîne sa recompilation lors de la prochaine exécution.|  
 |Option|ENCRYPTION|Cette option n'est pas prise en charge. Supprimez **ENCRYPTION** de la définition de procédure.|  
@@ -187,6 +187,5 @@ ms.locfileid: "85753206"
 |Fonctionnalité|DTC|Les transactions qui accèdent aux tables mémoire optimisées ne peuvent pas être des transactions distribuées.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
-  
+ [Migration vers OLTP en mémoire](./plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
   

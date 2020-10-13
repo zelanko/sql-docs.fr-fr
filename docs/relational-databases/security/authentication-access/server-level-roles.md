@@ -24,12 +24,12 @@ ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b911a1c651716dd53eacda67ee41cdfc6d7a9262
-ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
+ms.openlocfilehash: f185faf3ef585c1f76b3c1dea605632cedf7bd1b
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2020
-ms.locfileid: "91636139"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869024"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "91636139"
   
  Vous pouvez ajouter des principaux au niveau du serveur (connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], comptes et groupes Windows) à des rôles serveur. Chaque membre d'un rôle serveur fixe peut ajouter des connexions à ce rôle. Les membres de rôles serveur définis par l'utilisateur ne peuvent pas ajouter d'autres principaux de serveur à ces rôles.  
 > [!NOTE]
->  Les autorisations de niveau serveur ne sont pas disponibles dans SQL Database ou SQL Data Warehouse. Pour plus d’informations sur SQL Database, consultez [Contrôle et octroi de l’accès à la base de données](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+>  Les autorisations de niveau serveur ne sont pas disponibles dans SQL Database ou SQL Data Warehouse. Pour plus d’informations sur SQL Database, consultez [Contrôle et octroi de l’accès à la base de données](/azure/sql-database/sql-database-manage-logins).
   
 ## <a name="fixed-server-level-roles"></a>Rôles serveur fixes  
  Le tableau ci-dessous répertorie les rôles serveur fixes et leurs fonctionnalités.  
@@ -104,5 +104,4 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [Autorisations du principal du serveur REVOKE &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [Autorisations du principal du serveur DENY &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   
  [Créer un rôle serveur](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
-  
   

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58c105d3f4d4d49cd7bf064a2c3c6b88fc5a7eae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 897ebac1fa9d73444daf97a3642edb573a4f1c69
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85756876"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868795"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT et JOIN à partir de vues système pour les événements étendus dans SQL Server
 
@@ -80,7 +80,7 @@ Pour sélectionner (avec SELECT) à partir des vues système, l’autorisation s
 
 Cette section met en correspondance et en corrélation trois différentes perspectives technologiques sur la même session d’événements définie. La session a été définie et est visible dans l’ **Explorateur d’objets** de SQL Server Management Studio (SSMS.exe), mais elle n’est pas en cours d’exécution.
 
-Chaque mois, il est préférable d’ [installer la dernière mise à jour de SSMS](https://msdn.microsoft.com/library/mt238290.aspx), afin d’éviter toute erreur inattendue.
+Chaque mois, il est préférable d’ [installer la dernière mise à jour de SSMS](../../ssms/download-sql-server-management-studio-ssms.md), afin d’éviter toute erreur inattendue.
 
 
 Vous trouverez de la documentation de référence sur les affichages catalogue pour les événements étendus dans [Affichages catalogue des événements étendus (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md).
@@ -891,5 +891,3 @@ Voici le contenu de la première cellule XML, tirée de l’ensemble de lignes r
   </action>
 </event>
 ```
-
-

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d8fd7e4164807789939ba0c3fd515d1a2d8dc67
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: 88ab6e015f26cf97e002bc4e21a4430bf30d9cba
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87410985"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868199"
 ---
 # <a name="deploy-the-host-guardian-service-for-ssnoversion-md"></a>Déployer le Service Guardian hôte pour [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
@@ -53,7 +53,7 @@ Avant de commencer, vérifiez que l’ordinateur que vous utilisez exécute Wind
     Install-HgsServer -HgsDomainName $HgsDomainName -SafeModeAdministratorPassword $DSRMPassword -Restart
     ```
 
-    Votre ordinateur SGH redémarre une nouvelle fois pour terminer la configuration de la forêt Active Directory. La prochaine fois que vous vous connecterez, votre compte d’administrateur sera un compte d’administrateur de domaine. Pour plus d’informations sur la gestion et la sécurisation de votre nouvelle forêt, nous vous recommandons de passer en revue la [documentation sur les opérations dans Active Directory Domain Services](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations).
+    Votre ordinateur SGH redémarre une nouvelle fois pour terminer la configuration de la forêt Active Directory. La prochaine fois que vous vous connecterez, votre compte d’administrateur sera un compte d’administrateur de domaine. Pour plus d’informations sur la gestion et la sécurisation de votre nouvelle forêt, nous vous recommandons de passer en revue la [documentation sur les opérations dans Active Directory Domain Services](/windows-server/identity/ad-ds/manage/component-updates/ad-ds-operations).
 
 3. Vous allez à présent configurer le cluster SGH et installer le service d’attestation en exécutant la commande suivante dans une console Windows PowerShell avec élévation de privilèges :
 
@@ -218,7 +218,7 @@ Il est recommandé que toutes les instances de production de SGH utilisent une l
 
 1. Obtenez un certificat TLS auprès de votre autorité de certification en utilisant le nom de service SGH complet de l’étape 1.3 comme nom d’objet. Si vous ne connaissez pas le nom de votre service, exécutez `Get-HgsServer` sur n’importe quel ordinateur SGH pour le trouver. Vous pouvez ajouter d’autres noms DNS à la liste Autre nom de l’objet si vos ordinateurs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] utilisent un nom DNS différent pour joindre votre cluster SGH (par exemple, si SGH se trouve derrière un équilibreur de charge réseau avec une adresse différente).
 
-2. Sur l’ordinateur SGH, utilisez [Set-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/set-hgsserver) pour activer la liaison HTTPS et spécifier le certificat TLS obtenu à l’étape précédente. Si votre certificat est déjà installé sur l’ordinateur dans le magasin de certificats local, utilisez la commande suivante pour l’inscrire auprès de SGH :
+2. Sur l’ordinateur SGH, utilisez [Set-HgsServer](/powershell/module/hgsserver/set-hgsserver) pour activer la liaison HTTPS et spécifier le certificat TLS obtenu à l’étape précédente. Si votre certificat est déjà installé sur l’ordinateur dans le magasin de certificats local, utilisez la commande suivante pour l’inscrire auprès de SGH :
 
     ```powershell
     # Note: you'll need to know the thumbprint for your certificate to configure HGS this way

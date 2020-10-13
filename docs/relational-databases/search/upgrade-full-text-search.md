@@ -17,12 +17,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 763184ba374d004001b33357591a89668c3dd0a2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4759838a20e721031db8e4ea5e644cc3822285a8
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490575"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868939"
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -113,7 +113,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
 ## <a name="backup-and-imported-full-text-catalogs"></a>Sauvegarde et catalogues de texte intégral importés  
  Pour les catalogues de texte intégral qui sont reconstruits ou réinitialisés pendant la mise à niveau (et pour les nouveaux catalogues de texte intégral), le catalogue de texte intégral est un concept logique et ne réside pas dans un groupe de fichiers. Par conséquent, pour sauvegarder un catalogue de texte intégral dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez identifier tous les groupes de fichiers contenant un index de recherche en texte intégral du catalogue et les sauvegarder un par un. Pour plus d’informations, consultez [Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md).  
   
- Pour les catalogues de texte intégral importés à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le catalogue de texte intégral est encore un fichier de base de données dans son propre groupe de fichiers. Le processus de sauvegarde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pour les catalogues de texte intégral s'applique encore mais le service MSFTESQL n'existe pas dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur le processus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration d’un catalogue de texte intégral](https://go.microsoft.com/fwlink/?LinkId=209154) dans la documentation en ligne de SQL Server 2005.  
+ Pour les catalogues de texte intégral importés à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], le catalogue de texte intégral est encore un fichier de base de données dans son propre groupe de fichiers. Le processus de sauvegarde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] pour les catalogues de texte intégral s'applique encore mais le service MSFTESQL n'existe pas dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur le processus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration d’un catalogue de texte intégral](/previous-versions/sql/sql-server-2005/ms142511(v=sql.90)) dans la documentation en ligne de SQL Server 2005.  
   
 ##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a> Migration d’index de recherche en texte intégral lors de la mise à niveau d’une base de données vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Les fichiers de base de données et les catalogues de texte intégral d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être mis à niveau vers une instance de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existante en utilisant un attachement, une restauration ou l'Assistant Copie de base de données. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Les index de recherche en texte intégral sont, le cas échéant, importés, réinitialisés ou reconstruits. La propriété de serveur **upgrade_option** détermine l’option de mise à niveau de texte intégral que l’instance de serveur utilise pendant ces mises à niveau de base de données.  
@@ -135,7 +135,7 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
 -   Si le catalogue de texte intégral est hors connexion, la sauvegarde échouera.  
   
- Pour plus d’informations sur la sauvegarde et la restauration de catalogues de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration de catalogues de texte intégral](https://go.microsoft.com/fwlink/?LinkId=121052) et [Restauration et sauvegarde de fichiers et catalogues de texte intégral](https://go.microsoft.com/fwlink/?LinkId=121053)dans la documentation en ligne de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+ Pour plus d’informations sur la sauvegarde et la restauration de catalogues de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , consultez [Sauvegarde et restauration de catalogues de texte intégral](./back-up-and-restore-full-text-catalogs-and-indexes.md) et [Restauration et sauvegarde de fichiers et catalogues de texte intégral](/previous-versions/sql/sql-server-2008-r2/ms190643(v=sql.105))dans la documentation en ligne de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
  Lorsque la base de données est restaurée sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], un nouveau fichier de base de données est crée pour le catalogue de texte intégral. Le nom par défaut de ce fichier est ftrow_*nom-catalogue*.ndf. Par exemple, si *nom-catalogue* est `cat1`, le nom par défaut du fichier de base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] serait `ftrow_cat1.ndf`. En revanche, si le nom par défaut est déjà utilisé dans le répertoire cible, le nouveau fichier de base de données serait nommé `ftrow_`*nom-catalogue*`{`*GUID*`}.ndf`, où *GUID* est l’identificateur global unique du nouveau fichier.  
   
@@ -176,11 +176,10 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  Si [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ne parvient pas à trouver un fichier catalogue de texte intégral ou si ce dernier a été déplacé durant l'opération d'attachement sans spécification du nouvel emplacement, le comportement dépend de l'option de mise à niveau de texte intégral sélectionnée. Si l’option de mise à niveau de texte intégral a la valeur **Importer** ou **Reconstruire**, le catalogue de texte intégral attaché est reconstruit. Si l’option de mise à niveau de texte intégral a la valeur **Réinitialiser**, le catalogue de texte intégral attaché est réinitialisé.  
   
- Pour plus d’informations sur le détachement et l’attachement d’une base de données, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) et [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
+ Pour plus d’informations sur le détachement et l’attachement d’une base de données, consultez [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) et [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Commencer à utiliser la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurer et gérer des filtres pour la recherche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

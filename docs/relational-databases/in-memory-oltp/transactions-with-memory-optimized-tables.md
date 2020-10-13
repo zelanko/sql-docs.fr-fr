@@ -12,12 +12,12 @@ ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e86e2957a4c9961a5d82d13737a3239deb9a7342
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c41b7f8fc9f1851daa72ca5189fee433c217f20
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753183"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868665"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -143,7 +143,7 @@ Voici les conditions d’erreur qui peuvent entraîner l’échec des transactio
 | Code d'erreur | Description | Cause |
 | :-- | :-- | :-- |
 | **41302** | Tentative de mise à jour d’une ligne qui a été mise à jour dans une autre transaction depuis le début de la transaction actuelle. | Cette erreur se produit si deux transactions simultanées tentent de mettre à jour ou de supprimer la même ligne au même moment. L’une des deux transactions reçoit ce message d’erreur et doit être retentée. <br/><br/>  | 
-| **41305**| Échec de la validation de lecture renouvelable Une ligne lue dans une table optimisée en mémoire a été mise à jour par une autre transaction qui a été validée avant cette transaction. | Cette erreur peut se produire lors de l’utilisation du niveau d’isolation REPEATABLE READ ou SERIALIZABLE, et également si les actions d’une transaction simultanée provoquent la violation d’une contrainte FOREIGN KEY. <br/><br/>Une telle violation simultanée de contraintes de clé étrangère est rare, et indique généralement un problème avec la logique de l’application ou avec une entrée de données. Toutefois, l’erreur peut également se produire s’il n’existe aucun index sur les colonnes impliquées dans la contrainte FOREIGN KEY. Il est donc recommandé de toujours créer un index sur les colonnes de clé étrangère d’une table optimisée en mémoire. <br/><br/> Pour plus d’informations sur les échecs de validation causés par des violations de clé étrangère, consultez [ce billet de blog](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) de l’équipe de consultants clients de SQL Server. |  
+| **41305**| Échec de la validation de lecture renouvelable Une ligne lue dans une table optimisée en mémoire a été mise à jour par une autre transaction qui a été validée avant cette transaction. | Cette erreur peut se produire lors de l’utilisation du niveau d’isolation REPEATABLE READ ou SERIALIZABLE, et également si les actions d’une transaction simultanée provoquent la violation d’une contrainte FOREIGN KEY. <br/><br/>Une telle violation simultanée de contraintes de clé étrangère est rare, et indique généralement un problème avec la logique de l’application ou avec une entrée de données. Toutefois, l’erreur peut également se produire s’il n’existe aucun index sur les colonnes impliquées dans la contrainte FOREIGN KEY. Il est donc recommandé de toujours créer un index sur les colonnes de clé étrangère d’une table optimisée en mémoire. <br/><br/> Pour plus d’informations sur les échecs de validation causés par des violations de clé étrangère, consultez [ce billet de blog](/archive/blogs/sqlcat/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys) de l’équipe de consultants clients de SQL Server. |  
 | **41325** | Échec de la validation sérialisable Une nouvelle ligne a été insérée dans une plage analysée précédemment par la transaction actuelle. Nous appelons cela une ligne fantôme. | Cette erreur peut se produire lors de l’utilisation du niveau d’isolation SERIALIZABLE, et également si les actions d’une transaction simultanée provoquent la violation d’une contrainte PRIMARY KEY, UNIQUE ou FOREIGN KEY. <br/><br/> Une telle violation simultanée des contraintes est rare, et indique généralement un problème avec la logique de l’application ou avec une entrée de données. Toutefois, comme pour les échecs de validation REPEATABLE READ, cette erreur peut également se produire s’il existe une contrainte FOREIGN KEY sans index sur les colonnes impliquées. |  
 | **41301** | Échec de la dépendance : une dépendance a été prise sur une autre transaction dont la validation a échoué. | Cette transaction (Tx1) a pris une dépendance sur une autre transaction (Tx2) lorsque celle-ci (Tx2) était en phase de validation, en lisant des données écrites par Tx2. La validation de Tx2 a donc échoué. Le plus souvent, l’échec de la validation de Tx2 est causé par l’échec de la validation de REPEATABLE READ (41305) et de SERIALIZABLE (41325). La validation peut également échouer en cas d’échec d’E/S du journal, même si cela est moins fréquent. |
 | **41823** et **41840** | Le quota pour les données utilisateur dans les tables optimisées en mémoire et les variables de table a été atteint. | L’erreur 41823 s’applique à SQL Server Express/Web/Standard Edition, ainsi qu’aux bases de données uniques dans [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. L’erreur 41840 s’applique aux pools élastiques dans [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/> Dans la plupart des cas, ces erreurs indiquent que la taille maximale des données utilisateur a été atteinte. Le moyen de résoudre l’erreur consiste à supprimer des données dans les tables optimisées en mémoire. Dans de rares cas cependant, cette erreur est temporaire. Nous recommandons donc de faire une nouvelle tentative la première fois que ces erreurs sont rencontrées.<br/><br/> Comme les autres erreurs de cette liste, les erreurs 41823 et 41840 entraînent l’abandon de la transaction active. |
@@ -281,6 +281,6 @@ go
   
 - [sp_getapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
-- [Niveaux d'isolation basés sur le contrôle de version de ligne dans le moteur de base de données](https://msdn.microsoft.com/library/ms177404.aspx)  
+- [Niveaux d'isolation basés sur le contrôle de version de ligne dans le moteur de base de données](/previous-versions/sql/sql-server-2008-r2/ms177404(v=sql.105))  
   
-- [Contrôler la durabilité d'une transaction](../../relational-databases/logs/control-transaction-durability.md)   
+- [Contrôler la durabilité d'une transaction](../../relational-databases/logs/control-transaction-durability.md)

@@ -12,12 +12,12 @@ ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32129e87589c982c2ae620abbf91eeeb245dc3a0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9677adb821528d7188a64415c344548a7ea400ed
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723121"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868674"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduction aux tables optimisées en mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "85723121"
   
 ## <a name="accessing-data-in-memory-optimized-tables"></a>Accès aux données des tables optimisées en mémoire  
 
-Les tables optimisées en mémoire sont plus efficacement accessibles à partir des procédures stockées compilées en mode natif ([Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)). Elles peuvent également être accédées via du [!INCLUDE[tsql](../../includes/tsql-md.md)]traditionnel et interprète. Le terme [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété fait référence à l'accès aux tables optimisées en mémoire sans procédure stockée compilée en mode natif. Parmi les exemples d'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété figure l'accès à une table optimisée en mémoire à partir d'un déclencheur DML ou d'un traitement, d'une vue ou d'une fonction table [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc.  
+Les tables optimisées en mémoire sont plus efficacement accessibles à partir des procédures stockées compilées en mode natif ([Procédures stockées compilées en mode natif](./a-guide-to-query-processing-for-memory-optimized-tables.md)). Elles peuvent également être accédées via du [!INCLUDE[tsql](../../includes/tsql-md.md)]traditionnel et interprète. Le terme [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété fait référence à l'accès aux tables optimisées en mémoire sans procédure stockée compilée en mode natif. Parmi les exemples d'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété figure l'accès à une table optimisée en mémoire à partir d'un déclencheur DML ou d'un traitement, d'une vue ou d'une fonction table [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc.  
   
  Le tableau suivant résume l'accès natif et l'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété pour différents objets.  
   
@@ -108,5 +108,4 @@ Pour découvrir une brève description des scénarios types dans lesquels [!INCL
 ## <a name="see-also"></a>Voir aussi
 
 [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
   
