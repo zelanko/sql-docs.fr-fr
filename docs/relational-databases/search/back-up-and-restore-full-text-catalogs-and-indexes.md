@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 37a8ab93e1a7f4747167dc6a69acf173c318751f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b8b6708493f92712fddb22582fe94382d882f0a2
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88464992"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869193"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "88464992"
   Cette rubrique explique comment sauvegarder et des index de recherche en texte intégral créés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le catalogue de texte intégral est un concept logique qui ne réside pas dans un groupe de fichiers. Par conséquent, pour sauvegarder un catalogue de texte intégral dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez identifier tous les groupes de fichiers contenant un index de recherche en texte intégral qui appartiennent au catalogue. Vous devez ensuite enregistrer ces groupes de fichiers, un par un.  
   
 > [!IMPORTANT]  
->  Il est possible d'importer des catalogues de texte intégral lors de la mise à niveau d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Chaque catalogue de texte intégral importé est un fichier de base de données dans son propre groupe de fichiers. Pour sauvegarder un catalogue importé, sauvegardez simplement son groupe de fichiers. Pour plus d’informations, consultez [Sauvegarde et restauration de catalogues de texte intégral](https://go.microsoft.com/fwlink/?LinkID=121052)dans la documentation en ligne de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
+>  Il est possible d'importer des catalogues de texte intégral lors de la mise à niveau d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Chaque catalogue de texte intégral importé est un fichier de base de données dans son propre groupe de fichiers. Pour sauvegarder un catalogue importé, sauvegardez simplement son groupe de fichiers. Pour plus d’informations, consultez [Sauvegarde et restauration de catalogues de texte intégral]()dans la documentation en ligne de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> Sauvegarde des index de recherche en texte intégral d'un catalogue de texte intégral  
   
@@ -105,5 +105,4 @@ GO
 ## <a name="see-also"></a> Voir aussi  
  [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md)  
-  
   

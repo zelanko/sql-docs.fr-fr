@@ -12,12 +12,12 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bbc6a5f1be39d3b46de9c9cb9abea5e17ecc0b41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 817e126cfcd6bd4f825cb8e3158cc96d0a78e30c
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723106"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866619"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Index sur des tables optimisées en mémoire
 
@@ -143,7 +143,7 @@ Prenez une table `Customers` ayant une clé primaire sur `CustomerId` et un inde
 
 Dans ce scénario, la bonne pratique consiste à utiliser un index non-cluster sur `(CustomerCategoryID, CustomerId)`. Cet index peut être utilisé pour les requêtes qui utilisent un prédicat impliquant `CustomerCategoryID`, mais la clé d’index ne contient pas de doublon. Par conséquent, aucune dégradation dans la maintenance d’index n’est provoquée par les valeurs CustomerCategoryID dupliquées ou par la colonne supplémentaire dans l’index.
 
-La requête suivante affiche le nombre moyen d’index de doublons de valeurs de clé d’index sur `CustomerCategoryID` dans la table `Sales.Customers`, dans l’exemple de base de données [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
+La requête suivante affiche le nombre moyen d’index de doublons de valeurs de clé d’index sur `CustomerCategoryID` dans la table `Sales.Customers`, dans l’exemple de base de données [WideWorldImporters](../../samples/wide-world-importers-what-is.md).
 
 ```sql
 SELECT AVG(row_count) FROM
@@ -235,4 +235,4 @@ Tirez parti de solutions comme [Adaptive Index Defrag](https://github.com/Micros
  [Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
  [Index de hachage pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#hash_index)   
  [Index non-cluster pour les tables à mémoire optimisée](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)    
- [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)  
+ [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag)

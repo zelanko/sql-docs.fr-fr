@@ -15,12 +15,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b405768f889e73d1885b67b05d8cf124d3f28d1f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c916bcaa0ff0a3fb294038df30e65e7f53f367aa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498605"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867452"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Recherche des GUID du jeu de propriétés et des ID d’entier de propriétés pour les propriétés de recherche
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "88498605"
 |Type|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Type de fichier perçu selon son type canonique.|  
 |Intitulé|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Titre de l'élément. Par exemple, le titre d'un document, l'objet d'un message, la légende d'une photo ou le nom d'une piste de musique.|  
   
- Pour favoriser la cohérence parmi les formats de fichier, Microsoft a identifié des sous-ensembles de propriétés du document fréquemment utilisées et prioritaires pour plusieurs catégories de documents. Celles-ci incluent des communications, des contacts, des documents, des fichiers de musique, des images et des vidéos. Pour plus d’informations sur les propriétés principales de chaque catégorie, consultez [Propriétés définies par le système pour les formats de fichiers personnalisés](https://go.microsoft.com/fwlink/?LinkId=144336) dans la documentation Windows Search.  
+ Pour favoriser la cohérence parmi les formats de fichier, Microsoft a identifié des sous-ensembles de propriétés du document fréquemment utilisées et prioritaires pour plusieurs catégories de documents. Celles-ci incluent des communications, des contacts, des documents, des fichiers de musique, des images et des vidéos. Pour plus d’informations sur les propriétés principales de chaque catégorie, consultez [Propriétés définies par le système pour les formats de fichiers personnalisés](/windows/win32/search/-shell-systemdefinedpropertiesforfileformats) dans la documentation Windows Search.  
   
  Un format de fichier spécifique peut implémenter des propriétés de trois types :  
   
@@ -84,9 +84,9 @@ propID = 4
 ...  
 ```  
   
- Pour obtenir la description complète de cette propriété, consultez [System.Author ](https://go.microsoft.com/fwlink/?LinkId=144337) dans la documentation de développement de Win32 et COM.  
+ Pour obtenir la description complète de cette propriété, consultez [System.Author ](/windows/win32/properties/props-system-author) dans la documentation de développement de Win32 et COM.  
   
- Pour obtenir une liste complète des propriétés Windows, consultez [Propriétés Windows](https://go.microsoft.com/fwlink/?LinkId=215013)et aussi la documentation Windows Search.  
+ Pour obtenir une liste complète des propriétés Windows, consultez [Propriétés Windows](/windows/win32/properties/props)et aussi la documentation Windows Search.  
   
 ##  <a name="adding-a-property-to-a-search-property-list"></a><a name="examples"></a> Ajout d'une propriété à une liste de propriétés de recherche  
  L'exemple suivant indique comment ajouter une propriété à une liste de propriétés de recherche. L’exemple utilise une instruction [ALTER SEARCH PROPERTY LIST](../../t-sql/statements/alter-search-property-list-transact-sql.md) pour ajouter la propriété `System.Author` à une liste de propriétés de recherche nommée `PropertyList1`, et fournit un nom convivial à la propriété, `Author`.  
@@ -107,5 +107,4 @@ GO
 ## <a name="see-also"></a>Voir aussi  
  [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Configurer et gérer des filtres pour la recherche](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
-  
   

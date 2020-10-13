@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 83a024997910e16b67e66244edcd9cc34c6751a7
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442533"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868049"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utiliser un fichier de format pour importer des données en bloc (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -34,9 +34,9 @@ Cette rubrique illustre l'utilisation d'un fichier de format dans les importatio
   * SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode)
   * SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).
 * Azure SQL Database et Azure SQL Data Warehouse prennent uniquement en charge [bcp](../../tools/bcp-utility.md).  Si vous souhaitez en savoir plus, veuillez consulter :
-  * [Chargement de données dans Azure SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-load/)
-  * [Charger des données à partir de SQL Server dans Azure SQL Data Warehouse (fichiers plats)](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-load-from-sql-server-with-bcp/)
-  * [Migration de vos données](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-migrate-data/)
+  * [Chargement de données dans Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Charger des données à partir de SQL Server dans Azure SQL Data Warehouse (fichiers plats)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Migration de vos données](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>Exemples de conditions de test
 Les fichiers de format pris en exemple dans cette rubrique sont fondés sur la table et le fichier de données définis ci-dessous.
@@ -263,4 +263,3 @@ SELECT * FROM TestDatabase.dbo.myFirstImport;
  [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)   
  [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)  
   [Fichiers de format pour l'importation ou l'exportation de données (SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-  

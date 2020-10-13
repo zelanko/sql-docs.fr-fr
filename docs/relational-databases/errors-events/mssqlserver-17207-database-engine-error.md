@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: a7938f28af84596f620246d3d70ad491cb22828c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d1c0face9315a38d4748cffef71e135401102dd0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456447"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869464"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -55,7 +55,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
 ```
 
 ## <a name="cause"></a>Cause
-Avant de pouvoir utiliser une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la base de données doit être démarrée. Le processus de démarrage de la base de données implique l’initialisation de diverses structures de données qui représentent la base de données et les fichiers de base de données, l’ouverture de tous les fichiers qui appartiennent à la base de données, et enfin l’exécution de la récupération sur la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la fonction d’API Windows [CreateFile](https://docs.microsoft.com/windows/win32/api/fileapi/nf-fileapi-createfilea) pour ouvrir les fichiers qui appartiennent à une base de données.
+Avant de pouvoir utiliser une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la base de données doit être démarrée. Le processus de démarrage de la base de données implique l’initialisation de diverses structures de données qui représentent la base de données et les fichiers de base de données, l’ouverture de tous les fichiers qui appartiennent à la base de données, et enfin l’exécution de la récupération sur la base de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise la fonction d’API Windows [CreateFile](/windows/win32/api/fileapi/nf-fileapi-createfilea) pour ouvrir les fichiers qui appartiennent à une base de données.
  
 Les messages 17207 (et 17204) indiquent qu’une erreur s’est produite lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tenté d’ouvrir des fichiers de base de données pendant le processus de démarrage.
  
@@ -83,7 +83,7 @@ Les informations sur l’erreur du système d’exploitation imprimées dans ces
 1. Si vous recevez l’erreur de système d’exploitation ```Access is Denied``` = 5, envisagez les méthodes suivantes :
    -  Vérifiez les autorisations définies pour le fichier en examinant les propriétés du fichier dans l’Explorateur Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des groupes Windows pour approvisionner le contrôle d’accès sur les diverses ressources de fichiers. Assurez-vous que le groupe approprié (avec des noms tels que SQLServerMSSQLUser$NomOrdinateur$MSSQLSERVER ou SQLServerMSSQLUser$NomOrdinateur$NomInstance) dispose des autorisations requises sur le fichier de base de données mentionné dans le message d’erreur. Consultez [Configurer les autorisations du système de fichiers pour l'accès au moteur de base de données](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014) pour plus de détails. Assurez-vous que le groupe Windows comprend réellement le compte de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le SID du service.
    -  Examinez le compte d’utilisateur sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution. Vous pouvez utiliser le gestionnaire des tâches de Windows pour accéder à ces informations. Recherchez la valeur « Nom d’utilisateur » pour l’exécutable « sqlservr.exe ». En outre, si vous avez récemment modifié le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sachez que la méthode prise en charge pour effectuer cette opération consiste à utiliser l’utilitaire Gestionnaire de configuration SQL Server. Pour plus d’informations à ce propos, consultez [Gestionnaire de configuration SQL Server](../sql-server-configuration-manager.md). 
-   -  Selon le type d’opération (ouverture de bases de données au démarrage du serveur, attachement d’une base de données, restauration d’une base de données, etc.), le compte utilisé pour l’emprunt d’identité et l’accès au fichier de base de données peut être différent. Passez en revue la rubrique [Sécurisation des fichiers de données et des fichiers journaux](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) pour savoir quelle opération définit quelles autorisations pour quels comptes. Utilisez un outil tel que Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) pour déterminer si l’accès au fichier se produit dans le contexte de sécurité du compte de démarrage du service d’instance de SQL Server (ou du SID de service) ou d’un compte avec emprunt d’identité.
+   -  Selon le type d’opération (ouverture de bases de données au démarrage du serveur, attachement d’une base de données, restauration d’une base de données, etc.), le compte utilisé pour l’emprunt d’identité et l’accès au fichier de base de données peut être différent. Passez en revue la rubrique [Sécurisation des fichiers de données et des fichiers journaux](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) pour savoir quelle opération définit quelles autorisations pour quels comptes. Utilisez un outil tel que Windows SysInternals [Process Monitor](/sysinternals/downloads/procmon) pour déterminer si l’accès au fichier se produit dans le contexte de sécurité du compte de démarrage du service d’instance de SQL Server (ou du SID de service) ou d’un compte avec emprunt d’identité.
 
       Si SQL Server emprunte les informations d’identification de l’utilisateur de la connexion qui exécute l’opération ALTER DATABASE ou CREATE DATABASE, vous remarquerez les informations suivantes dans l’outil Process Monitor (un exemple).
 
@@ -115,7 +115,6 @@ Les informations sur l’erreur du système d’exploitation imprimées dans ces
    - Assurez-vous que tous les emplacements de disque ou réseau [comme un lecteur iSCSI] sont disponibles avant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne tente d’accéder aux fichiers de base de données à ces emplacements. Si nécessaire, créez les dépendances requises dans l’Administrateur de cluster ou le Gestionnaire de contrôle des services.
 
 1. Si vous obtenez l’erreur de système d’exploitation `The process cannot access the file because it is being used by another process` = 32 :
-   - Utilisez un outil comme [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) ou [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) à partir de Windows Sysinternals pour déterminer si un autre processus ou service a acquis un verrou exclusif sur ce fichier de base de données.
+   - Utilisez un outil comme [Process Explorer](/sysinternals/downloads/process-explorer) ou [Handle](/sysinternals/downloads/handle) à partir de Windows Sysinternals pour déterminer si un autre processus ou service a acquis un verrou exclusif sur ce fichier de base de données.
    - Empêchez ce processus d’accéder aux fichiers de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les exemples courants incluent des programmes antivirus (pour plus d’informations sur les exclusions de fichiers, consultez l’[article suivant de la base de connaissances](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
    - Dans un environnement de cluster, assurez-vous que le processus sqlservr. exe du nœud propriétaire précédent a effectivement libéré les descripteurs des fichiers de base de données. Normalement, cela n’arrive pas, mais les erreurs de configuration du cluster ou des chemins d’e/s peuvent entraîner de tels problèmes.
-  

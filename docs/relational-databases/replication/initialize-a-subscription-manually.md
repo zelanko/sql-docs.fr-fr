@@ -16,12 +16,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 84d8c205fad36848874ec5f8dd8714755c74fad2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bfa7cc36898aa521fed2e0e20fd08a5296147fcf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490603"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869220"
 ---
 # <a name="initialize-a-subscription-manually"></a>Initialiser manuellement un abonnement
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "88490603"
   
 2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez **\@publication**, **\@subscriber**, le nom de la base de données sur l’Abonné contenant les données publiées pour **\@destination_db**, la valeur **pull** pour **\@subscription_type** et la valeur **replication support only** pour **\@sync_type**. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   
-3.  Sur l'Abonné, exécutez [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Pour les abonnements avec mise à jour, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
+3.  Sur l'Abonné, exécutez [sp_addpullsubscription](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Pour les abonnements avec mise à jour, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](./publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 4.  Sur l'Abonné, exécutez [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "88490603"
   
 1.  Assurez-vous que le schéma et les données existent dans la base de données d'abonnement. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez le nom de la base de données sur l’Abonné contenant les données publiées pour **\@destination_db**, la valeur **push** pour **\@subscription_type** et la valeur **replication support only** pour **\@sync_type**. Pour les abonnements avec mise à jour, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](https://technet.microsoft.com/library/ms152769(v=sql.130).aspx).  
+2.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Spécifiez le nom de la base de données sur l’Abonné contenant les données publiées pour **\@destination_db**, la valeur **push** pour **\@subscription_type** et la valeur **replication support only** pour **\@sync_type**. Pour les abonnements avec mise à jour, consultez [Créer un abonnement pouvant être mis à jour pour une publication transactionnelle](./publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Au niveau du serveur de publication sur la base de données de publication, exécutez [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Pour plus d’informations, consultez [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md).  
   
@@ -96,5 +96,4 @@ ms.locfileid: "88490603"
  [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

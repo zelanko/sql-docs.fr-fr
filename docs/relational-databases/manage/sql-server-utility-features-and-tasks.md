@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2378ecd42d821a818a539350f872ed0d12099a8d
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9f37e62285ffcd3623bd1a26609466556e07634c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87242960"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810415"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Fonctionnalités et tâches de l'utilitaire SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -57,8 +57,7 @@ ms.locfileid: "87242960"
 |Décrit comment modifier le compte proxy pour le collecteur de données de l'utilitaire sur une instance gérée de SQL Server.|[Modifier le compte proxy pour le jeu d’éléments de collecte de l’utilitaire sur une instance gérée de SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |Décrit comment déplacer un UCP d'une instance de SQL Server vers une autre.|[Déplacer un UCP d’une instance de SQL Server vers une autre &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |Décrit comment supprimer un UCP.|[Supprimer un point de contrôle de l’utilitaire &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
-|Décrit comment résoudre les problèmes de l'utilitaire SQL Server.|[Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  
+|Décrit comment résoudre les problèmes de l'utilitaire SQL Server.|[Résolution des problèmes liés à l’utilitaire SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))|  
 |Décrit comment résoudre les problèmes d'intégrité des ressources de SQL Server.|[Résoudre les problèmes de contrôle d’intégrité de SQL Server &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)|  
 |Liens vers les rubriques d'aide (F1) de l'Explorateur d'utilitaire.|[Aide (F1) sur l’Explorateur d’utilitaire](../../relational-databases/manage/utility-explorer-f1-help.md)|  
-  
   

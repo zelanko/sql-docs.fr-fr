@@ -11,19 +11,19 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 27f37c0bfc246256274eb435ff8a79a9010c204e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 9dcbab028ec47adcf569554d464634a4813e5914
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248633"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810175"
 ---
 # <a name="enable-sql-server-managed-backup-to-azure"></a>Activer la gestion de sauvegarde de SQL Server sur Azure
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique décrit comment activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] avec les paramètres par défaut au niveau base de données et instance. Elle décrit également comment activer les notifications par courrier électronique et surveiller l'activité de sauvegarde.  
   
- Ce tutoriel utilise Azure PowerShell. Avant de commencer ce didacticiel, [téléchargez et installez Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+ Ce tutoriel utilise Azure PowerShell. Avant de commencer ce didacticiel, [téléchargez et installez Azure PowerShell](/powershell/azure/).  
   
 > [!IMPORTANT]  
 >  Si vous souhaitez également activer des options avancées ou utiliser une planification personnalisée, configurez ces paramètres avant d’activer [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Pour plus d’informations, consultez [Configurer les options avancées pour la gestion de sauvegarde de SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "87248633"
 
 Le processus requiert un compte Azure. Si vous avez déjà un compte, passez à l’étape suivante. Sinon, vous pouvez commencer avec une [version d’évaluation gratuite](https://azure.microsoft.com/pricing/free-trial/) ou explorer les [options d’achat](https://azure.microsoft.com/pricing/purchase-options/).
 
-Pour plus d'informations sur les comptes de stockage, consultez [À propos des comptes de stockage Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). 
+Pour plus d'informations sur les comptes de stockage, consultez [À propos des comptes de stockage Azure](/azure/storage/common/storage-account-create). 
 
 #### <a name="azure-cli"></a>[Azure CLI](#tab/azure-cli)
 
@@ -106,7 +106,7 @@ Si l’URL est incluse, séparez-la du jeton SAP au niveau du point d’interrog
 |**Jeton SAP**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
-Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la création d’informations d’identification SQL. Pour plus d’informations sur les signatures d’accès partagé, consultez l’article [Signatures d’accès partagé, partie 1 : Présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/).  
+Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la création d’informations d’identification SQL. Pour plus d’informations sur les signatures d’accès partagé, consultez l’article [Signatures d’accès partagé, partie 1 : Présentation du modèle SAP](/azure/storage/common/storage-sas-overview).  
   
 ## <a name="enable-managed-backup-to-azure"></a>Activer la gestion de sauvegarde sur Azure
   
@@ -211,4 +211,4 @@ Enregistrez l’URL du conteneur et le SAS pour les utiliser lors de la créatio
 Les étapes de cette section sont propres à la configuration initiale de la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] sur la base de données. Vous pouvez modifier les configurations existantes à l'aide des mêmes procédures stockées système et indiquer de nouvelles valeurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion de sauvegarde de SQL Server sur Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+ [Gestion de sauvegarde de SQL Server sur Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 10c344ac156a59dda89e678709e6b846bf3c33a0
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: cededc3af0cb9c5e1980246ef67491c7e68fc960
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89541175"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868143"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Création d'une table mémoire optimisée et d'une procédure stockée compilée en mode natif
 
@@ -42,7 +42,7 @@ Pour plus d’informations sur l’utilisation de [!INCLUDE[ssManStudioFull](../
 
 ### <a name="natively-compiled-stored-procedures"></a>Procédures stockées compilées en mode natif
 
-Les procédures stockées compilées en mode natif sont des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] compilées en code natif et qui accèdent aux tables optimisées en mémoire. Elles permettent aux requêtes et à la logique métier qu'elles contiennent de s'exécuter rapidement. Pour plus d'informations sur le processus de compilation en mode natif, consultez [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). Pour plus d’informations sur la migration des procédures stockées sur disque vers des procédures stockées compilées en mode natif, consultez [Problèmes de migration pour les procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md).
+Les procédures stockées compilées en mode natif sont des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)] compilées en code natif et qui accèdent aux tables optimisées en mémoire. Elles permettent aux requêtes et à la logique métier qu'elles contiennent de s'exécuter rapidement. Pour plus d'informations sur le processus de compilation en mode natif, consultez [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md). Pour plus d’informations sur la migration des procédures stockées sur disque vers des procédures stockées compilées en mode natif, consultez [Problèmes de migration pour les procédures stockées compilées en mode natif](./a-guide-to-query-processing-for-memory-optimized-tables.md).
 
 > [!NOTE]
 > La différence entre les procédures stockées (sur disque) interprétées et les procédures stockées compilées en mode natif réside dans le fait qu’une procédure stockée interprétée est compilée lors de la première exécution, tandis qu’une procédure stockée compilée en mode natif l’est au moment de sa création. Avec des procédures stockées compilées en mode natif, de nombreuses conditions d’erreur peuvent être détectées lors de la création et entraîner l’échec de la création de la procédure stockée compilée en mode natif (dépassement arithmétique, conversion de type et certaines conditions de division par zéro). Avec des procédures stockées interprétées, ces conditions d’erreur ne provoquent généralement pas d’échec quand la procédure stockée est créée, mais toutes les exécutions échouent.
@@ -291,6 +291,5 @@ ORDER BY so.so_id, sod.lineitem_id
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de code OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)  
-  
+ [Exemples de code OLTP en mémoire](./sample-database-for-in-memory-oltp.md)  
   

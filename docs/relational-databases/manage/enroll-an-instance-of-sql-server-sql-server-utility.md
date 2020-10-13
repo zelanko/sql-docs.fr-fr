@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 211b16d4b03439295c4970449ef61855c09addc4
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 04a4513ed886c29a18d5bee3d45324a35b3d63ea
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988552"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810425"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrire une instance de SQL Server (utilitaire SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -94,12 +94,12 @@ ms.locfileid: "87988552"
  Pour continuer, cliquez sur **Suivant**.  
   
 ##  <a name="specify-the-instance-of-sql-server"></a><a name="Instance_name"></a> Spécifiez l'instance de SQL Server.  
- Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…** . Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance. Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Pour sélectionner une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de la boîte de dialogue de connexion, cliquez sur **Se connecter…** . Indiquez le nom de l’ordinateur et le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au format NomOrdinateur\NomInstance. Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Pour continuer, cliquez sur **Suivant**.  
   
 ##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Boîte de dialogue Connexion  
- Dans la boîte de dialogue Se connecter au serveur, vérifiez les informations type de serveur, nom de l'ordinateur et nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](https://msdn.microsoft.com/library/ee9017b4-8a19-4360-9003-9e6484082d41).  
+ Dans la boîte de dialogue Se connecter au serveur, vérifiez les informations type de serveur, nom de l'ordinateur et nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Se connecter au serveur &#40;moteur de base de données&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  Si la connexion est chiffrée, la connexion chiffrée est utilisée. Si la connexion n'est pas chiffrée, l'utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reconnecte à l'aide d'une connexion chiffrée.  
@@ -129,7 +129,7 @@ ms.locfileid: "87988552"
 |Les jeux d'éléments de collecte sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent être interrompus.|Interrompez les jeux d'éléments de collecte préexistants sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le collecteur de données est désactivé, activez-le, interrompez tous jeux d'éléments de collecte en cours d'exécution, puis réexécutez des règles de validation pour l'opération Créer un UCP.<br /><br /> Pour activer le collecteur de données :<br /><br /> Dans l'Explorateur d'objets, développez le nœud **Gestion** .<br /><br /> Cliquez avec le bouton droit sur **Collecte de données**, puis cliquez sur **Activer la collecte de données**.<br /><br /> Pour arrêter un jeu d'éléments de collecte :<br /><br /> Dans l'Explorateur d'objets, développez le nœud Gestion et développez **Collecte de données**, puis **Jeux d'éléments de collecte de données système**.<br /><br /> Cliquez avec le bouton droit sur le jeu d’éléments de collecte à arrêter, puis cliquez sur **Arrêter le jeu d’éléments de collecte de données**.<br /><br /> Une zone de message affiche les résultats de cette action et un cercle rouge sur l'icône du jeu d'éléments de collecte indique que celui-ci s'est arrêté.|  
 |Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être démarré.|Démarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer manuellement. Sinon, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer automatiquement.|  
 |Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'UCP doit être démarré.|Démarrez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sur l'UCP. Si l'UCP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une instance du cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer manuellement. Sinon, configurez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour démarrer automatiquement.|  
-|WMI doit être correctement configuré.|Pour résoudre les problèmes de configuration de WMI, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
+|WMI doit être correctement configuré.|Pour résoudre les problèmes de configuration de WMI, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).|  
 |Le compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être un compte de domaine Windows valide sur l'UCP.|Spécifiez un compte de domaine Windows valide. Pour vous assurer que le compte est valide, ouvrez une session sur l'UCP à l'aide du compte de domaine Windows.|  
 |Si vous sélectionnez l'option de compte proxy, le compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être un compte de domaine Windows valide sur l'instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Spécifiez un compte de domaine Windows valide. Pour vérifier que le compte est valide, ouvrez une session sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du compte de domaine Windows.|  
 |Le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ne peut pas être un compte intégré, comme Service réseau.|Réattribuez le compte à un compte de domaine Windows. Pour vérifier que le compte est valide, ouvrez une session sur l’instance spécifiée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du compte de domaine Windows.|  
@@ -173,7 +173,7 @@ ms.locfileid: "87988552"
 >   
 >  Informations supplémentaires :  Impossible d'obtenir des informations sur l'utilisateur ou le groupe '\<DomainName\AccountName>', code d'erreur 0x5. (Microsoft SQL Server, erreur : 15404)  
 >   
->  Pour plus d’informations sur la résolution de ce problème, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
+>  Pour plus d’informations sur la résolution de ce problème, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130)).  
   
 > [!IMPORTANT]  
 >  Ne modifiez pas les propriétés du jeu d’éléments de collecte « Informations sur l’utilitaire » sur une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et n’activez pas ou ne désactivez pas manuellement la collecte de données, car la collecte de données est contrôlée par un travail d’agent Utilitaire.  
@@ -199,6 +199,5 @@ ms.locfileid: "87988552"
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités et tâches de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Résolution des problèmes liés à l’utilitaire SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
-  
+ [Résolution des problèmes liés à l’utilitaire SQL Server](/previous-versions/sql/sql-server-2016/ee210592(v=sql.130))  
   

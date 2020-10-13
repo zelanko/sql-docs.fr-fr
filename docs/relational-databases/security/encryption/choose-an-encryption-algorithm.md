@@ -17,12 +17,12 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e93eeab1636dd2ee866ee6727bddb99c58a8c14
-ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
+ms.openlocfilehash: 04f5ea78761812c54c13fcf611d3f6e4765769a5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87332219"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869490"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Choisir un algorithme de chiffrement
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "87332219"
 >   
 >  L'utilisation répétée du même RC4 ou RC4_128 KEY_GUID sur différents blocs de données entraîne la même clé RC4 car [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne fournit pas automatiquement de salt. L'utilisation répétée de la même clé RC4 est une erreur connue qui entraîne un chiffrement très faible. Par conséquent, les mots clés RC4 et RC4_128 sont déconseillés. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
- Pour plus d'informations sur les algorithmes et la technologie de chiffrement, consultez la rubrique [Concepts fondamentaux sur la sécurité](https://go.microsoft.com/fwlink/?LinkId=62082) dans le Guide du développeur .NET Framework sur le site MSDN.  
+ Pour plus d'informations sur les algorithmes et la technologie de chiffrement, consultez la rubrique [Concepts fondamentaux sur la sécurité](/previous-versions/aa720225(v=vs.71)) dans le Guide du développeur .NET Framework sur le site MSDN.  
   
  **Éclaircissement concernant les algorithmes DES :**  
   
@@ -77,5 +77,4 @@ ms.locfileid: "87332219"
 ## <a name="see-also"></a>Voir aussi  
  [Chiffrement SQL Server](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [Hiérarchie de chiffrement](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
   

@@ -12,17 +12,17 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d7b59adddba4266499b90ec0ee523aeb7308673
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 975e14a1a17422949f5ef848b0b0a69d71e58593
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85651008"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866631"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables optimisées en mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Avant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la taille des données dans la ligne d’une table à mémoire optimisée ne pouvait pas être supérieure à [8 060 octets](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Toutefois, à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et dans Azure SQL Database, il est désormais possible de créer une table à mémoire optimisée avec plusieurs colonnes volumineuses (par exemple, plusieurs colonnes varbinary(8000)) et colonnes LOB (c'est-à-dire, varbinary(max), varchar(max) et nvarchar(max)) et d’effectuer des opérations dessus à l’aide de modules T-SQL compilés en mode natif et des types de table. 
+Avant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la taille des données dans la ligne d’une table à mémoire optimisée ne pouvait pas être supérieure à [8 060 octets](?viewFallbackFrom=sql-server-2014). Toutefois, à compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et dans Azure SQL Database, il est désormais possible de créer une table à mémoire optimisée avec plusieurs colonnes volumineuses (par exemple, plusieurs colonnes varbinary(8000)) et colonnes LOB (c'est-à-dire, varbinary(max), varchar(max) et nvarchar(max)) et d’effectuer des opérations dessus à l’aide de modules T-SQL compilés en mode natif et des types de table. 
   
 Les colonnes qui ne cadrent pas avec la limite de taille de ligne de 8 060 octets sont déplacées des lignes vers une table interne. À chaque colonne hors ligne correspond une table interne correspondante, qui à son tour possède un index unique non cluster. Pour plus d’informations sur ces tables internes utilisées pour des colonnes hors ligne, consultez [sys.memory_optimized_tables_internal_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md). 
  
@@ -238,9 +238,8 @@ where object_id = object_id('dbo.Orders')
 -   Pour les objets LOB, la limite de taille est identique à celle des tables basées sur des disques (limite de 2 Go sur les valeurs LOB). 
 -   Pour des performances optimales, il est recommandé que la plupart des colonnes tiennent dans 8 060 octets. 
 
-Le billet de blog [Nouveautés d’OLTP en mémoire dans SQL Server 2016 depuis CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) détaille certaines de ces complexités.   
+Le billet de blog [Nouveautés d’OLTP en mémoire dans SQL Server 2016 depuis CTP3](/archive/blogs/sqlserverstorageengine/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3) détaille certaines de ces complexités.   
  
 ## <a name="see-also"></a>Voir aussi  
- [Tables à mémoire optimisée](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
-  
+ [Tables à mémoire optimisée](./sample-database-for-in-memory-oltp.md)  
   

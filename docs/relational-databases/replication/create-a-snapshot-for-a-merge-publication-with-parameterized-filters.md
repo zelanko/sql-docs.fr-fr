@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00dfb229-f1de-4d33-90b0-d7c99ab52dcb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b4f57e1593d9f8335f62095cf309ee85f74e1a4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d0229c5fb1166d49c8e4db2e80fbed03c0ea95a9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773916"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868301"
 ---
 # <a name="create-a-snapshot-for-a-merge-publication-with-parameterized-filters"></a>Créer un instantané d'une publication de fusion avec des filtres paramétrés
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -285,7 +285,7 @@ PAUSE
 >  Lorsque le filtrage d’un article génère des partitions qui ne se chevauchent pas et qui sont uniques pour chaque abonnement (en spécifiant une valeur de F:Microsoft.SqlServer.Replication.PartitionOptions.NonOverlappingSingleSubscription pour P:Microsoft.SqlServer.Replication.MergeArticle.PartitionOption lors de la création d’un article de fusion), les métadonnées sont nettoyées à chaque exécution de l’Agent de fusion. Cela signifie que l'instantané partitionné expire plus rapidement. Lorsque vous optez pour cette méthode, envisagez d'autoriser les Abonnées à demander la génération d'instantanés. Pour plus d'informations, consultez la section Utilisation des options de filtrage appropriées, dans la rubrique [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 > [!IMPORTANT]  
->  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+>  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](/previous-versions/aa719848(v=vs.71)) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 #### <a name="to-create-a-publication-that-allows-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Pour créer une publication qui permet aux Abonnés d'initialiser la génération et la remise d'instantanés  
   
@@ -424,5 +424,4 @@ PAUSE
  [Filtres de lignes paramétrés](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Concepts liés aux procédures stockées système de réplication](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Bonnes pratiques en matière de sécurité de la réplication](../../relational-databases/replication/security/replication-security-best-practices.md)  
-  
   

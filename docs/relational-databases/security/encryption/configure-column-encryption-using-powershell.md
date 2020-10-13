@@ -12,17 +12,17 @@ ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 623986a7ff2adaa7b2769090c2d94a8e9ebf2e83
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7014f349998781dcd890e84a77deb4732fe028c9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88493806"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91865753"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-with-powershell"></a>Configurer le chiffrement de colonne à l’aide d’Always Encrypted avec PowerShell
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
-Cet article fournit les étapes de définition de la configuration d’Always Encrypted cible pour les colonnes de base de données à l’aide de l’applet de commande [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (dans le module PowerShell *SqlServer* ). L’applet de commande **Set-SqlColumnEncryption** modifie le schéma de la base de données cible et les données stockées dans les colonnes sélectionnées. Les données stockées dans une colonne peuvent être chiffrées, rechiffrées ou déchiffrées, en fonction des paramètres de chiffrement cible spécifiés pour les colonnes et de la configuration de chiffrement active.
+Cet article fournit les étapes de définition de la configuration d’Always Encrypted cible pour les colonnes de base de données à l’aide de l’applet de commande [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (dans le module PowerShell *SqlServer* ). L’applet de commande **Set-SqlColumnEncryption** modifie le schéma de la base de données cible et les données stockées dans les colonnes sélectionnées. Les données stockées dans une colonne peuvent être chiffrées, rechiffrées ou déchiffrées, en fonction des paramètres de chiffrement cible spécifiés pour les colonnes et de la configuration de chiffrement active.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
@@ -66,9 +66,9 @@ Tâche  |Article  |Accède au magasin de clés/aux clés en texte brut  |Accède
 ---|---|---|---
 Étape 1. Démarrer un environnement PowerShell et importer le module SqlServer. | [Importer le module SqlServer](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | Non | Non
 Étape 2. Se connecter à votre serveur et à la base de données. | [Connexion à une base de données](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | Non | Oui
-Étape 3. S’authentifier auprès d’Azure, si votre clé principale de colonne (qui protège la clé de chiffrement de colonne, soumise à permutation) est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Oui | Non
-Étape 4. Créer un tableau d’objets SqlColumnEncryptionSettings : un pour chaque colonne de base de données que vous souhaitez chiffrer, rechiffrer ou déchiffrer. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Il spécifie le schéma de chiffrement cible pour une colonne. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Non | Non
-Étape 5. Définir la configuration de chiffrement souhaitée, spécifiée dans le tableau d’objets SqlColumnMasterKeySettings que vous avez créé à l’étape précédente. Une colonne est chiffrée, rechiffrée ou déchiffrée en fonction des paramètres cible spécifiés et de la configuration de chiffrement active de la colonne.| [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Remarque :** cette étape peut prendre longtemps. Vos applications ne peuvent pas accéder aux tables pendant toute la durée de l’opération ou pendant une partie de l’opération, en fonction de l’approche sélectionnée (en ligne ou hors ligne). | Oui | Oui
+Étape 3. S’authentifier auprès d’Azure, si votre clé principale de colonne (qui protège la clé de chiffrement de colonne, soumise à permutation) est stockée dans Azure Key Vault. | [Add-SqlAzureAuthenticationContext](/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Oui | Non
+Étape 4. Créer un tableau d’objets SqlColumnEncryptionSettings : un pour chaque colonne de base de données que vous souhaitez chiffrer, rechiffrer ou déchiffrer. SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Il spécifie le schéma de chiffrement cible pour une colonne. | [New-SqlColumnEncryptionSettings](/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Non | Non
+Étape 5. Définir la configuration de chiffrement souhaitée, spécifiée dans le tableau d’objets SqlColumnMasterKeySettings que vous avez créé à l’étape précédente. Une colonne est chiffrée, rechiffrée ou déchiffrée en fonction des paramètres cible spécifiés et de la configuration de chiffrement active de la colonne.| [Set-SqlColumnEncryption](/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Remarque :** cette étape peut prendre longtemps. Vos applications ne peuvent pas accéder aux tables pendant toute la durée de l’opération ou pendant une partie de l’opération, en fonction de l’approche sélectionnée (en ligne ou hors ligne). | Oui | Oui
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>Chiffrer des colonnes à l’aide de l’approche hors connexion - Exemple
 
@@ -156,5 +156,3 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
  - [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
  - [Configurer le chiffrement de colonne à l’aide de l’Assistant Always Encrypted](always-encrypted-wizard.md)
  - [Configurer le chiffrement de colonne en utilisant Always Encrypted avec un package DAC](configure-always-encrypted-using-dacpac.md)
-
-

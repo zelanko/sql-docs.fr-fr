@@ -1,20 +1,20 @@
 ---
 title: Sauvegarder et restaurer des bases de données SQL Server sur Linux
 description: En savoir plus sur la sauvegarde et la restauration des bases de données SQL Server sur Linux. Découvrez également comment effectuer une sauvegarde et une restauration avec SQL Server Management Studio (SSMS).
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 ms.reviewer: vanto
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 6a590b895a1929e0c83ebef76cc2d6dc544ae5af
-ms.sourcegitcommit: 968969b62bc158b9843aba5034c9d913519bc4a7
+ms.openlocfilehash: 743995e7615ac7c0398d525657dfa44138de3108
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "91753511"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784774"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sauvegarder et restaurer des bases de données SQL Server sur Linux
 

@@ -14,12 +14,12 @@ ms.topic: conceptual
 ms.date: 11/06/2019
 ms.author: jaszymas
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c37c2aa1f36fca57e544dc588d492be98c653fef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d19b9d31caf45a5438bf03fcab675ad9ebe5cf71
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448070"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867942"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Erreurs courantes liées au chiffrement transparent des données avec des clés managées par le client dans Azure Key Vault
 
@@ -34,7 +34,7 @@ Dans les 8 premières heures, si le problème d’accès à la clé Azure Key V
 
 Si une base de données inaccessible n’est plus nécessaire, elle peut être supprimée immédiatement pour arrêter les coûts. Toutes les autres actions sur la base de données ne sont pas autorisées tant que l’accès à la clé Azure Key Vault n’a pas été restauré et que la base de données est de nouveau en ligne. La modification de l’option TDE à partir des clés managées par le client sur le serveur n’est pas non plus possible lorsqu’une base de données chiffrée avec des clés managées par le client est inaccessible. Cela est nécessaire pour protéger les données contre tout accès non autorisé, tandis que les autorisations sur le protecteur TDE ont été révoquées. 
 
-Lorsqu’une base de données est inaccessible pendant plus de 8 heures, elle ne peut plus être corrigée automatiquement. Si l’accès à la clé Azure Key Vault a été restauré après cette période, vous devez revalider manuellement l’accès à la clé pour remettre la base de données en ligne. Dans ce cas, la remise en ligne de la base de données peut être très longue, selon la taille de celle-ci. Une fois la base de données de nouveau en ligne, les paramètres précédemment configurés tels que le [groupe de basculement](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group) ou l’historique de récupération jusqu’à une date et heure, ainsi que toutes les étiquettes, **seront perdus**. Par conséquent, nous vous recommandons d’implémenter un système de notifications à l’aide de [groupes d’actions](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) qui permettent d’être informé et de traiter les problèmes sous-jacents d’accès aux clés dès que possible. 
+Lorsqu’une base de données est inaccessible pendant plus de 8 heures, elle ne peut plus être corrigée automatiquement. Si l’accès à la clé Azure Key Vault a été restauré après cette période, vous devez revalider manuellement l’accès à la clé pour remettre la base de données en ligne. Dans ce cas, la remise en ligne de la base de données peut être très longue, selon la taille de celle-ci. Une fois la base de données de nouveau en ligne, les paramètres précédemment configurés tels que le [groupe de basculement](/azure/sql-database/sql-database-auto-failover-group) ou l’historique de récupération jusqu’à une date et heure, ainsi que toutes les étiquettes, **seront perdus**. Par conséquent, nous vous recommandons d’implémenter un système de notifications à l’aide de [groupes d’actions](/azure/azure-monitor/platform/action-groups) qui permettent d’être informé et de traiter les problèmes sous-jacents d’accès aux clés dès que possible. 
 
 ## <a name="common-errors-causing-databases-to-become-inaccessible"></a>Erreurs courantes provoquant l’inaccessibilité des bases de données
 
@@ -68,17 +68,17 @@ _401 AzureKeyVaultNoServerIdentity - L’identité du serveur n’est pas correc
 
 Utilisez la cmdlet ou commande suivante pour vous assurer qu’une identité a bien été attribuée à l’instance SQL Server logique :
 
-- Azure PowerShell : [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+- Azure PowerShell : [Get-AzureRMSqlServer](/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
 
-- Azure CLI : [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+- Azure CLI : [az-sql-server-show](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
 
 **Atténuation**
 
 Utilisez la cmdlet ou commande suivante pour configurer une identité Azure AD (AppId) pour l’instance SQL Server logique :
 
-- Azure PowerShell : [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) avec l’option `-AssignIdentity`.
+- Azure PowerShell : [Set-AzureRmSqlServer](/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) avec l’option `-AssignIdentity`.
 
-- Azure CLI : [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) avec l’option `--assign_identity`.
+- Azure CLI : [az sql server update](/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) avec l’option `--assign_identity`.
 
 Dans le portail Azure, accédez au coffre de clés, puis à **Stratégies d’accès**. Procédez comme suit : 
 
@@ -103,9 +103,9 @@ Pour identifier l’URI de la clé et le coffre de clé :
 
 1. Utilisez la cmdlet ou commande suivante pour obtenir l’URI de la clé d’une instance SQL Server logique spécifique :
 
-    - Azure PowerShell : [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+    - Azure PowerShell : [Get-AzureRmSqlServerKeyVaultKey](/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-    - Azure CLI : [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+    - Azure CLI : [az-sql-server-tde-key-show](/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
 1. Utilisez l’URI de la clé pour identifier le coffre de clés :
 
@@ -165,7 +165,7 @@ Vérifiez que l’instance SQL Server logique dispose des autorisations d’acc�
 
 ## <a name="getting-tde-status-from-the-activity-log"></a>Obtention de l’état TDE depuis le journal d’activité
 
-Pour permettre l’analyse de l’état de la base de données en raison de problèmes d’accès à la clé Azure Key Vault, les événements suivants sont enregistrés dans le [journal d’activité](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) pour l’ID de la ressource en fonction de l’URL et de Subscription+Resourcegroup+ServerName+DatabaseName Azure Resource Manager : 
+Pour permettre l’analyse de l’état de la base de données en raison de problèmes d’accès à la clé Azure Key Vault, les événements suivants sont enregistrés dans le [journal d’activité](/azure/service-health/alerts-activity-log-service-notifications) pour l’ID de la ressource en fonction de l’URL et de Subscription+Resourcegroup+ServerName+DatabaseName Azure Resource Manager : 
 
 **Événement lorsque le service perd l’accès à la clé Azure Key Vault**
 
@@ -238,7 +238,5 @@ Description : La restauration de l’accès de la base de données à la clé d
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- En savoir plus sur [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
-- Configurez des [groupes d’actions](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) pour recevoir des notifications et des alertes en fonction de vos préférences, par exemple e-mail/SMS/transmission de type push/vocale, application logique, Webhook, gestion des services informatiques ou Runbook Automation. 
-
-
+- En savoir plus sur [Azure Resource Health](/azure/service-health/resource-health-overview).
+- Configurez des [groupes d’actions](/azure/azure-monitor/platform/action-groups) pour recevoir des notifications et des alertes en fonction de vos préférences, par exemple e-mail/SMS/transmission de type push/vocale, application logique, Webhook, gestion des services informatiques ou Runbook Automation.

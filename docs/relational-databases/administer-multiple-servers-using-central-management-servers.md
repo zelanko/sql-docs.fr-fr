@@ -18,12 +18,12 @@ ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 9fcf805dc2c4ff9e639b43e0d6ea455d3aa439fe
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 73f2e9153ebfc204a0f63a6f8aea305815da4e59
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915705"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810729"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>Administrer plusieurs serveurs à l’aide de serveurs d’administration centrale
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -39,9 +39,8 @@ ms.locfileid: "86915705"
 ## <a name="create-central-management-server-and-server-groups"></a>Créer un serveur de gestion centralisée et des groupes de serveurs 
  Pour créer un serveur de gestion centralisée et des groupes de serveurs, utilisez la fenêtre **Serveurs inscrits** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Notez que le serveur de gestion centralisée ne peut pas être membre d'un groupe qu'il gère. 
  
- Pour en savoir plus sur la création de serveurs de gestion centralisée et de groupes de serveurs, consultez [Créer un serveur de gestion centralisée et un groupe de serveurs &#40;SQL Server Management Studio&#41;](../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md).  
+ Pour en savoir plus sur la création de serveurs de gestion centralisée et de groupes de serveurs, consultez [Créer un serveur de gestion centralisée et un groupe de serveurs &#40;SQL Server Management Studio&#41;](../ssms/register-servers/create-a-central-management-server-and-server-group.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
-  
   

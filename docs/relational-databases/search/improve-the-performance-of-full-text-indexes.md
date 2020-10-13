@@ -18,12 +18,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4b893bd45de93ab0ee934343e16bf6d577f1123
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77e6942702594d7c33e3e88ca0d695dda3a59caa
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427931"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868073"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -207,7 +207,7 @@ Le moteur d’indexation et de recherche en texte intégral utilise deux types d
   
  Pour des raisons de sécurité, les filtres sont chargés par les processus hôtes de démon de filtre. Une instance de serveur utilise un processus multithread pour tous les filtres multithreads et un processus monothread pour tous les filtres monothreads. Lorsqu'un document qui utilise un filtre multithread contient un document incorporé qui utilise un filtre monothread, le Moteur d'indexation et de recherche en texte intégral lance un processus monothread pour le document incorporé. Par exemple, quand il rencontre un document Word qui contient un document PDF, le Moteur d’indexation et de recherche en texte intégral utilise le processus multithread pour le contenu Word et lance un processus monothread pour le contenu PDF. Toutefois, un filtre monothread peut ne pas fonctionner correctement dans cet environnement et peut déstabiliser le processus de filtrage. Dans certaines circonstances, lorsque ce type d’incorporation est courant, cette déstabilisation peut provoquer des blocages du processus. Dans ce cas, le moteur d’indexation et de recherche en texte intégral réachemine tout document ayant subi un échec (par exemple, un document Word incorporant un contenu PDF) vers le processus de filtrage monothread. Si le réacheminement a lieu fréquemment, il en résulte une détérioration des performances du processus d'indexation de texte intégral.  
   
-Pour contourner ce problème, marquez le filtre du document conteneur (le document Word dans cet exemple) en tant que filtre monothread. Pour ce faire, définissez la valeur de Registre **ThreadingModel** pour le filtre en spécifiant **Thread cloisonné**. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](https://go.microsoft.com/fwlink/?LinkId=209159).  
+Pour contourner ce problème, marquez le filtre du document conteneur (le document Word dans cet exemple) en tant que filtre monothread. Pour ce faire, définissez la valeur de Registre **ThreadingModel** pour le filtre en spécifiant **Thread cloisonné**. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](/previous-versions/ms809971(v=msdn.10)).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
@@ -217,5 +217,4 @@ Pour contourner ce problème, marquez le filtre du document conteneur (le docume
  [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql.md)   
  [sys.dm_fts_memory_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql.md)   
  [Résoudre l'indexation de recherche en texte intégral](../../relational-databases/search/troubleshoot-full-text-indexing.md)  
-  
   

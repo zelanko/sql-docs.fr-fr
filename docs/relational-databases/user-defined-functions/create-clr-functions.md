@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97cbd5543bd73001f599a25eaa9a79f493f40f58
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4e7e7ba7e0e3f526c69026b9f759937d7329d50c
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472914"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811073"
 ---
 # <a name="create-clr-functions"></a>Créer des fonctions CLR
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "88472914"
 -   [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
   
 ## <a name="accessing-native-code"></a>Accès au code natif  
- Les fonctions CLR permettent d’accéder au code natif (non managé), tel que le code écrit en C ou C++, via l’utilisation de PInvoke à partir du code managé (pour plus d’informations, consultez [Appel à des fonctions natives à partir de code managé](https://go.microsoft.com/fwlink/?LinkID=181929) ). Vous pouvez ainsi réutiliser du code hérité en tant que fonctions CLR définies par l'utilisateur ou écrire des fonctions définies par l'utilisateur ayant un impact sur les performances en code natif. L'utilisation d'un assembly UNSAFE est obligatoire. Pour connaître les précautions à prendre lors de l’utilisation des assemblys UNSAFE, consultez [Sécurité d’accès du code de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) .  
+ Les fonctions CLR permettent d’accéder au code natif (non managé), tel que le code écrit en C ou C++, via l’utilisation de PInvoke à partir du code managé (pour plus d’informations, consultez [Appel à des fonctions natives à partir de code managé](/cpp/dotnet/calling-native-functions-from-managed-code) ). Vous pouvez ainsi réutiliser du code hérité en tant que fonctions CLR définies par l'utilisateur ou écrire des fonctions définies par l'utilisateur ayant un impact sur les performances en code natif. L'utilisation d'un assembly UNSAFE est obligatoire. Pour connaître les précautions à prendre lors de l’utilisation des assemblys UNSAFE, consultez [Sécurité d’accès du code de l’intégration du CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
@@ -64,5 +64,4 @@ ms.locfileid: "88472914"
  [Exécuter les fonctions définies par l'utilisateur](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)   
  [Afficher les fonctions définies par l'utilisateur](../../relational-databases/user-defined-functions/view-user-defined-functions.md)   
  [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

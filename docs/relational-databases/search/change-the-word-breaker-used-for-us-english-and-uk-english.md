@@ -11,16 +11,16 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2da7ecd383b1db1ef9a66b3ac3fb75ef9fbf8723
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9aea3dff9973d75c71eb27a60859c99d4385b617
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403875"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866934"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifier l'analyseur lexical utilisé pour l'anglais des États-Unis et l'anglais (R.U.)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe une nouvelle version (version 14.0.4999.1038) de l’analyseur lexical et du générateur de formes dérivées pour la langue anglaise, en remplaçant la version précédente de ces composants (version 12.0.6828.0). Pour plus d’informations sur la modification du comportement des nouveaux composants, consultez [Changements de comportement pour la recherche en texte intégral](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15). Cette rubrique décrit comment passer de la nouvelle version de ces composants à la version précédente, ou de la version précédente à la nouvelle version. Pour les installations de cluster, ces modifications doivent être apportées sur tous les nœuds principaux et passifs.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe une nouvelle version (version 14.0.4999.1038) de l’analyseur lexical et du générateur de formes dérivées pour la langue anglaise, en remplaçant la version précédente de ces composants (version 12.0.6828.0). Pour plus d’informations sur la modification du comportement des nouveaux composants, consultez [Changements de comportement pour la recherche en texte intégral](./full-text-search.md?view=sql-server-ver15). Cette rubrique décrit comment passer de la nouvelle version de ces composants à la version précédente, ou de la version précédente à la nouvelle version. Pour les installations de cluster, ces modifications doivent être apportées sur tous les nœuds principaux et passifs.  
   
  Les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisaient des analyseurs lexicaux différents représentés par des CLSID différents pour l'anglais des États-Unis (LCID 1033) et l'anglais du Royaume-Uni (LCID 2057). Dans cette version, les deux LCID utilisent les mêmes composants avec le même CLSID, comme indiqué dans le tableau suivant :  
   
@@ -127,6 +127,5 @@ ms.locfileid: "88403875"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Changements de comportement de la recherche en texte intégral](https://docs.microsoft.com/sql/relational-databases/search/full-text-search?view=sql-server-ver15)  
-  
+ [Changements de comportement de la recherche en texte intégral](./full-text-search.md?view=sql-server-ver15)  
   

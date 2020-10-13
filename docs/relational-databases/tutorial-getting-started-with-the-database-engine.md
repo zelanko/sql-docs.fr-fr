@@ -18,14 +18,14 @@ ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8398d6dcd8dc4fa10a6a4e4c52c0e910a9de1f18
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cad1def690f9ebf0803f25e83300d3790d6ef4c9
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88485378"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809375"
 ---
-# <a name="tutorial-getting-started-with-the-database-engine"></a>Tutoriel : Bien démarrer avec le moteur de base de données
+# <a name="tutorial-getting-started-with-the-database-engine"></a>Didacticiel : mise en route du moteur de base de données
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
 Bienvenue dans le didacticiel de mise en route du [!INCLUDE[ssDE](../includes/ssde-md.md)] . Ce didacticiel est destiné aux nouveaux utilisateurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disposant de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]. Ce didacticiel sommaire vous guide dans vos premiers pas avec le [!INCLUDE[ssDE](../includes/ssde-md.md)].  
@@ -41,7 +41,7 @@ Dans cette leçon, vous allez apprendre à vous connecter au [!INCLUDE[ssDE](../
 [Leçon 2 : Connexion à partir d’un autre ordinateur](../relational-databases/lesson-2-connecting-from-another-computer.md)  
 Dans cette leçon, vous allez apprendre à vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] à partir d’un deuxième ordinateur, notamment en activant des protocoles et en configurant des ports et des paramètres de pare-feu.  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Conditions requises  
 Ce didacticiel n'exige aucune connaissance préalable.  
   
 Les éléments suivants doivent cependant être installés sur votre système :  
@@ -49,8 +49,6 @@ Les éléments suivants doivent cependant être installés sur votre système :
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour installer [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], consultez[Télécharger SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Tutoriel : SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  
+[Tutoriel : SQL Server Management Studio](../ssms/quickstarts/connect-query-sql-server.md)  
   
   
-  
-

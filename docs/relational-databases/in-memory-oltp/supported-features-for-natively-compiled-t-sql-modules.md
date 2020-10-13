@@ -12,12 +12,12 @@ ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 172e3a271086564c0ae4da7fd01a3084d65a85e5
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: b1d4a5951b223e5772a59f3cb9c12fd4f04ae244
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834720"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867290"
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "85834720"
 
  Pour connaître les fonctionnalités prises en charge autour de la définition des modules natifs, consultez [DDL pris en charge pour les modules T-SQL compilés en mode natif](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md).  
 
- Pour plus d’informations sur les constructions qui ne sont pas prises en charge et sur la manière de contourner certaines des fonctionnalités non prises en charge dans les modules compilés en mode natif, consultez [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). Pour plus d’informations sur les fonctionnalités non prises en charge, consultez [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
+ Pour plus d’informations sur les constructions qui ne sont pas prises en charge et sur la manière de contourner certaines des fonctionnalités non prises en charge dans les modules compilés en mode natif, consultez [Migration Issues for Natively Compiled Stored Procedures](./a-guide-to-query-processing-for-memory-optimized-tables.md). Pour plus d’informations sur les fonctionnalités non prises en charge, consultez [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
 ##  <a name="query-surface-area-in-native-modules"></a><a name="qsancsp"></a> Surface d’exposition de requête dans les modules natifs  
 
@@ -286,7 +286,5 @@ GO
  La formule pour calculer la valeur maximale N prise en charge dans le pire des cas dans TOP est : `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
- [Problèmes de migration pour les procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
-
+ [Procédures stockées compilées en mode natif](./a-guide-to-query-processing-for-memory-optimized-tables.md)   
+ [Problèmes de migration pour les procédures stockées compilées en mode natif](./a-guide-to-query-processing-for-memory-optimized-tables.md)

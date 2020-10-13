@@ -17,12 +17,12 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 18b5f2e898638823e20aa237d9bbbc43bb025967
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 88321dc6030b76869c55039f04dea39728342751
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720591"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868127"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Afficher et modifier les propriétés d'un serveur de distribution ou d'un serveur de publication
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -176,7 +176,7 @@ ms.locfileid: "85720591"
 5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passez la nouvelle valeur de mot de passe pour le paramètre *password* .  
   
     > [!IMPORTANT]  
-    >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+    >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](/previous-versions/aa719848(v=vs.71)) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
   
 6.  (Facultatif) Effectuez la procédure suivante pour modifier le mot de passe sur chaque serveur de publication distant qui utilise ce serveur de distribution :  
   
@@ -208,5 +208,4 @@ ms.locfileid: "85720591"
  [Script d’information du serveur de distribution et du serveur de publication](../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)   
  [Concepts liés aux procédures stockées système de réplication](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Afficher des informations et effectuer des tâches pour un serveur de publication &#40;moniteur de réplication&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1fd961b275f6b392e9284312675c873f16fecd27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe74f56af2726a32d6216852ca2d8dec341ee6dd
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718061"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809439"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "85718061"
   
 -   RESTORE WITH MOVE est requis.  
   
--   Pour plus d’informations sur le stockage Premium, consultez [stockage Premium : stockage hautes performances pour les charges de travail des machines virtuelles Azure](https://azure.microsoft.com/documentation/articles/storage-premium-storage-preview-portal/).  
+-   Pour plus d’informations sur le stockage Premium, consultez [stockage Premium : stockage hautes performances pour les charges de travail des machines virtuelles Azure](/azure/virtual-machines/disks-types).  
   
  **Compte de stockage unique :** l’instantané de fichier et les objets blob de destination doivent utiliser le même compte de stockage.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "85718061"
   
  **Restauration en ligne :** quand vous utilisez des sauvegardes de captures instantanées de fichiers, vous ne pouvez pas effectuer une restauration en ligne. Pour plus d’informations sur les restaurations en ligne, consultez [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
- **Facturation :** quand vous utilisez la sauvegarde de captures instantanées de fichiers SQL Server, des frais supplémentaires s’appliquent du fait de la modification des données. Pour plus d’informations, consultez [Understanding How Snapshots Accrue Charges](https://msdn.microsoft.com/library/azure/hh768807.aspx)(Comprendre comment les captures instantanées contribuent à l’augmentation des coûts).  
+ **Facturation :** quand vous utilisez la sauvegarde de captures instantanées de fichiers SQL Server, des frais supplémentaires s’appliquent du fait de la modification des données. Pour plus d’informations, consultez [Understanding How Snapshots Accrue Charges](/rest/api/storageservices/Understanding-How-Snapshots-Accrue-Charges)(Comprendre comment les captures instantanées contribuent à l’augmentation des coûts).  
   
  **Archivage :** si vous souhaitez archiver une sauvegarde de capture instantanée de fichier, vous pouvez effectuer l’opération dans le stockage d’objets blob ou dans la sauvegarde en continu. Pour effectuer l’opération d’archivage dans le stockage d’objets blob, copiez les captures instantanées du jeu de sauvegarde de captures instantanées de fichiers dans des objets blob distincts. Pour l’exécuter dans la sauvegarde en continu, restaurez la sauvegarde d’instantanés de fichiers en tant que nouvelle base de données, puis effectuez une sauvegarde en continu normale avec compression et/ou chiffrement et archivez-la aussi longtemps que vous le souhaitez, indépendamment des objets blob de base.  
   
@@ -178,5 +178,4 @@ GO
   
 ## <a name="see-also"></a> Voir aussi  
  [Tutoriel : Utilisation du service Stockage Blob Microsoft Azure avec des bases de données SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-  
   

@@ -21,12 +21,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02ac9ba37fae91916675a8a8edb4dfe904306112
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5edcc10b7cb9682f6856c8129e13a2d57af67074
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463792"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810731"
 ---
 # <a name="track-data-changes-sql-server"></a>Suivre les modifications de données (SQL Server)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "88463792"
   
      Décrit le suivi des modifications, fournit une vue d'ensemble de haut niveau du mode de fonctionnement du suivi des modifications et décrit la manière dont le suivi des modifications interagit avec d'autres fonctionnalités du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
--   [Centre de développement Microsoft Sync Framework](https://go.microsoft.com/fwlink/?LinkId=108054)  
+-   [Centre de développement Microsoft Sync Framework](/previous-versions/sql/synchronization/mt490616(v=msdn.10))  
   
      Fournit une documentation complète pour [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] et [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]. Dans la documentation relative à [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)], la rubrique de procédure traitant de l’utilisation du suivi des modifications SQL Server contient des informations détaillées et des exemples de code.  
   
@@ -176,7 +176,5 @@ ms.locfileid: "88463792"
  [Fonctions de suivi des modifications &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Procédures stockées de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Tables de capture des données modifiées &#40;Transact-SQL&#41;](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)   
- [Vues de gestion dynamique liées à la capture des données modifiées &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
+ [Vues de gestion dynamique liées à la capture des données modifiées &#40;Transact-SQL&#41;](../system-dynamic-management-views/system-dynamic-management-views.md)  
   
-  
-

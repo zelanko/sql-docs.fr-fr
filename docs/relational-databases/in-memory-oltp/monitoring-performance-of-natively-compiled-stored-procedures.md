@@ -12,12 +12,12 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbac8fa27b79b96a55f580983586141e14e27fc1
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: a4214a85d3adc673c557d99d6bc21176559a85bd
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89545167"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868517"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Surveillance des performances des procédures stockées compilées en mode natif
 
@@ -133,6 +133,5 @@ GO
  Le plan d'exécution estimé pour les procédures stockées compilées en mode natif affiche les opérateurs de requête et les expressions des requêtes dans la procédure. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ne prend pas en charge tous les attributs SHOWPLAN_XML des procédures stockées compilées en mode natif. Par exemple, les attributs liés au coût de l'optimiseur de requête ne font pas partie de SHOWPLAN_XML pour la procédure.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
-  
+ [Procédures stockées compilées en mode natif](./a-guide-to-query-processing-for-memory-optimized-tables.md)  
   

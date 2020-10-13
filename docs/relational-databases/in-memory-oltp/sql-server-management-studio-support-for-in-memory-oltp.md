@@ -12,16 +12,16 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ad32beddf999b37ad3c3a507f7cc761463264d5
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: ddd1c896aa3a1425b6d31d33a6d113c77c9c11bf
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551565"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867490"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des outils permettant de configurer, de surveiller et d’administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des outils permettant de configurer, de surveiller et d’administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
   
  Les tâches de cette rubrique décrivent comment utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer les tables mémoire optimisées ; les index sur les tables mémoire optimisées ; les procédures stockées compilées en mode natif ; et les types de tables mémoire optimisées, définis par l'utilisateur.  
   
@@ -159,6 +159,5 @@ ms.locfileid: "89551565"
  Pour plus d’informations sur les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non prises en charge, consultez [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Prise en charge d'OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
+ [Prise en charge d'OLTP en mémoire par SQL Server](./transact-sql-support-for-in-memory-oltp.md)  
   

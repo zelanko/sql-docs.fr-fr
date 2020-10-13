@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0e4bd61a4b08e394acfe53e0430f762f7c31d868
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 84ba17db1df93ed95853519691a6caac94b6afb8
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718077"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809424"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauration de fichiers (mode de récupération simple)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "85718077"
   
      Dans une *restauration de fichiers en ligne*, si la base de données est en ligne au moment de la restauration, elle reste en ligne durant la restauration de fichiers. Toutefois, chaque groupe de fichiers dans lequel un fichier est restauré est hors connexion pendant l'opération de restauration. Une fois que tous les fichiers d'un groupe de fichiers hors connexion sont récupérés, le groupe de fichiers est automatiquement mis en ligne.  
   
-     Pour plus d’informations sur la prise en charge de la restauration de fichiers et de pages en ligne, consultez [Fonctionnalités et tâches du moteur de base de données](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34). Pour plus d’informations sur les restaurations en ligne, consultez [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     Pour plus d’informations sur la prise en charge de la restauration de fichiers et de pages en ligne, consultez [Fonctionnalités et tâches du moteur de base de données](../../sql-server/what-s-new-in-sql-server-ver15.md). Pour plus d’informations sur les restaurations en ligne, consultez [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
     > [!TIP]  
     >  Si vous voulez que la base de données soit hors connexion pour une restauration de fichiers, mettez celle-ci hors connexion avant de démarrer la séquence de restauration en exécutant l’instruction [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) suivante : ALTER DATABASE *nom_base_de_données* SET OFFLINE.  
@@ -96,7 +96,7 @@ ms.locfileid: "85718077"
   
 -   [Restaurer des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
--   [Restore.SqlRestore, méthode (Serveur) (SMO)](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.restore.sqlrestore.aspx)   
+-   [Restore.SqlRestore, méthode (Serveur) (SMO)](/dotnet/api/microsoft.sqlserver.management.smo.restore.sqlrestore)   
   
 ## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration : interopérabilité et coexistence &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
@@ -107,5 +107,4 @@ ms.locfileid: "85718077"
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Restaurations fragmentaires &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
-  
   

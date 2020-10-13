@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 332fde643d285b20c0bd772918f8c9cf1bf578f2
-ms.sourcegitcommit: 21bedbae28840e2f96f5e8b08bcfc794f305c8bc
+ms.openlocfilehash: a0fffe198adc37a9cabe232d5509e9df1652013b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87864956"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91809095"
 ---
 # <a name="quickstart-sql-backup-and-restore-to-azure-blob-storage-service"></a>Démarrage rapide : Sauvegarde et restauration de SQL Server avec le service de stockage Blob Azure
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md](../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -26,10 +26,10 @@ Ce guide de démarrage rapide vous aide à comprendre comment écrire des sauveg
 Pour suivre ce guide de démarrage rapide, vous devez connaître les concepts de sauvegarde et de restauration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et la syntaxe T-SQL.  Vous avez besoin d’un compte de stockage Azure, de SQL Server Management Studio (SSMS) et d’un accès à un serveur qui exécute SQL Server ou Azure SQL Managed Instance. Par ailleurs, le compte utilisé pour émettre les commandes BACKUP et RESTORE doit figurer dans le rôle de base de données **db_backupoperator** avec les autorisations **modifier les informations d’identification**. 
 
 - Obtenir gratuitement un [compte Azure](https://azure.microsoft.com/offers/ms-azr-0044p/).
-- Créez un [compte de stockage Azure](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal).
-- Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Créez un [compte de stockage Azure](/azure/storage/common/storage-quickstart-create-account?tabs=portal).
+- Installez [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) ou déployez [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started) avec une connectivité établie via une [machine virtuelle SQL Azure](/azure/sql-database/sql-database-managed-instance-configure-vm) ou une connexion [point à site](/azure/sql-database/sql-database-managed-instance-configure-p2s).
-- Affectez le compte utilisateur au rôle de [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) et autorisez [modifier les informations d’identification](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql). 
+- Affectez le compte utilisateur au rôle de [db_backupoperator](./security/authentication-access/database-level-roles.md) et autorisez [modifier les informations d’identification](../t-sql/statements/alter-credential-transact-sql.md). 
 
 ## <a name="create-azure-blob-container"></a>Créer un conteneur d’objets blob Azure
 Un conteneur regroupe un ensemble d’objets blob. Tous les objets blob doivent figurer dans un conteneur. Un compte de stockage peut contenir un nombre illimité de conteneurs, mais doit comporter au moins un conteneur. Un conteneur peut stocker un nombre illimité d’objets blob. 
@@ -46,7 +46,7 @@ Pour créer un conteneur, suivez ces étapes :
     ![Nouveau conteneur](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
   > [!NOTE]
-  > L'authentification auprès du compte de stockage est requise pour la sauvegarde et la restauration SQL Server même si vous choisissez de créer un conteneur public. Vous pouvez également créer un conteneur par programme à l'aide des API REST. Pour plus d'informations, consultez [Créer un conteneur](https://docs.microsoft.com/rest/api/storageservices/Create-Container).
+  > L'authentification auprès du compte de stockage est requise pour la sauvegarde et la restauration SQL Server même si vous choisissez de créer un conteneur public. Vous pouvez également créer un conteneur par programme à l'aide des API REST. Pour plus d'informations, consultez [Créer un conteneur](/rest/api/storageservices/Create-Container).
 
 ## <a name="create-a-test-database"></a>Créer une base de données de test 
 À cette étape, créez une base de données de test à l’aide de SQL Server Management Studio (SSMS). 
@@ -235,4 +235,3 @@ Les ressources suivantes sont des lectures recommandées afin de mieux comprendr
   
 -   [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
 -   [Bonnes pratiques et résolution des problèmes liés à la sauvegarde SQL Server vers une URL](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
-  

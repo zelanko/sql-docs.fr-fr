@@ -20,12 +20,12 @@ ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 08cca6276b93515385f342a591376b45c9898d04
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 8a95adc8ad2b4a9c5c2b97a1d5e36820d1fe7ac1
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480621"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868101"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Concepts liés aux procédures stockées système de réplication
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -131,9 +131,9 @@ GO
  Une fois qu'un script de réplication a été créé, il est possible d'utiliser l'une des méthodes suivantes pour l'exécuter.  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Création d'un fichier de requête SQL dans SQL Server Management Studio  
- Il est possible de créer un fichier de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication sous la forme d’un fichier de requête SQL dans un projet [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Après l'écriture du script, une connexion à la base de données peut être établie pour ce fichier de requête, et le script peut être exécuté. Pour plus d’informations sur la manière de créer des scripts [!INCLUDE[tsql](../../../includes/tsql-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], consultez [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15).  
+ Il est possible de créer un fichier de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication sous la forme d’un fichier de requête SQL dans un projet [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Après l'écriture du script, une connexion à la base de données peut être établie pour ce fichier de requête, et le script peut être exécuté. Pour plus d’informations sur la manière de créer des scripts [!INCLUDE[tsql](../../../includes/tsql-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], consultez [Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15).  
   
- Pour utiliser un script qui inclut des variables de script, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] doit s’exécuter en mode **sqlcmd**. En mode **sqlcmd**, l’éditeur de requête accepte une syntaxe supplémentaire spécifique à **sqlcmd**, par exemple `:setvar`, qui est utilisée pour fournir une valeur à une variable. Pour plus d’informations sur le mode **sqlcmd**, consultez [Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md). Dans le script suivant, la syntaxe `:setvar` est utilisée afin de fournir une valeur pour la variable `$(DistPubServer)`.  
+ Pour utiliser un script qui inclut des variables de script, [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] doit s’exécuter en mode **sqlcmd**. En mode **sqlcmd**, l’éditeur de requête accepte une syntaxe supplémentaire spécifique à **sqlcmd**, par exemple `:setvar`, qui est utilisée pour fournir une valeur à une variable. Pour plus d’informations sur le mode **sqlcmd**, consultez [Modifier des scripts SQLCMD à l’aide de l’Éditeur de requête](../../../ssms/scripting/edit-sqlcmd-scripts-with-query-editor.md). Dans le script suivant, la syntaxe `:setvar` est utilisée afin de fournir une valeur pour la variable `$(DistPubServer)`.  
   
 ```  
 :setvar DistPubServer N'MyPublisherAndDistributor';  
@@ -230,5 +230,4 @@ REM -- The following must be supplied on one line.
  [Concepts de programmation en matière de réplication](../../../relational-databases/replication/concepts/replication-programming-concepts.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [Création de scripts de réplication](../../../relational-databases/replication/scripting-replication.md)  
-  
   
