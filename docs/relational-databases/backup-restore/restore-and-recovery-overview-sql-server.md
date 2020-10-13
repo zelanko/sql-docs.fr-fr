@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: e62b9f4c4de0db24294640cd2013f0fc4b0d6c7b
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 5157ab86adbbea5b6e9fa1bdb14264f5418ac07b
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480402"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810701"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Vue d'ensemble de la restauration et de la récupération (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -97,7 +97,7 @@ En cas de défaillance ou autre arrêt non sain, il peut arriver que certaines m
 
 -   La **phase d’annulation** restaure les transactions incomplètes trouvée dans la table ATT afin de préserver l'intégrité de la base de données. Après la restauration, la base de données passe en ligne, et aucune autre sauvegarde du journal des transactions ne peut être appliquée à la base de données.
 
-Les informations sur la progression de chaque phase de la récupération de la base de données sont consignées dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [journal des erreurs](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). La progression de la récupération de la base de données peut également être suivie via Événements étendus. Pour plus d’informations, consultez le billet de blog [New extended events for database recovery progress](https://blogs.msdn.microsoft.com/sql_server_team/new-extended-events-for-database-recovery-progress/) (Nouveaux événements étendus pour la progression de la récupération de la base de données).
+Les informations sur la progression de chaque phase de la récupération de la base de données sont consignées dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [journal des erreurs](../../tools/configuration-manager/viewing-the-sql-server-error-log.md). La progression de la récupération de la base de données peut également être suivie via Événements étendus. Pour plus d’informations, consultez le billet de blog [New extended events for database recovery progress](/archive/blogs/sql_server_team/new-extended-events-for-database-recovery-progress) (Nouveaux événements étendus pour la progression de la récupération de la base de données).
 
 > [!NOTE]
 > Dans le cas d’un scénario de restauration fragmentaire, si un groupe de fichiers est en lecture seule avant la création de la sauvegarde de fichiers, l'application des sauvegardes de journaux au groupe de fichiers n'est pas nécessaire et n'est pas effectuée par la restauration de fichiers. 
@@ -174,9 +174,9 @@ L'Assistant Récupération de base de données permet de créer des plans de res
   
 Pour plus d'informations sur l'Assistant Récupération de base de données, consultez les blogs de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suivants :  
   
--   [Assistant Récupération : introduction](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
+-   [Assistant Récupération : introduction](/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
--   [Assistant Récupération : utilisation de SSMS pour créer/restaurer des sauvegardes fractionnées](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
+-   [Assistant Récupération : utilisation de SSMS pour créer/restaurer des sauvegardes fractionnées](/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 
 ## <a name="accelerated-database-recovery"></a><a name="adr"></a> Récupération de base de données accélérée
 [La récupération de base de données accélérée](/azure/sql-database/sql-database-accelerated-database-recovery/) est disponible dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. La récupération de base de données accélérée améliore considérablement la disponibilité des bases de données, notamment en présence de transactions durables, en redéfinissant le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [processus de récupération](#TlogAndRecovery). Une base de données pour laquelle la récupération de base de données accélérée a été activée termine le processus de récupération beaucoup plus rapidement après un basculement ou tout autre arrêt qui n’est pas propre. Lorsqu’elle est activée, la récupération de base de données accélérée effectue également la restauration des transactions longues annulées beaucoup plus rapidement.
@@ -195,4 +195,4 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = ON;
  [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
  [Guide d’architecture et gestion du journal des transactions SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)     
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)     
- [Appliquer les sauvegardes du journal de transactions (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Appliquer les sauvegardes du journal de transactions (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)

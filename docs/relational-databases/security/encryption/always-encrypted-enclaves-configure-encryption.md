@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 38f421815202b16fe5d7d2570ce5661be5097109
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bb922b1dc85706e0630dd3d67dcb33459c490124
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490486"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863698"
 ---
 # <a name="configure-column-encryption-in-place-using-always-encrypted-with-secure-enclaves"></a>Configurer le chiffrement de colonne sur place en utilisant Always Encrypted avec enclaves sécurisées 
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -43,7 +43,7 @@ Un utilisateur ou une application déclenchant des opérations de chiffrement do
 Vous pouvez déclencher le chiffrement sur place seulement avec [ALTER TABLE ALTER COLUMN (Transact-SQL)](../../../t-sql/statements/alter-table-transact-sql.md) depuis SQL Server Management Studio ou depuis votre application personnalisée. Consultez [Configurer le chiffrement de colonne sur place avec Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md).
 
 > [!NOTE]
-> Actuellement, l’[Assistant Always Encrypted](always-encrypted-wizard.md) et l’applet de commande [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/module/sqlserver/set-sqlcolumnencryption) ne prennent pas en charge le chiffrement sur place et téléchargent toujours les données pour les opérations de chiffrement, même si votre configuration répond aux exigences ci-dessus. 
+> Actuellement, l’[Assistant Always Encrypted](always-encrypted-wizard.md) et l’applet de commande [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption) ne prennent pas en charge le chiffrement sur place et téléchargent toujours les données pour les opérations de chiffrement, même si votre configuration répond aux exigences ci-dessus. 
 
 ## <a name="next-steps"></a>Étapes suivantes
 - [Configurer le chiffrement de colonne sur place avec Transact-SQL](always-encrypted-enclaves-configure-encryption-tsql.md)

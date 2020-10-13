@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f0d845cc010b41fe7789ead2a66a188b214020a
-ms.sourcegitcommit: d56a834269132a83e5fe0a05b033936776cda8bb
+ms.openlocfilehash: aab93dcc8036e0e1273a1c9444d7418214ad8926
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "91529480"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891049"
 ---
 # <a name="best-practices-with-query-store"></a>Bonnes pratiques relatives au Magasin des requêtes
 
@@ -28,13 +28,13 @@ Cet article décrit les bonnes pratiques concernant l’utilisation du Magasin d
 
 ## <a name="use-the-latest-ssmanstudiofull"></a><a name="SSMS"></a>Utiliser la dernière version de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un ensemble d’interfaces utilisateur conçu pour configurer le Magasin des requêtes et consommer les données collectées relatives à votre charge de travail. Téléchargez la dernière version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [ici](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] propose un ensemble d’interfaces utilisateur conçu pour configurer le Magasin des requêtes et consommer les données collectées relatives à votre charge de travail. Téléchargez la dernière version de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [ici](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Pour obtenir une description rapide de la manière d’utiliser le Magasin des requêtes dans des scénarios de résolution de problèmes, consultez les blogs relatifs au [\@Azure Magasin des requêtes](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Utiliser Query Performance Insight dans Azure SQL Database
 
-Si vous exécutez le Magasin des requêtes dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous pouvez utiliser [Query Performance Insight](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) pour analyser la consommation de ressources dans le temps. Même si vous pouvez utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et [Azure Data Studio](../../azure-data-studio/what-is.md) pour obtenir des détails sur la consommation en ressources de toutes vos requêtes (par exemple, processeur, mémoire et E/S), Query Performance Insight vous offre un moyen rapide et efficace de déterminer leur impact sur la consommation DTU globale de votre base de données. Pour plus d’informations, consultez [Query Performance Insight pour base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+Si vous exécutez le Magasin des requêtes dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], vous pouvez utiliser [Query Performance Insight](/azure/sql-database/sql-database-query-performance) pour analyser la consommation de ressources dans le temps. Même si vous pouvez utiliser [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] et [Azure Data Studio](../../azure-data-studio/what-is.md) pour obtenir des détails sur la consommation en ressources de toutes vos requêtes (par exemple, processeur, mémoire et E/S), Query Performance Insight vous offre un moyen rapide et efficace de déterminer leur impact sur la consommation DTU globale de votre base de données. Pour plus d’informations, consultez [Query Performance Insight pour base de données SQL Azure](/azure/azure-sql/database/query-performance-insight-use).
 
 Cette section décrit les paramètres optimaux de configuration par défaut, conçus pour garantir un fonctionnement fiable du Magasin des requêtes et des fonctionnalités dépendantes. La configuration par défaut est optimisée pour la collecte des données en continu, c’est-à-dire pour passer le moins de temps possible aux états OFF/READ_ONLY. Pour plus d’informations sur toutes les options de Magasin des requêtes disponibles, consultez [Options ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 

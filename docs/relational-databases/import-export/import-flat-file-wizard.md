@@ -13,16 +13,16 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c083045beaae0d9cbdc6c815723a60093a97431a
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 68144fbcffdc2535471c279b5771963fcfb05fec
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646043"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868738"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistant Importation d’un fichier plat dans SQL
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-> Pour tout contenu associé à l’Assistant Importation et exportation, consultez [Assistant Importation et exportation SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+> Pour tout contenu associé à l’Assistant Importation et exportation, consultez [Assistant Importation et exportation SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 L’Assistant Importation de fichier plat permet de copier les données d’un fichier plat (.csv ou .txt) dans une nouvelle table d’une base de données.  L’Assistant Importation de fichier plat prend en charge les formats de fichiers de largeur fixe et séparés par des virgules. Cette présentation décrit les raisons d’utiliser cet Assistant et où le trouver, puis fournit un exemple simple à suivre.
 
@@ -36,7 +36,7 @@ Pour mieux comprendre l’amélioration apportée à l’expérience utilisateur
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prérequis
-Cette fonctionnalité est disponible sur SQL Server Management Studio (SSMS) 17.3 ou version ultérieure. Veillez à utiliser la version la plus récente. Vous trouverez la dernière version [ici.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+Cette fonctionnalité est disponible sur SQL Server Management Studio (SSMS) 17.3 ou version ultérieure. Veillez à utiliser la version la plus récente. Vous trouverez la dernière version [ici.](../../ssms/download-sql-server-management-studio-ssms.md)
  
 ## <a name="getting-started"></a><a id="started"></a>Commencer
 Pour accéder à l’Assistant Importation d’un fichier plat, procédez comme suit :
@@ -124,7 +124,6 @@ Failed to convert parameter value from a String to a Double. (System.Data)
 
 Découvrez-en plus sur l’Assistant.
  
-- **En savoir plus sur l’importation d’autres sources.** Si vous souhaitez importer plusieurs fichiers plats, consultez [Assistant Importation et exportation SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
-- **En savoir plus sur la connexion à des sources de fichiers plats.** Si vous recherchez plus d’informations sur la connexion à des sources de fichiers plats, consultez [Se connecter à une source de données de fichiers plats](https://docs.microsoft.com/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
+- **En savoir plus sur l’importation d’autres sources.** Si vous souhaitez importer plusieurs fichiers plats, consultez [Assistant Importation et exportation SQL Server](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
+- **En savoir plus sur la connexion à des sources de fichiers plats.** Si vous recherchez plus d’informations sur la connexion à des sources de fichiers plats, consultez [Se connecter à une source de données de fichiers plats](../../integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard.md).
 - **En savoir plus sur PROSE.** Si vous recherchez une vue d’ensemble du framework intelligent utilisé par cet Assistant, consultez [PROSE SDK](https://microsoft.github.io/prose/).
-

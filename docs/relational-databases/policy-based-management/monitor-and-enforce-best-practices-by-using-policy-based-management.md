@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fa82df08581e8667bdcae7e8c64fa1562e4b7081
-ms.sourcegitcommit: 27f95e50f11a98164e9e7a5130a3e00ac06b4cea
+ms.openlocfilehash: 189ce28ed2480a6efedd14c91a96ebae12c862e2
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91412742"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892159"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Surveiller et appliquer les bonnes pratiques à l'aide de la Gestion basée sur des stratégies
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "91412742"
 |Nom de stratégie|Règle de meilleure pratique|  
 |-----------------|------------------------|  
 |Algorithme de chiffrement à clé asymétrique|[Force de chiffrement des clés asymétriques](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|Emplacement des fichiers de données et de sauvegarde|[Les fichiers de sauvegarde doivent être placés sur des périphériques distincts des fichiers de base de données](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|Emplacement des fichiers de données et de sauvegarde|[Les fichiers de sauvegarde doivent être placés sur des périphériques distincts des fichiers de base de données](../backup-restore/backup-devices-sql-server.md)|  
 |Emplacement des fichiers de données et des fichiers journaux|[Placer les fichiers de données et les fichiers journaux sur des lecteurs distincts](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |Fermeture automatique de la base de données|[Définir l’option de base de données AUTO_CLOSE sur OFF](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |Réduction automatique de la base de données|[Définir l’option de base de données AUTO_SHRINK sur OFF](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|Classement de base de données|[Définir le même classement pour les bases de données définies par l'utilisateur que pour les bases de données MASTER ou model](https://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
+|Classement de base de données|[Définir le même classement pour les bases de données définies par l'utilisateur que pour les bases de données MASTER ou model](/previous-versions/sql/sql-server-2016/bb402915(v=sql.130))|  
 |Vérification de la page de base de données|[Définir l’option de base de données PAGE_VERIFY sur la valeur CHECKSUM](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |État de la page de base de données|[Vérifier l’intégrité d’une base de données contenant des pages suspectes](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |Autorisations Invité|[Autorisations Invité sur les bases de données utilisateur](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -70,5 +70,4 @@ ms.locfileid: "91412742"
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation des facettes de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
-  
   

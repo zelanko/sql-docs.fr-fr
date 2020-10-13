@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 85729b4f194cedb1a0682387ab7047f332a2ceb8
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 90bb710e57e87bfb6bf86f4ae0543329a4500940
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490472"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91863647"
 ---
 # <a name="configure-column-encryption-in-place-with-transact-sql"></a>Configurer le chiffrement de colonne sur place avec Transact-SQL
 [!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -36,7 +36,7 @@ Comme toute requête utilisant une enclave sécurisée côté serveur, une instr
 Le reste de cet article décrit comment déclencher un chiffrement sur place avec l’instruction `ALTER TABLE`/`ALTER COLUMN` depuis SQL Server Management Studio. Vous pouvez aussi émettre l’instruction `ALTER TABLE`/`ALTER COLUMN` depuis votre application. 
 
 > [!NOTE]
-> Actuellement, les outils autres que SSMS, notamment l’applet de commande [Invoke-Sqlcmd](https://docs.microsoft.com/powershell/module/sqlserver/invoke-sqlcmd) du module SqlServer PowerShell et [sqlcmd](../../../tools/sqlcmd-utility.md), ne prennent pas en charge l’utilisation de `ALTER TABLE`/`ALTER COLUMN` pour les opérations de chiffrement sur place.
+> Actuellement, les outils autres que SSMS, notamment l’applet de commande [Invoke-Sqlcmd](/powershell/module/sqlserver/invoke-sqlcmd) du module SqlServer PowerShell et [sqlcmd](../../../tools/sqlcmd-utility.md), ne prennent pas en charge l’utilisation de `ALTER TABLE`/`ALTER COLUMN` pour les opérations de chiffrement sur place.
 
 ## <a name="perform-in-place-encryption-with-transact-sql-in-ssms"></a>Effectuer un chiffrement sur place avec Transact-SQL dans SSMS
 ### <a name="pre-requisites"></a>Conditions préalables

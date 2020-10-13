@@ -14,12 +14,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7ea789049116c79e3242a5d1fed1f1fb8f020d1f
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: b636a615544cdf3ab642e34b1d02c59db2e11872
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818232"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892509"
 ---
 # <a name="polybase-scale-out-groups"></a>Groupes de scale-out PolyBase
 
@@ -27,7 +27,7 @@ ms.locfileid: "84818232"
 
 Une instance de SQL Server autonome avec PolyBase peut se transformer en goulot d’étranglement de performances lors du traitement de gros volumes de jeux données dans Hadoop ou le Stockage Blob Azure. La fonctionnalité Groupe PolyBase vous permet de créer un cluster d’instances de SQL Server pour traiter de grands volumes de jeux de données à partir de sources de données externes telles que Hadoop ou le stockage d’objets Blob Azure, sous forme de montée en puissance (scale-out) parallèle pour des performances de requête optimisées. Vous pouvez maintenant adapter votre calcul SQL Server pour répondre aux besoins de performances de votre charge de travail. Les groupes de scale-out PolyBase, groupe d’instances SQL Server, vous permettent de traiter de grands jeux de données externes dans une architecture de traitement parallèle. Les performances de chargement de données et de requête peuvent augmenter de façon linéaire quand vous ajoutez d’autres instances SQL Server au groupe. 
   
-Consultez [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md) et [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md).
+Consultez [Prise en main de PolyBase](./polybase-guide.md) et [Guide de PolyBase](../../relational-databases/polybase/polybase-guide.md).
   
 ![groupes de scale-out PolyBase](../../relational-databases/polybase/media/polybase-scale-out-groups.png "Groupes de scale-out PolyBase")  
   
@@ -68,5 +68,4 @@ Pour configurer un groupe de scale-out PolyBase, consultez le guide suivant :
 
  [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
  [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
- [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
-
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)

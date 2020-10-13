@@ -23,12 +23,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: d3af77a60678e8286fadfbafcf46f742439e9bf7
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: de468b09b6f6b1f05545cb4a93b6db6082cef48e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86902391"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891119"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Améliorer les performances de la réplication transactionnelle
 [!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
@@ -84,7 +84,7 @@ Conclusions :
     - L’augmentation de la valeur **SubscriptionStreams** est positive pour le débit global de l’Agent de distribution, étant donné que plusieurs connexions à l’abonné appliquent en parallèle des modifications par lots. Toutefois, en fonction du nombre de processeurs et d’autres conditions liées aux métadonnées (par exemple, la clé primaire, les clés étrangères, les contraintes uniques et les index), une valeur SubscriptionStreams élevée risquerait en fait d’avoir un effet négatif. Par ailleurs, si l’exécution ou la validation d’un flux échoue, l’Agent de distribution se remet à utiliser un seul flux pour retenter d’exécuter les lots ayant échoué.
 
 
-Pour plus d’informations sur ces tests, consultez le blog [Optimiser les paramètres de profil de l’agent de réplication pour obtenir de meilleures performances](https://blogs.msdn.microsoft.com/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance/).
+Pour plus d’informations sur ces tests, consultez le blog [Optimiser les paramètres de profil de l’agent de réplication pour obtenir de meilleures performances](/archive/blogs/sql_server_team/optimizing-replication-agent-profile-parameters-for-better-performance).
 
 
 ### <a name="log-reader-agent"></a>l'Agent de lecture du journal ;
@@ -162,5 +162,4 @@ La validation d'un ensemble de transactions comporte une charge fixe ; en valida
 [Utiliser des profils d’agent de réplication](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
 [Afficher et modifier des paramètres d’invite de commandes d’un Agent de réplication &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
 [Concepts des exécutables de l'agent de réplication](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
-  
   

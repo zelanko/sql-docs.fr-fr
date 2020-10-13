@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 94bf4d93-c0ff-4869-bde7-80c24866092e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3617249a1309a86c5ff0a083f3c0db15ee91299d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 97e37ced535863dfe232fb1299be70774643c1c7
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773545"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811039"
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Réduire le bruit dans les stratégies d'utilisation du processeur (Utilitaire SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "85773545"
   
 -   Augmentez le pourcentage de tolérance aux violations d'1 incrément de 30 %. Une violation unique en 1 heure correspondrait à 1 point de données dans une taille de l'échantillon de 4. Dans ce cas, la stratégie tolère 1 violation par heure, mais signale une surexploitation à partir de 2 violations (>30 % des points de données) dans une période de collecte d'1 heure.  
   
--   Augmentez les seuils de stratégie pour l'utilisation du processeur de l'instance managée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de l'application de couche Données. Pour plus d’informations sur la modification des stratégies globales d’utilisation du processeur pour les instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les applications de couche Données, consultez [Administration de l’utilitaire &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). Pour plus d’informations sur la modification des stratégies d’utilisation du processeur pour des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). Pour plus d’informations sur la modification des stratégies d’utilisation du processeur pour des applications de la couche Données spécifiques, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+-   Augmentez les seuils de stratégie pour l'utilisation du processeur de l'instance managée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de l'application de couche Données. Pour plus d’informations sur la modification des stratégies globales d’utilisation du processeur pour les instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les applications de couche Données, consultez [Administration de l’utilitaire &#40;utilitaire SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130)). Pour plus d’informations sur la modification des stratégies d’utilisation du processeur pour des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](./utility-explorer-f1-help.md). Pour plus d’informations sur la modification des stratégies d’utilisation du processeur pour des applications de la couche Données spécifiques, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130)).  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-underutilized"></a>À quelle fréquence l'utilisation du processeur doit-elle se trouver en état de violation pour être signalée comme sous-exploitée ?  
  La période d'évaluation et le pourcentage de tolérance aux violations sont tous deux configurables à l'aide des paramètres de l'onglet **Stratégie** dans le nœud **Administration de l'utilitaire** de l'Explorateur de l'utilitaire. Pour modifier les stratégies, utilisez les contrôles Slider à droite des descriptions de stratégie, puis cliquez sur **Appliquer**. Vous pouvez également restaurer les valeurs par défaut ou ignorer les modifications à l'aide des boutons situés en bas de l'affichage.  
@@ -56,12 +56,11 @@ ms.locfileid: "85773545"
   
 -   Le pourcentage par défaut des points de données en violation avant que le processeur soit signalé comme sous-exploité est de 90 %. Les options sont comprises entre 0 % et 100 %.  
   
- Selon les valeurs par défaut, 672 points de données sont collectés par semaine, mais le seuil de stratégie est de 0 %. Donc par défaut, cette stratégie ne génère pas de violations de sous-exploitation du processeur. Pour plus d’informations sur la modification des stratégies globales d’utilisation du processeur pour les instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les applications de couche Données, consultez [Administration de l’utilitaire &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d). Pour plus d’informations sur la modification des stratégies d’utilisation du processeur pour des instances de SQL Server, consultez [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2). Pour plus d’informations sur la modification des stratégies d’utilisation du processeur pour des applications de la couche Données spécifiques, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867).  
+ Selon les valeurs par défaut, 672 points de données sont collectés par semaine, mais le seuil de stratégie est de 0 %. Donc par défaut, cette stratégie ne génère pas de violations de sous-exploitation du processeur. Pour plus d’informations sur la modification des stratégies globales d’utilisation du processeur pour les instances managées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les applications de couche Données, consultez [Administration de l’utilitaire &#40;utilitaire SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130)). Pour plus d’informations sur la modification des stratégies d’utilisation du processeur pour des instances de SQL Server, consultez [Détails de l’instance gérée &#40;utilitaire SQL Server&#41;](./utility-explorer-f1-help.md). Pour plus d’informations sur la modification des stratégies d’utilisation du processeur pour des applications de la couche Données spécifiques, consultez [Détails des applications de la couche Données déployées &#40;utilitaire SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240857(v=sql.130)).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de l’utilitaire &#40;utilitaire SQL Server&#41;](https://msdn.microsoft.com/library/3e5a00c3-8905-40f0-9ddc-d924df9c2f0d)   
+ [Administration de l’utilitaire &#40;utilitaire SQL Server&#41;](/previous-versions/sql/sql-server-2016/ee240832(v=sql.130))   
  [Surveiller des instances de SQL Server dans l'utilitaire SQL Server](../../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Modifier une définition de la stratégie de contrôle d’intégrité des ressources &#40;utilitaire SQL Server&#41;](../../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)   
  [Fonctionnalités et tâches de l’utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
-  
   

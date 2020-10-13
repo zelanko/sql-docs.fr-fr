@@ -14,12 +14,12 @@ ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b612f3718b35d94ec7e0a4ae60acd618faa9135e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cfbe3440f5976ed2432f5fbcc7bd7ff39dffde45
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88427401"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91811083"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Didacticiel : signature de procédures stockées à l'aide d'un certificat
 [!INCLUDE [SQL Server Azure SQL Database SQL Managed Instance](../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,11 +39,11 @@ Chaque bloc de code dans cet exemple est présenté sous forme de lignes. Pour c
 ## <a name="prerequisites"></a>Conditions préalables requises
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l’accès à un serveur qui exécute SQL Server et d’une base de données AdventureWorks.
 
-- Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installez [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).
 - Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Téléchargez les [exemples de bases de données AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+- Téléchargez les [exemples de bases de données AdventureWorks2017](../samples/adventureworks-install-configure.md).
 
-Pour obtenir des instructions sur la restauration d’une base de données dans SQL Server Management Studio, consultez [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
+Pour obtenir des instructions sur la restauration d’une base de données dans SQL Server Management Studio, consultez [Restaurer une base de données](./backup-restore/restore-a-database-backup-using-ssms.md).   
   
 ## <a name="1-configure-the-environment"></a>1. Configurez l'environnement  
 Pour définir le contexte initial de l’exemple, ouvrez une nouvelle requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et exécutez le code suivant pour ouvrir la base de données Adventureworks2017. Ce code modifie et redéfinit le contexte de la base de données à `AdventureWorks2012` , puis crée une nouvelle connexion serveur et un compte d'utilisateur de base de données (`TestCreditRatingUser`) avec un mot de passe.  
@@ -288,6 +288,5 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
 [Centre de sécurité pour le moteur de base de données SQL Server et Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-  
   
   

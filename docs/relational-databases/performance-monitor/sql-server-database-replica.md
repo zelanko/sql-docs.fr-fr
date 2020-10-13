@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 280fae3d260995a15a7baa9e40a861cb2cfdecc4
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458333"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892229"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, réplica de base de données
 
@@ -42,7 +42,7 @@ ms.locfileid: "86458333"
 |**Octets restants de restauration par progression**|Taille de journal restante, en kilo-octets, avant la fin de la phase de restauration.|Réplica secondaire|  
 |**Octets réexécutés/s**|Quantité d'enregistrements du journal réexécutée sur la base de données secondaire au cours de la dernière seconde.|Réplica secondaire|  
 |**Taille totale de journal nécessitant une annulation**|Nombre total de kilo-octets du journal qui doivent être annulés.|Réplica secondaire|  
-|**Délai de transaction**|Délai d’attente d’accusé de réception de validation non terminée pour toutes les transactions en cours, en millisecondes. Divisez cette valeur par *Transactions d’écriture en miroir/s* pour obtenir le *délai de transaction moyen*. Pour plus d’informations, consultez [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](https://blogs.msdn.microsoft.com/saponsqlserver/2013/04/24/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii/).|Réplica principal|  
+|**Délai de transaction**|Délai d’attente d’accusé de réception de validation non terminée pour toutes les transactions en cours, en millisecondes. Divisez cette valeur par *Transactions d’écriture en miroir/s* pour obtenir le *délai de transaction moyen*. Pour plus d’informations, consultez [SQL Server 2012 AlwaysOn – Part 12 – Performance Aspects and Performance Monitoring II](/archive/blogs/saponsqlserver/sql-server-2012-alwayson-part-12-performance-aspects-and-performance-monitoring-ii).|Réplica principal|  
   
 ## <a name="see-also"></a>Voir aussi
   
@@ -50,4 +50,3 @@ ms.locfileid: "86458333"
  [SQL Server, réplica de disponibilité](../../relational-databases/performance-monitor/sql-server-availability-replica.md)   
  [SQL Server, objet Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md)   
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  

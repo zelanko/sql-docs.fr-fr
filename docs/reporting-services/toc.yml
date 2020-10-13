@@ -1467,7 +1467,7 @@
 - name: Bases de données relationnelles
   items:
     - name: 'Guide pratique pour gérer les connexions, les utilisateurs et les schémas'
-      href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+      href: ../relational-databases/security/authentication-access/create-a-login.md
     - name: Masquage dynamique des données
       href: ../relational-databases/security/dynamic-data-masking.md
     - name: Référence SQL Server Express LocalDB

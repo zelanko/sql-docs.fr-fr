@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd8b43e431a4e67eb1933548935fb37562dcdeb7
-ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
+ms.openlocfilehash: e161eff506c1aa5398752f052f00dc4dd69ae8d9
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87411145"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868904"
 ---
 # <a name="register-computer-with-host-guardian-service"></a>Inscrire un ordinateur auprès du Service Guardian hôte
 
@@ -120,7 +120,7 @@ Trois fichiers de données sont collectés pour l’attestation TPM, dont certai
 | -------------------- | ---------------- | ---------- |
 | Identificateur de plateforme  | Paire de clés de type EK (Endorsement Key) publique dans le TPM de l’ordinateur et certificat de paire de clés de type EK du fabricant du TPM. | 1 pour chaque ordinateur |
 | Base de référence TPM | Registres de contrôle de plateforme (PCR) dans le TPM qui mesurent la configuration du microprogramme et du système d’exploitation chargée pendant le processus de démarrage. Citons par exemple l’état du démarrage sécurisé et le chiffrement ou non des vidages sur incident. | 1 base de référence par configuration d’ordinateur (un ordinateur aux caractéristiques matérielles et logiciels identiques peut utiliser la même base de référence) |
-| Stratégie d’intégrité du code | Stratégie de [contrôle d’application Windows Defender](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) que vous approuvez pour protéger les ordinateurs | 1 par stratégie CI unique déployée sur les ordinateurs |
+| Stratégie d’intégrité du code | Stratégie de [contrôle d’application Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) que vous approuvez pour protéger les ordinateurs | 1 par stratégie CI unique déployée sur les ordinateurs |
 
 Vous pouvez configurer plusieurs artefacts d’attestation de chaque type sur SGH pour prendre en charge des configurations matérielles et logicielles diversifiées.
 SGH exige uniquement qu’un ordinateur en attente d’attestation respecte une stratégie dans chaque catégorie de stratégie.
@@ -147,7 +147,7 @@ Si vous utilisez déjà une stratégie d’intégrité du code WDAC personnalis�
     ConvertFrom-CIPolicy -XmlFilePath $temppolicy -BinaryFilePath "$HOME\Desktop\allowall_cipolicy.bin"
     ```
 
-2. Suivez les instructions du [guide de déploiement du contrôle d’application Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) pour déployer le fichier `allowall_cipolicy.bin` sur les ordinateurs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] à l’aide de la [stratégie de groupe](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). Pour les ordinateurs de groupe de travail, suivez le même processus à l’aide de l’Éditeur de stratégie de groupe locale (`gpedit.msc`).
+2. Suivez les instructions du [guide de déploiement du contrôle d’application Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide) pour déployer le fichier `allowall_cipolicy.bin` sur les ordinateurs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] à l’aide de la [stratégie de groupe](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-group-policy). Pour les ordinateurs de groupe de travail, suivez le même processus à l’aide de l’Éditeur de stratégie de groupe locale (`gpedit.msc`).
 
 3. Exécutez `gpupdate /force` sur les ordinateurs [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] pour configurer la nouvelle stratégie d’intégrité du code, puis redémarrez les ordinateurs pour appliquer la stratégie.
 
@@ -243,7 +243,7 @@ Répétez l’étape 4B pour chaque ordinateur [!INCLUDE [ssnoversion-md](../..
 
 Une fois que vous avez inscrit l’ordinateur [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] auprès de SGH ([étape 4A](#step-4a-register-a-computer-in-tpm-mode) pour le mode TPM, [étape 4B](#step-4b-register-a-computer-in-host-key-mode) pour le mode clé d’hôte), vous devez confirmer qu’il peut effectuer une attestation.
 
-Vous pouvez vérifier la configuration du client d’attestation SGH et effectuer une tentative d’attestation à tout moment avec [Get-HgsClientConfiguration](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
+Vous pouvez vérifier la configuration du client d’attestation SGH et effectuer une tentative d’attestation à tout moment avec [Get-HgsClientConfiguration](/powershell/module/hgsclient/get-hgsclientconfiguration?view=win10-ps).
 La sortie de la commande doit ressembler à ce qui suit :
 
 ```

@@ -14,12 +14,12 @@ ms.assetid: ada83c28-e8b7-45d9-b53c-b3d67c8820c8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dda5e49aa6f51382beb390ae48a544565e2703d9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: baa0397320f725f401099c00e9887069b5ec6cd1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418923"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891919"
 ---
 # <a name="views"></a>Les vues
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "88418923"
  Une vue partitionnée joint horizontalement les données partitionnées d'un ensemble de tables membres sur un ou plusieurs serveurs. Les données sont ainsi affichées comme si elles provenaient d'une seule table. Une vue qui joint des tables membres sur la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est une vue partitionnée locale.  
   
  Vues système  
- Les vues système exposent les métadonnées de catalogue. Vous pouvez utiliser des vues système pour retourner des informations sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les objets définis dans l'instance. Par exemple, vous pouvez interroger la vue de catalogue sys.databases pour retourner des informations sur les bases de données définies par l’utilisateur disponibles dans l’instance. Pour plus d’informations, consultez [Vues système &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ Les vues système exposent les métadonnées de catalogue. Vous pouvez utiliser des vues système pour retourner des informations sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les objets définis dans l'instance. Par exemple, vous pouvez interroger la vue de catalogue sys.databases pour retourner des informations sur les bases de données définies par l’utilisateur disponibles dans l’instance. Pour plus d’informations, consultez [Vues système &#40;Transact-SQL&#41;](../../t-sql/language-reference.md)  
   
 ## <a name="common-view-tasks"></a>Tâches courantes associées aux vues  
  Le tableau suivant fournit des liens vers les tâches couramment associées à la création ou à la modification d'une vue.  
@@ -57,5 +57,4 @@ ms.locfileid: "88418923"
 ## <a name="see-also"></a>Voir aussi  
  [Créer des vues sur les colonnes XML](../../relational-databases/xml/create-views-over-xml-columns.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)  
-  
   

@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 065b882ac2a3fdd2d43f9d7754b267384a163e89
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5881835f6a415b47825181d7d5a74ec24677e3c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772097"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891939"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -177,7 +177,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  Pour cela, vous devez commencer par créer la fonction multidiffusion dans CLR. Le type de données **xml** est exposé en tant que classe managée SqlXml dans ADO.NET et prend en charge la méthode **CreateReader()** qui retourne un flux XmlReader.  
   
 > [!NOTE]  
->  L'exemple de code de cette section utilise XPathDocument et XPathNavigator, ce qui vous oblige à charger tous les documents XML en mémoire. Si vous utilisez un code similaire dans votre application pour traiter plusieurs documents XML volumineux, ce code n'est pas évolutif. Au lieu de cela, laissez les allocations de mémoire petites et utilisez les interfaces multidiffusion chaque fois que possible. Pour plus d’informations sur les performances, consultez [Architecture d’intégration du CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9).  
+>  L'exemple de code de cette section utilise XPathDocument et XPathNavigator, ce qui vous oblige à charger tous les documents XML en mémoire. Si vous utilisez un code similaire dans votre application pour traiter plusieurs documents XML volumineux, ce code n'est pas évolutif. Au lieu de cela, laissez les allocations de mémoire petites et utilisez les interfaces multidiffusion chaque fois que possible. Pour plus d’informations sur les performances, consultez [Architecture d’intégration du CLR](../clr-integration/clr-integration-architecture-clr-hosted-environment.md).  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -257,5 +257,4 @@ as
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser des données XML dans les colonnes calculées](../../relational-databases/xml/use-xml-in-computed-columns.md)  
-  
   
