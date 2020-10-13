@@ -5,16 +5,16 @@ description: Gérer des instances SQL Server à l’aide de SQL Server avec Azur
 author: anosov1960
 ms.author: sashan
 ms.reviewer: mikeray
-ms.date: 09/10/2020
+ms.date: 10/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: references_regions
-ms.openlocfilehash: c647a1cdf767b7dacef5b7e376d6e787af688469
-ms.sourcegitcommit: 764f90cf2eeca8451afdea2753691ae4cf032bea
+ms.openlocfilehash: 5cf1a67d1eeb36ec4889d75241eba34b515264b0
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91589298"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834317"
 ---
 # <a name="azure-arc-enabled-sql-server-preview"></a>SQL Server avec Azure Arc (préversion)
 
@@ -44,8 +44,7 @@ SQL Server avec Azure Arc prend en charge SQL Server 2012 ou une version ultéri
 ### <a name="required-permissions"></a>Autorisations requises
 
 Pour connecter les instances SQL Server et l’hébergement à Azure Arc, vous devez avoir un compte disposant de privilèges pour effectuer les actions suivantes :
-   * Microsoft.AzureData/sqlServerInstances/write
-   * Microsoft.AzureData/sqlServerInstances/read
+   * Microsoft.AzureData/*
    * Microsoft.HybridCompute/machines/read
    * Microsoft.HybridCompute/machines/write
    * Microsoft.GuestConfiguration/guestConfigurationAssignments/read

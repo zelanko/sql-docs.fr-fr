@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: eac620d522408ff9fb4de5550d92cfcbd0f3ec4a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631937"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91727470"
 ---
 # <a name="using-table-valued-parameters"></a>Utilisation des paramètres table
 
@@ -35,8 +35,8 @@ Les valeurs de colonne dans les paramètres table sont accessibles à l’aide d
   
 | Ressource                                                                                                             | Description                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
-| [Paramètres table (moteur de base de données)](https://go.microsoft.com/fwlink/?LinkId=98363) dans la Documentation en ligne de SQL Server | Explique comment créer et utiliser des paramètres table.                             |
-| [Types de tables définis par l’utilisateur](https://go.microsoft.com/fwlink/?LinkId=98364) dans la Documentation en ligne de SQL Server                  | Décrit les types de tables définis par l’utilisateur qui permettent de déclarer des paramètres table. |
+| [Paramètres table (moteur de base de données)](/previous-versions/sql/sql-server-2008/bb510489(v=sql.100)) dans la Documentation en ligne de SQL Server | Explique comment créer et utiliser des paramètres table.                             |
+| [Types de tables définis par l’utilisateur](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) dans la Documentation en ligne de SQL Server                  | Décrit les types de tables définis par l’utilisateur qui permettent de déclarer des paramètres table. |
 | Section [Moteur de base de données Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=120507) de CodePlex        | Contient des exemples qui montrent comment utiliser les fonctions et fonctionnalités de SQL Server.  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Transmettre plusieurs lignes dans les versions précédentes de SQL Server  
@@ -53,7 +53,7 @@ Avant l’introduction des paramètres table dans SQL Server 2008, les options 
   
 ## <a name="creating-table-valued-parameter-types"></a>Créer des types de paramètres table  
 
-Les paramètres table sont basés sur des structures de table fortement typées et définies à l’aide d’instructions Transact-SQL `CREATE TYPE`. Vous devez créer un type de table et définir la structure dans SQL Server avant de pouvoir utiliser les paramètres table dans vos applications clientes. Pour plus d’informations sur la création des types de table, consultez [Types de table définis par l’utilisateur](https://go.microsoft.com/fwlink/?LinkID=98364) dans la Documentation en ligne de SQL Server.  
+Les paramètres table sont basés sur des structures de table fortement typées et définies à l’aide d’instructions Transact-SQL `CREATE TYPE`. Vous devez créer un type de table et définir la structure dans SQL Server avant de pouvoir utiliser les paramètres table dans vos applications clientes. Pour plus d’informations sur la création des types de table, consultez [Types de table définis par l’utilisateur](/previous-versions/sql/sql-server-2008/bb522526(v=sql.100)) dans la Documentation en ligne de SQL Server.  
 
 ```sql
 CREATE TYPE dbo.CategoryTableType AS TABLE  
@@ -315,4 +315,4 @@ Les méthodes suivantes ont été ajoutées à cette classe pour permettre de tr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Présentation du pilote JDBC](overview-of-the-jdbc-driver.md)  
+[Présentation du pilote JDBC](overview-of-the-jdbc-driver.md)

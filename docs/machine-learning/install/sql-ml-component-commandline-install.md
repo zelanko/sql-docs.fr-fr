@@ -1,25 +1,25 @@
 ---
 title: Installer à partir d’une invite de commandes
-description: Exécutez l’installation de SQL Server à partir d’une ligne de commande pour ajouter l’intégration de Python et du langage R à une instance du moteur de base de données SQL Server.
+description: Exécutez l’installation de SQL Server à partir d’une ligne de commande pour ajouter Machine Learning Services avec R et Python à une instance du moteur de base de données SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 09/30/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8c496778731a972603019450be15b3ea72d4c415
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 9769675d3901efc9e5ad794794705f924e494fe2
+ms.sourcegitcommit: c4d6804bde7eaf72d9233d6d43f77d77d1b17c4e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179798"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91624756"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installer les composants de machine learning SQL Server R et Python à partir de la ligne de commande
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-from-the-command-line"></a>Installer SQL Server Machine Learning Services avec R et Python à partir de la ligne de commande
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Cet article fournit des instructions pour l’installation des composants de machine learning SQL Server à partir d’une ligne de commande :
+Cet article fournit des instructions pour l’installation de [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) à partir d’une ligne de commande :
 
 + [Nouvelle instance en base de données](#indb)
 + [Ajout à une instance du moteur de base de données existante](#add-existing)

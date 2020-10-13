@@ -1,23 +1,25 @@
 ---
-title: Installation sans accès à Internet
-description: Installer les composants de machine learning SQL Server R et Python sur un ordinateur isolé derrière un pare-feu réseau.
+title: Installation hors connexion sans accès à Internet
+description: Installez SQL Server Machine Learning Services hors connexion avec Python et R sur des ordinateurs isolés derrière un pare-feu réseau.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 11/04/2019
+ms.date: 10/01/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2ee1ed401942ac2673e6527a721ba04bcd95b2f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f891511b5c3547dbeecf35f27b3a56682a7b6749
+ms.sourcegitcommit: 71d2389cf27156fa0404a6e6f65fb7a61c40789a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487642"
+ms.lasthandoff: 10/01/2020
+ms.locfileid: "91636154"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installer les composants de machine learning SQL Server R et Python sur un ordinateur sans accès à Internet
+# <a name="offline-install-sql-server-machine-learning-services-python-and-r-on-computers-with-no-internet-access"></a>Installer SQL Server Machine Learning Services hors connexion avec Python et R sur des ordinateurs sans accès à Internet
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+Cet article explique comment installer SQL Server Machine Learning Services hors connexion sur des ordinateurs sans accès à Internet et isolés derrière un pare-feu réseau.
 
 Par défaut, les programmes d’installation se connectent aux sites de téléchargement Microsoft pour obtenir les composants nécessaires à jour pour le machine learning sur SQL Server. Si les contraintes de pare-feu empêchent le programme d’installation d’y accéder, vous pouvez utiliser un appareil connecté à Internet pour télécharger les fichiers, transférer ces fichiers vers un serveur hors connexion, puis exécuter le programme d’installation.
 

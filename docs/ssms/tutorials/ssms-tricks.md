@@ -1,12 +1,12 @@
 ---
 title: Conseils et astuces sur l’utilisation de SSMS
 description: Déocuvrez comment commenter & supprimer des commentaires du code, mettre en retrait du texte, filtrer des objets, accéder à des journaux d’erreurs et rechercher des noms d’instances SQL avec SQL Server Management Studio.
-ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
-author: MashaMSFT
-ms.author: mathoma
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
 ms.reviewer: sstein
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
@@ -19,43 +19,43 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 2147baf038b99140bf21ab72695f779c0fe69faf
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
+ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462343"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "91724510"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Conseils et astuces pour utiliser SQL Server Management Studio (SSMS)
 
-Cet article vous propose des conseils et astuces pour utiliser SQL Server Management Studio (SSMS). Cet article vous montre comment : 
+Cet article vous propose des conseils et astuces pour utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Cet article vous montre comment : 
 
 > [!div class="checklist"]
 > * Ajouter/supprimer des marques de commentaire dans le texte Transact-SQL (T-SQL)
 > * Mettre en retrait du texte
 > * Filtrer des objets dans l’Explorateur d’objets
-> * Accéder à votre journal des erreurs SQL Server
-> * Rechercher le nom de votre instance SQL Server
+> * Accéder à votre journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+> * Rechercher du nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour tester les étapes fournies dans cet article, vous avez besoin de SQL Server Management Studio, de l’accès à SQL Server et d’une base de données AdventureWorks. 
+Pour tester les étapes fournies dans cet article, vous avez besoin de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], d’un accès à un serveur SQL et d’une base de données AdventureWorks. 
 
 * Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-* Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Installez [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Édition Développeur](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Téléchargez un [exemple de base de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Pour savoir comment restaurer une base de données dans SSMS, consultez [Restauration d’une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Ajouter/supprimer des marques de commentaire dans votre code T-SQL
 
 Vous pouvez ajouter et supprimer des marques de commentaire dans des parties de votre texte à l’aide du bouton **Commenter** de la barre d’outils. Le texte qui est commenté n’est pas exécuté.
 
-1. Ouvrez SQL Server Management Studio.
+1. Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
 2. Connectez-vous à votre serveur SQL.
 
 3. Ouvrez une fenêtre Nouvelle requête.
 
-4. Collez le code T-SQL suivant dans la fenêtre de texte.
+4. Collez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant dans votre fenêtre de texte.
 
     ```sql
     USE master
@@ -105,7 +105,7 @@ Vous pouvez utiliser les boutons de mise en retrait de la barre d’outils pour 
 
 1. Ouvrez une fenêtre Nouvelle requête.
 
-2. Collez le code T-SQL suivant dans la fenêtre de texte :
+2. Collez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant dans votre fenêtre de texte :
 
     ```sql
     USE master
@@ -163,11 +163,11 @@ Dans les bases de données qui ont de nombreux objets, vous pouvez utiliser le f
 
 ## <a name="access-your-sql-server-error-log"></a>Accéder à votre journal des erreurs SQL Server
 
-Le journal des erreurs est un fichier qui contient les détails de ce qui se produit dans votre instance SQL Server. Vous pouvez parcourir et interroger le journal des erreurs dans SSMS. Le journal des erreurs est un fichier .log qui se trouve sur votre disque.
+Le journal des erreurs est un fichier qui contient les détails de ce qui se produit dans votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez parcourir et interroger le journal des erreurs dans SSMS. Le journal des erreurs est un fichier .log qui se trouve sur votre disque.
 
 ### <a name="open-the-error-log-in-ssms"></a>Ouvrir le journal des erreurs dans SSMS
 
-1. Connectez-vous à votre serveur SQL.  
+1. Connectez-vous à votre serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 2. Développez **Gestion** > **Journaux SQL Server**. 
 
@@ -181,7 +181,7 @@ Le journal des erreurs est un fichier qui contient les détails de ce qui se pro
 
 2. Ouvrez une fenêtre Nouvelle requête.
 
-3. Collez le code T-SQL suivant dans la fenêtre de votre requête :
+3. Collez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant dans votre fenêtre de requête :
 
      ```sql
        sp_readerrorlog 0,1,'Server process ID'
@@ -195,11 +195,11 @@ Le journal des erreurs est un fichier qui contient les détails de ce qui se pro
 
 ### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>Rechercher l’emplacement du journal des erreurs si vous êtes connecté à SQL Server
 
-1. Connectez-vous à votre serveur SQL.
+1. Connectez-vous à votre serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 2. Ouvrez une fenêtre Nouvelle requête.
 
-3. Collez le code T-SQL suivant dans la fenêtre de votre requête, puis sélectionnez **Exécuter** :
+3. Collez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant dans votre fenêtre de requête, puis sélectionnez **Exécuter** :
 
      ```sql
         SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -211,13 +211,13 @@ Le journal des erreurs est un fichier qui contient les détails de ce qui se pro
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Rechercher l’emplacement du journal des erreurs si vous ne pouvez pas vous connecter à SQL Server
 
-Le chemin d’accès à votre journal des erreurs SQL Server peut varier en fonction de vos paramètres de configuration. Vous trouverez le chemin d’accès à l’emplacement du journal des erreurs dans les paramètres de démarrage au sein du Gestionnaire de configuration SQL Server. Suivez les étapes ci-dessous pour trouver le paramètre de démarrage pertinent identifiant l’emplacement de votre journal des erreurs SQL Server. *Votre chemin d'accès peut varier en fonction du chemin d’accès indiqué ci-dessous*.
+Le chemin de votre journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut varier en fonction de vos paramètres de configuration. Vous trouverez le chemin d’accès à l’emplacement du journal des erreurs dans les paramètres de démarrage au sein du Gestionnaire de configuration SQL Server. Suivez les étapes ci-dessous pour trouver le paramètre de démarrage pertinent identifiant l’emplacement de votre journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Votre chemin d'accès peut varier en fonction du chemin d’accès indiqué ci-dessous*.
 
 1. Ouvrez le Gestionnaire de configuration SQL Server.
 
 2. Développez **Services**.
 
-3. Cliquez avec le bouton droit sur votre instance SQL Server, puis sélectionnez **Propriétés** :
+3. Cliquez avec le bouton droit sur votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis sélectionnez **Propriétés** :
 
     ![Propriétés de serveur du Gestionnaire de configuration](media/ssms-tricks/serverproperties.PNG)
 
@@ -227,13 +227,13 @@ Le chemin d’accès à votre journal des erreurs SQL Server peut varier en fonc
 
     ![Journal des erreurs](media/ssms-tricks/errorlog.png)
 
-    Plusieurs fichiers errorlog.* se trouvent à cet emplacement. Le nom de fichier qui se termine par *.log est le fichier du journal des erreurs actuel. Les noms de fichiers qui se terminent par des chiffres sont les fichiers journaux précédents. Un journal est créé chaque fois que le serveur SQL redémarre.
+    Plusieurs fichiers journaux d’erreurs se trouvent à cet emplacement. Le nom de fichier qui se termine par *.log est le fichier du journal des erreurs actuel. Les noms de fichiers qui se terminent par des chiffres sont les fichiers journaux précédents. Un journal est créé chaque fois que le serveur SQL redémarre.
 
-6. Ouvrez le fichier errorlog.log dans le Bloc-notes. 
+6. Ouvrez le fichier errorlog.log dans le Bloc-notes.
 
-## <a name="find-sql-server-instance-name"></a><a name="determine-sql-server-name"></a>Trouver le nom de l’instance SQL Server
+## <a name="find-sql-server-instance-name"></a>Trouver le nom de l’instance SQL Server
 
-Vous avez plusieurs options pour rechercher le nom de votre serveur SQL avant et après vous y être connecté.  
+Vous avez plusieurs options pour rechercher le nom de votre serveur SQL avant et après vous être connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 ### <a name="before-you-connect-to-sql-server"></a>Avant de vous connecter à SQL Server
 
@@ -243,7 +243,7 @@ Vous avez plusieurs options pour rechercher le nom de votre serveur SQL avant et
 
 3. Recherchez le texte *Server name is*.
 
-    Ce qui figure entre guillemets simples est le nom de l’instance SQL Server à laquelle vous allez vous connecter :
+    Ce qui figure entre guillemets simples est le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous allez vous connecter :
 
     ![Rechercher le nom de serveur dans le journal des erreurs](media/ssms-tricks/servernameinlog.png)
 
@@ -251,7 +251,7 @@ Vous avez plusieurs options pour rechercher le nom de votre serveur SQL avant et
 
 ### <a name="when-youre-connected-to-sql-server"></a>Une fois que vous êtes connecté à SQL Server
 
-Une fois que vous êtes connecté à SQL Server, le nom du serveur est disponible à trois emplacements : 
+Une fois que vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le nom du serveur est disponible à trois emplacements : 
 
 1. Le nom du serveur est indiqué dans l’Explorateur d’objets :
 
@@ -266,19 +266,19 @@ Une fois que vous êtes connecté à SQL Server, le nom du serveur est disponibl
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>Si vous êtes connecté à un alias ou un écouteur de groupe de disponibilité
 
-Quand vous êtes connecté à un alias ou un écouteur de groupe de disponibilité, ces informations sont indiquées dans l’Explorateur d’objets et la fenêtre Propriétés. Dans ce cas, le nom SQL Server n’est peut-être pas visible et doit être interrogé :
+Quand vous êtes connecté à un alias ou un écouteur de groupe de disponibilité, ces informations sont indiquées dans l’Explorateur d’objets et la fenêtre Propriétés. Dans ce cas, le nom du serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut ne pas être visible de manière évidente et doit être interrogé :
 
 1. Connectez-vous à votre serveur SQL.
 
 2. Ouvrez une fenêtre Nouvelle requête.
 
-3. Collez le code T-SQL suivant dans la fenêtre :
+3. Collez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant dans la fenêtre :
 
       ```sql
        select @@Servername
      ```
 
-4. Consultez les résultats de la requête pour identifier le nom de l’instance SQL Server à laquelle vous êtes connecté : 
+4. Consultez les résultats de la requête pour identifier le nom de l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous êtes connecté : 
 
     ![Interroger le nom du serveur SQL](media/ssms-tricks/queryservername.png)
 
