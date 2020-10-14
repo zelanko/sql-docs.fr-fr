@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
-title: sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+description: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+title: sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e712d2b5adafbb3f47ef132c701a82d3c9026c9
-ms.sourcegitcommit: 883435b4c7366f06ac03579752093737b098feab
+ms.openlocfilehash: c08303bd13b96089ac2b9e0f82c83a992ec83e63
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89062348"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038294"
 ---
-# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Fournit des informations d’index ColumnStore en cluster sur une base par segment pour aider l’administrateur à prendre des décisions de gestion du système dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys. pdw_nodes_column_store_row_groups** contient une colonne pour le nombre total de lignes stockées physiquement (y compris celles marquées comme supprimées) et une colonne pour le nombre de lignes marquées comme supprimées. Utilisez **sys. pdw_nodes_column_store_row_groups** pour déterminer les groupes de lignes qui ont un pourcentage élevé de lignes supprimées et doivent être reconstruites.  
+  Fournit des informations d’index ColumnStore en cluster sur une base par segment pour aider l’administrateur à prendre des décisions de gestion du système dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys.pdw_nodes_column_store_row_groups** contient une colonne pour le nombre total de lignes stockées physiquement (y compris celles marquées comme supprimées) et une colonne pour le nombre de lignes marquées comme supprimées. Utilisez **sys.pdw_nodes_column_store_row_groups** pour déterminer les groupes de lignes qui ont un pourcentage élevé de lignes supprimées et doivent être reconstruites.  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ID de la table sous-jacente. Il s’agit de la table physique sur le nœud de calcul, et non de la object_id de la table logique sur le nœud de contrôle. Par exemple, object_id ne correspond pas à la object_id dans sys. tables.<br /><br /> Pour effectuer une jointure avec sys. tables, utilisez sys. pdw_index_mappings.|  
+|**object_id**|**int**|ID de la table sous-jacente. Il s’agit de la table physique sur le nœud de calcul, et non de la object_id de la table logique sur le nœud de contrôle. Par exemple, object_id ne correspond pas à la object_id dans sys. tables.<br /><br /> Pour effectuer une jointure avec sys. tables, utilisez sys.pdw_index_mappings.|  
 |**index_id**|**int**|ID de l’index ColumnStore cluster sur *object_id* table.|  
 |**partition_number**|**int**|ID de la partition de table qui contient les *row_group_id*de groupe de lignes. Vous pouvez utiliser *partition_number* pour joindre cette DMV à sys. partitions.|  
 |**row_group_id**|**int**|ID de ce groupe de lignes. Cet ID est unique dans la partition.|  
@@ -40,10 +40,10 @@ ms.locfileid: "89062348"
 |**pdw_node_id**|**int**|ID unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
 |**distribution_id**|**int**|ID unique de la distribution.|
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Retourne une ligne pour chaque groupe de lignes columnstore pour chaque table ayant un index columnstore cluster ou non cluster.  
   
- Utilisez **sys. pdw_nodes_column_store_row_groups** pour déterminer le nombre de lignes incluses dans le groupe de lignes et la taille du groupe de lignes.  
+ Utilisez **sys.pdw_nodes_column_store_row_groups** pour déterminer le nombre de lignes incluses dans le groupe de lignes et la taille du groupe de lignes.  
   
  Lorsque le nombre de lignes supprimées dans un groupe de lignes atteint un fort pourcentage du nombre total de lignes, la table est moins efficace. Reconstruisez l'index columnstore pour réduire la taille de la table, ce qui réduit les E/S disque nécessaires pour lire la table. Pour reconstruire l’index ColumnStore, utilisez l’option **Rebuild** de l’instruction **ALTER index** .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "89062348"
  Nécessite l’autorisation **VIEW SERVER STATE**.  
   
 ## <a name="examples-sssdw-and-sspdw"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant joint la table **sys. pdw_nodes_column_store_row_groups** à d’autres tables système pour renvoyer des informations sur des tables spécifiques. La colonne calculée `PercentFull` est une estimation de l'efficacité du groupe de lignes. Pour rechercher des informations sur une seule table, supprimez les traits d’Union de commentaire devant la clause WHERE et fournissez un nom de table.  
+ L’exemple suivant joint la table **sys.pdw_nodes_column_store_row_groups** à d’autres tables système pour retourner des informations sur des tables spécifiques. La colonne calculée `PercentFull` est une estimation de l'efficacité du groupe de lignes. Pour rechercher des informations sur une seule table, supprimez les traits d’Union de commentaire devant la clause WHERE et fournissez un nom de table.  
   
 ```sql
 SELECT IndexMap.object_id,   
@@ -109,9 +109,9 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Vues de catalogue Azure Synapse Analytics et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CRÉER un INDEX COLUMNSTORE &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys. pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys. pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

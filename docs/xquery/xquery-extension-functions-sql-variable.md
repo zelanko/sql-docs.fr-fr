@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6ed7dd109906b4cace6ed185b1842f9e9e7dedde
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775427"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037033"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Fonctions d’extension XQuery : sql:variable()
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -94,11 +94,10 @@ WHERE ProductID=771
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Server les fonctions d’extension XQuery](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
+ [SQL Server les fonctions d’extension XQuery](./xquery-extension-functions-sql-column.md)   
  [Comparer du XML typé et du XML non typé](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [SQL Server de &#40;de données XML&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Données XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Créer des instances de données XML](../relational-databases/xml/create-instances-of-xml-data.md)   
  [méthodes de type de données xml](../t-sql/xml/xml-data-type-methods.md)   
  [Langage de manipulation de données XML &#40;DML XML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
-  
   

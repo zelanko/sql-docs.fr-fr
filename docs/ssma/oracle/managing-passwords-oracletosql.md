@@ -14,12 +14,12 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: 3ffcc42e790e6eb0f26ffa96ec8e3bcf7503ca3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 212d6792704ed2b52af91be3ea810a916a486bc8
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480451"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038022"
 ---
 # <a name="managing-passwords-oracletosql"></a>Gestion des mots de passe (OracleToSQL)
 Cette section concerne la sécurisation des mots de passe de base de données, ainsi que la procédure d’importation ou d’exportation entre les serveurs.
@@ -132,5 +132,4 @@ L’application console SSMA vous permet d’exporter les mots de passe de base 
 8. Veuillez confirmer le mot de passe : xxxxxxxx  
 
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[Exécution de la console SSMA (Oracle)](./executing-the-ssma-console-oracletosql.md)  

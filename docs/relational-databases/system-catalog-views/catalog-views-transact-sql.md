@@ -24,12 +24,12 @@ ms.assetid: 13bccc2f-ed3c-4b58-abd0-ca8bf34a66b8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3af547afd4b35c10358ce24be2fbcce96801144
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 9d139633c9f1e38f7509696ce228c6e0559da52f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89546885"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038297"
 ---
 # <a name="system-catalog-views-transact-sql"></a>Affichages catalogue système (Transact-SQL)
 
@@ -46,7 +46,7 @@ Les affichages catalogue retournent des informations utilisées par le [!INCLUDE
 - L'affichage dérivé contient un sur-ensemble de colonnes et un sous-ensemble de lignes.
 
 > [!IMPORTANT]
-> Dans les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut augmenter la définition de l'affichage catalogue système en ajoutant des colonnes à la fin de la liste des colonnes. Nous vous recommandons d’utiliser la syntaxe SELECT \* from *sys. catalog_view_name* dans le code de production, car le nombre de colonnes retournées peut changer et rompre votre application.
+> Dans les versions ultérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] peut augmenter la définition de l'affichage catalogue système en ajoutant des colonnes à la fin de la liste des colonnes. Nous vous recommandons d’utiliser la syntaxe SELECT \* FROM *sys.catalog_view_name* dans le code de production, car le nombre de colonnes retournées peut changer et rompre votre application.
 
 Les affichages catalogue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont classés en plusieurs catégories :
 
@@ -109,7 +109,7 @@ Les affichages catalogue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
         
         [Affichages catalogue des données spatiales](../../relational-databases/system-catalog-views/spatial-data-catalog-views.md)
         
-        [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
+        [Vues de catalogue Azure Synapse Analytics et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)
         
         [Affichages catalogue Stretch Database &#40;Transact-SQL&#41;](../system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-databases.md)
         

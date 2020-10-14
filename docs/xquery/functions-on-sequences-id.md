@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c27ed4fad982831288f1e115f6da94bc70114c61
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753556"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037428"
 ---
 # <a name="functions-on-sequences---id"></a>Fonctions sur les séquences : id
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Une ou plusieurs valeurs xs:IDREF.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le résultat de la fonction est une séquence d'éléments de l'instance XML, dans l'ordre du document, qui ont une valeur xs:ID égale à une ou plusieurs des valeurs xs:IDREF de la liste des candidats xs:IDREF.  
   
  Si la valeur xs:IDREF ne correspond à aucun élément, la fonction renvoie la séquence vide.  
@@ -47,7 +47,7 @@ fn:id($arg as xs:IDREF*) as element()*
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Récupération des éléments en fonction de la valeur de l'attribut IDREF  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>R. Récupération des éléments en fonction de la valeur de l'attribut IDREF  
  L’exemple suivant utilise FN : ID pour récupérer les <`employee`> éléments, en fonction de l’attribut IDREF Manager. Dans cet exemple, l'attribut manager est de type IDREF et l'attribut eid est de type ID.  
   
  Pour une valeur d’attribut Manager spécifique, la fonction **ID ()** recherche le <`employee`> élément dont la valeur de l’attribut type d’ID correspond à la valeur IDREF d’entrée. En d’autres termes, pour un employé spécifique, la fonction **ID ()** retourne le responsable de l’employé.  
@@ -177,11 +177,10 @@ select @x.query('declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ne prend pas en charge la version à deux arguments de **ID ()**.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge la version à deux arguments de **ID ()**.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]requiert que le type d’argument **ID ()** soit un sous-type de XS : IDREF *.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiert que le type d’argument **ID ()** soit un sous-type de XS : IDREF *.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions sur les séquences](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
-  
+ [Fonctions sur les séquences](./xquery-functions-against-the-xml-data-type.md)  
   

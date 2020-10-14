@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
-title: sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
+description: sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
+title: sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 ms.custom: seo-dt-2019
 ms.date: 03/09/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41c43a39c85c05dcb0155c90fea74c5899445527
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3f4b29984f962f2ec4f542a57cd604c619a78c6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88475360"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036712"
 ---
-# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
+# <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contient une ligne pour chaque base de données physique sur un nœud de calcul. Agréger des informations sur la base de données physique pour obtenir des informations détaillées sur les bases de données. Pour combiner des informations, joignez le `sys.pdw_nodes_pdw_physical_databases` aux `sys.pdw_database_mappings` `sys.databases` tables et.  
@@ -28,7 +28,7 @@ ms.locfileid: "88475360"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID de l’objet pour la base de données. Notez que cette valeur n’est pas la même chose qu’une database_id dans la vue [sys. databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) .|  
-|physical_name|**sysname**|Nom physique de la base de données sur les nœuds de Shell/de calcul. Cette valeur est identique à celle de la colonne physical_name de la vue [sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
+|physical_name|**sysname**|Nom physique de la base de données sur les nœuds de Shell/de calcul. Cette valeur est identique à celle de la colonne physical_name de la [sys.pdw_database_mappings &#40;vue Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
 |pdw_node_id|**int**|ID numérique unique associé au nœud.|  
   
 ## <a name="examples-sspdw"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -47,7 +47,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Utilisation de sys. pdw_nodes_pdw_physical_databases pour collecter des informations détaillées sur les objets  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Utilisation de sys.pdw_nodes_pdw_physical_databases pour collecter des informations détaillées sur les objets  
  La requête suivante affiche des informations sur les index et contient des informations utiles sur la base de données à laquelle les objets appartiennent aux objets de la base de données.  
   
 ```  
@@ -64,7 +64,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Utilisation de sys. pdw_nodes_pdw_physical_databases pour déterminer l’état de chiffrement  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Utilisation de sys.pdw_nodes_pdw_physical_databases pour déterminer l’état de chiffrement  
  La requête suivante fournit l’état de chiffrement de la base de données AdventureWorksPDW2012.  
   
 ```  
@@ -87,9 +87,9 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Vues de catalogue Azure Synapse Analytics et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   
 

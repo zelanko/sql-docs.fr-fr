@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_nodes (Transact-SQL)
-title: sys. dm_pdw_nodes (Transact-SQL) | Microsoft Docs
+description: sys.dm_pdw_nodes (Transact-SQL)
+title: sys.dm_pdw_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b999f7e10baece4566ebe0dd87b96b92eaabac53
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b758dafadc743ffc6c51c6d1c94ab3a5ea597e2d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88474760"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037682"
 ---
-# <a name="sysdm_pdw_nodes-transact-sql"></a>sys. dm_pdw_nodes (Transact-SQL)
+# <a name="sysdm_pdw_nodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contient des informations sur tous les nœuds dans [!INCLUDE[ssAPS](../../includes/ssaps-md.md)] . Elle répertorie une ligne par nœud dans l’appliance.  
@@ -35,6 +35,6 @@ ms.locfileid: "88474760"
 |region|**nvarchar(32)**|Région dans laquelle le nœud est en cours d’exécution.|« PDW », « HDINSIGHT »|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics et les vues de gestion dynamique Parallel Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

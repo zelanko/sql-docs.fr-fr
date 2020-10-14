@@ -11,17 +11,17 @@ ms.assetid: e01f8be5-ce68-4c9f-bd13-d65e73a16470
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: c9e605f33615fa09b87a3c58353689db9eeecdd7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db1b6f9c7dc71bec58dd101f2fa7cb9f30f7f7ce
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463263"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037382"
 ---
 # <a name="appendix---1-oracletosql"></a>Annexe - 1 (OracleToSQL)
 Affichage rapide des options de ligne de commande de la console SSMA :  
   
-|SL. Non.|Commutateur|Nécessaire ?|Argument de commutateur|Valeurs autorisées|  
+|SL. Non.|Basculer|Requis ?|Argument de commutateur|Valeurs autorisées|  
 |-----------|----------|-------------|-------------------|--------------------|  
 |1|-s/script|Oui|scriptfile|Nom de fichier XML valide.<br /><br />Fichier de définition de script de console.|  
 |2|-v/variable|Non|variablevaluefile|Nom de fichier XML valide.<br /><br />Si des variables sont utilisées dans un fichier de script, ce fichier doit être spécifié.|  
@@ -33,5 +33,4 @@ Affichage rapide des options de ligne de commande de la console SSMA :
 |8|-?|Non|Non applicable|Non applicable|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Exécution de la console SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
-  
+[Exécution de la console SSMA (Oracle)](./executing-the-ssma-console-oracletosql.md)  

@@ -13,12 +13,12 @@ dev_langs:
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 2135b567509ef9df5f3c8df7a317a9ea45b92ec7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 63b415b74692e58b453cd483983844bfa9d724d4
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92006416"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034582"
 ---
 # <a name="sysworkload_management_workload_classifier_details-transact-sql"></a>sys.workload_management_workload_classifier_details (Transact-SQL)
 
@@ -38,4 +38,4 @@ Requiert l'autorisation VIEW SERVER STATE.
 
 ## <a name="next-steps"></a>Étapes suivantes
   
-Pour obtenir la liste de tous les affichages catalogue pour Azure Synapse Analytics et les Data Warehouse parallèles, consultez [SQL Data Warehouse et les affichages catalogue Data Warehouse parallèles](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Pour créer un classifieur de charge de travail, consultez [créer un classifieur de charge de travail](../../t-sql/statements/create-workload-classifier-transact-sql.md). Pour plus d’informations sur la classification de la charge de travail, consultez [classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) des charges de travail Azure Synapse Analytics et [importance des charges de travail](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)
+Pour obtenir la liste de tous les affichages catalogue pour l’analyse Azure Synapse et les Data Warehouse parallèles, consultez [Azure Synapse Analytics et les affichages catalogue parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md). Pour créer un classifieur de charge de travail, consultez [créer un classifieur de charge de travail](../../t-sql/statements/create-workload-classifier-transact-sql.md). Pour plus d’informations sur la classification de la charge de travail, consultez [classification](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification) des charges de travail Azure Synapse Analytics et [importance des charges de travail](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

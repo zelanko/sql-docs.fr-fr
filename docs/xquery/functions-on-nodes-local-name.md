@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dc7c25d1b953b98c81691843a4de6dc924bca651
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753608"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038069"
 ---
 # <a name="functions-on-nodes---local-name"></a>Fonctions sur les nœuds : local-name
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -39,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Nom du nœud dont la partie local-name sera extraite.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
   
 -   Dans SQL Server, **FN : local-name ()** sans argument ne peut être utilisé que dans le contexte d’un prédicat dépendant du contexte. Autrement dit, elle ne peut être utilisée qu'à l'intérieur de crochets (`[ ]`).  
   
@@ -50,7 +50,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockées dans différentes colonnes de type **XML** dans la base de données AdventureWorks.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Extraction du nom local d'un nœud spécifique  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>R. Extraction du nom local d'un nœud spécifique  
  La requête suivante est spécifiée sur une instance XML non typée. L'expression de requête, `local-name(/ROOT[1])`, extrait la partie locale du nom du nœud spécifié.  
   
 ```  
@@ -85,7 +85,6 @@ WHERE ProductModelID=7
  La requête retourne tous les <`Location`> éléments enfants de l' `root` élément <>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions sur les nœuds](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
+ [Fonctions sur les nœuds](./xquery-functions-against-the-xml-data-type.md)   
  [Fonction namespace-URI &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
-  
   

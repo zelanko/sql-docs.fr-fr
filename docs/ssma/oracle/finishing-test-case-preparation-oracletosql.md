@@ -11,12 +11,12 @@ ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: nahk-ivanov
 ms.author: alexiva
 manager: alexiva
-ms.openlocfilehash: a0498953c28a90498aa3e15439840180efdd25f7
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4707c68c0b744e092844d57bd6f235a69dbec9ce
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88463224"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038042"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>Terminer la préparation des cas de test (OracleToSQL)
 La dernière page de l’Assistant affiche la description du cas de test et les informations relatives aux objets impliqués dans le test. En outre, sur cette page, vous pouvez définir les options d’exécution des tests.  
@@ -55,10 +55,9 @@ Définit le mode d’enregistrement pour les tables auxiliaires créées pendant
   
 -   Si vous sélectionnez **demander**à l’utilisateur en cas d’échec de la comparaison de tables, l’utilisateur peut sélectionner l’action nécessaire si une erreur se produit.  
   
-Cliquez sur le bouton **Terminer** pour enregistrer le cas de test préparé dans [à l’aide des référentiels de test (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4).  
+Cliquez sur le bouton **Terminer** pour enregistrer le cas de test préparé dans [à l’aide des référentiels de test (OracleToSQL)](./using-test-repositories-oracletosql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Utilisation de référentiels de test &#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
 [Exécution de cas de test &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [Test des objets de base de données migrés &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
-  

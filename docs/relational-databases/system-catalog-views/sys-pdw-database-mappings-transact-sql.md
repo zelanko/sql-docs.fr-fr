@@ -1,6 +1,6 @@
 ---
-description: sys. pdw_database_mappings (Transact-SQL)
-title: sys. pdw_database_mappings (Transact-SQL) | Microsoft Docs
+description: sys.pdw_database_mappings (Transact-SQL)
+title: sys.pdw_database_mappings (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/17/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: 4ae2c71e-dd56-41ea-a16b-64936175b459
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c406f00d6ee9848ab5f09631d77436ef6b6dbddf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fb32b46347105b6dd80bf8013fe263018fad80e3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88490282"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035012"
 ---
-# <a name="syspdw_database_mappings-transact-sql"></a>sys. pdw_database_mappings (Transact-SQL)
+# <a name="syspdw_database_mappings-transact-sql"></a>sys.pdw_database_mappings (Transact-SQL)
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  Mappe le **database_id**s de bases de données au nom physique utilisé sur les nœuds de calcul, et fournit l' **ID principal** du propriétaire de la base de données sur le système. Joignez **sys. pdw_database_mappings** à **sys. databases** et **sys. pdw_nodes_pdw_physical_databases**.  
+  Mappe le **database_id**s de bases de données au nom physique utilisé sur les nœuds de calcul, et fournit l' **ID principal** du propriétaire de la base de données sur le système. Joindre **sys.pdw_database_mappings** à **sys. databases** et **sys.pdw_nodes_pdw_physical_databases**.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
@@ -31,7 +31,7 @@ ms.locfileid: "88490282"
 |database_id|**int**|ID de l’objet pour la base de données. Consultez [sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).<br /><br /> **physical_name** et **database_id** forment la clé de cette vue.||  
   
 ## <a name="examples-sspdw"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L’exemple suivant joint sys. pdw_database_mappings à d’autres tables système pour montrer comment les bases de données sont mappées.  
+ L’exemple suivant joint sys.pdw_database_mappings à d’autres tables système pour montrer comment les bases de données sont mappées.  
   
 ```  
 SELECT DB.database_id, DB.name, Map.*, Phys.*   
@@ -44,10 +44,10 @@ ORDER BY DB.database_id, Phys.pdw_node_id;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys. pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
- [sys. pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
- [sys. pdw_nodes_pdw_physical_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
+ [Vues de catalogue Azure Synapse Analytics et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [sys.pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
+ [sys.pdw_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md)   
+ [sys.pdw_nodes_pdw_physical_databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md)  
   
   
 

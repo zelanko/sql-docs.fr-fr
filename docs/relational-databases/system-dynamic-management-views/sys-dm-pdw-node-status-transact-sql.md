@@ -1,6 +1,6 @@
 ---
-description: sys. dm_pdw_node_status (Transact-SQL)
-title: sys. dm_pdw_node_status (Transact-SQL) | Microsoft Docs
+description: sys.dm_pdw_node_status (Transact-SQL)
+title: sys.dm_pdw_node_status (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 8e263b65-81d0-49d0-8873-62ef424369d6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fbe3aae7c707d836bafff703c8e86adffe4d1cd9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 267b2aa14e85f77af91a0cf1a5640a16ee158215
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89531106"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035312"
 ---
-# <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-SQL)
+# <a name="sysdm_pdw_node_status-transact-sql"></a>sys.dm_pdw_node_status (Transact-SQL)
 
 [!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
-  Contient des informations supplémentaires (sur [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) sur les performances et l’état de tous les nœuds d’appliance. Elle répertorie une ligne par nœud dans l’appliance.  
+  Contient des informations supplémentaires (par rapport à [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)) sur les performances et l’état de tous les nœuds d’appliance. Elle répertorie une ligne par nœud dans l’appliance.  
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
@@ -44,6 +44,6 @@ ms.locfileid: "89531106"
 |error_id|**nvarchar (36)**|Identificateur unique de la dernière erreur qui s’est produite sur ce nœud.||  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Data Warehouse et les vues de gestion dynamique Data Warehouse parallèles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [Azure Synapse Analytics et les vues de gestion dynamique Parallel Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
