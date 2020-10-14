@@ -1,6 +1,6 @@
 ---
-description: sp_pdw_database_encryption (SQL Data Warehouse)
-title: sp_pdw_database_encryption (SQL Data Warehouse) | Microsoft Docs
+description: sp_pdw_database_encryption (Azure Synapse Analytics)
+title: sp_pdw_database_encryption (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: f5ccb424-7a95-4557-b774-c69de33c1545
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6b075ac707296073f6b4a4b606306b82571b4268
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 142ebd04c32491a800dbc7651fe91fbcdd715a56
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988792"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059227"
 ---
-# <a name="sp_pdw_database_encryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
+# <a name="sp_pdw_database_encryption-azure-synapse-analytics"></a>sp_pdw_database_encryption (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Utilisez **sp_pdw_database_encryption** pour activer le chiffrement transparent des données pour un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] appareil. Lorsque **sp_pdw_database_encryption** défini sur 1, utilisez l’instruction **ALTER DATABASE** pour chiffrer une base de données à l’aide de TDE.  
@@ -46,7 +46,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Lorsque le TDE est activé à l’aide de **sp_pdw_database_encryption**, la base de données tempdb est supprimée, recréée et chiffrée. Pour cette raison, le TDE ne peut pas être activé sur un appareil tant qu’il existe d’autres sessions actives utilisant tempdb. L’activation ou la désactivation de TDE sur un appareil est une action qui modifie l’état de l’appliance. dans la plupart des cas, il est prévu qu’elle soit exécutée une fois dans la durée de vie de l’appliance et doit être exécutée en l’absence de trafic sur l’appliance.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -60,7 +60,7 @@ EXEC sys.sp_pdw_database_encryption 1;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
- [sp_pdw_log_user_data_masking &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;&#41;Azure Synapse Analytics ](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)   
+ [sp_pdw_log_user_data_masking &#40;&#41;Azure Synapse Analytics ](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
   
   

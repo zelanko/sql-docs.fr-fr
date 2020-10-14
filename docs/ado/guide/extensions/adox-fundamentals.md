@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d24e7a61642ed9945dfc69a06c584b2423775659
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: ce9b8d9bedafc4211f15022cf0326174a2c597b2
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88978700"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059067"
 ---
 # <a name="adox-fundamentals"></a>Concepts de base d’ADOX
 Les extensions Microsoft® ActiveX® Data Objects pour la sécurité et le langage de définition de données (ADOX) sont une extension du modèle de programmation et des objets ADO. ADOX comprend des objets pour la création et la modification d’un schéma, ainsi que pour la sécurité. Étant donné qu’il s’agit d’une approche basée sur les objets de la manipulation de schéma, vous pouvez écrire du code qui fonctionnera sur diverses sources de données, quelles que soient les différences dans leurs syntaxes natives.  
@@ -44,7 +44,7 @@ Les extensions Microsoft® ActiveX® Data Objects pour la sécurité et le langa
 -   [Exemples ADOX](../../reference/adox-api/adox-code-examples.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADOX](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
+ [Informations de référence sur l’API ADOX](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15&preserve-view=true)   
  [Exemples de code ADOX](../../reference/adox-api/adox-code-examples.md)   
  [Collections ADOX](../../reference/adox-api/adox-collections.md)   
  [Constantes énumérées ADOX](../../reference/adox-api/adox-enumerated-constants.md)   

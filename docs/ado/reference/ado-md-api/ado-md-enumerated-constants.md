@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c302bde71ea759a068aaa9e7274ec0182217a0cc
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 65cd2c14b9d10376ee553f3dfdae66645893f06f
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987550"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059407"
 ---
 # <a name="ado-md-enumerated-constants"></a>Constantes énumérées ADO MD
 Pour faciliter le débogage, les constantes énumérées ADO MD répertorient une valeur pour chaque constante. Toutefois, cette valeur est purement indicative et peut changer d’une version de ADO MD à une autre. Votre code ne doit dépendre que du nom, et non de la valeur réelle, des constantes énumérées.  
@@ -30,7 +30,7 @@ Pour faciliter le débogage, les constantes énumérées ADO MD répertorient un
 -   [MemberTypeEnum](./membertypeenum.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Informations de référence sur l’API ADO MD](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
  [Exemples de code ADO MD](./ado-md-code-examples.md)   
  [Collections de ADO MD](./ado-md-collections.md)   
  [Méthodes ADO MD](./ado-md-methods.md)   

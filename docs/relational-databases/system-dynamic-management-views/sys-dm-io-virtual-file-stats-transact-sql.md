@@ -21,12 +21,12 @@ ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70311ec54cd2eb49894751a2891259800552afc6
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4d4d4c319afb3cfb40c05cc187ae4d6ea6e0eacb
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005616"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059617"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -76,7 +76,7 @@ ID du fichier. *file_id* est de type int, sans valeur par défaut. Les entrées 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il s’agit du nom de la base de données stockée sur le nœud identifié par pdw_node_id. Chaque nœud possède une base de données tempdb qui contient 13 fichiers. Chaque nœud possède également une base de données par distribution, et chaque base de données de distribution contient 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats affichent 20 fichiers de base de données de distribution par pdw_node_id. 
+|**database_name**|**sysname**|Nom de la base de données.</br></br>Pour Azure Synapse Analytics, il s’agit du nom de la base de données stockée sur le nœud qui est identifiée par pdw_node_id. Chaque nœud possède une base de données tempdb qui contient 13 fichiers. Chaque nœud possède également une base de données par distribution, et chaque base de données de distribution contient 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats affichent 20 fichiers de base de données de distribution par pdw_node_id. 
 |**database_id**|**smallint**|ID de la base de données.|  
 |**file_id**|**smallint**|ID du fichier.|  
 |**sample_ms**|**bigint**|Nombre de millisecondes écoulées depuis le démarrage de l'ordinateur. Cette colonne peut être utilisée pour comparer différents résultats de cette fonction.</br></br>Le type de données est **int** pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
@@ -93,7 +93,7 @@ ID du fichier. *file_id* est de type int, sans valeur par défaut. Les entrées 
 |**io_stall_queued_write_ms**|**bigint**|**Ne s’applique pas à :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] .<br /><br />  Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les écritures. N'accepte pas la valeur NULL.|
 |**pdw_node_id**|**int**|**S’applique à :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud de la distribution.
  
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 Les compteurs sont initialisés à vide chaque fois que le service SQL Server (MSSQLSERVER) est démarré.
   
 ## <a name="permissions"></a>Autorisations  

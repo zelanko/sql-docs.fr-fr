@@ -1,6 +1,6 @@
 ---
-description: sp_pdw_log_user_data_masking (SQL Data Warehouse)
-title: sp_pdw_log_user_data_masking (SQL Data Warehouse) | Microsoft Docs
+description: sp_pdw_log_user_data_masking (Azure Synapse Analytics)
+title: sp_pdw_log_user_data_masking (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
@@ -12,14 +12,14 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c3b65b6e3626a79fae4f5b5ac87e997ce3c97554
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 87c151558a290f3c06a605de72931c5ee6990f60
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91988794"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059357"
 ---
-# <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
+# <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Utilisez **sp_pdw_log_user_data_masking** pour activer le masquage des données utilisateur dans les [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité. Le masquage des données utilisateur affecte les instructions sur toutes les bases de données de l’appliance.  
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  L’exécution de **sp_pdw_ log_user_data_masking** sans paramètres retourne l’état actuel du masquage des données utilisateur du journal TDE sur l’appareil sous la forme d’un jeu de résultats scalaire.  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques  
  Le masquage des données utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] les journaux d’activité permet le remplacement des littéraux par des valeurs constantes prédéfinies dans des instructions **Select** et DML, car elles peuvent contenir des données utilisateur. La définition de *masking_mode* sur 1 ne masque pas les métadonnées, telles que les noms de colonne ou de table. La définition de *masking_mode* sur 2 supprime les instructions avec des métadonnées, telles que les noms de colonne ou de table.  
   
  Le masquage des données utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] les journaux d’activité est implémenté de la manière suivante :  
@@ -76,7 +76,7 @@ EXEC sp_pdw_log_user_data_masking 1;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [sp_pdw_database_encryption &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
- [sp_pdw_database_encryption_regenerate_system_keys &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
+ [sp_pdw_database_encryption &#40;&#41;Azure Synapse Analytics ](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
+ [sp_pdw_database_encryption_regenerate_system_keys &#40;&#41;Azure Synapse Analytics ](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   
   

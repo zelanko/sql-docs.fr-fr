@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7793983cd46859f71a37984174cd1a3978779273
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: bb6dff77ed7d2dba2b2a6ee74d097d571ea53883
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88987512"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059397"
 ---
 # <a name="ado-md-methods"></a>Méthodes ADO MD
 
@@ -30,7 +30,7 @@ ms.locfileid: "88987512"
 |[Ouvrir](./open-method-ado-md.md)|Récupère les résultats d’une requête multidimensionnelle et retourne les résultats à un CellSet.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Informations de référence sur l’API ADO MD](./ado-md-object-model.md?view=sql-server-ver15)   
+ [Informations de référence sur l’API ADO MD](./ado-md-object-model.md?view=sql-server-ver15&preserve-view=true)   
  [Exemples de code ADO MD](./ado-md-code-examples.md)   
  [Collections de ADO MD](./ado-md-collections.md)   
  [ADO MD les constantes énumérées](./ado-md-enumerated-constants.md)   

@@ -13,19 +13,21 @@ ms.assetid: ''
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ef3237f77272978c767e1519e6b7895ce4cb274b
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 591bba14af18f8c622ffa5547339fd0024cf4445
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037712"
+ms.locfileid: "92059517"
 ---
 # <a name="sysdm_pdw_nodes_exec_query_profiles-transact-sql"></a>sys.dm_pdw_nodes_exec_query_profiles (Transact-SQL)
+
 [!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Surveille la progression des requêtes de l’entrepôt de données en temps réel pendant l’exécution de la requête.   
   
-## <a name="table-returned"></a>Table retournée  
+## <a name="table-returned"></a>Table retournée
+  
 Les compteurs retournés sont par opérateur par thread. Les résultats sont dynamiques et ne correspondent pas aux résultats des options existantes, telles que la création d’une `SET STATISTICS XML ON` sortie uniquement lorsque la requête est terminée.  
   
 |Nom de la colonne|Type de données|Description|  
@@ -68,15 +70,18 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |actual_read_row_count|**bigint**|Nombre de lignes lues par un opérateur avant l’application du prédicat résiduel.| 
 |estimated_read_row_count|**bigint**|**S’applique à :** À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Nombre de lignes dont la lecture est estimée par un opérateur avant l’application du prédicat résiduel.|  
   
-## <a name="remarks"></a>Notes  
+## <a name="remarks"></a>Remarques
+
 Les mêmes remarques dans [sys.dm_exec_query_profiles](./sys-dm-exec-query-profiles-transact-sql.md?view=sql-server-ver15) s’appliquent.  
 
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
 
-## <a name="see-also"></a>Voir aussi  
+## <a name="see-also"></a>Voir également
+
  [Azure Synapse Analytics et les vues de gestion dynamique Parallel Data Warehouse &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
    
 
- ## <a name="next-steps"></a>Étapes suivantes
- Pour obtenir des conseils supplémentaires en matière de développement, consultez l’article [Vue d’ensemble sur le développement SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-overview-develop).
+ ## <a name="next-steps"></a>Étapes suivantes 
+
+Vue d’ensemble du développement Azure Synapse Analytics] (/Azure/SQL-Data-Warehouse/SQL-Data-Warehouse-Overview-develop).
