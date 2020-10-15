@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 748addc15abc5521a82fb635626131d0cfbb0e25
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 234657a06ca2162bffc9448a1424820ead00f0c3
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117233"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988335"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Gestion des connexions et des travaux après un basculement de rôle (SQL Server)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "91117233"
 > [!NOTE]  
 >  Ce problème affecte les comptes Windows locaux sur différents ordinateurs. Toutefois, ce problème ne se pose pas pour les comptes de domaine car le SID est identique sur chacun des ordinateurs.  
   
- Pour plus d’informations, consultez [Orphaned Users with Database Mirroring and Log Shipping (Utilisateurs orphelins avec mise en miroir de bases de données et copie des journaux de transaction)](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (blog du moteur de base de données).  
+ Pour plus d’informations, consultez [Orphaned Users with Database Mirroring and Log Shipping (Utilisateurs orphelins avec mise en miroir de bases de données et copie des journaux de transaction)](/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (blog du moteur de base de données).  
   
 ## <a name="jobs"></a>travaux  
  Les travaux tels que les travaux de sauvegarde, requièrent une attention particulière. Généralement, après un basculement de rôle, le propriétaire de la base de données ou l'administrateur système doit recréer les travaux de la nouvelle base de données primaire/principale.  
@@ -50,5 +50,4 @@ ms.locfileid: "91117233"
 ## <a name="see-also"></a>Voir aussi  
  [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
-  
   

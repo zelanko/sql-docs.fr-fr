@@ -14,12 +14,12 @@ ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a54c7de35f9707701213488a4f51d23d5e314417
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d9fee236a710d7bc742f9a8fed27e12801daa550
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89570308"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988265"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +29,7 @@ Ce document Notes de publication décrit les problèmes connus que vous devez ex
 Ajout de la vue de gestion dynamique (DMV) **sys.dm_db_stats_properties**. Vous pouvez utiliser cette DMV pour retourner les propriétés de statistiques d'une table ou d'une vue indexée spécifique de la base de données active. Par exemple, cette DMV retourne le nombre de lignes échantillonnées et le nombre d'étapes dans l'histogramme.  
   
 ## <a name="20-before-you-install"></a>2.0 Avant d’installer  
-Pour plus d'informations sur l'installation des mises à jour de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , consultez la [documentation relative à la maintenance de SQL Server 2008 R2](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
+Pour plus d'informations sur l'installation des mises à jour de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , consultez la [documentation relative à la maintenance de SQL Server 2008 R2](/previous-versions/sql/sql-server-2008-r2/dd638062(v=sql.105)).  
   
 Pour plus d'informations d'ordre général sur le démarrage et l'installation de SQL Server 2008 R2, consultez le fichier Lisez-moi de SQL Server 2008 R2. Le document Lisez-moi est disponible sur le support d'installation.
   
@@ -65,4 +65,3 @@ Pour obtenir la liste des bogues et problèmes connus corrigés dans ce Service 
   
 ## <a name="see-also"></a> Voir aussi  
 [Comment déterminer la version et l'édition de SQL Server](https://support.microsoft.com/kb/321185)  
-  

@@ -38,12 +38,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 50542a1a86adcd2149a7170240796b4f6a511879
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288271"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035462"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Éditeur de requêtes SQL Server Management Studio (SSMS)
 
@@ -300,8 +300,8 @@ Si le moteur de recherche d’aide ne trouve pas de rubrique comportant un mot c
 | Faire glisser le texte d'un emplacement dans un script et le placer à un nouvel emplacement.| [Glisser et déplacer du texte](../scripting/drag-and-drop-text.md) |
 | Définir des signets afin de rechercher plus facilement les segments de code importants. | [Gérer les signets](../scripting/manage-bookmarks.md) |
 | Imprimer des scripts ou les résultats dans une fenêtre ou une grille.| [Imprimer le code et les résultats](../scripting/print-code-and-results.md) |
-| Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX. | [Créer des scripts Analysis Services](https://docs.microsoft.com/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX. | [Créer une requête DMX](https://docs.microsoft.com/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX. | [Créer des scripts Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
+| Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX. | [Créer une requête DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
 | Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête XML/A. | [Éditeur XML](../scripting/xml-editor-sql-server-management-studio.md) |
 | Utiliser les fonctionnalités sqlcmd dans l'éditeur de requête du moteur de base de données.| [Modifier des scripts SQLCMD](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | Comment utiliser des extraits de code dans l’éditeur de requête du moteur de base de données. Les extraits de code sont des modèles pour des instructions ou des blocs couramment utilisés, et peuvent être personnalisés ou étendus pour inclure les extraits de code spécifiques au site.| [Extraits de code T-SQL](../scripting/add-transact-sql-snippets.md) |

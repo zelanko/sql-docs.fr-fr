@@ -40,12 +40,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 2a96f6ae82354d243b4c95561e7fdd7b11c58441
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 126a649f2555b2a66ba7ce4378378ff9e401f6fc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934110"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987225"
 ---
 # <a name="database-project-settings"></a>Paramètres du projet de base de données
 
@@ -105,9 +105,9 @@ Les paramètres du tableau suivant s'appliquent à toutes les configurations de 
 La vérification Transact-SQL étendue est une fonctionnalité du système de projet de base de données qui permet aux développeurs de soumettre leur projet de base de données à Transact-SQL Compiler Service, au moment de la génération, afin de valider le code par rapport à l’interpréteur et à l’analyseur du moteur SQL Server.  
   
 ### <a name="transact-sql-compiler-service"></a>Transact-SQL Compiler Service  
-Transact-SQL Compiler Service est un composant basé sur le moteur de base de données Microsoft SQL Server 2012. Ce service permet de valider la syntaxe et la sémantique des instructions DDL avec la même fidélité qu'un moteur de base de données Microsoft SQL Server 2012. Cela signifie, de manière intrinsèque, que le Compiler Service ne prend pas en charge la syntaxe ou les fonctionnalités qui ont été déconseillées dans Microsoft SQL Server 2012. Pour plus d’informations sur les fonctionnalités dépréciées, consultez [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
+Transact-SQL Compiler Service est un composant basé sur le moteur de base de données Microsoft SQL Server 2012. Ce service permet de valider la syntaxe et la sémantique des instructions DDL avec la même fidélité qu'un moteur de base de données Microsoft SQL Server 2012. Cela signifie, de manière intrinsèque, que le Compiler Service ne prend pas en charge la syntaxe ou les fonctionnalités qui ont été déconseillées dans Microsoft SQL Server 2012. Pour plus d’informations sur les fonctionnalités dépréciées, consultez [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server.md).  
   
-Pour les besoins de la validation du projet de base de données, le Compiler Service crée une base de données partiellement autonome et simule l'exécution des instructions DDL sur cette base de données. Pour plus d'informations, consultez [Bases de données partiellement autonomes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+Pour les besoins de la validation du projet de base de données, le Compiler Service crée une base de données partiellement autonome et simule l'exécution des instructions DDL sur cette base de données. Pour plus d'informations, consultez [Bases de données partiellement autonomes](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110)).  
   
 Le Compiler Service distingue deux catégories de limitations.  
   
@@ -132,7 +132,7 @@ Fonctionnalités qui ne sont pas prises en charge actuellement pour la validatio
 -   Classement de métadonnées SQL Azure (Compiler Service utilise le classement de métadonnées de base de données partiellement autonome SQL Server 2012 - Latin1_General_100_CI_AS_KS_WS_SC)  
   
 ### <a name="enablingdisabling-extended-verification"></a>Activation/Désactivation de la vérification étendue  
-La vérification Transact-SQL étendue est activée par défaut dans un projet de base de données créé directement à partir d'une instance Azure SQL Database ou d'un projet dont la plateforme cible est définie sur SQL Azure. Il est recommandé d'utiliser la vérification étendue lors du développement pour une base de données SQL Azure ou à portée d'application ciblant SQL Server 2012. Pour plus d'informations sur les bases de données à portée d'application, consultez [Bases de données partiellement autonomes](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx).  
+La vérification Transact-SQL étendue est activée par défaut dans un projet de base de données créé directement à partir d'une instance Azure SQL Database ou d'un projet dont la plateforme cible est définie sur SQL Azure. Il est recommandé d'utiliser la vérification étendue lors du développement pour une base de données SQL Azure ou à portée d'application ciblant SQL Server 2012. Pour plus d'informations sur les bases de données à portée d'application, consultez [Bases de données partiellement autonomes](/previous-versions/sql/sql-server-2012/ff929071(v=sql.110)).  
   
 La fonctionnalité de vérification étendue peut également être utilisée lors du développement d'une base de données à portée d'application pour SQL Server 2008/R2 afin de parvenir à la compatibilité avec Microsoft SQL Server 2012 et SQL Azure.  
   
@@ -154,21 +154,21 @@ La fonctionnalité de vérification étendue peut également être utilisée lor
     ![Propriétés du fichier](../ssdt/media/ssdt-evf.gif "Propriétés du fichier")  
   
 ### <a name="special-considerations-for-collations"></a>Considérations spéciales relatives aux classements  
-Pour plus d'informations concernant les classements dans les bases de données partiellement autonomes, consultez [Classements de base de données autonome](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  
+Pour plus d'informations concernant les classements dans les bases de données partiellement autonomes, consultez [Classements de base de données autonome](/previous-versions/sql/sql-server-2012/ff929080(v=sql.110)).  
   
 ## <a name="sqlclr"></a><a name="bkmk_sqlclr"></a>SQLCLR  
-Pour plus d'informations sur les options d'assembly, consultez [Boîte de dialogue Informations de l'assembly](https://msdn.microsoft.com/library/1h52t681.aspx?queryresult=true).  
+Pour plus d'informations sur les options d'assembly, consultez [Boîte de dialogue Informations de l'assembly](/visualstudio/ide/reference/assembly-information-dialog-box?queryresult=true).  
   
-Pour plus d'informations sur la signature, consultez la section **Signature de l'assembly** de la rubrique [Page Signature, Concepteur de projets](https://msdn.microsoft.com/library/0k50fs3b.aspx?queryresult=true) .  
+Pour plus d'informations sur la signature, consultez la section **Signature de l'assembly** de la rubrique [Page Signature, Concepteur de projets](/visualstudio/ide/reference/signing-page-project-designer?queryresult=true) .  
   
 ## <a name="sqlclr-and-sqlclr-build"></a><a name="bkmk_sqlclr_sqlclrbuild"></a>SQLCLR et Build SQLCLR  
 Les pages de propriétés **SQLCLR** et **Build SQLCLR** contiennent de nombreux paramètres d'utilisation des objets CLR SQL dans votre projet. Plus particulièrement, la page de propriétés **SQLCLR** dispose d'un paramètre de niveau d'autorisation pour définir les autorisations sur l'assembly SQLCLR. Elle comprend aussi le paramètre Générer le DDL pour contrôler si le DDL des objets SQLCLR ajoutés au projet doit être généré. La page de propriétés **Build** SQLCLR contient toutes les options du compilateur que vous pouvez définir pour configurer la compilation du code SQLCLR dans le projet.  
   
 La page de propriétés **Build SQLCLR** contient des paramètres de build avancés pour la génération de vos objets CLR SQL. Différentes options sont fournies en fonction du langage (VB ou C#)) utilisé pour coder les objets SQL CLR.  
   
-1.  Si l'objet est écrit en C#, accédez aux options en cliquant sur le bouton **Avancé** dans la page de propriétés **Build SQLCLR**. La description des options C# est disponible dans l'article [Boîte de dialogue Paramètres de build avancés (C#)](https://msdn.microsoft.com/library/s4wcexbc.aspx).  
+1.  Si l'objet est écrit en C#, accédez aux options en cliquant sur le bouton **Avancé** dans la page de propriétés **Build SQLCLR**. La description des options C# est disponible dans l'article [Boîte de dialogue Paramètres de build avancés (C#)](/visualstudio/ide/reference/advanced-build-settings-dialog-box-csharp).  
   
-2.  Si l'objet est écrit en VB, sélectionnez d'abord VB dans la liste déroulante **Langage** , puis cliquez sur le bouton **Avancé** . La description des options VB est disponible dans l'article [Boîte de dialogue Paramètres avancés du compilateur (Visual Basic)](https://msdn.microsoft.com/library/07bysfz2.aspx)  
+2.  Si l'objet est écrit en VB, sélectionnez d'abord VB dans la liste déroulante **Langage** , puis cliquez sur le bouton **Avancé** . La description des options VB est disponible dans l'article [Boîte de dialogue Paramètres avancés du compilateur (Visual Basic)](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic)  
   
 
 ## <a name="build"></a><a name="bkmk_build"></a>Build  
@@ -228,10 +228,9 @@ Vous pouvez utiliser ces paramètres pour contrôler le débogage de votre proje
 |Avancé...|Non|Bouton de commande qui vous permet de spécifier les options qui contrôlent les événements et le comportement du déploiement.|  
   
 ## <a name="reference-paths"></a><a name="bkmk_ref_paths"></a>Chemins d'accès des références  
-Vous pouvez utiliser cette page pour définir les variables de serveur et de base de données associées à une référence entre bases de données. En outre, vous pouvez spécifier les valeurs de ces variables. Pour plus d'informations, consultez [Utilisation de références dans les projets de base de données](https://msdn.microsoft.com/library/bb386242.aspx).  
+Vous pouvez utiliser cette page pour définir les variables de serveur et de base de données associées à une référence entre bases de données. En outre, vous pouvez spécifier les valeurs de ces variables. Pour plus d'informations, consultez [Utilisation de références dans les projets de base de données](/previous-versions/visualstudio/visual-studio-2010/bb386242(v=vs.100)).  
   
 ## <a name="code-analysis"></a><a name="bkmk_code_analysis"></a>Analyse du code  
 Vous pouvez utiliser l'analyse du code pour découvrir d'éventuels problèmes dans vos scripts, tels que les problèmes de conception, d'attribution de nom et de performances. Les règles pour les projets de base de données sont organisées en ensembles de règles prédéfinis qui ciblent des zones spécifiques, et vous pouvez activer ou désactiver une règle dans l'onglet **Analyse du code** de la page de propriétés **Propriétés du projet** . Dans le même onglet, vous pouvez spécifier que l'analyse du code soit exécutée automatiquement chaque fois qu'un projet est généré, ou si les avertissements doivent être traités comme des erreurs.  
   
-Pour utiliser l’analyse du code manuellement, cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions** et sélectionnez **Exécuter l’analyse du code**. Les avertissements d'analyse du code s'affichent dans la fenêtre **Liste d'erreurs** . Vous pouvez double-cliquer sur un avertissement pour accéder au code source comportant le problème. Pour afficher des informations supplémentaires et les corrections possibles d’un avertissement, utilisez le menu contextuel **Afficher de l’aide sur l’erreur**. Pour plus d’informations sur l’analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](https://msdn.microsoft.com/library/dd172133.aspx).  
-  
+Pour utiliser l’analyse du code manuellement, cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions** et sélectionnez **Exécuter l’analyse du code**. Les avertissements d'analyse du code s'affichent dans la fenêtre **Liste d'erreurs** . Vous pouvez double-cliquer sur un avertissement pour accéder au code source comportant le problème. Pour afficher des informations supplémentaires et les corrections possibles d’un avertissement, utilisez le menu contextuel **Afficher de l’aide sur l’erreur**. Pour plus d’informations sur l’analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100)).  

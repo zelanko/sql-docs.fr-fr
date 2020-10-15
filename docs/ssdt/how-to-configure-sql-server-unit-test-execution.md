@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 51e2fc3b5e95fe022bd758d72fefb34611db0b79
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: b2d0b76423ab5a391351783970a6c9a057896bf7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519029"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987965"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procédure : Configurer l’exécution de test unitaire SQL Server
 
@@ -30,7 +30,7 @@ Ces paramètres contrôlent la façon dont votre test se connecte à la base de 
 -   **Déploiement du schéma**. Un projet de base de données est une représentation hors connexion de votre base de données. Le projet de base de données représente la structure de vos objets de base de données, mais ne contient pas de données. Après avoir apporté des modifications au schéma dans un projet de base de données, vous pouvez le tester dans une base de données réelle. Dans l'étape de déploiement du schéma, les objets de base de données que vous souhaitez tester sont copiés de votre projet de base de données dans la base de données sur laquelle vous exécutez des tests. Pour plus d'informations sur le déploiement du schéma, consultez [Déployer un schéma de base de données](#DeployingDBSchema).  
   
     > [!NOTE]  
-    > Les tests ne s'exécutent pas dans le dossier de la solution, mais dans un dossier distinct sur le disque dur. Bien que vous puissiez configurer tous les aspects du déploiement de test, en général vous n'avez pas besoin de les configurer pour les tests unitaires. Pour plus d'informations sur le déploiement de test, consultez [Exécution de tests](https://msdn.microsoft.com/library/dd286680(VS.100).aspx).  
+    > Les tests ne s'exécutent pas dans le dossier de la solution, mais dans un dossier distinct sur le disque dur. Bien que vous puissiez configurer tous les aspects du déploiement de test, en général vous n'avez pas besoin de les configurer pour les tests unitaires. Pour plus d'informations sur le déploiement de test, consultez [Exécution de tests](/previous-versions/visualstudio/visual-studio-2010/dd286680(v=vs.100)).  
   
 ## <a name="specify-connection-strings"></a><a name="SpecifyConnectionStrings"></a>Spécifier des chaînes de connexion  
   
@@ -85,4 +85,3 @@ Ces paramètres contrôlent la façon dont votre test se connecte à la base de 
 ## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

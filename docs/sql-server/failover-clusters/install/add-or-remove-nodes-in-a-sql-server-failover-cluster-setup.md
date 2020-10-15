@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: db5dbec0733140f39abe377513ff23bc7dd7b880
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: a560f2d421675b3e01e8c1350b37112187dc3aa8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91117043"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988567"
 ---
 # <a name="add-or-remove-nodes-in-a-failover-cluster-instance-setup"></a>Ajouter ou supprimer des nœuds dans une instance de cluster de basculement (installation)
 
@@ -68,7 +68,7 @@ ms.locfileid: "91117043"
   
 8.  Dans la page Configuration du nœud de clusters, utilisez la zone de liste déroulante pour spécifier le nom de l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui sera modifiée pendant cette opération d'installation.  
   
-9. Dans la page Configuration du serveur - Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez sélectionnées. Pour les installations d’instance de cluster de basculement, les informations de nom de compte et de type de démarrage seront préremplies dans cette page, en fonction des paramètres indiqués pour le nœud actif. Vous devez fournir des mots de passe pour chaque compte. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. Dans la page Configuration du serveur - Comptes de service, spécifiez les comptes de connexion des services [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les services réels configurés dans cette page dépendent des fonctionnalités que vous avez sélectionnées. Pour les installations d’instance de cluster de basculement, les informations de nom de compte et de type de démarrage seront préremplies dans cette page, en fonction des paramètres indiqués pour le nœud actif. Vous devez fournir des mots de passe pour chaque compte. Pour plus d’informations, consultez [Configuration du serveur - Comptes de service](../../../database-engine/install-windows/install-sql-server.md) et [Configurer les comptes de service Windows et les autorisations](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Note de sécurité** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -108,5 +108,4 @@ ms.locfileid: "91117043"
   
 ## <a name="see-also"></a>Voir aussi  
  [Afficher et lire les fichiers journaux d'installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
-  
   

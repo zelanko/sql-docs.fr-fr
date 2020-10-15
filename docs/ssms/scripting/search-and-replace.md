@@ -29,12 +29,12 @@ ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b817d15b8ddc7b3b14fd7b39f9643418840d6aaf
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3b1a75530245a3f3727fc47dee817b6a40416439
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901943"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036375"
 ---
 # <a name="search-and-replace"></a>Recherche et remplacement
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -51,10 +51,9 @@ ms.locfileid: "88901943"
  En règle générale, vous ne pouvez pas rechercher des éléments avec des vues graphiques.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Effectuer une recherche incrémentielle dans un document actif](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
- [Effectuer une recherche de façon interactive dans des documents](../../relational-databases/scripting/search-documents-interactively.md)   
- [Effectuer une recherche dans des documents à l'aide des listes de résultats](../../relational-databases/scripting/search-documents-using-results-lists.md)   
- [Rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Rechercher du texte avec des expressions régulières](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Effectuer une recherche incrémentielle dans un document actif](./search-an-active-document-incrementally.md)   
+ [Effectuer une recherche de façon interactive dans des documents](./search-documents-interactively.md)   
+ [Effectuer une recherche dans des documents à l'aide des listes de résultats](./search-documents-using-results-lists.md)   
+ [Rechercher du texte avec des caractères génériques](./search-text-with-wildcards.md)   
+ [Rechercher du texte avec des expressions régulières](./search-text-with-regular-expressions.md)  
   

@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6e2a3540ea758fa394ad0ebcdcd28777bf4237b
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 307e262c57409725014a202b4a48143b5228763e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901587"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036299"
 ---
 # <a name="specify-a-breakpoint-filter"></a>Spécifier un filtre de point d'arrêt
 
@@ -52,6 +52,6 @@ Les filtres de point d'arrêt ne sont en général pas utilisés avec le débogu
 3.  Cliquez sur **OK** pour implémenter les modifications ou sur **Annuler** pour fermer sans appliquer les modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier une condition de point d'arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)   
- [Spécifier un nombre d'accès](../../relational-databases/scripting/specify-a-hit-count.md)   
- [Spécifier une action de point d’arrêt](../../relational-databases/scripting/specify-a-breakpoint-action.md)  
+ [Spécifier une condition de point d'arrêt](./specify-a-breakpoint-condition.md)   
+ [Spécifier un nombre d'accès](./specify-a-hit-count.md)   
+ [Spécifier une action de point d’arrêt](./specify-a-breakpoint-action.md)

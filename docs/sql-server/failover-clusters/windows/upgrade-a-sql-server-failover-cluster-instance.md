@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 196678dbb5c91e6c5acbaf2fda0b6a65f9ac369e
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: c06446f14fd2f316f297b675cc1b96efc7801ba1
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442370"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988301"
 ---
 # <a name="upgrade-a-failover-cluster-instance"></a>Mettre à niveau une instance de cluster de basculement 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "87442370"
   
  Ce processus entraîne une limitation de la durée du temps mort au temps de basculement et au délai d'exécution des scripts de mise à niveau de la base de données pendant l'ensemble de la mise à niveau du cluster de basculement.  
   
- Pour contrôler le comportement du basculement des nœuds de cluster pendant le processus de mise à niveau, exécutez l'opération de mise à niveau à l'invite de commandes et utilisez le paramètre /FAILOVERCLUSTERROLLOWNERSHIP. Pour plus d’informations, consultez [Installer SQL Server à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+ Pour contrôler le comportement du basculement des nœuds de cluster pendant le processus de mise à niveau, exécutez l'opération de mise à niveau à l'invite de commandes et utilisez le paramètre /FAILOVERCLUSTERROLLOWNERSHIP. Pour plus d’informations, consultez [Installer SQL Server à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
 
  ## <a name="upgrade-with-installation-media"></a>Mettre à niveau avec le support d’installation 
   
@@ -83,7 +83,7 @@ ms.locfileid: "87442370"
   
 7.  Dans la page Sélectionner une instance, spécifiez l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à mettre à niveau vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Cliquez sur**Suivant**pour continuer.  
   
-8.  Dans la page Sélection de composant, les fonctionnalités à mettre à niveau sont présélectionnées. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour ajouter des fonctionnalités à une instance mise à niveau de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server 2016 &#40;programme d’installation&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md).  
+8.  Dans la page Sélection de composant, les fonctionnalités à mettre à niveau sont présélectionnées. Une description de chaque groupe de composants apparaît dans le volet droit après que vous avez sélectionné le nom de la fonctionnalité. N'oubliez pas que vous ne pouvez pas modifier les fonctionnalités à mettre à niveau, de même que vous ne pouvez pas ajouter de fonctionnalités pendant l'opération de mise à niveau. Pour ajouter des fonctionnalités à une instance mise à niveau de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] une fois l’opération de mise à niveau terminée, consultez [Ajouter des fonctionnalités à une instance de SQL Server 2016 &#40;programme d’installation&#41;](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-setup.md).  
   
      Les composants requis pour les fonctionnalités sélectionnées sont affichés dans le volet droit. Le programme d'installation de SQL Server installera les composants requis qui ne sont pas déjà installés pendant l'étape d'installation décrite ultérieurement dans cette procédure. Pour gagner du temps, préinstallez ces composants requis sur chaque nœud.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "87442370"
   
 10. La page Espace disque nécessaire calcule l'espace disque nécessaire pour les fonctionnalités que vous spécifiez et compare cet espace à l'espace disque disponible sur l'ordinateur où le programme d'installation s'exécute.  
   
-11. Dans la page de mise à niveau de recherche en texte intégral, spécifiez les options de mise à niveau pour les bases de données mises à niveau. Pour plus d’informations, consultez [Options de mise à niveau de recherche en texte intégral](https://msdn.microsoft.com/library/16c9376b-5fbb-4495-a429-06a2493849c9).  
+11. Dans la page de mise à niveau de recherche en texte intégral, spécifiez les options de mise à niveau pour les bases de données mises à niveau. Pour plus d’informations, consultez [Options de mise à niveau de recherche en texte intégral](../../../database-engine/install-windows/install-sql-server.md).  
   
 12. Dans la page **Création de rapports d'erreurs** , spécifiez les informations que vous souhaitez envoyer à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] afin d'aider à améliorer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les options de création de rapports d'erreurs sont activées par défaut.  
   
@@ -140,8 +140,7 @@ Procédez comme suit pour mettre à niveau votre instance de cluster de basculem
   
 -   [Modifier le mode de compatibilité de base de données et utiliser le magasin des requêtes](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)  
   
--   [Tirer parti des nouveautés de SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)  
+-   [Tirer parti des nouveautés de SQL Server 2016](../../what-s-new-in-sql-server-2017.md)  
   
 
-  
   

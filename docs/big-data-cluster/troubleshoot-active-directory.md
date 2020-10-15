@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 302731f3f0c37f60c4944b7df44d02b2cfc64a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 269e886708ec82211a4e29ac8b1e492d9f69cc98
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772882"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891069"
 ---
 # <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Résoudre les problèmes d’intégration Active Directory d’un cluster Big Data SQL Server
 
@@ -123,7 +123,7 @@ Pour déterminer la raison de l’arrêt du déploiement sans que les pods compu
 
 ## <a name="cause"></a>Cause
 
-Dans l’exemple ci-dessus, le déploiement ne parvient pas à créer de compte de connexion pour l’utilisateur du domaine, car l’étendue du groupe de domaine est définie comme étant de type domaine local. Utilisez des groupes de portée globale ou universelle. [Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory](deploy-active-directory.md) explique les exigences d’étendue des groupes Active Directory.
+Dans l’exemple ci-dessus, le déploiement ne parvient pas à créer de compte de connexion pour l’utilisateur du domaine, car l’étendue du groupe de domaine est définie comme étant de type domaine local. Utilisez des groupes de portée globale ou universelle. [Déployer [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory](active-directory-deploy.md) explique les exigences d’étendue des groupes Active Directory.
 
 ## <a name="verify"></a>Vérifier
 

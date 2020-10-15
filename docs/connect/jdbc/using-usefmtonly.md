@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: rene-ye
 ms.author: v-reye
 manager: kenvh
-ms.openlocfilehash: ad8f30b236ca9d4fe8a134db3e1726aaeb17a2d3
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 509c88230b8a09933291e5c09d528370cf06caca
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727460"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081528"
 ---
 # <a name="retrieving-parametermetadata-via-usefmtonly"></a>Récupération de ParameterMetaData via useFmtOnly
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -91,7 +91,7 @@ try (Connection c = DriverManager.getConnection(URL, USERNAME, PASSWORD)) {
 }
 ```
 > [!NOTE]  
->  La fonctionnalité prend uniquement en charge les requêtes `SELECT/INSERT/UPDATE/DELETE`. Les requêtes doivent commencer par l’un des 4 mots clés pris en charge ou une [expression de table commune](../../t-sql/queries/with-common-table-expression-transact-sql.md?view=sql-server-2017) suivie de l’une des requêtes prises en charge. Les paramètres dans les expressions de table communes ne sont pas pris en charge.
+>  La fonctionnalité prend uniquement en charge les requêtes `SELECT/INSERT/UPDATE/DELETE`. Les requêtes doivent commencer par l’un des 4 mots clés pris en charge ou une [expression de table commune](../../t-sql/queries/with-common-table-expression-transact-sql.md) suivie de l’une des requêtes prises en charge. Les paramètres dans les expressions de table communes ne sont pas pris en charge.
 
 ## <a name="known-issues"></a>Problèmes connus
   Il existe actuellement des problèmes avec la fonctionnalité, qui sont dus à des lacunes dans la logique d’analyse SQL. Ces problèmes pourraient être résolus dans une prochaine mise à jour de la fonctionnalité et sont décrits ci-dessous, avec des suggestions de solutions de contournement.

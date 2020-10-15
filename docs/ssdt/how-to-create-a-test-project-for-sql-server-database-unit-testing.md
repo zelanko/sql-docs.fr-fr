@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 4ff3cb815dcd27f72ea96296935484ec0cc15ea0
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b5a10fdbc94858a9fe3f5b523fdd43b505e2563f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243530"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987555"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Procédure : Créer un projet de test pour un test unitaire de base de données SQL Server
 
@@ -28,7 +28,7 @@ Vous pouvez placer tous vos tests unitaires SQL Server pour un projet de base de
 |Les différents tests unitaires SQL Server doivent-ils accéder à différentes connexions de base de données pour l’exécution ou la validation des tests ?|Dans l'affirmative, vous avez besoin de plusieurs projets de test. Vous ne pouvez pas spécifier plus d'une connexion de base de données pour l'exécution des tests. Toutefois, vous pouvez spécifier une connexion de base de données différente pour la validation des tests.|  
 |Voulez-vous déployer des projets de base de données distincts pour les différents tests unitaires ?|Dans l'affirmative, vous avez besoin de plusieurs projets de test. Un projet de test ne peut déployer qu'un seul projet de base de données.|  
   
-Pour plus d’informations sur chacune de ces questions, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Au lieu de créer plusieurs projets de test, vous pouvez également fournir votre propre implémentation Microsoft.Data.Schema.UnitTesting.DatabaseTestService [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx).  
+Pour plus d’informations sur chacune de ces questions, consultez [Procédure : configurer l’exécution de test unitaire SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Au lieu de créer plusieurs projets de test, vous pouvez également fournir votre propre implémentation Microsoft.Data.Schema.UnitTesting.DatabaseTestService [DatabaseTestService](/previous-versions/visualstudio/visual-studio-2010/dd154755(v=vs.100)).  
   
 Trois options sont à votre disposition pour ajouter un projet de test à une solution contenant un projet de base de données :  
   
@@ -56,4 +56,3 @@ Chaque approche est décrite dans les procédures suivantes.
   
 ## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
-  

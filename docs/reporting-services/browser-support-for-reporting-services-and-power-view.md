@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a8b47d98cdb6da8b29983cadbe3c0f6f44ba924
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a8bae1b0ae40d9895cedc094cf4a31386199f5e1
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245178"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891229"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Prise en charge des navigateurs pour Reporting Services et Power View
 
@@ -157,9 +157,8 @@ Voici la liste actuelle des navigateurs pris en charge pour le portail web.
 
 [Recherche et affichage de rapports dans le portail Web](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
-[Portail web (SSRS en mode natif)](https://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
+[Portail web (SSRS en mode natif)](./web-portal-ssrs-native-mode.md)  
 [Visionneuse HTML et barre d’outils des rapports](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Référence de paramètres d'accès URL](../reporting-services/url-access-parameter-reference.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
-

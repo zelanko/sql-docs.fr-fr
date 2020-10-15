@@ -16,12 +16,12 @@ ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 162790e2f0c025a1f28ad60e982d2f0cdb2b1095
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 817395eca7ed1fd5f9a0ae9f01c3059c17deffef
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901627"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036365"
 ---
 # <a name="search-documents-using-results-lists"></a>Effectuer une recherche dans des documents à l'aide des listes de résultats
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,9 +65,8 @@ ms.locfileid: "88901627"
  Les informations relatives aux remplacements s'affichent par défaut dans la fenêtre Résultats de la recherche 1. Vous pouvez parcourir les remplacements en double-cliquant sur chaque entrée de la fenêtre Résultats de la recherche 1.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche et remplacement](../../relational-databases/scripting/search-and-replace.md)   
- [Effectuer une recherche de façon interactive dans des documents](../../relational-databases/scripting/search-documents-interactively.md)   
- [Rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md)   
- [Rechercher du texte avec des expressions régulières](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
-  
+ [Recherche et remplacement](./search-and-replace.md)   
+ [Effectuer une recherche de façon interactive dans des documents](./search-documents-interactively.md)   
+ [Rechercher du texte avec des caractères génériques](./search-text-with-wildcards.md)   
+ [Rechercher du texte avec des expressions régulières](./search-text-with-regular-expressions.md)  
   

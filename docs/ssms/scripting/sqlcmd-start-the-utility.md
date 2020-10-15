@@ -11,12 +11,12 @@ ms.assetid: 00d57437-7a29-4da1-b639-ee990db055fb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2abef56a866b38bc5d3be9dd962daafb71497c3
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 38b89e893efa43df3ae2c78aacd6431727d7765e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901610"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036270"
 ---
 # <a name="sqlcmd---start-the-utility"></a>sqlcmd : démarrer l’utilitaire
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,6 +53,5 @@ ms.locfileid: "88901610"
     >  Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] entrées sont stockées dans une mémoire tampon. Elles sont exécutées en tant que lot lorsque la commande GO est rencontrée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exécuter des fichiers de script Transact-SQL à l'aide de sqlcmd](../../relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)  
-  
+ [Exécuter des fichiers de script Transact-SQL à l'aide de sqlcmd](./sqlcmd-run-transact-sql-script-files.md)  
   

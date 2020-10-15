@@ -10,12 +10,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bc11c5b511b879e0b1f97987d8ff7a9ff3f435d2
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 59a25c594d45c57c7fe9a7f9baeb87c1fa49e3de
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87928650"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987405"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertes de données Reporting Services
 
@@ -117,7 +117,7 @@ Voici les zones clés des alertes de données d' [!INCLUDE[ssRSnoversion](../inc
 ##  <a name="install-data-alerts"></a><a name="InstallAlerting"></a> Installer des alertes de données  
  La fonctionnalité d'alertes de données est disponible uniquement lorsque [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est installé en mode SharePoint. Lorsque vous installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, le programme d'installation crée automatiquement la base de données des alertes qui stocke les définitions d'alerte de données et les métadonnées d'alerte, crée deux pages SharePoint pour la gestion des alertes et ajoute le Concepteur d'alertes de données au site SharePoint. Il n'y a pas d'étapes spéciales à effectuer ni d'options à définir pour créer des alertes pendant l'installation.  
   
- Pour plus d’informations sur l’installation de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, dont le nouveau service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et l’application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qu’il faut créer et configurer pour pouvoir utiliser les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], voir [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode) dans MSDN Library.  
+ Pour plus d’informations sur l’installation de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, dont le nouveau service partagé [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et l’application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qu’il faut créer et configurer pour pouvoir utiliser les fonctionnalités [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], voir [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](./install-windows/install-the-first-report-server-in-sharepoint-mode.md) dans MSDN Library.  
   
  Comme le montre le schéma plus haut dans cette rubrique, les alertes de données utilisent des travaux de SQL Server Agent. Pour créer des travaux, SQL Server Agent doit s'exécuter. Il est possible que vous ayez configuré SQL Server Agent pour qu'il démarre automatiquement lors de l'installation d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Sinon, vous pouvez démarrer SQL Server Agent manuellement. Pour plus d’informations, consultez [Configurer SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) et [Démarrer, arrêter, suspendre, reprendre, redémarrer le moteur de base de données, SQL Server Agent ou le service SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   

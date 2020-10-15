@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d5bf4e441352bce868d80ba00fe185c7494c0917
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: f9c54984eb8d1c94176929579043f979aa518672
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111018"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988296"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Dépannage de clusters de basculement
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "91111018"
 -   Utilisation de procédures stockées étendues et d'objets COM  
   
 ## <a name="basic-troubleshooting-steps"></a>Étapes de dépannage de base  
- La première étape de diagnostic consiste à exécuter une vérification de validation de cluster à jour. Pour plus d’informations sur la validation, consultez [Guide pas à pas des clusters de basculement : Validation matérielle d’un cluster de basculement](https://technet.microsoft.com/library/cc732035.aspx).  Vous pouvez le faire sans interruption de service, car cela n’affecte aucune des ressources de cluster en ligne. La validation peut être exécutée à tout moment une fois que la fonctionnalité Clustering de basculement a été installée, notamment avant le déploiement du cluster, lors de la création du cluster et lors de l’exécution du cluster. En fait, des tests supplémentaires sont exécutés une fois le cluster utilisé, pour vérifier que les bonnes pratiques sont respectées pour les charges de travail à haute disponibilité. Sur ces dizaines de tests, seuls quelques-uns affecteront les charges de travail de cluster en cours d’exécution, et tous concernent la catégorie stockage. Il suffit donc de passer cette catégorie entière pour éviter facilement les tests avec interruption.  
+ La première étape de diagnostic consiste à exécuter une vérification de validation de cluster à jour. Pour plus d’informations sur la validation, consultez [Guide pas à pas des clusters de basculement : Validation matérielle d’un cluster de basculement](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)).  Vous pouvez le faire sans interruption de service, car cela n’affecte aucune des ressources de cluster en ligne. La validation peut être exécutée à tout moment une fois que la fonctionnalité Clustering de basculement a été installée, notamment avant le déploiement du cluster, lors de la création du cluster et lors de l’exécution du cluster. En fait, des tests supplémentaires sont exécutés une fois le cluster utilisé, pour vérifier que les bonnes pratiques sont respectées pour les charges de travail à haute disponibilité. Sur ces dizaines de tests, seuls quelques-uns affecteront les charges de travail de cluster en cours d’exécution, et tous concernent la catégorie stockage. Il suffit donc de passer cette catégorie entière pour éviter facilement les tests avec interruption.  
 Le clustering de basculement est proposé avec une sécurité intégrée pour empêcher les temps d’arrêt accidentels lors de l’exécution des tests de stockage pendant la validation. Si le cluster comprend des groupes en ligne lorsque la validation est lancée, et que les tests de stockage restent sélectionnés, l’utilisateur est invité à confirmer s'il souhaite exécuter tous les tests (et provoquer des temps d'arrêt) ou ignorer les tests de disques appartenant à des groupes en ligne pour éviter les temps d’arrêt. Si la catégorie de stockage entière est exclue des tests, cette invite ne s’affiche pas. Cela permet d’activer la validation du cluster sans temps d’arrêt.  
   
 #### <a name="how-to-revalidate-your-cluster"></a>Comment revalider votre cluster  
@@ -189,5 +189,4 @@ Le clustering de basculement est proposé avec une sécurité intégrée pour em
  [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Fonctionnement des procédures stockées étendues](../../../relational-databases/extended-stored-procedures-programming/how-extended-stored-procedures-work.md)   
  [Caractéristiques d'exécution des procédures stockées étendues](../../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
-  
   

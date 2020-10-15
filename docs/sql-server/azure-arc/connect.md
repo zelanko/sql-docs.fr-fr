@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 5b07323de0c8d385ad4df739c935a8bef96b4022
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d5b66ac431bfadff06c930f76517f35d95dcb12f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990307"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987995"
 ---
 # <a name="connect-your-sql-server-to-azure-arc"></a>Connecter votre SQL Server à Azure Arc
 
@@ -22,7 +22,7 @@ Vous pouvez connecter votre instance SQL Server à Azure Arc sur site en procéd
 ## <a name="prerequisites"></a>Prérequis
 
 * Au moins une instance SQL Server doit être installée sur votre machine.
-* Pour les machines Windows, Azure PowerShell doit être installé. Pour [installer Azure Powershell](https://docs.microsoft.com/powershell/azure/install-az-ps), suivez ces instructions.
+* Pour les machines Windows, Azure PowerShell doit être installé. Pour [installer Azure Powershell](/powershell/azure/install-az-ps), suivez ces instructions.
 * Pour les machines Linux, Azure CLI doit être installé et vous devez être connecté à votre compte Azure. Pour [installer Azure CLI](/cli/azure/install-azure-cli-apt), suivez ces instructions.
 
 
@@ -39,7 +39,7 @@ Au cours de cette étape, vous allez générer un script qui détecte toutes les
 3. Sélectionnez l’abonnement, le groupe de ressources, la région Azure et le système d’exploitation hôte. Si nécessaire, indiquez également le proxy que votre réseau utilise pour se connecter à Internet.
 
 > [!IMPORTANT]
-> Si la machine hébergeant l’instance SQL Server est déjà [connectée à Azure Arc](https://docs.microsoft.com/azure/azure-arc/servers/onboard-portal), veillez à sélectionner le groupe de ressources qui contient la ressource __Machine - Azure Arc__ correspondante.
+> Si la machine hébergeant l’instance SQL Server est déjà [connectée à Azure Arc](/azure/azure-arc/servers/onboard-portal), veillez à sélectionner le groupe de ressources qui contient la ressource __Machine - Azure Arc__ correspondante.
 
 ![Détails du serveur](media/join/server-details-sql-server-azure-arc.png)
 
@@ -56,7 +56,7 @@ Au cours de cette étape, vous allez utiliser le script que vous avez téléchar
 
 ### <a name="windows"></a>Windows
 
-1. Lancez une instance administrateur de __powershell.exe__ et connectez-vous à votre module PowerShell à l’aide de vos informations d’identification Azure. Suivez les [instructions de connexion](https://docs.microsoft.com/powershell/azure/install-az-ps#sign-in).
+1. Lancez une instance administrateur de __powershell.exe__ et connectez-vous à votre module PowerShell à l’aide de vos informations d’identification Azure. Suivez les [instructions de connexion](/powershell/azure/install-az-ps#sign-in).
 
 2. Exécuter le script téléchargé
 
@@ -69,7 +69,7 @@ Au cours de cette étape, vous allez utiliser le script que vous avez téléchar
 
 ### <a name="linux"></a>Linux
 
-1. Utilisez Azure CLI pour vous connecter avec vos informations d’identification Azure. Suivez les [instructions de connexion](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).
+1. Utilisez Azure CLI pour vous connecter avec vos informations d’identification Azure. Suivez les [instructions de connexion](/cli/azure/authenticate-azure-cli).
 
 2. Accordez l’autorisation d’exécution au script téléchargé et exécutez-le.
 

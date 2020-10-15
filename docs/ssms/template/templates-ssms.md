@@ -19,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60b44b3676f7943cb6a2e5c1fdb7981ca47c965f
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 4662b6e9bcea26bc93ab0d5bf07a767797a98d70
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522991"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035937"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Utiliser des modèles dans SQL Server Management Studio
 
@@ -34,7 +34,7 @@ Ce tutoriel vous présente les modèles Transact-SQL (T-SQL) prédéfinis qui so
 
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et de l’accès à un serveur SQL.
 
-* Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installez [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 * Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
@@ -118,7 +118,7 @@ Vous pouvez aussi créer un modèle dans l’Explorateur de modèles. Les étape
 
 La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices pratiques. Ces articles *Tutoriel* et *Procédure* vous aident à vous familiariser avec les différentes fonctionnalités disponibles dans SSMS.  Ces articles vous apprennent à gérer les composants de SSMS et à trouver les fonctionnalités utilisées régulièrement.
 
-* [Se connecter à une instance et l’interroger](../tutorials/connect-query-sql-server.md)
+* [Se connecter à une instance et l’interroger](../quickstarts/connect-query-sql-server.md)
 * [Création de scripts](../tutorials/scripting-ssms.md)
 * [Configuration de SSMS](../tutorials/ssms-configuration.md)
 * [Conseils et astuces supplémentaires pour utiliser SSMS](../tutorials/ssms-tricks.md)

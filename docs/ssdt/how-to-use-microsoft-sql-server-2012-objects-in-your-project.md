@@ -10,18 +10,18 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 42c9c1cdc852aed9a1ff8bf469cd0534bc992ba2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ee09f89463151f0dcf5c1fcd2c1f82a72ba8f350
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895841"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988185"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>Procédure : Utiliser des objets Microsoft SQL Server 2012 dans un projet
 
 Dans cet exemple, vous ajouterez un objet séquence à un projet de base de données ciblant Microsoft SQL Server 2012.  
   
-Des séquences sont introduites dans Microsoft SQL Server 2012. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut effectuer un cycle (répétition) selon la demande.  Pour plus d'informations sur les objets séquence, consultez [Numéros de séquence](../relational-databases/sequence-numbers/sequence-numbers.md). Pour plus d’informations sur les nouveautés concernant Microsoft SQL Server 2012, consultez [Nouveautés de SQL Server 2012 ](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
+Des séquences sont introduites dans Microsoft SQL Server 2012. Une séquence est un objet lié par schéma défini par l'utilisateur qui génère une séquence de valeurs numériques d'après la spécification avec laquelle la séquence a été créée. La séquence de valeurs numériques est générée dans un ordre croissant ou décroissant à un intervalle défini et peut effectuer un cycle (répétition) selon la demande.  Pour plus d'informations sur les objets séquence, consultez [Numéros de séquence](../relational-databases/sequence-numbers/sequence-numbers.md). Pour plus d’informations sur les nouveautés concernant Microsoft SQL Server 2012, consultez [Nouveautés de SQL Server 2012 ](/previous-versions/sql/sql-server-2012/bb500435(v=sql.110)).  
   
 > [!WARNING]  
 > Les procédures suivantes utilisent les entités créées dans les procédures précédentes des sections [Développement de base de données connectée](../ssdt/connected-database-development.md) et [Développement de base de données hors connexion orienté projet](../ssdt/project-oriented-offline-database-development.md).  
@@ -68,4 +68,3 @@ Des séquences sont introduites dans Microsoft SQL Server 2012. Une séquence es
 3.  Cliquez sur le bouton **Exécuter la requête**.  
   
 4.  Dans l'**Explorateur d'objets SQL Server**, accédez à la table **Produits** de la base de données. Cliquez avec le bouton droit et sélectionnez **Afficher les données** pour examiner les nouvelles lignes ajoutées.  
-  

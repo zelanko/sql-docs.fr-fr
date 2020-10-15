@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: c6652f8c6b76f9693229de8aba3e91ac2017c46c
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 6515eb1fb2c088681cc033aab59066f3c680f9dc
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518729"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986852"
 ---
 # <a name="dac-framework-compatibility"></a>Compatibilité avec DAC Framework
 
@@ -23,4 +23,4 @@ Lorsque vous essayez d'effectuer une action qui utilise le DAC Framework, SQL Se
 
 **Des versions incompatibles de SQL Server Data Tools et des composants d'exécution de base de données sont installées sur cet ordinateur**
 
-Vous pouvez télécharger une version plus récente de SSDT à partir de la page [Installer la dernière version de SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).
+Vous pouvez télécharger une version plus récente de SSDT à partir de la page [Installer la dernière version de SQL Server Data Tools](./download-sql-server-data-tools-ssdt.md).

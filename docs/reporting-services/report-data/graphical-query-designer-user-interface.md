@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bd66f5f839c101343babf642e40fdfd999a528e9
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 2f26eb4e27649e1b47af909f34fd2df6db61b904
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458271"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891309"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interface utilisateur du concepteur de requêtes graphique
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel pour la création de requêtes permettant de récupérer des données d’une base de données relationnelle pour un dataset de rapport dans le Concepteur de rapports. Utilisez le concepteur de requêtes graphique pour générer une requête de manière interactive et afficher les résultats pour les types de sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB et ODBC. Utilisez le concepteur de requêtes textuel pour spécifier plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , une syntaxe de requête ou de commande complexe et des requêtes basées sur des expressions. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](https://msdn.microsoft.com/library/44b7c664-03aa-494e-a484-052b318e810c). Pour plus d’informations sur l’utilisation de types de sources de données spécifiques, consultez [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un concepteur de requêtes graphique et un concepteur de requêtes textuel pour la création de requêtes permettant de récupérer des données d’une base de données relationnelle pour un dataset de rapport dans le Concepteur de rapports. Utilisez le concepteur de requêtes graphique pour générer une requête de manière interactive et afficher les résultats pour les types de sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, OLE DB et ODBC. Utilisez le concepteur de requêtes textuel pour spécifier plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , une syntaxe de requête ou de commande complexe et des requêtes basées sur des expressions. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes textuel](/previous-versions/sql/). Pour plus d’informations sur l’utilisation de types de sources de données spécifiques, consultez [Datasets de rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
  .  
   
 ## <a name="graphical-query-designer"></a>Concepteur de requêtes graphique  
- Ce concepteur de requêtes graphique prend en charge trois types de commandes de requête : **Text**, **StoredProcedure** ou **TableDirect**. Avant de créer une requête pour votre dataset, vous devez sélectionner une option de type de commande dans la page Requête de la boîte de dialogue [Propriétés du dataset](https://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f) .  
+ Ce concepteur de requêtes graphique prend en charge trois types de commandes de requête : **Text**, **StoredProcedure** ou **TableDirect**. Avant de créer une requête pour votre dataset, vous devez sélectionner une option de type de commande dans la page Requête de la boîte de dialogue [Propriétés du dataset](/previous-versions/sql/) .  
   
  Les options suivantes sont disponibles pour le type de requête :  
   
@@ -62,7 +62,7 @@ ms.locfileid: "86458271"
   
  Lorsque vous modifiez des informations dans un des trois premiers volets, ces modifications sont reflétées dans les autres volets. Par exemple, si vous ajoutez une table au volet Schéma, cette table est automatiquement ajoutée à la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le volet SQL. L'ajout d'un champ à la requête dans le volet SQL entraîne l'insertion du champ dans la liste du volet Grille et la mise à jour de la table dans le volet Diagramme.  
   
- Pour plus d’informations, consultez [Outils du concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
+ Pour plus d’informations, consultez [Outils du concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md).  
   
 #### <a name="toolbar-for-the-graphical-query-designer"></a>Barre d’outils du concepteur de requêtes graphique  
  La barre d’outils du concepteur de requêtes graphique fournit des boutons pour concevoir des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de l’interface graphique.  
@@ -150,6 +150,5 @@ EXEC uspGetEmployeeManagers '1';
  [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Type de connexion Oracle &#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)   
  [Fichier de configuration RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
- [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/200903f4-1208-4563-9dca-26aabaacfa20)  
-  
+ [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
