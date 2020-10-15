@@ -13,12 +13,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22a60f2f696a132bbcf7cc6b1497c286f5670cb5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 091f6a4fbe7650152eaf7b3c605618875013f92a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901272"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039050"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Activer, désactiver et supprimer des points d'arrêt
 
@@ -29,7 +29,7 @@ Pour afficher et gérer tous les points d'arrêt ouverts, vous pouvez utiliser l
 [!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
   
 ## <a name="the-breakpoints-window"></a>Fenêtre Points d'arrêt  
- La fenêtre **Points d'arrêt** répertorie des informations telles que la ligne de code sur laquelle se trouve le point d'arrêt. Dans la fenêtre **Points d'arrêt** , vous pouvez aussi supprimer, désactiver et activer des points d'arrêt. Pour plus d'informations sur la fenêtre **Points d'arrêt** , consultez [Points d'arrêt Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  
+ La fenêtre **Points d'arrêt** répertorie des informations telles que la ligne de code sur laquelle se trouve le point d'arrêt. Dans la fenêtre **Points d'arrêt** , vous pouvez aussi supprimer, désactiver et activer des points d'arrêt. Pour plus d'informations sur la fenêtre **Points d'arrêt** , consultez [Points d'arrêt Window](./transact-sql-debugger-breakpoints-window.md).  
   
  La désactivation d'un point d'arrêt l'empêche de suspendre l'exécution. Toutefois, la définition reste en place au cas où vous souhaiteriez activer le point d'arrêt ultérieurement. La suppression d'un point d'arrêt le supprime définitivement. Vous devez activer/désactiver un nouveau point d'arrêt pour suspendre l'exécution de l'instruction.  
   
@@ -101,6 +101,5 @@ Pour afficher et gérer tous les points d'arrêt ouverts, vous pouvez utiliser l
 -   Dans la barre d'outils de la fenêtre **Points d'arrêt** , cliquez sur le bouton **Supprimer tous les points d'arrêt** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Basculer un point d’arrêt](../../relational-databases/scripting/toggle-a-breakpoint.md)  
-  
+ [Basculer un point d’arrêt](./toggle-a-breakpoint.md)  
   

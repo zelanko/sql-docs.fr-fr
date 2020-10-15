@@ -23,12 +23,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30830fae390788d81fc655e4c31dcbe3eea79b5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 1e8a30b5c8ff29155c58f940de8d800075c84c1e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901958"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036386"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
 
@@ -42,7 +42,7 @@ Vous pouvez démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] 
 
 La configuration requise pour démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] est la suivante :
 
-- Si votre éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est connecté à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un autre ordinateur, vous avez dû configurer le débogueur de façon qu’il accepte le débogage distant. Pour plus d’informations, consultez [Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).
+- Si votre éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est connecté à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sur un autre ordinateur, vous avez dû configurer le débogueur de façon qu’il accepte le débogage distant. Pour plus d’informations, consultez [Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL](./configure-firewall-rules-before-running-the-tsql-debugger.md).
   
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] doit s'exécuter sous un compte Windows qui est membre du rôle serveur fixe sysadmin.
 
@@ -114,8 +114,8 @@ La configuration requise pour démarrer le débogueur [!INCLUDE[tsql](../../incl
   
 ## <a name="see-also"></a>Voir aussi
 
-- [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Débogueur Transact-SQL](./transact-sql-debugger.md)
+- [Exécuter pas à pas du code Transact-SQL](./step-through-transact-sql-code.md)
+- [Informations du débogueur Transact-SQL](./transact-sql-debugger-information.md)
+- [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
 - [Statistiques des requêtes dynamiques](../../relational-databases/performance/live-query-statistics.md)

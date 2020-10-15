@@ -13,12 +13,12 @@ ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dbf692581a7ad2cb6d1e2bb5ad600b65fc63d7c3
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 3d3ccbef48b79ef0706920ab2ff83a2daee68db9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901966"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036403"
 ---
 # <a name="replace-in-files"></a>Remplacer dans les fichiers
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -104,10 +104,10 @@ ms.locfileid: "88901966"
  Indique comment interpréter les caractères spéciaux qui sont entrés dans les zones de texte **Rechercher** et **Remplacer par** . Les options comprennent **Caractères génériques** et **Expressions régulières**.  
   
  **Regular Expressions**  
- Des notations spéciales définissent des modèles de texte pour les concordances. Pour obtenir la liste, consultez [Rechercher du texte avec des expressions régulières](../../relational-databases/scripting/search-text-with-regular-expressions.md).  
+ Des notations spéciales définissent des modèles de texte pour les concordances. Pour obtenir la liste, consultez [Rechercher du texte avec des expressions régulières](./search-text-with-regular-expressions.md).  
   
  **Caractères génériques**  
- Les caractères spéciaux tels que les astérisques (`*`) et les points d'interrogation (`?`) représentent un ou plusieurs caractères. Pour obtenir la liste, consultez [Rechercher du texte avec des caractères génériques](../../relational-databases/scripting/search-text-with-wildcards.md).  
+ Les caractères spéciaux tels que les astérisques (`*`) et les points d'interrogation (`?`) représentent un ou plusieurs caractères. Pour obtenir la liste, consultez [Rechercher du texte avec des caractères génériques](./search-text-with-wildcards.md).  
   
  **Examiner ces types de fichiers**  
  Cette liste indique les types de fichiers auxquels la recherche doit être appliquée dans les répertoires spécifiés dans **Regarder dans**. Si cette zone est laissée vide, la recherche couvre tous les fichiers des répertoires spécifiés dans **Regarder dans** .  
@@ -155,4 +155,4 @@ ms.locfileid: "88901966"
  Cet onglet de barre d’outils remplace la boîte de dialogue par celle intitulée **Rechercher un symbole** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
+ [Raccourcis clavier dans SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)

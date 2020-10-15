@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60c533d241353c2147cfc9b473e3531364f95496
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 20246ae24d3b8916537e041218dadf4bf1e3a042
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901171"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036162"
 ---
 # <a name="transact-sql-debugger---locals-window"></a>Débogueur Transact-SQL - Fenêtre Variables locales
 
@@ -54,9 +54,9 @@ La fenêtre **Variables locales** affiche des informations sur les expressions l
  Affiche le type de données de l'expression.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Espion (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Fenêtre Pile des appels](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Boîte de dialogue Espion express](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Débogueur Transact-SQL](./transact-sql-debugger.md)   
+ [Informations du débogueur Transact-SQL](./transact-sql-debugger-information.md)   
+ [Espion (fenêtre)](./transact-sql-debugger-watch-window.md)   
+ [Fenêtre Pile des appels](./transact-sql-debugger-call-stack-window.md)   
+ [Boîte de dialogue Espion express](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

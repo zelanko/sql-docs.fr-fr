@@ -14,12 +14,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/22/2020
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3485795f239017df321e862a04c0411a3a9318c0
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: ea7e44a8069fc1b66c49f4bb20fbfc8ba3e1c3f7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480384"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036133"
 ---
 # <a name="transact-sql-debugger"></a>Débogueur Transact-SQL
 
@@ -47,7 +47,7 @@ Les options suivantes fournies par le débogueur [!INCLUDE[tsql](../../includes/
 
     Si vous souhaitez déboguer une procédure stockée ou une fonction, vous pouvez effectuer un pas à pas détaillé dans le module. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ouvre une nouvelle fenêtre de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] remplie avec le code source pour le module, place la fenêtre en mode débogage, puis suspend l’exécution à la première instruction dans le module. Vous pouvez ensuite parcourir le code du module, en définissant par exemple des points d'arrêt ou en exécutant le code pas à pas.  
 
-Pour plus d’informations sur les différentes façons dont vous pouvez parcourir le code avec le débogueur, consultez [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+Pour plus d’informations sur les différentes façons dont vous pouvez parcourir le code avec le débogueur, consultez [Exécuter pas à pas du code Transact-SQL](./step-through-transact-sql-code.md).  
 
 ## <a name="viewing-debugger-information"></a>Affichage des informations du débogueur
 
@@ -69,11 +69,11 @@ Chaque fois que le débogueur suspend l'exécution du code à une instruction [!
 
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit comment configurer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour le débogage distant.|[Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)|  
-|décrit comment démarrer, arrêter et contrôler l'opération de débogage.|[Exécuter le débogueur Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)|  
-|Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code.|[Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
-|Décrit comment utiliser le débogueur pour afficher des données [!INCLUDE[tsql](../../includes/tsql-md.md)] (telles que des paramètres et des variables) et des informations système.|[Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
+|Décrit comment configurer le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour le débogage distant.|[Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL](./configure-firewall-rules-before-running-the-tsql-debugger.md)|  
+|décrit comment démarrer, arrêter et contrôler l'opération de débogage.|[Exécuter le débogueur Transact-SQL](./run-the-transact-sql-debugger.md)|  
+|Décrit comment utiliser le débogueur [!INCLUDE[tsql](../../includes/tsql-md.md)] pour parcourir le code.|[Exécuter pas à pas du code Transact-SQL](./step-through-transact-sql-code.md)|  
+|Décrit comment utiliser le débogueur pour afficher des données [!INCLUDE[tsql](../../includes/tsql-md.md)] (telles que des paramètres et des variables) et des informations système.|[Informations du débogueur Transact-SQL](./transact-sql-debugger-information.md)|  
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15)
+[Éditeurs de texte et de requête &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md?view=sql-server-ver15)

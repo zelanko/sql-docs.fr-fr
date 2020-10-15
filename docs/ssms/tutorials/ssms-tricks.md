@@ -19,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: seo-lt-2019
 ms.date: 03/13/2018
-ms.openlocfilehash: 60bf46d57b029696229ebf50188eca39f5b97c0a
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 1f05ea22f092573364e663165559be73857ca320
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91724510"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038913"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Conseils et astuces pour utiliser SQL Server Management Studio (SSMS)
 
@@ -41,9 +41,9 @@ Cet article vous propose des conseils et astuces pour utiliser [!INCLUDE[ssManSt
 
 Pour tester les étapes fournies dans cet article, vous avez besoin de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], d’un accès à un serveur SQL et d’une base de données AdventureWorks. 
 
-* Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installez [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Installez [[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Édition Développeur](https://www.microsoft.com/sql-server/sql-server-downloads).
-* Téléchargez un [exemple de base de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Pour savoir comment restaurer une base de données dans SSMS, consultez [Restauration d’une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+* Téléchargez un [exemple de base de données AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Pour savoir comment restaurer une base de données dans SSMS, consultez [Restauration d’une base de données](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="commentuncomment-your-t-sql-code"></a>Ajouter/supprimer des marques de commentaire dans votre code T-SQL
 
@@ -286,7 +286,7 @@ Quand vous êtes connecté à un alias ou un écouteur de groupe de disponibilit
 
 La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices pratiques. Ces articles *Tutoriel* et *Procédure* vous aident à vous familiariser avec les différentes fonctionnalités disponibles dans SSMS.  Ces articles vous apprennent à gérer les composants de SSMS et à trouver les fonctionnalités utilisées régulièrement.
 
-* [Se connecter à une instance et l’interroger](connect-query-sql-server.md)
+* [Se connecter à une instance et l’interroger](../quickstarts/connect-query-sql-server.md)
 * [Création de scripts](scripting-ssms.md)
 * [Utilisation de modèles dans SSMS](../template/templates-ssms.md)
 * [Configuration de SSMS](ssms-configuration.md)

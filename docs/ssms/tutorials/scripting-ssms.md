@@ -19,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 4d8df5bbc3ead279cb9606da6a906f9d713ff439
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: a2fe23c032c9e11d31586b25064c2ede386fa3e5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662038"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038960"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>Générer des scripts d’objet dans SQL Server Management Studio
 
@@ -43,11 +43,11 @@ Pour générer un script d’objet dans l’**Explorateur d’objets**, cliquez 
 
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l’accès à un serveur qui exécute SQL Server et d’une base de données AdventureWorks.
 
-* Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installez [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 * Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 * Téléchargez les [exemples de bases de données AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md). 
 
 ## <a name="script-queries-from-the-gui"></a>Générer des scripts pour des requêtes à partir de l’interface graphique utilisateur
 
@@ -146,7 +146,7 @@ La section suivante décrit comment générer le script de la base de données �
    ![Scripter des objets](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > Vous pouvez scripter les données de la base de données quand vous sélectionnez *Schéma et données* pour l’option **Types de données à inclure dans le script**. Toutefois, cette action n’est pas idéale avec les grandes bases de données, car elle peut prendre plus de mémoire que SSMS ne peut en allouer. Cette limitation n’est pas un problème pour les petites bases de données. Si vous souhaitez déplacer les données d’une base de données plus grande, utilisez l’[Assistant Importation et exportation](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > Vous pouvez scripter les données de la base de données quand vous sélectionnez *Schéma et données* pour l’option **Types de données à inclure dans le script**. Toutefois, cette action n’est pas idéale avec les grandes bases de données, car elle peut prendre plus de mémoire que SSMS ne peut en allouer. Cette limitation n’est pas un problème pour les petites bases de données. Si vous souhaitez déplacer les données d’une base de données plus grande, utilisez l’[Assistant Importation et exportation](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md).
 
 6. Sélectionnez **OK**, puis **Suivant**.
 
@@ -199,7 +199,7 @@ Dans cette section, vous allez découvrir comment supprimer et créer une procé
 
 ## <a name="script-extended-events"></a>Scripter des événements étendus
 
-Cette section explique comment scripter des [événements étendus](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
+Cette section explique comment scripter des [événements étendus](../../relational-databases/extended-events/extended-events.md).
 
 1. Connectez-vous à un serveur qui exécute SQL Server.
 
@@ -226,7 +226,7 @@ Cette section explique comment scripter des [événements étendus](https://docs
 
 La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices pratiques. Ces articles *Tutoriel* et *Procédure* vous aident à vous familiariser avec les différentes fonctionnalités disponibles dans SSMS. Ces articles vous apprennent à gérer les composants de SSMS et à trouver les fonctionnalités utilisées régulièrement.
 
-* [Se connecter à une instance et l’interroger](connect-query-sql-server.md)
+* [Se connecter à une instance et l’interroger](../quickstarts/connect-query-sql-server.md)
 * [Utilisation de modèles dans SSMS](../template/templates-ssms.md)
 * [Configuration de SSMS](ssms-configuration.md)
 * [Conseils et astuces supplémentaires pour utiliser SSMS](ssms-tricks.md)

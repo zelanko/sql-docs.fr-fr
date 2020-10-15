@@ -12,12 +12,12 @@ ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3fb8dc9157e7574835ee330b9c9e0f925c6e6f4
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 98d82f71690be9f22cb891d002a315ccfa7c1762
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901335"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039003"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Générer des scripts (SQL Server Management Studio)
 
@@ -25,7 +25,7 @@ ms.locfileid: "88901335"
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit deux mécanismes pour générer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] . Vous pouvez créer des scripts pour plusieurs objets à l’aide de **l’Assistant Générer et publier des scripts**. Vous pouvez également générer un script pour des objets individuels ou plusieurs objets à l'aide du menu **Script en tant que** dans l' **Explorateur d'objets**.
 
-Pour obtenir un didacticiel détaillé sur les scripts de différents objets à l’aide de SQL Server Management Studio (SSMS), consultez [Tutoriel : Écriture de scripts dans SSMS](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms).
+Pour obtenir un didacticiel détaillé sur les scripts de différents objets à l’aide de SQL Server Management Studio (SSMS), consultez [Tutoriel : Écriture de scripts dans SSMS](../tutorials/scripting-ssms.md).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -33,7 +33,7 @@ Choisissez le mécanisme qui correspond le mieux à vos besoins.
 
 ###  <a name="generate-and-publish-scripts-wizard"></a><a name="GenPubScriptWiz"></a> Assistant Générer et publier des scripts
 
-Utilisez l' **Assistant Générer et publier des scripts** pour créer un script [!INCLUDE[tsql](../../includes/tsql-md.md)] pour plusieurs objets. L'Assistant génère un script de tous les objets d'une base de données, ou un sous-ensemble des objets que vous sélectionnez. L'Assistant propose de nombreuses options pour vos scripts et vous permet notamment d'inclure ou non des autorisations, un classement et des contraintes. Pour obtenir des instructions sur l'utilisation de l'Assistant, consultez [Generate and Publish Scripts Wizard](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).
+Utilisez l' **Assistant Générer et publier des scripts** pour créer un script [!INCLUDE[tsql](../../includes/tsql-md.md)] pour plusieurs objets. L'Assistant génère un script de tous les objets d'une base de données, ou un sous-ensemble des objets que vous sélectionnez. L'Assistant propose de nombreuses options pour vos scripts et vous permet notamment d'inclure ou non des autorisations, un classement et des contraintes. Pour obtenir des instructions sur l'utilisation de l'Assistant, consultez [Generate and Publish Scripts Wizard](./generate-and-publish-scripts-wizard.md).
   
 ### <a name="object-explorer-script-as-menu"></a><a name="OEScriptAsMenu"></a> Menu Script en tant que de l'Explorateur d'objets
 

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2a92cb1a23c4c1d7062945bc24961a2c37d25950
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 69fbb16e0671c14426fc550d61bdb929b64d06ab
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83764935"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935525"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
 
@@ -35,7 +35,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
 
 ## <a name="cmdlet-summary"></a>Résumé des applets de commande
 
- Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)** . Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Dans les résumés suivants d’applets de commande, les références à l’application de service « bases de données » font référence à toutes les bases de données créées et utilisées par une application de service Reporting Services. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
+ Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)** . Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](/powershell/scripting/getting-started/starting-windows-powershell). Dans les résumés suivants d’applets de commande, les références à l’application de service « bases de données » font référence à toutes les bases de données créées et utilisées par une application de service Reporting Services. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
   
  Si vous voyez un message d'erreur semblable au suivant lorsque vous tapez les exemples PowerShell :  
   
@@ -52,7 +52,7 @@ Lorsque vous installez le mode SharePoint de SQL Server 2016 Reporting Services
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- Pour plus d’informations, consultez [Utiliser Windows PowerShell pour administrer SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx).  
+ Pour plus d’informations, consultez [Utiliser Windows PowerShell pour administrer SharePoint 2013](/powershell/module/sharepoint-server/).  
   
 ### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Pour ouvrir SharePoint Management Shell et exécuter les applets de commande
   
@@ -291,7 +291,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Liste de vérification : Utiliser PowerShell pour vérifier PowerPivot pour SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
-[Obtenir de l’aide sur SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Liste de vérification : Utiliser PowerShell pour vérifier PowerPivot pour SharePoint](/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+[Obtenir de l’aide sur SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

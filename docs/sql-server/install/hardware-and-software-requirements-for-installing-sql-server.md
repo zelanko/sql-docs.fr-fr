@@ -45,12 +45,12 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: 5708f31a580e5ba3373397d1d55a83edd4c93d3b
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 39991d0c69efe81bae92bb1de2d9ee9221245bf4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238269"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988073"
 ---
 # <a name="sql-server-2016-and-2017-hardware-and-software-requirements"></a>SQL Server 2016 et 2017 : Configuration matérielle et logicielle requise
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -100,7 +100,7 @@ Le programme d'installation de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-
   
   
 > [!IMPORTANT]
-> La fonctionnalité PolyBase comporte d’autres exigences matérielles et logicielles. Pour plus d’informations, consultez [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+> La fonctionnalité PolyBase comporte d’autres exigences matérielles et logicielles. Pour plus d’informations, consultez [Prise en main de PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
 
 
@@ -240,7 +240,7 @@ Pour plus d’informations sur l’installation de SQL Server en mode Server Cor
     - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend actuellement en charge les lecteurs de disque dont les tailles de secteur natif standard s’élève à 512 octets et 4 Ko.  Les disques durs dont les tailles de secteur est supérieure à 4 Ko peuvent provoquer des erreurs quand vous essayez d’y stocker des fichiers de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Consultez [Limites des tailles de secteur de disque dur prises en charge dans SQL Server](https://support.microsoft.com/kb/926930) pour plus d’informations sur la prise en charge des tailles de secteur de disque dur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
     - L'installation du cluster de basculement[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge uniquement le disque local pour l'installation des fichiers tempdb. Assurez-vous que le chemin d'accès spécifié pour les données tempdb et les fichiers journaux sont valides sur tous les nœuds du cluster. Pendant le basculement, si les répertoires tempdb ne sont pas disponibles sur le nœud de basculement cible, la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sera pas en ligne.
 -   Stockage partagé  
--   [Espaces de stockage direct \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
+-   [Espaces de stockage direct \(S2D\)](/windows-server/storage/storage-spaces/storage-spaces-direct-overview)  
 -   Partage de fichiers SMB  
     - Le stockage de fichiers SMB n'est pas pris en charge pour les fichiers de données d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les installations autonomes ou en clusters. Utilisez un stockage attaché direct, un réseau de zone de stockage ou des espaces de stockage direct (S2D) à la place. 
     - Le stockage SMB peut être hébergé par un serveur de fichiers Windows ou un dispositif de stockage SMB tiers. Si vous utilisez un serveur de fichiers Windows, il doit s'agir de la version 2008 ou ultérieure. Pour plus d'informations sur l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le partage de fichiers SMB comme option de stockage, consultez [Installer SQL Server avec le partage de fichiers SMB en tant qu'option de stockage](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
@@ -277,4 +277,3 @@ Vous pouvez également créer une [machine virtuelle Azure qui exécute déjà S
 ## <a name="next-steps"></a>Étapes suivantes
 
 Une fois que vous avez passé en revue les exigences matérielles et logicielles nécessaires à l’installation de SQL Server, vous pouvez commencer à [planifier une installation de SQL Server](../../sql-server/install/planning-a-sql-server-installation.md) ou passer en revue les [considérations relatives à la sécurité pour SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).
-

@@ -8,12 +8,12 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 30097342700a9daccb6107f5fafe9e5acef3e225
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 4a4f32c73d1fdf0cd47caaa031321eaa0ef52092
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179289"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956740"
 ---
 # <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>SQL Server 2019 sur Windows : Modifications de l’isolation dans Machine Learning Services
 [!INCLUDE [SQL Server 2019 - Windows only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
@@ -24,7 +24,7 @@ Pour plus d’informations, découvrez comment installer [SQL Server Machine Lea
 
 ## <a name="changes-to-isolation-mechanism"></a>Modifications apportées au mécanisme d’isolation
 
-Sur Windows, le programme d’installation de SQL Server 2019 modifie le mécanisme d’isolation pour les processus externes. Cette modification remplace les comptes professionnels locaux par des éléments [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation), une technologie d’isolation destinée aux applications clientes s’exécutant sur Windows. 
+Sur Windows, le programme d’installation de SQL Server 2019 modifie le mécanisme d’isolation pour les processus externes. Cette modification remplace les comptes professionnels locaux par des éléments [AppContainers](/windows/desktop/secauthz/appcontainer-isolation), une technologie d’isolation destinée aux applications clientes s’exécutant sur Windows. 
 
 Aucune action spécifique n’est requise de la part de l’administrateur suite à la modification. Sur un serveur nouveau ou mis à niveau, tous les scripts externes et le code exécuté à partir de [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) respectent automatiquement le nouveau modèle d’isolation. 
 
@@ -39,7 +39,7 @@ Bien que le modèle d’isolation ait changé, l’assistant d’installation et
 
 Dans les versions précédentes, **SQLRUserGroup** contenait un pool de comptes d’utilisateurs Windows locaux (MSSQLSERVER00-MSSQLSERVER20) utilisés pour isoler et exécuter les processus externes. Lorsqu’un processus externe était nécessaire, le service SQL Server Launchpad choisissait un compte disponible et l’utilisait pour exécuter un processus. 
 
-Dans SQL Server 2019, le programme d’installation ne crée plus de comptes professionnels locaux. Au lieu de cela, l’isolation est obtenue via [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation). Au moment de l’exécution, lorsqu’un script incorporé ou du code est détecté dans une procédure stockée ou une requête, SQL Server appelle Launchpad avec une demande de lanceur spécifique à l’extension. Launchpad appelle l’environnement de runtime approprié dans un processus sous son identité et instancie un élément AppContainer pour l’héberger. Cette modification est utile, car la gestion des comptes et des mots de passe locaux n’est plus nécessaire. En outre, sur les installations où les comptes d’utilisateurs locaux sont interdits, la suppression de la dépendance de compte d’utilisateur local signifie que vous pouvez désormais utiliser cette fonctionnalité.
+Dans SQL Server 2019, le programme d’installation ne crée plus de comptes professionnels locaux. Au lieu de cela, l’isolation est obtenue via [AppContainers](/windows/desktop/secauthz/appcontainer-isolation). Au moment de l’exécution, lorsqu’un script incorporé ou du code est détecté dans une procédure stockée ou une requête, SQL Server appelle Launchpad avec une demande de lanceur spécifique à l’extension. Launchpad appelle l’environnement de runtime approprié dans un processus sous son identité et instancie un élément AppContainer pour l’héberger. Cette modification est utile, car la gestion des comptes et des mots de passe locaux n’est plus nécessaire. En outre, sur les installations où les comptes d’utilisateurs locaux sont interdits, la suppression de la dépendance de compte d’utilisateur local signifie que vous pouvez désormais utiliser cette fonctionnalité.
 
 Tels qu’implémentés par SQL Server, les éléments AppContainers constituent un mécanisme interne. Bien que vous ne puissiez pas voir physiquement les éléments AppContainers dans Process Monitor, vous pouvez les retrouver dans les règles de pare-feu sortantes créées par le programme d’installation pour empêcher les processus d’effectuer des appels réseau.
 

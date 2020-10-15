@@ -16,12 +16,12 @@ ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a97616d707849e94de995e29bda6b7853f6631d7
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: e7596e6ef216682ad66695b30712b3e77e2aa5ab
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901934"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038993"
 ---
 # <a name="insert-surround-with-transact-sql-snippets"></a>Insérer des extraits de code d'entourage (surround-with) Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901934"
 ## <a name="inserting-surround-with-snippets"></a>Insertion d'extraits de code d'entourage  
  Les extraits de code d’entourage peuvent être lancés de trois manières : par le biais d’un raccourci clavier, du menu **Édition** et du menu contextuel.  
   
- Après avoir inséré l'extrait de code, vous devez modifier le texte de remplacement pour former une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide. Pour plus d’informations, consultez [Compléter des extraits de code Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ Après avoir inséré l'extrait de code, vous devez modifier le texte de remplacement pour former une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide. Pour plus d’informations, consultez [Compléter des extraits de code Transact-SQL](./complete-transact-sql-snippets.md).  
   
 #### <a name="to-insert-a-surround-with-snippet"></a>Pour insérer un extrait de code d'entourage  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901934"
 3.  Sélectionnez le nom de l'extrait de code (BEGIN, IF ou WHILE) sur la liste à l'aide de la souris ou en tapant le nom de l'extrait de code et en appuyant sur TABULATION ou ENTRÉE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer des extraits de code Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
-  
+ [Insérer des extraits de code Transact-SQL](./insert-transact-sql-snippets.md)  
   

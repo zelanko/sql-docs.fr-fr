@@ -19,12 +19,12 @@ ms.assetid: 5c3061db-23c5-4d9f-a6ab-6b53a1a83f88
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d71d10d105bcd5d58a419644ffdb4ba269af2683
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: f4a4e57c2a1dffe8a41cf54827a0ae03b1e3cb18
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902068"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039123"
 ---
 # <a name="change-font-color-size-and-style"></a>Modifier la couleur, la taille et le style de la police
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -46,7 +46,6 @@ ms.locfileid: "88902068"
  Les paramètres de la couleur du texte et du type de police sont globaux pour tous les types d'éléments de texte, notamment les commentaires, les chaînes, etc.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Imprimer le code et les résultats](../../relational-databases/scripting/print-code-and-results.md)   
- [Codage en couleurs dans les éditeurs de requête](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-  
+ [Imprimer le code et les résultats](./print-code-and-results.md)   
+ [Codage en couleurs dans les éditeurs de requête](./color-coding-in-query-editors.md)  
   

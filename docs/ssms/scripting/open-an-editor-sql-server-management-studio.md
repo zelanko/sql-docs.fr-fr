@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c31d10b470271959f7bcb77b821847f9ff45b388
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 66b83e6c2a26f5fb9f8c2676dc3245d4d79e080e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093474"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036482"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>Ouvrir un éditeur (SQL Server Management Studio)
 
@@ -52,7 +52,7 @@ Cette rubrique explique comment ouvrir l'Éditeur de requête du [!INCLUDE[ssDE]
 ### <a name="using-the-fileopen-menu"></a>Utilisation du menu Fichier/Ouvrir  
  Dans le menu **Fichier** , cliquez sur **Ouvrir**, puis naviguez jusqu’à un fichier et ouvrez-le. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre le type approprié d’éditeur pour l’extension de fichier, copie le contenu du fichier dans la fenêtre de l’éditeur et ouvre si nécessaire une boîte de dialogue de connexion. Par exemple, si vous ouvrez un fichier avec l'extension .sql, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre une fenêtre de l'Éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] , y copie le contenu du fichier .sql, et ouvre une boîte de dialogue de connexion. Si vous ouvrez un fichier avec une extension non associée à un éditeur spécifique, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ouvre une fenêtre d'éditeur de texte et y copie le contenu du fichier.  
   
- Pour plus d’informations, consultez [Associer des extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
+ Pour plus d’informations, consultez [Associer des extensions de fichier à un éditeur de code](./associate-file-extensions-to-a-code-editor.md).  
   
 ### <a name="using-the-toolbar"></a>Utilisation de la barre d'outils  
  Dans la barre d’outils **Standard** , cliquez sur l’un des boutons suivants :  

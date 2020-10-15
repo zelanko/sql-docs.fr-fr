@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6afdda3975fc8f6c269f9c1fcbca35318f0c4da
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: b317c09026eb6baa0e9d0f8f2957c7c7c717af55
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179992"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956572"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et ressources
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -357,19 +357,19 @@ Vous trouverez ci-dessous des liens vers des informations, des outils et des scr
 
 + [Comment faire pour déterminer la taille de fichier d’échange appropriée pour les versions 64 bits de Windows](https://support.microsoft.com/kb/2860880)
 
-+ [Présentation de l’accès NUMA](https://technet.microsoft.com/library/ms178144.aspx)
++ [Présentation de l’accès NUMA](/previous-versions/sql/sql-server-2008-r2/ms178144(v=sql.105))
 
-+ [Prise en charge de la technologie NUMA dans SQL Server](https://technet.microsoft.com/library/ms180954.aspx)
++ [Prise en charge de la technologie NUMA dans SQL Server](/previous-versions/sql/sql-server-2008-r2/ms180954(v=sql.105))
 
-+ [Soft-NUMA (SQL Server)](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Soft-NUMA (SQL Server)](../../database-engine/configure-windows/soft-numa-sql-server.md)
 
 ### <a name="learn-about-sql-server-optimizations"></a>En savoir plus sur les optimisations de SQL Server
 
 + [Réorganiser et reconstruire des index](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
-+ [Introduction aux tables optimisées en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
++ [Introduction aux tables optimisées en mémoire](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)
 
-+ La [Démonstration : Optimisation des performances de l’OLTP en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ La [Démonstration : Optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)
 
 + [Compression des données](../../relational-databases/data-compression/data-compression.md)
 
@@ -383,7 +383,7 @@ Vous trouverez ci-dessous des liens vers des informations, des outils et des scr
 
 + [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)
 
-+ [Présentation de Resource Governor](https://technet.microsoft.com/library/bb895232.aspx)
++ [Présentation de Resource Governor](/previous-versions/sql/sql-server-2008-r2/bb895232(v=sql.105))
 
 + [An example of configuring Resource Governor](https://blog.sqlauthority.com/2012/06/04/sql-server-simple-example-to-configure-resource-governor-introduction-to-resource-governor/) (Un exemple de configuration de Resource Governor)
 
@@ -391,7 +391,7 @@ Vous trouverez ci-dessous des liens vers des informations, des outils et des scr
 
 + [Générateur de charge de stockage/outil de test de performances DISKSPD](https://github.com/microsoft/diskspd)
 
-+ [Informations de référence sur l’utilitaire FSUtil](https://technet.microsoft.com/library/cc753059.aspx)
++ [Informations de référence sur l’utilitaire FSUtil](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc753059(v=ws.11))
 
 
 ## <a name="other-articles-in-this-series"></a>Autres articles de cette série

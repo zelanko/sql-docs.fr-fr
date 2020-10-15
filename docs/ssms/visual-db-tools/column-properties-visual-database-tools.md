@@ -17,12 +17,12 @@ ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 3a4a58cd8522050e3de958cafae1224ba59363b0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2228819de295edf29d5b2b1ca6bfcc43626a42a0
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480081"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038928"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriétés de la colonne (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -53,7 +53,7 @@ Affiche le nom de la source de données pour la colonne sélectionnée. (S'appli
 S'étend pour afficher les propriétés restantes.  
   
 **Type de données**  
-Affiche le type de données de la colonne sélectionnée. Pour plus d’informations, consultez [Types de données (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Affiche le type de données de la colonne sélectionnée. Pour plus d’informations, consultez [Types de données (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Incrément d'identité**  
 Indique l’incrément qui sera ajouté à **Valeur initiale de la propriété Identity** pour chaque ligne ultérieure de la colonne d’identité. (S'applique uniquement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
@@ -95,7 +95,7 @@ Affiche le nom de la colonne. Pour modifier le nom, tapez-le dans la zone de tex
 Précise si le type de données de la colonne autorise les valeurs NULL.  
   
 **Type de données**  
-Affiche le type de données de la colonne sélectionnée. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur. Pour plus d’informations, consultez [Types de données (Transact-SQL)](https://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
+Affiche le type de données de la colonne sélectionnée. Pour modifier cette propriété, cliquez sur sa valeur, développez la liste déroulante et choisissez une autre valeur. Pour plus d’informations, consultez [Types de données (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 **Valeur ou liaison par défaut**  
 Affiche la valeur par défaut de cette colonne quand aucune valeur n'y est spécifiée. La liste déroulante contient toutes les valeurs par défaut globales définies dans la source de données. Pour lier la colonne à une valeur par défaut globale, sélectionnez-en une dans la liste déroulante. Ou bien, pour créer une contrainte par défaut pour la colonne, entrez la valeur par défaut directement comme un texte.  
@@ -143,7 +143,7 @@ Affiche la colonne utilisée pour définir le type de document d'une colonne de 
 Indique la langue utilisée pour indexer la colonne.  
   
 **Sémantique statistique**  
-Sélectionnez s'il faut activer l'indexation sémantique statistique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique (SQL Server)](https://msdn.microsoft.com/cd8faa9d-07db-420d-93f4-a2ea7c974b97).  
+Sélectionnez s'il faut activer l'indexation sémantique statistique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique (SQL Server)](../../relational-databases/search/semantic-search-sql-server.md).  
   
 Si vous sélectionnez une **langue** avant de sélectionner **Sémantique statistique**, et que la langue sélectionnée n'est pas associée à un modèle linguistique sémantique, l'option **Sémantique statistique** est définie avec la valeur **Non** et ne peut pas être modifiée. Si vous sélectionnez **Oui** pour l'option **Sémantique statistique** avant de sélectionner une **langue**, les langues disponibles dans la colonne **Langue** sont limitées à celles pour lesquelles il existe une prise en charge de modèle linguistique sémantique.  
   
@@ -188,4 +188,3 @@ Affiche la taille en octets autorisée par le type de données de la colonne. Pa
   
 > [!NOTE]  
 > La longueur d’un type de données **varchar(max)** varie pour chaque ligne. sp_help retourne (-1) comme longueur de colonne **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] affiche -1 comme taille de colonne.  
-  

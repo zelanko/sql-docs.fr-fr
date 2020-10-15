@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 861014b336d9f75c2df1dfc7888a28eb663575de
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 0db07a60c00e499cb86b5efb1113bbfd49807dc4
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518749"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988215"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Création et définition de tests unitaires SQL Server
 
@@ -43,9 +43,8 @@ Dans le tableau suivant, vous pouvez trouver des descriptions de tâches courant
 [Exécuter des tests unitaires SQL Server](../ssdt/running-sql-server-unit-tests.md)  
 Après avoir créé les tests unitaires SQL Server, exécutez-les dans la fenêtre Affichage des tests, le Concepteur de test unitaire SQL Server ou à l'aide de Team Foundation Build.  
   
-[Scénario : définir des conditions de test personnalisées pour les tests unitaires de base de données](https://msdn.microsoft.com/library/dd193282(VS.100).aspx)  
+[Scénario : définir des conditions de test personnalisées pour les tests unitaires de base de données](/previous-versions/visualstudio/visual-studio-2010/dd193282(v=vs.100))  
 Créez une condition de test personnalisée afin de tester un comportement que les conditions de test par défaut ne peuvent pas vérifier.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  

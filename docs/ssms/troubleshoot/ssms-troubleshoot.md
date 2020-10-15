@@ -11,12 +11,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 09/18/2019
-ms.openlocfilehash: 3363414382df2eb73a21dd32a9daa3a950c6907a
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 97200a4dfdaebeb77703fe420267557a3d5ad9d7
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990362"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035905"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>Obtenir des données de diagnostic après un incident de SQL Server Management Studio (SSMS)
 
@@ -28,7 +28,7 @@ Obtenez une image mémoire complète de SQL Server Management Studio (SSMS) lors
 
 Pour capturer des informations de diagnostic pour détecter un problème dans lequel SSMS cesse de répondre ou se bloque, suivez les étapes ci-dessous.
 
-1. Télécharger [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Télécharger [ProcDump](/sysinternals/downloads/procdump).
 
 2. Décompressez le téléchargement dans un dossier.
 
@@ -62,7 +62,7 @@ Vous pouvez obtenir une image mémoire complète avec n’importe quelle excepti
 
 Pour capturer des informations de diagnostic afin de résoudre une OutOfMemoryException à partir du SSMS, suivez les étapes ci-dessous.
 
-1. Télécharger [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Télécharger [ProcDump](/sysinternals/downloads/procdump).
 
 2. Décompressez le téléchargement dans un dossier.
 

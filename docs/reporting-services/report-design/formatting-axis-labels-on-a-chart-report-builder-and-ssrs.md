@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5d44212b3d290f69f8565040d44946104f92b045
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 240444331ed9a3ffa4fd083107aa68c476153392
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880283"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935131"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
   Les types de graphiques basés sur les coordonnées (histogramme, graphique à barres, graphique en aires, graphique à points, graphique en courbes et graphique d'étendue) comportent deux axes qui sont utilisés pour classer des données en catégories et afficher les relations de données. Des types de mises en forme différents seront appliqués à chaque axe.  
@@ -106,7 +106,7 @@ ms.locfileid: "84880283"
   
  Vous pouvez définir un axe scalaire de deux façons :  
   
--   Sélectionnez l’option **Axe scalaire** de la boîte de dialogue **Propriétés de l’axe** . Cela ajoutera des valeurs numérique ou de date/d'heure à l'axe où il n'existe aucune valeur de regroupement de données. Pour plus d’informations, consultez [Boîte de dialogue Propriétés de l’axe, Options de l’axe &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11).  
+-   Sélectionnez l’option **Axe scalaire** de la boîte de dialogue **Propriétés de l’axe** . Cela ajoutera des valeurs numérique ou de date/d'heure à l'axe où il n'existe aucune valeur de regroupement de données. Pour plus d’informations, consultez [Boîte de dialogue Propriétés de l’axe, Options de l’axe &#40;Générateur de rapports et SSRS&#41;](/previous-versions/sql/).  
   
 -   Sélectionnez un champ ou tapez une expression pour l’option **Champ de catégorie** de la boîte de dialogue **Propriétés de la série** . Le graphique ajoutera des intervalles d'axe pour toutes les valeurs du champ de catégorie que vous avez spécifié.  
   
@@ -128,5 +128,4 @@ ms.locfileid: "84880283"
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a7a9e0aaf57d3084e6be239cb8fedcdd3d2e9066
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 2af61cc504fe89a4a8992397df69816f411f353f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767343"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935489"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Télécharger des documents vers une bibliothèque SharePoint (Reporting Services en mode SharePoint)
 
@@ -44,7 +44,7 @@ Vous pouvez télécharger des définitions de rapport et des modèles de rapport
   
      Si la définition de rapport utilise un fichier de source de données partagée (.rsds) pour stocker les informations de connexion à une source de données externe, vous pouvez télécharger les fichiers .rdl et .rsds au même moment. Pour cela, cliquez sur **Télécharger plusieurs fichiers**, spécifiez les deux fichiers, puis cliquez sur **OK**.  
   
- Si vous téléchargez un rapport qui contient des références à des sources de données partagées, à des modèles de rapport ou à des sous-rapports, les références seront rompues dans le rapport lors du téléchargement des fichiers. Pour plus d’informations sur la réinitialisation des références, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76).  
+ Si vous téléchargez un rapport qui contient des références à des sources de données partagées, à des modèles de rapport ou à des sous-rapports, les références seront rompues dans le rapport lors du téléchargement des fichiers. Pour plus d’informations sur la réinitialisation des références, consultez [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](/previous-versions/sql/).  
   
  Lorsque vous téléchargez un rapport, il s'exécute à la demande lorsque vous l'ouvrez, récupérant les données actives à partir de la source de données. Vous pouvez configurer le rapport pour récupérer des données suivant une planification ou utiliser les données mises en cache. Pour plus d’informations, consultez [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   

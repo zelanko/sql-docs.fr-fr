@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c767c4e4feced7f5979cf6b22e90cceef311ca5
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 8338e122e08ddf03417875c6a0436c16d1e3ff34
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255732"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935286"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Fonctions du Générateur de rapports - Référence aux fonctions d’agrégation
   Pour inclure des valeurs agrégées dans votre rapport, vous pouvez utiliser des fonctions d'agrégation intégrées dans des expressions. La fonction d'agrégation par défaut pour les champs de type numérique est SUM. Vous pouvez modifier l'expression et utiliser une fonction d'agrégation intégrée différente ou spécifier une étendue différente. L'étendue identifie le jeu de données à utiliser pour le calcul.  
@@ -65,7 +65,7 @@ ms.locfileid: "84255732"
 |[Var](../../reporting-services/report-design/report-builder-functions-var-function.md)|Retourne la variance de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans l'étendue donnée.|  
 |[VarP](../../reporting-services/report-design/report-builder-functions-varp-function.md)|Retourne la variance de remplissage de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.|  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ##  <a name="restrictions-on-built-in-fields-collections-and-aggregate-functions"></a><a name="Restrictions"></a> Restrictions sur les champs prédéfinis, les collections et les fonctions d'agrégation  
  Le tableau suivant résume les restrictions dans les emplacements de rapport où vous pouvez ajouter des expressions qui contiennent des références aux collections intégrées globales.  
@@ -102,7 +102,7 @@ ms.locfileid: "84255732"
   
 -   **Remarque 8.** Le type de données de tous les agrégats à l'exception de Count et CountDistinct doit être le même, ou Null, pour toutes les valeurs.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ##  <a name="restrictions-on-nested-aggregates"></a><a name="NestedRestrictions"></a> Restrictions concernant les agrégats imbriqués  
  Le tableau suivant résume les restrictions concernant les fonctions d'agrégation qui peuvent spécifier d'autres fonctions d'agrégation comme agrégats imbriqués.  
@@ -119,7 +119,7 @@ ms.locfileid: "84255732"
   
 -   **Remarque 1.** Les fonctions d’agrégation sont autorisées uniquement à l’intérieur de l’expression *Source* d’une fonction Lookup si cette dernière n’est pas contenue dans un agrégat. Les fonctions d'agrégation ne sont pas autorisées à l'intérieur des expressions *Destination* ou *Result* d'une fonction Lookup.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ##  <a name="calculating-running-values"></a><a name="CalculatingRunningValues"></a> Calcul de valeurs d'exécution  
  Les fonctions intégrées suivantes calculent des valeurs d'exécution pour un jeu de données. **RowNumber** est semblable à **RunningValue** en ce sens qu'il retourne la valeur d'exécution d'un nombre qui s'incrémente pour chaque ligne de l'étendue contenante. Le paramètre d'étendue de ces fonctions doit spécifier une étendue contenante, laquelle contrôle le moment où le nombre redémarre.  
@@ -129,7 +129,7 @@ ms.locfileid: "84255732"
 |[RowNumber](../../reporting-services/report-design/report-builder-functions-rownumber-function.md)|Retourne un nombre évolutif du nombre de lignes pour l'étendue spécifiée. La fonction **RowNumber** redémarre le comptage à 1, et non à 0.|  
 |[RunningValue](../../reporting-services/report-design/report-builder-functions-runningvalue-function.md)|Retourne un agrégat cumulé de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée pour l'étendue donnée.|  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ##  <a name="retrieving-row-counts"></a><a name="RetrievingRowCounts"></a> Récupération de nombres de lignes  
  La fonction intégrée suivante calcule le nombre de lignes d'une étendue donnée. Utilisez-la pour compter toutes les lignes, y compris celles contenant des valeurs Null.  
@@ -138,7 +138,7 @@ ms.locfileid: "84255732"
 |------------------|---------------------|  
 |[CountRows](../../reporting-services/report-design/report-builder-functions-countrows-function.md)|Retourne le nombre de lignes dans l'étendue spécifiée, y compris celles contenant des valeurs Null.|  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ##  <a name="looking-up-values-from-another-dataset"></a><a name="LookupFunctions"></a> Recherche de valeurs d'un autre dataset  
  Les fonctions de recherche suivantes récupèrent des valeurs à partir d'un dataset spécifié.  
@@ -149,7 +149,7 @@ ms.locfileid: "84255732"
 |[LookupSet, fonction](../../reporting-services/report-design/report-builder-functions-lookupset-function.md)|Retourne un ensemble de valeurs à partir d'un dataset pour une expression spécifiée.|  
 |[Multilookup, fonction](../../reporting-services/report-design/report-builder-functions-multilookup-function.md)|Retourne le jeu de valeurs de première correspondance pour un ensemble de noms à partir d'un dataset contenant des paires nom/valeur.|  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ##  <a name="retrieving-sort-dependent-values"></a><a name="RetrievingPostsortValues"></a> Récupération de valeurs dépendantes du tri  
  Les fonctions intégrées suivantes retournent la première valeur, la dernière valeur ou la valeur précédente dans une étendue donnée. Ces fonctions dépendent de l'ordre de tri des valeurs de données. Utilisez ces fonctions pour, par exemple, rechercher les première et dernière valeurs d'une page afin de créer un en-tête de page de type dictionnaire. Utilisez **Previous** pour comparer une valeur d'une ligne avec la valeur de la ligne précédente dans une étendue spécifique pour, par exemple, rechercher des valeurs d'une année sur l'autre en pourcentage dans une table.  
@@ -160,7 +160,7 @@ ms.locfileid: "84255732"
 |[Dernière](../../reporting-services/report-design/report-builder-functions-last-function.md)|Retourne la dernière valeur dans l'étendue donnée de l'expression spécifiée.|  
 |[Précédent](../../reporting-services/report-design/report-builder-functions-previous-function.md)|Retourne la valeur ou la valeur d'agrégation spécifiée pour l'instance précédente d'un élément dans l'étendue spécifiée.|  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ##  <a name="retrieving-server-aggregates"></a><a name="RetrievingServerAggregates"></a> Récupération d'agrégats de serveurs  
  La fonction intégrée suivante récupère des agrégats personnalisés du fournisseur de données. Par exemple, un type de la source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permet d'extraire des agrégats calculés sur le serveur de source de données pour une utilisation dans un en-tête de groupe.  
@@ -169,7 +169,7 @@ ms.locfileid: "84255732"
 |------------------|---------------------|  
 |[Agrégat](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)|Retourne un agrégat personnalisé de l'expression spécifiée, comme défini par le fournisseur de données.|  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ##  <a name="testing-for-scope"></a><a name="TestingforScope"></a> Test de l'étendue  
  La fonction intégrée suivante teste le contexte actuel d'un élément de rapport pour voir s'il est membre d'une étendue spécifique.  
@@ -178,7 +178,7 @@ ms.locfileid: "84255732"
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Indique si l'instance active d'un élément se trouve dans l'étendue spécifiée.|  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ##  <a name="retrieving-recursive-level"></a><a name="RetrievingRecursiveLevel"></a> Récupération du niveau récursif  
  La fonction intégrée suivante récupère le niveau actuel lorsqu'une hiérarchie récursive est traitée. Utilisez le résultat de cette fonction avec la propriété **Padding** dans une zone de texte pour contrôler le niveau de retrait d'une hiérarchie visuelle pour un groupe récursif. Pour plus d’informations, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
@@ -187,11 +187,10 @@ ms.locfileid: "84255732"
 |--------------|-----------------|  
 |[Niveau](../../reporting-services/report-design/report-builder-functions-level-function.md)|Retourne le niveau de profondeur actuel d'une hiérarchie récursive.|  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut")Retour en haut  
   
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
-  
   

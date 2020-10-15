@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 70f02555b6993a8edd3b226352480dc5be8951c7
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b548dc877969334096171ee7475c928b786e5905
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85894888"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988277"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Stratégie de basculement pour les instances de cluster de basculement
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -105,11 +105,10 @@ ms.locfileid: "85894888"
  *Valeur par défaut  
   
 ####  <a name="responding-to-failures"></a><a name="respond"></a> Réponse aux échecs  
- Lorsqu'une ou plusieurs conditions d'échec sont détectées, la manière dont le service WSFC y répond dépend de l'état du quorum WSFC et des paramètres de redémarrage et de basculement du groupe de ressources de la FCI. Si la FCI a perdu le quorum WSFC, alors elle est entièrement mise hors connexion et perd sa haute disponibilité. Si la FCI conserve son quorum WSFC, le service WSFC peut répondre en tentant d'abord de redémarrer le nœud en échec, puis tente un basculement si les tentatives de redémarrage ont échoué. Les paramètres de redémarrage et de basculement sont configurés dans le composant logiciel enfichable Gestionnaire du cluster de basculement. Pour plus d’informations sur ces paramètres, consultez [\<Resource>Propriétés : onglet Stratégies](https://technet.microsoft.com/library/cc725685.aspx).  
+ Lorsqu'une ou plusieurs conditions d'échec sont détectées, la manière dont le service WSFC y répond dépend de l'état du quorum WSFC et des paramètres de redémarrage et de basculement du groupe de ressources de la FCI. Si la FCI a perdu le quorum WSFC, alors elle est entièrement mise hors connexion et perd sa haute disponibilité. Si la FCI conserve son quorum WSFC, le service WSFC peut répondre en tentant d'abord de redémarrer le nœud en échec, puis tente un basculement si les tentatives de redémarrage ont échoué. Les paramètres de redémarrage et de basculement sont configurés dans le composant logiciel enfichable Gestionnaire du cluster de basculement. Pour plus d’informations sur ces paramètres, consultez [\<Resource>Propriétés : onglet Stratégies](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725685(v=ws.11)).  
   
  Pour plus d’informations sur la conservation de l’intégrité du quorum, consultez [Modes de quorum WSFC et configuration de vote &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
-  
   

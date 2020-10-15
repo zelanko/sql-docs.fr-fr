@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5e507c40fba6755a0a7a82e3047b2b9b44cbc66d
-ms.sourcegitcommit: f898aa83561e94626024916932568ab05e73b656
+ms.openlocfilehash: e50c5c3f239900ab1c477f1c9d49507b3b4a43e8
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84012657"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935338"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Mise en forme du texte et des espaces réservés (Générateur de rapports et SSRS)
   Les zones de texte peuvent être des éléments de rapport ou correspondre aux cellules individuelles d'une région de données dans lesquelles figure du texte, un champ calculé, un pointeur renvoyant au champ d'une base de données ou une combinaison de ces trois éléments. Vous pouvez associer des polices et des couleurs, ajouter des styles gras et italiques et appliquer des styles de paragraphe (par exemple, un alignement et des retraits négatifs). Vous pouvez mettre en forme une zone de texte tout entière ou bien mettre en forme un texte spécifique, des nombres, des expressions ou des champs à l'intérieur de la zone de texte.  
@@ -44,7 +44,7 @@ ms.locfileid: "84012657"
   
 -   Faites glisser l’un des champs du volet **Données du rapport** vers la zone de texte concernée. Si vous faites glisser l'expression vers n'importe quelle autre zone du corps du rapport, une nouvelle zone de texte contenant un espace réservé sera créée. Cet espace réservé aura pour valeur l'expression du champ déposé précédemment sur la zone de texte.  
   
--   Cliquez avec le bouton droit n’importe où dans la zone de texte, puis sélectionnez **Insérer un espace réservé**. La boîte de dialogue **Propriétés de l’espace réservé** permet de définir l’expression qui correspondra à la valeur de votre espace réservé. Pour plus d’informations, consultez [Boîte de dialogue Propriétés de l’espace réservé, Général &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8).  
+-   Cliquez avec le bouton droit n’importe où dans la zone de texte, puis sélectionnez **Insérer un espace réservé**. La boîte de dialogue **Propriétés de l’espace réservé** permet de définir l’expression qui correspondra à la valeur de votre espace réservé. Pour plus d’informations, consultez [Boîte de dialogue Propriétés de l’espace réservé, Général &#40;Générateur de rapports et SSRS&#41;](./text-boxes-report-builder-and-ssrs.md).  
   
 -   Tapez toute expression simple ou complexe dans la zone de texte. Par exemple, si vous tapez **Nom : [Nom]** dans la zone de texte, le texte **[Nom]** sera affiché sous la forme d’un espace réservé qui représentera l’expression `=Fields!Name.Value`.  
   
@@ -74,8 +74,7 @@ ms.locfileid: "84012657"
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Boîte de dialogue Propriétés de l’espace réservé, Général &#40;Générateur de rapports et SSRS&#41;](https://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Boîte de dialogue Propriétés de l’espace réservé, Général &#40;Générateur de rapports et SSRS&#41;](./text-boxes-report-builder-and-ssrs.md)   
  [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [Zones de texte &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
-  
   

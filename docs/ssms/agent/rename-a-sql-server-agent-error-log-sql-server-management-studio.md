@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e4ec772988b2fa2dd8e6c028ab926546424c2891
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e636d3a46feb104325e86fd53f98bbc108ce5be5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480259"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034942"
 ---
 # <a name="rename-a-sql-server-agent-error-log"></a>Renommer le journal des erreurs SQL Server Agent
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Cette rubrique explique comment renommer le fichier où sont consignées les erreurs de [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -68,4 +68,3 @@ Pour plus d’informations sur les autorisations Windows nécessaires pour le co
 4.  Dans la boîte de dialogue **Configurer les journaux d'erreurs de l'Agent SQL Server** , dans la zone **Fichier journal des erreurs** , entrez le nouveau chemin d'accès et le nom de fichier du journal des erreurs. Vous pouvez également cliquer sur les points de suspension **(...)** pour ouvrir la boîte de dialogue **Spécifier l’emplacement du journal d’erreurs de l’agent** .  
   
 5.  Lorsque vous avez terminé, cliquez sur **OK**.  
-  

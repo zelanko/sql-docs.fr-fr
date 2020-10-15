@@ -9,12 +9,12 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c3cf6afe4f99e7a728368f3454cc125998d806fa
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: f00bbceefd5691bf4f78111aaa73f03f35bfb812
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178666"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956990"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Installer SQL Server Machine Learning Services (Python et R) sur Windows
 
@@ -26,7 +26,7 @@ Découvrez comment installer SQL Server Machine Learning Services sur Windows. V
 
 + Une instance du moteur de base de données est nécessaire. Vous ne pouvez pas installer uniquement les fonctionnalités Python ou R, même si vous pouvez les ajouter de façon incrémentielle à une instance existante.
 
-+ Pour assurer la continuité de l’activité, Machine Learning Services prend en charge les [groupes de disponibilité Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server). Installez Machine Learning Services et configurez des packages sur chaque nœud.
++ Pour assurer la continuité de l’activité, Machine Learning Services prend en charge les [groupes de disponibilité Always On](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). Installez Machine Learning Services et configurez des packages sur chaque nœud.
 
 + L’installation de Machine Learning Services *n’est pas prise en charge* sur une [instance de cluster de basculement Always On](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) dans SQL Server 2017. Elle est prise en charge avec SQL Server 2019 et ultérieur.
  
@@ -52,11 +52,11 @@ Découvrez comment installer SQL Server Machine Learning Services sur Windows. V
 [!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Pour plus d’informations sur les éditions SQL Server qui prennent en charge l’intégration Python et R avec Machine Learning Services, consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2017).
+Pour plus d’informations sur les éditions SQL Server qui prennent en charge l’intégration Python et R avec Machine Learning Services, consultez [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
-Pour plus d’informations sur les éditions SQL Server qui prennent en charge l’intégration Python et R avec Machine Learning Services, consultez [Éditions et fonctionnalités prises en charge de SQL Server 2019 (15.x)](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-version-15).
+Pour plus d’informations sur les éditions SQL Server qui prennent en charge l’intégration Python et R avec Machine Learning Services, consultez [Éditions et fonctionnalités prises en charge de SQL Server 2019 (15.x)](../../sql-server/editions-and-components-of-sql-server-version-15.md).
 ::: moniker-end
 
 ## <a name="run-setup"></a>Exécuter le programme d’installation
@@ -147,7 +147,7 @@ Le contrat de licence couvre :
 
    Notez l’emplacement du dossier sous le chemin `..\Setup Bootstrap\Log` où sont stockés les fichiers config. Une fois l’installation terminée, vous pouvez passer en revue les composants installés dans le fichier de synthèse.
 
-1. Si vous êtes invité redémarrer l’ordinateur après l’installation, faites-le dès à présent. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Si vous êtes invité redémarrer l’ordinateur après l’installation, faites-le dès à présent. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
@@ -165,7 +165,7 @@ Le contrat de licence couvre :
 
    Notez l’emplacement du dossier sous le chemin `..\Setup Bootstrap\Log` où sont stockés les fichiers de configuration. Une fois l’installation terminée, vous pouvez passer en revue les composants installés dans le fichier de synthèse.
 
-4. Si vous êtes invité à redémarrer l’ordinateur après l’installation, faites-le dès à présent. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+4. Si vous êtes invité à redémarrer l’ordinateur après l’installation, faites-le dès à présent. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ::: moniker-end
 
@@ -189,7 +189,7 @@ Cette étape nécessite un redémarrage du serveur. Si vous vous apprêtez à ac
 1. Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
 
     > [!TIP]
-    > Vous pouvez télécharger et installer la version appropriée à partir de cette page : [Téléchargez SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+    > Vous pouvez télécharger et installer la version appropriée à partir de cette page : [Téléchargez SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
     > 
     > Vous pouvez également utiliser [Azure Data Studio](../../azure-data-studio/what-is.md), qui prend en charge les requêtes et les tâches d’administration sur SQL Server.
   
@@ -287,7 +287,7 @@ Les serveurs non connectés nécessitent des étapes supplémentaires. Pour plus
 
 1. Commencez avec une instance de base déjà installée : version initiale de SQL Server 2017
 
-2. Accédez à la liste des mises à jour cumulatives : [Dernières mises à jour pour Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server)
+2. Accédez à la liste des mises à jour cumulatives : [Dernières mises à jour pour Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md)
 
 3. Sélectionnez la mise à jour cumulative la plus récente. Un fichier exécutable est téléchargé et extrait automatiquement.
 
@@ -311,7 +311,7 @@ Au niveau de l’instance, ces configurations supplémentaires peuvent inclure 
 * [Activer des protocoles réseau supplémentaires](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Activer des connexions à distance](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
 * [Créer un nom de connexion pour SQLRUserGroup](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
-* [Gestion des quotas de disque](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas) pour éviter que les scripts externes n’exécutent des tâches qui saturent l’espace disque
+* [Gestion des quotas de disque](/windows/desktop/fileio/managing-disk-quotas) pour éviter que les scripts externes n’exécutent des tâches qui saturent l’espace disque
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 Dans SQL Server 2019 sur Windows, le mécanisme d’isolation a changé. Ce mécanisme affecte **SQLRUserGroup**, les règles de pare-feu, l’autorisation de fichier et l’authentification implicite. Pour plus d’informations, consultez [Modifications de l’isolation pour Machine Learning Services](sql-server-machine-learning-services-2019.md).

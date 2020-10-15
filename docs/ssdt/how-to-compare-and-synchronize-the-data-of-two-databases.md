@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 19a1854a939f776f8eb75d9adf9d6d43856f920b
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: e246374476c3dff300aaf6c53ee3c6e8a1896db5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519039"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987975"
 ---
 # <a name="how-to-compare-and-synchronize-the-data-of-two-databases"></a>Procédure : Comparer et synchroniser les données de deux bases de données
 
@@ -83,7 +83,7 @@ Pour plus d'informations, consultez [Comparer et synchroniser des données d'une
   
     Remplacez les espaces réservés (*sServerName*, *sDatabaseName*, *sUserName*, *sPassword*, *sDisplayName*, *tServerName*, *tDatabaseName*, *tUserName*, *tPassword* et *tDisplayName*) par les valeurs de vos bases de données source et cible.  
   
-    Si vous ne spécifiez pas une source et une cible, la boîte de dialogue **Nouvelle comparaison de données** s'affiche. Pour plus d'informations sur les paramètres de la commande Sql.NewDataComparison, consultez [Référence des commandes Automation pour les fonctionnalités de base de données de Visual Studio Team System](https://msdn.microsoft.com/library/dd470565.aspx).  
+    Si vous ne spécifiez pas une source et une cible, la boîte de dialogue **Nouvelle comparaison de données** s'affiche. Pour plus d'informations sur les paramètres de la commande Sql.NewDataComparison, consultez [Référence des commandes Automation pour les fonctionnalités de base de données de Visual Studio Team System](/previous-versions/visualstudio/visual-studio-2010/dd470565(v=vs.100)).  
   
     Les données des bases de données source et cibles spécifiées sont comparées. Les résultats s'affichent dans une session de comparaisons de données. Pour plus d'informations sur l'affichage des résultats ou la synchronisation des données, consultez [Afficher les différences entre les données](#ViewDifferences) et [Synchronisation des données d'une base de données](#Synchronize).  
   
@@ -168,4 +168,3 @@ Après avoir comparé les données dans deux bases de données, vous pouvez les 
   
 ## <a name="see-also"></a>Voir aussi  
 [Comparer et synchroniser des données d'une ou plusieurs tables avec des données d'une base de données de référence](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)  
-  

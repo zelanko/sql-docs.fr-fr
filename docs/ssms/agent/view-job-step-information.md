@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d439de6bdf2ff7a9fccfc266a81cb540a28e419a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0f74ab9949662ceffce1965ebf4fefcc9086e5e9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497480"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038691"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Cette rubrique décrit comment afficher les détails d'une étape de travail dans la boîte de dialogue Propriétés de l'étape du travail. Elle contient également des informations sur l'affichage de la sortie d'une étape de travail.  
   
@@ -77,4 +77,3 @@ Affichez uniquement les travaux dont vous êtes propriétaire, à moins que vous
     -   Si vous êtes connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une version ultérieure, vous pouvez cliquer sur **Afficher** uniquement lorsque la case à cocher **Enregistrer un journal dans la table** est activée. Dans ce cas, la sortie de la table de travail est écrite dans la table **sysjobstepslogs** de la base de données **msdb** .  
   
     -   Le bouton **Afficher** est désactivé lorsque le résultat de l'étape de travail est écrit dans un fichier. Pour afficher le fichier de sortie d'une étape de travail, utilisez le Bloc-notes.  
-  
