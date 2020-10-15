@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: cheenamalhotra
 ms.author: v-chmalh
 ms.reviewer: v-kaywon
-ms.openlocfilehash: a15c888abefba554bb4170039eea23988a6615fd
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: fbfa8e19599294df827756da495fbe4eb43c479d
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725670"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081608"
 ---
 # <a name="using-always-encrypted-with-the-microsoft-net-data-provider-for-sql-server"></a>Utilisation d’Always Encrypted avec le Fournisseur de données Microsoft .NET pour SQL Server
 
@@ -561,7 +561,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |[SqlConnection.ColumnEncryptionKeyCacheTtl](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptionkeycachettl)|Obtient et définit la durée de vie des entrées du cache de clé de chiffrement de colonne.|
 |[SqlConnection.ColumnEncryptionTrustedMasterKeyPaths](/dotnet/api/microsoft.data.sqlclient.sqlconnection.columnencryptiontrustedmasterkeypaths)|Vous permet de définir une liste de chemins d’accès de clés approuvés pour un serveur de bases de données. Si, pendant le traitement d’une requête d’application, le pilote reçoit un chemin d’accès de clé qui ne figure pas dans la liste, la requête échoue. Cette propriété fournit une protection supplémentaire contre les attaques de sécurité durant lesquelles un ordinateur SQL Server compromis fournit des chemins d’accès de clés factices, qui peuvent entraîner une fuite des informations d’identification du magasin de clés.|
 |[Méthode SqlConnection.RegisterColumnEncryptionKeyStoreProviders](/dotnet/api/microsoft.data.sqlclient.sqlconnection.registercolumnencryptionkeystoreproviders)|Vous permet d’inscrire des fournisseurs de magasins de clés personnalisés. Il s’agit d’un dictionnaire qui mappe des noms de fournisseurs de magasins de clés à des implémentations de fournisseurs de magasins de clés.|
-|[Constructeur SqlCommand (String, SqlConnection, SqlTransaction, SqlCommandColumnEncryptionSetting)](/dotnet/api/microsoft.data.sqlclient.sqlcommand.-ctor?view=sqlclient-dotnet-core-1.0#Microsoft_Data_SqlClient_SqlCommand__ctor_System_String_Microsoft_Data_SqlClient_SqlConnection_Microsoft_Data_SqlClient_SqlTransaction_Microsoft_Data_SqlClient_SqlCommandColumnEncryptionSetting_)|Permet de contrôler le comportement d’Always Encrypted pour des requêtes individuelles.|
+|[Constructeur SqlCommand (String, SqlConnection, SqlTransaction, SqlCommandColumnEncryptionSetting)](/dotnet/api/microsoft.data.sqlclient.sqlcommand.-ctor?view=sqlclient-dotnet-core-1.0&preserve-view=true#Microsoft_Data_SqlClient_SqlCommand__ctor_System_String_Microsoft_Data_SqlClient_SqlConnection_Microsoft_Data_SqlClient_SqlTransaction_Microsoft_Data_SqlClient_SqlCommandColumnEncryptionSetting_)|Permet de contrôler le comportement d’Always Encrypted pour des requêtes individuelles.|
 |[SqlParameter.ForceColumnEncryption](/dotnet/api/microsoft.data.sqlclient.sqlparameter.forcecolumnencryption)|Applique le chiffrement d’un paramètre. Si SQL Server informe le pilote que le paramètre ne nécessite pas de chiffrement, la requête utilisant le paramètre échoue. Cette propriété fournit une protection supplémentaire contre les attaques au niveau de la sécurité qui impliquent un serveur SQL Server compromis fournissant des métadonnées de chiffrement incorrectes au client, ce qui peut entraîner la divulgation de données.|
 |[Mot clé](/dotnet/api/microsoft.data.sqlclient.sqlconnection.connectionstring) de la chaîne de connexion : `Column Encryption Setting=enabled`|Active ou désactive la fonctionnalité Always Encrypted pour la connexion.|
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Abort method
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b177fcb4a86c614116b414902be808862721abf
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4b107922be6c40da57ee42b195998e5528f4a2ac
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726933"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081928"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -62,7 +62,7 @@ HRESULT Abort(void);
  Le lot n'a pas été annulé.  
   
  E_FAIL  
- Une erreur spécifique au fournisseur s’est produite. Pour obtenir des informations détaillées, utilisez l’interface [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md?view=sql-server-ver15).  
+ Une erreur spécifique au fournisseur s’est produite. Pour obtenir des informations détaillées, utilisez l’interface [ISQLServerErrorInfo](./isqlservererrorinfo-geterrorinfo-ole-db.md).  
   
  E_UNEXPECTED  
  L'appel à la méthode était inattendu. Par exemple, l'objet est dans un état zombie parce que la méthode `ISSAbort::Abort` a déjà été appelée.  

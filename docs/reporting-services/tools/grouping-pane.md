@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d52ef6b9d9ac23afee2f6c9187da0da22ef4dd0
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: cc34af8b12a36ceae0195f747d5f9a8c5b675b52
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86915685"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986282"
 ---
 # <a name="grouping-pane"></a>Volet de regroupement
 Quand vous concevez des rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , le volet de regroupement affiche les groupes de lignes et les groupes de colonnes de la région de données de tableau matriciel sélectionnée. Le volet de regroupement n'est pas disponible pour les régions de données Graphique et Jauge. Le volet de regroupement se compose d’un volet Groupes de lignes et d’un volet Groupes de colonnes. Le volet de regroupement comporte deux modes : par défaut et avancé. Le mode par défaut affiche une vue hiérarchique des membres dynamiques pour les groupes de lignes et de colonnes. Le mode avancé affiche à la fois les membres statiques et dynamiques pour les groupes de lignes et de colonnes. Un groupe est un jeu de données nommé extrait d'un dataset de rapport qui est affiché sur une région de données. Les groupes sont organisés en hiérarchies qui incluent des membres statiques et dynamiques. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
   
-  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Si le volet de regroupement n’est pas visible, dans le menu **Rapport** , cliquez sur **Regroupement**.
+  ![ssrs_fyi_note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Si le volet de regroupement n’est pas visible, dans le menu **Rapport** , cliquez sur **Regroupement**.
   
  Les cellules situées dans les zones de groupes de lignes et de colonnes peuvent être des membres statiques ou dynamiques d'un groupe. Les membres statiques ne sont utilisés qu'à une seule reprise par groupe et ne contiennent généralement que des étiquettes ou des totaux. Les membres dynamiques ne sont utilisés qu'à une seule reprise par instance de groupe et contiennent généralement les valeurs uniques de l'expression de groupe. Quand vous sélectionnez des cellules de tableau matriciel dans la zone de groupes de lignes ou de groupes de colonnes, le membre du groupe correspondant est sélectionné dans le volet Groupes de lignes ou Groupes de colonnes. Inversement, si vous sélectionnez des groupes dans le volet de regroupement, la cellule correspondante associée au membre du groupe est sélectionnée sur l'aire de conception. Pour plus d’informations sur les zones de groupes de lignes et de colonnes de tableau matriciel, consultez [Zones de région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -50,7 +50,7 @@ Quand vous concevez des rapports [!INCLUDE[ssRSnoversion_md](../../includes/ssrs
 ## <a name="advanced-mode"></a>Mode avancé  
 En Mode avancé, vous pouvez afficher tous les membres statiques et dynamiques d'un groupe. Quand vous sélectionnez un membre, la fenêtre Propriétés affiche les propriétés du **Membre du tableau matriciel**sélectionné.  
   
-![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Pour activer/désactiver le **Mode avancé**, cliquez avec le bouton droit sur la flèche vers le bas en regard du volet Groupes de colonnes, puis cliquez sur **Mode avancé**.  
+![ssrs_fyi_note](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) Pour activer/désactiver le **Mode avancé**, cliquez avec le bouton droit sur la flèche vers le bas en regard du volet Groupes de colonnes, puis cliquez sur **Mode avancé**.  
   
 Dans la plupart des cas, les propriétés qui contrôlent l'affichage des lignes et des colonnes de groupe statiques et dynamiques sont définies automatiquement lorsque vous créez un groupe ou ajoutez des totaux. 
 
@@ -82,5 +82,4 @@ Pour modifier les valeurs par défaut, vous devez sélectionner le membre de gro
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
   

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a821c4-2920-400c-be03-93d26c749bb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 009c70da7365cc232dc5b00da6b4f1f62bfca8e2
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: d4195123fbe1660c1c081c810d2b5b6b0feebd80
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569959"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891509"
 ---
 # <a name="integrate-reporting-services-using-the-report-viewer-controls---get-started"></a>Intégrer Reporting Services à l’aide des contrôles Visionneuse de rapports - Prise en main
 
-Les contrôles Visionneuse de rapports permettent d’intégrer des rapports Reporting Services RDL dans les applications WebForms et WinForms. Pour plus d’informations sur les mises à jour récentes, consultez le [journal des modifications](changelog.md).
+Les contrôles Visionneuse de rapports permettent d’intégrer des rapports Reporting Services RDL dans les applications WebForms et WinForms. Pour plus d’informations sur les mises à jour récentes, consultez le [journal des modifications](./release-notes-ssrs-application-integration.md).
 
 ## <a name="add-the-report-viewer-control-to-a-new-web-project"></a>Ajouter le contrôle Visionneuse de rapports à un nouveau projet web
 
@@ -270,9 +270,8 @@ Voici des liens vers des articles sur le site NuGet.org sur les versions WebForm
 
 ## <a name="forum-feedback"></a>Commentaires sur le forum
 
-Informez l’équipe au sujet des problèmes sur les [forums Reporting Services](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html).
+Informez l’équipe au sujet des problèmes sur les [forums Reporting Services](/answers/topics/sql-server-reporting-services.html).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Collecte de données dans le contrôle Visionneuse de rapports](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-
+[Collecte de données dans le contrôle Visionneuse de rapports](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)

@@ -9,12 +9,12 @@ ms.date: 04/21/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4cac5fe891533d623a686a02641f63cb25d4b17f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1dbe3505616fa95c429faf6d1f018f947bd60930
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82154154"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891029"
 ---
 # <a name="ad-mode-deployment-stopped---missing-reverse-lookup-zone-entry-for-dc"></a>Déploiement en mode AD arrêté : entrée de zone de recherche inversée manquante pour le contrôleur de domaine
 
@@ -146,4 +146,4 @@ $DcControllerDnsPtr_Result
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Vérifier l’entrée de DNS inversé (enregistrement PTR) pour le contrôleur de domaine](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).
+[Vérifier l’entrée de DNS inversé (enregistrement PTR) pour le contrôleur de domaine](active-directory-deploy.md#verify-reverse-dns-entry-for-domain-controller).

@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 01/16/2020
-ms.openlocfilehash: 0a05f23265bd6e81c639bc8342699bf3bb8ab661
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: b0174f0b7705c9a7c7c678782a4b17fb4a1a74af
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742185"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91985885"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gérer les propriétaires d’abonnement et exécuter un abonnement - PowerShell
 
@@ -23,7 +23,7 @@ ms.locfileid: "80742185"
 
 À compter de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez transférer par programmation la propriété d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] d’un utilisateur à un autre. Cette rubrique fournit plusieurs scripts Windows PowerShell que vous pouvez utiliser pour modifier ou simplement dresser la liste des appartenances aux abonnements. Chaque exemple comprend un exemple de syntaxe pour le mode Natif et le mode SharePoint. Une fois que vous avez modifié le propriétaire d'un abonnement, celui-ci s'exécute dans le contexte de sécurité du nouveau propriétaire et le champ User!UserID du rapport affiche la valeur du nouveau propriétaire. Pour plus d’informations sur le modèle objet appelé par les exemples PowerShell, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
 
-![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")
+![Contenu relatif à PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell")
 
 ##  <a name="in-this-topic"></a><a name="bkmk_top"></a> Dans cette rubrique :
   
@@ -47,17 +47,17 @@ ms.locfileid: "80742185"
 
 Cette section récapitule les niveaux d'autorisation requis pour utiliser chacune des méthodes pour le mode Natif et le mode SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les scripts de cette rubrique utilisent les méthodes [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] suivantes :  
   
-- [Méthode ReportingService2010.ListSubscriptions](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [Méthode ReportingService2010.ListSubscriptions](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
   
-- [Méthode ReportingService2010.ChangeSubscriptionOwner](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+- [Méthode ReportingService2010.ChangeSubscriptionOwner](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)  
   
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
   
-- La méthode [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) est utilisée uniquement dans le dernier script pour déclencher l'exécution d'un abonnement spécifique. Si vous ne prévoyez pas d'utiliser ce script, vous pouvez ignorer les exigences relatives aux autorisations pour la méthode FireEvent.  
+- La méthode [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent) est utilisée uniquement dans le dernier script pour déclencher l'exécution d'un abonnement spécifique. Si vous ne prévoyez pas d'utiliser ce script, vous pouvez ignorer les exigences relatives aux autorisations pour la méthode FireEvent.  
   
 **Mode natif :**
   
-- Liste des abonnements : [ReportOperation Enumeration](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) sur le rapport ET l’utilisateur est le propriétaire de l’abonnement OU ReadAnySubscription.  
+- Liste des abonnements : [ReportOperation Enumeration](/dotnet/api/microsoft.reportingservices.interfaces.reportoperation) sur le rapport ET l’utilisateur est le propriétaire de l’abonnement OU ReadAnySubscription.  
   
 - Modifier des abonnements : l'utilisateur doit être membre du groupe BUILTIN\\Administrateurs  
   
@@ -67,7 +67,7 @@ Cette section récapitule les niveaux d'autorisation requis pour utiliser chacun
   
  **Mode SharePoint :**
   
-- Liste des abonnements : ManageAlerts OU [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) sur le rapport ET l'utilisateur est le propriétaire de l'abonnement et il s'agit d'un abonnement planifié).  
+- Liste des abonnements : ManageAlerts OU [CreateAlerts](/previous-versions/office/sharepoint-server/ms412690(v=office.15)) sur le rapport ET l'utilisateur est le propriétaire de l'abonnement et il s'agit d'un abonnement planifié).  
   
 - Modifier des abonnements : ManageWeb  
   
@@ -387,10 +387,10 @@ $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID
 
 ## <a name="see-also"></a>Voir aussi  
 
-- [Méthode ReportingService2010.ListSubscriptions](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [Méthode ReportingService2010.ListSubscriptions](/dotnet/api/reportservice2010.reportingservice2010.listsubscriptions)  
 
-- [Méthode ReportingService2010.ChangeSubscriptionOwner](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [Méthode ReportingService2010.ChangeSubscriptionOwner](/dotnet/api/reportservice2010.reportingservice2010.changesubscriptionowner)   
 
-- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ListChildren](/dotnet/api/reportservice2010.reportingservice2010.listchildren)  
 
-- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
+- [ReportingService2010.FireEvent](/dotnet/api/reportservice2010.reportingservice2010.fireevent)

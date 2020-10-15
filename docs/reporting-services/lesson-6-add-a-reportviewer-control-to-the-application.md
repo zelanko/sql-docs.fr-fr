@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4090a01d4aa50fcbbfa64182dcd23a3e01c50e78
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 3a1874b3253136a12973a60e6619e199995b5314
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245098"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891549"
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Leçon 6 : Ajouter un contrôle ReportViewer à l’application
 Après avoir conçu le rapport enfant à l'aide de l'Assistant Rapport, l'étape suivante consiste à ajouter un contrôle ReportViewer à l'application de site Web. Si vous utilisez le site web des rapports ASP.NET, la page default.aspx contient le contrôle ReportViewer.   
@@ -31,7 +31,7 @@ Après avoir conçu le rapport enfant à l'aide de l'Assistant Rapport, l'étape
   
 5.  Dans la zone **Choisir un rapport** , sélectionnez le rapport parent que vous avez créé.  
   
-    Lorsque vous sélectionnez un rapport, les instances de sources de données utilisées dans le rapport sont créées automatiquement. Le code est généré pour instancier chaque objet DataTable (et son conteneur [DataSet](https://msdn.microsoft.com/library/system.data.dataset.aspx) ). Un contrôle [ObjectDataSource](https://msdn.microsoft.com/library/system.web.ui.webcontrols.objectdatasource.aspx) est ajouté à l’aire de conception, correspondant à chaque source de données utilisée dans le rapport. Ce contrôle de source de données est configuré automatiquement.  
+    Lorsque vous sélectionnez un rapport, les instances de sources de données utilisées dans le rapport sont créées automatiquement. Le code est généré pour instancier chaque objet DataTable (et son conteneur [DataSet](/dotnet/api/system.data.dataset) ). Un contrôle [ObjectDataSource](/dotnet/api/system.web.ui.webcontrols.objectdatasource) est ajouté à l’aire de conception, correspondant à chaque source de données utilisée dans le rapport. Ce contrôle de source de données est configuré automatiquement.  
   
 6.  Dans le menu Générer, cliquez sur Générer le site Web.  
   
@@ -39,5 +39,3 @@ Après avoir conçu le rapport enfant à l'aide de l'Assistant Rapport, l'étape
   
 ## <a name="next-task"></a>Tâche suivante  
 Vous venez d'ajouter un contrôle ReportViewer dans l'application de site Web. Vous allez à présent ajouter une action d'extraction dans le rapport parent. Voir [Leçon 7 : Ajouter une action d’extraction dans le rapport parent](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md).  
-  
-

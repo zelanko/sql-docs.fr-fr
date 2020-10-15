@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d00cb13b-e1c2-4300-a195-3da1430a2df1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 554622ce583bb314609c9000b1398ffbca4b6718
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: bff06284226c67a0f784b9e77bbe85dd056edb09
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458219"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891139"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>Type de connexion OLE DB (SSRS)
   Pour inclure les données d'un fournisseur de données OLE DB, vous devez avoir un dataset basé sur une source de données de rapport de type OLE DB. Ce type de source de données intégré est basé sur l’extension pour le traitement des données OLE DB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -58,7 +58,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Pour récupérer correctement les données de votre choix, vous devez spécifier une syntaxe de requête prise en charge par le fournisseur de données. La prise en charge des paramètres varie selon le fournisseur de données. Pour plus d'informations, consultez les rubriques spécifiques au fournisseur de données sélectionné. Par exemple :  
   
--   [Fournisseur OLE DB Analysis Services &#40;Analysis Services – Données multidimensionnelles&#41;](https://docs.microsoft.com/analysis-services/instances/data-providers-used-for-analysis-services-connections
+-   [Fournisseur OLE DB Analysis Services &#40;Analysis Services – Données multidimensionnelles&#41;](/analysis-services/instances/data-providers-used-for-analysis-services-connections
 )  
    
   
@@ -100,5 +100,4 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

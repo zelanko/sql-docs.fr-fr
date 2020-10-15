@@ -25,18 +25,18 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9727e0ac0270b32fe4df943e6ab91d2748cc7994
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5e275d0465f436e20ac590e40a001fb8c335a573
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88319015"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92032974"
 ---
 # <a name="operators"></a>Opérateurs
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
-> Dans [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+> Dans [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance), la plupart, mais pas toutes les fonctionnalités SQL Server Agent sont actuellement prises en charge. Pour plus d’informations, consultez [Différences T-SQL entre Azure SQL Managed Instance et SQL Server](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
 
 Les opérateurs sont des alias pour les personnes ou les groupes qui peuvent recevoir une notification électronique à la fin des travaux ou en cas d'alertes. Le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent prend en charge la notification des administrateurs par le biais des opérateurs. Les opérateurs activent les fonctions de notification et de surveillance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
@@ -125,8 +125,7 @@ Un ou plusieurs des éléments suivants sont nécessaires pour avertir un opéra
 |Tâches|Rubrique|  
 |-|-|  
 |Tâches associées à la création d'un opérateur|[Créer un opérateur](../../ssms/agent/create-an-operator.md)<br /><br />[Désigner un opérateur de prévention de défaillance](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|Tâches associées à l'affectation d'alertes|[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Définir la réponse à une alerte &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|Tâches associées à l'affectation d'alertes|[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Définir la réponse à une alerte &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)<br /><br />[Affecter des alertes à un opérateur](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Messagerie de base de données](../../relational-databases/database-mail/database-mail.md)  
-  
