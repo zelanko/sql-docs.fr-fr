@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 75d5e4cc3892ed2fd33392dc413b55936eac191d
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c09f79fafca4c16048817f3ee2524f214cb13d49
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179688"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956615"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Synchronisation de packages R pour SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -23,7 +23,7 @@ La version de RevoScaleR incluse dans SQL Server 2017 comprend la possibilité d
 
 Cette fonctionnalité a été fournie pour faciliter la sauvegarde des collections de packages R associées aux bases de données SQL Server. À l’aide de cette fonctionnalité, un administrateur peut restaurer non seulement la base de données, mais aussi les packages R qui ont été utilisés par les scientifiques de données qui travaillent dans cette base de données.
 
-Cet article décrit la fonctionnalité de synchronisation de packages et l’utilisation de la fonction [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages) pour effectuer les tâches suivantes :
+Cet article décrit la fonctionnalité de synchronisation de packages et l’utilisation de la fonction [rxSyncPackages](/machine-learning-server/r-reference/revoscaler/rxsyncpackages) pour effectuer les tâches suivantes :
 
 + Synchroniser une liste de packages pour une base de données SQL Server entière
 
@@ -56,7 +56,7 @@ Pour utiliser la synchronisation des packages, vous devez activer la nouvelle fo
 1. L’administrateur du serveur active la fonctionnalité pour l’instance.
 2. Pour chaque base de données, l’administrateur octroie aux utilisateurs individuels la possibilité d’installer ou de partager des packages R à l’aide des rôles de base de données.
 
-Une fois cette opération effectuée, vous pouvez utiliser des fonctions RevoScaleR, telles que [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) pour installer des packages dans une base de données.  Les informations sur les utilisateurs et les packages qu’ils peuvent utiliser sont stockées dans l’instance. 
+Une fois cette opération effectuée, vous pouvez utiliser des fonctions RevoScaleR, telles que [rxInstallPackages](/machine-learning-server/r-reference/revoscaler/rxinstallpackages) pour installer des packages dans une base de données.  Les informations sur les utilisateurs et les packages qu’ils peuvent utiliser sont stockées dans l’instance. 
 
 Chaque fois que vous ajoutez un nouveau package à l’aide des fonctions de gestion des packages, les deux enregistrements dans SQL Server et le système de fichiers sont mis à jour. Ces informations peuvent être utilisées pour restaurer les informations sur les packages pour l’ensemble de la base de données.
 
@@ -74,7 +74,7 @@ Chaque fois que vous ajoutez un nouveau package à l’aide des fonctions de ges
 
 ## <a name="how-package-synchronization-works"></a>Fonctionnement de la synchronisation des packages
 
-Pour utiliser la synchronisation des packages, appelez [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages), qui est une nouvelle fonction dans [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). 
+Pour utiliser la synchronisation des packages, appelez [rxSyncPackages](/r-server/r-reference/revoscaler/rxsyncpackages), qui est une nouvelle fonction dans [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler). 
 
 Pour chaque appel à `rxSyncPackages`, vous devez spécifier une instance et une base de données. Ensuite, répertoriez les packages à synchroniser ou spécifiez l’étendue du package.
 

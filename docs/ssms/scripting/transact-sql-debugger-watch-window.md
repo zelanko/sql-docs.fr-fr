@@ -14,12 +14,12 @@ ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a4a19d53dc1c7788a2e5002bc1189b9df47b3ee5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 182f6805ee452f065bda86ee23bfec60bc8b8999
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901806"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036120"
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Débogueur Transact-SQL - Fenêtre Espion
 
@@ -64,9 +64,9 @@ La fenêtre **Espion** affiche des informations sur les expressions que vous ave
  Affiche le type de données de l'expression.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [Variables locales (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Fenêtre Pile des appels](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Boîte de dialogue Espion express](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ [Débogueur Transact-SQL](./transact-sql-debugger.md)   
+ [Informations du débogueur Transact-SQL](./transact-sql-debugger-information.md)   
+ [Variables locales (fenêtre)](./transact-sql-debugger-locals-window.md)   
+ [Fenêtre Pile des appels](./transact-sql-debugger-call-stack-window.md)   
+ [Boîte de dialogue Espion express](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)

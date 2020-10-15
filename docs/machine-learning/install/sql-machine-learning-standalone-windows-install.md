@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a83e1ea4c96144f7188812522ee121530bac351c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 2332aff0cb4c73fb7bbda61e498b1167327f6957
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178656"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956798"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Installer Machine Learning Server (autonome) ou R Server (autonome) en utilisant le programme d’installation de SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -26,7 +26,7 @@ Le programme d’installation de SQL Server comprend une option de **fonctionnal
 Le programme d’installation de SQL Server comprend une option de **fonctionnalité partagée** permettant d’installer un serveur machine learning autonome qui s’exécute en dehors de SQL Server. Dans SQL Server 2016, cette fonctionnalité est appelée **R Server (autonome)** .  
 ::: moniker-end
 
-Un serveur autonome installé par le biais du programme d’installation de SQL Server est fonctionnellement équivalent aux versions non-SQL de [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) et prend en charge les mêmes cas d’utilisation et scénarios, notamment :
+Un serveur autonome installé par le biais du programme d’installation de SQL Server est fonctionnellement équivalent aux versions non-SQL de [Microsoft Machine Learning Server](/machine-learning-server/what-is-machine-learning-server) et prend en charge les mêmes cas d’utilisation et scénarios, notamment :
 
 + Exécution à distance avec basculement entre les sessions locales et distantes dans la même console
 + Opérationnalisation avec des nœuds web et des nœuds de calcul
@@ -192,7 +192,7 @@ Sur les serveurs non connectés, des étapes supplémentaires sont nécessaires.
 
 3. Si vous avez activé l’exécution de l’opérationnalisation avec des nœuds web et des nœuds de calcul pour les déploiements de service web, sauvegardez le fichier **AppSettings.json** à titre de précaution. L’application de SQL Server 2017 CU13 (ou d’une version ultérieure) met à jour ce fichier. Une copie de sauvegarde vous permettra donc de conserver la version d’origine.
 
-4. Sur une machine connectée à Internet, téléchargez la dernière mise à jour cumulative de votre version à partir de la page [Dernières mises à jour pour Microsoft SQL Server](https://docs.microsoft.com/sql/database-engine/install-windows/latest-updates-for-microsoft-sql-server).
+4. Sur une machine connectée à Internet, téléchargez la dernière mise à jour cumulative de votre version à partir de la page [Dernières mises à jour pour Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 5. Téléchargez la mise à jour cumulative la plus récente. Il s’agit d’un fichier exécutable.
 
@@ -215,7 +215,7 @@ Sur les serveurs non connectés, des étapes supplémentaires sont nécessaires.
     }
     ```
 
-9. [Exécutez l’utilitaire CLI d’administration](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch) pour redémarrer les nœuds web et les nœuds de calcul. Pour connaître les étapes et la syntaxe, consultez [Superviser, démarrer et arrêter des nœuds web et des nœuds de calcul](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start).
+9. [Exécutez l’utilitaire CLI d’administration](/machine-learning-server/operationalize/configure-admin-cli-launch) pour redémarrer les nœuds web et les nœuds de calcul. Pour connaître les étapes et la syntaxe, consultez [Superviser, démarrer et arrêter des nœuds web et des nœuds de calcul](/machine-learning-server/operationalize/configure-admin-cli-stop-start).
 
 ## <a name="development-tools"></a>Outils de développement
 

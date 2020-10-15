@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b6c43f4376d6e60607fd1fcfb1c64f1d25cea3af
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: f9b9ddfd58beed00a00c3512b5db51e7a3a7907c
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901475"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036208"
 ---
 # <a name="toggle-a-breakpoint"></a>Basculer un point d'arrêt
 
@@ -33,7 +33,7 @@ Une fois le point d'arrêt défini, il est représenté par une icône dans la b
   
  S'il existe plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sur une ligne, vous pouvez basculer un point d'arrêt pour chaque instruction. Cliquer dans la barre grise à gauche de la fenêtre bascule un point d'arrêt sur la première instruction de la ligne. Vous pouvez basculer un point d’arrêt dans une instruction suivante en mettant en surbrillance une partie de l’instruction ou en plaçant le curseur dans l’instruction, puis en appuyant sur F9 ou en cliquant sur **Basculer le point d’arrêt** dans le menu **Déboguer** . Si plusieurs points d'arrêt se trouvent sur une ligne, un seul glyphe de point d'arrêt se trouve dans la barre grise à gauche.  
   
- Une fois qu'un point d'arrêt a été basculé, vous pouvez effectuer plusieurs actions sur celui-ci, par exemple modifier ses propriétés ou les désactiver temporairement. Pour plus d’informations, consultez [Points d’arrêt Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  
+ Une fois qu'un point d'arrêt a été basculé, vous pouvez effectuer plusieurs actions sur celui-ci, par exemple modifier ses propriétés ou les désactiver temporairement. Pour plus d’informations, consultez [Points d’arrêt Transact-SQL](./transact-sql-breakpoints.md).  
   
 ## <a name="toggle-a-breakpoint"></a>Basculer un point d'arrêt  
  **Pour basculer un point d'arrêt sur une instruction Transact-SQL**  
@@ -45,5 +45,4 @@ Une fois le point d'arrêt défini, il est représenté par une icône dans la b
     -   Appuyez sur F9.  
   
     -   Dans le menu **Déboguer** , cliquez sur **Basculer le point d’arrêt**.  
-  
   

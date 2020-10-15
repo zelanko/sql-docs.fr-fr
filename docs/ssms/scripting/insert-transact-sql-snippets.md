@@ -16,12 +16,12 @@ ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 979018404b696ef3d8a39b198d4cf115e28f068f
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 2998121fff0be71019539a9e40da5a06bbf9133a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901905"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039016"
 ---
 # <a name="insert-transact-sql-snippets"></a>Insérer des extraits de code Transact-SQL
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "88901905"
 ## <a name="inserting-snippets"></a>Insertion d'extraits de code  
  Vous pouvez utiliser le menu **Insérer un extrait** pour ouvrir une liste par catégorie d’extraits de code et en choisir un.  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] Les extraits de code contiennent des points de remplacement : du texte qui suggère la syntaxe pertinente pour ce point. Par exemple, l'extrait de code CREATE TABLE contient des points de remplacement pour des éléments tels que le nom de la table, les noms de colonne et les types de données de colonne. Après avoir inséré l'extrait de code, vous devez modifier le texte de remplacement pour former une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide. Pour plus d’informations, consultez [Compléter des extraits de code Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] Les extraits de code contiennent des points de remplacement : du texte qui suggère la syntaxe pertinente pour ce point. Par exemple, l'extrait de code CREATE TABLE contient des points de remplacement pour des éléments tels que le nom de la table, les noms de colonne et les types de données de colonne. Après avoir inséré l'extrait de code, vous devez modifier le texte de remplacement pour former une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] valide. Pour plus d’informations, consultez [Compléter des extraits de code Transact-SQL](./complete-transact-sql-snippets.md).  
   
 #### <a name="inserting-a-snippet-by-using-the-insert-snippet-menu"></a>Insertion d'un extrait de code à l'aide du menu Insérer un extrait  
   
@@ -47,6 +47,5 @@ ms.locfileid: "88901905"
 3.  Double-cliquez sur l'extrait de code ou sélectionnez l'extrait de code dans le sélecteur d'extraits, puis appuyez sur TABULATION ou ENTRÉE.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Insérer des extraits de code d’entourage (surround-with) Transact-SQL](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
-  
+ [Insérer des extraits de code d’entourage (surround-with) Transact-SQL](./insert-surround-with-transact-sql-snippets.md)  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 985c1eff05d5b1d3323d8b99818a48258b6c5ed4
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: 90b04d936d4e923da06914dddfa0d934a4996ee5
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059077"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098598"
 ---
 # <a name="ado-programmers-guide-for-using-ado-objects"></a>Guide du programmeur ADO pour l’utilisation d’objets ADO
 Cette documentation fournit une vue d’ensemble de l’utilisation des objets ADO pour travailler avec des données provenant de différentes sources de données. Tout d’abord, l’introduction résume les nouvelles fonctionnalités et la configuration requise pour l’installation, l’utilisation et la redistribution du composant ADO. Les sections suivantes traitent de l’utilisation des différents types d’objets ADO. Enfin, les annexes discutent des différents fournisseurs de données et de services fournis par Microsoft, des messages d’erreur et des conseils sur l’utilisation d’ADO dans plusieurs langages de programmation, en plus des exemples et d’un glossaire.
@@ -27,7 +27,7 @@ Cette documentation fournit une vue d’ensemble de l’utilisation des objets A
 
 -   [Introduction](./ado-introduction.md)
 
--   [ActiveX Data Objects (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15&preserve-view=true)
+-   [ActiveX Data Objects (ADO)](./data/ado-fundamentals.md?view=sql-server-ver15)
 
 -   [Data Services à distance (RDS)](./remote-data-service/remote-data-service-rds.md)
 
@@ -35,4 +35,4 @@ Cette documentation fournit une vue d’ensemble de l’utilisation des objets A
 
 -   [Extensions ADO pour le langage de définition de données et la sécurité (ADOX)](./extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
 
--   [Annexes](./appendixes/appendix-a-providers.md?view=sql-server-ver15&preserve-view=true)
+-   [Annexes](./appendixes/appendix-a-providers.md?view=sql-server-ver15)

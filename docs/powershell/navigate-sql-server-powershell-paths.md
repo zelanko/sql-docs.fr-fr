@@ -1,36 +1,34 @@
 ---
-title: Parcourir les chemins PowerShell SQL Server | Microsoft Docs
+title: Parcourir les chemins PowerShell SQL Server
 description: Découvrez comment utiliser les cmdlets PowerShell pour naviguer dans les structures de chemins d'accès qui représentent la hiérarchie des objets pris en charge par un fournisseur PowerShell.
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c823a1ff344fb453229330a0657d0604432397c0
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: ''
+ms.date: 10/14/2020
+ms.openlocfilehash: 54580e6c1dc218caab00460774d4b04cd87f79d5
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714237"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006121"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Parcourir les chemins PowerShell SQL Server
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Le fournisseur PowerShell du [!INCLUDE[ssDE](../includes/ssde-md.md)] expose le jeu d'objets dans une instance de SQL Server dans une structure similaire à un chemin d'accès de fichier. Vous pouvez utiliser des applets de commande Windows PowerShell pour naviguer jusqu'au chemin d'accès du fournisseur et créer des lecteurs personnalisés pour raccourcir le chemin d'accès que vous devez taper.  
 
-> [!NOTE]
-> Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
-> Des versions précédentes du module **SqlServer** *étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
-> Pour installer le module **SqlServer**, consultez [Installer SQL Server PowerShell](download-sql-server-ps-module.md).
-  
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
+
 Windows PowerShell implémente des applets de commande pour parcourir la structure de chemin d'accès qui représentent la hiérarchie des objets pris en charge par un fournisseur PowerShell. Une fois que vous avez accédé à un nœud dans le chemin d'accès, vous pouvez utiliser d'autres applets de commande pour exécuter des opérations de base sur l'objet actif. Étant donné que les applets de commande sont fréquemment utilisées, elles ont des alias canoniques courts. Il existe également un ensemble d'alias qui mappent les applets de commande à des commandes semblables destinées à l'invite de commandes, et un autre ensemble pour les commandes de l'interpréteur de commandes UNIX.  
-  
- Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implémente un sous-ensemble des applets de commande du fournisseur, comme indiqué dans le tableau suivant :  
-  
+
+Le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implémente un sous-ensemble des applets de commande du fournisseur, comme indiqué dans le tableau suivant :  
+
 |Applet de commande|Alias canonique|Alias d'applet de commande|Alias de l'interpréteur de commandes UNIX|Description|  
 |------------|---------------------|---------------|----------------------|-----------------|  
 |**Get-Location**|**gl**|**pwd**|**pwd**|Obtient le nœud actuel.|  
@@ -39,35 +37,39 @@ Windows PowerShell implémente des applets de commande pour parcourir la structu
 |**Get-Item**|**gi**|||Retourne les propriétés de l'élément actif.|  
 |**Rename-Item**|**rni**|**rn**|**ren**|Renomme un objet.|  
 |**Remove-Item**|**ri**|**del, rd**|**rm, rmdir**|Supprime un objet.|  
-  
-> [!IMPORTANT]  
->  Certains identificateurs (noms d'objets) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiennent des caractères que Windows PowerShell ne prend pas en charge dans les noms de chemins d'accès. Pour plus d'informations sur l'utilisation de noms qui contiennent ces caractères, consultez [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
-  
-### <a name="sql-server-information-returned-by-get-childitem"></a>Informations de SQL Server retournées par Get-ChildItem  
- Les informations retournées par **Get-ChildItem** (ou ses alias **dir** et **ls** ) dépendent de votre emplacement dans un chemin SQLSERVER:.  
-  
-|Emplacement de chemin d'accès|Résultats de Get-ChildItem|  
-|-------------------|----------------------------|  
+
+> [!IMPORTANT]
+> Certains identificateurs (noms d'objets) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiennent des caractères que Windows PowerShell ne prend pas en charge dans les noms de chemins d'accès. Pour plus d'informations sur l'utilisation de noms qui contiennent ces caractères, consultez [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
+
+## <a name="sql-server-information-returned-by-get-childitem"></a>Informations de SQL Server retournées par Get-ChildItem  
+
+Les informations retournées par **Get-ChildItem** (ou ses alias **dir** et **ls** ) dépendent de votre emplacement dans un chemin SQLSERVER:.  
+
+|Emplacement de chemin d'accès|Résultats de Get-ChildItem|
+|-------------------|----------------------------|
 |SQLSERVER:\SQL|Retourne le nom de l'ordinateur local. Si vous avez utilisé SMO ou WMI pour vous connecter aux instances du [!INCLUDE[ssDE](../includes/ssde-md.md)] sur d’autres ordinateurs, ces ordinateurs sont également répertoriés.|  
 |SQLSERVER:\SQL\\*nom_ordinateur*|Liste des instances du [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l'ordinateur.|  
 |SQLSERVER:\SQL\\*nom_ordinateur*\\*nom_instance*|Liste des types d'objets de niveau supérieur dans l'instance, tels que les points de terminaison, les certificats et les bases de données.|  
 |Nœud de classes d'objets, tels que Databases|Liste des objets de ce type, telle que la liste des bases de données : MASTER, Model, AdventureWorks20008R2.|  
 |Nœud de noms d’objets, comme AdventureWorks2012|Liste des types d'objets contenus dans l'objet. Par exemple, une base de données répertorierait des types d'objets tels que les tables et les vues.|  
+
+Par défaut, **Get-ChildItem** ne répertorie pas d’objets système. Utilisez le paramètre *Force* pour afficher les objets système, tels que les objets dans le schéma **sys** .  
+
+### <a name="custom-drives"></a>Lecteurs personnalisés
+
+Windows PowerShell permet aux utilisateurs de définir des lecteurs virtuels appelés lecteurs PowerShell, qui sont mappés aux nœuds de démarrage d’une instruction de chemin. Ils sont généralement utilisés pour raccourcir les chemins d'accès fréquemment tapés. Les chemins SQLSERVER: peuvent devenir longs, occupant beaucoup de place dans la fenêtre Windows PowerShell et nécessitant beaucoup de saisie. Si vous devez effectuer beaucoup de travail sur un nœud de chemin d'accès particulier, vous pouvez définir un lecteur Windows PowerShell personnalisé mappé à ce nœud.  
   
- Par défaut, **Get-ChildItem** ne répertorie pas d’objets système. Utilisez le paramètre *Force* pour afficher les objets système, tels que les objets dans le schéma **sys** .  
-  
-### <a name="custom-drives"></a>Lecteurs personnalisés  
- Windows PowerShell permet aux utilisateurs de définir des lecteurs virtuels appelés lecteurs PowerShell, qui sont mappés aux nœuds de démarrage d’une instruction de chemin. Ils sont généralement utilisés pour raccourcir les chemins d'accès fréquemment tapés. Les chemins SQLSERVER: peuvent devenir longs, occupant beaucoup de place dans la fenêtre Windows PowerShell et nécessitant beaucoup de saisie. Si vous devez effectuer beaucoup de travail sur un nœud de chemin d'accès particulier, vous pouvez définir un lecteur Windows PowerShell personnalisé mappé à ce nœud.  
-  
-## <a name="use-powershell-cmdlet-aliases"></a>Utiliser des alias d'applets de commande PowerShell  
- **Utiliser un alias d'applet de commande**  
-  
--   Au lieu de taper un nom d'applet de commande complet, tapez un alias plus court ou un alias mappé à une commande d'invite de commandes familière.  
-  
+## <a name="use-powershell-cmdlet-aliases"></a>Utiliser des alias d'applets de commande PowerShell
+
+**Utiliser un alias d'applet de commande**
+
+- Au lieu de taper un nom d'applet de commande complet, tapez un alias plus court ou un alias mappé à une commande d'invite de commandes familière.  
+
 ### <a name="alias-example-powershell"></a>Exemple d'alias (PowerShell)  
- Par exemple, vous pouvez utiliser l'un des jeux d'applets de commande ou ensembles d'alias suivants pour récupérer la liste des instances [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles si vous accédez au dossier SQLSERVER:\SQL et si vous demandez la liste des éléments enfants de ce dossier :  
+
+Par exemple, vous pouvez utiliser l'un des jeux d'applets de commande ou ensembles d'alias suivants pour récupérer la liste des instances [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles si vous accédez au dossier SQLSERVER:\SQL et si vous demandez la liste des éléments enfants de ce dossier :  
   
-```  
+```powershell  
 ## Shows using the full cmdet name.  
 Set-Location SQLSERVER:\SQL  
 Get-ChildItem  
@@ -83,7 +85,7 @@ dir
 ## Shows using Unix shell aliases.  
 cd SQLSERVER:\SQL  
 ls  
-```  
+```
   
 ## <a name="use-get-childitem"></a>Utiliser Get-ChildItem  
  **Renvoyer des informations à l'aide de Get-Childitem**  
@@ -95,7 +97,7 @@ ls
 ### <a name="get-childitem-example-powershell"></a>Exemple de Get-ChildItem (PowerShell)  
  Ces exemples illustrent les informations retournées par Get-Childitem pour différents nœuds dans un chemin d'accès de fournisseur SQL Server.  
   
-```  
+```powershell  
 ## Return the current computer and any computer  
 ## to which you have made a SQL or WMI connection.  
 Set-Location SQLSERVER:\SQL  
@@ -115,7 +117,7 @@ Get-ChildItem
 ## The force parameter is used to include the system databases.  
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases  
 Get-ChildItem -force  
-```  
+```
   
 ## <a name="create-a-custom-drive"></a>Créer un lecteur personnalisé  
  **Créer et utiliser un lecteur personnalisé**  
@@ -127,17 +129,16 @@ Get-ChildItem -force
 ### <a name="custom-drive-example-powershell"></a>Exemple de lecteur personnalisé (PowerShell)  
  Cet exemple crée un lecteur virtuel nommé AWDB qui mappe au nœud pour une copie déployée de l’exemple de base de données AdventureWorks2012. Le lecteur virtuel est ensuite utilisé pour naviguer jusqu'à une table dans la base de données.  
   
-```  
+```powershell  
 ## Create a new virtual drive.  
 New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
   
 ## Use AWDB: to navigate to a specific table.  
 Set-Location AWDB:\Tables\Purchasing.Vendor  
-```  
+```
   
-## <a name="see-also"></a>Voir aussi  
- [fournisseur PowerShell SQL Server](sql-server-powershell-provider.md)   
- [Utiliser des chemins d'accès PowerShell SQL Server](work-with-sql-server-powershell-paths.md)   
- [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
+## <a name="see-also"></a>Voir aussi
+
+- [Fournisseur SQL Server PowerShell](sql-server-powershell-provider.md)
+- [Utiliser des chemins SQL Server PowerShell](work-with-sql-server-powershell-paths.md)
+- [SQL Server PowerShell](sql-server-powershell.md)

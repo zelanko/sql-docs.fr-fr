@@ -18,12 +18,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3a7425eebb86ae2afd5d9e41af51fa0badbb304
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 5c71685e6abf6a38827394c24fb9d2dc5e1afb8d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901515"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036262"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Utiliser l’utilitaire
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "88901515"
   
 -   Les utilisateurs soumettent un travail **sqlcmd** soit en spécifiant une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] unique à exécuter, soit en indiquant à l'utilitaire un fichier texte contenant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] à exécuter. La sortie est généralement envoyée dans un fichier texte, mais elle peut aussi être affichée à l’invite de commandes.  
   
--   [Mode SQLCMD](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
+-   [Mode SQLCMD](./edit-sqlcmd-scripts-with-query-editor.md) dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   SMO (SQL Server Management Objects)  
   
@@ -202,7 +202,7 @@ ms.locfileid: "88901515"
  Les lignes situées après la ligne `3> GO` sont les données de sortie d'une instruction `SELECT` . Une fois les données de sortie générées, `sqlcmd` réinitialise l'invite `sqlcmd` et affiche `1>`. Après avoir entré `EXIT` sur la ligne `1>`, la fenêtre d'invite de commandes affiche la même ligne que celle qu'elle a affichée lorsque vous avez ouvert l'invite de commandes la première fois. Ceci indique que `sqlcmd` a mis fin à sa session. Vous pouvez maintenant fermer la fenêtre d'invite de commandes en tapant une autre commande `EXIT` .  
   
 ## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Exécution de fichiers de script Transact-SQL à l’aide de sqlcmd  
- Vous pouvez utiliser **sqlcmd** pour exécuter des fichiers de script de base de données. Il s'agit de fichiers texte contenant un mélange d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , de commandes **sqlcmd** et de variables de script. Pour plus d’informations sur la façon de générer un script pour des variables, consultez [Utiliser sqlcmd avec des variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). **sqlcmd** fonctionne avec les instructions, les commandes et les variables de script contenues dans un fichier de script de manière très similaire à son fonctionnement avec des instructions et des commandes entrées de manière interactive. La principale différence est que **sqlcmd** lit le fichier d'entrée sans marquer de pause au lieu d'attendre que l'utilisateur entre les instructions, les commandes et les variables de script.  
+ Vous pouvez utiliser **sqlcmd** pour exécuter des fichiers de script de base de données. Il s'agit de fichiers texte contenant un mélange d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , de commandes **sqlcmd** et de variables de script. Pour plus d’informations sur la façon de générer un script pour des variables, consultez [Utiliser sqlcmd avec des variables de script](./sqlcmd-use-with-scripting-variables.md). **sqlcmd** fonctionne avec les instructions, les commandes et les variables de script contenues dans un fichier de script de manière très similaire à son fonctionnement avec des instructions et des commandes entrées de manière interactive. La principale différence est que **sqlcmd** lit le fichier d'entrée sans marquer de pause au lieu d'attendre que l'utilisateur entre les instructions, les commandes et les variables de script.  
   
  Il existe plusieurs manières de créer des fichiers de script de base de données :  
   
@@ -535,9 +535,8 @@ SQLCMD -E -N -C
   
 ## <a name="more-about-sqlcmd"></a>En savoir plus sur sqlcmd  
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
- [Utiliser sqlcmd avec des variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
- [Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   
+ [Utiliser sqlcmd avec des variables de script](./sqlcmd-use-with-scripting-variables.md)   
+ [Modifier des scripts SQLCMD à l'aide de l'Éditeur de requête](./edit-sqlcmd-scripts-with-query-editor.md)   
  [Gérer les étapes de travail](../../ssms/agent/manage-job-steps.md)   
  [Créer une étape de travail CmdExec](../../ssms/agent/create-a-cmdexec-job-step.md)  
-  
   

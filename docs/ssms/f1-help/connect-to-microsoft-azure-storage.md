@@ -14,12 +14,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/12/2017
-ms.openlocfilehash: ed8fa9e9ecb2f5f94d177c588584478fae8e8d81
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d1074f9247e8c46a027bde25e3b6a01cc185cb9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417925"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035469"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Se connecter au service Stockage Microsoft Azure
 
@@ -32,7 +32,7 @@ Spécifiez les informations suivantes sur votre compte Azure, puis cliquez sur *
 1.  **Compte de stockage** - Spécifiez le nom du compte de stockage.
 
    >[!NOTE]
-   > Vous pouvez uniquement vous connecter à des [comptes de stockage à usage général](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services). La connexion à d’autres types de comptes de stockage peut entraîner une erreur similaire à celle qui suit :
+   > Vous pouvez uniquement vous connecter à des [comptes de stockage à usage général](/azure/storage/common/storage-introduction#azure-storage-services). La connexion à d’autres types de comptes de stockage peut entraîner une erreur similaire à celle qui suit :
    >
    >  The value for one of the HTTP headers is not in the correct format. (Le format de la valeur d’un des en-têtes HTTP est incorrect.) (Microsoft.SqlServer.StorageClient).
    >
@@ -43,4 +43,3 @@ Spécifiez les informations suivantes sur votre compte Azure, puis cliquez sur *
 3.  **Utiliser des points de terminaison sécurisés (HTTPS)** - Cette option utilise la communication chiffrée et l’identification sécurisée d’un serveur web du réseau.  
   
 4.  **Enregistrer la clé de compte** - Cette option enregistre votre mot de passe dans un fichier chiffré.  
-  

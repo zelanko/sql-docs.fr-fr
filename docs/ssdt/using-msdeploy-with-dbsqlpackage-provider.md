@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 04/26/2017
-ms.openlocfilehash: daeff5e44e714354cb8e0edc525779b197ec7d19
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0cf5e6c46add1ce49b4d95f6eebe1feb2fb496f
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934084"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987765"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Utilisation de MSDeploy avec le fournisseur dbSqlPackage
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934084"
   
 -   **Script** : crée un script Transact\-SQL équivalent au script exécuté par l’action Publier.  
   
-Pour plus d’informations concernant DACFx, consultez la documentation sur l’API gérée par DACFx sous [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) ou [SqlPackage.exe](../tools/sqlpackage.md) (outil en ligne de commande DACFx).  
+Pour plus d’informations concernant DACFx, consultez la documentation sur l’API gérée par DACFx sous [https://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](/dotnet/api/microsoft.sqlserver.dac) ou [SqlPackage.exe](../tools/sqlpackage.md) (outil en ligne de commande DACFx).  
   
 > [!IMPORTANT]  
 > La fonctionnalité de fournisseur dbSqlPackage sera supprimée dans la prochaine version majeure de Visual Studio. Pour plus d'informations sur la façon de publier une base de données avec Web Deploy, consultez [Fournisseur dbDacFx pour la publication de base de données incrémentielle](https://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  
@@ -203,4 +203,3 @@ Ce qui suit est un exemple de syntaxe pour une opération **Script** utilisant *
 ```  
 MSDeploy.exe -verb:sync -source:dbSqlPackage="<source dacpac file path>" -dest:dbSqlPackage="<target SQL Server/SQL Azure connection string>",Action=Script,OutputPath="<path to output sql script>",<destination parameters>  
 ```  
-  

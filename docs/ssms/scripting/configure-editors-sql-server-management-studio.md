@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99fb2ac932b3fde03c024d1ecce06de2ef37d5b1
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 7da0e6a9eff582e69fa37ccd4396039fe6ac1727
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093498"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039093"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>Configurer des éditeurs (SQL Server Management Studio)
 
@@ -42,7 +42,7 @@ Vous pouvez personnaliser le fonctionnement des éditeurs [!INCLUDE[ssManStudioF
   
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
-|Décrit comment spécifier qu'un éditeur doit être ouvert par un double-clic sur un fichier avec une extension spécifiée dans l'Explorateur Windows.|[Associer des extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)|  
-|Décrit comment personnaliser les polices pour rendre le code et le texte plus lisibles.|[Modifier la couleur, la taille et le style de la police](../../relational-databases/scripting/change-font-color-size-and-style.md)|  
-|Décrit comment afficher des propriétés.|[Utiliser la fenêtre Propriétés dans Management Studio](../../relational-databases/scripting/use-the-properties-window-in-management-studio.md)|  
-|Emplacement des pages d'aide F1 concernant les boîtes de dialogue d'options d'éditeur.|[Aide (F1) des pages Options de requête](https://docs.microsoft.com/sql/ssms/f1-help/f1-help-for-server-connections-sql-server-management-studio)|
+|Décrit comment spécifier qu'un éditeur doit être ouvert par un double-clic sur un fichier avec une extension spécifiée dans l'Explorateur Windows.|[Associer des extensions de fichier à un éditeur de code](./associate-file-extensions-to-a-code-editor.md)|  
+|Décrit comment personnaliser les polices pour rendre le code et le texte plus lisibles.|[Modifier la couleur, la taille et le style de la police](./change-font-color-size-and-style.md)|  
+|Décrit comment afficher des propriétés.|[Utiliser la fenêtre Propriétés dans Management Studio](./use-the-properties-window-in-management-studio.md)|  
+|Emplacement des pages d'aide F1 concernant les boîtes de dialogue d'options d'éditeur.|[Aide (F1) des pages Options de requête](../f1-help/f1-help-for-server-connections-sql-server-management-studio.md)|

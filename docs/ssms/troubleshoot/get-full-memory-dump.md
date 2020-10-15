@@ -12,12 +12,12 @@ ms.author: maghan
 ms.reviewer: drskwier, sstein
 ms.custom: seo-lt-2019
 ms.date: 05/17/2019
-ms.openlocfilehash: a15ce5e05e54b6196d363e8967c33fa4ad190295
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: d6055d14fd6edbc711c950aa194cd9b553cb3b78
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990264"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035916"
 ---
 # <a name="get-full-memory-dump"></a>Obtenir l’image mémoire complète
 
@@ -27,7 +27,7 @@ Dans cet article, vous allez apprendre à capturer des informations de diagnosti
 
 Pour capturer des informations de diagnostic pour résoudre les problèmes, suivez les étapes ci-dessous.
 
-1. Télécharger [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Télécharger [ProcDump](/sysinternals/downloads/procdump).
 
 2. Décompressez le téléchargement dans un dossier.
 
@@ -61,7 +61,7 @@ Vous pouvez également obtenir l’image mémoire complète de SSMS lorsqu’ell
 
 Pour capturer des informations de diagnostic pour résoudre une OutOfMemoryException à partir du SSMS, suivez les étapes ci-dessous.
 
-1. Télécharger [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. Télécharger [ProcDump](/sysinternals/downloads/procdump).
 
 2. Décompressez le téléchargement dans un dossier.
 

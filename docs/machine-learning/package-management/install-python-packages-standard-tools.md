@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 3bee37788001edabd454891d8e9081814f198490
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 8b2e61640c03af160985d9e65262eb3da600c3c2
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179188"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956690"
 ---
 # <a name="install-packages-with-python-tools-on-sql-server"></a>Installer des packages avec des outils Python sur SQL Server
 [!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
@@ -52,7 +52,7 @@ Pour plus d’informations sur l’emplacement des packages et les chemins d’i
 
 Pour installer un nouveau package Python qui peut être utilisé dans un script sur SQL Server, installez le package dans l’instance de Machine Learning Services. Si vous avez plusieurs instances de Machine Learning Services, vous devez ajouter le package à chacune d’entre elles.
 
-Le package installé dans les exemples suivants est [CNTK](https://docs.microsoft.com/cognitive-toolkit/), une infrastructure d’apprentissage approfondi de Microsoft qui prend en charge la personnalisation, la formation et le partage de différents types de réseaux neuraux.
+Le package installé dans les exemples suivants est [CNTK](/cognitive-toolkit/), une infrastructure d’apprentissage approfondi de Microsoft qui prend en charge la personnalisation, la formation et le partage de différents types de réseaux neuraux.
 
 ### <a name="for-offline-install-download-the-python-package"></a>Pour une installation hors connexion, téléchargez le package Python
 
@@ -63,7 +63,7 @@ Par exemple, sur un ordinateur connecté à Internet, vous pouvez télécharger 
 > [!IMPORTANT]
 > Assurez-vous que vous disposez de la version Windows du package. Si le fichier se termine par .gz, il ne s’agit probablement pas de la bonne version.
 
-Pour plus d’informations sur les téléchargements de l’infrastructure CNTK pour plusieurs plateformes et pour plusieurs versions de Python, consultez [Configurer CNTK sur votre ordinateur](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine).
+Pour plus d’informations sur les téléchargements de l’infrastructure CNTK pour plusieurs plateformes et pour plusieurs versions de Python, consultez [Configurer CNTK sur votre ordinateur](/cognitive-toolkit/Setup-CNTK-on-your-machine).
 
 ### <a name="locate-the-python-library"></a>Localiser la bibliothèque Python
 
@@ -123,5 +123,5 @@ import cntk
 ## <a name="see-also"></a>Voir aussi
 
 + [Obtenir des informations sur les packages Python](python-package-information.md)
-+ [Tutoriels Python pour SQL Server Machine Learning Services](../tutorials/sql-server-python-tutorials.md)
++ [Tutoriels Python pour SQL Server Machine Learning Services](../tutorials/python-tutorials.md)
 + [API Python pour CNTK](https://cntk.ai/pythondocs/tutorials.html).

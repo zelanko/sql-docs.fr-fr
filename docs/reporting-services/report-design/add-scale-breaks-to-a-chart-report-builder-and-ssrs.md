@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84d66436-ed62-4967-bbbd-b457593ee787
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5bf77e72c4b8ac84d57668ebcf960ed8b926ba6e
-ms.sourcegitcommit: 6c2232c4d2c1ce5710296ce97b909f5ed9787f66
+ms.openlocfilehash: c83ef4812dbd28da971877cf90b1b4e8406af272
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84462333"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935249"
 ---
 # <a name="add-scale-breaks-to-a-chart-report-builder-and-ssrs"></a>Ajouter des séparations d'échelle à un graphique (Générateur de rapports et SSRS)
 
@@ -50,6 +50,6 @@ ms.locfileid: "84462333"
 
 [Graphiques](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 [Mise en forme d’un graphique](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Boîte de dialogue Propriétés de l’axe, Options de l’axe](https://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)  
+[Boîte de dialogue Propriétés de l’axe, Options de l’axe](/previous-versions/sql/)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

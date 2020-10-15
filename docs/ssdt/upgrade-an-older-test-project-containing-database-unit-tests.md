@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 801844176680032b24e777a70acceea65f19f1f2
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 26c12a659e702765b4d69b58d5e1b4247d7aba3c
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883387"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987785"
 ---
 # <a name="upgrade-an-older-test-project-containing-database-unit-tests"></a>Mettre à niveau un projet de test antérieur contenant des tests unitaires de base de données
 
@@ -24,7 +24,7 @@ Mettez à niveau un ancien projet de test créé dans Visual Studio 2010 et cont
 > [!TIP]  
 > Si vous utilisez Visual Studio 2010, après avoir ajouté des tests unitaires SQL Server à un projet de test, n'ajoutez pas de tests unitaires utilisant le modèle de test unitaire de base de données antérieur. Le cas échéant, vous devrez reconvertir le projet avant de pouvoir exécuter les tests.  
   
-Si vous disposez d'un projet de base de données de test créé dans une version de Visual Studio antérieure à Visual Studio 2010, utilisez les informations de la rubrique [Procédure : mettre à niveau des tests unitaires de base de données de versions antérieures de Visual Studio](https://msdn.microsoft.com/library/dd193412(VS.100).aspx) pour mettre à niveau votre projet de base de données vers Visual Studio 2010 avant de mettre à niveau le projet vers SQL Server Data Tools.  
+Si vous disposez d'un projet de base de données de test créé dans une version de Visual Studio antérieure à Visual Studio 2010, utilisez les informations de la rubrique [Procédure : mettre à niveau des tests unitaires de base de données de versions antérieures de Visual Studio](/previous-versions/visualstudio/visual-studio-2010/dd193412(v=vs.100)) pour mettre à niveau votre projet de base de données vers Visual Studio 2010 avant de mettre à niveau le projet vers SQL Server Data Tools.  
   
 ### <a name="initiating-an-upgrade"></a>Initialisation d'une mise à niveau.  
   
@@ -41,4 +41,3 @@ Si vous disposez d'un projet de base de données de test créé dans une version
   
 ## <a name="see-also"></a>Voir aussi  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
-  
