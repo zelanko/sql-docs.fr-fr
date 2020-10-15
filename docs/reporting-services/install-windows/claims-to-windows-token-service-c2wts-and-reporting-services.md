@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 65f2fb2148e1a33aacb9d0b1e82039d594ea3524
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 429933e4491a7e0f7382e5ca8faa3b6ae26f3c82
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88396785"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891599"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Service d'émission de jetons Revendications vers Windows (C2WTS) et Reporting Services
 
@@ -29,9 +29,9 @@ Il est également nécessaire avec le mode SharePoint de SQL Server Reporting S
 
 Le composant WebPart Visionneuse de rapports peut être utilisé pour incorporer des rapports SQL Server Reporting Services en mode natif dans votre site SharePoint. Ce composant WebPart est disponible pour SharePoint 2013 et SharePoint 2016. SharePoint 2013 et SharePoint 2016 utilisent tous deux l’authentification basée sur les revendications. Par conséquent, C2WTS doit être configuré correctement et Reporting Services doit être configuré avec l’authentification Kerberos pour que les rapports s’affichent correctement.
 
-1. Configurez votre instance Reporting Services (mode natif) pour l’authentification Kerberos en spécifiant le compte de service SSRS, en définissant un SPN et en mettant à jour le fichier rsreportserver.config pour utiliser le type d’authentification RSWindowsNegotiate. [Enregistrer un nom de principal du service (SPN) pour un serveur de rapports](https://docs.microsoft.com/sql/reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server)
+1. Configurez votre instance Reporting Services (mode natif) pour l’authentification Kerberos en spécifiant le compte de service SSRS, en définissant un SPN et en mettant à jour le fichier rsreportserver.config pour utiliser le type d’authentification RSWindowsNegotiate. [Enregistrer un nom de principal du service (SPN) pour un serveur de rapports](../report-server/register-a-service-principal-name-spn-for-a-report-server.md)
 
-2. Suivez les étapes dans [Étapes nécessaires pour configurer C2WTS](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#steps-needed-to-configure-c2wts)
+2. Suivez les étapes dans [Étapes nécessaires pour configurer C2WTS](?view=sql-server-2017#steps-needed-to-configure-c2wts)
  
 
 ## <a name="sharepoint-mode-integration"></a>Intégration du mode SharePoint
@@ -44,7 +44,7 @@ Le service d’émission de jetons Revendications vers Windows (C2WTS) SharePoin
 
 Les jetons créés par C2WTS ne fonctionnent qu’avec la délégation contrainte (pour certains services uniquement) et l’option de configuration « avec n’importe quel protocole d’authentification » (transition de protocole).
 
-Si votre environnement utilise la délégation contrainte Kerberos, le service SharePoint server et les sources de données externes doivent résider dans le même domaine Windows. Tout service qui s’appuie sur le service d’émission de jetons Revendications vers Windows (C2WTS) doit utiliser la délégation **contrainte** Kerberos pour permettre à C2WTS d’utiliser une transition de protocole Kerberos dans la conversion de revendications en informations d’identification Windows. Ces exigences s'appliquent à tous les services partagés SharePoint. Pour plus d’informations, consultez [Planifier l’authentification Kerberos dans SharePoint 2013](https://technet.microsoft.com/library/ee806870.aspx).  
+Si votre environnement utilise la délégation contrainte Kerberos, le service SharePoint server et les sources de données externes doivent résider dans le même domaine Windows. Tout service qui s’appuie sur le service d’émission de jetons Revendications vers Windows (C2WTS) doit utiliser la délégation **contrainte** Kerberos pour permettre à C2WTS d’utiliser une transition de protocole Kerberos dans la conversion de revendications en informations d’identification Windows. Ces exigences s'appliquent à tous les services partagés SharePoint. Pour plus d’informations, consultez [Planifier l’authentification Kerberos dans SharePoint 2013](/SharePoint/security-for-sharepoint-server/kerberos-authentication-planning).  
 
 1. Configurez le compte de domaine de service C2WTS. 
 
@@ -84,7 +84,7 @@ Si votre environnement utilise la délégation contrainte Kerberos, le service S
     * Sélectionnez **Utilisateurs ou ordinateurs...&#42;** et entrez le compte qui héberge le service. Par exemple, si un serveur SQL Server s’exécute sous un compte nommé *sqlservice*, entrez `sqlservice`. 
       Pour le **composant WebPart Visionneuse de rapports**, il s’agit du compte de service pour l’instance Reporting Services (mode natif).
 
-    * Sélectionnez la liste des services. Les SPN disponibles sur ce compte s’affichent. Si vous ne voyez pas le service sur ce compte, il est peut-être manquant ou placé sur un autre compte. Vous pouvez utiliser l’utilitaire SetSPN pour ajuster les SPN. Pour le **composant WebPart Visionneuse de rapports**, vous verrez le SPN HTTP configuré dans [Configuration du composant WebPart Visionneuse de rapports](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
+    * Sélectionnez la liste des services. Les SPN disponibles sur ce compte s’affichent. Si vous ne voyez pas le service sur ce compte, il est peut-être manquant ou placé sur un autre compte. Vous pouvez utiliser l’utilitaire SetSPN pour ajuster les SPN. Pour le **composant WebPart Visionneuse de rapports**, vous verrez le SPN HTTP configuré dans [Configuration du composant WebPart Visionneuse de rapports](?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
 
     * Cliquez sur OK pour fermer les boîtes de dialogue.
 

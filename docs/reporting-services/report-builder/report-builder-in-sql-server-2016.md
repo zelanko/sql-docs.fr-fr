@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f67cf34bd18dc6a2743822f66acbee1692000bdb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f8c6cb06fd63f526de699d7c6050dacd1b5ff05b
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80290895"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891859"
 ---
 # <a name="report-builder-in-sql-server"></a>Générateur de rapports dans SQL Server
 
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] est un outil de création de rapports paginés pour les utilisateurs professionnels qui préfèrent travailler dans un environnement autonome au lieu d’utiliser le Concepteur de rapports dans Visual Studio/SSDT.  Quand vous concevez un rapport paginé, vous créez une définition de rapport qui spécifie les données à récupérer, où les obtenir et comment les afficher. Au moment de l’exécution du rapport, le processeur de rapports assimile la définition de rapport que vous avez spécifiée, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez afficher un aperçu de votre rapport dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Publiez ensuite votre rapport sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou intégré SharePoint (2016 et versions antérieures). 
 
-Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir plus sur les [rapports paginés dans Power BI Premium](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (préversion).
+Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir plus sur les [rapports paginés dans Power BI Premium](/power-bi/paginated-reports-report-builder-power-bi) (préversion).
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -93,5 +93,3 @@ Vous pouvez aussi publier un rapport paginé dans le service Power BI. En savoir
   
  [Raccourcis clavier &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Présente les touches de raccourci disponibles pour la navigation et la conception de rapports dans le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)].  
-  
-

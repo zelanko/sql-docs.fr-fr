@@ -13,12 +13,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: a9d16c785696a18262b818668af9d65c55f37616
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ed1e16aac4de3277906d00c2b1a0f4458418cc95
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727493"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081768"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>Utilisation de l'authentification NTLM pour se connecter à SQL Server
 
@@ -79,7 +79,7 @@ Par exemple, votre SPN peut ressembler à ce qui suit : « MSSQLSvc/some-server
 
 Pour plus d'informations sur les noms des principaux du service (SPN), consultez :
 
-- [Prise en charge des noms de principaux du service (SPN) dans les connexions clientes](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md?view=sql-server-2017)
+- [Prise en charge des noms de principaux du service (SPN) dans les connexions clientes](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)
 
 > [!NOTE]  
 > L’attribut de connexion serverSpn est uniquement pris en charge par Microsoft JDBC Driver 4.2 et versions ultérieures.

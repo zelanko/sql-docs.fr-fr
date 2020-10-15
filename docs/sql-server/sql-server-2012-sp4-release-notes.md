@@ -11,12 +11,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: rothja
 ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 395acfc882bdd4277a260f53eba4da8acf57d85f
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: bdfedbb3a60a27ec53744b2b4a6919a5be9510fd
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87111693"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986088"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notes de publication de SQL Server 2012 Service Pack
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -208,11 +208,11 @@ La version SQL Server 2012 Express Service Pack 1 (SP1) inclut la version compl�
 ### <a name="sql-server-data-tier-application-framework-dacfx"></a>SQL Server Data-Tier Application Framework (DACFx)  
 **Prise en charge de la mise à niveau sur place**  
   
-Cette version de l'Infrastructure d'application de couche Données (DACFx) prend en charge la mise à niveau de versions précédentes, de sorte qu'il n'est pas nécessaire de supprimer les installations DACFx précédentes avant d'effectuer la mise à niveau de cette version. Vous pouvez trouver de versions à venir de DACFx [ici](https://msdn.microsoft.com/library/dn702988.aspx).  
+Cette version de l'Infrastructure d'application de couche Données (DACFx) prend en charge la mise à niveau de versions précédentes, de sorte qu'il n'est pas nécessaire de supprimer les installations DACFx précédentes avant d'effectuer la mise à niveau de cette version. Vous pouvez trouver de versions à venir de DACFx [ici](/previous-versions/sql/sql-server-2016/dn702988(v=sql.130)).  
   
 **Prise en charge des index XML sélectifs**  
   
-SQL Server 2012 SP1 inclut la prise en charge des [Index XML sélectifs (SXI)](https://msdn.microsoft.com/598ecdcd-084b-4032-81b2-eed6ae9f5d44), une nouvelle fonctionnalité SQL Server qui fournit une nouvelle façon d'indexer les données des colonnes XML avec des performances et une efficacité supplémentaires.  
+SQL Server 2012 SP1 inclut la prise en charge des [Index XML sélectifs (SXI)](../relational-databases/xml/selective-xml-indexes-sxi.md), une nouvelle fonctionnalité SQL Server qui fournit une nouvelle façon d'indexer les données des colonnes XML avec des performances et une efficacité supplémentaires.  
   
 DACFx prend maintenant en charge des index SXI dans tous les scénarios DAC et tous les outils clients. SXI n'est pris en charge que dans cette version du SSDT. Les versions RTM et de septembre 2012 de SSDT ne prennent pas en charge SXI.  
   
@@ -232,7 +232,7 @@ Précédemment, DACFx ne conservait pas l'état (WITH CHECK / NOCHECK) des contr
   
 -   Importer BACPAC - Importe un fichier .bacpac afin de créer une nouvelle base de données Azure SQL Database ou SQL Server, ou d’en remplir une vide.  
   
-Vous trouverez la documentation complète de SqlPackage.exe sur MSDN [ici](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx).  
+Vous trouverez la documentation complète de SqlPackage.exe sur MSDN [ici](../tools/sqlpackage.md).  
   
 **Compatibilité du package**  
   
@@ -243,11 +243,11 @@ Cette version introduit plusieurs scénarios de compatibilité ascendante des pa
 -   Tous les packages DAC créés par les versions précédentes de DACFx peuvent être consommés par cette version.  
   
 ## <a name="see-also"></a>Voir aussi
-- [Installer des mises à jour de maintenance de SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [Installer des mises à jour de maintenance de SQL Server 2012](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [Comment identifier la version et l'édition de votre SQL Server](https://support.microsoft.com/help/321185)
-- [Installer des mises à jour de maintenance de SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
+- [Installer des mises à jour de maintenance de SQL Server 2012](/previous-versions/sql/sql-server-2012/hh479746(v=sql.110))
 - [Comment identifier la version et l'édition de votre SQL Server](https://support.microsoft.com/help/321185) 
 - [Comment déterminer la version et l'édition de SQL Server](https://support.microsoft.com/kb/321185)  
-- [Fonctionnalités prises en charge par les éditions de SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
+- [Fonctionnalités prises en charge par les éditions de SQL Server 2014](./editions-and-components-of-sql-server-2016.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

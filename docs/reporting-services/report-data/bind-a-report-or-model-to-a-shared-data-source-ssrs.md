@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 23cc15f2-2883-48e2-bc6c-fa0ab61a2e21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c35e3d48167ecba74f18fa0ed13461a5165cec42
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 5e5465b64f8d053839482793b46349cd1b077097
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458921"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891749"
 ---
 # <a name="bind-a-report-to-a-shared-data-source-ssrs"></a>Lier un rapport à une source de données partagée (SSRS)
   Dans certaines situations, par exemple si vous déplacez un rapport d’un serveur test vers un serveur de production, vous pouvez envisager d’enregistrer le fichier sur votre ordinateur local puis de le télécharger sur un autre serveur de rapports. Si vous téléchargez le rapport sur le nouveau serveur, vous devez le lier de nouveau à une source de données partagée stockée sur le nouveau serveur de rapports. Si vous ne liez pas de nouveau le rapport, celui-ci ne fonctionnera pas correctement en cas d’accès à partir du nouveau serveur de rapports.  
@@ -63,8 +63,7 @@ ms.locfileid: "86458921"
   
 ## <a name="see-also"></a>Voir aussi  
  [Télécharger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)   
- [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
+ [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](/previous-versions/sql/)   
  [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
-  
   

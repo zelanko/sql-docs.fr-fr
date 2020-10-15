@@ -10,12 +10,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/01/2017
-ms.openlocfilehash: e128bf4402074ecce5b65951f0d2463368c08bf6
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cfddbdca35d24589b3fa87976cbfb547f14a46ee
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812144"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891789"
 ---
 # <a name="add-and-verify-a-data-connection-report-builder-and-ssrs"></a>Ajouter et vérifier une connexion de données (Générateur de rapports et SSRS)
 
@@ -25,7 +25,7 @@ Pour ajouter une source de données partagée à votre rapport, accédez à un s
 
 Pour créer une source de données incorporée, vous devez disposer des informations de connexion à la source de données externe et connaître les autorisations dont vous avez besoin pour accéder aux données. Ces informations proviennent généralement du propriétaire de la source de données. Vous pouvez tester la connexion pour vérifier que les informations d'identification spécifiées sont suffisantes.
 
-Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) et [Spécifier des informations d’identification dans le Générateur de rapports](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017)
+Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) et [Spécifier des informations d’identification dans le Générateur de rapports](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017)
 
 > [!NOTE]  
 > [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -59,7 +59,7 @@ La source de données apparaît dans le volet des données de rapport.
 
 5. Cliquez sur **Détails**et utilisez les informations pour corriger le problème.
 
-    Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](https://docs.microsoft.com/sql/reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources?view=sql-server-2017).
+    Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](./specify-credential-and-connection-information-for-report-data-sources.md?view=sql-server-2017).
 
 6. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 

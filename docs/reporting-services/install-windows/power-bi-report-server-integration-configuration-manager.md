@@ -7,12 +7,12 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: d0eb3bcdd62d7f78799f754b668544cfdd01fcd9
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: 66893eb9b35ac0635600d6628c3ef0121d5d37c9
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991865"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891299"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Intégration du serveur de rapports Power BI (Gestionnaire de configuration)
 
@@ -24,9 +24,9 @@ La page  **Intégration de Power BI** du Gestionnaire de configuration [!INCLUDE
 
 Outre une connexion Internet active pour pouvoir accéder au service [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] , voici la configuration requise pour effectuer l’intégration [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)].
 
-- **Azure Active Directory :** votre organisation doit utiliser Azure Active Directory, qui fournit la gestion des annuaires et des identités pour les services et applications web Azure. Pour plus d’informations, consultez [Qu’est-ce qu’Azure Active Directory ?](https://azure.microsoft.com/documentation/articles/active-directory-whatis/)
+- **Azure Active Directory :** votre organisation doit utiliser Azure Active Directory, qui fournit la gestion des annuaires et des identités pour les services et applications web Azure. Pour plus d’informations, consultez [Qu’est-ce qu’Azure Active Directory ?](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- **Client géré :** le tableau de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] auquel vous voulez épingler des éléments de rapport doit faire partie d’un client géré Azure AD.  Un client managé est créé automatiquement la première fois que votre organisation s’abonne à des services Azure tels que Microsoft 365 et Microsoft Intune.   Les clients viraux ne sont pas pris en charge pour le moment.  Pour plus d’informations, consultez les sections « Qu’est-ce qu’un client Azure AD ?» et « Obtention d’un annuaire Azure AD » de la rubrique [Qu’est-ce qu’un annuaire Azure AD ?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)
+- **Client géré :** le tableau de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] auquel vous voulez épingler des éléments de rapport doit faire partie d’un client géré Azure AD.  Un client managé est créé automatiquement la première fois que votre organisation s’abonne à des services Azure tels que Microsoft 365 et Microsoft Intune.   Les clients viraux ne sont pas pris en charge pour le moment.  Pour plus d’informations, consultez les sections « Qu’est-ce qu’un client Azure AD ?» et « Obtention d’un annuaire Azure AD » de la rubrique [Qu’est-ce qu’un annuaire Azure AD ?](/previous-versions/azure/azure-services/jj573650(v=azure.100)#BKMK_WhatIsAnAzureADTenant)
 
 - L’intégration de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] doit être effectuée par un utilisateur membre du client Azure AD, un administrateur système [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et un administrateur système pour la base de données de catalogues ReportServer.
 
@@ -46,7 +46,7 @@ Un administrateur peut consulter les fichiers de journaux  [!INCLUDE[ssRSnoversi
 
 ## <a name="to-integrate-and-register-the-report-server"></a><a name="bkmk_steps2integrate"></a> Pour intégrer et inscrire le serveur de rapports
 
-Exécutez la procédure suivante dans le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
+Exécutez la procédure suivante dans le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez [Gestionnaire de configuration du serveur de rapports](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).
 
 1. Sélectionnez la page d’intégration de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] .
 

@@ -10,12 +10,12 @@ ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: cc9294e13539f78ac1d45781e9a51f3a8f944d3e
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: df5e996ffdc9a307b14c8befd71c64036927b562
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247224"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891499"
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Accorder des autorisations aux utilisateurs et alerter les administrateurs
 
@@ -30,7 +30,7 @@ Avant que les utilisateurs et les administrateurs d'alerte puissent créer, modi
 
 **Alerte des administrateurs** : les autorisations doivent inclure l’autorisation SharePoint Gérer les alertes. Par défaut, seul le niveau d'autorisation Contrôle total comprend cette autorisation pour les sites créés avec le modèle de site Team Site. Si vous utilisez d'autres modèles de site, vous verrez des listes différentes de groupes SharePoint par défaut. Vous pouvez ajouter des alertes de gestion à l'un des niveaux d'autorisation prédéfinis ou créer un niveau d'autorisation personnalisé avec l'autorisation requise pour prendre en charge l'alerte des administrateurs qui affichent et suppriment des alertes de données.
 
-Pour en savoir plus sur les autorisations SharePoint, consultez [Autorisations utilisateur et niveaux d’autorisation (SharePoint Server 2010)](https://technet.microsoft.com/library/cc721640.aspx).
+Pour en savoir plus sur les autorisations SharePoint, consultez [Autorisations utilisateur et niveaux d’autorisation (SharePoint Server 2010)](/SharePoint/sites/user-permissions-and-permission-levels).
 
 ## <a name="grant-permissions"></a>Accorder des autorisations
   

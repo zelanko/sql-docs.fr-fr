@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b66ae216df1b50ee1fa71de8e18f7ee8251e1be4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 86bc7c0352e7bf2447628a143a5c1732b132a412
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547871"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891369"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Activer ou désactiver les fonctionnalités Reporting Services
   Vous pouvez désactiver les fonctionnalités de serveur de rapports que vous n'utilisez pas dans le cadre d'une stratégie de verrouillage pour réduire l'exposition aux attaques d'un serveur de rapports de production. Dans la plupart des cas, vous préférerez exécuter les fonctionnalités de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] conjointement afin de bénéficier de toutes les fonctionnalités offertes dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Toutefois, vous pouvez désactiver les fonctionnalités dont vous n'avez pas besoin, selon votre modèle de déploiement. Par exemple, vous pouvez activer le traitement en arrière-plan uniquement si le traitement de tous les rapports a été planifié. De même, vous pouvez exécuter simplement le service web Report Server si vous souhaitez disposer uniquement de rapports interactifs à la demande.  
@@ -116,7 +116,7 @@ ms.locfileid: "84547871"
 4.  Sélectionnez **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Gestionnaire de configuration de Reporting Services (mode natif)](../install-windows/reporting-services-configuration-manager-native-mode.md)
+[Report Server Configuration Manager (mode natif)](../install-windows/reporting-services-configuration-manager-native-mode.md)
 
  D’autres questions ? [Essayez le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
   

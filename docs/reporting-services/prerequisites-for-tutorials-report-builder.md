@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9b8346a6-f4f4-4ad3-bc98-8f2be342ef2d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 15ca9251c5cb9f541710d7a18b8c10864cd24b8c
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 576f4955afdd735eb1b4d016c954828064be139e
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87945515"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891849"
 ---
 # <a name="prerequisites-for-tutorials-report-builder"></a>Éléments requis pour les didacticiels (Générateur de rapports)
 
@@ -36,7 +36,7 @@ Pour exécuter les didacticiels du Générateur de rapports, vous devez réunir 
   
 -   Nom d’une instance de SQL Server et des informations d’identification suffisantes pour l’accès en lecture seule à n’importe quelle base de données. Les requêtes de dataset des didacticiels utilisent des données littérales, mais chaque requête doit être traitée par une instance de SQL Server pour retourner les métadonnées nécessaires à un dataset de rapport. Par exemple, la chaîne de connexion suivante spécifie uniquement un serveur : `data source=<servername>`. Vous devez avoir un accès en lecture à la base de données par défaut qui vous est affectée par l'administrateur système qui vous accorde l'autorisation d'accès au serveur. Vous pouvez également spécifier une base de données, comme indiqué dans la chaîne de connexion suivante : `data source=<servername>;initial catalog=<database>`.  
   
--   Pour le [tutoriel : Rapport cartographique (Générateur de rapports)](tutorial-map-report-report-builder.md), le serveur de rapports doit être configuré pour prendre en charge les cartes Bing comme arrière-plan. Pour plus d’informations, consultez [Planifier la prise en charge de rapport cartographique](https://docs.microsoft.com/sql/reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs).   
+-   Pour le [tutoriel : Rapport cartographique (Générateur de rapports)](tutorial-map-report-report-builder.md), le serveur de rapports doit être configuré pour prendre en charge les cartes Bing comme arrière-plan. Pour plus d’informations, consultez [Planifier la prise en charge de rapport cartographique](./report-design/plan-a-map-report-report-builder-and-ssrs.md).   
 
 -   Le [Tutoriel : La création d’un rapport principal et d’un rapport d’extraction (Générateur de rapports)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) nécessite un accès au cube Contoso Sales. Pour plus d’informations, consultez le didacticiel. 
   

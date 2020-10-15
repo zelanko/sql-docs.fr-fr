@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b5b87404b685fe9e5de09f8703d3c06c48371836
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b0b603e2abb775383083942f93279c8c117a3829
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87247236"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891489"
 ---
 # <a name="feature-reference-reporting-services"></a>Références relatives aux fonctionnalités (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] contient plusieurs outils et applications qui permettent de créer, gérer et afficher des rapports. Cette section répertorie les rubriques spécifiques qui décrivent les boîtes de dialogue, les pages Web et les Assistants de ces outils et applications.  
@@ -29,9 +29,6 @@ ms.locfileid: "87247236"
 ## <a name="in-this-section"></a>Dans cette section  
  [Aide sur le concepteur de rapports via la touche F1](../reporting-services/tools/report-designer-f1-help.md)  
  Aide sur le Concepteur de rapports et ses boîtes de dialogue, sur l'Assistant Rapport et sur l'Assistant Image.  
-  
- [Rubriques d’aide sur le Gestionnaire de configuration de Reporting Services](https://msdn.microsoft.com/library/7b6fb18e-ec39-4661-88e3-977ed64e2c82)  
- Aide sur l’outil de configuration de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utilisé pour déployer et gérer les instances du serveur de rapports.  
   
  [Aide du serveur de rapports dans Management Studio via la touche F1](../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
  Aide sur les boîtes de dialogue utilisées pour gérer des rapports et des serveurs de rapports dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  

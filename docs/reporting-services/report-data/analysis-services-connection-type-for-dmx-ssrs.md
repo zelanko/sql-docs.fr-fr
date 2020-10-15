@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e44b1872f3962f27666bf68b1f661b9804b8880b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: acb81c5dc8533e4870b540dda7c091eb37542d2c
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458981"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891819"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Type de connexion Analysis Services pour DMX (SSRS)
   Quand vous créez un dataset à l’aide d’une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le Concepteur de rapports affiche le Concepteur de requêtes MDX (Multidimensional Expression) s’il détecte un cube valide. Si aucun cube n'est détecté, mais qu'un modèle d'exploration de données est disponible, le Concepteur de rapports affiche le Concepteur de requêtes DMX (Data Mining Extensions). Pour basculer entre les concepteurs MDX et DMX, cliquez sur le bouton **Type de commande DMX** (![Basculer vers la vue langage de requête DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Basculer vers l'affichage de langage de requête DMX")) dans la barre d’outils. Utilisez le Concepteur de requêtes DMX pour créer de manière interactive une requête DMX à l'aide d'éléments graphiques. Pour utiliser le Concepteur de requêtes DMX, la source de données que vous spécifiez doit déjà avoir un modèle d'exploration de données qui fournit les données. Les résultats de requête sont convertis en un jeu de lignes à deux dimensions qui sera utilisé dans le rapport.  
   
 > [!NOTE]  
->  Vous devez former le modèle avant de concevoir le rapport. Pour plus d’informations, consultez [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions).  
+>  Vous devez former le modèle avant de concevoir le rapport. Pour plus d’informations, consultez [Solutions d’exploration de données](/analysis-services/data-mining/data-mining-solutions).  
   
 ## <a name="design-mode"></a>Mode Création  
  Le Concepteur de requêtes DMX s'ouvre en mode Création. Le mode Création comprend une zone de conception graphique permettant de sélectionner un modèle d'exploration de données et une table d'entrée, ainsi qu'une grille utilisée pour spécifier la requête de prédiction. Il existe deux autres modes dans le Concepteur de requêtes DMX : le mode Requête et le mode Résultats. En mode Requête, la grille du mode Création est remplacée par un volet Requête, qui vous permet de taper des requêtes DMX. En mode Résultat, le jeu de résultats retourné par la requête apparaît dans une grille de données.  
@@ -46,8 +46,7 @@ ms.locfileid: "86458981"
  Pour plus d’informations sur la façon de gérer la relation entre les paramètres de rapport et les paramètres de requête, consultez [Associer un paramètre de requête à un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md). Pour plus d’informations sur les paramètres, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Solutions d’exploration de données](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)   
+ [Solutions d’exploration de données](/analysis-services/data-mining/data-mining-solutions)   
  [Outils de création de requêtes &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
-  
   

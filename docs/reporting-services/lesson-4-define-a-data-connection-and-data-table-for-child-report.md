@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 80df8e86ed3d23c5ab097cdab3f26d83838c4544
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a13617ec599390718e5c56222fb40b5e78f384fd
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245118"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892069"
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant
 Après avoir créé le rapport parent, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport enfant. Dans ce didacticiel, la connexion de données doit s’établir avec la base de données AdventureWorks2014.  
@@ -62,7 +62,7 @@ Après avoir créé le rapport parent, l'étape suivante consiste à créer une 
     > [!WARNING]  
     > Veillez à décocher **Créer des méthodes pour envoyer directement des mises à jour à la base de données (GenerateDBDirectMethods)** .  
   
-    Vous avez maintenant terminé la configuration de l’objet ADO.NET [DataTable](https://msdn.microsoft.com/library/system.data.datatable.aspx) comme source de données de votre rapport. Dans la page du Concepteur de DataSet dans Visual Studio, vous devez voir l’objet **DataTable** que vous avez ajouté, qui répertorie les colonnes spécifiées dans la requête. DataSet2 contient les données de la table PurchaseOrderDetail, en fonction de la requête.  
+    Vous avez maintenant terminé la configuration de l’objet ADO.NET [DataTable](/dotnet/api/system.data.datatable) comme source de données de votre rapport. Dans la page du Concepteur de DataSet dans Visual Studio, vous devez voir l’objet **DataTable** que vous avez ajouté, qui répertorie les colonnes spécifiées dans la requête. DataSet2 contient les données de la table PurchaseOrderDetail, en fonction de la requête.  
   
 11. Enregistrez le fichier .  
   
@@ -70,5 +70,3 @@ Après avoir créé le rapport parent, l'étape suivante consiste à créer une 
   
 ## <a name="next-task"></a>Tâche suivante  
 Vous venez de créer une connexion de données et une table de données pour le rapport enfant. Vous allez à présent concevoir le rapport enfant à l'aide de l'Assistant Rapport. Voir [Leçon 5 : Concevoir le rapport enfant à l’aide de l’Assistant Rapport](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
-  
-

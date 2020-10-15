@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d256ac7cc7f7925ad307c527378abcca5b6d121f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f1c8338fe9c477f8885839a0236f2aaaa0e9ebde
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76971382"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890849"
 ---
 # <a name="install-report-builder"></a>Installer le Générateur de rapports
 
@@ -43,7 +43,7 @@ ms.locfileid: "76971382"
  
 ## <a name="install-ssrbnoversion-with-microsoft-endpoint-configuration-manager"></a>Installer [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] avec le Gestionnaire de configuration Microsoft Endpoint 
   
- Un administrateur peut également utiliser un logiciel tel que le Gestionnaire de configuration Microsoft Endpoint pour placer le programme sur votre ordinateur. Pour savoir comment utiliser des logiciels spécifiques pour installer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consultez la documentation des logiciels en question. Pour plus d'informations, consultez la [documentation du Gestionnaire de configuration Microsoft Endpoint](https://docs.microsoft.com/configmgr/).  
+ Un administrateur peut également utiliser un logiciel tel que le Gestionnaire de configuration Microsoft Endpoint pour placer le programme sur votre ordinateur. Pour savoir comment utiliser des logiciels spécifiques pour installer le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)], consultez la documentation des logiciels en question. Pour plus d'informations, consultez la [documentation du Gestionnaire de configuration Microsoft Endpoint](/configmgr/).  
   
 > [!IMPORTANT]  
 >  Les fonctionnalités de sécurité de Windows Vista et Windows 7 requièrent des autorisations élevées pour exécuter des opérations en ligne de commande ; par conséquent, vous êtes invité à confirmer que vous avez l'autorisation d'exécuter la ligne de commande. Il ne s'agit pas d'une installation sans assistance. Pour effectuer une installation sans assistance, vous devez exécuter la ligne de commande en tant qu'administrateur.  
@@ -117,6 +117,5 @@ ms.locfileid: "76971382"
   
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)   
- [Désinstaller le générateur de rapports](../../reporting-services/install-windows/uninstall-report-builder.md)  
-  
+ [Désinstaller le Générateur de rapports](../../reporting-services/install-windows/uninstall-report-builder.md)  
   
