@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: c210bb02d44b22727b74cb49e635b47e6d1f3dba
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b37e339dc13577bd30491f1c155ebb8114868d60
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491746"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038936"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Boîte de dialogue Contraintes de validation (Visual Database Tools)
 
@@ -44,7 +44,7 @@ Supprime la contrainte sélectionnée de la table. Pour annuler l'ajout d'une co
 Se développe pour afficher le champ de la propriété **Expression** .  
   
 **Expression**  
-Affiche l'expression pour la contrainte de validation sélectionnée. Pour les nouvelles contraintes, vous devez entrer l'expression avant de quitter cette zone. Vous pouvez également modifier des contraintes de validation existantes. Pour plus d’informations, consultez [Utilisation des contraintes](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e).  
+Affiche l'expression pour la contrainte de validation sélectionnée. Pour les nouvelles contraintes, vous devez entrer l'expression avant de quitter cette zone. Vous pouvez également modifier des contraintes de validation existantes. Pour plus d’informations, consultez [Utilisation des contraintes](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
   
 **Catégorie Identité**  
 Se développe pour afficher les propriétés de **Nom** et **Description**.  
@@ -69,5 +69,5 @@ Indique si la contrainte doit être appliquée lorsqu'un Agent de réplication e
   
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation des contraintes](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)
+[Utilisation des contraintes](../../relational-databases/tables/unique-constraints-and-check-constraints.md)
 [Boîtes de dialogue Index - Clés &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)

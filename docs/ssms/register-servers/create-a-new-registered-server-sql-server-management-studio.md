@@ -16,12 +16,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 5b75fa312f06fa91d7ffbe9a4a4226f0e3852449
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9bdbf68766e6c271f17254afc4262de341deaeb3
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88480157"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037594"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Créer un nouveau serveur inscrit (SQL Server Management Studio)
 
@@ -33,7 +33,7 @@ Cette rubrique explique comment enregistrer les informations de connexion relati
   
 -   Groupes de serveurs locaux  
   
-     Utilisez des groupes de serveurs locaux pour vous connecter facilement aux serveurs que vous gérez fréquemment. Les serveurs locaux et non locaux sont inscrits dans des groupes de serveurs locaux. Les groupes de serveurs locaux sont uniques à chaque utilisateur. Pour plus d’informations sur la façon de partager des informations de serveur inscrit, consultez [Exporter les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md) et [Importer les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md).  
+     Utilisez des groupes de serveurs locaux pour vous connecter facilement aux serveurs que vous gérez fréquemment. Les serveurs locaux et non locaux sont inscrits dans des groupes de serveurs locaux. Les groupes de serveurs locaux sont uniques à chaque utilisateur. Pour plus d’informations sur la façon de partager des informations de serveur inscrit, consultez [Exporter les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md) et [Importer les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md).  
   
     > [!NOTE]  
     >  Nous recommandons d'utiliser l'authentification Windows dans la mesure du possible.  
@@ -98,7 +98,7 @@ Cette rubrique explique comment enregistrer les informations de connexion relati
      Cliquez sur ce bouton pour enregistrer les paramètres des serveurs inscrits.  
   
 ## <a name="multiserver-queries"></a>Requêtes multiserveurs  
- La fenêtre Éditeur de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut se connecter à plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les interroger simultanément. Les résultats retournés par la requête peuvent être fusionnés dans un volet de résultats unique ou retournés dans des volets de résultats distincts. En guise d'option, l'Éditeur de requête peut inclure des colonnes qui fournissent le nom du serveur ayant produit chaque ligne et également la connexion utilisée pour se connecter au serveur ayant fourni chaque ligne. Pour plus d’informations sur la façon d’exécuter des requêtes multiserveurs, consultez [Exécuter des instructions simultanément sur plusieurs serveurs &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/execute-statements-against-multiple-servers-simultaneously.md).  
+ La fenêtre Éditeur de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] peut se connecter à plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les interroger simultanément. Les résultats retournés par la requête peuvent être fusionnés dans un volet de résultats unique ou retournés dans des volets de résultats distincts. En guise d'option, l'Éditeur de requête peut inclure des colonnes qui fournissent le nom du serveur ayant produit chaque ligne et également la connexion utilisée pour se connecter au serveur ayant fourni chaque ligne. Pour plus d’informations sur la façon d’exécuter des requêtes multiserveurs, consultez [Exécuter des instructions simultanément sur plusieurs serveurs &#40;SQL Server Management Studio&#41;](./execute-statements-against-multiple-servers-simultaneously.md).  
   
  Pour exécuter des requêtes sur tous les serveurs du groupe de serveurs locaux, cliquez avec le bouton droit sur le groupe de serveurs, pointez sur **Se connecter**, puis cliquez sur **Nouvelle requête**. Lorsque les requêtes sont exécutées dans la nouvelle fenêtre de l'éditeur de requête, elles s'exécutent sur tous serveurs du groupe en utilisant les informations de connexion stockées (y compris le contexte d'authentification utilisateur). Toute connexion d'un serveur inscrit à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mais n'enregistrant pas le mot de passe est vouée à l'échec.  
   
@@ -106,7 +106,6 @@ Cette rubrique explique comment enregistrer les informations de connexion relati
   
 ## <a name="see-also"></a>Voir aussi  
  [Masquer les objets système dans l'Explorateur d'objets](../object/hide-system-objects-in-object-explorer.md)   
- [Exporter les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/export-registered-server-information-sql-server-management-studio.md)   
- [Importer les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/import-registered-server-information-sql-server-management-studio.md)  
-  
+ [Exporter les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](./export-registered-server-information-sql-server-management-studio.md)   
+ [Importer les informations des serveurs inscrits &#40;SQL Server Management Studio&#41;](./import-registered-server-information-sql-server-management-studio.md)  
   

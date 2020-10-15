@@ -15,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 32adf127957504d85d071e7b59ad0ab6a0590547
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: abc9fccd9c81f26b872a991c05a2d653384ad123
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88462942"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036903"
 ---
 # <a name="registered-servers-f1-help"></a>Serveurs inscrits – Aide (F1)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Cette section contient l’aide, accessible via la touche F1, relative au composant Serveurs inscrits de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Elle décrit les différentes options.
   
- Pour en savoir plus sur les serveurs inscrits et obtenir des liens vers les options qu’ils offrent, accédez à la rubrique [Inscrire les serveurs](../../tools/sql-server-management-studio/register-servers.md) . 
+ Pour en savoir plus sur les serveurs inscrits et obtenir des liens vers les options qu’ils offrent, accédez à la rubrique [Inscrire les serveurs](./register-servers.md) . 
  
 
  Cliquez sur ce bouton pour enregistrer les paramètres des serveurs inscrits. 
@@ -147,4 +147,3 @@ ms.locfileid: "88462942"
 
  
  
-  

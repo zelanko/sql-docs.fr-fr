@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d83f361efd4d822456366133729759cb16c18647
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 56af9dbb3c2245bc3b45d8dde24ae5be169f886d
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901419"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036278"
 ---
 # <a name="specify-a-hit-count"></a>Spécifier un nombre d'accès
 
@@ -47,7 +47,7 @@ Un nombre d'accès à un point d'arrêt est un compteur incrémenté par le déb
   
  Si vous souhaitez connaître le nombre d'accès à un point d'arrêt sans que l'exécution s'arrête, spécifiez un nombre d'accès avec une valeur très élevée afin que le point d'arrêt n'entraîne jamais l'arrêt.  
   
- L'action par défaut pour un point d'arrêt consiste à arrêter l'exécution lorsque le nombre d'accès et la condition de point d'arrêt sont tous les deux satisfaits. Pour plus d’informations sur la spécification d’autres actions, consultez [Spécifier une action de point d’arrêt](../../relational-databases/scripting/specify-a-breakpoint-action.md).  
+ L'action par défaut pour un point d'arrêt consiste à arrêter l'exécution lorsque le nombre d'accès et la condition de point d'arrêt sont tous les deux satisfaits. Pour plus d’informations sur la spécification d’autres actions, consultez [Spécifier une action de point d’arrêt](./specify-a-breakpoint-action.md).  
   
 #### <a name="to-specify-a-hit-count"></a>Pour spécifier un nombre d'accès  
   
@@ -78,6 +78,5 @@ Un nombre d'accès à un point d'arrêt est un compteur incrémenté par le déb
 4.  Cliquez sur **OK** ou sur **Annuler** pour fermer la boîte de dialogue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier une condition de point d’arrêt](../../relational-databases/scripting/specify-a-breakpoint-condition.md)  
-  
+ [Spécifier une condition de point d’arrêt](./specify-a-breakpoint-condition.md)  
   

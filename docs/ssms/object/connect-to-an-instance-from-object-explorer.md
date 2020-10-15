@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2530029b43a4b01d8b6fce8b321f0c9b66a6a852
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 700944b707416a89d16b5ce53eee471692779870
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417935"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037648"
 ---
 # <a name="connect-to-a-sql-server-or-azure-sql-database"></a>Se connecter à SQL Server ou Azure SQL Database
 
@@ -29,7 +29,7 @@ Pour travailler avec des serveurs et des bases de données, vous devez d’abord
 
 1. Dans l’**Explorateur d’objets**, cliquez sur **Connexion > Moteur de base de données...**.
 
-   ![se connecter](../media/connect-to-server/connect-db-engine.png)
+   ![connect](../media/connect-to-server/connect-db-engine.png)
 
 1. Renseignez l’écran **Se connecter au serveur** et cliquez sur **Connexion** :
 
@@ -58,7 +58,7 @@ Pour travailler avec des serveurs et des bases de données, vous devez d’abord
 [SQL Server Management Studio (SSMS)](../sql-server-management-studio-ssms.md)  
 [Télécharger SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
 
-[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
-[Services d’intégration](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
-[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
-[Stockage Azure](../f1-help/connect-to-microsoft-azure-storage.md)  
+[Analysis Services](/analysis-services/instances/connect-from-client-applications-analysis-services)  
+[Services d’intégration](../../integration-services/sql-server-integration-services.md)  
+[Reporting Services](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)  
+[Stockage Azure](../f1-help/connect-to-microsoft-azure-storage.md)

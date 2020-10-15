@@ -10,12 +10,12 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2303fdda5ae28fb9a384a174a128b2487e637f7e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 053639f8ff25d50e7cad9c05d82cfcac6a0ee071
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173312"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956522"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architecture d’extensibilité dans SQL Server Machine Learning Services 
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -81,7 +81,7 @@ Dans Linux, une seule instance de moteur de base de données est prise en charge
 
 ## <a name="bxlserver-and-sql-satellite"></a>BxlServer et SQL Satellite
 
-**BxlServer** est un exécutable fourni par Microsoft qui gère la communication entre SQL Server et le runtime de langage. Il crée les objets de traitement Windows pour Windows, ou les espaces de noms pour Linux, qui servent à accueillir les sessions de script externe. De même, il provisionne des dossiers de travail sécurisés pour chaque travail de script externe et utilise SQL Satellite pour gérer le transfert de données entre le runtime externe et SQL Server. Si vous exécutez l’[Explorateur de processus](https://technet.microsoft.com/sysinternals/processexplorer.aspx) pendant l’exécution d’un travail, vous pouvez noter la présence d’une ou plusieurs instances de BxlServer.
+**BxlServer** est un exécutable fourni par Microsoft qui gère la communication entre SQL Server et le runtime de langage. Il crée les objets de traitement Windows pour Windows, ou les espaces de noms pour Linux, qui servent à accueillir les sessions de script externe. De même, il provisionne des dossiers de travail sécurisés pour chaque travail de script externe et utilise SQL Satellite pour gérer le transfert de données entre le runtime externe et SQL Server. Si vous exécutez l’[Explorateur de processus](/sysinternals/downloads/process-explorer) pendant l’exécution d’un travail, vous pouvez noter la présence d’une ou plusieurs instances de BxlServer.
 
 En effet, BxlServer est un complément d’environnement de runtime de langage qui fonctionne avec SQL Server pour transférer les données et gérer les tâches. BXL, qui est l’abréviation de « Binary Exchange Language », désigne le format de données utilisé pour déplacer efficacement les données entre SQL Server et les processus externes. BxlServer est aussi une composante importante de produits associés comme Microsoft R Client et Microsoft R Server.
 
@@ -139,7 +139,7 @@ Les protocoles de communication entre les composants et les plateformes de donn�
 
 + **Autres protocoles**
 
-  Les processus qui peuvent avoir besoin de travailler dans des « blocs » ou de transférer des données en retour à un client distant peuvent aussi utiliser le [format de fichier XDF](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf). Le transfert de données proprement dit s’effectue via des objets blob encodés.
+  Les processus qui peuvent avoir besoin de travailler dans des « blocs » ou de transférer des données en retour à un client distant peuvent aussi utiliser le [format de fichier XDF](/machine-learning-server/r/concept-what-is-xdf). Le transfert de données proprement dit s’effectue via des objets blob encodés.
 
 ## <a name="see-also"></a>Voir aussi
 

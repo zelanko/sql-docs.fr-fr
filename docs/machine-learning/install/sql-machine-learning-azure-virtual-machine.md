@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ea886eed26a2f88711d1405b5130570c09c87d6c
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 576a19cf5a86893c248f11897f9a2d83a80598bc
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180489"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956970"
 ---
 # <a name="install-sql-server-machine-learning-services-with-python-and-r-on-an-azure-virtual-machine"></a>Installation de SQL Server Machine Learning Services sur une machine virtuelle Azure avec Python et R
 [!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
@@ -30,9 +30,9 @@ Procédez comme suit :
 
 ## <a name="provision-sql-server-virtual-machine-in-azure"></a>Approvisionnement d’une machine virtuelle SQL Server dans Azure
 
-Pour obtenir des instructions pas à pas, consultez [Provisionnement d’une machine virtuelle Windows SQL Server dans le Portail Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
+Pour obtenir des instructions pas à pas, consultez [Provisionnement d’une machine virtuelle Windows SQL Server dans le Portail Azure](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision). 
 
-L’étape [Configurer les paramètres SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) est le moment où vous ajoutez Machine Learning Services à votre instance.
+L’étape [Configurer les paramètres SQL Server](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings) est le moment où vous ajoutez Machine Learning Services à votre instance.
 
 <a name="firewall"></a>
 

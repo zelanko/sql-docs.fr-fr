@@ -8,16 +8,16 @@ ms.reviewer: mikeray
 ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 07b140aceae2eae1a63b826b0bb4f95c8cfc515b
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 36d4581756cd89e016658f8e415aaec6fbe9a35b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90990352"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988005"
 ---
 # <a name="connect-sql-server-instances-to-azure-arc-at-scale"></a>Connecter des instances SQL Server à Azure Arc à grande échelle
 
-Vous pouvez connecter plusieurs instances SQL Server installées sur plusieurs machines Windows ou Linux à Azure Arc en utilisant le [script généré pour une seule machine](connect.md). Le script se connecte et inscrit chaque machine et les instances SQL Server installées sur celle-ci à Azure Arc. Pour une expérience optimale, nous vous recommandons d’utiliser un [principal de service](https://docs.microsoft.com/azure/active-directory/develop/app-objects-and-service-principals) Azure Active Directory. Un principal de service est une identité de gestion limitée spéciale qui ne dispose que de l’autorisation minimale nécessaire pour connecter des machines à Azure et pour créer les ressources Azure pour un serveur ou serveur SQL doté d’Azure Arc. Cela est plus sûr que d’utiliser un compte doté de privilèges plus élevés comme un Administrateur client et respecte nos meilleures pratiques en matière de sécurité du contrôle d’accès.  
+Vous pouvez connecter plusieurs instances SQL Server installées sur plusieurs machines Windows ou Linux à Azure Arc en utilisant le [script généré pour une seule machine](connect.md). Le script se connecte et inscrit chaque machine et les instances SQL Server installées sur celle-ci à Azure Arc. Pour une expérience optimale, nous vous recommandons d’utiliser un [principal de service](/azure/active-directory/develop/app-objects-and-service-principals) Azure Active Directory. Un principal de service est une identité de gestion limitée spéciale qui ne dispose que de l’autorisation minimale nécessaire pour connecter des machines à Azure et pour créer les ressources Azure pour un serveur ou serveur SQL doté d’Azure Arc. Cela est plus sûr que d’utiliser un compte doté de privilèges plus élevés comme un Administrateur client et respecte nos meilleures pratiques en matière de sécurité du contrôle d’accès.  
 
 Les méthodes d’installation pour installer et configurer l’agent Connected Machine requièrent que la méthode automatisée que vous utilisez dispose des autorisations d’administrateur sur les ordinateurs. Vous utilisez le compte root sur Linux et un membre du groupe Administrateurs local sur Windows.
 

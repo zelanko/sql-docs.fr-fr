@@ -16,12 +16,12 @@ ms.assetid: 4b72ffc6-aea2-4e11-ab36-fa2de4d7bcc5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 613633dced2e5e906ad5d676e05b519e5f1708a5
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: decdf70e29d907e8f95b7e16cbd88ac94e16b857
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901865"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036082"
 ---
 # <a name="identify-issues-with-intellisense---sql-server-management-studio-ssms"></a>Identifier les problèmes avec IntelliSense - SQL Server Management Studio (SSMS)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -48,12 +48,12 @@ ms.locfileid: "88901865"
   
      La plupart des fonctionnalités IntelliSense fonctionnent automatiquement par défaut. Vous pouvez toutefois désactiver n'importe quelle fonctionnalité.  
   
-     Même si l'option qui permet de compléter automatiquement les instructions est désactivée, vous pouvez utiliser une fonctionnalité IntelliSense. Pour plus d’informations, consultez [Configurer IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-intellisense-sql-server-management-studio.md).  
+     Même si l'option qui permet de compléter automatiquement les instructions est désactivée, vous pouvez utiliser une fonctionnalité IntelliSense. Pour plus d’informations, consultez [Configurer IntelliSense &#40;SQL Server Management Studio&#41;](./configure-intellisense-sql-server-management-studio.md).  
   
 ## <a name="database-engine-query-intellisense"></a>Requête de moteur de base de données IntelliSense  
  Les problèmes suivants s’appliquent à l’éditeur de requête du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] :  
   
--   La fonctionnalité IntelliSense de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne prend pas en charge tous les éléments de la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'aide sur les paramètres ne prend pas en charge les paramètres dans certains objets, tels que les procédures stockées étendues. Pour plus d’informations, consultez [Syntaxe Transact-SQL prise en charge par IntelliSense](../../relational-databases/scripting/transact-sql-syntax-supported-by-intellisense.md).  
+-   La fonctionnalité IntelliSense de l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne prend pas en charge tous les éléments de la syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'aide sur les paramètres ne prend pas en charge les paramètres dans certains objets, tels que les procédures stockées étendues. Pour plus d’informations, consultez [Syntaxe Transact-SQL prise en charge par IntelliSense](./transact-sql-syntax-supported-by-intellisense.md).  
   
 -   IntelliSense n’est disponible que si l’éditeur de requête du [!INCLUDE[ssDE](../../includes/ssde-md.md)] est connecté à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure. IntelliSense n’est pas disponible quand l’éditeur de requête est connecté à des versions antérieures du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -70,5 +70,4 @@ ms.locfileid: "88901865"
 -   Les listes de saisie semi-automatique n'incluent pas les objets de base de données pour lesquels vous n'avez pas d'autorisations. IntelliSense signale les références aux objets pour lesquels vous disposez d'autorisations. Par exemple, si vous ouvrez un script écrit par un autre utilisateur, toute référence à un objet pour lequel cette personne dispose d'autorisations, contrairement à vous, est signalée comme incorrecte.  
   
 -   Les listes de saisie semi-automatique peuvent cesser de fonctionner si vous perdez la connexion à l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Rétablissez la connexion à l'instance.  
-  
   

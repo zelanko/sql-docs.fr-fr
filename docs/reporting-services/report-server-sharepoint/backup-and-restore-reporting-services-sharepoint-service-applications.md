@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bf9391bfb9a705379caa6c9f34ae752d2dcc3c6
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: e40a80f58bcc3eb2210ebb127248746e8a45a4f1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767100"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935532"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Sauvegarder et restaurer des applications de service Reporting Services SharePoint
 
@@ -72,9 +72,9 @@ Pour sauvegarder l'application de service, procédez comme suit :
   
  Pour plus d'informations, consultez les rubriques suivantes dans la documentation de SharePoint :  
   
- [Enregistrer une application de service (SharePoint Foundation 2010) dans la documentation SharePoint](https://msdn.microsoft.com/library/ee748601.aspx).  
+ [Enregistrer une application de service (SharePoint Foundation 2010) dans la documentation SharePoint](/previous-versions/office/sharepoint-foundation-2010/ee748601(v=office.14)).  
   
- [Enregistrer une application de service (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
+ [Enregistrer une application de service (SharePoint Server 2010)](/SharePoint/administration/back-up-a-service-application)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Vérifier le compte d’exécution et l’authentification de la base de données
 
@@ -126,9 +126,9 @@ Pour sauvegarder l'application de service, procédez comme suit :
   
  Pour plus d'informations, consultez les rubriques suivantes dans la documentation de SharePoint :  
   
- [Restaurer une application de service (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
+ [Restaurer une application de service (SharePoint Foundation 2010)](/previous-versions/office/sharepoint-foundation-2010/ee748615(v=office.14)).  
   
- [Restaurer une application de service (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
+ [Restaurer une application de service (SharePoint Server 2010)](/SharePoint/administration/restore-a-service-application).  
 
 ### <a name="restore-the-encryption-keys-using-sharepoint-central-administration"></a>Restaurer les clés de chiffrement à l’aide de l’Administration centrale de SharePoint
 

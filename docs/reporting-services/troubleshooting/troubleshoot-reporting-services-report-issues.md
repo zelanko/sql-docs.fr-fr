@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dcd12b54aa0ef9cee4cd5e0be98889119a99336c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 18809d6d6d5937355fedebf72f50e82fadad10ff
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662801"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988373"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Résoudre les problèmes avec les rapports Reporting Services
 Cette rubrique vous fournit des conseils pour résoudre les problèmes associés à la conception de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , l’affichage de l’aperçu d’un rapport, la publication d’un rapport sur un serveur de rapports en mode natif ou en mode SharePoint, l’affichage d’un rapport sur le serveur de rapports ou l’exportation d’un rapport dans un format de fichier différent.  
@@ -38,7 +38,7 @@ Pour afficher la pile des appels, ouvrez une session sur le serveur de rapports 
 ## <a name="use-ssmanstudiofull-to-verify-queries-and-credentials"></a>Utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] pour vérifier les informations d’identification et les requêtes  
 Vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull.md)] pour valider des requêtes complexes avant de les inclure dans votre rapport.   
   
-Pour plus d’informations, consultez [Éditeur de requête du moteur de base de données](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md) et [Gérer les objets à l’aide de l’Explorateur d’objets](~/ssms/object/manage-objects-by-using-object-explorer.md).  
+Pour plus d’informations, consultez [Éditeur de requête du moteur de base de données](../../ssms/f1-help/database-engine-query-editor-sql-server-management-studio.md) et [Gérer les objets à l’aide de l’Explorateur d’objets](~/ssms/object/manage-objects-by-using-object-explorer.md).  
   
 ## <a name="analyze-problem-reports-with-report-data-cached-on-the-client"></a>Analyser les rapports de problèmes avec des données de rapport mises en cache sur le client  
 Lorsqu’un auteur de rapport crée un rapport dans Business Intelligence Development Studio, le client de création met en cache les données sous forme d’un fichier .rdl.data qui est utilisé lorsque vous affichez l’aperçu d’un rapport. Chaque fois que la requête est modifiée, le cache est mis à jour. Pour déboguer les problèmes de rapport, il peut parfois s'avérer utile d'empêcher l'actualisation des données de rapport de manière à ce que les données ne soient pas modifiées pendant le débogage.   
@@ -60,5 +60,3 @@ Tant que la valeur est 1, seules les données de rapport mises en cache sont uti
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
-

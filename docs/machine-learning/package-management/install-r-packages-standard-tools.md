@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: dd9b0dde6a7cc032b31fc2d8c45a06f616e3ed58
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 55e02294fcf59b4dc8d826f468b21ff8718492ef
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179057"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956674"
 ---
 # <a name="install-packages-with-r-tools"></a>Installer des packages avec les outils R
 
@@ -127,4 +127,4 @@ Comme alternative à **miniCRAN**, vous pouvez effectuer ces étapes manuellemen
 
 + [Obtenir des informations sur les packages R](r-package-information.md)
 + [Conseils pour l’utilisation de packages R](tips-for-using-r-packages.md)
-+ [Tutoriels sur le langage R SQL Server](../tutorials/sql-server-r-tutorials.md)
++ [Tutoriels sur le langage R SQL Server](../tutorials/r-tutorials.md)

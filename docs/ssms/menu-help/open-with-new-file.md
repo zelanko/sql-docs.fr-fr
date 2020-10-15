@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e619e457bf538a0a8c75e0615e45ca52567ea43a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cb7bd83a9a7526466d1a7798ab9ef3d71647d4fd
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491935"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037668"
 ---
 # <a name="open-with-new-file"></a>Ouvrir avec (Nouveau fichier)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -44,4 +44,4 @@ Pour spécifier un éditeur par défaut (et, le cas échéant, des options d’e
 > Dans la liste de programmes figurant sous **Sélectionnez le programme à ouvrir**, le nom de l’éditeur par défaut pour le type de fichier sélectionné est suivi de **(Par défaut)**.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Association d’extensions de fichier à un éditeur de code](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
+[Association d’extensions de fichier à un éditeur de code](../scripting/associate-file-extensions-to-a-code-editor.md)

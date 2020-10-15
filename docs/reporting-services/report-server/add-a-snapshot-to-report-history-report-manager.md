@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/26/2019
-ms.openlocfilehash: 1effcdd44d04b3125cdeaf9983372cdcb00bd429
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 549333b7556e3537fd8a6a628738b0c0f87a1da9
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87245732"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935321"
 ---
 # <a name="add-a-snapshot-to-report-history"></a>Ajouter un instantané à un historique de rapport
 
@@ -71,7 +71,7 @@ Les instantanés de rapport ne sont pas enregistrés dans un format de rendu par
 - [Configurer les propriétés d’exécution d’un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limiter l’historique de rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Planifications](../../reporting-services/subscriptions/schedules.md)   
-- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end
 
@@ -160,6 +160,6 @@ Les instantanés de rapport ne sont pas enregistrés dans un format de rendu par
 - [Configurer les propriétés d’exécution d’un rapport (portail web)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)
 - [Limiter l'historique de rapport (portail web)](../../reporting-services/reports/limit-report-history-report-manager.md)
 - [Planifications](../../reporting-services/subscriptions/schedules.md)   
-- [Portail web d’un serveur de rapports  &#40;mode natif SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)
+- [Portail web d’un serveur de rapports  &#40;mode natif SSRS&#41;](../web-portal-ssrs-native-mode.md)
 
 ::: moniker-end

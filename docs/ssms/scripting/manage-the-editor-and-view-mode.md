@@ -21,12 +21,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1402467a2a030afc77390b5fccb2246fe2ae52c5
-ms.sourcegitcommit: 9e1f1c6ee8f5a10d18a2599bfd9f3eb6081829e1
+ms.openlocfilehash: 9e71aa6719c06dd181d756ebb1ee5e14e47ba96f
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/29/2020
-ms.locfileid: "89093427"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038976"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Gérer l'Éditeur et le mode d'affichage
 
@@ -91,7 +91,7 @@ L'Éditeur offre plusieurs moyens de contrôler l'affichage du code.
  Lorsque le mode Espace virtuel n'est pas activé, le curseur passe de la fin d'une ligne au premier caractère de la ligne suivante et inversement.  
   
 ## <a name="displaying-line-numbers"></a>affichage des numéros de ligne  
- Vous pouvez activer la numérotation des lignes dans votre code. Les numéros de ligne sont utiles pour se déplacer dans le code. Pour plus d’informations, consultez [Navigation dans le code et le texte](../../relational-databases/scripting/navigate-code-and-text.md).  
+ Vous pouvez activer la numérotation des lignes dans votre code. Les numéros de ligne sont utiles pour se déplacer dans le code. Pour plus d’informations, consultez [Navigation dans le code et le texte](./navigate-code-and-text.md).  
   
 > [!NOTE]  
 >  L'activation de la numérotation des lignes ne signifie pas que ces numéros soient repris sur le document imprimé. Pour imprimer les numéros de ligne, cochez la case **Numéros de ligne** dans la commande **Mise en page** du menu **Fichier** .  
@@ -122,5 +122,4 @@ L'Éditeur offre plusieurs moyens de contrôler l'affichage du code.
 #### <a name="to-hide-all-the-tool-windows-at-once"></a>Pour masquer toutes les fenêtres Outil en même temps  
   
 1.  Dans le menu **Fenêtre** , sélectionnez **Masquer tout automatiquement** .  
-  
   

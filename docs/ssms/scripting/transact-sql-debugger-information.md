@@ -19,12 +19,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 12/04/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35bd9f8d1870c45b5c2b401639e261806e9d3f91
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: ad70e5f88163668c8b0802b6b66996e608f0ffd9
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88902096"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92036172"
 ---
 # <a name="transact-sql-debugger---information"></a>Débogueur Transact-SQL - Informations
 
@@ -70,10 +70,10 @@ En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre prin
   
  Vous pouvez définir les valeurs de données pour des variables dans les fenêtres **Variables locales**, **Espion**ou **Espion express** en cliquant avec le bouton droit sur la ligne, puis en sélectionnant **Modifier la valeur**. Les colonnes **Valeur** dans la fenêtre **Variables locales** , la fenêtre **Espion** et la boîte de dialogue **Espion express** prennent toutes en charge les visualiseurs de données texte, XML et HTML. Les visualiseurs sont représentés par une bulle d’informations en forme de loupe à droite de la colonne **Valeurs** . Vous pouvez utiliser les visualiseurs pour afficher des valeurs de données texte, XML ou HTML dans des affichages qui correspondent aux types de données, par exemple des fichiers XML dans une fenêtre de navigateur.  
   
- En mode débogage, lorsque vous déplacez le pointeur de la souris sur un identificateur, une fenêtre contextuelle **Info express** affiche le nom de l’expression et sa valeur actuelle. Pour plus d’informations, consultez [Info express &#40;IntelliSense&#41;](../../relational-databases/scripting/quick-info-intellisense.md).  
+ En mode débogage, lorsque vous déplacez le pointeur de la souris sur un identificateur, une fenêtre contextuelle **Info express** affiche le nom de l’expression et sa valeur actuelle. Pour plus d’informations, consultez [Info express &#40;IntelliSense&#41;](./quick-info-intellisense.md).  
   
 ## <a name="breakpoints"></a>Points d’arrêt  
- Vous pouvez utiliser la fenêtre **Points d’arrêt** pour afficher et gérer les points d’arrêt actuellement définis. Pour plus d’informations, consultez [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md).  
+ Vous pouvez utiliser la fenêtre **Points d’arrêt** pour afficher et gérer les points d’arrêt actuellement définis. Pour plus d’informations, consultez [Exécuter pas à pas du code Transact-SQL](./step-through-transact-sql-code.md).  
   
 ## <a name="call-stacks"></a>Pile des appels  
  La fenêtre **Pile des appels** affiche l’emplacement d’exécution actuel et des informations sur la façon dont l’exécution a atteint l’emplacement d’exécution actuel à partir de la fenêtre de l’éditeur d’origine via des modules [!INCLUDE[tsql](../../includes/tsql-md.md)] (fonctions, procédures stockées ou déclencheurs). Chaque ligne dans la fenêtre **Pile des appels** est appelée un « frame de pile » et représente l’un des éléments suivants :  
@@ -104,13 +104,12 @@ En mode débogage, le débogueur ouvre deux fenêtres en bas de la fenêtre prin
  En mode débogage, les onglets **Résultats** et **Messages** sont toujours actifs dans l’éditeur de requête. L’onglet **Résultats** continue à afficher les jeux de résultats des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont exécutées au cours d’une session de débogage. L’onglet **Messages** continue à afficher des messages système, tels que *xx* lignes affectées et la sortie des instructions PRINT et RAISERROR.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Variables locales (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
- [Espion (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
- [Boîte de dialogue Espion express](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   
- [Fenêtre Points d'arrêt](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md)   
- [Fenêtre Pile des appels](../../relational-databases/scripting/transact-sql-debugger-call-stack-window.md)   
- [Fenêtre Threads](../../relational-databases/scripting/transact-sql-debugger-threads-window.md)   
- [Fenêtre Sortie](../../relational-databases/scripting/transact-sql-debugger-output-window.md)   
- [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)  
-  
+ [Variables locales (fenêtre)](./transact-sql-debugger-locals-window.md)   
+ [Espion (fenêtre)](./transact-sql-debugger-watch-window.md)   
+ [Boîte de dialogue Espion express](./transact-sql-debugger-quickwatch-dialog-box.md)   
+ [Fenêtre Points d'arrêt](./transact-sql-debugger-breakpoints-window.md)   
+ [Fenêtre Pile des appels](./transact-sql-debugger-call-stack-window.md)   
+ [Fenêtre Threads](./transact-sql-debugger-threads-window.md)   
+ [Fenêtre Sortie](./transact-sql-debugger-output-window.md)   
+ [Débogueur Transact-SQL](./transact-sql-debugger.md)  
   

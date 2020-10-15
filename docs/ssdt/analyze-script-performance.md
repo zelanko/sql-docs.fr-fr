@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: dbaec18d8f28e820af1905047de89aa6c00e9743
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 2abb12c7df083de7e19148729cb64e16b96d528d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85519109"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988235"
 ---
 # <a name="analyze-script-performance"></a>Analyser les performances de script
 
@@ -30,7 +30,7 @@ Pour activer/désactiver la collecte de statistiques client, pointez sur **Édi
   
 Si les statistiques client sont activées, l’onglet **Statistiques** s’affiche à côté de l’onglet **Message** lors de l’exécution de la requête. Si elles sont désactivées, l’onglet **Statistiques** n’apparaît pas. Les statistiques provenant d'exécutions de requêtes successives sont répertoriées avec les valeurs moyennes.  
   
-Pour plus d’informations sur les statistiques collectées, consultez [Volet Interroger les statistiques de fenêtre](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) et la section [Onglet Statistiques client](https://msdn.microsoft.com/library/aa833205.aspx) de cette rubrique.  
+Pour plus d’informations sur les statistiques collectées, consultez [Volet Interroger les statistiques de fenêtre](https://msdn.microsoft.com/library/aa216969(SQL.80).aspx) et la section [Onglet Statistiques client](/previous-versions/visualstudio/visual-studio-2010/aa833205(v=vs.100)) de cette rubrique.  
   
 ## <a name="using-execution-plans"></a>Utilisation des plans d'exécution  
 Les plans d'exécution affichent la façon dont le moteur de base de données parcourt les tables et utilise les index pour accéder aux données d'une requête ou de toute autre instruction DML (par exemple, une mise à jour) et les traiter. Cette approche graphique s'avère très utile pour la compréhension des caractéristiques de performances d'une requête.  
@@ -39,7 +39,7 @@ Ouvrez un script Transact\-SQL contenant les requêtes à analyser dans l’édi
   
 Une fois le script analysé ou exécuté, cliquez sur l’onglet **Plan d’exécution** pour voir une représentation graphique du résultat du plan d’exécution.  
   
-Le résultat du plan d'exécution graphique se lit de droite à gauche et de haut en bas. Chaque requête du traitement analysé est affichée, de même que le coût de chaque requête sous la forme d'un pourcentage du coût total du traitement. Pour afficher des informations supplémentaires, comme le coût et le fonctionnement de chaque étape, placez le curseur sur les [icônes des opérateurs logiques et physiques](https://msdn.microsoft.com/library/ms175913.aspx) sur le plan graphique.  
+Le résultat du plan d'exécution graphique se lit de droite à gauche et de haut en bas. Chaque requête du traitement analysé est affichée, de même que le coût de chaque requête sous la forme d'un pourcentage du coût total du traitement. Pour afficher des informations supplémentaires, comme le coût et le fonctionnement de chaque étape, placez le curseur sur les [icônes des opérateurs logiques et physiques](/previous-versions/sql/sql-server-2008-r2/ms175913(v=sql.105)) sur le plan graphique.  
   
 Pour modifier l’affichage du plan d’exécution, cliquez avec le bouton droit sur le **Plan d’exécution**, puis sélectionnez **Zoom avant**, **Zoom arrière**, **Zoom personnalisé** ou **Zoom pour ajuster**. **Zoom avant** et **Zoom arrière** permettent respectivement d’agrandir et de réduire l’affichage du plan d’exécution suivant des pourcentages fixes. **Zoom personnalisé** vous permet de définir votre propre facteur de zoom, par exemple 80 %.  **Zoom pour ajuster** ajuste le plan d’exécution au volet de résultats.  
   
@@ -50,5 +50,4 @@ Vous pouvez utiliser l'analyse du code pour découvrir d'éventuels problèmes d
   
 Pour utiliser l’analyse du code manuellement, cliquez avec le bouton droit sur votre projet dans **l’Explorateur de solutions** et sélectionnez **Exécuter l’analyse du code**. Les avertissements d'analyse du code s'affichent dans la fenêtre **Liste d'erreurs** . Vous pouvez double-cliquer sur un avertissement pour accéder au code source comportant le problème. Pour afficher des informations supplémentaires et les corrections possibles d’un avertissement, utilisez le menu contextuel **Afficher de l’aide sur l’erreur**.  
   
-Pour plus d’informations sur l’analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](https://msdn.microsoft.com/library/dd172133.aspx).  
-  
+Pour plus d’informations sur l’analyse du code, consultez [Analyse du code de la base de données pour améliorer la qualité du code](/previous-versions/visualstudio/visual-studio-2010/dd172133(v=vs.100)).  

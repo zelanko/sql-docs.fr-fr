@@ -23,12 +23,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.date: 10/20/2016
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09732c9089781026239c300dd53f51108d3e149a
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: 18ddcd8e2671416af4af22ee324caedd296b89bf
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901983"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039079"
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL
 
@@ -170,8 +170,8 @@ Toute tentative de démarrer le débogueur [!INCLUDE[tsql](../../includes/tsql-m
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)
-- [Exécuter le débogueur Transact-SQL](../../relational-databases/scripting/run-the-transact-sql-debugger.md)
-- [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)
-- [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)
-- [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [Débogueur Transact-SQL](./transact-sql-debugger.md)
+- [Exécuter le débogueur Transact-SQL](./run-the-transact-sql-debugger.md)
+- [Exécuter pas à pas du code Transact-SQL](./step-through-transact-sql-code.md)
+- [Informations du débogueur Transact-SQL](./transact-sql-debugger-information.md)
+- [Éditeur de requête du moteur de base de données &#40;SQL Server Management Studio&#41;](../f1-help/database-engine-query-editor-sql-server-management-studio.md)
