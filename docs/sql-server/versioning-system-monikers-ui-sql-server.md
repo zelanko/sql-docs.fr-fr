@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e4bdddf08a1d9b276b4e4714d75a0a231560ef19
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d0a851a8f2374740f9a6cfe9d1ae6db5f2ee113e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373165"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987245"
 ---
 # <a name="versioning-system-for-sql-documentation"></a>Système de gestion de versions dans la documentation SQL
 
@@ -159,17 +159,17 @@ Le système de gestion de versions est entièrement implémenté pour SQL Server
 
 - _Versions 2012 et antérieures :_ &nbsp; le système de gestion de versions n’est pas utilisé pour SQL Server versions 2012 et antérieures.
     - Le moniker spécial **SQL Server - older** (SQL Server - version antérieure) est destiné à masquer presque tous les articles. Les rares exceptions sont quelques articles dont peuvent avoir besoin les clients de versions antérieures.
-    - [Versions antérieures de SQL Server, 2012-2005](../toc/previous-versions-sql-server.md)
+    - [Versions antérieures de SQL Server, 2012-2005](./previous-versions-sql-server.md)
 
 - _2014 :_ &nbsp; le système de gestion de versions est partiellement implémenté pour SQL Server 2014. Vous pouvez choisir SQL Server 2014 dans le contrôle de gestion de versions ; cela fonctionne. Toutefois, en interne, les fichiers pour 2014 sont dédiés uniquement à 2014, de la même façon que les fichiers pour 2008 sont dédiés uniquement à 2008.
-    - [Documentation SQL Server 2014 hors connexion](/sql/sql-server/sql-server-offline-documentation)
+    - [Documentation SQL Server 2014 hors connexion](./sql-server-offline-documentation.md)
 
 - _Versions 2016 et ultérieures :_ &nbsp; le système de gestion de versions est entièrement implémenté pour SQL Server versions 2016 et ultérieures.
-    - [Bienvenue dans la documentation SQL Server versions 2016 et ultérieures](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
+    - [Bienvenue dans la documentation SQL Server versions 2016 et ultérieures](./index.yml?preserve-view=true&view=sql-server-2016)
     - [Documentation SQL Server 2016 hors connexion](sql-server-offline-documentation.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Versions antérieures de SQL Server, 2014-2005](../toc/previous-versions-sql-server.md)  
+[Versions antérieures de SQL Server, 2014-2005](./previous-versions-sql-server.md)  
 [Guide de navigation dans la documentation de SQL Server](sql-docs-navigation-guide.md)  
-[Guide pratique pour contribuer à la documentation SQL Server](sql-server-docs-contribute.md)  
+[Guide pratique pour contribuer à la documentation SQL Server](sql-server-docs-contribute.md)

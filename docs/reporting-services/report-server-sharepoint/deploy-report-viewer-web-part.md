@@ -8,12 +8,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 49ac20b46c5453c431cb856ad060512b48315262
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: b6c0280e54fab14c4a3f76f75a4639dad99a0635
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767027"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933558"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Déployer le composant WebPart Visionneuse de rapports de SQL Server Reporting Services sur un site SharePoint
 
@@ -53,7 +53,7 @@ Cette section montre comment déployer le package de solution sur votre batterie
 
 1. Sur un serveur SharePoint, ouvrez un environnement de ligne de commande SharePoint en utilisant l’option **Exécuter en tant qu’administrateur**.
 
-2. Exécutez [Add-SPSolution](https://technet.microsoft.com/library/ff607552(v=office.16).aspx) pour ajouter la solution de batterie de serveurs.
+2. Exécutez [Add-SPSolution](/powershell/module/sharepoint-server/Add-SPSolution) pour ajouter la solution de batterie de serveurs.
 
     ```
     Add-SPSolution -LiteralPath "{path to file}\ReportViewerWebPart.wsp"
@@ -61,7 +61,7 @@ Cette section montre comment déployer le package de solution sur votre batterie
 
     L'applet de commande retourne le nom de la solution, son ID, et Deployed=False. À l'étape suivante, vous déploierez la solution.
 
-3. Exécutez l’applet de commande [Install-SPSolution](https://technet.microsoft.com/library/ff607534(v=office.16).aspx) pour déployer la solution de batterie de serveurs.
+3. Exécutez l’applet de commande [Install-SPSolution](/powershell/module/sharepoint-server/Install-SPSolution) pour déployer la solution de batterie de serveurs.
 
     **SharePoint 2013**
 
@@ -93,7 +93,7 @@ Cette section montre comment déployer le package de solution sur votre batterie
 
 6. Répétez ces étapes pour les collections de sites supplémentaires en ouvrant chaque site et en cliquant sur Actions du site.
 
-Si vous le souhaitez, vous pouvez également utiliser PowerShell pour activer cette fonctionnalité sur tous les sites à l’aide de l’applet de commande [Enable-SPFeature](https://technet.microsoft.com/library/ff607803.aspx).
+Si vous le souhaitez, vous pouvez également utiliser PowerShell pour activer cette fonctionnalité sur tous les sites à l’aide de l’applet de commande [Enable-SPFeature](/powershell/module/sharepoint-server/Enable-SPFeature).
 
 ```
 Get-SPWebApplication "<web application url>" | Get-SPSite -Limit ALL | 

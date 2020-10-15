@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 276e6e9f1ad326b0b3930d729fe233f2e4cbb7c6
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: c310b902889b8dc78b81609439f09ba2d6e4beb7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255622"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934894"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Opérateurs dans les expressions (Générateur de rapports et SSRS)
   Un opérateur est un symbole qui représente des actions exécutées sur un ou plusieurs termes d'une expression. Les catégories d'opérateurs suivantes sont prises en charge dans une expression : arithmétique, de comparaison, de concaténation, logique ou au niveau du bit, et de décalage de bits.  
@@ -78,10 +78,9 @@ ms.locfileid: "84255622"
 |>>|Effectue un décalage arithmétique vers la droite sur un modèle binaire.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue Expression](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
+ [Boîte de dialogue Expression](/previous-versions/sql/)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Boîte de dialogue Expression &#40;Générateur de rapports&#41;](https://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)  
-  
+ [Boîte de dialogue Expression &#40;Générateur de rapports&#41;](./expressions-report-builder-and-ssrs.md)  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9fd4b92dcacf94e2a0196f210050954a84c1ac3d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f30b82c72a726faf5d2fb0e221fa36f4872acf12
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88498012"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987335"
 ---
 # <a name="securable-items"></a>Éléments sécurisables
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise la sécurité basée sur les rôles pour contrôler l’accès aux éléments stockés sur un serveur de rapports. Lorsque vous accordez à un utilisateur l'accès à un serveur de rapports, vous le faites en général en créant une paire d'attributions de rôle :  
@@ -61,7 +61,6 @@ ms.locfileid: "88498012"
 ## <a name="see-also"></a>Voir aussi  
  [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](./grant-user-access-to-a-report-server.md)   
  [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
-  
   

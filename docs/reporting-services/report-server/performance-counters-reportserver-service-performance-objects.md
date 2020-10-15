@@ -12,12 +12,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b7afe684cb88327fd7b8bb22ae2637ad4064cb25
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: fe50faeeb134ca9162f5de25b6c775d3b6eea829
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84545521"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986956"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Compteurs de performances - Service ReportServer, objets de performance
   Cette rubrique décrit les compteurs de performance pour les objets de performance **ReportServer:Service** et **ReportServerSharePoint:Service** qui font partie d’un déploiement de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -25,7 +25,7 @@ ms.locfileid: "84545521"
 > [!NOTE]  
 >  Les objets de performance sont utilisés pour contrôler des événements sur le serveur de rapports local. Si vous exécutez un serveur de rapports dans un déploiement avec montée en puissance parallèle, les chiffres s'appliquent au serveur actuel et non au déploiement avec montée en puissance parallèle dans son ensemble.  
   
- Les objets de performance sont disponibles dans l’Analyseur de performances Windows (**Perfmon.exe**). Pour plus d'informations, consultez la documentation Windows. [Profilage de runtime](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Les objets de performance sont disponibles dans l’Analyseur de performances Windows (**Perfmon.exe**). Pour plus d'informations, consultez la documentation Windows. [Profilage de runtime](/dotnet/framework/debug-trace-profile/runtime-profiling) (https://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Dans cette rubrique :  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84545521"
   
  Le tableau suivant répertorie les compteurs inclus dans l’objet de performance **ReportServer:Service** .  
   
- ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Le script Windows PowerShell suivant retourne la liste des compteurs de performance pour le compteur de performance CounterSetName.  
+ ![Contenu relatif à PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Le script Windows PowerShell suivant retourne la liste des compteurs de performance pour le compteur de performance CounterSetName.  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -77,7 +77,7 @@ ms.locfileid: "84545521"
 ##  <a name="reportserversharepointservice-sharepoint-mode-report-server"></a><a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service (serveur de rapports en mode SharePoint)  
  L’objet de performance **ReportServerSharePoint:Service** a été ajouté dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Le script Windows PowerShell suivant retourne la liste des compteurs de performance pour le compteur de performance CounterSetName.  
+ ![Contenu relatif à PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Le script Windows PowerShell suivant retourne la liste des compteurs de performance pour le compteur de performance CounterSetName.  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -90,7 +90,7 @@ ms.locfileid: "84545521"
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="use-powershell-cmdlets-to-return-lists"></a><a name="bkmk_powershell"></a> Utiliser des applets de commande PowerShell pour retourner des listes  
- ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Le script Windows PowerShell suivant retourne la liste des compteurs de performance pour le compteur de performance CounterSetName « ReportServerSharePoint:Service » :  
+ ![Contenu relatif à PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") Le script Windows PowerShell suivant retourne la liste des compteurs de performance pour le compteur de performance CounterSetName « ReportServerSharePoint:Service » :  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -100,5 +100,4 @@ ms.locfileid: "84545521"
  [Analyse des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)   
  [Compteurs de performances du service web MSRS 2011 et des objets de performance du service Windows MSRS 2011 &#40;mode natif&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Compteurs de performances du service Web MSRS 2011 en mode SharePoint et des objets de performance du service Windows MSRS 2011 en mode SharePoint &#40;mode SharePoint&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md)  
-  
   

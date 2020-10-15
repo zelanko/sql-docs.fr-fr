@@ -13,12 +13,12 @@ ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 566239ac238afb66650c50cd9d96c8fa81d3f70c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 68b0546f18d5026caf7e0a141eb58bd62efa2188
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88497142"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92034872"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Boîte de dialogue Index de texte intégral (Visual Database Tools)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -28,7 +28,7 @@ Cette boîte de dialogue permet de créer un index de texte intégral si vous so
 > Pour créer un index de texte intégral, vous devez d'abord créer un catalogue de texte intégral pour la base de données à l'aide d'un outil extérieur, tel que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou Enterprise Manager.  
 > 
 > [!NOTE]
-> La fonctionnalité d’index de texte intégral n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4).  
+> La fonctionnalité d’index de texte intégral n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 ## <a name="options"></a>Options  
 **Index de texte intégral sélectionné**  
@@ -95,6 +95,5 @@ Affiche le type de l'analyse actuelle ou de la dernière analyse : Complet, Incr
 Affiche la liste de tous les noms de colonnes de cette base de données qui possèdent des index uniques à une seule colonne. Ces colonnes peuvent être utilisées pour créer un index de texte intégral.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Utiliser l'Assistant Indexation de texte intégral](https://msdn.microsoft.com/3e9d9605-6525-4781-9168-fdaa06db3459)  
-[CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd)  
-  
+[Utiliser l'Assistant Indexation de texte intégral](../../relational-databases/search/use-the-full-text-indexing-wizard.md)  
+[CREATE FULLTEXT INDEX (Transact-SQL)](../../t-sql/statements/create-fulltext-index-transact-sql.md)  

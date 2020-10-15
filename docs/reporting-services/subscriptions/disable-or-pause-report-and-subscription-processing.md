@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ffdfc6e3a2141eddb484bc4dde3b25bda5a8b70a
-ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.openlocfilehash: 1ea16180c9a4e67f40302de7d70ae357b8393010
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87396108"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986625"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Désactiver ou suspendre le traitement des rapports et des abonnements  
 Il existe plusieurs approches pour désactiver ou suspendre le traitement des rapports et des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les approches présentées dans cet article couvrent la désactivation d’un abonnement jusqu’à la suspension de la connexion à la source de données. Toutes les approches ne sont pas possibles avec les deux modes de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. La table suivante récapitule les méthodes et les modes de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pris en charge :  
@@ -60,7 +60,7 @@ Dans le portail web, accédez à l'abonnement à partir de la page **Mes abonnem
   
  `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
-![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") : **Utiliser Windows PowerShell pour désactiver un seul abonnement :** Utilisez le script PowerShell suivant pour désactiver un abonnement spécifique. Mettez à jour le nom du serveur et l’ID d’abonnement dans le script.  
+![Contenu relatif à PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") : **Utiliser Windows PowerShell pour désactiver un seul abonnement :** Utilisez le script PowerShell suivant pour désactiver un abonnement spécifique. Mettez à jour le nom du serveur et l’ID d’abonnement dans le script.  
   
 ```PS  
 #disable specific subscription  
@@ -80,7 +80,7 @@ $subscriptions | select subscriptionid, report, status, path
   
 ```  
   
- ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour répertorier tous les abonnements désactivés :** Utilisez le script PowerShell suivant pour répertorier tous les abonnements désactivés sur le serveur de rapports en mode natif actuel. Mettez à jour le nom du serveur.  
+ ![Contenu relatif à PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour répertorier tous les abonnements désactivés :** Utilisez le script PowerShell suivant pour répertorier tous les abonnements désactivés sur le serveur de rapports en mode natif actuel. Mettez à jour le nom du serveur.  
   
 ```  
 #list all disabled subscriptions  
@@ -91,7 +91,7 @@ Write-Host "----------------------------------- ";
 $subscriptions | Where-Object {$_.Active.DisabledByUserSpecified -and $_.Active.DisabledByUser } | select subscriptionid, report, status, lastexecuted,path | format-table -auto  
 ```  
   
- ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour activer tous les abonnements désactivés :** Utilisez le script PowerShell suivant pour activer tous les abonnements actuellement désactivés. Mettez à jour le nom du serveur.  
+ ![Contenu relatif à PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour activer tous les abonnements désactivés :** Utilisez le script PowerShell suivant pour activer tous les abonnements actuellement désactivés. Mettez à jour le nom du serveur.  
   
 ```  
 #enable all subscriptions  
@@ -105,7 +105,7 @@ ForEach ($subscription in $subscriptions)
   
 ```  
   
- ![Contenu relatif à PowerShell](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour DÉSACTIVER tous les abonnements :** Utilisez le script PowerShell suivant pour désactiver **TOUS** les abonnements.  
+ ![Contenu relatif à PowerShell](/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour DÉSACTIVER tous les abonnements :** Utilisez le script PowerShell suivant pour désactiver **TOUS** les abonnements.  
   
 ```  
 #DISABLE all subscriptions  
@@ -121,7 +121,7 @@ ForEach ($subscription in $subscriptions)
 ##  <a name="pause-a-shared-schedule"></a><a name="bkmk_pause_schedule"></a> Suspendre une planification partagée  
  Si un rapport ou un abonnement s'exécute à partir d'une planification partagée, vous pouvez suspendre la planification pour empêcher le traitement. Tous les traitements de rapports et d'abonnements pilotés par la planification sont reportés jusqu'à la reprise de la planification.  
   
--   **Mode SharePoint :** ![Paramètres SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint") Dans **Paramètres du site**, sélectionnez **Gérer les planifications partagées**. Sélectionnez la planification, puis cliquez sur **Suspendre les planifications sélectionnées**.  
+-   **Mode SharePoint :** ![Paramètres SharePoint](/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint") Dans **Paramètres du site**, sélectionnez **Gérer les planifications partagées**. Sélectionnez la planification, puis cliquez sur **Suspendre les planifications sélectionnées**.  
   
 -   **Mode natif :** Dans le portail web, sélectionnez le bouton **Paramètres** ![bouton Paramètres](media/ssrs-portal-settings-gear.png) dans la barre de menus en haut de l’écran du portail web, puis sélectionnez **Paramètres du site** dans le menu déroulant. Sélectionnez l’onglet **Planifications** pour afficher la page Planifications. Cochez les cases en regard des planifications que vous souhaitez activer ou désactiver, puis sélectionnez le bouton **Activer** ou **Désactiver** respectivement pour effectuer l’action souhaitée. La colonne État est mise à jour avec la valeur « Désactivé » ou « Activé » en conséquence.  
   
@@ -177,4 +177,3 @@ Un moyen de rendre un rapport indisponible consiste à supprimer temporairement 
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)   
  [Éléments sécurisables](../../reporting-services/security/securable-items.md) 
-  

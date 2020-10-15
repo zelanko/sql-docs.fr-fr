@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e7fa3484063a5d57de1540e54454b674d8d687c9
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: 24cf362c711abd450533b218c699fc7f2bc1dd18
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86967500"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987255"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Nouveautés de SQL Server 2016
 [!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
@@ -59,10 +59,10 @@ SQL Server 2016 Analysis Services offre une amélioration des performances, de l
 - Le nouveau **vérificateur de cohérence de base de données (DBCC)** s’exécute en interne pour détecter les problèmes potentiels d’altération des données.
 - **Direct Query**, qui interroge des données externes en direct plutôt qu’après les avoir importées, prend désormais en charge d’autres sources de données, notamment SQL Azure, Oracle et Teradata. 
 - Il y a beaucoup de nouvelles **fonctions DAX (Data Access Expressions)** .
-- Le nouvel espace de noms **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** gère les modèles et les instances en mode tabulaire. 
-- [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) a été réusiné de façon à inclure un deuxième assembly, **Microsoft.AnalysisServices.Core.dll**.
+- Le nouvel espace de noms **[Microsoft.AnalysisServices.Tabular](/dotnet/api/microsoft.analysisservices.tabular)** gère les modèles et les instances en mode tabulaire. 
+- [Analysis Services Management Objects (AMO)](/dotnet/api/) a été réusiné de façon à inclure un deuxième assembly, **Microsoft.AnalysisServices.Core.dll**.
 
-Consultez la page [Moteur Analysis Services (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
+Consultez la page [Moteur Analysis Services (SSAS)](/analysis-services/what-s-new-in-analysis-services). 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - Prise en charge des **groupes de disponibilité AlwaysOn**
@@ -97,13 +97,13 @@ Microsoft a soigneusement remanié Reporting Services dans cette version.
 Consultez la page [Reporting Services (SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md).
 
 ## <a name="next-steps"></a>Étapes suivantes   
-- [Programme d’installation de SQL Server](../database-engine/install-windows/installation-for-sql-server-2016.md)   
+- [Programme d’installation de SQL Server](../database-engine/install-windows/install-sql-server.md)   
 - [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
 - [Feuille de données SQL Server 2016](https://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
-- [Fonctionnalités prises en charge par les éditions de SQL Server](https://msdn.microsoft.com/library/cc645993.aspx)
+- [Fonctionnalités prises en charge par les éditions de SQL Server](./editions-and-components-of-sql-server-2016.md)
 - [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)
 - [Installer SQL Server 2016 avec l’Assistant Installation](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-- [Configuration et installation de maintenance](https://msdn.microsoft.com/library/6df72a78-6b36-4bc1-948e-04b4ebe46094)
+- [Configuration et installation de maintenance](../database-engine/install-windows/install-sql-server-servicing-updates.md)
 - [Nouveau module SQL PowerShell](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

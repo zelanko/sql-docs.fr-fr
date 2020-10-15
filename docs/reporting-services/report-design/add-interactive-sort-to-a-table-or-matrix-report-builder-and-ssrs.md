@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d33cab9f1805652501f9d65cfeb06e47dc444733
-ms.sourcegitcommit: 93e4fd75e8fe0cc85e7949c9adf23b0e1c275465
+ms.openlocfilehash: 7674b05ba6c1fb5de836ed3b767e6653cbdc51cf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84255512"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933289"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Ajouter un tri interactif à un tableau ou une matrice (Générateur de rapports et SSRS)
   Ajoutez des boutons de tri interactif pour permettre aux utilisateurs de modifier l'ordre de tri des lignes et des colonnes dans les tables et les matrices. Cette fonctionnalité est prise en charge uniquement dans les formats de rendu qui prennent en charge les interactions avec l'utilisateur, tels que le format HTML.  
@@ -61,7 +61,7 @@ ms.locfileid: "84255512"
   
  Pour vérifier l’action de tri, cliquez sur **Exécuter** afin d’afficher un aperçu du rapport, puis cliquez sur les boutons de tri interactifs.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
   
 ##  <a name="sorting-a-top-level-parent-row-group-for-a-table-or-matrix"></a><a name="SortingTopLevelParent"></a> Tri d’un groupe de lignes parent de niveau supérieur dans une table ou une matrice  
  Ajoutez un bouton de tri interactif à un en-tête de colonne pour permettre aux utilisateurs de cliquer sur ce dernier afin de trier les lignes de groupes parents d'une table ou d'une matrice selon la valeur affichée dans cette colonne. L'ordre des groupes enfants n'est pas modifié.  
@@ -85,7 +85,7 @@ ms.locfileid: "84255512"
   
  Pour vérifier l’action de tri, cliquez sur **Exécuter** afin d’afficher un aperçu du rapport, puis cliquez sur les boutons de tri interactifs.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
   
 ##  <a name="sorting-child-groups-or-detail-rows-for-a-group"></a><a name="SortingChildGroups"></a> Tri de groupes enfants ou de lignes de détails dans un groupe  
  Ajoutez un bouton de tri interactif à une ligne d'en-tête de groupe pour permettre aux utilisateurs de trier les valeurs d'un groupe enfant à partir d'un groupe parent ou de trier les lignes de détails du groupe enfant le plus profond.  
@@ -108,7 +108,7 @@ ms.locfileid: "84255512"
   
  Pour vérifier l’action de tri, cliquez sur **Exécuter** afin d’afficher un aperçu du rapport, puis cliquez sur les boutons de tri interactifs.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
   
 ##  <a name="sorting-rows-based-on-a-complex-group-expression"></a><a name="SortingMultipleRowGroups"></a> Tri de lignes en fonction d'une expression de groupe complexe  
  Ajoutez un bouton de tri interactif à un en-tête de colonne pour permettre aux utilisateurs de cliquer sur l'en-tête de colonne afin de trier les groupes parents et enfants combinés. Pour ce faire, vous devez modifier l'expression de groupe afin qu'elle corresponde à un composite des deux groupes. Par exemple, supposons qu'une matrice affiche des totaux de stock d'un magasin pour des articles regroupés par couleur et par taille. Pour trier les lignes selon la combinaison de couleur et de taille, au lieu d'avoir un groupe séparé pour la couleur et un autre pour la taille, vous pouvez définir un groupe qui combine les deux critères. Pour plus d’informations sur la définition d’expressions de groupe, consultez [Exemples d’expressions de groupe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md).  
@@ -165,7 +165,7 @@ ms.locfileid: "84255512"
   
  Pour vérifier l’action de tri, cliquez sur **Exécuter** afin d’afficher un aperçu du rapport, puis cliquez sur le bouton de tri interactif. La matrice effectue un tri selon les valeurs combinées de l'expression de groupe, bien que chaque valeur individuelle s'affiche dans sa propre colonne.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
   
 ##  <a name="synchronizing-sort-order-for-multiple-data-regions"></a><a name="SynchronizingSortOrder"></a> Synchronisation de l'ordre de tri pour plusieurs régions de données  
  Ajoutez un bouton de tri interactif qui permettra aux utilisateurs de trier plusieurs régions de données d'un simple clic. Lorsque vous créez un bouton de tri interactif, vous pouvez spécifier une synchronisation du tri pour plusieurs régions de données, selon le même dataset de rapport. Par exemple, un rapport peut inclure une matrice et un graphique qui présente les données sous forme graphique. Lorsqu'un utilisateur modifie l'ordre de tri des lignes dans la matrice, le graphique affiche automatiquement le même ordre de tri.  
@@ -214,12 +214,11 @@ ms.locfileid: "84255512"
   
  Pour vérifier l’action de tri, cliquez sur **Exécuter** afin d’afficher un aperçu du rapport, puis cliquez sur le bouton de tri interactif. La matrice effectue un tri selon les valeurs combinées de l'expression de groupe, bien que chaque valeur individuelle s'affiche dans sa propre colonne.  
   
- ![Icône de flèche utilisée avec le lien Retour en haut](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
+ ![Icône de flèche utilisée avec le lien Retour en haut](/analysis-services/analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour en haut") [Retour en haut](#BackToTop)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tri interactif &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
  [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3550bd04341d9975870aa18483f2901e845795e0
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 8f11ec9625a675e42d712bd1bb1bba953ce979c0
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627519"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934583"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Rôle de SOAP dans Reporting Services
   Le service Web Report Server utilise la messagerie SOAP (Simple Object Access Protocol) pour envoyer des commandes textuelles sur un réseau. Ces commandes prennent la forme de texte XML envoyé sur le Web à l'aide du protocole HTTP. En utilisant SOAP en tant que protocole de communication, le service Web Report Server permet aux applications et aux composants d'échanger des données avec le serveur de rapports à l'aide d'une infrastructure ouverte et largement reconnue. La norme SOAP est définie sur le site www.w3.org/TR/SOAP.  
@@ -60,8 +60,7 @@ public void DeleteItem(string item);
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès à l’API SOAP](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../web-portal-ssrs-native-mode.md)   
  [Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Service Web des serveurs de rapports](../../reporting-services/report-server-web-service/report-server-web-service.md)  
-  
   

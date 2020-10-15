@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb4d1592b2541c16a34c96820a27942ef8bc08e3
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: 8f7d43c03e95ed66b9b0cd2d9c1b8ee39cdb42c5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87248585"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987495"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Concepts de Reporting Services (SSRS)
   Cette rubrique fournit un bref résumé des concepts de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -99,7 +99,7 @@ Vous créez des rapports Reporting Services mobiles (fichiers .rsmobile) dans l�
   
 -   **Informations d'identification.** Les informations d'identification sont des informations d'authentification qui doivent être fournies pour vous permettre d'accéder à des données externes.  
   
-     Les informations d'identification sont utilisées pour créer une source de données incorporée, exécuter une requête ou récupérer des données lors du traitement d'un rapport. Le propriétaire de la source de données détermine le type d'informations d'identification à utiliser pour accéder aux données. Les informations d'identification sont gérées indépendamment de la connexion de données sur un serveur de rapports, un site SharePoint ou un ordinateur local, au sein d'un environnement de création de rapports. Selon le type de source de données, les informations d'identification peuvent être enregistrées à des fins d'automatisation, ou définies pour être demandées à chaque utilisateur. Les informations d'identification nécessaires peuvent différer selon que vous vous connectez à la source de données à partir de votre ordinateur ou à partir du serveur de rapports. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+     Les informations d'identification sont utilisées pour créer une source de données incorporée, exécuter une requête ou récupérer des données lors du traitement d'un rapport. Le propriétaire de la source de données détermine le type d'informations d'identification à utiliser pour accéder aux données. Les informations d'identification sont gérées indépendamment de la connexion de données sur un serveur de rapports, un site SharePoint ou un ordinateur local, au sein d'un environnement de création de rapports. Selon le type de source de données, les informations d'identification peuvent être enregistrées à des fins d'automatisation, ou définies pour être demandées à chaque utilisateur. Les informations d'identification nécessaires peuvent différer selon que vous vous connectez à la source de données à partir de votre ordinateur ou à partir du serveur de rapports. Pour plus d’informations, consultez [Spécifier des informations d’identification dans le Générateur de rapports](/previous-versions/sql/).  
   
 ### <a name="report-datasets"></a>Datasets de rapport 
  Dans un rapport, un dataset représente des données de rapport retournées comme résultat de l'exécution d'une requête sur une source de données externe. Le dataset dépend de la connexion de données qui contient des informations sur la source de données externe. Les données elles-mêmes ne sont pas intégrées dans la définition de rapport. Un dataset contient une commande de requête, une collection de champs, des paramètres, des filtres et des options de données incluant notamment le respect de la casse et le classement. Il existe deux types de datasets :  
@@ -121,11 +121,11 @@ Vous créez des rapports Reporting Services mobiles (fichiers .rsmobile) dans l�
   
  Utilisez les régions de données pour activer des visualisations de données courantes : nombres et texte dans une table, une matrice ou une liste ; représentations graphiques dans un graphique ou une jauge ; affichages géographiques sur une carte. Les tables, matrices et listes sont toutes basées sur la région de données du tableau matriciel, lequel peut se développer autant que nécessaire pour afficher toutes les données du dataset. Une région de données de tableau matriciel prend en charge plusieurs groupes de lignes et de colonnes statiques et dynamiques. Un graphique affiche plusieurs séries et catégories de groupes sous divers formats graphiques. Une jauge affiche une valeur unique ou une valeur agrégée pour un dataset. Une carte affiche les données spatiales en tant qu'éléments cartographiques dont l'apparence peut varier selon les données agrégées d'un dataset.  
   
--   **Table.** Une table est une région de données qui présente les données ligne par ligne. Les colonnes de table sont statiques : vous déterminez le nombre de colonnes lorsque vous concevez votre rapport. Les lignes de table sont dynamiques : elles s'étendent vers le bas pour contenir les données. Vous pouvez ajouter aux tables des groupes, qui organisent les données par champs ou expressions sélectionnés. Pour plus d’informations, consultez [Tables, matrices et listes (Générateur de rapports et SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
+-   **Table.** Une table est une région de données qui présente les données ligne par ligne. Les colonnes de table sont statiques : vous déterminez le nombre de colonnes lorsque vous concevez votre rapport. Les lignes de table sont dynamiques : elles s'étendent vers le bas pour contenir les données. Vous pouvez ajouter aux tables des groupes, qui organisent les données par champs ou expressions sélectionnés. Pour plus d’informations, consultez [Tables, matrices et listes (Générateur de rapports et SSRS)](./report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
--   **Matrice.** Une matrice est également connue sous le nom d'analyse croisée. Une région de données de type matrice contient à la fois des colonnes et des lignes dynamiques : elles s'étendent pour contenir les données. Une matrice peut posséder des lignes et des colonnes dynamiques, ainsi que des lignes et des colonnes statiques. Les colonnes ou les lignes peuvent contenir d'autres colonnes ou lignes ; en outre, elles peuvent être utilisées pour regrouper des données. Pour plus d’informations, consultez [Tables, matrices et listes (Générateur de rapports et SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
+-   **Matrice.** Une matrice est également connue sous le nom d'analyse croisée. Une région de données de type matrice contient à la fois des colonnes et des lignes dynamiques : elles s'étendent pour contenir les données. Une matrice peut posséder des lignes et des colonnes dynamiques, ainsi que des lignes et des colonnes statiques. Les colonnes ou les lignes peuvent contenir d'autres colonnes ou lignes ; en outre, elles peuvent être utilisées pour regrouper des données. Pour plus d’informations, consultez [Tables, matrices et listes (Générateur de rapports et SSRS)](./report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
--   **Liste.** Une liste est une région de données qui présente les données selon une disposition libre. Vous pouvez organiser les éléments de rapport de façon à créer un formulaire avec des zones de texte, des images et d'autres régions de données placées aux emplacements de votre choix dans la liste. Pour plus d’informations, consultez [Tables, matrices et listes (Générateur de rapports et SSRS)](https://msdn.microsoft.com/9dcf3fc8-bf9c-4a14-a03d-e78254aa4098).  
+-   **Liste.** Une liste est une région de données qui présente les données selon une disposition libre. Vous pouvez organiser les éléments de rapport de façon à créer un formulaire avec des zones de texte, des images et d'autres régions de données placées aux emplacements de votre choix dans la liste. Pour plus d’informations, consultez [Tables, matrices et listes (Générateur de rapports et SSRS)](./report-design/tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 -   **Graphique.** Un graphique présente les données graphiquement. Les exemples de graphiques courants sont les graphiques à barres, à secteurs et en courbes, mais de nombreux autres styles de graphiques sont pris en charge. Pour plus d’informations, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md).  
   
@@ -213,5 +213,4 @@ Illustration du traitement d'un rapport
  [Fonctionnalités et tâches Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
  [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
-  
   

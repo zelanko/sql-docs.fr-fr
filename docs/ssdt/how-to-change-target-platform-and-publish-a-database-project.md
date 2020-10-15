@@ -13,12 +13,12 @@ ms.author: maghan
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
-ms.openlocfilehash: 1d69b0f2a11afb46e46ff88a49dff12c2037ecca
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: c5ee0b9febeec7da287e26a40adcb6910b80991d
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942465"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987215"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procédure : Modifier la plateforme cible et publier un projet de base de données
 
@@ -43,7 +43,7 @@ SSDT simplifie aussi cette tâche en tenant compte de votre plateforme cible et 
   
 3.  L’erreur suivante s’affiche dans le volet **Liste d’erreurs** : SQL70015 : Le « schéma de partition et de référence du groupe de fichiers » n’est pas pris en charge dans SQL Azure.  
   
-    SSDT valide automatiquement votre script en fonction de la plateforme cible. Dans ce cas, étant donné que le groupe de fichiers n'est pas pris en charge dans SQL Azure, SSDT retourne une erreur. Pour connaître la liste des instructions Transact\-SQL non prises en charge dans SQL Azure, voir [Instructions Transact-SQL partiellement prises en charge (Microsoft Azure SQL Database)](https://msdn.microsoft.com/library/ee336267.aspx).  
+    SSDT valide automatiquement votre script en fonction de la plateforme cible. Dans ce cas, étant donné que le groupe de fichiers n'est pas pris en charge dans SQL Azure, SSDT retourne une erreur. Pour connaître la liste des instructions Transact\-SQL non prises en charge dans SQL Azure, voir [Instructions Transact-SQL partiellement prises en charge (Microsoft Azure SQL Database)](/previous-versions/azure/ee336267(v=azure.100)).  
   
 4.  Supprimez la clause `ON` . Notez que l'erreur disparaît immédiatement de la **Liste d'erreurs**.  
   
@@ -68,4 +68,3 @@ SSDT simplifie aussi cette tâche en tenant compte de votre plateforme cible et 
 **Un projet qui spécifie Microsoft SQL Server 2012 comme plateforme cible risque de rencontrer des problèmes de compatibilité avec SQL Server 2008.** S’il contient des entités (par exemple, un objet Séquence) introduites dans Microsoft SQL Server 2012, l’opération de publication échouera.  
   
 Le déploiement échoue si les prédicats d'objet utilisent **CONTAINS** OU **FREETEXT** sur un index de recherche en texte intégral nouvellement créé et que des scripts transactionnels sont utilisés. Si l'option consistant à inclure des scripts transactionnels est activée au cours du déploiement, les procédures et vues sont définies au sein d'une transaction, alors qu'un index de texte intégral est défini à l'extérieur d'une transaction à la fin du script de déploiement. En raison de cette organisation dans le script, les procédures ou les vues utilisant CONTAINS ou FREETEXT ne sont pas résolues par rapport à l'index de texte intégral dans une erreur de déploiement.  
-  

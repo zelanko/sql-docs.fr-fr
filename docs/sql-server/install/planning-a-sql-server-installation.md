@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ce94f99ac38a6d87dfc39a9ba01ad672f1cd70a0
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0197c453f2eaeda872eac7ec639fdb56eb7545ce
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902303"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986996"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planification d’une installation de SQL Server
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "85902303"
  Cette section de la documentation d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] décrit comment installer et configurer un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
+ [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Solutions haute disponibilité &#40;SQL Server&#41;](../../database-engine/sql-server-business-continuity-dr.md)   
  [Avant l'installation du clustering de basculement](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
- [Mettre à niveau SQL Server à l’aide de l’Assistant Installation &#40;Installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Mettre à niveau SQL Server à l’aide de l’Assistant Installation &#40;Installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)

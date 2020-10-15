@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 522d18c5eca3f9200f69b68e3f269ce01212a608
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: 1d1a544f300e6e49e5355294a1e0f99515482113
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87934228"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934640"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Service et applications de service Reporting Services SharePoint
 
@@ -29,7 +29,7 @@ ms.locfileid: "87934228"
   
 ## <a name="creating-a-reporting-services-service-application"></a>Création d’une application de service Reporting Services
 
- Vous pouvez utiliser l’Administration centrale de SharePoint ou les scripts PowerShell pour créer les applications de service Reporting Services. Pour plus d’informations sur l’utilisation de l’Administration centrale de SharePoint, consultez la section « Créer une application de service Reporting Services » dans [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode). Consultez la section PowerShell plus loin dans cette rubrique pour obtenir un exemple de script PowerShell permettant de créer des applications de service.  
+ Vous pouvez utiliser l’Administration centrale de SharePoint ou les scripts PowerShell pour créer les applications de service Reporting Services. Pour plus d’informations sur l’utilisation de l’Administration centrale de SharePoint, consultez la section « Créer une application de service Reporting Services » dans [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../install-windows/install-the-first-report-server-in-sharepoint-mode.md). Consultez la section PowerShell plus loin dans cette rubrique pour obtenir un exemple de script PowerShell permettant de créer des applications de service.  
   
 ## <a name="modify-the-associations-of-the-service-application-with-a-proxy-group"></a>Modifier les associations de l’application de service avec un groupe de proxy
 

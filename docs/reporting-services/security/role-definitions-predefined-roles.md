@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb514f5580545c43752911257546d97bc67426d3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0c0929f82f7f9a086fa58856b6e1357807c198f7
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454521"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987387"
 ---
 # <a name="role-definitions---predefined-roles"></a>Définitions de rôles - Rôles prédéfinis
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé avec des rôles prédéfinis que vous pouvez utiliser pour accorder l'accès aux opérations du serveur de rapports. Chaque rôle prédéfini décrit une collection de tâches associées. Vous pouvez assigner des groupes et des comptes d'utilisateurs à des rôles prédéfinis pour fournir l'accès immédiat aux opérations du serveur de rapports.  
@@ -60,11 +60,11 @@ ms.locfileid: "88454521"
 |----------|-----------------|  
 |Lire les rapports|Lire les définitions de rapport.|  
 |Créer des rapports liés|Créer des rapports liés qui sont basés sur un rapport non lié.|  
-|Gérer tous les abonnements|Afficher, modifier et supprimer un abonnement à un rapport, lié ou non, quel que soit le propriétaire de l'abonnement. Cette tâche prend en charge la création d’abonnements pilotés par les données. Elle prend également en charge la modification et l’exécution de l’[actualisation planifiée pour les fichiers Power BI (.pbix) dans Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Gérer tous les abonnements|Afficher, modifier et supprimer un abonnement à un rapport, lié ou non, quel que soit le propriétaire de l'abonnement. Cette tâche prend en charge la création d’abonnements pilotés par les données. Elle prend également en charge la modification et l’exécution de l’[actualisation planifiée pour les fichiers Power BI (.pbix) dans Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
 |Gérer les sources de données|Créer et supprimer les éléments de source de données partagée, afficher et modifier les propriétés et le contenu des sources de données.|  
 |Gérer les dossiers|Créer, afficher et supprimer des dossiers. Afficher et modifier des propriétés de dossier.|  
 |Gérer les modèles|Créer, afficher et supprimer des modèles. Afficher et modifier des propriétés du modèle.|  
-|Gérer les abonnements individuels|Créer, afficher, modifier et supprimer des abonnements - appartenant à des utilisateurs - à des rapports, liés ou non. Cette tâche prend également en charge la modification et l’exécution de l’[actualisation planifiée pour les fichiers Power BI (.pbix) dans Power BI Report Server](https://docs.microsoft.com/power-bi/report-server/configure-scheduled-refresh).|  
+|Gérer les abonnements individuels|Créer, afficher, modifier et supprimer des abonnements - appartenant à des utilisateurs - à des rapports, liés ou non. Cette tâche prend également en charge la modification et l’exécution de l’[actualisation planifiée pour les fichiers Power BI (.pbix) dans Power BI Report Server](/power-bi/report-server/configure-scheduled-refresh).|  
 |Gérer l'historique de rapport|Créer, afficher et supprimer l'historique de rapport, afficher les propriétés de l'historique de rapport. Afficher et modifier les paramètres qui déterminent les limites de l'historique des instantanés ainsi que le fonctionnement de la mise en cache.|  
 |Gérer les rapports|Ajouter et supprimer des rapports, modifier des paramètres de rapport, afficher et modifier des propriétés de rapport, afficher et modifier des sources de données qui fournissent du contenu au rapport, afficher et modifier des définitions de rapports et définir des stratégies au niveau du rapport.|  
 |Gestion des ressources|Créer, modifier et supprimer des ressources. Afficher et modifier des propriétés de ressource.|  
@@ -216,4 +216,3 @@ Le tableau ci-dessous répertorie les tâches qui sont comprises dans la défini
 [Modifier ou supprimer une attribution de rôle &#40; portail web SSRS&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
 [Octroi d'autorisations sur un serveur de rapports en mode natif](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
 [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md)
-  

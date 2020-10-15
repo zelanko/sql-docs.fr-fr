@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5764cfafb9db66dc10e2db6092cd6421b3463bd5
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: e382dc67cb0a04bafabbbf4a88c2695edba8472b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742111"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987361"
 ---
 # <a name="manage-a-running-process"></a>Gérer un processus en cours d'exécution
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] analyse l'état des travaux qui s'exécutent sur le serveur de rapports. À intervalles réguliers, le serveur de rapports procède à une analyse des travaux en cours et transmet des informations d'état à la base de données du serveur de rapports ou aux bases de données d'application de service pour le mode SharePoint. Un travail est en cours si l'un des processus suivants est en cours : exécution de la requête sur un serveur de base de données distant ou local, traitement des rapports et rendu de rapport.  
@@ -122,7 +122,6 @@ ms.locfileid: "80742111"
  [Propriétés du travail &#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)   
  [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../web-portal-ssrs-native-mode.md)   
  [Contrôle des performances d'un serveur de rapports](../../reporting-services/report-server/monitoring-report-server-performance.md)  
-  
   
