@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 1413903521019e9b2c95b11143d7e0039fc8e103
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.openlocfilehash: 0231111907d1f342aeda6aea5a9d824a56f40e8b
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88745969"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987568"
 ---
 # <a name="azure-data-studio-faq"></a>FAQ sur Azure Data Studio
 
@@ -181,9 +181,9 @@ SQL PowerShell est disponible dès aujourd’hui dans PowerShell Gallery et vous
 
 Les développeurs et les administrateurs de bases de données sont les utilisateurs typiques d’Azure Data Studio.
 
-## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio s’intègre-t-il à Azure SQL Data Warehouse ?
+## <a name="does-azure-data-studio-integrate-with-azure-synapse-analytics"></a>Azure Data Studio s’intègre-t-il à Azure Synapse Analytics ?
 
-Oui. La prise en charge Azure Data Studio d’Azure SQL Data Warehouse est actuellement en préversion, avec Azure SQL Managed Instance et Big Data SQL Server 2019.
+Oui. La prise en charge Azure Data Studio d’Azure Synapse Analytics est en préversion, avec Azure SQL Managed Instance et Big Data SQL Server 2019.
 
 ## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>Pourquoi Azure Data Studio est-il important pour la nouvelle version de SQL Server ?
 

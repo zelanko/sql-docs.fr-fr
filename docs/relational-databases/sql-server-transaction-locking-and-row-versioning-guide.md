@@ -20,12 +20,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cab3daadc9c3fda3739db3c48fb623725098cba1
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 70358a9ba4fc5cb9d9b326119b488efe6af3a9f5
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480946"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91868196"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -810,7 +810,7 @@ GO
 ## <a name="dynamic-locking"></a><a name="dynamic_locks"></a> Verrouillage dynamique
  L'utilisation de verrous de bas niveau, comme les verrous de ligne, augmente la concurrence car elle diminue la probabilité d'avoir deux transactions qui demandent des verrous sur les mêmes données en même temps. L'utilisation de verrous de bas niveau augmente également le nombre de verrous et les ressources nécessaires à leur gestion. Les verrous de table ou de page de haut niveau réduisent la charge mais au détriment de la concurrence.  
   
- ![lockcht](../relational-databases/media/lockcht.png) 
+ ![Coût de verrouillage et coût de concurrence](../relational-databases/media/lockcht.png) 
   
  Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise une stratégie de verrouillage dynamique pour déterminer les verrous les plus rentables. Lorsqu'une requête est exécutée, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] détermine automatiquement les verrous les plus appropriés sur la base des caractéristiques du schéma et de la requête. Par exemple, pour réduire l'utilisation des verrous, l'optimiseur peut choisir d'utiliser des verrous de niveau page dans un index lors de l'analyse de l'index.  
   
@@ -940,7 +940,7 @@ ORDER BY [Date] DESC
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)]
 
-![system_health_qry](../relational-databases/media/system_health_qry.png)
+![system_health_xevent_query_result](../relational-databases/media/system_health_qry.png)
 
 L’exemple suivant illustre la sortie après avoir cliqué sur le premier lien du résultat ci-dessus :
 
@@ -2080,8 +2080,15 @@ GO
   
 -   Limitez autant que possible le volume de données auxquelles accède votre transaction.  
     Le nombre de lignes verrouillées est ainsi limité, ce qui limite également la contention des transactions.  
+    
+-   Évitez autant que possible les indicateurs de verrouillage pessimiste tels que HOLDLOCK. 
+    Des indicateurs tels que HOLDLOCK ou le niveau d’isolation SERIALIZABLE peuvent entraîner l’attente des processus même sur des verrous partagés et réduire la concurrence.
+
+-   Évitez autant que possible d’utiliser des transactions implicites. Ces dernières peuvent introduire un comportement imprévisible en raison de leur nature. Consultez [Transactions implicites et problèmes de concurrence](#implicit-transactions-and-avoiding-concurrency-and-resource-problems).
+
+-   Concevez des index avec un [facteur de remplissage](indexes/specify-fill-factor-for-an-index.md) réduit. La réduction du facteur de remplissage peut vous aider à empêcher ou à réduire la fragmentation des pages d’index et donc à réduire les temps de recherche d’index, en particulier lors de leur récupération sur le disque. Pour afficher les informations de fragmentation des données et des index de la table ou vue spécifiée, vous pouvez utiliser sys.dm_db_index_physical_stats. 
   
-#### <a name="avoiding-concurrency-and-resource-problems"></a>Prévention des problèmes de concurrence et de ressources  
+#### <a name="implicit-transactions-and-avoiding-concurrency-and-resource-problems"></a>Transactions implicites et prévention des problèmes de concurrence et de ressources  
  Pour prévenir les problèmes de concurrence et de ressources, soyez minutieux dans la gestion des transactions implicites. Dans les transactions implicites, l’instruction [!INCLUDE[tsql](../includes/tsql-md.md)] qui suit une instruction `COMMIT` ou `ROLLBACK` démarre automatiquement une nouvelle transaction. Une nouvelle transaction risque ainsi d'être ouverte alors que l'application consulte des données, ou qu'elle attend une entrée de données par l'utilisateur. Après avoir terminé la dernière transaction nécessaire à la protection des modifications, désactivez les transactions implicites jusqu'à ce qu'une transaction doive à nouveau protéger les modifications de données. Cette procédure permet à [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] d'utiliser le mode autocommit lorsque l'application consulte des données ou attend une entrée de données par l'utilisateur.  
   
  De plus, quand le niveau d’isolation d’instantané est activé, même si une nouvelle transaction ne contient pas de verrous, une exécution longue empêche la suppression des anciennes versions dans `tempdb`.  
@@ -2112,8 +2119,8 @@ GO
  Vous devrez peut-être utiliser l'instruction KILL. Utilisez cette instruction avec précaution, particulièrement lorsque des processus critiques sont en cours d'exécution. Pour plus d’informations, consultez [KILL &#40;Transact-SQL&#41;](../t-sql/language-elements/kill-transact-sql.md).  
   
 ##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecture supplémentaire   
-[Charge du contrôle de version de ligne](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
+[Charge du contrôle de version de ligne](/archive/blogs/sqlserverstorageengine/overhead-of-row-versioning)   
 [Événements étendus](../relational-databases/extended-events/extended-events.md)   
 [sys.dm_tran_locks &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)     
 [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)      
-[Fonctions et vues de gestion dynamique relatives aux transactions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)     
+[Fonctions et vues de gestion dynamique relatives aux transactions &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)

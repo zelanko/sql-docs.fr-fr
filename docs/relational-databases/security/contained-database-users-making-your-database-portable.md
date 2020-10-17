@@ -15,12 +15,12 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a76bc720df1808290a09e2cec5fad1c0667ae389
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: 935729861e3cd2a1119290cab46eaa76a1b36621
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988791"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91864045"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utilisateurs de base de données autonome - Rendre votre base de données portable
 
@@ -41,7 +41,7 @@ ms.locfileid: "87988791"
 
  Dans le modèle utilisateur de la base de données autonome, la connexion de la base de données MASTER n'est pas présente. Au lieu de cela, le processus d'authentification se produit sur la base de données utilisateur, et l'utilisateur de base de données de la base de données utilisateur n'a pas de connexion associée dans la base de données MASTER. Le modèle utilisateur de base de données autonome prend en charge l’authentification Windows et l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et il peut être utilisé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Pour vous connecter en tant qu'utilisateur de base de données autonome, la chaîne de connexion doit toujours contenir un paramètre de la base de données utilisateur afin que [!INCLUDE[ssDE](../../includes/ssde-md.md)] sache quelle base de données est chargée de gérer le processus d'authentification. L'activité de l'utilisateur de base de données autonome étant limitée à l'authentification de base de données, lorsque vous vous connectez en tant qu'utilisateur de base de données autonome, le compte d'utilisateur base de données doit être créé indépendamment dans chaque base de données dont l'utilisateur a besoin. Pour modifier les bases de données, les utilisateurs [!INCLUDE[ssSDS](../../includes/sssds-md.md)] doivent créer une connexion. Les utilisateurs de base de données autonome dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent modifier les bases de données si un même utilisateur est présent dans une autre base de données.  
   
-**Azure :** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] prennent en charge les identités Azure Active Directory en tant qu’utilisateurs de base de données autonome. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] prend en charge les utilisateurs de base de données autonome utilisant l’authentification [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], à la différence de [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Pour plus d’informations, consultez [Connexion à SQL Database avec l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Lorsque vous utilisez l’authentification Azure Active Directory, les connexions à partir de SSMS peut être établies à l’aide de l’authentification Active Directory universelle.  Les administrateurs peuvent configurer une authentification universelle pour exiger l’authentification multifacteur, qui vérifie l’identité à l’aide d’un appel téléphonique, d’un SMS, d’une carte à puce avec code confidentiel ou d’une notification d’application mobile. Pour plus d’informations, voir [Prise en charge de SSMS pour Azure AD MFA avec la base de données SQL et SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure :** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] prennent en charge les identités Azure Active Directory en tant qu’utilisateurs de base de données autonome. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] prend en charge les utilisateurs de base de données autonome utilisant l’authentification [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], à la différence de [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Pour plus d’informations, consultez [Connexion à SQL Database avec l’authentification Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). Lorsque vous utilisez l’authentification Azure Active Directory, les connexions à partir de SSMS peut être établies à l’aide de l’authentification Active Directory universelle.  Les administrateurs peuvent configurer une authentification universelle pour exiger l’authentification multifacteur, qui vérifie l’identité à l’aide d’un appel téléphonique, d’un SMS, d’une carte à puce avec code confidentiel ou d’une notification d’application mobile. Pour plus d’informations, voir [Prise en charge de SSMS pour Azure AD MFA avec la base de données SQL et SQL Data Warehouse](/azure/azure-sql/database/authentication-mfa-ssms-overview).  
   
  Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], dans la mesure où le nom de la base de données est toujours requis dans la chaîne de connexion, aucune modification n’est requise sur la chaîne de connexion lorsque vous passez du modèle traditionnel au modèle utilisateur de base de données autonome. Pour les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le nom de la base de données doit être ajoutée à la chaîne de connexion, s’il n'est pas déjà présent.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "87988791"
   
  Pour plus d'informations sur les règles de pare-feu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , consultez les rubriques suivantes :  
   
-- [Pare-feu Azure SQL Database](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
-- [Procédure : configurer les paramètres de pare-feu (Azure SQL Database)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
+- [Pare-feu Azure SQL Database](/previous-versions/azure/ee621782(v=azure.100))  
+- [Procédure : configurer les paramètres de pare-feu (Azure SQL Database)](/previous-versions/azure/jj553530(v=azure.100))  
 - [sp_set_firewall_rule &#40;Base de données Azure SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 - [sp_set_database_firewall_rule &#40;Base de données Azure SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)  
   
@@ -79,24 +79,34 @@ ms.locfileid: "87988791"
 
 Azure SQL Managed Instance se comporte comme SQL Server localement dans le contexte des bases de données autonomes. Veillez à changer le contexte de votre base de données, de base de données Master en base de données utilisateur, lors de la création de l’utilisateur de base de données autonome. De plus, il ne doit y avoir aucune connexion active à la base de données utilisateur lors de la définition de l’option d’autonomie. 
 
-Par exemple : 
+
+Par exemple :
+
+> [!WARNING]
+> Avant d’exécuter le script suivant, vérifiez qu’aucune autre connexion n’est active sur votre base de données Managed Instance. Le script peut perturber les autres processus en cours d’exécution sur la base de données.
 
 ```sql
 Use MASTER;
 GO 
 
 ALTER DATABASE Test
-SET containment=partial
+SET RESTRICTED_USER
+WITH ROLLBACK IMMEDIATE;
 
+ALTER DATABASE Test
+SET containment=partial;
+
+ALTER DATABASE Test
+SET MULTI_USER;
 
 USE Test;  
-GO  
+GO 
+
 CREATE USER Carlo  
 WITH PASSWORD='Enterpwdhere*'  
 
-
 SELECT containment_desc FROM sys.databases
-WHERE name='test'
+WHERE name='Test'
 ```
 
   
@@ -115,5 +125,4 @@ WHERE name='test'
  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)   
  [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
- [Connexion à SQL Database avec l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)  
-  
+ [Connexion à SQL Database avec l’authentification Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview)  

@@ -13,12 +13,12 @@ ms.author: jovanpop
 ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 785060a9f12b68f38e7d59420f7a2e31a77312fa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7161ce97faa4d1baab514df45429592629e2518b
+ms.sourcegitcommit: 346a37242f889d76cd783f55aeed98023c693610
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88499322"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "91765735"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>Mettre en forme la sortie JSON automatiquement avec le mode AUTO (SQL Server)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,7 @@ L’alternative consiste à utiliser l’option **PATH** pour conserver le contr
 
 Une requête qui utilise l’option **FOR JSON AUTO** doit avoir une clause **FROM** .  
   
-Voici quelques exemples de la clause **FOR JSON** avec l’option **AUTO** .  
+Voici quelques exemples de la clause **FOR JSON** avec l’option **AUTO** . [Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md) est l’éditeur de requête recommandé pour les requêtes JSON, car il met en forme automatiquement les résultats JSON (comme indiqué dans cet article) au lieu d’afficher une chaîne plate.
   
 ## <a name="examples"></a>Exemples
 

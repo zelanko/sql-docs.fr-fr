@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5314f43ea17351f54cf1815346a0820cc5cd77e3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715492"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987585"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Fichiers de données SQL Server dans Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -177,25 +177,28 @@ Pour plus d'informations, consultez [Gérer l'accès aux ressources Azure Storag
   
  **Erreurs de base de données**  
   
-1.  *Erreurs lors de la création d'une base de données*   
-    Résolution : Consultez les instructions fournies dans la leçon 4 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
+Résolution des **erreurs liées à la création d’une base de données** : Consultez les instructions fournies dans la leçon 4 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../lesson-4-restore-database-to-virtual-machine-from-url.md).  
   
-2.  *Erreurs lors de l'exécution de l'instruction Alter*   
-    Résolution : veillez à exécuter l’instruction Alter Database lorsque la base de données est en ligne. Lors de la copie des fichiers de données vers le stockage Azure, créez toujours un objet blob de pages, et non un objet blob de blocs. Sinon, la modification de la base de données avec l'instruction ALTER échouera. Consultez les instructions fournies dans la leçon 7 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+**Erreurs lors de l'exécution de l'instruction Alter** Résolution : veillez à exécuter l'instruction Alter Database lorsque la base de données est en ligne. Lors de la copie des fichiers de données vers le stockage Azure, créez toujours un objet blob de pages, et non un objet blob de blocs. Sinon, la modification de la base de données avec l'instruction ALTER échouera. Consultez les instructions fournies dans la leçon 7 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Code d’erreur 5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d'exploitation : « %ls »*   
+**Code d’erreur 5120 - Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d'exploitation : « %ls »**   
 
-    Résolution : Actuellement, cette nouvelle amélioration ne prend pas en charge l’accès simultané de plusieurs instances SQL Server aux mêmes fichiers de base de données dans le Stockage Azure. Si un serveur A est en ligne avec un fichier de base de données actif et si un serveur B démarre par erreur, et qu’il comporte également une base de données qui pointe vers le même fichier de données, le deuxième serveur ne peut pas démarrer la base de données. Un code d’erreur *5120 Impossible d’ouvrir le fichier physique « %.\*ls » est généré. Erreur %d du système d’exploitation : « %ls »* .  
+Résolution : Actuellement, cette nouvelle amélioration ne prend pas en charge l’accès simultané de plusieurs instances SQL Server aux mêmes fichiers de base de données dans le Stockage Azure. Si un serveur A est en ligne avec un fichier de base de données actif et si un serveur B démarre par erreur, et qu’il comporte également une base de données qui pointe vers le même fichier de données, le deuxième serveur ne peut pas démarrer la base de données. Un code d’erreur *5120 Impossible d’ouvrir le fichier physique « %.\*ls » est généré. Erreur %d du système d’exploitation : « %ls »* .  
   
-     Pour résoudre ce problème, déterminez d’abord si vous avez besoin du serveur A pour accéder au fichier de base de données dans le stockage Azure. Sinon, supprimez les connexions entre le serveur A et les fichiers de base de données dans le stockage Azure. Pour ce faire, procédez comme suit :  
-  
-    1.  Définissez le chemin d'accès du serveur A sur un dossier local à l'aide de l'instruction ALTER Database.  
-  
-    2.  Mettez la base de données hors connexion sur le serveur A.  
-  
-    3.  Puis, copiez les fichiers de base de données du stockage Azure dans le dossier local du serveur A. Cela garantit que le serveur A dispose toujours d’une copie de la base de données localement.  
-  
-    4.  Mettez la base de données en ligne.  
+Pour résoudre ce problème, déterminez d’abord si vous avez besoin du serveur A pour accéder au fichier de base de données dans le stockage Azure. Sinon, supprimez les connexions entre le serveur A et les fichiers de base de données dans le stockage Azure. Pour ce faire, procédez comme suit :  
+
+1.  Définissez le chemin d'accès du serveur A sur un dossier local à l'aide de l'instruction ALTER Database.  
+
+2.  Mettez la base de données hors connexion sur le serveur A.  
+
+3.  Puis, copiez les fichiers de base de données du stockage Azure dans le dossier local du serveur A. Cela garantit que le serveur A dispose toujours d’une copie de la base de données localement.  
+
+4.  Mettez la base de données en ligne.
+
+**Code d’erreur 833 - L’exécution des demandes d’E/S dure plus de 15 secondes** 
+   
+   Cette erreur indique que le système de stockage n’est pas en mesure de répondre aux demandes de la charge de travail SQL Server. Diminuez l’activité d’E/S de la couche d’application ou augmentez la capacité de débit sur la couche de stockage. Pour en savoir plus, consultez [Erreur 833](../errors-events/mssqlserver-833-database-engine-error.md). Si les problèmes de performances persistent, envisagez de déplacer les fichiers vers un autre niveau de stockage, par exemple Premium ou UltraSSD. Pour SQL Server sur les machines virtuelles Azure, consultez [Optimisation des performances de stockage](/azure/virtual-machines/premium-storage-performance).
+
 
 ## <a name="next-steps"></a>Étapes suivantes  
   

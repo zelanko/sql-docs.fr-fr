@@ -18,12 +18,12 @@ ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bcf97d3f0e3607d9444c6ab5b3b101004d3926b
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: f10e2cd6b6b146bb7c91d9732ba04b7f6a4d5ebb
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86457615"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784735"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Enregistrer un plan d'exécution au format XML
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "86457615"
   
 5.  Dans la boîte de dialogue **Enregistrer** \<Grid or Text> **les Résultats**, dans la boîte **Enregistrer comme type**, cliquez sur **Tous les fichiers (\*.\*)** .  
   
-6.  Dans la boîte **Nom de fichier**, fournissez un nom au format \<name**>.sqlplan**, puis cliquez sur **Enregistrer**.  
+6.  Dans la boîte **Nom de fichier**, fournissez un nom au format \<name> **.sqlplan**, puis cliquez sur **Enregistrer**.  
 
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Pour enregistrer un plan d'exécution avec les options de SQL Server Management Studio  
   
@@ -83,7 +83,7 @@ ms.locfileid: "86457615"
   
 3.  Dans la boîte de dialogue **Enregistrer sous**, assurez-vous que **Type de fichier** est défini à **Fichiers de plan d’exécution (\*.sqlplan)** .  
   
-4.  Dans la boîte **Nom de fichier**, fournissez un nom au format \<name**>.sqlplan**, puis cliquez sur **Enregistrer**.  
+4.  Dans la boîte **Nom de fichier**, fournissez un nom au format \<name> **.sqlplan**, puis cliquez sur **Enregistrer**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Pour ouvrir un plan de requête XML dans SQL Server Management Studio  
   

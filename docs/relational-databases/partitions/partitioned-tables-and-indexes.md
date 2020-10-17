@@ -17,16 +17,16 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cbc395652b7c829fe3694bf5d040a319073e958
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1cdad35826cf23244264057c059d2f2c79f2049a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88470361"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891009"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le partitionnement des tables et des index. Les données des tables et des index partitionnés sont divisées en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Les données sont partitionnées horizontalement, de sorte que les groupes de lignes sont mappés à des partitions individuelles. Toutes les partitions d'un index ou d'une table unique doivent résider dans la même base de données. La table ou l'index est traité en tant qu'entité logique unique lorsque des requêtes ou des mises à jour sont effectuées sur les données. Dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1, les tables et les index partitionnés n’étaient pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le partitionnement des tables et des index. Les données des tables et des index partitionnés sont divisées en unités qui peuvent être réparties sur plusieurs groupes de fichiers d'une base de données. Les données sont partitionnées horizontalement, de sorte que les groupes de lignes sont mappés à des partitions individuelles. Toutes les partitions d'un index ou d'une table unique doivent résider dans la même base de données. La table ou l'index est traité en tant qu'entité logique unique lorsque des requêtes ou des mises à jour sont effectuées sur les données. Dans les versions antérieures à [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1, les tables et les index partitionnés n’étaient pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 > [!IMPORTANT]  
 > [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge jusqu'à 15 000 partitions par défaut. Dans les versions antérieures à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le nombre de partitions était limité à 1 000 par défaut. Sur les systèmes x86, la création d’une table ou d’un index avec plus de 1 000 partitions est possible, mais n’est pas prise en charge.  
@@ -48,7 +48,7 @@ De plus, il est possible d'améliorer les performances en activant l'escalade de
 Les termes suivants s'appliquent aux partitionnement de table et d'index.  
   
 ### <a name="partition-function"></a>Fonction de partition  
-Objet de base de données qui définit comment les lignes d'une table ou d'un index sont mappées à un ensemble de partitions en fonction des valeurs de certaines colonnes, appelées « colonnes de partitionnement ». Autrement dit, la fonction de partition définit le nombre de partitions qu'aura la table, ainsi que la façon dont les limites des partitions sont définies. Prenons l’exemple d’une table qui contient des données de commande client ; vous pouvez partitionner la table en douze partitions (mensuellement) en fonction d’une colonne **datetime** , telle qu’une date de vente.  
+Objet de base de données qui définit comment les lignes d’une table ou d’un index sont mappées à un ensemble de partitions en fonction des valeurs d’une certaine colonne, appelée « colonne de partitionnement ». Chaque valeur de la colonne de partitionnement est une entrée de la fonction de partitionnement, qui retourne une valeur de partition. La fonction de partition définit le nombre de partitions et les limites de partition qu’utilise la table. Prenons l’exemple d’une table qui contient des données de commande client ; vous pouvez partitionner la table en douze partitions (mensuellement) en fonction d’une colonne **datetime** , telle qu’une date de vente.  
   
 ### <a name="partition-scheme"></a>Schéma de partition 
 Objet de base de données qui mappe les partitions d'une fonction de partition à un ensemble de groupes de fichiers. Le principal motif de placement des partitions sur des groupes de fichiers distincts est la possibilité de réaliser des opérations de sauvegarde indépendantes sur les partitions. En effet, vous pouvez réaliser des sauvegardes sur des groupes de fichiers spécifiques.  
@@ -129,9 +129,8 @@ Ainsi, l’optimiseur de requête peut traiter la jointure plus rapidement car l
  Les livres blancs suivants relatifs aux stratégies et implémentations de tables et index partitionnés pourront se révéler utiles.  
 -   [Stratégies de tables et d’index partitionnés avec SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)    
 -   [Comment implémenter une fenêtre glissante automatique](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)    
--   [Chargement en masse dans une table partitionnée](https://msdn.microsoft.com/library/cc966380.aspx)    
--   [Projet REAL : Cycle de vie de données -- Partitionnement](https://technet.microsoft.com/library/cc966424.aspx)    
--   [Améliorations du traitement des requêtes sur les tables et les index partitionnés](https://msdn.microsoft.com/library/ms345599.aspx)    
+-   [Chargement en masse dans une table partitionnée](/previous-versions/sql/sql-server-2005/administrator/cc966380(v=technet.10))    
+-   [Projet REAL : Cycle de vie de données -- Partitionnement](/previous-versions/sql/sql-server-2005/administrator/cc966424(v=technet.10))    
+-   [Améliorations du traitement des requêtes sur les tables et les index partitionnés](/previous-versions/sql/sql-server-2008-r2/ms345599(v=sql.105))    
 -   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) dans _SQLCAT's Guide to: Relational Engineering_
-  
   

@@ -59,7 +59,7 @@
         - name: Extension PowerShell
           href: extensions/powershell-extension.md
         - name: Extension SandDance
-          href: sanddance-extension.md
+          href: extensions/sanddance-extension.md
         - name: Extension de comparaison de schéma
           href: extensions/schema-compare-extension.md
         - name: Extension des projets SQL Database
@@ -84,10 +84,10 @@
           href: extensions/sql-server-profiler-extension.md
     - name: Création d’extensions
       items:
-        - name: Vue d’ensemble de l’extensibilité
-          href: extensibility.md
         - name: Création d’extensions
           href: extensions/extension-authoring.md
+        - name: Vue d’ensemble de l’extensibilité
+          href: extensibility.md
         - name: API d’extensibilité
           href: extensibility-apis.md
         - name: Extension de mappage de touches
@@ -102,6 +102,8 @@
           href: extensions/wizard-extension.md
     - name: 'Terminal intégré (PowerShell, Bash)'
       href: integrated-terminal.md
+    - name: Fonctionnalités de préversion
+      href: preview-features.md
     - name: Groupes de serveurs
       href: server-groups.md
     - name: Contrôle de code source
@@ -122,8 +124,12 @@
           href: notebooks/notebooks-kqlmagic.md
     - name: Déploiement
       items:
+        - name: Déployer Azure SQL Database
+          href: deploy-azure-sql-database.md
         - name: Déployer Azure SQL Edge
           href: deploy-azure-sql-edge.md
+        - name: Déployer SQL Server sur des machines virtuelles Azure
+          href: deploy-azure-sql-server-vm.md
     - name: Tableaux de bord et widgets d’insight
       href: insight-widgets.md
     - name: Extraits de code

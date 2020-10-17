@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 49fd020cbbe8162dd82b51ab4743730a85762598
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: b06b51e5c8f1cbe7d542c8ecf04df0ded859d775
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603369"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892439"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -148,7 +148,7 @@ Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 - Expressions arithmétiques telles que 1+1, 5/3*2, ne contenant que des constantes.
 - Expressions logiques telles que 1=1 et 1>2 AND 3>4, ne contenant que des constantes.
 - Fonctions intégrées considérées comme pouvant être assemblées par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], y compris `CAST` et `CONVERT`. En général, une fonction intrinsèque peut être assemblée si elle est fonction de ses données d'entrée uniquement, à l'exclusion de toute information contextuelle (options SET, paramètres de langue, options de base de données et clés de chiffrement). Les fonctions non déterministes ne peuvent pas être assemblées. Les fonctions intégrées déterministes peuvent être assemblées, à quelques exceptions près.
-- Méthodes déterministes de types CLR définis par l’utilisateur et fonctions CLR définies par l’utilisateur avec valeur scalaire déterministe (à partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Pour plus d’informations, consultez [Assemblage de constantes pour les fonctions et les méthodes CLR définies par l’utilisateur](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
+- Méthodes déterministes de types CLR définis par l’utilisateur et fonctions CLR définies par l’utilisateur avec valeur scalaire déterministe (à partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). Pour plus d’informations, consultez [Assemblage de constantes pour les fonctions et les méthodes CLR définies par l’utilisateur](/previous-versions/sql/2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014?view=sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
 
 > [!NOTE] 
 > Les objets volumineux constituent une exception. Si le type de résultat du processus d’assemblage est un type d’objet volumineux (text, ntext, image, nvarchar(max), varchar(max), varbinary(max) ou XML), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’assemble pas l’expression.
@@ -1030,7 +1030,7 @@ Les constructions qui empêchent le parallélisme sont les suivantes :
     Pour plus d’informations sur les curseurs, consultez [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
     
 -   **Requêtes récursives**        
-    Pour plus d’informations sur la récursivité, consultez [Principes de définition et d’utilisation des expressions de table communes récursives](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) et [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx).
+    Pour plus d’informations sur la récursivité, consultez [Principes de définition et d’utilisation des expressions de table communes récursives](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) et [Recursion in T-SQL](/previous-versions/sql/legacy/aa175801(v=sql.80)).
 
 -   **Fonctions table à instructions multiples (MSTVF)**         
     Pour plus d’informations sur les MSTVF, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
@@ -1270,7 +1270,8 @@ Quand c’est possible, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e
 [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] a amélioré les performances du traitement des requêtes sur les tables partitionnées pour de nombreux plans parallèles, changé la façon dont les plans parallèles et en série sont représentés, et amélioré les informations de partitionnement fournies dans les plans d’exécution au moment de la compilation et au moment de l’exécution. Cette rubrique décrit ces améliorations, fournit des indications sur la façon d'interpréter les plans d'exécution de requêtes de tables et d'index partitionnés, et fournit des recommandations pour améliorer les performances des requêtes sur les objets partitionnés. 
 
 > [!NOTE]
-> Les tables et les index partitionnés sont uniquement pris en charge dans les éditions Enterprise, Developer et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+> Jusqu’à [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], les tables et les index partitionnés sont uniquement pris en charge dans les éditions Enterprise, Developer et Evaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].   
+> À compter de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1, les tables et les index partitionnés sont également pris en charge dans l’édition Standard de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 ### <a name="new-partition-aware-seek-operation"></a>Nouvelle opération de recherche sensible aux partitions
 
@@ -1435,7 +1436,7 @@ Pour améliorer les performances des requêtes qui accèdent à une grande quant
 * Utilisez un serveur avec des processeurs rapides et autant de noyaux de processeur que^possible selon vos moyens pour tirer parti des capacités de traitement de requête parallèle.
 * Assurez-vous que le serveur possède une bande passante de contrôleur d'E/S suffisante. 
 * Créez un index cluster sur chaque grande table partitionnée pour tirer parti des optimisations d'analyse d'arbre B (B-tree).
-* Appliquez les recommandations mentionnées dans le livre blanc « [The Data Loading Performance Guide](https://msdn.microsoft.com/library/dd425070.aspx)» lors du chargement en masse des données dans des tables partitionnées.
+* Appliquez les recommandations mentionnées dans le livre blanc « [The Data Loading Performance Guide](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100))» lors du chargement en masse des données dans des tables partitionnées.
 
 ### <a name="example"></a>Exemple
 

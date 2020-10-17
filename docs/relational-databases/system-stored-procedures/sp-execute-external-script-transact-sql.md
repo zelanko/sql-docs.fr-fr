@@ -21,12 +21,12 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 27a1776382cf9a8acf86f08ed960578932ca9655
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 7953c9aafda19182395311b7adc648c04d5c1f39
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91810188"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155072"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ La procédure stockée **sp_execute_external_script** exécute un script fourni 
 
 Pour Machine Learning Services, [python](../../machine-learning/concepts/extension-python.md) et [R](../../machine-learning/concepts/extension-r.md) sont des langages pris en charge. Pour les extensions de langage, Java est pris en charge, mais doit être défini avec [Create External Language](../../t-sql/statements/create-external-language-transact-sql.md).
 
-Pour exécuter **sp_execute_external_script**, vous devez d’abord installer les extensions de langage ou de machine learning services. Pour plus d’informations, consultez [installer SQL Server machine learning services (Python et R) sur Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) et [Linux](../../linux/sql-server-linux-setup-machine-learning.md), ou [installer les extensions de langage SQL Server sur Windows](../../language-extensions/install/install-sql-server-language-extensions-on-windows.md) et [Linux](../../linux/sql-server-linux-setup-language-extensions.md).
+Pour exécuter **sp_execute_external_script**, vous devez d’abord installer les extensions de langage ou de machine learning services. Pour plus d’informations, consultez [installer SQL Server machine learning services (Python et R) sur Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) et [Linux](../../linux/sql-server-linux-setup-machine-learning.md), ou [installer les extensions de langage SQL Server sur Windows](../../language-extensions/install/windows-java.md) et [Linux](../../linux/sql-server-linux-setup-language-extensions-java.md).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
@@ -63,7 +63,7 @@ Pour Machine Learning Services, [python](../../machine-learning/concepts/extensi
 Pour exécuter **sp_execute_external_script**, vous devez d’abord activer machine learning services. Pour plus d’informations, consultez la [machine learning services dans la documentation Azure SQL Managed instance](/azure/azure-sql/managed-instance/machine-learning-services-overview).
 ::: moniker-end
 
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ## <a name="syntax"></a>Syntaxe
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` Liste de valeurs pour les paramètres d’entrée utilisés par le script externe.  
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 > [!IMPORTANT]
 > L’arborescence de requêtes est contrôlée par SQL Machine Learning et les utilisateurs ne peuvent pas effectuer d’opérations arbitraires sur la requête.

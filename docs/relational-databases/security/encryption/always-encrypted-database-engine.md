@@ -17,12 +17,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f46200a134351d1f6328ad79ccb030baddf4df3
-ms.sourcegitcommit: bf8cf755896a8c964774a438f2bd461a2a648c22
+ms.openlocfilehash: 6c13a720a9578600d80bb989ef740d3654cc4ae6
+ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/14/2020
-ms.locfileid: "88216768"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91810005"
 ---
 # <a name="always-encrypted"></a>Always Encrypted
 [!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
@@ -164,7 +164,7 @@ Always Encrypted n’est pas pris en charge pour les colonnes avec les caractér
 - Colonnes avec la propriété `ROWGUIDCOL`.  
 - Chaîne (`varchar`, `char`, etc.) avec des classements non-bin2.  
 - Colonnes qui font office de clés pour les index en cluster et non cluster lors de l’utilisation du chiffrement aléatoire (le chiffrement déterministe est pris en charge).
-- Colonnes qui font office de clés pour les index en texte intégral lors de l’utilisation du chiffrement aléatoire (le chiffrement déterministe est pris en charge).  
+- Colonnes incluses dans les index de recherche en texte intégral (Always Encrypted ne prend pas en charge la [recherche en texte intégral](../../../relational-databases/search/full-text-search.md)).  
 - Colonnes calculées
 - Colonnes référencées par des colonnes calculées (quand l’expression effectue des opérations non prises en charge pour Always Encrypted).  
 - Jeu de colonnes éparses.  

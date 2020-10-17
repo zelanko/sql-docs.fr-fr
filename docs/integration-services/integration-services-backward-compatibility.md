@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4b7722cea77801e1292072bd948779a8e5688550
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a700ef86b2ca645ce29cc7468fd8b948ccc2d4d7
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88345655"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91957020"
 ---
 # <a name="integration-services-backward-compatibility"></a>Compatibilité descendante d'Integration Services
 
@@ -32,25 +32,25 @@ ms.locfileid: "88345655"
 
   Cette rubrique décrit les modifications entre les versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Elle traite des fonctionnalités qui ne sont plus disponibles ou destinées à être supprimées dans les versions futures. Elle décrit également les changements importants apportés au produit, connus pour empêcher le bon fonctionnement ou pour modifier le comportement d'une application personnalisée incluant la fonctionnalité [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>Fonctionnalités Integration Services déconseillées dans SQL Server 2016
+## <a name="deprecated-integration-services-features"></a>Fonctionnalités Integration Services dépréciées
 
 Cette rubrique décrit les fonctionnalités dépréciées d’[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] encore disponibles dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. N’utilisez pas de fonctions déconseillées dans les nouvelles applications.  
   
  Il n'existe aucune fonctionnalité [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déconseillée dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
-## <a name="discontinued-integration-services-functionality-in-sql-server-2016"></a>Fonctionnalités Integration Services abandonnées dans SQL Server 2016
+## <a name="discontinued-integration-services-functionality"></a>Fonctionnalités Integration Services abandonnées
 
 Cette rubrique décrit les fonctionnalités d’[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] qui ne sont plus disponibles dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
  Aucune fonctionnalité Integration Services n’a été supprimée dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
 
-## <a name="breaking-changes-to-integration-services-features-in-sql-server-2016"></a>Changements essentiels apportés aux fonctionnalités Integration Services de SQL Server 2016
+## <a name="breaking-changes-to-integration-services-features"></a>Changements cassants apportés aux fonctionnalités Integration Services
 
 Cette section décrit les changements essentiels apportés à [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ces modifications peuvent interrompre les applications, scripts ou autres éléments basés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il se peut que vous rencontriez ces problèmes pendant une mise à niveau.  
   
  Aucune modification avec rupture n’a été apportée aux fonctionnalités Integration Services de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
 
-## <a name="behavior-changes-to-integration-services-features-in-sql-server-2016"></a>Changements de comportement des fonctionnalités Integration Services dans SQL Server 2016
+## <a name="behavior-changes-to-integration-services-features"></a>Changements de comportement des fonctionnalités Integration Services
 
 Cette section décrit les changements de comportement dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Les modifications de comportement affectent le mode de fonctionnement ou d’interaction des fonctionnalités dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

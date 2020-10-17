@@ -2,7 +2,7 @@
 title: Résolution des problèmes et maintenance du connecteur SQL Server
 description: Découvrez les instructions de maintenance et les étapes courantes de résolution des problèmes pour le connecteur SQL Server.
 ms.custom: seo-lt-2019
-ms.date: 07/25/2019
+ms.date: 10/08/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 35ac4ad2bd6ee621973d4f999b32ec6b8099bfb7
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: 4c8a74d33e75ab19b283f3b9d1bfdaf47dc69240
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042770"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91869260"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
 
@@ -30,10 +30,10 @@ ms.locfileid: "90042770"
 ### <a name="key-rollover"></a>Substitution de clé  
   
 > [!IMPORTANT]  
-> Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que le nom de clé utilise uniquement les caractères « a-z », « A-Z », « 0-9 » et « - », avec une limite de 26 caractères.   
+> Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que le nom de clé utilise uniquement les caractères « a-z », « A-Z », « 0-9 » et « - », avec une limite de 26 caractères.
 > Des versions de clés différentes sous le même nom de clé dans Azure Key Vault ne fonctionnent pas avec le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour permuter une clé Azure Key Vault utilisée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], une clé portant un nouveau nom de clé doit être créée.  
   
- En général, les clés asymétriques de serveur pour le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent faire l’objet d’une gestion des versions une fois par an ou une fois tous les deux ans. Bien que le coffre de clés prenne en charge la gestion des versions des clés, les clients ne doivent pas utiliser cette fonctionnalité pour implémenter la gestion des versions. Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peut pas traiter les modifications apportées à la version des clés du coffre de clés. Pour implémenter la gestion des versions des clés, le client doit créer une clé dans le coffre de clés, puis chiffrer à nouveau la clé de chiffrement de données dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
+ En général, les clés asymétriques de serveur pour le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doivent faire l’objet d’une gestion des versions une fois par an ou une fois tous les deux ans. Bien que le coffre de clés prenne en charge la gestion des versions des clés, les clients ne doivent pas utiliser cette fonctionnalité pour implémenter la gestion des versions. Le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peut pas traiter les modifications apportées à la version des clés du coffre de clés. Pour implémenter la gestion des versions des clés, créez une clé dans le coffre de clés, puis rechiffrez la clé de chiffrement de données dans [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   
  Dans le cas du chiffrement transparent des données, voici comment procéder :  
   
@@ -98,60 +98,59 @@ ms.locfileid: "90042770"
 
 Les versions 1.0.0.440 et antérieures ont été remplacées et ne sont plus prises en charge dans les environnements de production. Les versions 1.0.1.0 et les versions antérieures ne sont pas prises en charge dans les environnements de production. Utilisez les instructions suivantes pour effectuer une mise à niveau vers la dernière version disponible sur le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=45344).
 
-Si vous utilisez actuellement la version 1.0.1.0 ou une version plus récente, procédez comme suit pour mettre à jour vers la dernière version du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ces instructions évitent de redémarrer l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
- 
-1. Installez la version la plus récente du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir du [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=45344). Dans l’Assistant programme d’installation, enregistrez le nouveau fichier DLL sous un chemin d’accès différent du chemin d’accès au fichier de DLL du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’origine. Par exemple, le nouveau chemin d’accès du fichier pourrait être : `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
- 
-1. Dans l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], exécutez la commande Transact-SQL suivante pour faire pointer votre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers votre nouvelle version du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :
+### <a name="upgrade"></a>Mettre à niveau
 
-    ```sql
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll'
-    GO  
-    ```
+1. Arrêter le service SQL Server à l’aide du Gestionnaire de configuration SQL Server
+1. Désinstaller l’ancienne version à l’aide de Panneau de configuration\Programmes\Programmes et fonctionnalités
+    1. Nom de l’application : Connecteur SQL Server pour Microsoft Azure Key Vault
+    1. Version : 15.0.300.96 (ou antérieure)
+    1. Date du fichier DLL : 30/01/2018 15:00 (ou antérieure)
+1. Installer (mettre à niveau) le nouveau connecteur SQL Server pour Microsoft Azure Key Vault
+    1. Version : 15.0.2000.367
+    1. Date du fichier DLL : 11/09/2020 ‏‎5:17
+1. Démarrer le service SQL Server
+1. Vérifier si la ou les bases de données chiffrées sont accessibles
 
-Si vous utilisez actuellement la version 1.0.0.440 ou une version plus récente, procédez comme suit pour mettre à jour vers la dernière version du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
-  
-1. Arrêtez l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Arrêtez le service du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
-  
-1. Désinstallez le connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l’aide de la fonctionnalité Programmes et fonctionnalités de Windows.  
-  
-     Vous pouvez également renommer le dossier dans lequel se trouve le fichier DLL. Le nom par défaut du dossier est « [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour Microsoft Azure Key Vault ».  
-  
-1. Installez la version la plus récente du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à partir du Centre de téléchargement Microsoft.  
-  
-1. Redémarrez l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-  
-1. Exécutez l’instruction suivante pour modifier le fournisseur EKM afin de commencer à utiliser la version la plus récente du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Assurez-vous que le chemin du fichier pointe vers l’emplacement où vous avez téléchargé la version la plus récente. Cette étape peut être ignorée si la nouvelle version est installée dans le même emplacement que la version d’origine.
-  
-    ```sql  
-    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov
-    FROM FILE =
-    'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
-    GO  
-    ```  
-  
+### <a name="rollback"></a>Restauration
+
+1. Arrêter le service SQL Server à l’aide du Gestionnaire de configuration SQL Server
+
+1. Désinstaller la nouvelle version à l’aide de Panneau de configuration\Programmes\Programmes et fonctionnalités
+    1. Nom de l’application : Connecteur SQL Server pour Microsoft Azure Key Vault
+    1. Version : 15.0.2000.367
+    1. Date du fichier DLL : 11/09/2020 ‏‎5:17
+
+1. Installer l’ancienne version du connecteur SQL Server pour Microsoft Azure Key Vault
+    1. Version : 15.0.300.96
+    1. Date du fichier DLL : 30/01/2018 15:00
+1. Démarrer le service SQL Server
+
 1. Vérifiez que les bases de données qui utilisent le chiffrement TDE sont accessibles.  
   
-1. Après avoir vérifié que la mise à jour fonctionne, vous pouvez supprimer le dossier de l’ancien connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si vous avez choisi de le renommer au lieu de le désinstaller à l’étape 3.  
+1. Après avoir vérifié que la mise à jour fonctionne, vous pouvez supprimer le dossier de l’ancien connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si vous avez choisi de le renommer au lieu de le désinstaller à l’étape 3.
+
+### <a name="older-versions-of-the-sql-server-connector"></a>Versions antérieures du connecteur SQL Server
   
+Liens ciblés vers les versions antérieures du connecteur SQL Server
+
+- Intensité : [1.0.5.0 (version 15.0.2000.367) – Date de fichier du 11 septembre 2020](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/1033_15.0.2000.367/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.5.0 (version 15.0.300.96) – Date de fichier du 30 janvier 2018](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/ENU/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+- [1.0.4.0 : (version 13.0.811.168)](https://download.microsoft.com/download/8/0/9/809494F2-BAC9-4388-AD07-7EAF9745D77B/SQLServerConnectorforMicrosoftAzureKeyVault.msi)
+
 ### <a name="rolling-the-ssnoversion-service-principal"></a>Modification du principal du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des principaux du service créés dans Azure Active Directory comme informations d’identification pour accéder au coffre de clés.  Le principal du service a un ID client et une clé d’authentification.  Des informations d’identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont configurées avec le **nom du coffre**, l’ **ID client**et la **clé d’authentification**.  La **clé d’authentification** est valide un certain temps (un ou deux ans).   Avant l’expiration de cette période, une nouvelle clé doit être générée pour le principal du service dans Azure AD.  Ensuite, les informations d’identification doivent être modifiées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] gère un cache pour les informations d’identification de la session en cours ; ainsi, si des informations d’identification sont modifiées, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] doit être redémarré.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des principaux du service créés dans Azure Active Directory comme informations d’identification pour accéder au coffre de clés. Le principal du service a un ID client et une clé d’authentification. Des informations d’identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont configurées avec le **nom du coffre**, l’ **ID client**et la **clé d’authentification**. La **clé d’authentification** est valide un certain temps (un ou deux ans). Avant l’expiration de cette période, une nouvelle clé doit être générée pour le principal du service dans Azure AD. Ensuite, les informations d’identification doivent être modifiées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] gère un cache pour les informations d’identification de la session en cours ; ainsi, si des informations d’identification sont modifiées, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] doit être redémarré.  
   
 ### <a name="key-backup-and-recovery"></a>Sauvegarde et récupération des clés
 
 Le coffre de clés doit être sauvegardé régulièrement. Si une clé asymétrique dans le coffre est perdue, elle peut être restaurée à partir d’une sauvegarde. La clé doit être restaurée à l’aide du même nom qu’avant, ce que fera la commande PowerShell Restore (voir les étapes ci-dessous).  
-Si le coffre a été perdu, vous devez recréer un coffre et restaurer la clé asymétrique dans le coffre en utilisant le même nom qu’avant. Le nom du coffre peut être différent (ou le même qu’avant). En outre, vous devez définir les autorisations d’accès sur le nouveau coffre de manière à accorder au principal du service SQL Server l’accès nécessaire pour les scénarios de chiffrement SQL Server, puis paramétrer les informations d’identification SQL Server afin qu’elles reflètent le nom du nouveau coffre.
+Si le coffre a été perdu, vous devez recréer un coffre et restaurer la clé asymétrique dans le coffre en utilisant le même nom qu’avant. Le nom du coffre peut être différent (ou le même qu’avant). Définissez les autorisations d’accès sur le nouveau coffre de manière à accorder au principal du service SQL Server l’accès nécessaire pour les scénarios de chiffrement SQL Server, puis paramétrez les informations d’identification SQL Server afin qu’elles reflètent le nom du nouveau coffre.
 
 Voici un récapitulatif des étapes :  
   
 - Sauvegarder la clé de coffre (à l’aide de l’applet de commande PowerShell Backup-AzureKeyVaultKey).  
-- En cas de défaillance du coffre, créer un coffre dans la même région géographique*. L’utilisateur qui effectue cette création doit se trouver dans le même répertoire par défaut que le programme d’installation du principal du service pour SQL Server.  
-- Restaurer la clé dans le nouveau coffre (à l’aide de l’applet de commande PowerShell Restore-AzureKeyVaultKey : cette opération restaure la clé en utilisant le même nom qu’avant). S’il existe déjà une clé portant le même nom, la restauration échoue.  
+- En cas de défaillance du coffre, créer un coffre dans la même région géographique. L’utilisateur qui crée le coffre doit se trouver dans le même annuaire par défaut que le programme d’installation du principal du service pour SQL Server.  
+- Restaurer la clé dans le nouveau coffre à l’aide de l’applet de commande PowerShell Restore-AzureKeyVaultKey, opération qui restaure la clé en utilisant le même nom qu’avant. S’il existe déjà une clé portant le même nom, la restauration échoue.  
 - Accorder des autorisations au principal du service SQL Server pour utiliser ce nouveau coffre.
 - Modifier les informations d’identification SQL Server utilisées par le moteur de base de données afin qu’elles reflètent le nom du nouveau coffre (le cas échéant).  
   
@@ -176,7 +175,7 @@ Le connecteur communique avec deux points de terminaison, qui doivent être auto
 - *.vault.azure.net/* :443
 
 **Comment se connecter à Azure Key Vault par le biais d’un serveur proxy HTTP(S) ?**
-Le connecteur utilise les paramètres de configuration de proxy d’Internet Explorer. Ces paramètres peuvent être contrôlés par le biais d’une [stratégie de groupe](https://blogs.msdn.microsoft.com/askie/2015/10/12/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available/) ou du Registre, mais il est important de noter qu’ils ne s’appliquent pas à l’ensemble du système et qu’ils doivent cibler le compte de service exécutant l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si un administrateur de base de données examine ou modifie les paramètres dans Internet Explorer, seul le compte de l’administrateur de base de données est affecté (le moteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne l’est pas). La connexion interactive au serveur à l’aide du compte de service n’est pas recommandée et est bloquée dans de nombreux environnements sécurisés. Les modifications apportées aux paramètres de proxy configurés peuvent nécessiter le redémarrage de l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour entrer en vigueur. En effet, elles sont mises en cache quand le connecteur tente pour la première fois de se connecter à un coffre de clés.
+Le connecteur utilise les paramètres de configuration de proxy d’Internet Explorer. Ces paramètres peuvent être contrôlés par le biais d’une [stratégie de groupe](/archive/blogs/askie/how-to-configure-proxy-settings-for-ie10-and-ie11-as-iem-is-not-available) ou du Registre, mais il est important de noter qu’ils ne s’appliquent pas à l’ensemble du système et qu’ils doivent cibler le compte de service exécutant l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si un administrateur de base de données examine ou modifie les paramètres dans Internet Explorer, seul le compte de l’administrateur de base de données est affecté (le moteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne l’est pas). La connexion interactive au serveur à l’aide du compte de service n’est pas recommandée et est bloquée dans de nombreux environnements sécurisés. Les modifications apportées aux paramètres de proxy configurés peuvent nécessiter le redémarrage de l’instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour entrer en vigueur. En effet, elles sont mises en cache quand le connecteur tente pour la première fois de se connecter à un coffre de clés.
 
 **Quels sont les niveaux d’autorisation minimaux exigés pour chaque étape de configuration dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Même si vous pouvez effectuer toutes les étapes de configuration comme membre du rôle serveur fixe sysadmin, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous encourage à réduire les autorisations que vous utilisez. La liste suivante définit le niveau d’autorisation minimal pour chaque action.  
@@ -193,22 +192,23 @@ Le connecteur utilise les paramètres de configuration de proxy d’Internet Exp
 
 **Comment modifier mon Active Directory par défaut, de sorte que mon coffre de clés soit créé dans le même abonnement et Active Directory que le principal du service que j’ai créé pour le connecteur [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] ?**
 
-![aad-change-default-directory-helpsteps](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
+![procédure pour changer d’annuaire aad par défaut](../../../relational-databases/security/encryption/media/aad-change-default-directory-helpsteps.png)
 
 1. Accédez au portail Azure Classic : [https://manage.windowsazure.com](https://manage.windowsazure.com)  
-2. Dans le menu de gauche, faites défiler vers le bas et sélectionnez **Paramètres**.
+2. Dans le menu de gauche, sélectionnez **Paramètres**.
 3. Sélectionnez l’abonnement Azure que vous utilisez actuellement, puis cliquez sur **Modifier l’annuaire** à partir des commandes en bas de l’écran.
 4. Dans la fenêtre contextuelle, utilisez la liste déroulante **Annuaire** pour sélectionner l’annuaire Active Directory que vous souhaitez utiliser. Celui-ci devient l’annuaire par défaut.
-5. Assurez-vous que vous êtes l’administrateur global d’Active Directory qui vient d’être sélectionné. Si vous n’êtes pas l’administrateur global, il se peut que vous ayez perdu des autorisations de gestion en raison du basculement d’annuaires.
+5. Assurez-vous que vous êtes l’administrateur global d’Active Directory qui vient d’être sélectionné. Si vous n’êtes pas l’administrateur général, vous risquez de perdre les autorisations de gestion parce que vous avez changé d’annuaires.
 6. Une fois la fenêtre contextuelle fermée, si aucun de vos abonnements ne s’affiche, vous devez mettre à jour le filtre **Filtrer par annuaire** du filtre **Abonnements** du menu supérieur droit de l’écran pour afficher les abonnements à l’aide de l’annuaire Active Directory qui vient d’être mis à jour.
 
     > [!NOTE] 
     > Il se peut que vous ne disposiez pas des autorisations permettant de modifier réellement l’annuaire par défaut sur votre abonnement Azure. Dans ce cas, créez le principal du service AAD dans votre annuaire par défaut afin qu’il soit dans le même annuaire que le coffre de clés Azure utilisé ultérieurement.
 
-Pour en savoir plus sur Active Directory, lisez [Association des abonnements Azure avec Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
+Pour en savoir plus sur Active Directory, lisez [Association des abonnements Azure avec Azure Active Directory](/azure/active-directory/fundamentals/active-directory-how-subscriptions-associated-directory)
   
-##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Explications des codes d’erreur du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- **Codes d’erreur du fournisseur :**  
+##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> C. Explications des codes d’erreur du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
+
+**Codes d’erreur du fournisseur :**  
   
 Code d'erreur  |Symbole  |Description
 ---------|---------|---------  
@@ -405,9 +405,9 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
  Documentation relative à Azure Key Vault  
   
-- [Qu’est-ce qu’Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+- [Qu’est-ce qu’Azure Key Vault ?](/azure/key-vault/general/basic-concepts)  
   
-- [Prise en main d'Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
+- [Prise en main d'Azure Key Vault](/azure/key-vault/general/overview)  
   
 - Informations de référence sur les [applets de commande Azure Key Vault](/powershell/module/azurerm.keyvault/) de PowerShell  
   

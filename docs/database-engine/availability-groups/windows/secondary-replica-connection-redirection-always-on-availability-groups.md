@@ -18,12 +18,12 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4d3d1b76144de526146e4938ad655d990b443e1c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 691b3c495db0280b2ae1f50b2d877677c66dc768
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91669851"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866560"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal (groupes de disponibilité Always On)
 
@@ -89,7 +89,7 @@ Dans cet exemple, un groupe de disponibilité a trois réplicas :
 
 L’illustration suivante représente le groupe de disponibilité.
 
-![Groupe de disponibilité d’origine](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
+![Groupe de disponibilité avec réplicas principal, secondaire et secondaire asynchrone](media/replica-connection-redirection-always-on-availability-groups/01_originalAG.png)
 
 Le script Transact-SQL suivant crée ce groupe de disponibilité. Dans cet exemple, chaque réplica spécifie `READ_WRITE_ROUTING_URL`.
 ```sql
@@ -144,18 +144,13 @@ GO
 
 Dans le diagramme suivant, une application cliente se connecte à COMPUTER02, avec `ApplicationIntent=ReadWrite`. La connexion est redirigée vers le réplica principal. 
 
-![Groupe de disponibilité d’origine](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
+![La connexion à l’ordinateur 2 est redirigée vers le réplica principal](media/replica-connection-redirection-always-on-availability-groups/02_redirectionAG.png)
 
 Le réplica secondaire redirige les appels de lecture/écriture vers le réplica principal. Une connexion en lecture/écriture vers l’un des réplicas sera redirigée vers le réplica principal. 
 
 Dans le diagramme suivant, le réplica principal a fait l’objet d’un basculement manuel vers COMPUTER02. Une application cliente se connecte à COMPUTER01, avec `ApplicationIntent=ReadWrite`. La connexion est redirigée vers le réplica principal. 
 
-![Groupe de disponibilité d’origine](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
-
-
-## <a name="sql-server-instance-offline"></a>Instance SQL Server hors connexion
-
-Si l’instance de SQL Server qui est spécifiée dans la chaîne de connexion n’est pas disponible (en cas de panne), la connexion échoue, quel que soit le rôle que joue le réplica sur le serveur cible. Pour éviter les temps d’arrêt prolongés du service, configurez un autre `FailoverPartner` dans la chaîne de connexion. L’application doit implémenter une logique de nouvelle tentative puisque les réplicas principaux et secondaires seront hors connexion pendant le basculement. Pour plus d’informations sur les chaînes de connexion, consultez [SqlConnection.ConnectionString, propriété](/dotnet/api/system.data.sqlclient.sqlconnection.connectionstring).
+![Connexion redirigée vers le nouveau réplica principal sur l’ordinateur 2](media/replica-connection-redirection-always-on-availability-groups/03_redirectionAG.png)
 
 ## <a name="see-also"></a>Voir aussi
 

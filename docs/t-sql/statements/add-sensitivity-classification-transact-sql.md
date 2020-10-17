@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.custom: ''
 ms.date: 06/10/2020
 monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb-current || = sqlallproducts-allversions"
-ms.openlocfilehash: 641896fb407beabdedbd30d98cc8d94d16d31efe
-ms.sourcegitcommit: 18a98ea6a30d448aa6195e10ea2413be7e837e94
+ms.openlocfilehash: cc5f77d8590434d8d8d03e5ef8ab68365be3c4ca
+ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2020
-ms.locfileid: "88991880"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "91784781"
 ---
 # <a name="add-sensitivity-classification-transact-sql"></a>AJOUTER UNE CLASSIFICATION DE SENSIBILITÉ (Transact-SQL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "88991880"
 
 Ajoute des métadonnées relatives à la classification de sensibilité à une ou plusieurs colonnes de base de données. La classification peut inclure une étiquette de sensibilité et un type d’information.
 
-Pour SQL Server, cela a été introduit dans SQL Server 2019.
+Pour SQL Server, cela a été introduit dans SQL Server 2012.
 
 Classifier des données sensibles dans votre environnement de base de données permet d’étendre la visibilité et d’améliorer la protection. Vous trouverez des informations supplémentaires dans [Mise en route avec SQL Information Protection](https://aka.ms/sqlip)
 

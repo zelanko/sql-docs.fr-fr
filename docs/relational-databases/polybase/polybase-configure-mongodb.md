@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 7592100b7f8faec7dcfba35977e6b1cb5865854c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ab1ef128b86f3426193b648c41f6cac6b324e71
+ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741767"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91834042"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>Configurer PolyBase pour accéder à des données externes dans MongoDB
 
@@ -49,6 +49,10 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
     */
     CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
     ```
+    
+   > [!IMPORTANT] 
+   > Le connecteur ODBC MongoDB pour Polybase prend uniquement en charge l’authentification de base (l’authentification Kerberos n’est pas prise en charge).    
+    
 1. Créez une source de données externe avec [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
     ```sql
@@ -72,7 +76,9 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
     ```
 
 >[!IMPORTANT] 
->Une fois que vous avez créé une source de données externes, vous pouvez utiliser la commande [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) afin de créer une table requêtable sur cette source. 
+>Une fois que vous avez créé une source de données externes, vous pouvez utiliser la commande [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) afin de créer une table requêtable sur cette source.
+>
+>Pour obtenir un exemple, consultez [Créer une table externe pour MongoDB](../../t-sql/statements/create-external-table-transact-sql.md#k-create-an-external-table-for-mongodb).
 
 ## <a name="flattening"></a>Aplanissement
 L’aplanissement est activé pour les données imbriquées et répétées depuis des collections de document MongoDB. L’utilisateur doit activer `create an external table` et spécifier explicitement un schéma relationnel sur des collections de documents MongoDB dont les données peuvent être imbriquées et/ou répétées. Les types de données JSON imbriquées/répétées seront aplanis comme suit :
