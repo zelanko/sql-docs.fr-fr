@@ -1,6 +1,6 @@
 ---
-description: sys. database_query_store_options (Transact-SQL)
-title: sys. database_query_store_options (Transact-SQL) | Microsoft Docs
+description: sys.database_query_store_options (Transact-SQL)
+title: sys.database_query_store_options (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/27/2020
 ms.prod: sql
@@ -22,14 +22,14 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f145ef3109ed9ba755ee006a218313d5a7956df4
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d1c77693808a1571069e9b921e7efe017d55a514
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89551497"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175920"
 ---
-# <a name="sysdatabase_query_store_options-transact-sql"></a>sys. database_query_store_options (Transact-SQL)
+# <a name="sysdatabase_query_store_options-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Retourne les options de Magasin des requêtes pour cette base de données.  
@@ -42,7 +42,7 @@ ms.locfileid: "89551497"
 |**desired_state_desc**|**nvarchar(60)**|Description textuelle du mode d’opération souhaité de Magasin des requêtes :<br />OFF<br />READ_ONLY<br />READ_WRITE|  
 |**actual_state**|**smallint**|Indique le mode d’opération de Magasin des requêtes. En plus de la liste des États souhaités requis par l’utilisateur, l’état réel peut être un état d’erreur.<br /> 0 = désactivé <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE<br /> 3 = ERREUR|  
 |**actual_state_desc**|**nvarchar(60)**|Description textuelle du mode d’opération réel de Magasin des requêtes.<br />OFF<br />READ_ONLY<br />READ_WRITE<br />ERROR<br /><br /> Il existe des situations dans lesquelles l’état réel diffère de l’état souhaité :<br />-Si la base de données est définie en mode lecture seule ou si Magasin des requêtes taille dépasse son quota configuré, Magasin des requêtes peut fonctionner en mode lecture seule même si l’utilisateur a spécifié l’accès en lecture-écriture.<br />-Dans les scénarios extrêmes Magasin des requêtes pouvez entrer un état d’erreur en raison d’erreurs internes. À compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] , si cela se produit, magasin des requêtes peut être récupéré en exécutant la `sp_query_store_consistency_check` procédure stockée dans la base de données affectée. Si l’exécution `sp_query_store_consistency_check` ne fonctionne pas, ou si vous utilisez [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , vous devrez effacer les données en exécutant `ALTER DATABASE [YourDatabaseName] SET QUERY_STORE CLEAR ALL;`|  
-|**readonly_reason**|**int**|Lorsque le **desired_state_desc** est READ_WRITE et que le **actual_state_desc** est READ_ONLY, **readonly_reason** retourne une table de bits pour indiquer la raison pour laquelle le magasin des requêtes est en mode lecture seule.<br /><br /> **1** -la base de données est en mode lecture seule<br /><br /> **2** -la base de données est en mode mono-utilisateur<br /><br /> **4** -la base de données est en mode urgence<br /><br /> **8** -la base de données est un réplica secondaire (s’applique à la Always on et à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la géo-réplication). Cette valeur peut être observée efficacement uniquement sur les réplicas secondaires **accessibles en lecture** .<br /><br /> **65536** -la magasin des requêtes a atteint la limite de taille définie par l' `MAX_STORAGE_SIZE_MB` option. Pour plus d’informations sur cette option, consultez [options SET de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /><br /> **131072** -le nombre d’instructions différentes dans magasin des requêtes a atteint la limite de mémoire interne. Envisagez de supprimer les requêtes dont vous n’avez pas besoin ou de procéder à une mise à niveau vers un niveau de service supérieur pour permettre le transfert de Magasin des requêtes en mode lecture-écriture.<br />**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> **262144** -la taille des éléments en mémoire en attente de conservation sur le disque a atteint la limite de mémoire interne. Magasin des requêtes sera temporairement en mode lecture seule jusqu’à ce que les éléments en mémoire soient conservés sur le disque. <br />**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> **524288** -la base de données a atteint la limite de taille de disque. Magasin des requêtes fait partie de la base de données utilisateur, si bien qu’il n’y a plus d’espace disponible pour une base de données, cela signifie que les Magasin des requêtes ne peuvent plus croître.<br />**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. <br /> <br /> Pour rebasculer le mode d’opération Magasin des requêtes en lecture-écriture, consultez **Verify magasin des requêtes collecte des données de requête en continu** [dans la pratique recommandée avec la magasin des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify).|  
+|**readonly_reason**|**int**|Lorsque le **desired_state_desc** est READ_WRITE et que le **actual_state_desc** est READ_ONLY, **readonly_reason** retourne une table de bits pour indiquer la raison pour laquelle le magasin des requêtes est en mode lecture seule.<br /><br /> **1** -la base de données est en mode lecture seule<br /><br /> **2** -la base de données est en mode mono-utilisateur<br /><br /> **4** -la base de données est en mode urgence<br /><br /> **8** -la base de données est un réplica secondaire (s’applique à la Always on et à [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] la géo-réplication). Cette valeur peut être observée efficacement uniquement sur les réplicas secondaires **accessibles en lecture** .<br /><br /> **65536** -la magasin des requêtes a atteint la limite de taille définie par l' `MAX_STORAGE_SIZE_MB` option. Pour plus d’informations sur cette option, consultez [options SET de ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).<br /><br /> **131072** -le nombre d’instructions différentes dans magasin des requêtes a atteint la limite de mémoire interne. Envisagez de supprimer les requêtes dont vous n’avez pas besoin ou de procéder à une mise à niveau vers un niveau de service supérieur pour permettre le transfert de Magasin des requêtes en mode lecture-écriture.<br /><br /><br /> **262144** -la taille des éléments en mémoire en attente de conservation sur le disque a atteint la limite de mémoire interne. Magasin des requêtes sera temporairement en mode lecture seule jusqu’à ce que les éléments en mémoire soient conservés sur le disque. <br /><br /><br /> **524288** -la base de données a atteint la limite de taille de disque. Magasin des requêtes fait partie de la base de données utilisateur, si bien qu’il n’y a plus d’espace disponible pour une base de données, cela signifie que les Magasin des requêtes ne peuvent plus croître.<br /><br /> <br /> Pour rebasculer le mode d’opération Magasin des requêtes en lecture-écriture, consultez **Verify magasin des requêtes collecte des données de requête en continu** [dans la pratique recommandée avec la magasin des requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md#Verify).|  
 |**current_storage_size_mb**|**bigint**|Taille de Magasin des requêtes sur le disque en mégaoctets.|  
 |**flush_interval_seconds**|**bigint**|Période de vidage régulier des données de Magasin des requêtes sur le disque, en secondes. La valeur par défaut est **900** (15 minutes).<br /><br /> Modifiez à l’aide de l' `ALTER DATABASE <database> SET QUERY_STORE (DATA_FLUSH_INTERVAL_SECONDS  = <interval>)` instruction.|  
 |**interval_length_minutes**|**bigint**|Intervalle d’agrégation des statistiques en minutes. Les valeurs arbitraires ne sont pas autorisées. Utilisez l’une des valeurs suivantes : 1, 5, 10, 15, 30, 60 et 1440 minutes. La valeur par défaut est de **60** minutes.|  
@@ -60,16 +60,16 @@ ms.locfileid: "89551497"
  Nécessite l’autorisation `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [sys. query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys. query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys. query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   
