@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seo-lt-2019, seo-mmd-2019
 ms.date: 06/09/2020
-ms.openlocfilehash: 20a1d961035974c3c268be3e727133d731f673c3
-ms.sourcegitcommit: f7c9e562d6048f89d203d71685ba86f127d8d241
+ms.openlocfilehash: b0e5df690fd141a60a81a64c0d0a4ce9a72723ee
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2020
-ms.locfileid: "90042850"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935456"
 ---
-# <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurer le compte de service Report Server (Gestionnaire de configuration de SSRS)
+# <a name="configure-the-report-server-service-account-report-server-configuration-manager"></a>Configurer le compte de service de serveurs de rapports (Gestionnaire de configuration du serveur de rapports)
 
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est implémenté en tant que service unique qui contient un service Web Report Server, le [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]et une application de traitement en arrière-plan utilisée pour le traitement des rapports planifié et la remise d’abonnement. Cette rubrique explique comment le compte de service est configuré initialement et comment modifier le compte ou le mot de passe à l'aide de l'outil de configuration de Reporting Services.  
   
@@ -99,7 +99,7 @@ Les instructions et les liens suivants de cette section peuvent vous aider à ch
   
 ## <a name="updating-an-expired-password"></a>Mise à jour d'un mot de passe  expiré
 
- Si le service Report Server s’exécute sous un compte de domaine et que le mot de passe expire avant que vous puissiez le mettre à jour dans le Gestionnaire de configuration de Reporting Services, le service ne démarre pas tant que vous n’avez pas spécifié un nouveau mot de passe.  
+ Si le service Report Server s’exécute sous un compte de domaine et que le mot de passe expire avant que vous puissiez le mettre à jour dans le Gestionnaire de configuration du serveur de rapports, le service ne démarre pas tant que vous n’avez pas spécifié un nouveau mot de passe.  
   
  Si le mot de passe du compte de service pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] expire, l’erreur **rsReportServerDatabaseUnavailable** se produit si vous tentez de vous connecter au serveur de rapports. La réinitialisation du mot de passe résout cette erreur.  
   
@@ -115,5 +115,4 @@ Les instructions et les liens suivants de cette section peuvent vous aider à ch
   
 ## <a name="next-steps"></a>Étapes suivantes
 
- [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md) [Gestionnaire de configuration du serveur de rapports &#40;Mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   

@@ -1,21 +1,21 @@
 ---
 title: Connexion de bouclage SQL dans Python et R
-description: Découvrez comment utiliser une connexion de bouclage pour vous reconnecter à SQL Server sur ODBC afin de lire ou d’écrire des données dans un script Python ou R exécuté à partir de sp_execute_external_script.
+description: Découvrez comment utiliser une connexion de bouclage pour vous reconnecter à SQL Server sur ODBC afin de lire ou d’écrire des données à partir d’un script Python ou R exécuté à partir de sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/20/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: Aniruddh25
 ms.author: anmunde
 ms.reviewer: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 21c32a27a94dcf8a1981f1fde2eb4db0b71b1b8a
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: a732734e256d553c4917545d24021b02d7232b01
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714137"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988465"
 ---
 # <a name="loopback-connection-to-sql-server-from-a-python-or-r-script"></a>Connexion de bouclage à SQL Server à partir d’un script Python ou R
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
@@ -48,7 +48,7 @@ Voici un exemple de chaîne de connexion de bouclage sur Linux :
 
 L’adresse du serveur, l’emplacement du fichier de certificat client et l’emplacement du fichier de clé client sont uniques à chaque `sp_execute_external_script` et peuvent être obtenus à l’aide de l’API **rx_get_sql_loopback_connection_string ()** pour Python ou **rxGetSqlLoopbackConnectionString ()** pour R.
 
-Pour plus d’informations sur les attributs de chaîne de connexion, consultez [Attributs et mots clés de chaîne de connexion et DSN](https://docs.microsoft.com/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) pour Microsoft ODBC Driver for SQL Server.
+Pour plus d’informations sur les attributs de chaîne de connexion, consultez [Attributs et mots clés de chaîne de connexion et DSN](../../connect/odbc/dsn-connection-string-attribute.md?view=sql-server-linux-ver15#new-connection-string-keywords-and-connection-attributes) pour Microsoft ODBC Driver for SQL Server.
 
 ## <a name="generate-connection-string-with-revoscalepy-for-python"></a>Générer une chaîne de connexion avec revoscalepy pour Python
 

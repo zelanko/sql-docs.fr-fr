@@ -9,18 +9,18 @@ author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8d9ba741433cf5e010861dd3096ac9bf8b4f1707
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: fb7f365fdbf4421093c11b5223bb3c1036a8d911
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227159"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956303"
 ---
 # <a name="install-an-r-custom-runtime-for-sql-server"></a>Installer un CLR personnalisé R pour SQL Server
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Cet article explique comment installer un CLR personnalisé pour l’exécution de scripts R avec SQL Server. Le CLR personnalisé pour R peut être utilisé dans les scénarios suivants :
+Cet article explique comment installer un CLR personnalisé pour l’exécution de scripts R avec SQL Server. Le runtime personnalisé utilise une technologie d’extension de langage reposant sur un framework d’extensibilité pour l’exécution de code externe. Le CLR personnalisé pour R peut être utilisé dans les scénarios suivants :
 
 + Une installation de SQL Server avec l’infrastructure d’extensibilité.
 
@@ -71,7 +71,7 @@ Les extensions de langage utilisent l’infrastructure d’extensibilité pour e
     + Services Moteur de base de données
     + Machine Learning Services et extensions de langage
 
-1. Si vous êtes invité à redémarrer l’ordinateur après l’installation, faites-le dès à présent. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
+1. Si vous êtes invité à redémarrer l’ordinateur après l’installation, faites-le dès à présent. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).
 
 ## <a name="install-r"></a>Installation de R
 

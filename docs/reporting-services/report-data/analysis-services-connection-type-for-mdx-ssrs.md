@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd2e7148-3124-4e07-9734-22333127c3be
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c2aa39f932c0fed1a64155037f32cfc207bfede4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 3f8b6fb8aa45357318c398773708ecd2c66dba30
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458991"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935068"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Type de connexion Analysis Services pour MDX (SSRS)
   Pour inclure des données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ce type de source de données intégré est basé sur l’extension de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vous pouvez récupérer les métadonnées relatives aux dimensions, hiérarchies, niveaux, indicateurs de performance clés (KPI), mesures et attributs d'un cube [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de les utiliser comme données de rapport.  
@@ -46,7 +46,7 @@ data source=<server name>;initial catalog=<database name>
   
 -   demander à l'utilisateur des informations d'identification ; Cette option prend uniquement en charge la sécurité intégrée de Windows.  
   
--   Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).
+-   Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).
   
  Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -78,7 +78,7 @@ data source=<server name>;initial catalog=<database name>
   
   
 ##  <a name="remarks"></a><a name="Remarks"></a> Notes  
- L'extension de données Analysis Services est basée sur le protocole XMLA (XML for Analysis). Les jeux de résultats de cubes sont récupérés via le protocole XMLA sous la forme d'un ensemble de lignes aplati. Les hiérarchies déséquilibrées ne sont pas prises en charge. Pour plus d’informations sur les hiérarchies, consultez [Hiérarchies déséquilibrées](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
+ L'extension de données Analysis Services est basée sur le protocole XMLA (XML for Analysis). Les jeux de résultats de cubes sont récupérés via le protocole XMLA sous la forme d'un ensemble de lignes aplati. Les hiérarchies déséquilibrées ne sont pas prises en charge. Pour plus d’informations sur les hiérarchies, consultez [Hiérarchies déséquilibrées](/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  Vous pouvez également récupérer les données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir du type de source de données OLE DB. Pour plus d’informations, consultez [Type de connexion OLE DB &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md).  
   
@@ -111,5 +111,4 @@ data source=<server name>;initial catalog=<database name>
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-  
   

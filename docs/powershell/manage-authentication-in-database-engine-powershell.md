@@ -1,60 +1,60 @@
 ---
-title: 'PowerShell : Gérer l’authentification'
+title: Gérer l’authentification pour SQL Server dans PowerShell
 description: Découvrez comment utiliser l’authentification SQL Server plutôt que l’authentification Windows (valeur par défaut) lors de la connexion à une instance du Moteur de base de données.
 titleSuffix: SQL Server on Linux
-ms.custom: seo-lt-2019
-ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cde441ebf659cfb558c21abd981a49079bcacb16
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.reviewer: matteot, drskwier
+ms.custom: seo-lt-2019
+ms.date: 10/14/2020
+ms.openlocfilehash: 59f7fdf4427a6f63da0a36a73697b2f5dbce7784
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714217"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081558"
 ---
-# <a name="powershell-manage-authentication-to-sql-server"></a>PowerShell : Gérer l’authentification pour SQL Server
+# <a name="manage-authentication-to-sql-server-in-powershell"></a>Gérer l’authentification pour SQL Server dans PowerShell
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Par défaut, les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent l'authentification Windows lors de la connexion à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Vous pouvez utiliser l’authentification SQL Server en définissant une unité virtuelle PowerShell ou en spécifiant les paramètres **-Username** et **-Password** pour **Invoke-Sqlcmd**.  
-  
-> [!NOTE]
-> Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
-> Des versions précédentes du module **SqlServer** *étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
-> Pour installer le module **SqlServer**, consultez [Installer SQL Server PowerShell](download-sql-server-ps-module.md).
+Par défaut, les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell utilisent l'authentification Windows lors de la connexion à une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Vous pouvez utiliser l’authentification SQL Server en définissant une unité virtuelle PowerShell ou en spécifiant les paramètres **-Username** et **-Password** pour **Invoke-Sqlcmd**.
 
-  
-##  <a name="permissions"></a><a name="Permissions"></a> Autorisations  
- Toutes les actions que vous pouvez effectuer dans une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] sont contrôlées par les autorisations accordées aux informations d'identification utilisées pour la connexion à l'instance. Par défaut, le fournisseur et les applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent le compte Windows sous lequel ils s'exécutent pour établir une connexion via l'authentification Windows au [!INCLUDE[ssDE](../includes/ssde-md.md)].  
-  
- Pour établir une connexion via l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un ID de connexion et un mot de passe d'authentification SQL Server. Quand vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez associer les informations d’identification de connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à un lecteur virtuel, puis exécuter la commande de changement de répertoire (**cd**) pour passer à ce lecteur. Dans Windows PowerShell, les informations d'identification de sécurité peuvent être associées uniquement à des lecteurs virtuels.  
-  
-##  <a name="sql-server-authentication-using-a-virtual-drive"></a><a name="SQLAuthVirtDrv"></a> Authentification SQL Server avec un lecteur virtuel  
- **Pour créer un lecteur virtuel associé à une connexion via l'authentification SQL Server**  
-  
-1.  Créez une fonction qui :  
-  
-    1.  Possède des paramètres pour le nom indiquant le lecteur virtuel, l'ID de connexion et le chemin d'accès du fournisseur à associer au lecteur virtuel.  
-  
-    2.  Utilise **read-host** pour inviter l’utilisateur à fournir le mot de passe.  
-  
-    3.  Utilise **new-object** pour créer un objet d’informations d’identification.  
-  
-    4.  Utilise **new-psdrive** pour créer un lecteur virtuel avec les informations d’identification fournies.  
-  
-2.  Appelez la fonction pour créer un lecteur virtuel avec les informations d'identification fournies.  
-  
-### <a name="example-virtual-drive"></a>Exemple (lecteur virtuel)  
- Cet exemple crée une fonction nommée **sqldrive** que vous pouvez utiliser pour créer un lecteur virtuel associé à la connexion via l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et à l'instance spécifiées.  
+[!INCLUDE [sql-server-powershell-version](../includes/sql-server-powershell-version.md)]
+
+## <a name="permissions"></a>Autorisations
+
+Toutes les actions que vous pouvez effectuer dans une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] sont contrôlées par les autorisations accordées aux informations d'identification utilisées pour la connexion à l'instance. Par défaut, le fournisseur et les applets de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilisent le compte Windows sous lequel ils s'exécutent pour établir une connexion via l'authentification Windows au [!INCLUDE[ssDE](../includes/ssde-md.md)].  
+
+Pour établir une connexion via l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez fournir un ID de connexion et un mot de passe d'authentification SQL Server. Quand vous utilisez le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vous devez associer les informations d’identification de connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à un lecteur virtuel, puis exécuter la commande de changement de répertoire (**cd**) pour passer à ce lecteur. Dans Windows PowerShell, les informations d'identification de sécurité peuvent être associées uniquement à des lecteurs virtuels.  
+
+## <a name="sql-server-authentication-using-a-virtual-drive"></a>Authentification SQL Server avec un lecteur virtuel
+
+### <a name="to-create-a-virtual-drive-associated-with-a-sql-server-authentication-login"></a>Pour créer un lecteur virtuel associé à une connexion via l'authentification SQL Server
+
+1. Créez une fonction qui :
+
+    1. Possède des paramètres pour le nom indiquant le lecteur virtuel, l'ID de connexion et le chemin d'accès du fournisseur à associer au lecteur virtuel.
+
+    2. Utilise **read-host** pour inviter l’utilisateur à fournir le mot de passe.  
+
+    3. Utilise **new-object** pour créer un objet d’informations d’identification.  
+
+    4. Utilise **new-psdrive** pour créer un lecteur virtuel avec les informations d’identification fournies.  
+
+2. Appelez la fonction pour créer un lecteur virtuel avec les informations d'identification fournies.  
+
+#### <a name="example-virtual-drive"></a>Exemple (lecteur virtuel)
+
+Cet exemple crée une fonction nommée **sqldrive** que vous pouvez utiliser pour créer un lecteur virtuel associé à la connexion via l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et à l'instance spécifiées.  
   
  La fonction **sqldrive** vous invite à entrer le mot de passe de votre connexion, en masquant celui-ci à mesure que vous le tapez. Ensuite, chaque fois que vous exécutez la commande de changement de répertoire (**cd**) pour vous connecter à un chemin via le nom de lecteur virtuel, toutes les opérations sont effectuées en utilisant les informations d’identification de connexion de l’authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que vous avez fournies lors de la création du lecteur.  
   
-```  
+```powershell
 ## Create a function that specifies the login and prompts for the password.  
   
 function sqldrive  
@@ -70,26 +70,28 @@ sqldrive SQLAuth
   
 ## CD to the virtual drive, which invokes the supplied authentication credentials.  
 cd SQLAuth  
-```  
-  
-##  <a name="sql-server-authentication-using-invoke-sqlcmd"></a><a name="SQLAuthInvSqlCmd"></a> Authentification SQL Server avec Invoke-Sqlcmd  
- **Pour utiliser Invoke-Sqlcmd avec l'authentification SQL Server**  
-  
-1.  Utilisez le paramètre **-Username** pour spécifier un ID de connexion, et le paramètre **-Password** pour spécifier le mot de passe associé.  
-  
-### <a name="example-invoke-sqlcmd"></a>Exemple (Invoke-Sqlcmd)  
- Cet exemple utilise l'applet de commande read-host pour inviter l'utilisateur à entrer un mot de passe, puis se connecte via l'authentification SQL Server.  
-  
-```  
+```
+
+## <a name="sql-server-authentication-using-invoke-sqlcmd"></a>Authentification SQL Server avec Invoke-Sqlcmd
+
+### <a name="to-use-invoke-sqlcmd-with-sql-server-authentication"></a>Pour utiliser Invoke-Sqlcmd avec l'authentification SQL Server
+
+1. Utilisez le paramètre **-Username** pour spécifier un ID de connexion, et le paramètre **-Password** pour spécifier le mot de passe associé.  
+
+#### <a name="example-invoke-sqlcmd"></a>Exemple (Invoke-Sqlcmd)
+
+Cet exemple utilise l'applet de commande read-host pour inviter l'utilisateur à entrer un mot de passe, puis se connecte via l'authentification SQL Server.  
+
+```powershell
 ## Prompt the user for their password.  
 $pwd = read-host -AsSecureString -Prompt "Password"  
   
 Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyInstance" -Username "MyLogin" -Password $pwd  
-```  
-  
-## <a name="see-also"></a>Voir aussi  
- [SQL Server PowerShell](sql-server-powershell.md)   
- [fournisseur PowerShell SQL Server](sql-server-powershell-provider.md)   
- [Invoke-Sqlcmd, applet de commande](invoke-sqlcmd-cmdlet.md)  
-  
-  
+```
+
+## <a name="see-also"></a>Voir aussi
+
+- [SQL Server PowerShell](sql-server-powershell.md)
+- [Fournisseur SQL Server PowerShell](sql-server-powershell-provider.md)
+- [Invoke-Sqlcmd, applet de commande](/powershell/module/sqlserver/invoke-sqlcmd)
+- [Utiliser PowerShell avec Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

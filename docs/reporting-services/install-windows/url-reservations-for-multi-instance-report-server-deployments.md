@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 661dc1ee0e259cc2f1457e555ca685e8e581dc0e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 53d12c7441b796bf4564bbaf05a84ecfd7aae86a
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445961"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934572"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments"></a>Réservations d'URL pour les déploiements de serveur de rapports multi-instance
   Si vous installez plusieurs instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur le même ordinateur, vous devez considérer comment vous définirez les réservations d'URL pour chaque instance. Dans chaque instance, le service Web Report Server et le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] doivent avoir au moins une réservation d’URL chacun. L'ensemble entier de réservations doit être unique dans HTTP.SYS.  
@@ -46,7 +46,7 @@ ms.locfileid: "88445961"
  Les technologies sous-jacentes utilisées par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imposent des spécifications relatives aux noms uniques. HTTP.SYS requiert que toutes les URL dans sa base de données de référentiel soient uniques. Vous pouvez varier le port, le nom d'hôte ou le nom de répertoire virtuel pour créer une URL unique. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiert que les identités d’application soient uniques dans le même processus. Cette spécification affecte les noms de répertoires virtuels. Elle spécifie que vous ne pouvez pas dupliquer de nom de répertoire virtuel dans la même instance de serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+ [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
   
   

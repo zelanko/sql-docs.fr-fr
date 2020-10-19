@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29181b0830ad767c71e73c709aa7f3eee5a49190
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4592e5b2bc35da9c2887e0c2552dc33cd3cecd5e
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759792"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987376"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>Portail web d’un serveur de rapports (Mode natif SSRS)
 
@@ -48,7 +48,7 @@ Le portail web est uniquement utilisé pour les serveurs de rapports qui s’ex�
 
 Certaines fonctionnalités du portail web sont disponibles uniquement dans les éditions spécifiées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-Dans le cas d'une nouvelle installation, seuls les administrateurs locaux possèdent les autorisations suffisantes pour travailler avec le contenu et les paramètres. Pour octroyer des autorisations à d'autres utilisateurs, un administrateur local doit créer des attributions de rôles permettant d'accéder au serveur de rapports. Les pages et les tâches auxquelles un utilisateur pourra ensuite accéder dépendent des attributions de rôles qui ont été définies pour cet utilisateur. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](security/grant-user-access-to-a-report-server-report-manager.md)
+Dans le cas d'une nouvelle installation, seuls les administrateurs locaux possèdent les autorisations suffisantes pour travailler avec le contenu et les paramètres. Pour octroyer des autorisations à d'autres utilisateurs, un administrateur local doit créer des attributions de rôles permettant d'accéder au serveur de rapports. Les pages et les tâches auxquelles un utilisateur pourra ensuite accéder dépendent des attributions de rôles qui ont été définies pour cet utilisateur. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports](./security/grant-user-access-to-a-report-server.md)
 
 > [!NOTE]
 > Si vous accédez au portail web sur l'ordinateur local sur lequel le serveur est en cours d’exécution, il est possible qu’un message indiquant que vous n'êtes pas autorisé à afficher ce dossier s’affiche. Cela est dû au contrôle d'accès universel (UAC) et au fait que vous n'exécutez pas le navigateur en tant qu'administrateur. Vous n'êtes pas en mesure d'exécuter Microsoft Edge en tant qu'administrateur. Vous devez utiliser Internet Explorer. Vous pouvez soit accéder au serveur à distance, soit lancer Internet Explorer en tant qu'administrateur et accéder au portail web. Si vous souhaitez utiliser le portail web à distance, vous devez accorder les droits de gestionnaire du contenu de votre compte sur le dossier.  
@@ -115,7 +115,7 @@ Entrez un terme de recherche pour voir tout ce à quoi vous pouvez accéder. Les
 ## <a name="see-also"></a>Voir aussi
 
 [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
-[Configurer une URL (Gestionnaire de configuration de SSRS)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
+[Configurer une URL (Gestionnaire de configuration du serveur de rapports)](../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
 [Outils de Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Planification de la prise en charge des navigateurs par Reporting Services](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c3acdc15b2d5eaf5e8e38e0929757fd44157a148
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: a38fe4c1a8b627b5a45e30254f8eeac62f4452ad
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86916263"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91988133"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitaire rskeymgmt (SSRS)
   Extrait, restaure, crée et supprime la clé symétrique utilisée pour protéger les données sensibles de serveur de rapports contre un accès non autorisé. Cet utilitaire sert également à joindre des instances de serveur de rapports dans un déploiement évolutif. Un *déploiement évolutif de serveurs de rapports* correspond à plusieurs instances de serveur de rapports qui partagent une base de données de serveur de rapports unique.  
@@ -129,7 +129,7 @@ rskeymgmt -a -f a:\backupkey\keys -p <password>
 ```  
   
 #### <a name="deleting-encryption-keys-and-encrypted-content"></a>Suppression de clés de chiffrement et contenu chiffré  
- Cet exemple illustre la suppression de toutes les clés de chiffrement stockées dans un serveur de rapports. Si votre installation est un déploiement évolutif de serveur de rapports, les clés de chiffrement de toutes les instances de serveur de rapports qui sont incluses dans le déploiement sont supprimées. La suppression d'une clé de chiffrement supprime également toutes les valeurs chiffrées existantes dans la base de données du serveur de rapports. Pour plus d’informations sur le contenu chiffré, consultez [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
+ Cet exemple illustre la suppression de toutes les clés de chiffrement stockées dans un serveur de rapports. Si votre installation est un déploiement évolutif de serveur de rapports, les clés de chiffrement de toutes les instances de serveur de rapports qui sont incluses dans le déploiement sont supprimées. La suppression d'une clé de chiffrement supprime également toutes les valeurs chiffrées existantes dans la base de données du serveur de rapports. Pour plus d’informations sur le contenu chiffré, consultez [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  
   
 ```  
 rskeymgmt -d  
@@ -171,12 +171,11 @@ rskeymgmt -r <installationID>
   
  L’utilitaire **rskeymgmt** sert à gérer l’ensemble des clés qui est défini durant l’installation ou l’initialisation. Il se connecte au service Windows Report Server par l'intermédiaire d'un point de terminaison de RPC (Remote Procedure Call). Le service Windows Report Server doit être en cours d'exécution pour permettre le fonctionnement de cet utilitaire.  
   
- Pour plus d’informations sur les clés de chiffrement, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) et [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Pour plus d’informations sur les clés de chiffrement, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) et [Initialiser un serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déploiement avec montée en puissance parallèle - Mode natif de Reporting Services &#40;Gestionnaire de configuration&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
+ [Déploiement avec montée en puissance parallèle - Mode natif de Reporting Services &#40;Gestionnaire de configuration&#41;](/previous-versions/sql/sql-server-2016/ms181357(v=sql.130))   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Utilitaires d’invite de commandes du serveur de rapports &#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
-  
+ [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

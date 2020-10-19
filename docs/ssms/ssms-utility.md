@@ -17,12 +17,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 07/24/2020
-ms.openlocfilehash: 5688b402cf4b7dafae7812e4e86985a48626da23
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4cc43babe2ae064731f293a0dc96219aaeced5a5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417885"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92035996"
 ---
 # <a name="ssms-utility"></a>Utilitaire SSMS
 
@@ -30,7 +30,7 @@ ms.locfileid: "88417885"
 
 L’utilitaire **SSMS** ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Si cela est spécifié, **Ssms** établit également une connexion à un serveur et ouvre des requêtes, des scripts, des fichiers, des projets et des solutions.
 
-Vous pouvez spécifier des fichiers contenant des requêtes, des projets ou des solutions. Les fichiers qui contiennent des requêtes sont automatiquement connectés à un serveur si des informations de connexion sont fournies et si le type de fichier est associé à ce type de serveur. Par exemple, les fichiers .sql ouvrent une fenêtre Éditeur de requête SQL dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], tandis que les fichiers .mdx ouvrent une fenêtre Éditeur de requête MDX dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Les**solutions et projets SQL Server** s’ouvrent dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+Vous pouvez spécifier des fichiers contenant des requêtes, des projets ou des solutions. Les fichiers qui contiennent des requêtes sont automatiquement connectés à un serveur si des informations de connexion sont fournies et si le type de fichier est associé à ce type de serveur. Par exemple, les fichiers .sql ouvrent une fenêtre Éditeur de requête SQL dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], tandis que les fichiers .mdx ouvrent une fenêtre Éditeur de requête MDX dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Les**solutions et projets SQL Server** s’ouvrent dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 > [!NOTE]
 > L’utilitaire **Ssms** n’exécute pas de requêtes. Pour exécuter des requêtes depuis la ligne de commande, employez l’utilitaire **sqlcmd** . 
@@ -62,7 +62,10 @@ Ssms
 
 [**-U** _username_] Nom d’utilisateur lors d’une connexion avec l’authentification SQL
 
-[ **-P** _mot de passe_] Mot de passe lors d'une connexion avec « Authentification SQL »
+> [!Note]
+> **-P** a été supprimé dans SSMS version 18.0.
+>
+> Solution de contournement : Essayez de vous connecter au serveur une seule fois à l’aide de l’interface utilisateur et enregistrez votre mot de passe.
 
 [**-E**] Connexion à l’aide de l’authentification Windows
 
@@ -91,40 +94,40 @@ Le tableau suivant mappe des types de serveur à des extensions de fichier.
 
 Le script suivant ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à partir d'une invite de commandes avec les paramètres par défaut :
 
-```
+```console
   Ssms
 ```
 
 Les scripts suivants ouvrent [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à partir d’une invite de commandes avec *Active Directory - Intégré* :
 
-```
+```console
 Ssms.exe -S servername.database.windows.net -G
 ```
 
 Le script suivant ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à partir d'une invite de commandes, avec l'authentification Windows, avec l'Éditeur de code réglé sur le serveur `ACCTG and the database AdventureWorks2012,` , sans affichage de l'écran de démarrage :
 
-```
+```console
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash
 ```
 
 Le script suivant ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à partir d'une invite de commandes et ouvre le script MonthEndQuery.
 
-```
+```console
 Ssms "C:\Documents and Settings\username\My Documents\SQL Server Management Studio Projects\FinanceScripts\FinanceScripts\MonthEndQuery.sql"
 ```
 
 Le script suivant ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à partir d'une invite de commandes et ouvre le projet NewReportsProject sur l'ordinateur nommé `developer`:
 
-```
+```console
 Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 ```
 
 Le script suivant ouvre [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] à partir d'une invite de commandes et ouvre la solution MonthlyReports. 
 
-```
+```console
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"
 ```
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utiliser SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)
+[Utiliser SQL Server Management Studio](./sql-server-management-studio-ssms.md)

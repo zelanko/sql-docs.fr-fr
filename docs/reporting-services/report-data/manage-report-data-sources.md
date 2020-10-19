@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0475aded-c8fe-4337-a2b5-4df0ec4c46af
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2a433169d694f9f2d71a049c906267a64b6c0756
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 85f40936b589ac5a1f90ec47a81756998c5e9db7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458256"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934918"
 ---
 # <a name="manage-report-data-sources"></a>Gérer des sources de données de rapports
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], les rapports, les modèles de rapports et les abonnements pilotés par les données récupèrent les données qui proviennent de sources de données externes. Pour se connecter à une source de données externe, un serveur de rapports utilise les informations de connexion de la source de données qui sont définies dans le rapport, le modèle ou l'abonnement, ou qui sont référencées à partir de ceux-ci. Les propriétés de connexion à la source de données sont toujours définies avec le rapport ou le modèle que vous créez, mais vous pouvez les gérer de manière indépendante après avoir publié le rapport ou le modèle sur un serveur de rapports.  
@@ -62,17 +62,17 @@ ms.locfileid: "86458256"
 |----------|----------|----------|  
 |Afficher des exemples de chaînes de connexion.||[Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Choisir une stratégie pour obtenir des informations d'identification pour se connecter à une source de données.||[Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Ajouter des propriétés de connexion à la source de données à un fichier de définition de rapport (.rdl).|Concepteur de rapports|[Créer une source de données incorporée ou partagée &#40;SSRS&#41;](https://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)|  
+|Ajouter des propriétés de connexion à la source de données à un fichier de définition de rapport (.rdl).|Concepteur de rapports|[Créer une source de données incorporée ou partagée &#40;SSRS&#41;](/previous-versions/sql/)|  
 |Ajouter et créer un lien vers un fichier de source de données partagée (.rds) dans un projet de rapport.|Concepteur de rapports|[Créer, modifier et supprimer des sources de données partagées &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Créer une liste prédéfinie des sources de données que les utilisateurs peuvent sélectionner au moment de l'exécution. Lorsqu'un utilisateur demande un rapport, celui-ci fournit une liste des sources de données. L'utilisateur doit sélectionner quelle source de données utiliser avant d'exécuter le rapport. Pour ajouter une liste de sélection de la source de données à un rapport, utilisez une expression.<br /><br /> Il s'agit d'une connexion dynamique à la source de données.|Concepteur de rapports|[Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Créer un élément de source de données partagée sur un serveur de rapports.|[Créer, modifier, puis supprimer des sources de données partagées](create-modify-and-delete-shared-data-sources-ssrs.md) |  
 |Stocker des informations d'identification comme condition préalable à la création des abonnements ou des instantanés de rapport.|Portail web|[Stocker des informations d’identification dans une source de données Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)|  
 |Modifier les propriétés de connexion à la source de données sur un rapport publié.|Portail web|[Configurer des propriétés de la source de données d'un rapport](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)|  
-|Créer un élément de source de données partagée sur un serveur de rapports.|Site SharePoint|[Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](https://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)|  
+|Créer un élément de source de données partagée sur un serveur de rapports.|Site SharePoint|[Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](/previous-versions/sql/)|  
 |Utiliser des informations de connexion .odc existantes avec un rapport.|Site SharePoint|[Utiliser une connexion de données Office &#40;.odc&#41; avec les rapports &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)|  
   
 > [!NOTE]  
->  La gestion des connexions aux sources de données d'un rapport diffère de la gestion de la connexion d'un serveur de rapports à sa base de données. Pour plus d’informations sur la connexion d’un serveur de rapports à sa banque de données interne, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+>  La gestion des connexions aux sources de données d'un rapport diffère de la gestion de la connexion d'un serveur de rapports à sa base de données. Pour plus d’informations sur la connexion d’un serveur de rapports à son magasin de données interne, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Lier un rapport ou un modèle à une source de données partagée &#40;SSRS&#41;](../../reporting-services/report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
@@ -80,5 +80,4 @@ ms.locfileid: "86458256"
  [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
-  
   

@@ -44,12 +44,12 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf51bcec55fbd11e386eb127a3bec57f37ec7f37
-ms.sourcegitcommit: 6d53ecfdc463914f045c20eda96da39dec22acca
+ms.openlocfilehash: edbce6b52c224bc95aad1b3a6088696dba4c4f6a
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88901372"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039017"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistant Générer et publier des scripts
 
@@ -57,7 +57,7 @@ ms.locfileid: "88901372"
 
 Vous pouvez utiliser l’ **Assistant Générer et publier des scripts** pour créer des scripts afin de transférer une base de données d’une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ou de [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]vers une autre. Vous pouvez générer des scripts pour une base de données sur une instance du moteur de base de données dans votre réseau local ou à partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les scripts générés peuvent être exécutés sur une autre instance du moteur de base de données ou [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous pouvez également utiliser l'Assistant pour publier directement le contenu d'une base de données sur un service Web créé à l'aide des Services de publication de base de données. Vous pouvez créer des scripts pour une base de données entière ou les limiter à des objets spécifiques.
 
-Pour un tutoriel plus détaillé sur l’utilisation de l’Assistant Générer et publier des scripts, consultez [Tutoriel : Assistant Générer des scripts](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases).
+Pour un tutoriel plus détaillé sur l’utilisation de l’Assistant Générer et publier des scripts, consultez [Tutoriel : Assistant Générer des scripts](../tutorials/scripting-ssms.md#script-databases).
 
 ## <a name="before-you-begin"></a>Avant de commencer
 
@@ -130,7 +130,7 @@ Utilisez cette page pour spécifier si vous souhaitez que l'Assistant enregistre
 
 ![Enregistrer comme notebook](media/generate-and-publish-scripts-wizard/save.png)
 
-- **[Enregistrer comme notebook](../../azure-data-studio/notebooks-guidance.md)** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Sélectionnez le bouton Parcourir ( **...** ) pour spécifier le nom et l’emplacement du fichier.
+- **[Enregistrer comme notebook](../../azure-data-studio/notebooks/notebooks-guidance.md)** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Sélectionnez le bouton Parcourir ( **...** ) pour spécifier le nom et l’emplacement du fichier.
 
 - **Enregistrer comme fichier de script** - Permet d’enregistrer le script dans un ou plusieurs fichiers .sql. Sélectionnez le bouton Parcourir **(...)** pour spécifier le nom et l’emplacement du fichier. Activez la case à cocher **Remplacer le fichier existant** pour remplacer le fichier s'il en existe déjà un du même nom. Sélectionnez **Fichier de script unique** ou **Un fichier de script par objet** pour spécifier comment les scripts doivent être générés. Sélectionnez **Texte Unicode** ou **Texte ANSI** pour spécifier le type de texte qui doit être utilisé dans le script.
 
@@ -246,7 +246,7 @@ Utilisez cette page pour contrôler la progression de l'Assistant.
 
 Si tous les paramètres sont corrects, votre configuration se termine correctement.
 
-## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Génération de scripts dans Azure SQL Data Warehouse
+## <a name="generating-scripts-on-azure-synapse-analytics"></a>Génération de scripts sur Azure Synapse Analytics
 
 Si la syntaxe générée par l’utilisation de « Script comme » ne ressemble pas à la syntaxe [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] ou si vous recevez un message d’erreur, vous devrez peut-être définir vos options de script dans SQL Server Management Studio sur [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].
 

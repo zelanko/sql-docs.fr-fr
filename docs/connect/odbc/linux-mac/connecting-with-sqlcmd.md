@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ab5cad910efcf73ab5b708f6a6a9bbf55c0df9b
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 5d69f1a19e0494b7426eebbac7d8732794f90be8
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727414"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987905"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connexion avec sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -215,9 +215,13 @@ Vous pouvez indiquer un nom de source de données (DSN) plutôt qu’un nom de s
   
 Les noms de sources de données système sont stockés dans le fichier `odbc.ini` du répertoire ODBC SysConfigDir (`/etc/odbc.ini` sur les installations standard). Les noms de sources de données utilisateur sont stockés dans `.odbc.ini` dans le répertoire de base de l’utilisateur (`~/.odbc.ini`).
 
+Sur les systèmes Windows, les noms de source de données Utilisateur et Système sont stockés dans le Registre et gérés par le biais d’odbcad32.exe. Les noms de source de données Fichier ne sont pas pris en charge par bcp et sqlcmd.
+
 Consultez [Mots clés et attributs de chaîne de connexion et DSN](../dsn-connection-string-attribute.md) pour la liste des entrées prises en charge par le pilote.
 
-Dans un nom de source de données, seule l’entrée DRIVER est nécessaire, mais pour établir une connexion à un serveur, `sqlcmd` ou `bcp` a besoin de la valeur de l’entrée SERVER.  
+Dans un nom de source de données, seule l’entrée DRIVER est nécessaire, mais pour établir une connexion à un serveur distant, `sqlcmd` ou `bcp` a besoin d’une valeur dans l’élément SERVER. Si l’élément SERVER est vide ou absent dans le nom de source de données, `sqlcmd` et `bcp` tenteront de se connecter à l’instance par défaut sur le système local.
+
+Lors de l’utilisation de bcp sur les systèmes Windows, [!INCLUDE [sssql17-md](../../../includes/sssql17-md.md)] et versions antérieures exigent le pilote SQL Native Client 11 (sqlncli11.dll), tandis que [!INCLUDE [sssqlv15-md](../../../includes/sssqlv15-md.md)] et versions ultérieures exigent le pilote Microsoft ODBC Driver 17 for SQL Server (msodbcsql17.dll).  
 
 Si vous spécifiez la même option dans le nom de source de données et sur la ligne de commande `sqlcmd` ou `bcp`, l’option de ligne de commande remplace la valeur utilisée dans le nom de source de données. Par exemple, si le nom de source de données comporte une entrée DATABASE et que la ligne de commande `sqlcmd` inclut **-d**, la valeur passée à **-d** est utilisée. Si vous spécifiez **Trusted_Connection=yes** dans le nom de source de données, l’authentification Kerberos est utilisée et le nom d’utilisateur ( **-U**) et le mot de passe ( **-P**), s’ils sont fournis, sont ignorés.
 

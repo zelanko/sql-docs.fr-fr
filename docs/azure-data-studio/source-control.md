@@ -8,13 +8,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 0cec5d79b62307053c3733f805101dd4638ba94e
-ms.sourcegitcommit: dc8a30a4a27e15fc6671ca2674da9b7c637ec255
+ms.date: 09/24/2019
+ms.openlocfilehash: 7f032d870952cdadbde79dbf56f4c63ae351d6e9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88746149"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081568"
 ---
 # <a name="source-control-in-azure-data-studio"></a>Contrôle de code source dans Azure Data Studio
 
@@ -22,12 +22,12 @@ Azure Data Studio prend en charge Git pour le contrôle de version/code source.
 
 ## <a name="git-support-in-azure-data-studio"></a>Prise en charge de git dans Azure Data Studio
 
-Azure Data Studio est fourni avec un gestionnaire de contrôle de code source Git, mais vous devez toujours [installer Git (version 2.0.0 ou ultérieure)](https://git-scm.com/download) pour que ces fonctionnalités soient disponibles. 
+Azure Data Studio est fourni avec un gestionnaire de contrôle de code source Git, mais vous devez toujours [installer Git (version 2.0.0 ou ultérieure)](https://git-scm.com/download) pour que ces fonctionnalités soient disponibles.
 
 ## <a name="open-an-existing-git-repository"></a>Ouvrir un référentiel git existant
 
 1. Dans le menu **Fichier**, sélectionnez **Ouvrir le dossier...**
-2. Accédez au dossier qui contient vos fichiers suivis par git, puis cliquez sur **Sélectionner un dossier**. Les sous-dossiers de votre référentiel local peuvent être sélectionnés ici.
+2. Accédez au dossier qui contient vos fichiers suivis par git, puis sélectionnez **Sélectionner un dossier**. Les sous-dossiers de votre référentiel local peuvent être sélectionnés ici.
 
 ## <a name="initialize-a-new-git-repository"></a>Initialiser un nouveau référentiel git
 

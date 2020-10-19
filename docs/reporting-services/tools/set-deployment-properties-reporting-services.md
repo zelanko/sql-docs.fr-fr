@@ -14,12 +14,12 @@ ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/15/2019
-ms.openlocfilehash: 8ebf9f5e6659659543c66634e71b0a4315dcc07e
-ms.sourcegitcommit: 291ae8f6b72fd355f8f24ce5300339306293ea7e
+ms.openlocfilehash: 97a0f7d9bf63bf6ad74b522a42900fc36cfcd429
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/18/2020
-ms.locfileid: "88512335"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891649"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Définir des propriétés de déploiement (Reporting Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "88512335"
  Utilisez le Gestionnaire de configuration pour créer et gérer des jeux de propriétés de projet dans les configurations de projet. Le Gestionnaire de configuration est une fonctionnalité prise en charge par [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], sur lequel repose [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] .  
   
 > [!NOTE]  
-> Ne confondez pas cette fonctionnalité avec le Gestionnaire de configuration de Reporting Services, utilisé pour configurer Reporting Services après l'installation. Pour plus d’informations, consultez [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
+> Ne confondez pas cette fonctionnalité avec le Gestionnaire de configuration du serveur de rapports, utilisé pour configurer Reporting Services après l’installation. Pour plus d’informations, consultez [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md).  
 >
 > [!NOTE]  
 > Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], l’action de publier des rapports d’une solution ou d’un projet Report Server est connue sous le nom de *déploiement de rapports*.  

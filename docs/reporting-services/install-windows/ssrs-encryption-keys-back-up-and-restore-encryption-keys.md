@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5da541204707bc3ad3b47a8ade5f1f1af6506ad5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: fa300420df785fa27eacb68ae5090cd042f1ddbb
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454562"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933763"
 ---
 # <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Clés de chiffrement SSRS - Sauvegarder et restaurer les clés de chiffrement
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "88454562"
   
  La restauration de la copie de sauvegarde de la clé de chiffrement est indispensable lorsque l'un des événements suivants se produit :  
   
--   Modification effectuée sur le nom du compte de service Windows Report Server ou réinitialisation du mot de passe. Lorsque vous utilisez le Gestionnaire de configuration de Reporting Services, la sauvegarde de la clé est intégrée à une opération de changement de nom du compte de service.  
+-   Modification effectuée sur le nom du compte de service Windows Report Server ou réinitialisation du mot de passe. Lorsque vous utilisez le Gestionnaire de configuration du serveur de rapports, la sauvegarde de la clé est intégrée à une opération de changement de nom du compte de service.  
   
     > [!NOTE]
     > La réinitialisation et la modification d'un mot de passe sont deux opérations différentes. La réinitialisation d'un mot de passe requiert l'autorisation permettant de remplacer des informations de compte sur le contrôleur de domaine. Cette opération est effectuée par un administrateur système lorsqu'un utilisateur a oublié ou ne connaît pas un mot de passe particulier. Seule la réinitialisation d'un mot de passe nécessite la restauration de la clé symétrique. Le changement régulier d'un mot de passe de compte ne vous oblige pas à réinitialiser la clé symétrique.  
@@ -47,7 +47,7 @@ ms.locfileid: "88454562"
 
  La sauvegarde de la clé symétrique est un processus qui consiste à écrire la clé dans le fichier que vous spécifiez, puis à brouiller ces données à l'aide du mot de passe que vous fournissez. En aucun cas la clé symétrique ne peut être conservée sans être chiffrée, vous devez donc fournir un mot de passe afin de chiffrer la clé au moment de son enregistrement sur un disque. Une fois le fichier créé, vous devez le stocker dans un endroit sécurisé et **vous souvenir du mot de passe** qui permet de déverrouiller le fichier. Pour sauvegarder la clé symétrique, utilisez les outils suivants :  
   
- **Mode natif :** le Gestionnaire de configuration de Reporting Services ou l'utilitaire **rskeymgmt** .  
+ **Mode natif :** le Gestionnaire de configuration du serveur de rapports ou l’utilitaire **rskeymgmt**.  
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
   
@@ -58,7 +58,7 @@ ms.locfileid: "88454562"
 
 ::: moniker-end
   
-##  <a name="back-up-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Sauvegarder les clés de chiffrement - Gestionnaire de configuration Reporting Services (mode natif)  
+##  <a name="back-up-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_backup_configuration_manager"></a> Sauvegarder les clés de chiffrement - Gestionnaire de configuration du serveur de rapports (mode natif)  
   
 1.  Lancez Report Server Configuration Manager, puis connectez-vous à l'instance de serveur de rapports à configurer.  
   
@@ -89,11 +89,11 @@ ms.locfileid: "88454562"
   
 -   Les données de clé symétrique préalablement stockées (par exemple, des informations de clé déjà présentes dans la base de données du serveur de rapports en raison d'un précédent déploiement) sont supprimées.  
   
- Pour restaurer une clé de chiffrement, vous devez posséder un exemplaire de la clé de chiffrement dans un fichier et connaître le mot de passe permettant de déverrouiller l'exemplaire stocké. Si vous détenez la clé et le mot de passe, procédez à la restauration en exécutant l'outil de configuration de Reporting Services ou l'utilitaire **rskeymgmt** . La clé symétrique doit être identique à l'exemplaire qui verrouille et déverrouille les données chiffrées stockées à ce moment-là dans la base de données du serveur de rapports. Si vous restaurez un exemplaire non valide, le serveur de rapports est incapable d'accéder à ces données. Vous serez amené à supprimer toutes les valeurs chiffrées si jamais la restauration d'une clé valide est impossible. Si, pour une raison quelconque, vous ne pouvez pas restaurer la clé de chiffrement (vous ne possédez pas de copie de sauvegarde par exemple), supprimez la clé et le contenu chiffré. Pour plus d’informations, consultez [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Pour plus d’informations sur la création de clés symétriques, consultez [Initialiser un serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Pour restaurer une clé de chiffrement, vous devez posséder un exemplaire de la clé de chiffrement dans un fichier et connaître le mot de passe permettant de déverrouiller l'exemplaire stocké. Si vous détenez la clé et le mot de passe, procédez à la restauration en exécutant l'outil de configuration de Reporting Services ou l'utilitaire **rskeymgmt** . La clé symétrique doit être identique à l'exemplaire qui verrouille et déverrouille les données chiffrées stockées à ce moment-là dans la base de données du serveur de rapports. Si vous restaurez un exemplaire non valide, le serveur de rapports est incapable d'accéder à ces données. Vous serez amené à supprimer toutes les valeurs chiffrées si jamais la restauration d'une clé valide est impossible. Si, pour une raison quelconque, vous ne pouvez pas restaurer la clé de chiffrement (vous ne possédez pas de copie de sauvegarde par exemple), supprimez la clé et le contenu chiffré. Pour plus d’informations, consultez [Supprimer et recréer des clés de chiffrement &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md). Pour plus d’informations sur la création de clés symétriques, consultez [Initialiser un serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
-###  <a name="restore-encryption-keys--reporting-services-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Restaurer les clés de chiffrement - Gestionnaire de configuration Reporting Services (mode natif)  
+###  <a name="restore-encryption-keys--report-server-configuration-manager-native-mode"></a><a name="bkmk_restore_configuration_manager"></a> Restaurer les clés de chiffrement - Gestionnaire de configuration du serveur de rapports (mode natif)  
   
-1.  Démarrez le Gestionnaire de configuration de Reporting Services et connectez-vous à l'instance de serveur de rapports à configurer.  
+1.  Lancez Report Server Configuration Manager, puis connectez-vous à l'instance de serveur de rapports à configurer.  
   
 2.  Dans la page Clés de chiffrement, cliquez sur **Restaurer**.  
   
@@ -112,6 +112,6 @@ ms.locfileid: "88454562"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

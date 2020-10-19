@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d6d978ab86f2e6f6a1ed85345685eb1da00928a6
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 15f8fddb50f1cc814c88cc721fd46ceba1581faf
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603350"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934775"
 ---
 # <a name="configure-tls-connections-on-a-native-mode-report-server"></a>Configurer des connexions TLS sur un serveur de rapports en mode natif
 
@@ -86,12 +86,12 @@ ms.locfileid: "91603350"
   
  Les liaisons TLS sont une ressource partagée dans Microsoft Windows. Les modifications apportées par le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou d’autres outils, tels que le Gestionnaire des services IIS, peuvent avoir une incidence sur d’autres applications sur le même ordinateur. Il est recommandé d'utiliser le même outil pour modifier les liaisons que celui utilisé pour les créer.  Par exemple, si vous avez créé des liaisons TLS à l'aide de Configuration Manager, il est alors recommandé d'utiliser cet outil pour gérer le cycle de vie des liaisons. Si vous utilisez le Gestionnaire IIS pour créer des liaisons, il est alors recommandé d'utiliser cet outil pour gérer le cycle de vie des liaisons. Si IIS a été installé sur l'ordinateur avant [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , il est recommandé de vérifier la configuration TLS dans IIS avant de configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Si vous supprimez des liaisons TLS pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide du Gestionnaire de configuration Reporting Services, il se peut que TLS ne fonctionne plus pour les sites web sur un serveur exécutant Internet Information Services (IIS) ou sur un autre serveur HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestionnaire de configuration supprime la clé de Registre suivante : **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Lorsque cette clé de Registre est supprimée, la liaison TLS pour IIS l'est également. Sans cette liaison, TLS n'est pas fourni pour le protocole HTTPS. Pour diagnostiquer ce problème, utilisez le Gestionnaire IIS ou l’utilitaire de ligne de commande HTTPCFG.exe. Pour résoudre ce problème, restaurez la liaison TLS pour vos sites web à l’aide du Gestionnaire IIS. Afin d'éviter ce problème à l'avenir, utilisez le Gestionnaire IIS pour supprimer les liaisons TLS, puis pour restaurer la liaison pour les sites web de votre choix. Pour plus d’informations, consultez l’article de la Base de connaissances [SSL ne fonctionne plus après la suppression d’une liaison SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
+ Si vous supprimez des liaisons TLS pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à l’aide du Gestionnaire de configuration du serveur de rapports, il se peut que TLS ne fonctionne plus pour les sites web sur un serveur exécutant Internet Information Services (IIS) ou sur un autre serveur HTTP.SYS. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Gestionnaire de configuration supprime la clé de Registre suivante : **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\HTTP\Parameters\SslBindingInfo\0.0.0.0:443** Lorsque cette clé de Registre est supprimée, la liaison TLS pour IIS l'est également. Sans cette liaison, TLS n'est pas fourni pour le protocole HTTPS. Pour diagnostiquer ce problème, utilisez le Gestionnaire IIS ou l’utilitaire de ligne de commande HTTPCFG.exe. Pour résoudre ce problème, restaurez la liaison TLS pour vos sites web à l’aide du Gestionnaire IIS. Afin d'éviter ce problème à l'avenir, utilisez le Gestionnaire IIS pour supprimer les liaisons TLS, puis pour restaurer la liaison pour les sites web de votre choix. Pour plus d’informations, consultez l’article de la Base de connaissances [SSL ne fonctionne plus après la suppression d’une liaison SSL (https://support.microsoft.com/kb/956209/n)](https://support.microsoft.com/kb/956209/n).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)   
  [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
+ [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

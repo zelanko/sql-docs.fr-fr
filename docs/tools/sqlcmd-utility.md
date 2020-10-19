@@ -28,12 +28,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 018bce8226fc534694b230c18bb2f272787ec144
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: ff7316307676c15f96579631bdf2dd6eb9612acc
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076764"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005948"
 ---
 # <a name="sqlcmd-utility"></a>Utilitaire sqlcmd
 
@@ -65,8 +65,8 @@ Numéro de version : 15.0.2<br>
 Numéro de build : 15.0.2000.5<br>
 Date de publication : 11 septembre 2020
 
-La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour les fonctionnalités SQL Database, SQL Data Warehouse et Always Encrypted.
-Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour SQL Database et SQL Data Warehouse.
+La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de MFA (Multi-Factor Authentication) pour les fonctionnalités SQL Database, Azure Synapse Analytics et Always Encrypted.
+Le nouveau BCP prend en charge l’authentification Azure AD, notamment la prise en charge de MFA pour SQL Database et Azure Synapse Analytics.
 
 **Configuration requise** Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
@@ -102,6 +102,7 @@ sqlcmd
    -c batch_terminator
    -C (trust the server certificate)
    -d db_name
+   -D
    -e (echo input)
    -E (use trusted connection)
    -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage]
@@ -148,17 +149,23 @@ sqlcmd
 
 **Options relatives à la connexion**
 
-**-A**
-
+**-A**  
 Se connecte à SQL Server avec une connexion administrateur dédiée (DAC, Dedicated Administrator Connection). Ce type de connexion est utilisé pour dépanner un serveur. Cette connexion ne fonctionne qu'avec les serveurs prenant en charge DAC. Si DAC n’est pas disponible, **sqlcmd** génère un message d’erreur et se termine. Pour plus d’informations sur DAC, consultez [Connexion de diagnostic pour les administrateurs de base de données](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). L’option -A n’est pas prise en charge avec l’option -G. Quand vous vous connectez à SQL Database à l’aide de -A, vous devez être administrateur SQL Server. La DAC n’est pas disponible pour un administrateur Azure Active Directory.
 
-**-C** Ce réseau est utilisé par le client pour le configurer afin d'approuver implicitement le certificat de serveur sans validation. Cette option est équivalente à l'option ADO.NET `TRUSTSERVERCERTIFICATE = true`.  
+**-C**  
+Ce commutateur est utilisé par le client pour le configurer afin d'approuver implicitement le certificat de serveur sans validation. Cette option est équivalente à l'option ADO.NET `TRUSTSERVERCERTIFICATE = true`.  
 
 **-d** _db_name_  
 Émet une instruction `USE` *db_name* quand vous démarrez **sqlcmd**. Cette option définit la variable de script **sqlcmd** SQLCMDDBNAME. Ce paramètre spécifie la base de données initiale. La valeur par défaut est la propriété de base de données par défaut de votre connexion. Si la base de données n’existe pas, un message d’erreur est généré et **sqlcmd** se termine.  
 
+**-D**  
+Interprète le nom du serveur fourni à -S comme un nom de source de données plutôt qu’un nom d’hôte. Pour plus d’informations, consultez _Prise en charge du nom de source de données dans sqlcmd et bcp_ dans [Connexion avec sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
+
+> [!NOTE]
+> L’option -D est uniquement disponible sur les clients Linux et MacOS. Sur les clients Windows, elle faisait précédemment référence à une option désormais obsolète qui a été supprimée et est ignorée.
+
 **-l** _login_timeout_  
-Spécifie le nombre de secondes au terme duquel une connexion **sqlcmd** au pilote ODBC expire quand vous tentez d’établir une connexion à un serveur. Cette option définit la variable de script **sqlcmd** SQLCMDLOGINTIMEOUT. Le délai d’attente par défaut pour la connexion à **sqlcmd** est de huit secondes. Quand vous utilisez l’option **-G** pour vous connecter à SQL Database ou à SQL Data Warehouse et vous authentifier à l’aide d’Azure Active Directory, il est recommandé d’indiquer un délai d’attente d’au moins 30 secondes. Le délai d'attente de la connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n’est pas numérique ou n’est pas comprise dans cette plage, **sqlcmd** génère un message d’erreur. Une valeur de 0 spécifie un délai d'attente infini.
+Spécifie le nombre de secondes au terme duquel une connexion **sqlcmd** au pilote ODBC expire quand vous tentez d’établir une connexion à un serveur. Cette option définit la variable de script **sqlcmd** SQLCMDLOGINTIMEOUT. Le délai d’attente par défaut pour la connexion à **sqlcmd** est de huit secondes. Quand vous utilisez l’option **-G** pour vous connecter à SQL Database ou à Azure Synapse Analytics et vous authentifier à l’aide d’Azure Active Directory, il est recommandé d’indiquer un délai d’attente d’au moins 30 secondes. Le délai d'attente de la connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n’est pas numérique ou n’est pas comprise dans cette plage, **sqlcmd** génère un message d’erreur. Une valeur de 0 spécifie un délai d'attente infini.
 
 **-E**  
 Utilise une connexion approuvée au lieu d’un nom d’utilisateur et d’un mot de passe pour se connecter à SQL Server. Par défaut, si **-E** n’est pas spécifié, **sqlcmd** utilise l’option de connexion approuvée.  
@@ -169,7 +176,7 @@ L’option **-E** ignore les éventuels paramètres de variables d’environneme
 Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d’informations, consultez [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Uniquement les clés principales stockées dans le magasin de certificats Windows sont prises en charge. Le commutateur -g nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`.
 
 **-G**  
-Ce commutateur est utilisé par le client durant la connexion à SQL Database ou à SQL Data Warehouse pour indiquer que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Cette option définit la variable de script **sqlcmd** SQLCMDUSEAAD = true. Le commutateur -G nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`. Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). L’option -A n’est pas prise en charge avec l’option -G.
+Ce commutateur est utilisé par le client durant la connexion à SQL Database ou à Azure Synapse Analytics pour faire en sorte que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Cette option définit la variable de script **sqlcmd** SQLCMDUSEAAD = true. Le commutateur -G nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`. Pour plus d’informations, consultez [Connexion à SQL Database ou Azure Synapse Analytics à l’aide de l’authentification Azure Active Directory](/azure/azure-sql/database/authentication-aad-overview). L’option -A n’est pas prise en charge avec l’option -G.
 
 > [!IMPORTANT]
 > L’option `-G` s’applique uniquement à Azure SQL Database et à Azure Data Warehouse.
@@ -209,7 +216,7 @@ Ce commutateur est utilisé par le client durant la connexion à SQL Database ou
 
 - **Azure Active Directory Interactive**
 
-    L’authentification interactive Azure AD pour Azure SQL Database et SQL Data Warehouse vous permet d’utiliser une méthode interactive qui prend en charge l’authentification multifacteur. Pour plus d’informations, consultez [Authentification interactive Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+    L’authentification interactive Azure AD pour Azure SQL Database et Azure Synapse Analytics vous permet d’utiliser une méthode interactive qui prend en charge l’authentification multifacteur. Pour plus d’informations, consultez [Authentification interactive Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
    L’authentification Azure AD interactive requiert **sqlcmd**, [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) ou version ultérieure, ainsi qu’[ODBC, version 17.2 ou version ultérieure](https://aka.ms/downloadmsodbcsql).  
 

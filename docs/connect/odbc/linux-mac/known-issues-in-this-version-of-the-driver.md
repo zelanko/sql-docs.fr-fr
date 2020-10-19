@@ -10,12 +10,12 @@ helpviewer_keywords:
 - known issues
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6729d46fe498c6efe8e49f941c0ef1b007870b2
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: af611dcc4ca45ae18d650af6248b0f53ab8bcb0b
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727400"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847299"
 ---
 # <a name="known-issues-for-the-odbc-driver-on-linux-and-macos"></a>Problèmes connus concernant le pilote ODBC sur Linux et macOS
 
@@ -33,7 +33,7 @@ D’autres problèmes seront abordés sur le [blog SQL Server Drivers](https://t
 
 - Si l’encodage client est UTF-8, le gestionnaire de pilotes n’effectue pas toujours une conversion correcte de UTF-8 en UTF-16. Les données sont endommagées quand un ou plusieurs caractères dans la chaîne ne sont pas des caractères UTF-8 valides. Les caractères ASCII sont mappés correctement. Le Gestionnaire de pilotes essaie d’effectuer cette conversion lors de l’appel des versions SQLCHAR de l’API ODBC (par exemple, SQLDriverConnectA). Le gestionnaire de pilotes n’essaie pas d’effectuer cette conversion lors de l’appel des versions SQLWCHAR de l’API ODBC (par exemple, SQLDriverConnectW).  
 
-- Le paramètre *ColumnSize* de **SQLBindParameter** fait référence au nombre de caractères dans le type SQL, tandis que *BufferLength* est le nombre d’octets dans la mémoire tampon de l’application. Toutefois, si le type de données SQL est `varchar(n)` ou `char(n)`, si l’application lie le paramètre en tant que SQL_C_CHAR ou SQL_C_VARCHAR et que l’encodage de caractères du client est UTF-8, le pilote peut retourner l’erreur « Troncation à droite de la chaîne de données » même si la valeur de *ColumnSize* est alignée sur la taille du type de données sur le serveur. Cette erreur se produit dans la mesure où les conversions entre les encodages de caractères peuvent changer la longueur des données. Par exemple, un caractère d’apostrophe droite (U+2019) est encodé en CP-1252 comme 0x92 sur un octet, mais en UTF-8 comme séquence 0xe2 0x80 0x99 sur trois octets.
+- Le paramètre *ColumnSize* de **SQLBindParameter** fait référence au nombre de caractères dans le type SQL, tandis que *BufferLength* est le nombre d’octets dans la mémoire tampon de l’application. Toutefois, si le type de données SQL est `varchar(n)` ou `char(n)`, si l’application lie le paramètre en tant que SQL_C_CHAR pour le type C et SQL_CHAR ou SQL_VARCHAR pour le type SQL, et que l’encodage de caractères du client est UTF-8, le pilote peut retourner l’erreur « Troncation à droite de la chaîne de données » même si la valeur de *ColumnSize* est alignée sur la taille du type de données sur le serveur. Cette erreur se produit dans la mesure où les conversions entre les encodages de caractères peuvent changer la longueur des données. Par exemple, un caractère d’apostrophe droite (U+2019) est encodé en CP-1252 comme 0x92 sur un octet, mais en UTF-8 comme séquence 0xe2 0x80 0x99 sur trois octets.
 
 Par exemple, si votre encodage est UTF-8 et que vous spécifiez 1 pour *BufferLength* et *ColumnSize* dans **SQLBindParameter** pour un paramètre de sortie, puis que vous essayez de récupérer le caractère précédent stocké dans une colonne `char(1)` sur le serveur (à l’aide de CP-1252), le pilote tente de le convertir dans l’encodage UTF-8 sur 3 octets, mais ne peut pas faire tenir le résultat dans une mémoire tampon d’un octet. Dans l’autre sens, il compare *ColumnSize* à *BufferLength* dans **SQLBindParameter** avant d’effectuer la conversion entre les différentes pages de codes sur le client et le serveur. Étant donné qu’une *ColumnSize* de 1 est inférieure à une *BufferLength* de 3 (par exemple), le pilote génère une erreur. Pour éviter cette erreur, vérifiez que la longueur des données après la conversion est adaptée à la colonne ou mémoire tampon spécifiée. Notez que *ColumnSize* ne peut pas être supérieure à 8000 pour le type `varchar(n)`.
 

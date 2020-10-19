@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: sstein
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: ba646353b0ded0a1cc4617c1b4c9ffc3c159662e
-ms.sourcegitcommit: 9386ae1b90705a39d37d5541b70c5e8a6564f253
+ms.openlocfilehash: d44e59e8dfdd9ba38feb2c860348f44af325c768
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91662789"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038382"
 ---
 # <a name="quickstart-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Démarrage rapide : Se connecter à une instance SQL Server et l’interroger en utilisant SQL Server Management Studio (SSMS)
 
@@ -35,12 +35,12 @@ Ce guide de démarrage rapide vous apprend à utiliser SSMS (SQL Server Manageme
 
 Pour effectuer les étapes de cet article, vous avez besoin de SQL Server Management Studio et d’un accès à une instance SQL Server.
 
-* Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+* Installez [SQL Server Management Studio](../download-sql-server-management-studio-ssms.md).
 
 Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plateforme parmi les liens suivants. Si vous choisissez l’authentification SQL, utilisez vos informations d’identification de connexion SQL Server.
 
 * **Windows** : [Télécharger SQL Server 2019 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-* **macOS** : [Télécharger SQL Server 2019 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+* **macOS** : [Télécharger SQL Server 2019 sur Docker](../../linux/quickstart-install-connect-docker.md).
 
 ## <a name="connect-to-a-sql-server-instance"></a>Se connecter à une instance de SQL Server
 
@@ -54,7 +54,7 @@ Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plat
 
     * Pour **Type de serveur**, sélectionnez **Moteur de base de données** (généralement l’option par défaut).
     * Pour **Nom du serveur**, entrez le nom de votre instance SQL Server. (Cet article utilise le nom d’instance SQL2016ST sur le nom d’hôte NODE5 [NODE5\SQL2016ST].) Si vous ne savez pas comment déterminer le nom de votre instance SQL Server, consultez [Conseils et astuces supplémentaires sur l’utilisation de SSMS](../tutorials/ssms-tricks.md#find-sql-server-instance-name).
-    * Pour **Authentification**, sélectionnez **Authentification Windows**. Cet article utilise l’authentification Windows, mais la connexion SQL Server est également prise en charge. Si vous sélectionnez **Connexion SQL**, vous êtes invité à fournir un nom d’utilisateur et un mot de passe. Pour plus d’informations sur les types d’authentification, consultez [Se connecter au serveur (moteur de base de données)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+    * Pour **Authentification**, sélectionnez **Authentification Windows**. Cet article utilise l’authentification Windows, mais la connexion SQL Server est également prise en charge. Si vous sélectionnez **Connexion SQL**, vous êtes invité à fournir un nom d’utilisateur et un mot de passe. Pour plus d’informations sur les types d’authentification, consultez [Se connecter au serveur (moteur de base de données)](../f1-help/connect-to-server-database-engine.md).
 
     ![Champ « Nom du serveur » avec la possibilité d’utiliser une instance SQL Server](media/connect-query-sql-server/connection-2.png)
 
@@ -71,7 +71,7 @@ Pour vérifier que votre connexion au serveur SQL Server a réussi, développez 
 * Connexion à SQL Azure DB (dans ce cas, msftestserver.database.windows.net : ![Connexion à une base de données SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png)
 
 > [!NOTE]
-> Dans cet article, vous avez utilisé précédemment l’*authentification Windows* pour vous connecter à votre serveur SQL Server local, mais cette méthode n’est pas prise en charge pour SQL Azure DB. De ce fait, c’est l’authentification SQL qui est utilisée dans cette image pour établir une connexion à la base de données SQL Azure DB. Pour plus d’informations, consultez [Authentification locale SQL](../../relational-databases/security/choose-an-authentication-mode.md) et [Authentification SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#access-management).
+> Dans cet article, vous avez utilisé précédemment l’*authentification Windows* pour vous connecter à votre serveur SQL Server local, mais cette méthode n’est pas prise en charge pour SQL Azure DB. De ce fait, c’est l’authentification SQL qui est utilisée dans cette image pour établir une connexion à la base de données SQL Azure DB. Pour plus d’informations, consultez [Authentification locale SQL](../../relational-databases/security/choose-an-authentication-mode.md) et [Authentification SQL Azure](/azure/sql-database/sql-database-security-overview#access-management).
 
 ## <a name="create-a-database"></a>Création d'une base de données
 
@@ -198,7 +198,7 @@ Vous pouvez changer le serveur auquel votre fenêtre de requête actuelle est co
 
 ## <a name="azure-data-studio"></a>Azure Data Studio
 
-Vous pouvez également vous connecter et interroger [SQL Server](../../azure-data-studio/quickstart-sql-server.md), une [base de données Azure SQL](../../azure-data-studio/quickstart-sql-database.md) et des [entrepôts de données Azure SQL](../../azure-data-studio/quickstart-sql-dw.md) à l’aide d’Azure Data Studio.
+Vous pouvez également vous connecter et interroger [SQL Server](../../azure-data-studio/quickstart-sql-server.md), [Azure SQL Database](../../azure-data-studio/quickstart-sql-database.md) et [Azure Synapse Analyticss](../../azure-data-studio/quickstart-sql-dw.md) à l’aide d’Azure Data Studio.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5946e49610acd59603b6730381e586ea3456ac8d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 968de0f9cf8c95b13a67f3fb2b0f36e3d8c09ced
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662791"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986111"
 ---
 # <a name="troubleshoot-server--database-connection-problems-with-reporting-services"></a>Résoudre les problèmes de connexion à un serveur et à une base de données avec Reporting Server
-Utilisez cette rubrique pour résoudre les problèmes que vous rencontrez lors de la connexion à un serveur de rapports. En outre, elle fournit des informations sur les messages de type « Erreur inattendue ». Pour plus d’informations sur la configuration de la source de données et des informations de connexion au serveur de rapports, voir [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) et [Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Utilisez cette rubrique pour résoudre les problèmes que vous rencontrez lors de la connexion à un serveur de rapports. En outre, elle fournit des informations sur les messages de type « Erreur inattendue ». Pour plus d’informations sur la configuration de la source de données et des informations de connexion au serveur de rapports, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) et [Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration du serveur de rapports)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>Impossible de créer une connexion à la source de données 'nom_source_données'. (rsErrorOpeningConnection)  
 Ceci est une erreur générique qui se produit lorsque le serveur de rapports ne peut pas ouvrir une connexion à une source de données externe qui fournit des données à un rapport. Cette erreur apparaît avec un second message d'erreur qui indique la cause sous-jacente. Les erreurs supplémentaires suivantes peuvent apparaître avec **rsErrorOpeningConnection**.  
@@ -32,7 +32,7 @@ Cette situation se produit lorsque des informations d'identification sont transm
 Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server). Cette erreur est retournée par l’instance du moteur de base de données qui héberge la base de données du serveur de rapports. Dans la plupart des cas, cette erreur se produit à la suite d’un arrêt du service SQL Server. Si vous utilisez SQL Server Express with Advanced Services ou une instance nommée, cette erreur se produit si l’URL du serveur de rapports ou la chaîne de connexion à la base de données du serveur de rapports ne sont pas correctes. Pour résoudre ces problèmes, procédez comme suit :  
   
 * Vérifiez que le service SQL Server (**MSSQLSERVER**) a démarré. Sur l’ordinateur qui héberge l’instance du moteur de base de données, cliquez sur Démarrer, Outils d’administration, Services, puis faites défiler la liste jusqu’à SQL Server (**MSSQLSERVER**). Si le service n’a pas démarré, cliquez dessus avec le bouton droit, puis sélectionnez Propriétés. Dans Type de démarrage, sélectionnez Automatique, puis cliquez successivement sur Appliquer, Démarrer, puis OK.   
-* Assurez-vous que l'URL du serveur de rapports et la chaîne de connexion à la base de données du serveur de rapports sont correctes. Si les services Reporting Services ou le moteur de base de données ont été installés en tant qu’instance nommée, la chaîne de connexion par défaut créée pendant l’installation comprend le nom d’instance. Par exemple, si vous avez installé une instance par défaut de SQL Server Express with Advanced Services sur un serveur nommé DEVSRV01, l’URL du portail web est DEVSRV01\Reports$SQLEXPRESS. En outre, le nom du serveur de base de données dans la chaîne de connexion ressemble à DEVSRV01\SQLEXPRESS. Pour plus d’informations sur les URL et les chaînes de connexion à la source de données pour SQL Server Express, voir [Reporting Services dans SQL Server Express with Advanced Services](https://technet.microsoft.com/library/ms365166(v=sql.105).aspx). Pour vérifier la chaîne de connexion de la base de données du serveur de rapports, démarrez l’outil de configuration de Reporting Services, puis consultez la page Installation de la base de données.  
+* Assurez-vous que l'URL du serveur de rapports et la chaîne de connexion à la base de données du serveur de rapports sont correctes. Si les services Reporting Services ou le moteur de base de données ont été installés en tant qu’instance nommée, la chaîne de connexion par défaut créée pendant l’installation comprend le nom d’instance. Par exemple, si vous avez installé une instance par défaut de SQL Server Express with Advanced Services sur un serveur nommé DEVSRV01, l’URL du portail web est DEVSRV01\Reports$SQLEXPRESS. En outre, le nom du serveur de base de données dans la chaîne de connexion ressemble à DEVSRV01\SQLEXPRESS. Pour plus d’informations sur les URL et les chaînes de connexion à la source de données pour SQL Server Express, voir [Reporting Services dans SQL Server Express with Advanced Services](/previous-versions/sql/sql-server-2008-r2/ms365166(v=sql.105)). Pour vérifier la chaîne de connexion de la base de données du serveur de rapports, démarrez l’outil de configuration de Reporting Services, puis consultez la page Installation de la base de données.  
   
 ### <a name="a-connection-cannot-be-made-ensure-that-the-server-is-running"></a>Impossible d'établir une connexion. Vérifiez que le serveur fonctionne.  
 Cette erreur est retournée par le fournisseur ADOMD.NET. Cette erreur peut se produire pour différentes raisons. Si vous avez spécifié le serveur comme hôte local (« localhost »), essayez de spécifier le nom du serveur à la place. Cette erreur peut également se produire s'il est impossible d'allouer de la mémoire à la nouvelle connexion. Pour plus d’informations, voir l’ [l’Article 912017 de Base de connaissances CORRECTIF, Message d’erreur lorsque vous vous connectez à une instance de SQL Server 2005 Analysis Services :](https://support.microsoft.com/kb/912017).  
@@ -56,7 +56,7 @@ Pour résoudre cette erreur, vous pouvez modifier la chaîne de connexion de man
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Erreur WMI lors de la connexion à un serveur de rapports dans Management Studio  
 Par défaut, Management Studio utilise le fournisseur WMI (Windows Management Instrumentation) de Reporting Services pour établir une connexion au serveur de rapports. Si le fournisseur WMI n'est pas installé correctement, vous obtiendrez l'erreur suivante lors de la tentative de connexion au serveur de rapports :  
   
-Impossible de se connecter à \<nom de votre serveur>. Soit le fournisseur WMI de Reporting Services n'est pas installé, soit il est configuré de manière incorrecte (Microsoft.SqlServer.Management.UI.RSClient).  
+Impossible de se connecter à \<your server name>. Soit le fournisseur WMI de Reporting Services n'est pas installé, soit il est configuré de manière incorrecte (Microsoft.SqlServer.Management.UI.RSClient).  
   
 Pour résoudre cette erreur, vous devez réinstaller le logiciel. Dans tous les autres cas, en guise de solution temporaire, vous pouvez vous connecter au serveur de rapports via le point de terminaison SOAP :  
   
@@ -69,7 +69,7 @@ Une erreur **rsReportServerDatabaseLogonFailed** peut se produire si, pour la co
   
 Le texte complet de l'erreur est : « Le serveur de rapports ne peut pas ouvrir une connexion à la base de données du serveur de rapports. Échec de l’ouverture de session (**rsReportServerDatabaseLogonFailed**). Échec d'ouverture de session : nom d'utilisateur inconnu ou mot de passe incorrect. »  
   
-Si vous redéfinissez le mot de passe, vous devez mettre à jour la connexion. Pour plus d’informations, voir [Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Si vous redéfinissez le mot de passe, vous devez mettre à jour la connexion. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration du serveur de rapports)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="the-report-server-cannot-open-a-connection-to-the-report-server-database-rsreportserverdatabaseunavailable"></a>Le serveur de rapports ne peut pas ouvrir une connexion à la base de données du serveur de rapports. (rsReportServerDatabaseUnavailable).  
 Message complet : Le serveur de rapports ne peut pas ouvrir une connexion à la base de données du serveur de rapports. Une connexion à la base de données est requise pour toutes les demandes et le traitement. (rsReportServerDatabaseUnavailable)  
@@ -120,4 +120,3 @@ Lorsque vous créez les bases de données du serveur de rapports, **ReportServer
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

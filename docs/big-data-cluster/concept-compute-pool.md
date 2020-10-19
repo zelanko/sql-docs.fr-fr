@@ -5,35 +5,60 @@ description: Cet article explique le rôle d’un pool de calcul dans un cluster
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 10/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7afce300e40f6703cbe4c2d734751aa27256959
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9c3374b0820233e20ee73b85947ed2b8a61847c0
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730671"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91866819"
 ---
-# <a name="what-are-compute-pools-in-a-sql-server-big-data-cluster"></a>Présentation des pools de calcul dans un cluster Big Data SQL Server
+# <a name="what-are-compute-pools-sql-server-big-data-clusters"></a>Présentation des pools de calcul dans les clusters Big Data SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Cet article décrit le rôle des *pools de calcul SQL Server* dans un cluster Big Data SQL Server. Les pools de calcul fournissent des ressources de calcul de scale-out pour les clusters Big Data. Les sections suivantes décrivent l’architecture et les fonctionnalités d’un pool de calcul.
+Cet article décrit le rôle des *pools de calcul SQL Server* dans les clusters Big Data SQL Server. Les pools de calcul fournissent des ressources de calcul de scale-out pour les clusters Big Data. Ils servent à déplacer le travail de calcul, ou les jeux de résultats intermédiaires, à partir de l’instance maître SQL Server. Les sections suivantes décrivent l’architecture, les fonctionnalités et les scénarios d’utilisation d’un pool de calcul.
 
 Vous pouvez également regarder cette vidéo de 5 minutes pour une introduction aux pools de calcul :
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Overview-Big-Data-Cluster-Compute-Pool/player?WT.mc_id=dataexposed-c9-niner]
 
-
 ## <a name="compute-pool-architecture"></a>Architecture d’un pool de calcul
 
 Un pool de calcul est constitué d’un ou de plusieurs pods de calcul exécutés dans Kubernetes. La création et la gestion automatisées de ces pods sont coordonnées par l’[instance maître de SQL Server](concept-master-instance.md). Chaque pod contient un ensemble de services de base, ainsi qu’une instance du moteur de base de données SQL Server.
 
+![Architecture d’un pool de calcul](media/concept-compute-pool/compute-pool-architecture.png)
+
 ## <a name="scale-out-groups"></a>Groupes de scale-out
 
-Un pool de calcul peut servir de groupe de scale-out PolyBase pour les requêtes distribuées sur différentes sources de données comme HDFS, Oracle, MongoDB ou Teradata. En utilisant des pods de calcul dans Kubernetes, les clusters Big Data peuvent automatiser la création et la configuration de pods de calcul pour les groupes de scale-out PolyBase.
+Un pool de calcul peut servir de groupe de scale-out PolyBase pour les requêtes distribuées sur différentes sources de données externes telles que SQL Server, Oracle, MongoDB, Teradata et HDFS. En utilisant des pods de calcul dans Kubernetes, les clusters Big Data peuvent automatiser la création et la configuration de pods de calcul pour les groupes de scale-out PolyBase.
+
+## <a name="compute-pool-scenarios"></a>Scénarios de pool de calcul
+
+Le pool de calcul est utilisé dans les scénarios suivants :
+
+- Lorsque les requêtes soumises à l’instance maître utilisent une ou plusieurs tables situées dans le [pool de stockage](concept-storage-pool.md)
+
+- Lorsque les requêtes soumises à l’instance maître utilisent une ou plusieurs tables avec une distribution par tourniquet situées dans le [pool de données](concept-data-pool.md)
+
+- Lorsque les requêtes soumises à l’instance maître utilisent des tables **partitionnées** avec des sources de données externes SQL Server, Oracle, MongoDB et Teradata. Pour ce scénario, l’indicateur de requête OPTION (FORCE SCALEOUTEXECUTION) doit être activé
+
+- Lorsque les requêtes soumises à l’instance maître utilisent une ou plusieurs tables situées dans la [hiérarchisation HDFS](hdfs-tiering.md)
+
+Le pool de calcul n’est **pas** utilisé dans les scénarios suivants :
+
+- Lorsque les requêtes soumises à l’instance maître utilisent une ou plusieurs tables dans un cluster Hadoop HDFS externe
+
+- Lorsque les requêtes soumises à l’instance maître utilisent une ou plusieurs tables dans Stockage Blob Azure
+
+- Lorsque les requêtes soumises à l’instance maître utilisent des tables **non partitionnées** avec des sources de données externes SQL Server, Oracle, MongoDB et Teradata.
+
+- Lorsque l’indicateur de requête OPTION (DISABLE SCALEOUTEXECUTION) est activé
+
+- Lorsque les requêtes soumises à l’instance maître s’appliquent à des bases de données situées sur l’instance maître
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: matteot
 ms.custom: ''
 ms.date: 06/11/2020
-ms.openlocfilehash: e320408fd569cbf747c9f9ada68f51dd2bea8a41
-ms.sourcegitcommit: a9f16d7819ed0e2b7ad8f4a7d4d2397437b2bbb2
+ms.openlocfilehash: 968bcd1560fd4fd24dddfaf45cfe606518235b60
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/21/2020
-ms.locfileid: "88714327"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081888"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 
@@ -23,13 +23,19 @@ ms.locfileid: "88714327"
 
 **[Installer SQL Server PowerShell](download-sql-server-ps-module.md)**
 
-Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
+Il existe deux modules SQL Server PowerShell  **[SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)** et **[SQLPS](https://docs.microsoft.com/powershell/module/sqlps)** .
 
-Des versions précédentes du module **SqlServer** étaient fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS.
+Le module **SqlServer** est le module PowerShell actuel à utiliser.
 
-Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
+Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour.
 
-Pour installer le module **SqlServer**, consultez [Installer SQL Server PowerShell](download-sql-server-ps-module.md).
+Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS** ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.
+
+Des versions précédentes du module **SqlServer** *étaient* fournies avec [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md), mais uniquement avec les versions 16.x de SSMS.
+
+Pour utiliser PowerShell avec SSMS 17.0 et versions ultérieures, installez le module **SqlServer** à partir de [PowerShell Gallery](https://www.powershellgallery.com/packages/SqlServer).
+
+Vous pouvez également utiliser [PowerShell avec Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md).
 
 **Pourquoi le module SQLPS s’appelle-t-il désormais SqlServer ?**
 
@@ -47,7 +53,7 @@ Cette section s’applique aux scripts exécutés à partir de PowerShell et non
 
 Le module **SqlServer** est fourni avec :
 
-- Des [Fournisseurs PowerShell](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_providers) qui activent un mécanisme de navigation simple semblable aux chemins d’accès des systèmes de fichiers. Vous pouvez générer des chemins d'accès semblables aux chemins d'accès des systèmes de fichiers, où le lecteur est associé à un modèle objet de gestion SQL Server et les nœuds sont basés sur les classes du modèle objet. Vous pouvez ensuite utiliser des commandes familières telles que **cd** et **dir** pour naviguer parmi les chemins d’accès de la même façon que vous naviguez parmi des dossiers dans une fenêtre d’invite de commandes. Vous pouvez utiliser d’autres commandes, telles que **ren** ou **del**, pour exécuter des actions sur les nœuds du chemin d’accès.
+- Des [Fournisseurs PowerShell](/powershell/module/microsoft.powershell.core/about/about_providers) qui activent un mécanisme de navigation simple semblable aux chemins d’accès des systèmes de fichiers. Vous pouvez générer des chemins d'accès semblables aux chemins d'accès des systèmes de fichiers, où le lecteur est associé à un modèle objet de gestion SQL Server et les nœuds sont basés sur les classes du modèle objet. Vous pouvez ensuite utiliser des commandes familières telles que **cd** et **dir** pour naviguer parmi les chemins d’accès de la même façon que vous naviguez parmi des dossiers dans une fenêtre d’invite de commandes. Vous pouvez utiliser d’autres commandes, telles que **ren** ou **del**, pour exécuter des actions sur les nœuds du chemin d’accès.
 
 - Un jeu de cmdlets qui prennent en charge des actions telles que l’exécution d’un script **sqlcmd** contenant des instructions Transact-SQL ou XQuery.  
 
@@ -55,13 +61,13 @@ Le module **SqlServer** est fourni avec :
 
 ## <a name="sql-server-versions"></a>Versions de SQL Server
 
-Les applets de commande SQL PowerShell peuvent servir à gérer des instances d’Azure SQL Database, d’Azure SQL Data Warehouse et de tous les [produits SQL Server pris en charge](https://support.microsoft.com/lifecycle/search/1044).
+Les applets de commande SQL PowerShell peuvent servir à gérer des instances d’Azure SQL Database, Azure Synapse Analytics et tous les [produits SQL Server pris en charge](https://support.microsoft.com/lifecycle/search/1044).
 
 ## <a name="sql-server-identifiers-that-contain-characters-not-supported-in-powershell-paths"></a>Identificateurs SQL Server contenant des caractères non pris en charge dans les chemins PowerShell
 
 Les applets de commande **Encode-Sqlname** et **Decode-Sqlname** vous aident à spécifier les identificateurs SQL Server qui contiennent des caractères non pris en charge dans les chemins PowerShell. Pour plus d’informations, consultez [Identificateurs SQL Server dans PowerShell](sql-server-identifiers-in-powershell.md).
 
-Utilisez la cmdlet **Convert-UrnToPath** pour convertir un nom de ressource unique pour un objet du Moteur de base de données en un chemin d’accès pour le fournisseur PowerShell SQL Server. Pour plus d’informations, consultez [Convertir des URN en chemins d’accès de fournisseur SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath).
+Utilisez la cmdlet **Convert-UrnToPath** pour convertir un nom de ressource unique pour un objet du Moteur de base de données en un chemin d’accès pour le fournisseur PowerShell SQL Server. Pour plus d’informations, consultez [Convertir des URN en chemins d’accès de fournisseur SQL Server](/powershell/module/sqlserver/Convert-UrnToPath).
   
 ## <a name="query-expressions-and-unique-resource-names"></a>Expressions de requête et noms de ressource uniques  
 
@@ -80,9 +86,11 @@ Import-Module -Name SqlServer
 
 ## <a name="cmdlet-reference"></a>Référence des applets de commande
 
-- [Applets de commande SqlServer](https://docs.microsoft.com/powershell/module/sqlserver)
-- [Applets de commande SQLPS](https://docs.microsoft.com/powershell/module/sqlps)
+- [Applets de commande SqlServer](/powershell/module/sqlserver)
+- [Applets de commande SQLPS](/powershell/module/sqlps)
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Télécharger le module SQL Server PowerShell](download-sql-server-ps-module.md)
+- [Télécharger le module SQL Server PowerShell](download-sql-server-ps-module.md)
+- [Applets de commande SQL Server PowerShell](/powershell/module/sqlserver)
+- [Utiliser PowerShell avec Azure Data Studio](../azure-data-studio/extensions/powershell-extension.md)

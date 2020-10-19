@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b09992c53a680e19bd5676e8944b2ddab8358296
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 616397e2032ca5855f9213073f495f1f7ec163db
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866316"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933552"
 ---
-# <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
+# <a name="configure-the-unattended-execution-account-report-server-configuration-manager"></a>Configurer le compte d’exécution sans assistance (Gestionnaire de configuration du serveur de rapports)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un compte spécial utilisé pour le traitement de rapport sans assistance et pour l'envoi de demandes de connexion par le biais du réseau. Le compte est utilisé des façons suivantes :  
   
 -   Envoyez les demandes de connexion sur le réseau pour les rapports qui utilisent l'authentification de base de données ou connectez-vous aux sources de données de rapport externes qui ne requièrent pas ou n'utilisent pas l'authentification. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).
@@ -41,7 +41,7 @@ ms.locfileid: "74866316"
   
  Pour spécifier le compte, vous pouvez utiliser l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou l’utilitaire **rsconfig** . La façon la plus simple de configurer le compte d'exécution sans surveillance consiste à exécuter l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et à spécifier les informations d'identification dans la page Compte d'exécution.  
   
-1.  Démarrez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis connectez-vous à l'instance du serveur de rapports que vous voulez configurer. Pour obtenir des instructions, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Démarrez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis connectez-vous à l'instance du serveur de rapports que vous voulez configurer. Pour obtenir des instructions, consultez [Gestionnaire de configuration du serveur de rapports &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Sur la page Compte d'exécution, activez l'option **Spécifier un compte d'exécution**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74866316"
   
 3.  Tapez la commande suivante pour configurer le compte sur une instance de serveur de rapports locale :  
   
-     **rsconfig -e -u\<domaine/nom utilisateur> -p\<mot de passe>**  
+     **rsconfig -e -u\<domain/username> -p\<password>**  
   
  **rsconfig -e** prend en charge d’autres arguments. Pour plus d’informations sur la syntaxe et pour obtenir des exemples de commande, consultez [Utilitaire rsconfig &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md).
  
@@ -106,6 +106,6 @@ ms.locfileid: "74866316"
  Les informations de compte sont supprimées du fichier RSReportServer.config.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestionnaire de configurations de Reporting Services (SSRS en mode natif)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Gestionnaire de configuration du serveur de rapports (mode natif SSRS)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

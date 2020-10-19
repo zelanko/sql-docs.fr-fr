@@ -10,12 +10,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f401a51defd84d9ed6a3160c4961b3087847b2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fc01d1323d3145b16c9a6317509e72715f5a12ce
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286243"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890861"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-ssrs"></a>Installer ou désinstaller le complément Reporting Services pour SharePoint (SSRS)
 
@@ -53,7 +53,7 @@ ms.locfileid: "79286243"
 ##  <a name="overview-of-the-installation-methods"></a><a name="bkmk_3ways_to_install"></a> Vue d'ensemble des méthodes d'installation  
  Le complément SQL Server 2016 Reporting Services pour les produits SharePoint peut être installé en utilisant l’une des deux méthodes suivantes :  
   
--   **Assistant Installation :** ![remarque](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque") Dans SQL Server 2016, le complément peut être installé par l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
+-   **Assistant Installation :** ![remarque](/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "remarque") Dans SQL Server 2016, le complément peut être installé par l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Choisissez **Complément Reporting Services pour les produits SharePoint** dans la page **Sélection de fonctionnalités** de l’Assistant.  
   
 -   **rsSharepoint.msi :** le complément peut être installé directement à partir du support d'installation ou téléchargé et installé. Le fichier rsSharepoint.msi prend en charge à la fois une interface utilisateur graphique et une installation à partir de la ligne de commande. Vous devez exécuter le fichier .msi avec les privilèges d'administrateur ; pour ce faire, commencez par ouvrir une fenêtre d'invite de commandes avec des autorisations élevées, puis exécutez rsSharepoint.msi à partir de la ligne de commande. Pour plus d’informations sur le téléchargement du complément, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
@@ -213,7 +213,7 @@ Rssharepoint.msi /?
     ```  
   
 ##  <a name="setup-log-files"></a><a name="bkmk_logfiles"></a> Fichiers journaux d'installation  
- Durant son exécution, le programme d’installation enregistre des informations dans un fichier journal, dans le dossier **%temp%** de l’utilisateur qui installe le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, **c:\Users\\\<nom_utilisateur\>\AppData\Local\Temp**. Le nom de fichier est **RS_SP_\<numéro>.log**, par exemple **RS_SP_0.log**. Chaque erreur consignée dans ce journal commence par la chaîne « SSRSCustomActionError ».  
+ Durant son exécution, le programme d’installation enregistre des informations dans un fichier journal, dans le dossier **%temp%** de l’utilisateur qui installe le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, **c:\Users\\\<nom_utilisateur\>\AppData\Local\Temp**. Le nom de fichier est **RS_SP_\<number>.log**, par exemple **RS_SP_0.log**. Chaque erreur consignée dans ce journal commence par la chaîne « SSRSCustomActionError ».  
   
 > [!NOTE]  
 >  AppData est un dossier masqué dans le système d'exploitation Windows. Vous devrez peut-être modifier vos paramètres des dossiers de l'Explorateur Windows afin de voir les fichiers masqués et des dossiers.  

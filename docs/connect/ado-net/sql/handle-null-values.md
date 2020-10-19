@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: 0f4ccc330491ba5699ed10de48a883792d896447
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 4d11586f380354d0cef98039fbe95d2f9ed3287b
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725634"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081458"
 ---
 # <a name="handling-null-values"></a>Traitement des valeurs Null
 
@@ -107,7 +107,7 @@ En outre, les règles suivantes s’appliquent à une instance des affectations 
   
 - La méthode <xref:System.Data.DataRow.IsNull%2A> renvoie `true` pour `DbNull.Value` et `INullable.Null`.  
   
-## <a name="assigning-null-values"></a>Affectation des valeurs Null  
+## <a name="assigning-null-values-to-sqltypes"></a>Assignation de valeurs Null à SqlTypes  
 La valeur par défaut pour toute instance <xref:System.Data.SqlTypes> est Null.  
   
 Les valeurs Null dans <xref:System.Data.SqlTypes> sont spécifiques au type et ne peuvent pas être représentées par une valeur unique, telle que `DbNull`. Utilisez la propriété `IsNull` pour vérifier les valeurs Null.  

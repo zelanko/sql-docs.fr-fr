@@ -8,14 +8,14 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 9/2/2020
-ms.openlocfilehash: a955c552ab3e78cd34cbb80269e1910b3a63a560
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 1169c75eb349f4b997a434acc5f7e0e7cc2792f3
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603385"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935575"
 ---
-# <a name="create-a-report-server-database-ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports, Gestionnaire de configuration SSRS  
+# <a name="create-a-report-server-database-report-server-configuration-manager"></a>Créer une base de données du serveur de rapports, Gestionnaire de configuration du serveur de rapports  
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
@@ -49,7 +49,7 @@ Voici des exemples de noms des trois bases de données en mode SharePoint :
  ### <a name="native-mode"></a>en mode natif
  Vous pouvez créer la base de données du serveur de rapports en mode natif en procédant comme suit :  
   
-- **Automatique**. Utilisez l’Assistant Installation de SQL Server si vous choisissez l’option d’installation de la configuration par défaut. Dans l’Assistant Installation de SQL Server, cette option s’appelle **Installer et configurer** dans la page des **options d’installation du serveur de rapports**. Si vous choisissez l’option **Installer uniquement**, vous devez utiliser le Gestionnaire de configuration de SQL Server Reporting Services pour créer la base de données.  
+- **Automatique**. Utilisez l’Assistant Installation de SQL Server si vous choisissez l’option d’installation de la configuration par défaut. Dans l’Assistant Installation de SQL Server, cette option s’appelle **Installer et configurer** dans la page des **options d’installation du serveur de rapports**. Si vous choisissez l’option **Installer uniquement**, vous devez utiliser le Gestionnaire de configuration du serveur de rapports de SQL Server pour créer la base de données.  
   
 - **Manuel**. Utilisez le Gestionnaire de configuration de SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Créez la base de données du serveur de rapports manuellement si vous utilisez un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] distant pour héberger la base de données. Pour plus d’informations, consultez [Créer une base de données du serveur de rapports en mode natif](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
@@ -85,7 +85,7 @@ La page des **options d’installation du serveur de rapports** n’offre que l�
   
 - [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
 
-Si vous créez la base de données du serveur de rapports sur un ordinateur distant, configurez la connexion de manière à employer un compte d'utilisateur de domaine ou un compte de service pouvant accéder au réseau. Si vous utilisez une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante, réfléchissez aux informations d'identification que le serveur de rapports devra utiliser pour se connecter à l'instance. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+Si vous créez la base de données du serveur de rapports sur un ordinateur distant, configurez la connexion de manière à employer un compte d'utilisateur de domaine ou un compte de service pouvant accéder au réseau. Si vous utilisez une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distante, réfléchissez aux informations d'identification que le serveur de rapports devra utiliser pour se connecter à l'instance. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 > Le serveur de rapports et l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergeant la base de données du serveur de rapports peuvent appartenir à des domaines différents. Dans le cadre d'un déploiement Internet, il est courant d'utiliser un serveur situé derrière un pare-feu. 
@@ -98,6 +98,6 @@ Si vous créez la base de données du serveur de rapports sur un ordinateur dist
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-En savoir plus sur le [Gestionnaire de configuration de Reporting Services](https://msdn.microsoft.com/63519ef4-e68a-42fb-9cf7-31228ea4e434).  
+Apprenez-en davantage sur le [Gestionnaire de configuration du serveur de rapports](reporting-services-configuration-manager-native-mode.md).  
 
 D’autres questions ? Posez-les sur le [forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

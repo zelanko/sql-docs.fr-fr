@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 120e99440b77a27be4f83f8e4355a4ec75cab7bb
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: c4bbc8f1c5b96f659936cb955c1f6f31bd0ef0da
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458496"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91933441"
 ---
 # <a name="xml-connection-type-ssrs"></a>Type de connexion XML (SSRS)
   Pour inclure les données d'une source de données XML dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type XML. Ce type de source de données intégré est basé sur l'extension de données XML. Ce type de source de données vous permet de vous connecter et de récupérer des données à partir de documents XML, de services Web ou de données XML incorporées dans la requête.  
@@ -45,7 +45,7 @@ ms.locfileid: "86458496"
   
 -   Utilisateur Windows actuel (également appelé sécurité intégrée).  
   
--   Aucune information d'identification n'est requise. Si vous choisissez de ne pas demander d'informations d'identification, l'accès anonyme est utilisé. Vérifiez que vous avez défini le compte d'exécution sans assistance pour le serveur de rapports afin d'établir une connexion à une source de données externe. L'extension pour le traitement des données XML ne transmet pas d'informations d'identification à l'URL cible ou au service Web ; la connexion ne peut aboutir que si vous avez défini le compte d'exécution sans assistance. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+-   Aucune information d'identification n'est requise. Si vous choisissez de ne pas demander d'informations d'identification, l'accès anonyme est utilisé. Vérifiez que vous avez défini le compte d'exécution sans assistance pour le serveur de rapports afin d'établir une connexion à une source de données externe. L'extension pour le traitement des données XML ne transmet pas d'informations d'identification à l'URL cible ou au service Web ; la connexion ne peut aboutir que si vous avez défini le compte d'exécution sans assistance. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
  Les informations d'identification stockées ou demandées ne sont pas prises en charge. Notez bien que si vous désactivez la sécurité intégrée de Windows, vous ne pouvez pas l'utiliser pour récupérer des données. Si vous spécifiez des informations d'identification stockées ou demandées par invite, une erreur se produit au moment de l'exécution.  
   

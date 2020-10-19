@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dbe8c7f4d755d18c0baa01f5f6ef37601292047b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4cf54be2376dede022b0f6905e21685184a6b122
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866332"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934749"
 ---
-# <a name="create-a-native-mode-report-server-database-ssrs-configuration-manager"></a>Créer une base de données du serveur de rapports en mode natif (Gestionnaire de configuration SSRS)
+# <a name="create-a-native-mode-report-server-database-report-server-configuration-manager"></a>Créer une base de données du serveur de rapports en mode natif (Gestionnaire de configuration du serveur de rapports)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -36,7 +36,7 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
  La création ou la configuration d'une base de données de serveur de rapports est un processus comportant plusieurs étapes. Avant de créer la base de données du serveur de rapports, pensez à la façon dont vous souhaitez spécifier les éléments suivants :  
   
  **Sélectionner un serveur de base de données**  
- Consultez les versions prises en charge du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
+ Consultez les versions prises en charge du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md).  
   
  **Activer les connexions TCP/IP**  
  Activez les connexions TCP/IP pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Certaines éditions du [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’activent pas TCP/IP par défaut. Les instructions sont fournies dans cette rubrique.  
@@ -47,7 +47,7 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
  **Choisir les informations d'identification du serveur de rapports**  
  Décidez comment le serveur de rapports se connectera aux bases de données de serveur de rapports. Les types d'informations d'identification incluent le compte d'utilisateur de domaine, le compte d'utilisateur de la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le compte de service Report Server.  
   
- Ces informations d'identification sont chiffrées et stockées dans le fichier RSReportServer.config. Le serveur de rapports utilise ces informations d'identification pour les connexions continues à la base de données du serveur de rapports. Si vous souhaitez utiliser un compte d'utilisateur Windows ou un compte d'utilisateur de base de données, veillez bien à en spécifier un qui existe déjà. Bien que le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crée une connexion et définisse les autorisations nécessaires, il ne crée pas de compte automatiquement. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Ces informations d'identification sont chiffrées et stockées dans le fichier RSReportServer.config. Le serveur de rapports utilise ces informations d'identification pour les connexions continues à la base de données du serveur de rapports. Si vous souhaitez utiliser un compte d'utilisateur Windows ou un compte d'utilisateur de base de données, veillez bien à en spécifier un qui existe déjà. Bien que le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crée une connexion et définisse les autorisations nécessaires, il ne crée pas de compte automatiquement. Pour plus d’informations, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Choisir une langue du serveur de rapports**  
  Choisissez une langue à spécifier pour le serveur de rapports. Les noms de rôle prédéfinis, les descriptions et les dossiers Mes rapports n'apparaissent pas en différentes langues lorsque les utilisateurs se connectent au serveur à l'aide de différentes versions linguistiques d'un navigateur.  
@@ -73,7 +73,7 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
   
 ### <a name="to-create-a-local-report-server-database"></a>Pour créer une base de données locale du serveur de rapports  
   
-1.  Démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis connectez-vous à l'instance du serveur de rapports pour laquelle vous créez la base de données. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis connectez-vous à l'instance du serveur de rapports pour laquelle vous créez la base de données. Pour plus d’informations, consultez [Gestionnaire de configuration du serveur de rapports &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Dans la page Base de données, sélectionnez **Modifier la base de données**.  
   
@@ -81,7 +81,7 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
   
 4.  Connectez-vous à l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] que vous allez utiliser pour créer et héberger la base de données du serveur de rapports :  
   
-    1.  Tapez l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que vous souhaitez utiliser. L'Assistant affiche un [!INCLUDE[ssDE](../../includes/ssde-md.md)] local qui s'exécute comme instance par défaut en cas de disponibilité. Sinon, vous devez entrer le serveur et l'instance à utiliser. Les instances nommées sont spécifiées dans le format suivant : \<nom_ serveur>\\<nom_instance\>.  
+    1.  Tapez l'instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que vous souhaitez utiliser. L'Assistant affiche un [!INCLUDE[ssDE](../../includes/ssde-md.md)] local qui s'exécute comme instance par défaut en cas de disponibilité. Sinon, vous devez entrer le serveur et l'instance à utiliser. Les instances nommées sont spécifiées au format suivant : \<servername>\\<nom_instance\>.  
   
     2.  Entrez les informations d’identification utilisées pour une connexion unique au [!INCLUDE[ssDE](../../includes/ssde-md.md)] en vue de créer les bases de données du serveur de rapports. Pour plus d'informations sur la façon dont ces informations d'identification sont utilisées, consultez [Avant de commencer](#rsdbrequirements) dans cette rubrique.  
   
@@ -119,7 +119,7 @@ Pour créer une base de données du serveur de rapports ou modifier la chaîne d
 
 Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit l'Assistant Modification des informations d'identification pour vous guider à travers les étapes de reconfiguration du compte que le serveur de rapports utilise pour se connecter à la base de données du serveur de rapports. Lorsque vous modifiez les informations d'identification, le Gestionnaire de configuration met à jour toutes les autorisations et informations de connexion de base de données sur le serveur de base de données pour la base de données du serveur de rapports en cours d'utilisation par le serveur de rapports. 
 
-1.  Démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis connectez-vous à l'instance du serveur de rapports pour laquelle vous créez la base de données. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1.  Démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis connectez-vous à l'instance du serveur de rapports pour laquelle vous créez la base de données. Pour plus d’informations, consultez [Gestionnaire de configuration du serveur de rapports &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 2.  Dans la page Base de données, sélectionnez **Modifier les informations d’identification**. 
 
@@ -151,6 +151,6 @@ Le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrs
 
 [Configurer une connexion à la base de données du serveur de rapports](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[Gestionnaire de configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+[Gestionnaire de configuration service Web Report Server](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

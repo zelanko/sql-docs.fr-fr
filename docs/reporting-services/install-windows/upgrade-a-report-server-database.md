@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4091cf87-9d97-4048-a393-67f1f9207401
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fcf80ef99c06487f25b65a928aab25a24bfccffe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 634fc0130942aacf7ec7c32971c9efa58e0bb16a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446002"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91891169"
 ---
 # <a name="upgrade-a-report-server-database"></a>Mettre à niveau une base de données du serveur de rapports
 
@@ -61,7 +61,7 @@ La base de données du serveur de rapports offre un espace de stockage pour une 
   
  En revanche, si vous ne bénéficiez pas d’une autorisation **sysadmin** concernant la base de données de l’ordinateur distant, la connexion sera refusée et un message d’erreur s’affichera, indiquant que :  
   
- `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Reporting Services Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
+ `"Setup was not able to upgrade the report server database schema. You must update the database schema manually after setup is finished. To update the schema, run the Report Server Configuration Manager, open the Database Setup page, re-select the database, and click Apply. The database will be upgraded automatically."`  
   
  À ce stade, les fichiers programme du serveur de rapports sont mis à niveau, mais la base de données du serveur de rapports reste au format de la version précédente. Le serveur de rapports n'est pas disponible tant que vous n'avez pas fini le processus de mise à niveau en mettant à niveau la base de données manuellement.  
   
@@ -70,7 +70,7 @@ La base de données du serveur de rapports offre un espace de stockage pour une 
   
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Gestionnaire de configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[Gestionnaire de configuration du serveur de rapports](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Créer une base de données du serveur de rapports](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Migrer une installation Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  

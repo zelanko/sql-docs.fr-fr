@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 67e30169af049cbf9c3ac7ee3d06d779b77f67c6
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 90485210bbc0fe657516306dd433f3241b5c90c9
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989432"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005973"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notes de version de SqlPackage.exe
 
@@ -51,7 +51,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Always Encrypted | Ajout du support de l’importation et de l’exportation de l’enclave sécurisée pour SQL Server 2019 |
 | Déploiement | Ajout de la prise en charge pour ignorer les tables de capture des changements de données activées lors de l’exportation à partir Azure SQL Database |
 | Déploiement | Support supplémentaire pour l’option d’index OPTIMIZE_FOR_SEQUENTIAL_KEY dans Azure SQL Database |
-| Déploiement | Ajout de la prise en charge des colonnes d’identité pour Azure SQL Data Warehouse | 
+| Déploiement | Ajout de la prise en charge des colonnes d’identité pour Azure Synapse Analytics | 
 | Aide | Sortie de la version sqlpackage dans l’aide (/?) et prise en charge du paramètre/version | 
 
 ### <a name="fixes"></a>Correctifs
@@ -63,12 +63,12 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Déploiement | Correction de l’inscription dacpac lors du déploiement de .NET Core | 
 | Déploiement | Correction de sqlpackage sur la gestion .NET Core du paramètre/accessToken (/at) | 
 | Déploiement | Autoriser les instructions ALTER TABLE dans les procédures stockées comme des instructions de niveau non supérieur | 
-| Déploiement | Correction de la validation Azure SQL Data Warehouse des affichages matérialisés pour ne pas respecter la casse | 
+| Déploiement | Correction de la validation Azure Synapse Analytics des vues matérialisés pour ne pas respecter la casse | 
 
 ### <a name="known-issues"></a>Problèmes connus
 | Fonctionnalité | Détails |
 | :------ | :------ |
-| Déploiement | La fonctionnalité de gestion des charges de travail Azure SQL Data Warehouse (groupes de charge de travail et classifieurs de charges de travail) n’est pas encore prise en charge | 
+| Déploiement | La fonctionnalité de gestion des charges de travail Azure Synapse Analytics (groupes de charge de travail et classifieurs de charges de travail) n’est pas encore prise en charge | 
 
 ## <a name="1851-sqlpackage"></a>18.5.1 sqlpackage
 
@@ -96,14 +96,14 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 ### <a name="features"></a>Fonctionnalités
 | Fonctionnalité | Détails |
 | :------ | :------ |
-| Déploiement | La classification de la sensibilité des données est maintenant prise en charge pour SQL Server 2008 et ultérieur, Azure SQL Database et Azure SQL Data Warehouse |
-| Déploiement | Ajout de la prise en charge des contraintes de table dans Azure SQL Data Warehouse |
-| Déploiement | Ajout de la prise en charge de l’index columnstore en cluster ordonné dans SQL Data Warehouse |
+| Déploiement | La classification de la sensibilité des données est maintenant prise en charge pour SQL Server 2008 et versions ultérieures, Azure SQL Database et Azure Synapse Analytics |
+| Déploiement | Ajout de la prise en charge des contraintes de table dans Azure Synapse Analytics |
+| Déploiement | Ajout de la prise en charge de l’index columnstore en cluster ordonné dans Azure Synapse Analytics |
 | Déploiement | Ajout de la prise en charge de la source de données externe (pour Oracle, Teradata, MongoDB/CosmosDB, ODBC, cluster Big Data) et de la table externe pour le cluster Big Data SQL Server 2019 |
 | Déploiement | Ajout de SQL Database Edge comme édition prise en charge |
 | Déploiement | Prise en charge des noms de serveur Managed Instance au format '\<server>.\<dnszone>.database.windows.net' |
-| Déploiement | Ajout de la prise en charge de la commande copy dans Azure SQL Data Warehouse |
-| Déploiement | Ajout de l’option de déploiement « IgnoreTablePartitionOptions » durant la publication pour éviter la recréation de la table en cas de modification de la fonction de partition sur la table pour Azure SQL Data Warehouse |
+| Déploiement | Ajout de la prise en charge de la commande copy dans Azure Synapse Analytics |
+| Déploiement | Ajout de l’option de déploiement « IgnoreTablePartitionOptions » durant la publication pour éviter la recréation de la table en cas de modification de la fonction de partition sur la table pour Azure Synapse Analytics |
 | .NET Core | Ajout de la prise en charge de Microsoft.Data.SqlClient dans la version .NET Core de sqlpackage |
 | &nbsp; | &nbsp; |
 
@@ -114,9 +114,9 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 | Déploiement | Correction de la génération d’instructions GRANT pour les autorisations AlterAnyDatabaseScopedConfiguration et AlterAnySensitivityClassification |
 | Déploiement | Correction d’un problème entraînant la non-reconnaissance d’une autorisation de script externe |
 | Déploiement | Correction de la propriété inline : l’ajout implicite de la propriété ne doit pas apparaître dans la différence, mais une mention explicite doit apparaître dans le script |
-| Déploiement | Résolution d’un problème où la modification d’une table référencée par une vue matérialisée entraîne la génération d’instructions Alter View qui ne sont pas prises en charge dans les vues matérialisées pour Azure SQL Data Warehouse |
-| Déploiement | Correction de l’échec de la publication lors de l’ajout d’une colonne à une table avec des données pour Azure SQL Data Warehouse |
-| Déploiement | Correction du script de mise à jour devant déplacer les données vers une nouvelle table lors de la modification du type de colonne de distribution (scénario de perte de données) pour Azure SQL Data Warehouse |
+| Déploiement | Résolution d’un problème où la modification d’une table référencée par une vue matérialisée entraîne la génération d’instructions Alter View qui ne sont pas prises en charge dans les vues matérialisées pour Azure Synapse Analytics |
+| Déploiement | Correction de l’échec de la publication lors de l’ajout d’une colonne à une table avec des données pour Azure Synapse Analytics |
+| Déploiement | Correction du script de mise à jour devant déplacer les données vers une nouvelle table lors de la modification du type de colonne de distribution (scénario de perte de données) pour Azure Synapse Analytics |
 | ScriptDom | Correction d’un bogue dans ScriptDom entraînant la non-reconnaissance des contraintes inline définies après un index inline |
 | ScriptDom | Correction dans ScriptDom d’une parenthèse fermante manquante SYSTEM_TIME dans une instruction de traitement par lots |
 | Always Encrypted | Correction de l’échec de la suppression de la table #tmpErrors lorsque sqlpackage se reconnecte et que la table temporaire est déjà supprimée (la table temporaire disparaissant quand la connexion est perdue) |
@@ -164,7 +164,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fonctionnalité | Détails |
 | :------ | :------ |
-| Déploiement | Ajout de la prise en charge pour le déploiement sur Azure SQL Data Warehouse (GA). | 
+| Déploiement | Ajout de la prise en charge pour le déploiement sur Azure Synapse Analytics (GA). | 
 | Plateforme | sqlpackage .NET Core GA pour macOS, Linux et Windows. | 
 | Sécurité | Suppression de la signature du code SHA1. |
 | Déploiement | Ajout de la prise en charge des nouvelles éditions des bases de données Azure : GeneralPurpose, BusinessCritical, Hyperscale |
@@ -203,7 +203,7 @@ Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 
 | Fonctionnalité | Détails |
 | :------ | :------ |
-| Déploiement | Ajout de la prise en charge pour le déploiement sur Azure SQL Data Warehouse (préversion). | 
+| Déploiement | Ajout de la prise en charge pour le déploiement sur Azure Synapse Analytics (préversion). | 
 | Déploiement | Ajout du paramètre /p:DatabaseLockTimeout=(INT32 '60') à sqlpackage. | 
 | Déploiement | Ajout du paramètre /p:LongRunningCommandTimeout=(INT32) à sqlpackage. |
 | Exportation/Extraction | Ajout du paramètre /p:TempDirectoryForTableData=(STRING) à sqlpackage. |

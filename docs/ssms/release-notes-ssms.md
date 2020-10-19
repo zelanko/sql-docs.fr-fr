@@ -11,12 +11,12 @@ ms.author: drskwier
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 09/28/2020
-ms.openlocfilehash: 46a8b73155fea5c22ef7d94acc3f128f42138410
-ms.sourcegitcommit: 2600a414c321cfd6dc6daf5b9bcbc9a99c049dc4
+ms.openlocfilehash: 7115c3c36f79b35fbb66d39ec530b320d7929c0e
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "91603443"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92039153"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notes de publication de SQL Server Management Studio (SSMS)
 
@@ -66,8 +66,8 @@ SSMS 18.6 est la dernière version en disponibilité générale de SSMS. Si vou
 | Classification des données | Mettez à jour SSMS pour prendre en charge l’importation/exportation d’une stratégie exportée via des applets de commande PowerShell. |
 | Importer un fichier plat | Ajout de la prise en charge des fichiers de type largeur fixe et de la détection de type de fichier pour les fichiers .csv/.tsv pour s’assurer qu’ils sont analysés en tant que fichiers csv/tsv, respectivement. |
 | Integration Services | Ajout de la prise en charge des travaux de l’agent Azure SQL Managed Instance pour exécuter un package SSIS à partir du magasin de packages dans Azure-SSIS IR. |
-| SMO / Création de scripts | Ajout de la prise en charge des scripts de masquage dynamique des données sur [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (anciennement SQL Azure DW). |
-| SMO / Création de scripts | Ajout de la prise en charge des scripts de stratégie de sécurité sur [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (anciennement SQL DW). |
+| SMO / Création de scripts | Ajout de la prise en charge des scripts de masquage dynamique des données sur [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (anciennement SQL Azure DW). |
+| SMO / Création de scripts | Ajout de la prise en charge des scripts de stratégie de sécurité sur [Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (anciennement SQL DW). |
 
 ### <a name="bug-fixes-in-186"></a>Correctifs de bogues dans la version 18.6
 
@@ -376,7 +376,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 | Exécution ou résultats des requêtes | Ajout d’un *délai d’achèvement* dans les messages à suivre lorsque l’exécution d’une requête donnée est terminée. |
 | Exécution ou résultats des requêtes | Permet d’afficher plus de données (Résultats dans du texte) et d’en stocker davantage dans des cellules (Résultats dans des grilles). SSMS autorise désormais jusqu’à 2 millions de caractères pour ces deux options (auparavant, les limites étaient fixées à 256 000 caractères pour l’affichage et à 64 000 caractères pour le stockage dans des grilles). Cela règle également le problème des utilisateurs qui ne parvenaient pas à extraire plus de 43 680 caractères des cellules d’une grille. |
 | ShowPlan | Ajout d’un nouvel attribut dans QueryPlan quand la [fonctionnalité UDF scalaire Inline](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining) est activée (ContainsInlineScalarTsqludfs). |
-| SMO | Ajout de la prise en charge de l’*API SQL Assessment*. Pour plus d’informations, consultez [API SQL Assessment](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview). |
+| SMO | Ajout de la prise en charge de l’*API SQL Assessment*. Pour plus d’informations, consultez [API SQL Assessment](../tools/sql-assessment-api/sql-assessment-api-overview.md). |
 |  |  |
 
 #### <a name="bug-fixes-in-182"></a>Correctifs de bogues dans la version 18.2
@@ -526,7 +526,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |SSMS nécessite NetFx 4.7.2 ou une version ultérieure|Nous avons mis à niveau notre configuration minimale requise de NetFx4.6.1 à NetFx4.7.2 : cela nous permet de tirer parti des nouvelles fonctionnalités exposées par la nouvelle infrastructure.|
 |Possibilité de migrer les paramètres de SSMS| Au premier démarrage de SSMS 18, l’utilisateur est invité à migrer les paramètres de la version 17.x. Les fichiers de paramètres utilisateur sont maintenant stockés comme un fichier XML simple, ce qui améliore la portabilité et permet éventuellement la modification.|
 |Prise en charge des résolutions élevées| La prise en charge des résolutions élevées est désormais activée par défaut.|
-|SSMS est livré avec le pilote Microsoft OLE DB| Pour plus d’informations, consultez [Télécharger Microsoft OLE DB Driver pour SQL Server](https://docs.microsoft.com/sql/connect/oledb/download-oledb-driver-for-sql-server).|
+|SSMS est livré avec le pilote Microsoft OLE DB| Pour plus d’informations, consultez [Télécharger Microsoft OLE DB Driver pour SQL Server](../connect/oledb/download-oledb-driver-for-sql-server.md).|
 |SSMS n’est pas pris en charge sur Windows 8. Windows 10 et Windows Server 2016 nécessitent la version 1607 (10.0.14393) ou ultérieure|Compte tenu de la nouvelle dépendance vis-à-vis de NetFx 4.7.2, SSMS 18.0 ne peut pas être installé sur Windows 8, les anciennes versions de Windows 10 et Windows Server 2016. Le programme d’installation de SSMS bloque ces systèmes. Windows 8.1 est toujours pris en charge.|
 |SSMS n’est plus ajouté à la variable d’environnement PATH|Le chemin de SSMS.EXE (et des outils en général) n’est plus ajouté au chemin. Les utilisateurs peuvent l’ajouter manuellement ou, s’ils utilisent une version moderne de Windows, passer par le menu Démarrer.|
 |Les ID de package ne sont plus nécessaires pour développer des extensions SSMS| Avant, SSMS chargeait de façon sélective uniquement les packages connus, ce qui contraignait les développeurs à inscrire leur propre package. Cela n’est plus le cas.|
@@ -553,10 +553,10 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |Always Encrypted avec enclaves sécurisées| Plusieurs améliorations ont été apportées pour prendre en charge Always Encrypted avec enclaves sécurisées dans SQL Server 2019 :  Champ de texte permettant de spécifier l’URL d’attestation d’enclave dans la boîte de dialogue Se connecter au serveur (sous le nouvel onglet Always Encrypted).  Nouvelle case à cocher dans la boîte de dialogue Nouvelle clé principale de colonne permettant d’indiquer si une nouvelle clé principale de colonne doit autoriser les calculs d’enclave.  D’autres boîtes de dialogue de gestion de clés Always Encrypted exposent désormais des informations indiquant sur quelles clés principales de colonne les calculs d’enclave sont autorisés.|
 |Fichiers d’audit|Abandon de la méthode d’authentification basée sur la clé du compte de stockage au profit de l’authentification basée sur Azure AD.|
 |Classification des données| Réorganisation du menu des tâches de classification des données : ajout d’un sous-menu au menu des tâches de base de données et ajout d’une option pour ouvrir le rapport à partir du menu sans ouvrir au préalable la fenêtre de classification des données.|
-|Classification des données|Ajout d’une nouvelle fonctionnalité de « classification des données » à SMO. L’objet Column expose de nouvelles propriétés : SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId et IsClassified (en lecture seule). Pour plus d’informations, consultez [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql)|
+|Classification des données|Ajout d’une nouvelle fonctionnalité de « classification des données » à SMO. L’objet Column expose de nouvelles propriétés : SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId et IsClassified (en lecture seule). Pour plus d’informations, consultez [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../t-sql/statements/add-sensitivity-classification-transact-sql.md)|
 |Classification des données|Ajout d’un nouvel élément de menu « Rapport de classification » au menu volant « Classification des données ».|
 |Classification des données| Recommandations mises à jour.|
-|Mise à niveau du niveau de compatibilité de la base de données|Ajout d’une nouvelle option sous ***Nom de la base de données*** > ***Tâches*** > ***Mise à niveau de la base de données***. Celle-ci démarre le nouvel **Assistant Paramétrage de requêtes** pour guider l’utilisateur dans le processus suivant : Collecte d’une ligne de base de performances avant la mise à niveau du niveau de compatibilité de la base de données. Mise à niveau vers le niveau de compatibilité de la base de données souhaité.  Collecte d’un deuxième passage de données de performances sur la même charge de travail. Détection des régressions de la charge de travail et indication de recommandations testées pour améliorer les performances de la charge de travail.  Ce processus est semblable au processus de mise à niveau de base de données documenté dans la rubrique [Scénarios d’utilisation du Magasin des requêtes](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), à l’exception de la dernière étape où l’Assistant Paramétrage de requêtes ne s’appuie pas sur un état valide antérieur connu pour générer des recommandations.|
+|Mise à niveau du niveau de compatibilité de la base de données|Ajout d’une nouvelle option sous ***Nom de la base de données*** > ***Tâches*** > ***Mise à niveau de la base de données***. Celle-ci démarre le nouvel **Assistant Paramétrage de requêtes** pour guider l’utilisateur dans le processus suivant : Collecte d’une ligne de base de performances avant la mise à niveau du niveau de compatibilité de la base de données. Mise à niveau vers le niveau de compatibilité de la base de données souhaité.  Collecte d’un deuxième passage de données de performances sur la même charge de travail. Détection des régressions de la charge de travail et indication de recommandations testées pour améliorer les performances de la charge de travail.  Ce processus est semblable au processus de mise à niveau de base de données documenté dans la rubrique [Scénarios d’utilisation du Magasin des requêtes](../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade), à l’exception de la dernière étape où l’Assistant Paramétrage de requêtes ne s’appuie pas sur un état valide antérieur connu pour générer des recommandations.|
 |Assistant Application de la couche Données|Ajout de la prise en charge de l’importation/exportation de l’application de la couche Données avec des tables de graphe.|
 |Assistant Importation d’un fichier plat|Ajout d’une logique pour notifier l’utilisateur que l’importation peut avoir abouti à un renommage des colonnes.|
 |Integration Services (SSIS)|Les clients peuvent désormais planifier des packages SSIS sur les runtimes d’intégration Azure-SSIS qui se trouvent dans le cloud Azure Government.|
@@ -576,7 +576,7 @@ Pour connaître les autres problèmes connus et pour envoyer vos commentaires à
 |ShowPlan|Ajout de la logique pour l’affichage de « Materializer Operator (External Select) ».|
 |ShowPlan|Ajout d’un nouvel attribut de plan d’exécution de requêtes « BatchModeOnRowStoreUSed » pour identifier facilement les requêtes qui utilisent la fonctionnalité « analyse en mode batch sur les rowstores ». Chaque fois qu’une requête effectue une analyse en mode batch sur des rowstores, un nouvel attribut (BatchModeOnRowStoreUsed="true") est ajouté à l’élément StmtSimple.|
 |ShowPlan|Ajout de la prise en charge du plan d’exécution de requêtes à LocalCube RelOp pour DW ROLLUP et CUBE.|
-|ShowPlan|Nouvel opérateur LocalCube pour les nouvelles fonctionnalités d’agrégation ROLLUP et CUBE dans Azure SQL Data Warehouse.|
+|ShowPlan|Nouvel opérateur LocalCube pour les nouvelles fonctionnalités d’agrégation ROLLUP et CUBE dans Azure Synapse Analytics.|
 |SMO| Prise en charge étendue de SMO pour la création d’index reprenables.|
 |SMO| Ajout d’un nouvel événement sur les objets SMO (« PropertyMissing ») pour aider les créateurs d’applications à détecter plus tôt les problèmes de performances de SMO.|
 |SMO| Exposition de la nouvelle propriété DefaultBackupChecksum sur l’objet Configuration qui est mappée au « paramètre par défaut de la somme de contrôle de sauvegarde » dans la configuration du serveur.|

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3b3c3f296d0fd2ae05c3b88a08428c3ddb8a5f2c
-ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
+ms.openlocfilehash: a9067a7ffa6bd6379fb9384b915d07cb64893467
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86391804"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080639"
 ---
 # <a name="sqlsrv_fetch_array"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -82,7 +82,7 @@ SELECT SCOPE_IDENTITY() AS PictureID
   
 Si un jeu de résultats contient plusieurs colonnes sans nom, la valeur de la dernière colonne sans nom est affectée à la clé de chaîne vide ("").  
   
-## <a name="example"></a>Exemple  
+## <a name="associative-array-example"></a>Exemple de tableau associatif  
 L’exemple suivant récupère chaque ligne d’un jeu de résultats sous forme d’objet **array**associatif. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
@@ -121,7 +121,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="indexed-array-xample"></a>Exemple de tableau indexé  
 L’exemple suivant récupère chaque ligne d’un jeu de résultats sous forme de tableau indexé numériquement.  
   
 L’exemple récupère, à partir de la table *Purchasing.PurchaseOrderDetail* de la base de données AdventureWorks, les informations sur les produits qui ont une date spécifique, et dont la quantité en stock (*StockQty*) est inférieure à la valeur spécifiée.  

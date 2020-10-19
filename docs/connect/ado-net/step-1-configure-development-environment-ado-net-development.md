@@ -11,12 +11,12 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: dde55bd4afd162869606e336126c32c274ea7445
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2e9f0619f26abf8b077059c7e12c7fc34c51a2e6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633315"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081298"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Étape 1 : Configurer l’environnement de développement pour le développement ADO.NET
 
@@ -30,7 +30,7 @@ Notre exemple de code actuel utilise ADO.NET du .NET Framework, pour Windows. Le
 
 ### <a name="adonet-for-windows"></a>ADO.NET, pour Windows
 
-- ![Télécharger-FlècheBas-Encerclé](../../ssms/media/download-icon.png)[Pour télécharger et installer .NET Framework, y compris ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Flèche de téléchargement encerclée Framework](../../ssms/media/download-icon.png)[Pour télécharger et installer le .NET Framework, y compris ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 - Installez Visual Studio Community, ou un environnement de développement intégré (IDE) similaire pour l’écriture et la compilation de code source C#. Microsoft propose désormais Visual Studio Community *gratuitement*.  
     - [Télécharger Visual Studio Community](https://www.visualstudio.com/products/visual-studio-community-vs)  
@@ -41,4 +41,4 @@ Notre exemple de code actuel utilise ADO.NET du .NET Framework, pour Windows. Le
 
 Des liens pour télécharger .NET Core pour un large éventail de systèmes d’exploitation sont disponibles à l’adresse suivante :
 
-- ![Télécharger-FlècheBas dans un cercle](../../ssms/media/download-icon.png)[Pour télécharger et installer .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Flèche de téléchargement encerclée Core](../../ssms/media/download-icon.png)[Pour télécharger et installer .NET Core](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

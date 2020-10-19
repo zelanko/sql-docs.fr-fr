@@ -1,6 +1,6 @@
 ---
 title: Paramètres d’abonnement et compte de partage de fichiers (Gestionnaire de configuration) | Microsoft Docs
-description: Utilisez la page Paramètres d'abonnement du Gestionnaire de configuration Reporting Services afin de configurer un compte de partage de fichiers pour les serveurs de rapports en mode natif et les abonnements de partage de fichiers.
+description: Utilisez la page Paramètres d’abonnement du Gestionnaire de configuration du serveur de rapports afin de configurer un compte de partage de fichiers pour les serveurs de rapports en mode natif et les abonnements de partage de fichiers.
 ms.date: 12/04/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -11,14 +11,14 @@ f1_keywords:
 ms.assetid: fefa7bdb-b5f2-4db7-b91c-b58869279f3c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9dd29c96f80ed24889356c72961f47de707037e6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 05441d59b725a172fddfb83ae116cda2d3ca5596
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74866272"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935548"
 ---
-# <a name="subscription-settings-and-a-file-share-account-ssrs-configuration-manager"></a>Paramètres d'abonnement et compte de partage de fichiers (Gestionnaire de configuration SSRS)
+# <a name="subscription-settings-and-a-file-share-account-report-server-configuration-manager"></a>Paramètres d’abonnement et compte de partage de fichiers (Gestionnaire de configuration du serveur de rapports)
   Utilisez la page **Paramètres d'abonnement** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin de configurer un compte de partage de fichiers pour les serveurs de rapports en mode natif et les abonnements de partage de fichiers. Le compte de partage de fichiers vous permet d'utiliser un jeu unique d'informations d'identification dans plusieurs abonnements qui fournissent des rapports à un partage de fichiers. Au moment de modifier les informations d'identification, vous configurez la modification pour le compte de partage de fichiers et vous n'avez pas besoin de mettre à jour chaque abonnement individuel.  
   
  Les abonnements de partage de fichiers [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent deux flux de travail :  

@@ -29,12 +29,12 @@ ms.reviewer: v-daenge
 ms.custom: seo-lt-2019
 ms.date: 09/11/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 61d00005973755588012d0e7e1d9f4be9327fa08
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 9a3fa6a8e427417b8c165f031cf5bd2295e9a50a
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076754"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005595"
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 
@@ -42,7 +42,7 @@ ms.locfileid: "90076754"
 
 > Pour utiliser bcp sur Linux, consultez [Installer sqlcmd et bcp sur Linux](../linux/sql-server-linux-setup-tools.md).
 >
-> Pour plus d’informations sur l’utilisation de bcp avec Azure SQL Data Warehouse, consultez [Charger des données avec bcp](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
+> Pour plus d’informations sur l’utilisation de bcp avec Azure Synapse Analytics, consultez [Charger des données avec bcp](/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
 L’utilitaire **b**ulk **c**opy **p**rogram (**bcp**) copie en bloc des données entre une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un fichier de données dans un format spécifié par l’utilisateur. L’utilitaire **bcp** permet d’importer un grand nombre de nouvelles lignes dans des tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d’exporter des données de tables dans des fichiers de données. Sauf lorsqu’il est utilisé avec l’option **queryout** , l’utilitaire ne nécessite aucune connaissance de [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour importer des données dans une table, vous devez utiliser un fichier de format créé pour cette table ou comprendre la structure de la table et les types de données valides pour ses colonnes.  
 
@@ -64,8 +64,8 @@ Numéro de version : 15.0.2 <br>
 Numéro de build : 15.0.2000.5<br>
 Date de publication : 11 septembre 2020
 
-La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour les fonctionnalités SQL Database, SQL Data Warehouse et Always Encrypted.
-Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de la MFA pour SQL Database et SQL Data Warehouse.
+La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de MFA (Multi-Factor Authentication) pour les fonctionnalités SQL Database, Azure Synapse Analytics et Always Encrypted.
+Le nouveau BCP prend en charge l’authentification Azure AD, notamment la prise en charge de MFA pour SQL Database et Azure Synapse Analytics.
 
 ### <a name="system-requirements"></a>Configuration requise
 
@@ -181,7 +181,8 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  Spécifie la base de données à laquelle se connecter. Par défaut, bcp.exe se connecte à la base de données par défaut de l'utilisateur. Si -d database_name et un nom en trois parties (database_name.schema.table, passé comme premier paramètre à bcp.exe) sont spécifiés, une erreur se produit, car vous ne pouvez pas spécifier deux fois le nom de la base de données. Si *database_name* commence par un trait d’union (-) ou une barre oblique (/), n’ajoutez pas d’espace entre **-d** et le nom de la base de données.  
 
 **-D**<a name="D"></a>  
-Fait en sorte que la valeur passée à l’option `bcp` `-S` soit interprétée comme un nom de source de données (DSN). Pour plus d’informations, consultez _Prise en charge du nom de source de données dans sqlcmd et bcp_ dans [Connexion avec sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
+Fait en sorte que la valeur passée à l’option `bcp` `-S` soit interprétée comme un nom de source de données (DSN). Un nom de source de données peut être utilisé pour incorporer des options de pilote afin de simplifier les lignes de commande, appliquer des options de pilote qui ne sont pas accessibles autrement à partir de la ligne de commande (telles que MultiSubnetFailover), ou pour aider à protéger les informations d’identification sensibles contre la détection en tant qu’arguments de ligne de commande. Pour plus d’informations, consultez _Prise en charge du nom de source de données dans sqlcmd et bcp_ dans [Connexion avec sqlcmd](../connect/odbc/linux-mac/connecting-with-sqlcmd.md).
+
 
  **-e** _**err\_file**_<a name="e"></a>  
  Spécifie le chemin complet d’un fichier d’erreur utilisé pour stocker les lignes que l’utilitaire **bcp** ne peut pas transférer du fichier vers la base de données. Les messages d’erreur de la commande **bcp** sont transmis à la station de travail de l’utilisateur. Si cette option est omise, aucun fichier d'erreur n'est créé.  
@@ -215,7 +216,7 @@ Indique que la ou les valeurs d'identité figurant dans le fichier de données i
 
 **-G**<a name="G"></a>
 
- Ce commutateur est utilisé par le client lors de la connexion à Azure SQL Database ou à Azure SQL Data Warehouse, pour indiquer que l’utilisateur doit être authentifié avec l’authentification Azure Active Directory. Le commutateur -G nécessite la [version 14.0.3008.27 ou ultérieure](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp -v. Pour plus d’informations, consultez [Utiliser l’authentification Azure Active Directory pour l’authentification auprès de SQL Database ou de SQL Data Warehouse](/azure/sql-database/sql-database-aad-authentication). 
+ Ce commutateur est utilisé par le client durant la connexion à Azure SQL Database ou à Azure Synapse Analytics pour faire en sorte que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Le commutateur -G nécessite la [version 14.0.3008.27 ou ultérieure](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp -v. Pour plus d’informations, consultez [Utiliser l’authentification Azure Active Directory pour l’authentification auprès de SQL Database ou Azure Synapse Analytics](/azure/sql-database/sql-database-aad-authentication). 
 
 > [!IMPORTANT]
 > L’option **-G** s’applique uniquement à Azure SQL Database et à Azure Data Warehouse.
@@ -258,7 +259,7 @@ Indique que la ou les valeurs d'identité figurant dans le fichier de données i
 
 - **Azure Active Directory Interactive**  
 
-   L’authentification interactive Azure AD pour Azure SQL Database et SQL Data Warehouse vous permet d’utiliser une méthode interactive qui prend en charge l’authentification multifacteur. Pour plus d’informations, consultez [Authentification interactive Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
+   L’authentification interactive Azure AD pour Azure SQL Database et Azure Synapse Analytics vous permet d’utiliser une méthode interactive qui prend en charge l’authentification multifacteur. Pour plus d’informations, consultez [Authentification interactive Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication).
 
    L’authentification Azure AD interactive requiert **bcp** [version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) ou version ultérieure, ainsi que [ODBC version 17.2 ou ultérieure](https://aka.ms/downloadmsodbcsql).  
 
@@ -404,13 +405,13 @@ Copie en bloc en faisant appel aux types de données natifs (base de données) d
  Spécifie que l'utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec une connexion approuvée qui utilise la sécurité intégrée. Les informations d’identification de sécurité de l’utilisateur réseau, *login_id*et *password* , ne sont pas requises. Si **-T** n’est pas spécifié, vous devez indiquer **-U** et **-P** pour vous connecter.
 
 > [!IMPORTANT]
-> Quand l’utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] via une connexion approuvée utilisant la sécurité intégrée, utilisez l’option **-T** (connexion approuvée) à la place de la combinaison *user name* et *password* . Lorsque l’utilitaire **bcp** se connecte à la base de données SQL ou à SQL Data Warehouse à l’aide de l’authentification Windows, ou lorsque l’authentification Azure Active Directory n’est pas prise en charge. Utilisez les options **-U** et **-P** . 
+> Quand l’utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] via une connexion approuvée utilisant la sécurité intégrée, utilisez l’option **-T** (connexion approuvée) à la place de la combinaison *user name* et *password* . Lorsque l’utilitaire **bcp** se connecte à SQL Database ou à Azure Synapse Analytics à l’aide de l’authentification Windows, ou lorsque l’authentification Azure Active Directory n’est pas prise en charge. Utilisez les options **-U** et **-P** . 
   
  **-U** _**login\_id**_<a name="U"></a>  
  Spécifie l'ID de connexion utilisé pour une connexion à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]
-> Quand l’utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] via une connexion approuvée utilisant la sécurité intégrée, utilisez l’option **-T** (connexion approuvée) à la place de la combinaison *user name* et *password* . Lorsque l’utilitaire **bcp** se connecte à la base de données SQL ou à SQL Data Warehouse à l’aide de l’authentification Windows, ou lorsque l’authentification Azure Active Directory n’est pas prise en charge. Utilisez les options **-U** et **-P** .
+> Quand l’utilitaire **bcp** se connecte à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] via une connexion approuvée utilisant la sécurité intégrée, utilisez l’option **-T** (connexion approuvée) à la place de la combinaison *user name* et *password* . Lorsque l’utilitaire **bcp** se connecte à SQL Database ou à Azure Synapse Analytics à l’aide de l’authentification Windows, ou lorsque l’authentification Azure Active Directory n’est pas prise en charge. Utilisez les options **-U** et **-P** .
   
  **-v**<a name="v"></a>  
  Indique le numéro de version et le copyright de l’utilitaire **bcp** .  

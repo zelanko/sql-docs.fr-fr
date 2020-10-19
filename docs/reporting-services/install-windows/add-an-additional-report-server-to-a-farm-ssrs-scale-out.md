@@ -9,12 +9,12 @@ ms.assetid: c1a6b683-15cf-44ae-ac60-ceee63a60aaf
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2b69bf8be4eef05ae8bb332afb4078eb1bca404
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 689d304798da13a8c8647598ac13d9ca232c6bfc
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88418675"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934697"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Ajouter un serveur de rapports supplémentaire à une batterie (montée en puissance SSRS)
 
@@ -26,7 +26,7 @@ ms.locfileid: "88418675"
 > [!TIP]  
 >  À compter de la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous n'utilisez pas le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour ajouter des serveurs et effectuer un scale-out des serveurs de rapports. Les produits SharePoint gèrent le déploiement avec montée en puissance parallèle de Reporting Services sous forme de serveurs SharePoint avec l'ajout du service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à la batterie de serveurs.  
   
- Pour plus d’informations sur le déploiement de serveurs de rapports en mode natif avec montée en puissance parallèle, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+ Pour plus d’informations sur la façon d’effectuer un scale-out de serveurs de rapports en mode natif, consultez [Configurer un déploiement par scale-out de serveurs de rapports en mode natif &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ##  <a name="load-balancing"></a><a name="bkmk_loadbalancing"></a> Équilibrage de charge  
  L'équilibrage de la charge des applications de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sera géré automatiquement par SharePoint à moins que votre environnement n'ait une solution d'équilibrage de charge tierce ou personnalisée. Le comportement d'équilibrage de la charge SharePoint par défaut fait que chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sera équilibrée à travers tous les serveurs d'applications sur lesquels vous avez démarré le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour vérifier si le service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé et démarré, cliquez sur **Gérer les services sur le serveur** dans l'Administration centrale de SharePoint.  
@@ -81,7 +81,7 @@ The Reporting Services Web Service is not enabled. Configure at least one instan
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx)  
-[Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx)
+[Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2016](/SharePoint/install/add-a-server-to-a-sharepoint-server-2016-farm)  
+[Ajouter un serveur SharePoint à une batterie de serveurs dans SharePoint Server 2013](/SharePoint/install/add-web-or-application-server-to-the-farm)
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

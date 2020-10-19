@@ -11,17 +11,17 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7b0d644d362ad4105c4e0b4f0db8d50c92a7e8b1
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: f7abb90d32f93975c9a984670ca450dc791a46ae
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726890"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92004561"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Se connecter à l’aide de l’authentification Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) est une technologie de gestion centralisée des identifiants utilisateur qui représente une solution de substitution à [l’authentification SQL Server](how-to-connect-using-sql-server-authentication.md). Elle rend possible la connexion à Microsoft Azure SQL Database et à SQL Data Warehouse avec des identités fédérées dans Azure AD à l’aide d’un nom d’utilisateur et d’un mot de passe, de l’authentification intégrée Windows ou d’un jeton d’accès Azure AD. Les pilotes PHP pour SQL Server offrent une prise en charge partielle de ces fonctionnalités.
+[Azure Active Directory](/azure/active-directory/active-directory-whatis) (Azure AD) est une technologie de gestion centralisée des identifiants utilisateur qui représente une solution de substitution à [l’authentification SQL Server](how-to-connect-using-sql-server-authentication.md). Elle rend possible la connexion à Microsoft Azure SQL Database et à Azure Synapse Analytics avec des identités fédérées dans Azure AD à l’aide d’un nom d’utilisateur et d’un mot de passe, de l’authentification intégrée Windows ou d’un jeton d’accès Azure AD. Les pilotes PHP pour SQL Server offrent une prise en charge partielle de ces fonctionnalités.
 
 Pour utiliser Azure AD, employez le mot clé **Authentication** ou le mot clé **AccessToken** (mutuellement exclusifs), comme le montre le tableau suivant. Pour plus d’informations techniques, consultez [Utiliser Azure Active Directory avec le pilote ODBC](../odbc/using-azure-active-directory.md).
 

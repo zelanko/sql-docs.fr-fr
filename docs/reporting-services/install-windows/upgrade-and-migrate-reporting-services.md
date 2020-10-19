@@ -12,12 +12,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 05/01/2020
-ms.openlocfilehash: 41add7a1ac27a0fba9eb364ec5e5da3dde37585c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f473590243956cd2fcba1961d3580fa052d6f4c1
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88446074"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934630"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -139,13 +139,13 @@ ms.locfileid: "88446074"
 ##  <a name="upgrade-a-reporting-services-native-mode-scale-out-deployment"></a><a name="bkmk_native_scaleout"></a> Mettre à niveau un déploiement par montée en puissance parallèle en mode natif Reporting Services  
  Voici un récapitulatif de la procédure de mise à niveau d’un déploiement en mode natif [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui fait l’objet d’un scale-out sur plusieurs serveurs de rapports. Ce processus implique des temps morts du déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
-1.  Sauvegardez les bases de données et les clés de chiffrement du serveur de rapports. Pour plus d’informations, consultez [Opérations de sauvegarde et de restauration pour Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) et [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
+1.  Sauvegardez les bases de données et les clés de chiffrement du serveur de rapports. Pour plus d’informations, consultez [Opérations de sauvegarde et de restauration pour Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) et [Ajouter et supprimer des clés de chiffrement pour un déploiement par scale-out &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
-2.  Utilisez le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour supprimer tous les serveurs de rapports du déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+2.  Utilisez le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour supprimer tous les serveurs de rapports du déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un déploiement par scale-out de serveur de rapports en mode natif &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 3.  Mettez à niveau l’un des serveurs de rapports vers SQL Server Reporting Services.  
   
-4.  Utilisez le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour rajouter les serveurs de rapports au déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+4.  Utilisez le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour rajouter les serveurs de rapports au déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Configurer un déploiement par scale-out de serveur de rapports en mode natif &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
      Pour chaque serveur, répétez les étapes de mise à niveau et montée en puissance parallèle.  
   

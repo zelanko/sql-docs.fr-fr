@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 89d7d4acbb9edda1e6bb5edd78f6bc043c429529
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: a3b2d48c507043b59455f04011d3d75e45727866
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87238242"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91986988"
 ---
 # <a name="technical-reference-ssrs"></a>Références techniques (SSRS)
 
   Recherchez les outils et la documentation de référence de PowerShell pour l’utilisation ou l’administration de SQL Server Reporting Services.  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Erreurs et événements**  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Erreurs et événements**  
  [Cause et résolution des erreurs Reporting Services](../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Références relatives aux fonctions**  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Références relatives aux fonctions**  
  [Aide sur le concepteur de rapports via la touche F1](../reporting-services/tools/report-designer-f1-help.md)  
   
- [Aide (F1) du Gestionnaire de rapports](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
+ [Aide (F1) du Gestionnaire de rapports](./web-portal-ssrs-native-mode.md)  
   
- [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Gestionnaire de configuration du serveur de rapports &#40;mode natif&#41;](../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
- [Aide de l’Assistant Rapport](https://msdn.microsoft.com/library/68287bcf-f91a-429f-bb7c-48c029b041fa)  
+ [Aide de l’Assistant Rapport](/previous-versions/sql/sql-server-2016/ms186558(v=sql.130))  
   
  [Visionneuse HTML et barre d’outils des rapports](../reporting-services/html-viewer-and-the-report-toolbar.md)  
   
  [Paramètres d’informations de périphérique pour les extensions de rendu &#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Utilitaires d’invite de commandes du serveur de rapports**  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Utilitaires d’invite de commandes du serveur de rapports**  
  [Utilitaire RS.exe &#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
  [Utilitaire rsconfig &#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)  
   
  [Utilitaire rskeymgmt &#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)  
   
- ![Petite icône de dossier de fichiers](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Bibliothèque de classes Fournisseur WMI de Reporting Services**  
+ ![Petite icône de dossier de fichiers](/analysis-services/analysis-services/media/filefolder-small.png "Petite icône de dossier de fichiers") **Bibliothèque de classes Fournisseur WMI de Reporting Services**  
  [Référence de bibliothèque du fournisseur WMI de Reporting Services &#40;SSRS&#41;](../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

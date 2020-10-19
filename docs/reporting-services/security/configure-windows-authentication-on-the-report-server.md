@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: eb6981b3396afdc387693c7ae89430179a6d68b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b41e35d48f6add25f4ff8c535fb7e96ed7afe67f
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88492652"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935420"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurer une authentification Windows sur le serveur de rapports
   Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM. Si votre déploiement inclut des applications clientes et des navigateurs clients qui utilisent ces fournisseurs de sécurité, vous pouvez utiliser les valeurs par défaut sans configuration supplémentaire. Si vous voulez utiliser un fournisseur de sécurité différent pour la sécurité intégrée de Windows (par exemple, si vous voulez utiliser Kerberos directement), ou si vous avez modifié les valeurs par défaut et que vous voulez restaurer les paramètres d'origine, vous pouvez utiliser les informations de cette rubrique pour spécifier des paramètres d'authentification sur le serveur de rapports.  
@@ -131,7 +131,7 @@ ms.locfileid: "88492652"
   
 -   Inscrivez un nom de principal du service (SPN) pour le service Report Server sous le compte d'utilisateur de domaine. Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Changez de compte de service pour qu'il s'exécute sous un compte intégré tel que le compte de service réseau. Les comptes intégrés mappent le nom de principal du service (SPN) HTTP au nom de principal du service (SPN) hôte, lequel est défini lorsque vous joignez un ordinateur à votre réseau. Pour plus d’informations, consultez [Configurer un compte de service &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
+-   Changez de compte de service pour qu'il s'exécute sous un compte intégré tel que le compte de service réseau. Les comptes intégrés mappent le nom de principal du service (SPN) HTTP au nom de principal du service (SPN) hôte, lequel est défini lorsque vous joignez un ordinateur à votre réseau. Pour plus d’informations, consultez [Configurer un compte de service &#40;Gestionnaire de configuration du serveur de rapports&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
   
 -   Utilisez NTLM. NTLM fonctionnera généralement dans les cas où l'authentification Kerberos échoue. Pour utiliser NTLM, supprimez **RSWindowsNegotiate** du fichier RSReportServer.config et vérifiez que seul **RSWindowsNTLM** est spécifié. Si vous choisissez cette approche, vous pouvez continuer à utiliser un compte d'utilisateur de domaine pour le service Report Server même si vous ne définissez pas de nom de principal du service (SPN) pour ce compte.  
   

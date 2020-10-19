@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 92e2e9093c5435512f853c9680640784f82e9db6
-ms.sourcegitcommit: 129f8574eba201eb6ade1f1620c6b80dfe63b331
+ms.openlocfilehash: 15130a351548ab5ad1d21ef2142b5b8c68db11b8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87435203"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081868"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ Vous pouvez fermer un objet PDOStatement en appelant `unset` :
 unset($stmt);
 ```
 
-## <a name="example"></a> Exemple
+## <a name="forward-only-example"></a>Exemple avant uniquement
 Cet exemple montre comment utiliser PDO::prepare avec des marqueurs de paramètres et un curseur avant uniquement.
 
 ```
@@ -100,7 +100,7 @@ unset($stmt);
 ?>
 ```
 
-## <a name="example"></a> Exemple
+## <a name="static-cursor-example"></a>Exemple de curseur statique
 Cet exemple montre comment utiliser PDO::prepare avec un curseur statique côté serveur. Pour obtenir un exemple de curseur côté client, consultez [Types de curseurs &#40;pilote PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).
 
 ```
@@ -140,7 +140,7 @@ print_r($row);
 ?>
 ```
 
-## <a name="example"></a> Exemple
+## <a name="targeted-example"></a>Exemple ciblé
 Les deux extraits de code suivants montrent comment utiliser PDO::prepare avec des données ciblées pour les colonnes CHAR/VARCHAR. Comme l’encodage par défaut pour PDO::prepare est UTF-8, l’utilisateur peut pour éviter les conversions implicites à l’aide de l’option `PDO::SQLSRV_ENCODING_SYSTEM`.
 
 **Option 1 :**
@@ -169,7 +169,7 @@ $statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCO
 
 <a name="emulate-prepare" />
 
-## <a name="example"></a> Exemple
+## <a name="prepare-example"></a>Exemple de préparation
 
 Cet exemple montre comment utiliser PDO::prepare avec `PDO::ATTR_EMULATE_PREPARES` défini sur true.
 

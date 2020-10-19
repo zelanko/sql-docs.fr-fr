@@ -3,64 +3,64 @@ title: Convertir les types de données R et SQL
 description: Passez en revue les conversions de types de données implicites et explicites entre R et SQL Server dans les solutions de science des données et d’apprentissage automatique.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/15/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a200917a21e664a21b4186ca1d643bfb0e275869
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2cd8a40fc1c85b8a58216a4c15ff0d1bb56df1da
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179974"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892239"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mappages de types de données entre R et SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Pour les solutions R qui s’exécutent sur la fonctionnalité d’intégration R dans SQL Server Machine Learning Services, passez en revue la liste des types de données non pris en charge, ainsi que les conversions de types de données qui peuvent être effectuées implicitement lorsque les données sont transmises entre R et SQL Server.
+Cet article liste les types de données pris en charge, ainsi que les conversions de types de données exécutées, lors de l’utilisation de la fonctionnalité d’intégration R dans SQL Server Machine Learning Services.
 
 ## <a name="base-r-version"></a>Version R de base
 
-SQL Server 2016 R services et SQL Server Machine Learning Services avec R, sont alignés sur des versions spécifiques de Microsoft R Open. Par exemple, la dernière version, SQL Server Machine Learning Services, repose sur Microsoft R Open 3.3.3.
+SQL Server 2016 R services et SQL Server Machine Learning Services avec R sont alignés sur des versions spécifiques de Microsoft R Open. Par exemple, la dernière version, SQL Server 2019 Machine Learning Services, repose sur Microsoft R Open 3.5.2.
 
-Pour afficher la version R associée à une instance particulière de SQL Server, ouvrez **RGui**. Pour l’instance par défaut, le chemin d’accès est le suivant : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+Pour afficher la version R associée à une instance particulière de SQL Server, ouvrez **RGui** dans l’instance SQL. Par exemple, le chemin de l’instance par défaut dans SQL Server 2019 serait : `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\R_SERVICES\bin\x64\Rgui.exe`.
 
-L’outil charge les bibliothèques R de base et d’autres bibliothèques. Les informations de version du package sont fournies dans une notification pour chaque package chargé au démarrage de la session. 
+L’outil charge les bibliothèques R de base et d’autres bibliothèques. Les informations de version du package sont fournies dans une notification pour chaque package chargé au démarrage de la session.
 
 ## <a name="r-and-sql-data-types"></a>Types de données R et SQL
 
-Alors que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs dizaines de types de données, R est compatible avec un nombre limité de types de données scalaires (numeric, integer, complexes, logiques, caractère, date/heure et brutes). Par conséquent, chaque fois que vous utilisez des données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des scripts R, les données peuvent être implicitement converties en un type de données compatible. Toutefois, la plupart du temps, une conversion exacte ne peut pas être effectuée automatiquement et une erreur est renvoyée, telle que « Unhandled SQL data type ».
+Alors que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge plusieurs dizaines de types de données, R est compatible avec un nombre limité de types de données scalaires (numériques, entières, complexes, logiques, caractère, date/heure et brutes). Par conséquent, chaque fois que vous utilisez des données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans des scripts R, les données peuvent être implicitement converties en un type de données compatible. Toutefois, la plupart du temps, une conversion exacte ne peut pas être effectuée automatiquement et une erreur est renvoyée, telle que « Unhandled SQL data type ».
 
 Cette section répertorie les conversions implicites fournies et les types de données non pris en charge. Des conseils sont fournis pour le mappage des types de données entre R et SQL Server.
 
-## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>Conversions de types de données implicites entre R et SQL Server
+## <a name="implicit-data-type-conversions"></a>Conversions de types de données implicites
 
 Le tableau suivant présente les modifications de types de données et de valeurs lorsque des données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont utilisées dans un script R et retournées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-|Type SQL|Classe R|Type RESULT SET|Commentaires|
-|-|-|-|-|
-|**bigint**|`numeric`|**float**|L’exécution d’un script R avec `sp_execute_external_script` autorise les données d’entrée de type bigint. Toutefois, étant donné qu’elles sont converties dans le type numérique de R, elles subissent une perte de précision pour les valeurs très élevées ou comportant des décimales. R prend en charge les entiers dans la limite de 53 bits, au-delà de laquelle il commence à afficher une perte de précision.|
-|**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
-|**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|La trame de données d’entrée (input_data_1) est créée sans définir explicitement un paramètre *stringsAsFactors*. Ainsi, le type de la colonne dépend de *default.stringsAsFactors()* en R.|
-|**datetime**|`POSIXct`|**datetime**|Représenté au format GMT|
-|**date**|`POSIXct`|**datetime**|Représenté au format GMT|
-|**decimal(p,s)**|`numeric`|**float**|L’exécution d’un script R avec `sp_execute_external_script` autorise les données d’entrée de type décimal. Toutefois, étant donné qu’elles sont converties dans le type numérique de R, elles subissent une perte de précision pour les valeurs très élevées ou comportant des décimales. `sp_execute_external_script` avec un script R ne prend pas en charge la totalité du type de données et modifie les derniers chiffres décimaux, en particulier ceux qui comportent une fraction.|
-|**float**|`numeric`|**float**||
-|**int**|`integer`|**int**||
-|**money**|`numeric`|**float**|L’exécution d’un script R avec `sp_execute_external_script` autorise les données d’entrée de type monnaie. Toutefois, étant donné qu’elles sont converties dans le type numérique de R, elles subissent une perte de précision pour les valeurs très élevées ou comportant des décimales. Les valeurs de centimes sont parfois imprécises, auquel cas un avertissement est émis : *Avertissement : Impossible de représenter avec précision les valeurs de centimes*.  |
-|**numeric(p,s)**|`numeric`|**float**|L’exécution d’un script R avec `sp_execute_external_script` autorise les données d’entrée de type numérique. Toutefois, étant donné qu’elles sont converties dans le type numérique de R, elles subissent une perte de précision pour les valeurs très élevées ou comportant des décimales. `sp_execute_external_script` avec un script R ne prend pas en charge la totalité du type de données et modifie les derniers chiffres décimaux, en particulier ceux qui comportent une fraction.|
-|**real**|`numeric`|**float**||
-|**smalldatetime**|`POSIXct`|**datetime**|Représenté au format GMT|
-|**smallint**|`integer`|**int**||
-|**smallmoney**|`numeric`|**float**||
-|**tinyint**|`integer`|**int**||
-|**uniqueidentifier**|`character`|**varchar(max)**||
-|**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
-|**varbinary(max)**|`raw`|**varbinary(max)**|Uniquement autorisé en tant que paramètre d’entrée et sortie|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|La trame de données d’entrée (input_data_1) est créée sans définir explicitement un paramètre *stringsAsFactors*. Ainsi, le type de la colonne dépend de *default.stringsAsFactors()* en R.|
+| Type SQL                         | Classe R     | Type RESULT SET    | Commentaires            |
+|----------------------------------|-------------|--------------------|---------------------|
+| **bigint**                       | `numeric`   | **float**          | L’exécution d’un script R avec `sp_execute_external_script` autorise les données d’entrée de type bigint. Toutefois, étant donné qu’elles sont converties dans le type numérique de R, elles subissent une perte de précision pour les valeurs très élevées ou comportant des décimales. R prend en charge les entiers dans la limite de 53 bits, au-delà de laquelle il commence à afficher une perte de précision.                                                                                         |
+| **binary(n)**<br /> n <= 8000    | `raw`       | **varbinary(max)** | Uniquement autorisé en tant que paramètre d’entrée et sortie |
+| **bit**                          | `logical`   | **bit**            |                     |
+| **char(n)**<br /> n <= 8000      | `character` | **varchar(max)**   | La trame de données d’entrée (input_data_1) est créée sans définir explicitement un paramètre *stringsAsFactors*. Ainsi, le type de la colonne dépend de *default.stringsAsFactors()* en R.                                                                                                                                                                                                                                           |
+| **datetime**                     | `POSIXct`   | **datetime**       | Représenté au format GMT  |
+| **date**                         | `POSIXct`   | **datetime**       | Représenté au format GMT  |
+| **decimal(p,s)**                 | `numeric`   | **float**          | L’exécution d’un script R avec `sp_execute_external_script` autorise les données d’entrée de type décimal. Toutefois, étant donné qu’elles sont converties dans le type numérique de R, elles subissent une perte de précision pour les valeurs très élevées ou comportant des décimales. `sp_execute_external_script` avec un script R ne prend pas en charge la totalité du type de données et modifie les derniers chiffres décimaux, en particulier ceux qui comportent une fraction. |
+| **float**                        | `numeric`   | **float**          |                     |
+| **int**                          | `integer`   | **int**            |                     |
+| **money**                        | `numeric`   | **float**          | L’exécution d’un script R avec `sp_execute_external_script` autorise les données d’entrée de type monnaie. Toutefois, étant donné qu’elles sont converties dans le type numérique de R, elles subissent une perte de précision pour les valeurs très élevées ou comportant des décimales. Les valeurs de centimes sont parfois imprécises, auquel cas un avertissement est émis : *Avertissement : Impossible de représenter avec précision les valeurs de centimes*.                                               |
+| **numeric(p,s)**                 | `numeric`   | **float**          | L’exécution d’un script R avec `sp_execute_external_script` autorise les données d’entrée de type numérique. Toutefois, étant donné qu’elles sont converties dans le type numérique de R, elles subissent une perte de précision pour les valeurs très élevées ou comportant des décimales. `sp_execute_external_script` avec un script R ne prend pas en charge la totalité du type de données et modifie les derniers chiffres décimaux, en particulier ceux qui comportent une fraction. |
+| **real**                         | `numeric`   | **float**          |                     |
+| **smalldatetime**                | `POSIXct`   | **datetime**       | Représenté au format GMT  |
+| **smallint**                     | `integer`   | **int**            |                     |
+| **smallmoney**                   | `numeric`   | **float**          |                     |
+| **tinyint**                      | `integer`   | **int**            |                     |
+| **uniqueidentifier**             | `character` | **varchar(max)**   |                     |
+| **varbinary(n)**<br /> n <= 8000 | `raw`       | **varbinary(max)** | Uniquement autorisé en tant que paramètre d’entrée et sortie |
+| **varbinary(max)**               | `raw`       | **varbinary(max)** | Uniquement autorisé en tant que paramètre d’entrée et sortie |
+| **varchar(n)**<br /> n <= 8000   | `character` | **varchar(max)**   | La trame de données d’entrée (input_data_1) est créée sans définir explicitement un paramètre *stringsAsFactors*. Ainsi, le type de la colonne dépend de *default.stringsAsFactors()* en R.                                                                                                                                                                                                                                           |
 
 ## <a name="data-types-not-supported-by-r"></a>Types de données non pris en charge par R
 
@@ -72,15 +72,15 @@ Parmi les catégories de types de données pris en charge par le [système SQL 
 
 ## <a name="data-types-that-might-convert-poorly"></a>Types de données qui peuvent être mal convertis
 
-+ La plupart des types datetime doivent fonctionner, à l’exception de **datetimeoffset** 
-+ La plupart des types de données numeric sont pris en charge, mais les conversions risquent d’échouer pour **money** et **smallmoney**
++ La plupart des types datetime doivent fonctionner, à l’exception de **datetimeoffset**.
++ La plupart des types de données numériques sont pris en charge, mais les conversions risquent d’échouer pour **money** et **smallmoney**.
 + **varchar** est pris en charge, mais étant donné que SQL Server utilise en règle générale Unicode, l’utilisation de **nvarchar** et d’autres types de données texte Unicode est recommandée lorsque cela est possible.
 + Les fonctions de la bibliothèque RevoScaleR précédées de rx peuvent traiter les types de données binaires SQL (**binary** et **varbinary**), mais dans la plupart des scénarios, un traitement spécial sera nécessaire pour ces types. La plupart du code R ne fonctionne pas avec des colonnes binaires.
 
   
  Pour plus d’informations sur les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).
 
-## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>Modifications des types de données entre SQL Server 2016 et les versions antérieures
+## <a name="changes-in-data-types-between-sql-server-versions"></a>Modifications des types de données entre les versions de SQL Server.
 
 Microsoft SQL Server 2016 et les versions ultérieures apportent des améliorations aux conversions des types de données et à plusieurs autres opérations. Ils offrent une plus grande précision lors de l’utilisation de types à virgule flottante, ainsi que des modifications mineures des opérations sur les types **datetime** classiques.
 
@@ -89,7 +89,7 @@ Ces améliorations sont toutes disponibles par défaut lorsque vous utilisez un 
 Pour plus d’informations, consultez [Améliorations de SQL Server 2016 dans le traitement de certains types de données et des opérations peu courantes](https://support.microsoft.com/help/4010261/sql-server-2016-improvements-in-handling-some-data-types-and-uncommon-).
  
 
-## <a name="verify-r-and-sql-data-schemas-in-advance"></a>Vérifier à l’avance les schémas de données R et SQL 
+## <a name="verify-r-and-sql-data-schemas-in-advance"></a>Vérifier à l’avance les schémas de données R et SQL
 
 En général, en cas de doute sur la manière dont un type ou une structure de données spécifique est utilisé dans R, vous pouvez faire appel à la fonction  `str()` pour obtenir la structure interne et le type de l’objet R. Le résultat de la fonction s’affiche dans la console R et est également disponible dans les résultats de requête, dans l’onglet **Messages** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. 
 
@@ -153,19 +153,19 @@ Notez l’utilisation de la fonction `str` dans R pour obtenir le schéma des do
 
 Vous pouvez voir que les conversions de types de données suivantes ont été effectuées implicitement dans le cadre de cette requête :
 
--   **Colonne C1**. La colonne est représentée sous la forme **int** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `integer` dans R et **int** dans le jeu de résultats de sortie.  
++ **Colonne C1**. La colonne est représentée sous la forme **int** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `integer` dans R et **int** dans le jeu de résultats de sortie.  
   
-     Aucune conversion de type n’a été effectuée.  
+  Aucune conversion de type n’a été effectuée.  
   
--   **Colonne C2**. La colonne est représentée sous la forme **varchar(10)** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `factor` dans R et **varchar(max)** dans la sortie.  
++ **Colonne C2**. La colonne est représentée sous la forme **varchar(10)** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `factor` dans R et **varchar(max)** dans la sortie.  
   
-     Notez le changement de la sortie : toute chaîne de R (un facteur ou une chaîne normale) est représentée sous la forme **varchar(max)** , quelle que soit la longueur de la chaîne.  
+  Notez le changement de la sortie : toute chaîne de R (un facteur ou une chaîne normale) est représentée sous la forme **varchar(max)** , quelle que soit la longueur de la chaîne.  
   
--   **Colonne C3**.  La colonne est représentée sous la forme **uniqueidentifier** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `character` dans R et **varchar(max)** dans la sortie.
++ **Colonne C3**.  La colonne est représentée sous la forme **uniqueidentifier** dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], `character` dans R et **varchar(max)** dans la sortie.
   
-     Remarque la conversion de type de données qui se produit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le type **uniqueidentifier** , mais pas R ; par conséquent, les identificateurs sont représentés sous forme de chaînes.
+  Remarque la conversion de type de données qui se produit. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge le type **uniqueidentifier** , mais pas R ; par conséquent, les identificateurs sont représentés sous forme de chaînes.
   
--   **Colonne C4**. La colonne contient des valeurs générées par le script R et non présentes dans les données d’origine.
++ **Colonne C4**. La colonne contient des valeurs générées par le script R et non présentes dans les données d’origine.
 
 
 ## <a name="example-2-dynamic-column-selection-using-r"></a>Exemple 2 : sélection de colonnes dynamiques à l’aide de R
@@ -182,3 +182,4 @@ sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 
 ## <a name="see-also"></a>Voir aussi
 
++ [Mappages de types de données entre Python et SQL Server](../python/python-libraries-and-data-types.md)

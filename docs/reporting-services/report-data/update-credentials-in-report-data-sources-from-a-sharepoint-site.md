@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 335fdaee0e27a868a889de4ab00b55f06c372e15
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: e1dc0c59a6fbe96062e48e24e2f6b126770f0c84
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458955"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935152"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>Mettre à jour les informations d'identification dans les sources de données de rapport à partir d'un site SharePoint
   Cette rubrique explique comment mettre à jour les sources de données incorporées dans les rapports et les sources de données partagées enregistrées dans une bibliothèque de documents SharePoint.  
@@ -43,7 +43,7 @@ ms.locfileid: "86458955"
   
      L’option **Informations d’identification non requises** peut également être utilisée dans certains cas.  
   
-     Pour certains types de sources de données, le compte d'exécution sans assistance doit être configuré sur le serveur de rapports. Pour plus d’informations, consultez la rubrique relative au type de source de données correspondant dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) et [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Pour certains types de sources de données, le compte d'exécution sans assistance doit être configuré sur le serveur de rapports. Pour plus d’informations, consultez la rubrique relative au type de source de données correspondant dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) et [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 7.  Tapez un nom d'utilisateur et un mot de passe.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "86458955"
   
      L’option **Informations d’identification non requises** peut également être utilisée dans certains cas. Cette option fonctionne uniquement si la source de données n'accepte pas les informations d'identification ou si vous transmettez les informations d'identification d'une autre façon.  
   
-     Pour certains types de sources de données, le compte d'exécution sans assistance doit être configuré sur le serveur de rapports. Pour plus d’informations, consultez la rubrique relative au type de source de données correspondant dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) et [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+     Pour certains types de sources de données, le compte d'exécution sans assistance doit être configuré sur le serveur de rapports. Pour plus d’informations, consultez la rubrique relative au type de source de données correspondant dans [Ajouter des données à partir de sources de données externes &#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md) et [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 5.  Tapez un nom d'utilisateur et un mot de passe.  
   

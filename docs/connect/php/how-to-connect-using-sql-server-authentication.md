@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 8ad83932fc6d02986f715a35fefbfedba5f320c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728327"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080748"
 ---
 # <a name="how-to-connect-using-sql-server-authentication"></a>Procédure : Se connecter à l’aide de l’authentification SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -50,7 +50,7 @@ Appliquez les précautions suivantes quand vous utilisez l’authentification SQ
 > [!NOTE]  
 > Vous pouvez définir des attributs de connexion autres que l’ID utilisateur et le mot de passe quand vous établissez une connexion. Pour obtenir la liste complète des attributs de connexion pris en charge, consultez [Connection Options](../../connect/php/connection-options.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="sqlsrv-example"></a>Exemple SQLSRV  
 L’exemple suivant utilise le pilote SQLSRV avec l’authentification SQL Server pour établir une connexion à une instance locale de SQL Server. Les valeurs des attributs de connexion obligatoires *UID* et *PWD* sont extraites à partir de fichiers texte propres à l’application, *uid.txt* et *pwd.txt*, dans le répertoire *C:\AppData*. Une fois la connexion établie, le serveur est interrogé pour vérifier la connexion de l’utilisateur.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans le navigateur quand l’exemple est exécuté à partir du navigateur.  
@@ -95,7 +95,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="pdo_sqlsrv-example"></a>Exemple PDO_SQLSRV  
 Cet exemple utilise le pilote PDO_SQLSRV pour illustrer comment se connecter avec l’authentification SQL Server.  
   
 ```  

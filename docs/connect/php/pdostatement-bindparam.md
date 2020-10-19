@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: c6b8b1f838ce3351299e4069e80f692efb487df1
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: dd2d1feb1ae156d685dbd18595447a248836eba9
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88646609"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081418"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Lors de la liaison de données null à des colonnes de serveur de type varbinary
   
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 
-## <a name="example"></a> Exemple  
+## <a name="parameter-example"></a>Exemple de paramètre  
 Cet exemple de code montre qu’après la liaison de $contact au paramètre, le fait de modifier la valeur change la valeur transmise dans la requête.  
   
 ```  
@@ -81,7 +81,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ?>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="output-parameter-example"></a>Exemple de paramètre de sortie  
 Cet exemple de code montre comment accéder à un paramètre de sortie.  
   
 ```  
@@ -102,7 +102,7 @@ echo $input1;
 > [!NOTE]
 > Lors de la liaison d’un paramètre de sortie à un type bigint, si la valeur est susceptible de se retrouver en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), PDO::PARAM_INT avec PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE risque d’entraîner une exception « valeur hors limites ». Utilisez plutôt la valeur PDO::PARAM_STR par défaut et indiquez la taille de la chaîne résultante, 21 maximum. Il s’agit du nombre maximal de chiffres, y compris le signe négatif, de n’importe quelle valeur bigint. 
 
-## <a name="example"></a> Exemple  
+## <a name="inputoutput-example"></a>Exemple d’entrée/sortie  
 Cet exemple de code montre comment utiliser un paramètre d’entrée/sortie.  
   
 ```  
@@ -124,7 +124,7 @@ Cet exemple de code montre comment utiliser un paramètre d’entrée/sortie.
 > [!NOTE]
 > Il est recommandé d’utiliser des chaînes en entrée pour lier des valeurs à une [colonne décimale ou numérique](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) pour des raisons de précision et d’exactitude, car PHP n’offre qu’une précision limitée pour les [nombres à virgule flottante](https://php.net/manual/en/language.types.float.php). Il en va de même pour les colonnes bigint, en particulier si les valeurs sont en dehors de la plage des [entiers](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
-## <a name="example"></a> Exemple  
+## <a name="decimal-input-example"></a>Exemple d’entrée décimale  
 Cet exemple de code montre comment lier une valeur décimale comme paramètre d’entrée.  
 
 ```

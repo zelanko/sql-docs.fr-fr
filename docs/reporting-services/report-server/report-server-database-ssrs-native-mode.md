@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1a4bfe8c47361793dde026d61fb5fb7bdf0e709c
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 9b5f4230aacedcff2ecdffedb943ae39097fc1d4
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547271"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934993"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Base de données du serveur de rapports (SSRS en mode natif)
   Un serveur de rapports est un serveur sans état qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour stocker les métadonnées et les définitions d'objets. Une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif utilise deux bases de données pour distinguer le stockage de données persistantes des obligations de stockage temporaire. Les bases de données sont créées ensemble et liées par le nom. Les noms par défaut de ces bases de données sont respectivement **ReportServer** et **ReportServerTempDB**.  
@@ -37,7 +37,7 @@ ms.locfileid: "84547271"
   
  Tous les accès à une base de données du serveur de rapports doivent être gérés par le biais du serveur de rapports. Pour avoir accès au contenu d’une base de données de serveur de rapports, utilisez les outils d’administration dédiés aux serveurs de rapports (tels que le portail web et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) ou des interfaces par programmation telles que l’accès par URL, le service Web Report Server ou le fournisseur WMI (Windows Management Instrumentation).  
   
- La connexion à la base de données du serveur de rapports est généralement définie par l'intermédiaire du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Toutefois, cette connexion peut être configurée au cours de l'installation si vous choisissez d'installer la configuration par défaut. Pour plus d’informations sur la connexion du serveur de rapports à la base de données, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ La connexion à la base de données du serveur de rapports est généralement définie par l'intermédiaire du Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Toutefois, cette connexion peut être configurée au cours de l'installation si vous choisissez d'installer la configuration par défaut. Pour plus d’informations sur la connexion du serveur de rapports à la base de données, consultez [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="report-server-database"></a>Base de données du serveur de rapports  
  La base de données d'un serveur de rapports est une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui stocke le contenu suivant :  
@@ -65,9 +65,9 @@ ms.locfileid: "84547271"
   
 ## <a name="see-also"></a>Voir aussi  
  [Héberger une base de données du serveur de rapports dans un cluster de basculement SQL Server](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Stocker des données chiffrées du serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Administrer une base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
- [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
+ [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Opérations de sauvegarde et de restauration pour Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
   

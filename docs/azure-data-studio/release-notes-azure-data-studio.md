@@ -1,5 +1,5 @@
 ---
-title: Notes de publication
+title: Notes de publication d’Azure Data Studio
 description: Cet article contient des notes de publication pour les versions d’Azure Data Studio allant de novembre 2017 jusqu’à présent. Pour la plupart des problèmes résumés ici, il existe des liens menant à des informations supplémentaires.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
@@ -8,17 +8,32 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 09/30/2020
-ms.openlocfilehash: 1d23774a2e722c85593af0238ef924569585ff62
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.date: 10/14/2020
+ms.openlocfilehash: c75105ddf77c62dd6c871b679dce32ec08c5364c
+ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725100"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92059187"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](./download-azure-data-studio.md)**
+
+## <a name="october-2020"></a>Octobre 2020
+
+14 octobre 2020 &nbsp; / &nbsp; version : 1.23.0
+
+&nbsp;
+
+| Modifier | Détails |
+| ------ | ------- |
+| Azure SQL Edge | Prise en charge des objets Azure SQL Edge. |
+| Correctifs de bogues | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is:issue+milestone:%22October+2020+Release%22+is:closed). |
+| Bases de données| Prise en charge de la même référence de base de données. |
+| Mises à jour des extensions | [Azure Arc](extensions/azure-arc-extension.md)</br>[azdata](../azdata/install/deploy-install-azdata.md)</br>[Machine Learning](extensions/machine-learning-extension.md)</br>[Kusto (KQL)](extensions/kusto-extension.md)</br>[Comparaison de schémas](extensions/schema-compare-extension.md)</br>SQL Assessment</br>[Projets SQL Database](extensions/sql-database-project-extension.md)</br>[SQL Server Import](extensions/sql-server-import-extension.md) |
+| Nouvelles fonctionnalités de déploiement | Ajout de déploiements de machines virtuelles et de bases de données Azure SQL. |
+| PowerShell | Ajout de la prise en charge de la diffusion en continu du noyau PowerShell. |
 
 ## <a name="september-2020-hotfix"></a>Septembre 2020 (correctif logiciel)
 
@@ -28,7 +43,7 @@ ms.locfileid: "91725100"
 
 | Modifier | Détails |
 | ------ | ------- |
-| Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1) |
+| Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub](https://github.com/microsoft/azuredatastudio/releases/tag/1.22.1). |
 
 ## <a name="september-2020"></a>Septembre 2020
 
@@ -68,8 +83,8 @@ ms.locfileid: "91725100"
 
 | Modifier | Détails |
 | :----- | :------ |
-| Correction de bogue n°11372 : l’opération glisser-déposer sur une table dans l’Explorateur d’objets renvoie de manière incorrecte les noms de tables à la ligne | [N°11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
-| Correction de bogue n°11356 : le thème sombre est désormais le thème par défaut | [N°11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| Correction de bogue n°11372 : l’opération glisser-déposer sur une table dans l’Explorateur d’objets renvoie de manière incorrecte les noms de tables à la ligne | [N°11372](https://github.com/microsoft/azuredatastudio/issues/11372) |
+| Correction de bogue n°11356 : le thème sombre est désormais le thème par défaut | [N°11356](https://github.com/microsoft/azuredatastudio/issues/11356) |
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issue"></a>Problème connu
@@ -90,7 +105,6 @@ ms.locfileid: "91725100"
 | Ajout de l’icône Compte Azure à la barre d’activités | Les utilisateurs peuvent désormais voir facilement où se connecter à Azure |
 | Bogues et problèmes résolus | Pour obtenir la liste complète des correctifs, consultez [Bogues et problèmes sur GitHub.](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed) |
 | &nbsp; | &nbsp; |
-
 
 ## <a name="june-2020"></a>Juin 2020
 
@@ -882,7 +896,7 @@ La *préversion publique de décembre* comprend plusieurs correctifs de bogues p
 
 | Modifier | Détails |
 | :----- | :------ |
-| La boîte de dialogue Créer une règle de pare-feu est désormais disponible pour vous aider à vous connecter à Azure SQL Database et Azure SQL Data Warehouse. | &nbsp; |
+| La boîte de dialogue Créer une règle de pare-feu est désormais disponible pour vous aider à vous connecter à Azure SQL Database et Azure Synapse Analytics. | &nbsp; |
 | Ajout des packages d’installation de Windows, de Linux DEB et de RPM. | &nbsp; |
 | Gestion de l’éditeur de disposition visuelle du tableau de bord. | &nbsp; |
 | Commandes *Modifier script comme* et *Exécuter script comme*. | &nbsp; |
@@ -904,7 +918,7 @@ Pour commencer, consultez l’un des guides de démarrage rapide suivants :
 
 - [Connexion & interrogation de SQL Server](quickstart-sql-server.md)
 - [Connexion & interrogation d’Azure SQL Database](quickstart-sql-database.md)
-- [Se connecter à et interroger Azure Data Warehouse](quickstart-sql-dw.md)
+- [Connexion et interrogation d’Azure Synapse Analytics](quickstart-sql-dw.md)
 
 Contribuer à Azure Data Studio :
 

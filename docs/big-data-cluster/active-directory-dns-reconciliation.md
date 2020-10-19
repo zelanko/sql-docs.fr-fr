@@ -1,19 +1,19 @@
 ---
 title: Rapprochement entre les noms DNS Active Directory et Kubernetes dans les déploiements Clusters Big Data
-description: Gérer l’accès au cluster Big Data
-author: mihaelablendea
-ms.author: mihaelab
+description: Configurer le rapprochement DNS pour Cluster Big Data SQL Server en mode Active Directory
+author: cloudmelon
+ms.author: melqin
 ms.reviewer: mikeray
-ms.date: 07/06/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 411d713734db080b036a98bd18b0618326dbd70f
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 63a5c53e64ece7650e65414fd24ddd82d6da5324
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279426"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91892459"
 ---
 # <a name="active-directory-and-kubernetes-dns-reconciliation-in-big-data-clusters-deployments"></a>Rapprochement entre les noms DNS Active Directory et Kubernetes dans les déploiements Clusters Big Data
 
@@ -89,6 +89,6 @@ Une fois le cluster Big Data supprimé et lors de son déprovisionnement, il n�
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Déploiement de clusters Big Data SQL Server en mode Active Directory](deploy-active-directory.md)
+- [Déploiement de clusters Big Data SQL Server en mode Active Directory](active-directory-deploy.md)
 - [Gestion de l’accès à un cluster Big Data en mode Active Directory](active-directory-objects.md)
 - [Déploiement de plusieurs clusters Big Data SQL Server Clusters dans le même domaine Active Directory](active-directory-deployment-background.md)

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 67efc6d07c437288c96a954c2b6d748282102e29
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: afbf987cdebb4239d96d2c1cd4fcf87301093d76
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629167"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081748"
 ---
 # <a name="example-application-pdo_sqlsrv-driver"></a>Exemple d’application (pilote PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ Pour exécuter l’exemple d’application Évaluations de produits AdventureWor
 -   SQL Server 2005 ou SQL Server 2008, avec la base de données [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) attachée, est installé sur l’ordinateur local.  
 -   Un navigateur web est installé.  
   
-## <a name="demonstrates"></a>Illustre le  
+## <a name="adventureworks-example"></a>Exemple AdventureWorks  
 L’exemple d’application Évaluations de produits AdventureWorks illustre ce qui suit :  
   
 -   Comment ouvrir une connexion à SQL Server à l’aide de l’authentification Windows.  
@@ -46,8 +46,7 @@ L’exemple d’application Évaluations de produits AdventureWorks illustre ce 
 -   Comment récupérer des données.  
 -   Comment rechercher les erreurs.  
   
-## <a name="example"></a>Exemple  
-L’exemple d’application Évaluations de produits AdventureWorks retourne les informations sur les produits à partir de la base de données pour les produits dont les noms contiennent une chaîne entrée par l’utilisateur. Dans la liste des produits retournés, l’utilisateur peut voir les évaluations, voir une image, télécharger une image et rédiger une évaluation pour un produit sélectionné.  
+Cet exemple retourne des informations sur les produits à partir de la base de données pour les produits dont les noms contiennent une chaîne entrée par l’utilisateur. Dans la liste des produits retournés, l’utilisateur peut voir les évaluations, voir une image, télécharger une image et rédiger une évaluation pour un produit sélectionné.  
   
 Placez le code suivant dans un fichier nommé adventureworks_demo_pdo.php :  
   
@@ -452,7 +451,7 @@ function PopulateProductsTable( $values )
 </html>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="lob-example"></a>Exemple d’application métier  
 Le script photo.php retourne la photo du produit correspondant au **ProductID**spécifié. Ce script est appelé depuis le script adventureworks_demo.php.  
   
 Placez le code suivant dans un fichier nommé photo_pdo.php :  

@@ -1,6 +1,6 @@
 ---
-title: Se connecter à Azure SQL Data Warehouse et exécuter des requêtes
-description: Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter à Azure SQL Data Warehouse et exécuter une requête
+title: Se connecter et interroger avec Azure Synapse Analytics
+description: Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter à un pool SQL dédié dans Azure Synapse Analytics et exécuter une requête.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan, sstein
@@ -9,30 +9,30 @@ author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: e9c0ba08445eb1f9712b00b84cc07ac7eae310f1
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: c2282220dff18a7f054cc5fd01b3670b6fd14d43
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88766368"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005491"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Démarrage rapide : utiliser Azure Data Studio pour vous connecter et interroger des données dans Azure SQL Data Warehouse
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Démarrage rapide : Utiliser Azure Data Studio pour se connecter et interroger des données à l’aide d’un pool SQL dédié dans Azure Synapse Analytics
 
-Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter à Azure SQL Data Warehouse, puis utiliser des instructions Transact-SQL pour créer, insérer et sélectionner des données. 
+Ce guide de démarrage rapide montre comment utiliser Azure Data Studio pour se connecter et utiliser un pool SQL dédié dans Azure Synapse Analytics, puis utiliser des instructions Transact-SQL pour créer, insérer et sélectionner des données. 
 
 ## <a name="prerequisites"></a>Prérequis
-Pour suivre cette procédure de démarrage rapide, vous avez besoin d’Azure Data Studio et d’un serveur Azure SQL Data Warehouse.
+Pour suivre ce guide démarrage rapide, vous avez besoin d’Azure Data Studio et d’un pool SQL dédié dans Azure Synapse Analytics.
 
 - [Installez Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15).
 
-Si vous ne disposez pas déjà d’un entrepôt de données SQL, consultez [Créer un entrepôt de données SQL](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
+Si vous n’avez pas encore de pool SQL dédié, consultez [Créer un pool SQL dédié](/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
 N’oubliez pas le nom du serveur et les informations d’identification de connexion !
 
 
-## <a name="connect-to-your-data-warehouse"></a>Connexion à votre entrepôt de données
+## <a name="connect-to-your-dedicated-sql-pool"></a>Se connecter à votre pool SQL dédié
 
-Utilisez Azure Data Studio pour établir une connexion à votre serveur Azure SQL Data Warehouse.
+Utilisez Azure Data Studio pour établir une connexion à votre serveur Azure Synapse Analytics.
 
 1. La première fois que vous exécutez Azure Data Studio, la page **Connexion** doit s’ouvrir. Si vous ne voyez pas la page **Connexion**, cliquez sur **Ajouter une connexion** ou sur l’icône **Nouvelle connexion** dans la barre latérale **SERVEURS** :
    
@@ -58,7 +58,7 @@ Utilisez Azure Data Studio pour établir une connexion à votre serveur Azure SQ
 
 4. Une fois la connexion établie, votre serveur s'ouvre dans la barre latérale *Serveurs*.
 
-## <a name="create-the-tutorial-data-warehouse"></a>Créer l’entrepôt de données du didacticiel
+## <a name="create-the-tutorial-dedicated-sql-pool"></a>Créer le pool SQL dédié du tutoriel
 1. Dans l’explorateur d’objets, cliquez avec le bouton droit sur votre serveur et sélectionnez **Nouvelle requête**.
 
 1. Collez l’extrait suivant dans l’éditeur de requête, puis cliquez sur **Exécuter** :
@@ -145,4 +145,4 @@ Nettoyez les ressources en supprimant les groupes de ressources dont vous n’av
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous avez réussi à vous connecter à un entrepôt de données Azure SQL et à exécuter une requête, essayez le [Didacticiel de l’éditeur de code](tutorial-sql-editor.md).
+Maintenant que vous avez réussi à vous connecter à Azure Synapse Analytics et à exécuter une requête, essayez le [tutoriel de l’éditeur de code](tutorial-sql-editor.md).

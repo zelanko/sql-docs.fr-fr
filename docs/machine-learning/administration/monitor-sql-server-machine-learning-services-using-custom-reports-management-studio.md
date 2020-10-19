@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 878c83f76a0235a43bcc22bb65e10dfa9eceb1b1
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 94ca6070ec0b4558ab907f6945ac57dc9bc9ab5f
+ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179651"
+ms.lasthandoff: 10/08/2020
+ms.locfileid: "91847369"
 ---
 # <a name="monitor-python-and-r-script-execution-using-custom-reports-in-sql-server-management-studio"></a>Surveiller l’exécution de scripts Python et R à l’aide de rapports personnalisés dans SQL Server Management Studio
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Utilisez des rapports personnalisés dans SQL Server Management Studio (SSMS) pour surveiller l’exécution de scripts externes (Python et R), les ressources utilisées, diagnostiquer les problèmes et optimiser les performances dans SQL Server Machine Learning Services.
+Utilisez des rapports personnalisés dans [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) pour superviser l’exécution de scripts externes (Python et R), les ressources utilisées, diagnostiquer les problèmes et optimiser les performances dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 
 Dans ces rapports, vous pouvez afficher les informations suivantes :
 

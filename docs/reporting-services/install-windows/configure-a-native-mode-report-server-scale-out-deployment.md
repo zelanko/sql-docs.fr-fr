@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a8e9e8fab90a0c2f21ae29d113ea896b471177f2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7730435d762d6e9e9bc4690dbdc644f0801fe20a
+ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88460001"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91890873"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif.
 
@@ -62,7 +62,7 @@ Pour SQL Server 2016 Reporting Services et les versions antérieures, les serveu
   
          Pour éviter des erreurs de compatibilité de base de données lorsque vous connectez les instances du serveur à la base de données partagée, assurez-vous que toutes les instances soient de la même version. Par exemple, si vous créez la base de données du serveur de rapports à l’aide d’une instance du serveur de rapports SQL Server 2016, l’édition de toutes les autres instances du même déploiement doit également être SQL Server 2016.  
   
-    -   Utilisez le gestionnaire de configuration de Reporting Services pour connecter chaque serveur de rapports à la base de données partagée. Vous ne pouvez connecter et configurer qu'un seul serveur de rapports à la fois.  
+    -   Utilisez le Gestionnaire de configuration du serveur de rapports pour connecter chaque serveur de rapports à la base de données partagée. Vous ne pouvez connecter et configurer qu'un seul serveur de rapports à la fois.  
   
     -   Utilisez l'outil de configuration de Reporting Services pour procéder au déploiement avec montée en puissance parallèle en joignant de nouvelles instances de serveur de rapports à la première instance déjà connectée à la base de données de serveur de rapports.  
   

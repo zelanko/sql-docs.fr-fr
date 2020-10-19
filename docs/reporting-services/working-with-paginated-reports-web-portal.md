@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1d5c5a6a7b1bd60f066c13a2b06e65dc6ef5f053
-ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.openlocfilehash: b07d50a9f885d6440f9cfd0a5bb47b3017d5f114
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/28/2020
-ms.locfileid: "87243572"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935412"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>Utilisation des rapports paginés (portail web)
 
@@ -117,7 +117,7 @@ Vous pouvez également choisir de quel type d’informations d’identification 
   
 Ceci vous permet de ne pas fournir d’informations d’identification pour la source de données. Si la source de données nécessite une ouverture de session utilisateur, cette option est sans effet. Vous devez choisir cette option uniquement si la connexion de source de données ne nécessite pas d'informations d'identification des utilisateurs.  
   
-Pour utiliser cette option, vous devez avoir précédemment configuré le compte d’exécution sans assistance pour votre serveur de rapports. Le compte d’exécution sans assistance est utilisé pour se connecter à des sources de données externes quand d’autres sources d’informations d’identification ne sont pas disponibles. Si vous spécifiez cette option et que le compte n'est pas configuré, la connexion à la source de données de rapports échouera et le traitement de rapports ne se produira pas. Pour plus d’informations sur ce compte, consultez [Configurer le compte d’exécution sans assistance (Gestionnaire de configuration de SSRS)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+Pour utiliser cette option, vous devez avoir précédemment configuré le compte d’exécution sans assistance pour votre serveur de rapports. Le compte d’exécution sans assistance est utilisé pour se connecter à des sources de données externes quand d’autres sources d’informations d’identification ne sont pas disponibles. Si vous spécifiez cette option et que le compte n'est pas configuré, la connexion à la source de données de rapports échouera et le traitement de rapports ne se produira pas. Pour plus d’informations sur ce compte, consultez [Configurer le compte d’exécution sans assistance (Gestionnaire de configuration du serveur de rapports)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="subscriptions"></a>Abonnements  
 Un abonnement Reporting Services est une configuration qui remet un rapport à une heure donnée ou en réponse à un événement, et dans un format de fichier que vous spécifiez. Par exemple, tous les mercredis, enregistrer le rapport MonthlySales.rdl au format de document Microsoft Word sur un partage de fichiers. Vous pouvez utiliser des abonnements pour planifier et automatiser la remise d'un rapport avec un ensemble de valeurs de paramètres de rapport spécifique. Pour plus d’informations, consultez [Utilisation des abonnements](working-with-subscriptions-web-portal.md).

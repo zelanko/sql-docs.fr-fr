@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1cd71f267fb6e249116cda4ba9c54069e8ee570
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b368b02ebfe37e63b4d02e6e69d6eed2bdb831ea
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509641"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934590"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propriétés de Reporting Services - Propriétés d’élément du serveur de rapports
   Les propriétés d'élément sont des propriétés spécifiques à des éléments dans la base de données du serveur de rapports, notamment des rapports, des rapports liés, des dossiers, des ressources, des modèles et des sources de données.  
@@ -59,7 +59,7 @@ ms.locfileid: "79509641"
 |**Langage**|Langue utilisé dans un rapport. La valeur est un code de langue défini dans la spécification RFC1766 du groupe de travail IETF (Internet Engineering Task Force). La première partie est une désignation de deux caractères de la langue de base. La deuxième partie est séparée par un trait d'union et désigne la variation ou le dialecte de la langue. Si aucune valeur n’est spécifiée dans l’élément **Style** associé à l’élément **Body** dans la définition du rapport, la valeur par défaut est la langue du serveur de rapports.|  
 |**ReportProcessingTimeout**|Délai d'expiration, en secondes, d'un rapport individuel. Si cette valeur est définie, le serveur de rapports tente d'arrêter le traitement d'un rapport lorsque le délai spécifié est écoulé. Les valeurs valides sont comprises entre **-1** et **2** **147** **483** **647**. Si la valeur est **-1**, le rapport n’est soumis à aucun délai d’expiration au cours du traitement. Si la valeur est **null**, la valeur de la propriété système **ReportProcessingTimeout** est utilisée pour le délai de traitement des rapports. La valeur par défaut est **null**. Pour plus d’informations, consultez [Propriétés système de Report Server](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Date et heure de dernière création d'un instantané de rapport pour un rapport.|  
-|**CanRunUnattended**|Valeur qui indique si un rapport peut être exécuté sans assistance selon une planification. Si cette propriété a la valeur **true**, les valeurs par défaut pour les paramètres de rapport sont définies et les informations d’identification de la source de données sont stockées avec le rapport, ou l’option de récupération des informations d’identification a la valeur **None**. Si cette propriété a la valeur **false**, les conditions préalables pour exécuter un rapport sans assistance ne sont pas satisfaites. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|**CanRunUnattended**|Valeur qui indique si un rapport peut être exécuté sans assistance selon une planification. Si cette propriété a la valeur **true**, les valeurs par défaut pour les paramètres de rapport sont définies et les informations d’identification de la source de données sont stockées avec le rapport, ou l’option de récupération des informations d’identification a la valeur **None**. Si cette propriété a la valeur **false**, les conditions préalables pour exécuter un rapport sans assistance ne sont pas satisfaites. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Valeur qui indique si le rapport a des valeurs par défaut valides définies pour tous les paramètres de rapport. La valeur est également **true** si un rapport ne possède pas de paramètres de rapport. Si cette propriété a la valeur **false**, un ou plusieurs paramètres de rapport n’ont pas de valeur par défaut valide.|  
 |**HasDataSourceCredentials**|Valeur qui indique que l’option de récupération des informations d’identification définie pour toutes les sources de données associées au rapport est **None** ou **Store**. Si cette propriété a la valeur **false**, une option de récupération des informations d’identification définie pour l’une des sources de données associées au rapport est **Integrated** ou **Prompt**.|  
 |**IsSnapshotExecution**|Valeur qui indique si le rapport est un instantané.|  

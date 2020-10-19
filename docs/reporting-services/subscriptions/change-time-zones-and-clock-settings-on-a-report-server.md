@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 69a19468-baa1-40f6-b158-8afdab0f8968
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2abd40f651171717a5ef7f0351a38780812828b3
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: 02b64deba925bdf355fa72746e5b0236c2cf14b5
+ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742280"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "91987325"
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>Modifier les fuseaux horaires et les paramètres d'horloge sur un serveur de rapports
   Un serveur de rapports utilise toujours l'heure locale de l'ordinateur sur lequel il est installé. Vous ne pouvez pas le configurer de manière à utiliser un autre fuseau horaire. Si une application cliente pointe vers un serveur de rapports se trouvant dans un autre fuseau horaire, c'est le fuseau horaire du serveur de rapports qui sera utilisé pour effectuer une opération planifiée. Dans les pages de gestion SharePoint et le Gestionnaire de rapports, le fuseau horaire est indiqué sur chaque page de planification de sorte que vous savez exactement à quel moment doit se produire une opération planifiée. Par exemple, la page consacrée à la création de planifications personnalisées indiquera « Les heures sont exprimées en (UTC-08:00) Heure du Pacifique (États-Unis et Canada). »
@@ -35,7 +35,7 @@ Le serveur de rapports crée un travail SQL Server Agent qui est utilisé pour d
  Les valeurs d'horodatage de propriété (par exemple, l'heure à laquelle un dossier ou un élément de rapport lié est créé) ne sont pas synchronisées sur un nouveau fuseau horaire. Si vous créez un élément le 25 juin à 09:00, puis réinitialisez le fuseau horaire ou l'horloge, la valeur d'horodatage demeure le 25 juin à 09:00.  
   
 ## <a name="changing-the-time-zone-sharepoint-mode"></a>Modification du fuseau horaire (mode SharePoint)  
- La configuration de fuseau horaire pour le mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint est gérée dans le cadre des paramètres régionaux de SharePoint. Pour plus d'informations, consultez [Paramètres régionaux (SharePoint Server 2010 (https://technet.microsoft.com/library/cc824907.aspx)](https://technet.microsoft.com/library/cc824907.aspx).  
+ La configuration de fuseau horaire pour le mode [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint est gérée dans le cadre des paramètres régionaux de SharePoint. Pour plus d’informations, consultez [Paramètres régionaux (SharePoint Server 2010 (/previous-versions/office/sharepoint-server-2010/cc824907(v=office.14))](/previous-versions/office/sharepoint-server-2010/cc824907(v=office.14)).  
   
 ## <a name="changing-the-clock-settings"></a>Modification des paramètres d'horloge  
  Le changement de l'heure de l'horloge de l'ordinateur est sans effet sur les valeurs d'horodatage existantes (par exemple, si vous avancez l'horloge d'une heure, les valeurs d'horodatage des instantanés d'historique de rapport ne changent pas). On peut constater un délai de 10 secondes avant que le processeur de planification et de remise utilise le nouveau paramètre. Le délai véritable peut varier si vous avez modifié les paramètres de fréquence d'interrogation dans les fichiers de configuration.  
@@ -43,5 +43,4 @@ Le serveur de rapports crée un travail SQL Server Agent qui est utilisé pour d
 ## <a name="see-also"></a>Voir aussi  
  [Démarrer et arrêter le service Report Server](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
  [Planifications](../../reporting-services/subscriptions/schedules.md)  
-  
   

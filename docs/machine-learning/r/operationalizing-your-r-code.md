@@ -3,18 +3,18 @@ title: Déployer du code R dans les procédures stockées
 description: Incorporez le code de langage R dans une procédure stockée SQL Server pour le rendre accessible à toute application cliente ayant accès à une base de données SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/28/2020
+ms.date: 10/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 81cc8f392275093f370a0dda12d1aaf1fca542e5
-ms.sourcegitcommit: b6ee0d434b3e42384b5d94f1585731fd7d0eff6f
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 67176b65c8fe285d87bd56fff0b547b7bf5b8428
+ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "89288261"
+ms.lasthandoff: 10/12/2020
+ms.locfileid: "91956618"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Faire fonctionner votre code R à l’aide des procédures stockées dans SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -28,7 +28,7 @@ Traditionnellement, l’intégration de solutions de science des données impliq
 + [Créer et exécuter des scripts R simples dans SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-Vous trouverez un exemple plus complet de déploiement de code R en production à l’aide des procédures stockées dans [Tutoriel : analytique de données R pour les développeurs SQL](../../machine-learning/tutorials/r-taxi-classification-introduction.md)
+Vous trouverez un exemple plus complet de déploiement de code R en production à l’aide des procédures stockées dans [Tutoriel R : Prédire les tarifs des taxis de New York avec classification binaire](../tutorials/r-taxi-classification-introduction.md).
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>Recommandations pour l’optimisation du code R pour SQL
 
@@ -39,7 +39,7 @@ La conversion de votre code R dans SQL est plus facile si certaines optimisation
 
 ## <a name="integrate-r-and-python-with-applications"></a>Intégrer R et Python aux applications
 
-Étant donné que vous pouvez exécuter R ou Python à partir d’une procédure stockée, vous pouvez exécuter des scripts à partir de n’importe quelle application qui peut envoyer une instruction T-SQL et gérer les résultats. Par exemple, vous pouvez reformer un modèle selon une planification à l’aide de la [tâche Execute T-SQL](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task) dans Integration Services ou à l’aide d’un autre planificateur de travaux qui peut exécuter une procédure stockée.
+Étant donné que vous pouvez exécuter R ou Python à partir d’une procédure stockée, vous pouvez exécuter des scripts à partir de n’importe quelle application qui peut envoyer une instruction T-SQL et gérer les résultats. Par exemple, vous pouvez reformer un modèle selon une planification à l’aide de la [tâche Execute T-SQL](../../integration-services/control-flow/execute-t-sql-statement-task.md) dans Integration Services ou à l’aide d’un autre planificateur de travaux qui peut exécuter une procédure stockée.
 
 Le scoring est une tâche importante qui peut facilement être automatisée ou démarrée à partir d’applications externes. Vous formez le modèle au préalable, en utilisant R ou Python ou une procédure stockée, et [enregistrer le modèle au format binaire](../tutorials/walkthrough-build-and-save-the-model.md) dans une table. Ensuite, le modèle peut être chargé dans une variable dans le cadre d’un appel de procédure stockée, à l’aide de l’une de ces options pour le scoring à partir de T-SQL :
 
@@ -47,10 +47,15 @@ Le scoring est une tâche importante qui peut facilement être automatisée ou d
 + Scoring sur une ligne, pour appeler à partir d’une application
 + [Scoring natif](../predictions/native-scoring-predict-transact-sql.md), pour la prédiction de lot rapide à partir de SQL Server sans appeler R
 
-Cette procédure pas à pas fournit un exemple de scoring à l’aide d’une procédure stockée à la fois dans les modes par lot et sur une ligne :
+Le tutoriel suivant fournit un exemple de scoring à l’aide d’une procédure stockée à la fois dans les modes par lot et sur une ligne :
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + [Procédure pas à pas de la science des données de bout en bout pour R dans SQL Server](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
+::: moniker-end
 
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
++ [Didacticiel R : Prédire les tarifs des taxis de New York avec classification binaire](../tutorials/r-taxi-classification-introduction.md)
+::: moniker-end
 
 ## <a name="boost-performance-and-scale"></a>Stimuler les performances et mettre à l'échelle
 
@@ -58,8 +63,12 @@ Si le langage R open source a des limites bien connues concernant les jeux de do
 
 Si votre solution R utilise des agrégations complexes ou des jeux de données volumineux, vous pouvez tirer parti des index columnstore et des agrégations en mémoire très efficaces de SQL Server, et utiliser le code R pour les calculs statistiques et les calculs de score.
 
+::: moniker range=">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
 ## <a name="adapt-r-code-for-other-platforms-or-compute-contexts"></a>Adapter le code R pour d’autres plateformes ou contextes de calcul
 
 Le même code R que vous exécutez sur des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être utilisé sur d’autres sources de données, comme Spark sur HDFS, lorsque vous utilisez l’[option de serveur autonome](../install/sql-machine-learning-standalone-windows-install.md) dans l’installation de SQL Server ou lorsque vous installez le produit non-SQL, Microsoft Machine Learning Server (anciennement **Microsoft R Server**) :
 
-+ [Machine Learning Server - Documentation](https://docs.microsoft.com/r-server/)
++ [Machine Learning Server - Documentation](/r-server/)
+
+::: moniker-end

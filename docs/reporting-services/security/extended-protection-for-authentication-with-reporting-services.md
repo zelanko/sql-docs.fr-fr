@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0c1103f32d08335e2f2dfc6c302db0b62ff93b3c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f152bf79c030fee3ce480d455c54fbdfad4b719
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88373466"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935484"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
 
@@ -154,7 +154,7 @@ SSRS prend en charge et applique la protection étendue qui a été activée dan
 |ComputerNamePhysicalDnsHostname|Nom d'hôte DNS de l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom d'hôte DNS de l'ordinateur local est utilisé, mais pas le nom du serveur virtuel de cluster.|  
 |ComputerNamePhysicalNetBIOS|Nom NetBIOS de l'ordinateur local. Si l'ordinateur local est un nœud dans un cluster, le nom NetBIOS de l'ordinateur local est utilisé, mais pas le nom du serveur virtuel de cluster.|  
   
-Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) et [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
+Pour plus d’informations, consultez [Inscrire un nom de principal du service &#40;SPN&#41; pour un serveur de rapports](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md) et [À propos des réservations et de l’inscription d’URL &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).  
   
 ## <a name="next-steps"></a>Étapes suivantes
 

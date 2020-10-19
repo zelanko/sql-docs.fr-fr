@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1e9b1d3357fe25ffd65492ba21b5dd74c819a66b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bcc9b0f7303a24bdd02d959e9b30044f3da26f2
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426301"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92080668"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ Si les résultats retournés par cette requête sont récupérés avec **sqlsrv_
 SELECT SCOPE_IDENTITY() AS PictureID
 ```
   
-## <a name="example"></a> Exemple  
+## <a name="object-example"></a>Exemple d’objet  
 L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’un objet PHP. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ``` 
@@ -131,7 +131,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="class-example"></a>Exemple de classe  
 L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’une instance de la classe *Product* définie dans le script. L’exemple récupère, à partir des tables *Purchasing.PurchaseOrderDetail* et *Production.Product* de la base de données AdventureWorks, les informations sur les produits qui ont une date d’échéance spécifique (*DueDate*), et dont la quantité en stock (*StockQty*) est inférieure à la valeur spécifiée. L’exemple met en évidence certaines des règles qui s’appliquent durant la spécification d’une classe dans un appel à **sqlsrv_fetch_object**:  
   
 -   La variable *$product* est une instance de la classe *Product* , car Product a été spécifié avec le paramètre *$className* et la classe *Product* existe.  

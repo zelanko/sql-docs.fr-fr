@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 05/01/2020
-ms.openlocfilehash: 2a0796c1eff4459d37d03a97de8b9eee27e65c4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d45e00b7d99f87ec3edc9bdd123d5392412dcf73
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454576"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91934838"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrer une installation Reporting Services (mode natif)
 
@@ -122,7 +122,7 @@ Pour plus d’informations sur les changements effectués dans SQL Server Report
 
  Avant d'installer une nouvelle instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], assurez-vous de sauvegarder tous les fichiers de votre installation actuelle.  
   
-1. Sauvegardez la clé de chiffrement de la base de données du serveur de rapports. Cette étape est cruciale pour le succès de la migration. En effet, à un stade plus avancé du processus de migration, vous devrez la restaurer pour rendre au serveur de rapports l'accès aux données chiffrées. Pour sauvegarder la clé, utilisez le Gestionnaire de configuration de Reporting Services.  
+1. Sauvegardez la clé de chiffrement de la base de données du serveur de rapports. Cette étape est cruciale pour le succès de la migration. En effet, à un stade plus avancé du processus de migration, vous devrez la restaurer pour rendre au serveur de rapports l'accès aux données chiffrées. Pour sauvegarder la clé, utilisez le Gestionnaire de configuration du serveur de rapports.  
   
 2. Sauvegardez la base de données du serveur de rapports en utilisant l'une des méthodes prises en charge pour la sauvegarde d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez les instructions relatives à la sauvegarde de la base de données du serveur de rapports dans [Déplacement des bases de données du serveur de rapports vers un autre ordinateur &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
@@ -202,7 +202,7 @@ Pour plus d’informations sur les changements effectués dans SQL Server Report
   
 1. Déterminez si les assemblys sont pris en charge ou doivent être recompilés :
 
-    * Les extensions de sécurité personnalisées doivent être réécrites à l’aide de l’interface [IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx).
+    * Les extensions de sécurité personnalisées doivent être réécrites à l’aide de l’interface [IAuthenticationExtension2](/dotnet/api/microsoft.reportingservices.interfaces.iauthenticationextension2).
   
     * Les extensions de rendu personnalisées pour [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] doivent être réécrites à l’aide du modèle objet de rendu.  
   
@@ -237,15 +237,15 @@ Pour plus d’informations sur les changements effectués dans SQL Server Report
 > [!IMPORTANT]
 >  Si l’un des serveurs de rapports du déploiement scale-out est en ligne et n’a pas été migré, il peut rencontrer une exception *rsInvalidReportServerDatabase* parce qu’il utilise un schéma plus ancien que les éléments mis à niveau auxquels il est connecté.  
 
-Si le serveur de rapports que vous avez migré a été configuré comme une base de données partagée pour un déploiement scale-out, vous devez supprimer toutes les anciennes clés de chiffrement de la table **Keys** dans la base de données **ReportServer** avant de configurer le service de serveur de rapports. Si les clés ne sont pas supprimées, le serveur de rapports migré essaiera de s'initialiser en mode de déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Ajouter et supprimer des clés de chiffrement pour un déploiement évolutif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) et [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
+Si le serveur de rapports que vous avez migré a été configuré comme une base de données partagée pour un déploiement scale-out, vous devez supprimer toutes les anciennes clés de chiffrement de la table **Keys** dans la base de données **ReportServer** avant de configurer le service de serveur de rapports. Si les clés ne sont pas supprimées, le serveur de rapports migré essaiera de s'initialiser en mode de déploiement avec montée en puissance parallèle. Pour plus d’informations, consultez [Ajouter et supprimer des clés de chiffrement pour un déploiement par scale-out &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) et [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
 
 Les clés de montée en puissance parallèle ne peuvent pas être supprimées à l'aide du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les anciennes clés doivent être supprimées de la table **Keys** dans la base de données **ReportServer** à l’aide de SQL Server Management Studio. Supprimez toutes les lignes dans la table Keys. Cela effacera la table et la préparera en vue de la restauration de la clé symétrique uniquement, comme documenté dans les étapes suivantes.  
 
 Avant de supprimer les clés, il est recommandé de d'abord sauvegarder la clé de chiffrement symétrique. Vous pouvez utiliser le Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour sauvegarder la clé. Ouvrez le Gestionnaire de configuration, cliquez sur l’onglet Clés de chiffrement, puis sur le bouton **Sauvegarder**. Vous pouvez également écrire un script de commandes WMI afin de sauvegarder la clé de chiffrement. Pour plus d’informations sur WMI, consultez [Méthode BackupEncryptionKey &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md).  
   
-1. Démarrez le Gestionnaire de configuration de Reporting Services et connectez-vous à l’instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous venez d’installer. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
+1. Démarrez le Gestionnaire de configuration du serveur de rapports et connectez-vous à l’instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que vous venez d’installer. Pour plus d’informations, consultez [Gestionnaire de configuration du serveur de rapports &#40;mode natif&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2. Configurez les URL du serveur de rapports et du portail web. Pour plus d’informations, consultez [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
+2. Configurez les URL du serveur de rapports et du portail web. Pour plus d’informations, consultez [Configurer une URL &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
 3. Configurez la base de données du serveur de rapports, en sélectionnant la base de données du serveur de rapports de votre installation précédente. Une fois la configuration réussie, les services de serveur de rapports redémarrent et, une fois la connexion établie avec la base de données du serveur de rapports, la base de données est mise à niveau automatiquement vers SQL Server Reporting Services. Pour plus d’informations sur l’exécution de l’Assistant Modification de base de données que vous utilisez pour créer ou sélectionner une base de données du serveur de rapports, consultez [Créer une base de données du serveur de rapports en mode natif](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
@@ -300,6 +300,6 @@ Une fois que vous avez effectué avec succès une migration de votre serveur de 
 * [Base de données du serveur de rapports](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 * [Mettre à niveau et migrer Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 * [Compatibilité descendante de Reporting Services](../../reporting-services/reporting-services-backward-compatibility.md)   
-* [Gestionnaire de configuration de Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+* [Gestionnaire de configuration service Web Report Server](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

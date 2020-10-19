@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 62334a277bc169350af4db1c2961595178e733a6
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634829"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081758"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Procédure : Se connecter avec l’authentification Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ Préférez l’authentification Windows pour la connexion à SQL Server dès lor
   
 Si l’authentification Windows n’est pas envisageable en pratique, consultez [Guide pratique pour se connecter avec l’authentification SQL Server](how-to-connect-using-sql-server-authentication.md).  
   
-## <a name="example"></a>Exemple  
+## <a name="sqlsrv-example"></a>Exemple SQLSRV  
 En utilisant le pilote SQLSRV de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], l’exemple suivant a recours à l’authentification Windows pour établir une connexion à une instance locale de SQL Server. Une fois la connexion établie, le serveur est interrogé pour déterminer la connexion de l’utilisateur qui accède à la base de données.  
   
 L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans le navigateur quand l’exemple est exécuté à partir du navigateur.  
@@ -81,7 +81,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a>Exemple  
+## <a name="pdo_sqlsrv-example"></a>Exemple PDO_SQLSRV  
 L’exemple suivant utilise le pilote PDO_SQLSRV pour accomplir la même tâche que l’exemple précédent.  
   
 ```  

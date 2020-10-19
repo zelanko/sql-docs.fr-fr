@@ -9,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.date: 02/15/2019
 monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d49fdea8dbc41624a565b685f9a2baa580b7a59c
-ms.sourcegitcommit: 822d4b3cfa53269535500a3db5877a82b5076728
+ms.openlocfilehash: f64ef01e248052667239f7516b0ccddc592871c7
+ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87988471"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91935189"
 ---
 # <a name="azure-sql-connection-type-ssrs"></a>Type de connexion Azure SQL (SSRS)
 
@@ -27,7 +27,7 @@ Cette extension de données prend en charge des paramètres à valeurs multiples
 > [!NOTE]  
 > Quand vous ouvrez une connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)], définissez le délai de connexion à 30 secondes.
   
-Pour plus d’informations, consultez [Microsoft Azure SQL Database sur docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/).  
+Pour plus d’informations, consultez [Microsoft Azure SQL Database sur docs.microsoft.com](/azure/sql-database/).  
   
 Utilisez les informations de cette rubrique pour générer une source de données. Pour obtenir des instructions détaillées, consultez [Ajouter et vérifier une connexion de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
@@ -55,7 +55,7 @@ Sur un client de création de rapports, les options suivantes sont disponibles p
   
 - Utiliser un nom d'utilisateur et un mot de passe enregistrés. Pour négocier le double tronçon qui se produit lorsque la base de données qui contient les données de rapport est différente du serveur de rapports, sélectionnez les options permettant d'utiliser les informations d'identification en tant qu'informations d'identification Windows. Vous pouvez également choisir d'emprunter l'identité de l'utilisateur authentifié après connexion à la source de données.  
   
-- Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+- Aucune information d'identification n'est requise. Pour utiliser cette option, vous devez avoir configuré le compte d'exécution sans assistance sur le serveur de rapports. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration du serveur de rapports&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 Pour plus d’informations, consultez [Créer des chaînes de connexion de données - Générateur de rapports et SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) ou [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -79,7 +79,7 @@ Le concepteur de requêtes textuel prend en charge les deux modes suivants :
   
 Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes relationnelles &#40;Générateur de rapports&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md) et [Interface utilisateur du Concepteur de requêtes textuel &#40;Générateur de rapports&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-Le concepteur de requêtes graphique utilisé par [!INCLUDE[ssSDS](../../includes/sssds-md.md)] fournit une prise en charge intégrée du regroupement et des agrégats pour vous aider à écrire des requêtes qui récupèrent uniquement les données de synthèse. Les fonctionnalités du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] sont les suivantes : clause GROUP BY, mot clé DISTINCT et agrégats tels que SUM et COUNT. Le concepteur de requêtes textuel fournit une prise en charge complète du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] , notamment en matière de regroupement et d’agrégats. Pour plus d’informations sur [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+Le concepteur de requêtes graphique utilisé par [!INCLUDE[ssSDS](../../includes/sssds-md.md)] fournit une prise en charge intégrée du regroupement et des agrégats pour vous aider à écrire des requêtes qui récupèrent uniquement les données de synthèse. Les fonctionnalités du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] sont les suivantes : clause GROUP BY, mot clé DISTINCT et agrégats tels que SUM et COUNT. Le concepteur de requêtes textuel fournit une prise en charge complète du langage [!INCLUDE[tsql](../../includes/tsql-md.md)] , notamment en matière de regroupement et d’agrégats. Pour plus d’informations sur [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/language-reference.md).  
   
 ### <a name="using-query-type-text"></a><a name="QueryText"></a> Utilisation du type de requête Texte
 
@@ -161,9 +161,9 @@ Vous pouvez utiliser la base de données SQL Azure avec l’authentification dir
 Ce scénario est pris en charge à condition que les éléments suivants soient correctement configurés :
 
 - La [Bibliothèque d'authentification Active Directory pour SQL Server (ADALSQL)](https://www.microsoft.com/download/details.aspx?id=48742) est installée sur le serveur de rapports.
-- Les [services de fédération Active Directory (AD FS)](https://docs.microsoft.com/windows-server/identity/active-directory-federation-services) sont configurés dans une optique de fédération entre Active Directory (AD) en local et AAD.
-- La [délégation Kerberos contrainte (KCD)](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) est configurée du serveur de rapports vers le serveur ADFS.
-- La source de données/le rapport est configuré de façon à s’authentifier auprès de [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview) comme l’utilisateur qui consulte le rapport.
+- Les [services de fédération Active Directory (AD FS)](/windows-server/identity/active-directory-federation-services) sont configurés dans une optique de fédération entre Active Directory (AD) en local et AAD.
+- La [délégation Kerberos contrainte (KCD)](/windows-server/security/kerberos/kerberos-constrained-delegation-overview) est configurée du serveur de rapports vers le serveur ADFS.
+- La source de données/le rapport est configuré de façon à s’authentifier auprès de [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) comme l’utilisateur qui consulte le rapport.
 
 ::: moniker-end
 
@@ -198,8 +198,7 @@ Fournit des informations détaillées sur la prise en charge des plateformes et 
   
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft Azure SQL Database sur docs.microsoft.com](https://docs.microsoft.com/azure/sql-database/)  
+[Microsoft Azure SQL Database sur docs.microsoft.com](/azure/sql-database/)  
 [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
 [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
-[Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
-
+[Expressions &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)
