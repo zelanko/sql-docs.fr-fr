@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bab30e48ce9b9452ab3e8c28ad409df30a6516aa
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26c8d6f53ef87fa2d9e6ab5dcfee6b39be01834f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445471"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196790"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,8 +39,7 @@ ms.locfileid: "88445471"
     
 ## <a name="syntax"></a>Syntaxe    
     
-```    
-    
+```syntaxsql
 RECONFIGURE [ WITH OVERRIDE ]    
 ```    
     
@@ -68,7 +67,7 @@ RECONFIGURE [ WITH OVERRIDE ]
 ## <a name="examples"></a>Exemples    
  L'exemple suivant affecte la valeur `recovery interval` minutes à la limite supérieure de l'option de configuration `75` et utilise `RECONFIGURE WITH OVERRIDE` pour l'installer. Les intervalles de récupération supérieurs à 60 minutes sont déconseillés et désactivés par défaut. Toutefois, étant donné que l'option `WITH OVERRIDE` est spécifiée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vérifie pas si la valeur spécifiée (`75`) est valide pour l'option de configuration `recovery interval`.    
     
-```    
+```sql    
 EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    

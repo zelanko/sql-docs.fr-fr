@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: d213c8849c23ec1cb57e2628403542a31655a495
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86913746"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193771"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Générer de fichiers de vidage pour l'exécution des packages
 
@@ -35,7 +35,7 @@ Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez 
   
      Appelez cette procédure stockée pour obliger un package à interrompre son exécution et créer un fichier de vidage.  
   
- Si vous déployez des packages à l’aide du modèle de déploiement de package, vous créez les fichiers de vidage du débogage à l’aide de l’utilitaire **dtexec** ou de l’utilitaire **dtutil** pour spécifier une option de vidage du débogage sur la ligne de commande. Pour plus d'informations, consultez [dtexec Utility](../../integration-services/packages/dtexec-utility.md) et [dtutil Utility](../../integration-services/dtutil-utility.md). Pour plus d’informations sur les modèles de déploiement de package, consultez [Déploiement de projets et de packages Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213290.aspx) et [Déploiement de packages hérités &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
+ Si vous déployez des packages à l’aide du modèle de déploiement de package, vous créez les fichiers de vidage du débogage à l’aide de l’utilitaire **dtexec** ou de l’utilitaire **dtutil** pour spécifier une option de vidage du débogage sur la ligne de commande. Pour plus d'informations, consultez [dtexec Utility](../../integration-services/packages/dtexec-utility.md) et [dtutil Utility](../../integration-services/dtutil-utility.md). Pour plus d’informations sur les modèles de déploiement de package, consultez [Déploiement de projets et de packages Integration Services (SSIS)](../packages/deploy-integration-services-ssis-projects-and-packages.md) et [Déploiement de packages hérités &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).   
   
 ## <a name="debug-dump-file-format"></a>Format des fichiers de vidage du débogage  
  Lorsque vous spécifiez une option de vidage de débogage, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crée les fichiers de vidage de débogage suivants :  
@@ -55,4 +55,4 @@ Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez 
 |Messages récents|Messages récents émis par le système. Inclut l'heure, le type, la description et l'ID de thread de chaque message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Horodatage : 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID du thread : 2368           (ThreadID)<br /><br /> [E:3]         Nom d'événement : OnError                        (EventName)<br /><br /> [E:3]         Nom de la source :                (SourceName)<br /><br /> [E:3]         ID de la source :                        (SourceID)<br /><br /> [E:3]         ID d'exécution :                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description : Le composant est manquant, n'est pas enregistré, ne peut pas être mis à niveau ou des interfaces obligatoires sont manquantes. Informations de contact de ce composant : «  ».|  
   
 ## <a name="related-information"></a>Informations connexes  
-[Exécuter le package, boîte de dialogue](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
+[Exécuter le package, boîte de dialogue](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)

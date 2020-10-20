@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa56c3788e690aae63d292ac1a71fad3a4fc6b67
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b745e73cb7f25ff8936ddc385979c69ad675f8ea
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495727"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194748"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Éditeur de source SAP BW (page Gestionnaire de connexions)
 
@@ -54,7 +54,7 @@ ms.locfileid: "88495727"
  **Nouveau**  
  Créez un gestionnaire de connexions à l’aide de la boîte de dialogue **Gestionnaire de connexions SAP BW** .  
   
- Pour plus d’informations sur cette boîte de dialogue, consultez [Éditeur du Gestionnaire de connexions SAP BW](../../integration-services/connection-manager/sap-bw-connection-manager-editor.md).  
+ Pour plus d’informations sur cette boîte de dialogue, consultez [Éditeur du Gestionnaire de connexions SAP BW](../connection-manager/sap-bw-connection-manager.md).  
   
  **Destination OHS**  
  Sélectionnez la destination OHS (Open Hub Service) à utiliser pour extraire des données de la source.  
@@ -133,5 +133,4 @@ ms.locfileid: "88495727"
  [Éditeur de source SAP BW &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [Éditeur de source SAP BW &#40;page Avancé&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Aide (F1) sur Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
-  
   

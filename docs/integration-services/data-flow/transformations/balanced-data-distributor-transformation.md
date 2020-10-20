@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17650c2fd72996ea0d8f0eb080fbc170d779fdbf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0af6a36d456b52791f2cafccc9c017f644893975
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495715"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194639"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Transformation du distributeur de données équilibrées (BDD)
 
@@ -42,6 +42,5 @@ ms.locfileid: "88495715"
  Notez que si le goulot d'étranglement d'un package SSIS est dû à la fréquence de lecture des données de la source, le composant BDD ne permet pas d'améliorer les performances. Si le goulot d'étranglement se trouve dans un package SSIS, car la destination ne prend pas en charge le parallélisme, BDD ne change rien. Toutefois, vous pouvez effectuer toutes les transformations en parallèle et utiliser la transformation Union All pour combiner les données de sortie de différents chemins de sortie de la transformation BDD avant d'envoyer les données à la destination.  
   
 > [!IMPORTANT]  
->   Pour obtenir une présentation avec une démonstration de l'utilisation de la transformation, consultez la [vidéo Distributeur de données équilibrées](https://go.microsoft.com/fwlink/?LinkID=226278) dans la bibliothèque TechNet.  
-  
+>   Pour obtenir une présentation avec une démonstration de l'utilisation de la transformation, consultez la [vidéo Distributeur de données équilibrées](/previous-versions/dn912438(v=msdn.10)) dans la bibliothèque TechNet.  
   

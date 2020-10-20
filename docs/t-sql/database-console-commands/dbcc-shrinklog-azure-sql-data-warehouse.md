@@ -12,12 +12,12 @@ dev_langs:
 author: pmasl
 ms.author: umajay
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bae2ef1468110ba89d77d5f7a6360aecb324abd0
-ms.sourcegitcommit: 1126792200d3b26ad4c29be1f561cf36f2e82e13
+ms.openlocfilehash: 5d6830452d32de9a1b3ca954cbaf94d7d883f1b5
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/14/2020
-ms.locfileid: "90076691"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038347"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG (Parallel Data Warehouse)
 
@@ -41,7 +41,7 @@ DBCC SHRINKLOG
 SIZE = { *target_size* [ MB \| **GB** \| TB ]  } \| **DEFAULT**.  
 *target_size* représente la taille voulue pour le journal des transactions, sur tous les nœuds de calcul, après l’exécution de DBCC SHRINKLOG. Il s’agit d’un entier supérieur à 0.  
 La taille du journal est mesurée en mégaoctets (Mo), gigaoctets (Go) ou téraoctets (To). Il s’agit de la taille combinée du journal des transactions sur tous les nœuds de calcul.  
-Par défaut, DBCC SHRINKLOG réduit le journal des transactions à la taille de journal stockée dans les métadonnées de la base de données. La taille du journal dans les métadonnées est déterminée par le paramètre LOG_SIZE dans [CREATE DATABASE &#40;Azure SQL synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) ou [ALTER DATABASE &#40;Azure synapse Analytics&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md). DBCC SHRINKLOG réduit la taille du journal des transactions à la taille par défaut quand `SIZE=DEFAULT` est spécifié ou quand la clause `SIZE` est omise.
+Par défaut, DBCC SHRINKLOG réduit le journal des transactions à la taille de journal stockée dans les métadonnées de la base de données. La taille du journal dans les métadonnées est déterminée par le paramètre LOG_SIZE dans [CREATE DATABASE &#40;Azure SQL synapse Analytics&#41;](../statements/create-database-transact-sql.md) ou [ALTER DATABASE &#40;Azure synapse Analytics&#41;](../statements/alter-database-transact-sql.md). DBCC SHRINKLOG réduit la taille du journal des transactions à la taille par défaut quand `SIZE=DEFAULT` est spécifié ou quand la clause `SIZE` est omise.
   
 WITH NO_INFOMSGS  
 Les messages d’information ne sont pas affichés dans les résultats DBCC SHRINKLOG.  

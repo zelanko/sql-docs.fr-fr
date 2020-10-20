@@ -12,12 +12,12 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 228c5a9f468ad7f82f6ca9c291a532466a5441df
-ms.sourcegitcommit: 678f513b0c4846797ba82a3f921ac95f7a5ac863
+ms.openlocfilehash: 380fa9b4cb6941b438d0308be38956659862ce50
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/07/2020
-ms.locfileid: "89511570"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115452"
 ---
 # <a name="deploy-and-connect-to-sql-server-docker-containers"></a>Déployer des conteneurs Docker SQL Server et s’y connecter
 
@@ -60,7 +60,7 @@ Vous pouvez vous connecter à l’instance SQL Server sur votre machine Docker �
 
 - [Azure Data Studio](../azure-data-studio/quickstart-sql-server.md)
 - [sqlcmd](sql-server-linux-setup-tools.md)
-- [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) sur Windows](sql-server-linux-manage-ssms.md)
 
 L’exemple suivant utilise **sqlcmd** pour se connecter à SQL Server s’exécutant dans un conteneur Docker. L’adresse IP dans la chaîne de connexion est l’adresse IP de l’ordinateur hôte qui exécute le conteneur.

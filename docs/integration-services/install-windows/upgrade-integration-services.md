@@ -17,12 +17,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: c86a5f51e1d78b15a85a2063530bfb9ac4183a7d
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 95ffd6eb4e200139f653d3c051b6106c5f472497
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480603"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193906"
 ---
 # <a name="upgrade-integration-services"></a>Mettre à niveau Integration Services
 
@@ -51,14 +51,14 @@ ms.locfileid: "89480603"
 > -   Tâche d'exécution de package DTS 2000 ;  
 > -   analyse du Conseiller de mise à niveau des packages DTS.  
 > 
->  Pour plus d’informations sur les autres fonctionnalités abandonnées, consultez [Fonctionnalités Integration Services abandonnées dans SQL Server 2016](https://msdn.microsoft.com/library/5ee40ceb-37b9-47a9-b90d-ce1de74b10f7).  
+>  Pour plus d’informations sur les autres fonctionnalités abandonnées, consultez [Fonctionnalités Integration Services abandonnées dans SQL Server 2016](/previous-versions/sql/sql-server-2016/bb500429(v=sql.130)).  
   
 ## <a name="upgrading-integration-services"></a>mise à niveau d'Integration Services  
  Vous pouvez effectuer la mise à niveau au moyen de l'une des méthodes suivantes :  
   
 -   Exécutez le programme d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et sélectionnez l’option **Mise à niveau de SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
--   Exécutez le fichier **setup.exe** à l’invite de commandes et spécifiez l’option **/ACTION=upgrade** . Pour plus d’informations, consultez la section, « Scripts d’installation pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]», dans [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
+-   Exécutez le fichier **setup.exe** à l’invite de commandes et spécifiez l’option **/ACTION=upgrade** . Pour plus d’informations, consultez la section, « Scripts d’installation pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]», dans [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
  Vous ne pouvez pas utiliser la mise à niveau pour exécuter les actions suivantes :  
   
@@ -151,5 +151,4 @@ ms.locfileid: "89480603"
   
 ## <a name="external-resources"></a>Ressources externes  
  Entrée de blog [Faire fonctionner vos extensions et applications SSIS personnalisées existantes à Denali](https://techcommunity.microsoft.com/t5/sql-server-integration-services/making-your-existing-custom-ssis-extensions-and-applications/ba-p/387951), sur blogs.msdn.com.  
-  
   

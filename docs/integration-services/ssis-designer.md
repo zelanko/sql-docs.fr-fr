@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c3306032f1ee69b99a2b7fd3c080003a93644ac3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bbda2ed08797343b328cf5764a5e73dc9b418e3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457003"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195839"
 ---
 # <a name="ssis-designer"></a>Concepteur SSIS
 
@@ -93,7 +93,7 @@ ms.locfileid: "88457003"
 ### <a name="event-handlers-tab"></a>Onglet Gestionnaires d'événements  
  Les événements d'un package sont construits sur la surface de dessin de l'onglet **Gestionnaires d'événements** . Sous l'onglet **Gestionnaires d'événements** , vous devez sélectionner le package ou l'objet du package pour lequel vous voulez créer un gestionnaire d'événements, puis sélectionner l'événement à associer au gestionnaire d'événements. Un gestionnaire d'événements contient un flux de contrôle et des flux de données facultatifs.  
   
- Pour en savoir plus, voir [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
+ Pour en savoir plus, voir [Add an Event Handler to a Package](./integration-services-ssis-event-handlers.md).  
   
 ### <a name="package-explorer-tab"></a>Onglet Explorateur de package  
  Les packages peuvent être complexes et inclure de nombreuses tâches, gestionnaires de connexions, variables et autres éléments. L'Explorateur de package permet d'afficher une liste complète des éléments du package.  
@@ -108,7 +108,7 @@ ms.locfileid: "88457003"
 #### <a name="connection-managers-area"></a>Zone Gestionnaires de connexion  
  Ajoutez et modifiez les gestionnaires de connexions utilisés par un package dans la zone **Gestionnaires de connexions** . [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut des gestionnaires de connexions permettant de se connecter à différentes sources de données, telles que des fichiers texte, des bases de données OLE DB et des fournisseurs .NET.  
   
- Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345).  
+ Pour plus d’informations, consultez [Connexions Integration Services &#40;SSIS&#41;](../integration-services/connection-manager/integration-services-ssis-connections.md) et [Créer des gestionnaires de connexions](./connection-manager/integration-services-ssis-connections.md).  
  
 ## <a name="control-flow-tab"></a>Onglet Flux de contrôle
 Utilisez l'onglet **Flux de contrôle** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer le flux de contrôle dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -191,5 +191,4 @@ Les packages utilisent des gestionnaires de connexion pour se connecter aux sour
   
 ## <a name="see-also"></a>Voir aussi  
  [Interface utilisateur d’Integration Services](../integration-services/integration-services-user-interface.md)  
-  
   

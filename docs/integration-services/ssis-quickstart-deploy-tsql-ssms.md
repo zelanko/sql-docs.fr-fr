@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c03bf004b95e4321cb93198750a798a019a1eb0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a741612f0afd305edaf4cc289f1841eb9b353d8a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495448"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195197"
 ---
 # <a name="deploy-an-ssis-project-from-ssms-with-transact-sql"></a>Déployer un projet SSIS à partir de SSMS avec Transact-SQL
 
@@ -28,7 +28,7 @@ SQL Server Management Studio est un environnement intégré pour la gestion des 
 
 ## <a name="prerequisites"></a>Prérequis
 
-Avant de commencer, vérifiez que vous disposez de la dernière version de SQL Server Management Studio. Pour télécharger SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Avant de commencer, vérifiez que vous disposez de la dernière version de SQL Server Management Studio. Pour télécharger SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
@@ -103,4 +103,4 @@ EXEC catalog.deploy_project @folder_name = '<target_folder>',
     - [Exécuter un package SSIS avec Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Exécuter un package SSIS à partir de l’invite de commandes](./ssis-quickstart-run-cmdline.md)
     - [Exécuter un package SSIS avec PowerShell](ssis-quickstart-run-powershell.md)
-    - [Exécuter un package SSIS avec C#](./ssis-quickstart-run-dotnet.md) 
+    - [Exécuter un package SSIS avec C#](./ssis-quickstart-run-dotnet.md)

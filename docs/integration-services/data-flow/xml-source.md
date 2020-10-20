@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 14aeae01cecd283ae480b337543fa0e1c4fe8bfc
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c066add73dbc8049f389c828363f1157bb39edae
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425611"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194549"
 ---
 # <a name="xml-source"></a>Source XML
 
@@ -83,7 +83,7 @@ ms.locfileid: "88425611"
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriétés personnalisées des sources XML](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88425611"
 |Valeur|Description|  
 |-----------|-----------------|  
 |Emplacement du fichier XML|Récupère des données dans un fichier XML.|  
-|Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes** : [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes** : [Utiliser des variables dans des packages](../integration-services-ssis-variables.md)|  
 |Données XML à partir d'une variable|Récupère des données XML à partir d'une variable.|  
   
  **Utiliser le schéma inclus**  
@@ -174,4 +174,4 @@ ms.locfileid: "88425611"
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Extraire des données à l'aide de la source XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+ [Extraire des données à l'aide de la source XML](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)

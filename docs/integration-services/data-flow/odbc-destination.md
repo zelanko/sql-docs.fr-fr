@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 80b988844668fbc5ea1e06af2852ffc9bc1a7785
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 04bf343142c1e89affe6ebb056f09771226da6e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392105"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194776"
 ---
 # <a name="odbc-destination"></a>Destination ODBC
 
@@ -35,7 +35,7 @@ ms.locfileid: "88392105"
  La destination ODBC comporte une sortie standard et une sortie d'erreur.  
   
 ##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Options de chargement  
- La destination ODBC peut utiliser l'un des deux modules de charge d'accès. Vous définissez le mode dans l’[Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Les deux modes sont :  
+ La destination ODBC peut utiliser l'un des deux modules de charge d'accès. Vous définissez le mode dans l’[Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](./odbc-source.md). Les deux modes sont :  
   
 -   **Lot**: dans ce mode, la destination ODBC tente d’utiliser la méthode d’insertion la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs modernes ODBC, cela implique de préparer une instruction INSERT avec des paramètres, puis d’utiliser une liaison de paramètre de table selon les lignes (où la taille de la table est contrôlée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "88392105"
   
 -   Colonnes de données de sortie standard.  
   
- Selon le comportement paramétré pour les erreurs, la destination ODBC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus de récupération dans la sortie d'erreur. Pour plus d’informations, consultez [Éditeur de source ODBC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md).  
+ Selon le comportement paramétré pour les erreurs, la destination ODBC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus de récupération dans la sortie d'erreur. Pour plus d’informations, consultez [Éditeur de source ODBC &#40;page Sortie d’erreur&#41;](./odbc-source.md).  
   
 ## <a name="parallelism"></a>Parallélisme  
  Il n'existe aucune limitation quant au nombre de composants de destination ODBC pouvant s'exécuter en parallèle sur la même table ou des tables différentes, sur le même ordinateur ou sur des ordinateurs différents (autre que les limites de session globale habituelles).  
@@ -67,11 +67,11 @@ ms.locfileid: "88392105"
   
  Pour plus d’informations, consultez l’une des rubriques suivantes :  
   
--   [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
+-   [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;]()  
   
--   [Éditeur de destination ODBC &#40;page Mappages&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
+-   [Éditeur de destination ODBC &#40;page Mappages&#41;]()  
   
--   [Éditeur de destination ODBC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+-   [Éditeur de destination ODBC &#40;page Sortie d’erreur&#41;]()  
   
  La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
@@ -185,4 +185,3 @@ ms.locfileid: "88392105"
   
 #### <a name="redirect-flow"></a>Rediriger le flux  
  La ligne qui provoque l'erreur ou la troncation est dirigée vers la sortie d'erreur de la destination ODBC. Pour plus d'informations, consultez Destination ODBC.  
-  

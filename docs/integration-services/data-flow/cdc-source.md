@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 86e5bfae7baa757b2655e63470be427ea46bebed
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7bd7f2478a08b00d1eb970b80ca3e5fb9f168d21
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457425"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196464"
 ---
 # <a name="cdc-source"></a>Source CDC
 
@@ -36,7 +36,7 @@ ms.locfileid: "88457425"
   
  La source CDC utilise les configurations suivantes :  
   
--   Un gestionnaire de connexions ADO.NET [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour accéder à la base de données CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur la configuration de la connexion à la source CDC, consultez [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md).  
+-   Un gestionnaire de connexions ADO.NET [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour accéder à la base de données CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations sur la configuration de la connexion à la source CDC, consultez [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;]().  
   
 -   Une table pour laquelle la capture de données modifiées est activée.  
   
@@ -105,11 +105,11 @@ use <cdc-enabled-database-name>
   
  Pour plus d’informations, consultez l’une des rubriques suivantes :  
   
--   [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+-   [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;]()  
   
--   [Éditeur de source CDC &#40;page Colonnes&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Éditeur de source CDC &#40;page Colonnes&#41;]()  
   
--   [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [Éditeur de source CDC &#40;page Sortie d’erreur&#41;]()  
   
  La boîte de dialogue **Éditeur avancé** contient les propriétés qui peuvent être définies par programme.  
   
@@ -251,5 +251,4 @@ use <cdc-enabled-database-name>
 ## <a name="related-content"></a>Contenu associé  
   
 -   Entrée de blog, [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)(Modes de traitement pour la source CDC), sur mattmasson.com.  
-  
   

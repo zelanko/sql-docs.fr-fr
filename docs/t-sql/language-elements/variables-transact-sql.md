@@ -14,12 +14,12 @@ ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b27c28f75dbd34fceded6a6170ea2b9596b0c60c
-ms.sourcegitcommit: 33e774fbf48a432485c601541840905c21f613a0
+ms.openlocfilehash: 264a277c45ebd1f067318625f7b0f1fb986389d4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/25/2020
-ms.locfileid: "88807026"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196143"
 ---
 # <a name="variables-transact-sql"></a>Variables (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -43,12 +43,12 @@ Le script suivant crée une petite table test et lui attribue 26 lignes. Il util
 
 ```sql
 -- Create the table.
-CREATE TABLE TestTable (cola int, colb char(3));
+CREATE TABLE TestTable (cola INT, colb CHAR(3));
 GO
 SET NOCOUNT ON;
 GO
 -- Declare the variable to be used.
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 
 -- Initialize the variable.
 SET @MyCounter = 0;
@@ -90,20 +90,20 @@ L’instruction DECLARE initialise une variable Transact-SQL de la manière suiv
 
 Par exemple, l'instruction **DECLARE** suivante crée une variable locale appelée **\@mycounter** avec pour type de données int.  
 ```sql
-DECLARE @MyCounter int;
+DECLARE @MyCounter INT;
 ```
 Pour déclarer plusieurs variables locales, utilisez une virgule après la première variable locale définie, puis indiquez le nom et le type de données de la variable locale suivante.
 
 Par exemple, l’instruction **DECLARE** suivante crée trois variables locales appelées **\@LastName**, **\@FirstName** et **\@StateProvince**, et les initialise toutes à la valeur NULL :  
 ```sql
-DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
+DECLARE @LastName NVARCHAR(30), @FirstName NVARCHAR(20), @StateProvince NCHAR(2);
 ```
 
 L’étendue d’une variable correspond à la plage des instructions Transact-SQL pouvant référencer cette variable. La portée d'une variable commence au point où elle est déclarée et se termine à la fin du traitement ou de la procédure stockée où elle est déclarée. Le script suivant, par exemple, génère une erreur de syntaxe car la variable est déclarée dans un lot et référencée dans un autre :  
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 -- Terminate the batch by using the GO keyword.
 GO 
@@ -119,7 +119,7 @@ WHERE BusinessEntityID = @MyVariable;
 Les variables ont une portée locale et elles ne sont visibles que dans le traitement ou la procédure où elles sont définies. Dans l'exemple suivant, la portée imbriquée créée pour l'exécution de sp_executesql n'a pas accès à la variable déclarée dans la portée supérieure et elle retourne une erreur.  
 
 ```sql
-DECLARE @MyVariable int;
+DECLARE @MyVariable INT;
 SET @MyVariable = 1;
 EXECUTE sp_executesql N'SELECT @MyVariable'; -- this produces an error
 ```
@@ -134,8 +134,8 @@ Pour affecter une valeur à une variable à l'aide de l'instruction SET, indique
 USE AdventureWorks2014;
 GO
 -- Declare two variables.
-DECLARE @FirstNameVariable nvarchar(50),
-   @PostalCodeVariable nvarchar(15);
+DECLARE @FirstNameVariable NVARCHAR(50),
+   @PostalCodeVariable NVARCHAR(15);
 
 -- Set their values.
 SET @FirstNameVariable = N'Amy';
@@ -154,7 +154,7 @@ Vous pouvez également affecter une valeur à une variable en y faisant référe
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = MAX(EmployeeID)
 FROM HumanResources.Employee;
@@ -169,7 +169,7 @@ Si une instruction SELECT retourne plusieurs lignes et si la variable fait réf�
 ```sql
 USE AdventureWorks2014;
 GO
-DECLARE @EmpIDVariable int;
+DECLARE @EmpIDVariable INT;
 
 SELECT @EmpIDVariable = BusinessEntityID
 FROM HumanResources.Employee

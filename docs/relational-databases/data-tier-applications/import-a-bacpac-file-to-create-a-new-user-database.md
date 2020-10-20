@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e02041dd6801f5ab0b819f4bffd91ca8ba38e8b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 77209c7b5156956897c3c458e825fddeb7462e22
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88412435"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195581"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -122,8 +122,8 @@ ms.locfileid: "88412435"
   
  **Base de données SQL Azure :**  
   
- - **[Importer un fichier BACPAC pour créer une nouvelle base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)** fournit des instructions étape par étape relatives à l’utilisation du portail Azure, de PowerShell, de SSMS ou de SqlPackage.  
- - Consultez **[Options et performances de la base de données SQL : comprendre ce qui est disponible dans chaque niveau de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)** pour obtenir plus de détails sur les différents niveaux de service.  
+ - **[Importer un fichier BACPAC pour créer une nouvelle base de données SQL Azure](/azure/azure-sql/database/database-import)** fournit des instructions étape par étape relatives à l’utilisation du portail Azure, de PowerShell, de SSMS ou de SqlPackage.  
+ - Consultez **[Options et performances de la base de données SQL : comprendre ce qui est disponible dans chaque niveau de service](/azure/azure-sql/database/purchasing-models)** pour obtenir plus de détails sur les différents niveaux de service.  
 
 ### <a name="validation-page"></a>Page Validation  
  Utilisez cette page pour passer en revue tous les problèmes qui empêchent l'opération. Pour continuer, résolvez les problèmes bloquants, puis cliquez sur **Réexécuter la validation** pour vous assurer que la validation est réussie.  
@@ -144,8 +144,7 @@ ms.locfileid: "88412435"
  Cliquez sur **Fermer** pour fermer l’assistant.  
   
 ## <a name="see-also"></a>Voir aussi  
-[Importer un fichier BACPAC pour créer une nouvelle base de données Azure SQL](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
+[Importer un fichier BACPAC pour créer une nouvelle base de données Azure SQL](/azure/azure-sql/database/database-import)  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exporter une application de la couche Données](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  
-  
   

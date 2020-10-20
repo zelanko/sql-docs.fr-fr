@@ -21,12 +21,12 @@ ms.assetid: 17186213-5ab5-40b0-b470-b660af1ec44c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e15d2d46f6bf1d7c922b11a210825cf78509ebe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 889e473669093646ae7c976025ed4032c17beeff
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88468044"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038344"
 ---
 # <a name="what-are-the-sql-database-functions"></a>Quelles sont les fonctions de base de données SQL ?
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -67,7 +67,7 @@ Effectuent des opérations sur une valeur unique et retournent ensuite une valeu
 |[Fonctions de chaîne](string-functions-transact-sql.md)|Effectuent des opérations sur une valeur d’entrée de type chaîne (**char** ou **varchar**) et renvoient une valeur numérique ou de type chaîne.|  
 |[Fonctions système](../../relational-databases/system-functions/system-functions-category-transact-sql.md)|Effectuent des opérations et retournent des informations concernant les valeurs, objets et paramètres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Fonctions statistiques système](system-statistical-functions-transact-sql.md)|Retournent des informations statistiques concernant le système.|  
-|[Fonctions texte et image](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|Effectuent des opérations sur des colonnes ou des valeurs d'entrée de type texte ou image et retournent des informations concernant la valeur.|  
+|[Fonctions texte et image](./text-and-image-functions-textptr-transact-sql.md)|Effectuent des opérations sur des colonnes ou des valeurs d'entrée de type texte ou image et retournent des informations concernant la valeur.|  
   
 ## <a name="function-determinism"></a>Déterminisme des fonctions  
  Les fonctions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégrées sont déterministes ou non déterministes. Une fonction déterministe retourne toujours le même résultat chaque fois qu'elle est appelée avec un ensemble de valeurs d'entrée spécifique. Une fonction non déterministe peut retourner des résultats différents chaque fois qu'elle est appelée, même si le même ensemble de valeurs d'entrée spécifique est utilisé. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)  
@@ -83,5 +83,4 @@ Effectuent des opérations sur une valeur unique et retournent ensuite une valeu
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)   
  [Utilisation de procédures stockées &#40;MDX&#41;](../../mdx/using-stored-procedures-mdx.md)  
-  
   

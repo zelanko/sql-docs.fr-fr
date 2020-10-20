@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.reviewer: maghan
-ms.openlocfilehash: f7de3c86cf58a9e4173ef170dff07db61f06f7f9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 8d71c814adf1843a6fb6237f7767e1d9f540e7e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522343"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196353"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Procédure pas à pas : Configurer Integration Services (SSIS) Scale Out
 
@@ -76,7 +76,7 @@ Pour installer la fonctionnalité Scale Out Master, utilisez l’Assistant Insta
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>Installer Scale Out Master à partir de l’invite de commandes
 
-Suivez les instructions fournies dans [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Définissez les paramètres pour Scale Out Master en effectuant les opérations suivantes :
+Suivez les instructions fournies dans [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Définissez les paramètres pour Scale Out Master en effectuant les opérations suivantes :
  
 1.  Ajoutez `IS_Master` au paramètre `/FEATURES`
 
@@ -131,7 +131,7 @@ Pour installer la fonctionnalité Scale Out Worker, utilisez l’Assistant Insta
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>Installer Scale Out Worker à partir de l’invite de commandes
 
-Suivez les instructions fournies dans [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Définissez les paramètres pour Scale Out Worker en effectuant les opérations suivantes :
+Suivez les instructions fournies dans [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Définissez les paramètres pour Scale Out Worker en effectuant les opérations suivantes :
 
 1.  Ajoutez IS_Worker au paramètre `/FEATURES`.
 
