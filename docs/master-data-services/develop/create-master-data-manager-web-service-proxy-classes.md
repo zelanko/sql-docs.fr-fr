@@ -11,12 +11,12 @@ ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7fcc185243cca0ba45f1f8be199649508fc4b56a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 33eeff1c3bd33ee193a283c26225418a7ca54a25
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477161"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196786"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Créer des classes proxy de service Web Master Data Manager
 
@@ -40,10 +40,10 @@ ms.locfileid: "88477161"
     « Vous avez créé un service. »  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Création de classes proxy à l'aide de Visual Studio  
- Si vous avez installé Visual Studio 2010, la méthode la plus simple de générer des classes proxy est d’ajouter une **Référence de service** à votre projet. L'adresse de la référence de service est l'URL de l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], suivie de /service/service.svc. Par exemple : `https://yourserver/MDS/service/service.svc`. Pour plus d’informations, consultez [Guide pratique pour ajouter, mettre à jour ou supprimer une référence de service](https://go.microsoft.com/fwlink/?LinkId=221167).  
+ Si vous avez installé Visual Studio 2010, la méthode la plus simple de générer des classes proxy est d’ajouter une **Référence de service** à votre projet. L'adresse de la référence de service est l'URL de l'application Web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], suivie de /service/service.svc. Par exemple : `https://yourserver/MDS/service/service.svc`. Pour plus d’informations, consultez [Guide pratique pour ajouter, mettre à jour ou supprimer une référence de service](/previous-versions/bb628652(v=vs.140)).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Création de classes proxy à l'aide de Svcutil.exe  
- Vous devez disposer de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] SDK Windows installé pour que Svcutil.exe soit installé sur votre ordinateur. Si vous utilisez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vous devez utiliser l'invite de commandes [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pour exécuter la commande. Pour plus d’informations, consultez [Outil Service Model Metadata Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) et [Génération d’un client WCF à partir de métadonnées de service](https://go.microsoft.com/fwlink/?LinkId=164821).  
+ Vous devez disposer de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ou de l' [!INCLUDE[msCoName](../../includes/msconame-md.md)] SDK Windows installé pour que Svcutil.exe soit installé sur votre ordinateur. Si vous utilisez [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], vous devez utiliser l'invite de commandes [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] pour exécuter la commande. Pour plus d’informations, consultez [Outil Service Model Metadata Tool (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe) et [Génération d’un client WCF à partir de métadonnées de service](/dotnet/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata).  
   
  Pour créer un jeu de classes proxy C# à l'aide de Svcutil.exe, utilisez une commande telle que :  
   
@@ -64,5 +64,4 @@ svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc
   
 ## <a name="see-also"></a>Voir aussi  
  [Opérations de service web par catégorie &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
-  
   

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 119ee04be796eb58e0661f02e001ac0b1a2e7a85
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f4b7f610ca23940c676befc107331b406c124cb2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812965"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197019"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importer des données à partir de tables (Master Data Services)
 
@@ -24,11 +24,11 @@ ms.locfileid: "85812965"
 
   Vous pouvez ajouter des données et apporter des modifications de données à un modèle en bloc dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
- **Conditions préalables**  
+ **Composants requis**  
   
 -   Vous devez avoir l’autorisation d’insérer des données dans le STG. \<name> _Leaf, STG. \<name> _Consolidated, STG. \<name> _Relationship table dans la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données.  
   
--   Vous devez disposer des autorisations pour exécuter la \<name> procédure stockée STG. udp_ _Leaf, STG. udp \_ \<name> _Consolidated ou stg. UDP \_ \<name> _Relationship dans la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données.  
+-   Vous devez disposer des autorisations nécessaires pour exécuter l’stg.udp_ \<name> _Leaf, STG. udp \_ \<name> _Consolidated ou la \_ \<name> procédure stockée _Relationship STG. UDP dans la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données.  
   
 -   L'état du modèle ne doit pas être **Activé**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85812965"
   
 2.  Ouvrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et connectez-vous à l'instance du moteur de base de données pour votre base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-     Pour plus d’informations, consultez [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
+     Pour plus d’informations, consultez [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md).  
   
 3.  Importez les données dans les tables de mise en lots à l'aide de l'Assistant Importation et exportation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -77,5 +77,4 @@ ms.locfileid: "85812965"
      Dans Master Data Manager, accédez à la zone de la fonction **Explorer** pour votre modèle, puis appliquez des règles d'entreprise pour valider les données. Pour plus d’informations, consultez [Valider des membres spécifiques par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md). Vous pouvez également utiliser une procédure stockée pour valider les données. Pour plus d’informations, consultez [Procédure stockée de validation &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md).  
   
      Quand vous chargez des données à partir des tables de mise en lots, elles ne sont pas validées automatiquement par rapport aux règles d'entreprise. Pour plus d’informations sur la validation et quand elle a lieu, consultez [Validation &#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md).  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bc939e8aa055a2a36216a6c94fd032e561cbabf5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3bd1f2214820a1795ae8d279c88a0d86c2ca5843
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484002"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194011"
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (MDX)
 
@@ -53,7 +53,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
   
  Si aucune expression de niveau ou valeur d'index n'est spécifiée, la fonction génère un jeu dans l'ordre hiérarchique en extrayant uniquement les enfants des membres situés au niveau le plus bas de la première dimension référencée dans le jeu spécifié.  
   
- L’interrogation de la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge fourni par le serveur pour les fonctions de perçage. Pour plus d’informations, consultez [Propriétés XMLA prises en charge &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ L’interrogation de la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge fourni par le serveur pour les fonctions de perçage. Pour plus d’informations, consultez [Propriétés XMLA prises en charge &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="examples"></a>Exemples  
  Vous pouvez essayer les exemples suivants dans la fenêtre de requête MDX dans SSMS, en utilisant le cube Adventure Works.  
@@ -119,5 +119,4 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

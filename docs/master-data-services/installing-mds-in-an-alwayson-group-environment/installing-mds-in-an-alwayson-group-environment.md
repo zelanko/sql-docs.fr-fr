@@ -1,5 +1,5 @@
 ---
-title: Haute disponibilité et reprise d’activité après sinistre
+title: Haute disponibilité et récupération d’urgence
 description: Installez et configurez les Master Data Services SQL sur un groupe de disponibilité Always On pour améliorer la haute disponibilité et la récupération d’urgence des données principales.
 ms.custom: seo-lt-2019
 ms.date: 07/28/2017
@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ceea117b0b266fdc7649e8e786b034039fae3507
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: a6cc30d907d6b8c0c14d177106da3457eb828bef
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522003"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194093"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
@@ -184,9 +184,9 @@ Remarques :
 
 - La fonctionnalité WSFC n’est peut-être pas disponible dans toutes les éditions de Windows Server. Vérifiez que votre édition a cette fonctionnalité.
 
-- Vérifiez que vous disposez des autorisations appropriées pour configurer le cluster WSFC dans Active Directory. Pour plus d’informations, consultez [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](https://technet.microsoft.com/library/cc731002(v=ws.10).aspx) (Guide pas à pas des clusters de basculement : configurer des comptes dans Active Directory).
+- Vérifiez que vous disposez des autorisations appropriées pour configurer le cluster WSFC dans Active Directory. Pour plus d’informations, consultez [Failover Cluster Step-by-Step Guide: Configure Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10)) (Guide pas à pas des clusters de basculement : configurer des comptes dans Active Directory).
 
-Pour plus d’informations sur le cluster WSFC, consultez [Failover Clusters](https://technet.microsoft.com/library/cc732488(v=ws.10).aspx) (Clusters de basculement).
+Pour plus d’informations sur le cluster WSFC, consultez [Failover Clusters](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732488(v=ws.10)) (Clusters de basculement).
 
 ## <a name="sql-server-always-on-availability-group"></a>SQL Server Always On groupe de disponibilité
 
@@ -394,5 +394,4 @@ Dans ce livre blanc, nous avons vu comment installer et configurer la base de do
 
 Ce document vous a-t-il été utile ? Envoyez-nous vos commentaires en cliquant sur **Commentaires** en haut de l’article. 
 
-Vos commentaires nous aideront à améliorer la qualité des livres blancs que nous publions. 
-
+Vos commentaires nous aideront à améliorer la qualité des livres blancs que nous publions.

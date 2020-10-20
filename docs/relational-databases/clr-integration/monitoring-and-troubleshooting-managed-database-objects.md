@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a7b589ac-104d-4b68-b4aa-9f5fc192b13d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 760fcc2212991f0841f4ded3dd2932e551c26060
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: cdf362f2b45df7cb419d5dc5161cb3428de7e7bb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87948025"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192595"
 ---
 # <a name="monitoring-and-troubleshooting-managed-database-objects"></a>Surveillance et dépannage des objets de base de données managés
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "87948025"
   
 |Événement|Description|  
 |-----------|-----------------|  
-|[Classe d'événements Assembly Load](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|Utilisé pour surveiller des demandes de chargement d'assembly (succès et échecs).|  
+|[Classe d'événements Assembly Load](../event-classes/sql-server-event-class-reference.md)|Utilisé pour surveiller des demandes de chargement d'assembly (succès et échecs).|  
 |Classe d' [événements SQL : BatchStarting](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [classe d’événements SQL : BatchCompleted](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Fournit des informations sur des lots [!INCLUDE[tsql](../../includes/tsql-md.md)] qui ont démarré ou ont été finalisés.|  
 |[SP : Starting, classe d’événements](../../relational-databases/event-classes/sp-starting-event-class.md), [classe d’événements SP : Completed](../../relational-databases/event-classes/sp-completed-event-class.md)|Utilisé pour surveiller l'exécution des procédures stockées [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |Classe d’événements [SQL : StmtStarting](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [classe d’événements SQL : StmtCompleted](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Utilisé pour surveiller l'exécution du CLR (Common Language Runtime) et des routines [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
@@ -59,7 +59,7 @@ ms.locfileid: "87948025"
 |Vue de catalogue|Description|  
 |------------------|-----------------|  
 |[sys. Assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|Retourne des informations sur des assemblys inscrits dans une base de données.|  
-|[sys. assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifie des assemblys qui référencent d'autres assemblys.|  
+|[sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|Identifie des assemblys qui référencent d'autres assemblys.|  
 |[sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|Retourne des informations sur chaque fonction, procédure stockée et déclencheur définis dans un assembly.|  
 |[sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|Retourne des informations sur les fichiers d'assembly inscrits dans la base de données.|  
 |[sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|Identifie les types définis par l'utilisateur (UDT) définis par un assembly.|  
@@ -76,9 +76,9 @@ ms.locfileid: "87948025"
 |Vue de gestion dynamique|Description|  
 |---------|-----------------|  
 |[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|Fournit des informations sur chaque domaine d'application sur le serveur.|  
-|[sys. dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Identifie chaque assembly managé inscrit sur le serveur.|  
-|[sys. dm_clr_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|Retourne des informations sur le CLR hébergé.|  
-|[sys. dm_clr_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|Identifie toutes les tâches du CLR en cours d'exécution.|  
+|[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|Identifie chaque assembly managé inscrit sur le serveur.|  
+|[sys.dm_clr_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|Retourne des informations sur le CLR hébergé.|  
+|[sys.dm_clr_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|Identifie toutes les tâches du CLR en cours d'exécution.|  
 |[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|Retourne des informations sur les plans d'exécution de requêtes mis en cache par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une exécution plus rapide des requêtes.|  
 |[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|Retourne les statistiques sur les performances des agrégats pour les plans de requêtes mis en cache.|  
 |[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -86,5 +86,4 @@ ms.locfileid: "87948025"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepts de programmation pour l’intégration du CLR &#40;Common Language Runtime&#41;](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
-  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed42f083-c9e8-4ee4-9d64-d879bf955c78
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 07917cbe056b38be42e4697fcef52935bae3efe3
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 15033816b953df764126853ada353452f00650d6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449291"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196173"
 ---
 # <a name="reserved-keyword-limitations"></a>Limitations des mots clés réservés
 
@@ -29,7 +29,6 @@ La limitation du mot clé réservé s’applique également à toute forme abré
 
 Une liste des mots clés réservés ODBC est disponible à l’adresse suivante :
 
-- [Mots clés réservés ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+- [Mots clés réservés ODBC](../reference/appendixes/reserved-keywords.md).
 
-- Dans le *Guide de référence du programmeur ODBC*, consultez l' [annexe C : grammaire SQL](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
-
+- Dans le *Guide de référence du programmeur ODBC*, consultez l' [annexe C : grammaire SQL](../reference/appendixes/appendix-c-sql-grammar.md).

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ee68e6cbb22bc817d478490315ab88ccb87e4ad4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 8899c5a9325c638549383683b82724eefa2b1464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387036"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196183"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Manipulation de données MDX - DRILLTHROUGH
 
@@ -50,7 +50,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  Une instruction MDX spécifie la cellule concernée. La valeur spécifiée par l’argument **MaxRows** indique le nombre maximal de lignes qui doivent être retournées par l’ensemble de lignes obtenu.  
   
- Par défaut, le nombre maximal de lignes qui sont retournées est de 10 000 lignes. Cela signifie que si vous ne spécifiez pas **MaxRows** , vous obtiendrez 10 000 lignes ou moins. Si cette valeur est trop faible pour votre scénario, vous pouvez définir **MaxRows** sur un nombre plus élevé, tel que `MAXROWS 20000` . Si elle est trop faible, vous pouvez augmenter la valeur par défaut en modifiant la propriété du serveur **OLAP\Query\DefaultDrillthroughMaxRows** . Pour plus d’informations sur la modification de cette propriété, consultez [Propriétés du serveur dans Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
+ Par défaut, le nombre maximal de lignes qui sont retournées est de 10 000 lignes. Cela signifie que si vous ne spécifiez pas **MaxRows** , vous obtiendrez 10 000 lignes ou moins. Si cette valeur est trop faible pour votre scénario, vous pouvez définir **MaxRows** sur un nombre plus élevé, tel que `MAXROWS 20000` . Si elle est trop faible, vous pouvez augmenter la valeur par défaut en modifiant la propriété du serveur **OLAP\Query\DefaultDrillthroughMaxRows** . Pour plus d’informations sur la modification de cette propriété, consultez [Propriétés du serveur dans Analysis Services](/analysis-services/server-properties/server-properties-in-analysis-services).  
   
  Sauf indication contraire, les colonnes retournées incluent tous les attributs de granularité de toutes les dimensions (autres que les dimensions de type plusieurs à plusieurs) associées au groupe de mesures. Les dimensions du cube sont précédées du signe $ afin de distinguer les dimensions et les groupes de mesures. La clause **Return** est utilisée pour spécifier les colonnes retournées par la requête d’extraction. Les fonctions suivantes peuvent être appliquées à un seul attribut ou mesure par la clause **Return** .  
   
@@ -99,5 +99,4 @@ RETURN
   
 ## <a name="see-also"></a>Voir aussi  
  [Instructions de manipulation de données MDX &#40;&#41;MDX ](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

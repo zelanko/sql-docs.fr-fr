@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 056335a32c0e7f1ae02979190cdf64b0829177df
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 18f95be4c33c1d9695a16f7183407e177bc02925
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813683"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193666"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Actions de règle d'entreprise (Master Data Services)
 
@@ -53,7 +53,7 @@ ms.locfileid: "85813683"
 |---------------------|-----------------|  
 |**est obligatoire**|L'attribut sélectionné **est requis**, ce qui signifie qu'il ne peut pas être null ou vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**n’est pas valide**|L'attribut sélectionné **n'est pas valide**.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
-|**doit contenir le modèle**|L'attribut sélectionné **doit contenir le modèle** spécifié. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
+|**doit contenir le modèle**|L'attribut sélectionné **doit contenir le modèle** spécifié. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](/dotnet/standard/base-types/regular-expression-language-quick-reference) dans MSDN Library.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
 |**doit être unique**|L'attribut sélectionné **doit être unique** indépendamment ou en association avec des attributs définis.<br /><br /> **Meilleure pratique :** associez cette action à une condition obligatoire pour garantir la validité des champs d'index dans les systèmes d'abonnement.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.<br /><br /> **REMARQUE**: Si le premier attribut est de type DateTime, vous ne pouvez pas l’utiliser en combinaison avec un attribut de type Numérique ou Texte. Si le premier attribut est de type Numérique, vous ne pouvez pas l’utiliser en combinaison avec un attribut de type DateTime.|  
 |**doit avoir l'une des valeurs suivantes**|L'attribut sélectionné **doit avoir l'une des valeurs** spécifiées dans une liste.<br /><br /> Cette action est valide pour les valeurs de texte.|  
 |**doit être supérieur à**|L'attribut sélectionné **doit être supérieur à** un attribut spécifique, une valeur d'attribut spécifique, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre et date.|  
@@ -70,11 +70,10 @@ ms.locfileid: "85813683"
   
 |Nom de l'action|Description|  
 |-----------------|-----------------|  
-|**démarrer le flux de travail**|Initialise un flux de travail externe. Les données qui ont provoqué cette action sont transmises au flux de travail. Pour plus d'informations, consultez [Intégration de flux de travail SharePoint avec Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
+|**démarrer le flux de travail**|Initialise un flux de travail externe. Les données qui ont provoqué cette action sont transmises au flux de travail. Pour plus d'informations, consultez [Intégration de flux de travail SharePoint avec Master Data Services](/previous-versions/sql/sql-server-2008-r2/gg690195(v=msdn.10)).<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Conditions de règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
-  
   

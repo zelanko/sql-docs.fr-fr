@@ -13,12 +13,12 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8a0fcbcee1d17a98025a1c8adbc02c3409b1db06
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e0b20fde852e02662780f75bd14e4b9023e01d80
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88389295"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192403"
 ---
 # <a name="entity-dependencies-explorer"></a>Explorateur Dépendances d’entité
 
@@ -29,7 +29,7 @@ ms.locfileid: "88389295"
   
 Il vous aide à répondre à la question « qui utilise mon entité et comment ? ». La vue est similaire à la page de l’explorateur Hiérarchie dérivée, mais elle est plus inclusive. Elle montre toutes les relations DBA, pas seulement celles définies dans le cadre d’une hiérarchie particulière. Aucune définition de la hiérarchie n’est nécessaire, car la structure hiérarchique affichée est simplement déduite des attributs DBA existants.  
   
-Dans le menu de la page Explorateur, l’option Dépendances d’entité répertorie toutes les entités du modèle dont dépend au moins une entité (par exemple, au moins une entité a un DBA qui fait référence à l’entité répertoriée). Le nombre de dépendances (directes et indirectes) est indiqué en regard du nom de l’entité, et la liste est triée en fonction de ce nombre, les entités les plus référencées apparaissant en premier. La capture d’écran ci-dessous, prises à partir du modèle Client des [données exemples](https://msdn.microsoft.com/library/master-data-services-sample.aspx), indique que l’entité BigArea est référencée (directement ou indirectement) par 7 entités :  
+Dans le menu de la page Explorateur, l’option Dépendances d’entité répertorie toutes les entités du modèle dont dépend au moins une entité (par exemple, au moins une entité a un DBA qui fait référence à l’entité répertoriée). Le nombre de dépendances (directes et indirectes) est indiqué en regard du nom de l’entité, et la liste est triée en fonction de ce nombre, les entités les plus référencées apparaissant en premier. La capture d’écran ci-dessous, prises à partir du modèle Client des [données exemples](./sql-server-samples-model-deployment-packages-mds.md), indique que l’entité BigArea est référencée (directement ou indirectement) par 7 entités :  
   
 ![MDS_EntityDependencies_Menu.jpg](../master-data-services/media/mds-entitydependencies-menu-jpg.jpg)  
     
@@ -47,5 +47,3 @@ Cette vue est totalement modifiable, comme dans la page Explorateur de hiérarch
   
   
   
-  
-

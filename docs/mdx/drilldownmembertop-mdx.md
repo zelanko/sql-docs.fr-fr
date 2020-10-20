@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fe58cf1c2793206c3217f4a0f7ea132d13a242ae
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d90c382ca34316225760c1a25288034ba26ab726
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421913"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193502"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 
@@ -61,7 +61,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
   
  La fonction **DrilldownMemberTop** est similaire à la fonction [DrilldownMember](../mdx/drilldownmember-mdx.md) , mais au lieu d’inclure tous les enfants de chaque membre du premier jeu qui est également présent dans le deuxième jeu, la fonction **DrilldownMemberTop** retourne le plus grand nombre de membres enfants pour chaque membre.  
   
- L’interrogation de la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge fourni par le serveur pour les fonctions de perçage. Pour plus d’informations, consultez [Propriétés XMLA prises en charge &#40;&#41;XMLA ](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
+ L’interrogation de la propriété XMLA MdpropMdxDrillFunctions vous permet de vérifier le niveau de prise en charge fourni par le serveur pour les fonctions de perçage. Pour plus d’informations, consultez [Propriétés XMLA prises en charge &#40;&#41;XMLA ](/analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="example"></a>Exemple  
  L'exemple suivant effectue une extraction vers le bas dans la catégorie d'habillement pour retourner les trois sous-catégories de vêtements enregistrant le plus grand nombre de commandes expédiées.  
@@ -81,5 +81,4 @@ WHERE [Measures].[Reseller Order Quantity]
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

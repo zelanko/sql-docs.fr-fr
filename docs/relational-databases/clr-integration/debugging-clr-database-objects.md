@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a6e723c8ad5ff8c97a3b57edb554092211da4d7
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 1be293f98a3b78280b16f80ab7dcfcb656f7e0ec
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785165"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196890"
 ---
 # <a name="how-to-debug-clr-database-objects"></a>Comment déboguer des objets de base de données CLR
 
@@ -47,7 +47,7 @@ En raison des restrictions précitées, nous recommandons que le débogage du co
 
 Le débogage dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suit un modèle « par connexion ». Un débogueur peut détecter et déboguer des activités uniquement sur la connexion cliente à laquelle il est attaché. Comme les fonctionnalités du débogueur ne sont pas limitées par le type de connexion, il est possible de déboguer à la fois des TDS (Tabular Data Stream) et des connexions HTTP. Toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas le débogage des connexions existantes. Le débogage prend en charge toutes les fonctionnalités de débogage communes dans les routines qui s'exécutent sur le serveur. L'interaction entre un débogueur et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'effectue par le biais d'un modèle COM (Component Object Model) distribué.  
   
-Pour plus d’informations et des scénarios sur le débogage des procédures stockées managées, des fonctions, des déclencheurs, des types définis par l’utilisateur et des agrégats, consultez [SQL Server le débogage de base de données d’intégration du CLR](https://go.microsoft.com/fwlink/?LinkId=120378) dans la documentation de Visual Studio.  
+Pour plus d’informations et des scénarios sur le débogage des procédures stockées managées, des fonctions, des déclencheurs, des types définis par l’utilisateur et des agrégats, consultez [SQL Server le débogage de base de données d’intégration du CLR](/previous-versions/ms165050(v=vs.100)) dans la documentation de Visual Studio.  
   
 Le protocole réseau TCP/IP doit être activé sur l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d'utiliser Visual Studio pour le développement et le débogage distants. Pour plus d’informations sur l’activation du protocole TCP/IP sur le serveur, consultez [configurer des protocoles clients](../../database-engine/configure-windows/configure-client-protocols.md).  
   
@@ -60,7 +60,7 @@ Pour déboguer un objet de base de données CLR dans Microsoft Visual Studio, pr
 2. Créer un nouveau type CLR SQL (C#) :
 
    1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le projet, puis sélectionnez **Ajouter**, **nouvel élément...**. 
-   1. Dans la fenêtre **Ajouter un nouvel élément** , **Sélectionnez procédure stockée c# CLR SQL**, **fonction définie par l’utilisateur c#** CLR SQL, **type SQL CLR c#**, **déclencheur SQL CLR c#**, **agrégat SQL CLR c#** ou **classe**.
+   1. Dans la **fenêtre Ajouter un nouvel élément** , **Sélectionnez procédure stockée c# CLR SQL**, **fonction SQL CLR C# User-Defined**, **SQL CLR C# User-Defined type**, **déclencheur SQL CLR c#**, **agrégat SQL CLR c#** ou **classe**.
    1. Spécifiez un nom pour le fichier source du nouveau type, puis sélectionnez **Ajouter**.
 
 3. Ajoutez le code du nouveau type à l'éditeur de texte. Pour obtenir un exemple de code pour un exemple de procédure stockée, consultez la section exemple ci-dessous dans cet article.
@@ -116,6 +116,6 @@ EXEC GetVersion
 
 ## <a name="next-steps"></a>Étapes suivantes
   
-Pour plus d’informations sur le débogage de code managé à l’aide de Visual Studio, consultez [débogage de code managé](https://go.microsoft.com/fwlink/?LinkId=120377) dans la documentation de Visual Studio.  
+Pour plus d’informations sur le débogage de code managé à l’aide de Visual Studio, consultez [débogage de code managé](/visualstudio/debugger/debugging-managed-code) dans la documentation de Visual Studio.  
 
 Pour plus d’informations, consultez concepts de programmation de l' [intégration du Common Language Runtime](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

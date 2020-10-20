@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 142783612b495d7968fec1574e182654ac83fb64
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: e4ee6d69057745486ed72f00721f9ab38833ca2e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480669"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196974"
 ---
 # <a name="mdx-data-manipulation---update-cube"></a>Manipulation de données MDX - UPDATE CUBE
 
 
-  L'instruction UPDATE CUBE est utilisée pour l'écriture différée des données dans une cellule d'un cube qui agrège uniquement dans son parent à l'aide de l'agrégation SUM. Pour obtenir plus d’explications et un exemple, consultez la rubrique « Présentation des allocations » dans ce billet de blog : [création d’une application d’écriture différée avec Analysis Services (blog)](https://docs.microsoft.com/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
+  L'instruction UPDATE CUBE est utilisée pour l'écriture différée des données dans une cellule d'un cube qui agrège uniquement dans son parent à l'aide de l'agrégation SUM. Pour obtenir plus d’explications et un exemple, consultez la rubrique « Présentation des allocations » dans ce billet de blog : [création d’une application d’écriture différée avec Analysis Services (blog)](/archive/blogs/data_otaku/building-a-writeback-application-with-analysis-services).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,7 +53,7 @@ UPDATE [ CUBE ] Cube_Name
  *Weight_Expression*  
  Expression numérique MDX (Multidimensional Expressions) valide qui retourne une valeur décimale comprise entre 0 et 1.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Vous pouvez mettre à jour la valeur d'une cellule feuille ou non-feuille d'un cube, et allouer inévitablement la valeur d'une cellule non-feuille spécifiée à toutes les cellules feuilles dépendantes. La cellule spécifiée par l'expression de tuple peut être n'importe quelle cellule valide dans l'espace multidimensionnel (ce qui signifie que la cellule ne dispose d'aucune cellule feuille). Toutefois, la cellule doit être agrégée avec la fonction d’agrégation [Sum](../mdx/sum-mdx.md) et ne doit pas inclure un membre calculé dans le tuple utilisé pour identifier la cellule.  
   
  Il peut être utile de considérer l’instruction **Update cube** comme une sous-routine qui génère automatiquement une série d’opérations d’écriture différée de cellule individuelles dans des cellules feuilles et non-feuilles qui se cumulent dans une somme spécifiée.  
@@ -110,5 +110,4 @@ Weight_Expression = <leaf cell value> / <existing value>
 ## <a name="see-also"></a>Voir aussi  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Instructions de manipulation de données MDX &#40;&#41;MDX ](../mdx/mdx-data-manipulation-statements-mdx.md)  
-  
   

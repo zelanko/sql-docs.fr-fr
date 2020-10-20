@@ -12,12 +12,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: da6742e7c2801db245002688c04fcb22ada1723a
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: eda1a559e9936deae31a5511dacd695e8ec6f24e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480429"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195034"
 ---
 # <a name="tracing-master-data-services"></a>Suivi (Master Data Services)
 
@@ -51,7 +51,7 @@ ms.locfileid: "89480429"
   
 -   Le suivi est activé pour les messages d’avertissement et de suivi d’activités.  
   
-     Pour plus d’informations, voir [SourceLevels, énumération](https://msdn.microsoft.com/library/system.diagnostics.sourcelevels).  
+     Pour plus d’informations, voir [SourceLevels, énumération](/dotnet/api/system.diagnostics.sourcelevels).  
   
 -   Les journaux sont enregistrés dans le dossier Logs sous le dossier WebApplication. L’emplacement par défaut est le suivant : C:\Program Files\Microsoft SQL Server\130\Master Data Services\WebApplication\Logs.  
   
@@ -71,5 +71,4 @@ ms.locfileid: "89480429"
   
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog intitulé [Troubleshooting Logging Improvement](https://techcommunity.microsoft.com/t5/sql-server-integration-services/troubleshooting-logging-improvement/ba-p/388214)(en anglais) sur msdn.com.  
-  
   

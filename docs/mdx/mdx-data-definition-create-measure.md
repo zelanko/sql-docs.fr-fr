@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: cdbee6f6ede5e46926f1a8189792d86cf9e99f5b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d352a12a4567fc88d2d037862c4cab2f1cd20fe0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387265"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193961"
 ---
 # <a name="mdx-data-definition---create-measure"></a>Définition de données MDX - CREATE MEASURE
 
@@ -43,11 +43,10 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ## <a name="remarks"></a>Notes  
  Le *Measure_Name*  doit être placé entre parenthèses carrées.  
   
- L’instruction CREATe MEASURe ne peut être utilisée qu’à l’intérieur d’une définition de script MDX. consultez [MdxScript, élément &#40;&#41;ASSL ](https://docs.microsoft.com/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
+ L’instruction CREATe MEASURe ne peut être utilisée qu’à l’intérieur d’une définition de script MDX. consultez [MdxScript, élément &#40;&#41;ASSL ](/analysis-services/assl/objects/mdxscript-element-assl?view=asallproducts-allversions).  
   
- Vous pouvez également définir un membre calculé qui ne doit être utilisé que par une requête unique. Pour définir un membre calculé limité à une seule requête, utilisez la clause WITH de l'instruction SELECT. Pour plus d’informations, consultez [génération de mesures dans MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
+ Vous pouvez également définir un membre calculé qui ne doit être utilisé que par une requête unique. Pour définir un membre calculé limité à une seule requête, utilisez la clause WITH de l'instruction SELECT. Pour plus d’informations, consultez [génération de mesures dans MDX](/analysis-services/multidimensional-models/mdx/mdx-building-measures).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

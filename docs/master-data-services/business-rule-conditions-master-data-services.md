@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5d6894fa23743581be1b8c87f8dd4c9e5d7b799c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 66783e2c9f5e7fd0df0771d56c494d11de103ad5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88500805"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193685"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>Conditions de règle d'entreprise (Master Data Services)
 
@@ -43,8 +43,8 @@ ms.locfileid: "88500805"
 |**ne se termine pas par**|L’attribut sélectionné **ne se termine pas par** un attribut spécifique, une valeur d’attribut spécifique, ou est vide.<br /><br /> Cette condition est valide pour les valeurs de texte et de lien.|  
 |**contains**|L'attribut sélectionné **contient** un attribut spécifique, une valeur d'attribut spécifique, ou est vide.<br /><br /> Cette condition est valide pour les valeurs de texte et de lien.|  
 |**ne contient pas**|L’attribut sélectionné **ne contient pas** un attribut spécifique, une valeur d’attribut spécifique, ou est vide.<br /><br /> Cette condition est valide pour les valeurs de texte et de lien.|  
-|**contient le modèle**|L'attribut sélectionné **contient le modèle** d'un attribut spécifique, d'une valeur d'attribut spécifique, ou est vide. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.<br /><br /> Cette condition est valide pour les valeurs de texte et de lien.|  
-|**ne contient pas le modèle**|L’attribut sélectionné **ne contient pas le modèle** d’un attribut spécifique, une valeur d’attribut spécifique, ou est vide. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.<br /><br /> Cette condition est valide pour les valeurs de texte et de lien.|  
+|**contient le modèle**|L'attribut sélectionné **contient le modèle** d'un attribut spécifique, d'une valeur d'attribut spécifique, ou est vide. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](/dotnet/standard/base-types/regular-expression-language-quick-reference) dans MSDN Library.<br /><br /> Cette condition est valide pour les valeurs de texte et de lien.|  
+|**ne contient pas le modèle**|L’attribut sélectionné **ne contient pas le modèle** d’un attribut spécifique, une valeur d’attribut spécifique, ou est vide. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](/dotnet/standard/base-types/regular-expression-language-quick-reference) dans MSDN Library.<br /><br /> Cette condition est valide pour les valeurs de texte et de lien.|  
 |**contient le sous-ensemble**|L'attribut sélectionné **contient le sous-ensemble** d'un attribut spécifique ou d'une valeur d'attribut spécifique. Vous devez spécifier la position de départ pour la recherche (par exemple, 1 signifie que la recherche débute au premier caractère).<br /><br /> Cette condition est valide pour les valeurs de texte et de lien.|  
 |**ne contient pas le sous-ensemble**|L’attribut sélectionné **ne contient pas le sous-ensemble** d’un attribut spécifique ou d’une valeur d’attribut spécifique. Vous devez spécifier la position de départ pour la recherche (par exemple, 1 signifie que la recherche débute au premier caractère).<br /><br /> Cette condition est valide pour les valeurs de texte et de lien.|  
 |**a changé**|L'attribut sélectionné **a changé** depuis la dernière application des règles d'entreprise au membre. Vous devez spécifier le groupe de modification dont l'attribut est membre.<br /><br /> Pour plus d’informations sur les groupes de suivi des modifications, consultez [Ajouter des attributs à un groupe de suivi des modifications &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).<br /><br /> Cette condition est valide pour les valeurs de texte, nombre, date et lien.|  
@@ -59,5 +59,4 @@ ms.locfileid: "88500805"
  [Actions de règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)   
  [&#40;des règles d’entreprise Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  
-  
   

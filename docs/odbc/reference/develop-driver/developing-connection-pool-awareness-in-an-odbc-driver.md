@@ -1,6 +1,6 @@
 ---
 description: Développement de la reconnaissance des pools de connexions dans un pilote ODBC
-title: Développement de la reconnaissance des pools de connexions dans un pilote ODBC | Microsoft Docs
+title: Développement Connection-Pool de la sensibilisation dans un pilote ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 519a2b64f6a5330b8c8fde458323c6c900941025
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f22be001a7434c13158deae8677b8c7bcb2f0630
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476271"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192309"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Développement de la reconnaissance des pools de connexions dans un pilote ODBC
 Cette rubrique décrit en détail le développement d’un pilote ODBC qui contient des informations sur la façon dont le pilote doit fournir des services de regroupement de connexions.  
   
-## <a name="enabling-driver-aware-connection-pooling"></a>Activation du regroupement de connexions prenant en charge les pilotes  
+## <a name="enabling-driver-aware-connection-pooling"></a>Activation du regroupement de connexions Driver-Aware  
  Un pilote doit implémenter les fonctions SPI (Service Provider Interface) ODBC suivantes :  
   
 -   SQLSetConnectAttrForDbcInfo  
@@ -68,7 +68,7 @@ Cette rubrique décrit en détail le développement d’un pilote ODBC qui conti
 ## <a name="the-connection-rating"></a>L’évaluation de la connexion  
  Par rapport à l’établissement d’une nouvelle connexion, vous pouvez obtenir de meilleures performances en réinitialisant certaines informations de connexion (telles que la base de données) dans une connexion regroupée. Par conséquent, il est possible que vous ne souhaitiez pas que le nom de la base de données se trouve dans votre ensemble d’attributs de clé. Dans le cas contraire, vous pouvez avoir un pool distinct pour chaque base de données, ce qui peut ne pas être correct dans les applications de niveau intermédiaire, où les clients utilisent différentes chaînes de connexion.  
   
- Chaque fois que vous réutilisez une connexion qui a des incompatibilités d’attributs, vous devez réinitialiser les attributs incompatibles en fonction de la nouvelle demande de l’application, afin que la connexion retournée soit identique à celle de la demande d’application (voir la discussion de l’attribut SQL_ATTR_DBC_INFO_TOKEN dans la [fonction SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)). Toutefois, la réinitialisation de ces attributs peut réduire les performances. Par exemple, la réinitialisation d’une base de données nécessite un appel réseau vers le serveur. Par conséquent, réutilisez une connexion qui est parfaitement mise en correspondance, si celle-ci est disponible.  
+ Chaque fois que vous réutilisez une connexion qui a des incompatibilités d’attributs, vous devez réinitialiser les attributs incompatibles en fonction de la nouvelle demande de l’application, afin que la connexion retournée soit identique à celle de la demande d’application (voir la discussion de l’attribut SQL_ATTR_DBC_INFO_TOKEN dans la [fonction SQLSetConnectAttr](../syntax/sqlsetconnectattr-function.md)). Toutefois, la réinitialisation de ces attributs peut réduire les performances. Par exemple, la réinitialisation d’une base de données nécessite un appel réseau vers le serveur. Par conséquent, réutilisez une connexion qui est parfaitement mise en correspondance, si celle-ci est disponible.  
   
  Une fonction d’évaluation dans le pilote peut évaluer une connexion existante avec une nouvelle demande de connexion. Par exemple, la fonction Rating du pilote peut déterminer les éléments suivants :  
   

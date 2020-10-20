@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 76057ce89097efa4b54deea6080eb3a429707125
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f229e1605646a427e2326e5689486d1319b7b206
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449491"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194338"
 ---
 # <a name="installing-and-configuring"></a>Installation et configuration
-Pour télécharger le pilote ODBC Visual FoxPro, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).  
+Pour télécharger le pilote ODBC Visual FoxPro, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).  
   
  Cette section contient les rubriques suivantes pour vous aider à installer et à configurer le pilote ODBC Microsoft Visual FoxPro :  
   
@@ -38,4 +38,4 @@ Pour télécharger le pilote ODBC Visual FoxPro, consultez [le site de télécha
   
 -   [Configuration d’ODBC pour Visual FoxPro, boîte de dialogue](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)  
   
- Pour télécharger le pilote, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](https://go.microsoft.com/fwlink/?LinkId=121318).
+ Pour télécharger le pilote, consultez [le site de téléchargement du pilote ODBC Visual FoxPro](/previous-versions/visualstudio/foxpro/mt490121(v=msdn.10)).

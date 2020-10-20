@@ -21,12 +21,12 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f7d0f7afb3d432bdf0c266ee3dfb66813102709
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: 41147a1b5a644c5af7a155635c0e7c690f2e4916
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91809335"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196713"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -38,9 +38,8 @@ ms.locfileid: "91809335"
 |**name**|**sysname**|Nom du principal. Nom unique dans un serveur.|  
 |**principal_id**|**int**|Numéro d'identification du principal. Nom unique dans un serveur.|  
 |**sid**|**varbinary(85)**|SID (Security-IDentifier) du principal. S'il s'agit d'un principal Windows, correspond au SID Windows.|  
-|**type**|**char(1)**|Type de principal :<br /><br /> S = Nom de connexion SQL<br /><br /> U = Connexion Windows<br /><br /> G = groupe Windows<br /><br /> R = Rôle SQL Server<br /><br /> C = Connexion mappée sur un certificat<br /><br /> E = connexion externe à partir de Azure Active Directory<br /><br /> X = groupe externe du groupe Azure Active Directory ou des applications
-<br /><br /> K = Connexion mappée sur une clé asymétrique|  
-|**type_desc**|**nvarchar(60)**|Description du type de principal :<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
+|**type**|**char(1)**|Type de principal :<br /><br /> S = Nom de connexion SQL<br /><br /> U = Connexion Windows<br /><br /> G = groupe Windows<br /><br /> R = Rôle SQL Server<br /><br /> C = Connexion mappée sur un certificat<br /><br /> E = connexion externe à partir de Azure Active Directory<br /><br /> X = groupe externe du groupe Azure Active Directory ou des applications<br /><br /> K = Connexion mappée sur une clé asymétrique|  
+|**type_desc**|**nvarchar(60)**|Description du type de principal :<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> EXTERNAL_LOGIN<br /><br /> EXTERNAL_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = Connexion désactivée.|  
 |**create_date**|**datetime**|Heure de création du principal.|  
 |**modify_date**|**datetime**|Heure de dernière modification de la définition du principal.|  

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 893fdf2398788b318cd9f4f1e75ed833ea7bd4e8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f3e21ddbcf4d3599548a827e169f2c0d63f114e8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883859"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194421"
 ---
 # <a name="database-requirements-master-data-services"></a>Configuration requise pour la base de données (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "85883859"
 > [!NOTE]  
 >  Tout ordinateur sur lequel vous installez les composants de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] doit disposer d'une licence. Pour plus d'informations, reportez-vous au Contrat de Licence Utilisateur Final (CLUF).  
   
-## <a name="requirements"></a>Configuration requise  
+## <a name="requirements"></a>Spécifications  
  Avant de créer une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , assurez -vous que les conditions suivantes sont remplies.  
   
 ### <a name="sql-server-edition"></a>Édition SQL Server  
@@ -56,7 +56,7 @@ ms.locfileid: "85883859"
   
 -   Microsoft SQL Server 2008 R2 Developer x64 (64 bits)  
   
- Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
+ Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md). 
   
 ### <a name="operating-system"></a>Système d'exploitation  
  Pour plus d’informations sur les systèmes d’exploitation Windows pris en charge et la configuration requise pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -77,5 +77,4 @@ ms.locfileid: "85883859"
  [Base de données Master Data Services](../../master-data-services/master-data-services-database.md)   
  [Boîte de dialogue se connecter à une base de données Master Data Services](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
  [Assistant Création d’une base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
-  
   

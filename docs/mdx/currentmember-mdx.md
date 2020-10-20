@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e04dd1146bc55d8d68475770a9077fc8d962b56d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5778a8b1d56fa568fe97dba104c1b46da1a005cf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471871"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196043"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 
@@ -75,7 +75,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Le membre actuel change sur une hiérarchie utilisée sur un axe dans une requête. Par conséquent, le membre actuel sur d’autres hiérarchies de la même dimension qui ne sont pas utilisées sur un axe peut également changer ; ce comportement est appelé « auto-exist ». vous trouverez plus de détails dans les [concepts clés de MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Par exemple, la requête suivante illustre comment le membre actuel sur la hiérarchie Année civile de la dimension Date change avec le membre actuel sur la hiérarchie Calendrier, lorsque celle-ci est affichée sur l'axe des lignes :  
+ Le membre actuel change sur une hiérarchie utilisée sur un axe dans une requête. Par conséquent, le membre actuel sur d’autres hiérarchies de la même dimension qui ne sont pas utilisées sur un axe peut également changer ; ce comportement est appelé « auto-exist ». vous trouverez plus de détails dans les [concepts clés de MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services). Par exemple, la requête suivante illustre comment le membre actuel sur la hiérarchie Année civile de la dimension Date change avec le membre actuel sur la hiérarchie Calendrier, lorsque celle-ci est affichée sur l'axe des lignes :  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -119,5 +119,4 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

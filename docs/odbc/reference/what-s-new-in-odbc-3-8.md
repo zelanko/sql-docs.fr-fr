@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 324d7133a5d63b2b6322357be79daa0ce263e092
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6d5e24fff5ac5dff2860fcf0cc24bd6ed4ee1ccf
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88428801"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196163"
 ---
 # <a name="what39s-new-in-odbc-38"></a>Nouveautés de&#39;dans ODBC 3,8
 Windows 8 comprend une version mise à jour de ODBC 3,8. ODBC 3,8 dans Windows 8 comprend les fonctionnalités suivantes :  
@@ -25,9 +25,9 @@ Windows 8 comprend une version mise à jour de ODBC 3,8. ODBC 3,8 dans Windows 8
   
 -   [Exécution asynchrone (méthode de notification)](../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
--   [Traçage de l’accès aux données (Windows 8)](https://msdn.microsoft.com/library/windows/desktop/hh829624.aspx)  
+-   [Traçage de l’accès aux données (Windows 8)](/previous-versions/windows/desktop/hh829624(v=vs.85))  
   
--   Des commandes PowerShell ont été ajoutées pour vous aider à gérer les sources de données ODBC, les pilotes ODBC, le compteur de performance ODBC et le suivi d’accès aux données sur la ligne de commande.  Pour plus d’informations, consultez [Windows Data Access Components PowerShell Commands](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
+-   Des commandes PowerShell ont été ajoutées pour vous aider à gérer les sources de données ODBC, les pilotes ODBC, le compteur de performance ODBC et le suivi d’accès aux données sur la ligne de commande.  Pour plus d’informations, consultez [Windows Data Access Components PowerShell Commands](/previous-versions/windows/desktop/jj134064(v=vs.85)).  
   
  Windows 7 comprend une version mise à jour de ODBC, ODBC 3,8. ODBC 3,8 comprend les fonctionnalités suivantes :  
   

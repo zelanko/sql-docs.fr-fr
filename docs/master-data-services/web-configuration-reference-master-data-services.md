@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 34e3e849a86cb23c3974b32b9d3d8c0721601274
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7f4baf9f3ef626f5e2dcdc62092afaf1e586df33
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88456758"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196093"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Référence de la configuration Web (Master Data Services)
 
@@ -32,16 +32,16 @@ ms.locfileid: "88456758"
 |Élément de configuration|Description|  
 |---------------------------|-----------------|  
 |**masterDataServices**|Élément personnalisé. Connecte le service Web [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] à une base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .|  
-|**connectionStrings**|Élément ASP.NET. Pour plus d’informations, consultez [connectionStrings, élément (Schéma des paramètres ASP.NET)](https://go.microsoft.com/fwlink/?LinkId=178347) dans MSDN Library.|  
-|**System. Web**|Élément ASP.NET. Pour plus d’informations, consultez [system.web, élément (Schéma des paramètres ASP.NET)](https://go.microsoft.com/fwlink/?LinkId=178348) dans MSDN Library.|  
-|**du**|Élément .NET Framework. Pour plus d’informations, consultez l' [ \<startup> élément](https://go.microsoft.com/fwlink/?LinkId=178349) dans MSDN Library.|  
-|**Language**|Élément .NET Framework. Pour plus d’informations, consultez l' [ \<runtime> élément](https://go.microsoft.com/fwlink/?LinkId=178350) dans MSDN Library.|  
-|**system.codedom**|Élément .NET Framework. Pour plus d’informations, consultez l' [ \<system.codedom> élément](https://go.microsoft.com/fwlink/?LinkId=178351) dans MSDN Library.|  
-|**System. Web. extensions**|Élément ASP.NET. Pour plus d’informations, consultez [system.web.extensions, élément (Schéma des paramètres ASP.NET)](https://go.microsoft.com/fwlink/?LinkId=178352) dans MSDN Library.|  
-|**system.webServer**|Groupe de sections qui contient des éléments IIS. Pour plus d’informations, consultez [system.webServer, groupe de sections \[Schéma des paramètres IIS 7\]](https://go.microsoft.com/fwlink/?LinkId=178353) dans MSDN Library.|  
-|**system.serviceModel**|Élément WCF. Pour plus d’informations, consultez [\<system.serviceModel>](https://go.microsoft.com/fwlink/?LinkId=178354) dans MSDN Library.|  
-|**system.diagnostics**|Élément .NET Framework. Pour plus d’informations, consultez l' [ \<system.diagnostics> élément](https://go.microsoft.com/fwlink/?LinkId=178355) dans MSDN Library.|  
-|**Rend**|Élément ASP.NET. Pour plus d’informations, consultez [appSettings, élément (Schéma des paramètres généraux)](https://go.microsoft.com/fwlink/?LinkId=178356) dans MSDN Library.|  
+|**connectionStrings**|Élément ASP.NET. Pour plus d’informations, consultez [connectionStrings, élément (Schéma des paramètres ASP.NET)](/previous-versions/dotnet/netframework-4.0/bf7sd233(v=vs.100)) dans MSDN Library.|  
+|**System. Web**|Élément ASP.NET. Pour plus d’informations, consultez [system.web, élément (Schéma des paramètres ASP.NET)](/previous-versions/dotnet/netframework-4.0/dayb112d(v=vs.100)) dans MSDN Library.|  
+|**du**|Élément .NET Framework. Pour plus d’informations, consultez l' [ \<startup> élément](/dotnet/framework/configure-apps/file-schema/startup/startup-element) dans MSDN Library.|  
+|**Language**|Élément .NET Framework. Pour plus d’informations, consultez l' [ \<runtime> élément](/dotnet/framework/configure-apps/file-schema/runtime/runtime-element) dans MSDN Library.|  
+|**system.codedom**|Élément .NET Framework. Pour plus d’informations, consultez l' [ \<system.codedom> élément](/dotnet/framework/configure-apps/file-schema/compiler/system-codedom-element) dans MSDN Library.|  
+|**System. Web. extensions**|Élément ASP.NET. Pour plus d’informations, consultez [system.web.extensions, élément (Schéma des paramètres ASP.NET)](/previous-versions/dotnet/netframework-4.0/bb546044(v=vs.100)) dans MSDN Library.|  
+|**system.webServer**|Groupe de sections qui contient des éléments IIS. Pour plus d’informations, consultez [system.webServer, groupe de sections \[Schéma des paramètres IIS 7\]](/previous-versions/iis/settings-schema/ms689429(v=vs.90)) dans MSDN Library.|  
+|**system.serviceModel**|Élément WCF. Pour plus d’informations, consultez [\<system.serviceModel>](/dotnet/framework/configure-apps/file-schema/wcf/system-servicemodel) dans MSDN Library.|  
+|**system.diagnostics**|Élément .NET Framework. Pour plus d’informations, consultez l' [ \<system.diagnostics> élément](/dotnet/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element) dans MSDN Library.|  
+|**Rend**|Élément ASP.NET. Pour plus d’informations, consultez [appSettings, élément (Schéma des paramètres généraux)](/previous-versions/dotnet/netframework-4.0/ms228154(v=vs.100)) dans MSDN Library.|  
   
 ## <a name="masterdataservices-element"></a>Élément masterDataServices  
  L' **\<masterDataServices>** élément est un élément personnalisé qui permet de connecter un [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] service Web à une [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de données.  
@@ -72,5 +72,4 @@ ms.locfileid: "88456758"
    <instance virtualPath="/MDS" siteName="Contoso" connectionName="MDSDB" serviceName="MDS1" />  
 </masterDataServices>  
 ```  
-  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db3a0122abd82506f24464fb7131eeb557c596c8
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: b0f5c1ba58efb8fddcf5375d2a38fbf9f227f43f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87947122"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196867"
 ---
 # <a name="clr-integration-security"></a>Sécurité de l'intégration du CLR
 
@@ -47,10 +47,10 @@ ms.locfileid: "87947122"
  [Attributs de protection de l'hôte et programmation de l'intégration CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Fournit des informations à propos des valeurs d'attributs de protection de l'hôte (HPA) interdites dans les assemblys SAFE et EXTERNAL_ACCESS.  
   
- [Liens dans la sécurité d'intégration du CLR](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Liens dans la sécurité d'intégration du CLR]()  
  Décrit comment les segments de code utilisateur peuvent s'appeler dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Emprunt d'identité et sécurité de l'intégration du CLR](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Emprunt d'identité et sécurité de l'intégration du CLR](../data-access/impersonation-and-credentials-for-connections.md)  
  Discute la manière dont le code managé accède aux ressources externes à l'aide de l'emprunt d'identité.  
   
  Discute des problèmes qui surviennent lorsqu'une méthode managée appelle une méthode dans une classe contenue dans un autre assembly.  
@@ -60,5 +60,4 @@ ms.locfileid: "87947122"
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des assemblys d'intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
-  
   

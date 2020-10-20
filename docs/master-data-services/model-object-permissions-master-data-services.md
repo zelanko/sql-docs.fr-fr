@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9d96811924faed2d48c58a3fcc516536e63d7385
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 79fcb613f985f363631b1ce26c75228bb7ab5862
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480312"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193621"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Autorisations d'objet de modèle (Master Data Services)
 
@@ -41,7 +41,7 @@ ms.locfileid: "89480312"
  En général vous devez attribuer l’autorisation **ALL** à l’objet de modèle, puis attribuer explicitement l’autorisation aux objets en dessous.  
   
 ## <a name="external-resources"></a>Ressources externes  
- Billet de blog, [Améliorations de sécurité](https://docs.microsoft.com/archive/blogs/e7/improvements-to-autoplay), sur msdn.com.  
+ Billet de blog, [Améliorations de sécurité](/archive/blogs/e7/improvements-to-autoplay), sur msdn.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
@@ -49,5 +49,4 @@ ms.locfileid: "89480312"
  [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
  [Autorisations des membres de la hiérarchie &#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
-  
   

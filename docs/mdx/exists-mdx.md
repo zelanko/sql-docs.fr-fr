@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e025449634106003ea6e5d624f0d4a621ef3b93
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c879d9091c692cfa7a93490b34c70ad84fa81c4
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494912"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193971"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  Retourne l'ensemble des tuples du premier jeu spécifié qui coexistent avec un ou plusieurs tuples du deuxième jeu spécifié. Cette fonction effectue manuellement ce que l'auto-existence réalise de manière automatique. Pour plus d’informations sur la fonction auto Exists, consultez [concepts clés dans MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+  Retourne l'ensemble des tuples du premier jeu spécifié qui coexistent avec un ou plusieurs tuples du deuxième jeu spécifié. Cette fonction effectue manuellement ce que l'auto-existence réalise de manière automatique. Pour plus d’informations sur la fonction auto Exists, consultez [concepts clés dans MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
  Si le facultatif \<Measure Group Name> est fourni, la fonction retourne des tuples qui existent avec un ou plusieurs tuples du deuxième jeu et les tuples qui ont des lignes associées dans la table de faits du groupe de mesures spécifié.  
   
@@ -99,5 +99,4 @@ FROM [Adventure Works]
  [NonEmptyCrossjoin&#41;MDX &#40;](../mdx/nonemptycrossjoin-mdx.md)   
  [&#41;MDX &#40;non vide ](../mdx/nonempty-mdx.md)   
  [&#40;&#41;MDX de IsEmpty ](../mdx/isempty-mdx.md)  
-  
   

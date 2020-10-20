@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3d52751978dbe2973ecab9506094fad6a6f6c29a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b9ad1f77a8e023d55a34e64d6c40ad956b0dac92
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88471771"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193489"
 ---
 # <a name="operators-mdx-syntax"></a>Opérateurs (syntaxe MDX)
 
@@ -31,9 +31,9 @@ ms.locfileid: "88471771"
   
  MDX prend en charge les opérateurs répertoriés dans le tableau suivant :  
   
-|Si vous devez effectuer ce type d'opération|Utilisation|  
+|Si vous devez effectuer ce type d'opération|Utilisez|  
 |---------------------------------------|---------|  
-|Affecter une valeur à une variable ou associer une colonne de jeu de résultats à un alias|[Opérateurs d’assignation](../mdx/assignment-operators.md)|  
+|Affecter une valeur à une variable ou associer une colonne de jeu de résultats à un alias|[Opérateurs d'assignation](../mdx/assignment-operators.md)|  
 |Addition, soustraction, multiplication, division.|[Opérateurs arithmétiques](../mdx/arithmetic-operators.md)|  
 |Tester une condition telle que AND, OR, NOT et XOR.|[Opérateurs au niveau du bit](../mdx/bitwise-operators.md)|  
 |Comparer une valeur à une autre ou à une expression|[Opérateurs de comparaison](../mdx/comparison-operators.md)|  
@@ -83,7 +83,7 @@ ms.locfileid: "88471771"
 ### <a name="determining-results"></a>Détermination de résultats  
  Lorsque vous combinez des expressions simples pour constituer une expression complexe, les règles des opérateurs combinées à celles de priorité des types de données déterminent le type de données de la valeur obtenue.  
   
- Si le résultat est un caractère ou une valeur Unicode, les règles des opérateurs combinées à celles de la priorité de classement déterminent le classement du résultat. Pour plus d’informations sur les classements, consultez [langues et classements &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services).  
+ Si le résultat est un caractère ou une valeur Unicode, les règles des opérateurs combinées à celles de la priorité de classement déterminent le classement du résultat. Pour plus d’informations sur les classements, consultez [langues et classements &#40;Analysis Services&#41;](/analysis-services/languages-and-collations-analysis-services).  
   
  Il existe également des règles pour déterminer la précision, l’échelle et la longueur du résultat basées sur la précision, l’échelle et la longueur des expressions simples.  
   
@@ -101,5 +101,4 @@ ms.locfileid: "88471771"
 ## <a name="see-also"></a>Voir aussi  
  [Référence des opérateurs MDX &#40;&#41;MDX ](../mdx/mdx-operator-reference-mdx.md)   
  [Éléments de la syntaxe MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
-  
   

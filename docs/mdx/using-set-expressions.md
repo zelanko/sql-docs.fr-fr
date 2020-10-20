@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d47372f2e90f96aca99eb05bd6a2565c08567611
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ddcdee57bd708bc8eb4c3c07d8e86a70705e01e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88491383"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193465"
 ---
 # <a name="using-set-expressions"></a>Utilisation d'expressions de jeu
 
@@ -58,9 +58,8 @@ ms.locfileid: "88491383"
   
  se compose de trois tuples, chacun contient deux références explicites aux membres sur la hiérarchie Product Categories de la dimension Product et la hiérarchie de calendrier de la dimension Date.  
   
- Pour obtenir des exemples de fonctions qui retournent des jeux, consultez [utilisation de membres, de tuples et de jeux &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+ Pour obtenir des exemples de fonctions qui retournent des jeux, consultez [utilisation de membres, de tuples et de jeux &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
-  
   

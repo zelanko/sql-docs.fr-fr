@@ -11,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: d636d13512993d64a9abd88e61412f76790c7590
-ms.sourcegitcommit: 777704aefa7e574f4b7d62ad2a4c1b10ca1731ff
+ms.openlocfilehash: 4df36b6012cd6cbe0f2570bb678ebff02fa21dd5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/06/2020
-ms.locfileid: "87823751"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195803"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
@@ -110,12 +110,12 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
   
  Pour plus d’informations sur l’installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide du programme d’installation, consultez [Installer SQL Server 2016 avec l’Assistant Installation &#40;programme d’installation&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
- Pour plus d’informations sur l’installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide d’une invite de commandes, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Lorsque vous utilisez une invite de commandes, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est disponible comme paramètre de fonctionnalité.  
+ Pour plus d’informations sur l’installation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à l’aide d’une invite de commandes, consultez [Installer SQL Server 2016 à partir de l’invite de commandes](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Lorsque vous utilisez une invite de commandes, [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est disponible comme paramètre de fonctionnalité.  
   
  Pour obtenir une brève description des liens vers des informations supplémentaires sur les tâches de préinstallation, consultez [Installer Master Data Services](../master-data-services/install-windows/install-master-data-services.md).  
   
 ##  <a name="setting-up-the-database-and-website"></a><a name="SetUpWeb"></a> Configuration de la base de données et du site web  
- **Pour configurer la base de données et le site Web à l’aide de[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
+ **Pour configurer la base de données et le site Web à l’aide de [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]**  
 
  
 > [!WARNING]
@@ -130,7 +130,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
   
 3.  Sur la page **serveur de base de données** , spécifiez l’instance SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Ajoute la prise en charge de SQL Server Managed Instance. Définissez la valeur de **SQL Server instance** sur l’hôte de l’instance gérée. Par exemple : `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Ajoute la prise en charge de SQL Server Managed Instance. Définissez la valeur de **SQL Server instance** sur l’hôte de l’instance gérée. Par exemple : `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Sélectionnez le **type d’authentification** , puis cliquez sur **tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données à l’aide des informations d’identification pour le type d’authentification que vous avez sélectionné. Cliquez sur **Suivant**.
 
@@ -294,5 +294,4 @@ Pour plus d’informations sur les paramètres de la page Configuration Web, con
  [Application Web Data Manager maître](../master-data-services/master-data-manager-web-application.md)   
  [Page Configuration de la base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
  [Nouveautés de Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
-  
   

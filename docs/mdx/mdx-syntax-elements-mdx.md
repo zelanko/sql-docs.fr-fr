@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 10a9aa360a50b43324ae9e41b77dee6ce84baf60
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 27755806802e5238329b4a9ecb49e6a9f6ad5ce2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483891"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196939"
 ---
 # <a name="mdx-syntax-elements-mdx"></a>Éléments de la syntaxe MDX (MDX)
 
@@ -30,9 +30,8 @@ ms.locfileid: "88483891"
 |[Fonctions](../mdx/functions-mdx-syntax.md)|Les fonctions sont des éléments de syntaxe qui acceptent une ou plusieurs valeurs d'entrée (voire aucune) et retournent une valeur scalaire ou un objet. Les exemples incluent la fonction [Sum](../mdx/sum-mdx.md) pour l’ajout de plusieurs valeurs, la fonction [members](../mdx/members-set-mdx.md) pour retourner un jeu de membres à partir d’une dimension ou d’un niveau, et ainsi de suite.|  
 |[Commentaires](../mdx/comments-mdx-syntax.md)|Les commentaires sont des parties de texte insérées dans des instructions ou des scripts MDX afin d'expliquer le but d'une instruction. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] n’exécute pas de commentaires.|  
 |[Mots clés réservés](../mdx/reserved-keywords-mdx-syntax.md)|Les mots clés réservés sont des mots dont l'utilisation est réservée à MDX et qui ne doivent pas être utilisés comme nom d'objet dans des instructions MDX.|  
-|[Membres, tuples et jeux](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Les membres, tuples et jeux sont des concepts essentiels des données multidimensionnelles que vous devez comprendre avant de créer une requête MDX.|  
+|[Membres, tuples et jeux](/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)|Les membres, tuples et jeux sont des concepts essentiels des données multidimensionnelles que vous devez comprendre avant de créer une requête MDX.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence MDX &#40;Multidimensional Expressions&#41;](../mdx/multidimensional-expressions-mdx-reference.md)  
-  
   

@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d1712d109f7aa984e4b7b2b2a5512ce043869aad
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d8aa29715753cfb169d87df3a31230eeec9397f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483883"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193951"
 ---
 # <a name="mdx-data-definition---create-set"></a>Définition de données MDX - CREATE SET
 
@@ -50,9 +50,9 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
 ## <a name="remarks"></a>Notes  
  Un jeu nommé est un jeu de membres de dimension (ou une expression définissant un jeu) que vous créez pour le réutiliser. Par exemple, un jeu nommé vous permet de définir un jeu de membres de dimension constitué de l'ensemble des dix premiers magasins en termes de ventes. Cet ensemble peut être défini de manière statique ou au moyen d’une fonction comme [TopCount](../mdx/topcount-mdx.md). Ce jeu nommé peut ensuite être utilisé chaque fois que l'ensemble des 10 premiers magasins est nécessaire.  
   
- L’instruction CREATe SET crée un jeu nommé qui reste disponible tout au long de la session, et par conséquent, peut être utilisé dans plusieurs requêtes dans une session. Pour plus d’informations, consultez [création de membres calculés au niveau de la Session &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
+ L’instruction CREATe SET crée un jeu nommé qui reste disponible tout au long de la session, et par conséquent, peut être utilisé dans plusieurs requêtes dans une session. Pour plus d’informations, consultez [création d' Session-Scoped membres calculés &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- Vous pouvez également définir un jeu nommé pour une seule requête. Pour ce faire, utilisez la clause WITH dans l'instruction SELECT. Pour plus d’informations sur la clause WITH, consultez [création de jeux nommés d’étendue de requête &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
+ Vous pouvez également définir un jeu nommé pour une seule requête. Pour ce faire, utilisez la clause WITH dans l'instruction SELECT. Pour plus d’informations sur la clause WITH, consultez [création d' Query-Scoped jeux nommés &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
   
  La clause *set_expression* peut contenir toute fonction qui prend en charge la syntaxe MDX. Les jeux créés avec l'instruction CREATE SET qui ne spécifient pas la clause SESSION ont une étendue de session. Utilisez la clause WITH pour créer un jeu avec une étendue de requête.  
   
@@ -62,7 +62,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  Un jeu défini par l'utilisateur peut se produire avec l'une des étendues répertoriées dans le tableau ci-dessous.  
   
  Étendue de requête  
- La visibilité et la durée de vie du jeu sont limitées à la requête. Le jeu est défini dans une requête distincte. L'étendue de requête remplace l'étendue de session. Pour plus d’informations, consultez [création de jeux nommés d’étendue de requête &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
+ La visibilité et la durée de vie du jeu sont limitées à la requête. Le jeu est défini dans une requête distincte. L'étendue de requête remplace l'étendue de session. Pour plus d’informations, consultez [création d' Query-Scoped jeux nommés &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets).  
   
  Étendue de session  
  La visibilité et la durée de vie du jeu sont limitées à la session dans laquelle il est créé. (La durée de vie est inférieure à la durée de la session si une instruction DROP SET est émise sur le jeu.) L’instruction CREATe SET crée un jeu avec une étendue de session. Utilisez la clause WITH pour créer un jeu avec une étendue de requête.  
@@ -103,5 +103,4 @@ SELECT [Core Products] ON 0
 ## <a name="see-also"></a>Voir aussi  
  [Instruction DROP SET &#40;&#41;MDX ](../mdx/mdx-data-definition-drop-set.md)   
  [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

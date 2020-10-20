@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 759feb8b64a06e6238d338d4d619dd1433819dda
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7929238ecb672dd6c537772dafb15422ca52bce3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88387535"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196053"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -47,7 +47,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  (x2, y*n*),..., (x*n*, Y1), (x*n*, Y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  Si les jeux dans la jointure croisée se composent de tuples issus de différentes hiérarchies d'attribut au sein de la même dimension, cette fonction retourne uniquement les tuples réellement existants. Pour plus d’informations, consultez [concepts clés dans MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
+>  Si les jeux dans la jointure croisée se composent de tuples issus de différentes hiérarchies d'attribut au sein de la même dimension, cette fonction retourne uniquement les tuples réellement existants. Pour plus d’informations, consultez [concepts clés dans MDX &#40;Analysis Services&#41;](/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
 ## <a name="examples"></a>Exemples  
  La requête suivante affiche des exemples simples de l'utilisation de la fonction Crossjoin sur les axes de colonnes et de lignes d'une requête :  
@@ -130,5 +130,4 @@ WHERE (Measures.[Internet Sales Amount],
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
-  
   

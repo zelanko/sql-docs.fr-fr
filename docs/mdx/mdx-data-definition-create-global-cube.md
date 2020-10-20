@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1bc5a787f6bc1b214aa60ef54b5b8172f07c11a5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a041e8dac7459e1f0322bd8492b5e5737ae80691
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88494862"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195635"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>Définition de données MDX - CREATE GLOBAL CUBE
 
 
-  Crée et remplit un cube persistant localement, en fonction d'un sous-cube issu d'un cube sur le serveur. Aucune connexion au serveur n'est nécessaire pour se connecter au cube conservé localement. Pour plus d’informations sur les cubes locaux, consultez [cubes locaux &#40;Analysis Services-&#41;de données multidimensionnelles ](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
+  Crée et remplit un cube persistant localement, en fonction d'un sous-cube issu d'un cube sur le serveur. Aucune connexion au serveur n'est nécessaire pour se connecter au cube conservé localement. Pour plus d’informations sur les cubes locaux, consultez [cubes locaux &#40;Analysis Services-&#41;de données multidimensionnelles ](/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -200,5 +200,4 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
 ## <a name="see-also"></a>Voir aussi  
  [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)   
  [Instruction CREATe SESSION CUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
-  
   

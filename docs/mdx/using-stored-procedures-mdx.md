@@ -9,17 +9,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2c9bd8f20ffae61656dd30f139ce12665ff57f4e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 095a4ab1b3acd4ec5a238f19c27446b7cebe27b2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88476971"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196928"
 ---
 # <a name="using-stored-procedures-mdx"></a>Utilisation de procédures stockées (MDX)
 
 
-  Vous pouvez étendre les fonctionnalités de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et MDX (Multidimensional Expressions) en écrivant des fonctions définies par l'utilisateur ou des procédures stockées .NET. Pour plus d’informations, consultez [ADOMD.NET Server Programming](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
+  Vous pouvez étendre les fonctionnalités de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et MDX (Multidimensional Expressions) en écrivant des fonctions définies par l'utilisateur ou des procédures stockées .NET. Pour plus d’informations, consultez [ADOMD.NET Server Programming](/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
  Lorsque vous référencez ou appelez une procédure stockée, vous spécifiez le nom de la fonction, suivi de parenthèses. Dans les parenthèses, vous pouvez spécifier des expressions appelées arguments qui fournissent les données à transmettre aux paramètres. Lorsque vous appelez une fonction, vous devez fournir des valeurs d'arguments pour tous les paramètres, en respectant l'ordre dans lequel les paramètres sont définis dans la fonction définie par l'utilisateur.  
   
@@ -43,5 +43,4 @@ WHERE [Measures].[Reseller Freight Cost]
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;syntaxe MDX&#41;](../mdx/functions-mdx-syntax.md)  
-  
   

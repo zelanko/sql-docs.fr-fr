@@ -9,12 +9,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e0317d67b62efb84a0447543ca59836da6717f33
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d2a604bd27145b839476c75ea443d680e78c464
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88483902"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196985"
 ---
 # <a name="mdx-data-definition---create-member"></a>Définition de données MDX - CREATE MEMBER
 
@@ -48,9 +48,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  Expression scalaire valide qui définit la valeur de la propriété de membre calculé.  
   
 ## <a name="remarks"></a>Notes  
- L'instruction CREATE MEMBER définit les membres calculés disponibles tout au long de la session, et qui peuvent par conséquent être utilisés dans plusieurs requêtes au cours de la session. Pour plus d’informations, consultez [création de membres calculés au niveau de la Session &#40;&#41;MDX ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
+ L'instruction CREATE MEMBER définit les membres calculés disponibles tout au long de la session, et qui peuvent par conséquent être utilisés dans plusieurs requêtes au cours de la session. Pour plus d’informations, consultez [création d' Session-Scoped membres calculés &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members).  
   
- Vous pouvez également définir un membre calculé qui ne doit être utilisé que par une requête unique. Pour définir un membre calculé limité à une seule requête, utilisez la clause WITH de l'instruction SELECT. Pour plus d’informations, consultez [création de membres calculés d’étendue de requête &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ Vous pouvez également définir un membre calculé qui ne doit être utilisé que par une requête unique. Pour définir un membre calculé limité à une seule requête, utilisez la clause WITH de l'instruction SELECT. Pour plus d’informations, consultez [création d' Query-Scoped membres calculés &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  *Property_name* pouvez faire référence à des propriétés de membre calculées standard ou facultatives. Les propriétés de membre standard sont répertoriées plus loin dans cette rubrique. Les membres calculés créés avec CREATe MEMBER sans valeur de **session** ont une portée de session. En outre, les chaînes contenues dans les définitions de membre calculé sont délimitées par des guillemets doubles. Ce comportement diffère de celui de la méthode définie par OLE DB, qui spécifie que les chaînes doivent être délimitées par des guillemets simples.  
   
@@ -62,7 +62,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  Un membre calculé peut se produire au s'in d'une des portées répertoriées dans le tableau suivant.  
   
  Étendue de requête  
- La visibilité et la durée de vie du membre calculé sont limitées à la requête. Le membre calculé est défini dans une requête particulière. L'étendue de requête remplace l'étendue de session. Pour plus d’informations, consultez [création de membres calculés d’étendue de requête &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
+ La visibilité et la durée de vie du membre calculé sont limitées à la requête. Le membre calculé est défini dans une requête particulière. L'étendue de requête remplace l'étendue de session. Pour plus d’informations, consultez [création d' Query-Scoped membres calculés &#40;&#41;MDX ](/analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members).  
   
  Étendue de session  
  La visibilité et la durée de vie du membre calculé sont limitées à la session dans laquelle il a été créé. (La durée de vie est inférieure à la durée de la session si une instruction de suppression de membre est émise sur le membre calculé.) L’instruction CREATe MEMBER crée un membre calculé avec une étendue de session.  
@@ -124,5 +124,4 @@ WHERE ProfitRatio
  [Instruction DROP MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Instruction UPDATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
  [Instructions de définition de données MDX &#40;&#41;MDX ](../mdx/mdx-data-definition-statements-mdx.md)  
-  
   

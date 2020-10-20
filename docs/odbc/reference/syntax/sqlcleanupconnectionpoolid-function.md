@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 12046405d10c41796b8ad989f746aaac242f430d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 20ad05559aa172ff7e8937359bad93f85347a92a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88448839"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193444"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID, fonction
 **Conformité**  
  Version introduite : ODBC 3,81 conforme aux normes : ODBC  
   
  **Résumé**  
- **SQLCleanupConnectionPoolID** informe un pilote qu’un ID de pool a expiré. Un ID de pool peut expirer chaque fois que toutes les connexions d’un pool associé à cet ID de pool ont expiré. Pour plus d’informations sur le délai d’expiration [de la connexion, consultez regroupement dans les composants d’accès aux données Microsoft](https://msdn.microsoft.com/library/ms810829.aspx) .  
+ **SQLCleanupConnectionPoolID** informe un pilote qu’un ID de pool a expiré. Un ID de pool peut expirer chaque fois que toutes les connexions d’un pool associé à cet ID de pool ont expiré. Pour plus d’informations sur le délai d’expiration [de la connexion, consultez regroupement dans les composants d’accès aux données Microsoft](/previous-versions/ms810829(v=msdn.10)) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
