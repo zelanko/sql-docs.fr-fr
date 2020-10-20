@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c1595b8212f5232155d77c3dc82ab1393a397b6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5b4e64c2d7ada0db923f1aa623576e7b2994d8e6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484478"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194701"
 ---
 # <a name="connect-to-the-teradata-source"></a>Connexion à la source Teradata
 
@@ -31,7 +31,7 @@ La source utilise le gestionnaire de connexions Teradata pour se connecter à la
 
 Vous pouvez consigner les appels que la source Teradata effectue vers l'API Teradata Parallel Transporter (TPT). Pour cela, activez la journalisation des packages, puis sélectionnez l'événement **Diagnostic** au niveau du package.
 
-Vous pouvez consigner les appels ODBC (Open Database Connectivity) que la source Teradata effectue vers le pilote ODBC Teradata en activant la trace du gestionnaire de pilotes ODBC. Pour plus d’informations, voir [Comment générer une trace ODBC avec l'administrateur de source de données ODBC](https://docs.microsoft.com/sql/odbc/admin/setting-tracing-options).
+Vous pouvez consigner les appels ODBC (Open Database Connectivity) que la source Teradata effectue vers le pilote ODBC Teradata en activant la trace du gestionnaire de pilotes ODBC. Pour plus d’informations, voir [Comment générer une trace ODBC avec l'administrateur de source de données ODBC](../../odbc/admin/setting-tracing-options.md).
 
 ## <a name="parallelism"></a>Parallélisme
 

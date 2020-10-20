@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 800c3e0b8af863cd7947e6847d3c8fe2e1ccab44
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 12d70dc722250d33de52bf8d1f13d1ab06083108
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392115"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194765"
 ---
 # <a name="odbc-source"></a>Source ODBC
 
@@ -51,7 +51,7 @@ ms.locfileid: "88392115"
   
 -   Colonnes de données de sortie standard.  
   
- Selon le comportement paramétré pour les erreurs, la source ODBC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur. Pour plus d’informations, consultez [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
+ Selon le comportement paramétré pour les erreurs, la source ODBC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur. Pour plus d’informations, consultez [Éditeur de destination ODBC &#40;page Gestionnaire de connexions&#41;](./odbc-destination.md).  
   
 ## <a name="data-type-support"></a>Prise en charge du type de données  
  Pour plus d’informations sur les types de données pris en charge par la source ODBC, consultez le Connecteur pour Open Database Connectivity (ODBC).  
@@ -195,5 +195,4 @@ ms.locfileid: "88392115"
   
 #### <a name="redirect-flow"></a>Rediriger le flux  
  La ligne qui provoque l'erreur ou la troncation est dirigée vers la sortie d'erreur de la source ODBC.  
-  
   

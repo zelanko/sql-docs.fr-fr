@@ -21,12 +21,12 @@ ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be188a87a06a91467a16862ea0a0d572e4f71b93
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: e3662722ae800aa078fe5ba58567d2c55efbb613
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227403"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92187548"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 
@@ -51,12 +51,13 @@ ms.locfileid: "91227403"
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-Simple CASE expression:   
+--Simple CASE expression:   
 CASE input_expression   
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
 END   
-Searched CASE expression:  
+
+--Searched CASE expression:  
 CASE  
      WHEN Boolean_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
@@ -197,7 +198,7 @@ SELECT BusinessEntityID, LastName, TerritoryName, CountryRegionName
 FROM Sales.vSalesPerson  
 WHERE TerritoryName IS NOT NULL  
 ORDER BY CASE CountryRegionName WHEN 'United States' THEN TerritoryName  
-         ELSE CountryRegionName END; 
+         ELSE CountryRegionName END;  
 ```  
   
 ### <a name="d-using-case-in-an-update-statement"></a>D. Utilisation de CASE dans une instruction UPDATE  
@@ -215,13 +216,13 @@ SET VacationHours =
     )  
 OUTPUT Deleted.BusinessEntityID, Deleted.VacationHours AS BeforeValue,   
        Inserted.VacationHours AS AfterValue  
-WHERE SalariedFlag = 0;  
+WHERE SalariedFlag = 0;   
 ```  
   
 ### <a name="e-using-case-in-a-set-statement"></a>E. Utilisation de CASE dans une instruction SET  
  L'exemple suivant utilise l'expression CASE dans une instruction SET au sein de la fonction table `dbo.GetContactInfo`. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], toutes les données relatives aux personnes sont stockées dans la table `Person.Person`. Par exemple, la personne peut être un employé, un représentant du fournisseur ou un client. La fonction retourne le prénom et le nom d’un `BusinessEntityID` donné, ainsi que le type de contact correspondant à cette personne. L’expression CASE dans l’instruction SET détermine la valeur à afficher pour la colonne `ContactType` en fonction de l’existence de la colonne `BusinessEntityID` dans les tables `Employee`, `Vendor` ou `Customer`.  
   
-```sql   
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FUNCTION dbo.GetContactInformation(@BusinessEntityID INT)  
@@ -287,13 +288,13 @@ SELECT BusinessEntityID, FirstName, LastName, ContactType
 FROM dbo.GetContactInformation(2200);  
 GO  
 SELECT BusinessEntityID, FirstName, LastName, ContactType  
-FROM dbo.GetContactInformation(5);
+FROM dbo.GetContactInformation(5);  
 ```  
   
 ### <a name="f-using-case-in-a-having-clause"></a>F. Utilisation de CASE dans une clause HAVING  
  L'exemple suivant utilise l'expression CASE dans une clause HAVING pour restreindre les lignes retournées par l'instruction SELECT. L’instruction retourne le taux horaire maximal de chaque poste indiqué dans la table `HumanResources.Employee`. La clause HAVING restreint les fonctions aux hommes ayant un taux de salaire maximal supérieur à 40 dollars ou aux femmes ayant un taux de salaire maximal supérieur à 42 dollars.  
   
-```sql  
+```sql 
 USE AdventureWorks2012;  
 GO  
 SELECT JobTitle, MAX(ph1.Rate)AS MaximumRate  
@@ -306,7 +307,7 @@ HAVING (MAX(CASE WHEN Gender = 'M'
      OR MAX(CASE WHEN Gender  = 'F'   
         THEN ph1.Rate    
         ELSE NULL END) > 42.00)  
-ORDER BY MaximumRate DESC; 
+ORDER BY MaximumRate DESC;  
 ```  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -333,7 +334,7 @@ ORDER BY ProductKey;
 ### <a name="h-using-case-in-an-update-statement"></a>H. Utilisation de CASE dans une instruction UPDATE  
  L'exemple suivant utilise l'expression CASE dans une instruction UPDATE afin de déterminer la valeur définie pour la colonne `VacationHours` des employés pour lesquels `SalariedFlag` a la valeur 0. En soustrayant 10 heures des résultats de `VacationHours` dans une valeur négative, `VacationHours` augmente de 40 heures ; sinon, `VacationHours` augmente de 20 heures.  
   
-```sql  
+```sql 
 -- Uses AdventureWorks   
   
 UPDATE dbo.DimEmployee  

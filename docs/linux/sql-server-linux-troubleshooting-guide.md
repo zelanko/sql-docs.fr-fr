@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.openlocfilehash: 99ac4b9fbd0ce616cebc707026eff1d5eb15895f
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 144da58b008e79e368e3505b7aebb2cb8e4d7035
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088741"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115796"
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Détecter un problème sur SQL Server sur Linux
 
@@ -42,11 +42,11 @@ Si vous avez des difficultés à vous connecter à votre SQL Server Linux, vous 
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > Une exception à cette technique est associée aux machines virtuelles Azure. Pour les machines virtuelles Azure, [recherchez l’adresse IP publique de la machine virtuelle dans la Portail Azure](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
+   > Une exception à cette technique est associée aux machines virtuelles Azure. Pour les machines virtuelles Azure, [recherchez l’adresse IP publique de la machine virtuelle dans la Portail Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect).
 
 - Le cas échéant, vérifiez que vous avez ouvert le port SQL Server (par défaut 1433) sur le pare-feu.
 
-- Pour les machines virtuelles Azure, vérifiez que vous disposez d’une [règle de groupe de sécurité réseau pour le port SQL Server par défaut](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
+- Pour les machines virtuelles Azure, vérifiez que vous disposez d’une [règle de groupe de sécurité réseau pour le port SQL Server par défaut](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote).
 
 - Vérifiez que le nom d’utilisateur et le mot de passe ne contiennent aucune faute de frappe ni d’espace supplémentaire ni de casse incorrecte.
 
@@ -90,7 +90,7 @@ Vous pouvez arrêter ou redémarrer le service SQL Server en fonction des besoin
    ```
 
 > [!TIP]
-> Pour plus de conseils sur la résolution des problèmes liés à Docker, consultez [Résolution des problèmes de conteneurs Docker SQL Server](sql-server-linux-configure-docker.md#troubleshooting).
+> Pour plus de conseils sur la résolution des problèmes liés à Docker, consultez [Résolution des problèmes de conteneurs Docker SQL Server](./sql-server-linux-docker-container-troubleshooting.md).
 
 ## <a name="access-the-log-files"></a>Accéder aux fichiers journaux
    
@@ -109,7 +109,7 @@ Si vous préférez, vous pouvez également convertir les fichiers au format UTF-
    ```
 ## <a name="extended-events"></a>Événements étendus
 
-Les événements étendus peuvent être interrogés à l’aide d’une commande SQL.  Plus d’informations sur les événements étendus peuvent être obtenues [ici](https://technet.microsoft.com/library/bb630282.aspx) :
+Les événements étendus peuvent être interrogés à l’aide d’une commande SQL.  Plus d’informations sur les événements étendus peuvent être obtenues [ici](../relational-databases/extended-events/extended-events.md) :
 
 ## <a name="crash-dumps"></a>Vidages sur incident 
 
@@ -197,7 +197,7 @@ De nombreux facteurs affectent les performances, notamment la conception de base
 
 - [Magasin de requêtes](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [Vues de gestion dynamique système (DMV)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [Tableau de bord des performances dans SQL Server Management Studio](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)
+- [Tableau de bord des performances dans SQL Server Management Studio](/archive/blogs/sql_server_team/new-in-ssms-performance-dashboard-built-in)
 
 ## <a name="common-issues"></a>Problèmes courants
 

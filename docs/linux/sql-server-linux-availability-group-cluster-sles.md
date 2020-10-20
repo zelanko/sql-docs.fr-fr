@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: efa93b1d85e0aec5be7ea62ce76cb0270c68178f
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: f353230ecedbec6e30347a6999fabc706c9b09c8
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91784871"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081718"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer un cluster SLES pour le groupe de disponibilité SQL Server
 
@@ -320,7 +320,7 @@ La contrainte de colocalisation a une contrainte de classement implicite. Elle d
 Pour empêcher l’adresse IP de pointer temporairement vers le nœud avec le secondaire antérieur au basculement, ajoutez une contrainte de classement. Pour ajouter une contrainte de classement, exécutez la commande suivante sur un nœud : 
 
 ```bash
-crm crm configure \
+sudo crm configure \
    order ag_first inf: ms-ag_cluster:promote admin_addr:start
 ```
 

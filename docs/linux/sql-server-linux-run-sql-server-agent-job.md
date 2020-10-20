@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 49d8dab49fef03b3bf06269ef4397656dfa888e3
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e7cc33b3f01ae9562f1d9fb1a84830df7a807c9b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088819"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115829"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>Créer et exécuter des tâches SQL Server Agent sur Linux
 
@@ -39,7 +39,7 @@ Pour exécuter ce didacticiel, vous devez réunir les conditions préalables sui
 Les conditions préalables suivantes sont facultatives :
 
 * Machine Windows avec SSMS :
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) pour les étapes SSMS facultatives.
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) pour les étapes SSMS facultatives.
 
 ## <a name="enable-sql-server-agent"></a>Activer SQL Server Agent
 
@@ -81,7 +81,7 @@ Suivez les étapes suivantes pour créer un exemple de base de données nommé *
 Les tâches suivantes permettent de créer une tâche SQL Server Agent sur Linux avec les commandes Transact-SQL. La tâche exécute une sauvegarde quotidienne de l’exemple de base de données **SampleDB**.
 
 > [!TIP]
-> Vous pouvez utiliser tout client T-SQL pour exécuter ces commandes. Par exemple, sur Linux, vous pouvez utiliser [sqlcmd](sql-server-linux-setup-tools.md) ou [Visual Studio Code](sql-server-linux-develop-use-vscode.md). À partir de Windows Server distant, vous pouvez également exécuter des requêtes dans SQL Server Management Studio (SSMS) ou utiliser l’interface IU pour la gestion des tâches, décrite dans la section suivante.
+> Vous pouvez utiliser tout client T-SQL pour exécuter ces commandes. Par exemple, sur Linux, vous pouvez utiliser [sqlcmd](sql-server-linux-setup-tools.md) ou [Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md). À partir de Windows Server distant, vous pouvez également exécuter des requêtes dans SQL Server Management Studio (SSMS) ou utiliser l’interface IU pour la gestion des tâches, décrite dans la section suivante.
 
 1. Utilisez [sp_add_job](../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md) pour créer une tâche nommée `Daily SampleDB Backup`.
 
@@ -200,4 +200,4 @@ Dans ce didacticiel, vous avez appris à :
 Par la suite, explorez d’autres fonctionnalités pour créer et gérer des tâches :
 
 > [!div class="nextstepaction"]
->[Documentation SQL Server Agent](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent)
+>[Documentation SQL Server Agent](../ssms/agent/sql-server-agent.md)

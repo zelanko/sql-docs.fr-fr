@@ -1,5 +1,6 @@
 ---
-title: Sécurité (Master Data Services) | Microsoft Docs
+title: Sécurité
+description: En savoir plus sur la sécurité dans Master Data Services, notamment les types d’utilisateurs, la définition de la sécurité, la sécurité dans le complément pour Excel et les tâches associées.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 8bb6507ef56537561847eeaee017d81c65292085
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9501014be6fdd311c37fd8f446ae01f0f2939f90
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257826"
 ---
 # <a name="security-master-data-services"></a>Sécurité (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilisez la sécurité dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]pour vous assurer que les utilisateurs ont accès aux données de référence spécifiques nécessaires pour réaliser leur travail, et les empêcher d'accéder aux données qui ne doivent pas leur être accessibles.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68085670"
   
 -   (Facultatif) [Autorisations des membres de la hiérarchie](../master-data-services/hierarchy-member-permissions-master-data-services.md), qui déterminent les membres auxquels un utilisateur peut accéder, ainsi que le type d’accès (Lire, Mettre à jour et Supprimer) dont l’utilisateur dispose sur ces membres.  
   
- Lorsque vous affectez des autorisations à des attributs et des membres, ces autorisations se croisent et des règles déterminent leur ordre de priorité. Pour plus d’informations, consultez [How Permissions Are Determined &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
+ Lorsque vous affectez des autorisations à des attributs et des membres, ces autorisations se croisent et des règles déterminent leur ordre de priorité. Pour plus d’informations, consultez [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md).  
   
 ## <a name="security-in-the-add-in-for-excel"></a>Sécurité du complément pour Excel  
  La sécurité définie dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] s'applique également à [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]. Les utilisateurs peuvent uniquement afficher et utiliser les données pour lesquelles ils ont l'autorisation nécessaire. Les administrateurs peuvent effectuer les tâches d'administration.  

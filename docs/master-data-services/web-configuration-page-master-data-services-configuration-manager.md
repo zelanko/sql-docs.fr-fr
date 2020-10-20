@@ -1,5 +1,6 @@
 ---
-title: Page Configuration web (Gestionnaire de configuration Master Data Services) | Microsoft Docs
+description: Page Configuration Web (Gestionnaire de configuration des services de données de référence)
+title: Page Configuration Web
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ f1_keywords:
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fc98260f9887652717edd4c67787089844826ad4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8599cc75e33f34a4becfac13de3e1462954c5b4e
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92258047"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Page Configuration Web (Gestionnaire de configuration des services de données de référence)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Utilisez la page **Configuration web** pour configurer un site web et une application web. Vous pouvez également activer Data Quality Services.  
   
@@ -29,8 +30,8 @@ ms.locfileid: "68017281"
   
 |Nom du contrôle|Description|  
 |------------------|-----------------|  
-|**Site Web**|Créez un site web, sélectionnez le site Web par défaut, ou sélectionnez un autre site disponibles (si répertorié). Cette liste affiche les sites Web définis dans les services Internet (IIS) sur l'ordinateur local. Lorsque vous créez un site web, une application Web est automatiquement créée. Lorsque vous sélectionnez une valeur par défaut ou un site existant différent, vous devez créer une application manuellement.|  
-|**application Web**|Sélectionnez une application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour la configuration. Cette zone affiche uniquement les applications Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] du site Web sélectionné.<br /><br /> Si rien n’est affiché, cliquez sur **Créer** pour créer un site web.|  
+|**Site web**|Créez un site web, sélectionnez le site Web par défaut, ou sélectionnez un autre site disponibles (si répertorié). Cette liste affiche les sites Web définis dans les services Internet (IIS) sur l'ordinateur local. Lorsque vous créez un site web, une application Web est automatiquement créée. Lorsque vous sélectionnez une valeur par défaut ou un site existant différent, vous devez créer une application manuellement.|  
+|**Application web**|Sélectionnez une application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour la configuration. Cette zone affiche uniquement les applications Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] du site Web sélectionné.<br /><br /> Si rien n’est affiché, cliquez sur **Créer** pour créer un site web.|  
 |**Créer**|Ouvre la boîte de dialogue **Créer une application Web** dans laquelle vous créez une application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sur le site sélectionné. Ce bouton est activé uniquement lorsque le site sélectionné n'a aucune application Web racine configurée comme application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] .|  
   
 ## <a name="associate-application-with-database"></a>Associer une base de données  à une application  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ea6e8b6a3628fb0f8d93aaa6b8775999b0481266
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cbbd57a1f195b3e2363357e653ff77129bb9f224
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495642"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195186"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
 
@@ -261,7 +261,7 @@ Dans la page **Aperçu**, vérifiez que la liste des colonnes et que les exemple
  **Actualiser**  
  Cliquez sur le bouton **Actualiser**pour visualiser l’effet obtenu en modifiant le nombre de lignes à ignorer. Il ne devient visible qu'après avoir changé d'autres options de connexion.  
  
-Pour plus d’informations sur la page **Aperçu**, consultez la page [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md) dans les informations de référence sur Integration Services.
+Pour plus d’informations sur la page **Aperçu**, consultez la page [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../connection-manager/flat-file-connection-manager.md) dans les informations de référence sur Integration Services.
 
 ## <a name="connect-to-a-flat-file-destination"></a>Se connecter à une destination de fichier plat
 Pour une destination de fichier plat, il n’existe qu’une seule page d’options, comme illustré dans la capture d’écran suivante. Accédez au fichier et sélectionnez-le, vérifiez ensuite les paramètres de la section **Format**.
@@ -303,4 +303,3 @@ Pour une destination de fichier plat, il n’existe qu’une seule page d’opti
 ## <a name="see-also"></a>Voir aussi
 [Choisir une source de données](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
-

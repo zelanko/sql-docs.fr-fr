@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cf9cc8d20f6cf8c380524806700373229cf22995
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 1956aeb1fc5895eea47ef46eb093a1eea435078b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480880"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196435"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
 
@@ -139,7 +139,7 @@ ms.locfileid: "89480880"
  Si vous devez créer plusieurs agrégations dans un flux de données, songez à créer plusieurs agrégations qui utilisent une transformation d'agrégation au lieu de créer plusieurs transformations. Cette approche améliore les performances lorsqu'une agrégation est un sous-ensemble d'une autre agrégation, car la transformation peut optimiser le stockage interne et analyser une seule fois les données entrantes. Par exemple, si une agrégation utilise une clause GROUP BY et une agrégation AVG, le fait de les combiner en une seule transformation peut améliorer les performances. Toutefois, du fait que la réalisation de plusieurs agrégations au sein d'une transformation d'agrégation sérialise les opérations d'agrégation, il est possible que les performances ne s'améliorent pas lorsque plusieurs agrégations doivent être calculées indépendamment.  
   
 #### <a name="fuzzy-lookup-and-fuzzy-grouping-transformations"></a>Transformations de recherche floue et de regroupement probable  
- Pour plus d'informations sur l'optimisation des performances des transformations de recherche floue et de regroupement probable, consultez le livre blanc [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=96604).  
+ Pour plus d'informations sur l'optimisation des performances des transformations de recherche floue et de regroupement probable, consultez le livre blanc [Présentation des transformations Fuzzy Lookup (recherche approximative) et Fuzzy Grouping (regroupement approximatif) dans les services DTS (Data Transformation Services) de SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/ms345128(v=sql.90)).  
   
 #### <a name="lookup-transformation"></a>Transformation de recherche  
  Réduisez la taille des données de référence en mémoire en entrant une instruction SELECT qui recherche uniquement les colonnes dont vous avez besoin. Cette approche est plus performante que la sélection d'une table ou d'une vue entière qui retourne une quantité importante de données inutiles.  
@@ -175,15 +175,15 @@ ms.locfileid: "89480880"
 ## <a name="related-content"></a>Contenu associé  
  **Articles et publications de blog**  
   
--   Article technique, [SQL Server 2005 Integration Services : une stratégie pour de meilleures performances](https://go.microsoft.com/fwlink/?LinkId=98899), sur le site technet.microsoft.com  
+-   Article technique, [SQL Server 2005 Integration Services : une stratégie pour de meilleures performances](/previous-versions/sql/sql-server-2005/administrator/cc966530(v=technet.10)), sur le site technet.microsoft.com  
   
--   Article technique, [Integration Services : techniques de réglage des performances](https://go.microsoft.com/fwlink/?LinkId=98900), sur le site technet.microsoft.com  
+-   Article technique, [Integration Services : techniques de réglage des performances](/previous-versions/sql/sql-server-2005/administrator/cc966529(v=technet.10)), sur le site technet.microsoft.com  
   
 -   Article technique [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) dans _SQLCAT's Guide to BI and Analytics_
   
--   Article technique, [Guide des performances de chargement des données](https://go.microsoft.com/fwlink/?LinkId=220816), sur le site msdn.microsoft.com.  
+-   Article technique, [Guide des performances de chargement des données](/previous-versions/sql/sql-server-2008/dd425070(v=sql.100)), sur le site msdn.microsoft.com.  
   
--   Article technique, [Nous avons chargé 1 To en 30 minutes avec SSIS, vous le pouvez aussi](https://go.microsoft.com/fwlink/?LinkId=220817), sur le site msdn.microsoft.com.  
+-   Article technique, [Nous avons chargé 1 To en 30 minutes avec SSIS, vous le pouvez aussi](/previous-versions/sql/sql-server-2008/dd537533(v=sql.100)), sur le site msdn.microsoft.com.  
   
 -   Article technique, [Les 10 meilleures pratiques pour SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=220818), sur le site sqlcat.com.  
   
@@ -195,18 +195,17 @@ ms.locfileid: "89480880"
   
 -   Série de vidéos, [Conception et optimisation des performances de vos packages SSIS en entreprise (Série de vidéos SQL)](https://go.microsoft.com/fwlink/?LinkId=400878)  
   
--   Vidéo, [Optimisation du flux de données de votre package SSIS en entreprise (Vidéo SQL Server)](https://technet.microsoft.com/sqlserver/ff686901.aspx), sur technet.microsoft.com  
+-   Vidéo, [Optimisation du flux de données de votre package SSIS en entreprise (Vidéo SQL Server)](/previous-versions/ff686901(v=msdn.10)), sur technet.microsoft.com  
   
--   Vidéo, [Présentation des mémoires tampon de flux de données SSIS (Vidéo SQL Server)](https://technet.microsoft.com/sqlserver/ff686905.aspx), sur technet.microsoft.com  
+-   Vidéo, [Présentation des mémoires tampon de flux de données SSIS (Vidéo SQL Server)](/previous-versions/ff686905(v=msdn.10)), sur technet.microsoft.com  
   
 -   Vidéo [Modèles de conception des performances de Microsoft SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkID=233698&clcid=0x409), sur channel9.msdn.com.  
   
 -   Présentation, [Exploitation par Microsoft IT des améliorations apportées au moteur de flux de données SQL Server 2008 SSIS](https://go.microsoft.com/fwlink/?LinkId=217660), sur le site sqlcat.com.  
   
--   Vidéo, [Distributeur de données équilibrées](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409), sur technet.microsoft.com.  
+-   Vidéo, [Distributeur de données équilibrées](/previous-versions/dn912438(v=msdn.10)), sur technet.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de dépannage pour le développement des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Outils de dépannage pour l’exécution des packages](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
-  
   

@@ -1,6 +1,7 @@
 ---
-title: Publier des données d’Excel dans Master Data Services (Complément MDS pour Excel) | Microsoft Docs
-ms.custom: microsoft-excel-add-in
+description: Publier des données d’Excel dans MDS (Complément MDS pour Excel)
+title: Importer des données à partir d’Excel
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 093f8a471210b73b8c3cdaf1b2bb083b31980c52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a06d8338f334074ede68f34c8145f0d8fecb529f
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092281"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257746"
 ---
 # <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Publier des données d’Excel dans MDS (Complément MDS pour Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], vous pouvez publier les données dans le référentiel MDS quand vous avez fini de travailler dans Excel et souhaitez enregistrer vos modifications afin que d’autres utilisateurs puissent y accéder.  
   
@@ -34,7 +35,7 @@ ms.locfileid: "68092281"
   
 -   La feuille de calcul active doit contenir des données managées MDS et vous devez avoir apporté des modifications ou effectué des ajouts à ces données.  
   
--   Si vous ajoutez des membres, vous ne devez pas spécifier de valeur **Code** si les codes de l'entité sont générés automatiquement. Pour plus d’informations, consultez [Création automatique de code &#40;Master Data Services&#41;](../../master-data-services/automatic-code-creation-master-data-services.md).  
+-   Si vous ajoutez des membres, vous ne devez pas spécifier de valeur **Code** si les codes de l'entité sont générés automatiquement. Pour plus d’informations, consultez [création automatique de Code &#40;Master Data Services&#41;](../../master-data-services/automatic-code-creation-master-data-services.md).  
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>Pour publier des données dans le référentiel MDS  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68092281"
   
 2.  facultatif. Si la boîte de dialogue **Publier et annoter** s’affiche, choisissez de partager la même annotation (commentaire) pour toutes les mises à jour, ou d’annoter chaque modification individuellement.  
   
-3.  Facultatif. Activez la case à cocher **Ne plus afficher cette boîte de dialogue** . Vous pouvez toujours afficher la boîte de dialogue ultérieurement en choisissant **Paramètres** et en sélectionnant la case à cocher **Afficher la boîte de dialogue Publier et annoter lors de la publication** .  
+3.  facultatif. Activez la case à cocher **Ne plus afficher cette boîte de dialogue** . Vous pouvez toujours afficher la boîte de dialogue ultérieurement en choisissant **Paramètres** et en sélectionnant la case à cocher **Afficher la boîte de dialogue Publier et annoter lors de la publication** .  
   
 4.  Cliquez sur **Publier**.  
   

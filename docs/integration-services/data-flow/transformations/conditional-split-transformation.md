@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0e63cd4f6c045d00ef3835f2207d8d8001ff1b27
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 2f70d8f963a6f26131099e6cd7d09d5019f9c6bc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477764"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194656"
 ---
 # <a name="conditional-split-transformation"></a>transformation de fractionnement conditionnel
 
@@ -60,7 +60,7 @@ ms.locfileid: "88477764"
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -97,10 +97,9 @@ ms.locfileid: "88477764"
  Tapez un nom pour la sortie par défaut ou utilisez le nom par défaut.  
   
  **Configurer l'affichage des erreurs**  
- Spécifiez comment gérer les erreurs dans la boîte de dialogue [Configurer la sortie d’erreur](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
+ Spécifiez comment gérer les erreurs dans la boîte de dialogue [Configurer la sortie d’erreur](../error-handling-in-data.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

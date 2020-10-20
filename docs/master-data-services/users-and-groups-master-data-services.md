@@ -1,5 +1,6 @@
 ---
-title: Utilisateurs et groupes (Master Data Services) | Microsoft Docs
+title: Utilisateurs et groupes
+description: Découvrez comment accorder l’accès à l’application Web Data Manager maître. Un utilisateur doit disposer d’un compte approprié.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f52031d8dead33601dd9f60e5475da53b0b9c9d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0136c2fe08e59169eda2b41a0557b7fd66c3e437
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92258056"
 ---
 # <a name="users-and-groups-master-data-services"></a>Utilisateurs et groupes (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Pour accéder à l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , un utilisateur doit disposer d'un compte de domaine Windows ou d'un compte sur le serveur où [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] est installé. Pour accorder l'accès à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , vous pouvez, au choix :  
   
@@ -45,7 +46,7 @@ ms.locfileid: "68102581"
  N'affectez pas d'autorisations supplémentaires à un utilisateur individuel et n'incluez pas un utilisateur dans plusieurs groupes qui ont accès à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]. De plus, n'utilisez pas d'autorisations des membres de la hiérarchie à moins que vous ne souhaitiez qu'un groupe ait un accès limité à des membres spécifiques.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter un utilisateur &#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)   
+ [Ajouter un &#40;d’utilisateur Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)   
  [Ajouter un groupe &#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)   
  [Supprimer des utilisateurs ou des groupes &#40;Master Data Services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
  [Tester les autorisations d’un utilisateur &#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  

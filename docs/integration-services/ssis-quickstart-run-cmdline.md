@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bc97eb4c3c8d554a86a773910508c2d1ba936459
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e9efc610f33e2f58a8c1ae66b43480fb1d1da164
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495413"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195823"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>Exécuter un package SSIS à partir de l’invite de commandes avec DTExec.exe
 
@@ -26,7 +26,7 @@ Ce guide de démarrage rapide montre comment exécuter un package SSIS à partir
 > [!NOTE]
 > La méthode décrite dans cet article n’a pas été testée avec des packages déployés sur un serveur Azure SQL Database.
 
-Pour plus d’informations sur `DTExec.exe`, consultez [Utilitaire dtexec](https://docs.microsoft.com/sql/integration-services/packages/dtexec-utility).
+Pour plus d’informations sur `DTExec.exe`, consultez [Utilitaire dtexec](./packages/dtexec-utility.md).
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
 
@@ -58,4 +58,4 @@ Avec les valeurs de paramètres utilisées dans l’exemple suivant, le programm
     - [Exécuter un package SSIS avec Transact-SQL (SSMS)](./ssis-quickstart-run-tsql-ssms.md)
     - [Exécuter un package SSIS avec Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Exécuter un package SSIS avec PowerShell](ssis-quickstart-run-powershell.md)
-    - [Exécuter un package SSIS avec C#](./ssis-quickstart-run-dotnet.md) 
+    - [Exécuter un package SSIS avec C#](./ssis-quickstart-run-dotnet.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94a94ba7bcd71510f82769ebb1517caef7e5a0fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: b10ca4ddff49785c1b5b6e33d7510985fd801c85
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425851"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194861"
 ---
 # <a name="ado-net-source"></a>Source ADO NET
 
@@ -36,12 +36,12 @@ ms.locfileid: "88425851"
 
   La source ADO .NET exploite des données issues d'un fournisseur .NET et les met à la disposition du flux de données.  
   
- Vous pouvez utiliser la source ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Recommandations générales et limitations (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Vous pouvez utiliser la source ADO .NET. pour vous connecter à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. La connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] via OLE DB n'est pas prise en charge. Pour plus d’informations sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consultez [Recommandations générales et limitations (Azure SQL Database)](/previous-versions/azure/ee336245(v=azure.100)).  
   
 ## <a name="data-type-support"></a>Prise en charge du type de données  
  La source convertit tout type de données qui ne mappe pas à un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] spécifique en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_NTEXT. Cette conversion se produit même si le type de données est **System.Object**.  
   
- Vous pouvez remplacer le type de données DT_NTEXT par le type de données DT_WSTR, et inversement. Pour modifier les types de données, définissez la propriété **DataType** dans la boîte de dialogue **Éditeur avancé** de la source ADO .NET. Pour plus d’informations, consultez [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
+ Vous pouvez remplacer le type de données DT_NTEXT par le type de données DT_WSTR, et inversement. Pour modifier les types de données, définissez la propriété **DataType** dans la boîte de dialogue **Éditeur avancé** de la source ADO .NET. Pour plus d’informations, consultez [Propriétés communes](./set-the-properties-of-a-data-flow-component.md).  
   
  Le type de données DT_NTEXT peut également être converti en type de données DT_BYTES ou DT_STR en utilisant une transformation de conversion de données après la source ADO .NET. Pour plus d’informations, voir [Data Conversion Transformation](../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
   
@@ -87,7 +87,7 @@ ms.locfileid: "88425851"
   
  Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriétés personnalisées ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -207,5 +207,4 @@ ms.locfileid: "88425851"
  [Destination DataReader](../../integration-services/data-flow/datareader-destination.md)   
  [Destination ADO NET](../../integration-services/data-flow/ado-net-destination.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
-  
   

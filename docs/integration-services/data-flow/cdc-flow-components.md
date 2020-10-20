@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb7897aa3f14a043eef6f983daafe8121a07c8bf
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: 0306e266f48259d0a7cc68a455116ec5a5ce847f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480891"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196483"
 ---
 # <a name="cdc-flow-components"></a>Composants de flux CDC
 
@@ -86,7 +86,7 @@ Un message s'affiche après avoir installé les composants. Cliquez sur **Oui** 
   
  Ce flux de contrôle [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient deux tâches de contrôle CDC et la tâche de flux de données. La première tâche appelée **Obtenir la plage de traitement CDC** définit la plage des numéros séquentiels dans le journal (LSN) pour les modifications traitées dans la tâche de flux de données appelée **Modifications des processus**. Cette plage est établie en fonction de ce qui a été traité pendant la dernière exécution de package et de ce qui a été enregistré dans un magasin persistant.  
   
- Pour plus d'informations sur l'utilisation de la tâche de contrôle CDC, consultez [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) et [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ Pour plus d'informations sur l'utilisation de la tâche de contrôle CDC, consultez [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) et [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  L'illustration suivante montre le flux de données **Modifications des processus** qui indique sur le plan conceptuel la façon dont les modifications sont traitées.  
   
@@ -104,11 +104,11 @@ Un message s'affiche après avoir installé les composants. Cliquez sur **Oui** 
   
  [Source CDC](../../integration-services/data-flow/cdc-source.md)  
   
- [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [Éditeur de source CDC &#40;page Gestionnaire de connexions&#41;](./cdc-source.md)  
   
- [Éditeur de source CDC &#40;page Colonnes&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [Éditeur de source CDC &#40;page Colonnes&#41;](./cdc-source.md)  
   
- [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [Éditeur de source CDC &#40;page Sortie d’erreur&#41;](./cdc-source.md)  
   
  Pour plus d'informations sur le séparateur CDC, consultez :  
   
@@ -217,9 +217,8 @@ Un message s'affiche après avoir installé les composants. Cliquez sur **Oui** 
   
 -   Article technique, [Dépannage des erreurs d'instance du service de capture de données modifiées Microsoft SQL Server pour Oracle par Attunity](https://go.microsoft.com/fwlink/?LinkId=252961), sur social.technet.microsoft.com.  
   
--   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898), on technet.microsoft.com.  
+-   Video, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](/previous-versions/dn912438(v=msdn.10)), on technet.microsoft.com.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md)  
-  
   

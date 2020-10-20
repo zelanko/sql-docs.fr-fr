@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cecf1f8803b0180ef6127cde203659be26f3c6c1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9ff964cda9e4e9687a61d50db7c7d53c6e9e24ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477901"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196003"
 ---
 # <a name="web-service-task"></a>Tâche de service Web
 
@@ -52,7 +52,7 @@ ms.locfileid: "88477901"
   
  Le fichier WSDL énumère les méthodes offertes par le service Web, les paramètres d'entrée requis par les méthodes, les réponses renvoyées par les méthodes et la manière de communiquer avec le service Web.  
   
- Si la méthode utilise des paramètres d'entrée, la tâche de service Web requiert des valeurs de paramètres. Par exemple, une méthode de service Web qui recommande la longueur des skis que vous devez acheter en fonction de votre taille exige que votre taille soit soumise dans un paramètre d'entrée. Les valeurs de paramètres peuvent être fournies par des chaînes définies dans la tâche ou par des variables définies dans l'étendue de la tâche ou un conteneur parent. L'avantage d'utiliser des variables est de vous permettre de mettre à jour dynamiquement les valeurs de paramètres en utilisant des scripts ou des configurations de package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Configurations de package](../../integration-services/packages/package-configurations.md).  
+ Si la méthode utilise des paramètres d'entrée, la tâche de service Web requiert des valeurs de paramètres. Par exemple, une méthode de service Web qui recommande la longueur des skis que vous devez acheter en fonction de votre taille exige que votre taille soit soumise dans un paramètre d'entrée. Les valeurs de paramètres peuvent être fournies par des chaînes définies dans la tâche ou par des variables définies dans l'étendue de la tâche ou un conteneur parent. L'avantage d'utiliser des variables est de vous permettre de mettre à jour dynamiquement les valeurs de paramètres en utilisant des scripts ou des configurations de package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Configurations de package](../packages/legacy-package-deployment-ssis.md).  
   
  De nombreuses méthodes de service Web n'utilisent pas de paramètres d'entrée. Par exemple, une méthode de service Web qui obtient le nom des présidents dont le mois de naissance correspond au mois en cours ne requiert pas de paramètre d'entrée car le service Web peut déterminer le mois en cours localement.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "88477901"
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuration par programmation de la tâche de service web  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur l'une des rubriques suivantes :  
@@ -93,7 +93,7 @@ ms.locfileid: "88477901"
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions HTTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
   
- **Rubriques connexes :**  [Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Éditeur du gestionnaire de connexions &#40;Server Page&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **Rubriques connexes :**  [Gestionnaire de connexions HTTP](../../integration-services/connection-manager/http-connection-manager.md), [Éditeur du gestionnaire de connexions &#40;Server Page&#41;](../connection-manager/http-connection-manager.md)  
   
  **WSDLFile**  
  Tapez le chemin d’accès qualifié complet d’un fichier WSDL qui est en local sur l’ordinateur ou cliquez sur le bouton Parcourir **(...)** et recherchez ce fichier.  
@@ -176,13 +176,13 @@ ms.locfileid: "88477901"
  **File**  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**New Connection...**> pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../connection-manager/file-connection-manager.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = Variable  
  **Variable**  
  Sélectionnez une variable dans la liste, ou cliquez sur \<**New Variable...**> pour en créer une.  
   
- **Rubriques connexes :**  [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :**  [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../integration-services-ssis-variables.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Vidéo, [Guide pratique pour appeler un service web à l’aide de la tâche Service web (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) sur technet.microsoft.com.  
+ Vidéo, [Guide pratique pour appeler un service web à l’aide de la tâche Service web (vidéo liée à SQL Server)](/previous-versions/dn912438(v=msdn.10)) sur technet.microsoft.com.

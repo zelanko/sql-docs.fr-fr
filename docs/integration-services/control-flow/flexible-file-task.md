@@ -13,12 +13,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4a84bfa9b7aa9fc50d16268005ac02868f11784b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: c93cecf5b261a888375ead03aac1eec07b76c63d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393548"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196493"
 ---
 # <a name="flexible-file-task"></a>Tâche de fichier flexible
 
@@ -29,7 +29,7 @@ Les services de stockage actuellement pris en charge sont :
 
 - Système de fichiers local
 - [Stockage Blob Azure](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
 
 Flexible File Task est un composant du [Feature Pack SQL Server Integration Services (SSIS) pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -62,12 +62,12 @@ Pour l’opération **Delete**, les propriétés suivantes sont disponibles.
 ***Remarques sur la configuration des autorisations du principal de service***
 
 Pour que la **connexion de test** fonctionne (soit le stockage d’objets blob, soit Data Lake Storage Gen2), le principal de service doit disposer au moins du rôle **Lecteur des données Blob du stockage** pour le compte de stockage.
-Cette opération s’effectue à l’aide de [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+Cette opération s’effectue à l’aide de [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Pour le stockage d’objets blob, des autorisations de lecture et d’écriture sont accordées en affectant au moins les rôles **Lecteur des données Blob du stockage**  et **Contributeur aux données Blob du stockage**, respectivement.
 
-Pour Data Lake Storage Gen2, l’autorisation est déterminée à la fois par RBAC et par des [listes des contrôles d’accès (ACL)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
-Faites attention à ce que les listes de contrôle d’accès soient configurées à l’aide de l’ID d’objet (OID) du principal de service pour l’inscription d’application, comme indiqué [ici](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Pour Data Lake Storage Gen2, l’autorisation est déterminée à la fois par RBAC et par des [listes des contrôles d’accès (ACL)](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Faites attention à ce que les listes de contrôle d’accès soient configurées à l’aide de l’ID d’objet (OID) du principal de service pour l’inscription d’application, comme indiqué [ici](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
 Cet ID diffère de l’ID d’application (client) utilisé avec la configuration RBAC.
 Quand un principal de sécurité reçoit des autorisations sur les données RBAC par le biais d’un rôle intégré ou personnalisé, ces autorisations sont évaluées en premier lors de l’autorisation d’une demande.
 Si l’opération demandée est autorisée par les attributions RBAC du principal de sécurité, l’autorisation est immédiatement résolue et aucune vérification de liste de contrôle d’accès supplémentaire n’est effectuée.
@@ -76,4 +76,4 @@ Sinon, si le principal de sécurité n’a pas d’attribution RBAC ou si l’op
 - Pour l’autorisation de lecture, accordez au moins l’autorisation d’**Exécution** à partir du système de fichiers source, ainsi que l’autorisation de **Lecture** pour les fichiers à copier. Vous pouvez également accorder au moins le rôle **Lecteur des données Blob du stockage** avec RBAC.
 - Pour l’autorisation d’écriture, accordez au moins l’autorisation d’**Exécution** à partir du système de fichiers récepteur, ainsi que l’autorisation d’**Écriture** pour le dossier récepteur. Vous pouvez également accorder au moins le rôle **Contributeur aux données Blob du stockage** avec RBAC.
 
-Pour plus d’informations, consultez [cet](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) article.
+Pour plus d’informations, consultez [cet](/azure/storage/blobs/data-lake-storage-access-control) article.

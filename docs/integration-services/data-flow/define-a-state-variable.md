@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f72f8f6aff6b5861a9bf4ba91ff77ef6e80719b2
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bbb4b442c50e8a40c0c0db20dd45073339ea48b8
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88349345"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195397"
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d’état
 
@@ -85,12 +85,11 @@ ms.locfileid: "88349345"
   
  N'attribuez pas une valeur à la variable dans le cadre de sa définition. La valeur doit être définie par la tâche de contrôle de capture de données modifiées.  
   
- Si vous envisagez d'utiliser la tâche de contrôle de capture de données modifiées avec **Permanence d'état automatique**, la variable d'état de capture de données modifiées sera lue dans la table d'état de la base de données que vous spécifiez et sera remise à jour dans cette même table lorsque sa valeur sera modifiée. Pour plus d'informations sur la table d'état, consultez [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)et [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md).  
+ Si vous envisagez d'utiliser la tâche de contrôle de capture de données modifiées avec **Permanence d'état automatique**, la variable d'état de capture de données modifiées sera lue dans la table d'état de la base de données que vous spécifiez et sera remise à jour dans cette même table lorsque sa valeur sera modifiée. Pour plus d'informations sur la table d'état, consultez [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)et [CDC Control Task Editor](../control-flow/cdc-control-task.md).  
   
  Si vous n'utilisez pas la tâche de contrôle de capture de données modifiées avec Permanence d'état automatique, vous devez charger la valeur de la variable depuis le stockage permanent dans lequel sa valeur a été enregistrée lors la dernière exécution du package, puis la réécrire dans le stockage permanent une fois le traitement de la plage de traitement actuelle terminé.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md)   
- [Éditeur de tâche de contrôle CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
-  
+ [Éditeur de tâche de contrôle CDC](../control-flow/cdc-control-task.md)  
   

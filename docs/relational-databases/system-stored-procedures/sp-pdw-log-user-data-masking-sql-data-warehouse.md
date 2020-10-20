@@ -12,12 +12,12 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 87c151558a290f3c06a605de72931c5ee6990f60
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: c014f76aac1544e16ec693277a034779f75883cd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059357"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92255608"
 ---
 # <a name="sp_pdw_log_user_data_masking-azure-synapse-analytics"></a>sp_pdw_log_user_data_masking (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
@@ -40,7 +40,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
-  
+
 #### <a name="parameters"></a>Paramètres  
 `[ @masking_mode = ] masking_mode` Détermine si le masquage transparent des données utilisateur du journal de chiffrement des données est activé. *masking_mode* est de **type int**et peut prendre l’une des valeurs suivantes :  
   
@@ -52,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  L’exécution de **sp_pdw_ log_user_data_masking** sans paramètres retourne l’état actuel du masquage des données utilisateur du journal TDE sur l’appareil sous la forme d’un jeu de résultats scalaire.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le masquage des données utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] les journaux d’activité permet le remplacement des littéraux par des valeurs constantes prédéfinies dans des instructions **Select** et DML, car elles peuvent contenir des données utilisateur. La définition de *masking_mode* sur 1 ne masque pas les métadonnées, telles que les noms de colonne ou de table. La définition de *masking_mode* sur 2 supprime les instructions avec des métadonnées, telles que les noms de colonne ou de table.  
   
  Le masquage des données utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] les journaux d’activité est implémenté de la manière suivante :  

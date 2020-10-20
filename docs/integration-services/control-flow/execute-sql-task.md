@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6138e30bf4794fff847dd7a0750d59c8d8fb884a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0b8155db361eeffd3b84ba1aadf313ecef4652e9
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88394165"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196537"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
 
@@ -69,7 +69,7 @@ ms.locfileid: "88394165"
 >  Les instructions SQL valides écrites en dehors de la tâche d'exécution SQL peuvent ne pas être analysées correctement par celle-ci.  
   
 > [!NOTE]  
->  La tâche d’exécution de requêtes SQL utilise la valeur d’énumération **RecognizeAll** ParseMode. Pour plus d’informations, consultez [ManagedBatchParser Namespace](https://go.microsoft.com/fwlink/?LinkId=223617)(Espace de noms ManagedBatchParser).  
+>  La tâche d’exécution de requêtes SQL utilise la valeur d’énumération **RecognizeAll** ParseMode. Pour plus d’informations, consultez [ManagedBatchParser Namespace](/dotnet/api/managedbatchparser)(Espace de noms ManagedBatchParser).  
   
 ## <a name="send-multiple-statements-in-a-batch"></a>Envoyer plusieurs instructions dans un traitement  
  Si vous incluez plusieurs instructions dans une tâche d'exécution SQL, vous pouvez les regrouper et les exécuter sous forme de traitement. Pour indiquer la fin d'un traitement, utilisez la commande GO. Toutes les instructions SQL comprises entre deux commandes GO sont envoyées dans un traitement au fournisseur OLE DB afin d'être exécutées. La commande SQL peut comprendre plusieurs traitements séparés par des commandes GO.  
@@ -115,7 +115,7 @@ ms.locfileid: "88394165"
 ## <a name="general-page---execute-sql-task-editor"></a>Page Général - Éditeur de tâche d’exécution de requêtes SQL
  Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'exécution SQL** pour configurer la tâche d'exécution SQL et indiquer l'instruction SQL que la tâche exécuter.  
 
-Pour plus d’informations sur le langage Transact-SQL, consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md).  
+Pour plus d’informations sur le langage Transact-SQL, consultez [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/language-reference.md).  
   
 ### <a name="static-options"></a>Options statiques  
  **Nom**  
@@ -186,19 +186,19 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
  **SQLStatement**  
  Dans la zone des options, tapez l’instruction SQL à exécuter ou cliquez sur le bouton d’exploration (...) pour taper l’instruction SQL dans la boîte de dialogue **Entrer une requête SQL**. Vous pouvez également cliquer sur **Générer la requête** pour composer l’instruction à l’aide de la boîte de dialogue **Générateur de requêtes**.  
   
- **Rubriques connexes :** [Générateur de requêtes](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Rubriques connexes :** [Générateur de requêtes](../integration-services-ssis-queries.md)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connexion de fichiers  
  **FileConnection**  
  Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**New connection...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../connection-manager/file-connection-manager.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
  Sélectionnez une variable existante ou cliquez sur \<**New variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](../integration-services-ssis-variables.md)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Page Mappage de paramètre - Éditeur de tâche d’exécution de requêtes SQL
 Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur de tâche d’exécution de requêtes SQL** pour associer des variables à des paramètres dans une instruction SQL.  
@@ -385,7 +385,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
 |Type de connexion|Syntaxe EXEC|  
 |---------------------|-----------------|  
 |EXCEL et OLEDB|`EXEC uspGetBillOfMaterials ?, ?`|  
-|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462)dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
+|ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](../../odbc/reference/develop-app/procedure-parameters.md)dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
 |ADO|Si IsQueryStoredProcedure est défini sur **False**, `EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Si IsQueryStoredProcedure est défini sur **True**, `uspGetBillOfMaterials`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Si IsQueryStoredProcedure est défini sur **False**, `EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Si IsQueryStoredProcedure est défini sur **True**, `uspGetBillOfMaterials`|  
   
@@ -448,7 +448,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
     |ODBC|1, 2, 3, ...|  
     |EXCEL et OLE DB|0, 1, 2, 3, ...|  
   
-10. Dans la liste **Nom de variable** , sélectionnez une variable. Pour plus d’informations, consultez [Ajouter, supprimer, modifier l’étendue de la variable définie par l’utilisateur dans un package](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+10. Dans la liste **Nom de variable** , sélectionnez une variable. Pour plus d’informations, consultez [Ajouter, supprimer, modifier l’étendue de la variable définie par l’utilisateur dans un package](../integration-services-ssis-variables.md).  
   
 11. Dans la liste **Direction** , indiquez si le paramètre est une entrée, une sortie ou une valeur de retour.  
   
@@ -474,7 +474,7 @@ Cette section décrit comment utiliser une instruction SQL paramétrable dans l
 |Type de connexion|Syntaxe EXEC|  
 |---------------------|-----------------|  
 |EXCEL et OLEDB|`EXEC ? = myStoredProcedure 1`|  
-|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](https://go.microsoft.com/fwlink/?LinkId=89462)dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
+|ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Pour plus d’informations sur la syntaxe d’appel ODBC, consultez la rubrique [Paramètres de procédure](../../odbc/reference/develop-app/procedure-parameters.md)dans le Guide de référence du programmeur ODBC publié dans MSDN Library.|  
 |ADO|Si IsQueryStoreProcedure est défini sur **False**, `EXEC ? = myStoredProcedure 1`<br /><br /> Si IsQueryStoreProcedure est défini sur **True**, `myStoredProcedure`|  
 |[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|Définissez IsQueryStoreProcedure sur **True**.<br /><br /> `myStoredProcedure`|  
   
@@ -557,7 +557,7 @@ Cette section décrit comment créer un mappage entre un jeu de résultats et un
   
 8.  Pour ajouter un mappage d’un jeu de résultats, cliquez sur **Ajouter**.  
   
-9. Dans la liste **Nom de variable** , sélectionnez une variable ou créez-en une. Pour plus d’informations, consultez [Ajouter, supprimer, modifier l’étendue de la variable définie par l’utilisateur dans un package](https://msdn.microsoft.com/library/cbf40c7f-3c8a-48cd-aefa-8b37faf8b40e).  
+9. Dans la liste **Nom de variable** , sélectionnez une variable ou créez-en une. Pour plus d’informations, consultez [Ajouter, supprimer, modifier l’étendue de la variable définie par l’utilisateur dans un package](../integration-services-ssis-variables.md).  
   
 10. Dans la liste **Nom de résultat** , éventuellement, modifiez le nom du jeu de résultats.  
   
@@ -579,5 +579,4 @@ Cette section décrit comment créer un mappage entre un jeu de résultats et un
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|**ExecuteSQLExecutingQuery**|Fournit des informations sur les phases d'exécution de l'instruction SQL. Des entrées de journal sont écrites lorsque la tâche acquiert la connexion à la base de données, lorsqu'elle commence à préparer l'instruction SQL et à la fin de l'exécution de l'instruction SQL. L'entrée de journal concernant la phase de préparation inclut l'instruction SQL que la tâche utilise.|  
-
+|**ExecuteSQLExecutingQuery**|Fournit des informations sur les phases d'exécution de l'instruction SQL. Des entrées de journal sont écrites lorsque la tâche acquiert la connexion à la base de données, lorsqu'elle commence à préparer l'instruction SQL et à la fin de l'exécution de l'instruction SQL. L'entrée de journal concernant la phase de préparation inclut l'instruction SQL que la tâche utilise.|

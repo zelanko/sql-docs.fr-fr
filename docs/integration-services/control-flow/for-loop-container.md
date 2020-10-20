@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2a8c0bb1cb003605ec863b41e2194bad4e3cf3e6
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7d95b3894351d156444b22e5b20c4cf5ed259990
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393565"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196503"
 ---
 # <a name="for-loop-container"></a>Conteneur de boucles For
 
@@ -67,9 +67,9 @@ ms.locfileid: "88393565"
   
 2.  Ajoutez des tâches et des conteneurs au conteneur de boucles For. Pour plus d’informations, consultez [Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
-3.  Connectez les tâches et les conteneurs du conteneur de boucles For à l'aide de contraintes de précédence. Pour plus d’informations, consultez [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](https://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75).  
+3.  Connectez les tâches et les conteneurs du conteneur de boucles For à l'aide de contraintes de précédence. Pour plus d’informations, consultez [Connecter des tâches et des conteneurs à l’aide d’une contrainte de précédence par défaut](./precedence-constraints.md).  
   
-4.  Configurez le conteneur de boucles For. Pour plus d’informations, consultez [Configurer un conteneur de boucles For](https://msdn.microsoft.com/library/b9cd7ea7-b198-4a35-8b16-6acf09611ca5).  
+4.  Configurez le conteneur de boucles For. Pour plus d’informations, consultez [Configurer un conteneur de boucles For]().  
 
 ##  <a name="configure-the-for-loop-container"></a>Configurer le conteneur de boucles For
 Cette procédure décrit comment configurer un conteneur de boucles For à l’aide de la boîte de dialogue **Éditeur de boucle For** .  
@@ -122,7 +122,7 @@ Utilisez la page **Éditeur de boucle For** de la boîte de dialogue **Éditeur 
   
  Lorsque vous spécifiez une variable dans une expression, vous devez préfixer le nom de la variable avec le signe arobase (@). Par exemple, pour une variable nommée **Counter**, entrez @Counter dans l’expression utilisée par le conteneur de boucles For. Si vous incluez la propriété d'espace de noms dans la variable, vous devez placer la variable et l'espace de noms entre crochets. Par exemple, pour une variable **Counter** dans l’espace de noms **MyNamespace**, tapez [@MyNamespace::Counter].  
   
- Les variables utilisées par le conteneur de boucles For doivent être définies dans la portée du conteneur de boucles For ou dans la portée d'un conteneur situé plus haut dans la hiérarchie de conteneurs de package. Par exemple, un conteneur de boucles For peut utiliser des variables définies dans sa portée et également des variables définies dans la portée du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ Les variables utilisées par le conteneur de boucles For doivent être définies dans la portée du conteneur de boucles For ou dans la portée d'un conteneur situé plus haut dans la hiérarchie de conteneurs de package. Par exemple, un conteneur de boucles For peut utiliser des variables définies dans sa portée et également des variables définies dans la portée du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../integration-services-ssis-variables.md).  
   
  La grammaire d'expression [!INCLUDE[ssIS](../../includes/ssis-md.md)] fournit un ensemble complet d'opérateurs et de fonctions pour l'implémentation d'expressions complexes utilisées pour l'évaluation, l'initialisation ou l'assignation. Pour plus d’informations, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
@@ -130,5 +130,4 @@ Utilisez la page **Éditeur de boucle For** de la boîte de dialogue **Éditeur 
 ## <a name="see-also"></a>Voir aussi  
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)   
  [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)  
-  
   

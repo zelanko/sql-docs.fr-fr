@@ -22,12 +22,12 @@ ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5e70dbb22c231a6d4eeb2367ad2e5231c93f4d07
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: bdaf68bd8f119fa0c0cba7c8cd16a11d927d310c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479434"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92188056"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "88479434"
 ## <a name="examples"></a>Exemples  
  L'exemple suivant recherche toutes les bicyclettes argentées (Silver) dont le prix standard n'est pas supérieur à 400 dollars.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductID, Name, Color, StandardCost  
@@ -93,7 +93,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant limite les résultats aux `SalesOrderNumber` dont les valeurs commencent par `SO6` et dont la valeur `ProductKeys` est supérieure ou égale à 400.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT ProductKey, CustomerKey, OrderDateKey, ShipDateKey  
