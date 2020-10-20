@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 136f2ec1b7bc795db2b95561f4fad31f8dfff42f
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 81e34f795391ad53728f35c8fed6e6b2363b3f7a
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901575"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115672"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Démarrage rapide : Installer SQL Server et créer une base de données sur Red Hat
 
@@ -53,7 +53,7 @@ Vous devez disposer d’une machine RHEL 7.3, 7.4, 7.5, 7.6 ou 8.0 avec **au mo
 
 ::: moniker-end
 
-Pour installer Red Hat Enterprise Linux sur votre propre machine, voir [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Vous pouvez également créer des machines virtuelles RHEL dans Azure. Consultez [Créer et gérer des machines virtuelles Linux avec l’interface Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm), puis utilisez `--image RHEL` dans l’appel à `az vm create`.
+Pour installer Red Hat Enterprise Linux sur votre propre machine, voir [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Vous pouvez également créer des machines virtuelles RHEL dans Azure. Consultez [Créer et gérer des machines virtuelles Linux avec l’interface Azure CLI](/azure/virtual-machines/linux/tutorial-manage-vm), puis utilisez `--image RHEL` dans l’appel à `az vm create`.
 
 Si vous avez déjà installé une version CTP ou RC de SQL Server, vous devez d’abord supprimer l’ancien référentiel avant de suivre ces étapes. Pour plus d'informations, voir [Configurer des référentiels Linux pour SQL Server 2017 et 2019](sql-server-linux-change-repo.md).
 

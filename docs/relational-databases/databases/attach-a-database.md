@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c1987fae42f804e861c1f15e55deb60e273e0d3b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789585"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194399"
 ---
 # <a name="attach-a-database"></a>Attacher une base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -42,7 +42,7 @@ Nous vous recommandons de déplacer les bases de données à l’aide de la proc
 Nous ne recommandons pas l’utilisation des opérations de détachement et d’attachement pour la sauvegarde et la récupération. Il n’existe aucune sauvegarde du journal des transactions et il est possible de supprimer accidentellement des fichiers.
   
 ###  <a name="security"></a><a name="Security"></a> Sécurité  
-Les autorisations d'accès au fichier sont définies au cours de plusieurs opérations de base de données, notamment le détachement ou l'attachement d'une base de données. Pour plus d’informations sur les autorisations de fichier définies lors du détachement et de l’attachement d’une base de données, consultez [Sécurisation des fichiers de données et des fichiers journaux](https://technet.microsoft.com/library/ms189128.aspx) dans la documentation en ligne de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (une lecture utile) 
+Les autorisations d'accès au fichier sont définies au cours de plusieurs opérations de base de données, notamment le détachement ou l'attachement d'une base de données. Pour plus d’informations sur les autorisations de fichier définies lors du détachement et de l’attachement d’une base de données, consultez [Sécurisation des fichiers de données et des fichiers journaux](/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)) dans la documentation en ligne de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (une lecture utile) 
   
 Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données. Pour plus d’informations sur l’attachement de bases de données et sur les modifications apportées aux métadonnées à cette occasion, consultez [Attacher et détacher une base de données (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
@@ -129,7 +129,7 @@ Requiert l’autorisation `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
-3.  Utilisez l’instruction [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) avec la clause `FOR ATTACH`.  
+3.  Utilisez l’instruction [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md) avec la clause `FOR ATTACH`.  
   
      Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple attache les fichiers de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] et renomme la base de données `MyAdventureWorks`.  
   
@@ -157,8 +157,7 @@ EXEC sys.sp_cdc_vupgrade
 ``` 
  
 ## <a name="see-also"></a>Voir aussi  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) 
  <br>[Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Détacher une base de données](../../relational-databases/databases/detach-a-database.md)  
-  
   

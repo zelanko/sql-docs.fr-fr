@@ -26,12 +26,12 @@ ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ea1933bc37001040beb6007fb877fa8765a24c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3e5b3519a18f8729920e307ddd895d34a2449d93
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467687"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194963"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467687"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 EXISTS ( subquery )  
 ```  
   
@@ -63,7 +63,7 @@ EXISTS ( subquery )
 ### <a name="a-using-null-in-a-subquery-to-still-return-a-result-set"></a>R. Utilisation de NULL dans une sous-requête pour retourner un jeu de résultats  
  Cet exemple retourne un jeu de résultats avec la valeur `NULL` spécifiée dans la sous-requête mais continue à donner TRUE du fait de la clause `EXISTS`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name   
@@ -75,7 +75,7 @@ ORDER BY Name ASC ;
 ### <a name="b-comparing-queries-by-using-exists-and-in"></a>B. Comparaison de requêtes à l'aide de EXISTS et de IN  
  Cet exemple compare deux requêtes sémantiquement équivalentes. La première requête utilise `EXISTS` et la seconde `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -90,7 +90,7 @@ GO
   
  La requête suivante utilise `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.FirstName, a.LastName  
@@ -118,7 +118,7 @@ Willis                                             Johnson
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. Comparaison de requêtes à l'aide de EXISTS et de = ANY  
  L'exemple suivant présente deux requêtes permettant de retrouver le nom commun à plusieurs revendeurs. La première requête utilise `EXISTS` et la seconde `=``ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -132,7 +132,7 @@ GO
   
  La requête suivante utilise `= ANY`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DISTINCT s.Name  
@@ -146,7 +146,7 @@ GO
 ### <a name="d-comparing-queries-by-using-exists-and-in"></a>D. Comparaison de requêtes à l'aide de EXISTS et de IN  
  L'exemple suivant illustre des requêtes chargées de retrouver les employés travaillant dans les différentes divisions d'une entreprise et dont le nom commence par `P`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -165,7 +165,7 @@ GO
   
  La requête suivante utilise `IN`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -183,7 +183,7 @@ GO
 ### <a name="e-using-not-exists"></a>E. Utilisation de NOT EXISTS  
  NOT EXISTS fonctionne à l'inverse de EXISTS. La clause WHERE figurant dans NOT EXISTS est satisfaite si aucune ligne n'est retournée par la sous-requête. L'exemple suivant recense les employés qui ne travaillent pas dans les différentes divisions d'une entreprise et dont le nom commence par `P`.  
   
-```  
+```sql  
 SELECT p.FirstName, p.LastName, e.JobTitle  
 FROM Person.Person AS p   
 JOIN HumanResources.Employee AS e  
@@ -304,7 +304,7 @@ Peng                           Wu                             Quality Assurance 
 ### <a name="f-using-exists"></a>F. Utilisation de EXISTS  
  L’exemple suivant détermine si les lignes de la table `ProspectiveBuyer` peuvent être des correspondances des lignes de la table `DimCustomer`. La requête retourne des lignes uniquement quad les deux valeurs `LastName` et `BirthDate` correspondent dans les deux tables.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  
@@ -318,7 +318,7 @@ WHERE EXISTS
 ### <a name="g-using-not-exists"></a>G. Utilisation de NOT EXISTS  
  NOT EXISTS fonctionne à l’opposé de EXISTS. La clause WHERE figurant dans NOT EXISTS est satisfaite si aucune ligne n'est retournée par la sous-requête. L’exemple suivant recherche les lignes de la table `DimCustomer` dont les valeurs `LastName` et `BirthDate` ne correspondent à aucune entrée dans la table `ProspectiveBuyers`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT a.LastName, a.BirthDate  

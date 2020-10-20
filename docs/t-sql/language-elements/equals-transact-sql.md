@@ -22,12 +22,12 @@ ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6acac2a2a67974945c6e934994c7823fc3d75bde
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3923bc7a36387e3ccef353f43aafcbaea2600658
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88422513"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196573"
 ---
 # <a name="-equals-transact-sql"></a>= (Equals) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88422513"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 expression = expression  
 ```  
   
@@ -68,13 +68,12 @@ Pour plus d’informations, consultez [SET ANSI_NULLS &#40;Transact-SQL&#41;](..
 ### <a name="a-using--in-a-simple-query"></a>R. Utilisation de = dans une requête simple  
  L'exemple suivant utilise l'opérateur d'égalité pour retourner toutes les lignes de la table `HumanResources.Department` dans lesquelles la valeur de la colonne `GroupName` est égale au mot « Manufacturing ».  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT DepartmentID, Name  
 FROM HumanResources.Department  
 WHERE GroupName = 'Manufacturing';  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -93,7 +92,7 @@ DepartmentID Name
 ### <a name="b-comparing-null-and-non-null-values"></a>B. Comparaison des valeurs NULL et non NULL  
  L'exemple ci-dessous utilise les opérateurs de comparaison Égal à (`=`) et Différent de (`<>`) pour effectuer une comparaison avec des valeurs `NULL` et non NULL dans une table. Il montre également que l’option `IS NULL` n’est pas influencée par le paramètre `SET ANSI_NULLS`.  
   
-```  
+```sql  
 -- Create table t1 and insert 3 rows.  
 CREATE TABLE dbo.t1 (a INT NULL);  
 INSERT INTO dbo.t1 VALUES (NULL),(0),(1);  
@@ -158,7 +157,6 @@ GO
   
 -- Drop table t1.  
 DROP TABLE dbo.t1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

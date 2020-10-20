@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b65b2c71fa8901a4a2aa36ad2b1879433ae94ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d6bcdb94260a5fe1190e6f96ada085f004458c54
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484567"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194231"
 ---
 # <a name="notify-operator-task"></a>tâche de notification d'opérateur
 
@@ -44,6 +44,5 @@ ms.locfileid: "88484567"
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
-  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   

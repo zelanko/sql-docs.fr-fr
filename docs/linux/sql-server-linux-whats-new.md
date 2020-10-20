@@ -7,12 +7,12 @@ ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 489b2bda31554766a874fb7d09d259fbc96a3398
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: 5f2b955579853c48f7899614f0e87dd996f3076e
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088731"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115582"
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Nouveautés de SQL Server 2017 sur Linux
 
@@ -57,7 +57,7 @@ Cet article décrit les principaux services et fonctionnalités disponibles pour
 
 - Outil de configuration de ligne de commande, [mssql-conf](sql-server-linux-configure-mssql-conf.md).
 - Support de l’installation sans assistance avec les [variables d’environnement](sql-server-linux-configure-environment-variables.md).
-- [Extension mssql-server de Visual Studio Code](sql-server-linux-develop-use-vscode.md) multiplateforme.
+- [Extension mssql-server de Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md) multiplateforme.
 - Générateur de script multiplateforme, [mssql-scripter](https://github.com/Microsoft/sql-xplat-cli/blob/dev/doc/usage_guide.md).
 - Analyse des vues de gestion dynamique (DMV) multiplateforme, [outil DBFS](https://github.com/Microsoft/dbfs).
 

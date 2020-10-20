@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5c9788c6a7e23759352f22acd543358305ad0a9a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6db38bcb37a0b7167a7d4c27b62a34438d77c343
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477261"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195884"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Créer la base de données (Assistant Importation et Exportation SQL Server)
 
@@ -29,7 +29,7 @@ Si vous sélectionnez **Nouveau** dans la page **Choisir une destination** pour 
 La boîte de dialogue **Créer une base de données** de l’Assistant offre uniquement les options de base disponibles pour la création d’une base de données SQL Server. Pour afficher et configurer toutes les options d’une nouvelle base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour créer la base de données, ou la configurer après sa création par l’Assistant. 
 
 > [!NOTE]
-> Si vous recherchez des informations sur l’instruction CREATE DATABASE [!INCLUDE[tsql](../../includes/tsql-md.md)] et non sur la boîte de dialogue **Créer une base de données** de l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+> Si vous recherchez des informations sur l’instruction CREATE DATABASE [!INCLUDE[tsql](../../includes/tsql-md.md)] et non sur la boîte de dialogue **Créer une base de données** de l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
 
 ## <a name="screen-shot-of-the-create-database-page"></a>Capture d’écran de la page Créer une base de données  
 La capture d’écran suivante montre la boîte de dialogue **Créer une base de données** de l’Assistant.  
@@ -40,7 +40,7 @@ La capture d’écran suivante montre la boîte de dialogue **Créer une base de
 **Nom**  
  Fournissez un nom pour la base de données SQL Server de destination.
  
-### <a name="naming-requirements"></a>Exigences concernant l’affectation des noms
+### <a name="naming-requirements"></a>Conditions de nommage
 Veillez à respecter les conventions de nommage SQL Server quand vous nommez la base de données.  
   
 -   Le nom de la base de données doit être unique au sein d’une instance de SQL Server.  
@@ -89,8 +89,7 @@ Pour obtenir des informations détaillées sur ces critères, consultez [Identif
  Définissez le nombre d'octets d'augmentation de la taille du fichier journal.  
 
 ### <a name="more-info"></a>En savoir plus
-Pour plus d’informations sur les options de taille de fichier que vous voyez sur cette page, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md). 
+Pour plus d’informations sur les options de taille de fichier que vous voyez sur cette page, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md). 
 
-## <a name="whats-next"></a>Et ensuite ?  
- Une fois que vous avez fourni un nom pour la nouvelle base de données que l’Assistant va créer et cliqué sur **OK**, la boîte de dialogue **Créer une base de données** vous renvoie à la page **Choisir une Destination** . Pour plus d’informations, consultez [Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
+## <a name="whats-next"></a>Quelle est l’étape suivante ?  
+ Une fois que vous avez fourni un nom pour la nouvelle base de données que l’Assistant va créer et cliqué sur **OK**, la boîte de dialogue **Créer une base de données** vous renvoie à la page **Choisir une Destination** . Pour plus d’informations, consultez [Choisir une destination](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).

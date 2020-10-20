@@ -12,12 +12,12 @@ author: ronortloff
 ms.author: rortloff
 ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: aa0f0f3afb40492e398e316095a3458169d03eaf
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.openlocfilehash: f432d19a558b82abd52bef2839c0887dff70f7ba
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059307"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92254756"
 ---
 # <a name="sp_pdw_database_encryption_regenerate_system_keys-azure-synapse-analytics"></a>sp_pdw_database_encryption_regenerate_system_keys (Azure Synapse Analytics)
 
@@ -25,7 +25,7 @@ ms.locfileid: "92059307"
 
   Utilisez **sp_pdw_database_encryption_regenerate_system_keys** pour faire pivoter le certificat et la clé de chiffrement de base de données pour les bases de données internes qui sont chiffrées lorsque TDE est activé sur l’appliance. Cela comprend `tempdb`. Cela échoue uniquement si TDE est activé.  
   
-## <a name="syntax"></a>Syntax  
+## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql  
 -- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
@@ -38,7 +38,7 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
 ## <a name="return-code-values"></a>Codet de retour  
  **0** (succès) ou **1** (échec)  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La procédure n’a aucun paramètre.  
   
  Cette procédure doit être utilisée lorsque le trafic dans l’appliance est faible.  
@@ -56,5 +56,4 @@ EXEC sys.sp_pdw_database_encryption_regenerate_system_keys;
 ## <a name="see-also"></a>Voir aussi  
  [sp_pdw_database_encryption &#40;&#41;Azure Synapse Analytics ](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_log_user_data_masking &#40;&#41;Azure Synapse Analytics ](../../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-  
   

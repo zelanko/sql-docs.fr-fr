@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8efd821c41f7a0eaa9a19633c7719795eaa12665
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0cf82f80425dcc00cb3129d051ca233af55ad783
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430871"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194844"
 ---
 # <a name="datareader-destination-custom-properties"></a>Propriétés personnalisées de la destination DataReader
 
@@ -30,7 +30,7 @@ ms.locfileid: "88430871"
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
 |DataReader|String|Nom de classe de la destination DataReader.|  
-|FailOnTimeout|Booléen|Indique s’il faut faire échouer l’opération ou non quand un **ReadTimeout** se produit. La valeur par défaut de cette propriété est **False**.|  
+|FailOnTimeout|Boolean|Indique s’il faut faire échouer l’opération ou non quand un **ReadTimeout** se produit. La valeur par défaut de cette propriété est **False**.|  
 |ReadTimeout|Integer|Nombre de millisecondes devant s'écouler avant l'expiration du délai d'attente. La valeur par défaut de cette propriété est 30000 (30 secondes).|  
   
  L'entrée et les colonnes d'entrée de la destination DataReader ne disposent pas de propriétés personnalisées.  
@@ -38,6 +38,5 @@ ms.locfileid: "88430871"
  Pour plus d’informations, consultez [Destination DataReader](../../integration-services/data-flow/datareader-destination.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
-  
+ [Propriétés communes](./set-the-properties-of-a-data-flow-component.md)  
   

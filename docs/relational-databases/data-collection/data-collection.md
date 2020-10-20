@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 829d60517864d9df7f8019a92e00664c1a1337ea
-ms.sourcegitcommit: e8f6c51d4702c0046aec1394109bc0503ca182f0
+ms.openlocfilehash: dd4827f08c9e21ccd45f128bcc64ab9e03c1474b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/07/2020
-ms.locfileid: "87943546"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193419"
 ---
 # <a name="data-collection"></a>Collecte de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "87943546"
   
  Le collecteur de données vous permet d'ajuster l'étendue de la collecte de données pour l'adapter à vos environnements de test et de production. Le collecteur de données utilise également un entrepôt de données, une base de données relationnelle qui vous permet de gérer les données que vous collectez en définissant pour elles différentes périodes de rétention.  
   
- Le collecteur de données prend en charge le paramétrage dynamique de la collecte de données et il est extensible via son API. Pour plus d’informations, consultez [Programmation du collecteur de données](https://docs.microsoft.com/sql/relational-databases/system-functions/data-collector-functions-transact-sql).  
+ Le collecteur de données prend en charge le paramétrage dynamique de la collecte de données et il est extensible via son API. Pour plus d’informations, consultez [Programmation du collecteur de données](../system-functions/data-collector-functions-transact-sql.md).  
   
  L'illustration suivante montre l'intégration du collecteur de données dans la stratégie globale de la collecte et de la gestion de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -51,7 +51,7 @@ ms.locfileid: "87943546"
   
 -   Comptes proxy  
   
- Pour plus d’informations, consultez [Tâches d’administration automatisée &#40;SQL Server Agent&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0).  
+ Pour plus d’informations, consultez [Tâches d’administration automatisée &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md).  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) permet d’exécuter des packages qui collectent des données provenant de fournisseurs de données individuels. Vous devez maîtriser les outils et les concepts [!INCLUDE[ssIS](../../includes/ssis-md.md)] suivants :  
   
@@ -119,5 +119,3 @@ ms.locfileid: "87943546"
 |Utiliser l’entrepôt de données de gestion pour collecter des données d’un serveur qui est une cible de collecte de données.|[Entrepôt de données de gestion](../../relational-databases/data-collection/management-data-warehouse.md)| 
 |Exploiter les fonctions de trace côté serveur de SQL Server Profiler pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique.| [Utiliser SQL Server Profiler pour créer un jeu d’éléments de collecte Trace SQL (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
-  
-

@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fa9fc496d10a189d75686e3c72f2453b89184626
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 411fe456ae96afdd5a01c0d6cb649035e121fb1b
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785132"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115642"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes de base de la disponibilité SQL Server pour les déploiements Linux
 
@@ -216,7 +216,7 @@ L’utilisation de machines virtuelles pour déployer [!INCLUDE[ssnoversion-md](
 Concernant les groupes de disponibilité et les instances de cluster de basculement (FCI) dans le cadre de la virtualisation, vérifiez que l’anti-affinité est définie pour les nœuds d’un cluster Pacemaker donné. Lorsqu’elles sont configurées pour la haute disponibilité dans une configuration de groupe de disponibilité ou d’instances de cluster de basculement (FCI), les machines virtuelles qui hébergent [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] ne doivent jamais s’exécuter sur le même hôte d’hyperviseur. Par exemple, si une instance de cluster de basculement (FCI) à deux nœuds est déployée, on a besoin d’*au moins* trois hôtes d’hyperviseur afin d’en avoir un prêt à fonctionner pour les machines virtuelles hébergeant un nœud en cas de défaillance d’un hôte, en particulier si des fonctionnalités telles que la migration dynamique ou vMotion sont utilisées.
 
 Pour plus d’informations, consultez :
--   Documentation Hyper-V - [Utilisation du clustering invité pour la haute disponibilité](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
+-   Documentation Hyper-V - [Utilisation du clustering invité pour la haute disponibilité](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn440540(v=ws.11))
 -   Livre blanc (écrit pour des déploiements basés sur Windows, mais la plupart des concepts s’appliquent toujours) - [Planification de déploiements SQL Server critiques à haute disponibilité avec VMware vSphere](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
 ### <a name="networking"></a>Mise en réseau

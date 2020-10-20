@@ -15,12 +15,12 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: dca0076160c9e21b991c444986d1b27162941f5c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7353d02985194024c24319df5c6eca1100607d29
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346215"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195869"
 ---
 # <a name="upgrade-integration-services-packages"></a>Mettre à niveau des packages Integration Services
 
@@ -62,7 +62,7 @@ ms.locfileid: "88346215"
   
  Pour utiliser [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour concevoir des packages incluant des composants personnalisés [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], vous devez modifier le fichier devenv.exe.config situé dans *\<drive>* :\Program Files\Microsoft Visual Studio 10.0\Common7\IDE.  
   
- Pour utiliser ces packages avec les applications clientes générées avec le runtime pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluez les règles de redirection dans la section de configuration du fichier *.exe .config de l'exécutable. Les règles redirigent les assemblys du runtime vers la version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Pour plus d’informations sur la redirection des versions d’assemblys, consultez [Élément \<assemblyBinding> pour \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
+ Pour utiliser ces packages avec les applications clientes générées avec le runtime pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluez les règles de redirection dans la section de configuration du fichier *.exe .config de l'exécutable. Les règles redirigent les assemblys du runtime vers la version 13.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Pour plus d’informations sur la redirection des versions d’assemblys, consultez [Élément \<assemblyBinding> pour \<runtime>](/dotnet/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime).  
   
 ### <a name="locating-the-assemblies"></a>Recherche d'assemblys  
  Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], les assemblys [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ont été mis à niveau vers le .NET 4.0. Il existe un Global Assembly Cache distinct pour .NET 4, situé dans *\<drive>* :\Windows\Microsoft.NET\assembly. Vous trouverez tous les assemblys [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sous ce chemin d'accès, en général dans le dossier GAC_MSIL.  
@@ -81,5 +81,4 @@ ms.locfileid: "88346215"
   
 ### <a name="scripts-that-depend-on-adodbdll"></a>Scripts qui dépendent d'ADODB.dll  
  Les scripts de la tâche de script et du composant Script qui référencent explicitement ADODB.dll risquent de ne pas pouvoir être mis à niveau ou de ne pas pouvoir s'exécuter sur les ordinateurs qui ne disposent pas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Pour permettre la mise à niveau des scripts de la tâche de script et du composant Script, il est recommandé de supprimer la dépendance sur ADODB.dll.  Ado.Net est l'alternative recommandée pour le code managé, à l'instar des scripts VB et C#.  
-  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d17bad386cc020be1a61696aec96a81b6126d8e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 013fffc66c8e40ca2124b949f555e0638df7967e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88393549"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194256"
 ---
 # <a name="ftp-task"></a>Tâche FTP
 
@@ -77,7 +77,7 @@ ms.locfileid: "88393549"
 ## <a name="related-tasks"></a>Tâches associées  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur la façon de définir ces propriétés dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Définir les propriétés d’une tâche ou d’un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
+ Pour plus d’informations sur la façon de définir ces propriétés dans le Concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez [Définir les propriétés d’une tâche ou d’un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md).  
   
  Pour plus d’informations sur la définition de ces propriétés par programmation, consultez <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "88393549"
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions FTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
   
- **Rubriques connexes :** [Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../connection-manager/ftp-connection-manager.md)  
   
  **Arrêt en cas d'échec de l'opération**  
  Indique si la tâche FTP se termine en cas d'échec de l'opération.  
@@ -157,7 +157,7 @@ ms.locfileid: "88393549"
  **RemovePath**  
  Sélectionnez un gestionnaire de connexions FTP ou cliquez sur \<**New connection...**> pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :** [Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaires de connexions FTP](../../integration-services/connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../connection-manager/ftp-connection-manager.md)  
   
 ### <a name="islocalpathvariable-dynamic-options"></a>Options dynamiques IsLocalPathVariable  
   
@@ -176,5 +176,4 @@ ms.locfileid: "88393549"
 ## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
-  
   

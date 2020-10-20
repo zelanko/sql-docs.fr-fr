@@ -13,12 +13,12 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4898ed6ddf50e75565d13be5f35b6f833f78d929
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 5a8b1aa27a301d67df200967b6cba36f042a7f75
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227465"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038893"
 ---
 # <a name="transactions-azure-synapse-analytics"></a>Transactions (Azure Synapse Analytics)
 
@@ -80,7 +80,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
  Si une erreur autre qu’une erreur d’instruction au moment de l’exécution entrave le bon déroulement d’une transaction explicite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] la restaure automatiquement et libère toutes les ressources bloquées par la transaction. Par exemple, si la connexion réseau du client à une instance de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est interrompue ou que le client se déconnecte de l’application, toutes les transactions non validées pendant la connexion sont restaurées quand le réseau notifie l’instance de l’interruption.  
   
- Si une erreur d’instruction au moment de l’exécution se produit dans un lot, le comportement de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est conforme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** dont la valeur est **ON** et toute la transaction est restaurée. Pour plus d’informations sur le paramètre **XACT_ABORT**, consultez [SET XACT_ABORT (Transact-SQL)](https://msdn.microsoft.com/library/ms188792.aspx).  
+ Si une erreur d’instruction au moment de l’exécution se produit dans un lot, le comportement de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est conforme à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**XACT_ABORT** dont la valeur est **ON** et toute la transaction est restaurée. Pour plus d’informations sur le paramètre **XACT_ABORT**, consultez [SET XACT_ABORT (Transact-SQL)](../statements/set-xact-abort-transact-sql.md).  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Une session ne peut exécuter qu’une seule transaction à un moment donné ; les points de sauvegarde et les transactions imbriquées ne sont pas pris en charge.  
@@ -94,7 +94,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Il n’est plus possible de restaurer une transaction après l’émission d’une instruction COMMIT, car les modifications de données ont été définitivement enregistrées dans la base de données.  
   
- Les commandes [CREATE DATABASE &#40; Azure Synapse Analytics&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) et [DROP DATABASE &#40; Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) ne peuvent pas être utilisées dans une transaction explicite.  
+ Les commandes [CREATE DATABASE &#40; Azure Synapse Analytics&#41;](../statements/create-database-transact-sql.md) et [DROP DATABASE &#40; Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md) ne peuvent pas être utilisées dans une transaction explicite.  
   
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] n’a pas de mécanisme de partage de transaction. Cela implique qu’à tout moment, une seule session peut travailler sur une même transaction dans le système.  
   
@@ -150,5 +150,4 @@ COMMIT;
  [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  
-  
   

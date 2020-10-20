@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 463f442c15fdd6bfa29e97c650d5b7d8ee95fe91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4fddf58b0f7473ea2ae46812d9908dcbbafb7b66
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85631026"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195643"
 ---
 # <a name="create-a-database"></a>Créer une base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Cette rubrique explique comment créer une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
 
 > [!NOTE]
-> Pour créer une base de données dans Azure SQL Database à l’aide de T-SQL, consultez [Créer une base de données dans Azure SQL Database](https://docs.microsoft.com/sql/t-sql/statements/create-database-azure-sql-database).
+> Pour créer une base de données dans Azure SQL Database à l’aide de T-SQL, consultez [Créer une base de données dans Azure SQL Database](../../t-sql/statements/create-database-transact-sql.md).
   
  **Dans cette rubrique**  
   
@@ -134,12 +134,11 @@ LOG ON
 GO  
 ```  
   
- Pour obtenir plus d’exemples, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Pour obtenir plus d’exemples, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Ajouter des fichiers de données ou journaux à une base de données](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
-  
   

@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9dfbe2a36695d3fcb776d9993243f9210df8082c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a55d74c1f7f75065cafa560cf1c6cc0bc70e2f99
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88391115"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195221"
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Page Général des Options des Concepteurs Integration Services
 
@@ -33,7 +33,7 @@ ms.locfileid: "88391115"
  **Vérifier la signature numérique lors du chargement d'un package**  
  Sélectionnez cette option pour que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vérifie la signature numérique durant le chargement d’un package. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vérifie uniquement si la signature numérique est présente, si elle est valide et si elle provient d’une source fiable. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ne vérifie pas si le package a été modifié depuis qu'il a été signé.  
   
- Si vous définissez la valeur de Registre **BlockedSignatureStates** , cette valeur de Registre remplace l’option **Vérifier la signature numérique lors du chargement d’un package** . Pour plus d’informations, consultez [Implémenter une stratégie de signature en définissant une valeur de Registre](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md).  
+ Si vous définissez la valeur de Registre **BlockedSignatureStates** , cette valeur de Registre remplace l’option **Vérifier la signature numérique lors du chargement d’un package** . Pour plus d’informations, consultez [Implémenter une stratégie de signature en définissant une valeur de Registre](./security/identify-the-source-of-packages-with-digital-signatures.md).  
   
  Pour plus d’informations sur les packages et les certificats numériques, consultez [Identifier la source de packages à l’aide de signatures numériques](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md).  
   
@@ -61,5 +61,4 @@ ms.locfileid: "88391115"
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sécurité &#40;Integration Services&#41;](../integration-services/security/security-overview-integration-services.md)   
  [Extension de packages avec des scripts](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
-  
   

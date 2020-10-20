@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cd306ce541f3fe4f6cf352421e0087afb595c41e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a61d85e961b2572ce60d9766e7df0c83d042e84e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430811"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195371"
 ---
 # <a name="ole-db-source"></a>Source OLE DB
 
@@ -34,7 +34,7 @@ ms.locfileid: "88430811"
   La source OLE DB extrait des données d'une série de bases de données relationnelles compatibles OLE DB à l'aide d'une table de base de données, d'une vue ou d'une commande SQL. Par exemple, la source OLE DB peut extraire des données de tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Si la source de données est [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, la source de données requiert un gestionnaire de connexions différent des versions antérieures d'Excel. Pour plus d’informations, consultez [Établir une connexion à un classeur Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md).  
+>  Si la source de données est [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, la source de données requiert un gestionnaire de connexions différent des versions antérieures d'Excel. Pour plus d’informations, consultez [Établir une connexion à un classeur Excel](../load-data-to-from-excel-with-ssis.md).  
   
  La source OLE DB fournit quatre modes d'accès aux données différents pour l'extraction des données :  
   
@@ -101,7 +101,7 @@ ms.locfileid: "88430811"
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](./set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriétés personnalisées OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -122,9 +122,9 @@ ms.locfileid: "88430811"
   La page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source OLE DB** vous permet de sélectionner le gestionnaire de connexions OLE DB pour la source. Cette page vous permet également de sélectionner une table ou une vue à partir de la base de données.  
   
 > [!NOTE]  
->  Pour charger des données à partir d’une source de données qui utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, utilisez une source OLE DB. Vous ne pouvez pas utiliser une source Excel pour charger des données à partir d'une source de données Excel 2007. Pour plus d’informations, consultez [Configurer le gestionnaire de connexions OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md).  
+>  Pour charger des données à partir d’une source de données qui utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, utilisez une source OLE DB. Vous ne pouvez pas utiliser une source Excel pour charger des données à partir d'une source de données Excel 2007. Pour plus d’informations, consultez [Configurer le gestionnaire de connexions OLE DB](../connection-manager/ole-db-connection-manager.md).  
 >   
->  Pour charger des données à partir d'une source de données qui utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 ou une version antérieure, utilisez une source Excel. Pour plus d’informations, consultez [Éditeur de source Excel &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md).  
+>  Pour charger des données à partir d'une source de données qui utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 ou une version antérieure, utilisez une source Excel. Pour plus d’informations, consultez [Éditeur de source Excel &#40;page Gestionnaire de connexions&#41;](./excel-source.md).  
   
 > [!NOTE]  
 >  La propriété **CommandTimeout** de la source OLE DB n’est pas disponible dans **l’Éditeur de source OLE DB**, mais peut être définie à l’aide de **l’Éditeur avancé**. Pour plus d’informations sur cette propriété, consultez la section sur la source Excel dans [Propriétés personnalisées OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md).  
@@ -150,7 +150,7 @@ ms.locfileid: "88430811"
 |Option|Description|  
 |------------|-----------------|  
 |Table ou vue|Permet de récupérer les données d'une table ou d'une vue dans la source de données OLE DB.|  
-|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes :** [Utiliser des variables dans des packages](../integration-services-ssis-variables.md)|  
 |Commande SQL|Récupérez les données de la source de données OLE DB à l'aide d'une requête SQL.|  
 |Commande SQL à partir d'une variable|Spécifiez le texte de la requête SQL dans une variable.|  
   
@@ -234,5 +234,4 @@ ms.locfileid: "88430811"
  [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)   
  [Flux de données](../../integration-services/data-flow/data-flow.md)  
-  
   

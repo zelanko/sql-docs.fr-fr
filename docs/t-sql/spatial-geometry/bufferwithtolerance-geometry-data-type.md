@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fc0cfc790f933935de0f9aee96dd7c6e7b66425f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a039118dc0abe85b065d74b96f551c2991820333
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88472533"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037063"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -83,7 +83,7 @@ Retourne un objet géométrique qui représente l’union de toutes les valeurs 
   
  Une mémoire tampon négative supprime tous les points dans la distance donnée de la limite de l’instance **geometry**.  
   
- L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max(tolérance, étendues \* 1E-7), où tolérance représente la valeur du paramètre *tolerance*. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max(tolérance, étendues \* 1E-7), où tolérance représente la valeur du paramètre *tolerance*. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geometry](./spatial-types-geometry-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `Point` et utilise `BufferWithTolerance()` pour obtenir une estimation grossière de la mémoire tampon autour d'elle.  
@@ -98,5 +98,3 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
  [STBuffer &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [Méthodes étendues sur les instances géométriques](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
-  
-

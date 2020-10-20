@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289687"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257445"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Gestion des autorisations dans les Data Warehouse parallèles
 Cet article décrit la configuration requise et les options de gestion des autorisations de base de données pour SQL Server PDW.
@@ -48,9 +48,9 @@ L’exemple suivant illustre une méthode courante et recommandée pour configur
 
 5.  Accordez des autorisations aux rôles de base de données définis par l’utilisateur.
 
-Les connexions sont des objets de niveau serveur et peuvent être répertoriées en affichant [sys. server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Seules les autorisations au niveau du serveur peuvent être accordées aux principaux de serveur.
+Les connexions sont des objets de niveau serveur et peuvent être répertoriées en affichant [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Seules les autorisations au niveau du serveur peuvent être accordées aux principaux de serveur.
 
-Les utilisateurs et les rôles de base de données sont des objets de niveau base de données et peuvent être répertoriés en affichant [sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Seules les autorisations au niveau de la base de données peuvent être accordées aux principaux de base de données.
+Les utilisateurs et les rôles de base de données sont des objets de niveau base de données et peuvent être répertoriés en affichant [sys.database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Seules les autorisations au niveau de la base de données peuvent être accordées aux principaux de base de données.
 
 ## <a name="default-permissions"></a><a name="BackupTypes"></a>Autorisations par défaut
 La liste suivante décrit les autorisations par défaut :
@@ -84,7 +84,7 @@ Toutes les nouvelles connexions d’appliance appartiennent automatiquement au r
 Le fait qu’une connexion ait ou non l’autorisation d’effectuer une action spécifique dépend des autorisations accordées ou refusées à la connexion, à l’utilisateur et aux rôles dont l’utilisateur est membre. Les autorisations au niveau du serveur (telles que **Create login** et **View Server State**) sont disponibles pour les principaux de niveau serveur (connexions). Les autorisations au niveau de la base de données (telles que **Select** dans une table ou **Execute** sur une procédure) sont disponibles pour les principaux au niveau de la base de données (utilisateurs et rôles de base de données).
 
 ### <a name="implicit-and-explicit-permissions"></a>Autorisations implicites et explicites
-Une *autorisation explicite* est une autorisation **GRANT** ou **DENY** donnée à un principal par une instruction **GRANT** ou **DENY**. Les autorisations au niveau de la base de données sont répertoriées dans la vue [sys. database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . Les autorisations au niveau du serveur sont répertoriées dans la vue [sys. server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .
+Une *autorisation explicite* est une autorisation **GRANT** ou **DENY** donnée à un principal par une instruction **GRANT** ou **DENY**. Les autorisations au niveau de la base de données sont répertoriées dans la vue [sys.database_permissions](../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) . Les autorisations au niveau du serveur sont répertoriées dans la vue [sys.server_permissions](../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) .
 
 Une *autorisation implicite* est une autorisation **Grant** ou **Deny** qu’un principal (connexion ou rôle de serveur) a hérité. Une autorisation peut être héritée des manières suivantes.
 
@@ -229,7 +229,7 @@ GRANT CONTROL SERVER TO Fay;
 Chaque connexion qui peut se connecter à SQL Server PDW est membre du rôle serveur **public** . Toutes les connexions héritent des autorisations accordées à **public** sur n’importe quel objet. Affectez uniquement des autorisations **publiques** à un objet lorsque vous souhaitez que l’objet soit disponible pour tous les utilisateurs. Vous ne pouvez pas modifier l’appartenance au rôle **public** .
 
 > [!NOTE]
-> **public** est implémenté différemment des autres rôles. Étant donné que tous les principaux de serveur sont membres de public, l’appartenance du rôle **public** n’est pas répertoriée dans la DMV **sys. server_role_members** .
+> **public** est implémenté différemment des autres rôles. Étant donné que tous les principaux de serveur sont membres de public, l’appartenance du rôle **public** n’est pas répertoriée dans la DMV **sys.server_role_members** .
 
 ### <a name="fixed-server-roles-vs-granting-permissions"></a>Rôles serveur fixes et octroi d’autorisations
 Le système des rôles serveur fixes et des rôles de base de données fixes est un système hérité issu des versions 1980. Les rôles fixes sont toujours pris en charge et sont utiles dans les environnements où il y a peu d’utilisateurs et les besoins en matière de sécurité sont simples. À partir de SQL Server 2005, un système plus détaillé d’octroi d’autorisation a été créé. Ce nouveau système est plus granulaire et offre de nombreuses autres options pour accorder et refuser des autorisations. La complexité supplémentaire du système plus granulaire rend plus difficile l’apprentissage, mais la plupart des systèmes d’entreprise doivent accorder des autorisations au lieu d’utiliser les rôles fixes. <!-- MISSING LINKS The permissions are discussed and listed in the topic [Permissions: GRANT, DENY, REVOKE &#40;SQL Server PDW&#41;](../sqlpdw/permissions-grant-deny-revoke-sql-server-pdw.md).  -->

@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5281f080-53d5-4679-aa26-f4cd4ac7a2df
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5b3784e4af35afe5fdf0b84290cdf33fc8c77496
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 05fefa983f3b58f8ca8be95772d3fbc49f3e9afb
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430151"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194056"
 ---
 # <a name="microsoft-connector-for-sap-bw"></a>Microsoft Connector pour SAP BW
 
@@ -45,7 +45,7 @@ ms.locfileid: "88430151"
   
 -   **Gestionnaire de connexions SAP BW** : le gestionnaire de connexions SAP BW connecte une source SAP BW ou une destination SAP BW à un système SAP Netweaver BW version 7.  
   
- Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server Integration Services avec SAP BI 7.0](https://go.microsoft.com/fwlink/?LinkId=301897). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
+ Pour obtenir la procédure pas à pas qui montre comment configurer et utiliser le gestionnaire de connexions, la source et la destination SAP BW, consultez le livre blanc [Utilisation de SQL Server Integration Services avec SAP BI 7.0](/previous-versions/sql/sql-server-2008/dd299430(v=sql.100)). Ce livre blanc explique également comment configurer les objets nécessaires dans SAP BW.  
   
 ## <a name="documentation"></a>Documentation  
  Ce fichier d’aide de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW contient les rubriques et sections suivantes :  
@@ -58,5 +58,4 @@ ms.locfileid: "88430151"
   
  [Aide (F1) sur Microsoft Connector pour SAP BW](../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
  Décrit l’interface utilisateur de chaque composant de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector pour SAP BW.  
-  
   

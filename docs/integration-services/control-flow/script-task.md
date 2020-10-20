@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 506b99d81a47df7a88a2ef33ea91815b99e165fb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 4f5f18f3306256906d6c419957aa3d97d3506e7d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425881"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197134"
 ---
 # <a name="script-task"></a>Tâche de script
 
@@ -79,15 +79,15 @@ ms.locfileid: "88425881"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez les rubriques suivantes :  
   
--   [Éditeur de tâche de script &#40;page Général&#41;](../../integration-services/control-flow/script-task-editor-general-page.md)  
+-   [Éditeur de tâche de script &#40;page Général&#41;]()  
   
--   [Éditeur de tâche de script &#40;page Script&#41;](../../integration-services/control-flow/script-task-editor-script-page.md)  
+-   [Éditeur de tâche de script &#40;page Script&#41;]()  
   
 -   [Page Expressions](../../integration-services/expressions/expressions-page.md)  
   
  Pour plus d’informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , consultez la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ### <a name="configuring-the-script-task-programmatically"></a>Configuration par programme de la tâche de script  
  Pour plus d’informations sur la définition par programmation de ces propriétés, consultez sur la rubrique suivante :  
@@ -123,7 +123,7 @@ ms.locfileid: "88425881"
   
  Après avoir créé un script pour la tâche, vous ne pouvez pas modifier la valeur de la propriété **ScriptLanguage** .  
   
- Pour définir le langage de script par défaut pour la tâche de script, utilisez l'option **Langage de script** dans la page **Général** de la boîte de dialogue **Options** . Pour plus d'informations, consultez [General Page](../../integration-services/control-flow/script-task-editor-general-page.md).  
+ Pour définir le langage de script par défaut pour la tâche de script, utilisez l'option **Langage de script** dans la page **Général** de la boîte de dialogue **Options** . Pour plus d'informations, consultez [General Page]().  
   
  **EntryPoint**  
  Spécifiez la méthode que le runtime [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appelle comme point d’entrée dans le code de la tâche de script. La méthode spécifiée doit se trouver dans la classe ScriptMain (classe par défaut générée par les modèles de script) du projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
@@ -148,5 +148,4 @@ ms.locfileid: "88425881"
 ## <a name="related-content"></a>Contenu associé  
   
 -   Article technique [Procédure d'envoi de courrier électronique avec notification de remise en C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Procédure d’envoi d’e-mail avec notification de remise en C#) sur shareourideas.com  
-  
   

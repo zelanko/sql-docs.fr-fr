@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 57a1c38bff7d5b302de595226a74ea66ba4f80ec
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 47cce068cada1a40ec3fda76013ec428ef5d7e11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495468"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195188"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Déployer un projet SSIS avec SQL Server Management Studio (SSMS)
 
@@ -27,7 +27,7 @@ SQL Server Management Studio est un environnement intégré pour la gestion des 
 
 ## <a name="prerequisites"></a>Prérequis
 
-Avant de commencer, vérifiez que vous disposez de la dernière version de SQL Server Management Studio. Pour télécharger SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Avant de commencer, vérifiez que vous disposez de la dernière version de SQL Server Management Studio. Pour télécharger SSMS, consultez [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md).
 
 La validation décrite dans cet article pour le déploiement sur Azure SQL Database nécessite SQL Server Data Tools (SSDT) version 17.4 ou ultérieure. Pour obtenir la dernière version de SSDT, consultez [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).
 
@@ -123,4 +123,4 @@ Utilisez SQL Server Management Studio pour établir une connexion au catalogue S
     - [Exécuter un package SSIS avec Transact-SQL (VS Code)](ssis-quickstart-run-tsql-vscode.md)
     - [Exécuter un package SSIS à partir de l’invite de commandes](./ssis-quickstart-run-cmdline.md)
     - [Exécuter un package SSIS avec PowerShell](ssis-quickstart-run-powershell.md)
-    - [Exécuter un package SSIS avec C#](./ssis-quickstart-run-dotnet.md) 
+    - [Exécuter un package SSIS avec C#](./ssis-quickstart-run-dotnet.md)

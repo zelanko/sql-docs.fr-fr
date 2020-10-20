@@ -22,12 +22,12 @@ ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33134b3f32620ce68edf844737e9e6c1814f1fcb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 48ea2ba928333eef0980ad199e33f93f94a859c6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459221"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195421"
 ---
 # <a name="unary-operators---positive"></a>Opérateurs unaires - Positif
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -47,7 +47,6 @@ Retourne la valeur d'une expression numérique (un opérateur unaire). Les opér
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 + numeric_expression  
 ```  
   
@@ -68,8 +67,8 @@ Retourne la valeur d'une expression numérique (un opérateur unaire). Les opér
 ### <a name="a-setting-a-variable-to-a-positive-value"></a>R. Affectation d'une valeur positive à une variable  
  Cet exemple assigne à une variable une valeur positive.  
   
-```  
-DECLARE @MyNumber decimal(10,2);  
+```sql  
+DECLARE @MyNumber DECIMAL(10,2);  
 SET @MyNumber = +123.45;  
 SELECT @MyNumber;  
 GO  
@@ -87,10 +86,10 @@ GO
 ### <a name="b-using-the-unary-plus-operator-with-a-negative-value"></a>B. Utilisation de l'opérateur unaire plus avec une valeur négative  
  Cet exemple montre l'utilisation du plus unaire avec une expression négative et la fonction ABS() sur la même expression négative. Le plus unaire n'affecte pas l'expression, mais la fonction ABS retourne la valeur positive de l'expression.  
   
-```  
+```sql  
 USE tempdb;  
 GO  
-DECLARE @Num1 int;  
+DECLARE @Num1 INT;  
 SET @Num1 = -5;  
 SELECT +@Num1, ABS(@Num1);  
 GO  
