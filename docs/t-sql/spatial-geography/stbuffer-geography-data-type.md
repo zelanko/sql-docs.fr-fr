@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9e869aa4f5f5056ef29968b6ad0d7446b0849a25
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1d39e58c6dd4fa648d8d4118414925777eb3535b
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88417045"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92038313"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (type de données geography)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "88417045"
   
  La limite de distance maximale permet à la construction de la mémoire tampon d'être aussi flexible que possible.  
   
- L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max (tolérance, étendues * 1E-7), où tolérance = distance \* 0,001. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geography](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max (tolérance, étendues * 1E-7), où tolérance = distance \* 0,001. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geography](./stequals-geography-data-type.md).  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant crée une instance `LineString``geography`. Il utilise ensuite `STBuffer()` pour retourner la région située à une proximité d'un mètre de l'instance.  
@@ -79,5 +79,4 @@ SELECT @g.STBuffer(1).ToString();
 ## <a name="see-also"></a>Voir aussi  
  [BufferWithTolerance &#40;type de données geography&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [Méthodes OGC sur les instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
-  
   

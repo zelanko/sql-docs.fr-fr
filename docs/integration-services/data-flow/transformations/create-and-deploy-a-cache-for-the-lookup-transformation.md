@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0d212a870d0b66108cb1b905249fc8ba2a611a91
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 26f08ee42a1fae6ac5a5d3a50d8b32282c2a2fde
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477741"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192682"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Créer et déployer un cache pour la transformation de recherche
 
@@ -31,7 +31,7 @@ ms.locfileid: "88477741"
   
  La transformation de recherche effectue des recherches en joignant les données des colonnes d’entrée d’une source de données connectée aux colonnes du dataset de référence.  
   
- Vous créez un fichier cache en utilisant un gestionnaire de connexions du cache et une transformation du cache. Pour plus d’informations, consultez [Gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md) et [Transformation du cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
+ Vous créez un fichier cache en utilisant un gestionnaire de connexions du cache et une transformation du cache. Pour plus d’informations, consultez [Gestionnaire de connexions du cache](../../connection-manager/cache-connection-manager.md) et [Transformation du cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
  Pour en savoir plus sur la transformation de recherche, consultez [Transformation de recherche](../../../integration-services/data-flow/transformations/lookup-transformation.md).  
   
@@ -65,11 +65,11 @@ ms.locfileid: "88477741"
     > [!NOTE]  
     >  Lorsque la transformation de recherche est configurée pour utiliser un gestionnaire de connexions du cache, seules les colonnes d'index dans le dataset de référence peuvent être mappées avec des colonnes d'entrée. En outre, toutes les colonnes d’index doivent être mappées.  
   
-     Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/cache-connection-manager-editor.md).  
+     Pour plus d’informations, consultez [Éditeur du gestionnaire de connexions du cache](../../connection-manager/cache-connection-manager.md).  
   
 7.  Configurez la transformation du cache selon vos besoins.  
   
-     Pour plus d’informations, consultez [Éditeur de transformation du cache &#40;page Gestionnaire de connexions&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md) et [Éditeur de transformation du cache &#40;page Mappages&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-mappings-page.md).  
+     Pour plus d’informations, consultez [Éditeur de transformation du cache &#40;page Gestionnaire de connexions&#41;](./cache-transform.md) et [Éditeur de transformation du cache &#40;page Mappages&#41;](./cache-transform.md).  
   
 8.  Exécutez le package.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "88477741"
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], ouvrez le projet [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] qui contient le package souhaité, puis ouvrez le package.  
   
-2.  Vous pouvez éventuellement créer une configuration de package. Pour plus d’informations, consultez [Créer des configurations de package](../../../integration-services/packages/create-package-configurations.md).  
+2.  Vous pouvez éventuellement créer une configuration de package. Pour plus d’informations, consultez [Créer des configurations de package](../../packages/legacy-package-deployment-ssis.md).  
   
 3.  Ajoutez le fichier cache au projet en procédant comme suit :  
   
@@ -89,13 +89,12 @@ ms.locfileid: "88477741"
   
      Le fichier apparaît dans le dossier **Divers** de l’Explorateur de solutions.  
   
-4.  Configurez le projet afin de créer un utilitaire de déploiement, puis créez le projet. Pour plus d’informations, consultez [Créer un utilitaire de déploiement](../../../integration-services/packages/create-a-deployment-utility.md).  
+4.  Configurez le projet afin de créer un utilitaire de déploiement, puis créez le projet. Pour plus d’informations, consultez [Créer un utilitaire de déploiement](../../packages/legacy-package-deployment-ssis.md).  
   
      Un fichier manifeste, \<*project name*>.SSISDeploymentManifest.xml, est créé. Il liste les divers fichiers du projet, les packages et les configurations des packages.  
   
-5.  Déployez le package dans le système de fichiers. Pour plus d’informations, consultez [Déployer des packages à l’aide de l’utilitaire de déploiement](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
+5.  Déployez le package dans le système de fichiers. Pour plus d’informations, consultez [Déployer des packages à l’aide de l’utilitaire de déploiement](../../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un utilitaire de déploiement](../../../integration-services/packages/create-a-deployment-utility.md)  
-  
+ [Créer un utilitaire de déploiement](../../packages/legacy-package-deployment-ssis.md)  
   

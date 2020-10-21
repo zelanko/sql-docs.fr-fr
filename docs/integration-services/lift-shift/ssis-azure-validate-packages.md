@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 41985e8d39de843c8319ac3ac5622c4cb8b4aa51
-ms.sourcegitcommit: fe5dedb2a43516450696b754e6fafac9f5fdf3cf
+ms.openlocfilehash: d92a41782ec094b323aaaec3eaff5fb584637dc7
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "89195135"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192521"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Valider les packages SSIS (SQL Server Integration Services) déployés sur Azure
 
@@ -33,7 +33,7 @@ Pour plus d’informations sur l’Assistant Déploiement de package, consultez 
 ## <a name="validate-connection-managers"></a>Valider les gestionnaires de connexions
 
 L’Assistant inspecte certains gestionnaires de connexions à la recherche des problèmes suivants qui peuvent entraîner l’échec de la connexion :
-- **Authentification Windows**. Si une chaîne de connexion utilise l’authentification Windows, la validation génère un avertissement. L’authentification Windows nécessite des étapes de configuration supplémentaires. Pour plus d’informations, consultez [Se connecter à des données et des partages de fichiers avec l’authentification Windows](ssis-azure-connect-with-windows-auth.md).
+- **Authentification Windows**. Si une chaîne de connexion utilise l’authentification Windows, la validation génère un avertissement. L’authentification Windows nécessite des étapes de configuration supplémentaires. Pour plus d’informations, consultez [Se connecter à des données et des partages de fichiers avec l’authentification Windows](/azure/data-factory/ssis-azure-connect-with-windows-auth).
 - **Chemin du fichier**. Si une chaîne de connexion contient un chemin de fichier local codé en dur, comme `C:\\...`, la validation génère un avertissement. Les packages contenant un chemin absolu peuvent échouer.
 - **Chemin UNC**. Si une chaîne de connexion contient un chemin UNC, la validation génère un avertissement. Les packages contenant un chemin UNC peuvent échouer, car ce chemin nécessite généralement l’authentification Windows pour l’octroi de l’accès.
 - **Nom d’hôte**. Si une propriété de serveur contient un nom d’hôte au lieu d’une adresse IP, la validation génère un avertissement. Les packages contenant un nom d’hôte peuvent échouer, car le réseau virtuel Azure exige généralement la bonne configuration DNS pour prendre en charge la résolution de noms DNS.

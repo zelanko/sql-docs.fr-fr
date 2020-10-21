@@ -1,24 +1,25 @@
 ---
-title: Activer l’intégration de Data Quality Services à Master Data Services | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Activer l’intégration de Data Quality Services
+description: Dans le complément Master Data Services pour Excel, les fonctionnalités de correspondance sont fournies par Data Quality Services (DQS).
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ab32938d-a80e-4106-80d4-94b2de3d67dc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 9c89efdcf1c9ad2b3bad9bf2b29506d21f2514e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 27c374ff84a33ed750c9b425dae9a75c6b33f8e0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944985"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "92257854"
 ---
 # <a name="enable-data-quality-services-integration-with-master-data-services"></a>Activer l'intégration de Data Quality Services avec Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], la fonctionnalité de mise en correspondance est assurée par Data Quality Services (DQS). Cette fonctionnalité doit être activée pour pouvoir être utilisée.  
   
@@ -41,7 +42,7 @@ ms.locfileid: "67944985"
 5.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en correspondance de la qualité des données dans le complément MDS pour Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
+ [Correspondance de la qualité des données dans le Complément MDS pour Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)   
  [Complément Master Data Services pour Microsoft Excel](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)   
  [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   

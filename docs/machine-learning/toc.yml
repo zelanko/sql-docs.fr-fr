@@ -374,7 +374,7 @@
 - name: Ressources
   items:
     - name: "Notes de publication\_2019 >"
-      href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+      href: ../sql-server/sql-server-version-15-release-notes.md?toc=..%252ftoc.json
     - name: "Notes de publication\_2017 >"
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: "Notes de publication\_2016 >"

@@ -24,12 +24,12 @@ ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a642ad617c1c466306f5beb3f11d41f9181b8458
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0751b396deef4a8617b18e9555aae50fdb835010
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88459371"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193379"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -85,7 +85,7 @@ test_expression [ NOT ] IN
 ### <a name="a-comparing-or-and-in"></a>R. Comparaison des opérateurs OR et IN  
  L'exemple suivant sélectionne une liste des noms d'employés qui sont ingénieurs concepteurs, concepteurs d'outils ou assistants marketing.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -100,7 +100,7 @@ GO
   
  Vous obtenez toutefois les mêmes résultats en utilisant IN.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, e.JobTitle  
@@ -131,7 +131,7 @@ Mary        Dempsey     Marketing Assistant
 ### <a name="b-using-in-with-a-subquery"></a>B. Utilisation de l'opérateur IN avec une sous-requête  
  L'exemple suivant recherche tous les ID des vendeurs dans la table `SalesPerson` pour les employés dont le quota de ventes annuel est supérieur à 250 000 $. Il sélectionne ensuite, dans la table `Employee`, les noms de tous les employés dont l'`EmployeeID` correspond aux résultats issus de la sous-requête `SELECT`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -160,7 +160,7 @@ Tete         Mensa-Annan
 ### <a name="c-using-not-in-with-a-subquery"></a>C. Utilisation de l'opérateur NOT IN avec une sous-requête  
  L'exemple suivant recherche les vendeurs qui n'ont pas de quota supérieur à 250 000 $. `NOT IN` identifie les vendeurs qui ne correspondent pas aux éléments de la liste de valeurs.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName  
@@ -179,7 +179,7 @@ GO
 ### <a name="d-using-in-and-not-in"></a>D. Utilisation des clauses IN et NOT IN  
  L’exemple suivant recherche toutes les entrées dans la table `FactInternetSales` qui correspondent à des valeurs `SalesReasonKey` dans la table `DimSalesReason`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -189,7 +189,7 @@ IN (SELECT SalesReasonKey FROM DimSalesReason);
   
  L’exemple suivant recherche toutes les entrées dans la table `FactInternetSalesReason` qui ne correspondent pas à des valeurs `SalesReasonKey` dans la table `DimSalesReason`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT * FROM FactInternetSalesReason   
@@ -200,7 +200,7 @@ NOT IN (SELECT SalesReasonKey FROM DimSalesReason);
 ### <a name="e-using-in-with-an-expression-list"></a>E. Utilisation de la clause IN avec une liste d’expressions  
  L’exemple suivant recherche tous les ID des vendeurs figurant dans la table `DimEmployee` dont le prénom est `Mike` ou `Michael`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName  

@@ -26,12 +26,12 @@ ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3c5c380472013176cdbe7ff745c588107d216b9
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 284d4110c4c0a2b8b4b7a1c26c4a4148fb5c50a6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88467631"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193329"
 ---
 # <a name="-modulus-transact-sql"></a>% (Reste) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "88467631"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 dividend % divisor  
 ```  
   
@@ -66,18 +66,18 @@ dividend % divisor
 ### <a name="a-simple-example"></a>R. Exemple simple  
  L'exemple suivant divise le nombre 38 par 5. Cette opération produit le nombre 7 comme partie entière du résultat, et montre comment le modulo retourne le reste 3.  
   
-```  
+```sql  
 SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### <a name="b-example-using-columns-in-a-table"></a>B. Exemple utilisant des colonnes dans une table  
  L'exemple suivant renvoie le numéro d'identification et le prix unitaire du produit, ainsi que le reste (modulo) de la division du prix de chaque produit, converti en valeur entière, par le nombre de produits commandés.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(100)ProductID, UnitPrice, OrderQty,  
-   CAST((UnitPrice) AS int) % OrderQty AS Modulo  
+   CAST((UnitPrice) AS INT) % OrderQty AS Modulo  
 FROM Sales.SalesOrderDetail;  
 GO  
 ```  
@@ -87,7 +87,7 @@ GO
 ### <a name="c-simple-example"></a>C. Exemple simple  
  L’exemple suivant montre les résultats de l’opérateur `%` lors d’une division de 3 par 2.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT TOP(1) 3%2 FROM dimEmployee;  

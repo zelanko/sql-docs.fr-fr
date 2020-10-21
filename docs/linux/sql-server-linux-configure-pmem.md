@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 146ab5788e29045a55e6251be01e061f52d7bbb8
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: c6f791cf96520f46c37bb061f30ac7df962695e5
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088926"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115685"
 ---
 # <a name="configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Configurer la mémoire persistante (PMEM) pour SQL Server sur Linux
 
@@ -87,7 +87,7 @@ mount -o dax,noatime /dev/pmem0 /mnt/dax
 
 Une fois que l’appareil a été configuré avec `ndctl`, créé et monté, vous pouvez y placer des fichiers de base de données ou créer une nouvelle base de données.
 
-Étant donné que les appareils PMEM sont O_DIRECT-safe (E/S directes), activez l’indicateur de trace 3979 pour désactiver le mécanisme de vidage forcé. Pour plus d’informations, consultez [Support FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Les éléments internes d’accès aux unités forcées sont décrits ici [FUA internals](https://blogs.msdn.microsoft.com/bobsql/2018/12/18/sql-server-on-linux-forced-unit-access-fua-internals/).
+Étant donné que les appareils PMEM sont O_DIRECT-safe (E/S directes), activez l’indicateur de trace 3979 pour désactiver le mécanisme de vidage forcé. Pour plus d’informations, consultez [Support FUA](https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux). Les éléments internes d’accès aux unités forcées sont décrits ici [FUA internals](/archive/blogs/bobsql/sql-server-on-linux-forced-unit-access-fua-internals).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

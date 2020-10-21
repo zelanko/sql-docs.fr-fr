@@ -10,11 +10,11 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289697"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257472"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Accorder des autorisations T-SQL pour des Data Warehouse parallèles
 Accordez des autorisations T-SQL pour les opérations de base de données en parallèle Data Warehouse.
@@ -133,7 +133,7 @@ Si la destination des données est une autre SQL Server PDW, l’utilisateur doi
 ## <a name="grant-permissions-to-manage-databases"></a>Accorder des autorisations pour gérer les bases de données
 Cette section décrit comment accorder des autorisations à un utilisateur de base de données pour gérer une base de données sur l’appareil SQL Server PDW.  
   
-Dans certains cas, une entreprise affecte un responsable pour une base de données. Le gestionnaire contrôle l’accès des autres connexions à la base de données, ainsi que les données et les objets de la base de données. Pour gérer tous les objets, rôles et utilisateurs dans une base de données, accordez à l’utilisateur l’autorisation **Control** sur la base de données. L’instruction suivante accorde à l’utilisateur `KimAbercrombie`l’autorisation **Control** sur la base de données **AdventureWorksPDW2012** .  
+Dans certains cas, une entreprise affecte un responsable pour une base de données. Le gestionnaire contrôle l’accès des autres connexions à la base de données, ainsi que les données et les objets de la base de données. Pour gérer tous les objets, rôles et utilisateurs dans une base de données, accordez à l’utilisateur l’autorisation **Control** sur la base de données. L’instruction suivante accorde à l’utilisateur l’autorisation **Control** sur la base de données **AdventureWorksPDW2012** `KimAbercrombie` .  
   
 ```sql
 USE AdventureWorksPDW2012;  
@@ -204,7 +204,7 @@ Les graphiques suivants peuvent prêter à confusion, mais ils montrent comment 
   
 ![Autorisations de connexion de sécurité APS](./media/grant-permissions/APS_security_login_perms.png "APS_security_login_perms")  
   
-**Autorisations de l’utilisateur :**  
+**Autorisations utilisateur :**  
   
 ![Autorisations utilisateur de sécurité APS](./media/grant-permissions/APS_security_user_perms.png "APS_security_user_perms")  
   
@@ -221,7 +221,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 L’appliance SQL Server PDW peut être surveillée à l’aide de la console d’administration ou des vues du système SQL Server PDW. Les connexions requièrent l’autorisation niveau serveur **afficher l’état du serveur** pour surveiller l’appliance. Les connexions requièrent l’autorisation **ALTER ANY Connection** pour mettre fin aux connexions à l’aide de la console d’administration ou de la commande **Kill** . Pour plus d’informations sur les autorisations requises pour utiliser la console d’administration, consultez [accorder des autorisations pour utiliser la console d’administration &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>Accorder l’autorisation de surveiller l’appliance à l’aide des vues système  
-Les instructions SQL suivantes créent une connexion nommée `monitor_login` et accordent l’autorisation **View Server State** à `monitor_login` la connexion.  
+Les instructions SQL suivantes créent une connexion nommée `monitor_login` et accordent l’autorisation **View Server State** à la `monitor_login` connexion.  
   
 ```sql  
 USE master;  
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views-and-to-terminate-connections"></a>Accorder l’autorisation de surveiller l’appliance à l’aide des vues système et de mettre fin aux connexions  
-Les instructions SQL suivantes créent une connexion nommée `monitor_and_terminate_login` et accordent les autorisations **View Server State** et **ALTER ANY Connection** à `monitor_and_terminate_login` la connexion.  
+Les instructions SQL suivantes créent une connexion nommée `monitor_and_terminate_login` et accordent les autorisations **View Server State** et **ALTER ANY Connection** à la `monitor_and_terminate_login` connexion.  
   
 ```sql  
 USE master;  
@@ -249,4 +249,4 @@ Pour créer des connexions d’administrateur, consultez [rôles serveur fixes](
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
 [CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
-[Chargement](load-overview.md)  
+[Load](load-overview.md)  
