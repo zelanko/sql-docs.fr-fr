@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: e28b690a6231a77b09664b1c8680522f426e5e92
-ms.sourcegitcommit: 610e3ebe21ac6575850a29641a32f275e71557e3
+ms.openlocfilehash: 125e1b8fdadc04a7d3ba08807a72ef594b42388e
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91785061"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115852"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrez une base de données SQL Server de Windows vers Linux à l’aide de la sauvegarde et de la restauration
 
@@ -37,7 +37,7 @@ Pour exécuter ce didacticiel, vous devez réunir les conditions préalables sui
 
 * Machine Windows avec les éléments suivants :
   * [SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads) installé.
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) installé.
+  * [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) installé.
   * Base de données cible à migrer.
 
 * Machine Linux avec les éléments suivants installés :
@@ -78,7 +78,7 @@ Pour restaurer la base de données, vous devez d’abord transférer le fichier 
 
 1. Installez un interpréteur de commandes Bash sur votre machine Windows qui prend en charge les commandes **scp** (copier sécurisée) et **ssh** (ouverture de session à distance). Les deux exemples comprennent :
 
-   * Le [Sous-système Windows pour Linux](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
+   * Le [Sous-système Windows pour Linux](/windows/wsl/about) (Windows 10)
    * L’interpréteur de commandes Git Bash ([https://git-scm.com/downloads](https://git-scm.com/downloads))
 
 1. Ouvrez une session Bash sur Windows.

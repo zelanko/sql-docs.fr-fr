@@ -19,12 +19,12 @@ ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 79e33cb5b5bea6c3eb264052dade0a3906a44efb
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9eb0bd04dc50aac286b72983ee4b3d196f04c60c
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006546"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175912"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Résoudre les problèmes liés à un journal des transactions saturé (erreur SQL Server 9002)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "86006546"
  
  Pour découvrir les raisons qui empêchent de tronquer le journal dans une situation donnée, utilisez les colonnes **log_reuse_wait** et **log_reuse_wait_desc** de l’affichage catalogue **sys.database**. Pour plus d’informations, consultez [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Pour obtenir une description des facteurs susceptibles de retarder la troncation du journal, consultez [Journal des transactions &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
-> **IMPORTANT**  
+> [!IMPORTANT]  
 >  Si la base de données était en mode de récupération quand l’erreur 9002 s’est produite, récupérez la base de données à l’aide de l’instruction [ALTER DATABASE *nom_base_de_données* SET ONLINE après avoir résolu le problème.](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
  D'autres solutions possibles en cas de saturation du journal des transactions sont les suivantes :  
@@ -61,8 +61,8 @@ ms.locfileid: "86006546"
   
  **Pour créer une sauvegarde du journal des transactions**  
   
-> **IMPORTANT**  
->  Si la base de données est endommagée, consultez [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+> [!IMPORTANT]  
+> Si la base de données est endommagée, consultez [Sauvegardes de la fin du journal &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 -   [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -74,7 +74,8 @@ ms.locfileid: "86006546"
 ### <a name="move-the-log-file-to-a-different-disk"></a>Déplacer le fichier journal vers un autre disque  
  Si vous ne pouvez pas libérer suffisamment d'espace disque sur le lecteur où le fichier journal se trouve actuellement, essayez de déplacer ce fichier sur une autre unité disposant d'espace suffisant.  
   
-> **IMPORTANT** Les fichiers journaux ne doivent jamais être placés sur des systèmes de fichiers compressés.  
+> [!IMPORTANT]
+> Les fichiers journaux ne doivent jamais être placés sur des systèmes de fichiers compressés.  
   
  **Déplacer un fichier journal**  
   
@@ -91,7 +92,8 @@ ms.locfileid: "86006546"
   
 -   Activez la croissance automatique à l'aide de l'instruction ALTER DATABASE pour définir un incrément de croissance différent de zéro pour l'option FILEGROWTH.  
   
-> **REMARQUE** Dans les deux cas, si la limite de taille actuelle est atteinte, augmentez la valeur MAXSIZE.  
+> [!NOTE]
+> Dans les deux cas, si la limite de taille actuelle est atteinte, augmentez la valeur MAXSIZE.  
   
 ### <a name="add-a-log-file-on-a-different-disk"></a>Ajout d’un fichier journal sur un autre disque  
  Ajoutez un nouveau fichier journal à la base de données d'un autre disque doté d'un espace suffisant à l'aide de l'instruction ALTER DATABASE <nom_base_de_données> ADD LOG FILE.  

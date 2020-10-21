@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 913345034da936d6ed7a0c9ea3678c427b4f34ef
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cf44509a479e66175d89c38c42595e418dc6c750
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495309"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192402"
 ---
 # <a name="system-variables"></a>Variables système
 
@@ -109,6 +109,5 @@ ms.locfileid: "88495309"
  Cette règle s'applique également aux variables définies par l'utilisateur. Cependant, lorsque les types de données de variables système ne peuvent pas être modifiés et si vous devez personnaliser l'utilisation de ces variables en fonction des types de données, les variables définies par l'utilisateur offrent plus de souplesse. Les variables définies par l'utilisateur qui sont utilisées dans des liaisons de paramètres sont généralement définies avec des types de données compatibles avec les types de données des paramètres auxquels elles sont mappées.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Mapper des paramètres de requête à des variables dans une tâche d’exécution SQL](https://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
-  
+ [Mapper des paramètres de requête à des variables dans une tâche d’exécution SQL](./control-flow/execute-sql-task.md)  
   

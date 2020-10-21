@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2d9422574f80febefc6458b389f04b4b1625b22c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5189cda62a168db3cedff0d57666df7e15a0d65c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425651"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193169"
 ---
 # <a name="transform-data-with-transformations"></a>Transformer des données avec des transformations
 
@@ -49,7 +49,7 @@ ms.locfileid: "88425651"
   
  Vous pouvez également écrire des transformations personnalisées. Pour plus d’informations, consultez [Développement d’un composant de flux de données personnalisé](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) et [Développement de types spécifiques de composants de flux de données](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md).  
   
- Après avoir ajouté la transformation au concepteur de flux de données, mais avant de configurer la transformation, vous devez connecter la transformation au flux de données en connectant la sortie d'une autre transformation ou source du flux de données à l'entrée de cette transformation. Le connecteur entre ces deux composants de flux de données porte le nom de chemin d'accès. Pour plus d’informations sur la connexion des composants et l’utilisation des chemins d’accès, consultez [Connecter des composants avec des chemins d’accès](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8).  
+ Après avoir ajouté la transformation au concepteur de flux de données, mais avant de configurer la transformation, vous devez connecter la transformation au flux de données en connectant la sortie d'une autre transformation ou source du flux de données à l'entrée de cette transformation. Le connecteur entre ces deux composants de flux de données porte le nom de chemin d'accès. Pour plus d’informations sur la connexion des composants et l’utilisation des chemins d’accès, consultez [Connecter des composants avec des chemins d’accès](../connect-components-in-a-data-flow.md).  
   
 ### <a name="to-add-a-transformation-to-a-data-flow"></a>Pour ajouter une transformation à un flux de données  
   
@@ -66,8 +66,7 @@ ms.locfileid: "88425651"
 ## <a name="see-also"></a>Voir aussi  
  [Tâche de flux de données](../../../integration-services/control-flow/data-flow-task.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
- [Connecter des composants avec des chemins](https://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
+ [Connecter des composants avec des chemins](../connect-components-in-a-data-flow.md)   
  [Gestion des erreurs dans les données](../../../integration-services/data-flow/error-handling-in-data.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)  
-  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fdad63c6b5d97d9b6b8193babc67ad8a57a32f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5a694df5f4920ecd70e4aa27def778712fbbf953
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425741"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195297"
 ---
 # <a name="script-component"></a>Composant Script
 
@@ -66,7 +66,7 @@ ms.locfileid: "88425741"
  Dans le concepteur [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , le composant Script propose deux modes : le mode Création des métadonnées et le mode Création du code. En mode Création des métadonnées, vous pouvez ajouter et modifier les entrées et les sorties du composant Script, mais vous ne pouvez pas écrire de code. Une fois toutes les entrées et sorties configurées, vous devez basculer en mode Création du code afin d'écrire le script. Le composant Script génère automatiquement le code de base à partir des métadonnées des entrées et des sorties. Si vous modifiez les métadonnées une fois que le composant Script a généré le code de base, votre code risque de ne plus se compiler, car le code de base compilé mis à jour sera peut-être incompatible avec votre code.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Écriture du script utilisé par le composant  
- Le composant Script utilise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement d’écriture des scripts. Vous pouvez accéder à VSTA à partir de **l’Éditeur de transformation de script**. Pour plus d’informations, consultez [Éditeur de transformation de script &#40;page Script&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Le composant Script utilise [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) comme environnement d’écriture des scripts. Vous pouvez accéder à VSTA à partir de **l’Éditeur de transformation de script**. Pour plus d’informations, consultez [Éditeur de transformation de script &#40;page Script&#41;]().  
   
  Le composant Script propose un projet VSTA qui inclut une classe auto-générée, nommée ScriptMain, qui représente les métadonnées du composant. Par exemple, si le composant Script est utilisé en tant que transformation avec trois sorties, ScriptMain inclut une méthode pour chaque sortie. ScriptMain est le point d'entrée dans le script.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "88425741"
 ### <a name="configuring-the-script-component-programmatically"></a>Configuration du composant Script par programmation  
  Pour plus d’informations sur les propriétés définissables dans la fenêtre **Propriétés** ou par programmation, cliquez sur l’une des rubriques suivantes :  
   
--   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -181,7 +181,7 @@ ms.locfileid: "88425741"
  **Inputs and outputs**  
  Permet de sélectionner une entrée ou une sortie à gauche pour en voir les propriétés dans le tableau de droite. Les propriétés pouvant être modifiées varient en fonction de la sélection faite. La plupart des propriétés affichées sont en lecture seule. Pour plus d'informations sur chacune de ces propriétés, consultez les rubriques suivantes.  
   
- [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Propriétés communes](../set-the-properties-of-a-data-flow-component.md)  
   
  [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -224,5 +224,4 @@ ms.locfileid: "88425741"
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
  [Extension du flux de données avec le composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)  
-  
   

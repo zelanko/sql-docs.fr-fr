@@ -1,5 +1,6 @@
 ---
-title: 'Présentation : importation de données à partir de tables (Master Data Services) | Microsoft Docs'
+title: Importation de données à partir de tables
+description: Importez des données à partir de tables et apportez des modifications aux données une fois que vous avez créé un modèle pour vos données dans Master Data Services.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 45dcf3f21a87d81289d6445014f4157db4ab8e67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 232900f14580db1e09fe0b54c4dfcd77e5310283
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "92257551"
 ---
-# <a name="overview-importing-data-from-tables-master-data-services"></a>Présentation : importation de données à partir de tables (Master Data Services)
+# <a name="overview-importing-data-from-tables-master-data-services"></a>Présentation : Importation de données à partir de tables (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Une fois que vous avez créé un modèle pour vos données dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez commencer à ajouter des données et à les modifier.   Vous utilisez les tables de mise en lots [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , les procédures stockées et Master Data Manager.  
   
  Pour obtenir des instructions sur la manière d’ajouter et de modifier des données, consultez [Importer des données à partir de tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
 > [!NOTE]
->  Vous pouvez également utiliser le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] pour ajouter des données au référentiel MDS (base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) à partir d’Excel. Pour plus d’informations, consultez [Vue d’ensemble : importation de données à partir d’Excel &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+>  Vous pouvez également utiliser le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] pour ajouter des données au référentiel MDS (base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]) à partir d’Excel. Pour plus d’informations, consultez [Vue d’ensemble : importation de données à partir d’Excel &#40;Complément MDS pour Excel&#41;](../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Lorsque vous ajoutez et modifiez des données, procédez comme suit.  
   
@@ -83,17 +84,17 @@ ms.locfileid: "68097383"
   
  Pour chaque entité du modèle, il existe une table de mise en lots. Le nom de la table indique l'entité correspondante et le type d'entité comme membre feuille. L'illustration suivante montre les tables de mise en lots pour les entités Devise, Client et Produit.  
   
- ![Tables de mise en lots dans la base de données MDS](../master-data-services/media/mds-staging-tables.png "Tables de mise en lots dans la base de données MDS")  
+ ![Tables intermédiaires dans la base de données MDS](../master-data-services/media/mds-staging-tables.png "Tables intermédiaires dans la base de données MDS")  
   
  Le nom de la table est spécifié lors de la création d'une entité et ne peut pas être modifié. Si le nom de la table de mise en lots contient un _1 ou tout autre nombre, une autre table de ce nom existait déjà lorsque l'entité a été créée.  
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] inclut les types suivants de procédures stockées de mise en lots.  
   
--   stg.udp_\<nom>_Leaf  
+-   stg.udp_ \<name> _Leaf  
   
--   stg.udp_\<nom>_Consolidated  
+-   stg.udp_ \<name> _Consolidated  
   
--   stg.udp_\<nom>_Relationship  
+-   stg.udp_ \<name> _Relationship  
   
  Pour chaque entité du modèle, il existe trois procédures stockées qui correspondent à un membre feuille, un membre consolidé et les tables de mise en lots de relations.  L'illustration suivante montre les procédures stockées de mise en lots pour les entités Devise, Client et Produit.  
   

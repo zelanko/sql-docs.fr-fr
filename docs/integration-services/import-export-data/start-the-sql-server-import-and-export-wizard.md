@@ -16,12 +16,12 @@ ms.author: chugu
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/18/2019
-ms.openlocfilehash: adbb8eee477e9f021c011b91e586492e64747851
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 1bf52643a67557e808ccf10a29d82d0e4ed6e9ff
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88346575"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195890"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>Démarrer l’Assistant Importation et Exportation SQL Server
 
@@ -41,7 +41,7 @@ Vous pouvez démarrer l’Assistant :
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>Prérequis - l’Assistant est-il installé sur votre ordinateur ?
 
-Si vous souhaitez exécuter l’Assistant, mais que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
+Si vous souhaitez exécuter l’Assistant, mais que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 > [!NOTE]
 > Pour utiliser la version 64 bits de l’Assistant Importation et Exportation SQL Server, vous devez installer SQL Server. SQL Server Data Tools (SSDT) et SQL Server Management Studio (SSMS) sont des applications 32 bits qui installent uniquement des fichiers 32 bits, y compris la version 32 bits de l’Assistant.
@@ -117,7 +117,7 @@ Si vous n’avez pas installé Visual Studio, ou que vous avez installé Visual 
 
 ## <a name="get-the-wizard"></a>Se procurer l’Assistant
 
-Si vous souhaitez exécuter l’Assistant, mais que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx).
+Si vous souhaitez exécuter l’Assistant, mais que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas installé sur votre ordinateur, vous pouvez installer l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en installant SSDT (SQL Server Data Tools). Pour plus d’informations, consultez [Télécharger SSDT (SQL Server Data Tools)](../../ssdt/download-sql-server-data-tools-ssdt.md).
 
 ## <a name="get-help-while-the-wizard-is-running"></a>Obtenir de l’aide pendant l’exécution de l’Assistant
 

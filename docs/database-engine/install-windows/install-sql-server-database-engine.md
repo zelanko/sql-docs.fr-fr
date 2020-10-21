@@ -13,12 +13,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8638c87129cfcc567296c0cf20b6b4a9f2f2b08a
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 6a895fb07d21fe7411fc019d5320dc9d2f6037cb
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670453"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155011"
 ---
 # <a name="install-sql-server-database-engine"></a>Installer le moteur de base de données SQL Server
 
@@ -40,7 +40,7 @@ Les fonctionnalités suivantes sont installées quand vous sélectionnez **Moteu
 -   [Réplication SQL Server](../../relational-databases/replication/sql-server-replication.md) (composant facultatif)  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R et Python) et [Extensions de langage](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md) (Java) - composant facultatif
+-   [Machine Learning Services](../../machine-learning/install/sql-machine-learning-services-windows-install.md) (R et Python) et [Extensions de langage](../..//language-extensions/install/windows-java.md) (Java) - composant facultatif
 ::: moniker-end
 
 ::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"

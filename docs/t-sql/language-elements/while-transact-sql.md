@@ -23,12 +23,12 @@ ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c99677be10dd8931be10c5902db036769312fd6
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: a78db68519a0c4aa3a47f1ebaf27e7122a4ca598
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227373"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92191257"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -79,7 +79,7 @@ WHILE Boolean_expression
 ### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>R. Utilisation de BREAK et CONTINUE avec des IF…ELSE et des WHILE imbriqués  
  Dans l'exemple suivant, si le prix moyen d'un produit est inférieur à `$300`, la boucle `WHILE` double les prix puis sélectionne le prix maximum. Si le prix maximum est inférieur ou égal à `$500`, la boucle `WHILE` redémarre et double de nouveau les prix. Cette boucle continue à doubler les prix jusqu'à ce que le prix maximum soit supérieur à `$500`, puis le programme sort de la boucle `WHILE` et affiche un message.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 WHILE (SELECT AVG(ListPrice) FROM Production.Product) < $300  
@@ -98,9 +98,9 @@ PRINT 'Too much for the market to bear';
 ### <a name="b-using-while-in-a-cursor"></a>B. Utilisation de WHILE dans un curseur  
  L'exemple suivant utilise `@@FETCH_STATUS` pour contrôler les activités d'un curseur dans une boucle `WHILE`.  
   
-```  
-DECLARE @EmployeeID as nvarchar(256)
-DECLARE @Title as nvarchar(50)
+```sql  
+DECLARE @EmployeeID as NVARCHAR(256)
+DECLARE @Title as NVARCHAR(50)
 
 DECLARE Employee_Cursor CURSOR FOR  
 SELECT LoginID, JobTitle   
@@ -123,7 +123,7 @@ GO
 ### <a name="c-simple-while-loop"></a>C. Boucle While simple  
  Dans l'exemple suivant, si le prix moyen d'un produit est inférieur à `$300`, la boucle `WHILE` double les prix puis sélectionne le prix maximum. Si le prix maximum est inférieur ou égal à `$500`, la boucle `WHILE` redémarre et double de nouveau les prix. Cette boucle continue à doubler les prix jusqu’à ce que le prix maximal soit supérieur à `$500`, puis le programme sort de la boucle `WHILE`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 WHILE ( SELECT AVG(ListPrice) FROM dbo.DimProduct) < $300  
@@ -134,7 +134,6 @@ BEGIN
     IF ( SELECT MAX (ListPrice) FROM dbo.DimProduct) > $500  
         BREAK;  
 END  
-  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

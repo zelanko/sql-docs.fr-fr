@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 75eeaf7b9402de747c49ad69f64731c2de6962c9
-ms.sourcegitcommit: 7035d9471876c70b99c58bf9b46af5cce6e9c66c
+ms.openlocfilehash: 19db6aeab39dc93c2dcfd6a869d3b54e0a1ceaa6
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/03/2020
-ms.locfileid: "87522891"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192461"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Prise en charge de Scale Out pour la haute disponibilité
 
@@ -98,9 +98,9 @@ Appelez la procédure stockée `[catalog].[update_logdb_info]` avec les valeurs 
 
 Sur les machines virtuelles Azure, cette opération de configuration nécessite des étapes supplémentaires. L’explication complète de ces concepts et de ces étapes dépasse le cadre de cet article.
 
-1.  Vous devez configurer un domaine Azure. Le clustering de basculement Windows Server nécessite que tous les ordinateurs du cluster soient membres du même domaine. Pour plus d’informations, consultez [Activer Azure Active Directory Domain Services à l’aide du portail Azure](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance).
+1.  Vous devez configurer un domaine Azure. Le clustering de basculement Windows Server nécessite que tous les ordinateurs du cluster soient membres du même domaine. Pour plus d’informations, consultez [Activer Azure Active Directory Domain Services à l’aide du portail Azure](/azure/active-directory-domain-services/create-instance).
 
-2. Vous devez configurer un équilibreur de charge Azure. Cette opération est obligatoire pour l’écouteur du groupe de disponibilité. Pour plus d’informations, consultez [Tutoriel : équilibrer la charge du trafic interne vers les machines virtuelles avec un équilibreur de charge de base à l’aide du portail Azure](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
+2. Vous devez configurer un équilibreur de charge Azure. Cette opération est obligatoire pour l’écouteur du groupe de disponibilité. Pour plus d’informations, consultez [Tutoriel : équilibrer la charge du trafic interne vers les machines virtuelles avec un équilibreur de charge de base à l’aide du portail Azure](/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Mettre à jour l’adresse Scale Out Master dans SSISDB
 

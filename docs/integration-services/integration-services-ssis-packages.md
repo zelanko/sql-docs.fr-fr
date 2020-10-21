@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 666e61788f402d405354f21bf583aa3f2e0b8286
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f7dea5e9016b9168131c5b809e9f1776dbbd1236
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88449811"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193851"
 ---
 # <a name="integration-services-ssis-packages"></a>Packages Integration Services (SSIS)
 
@@ -61,7 +61,7 @@ ms.locfileid: "88449811"
 ### <a name="configurations"></a>Configurations  
  Une configuration est un ensemble de paires propriété/valeur qui définit les propriétés du package et ses tâches, conteneurs, variables, connexions et gestionnaires d'événements lorsque le package s'exécute. Les configurations permettent de mettre à jour les propriétés sans modifier le package. Lorsque le package est exécuté, les informations de configuration sont chargées et mettent à jour les valeurs des propriétés. Par exemple, une configuration peut mettre à jour la chaîne de connexion.  
   
- La configuration est enregistrée puis déployée avec le package lorsque celui-ci est installé sur un autre ordinateur. Lorsque vous installez le package, vous pouvez mettre à jour les valeurs de la configuration afin qu'il puisse être pris en charge dans un autre environnement. Pour plus d’informations, consultez [Créer des configurations de package](../integration-services/packages/create-package-configurations.md).  
+ La configuration est enregistrée puis déployée avec le package lorsque celui-ci est installé sur un autre ordinateur. Lorsque vous installez le package, vous pouvez mettre à jour les valeurs de la configuration afin qu'il puisse être pris en charge dans un autre environnement. Pour plus d’informations, consultez [Créer des configurations de package](./packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="logging-and-log-providers"></a>Journalisation et modules fournisseurs d'informations  
  Un journal est une collection d'informations relatives au package, qui sont rassemblées lorsque celui-ci s'exécute. Par exemple, un journal peut indiquer l'heure de début et de fin de l'exécution d'un package. Un module fournisseur d'informations définit le type de destination et le format que le package et ses conteneurs et ses tâches peuvent utiliser pour consigner les informations d'exécution. Les journaux sont associés à un package, mais les tâches et les conteneurs figurant dans le package peuvent consigner des informations dans n'importe quel journal de package. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend une série de modules fournisseurs d’informations intégrés qui facilitent la journalisation. Par exemple, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des modules fournisseurs d'informations pour les fichiers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les fichiers texte. Vous pouvez également créer des modules fournisseurs d'informations personnalisés et les utiliser pour la journalisation. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
@@ -117,5 +117,4 @@ ms.locfileid: "88449811"
 -   [Créer des packages dans les outils de données SQL Server](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 -   Voir [Génération de packages par programme](../integration-services/building-packages-programmatically/building-packages-programmatically.md) dans le Guide du développeur. 
-  
   

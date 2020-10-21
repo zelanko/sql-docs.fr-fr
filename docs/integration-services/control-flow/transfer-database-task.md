@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 919b6b31618b1fcf36f0834aa6a3c5c2436c198b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 3421b1c839504c01ecb256530cb579c18f043b86
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88484509"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192795"
 ---
 # <a name="transfer-database-task"></a>Tâche de transfert de bases de données
 
@@ -47,7 +47,7 @@ ms.locfileid: "88484509"
 ## <a name="execution-value"></a>Valeur d'exécution  
  La valeur d'exécution, définie dans la propriété **ExecutionValue** de la tâche, renvoie la valeur 1, car contrairement aux autres tâches de transfert, la tâche de transfert de bases de données ne peut transférer qu'une seule base de données.  
   
- En affectant une variable définie par l’utilisateur à la propriété **ExecValueVariable** de la tâche de transfert de bases de données, les informations sur le transfert de messages d’erreur peuvent être rendues disponibles aux autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ En affectant une variable définie par l’utilisateur à la propriété **ExecValueVariable** de la tâche de transfert de bases de données, les informations sur le transfert de messages d’erreur peuvent être rendues disponibles aux autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Entrées du journal  
  La tâche de transfert de bases de données comporte les entrées de journal personnalisées suivantes :  
@@ -84,7 +84,7 @@ ms.locfileid: "88484509"
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="programmatic-configuration-of-the-transfer-database-task"></a>Configuration par programmation de la tâche de transfert de bases de données  
  Pour plus d'informations sur la définition par programme de ces propriétés, cliquez sur la rubrique suivante :  
@@ -210,4 +210,4 @@ ms.locfileid: "88484509"
   
  Entrez l'emplacement du partage de fichiers réseau ou cliquez sur le bouton Parcourir pour le rechercher.  
   
- Lors du transfert d'une base de données en mode hors connexion, les fichiers de base de données sont copiés dans l'emplacement du **Partage de fichiers réseau** avant d'être transférés dans l'emplacement **Dossier de destination** .  
+ Lors du transfert d'une base de données en mode hors connexion, les fichiers de base de données sont copiés dans l'emplacement du **Partage de fichiers réseau** avant d'être transférés dans l'emplacement **Dossier de destination** .

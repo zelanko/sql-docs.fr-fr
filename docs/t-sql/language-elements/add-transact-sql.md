@@ -25,12 +25,12 @@ ms.assetid: 4ba8baac-5f07-432c-87c5-d23e7011da55
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12b531d2f8615e9ff2cb9bbfc33973e6aab5d33f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 28cca0a52c68716f363003d486f4c2f6a199fd16
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88361875"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197003"
 ---
 # <a name="-addition-transact-sql"></a>+ (Addition) (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "88361875"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 expression + expression  
 ```  
   
@@ -59,7 +59,7 @@ expression + expression
 ### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>R. Utilisation de l'opérateur d'addition pour calculer le nombre total d'heures d'absence du travail de chaque employé.  
  L’exemple calcule le nombre total d’heures d’absence au travail de chaque employé en additionnant le nombre d’heures de congés et celui des arrêts maladie.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, VacationHours, SickLeaveHours,   
@@ -73,10 +73,9 @@ GO
 ### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>B. Utilisation de l'opérateur d'addition pour ajouter des jours à des valeurs de date et d'heure  
  Cet exemple additionne un nombre de jours à une date de type `datetime`.  
   
-```  
-  
+```sql
 SET NOCOUNT ON  
-DECLARE @startdate datetime, @adddays int;  
+DECLARE @startdate DATETIME, @adddays INT;  
 SET @startdate = 'January 10, 1900 12:00 AM';  
 SET @adddays = 5;  
 SET NOCOUNT OFF;  
@@ -97,8 +96,8 @@ Start Date                  Add Date
 ### <a name="c-adding-character-and-integer-data-types"></a>C. Addition de types de données caractère et entier  
  L’exemple suivant additionne une valeur de type **int** et une valeur de caractère en convertissant le type de données caractères en valeur **int**. Si la chaîne **char** contient un caractère non valide, [!INCLUDE[tsql](../../includes/tsql-md.md)] retourne une erreur.  
   
-```  
-DECLARE @addvalue int;  
+```sql  
+DECLARE @addvalue INT;  
 SET @addvalue = 15;  
 SELECT '125127' + @addvalue;  
 ```  
@@ -117,7 +116,7 @@ SELECT '125127' + @addvalue;
 ### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D : Utilisation de l’opérateur d’addition pour calculer le nombre total d’heures d’absence au travail de chaque employé  
  L’exemple ci-après calcule le nombre total d’heures d’absence au travail de chaque employé en additionnant le nombre d’heures de congés et celui des arrêts maladie, puis trie les résultats dans l’ordre croissant.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, VacationHours, SickLeaveHours,   

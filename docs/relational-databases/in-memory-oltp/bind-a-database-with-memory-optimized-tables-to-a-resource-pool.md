@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff3d2de93c28d106cf24cd72b72c5d2e3346d287
-ms.sourcegitcommit: cc23d8646041336d119b74bf239a6ac305ff3d31
+ms.openlocfilehash: 0be95e3bbdf796f8f1a888c6f5b18e7fda95f542
+ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91111005"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "91867330"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Lier une base de données avec des tables optimisées en mémoire à un pool de ressources
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -87,7 +87,7 @@ Pour cet exemple, nous allons supposer que vos calculs ont déterminé que les t
 ###  <a name="create-a-resource-pool-and-configure-memory"></a><a name="bkmk_CreateResourcePool"></a> Créer un pool de ressources et configurer la mémoire  
  Lors de la configuration de tables mémoire optimisées, la planification des capacités doit être effectuée sur MIN_MEMORY_PERCENT, et non sur MAX_MEMORY_PERCENT.  Consultez [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) pour des informations sur MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT. Ce paramètre fournit une disponibilité de mémoire plus prédictible pour les tables mémoire optimisées, car MIN_MEMORY_PERCENT sollicite la mémoire d'autres pools de ressources pour s'assurer qu'il est servi. Pour garantir que la mémoire est disponible et éviter les conditions OOM (mémoire insuffisante), les valeurs de MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT doivent être identiques. Consultez [Pourcentage de mémoire disponible pour les tables et index mémoire optimisés](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) ci-dessous pour obtenir le pourcentage de la mémoire disponible pour les tables optimisées en mémoire en fonction de la quantité de mémoire allouée.  
   
- Consultez [Bonnes pratiques : Utilisation d'OLTP en mémoire dans un environnement de machine virtuelle](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) pour plus d’informations sur le fonctionnement dans un environnement de machine virtuelle.  
+ Consultez [Bonnes pratiques : Utilisation d'OLTP en mémoire dans un environnement de machine virtuelle](/previous-versions/sql/sql-server-2016/dn529286(v=sql.130)) pour plus d’informations sur le fonctionnement dans un environnement de machine virtuelle.  
   
  Le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant crée un pool de ressources nommé Pool_IMOLTP avec la moitié de la mémoire disponible.  Une fois le pool créé, Resource Governor est reconfiguré afin d'inclure Pool_IMOLTP.  
   
@@ -143,7 +143,7 @@ GO
  Maintenant, la base de données est liée au pool de ressources.  
   
 ##  <a name="change-min_memory_percent-and-max_memory_percent-on-an-existing-pool"></a><a name="bkmk_ChangeAllocation"></a> Modifier MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant  
- Si vous ajoutez de la mémoire supplémentaire au serveur ou si la quantité de mémoire requise pour vos tables mémoire optimisées change, il peut être nécessaire de remplacer la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT. Les étapes suivantes vous montrent comment modifier la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT sur un pool de ressources. Consultez la section ci-dessous, pour des conseils sur les valeurs à utiliser pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT.  Consultez la rubrique [Bonnes pratiques : Utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) pour plus d’informations.  
+ Si vous ajoutez de la mémoire supplémentaire au serveur ou si la quantité de mémoire requise pour vos tables mémoire optimisées change, il peut être nécessaire de remplacer la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT. Les étapes suivantes vous montrent comment modifier la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT sur un pool de ressources. Consultez la section ci-dessous, pour des conseils sur les valeurs à utiliser pour MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT.  Consultez la rubrique [Bonnes pratiques : Utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](/previous-versions/sql/sql-server-2016/dn529286(v=sql.130)) pour plus d’informations.  
   
 1.  Utilisez `ALTER RESOURCE POOL` pour modifier à la fois la valeur de MIN_MEMORY_PERCENT et de MAX_MEMORY_PERCENT.  
   
@@ -216,5 +216,4 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
  [Créer un pool de ressources](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Modifier les paramètres de pool de ressources](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [Supprimer un pool de ressources](../../relational-databases/resource-governor/delete-a-resource-pool.md)  
-  
   

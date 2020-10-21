@@ -1,5 +1,6 @@
 ---
-title: 'Présentation : L’importation de données à partir d’Excel (complément MDS pour Excel) | Microsoft Docs'
+description: 'Présentation : Importation de données depuis Excel (Complément Master Data Services pour Excel)'
+title: Importation de données à partir d’Excel
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1da9e1876995f81fd2b40b9ef1bb4b509b4c848d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df78497bc65d383a3dc44225971ab1df742f32b5
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074484"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257787"
 ---
 # <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>Présentation : Importation de données depuis Excel (Complément Master Data Services pour Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], publiez les données dans le référentiel MDS lorsque vous souhaitez les partager avec d’autres utilisateurs. Dès que les données sont publiées, elles peuvent être téléchargées par les autres utilisateurs du complément.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "68074484"
   
 -   Vous pouvez afficher les transactions effectuées sur un membre par d'autres utilisateurs. Vous pouvez également afficher toutes les transactions que vous avez effectuées sur un membre, même si vous n’avez plus l’autorisation d’accès aux attributs spécifiques. Vous ne pouvez pas visualiser les transactions qui impliquent des attributs dans lesquels votre autorisation est définie sur Refuser.  
   
- Vous pouvez afficher toutes les transactions effectuées sur un membre. Pour plus d’informations, consultez [afficher toutes les Annotations ou Transactions pour un membre &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
+ Vous pouvez afficher toutes les transactions effectuées sur un membre. Pour plus d’informations, consultez [Afficher toutes les annotations ou transactions pour un membre &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel.md).  
   
 > [!IMPORTANT]  
 >  Si vous entrez une annotation de plus de 500 caractères, elle sera automatiquement tronquée.  

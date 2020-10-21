@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5e25927358f87c63c2c7d6dcbfb92b565d02994e
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 88a927a23696e5de7a1e079cb517078dc318b69c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495112"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193761"
 ---
 # <a name="use-annotations-in-packages"></a>Utiliser des annotations dans les packages
 
@@ -31,7 +31,7 @@ ms.locfileid: "88495112"
   
  Lorsque vous appuyez sur Entrée, le texte est renvoyé à la ligne suivante. La taille de la zone d'annotation augmente automatiquement lorsque vous ajoutez des lignes de texte supplémentaires. Les annotations de package sont conservées en texte clair dans la section CDATA du fichier de package.  
   
- Pour plus d’informations sur les modifications du format du fichier de package, consultez [Format de package SSIS](https://msdn.microsoft.com/library/cfe0e5dc-5be3-4222-b721-fe83665edd94).  
+ Pour plus d’informations sur les modifications du format du fichier de package, consultez [Format de package SSIS](./integration-services-ssis-packages.md).  
   
  Lorsque vous enregistrez le package, le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] enregistre les annotations dans le package.  
   
@@ -56,4 +56,4 @@ ms.locfileid: "88495112"
   
 7.  Pour ajouter une annotation à un groupe, cliquez avec le bouton droit sur l’annotation, puis cliquez sur **Groupe**.  
   
-8.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
+8.  Pour enregistrer le package mis à jour, dans le menu **Fichier** , cliquez sur **Enregistrer tout**.

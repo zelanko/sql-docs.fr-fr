@@ -13,12 +13,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6e91be4a96d91117448def702a617d9e44acc70a
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 230ada5b116e5789b008a1562ba5e2ba9325a9e0
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477817"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92197083"
 ---
 # <a name="flexible-file-source"></a>Source de fichier flexible
 
@@ -28,7 +28,7 @@ Le composant **Flexible File Source** permet à un package SSIS de lire des donn
 Les services de stockage actuellement pris en charge sont :
 
 - [Stockage Blob Azure](https://azure.microsoft.com/services/storage/blobs/)
-- [Azure Data Lake Storage Gen2](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-introduction)
+- [Azure Data Lake Storage Gen2](/azure/storage/blobs/data-lake-storage-introduction)
   
 Pour afficher l’éditeur Flexible File Source, faites glisser **Flexible File Source** sur le concepteur de flux de données et double-cliquez dessus pour ouvrir l’éditeur.
   
@@ -51,7 +51,7 @@ Les propriétés suivantes sont disponibles sur l’**éditeur avancé**.
 - **escapeChar :** caractère spécial utilisé pour échapper un délimiteur de colonne dans le contenu du fichier d’entrée. Vous ne pouvez pas spécifier à la fois escapeChar et quoteChar pour une table. Un seul caractère est autorisé. Pas de valeur par défaut.
 - **quoteChar :** caractère utilisé pour mettre entre guillemets une valeur de chaîne. Les délimiteurs de colonnes et de lignes à l’intérieur des guillemets seraient considérés comme faisant partie de la valeur de chaîne. Cette propriété s’applique aux jeux de données d’entrée et de sortie. Vous ne pouvez pas spécifier à la fois escapeChar et quoteChar pour une table. Un seul caractère est autorisé. Pas de valeur par défaut.
 - **nullValue :** un ou plusieurs caractères utilisés pour représenter une valeur Null. La valeur **par défaut** est \N.
-- **encodingName :** spécifiez le nom du codage. Voir la propriété [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8).
+- **encodingName :** spécifiez le nom du codage. Voir la propriété [Encoding.EncodingName](/dotnet/api/system.text.encoding?view=netframework-4.8).
 - **skipLineCount :**  indique le nombre de lignes non vides à ignorer lors de la lecture des données à partir des fichiers d’entrée. Si skipLineCount et firstRowAsHeader sont spécifiés, les lignes sont d’abord ignorées, puis les informations d’en-têtes sont lues à partir du fichier d’entrée.
 - **treatEmptyAsNull :** spécifie s’il faut traiter une chaîne Null ou vide comme une valeur Null lors de la lecture des données à partir d’un fichier d’entrée. La valeur **par défaut** est True.
 
@@ -60,16 +60,16 @@ Après avoir spécifié les informations de connexion, basculez vers la page **C
 **Remarques sur la configuration des autorisations du principal de service**
 
 Pour que la **connexion de test** fonctionne (soit le stockage d’objets blob, soit Data Lake Storage Gen2), le principal de service doit disposer au moins du rôle **Lecteur des données Blob du stockage** pour le compte de stockage.
-Cette opération s’effectue à l’aide de [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+Cette opération s’effectue à l’aide de [RBAC](/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
 
 Pour le stockage d’objets blob, l’autorisation de lecture est accordée en affectant au moins le rôle **Lecteur des données Blob du stockage**.
 
-Pour Data Lake Storage Gen2, l’autorisation est déterminée à la fois par RBAC et par des [listes des contrôles d’accès (ACL)](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
-Faites attention à ce que les listes de contrôle d’accès soient configurées à l’aide de l’ID d’objet (OID) du principal de service pour l’inscription d’application, comme indiqué [ici](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
+Pour Data Lake Storage Gen2, l’autorisation est déterminée à la fois par RBAC et par des [listes des contrôles d’accès (ACL)](/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer).
+Faites attention à ce que les listes de contrôle d’accès soient configurées à l’aide de l’ID d’objet (OID) du principal de service pour l’inscription d’application, comme indiqué [ici](/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal).
 Cet ID diffère de l’ID d’application (client) utilisé avec la configuration RBAC.
 Quand un principal de sécurité reçoit des autorisations sur les données RBAC par le biais d’un rôle intégré ou personnalisé, ces autorisations sont évaluées en premier lors de l’autorisation d’une demande.
 Si l’opération demandée est autorisée par les attributions RBAC du principal de sécurité, l’autorisation est immédiatement résolue et aucune vérification de liste de contrôle d’accès supplémentaire n’est effectuée.
 Sinon, si le principal de sécurité n’a pas d’attribution RBAC ou si l’opération de la demande ne correspond pas à l’autorisation affectée, les vérifications de liste de contrôle d’accès sont effectuées pour déterminer si le principal de sécurité est autorisé à effectuer l’opération demandée.
 Pour l’autorisation de lecture, accordez au moins l’autorisation d’**Exécution** à partir du système de fichiers source, ainsi que l’autorisation de **Lecture** pour les fichiers à lire.
 Vous pouvez également accorder au moins le rôle **Lecteur des données Blob du stockage** avec RBAC.
-Pour plus d’informations, consultez [cet](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) article.
+Pour plus d’informations, consultez [cet](/azure/storage/blobs/data-lake-storage-access-control) article.

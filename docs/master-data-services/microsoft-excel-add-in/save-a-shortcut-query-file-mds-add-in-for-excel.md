@@ -1,5 +1,6 @@
 ---
-title: Enregistrer un fichier de requête de raccourci (Complément MDS pour Excel) | Microsoft Docs
+description: Enregistrer un fichier de requête de raccourci (Complément MDS pour Excel)
+title: Enregistrer un fichier de requête de raccourci
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4fa72bced2173f9de3d3edb9c3323294bb13c5f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0ba147e5c784376f9bca1585bab99444c2d9378
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074413"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257841"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Enregistrer un fichier de requête de raccourci (Complément MDS pour Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], si vous accédez souvent au même jeu de données, enregistrez un fichier de requête de raccourci.  
   
