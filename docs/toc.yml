@@ -352,6 +352,14 @@
               href: big-data-cluster/change-azdata-password.md
             - name: Conteneurs non-racine
               href: big-data-cluster/non-root-containers.md
+            - name: Chiffrement au repos
+              items:
+                - name: Concepts et configuration
+                  href: big-data-cluster/encryption-at-rest-concepts-and-configuration.md
+                - name: TDE SQL Server
+                  href: big-data-cluster/encryption-at-rest-sql-server-tde.md
+                - name: Zones de chiffrement HDFS
+                  href: big-data-cluster/encryption-at-rest-hdfs-encryption-zones.md
         - name: Travaux Spark
           items:
             - name: Envoyer des travaux Spark dans Azure Data Studio
@@ -1841,7 +1849,7 @@
           items:
             - name: Créer
               href: relational-databases/tables/create-edge-constraints.md
-            - name: DELETE
+            - name: Supprimer
               href: relational-databases/tables/delete-edge-constraint.md
             - name: Modifier
               href: relational-databases/tables/modify-edge-constraint.md
