@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 93548684fb17ce59e5cee78e2a7a268dfce903ea
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: df48a338c2fe6cbc938284ed85b3b08fdc06f1cc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88430691"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193212"
 ---
 # <a name="derived-column-transformation"></a>Transformation de colonne dérivée
 
@@ -66,7 +66,7 @@ ms.locfileid: "88430691"
   
  La boîte de dialogue **Éditeur avancé** reflète les propriétés qui peuvent être définies par programmation. Pour plus d'informations sur les propriétés définissables dans la boîte de dialogue **Éditeur avancé** ou par programmation, cliquez sur l'une des rubriques suivantes :  
   
--   [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Propriétés communes](../set-the-properties-of-a-data-flow-component.md)  
   
 -   [Propriétés personnalisées des transformations](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -117,7 +117,7 @@ ms.locfileid: "88430691"
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** définit automatiquement la page de codes pour le type de données DT_STR. Vous pouvez mettre à jour **Page de codes**.  
   
  **Configurer l'affichage des erreurs**  
- Spécifiez comment gérer les erreurs dans la boîte de dialogue [Configurer la sortie d’erreur](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
+ Spécifiez comment gérer les erreurs dans la boîte de dialogue [Configurer la sortie d’erreur](../error-handling-in-data.md) .  
   
 ## <a name="related-content"></a>Contenu associé  
- Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
+ Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com

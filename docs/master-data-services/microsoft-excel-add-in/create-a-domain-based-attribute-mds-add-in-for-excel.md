@@ -1,5 +1,6 @@
 ---
-title: Créer un attribut basé sur un domaine (Complément MDS pour Excel) | Microsoft Docs
+description: Créer un attribut basé sur un domaine (complément MDS pour Excel)
+title: Créer un attribut basé sur un domaine
 ms.custom: microsoft-excel-add-in
 ms.date: 07/25/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c38d850cb7f20f61f709f7e27161d84fa9b84dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 963d07399e91b89e18ac355b9d205ef57d2c26e8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67988125"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257693"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Créer un attribut basé sur un domaine (complément MDS pour Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans le [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], les administrateurs peuvent créer un attribut basé sur un domaine quand ils souhaitent limiter les valeurs d’une colonne à un ensemble de valeurs spécifique.  
   
@@ -33,7 +34,7 @@ ms.locfileid: "67988125"
   
 -   Vous devez avoir l'autorisation d'accéder aux zones fonctionnelles **Administration de système** et **Explorateur** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
 -   Le modèle et l'entité doivent déjà exister.  
   
@@ -45,7 +46,7 @@ ms.locfileid: "67988125"
   
 3.  Dans le groupe **Modèle de build** , cliquez sur **Propriétés d'attribut**.  
   
-4.  Dans la boîte de dialogue **Propriétés d’attribut** , dans la liste **Type d’attribut** , choisissez **Liste contrainte (basée sur un domaine)** .  
+4.  Dans la boîte de dialogue **Propriétés d’attribut** , dans la liste **Type d’attribut** , choisissez **Liste contrainte (basée sur un domaine)**.  
   
 5.  Dans la liste **Remplir l’attribut avec les valeurs de** :  
   

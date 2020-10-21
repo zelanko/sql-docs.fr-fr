@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5aed55fa41bfd3998b4580e5ee0b66a35997b942
-ms.sourcegitcommit: a41e1f4199785a2b8019a419a1f3dcdc15571044
+ms.openlocfilehash: 23b04ae0e205a70b195b7da39a666256463bfa1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "91987585"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192849"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Fichiers de données SQL Server dans Microsoft Azure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -54,7 +54,7 @@ L’aide de base repose sur l’utilisation de Disques Azure, sauf dans un scén
 ### <a name="azure-storage-concepts"></a>Concepts liés au stockage Azure  
 Lorsque vous utilisez la fonctionnalité Fichiers de données SQL Server dans Azure, vous devez créer un compte de stockage et un conteneur dans Azure. Ensuite, vous devez créer des informations d'identification SQL Server, qui comportent des informations sur la stratégie du conteneur ainsi qu'une signature d'accès partagé qui est nécessaire pour accéder au conteneur.  
 
-Dans [Microsoft Azure](https://azure.microsoft.com), un compte de [stockage Azure](https://azure.microsoft.com/services/storage/) représente le niveau le plus élevé de l’espace de noms pour accéder aux objets blob. Un compte de stockage peut contenir un nombre illimité de conteneurs, tant que leur taille totale ne dépasse pas la limite de stockage. Pour les informations les plus récentes sur les limites de stockage, consultez [Abonnement Azure et limites, quotas et contraintes du service](https://docs.microsoft.com/azure/azure-subscription-service-limits). Un conteneur regroupe un ensemble d’objets [blobs](https://docs.microsoft.com/azure/storage/common/storage-introduction#blob-storage). Tous les objets blob doivent figurer dans un conteneur. Un compte peut contenir un nombre illimité de conteneurs. De même, un conteneur peut stocker un nombre illimité d’objets blob. Il existe deux types d’objets blob qui peuvent être enregistrés dans un stockage Azure : les objets blob de blocs et les objets blob de pages. Cette nouvelle fonctionnalité utilise des objets blob de pages, qui sont plus efficaces quand les plages d’octets d’un fichier sont fréquemment modifiées. Vous pouvez accéder aux objets blob à l’aide du format URL suivant : `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
+Dans [Microsoft Azure](https://azure.microsoft.com), un compte de [stockage Azure](https://azure.microsoft.com/services/storage/) représente le niveau le plus élevé de l’espace de noms pour accéder aux objets blob. Un compte de stockage peut contenir un nombre illimité de conteneurs, tant que leur taille totale ne dépasse pas la limite de stockage. Pour les informations les plus récentes sur les limites de stockage, consultez [Abonnement Azure et limites, quotas et contraintes du service](/azure/azure-subscription-service-limits). Un conteneur regroupe un ensemble d’objets [blobs](/azure/storage/common/storage-introduction#blob-storage). Tous les objets blob doivent figurer dans un conteneur. Un compte peut contenir un nombre illimité de conteneurs. De même, un conteneur peut stocker un nombre illimité d’objets blob. Il existe deux types d’objets blob qui peuvent être enregistrés dans un stockage Azure : les objets blob de blocs et les objets blob de pages. Cette nouvelle fonctionnalité utilise des objets blob de pages, qui sont plus efficaces quand les plages d’octets d’un fichier sont fréquemment modifiées. Vous pouvez accéder aux objets blob à l’aide du format URL suivant : `https://storageaccount.blob.core.windows.net/<container>/<blob>`.  
 
 ### <a name="azure-billing-considerations"></a>Considérations sur la facturation Azure  
 
@@ -91,7 +91,7 @@ ON
 >[!IMPORTANT]
 >s’il existe des références actives aux fichiers de données dans un conteneur, toutes les tentatives de suppression des informations d’identification SQL Server correspondantes échouent.
 
-Pour plus d'informations, consultez [Gérer l'accès aux ressources Azure Storage](https://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
+Pour plus d'informations, consultez [Gérer l'accès aux ressources Azure Storage](/azure/storage/blobs/storage-manage-access-to-resources).  
 
 ### <a name="security"></a>Sécurité  
  Vous trouverez ci-dessous les considérations de sécurité et la configuration requise pour le stockage de fichiers de données SQL Server dans le stockage Azure.
@@ -120,7 +120,7 @@ Pour plus d'informations, consultez [Gérer l'accès aux ressources Azure Storag
   
 - En cas d’utilisation de la fonctionnalité Fichiers de données SQL Server dans Azure, la géoréplication de votre compte de stockage n’est pas prise en charge. Si un compte de stockage est géorépliqué et qu'un géobasculement a lieu, la base de données risque d'être endommagée.  
   
-- Pour les limites de capacité, consultez [Présentation du Stockage Blob](https://docs.microsoft.com/azure/storage/blobs/storage-blobs-introduction).  
+- Pour les limites de capacité, consultez [Présentation du Stockage Blob](/azure/storage/blobs/storage-blobs-introduction).  
   
 - Il est impossible de conserver des données OLTP en mémoire dans le Stockage Blob à l’aide de la fonctionnalité Fichiers de données SQL Server dans le stockage Azure. Cela s’explique par le fait que l’OLTP en mémoire compte une dépendance sur **FileStream** et que, dans la version actuelle de cette fonctionnalité, l’enregistrement de données **FileStream** dans Azure Storage n’est pas pris en charge.  
   
@@ -166,10 +166,10 @@ Pour plus d'informations, consultez [Gérer l'accès aux ressources Azure Storag
     Résolution : Cette erreur peut s’afficher lorsque vous tentez de supprimer des informations d’identification utilisées par un fichier de base de données actif dans le Stockage Azure. Pour supprimer les informations d'identification, vous devez d'abord supprimer l'objet blob associé qui comporte ce fichier de base de données. Pour supprimer un objet blob dont le bail est actif, vous devez d’abord libérer le bail.  
   
 - *La signature d'accès partagé n'a pas été créée correctement sur le conteneur.*    
-     Résolution : vérifiez que vous avez créé correctement une signature d’accès partagé sur le conteneur. Consultez les instructions fournies dans la leçon 2 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
+     Résolution : vérifiez que vous avez créé correctement une signature d’accès partagé sur le conteneur. Consultez les instructions fournies dans la leçon 2 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#2---create-a-sql-server-credential-using-a-shared-access-signature).  
   
 - *Les informations d'identification de SQL Server n'ont pas été créées correctement.*    
-    Résolution : Vérifiez que vous avez utilisé une « signature d’accès partagé » pour le champ **Identité** et que vous avez créé un secret correctement. Consultez les instructions données dans la leçon 3 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../lesson-3-database-backup-to-url.md).  
+    Résolution : Vérifiez que vous avez utilisé une « signature d’accès partagé » pour le champ **Identité** et que vous avez créé un secret correctement. Consultez les instructions données dans la leçon 3 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md#3---database-backup-to-url).  
   
  **Erreurs de bail d'un objet blob :**  
   

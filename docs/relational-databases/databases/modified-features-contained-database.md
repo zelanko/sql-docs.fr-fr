@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5726487c9582a7f99b26154bdb92fa61647b1190
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5ddfed49481df7de8c63db08c8a184247c30857a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88465403"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194304"
 ---
 # <a name="modified-features-contained-database"></a>Fonctionnalités modifiées (base de données autonome)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "88465403"
  La syntaxe de l'instruction ALTER DATABASE en cas d'utilisation hors d'une base de données autonome diffère de celle utilisée pour les bases de données non autonomes. Ces modifications empêchent de dépasser la limite de base de données. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="create-database"></a>CREATE DATABASE  
- La syntaxe CREATE DATABASE pour une base de données autonome diffère de celle pour une base de données non autonome. Consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) pour plus d’informations sur les nouvelles exigences et autorisations relatives à la syntaxe.  
+ La syntaxe CREATE DATABASE pour une base de données autonome diffère de celle pour une base de données non autonome. Consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md) pour plus d’informations sur les nouvelles exigences et autorisations relatives à la syntaxe.  
   
 ## <a name="temporary-tables"></a>Tables temporaires  
  Les tables temporaires locales sont autorisées dans une base de données autonome, mais leur comportement est différent dans les bases de données non autonomes. Dans les bases de données sans relation contenant-contenu, les données de table temporaire sont classées selon le classement de **tempdb**. Dans une base de données autonome, les données de la table temporaire sont classées selon le classement de cette base de données.  
@@ -55,5 +55,4 @@ ms.locfileid: "88465403"
 ## <a name="see-also"></a>Voir aussi  
  [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)   
  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)  
-  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 416f9721802690688d82838bd477aa028e1301fe
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: f02b74a6e5e28fc44a1bab9eb3f101b91610d481
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477253"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193132"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Création d'une destination à l'aide du composant Script
 
@@ -57,18 +57,18 @@ ms.locfileid: "88477253"
   
  Pour obtenir des informations générales sur l’utilisation des gestionnaires de connexions avec le composant Script, consultez [Connexion aux sources de données dans le composant Script](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
   
- Pour plus d’informations sur la page **Gestionnaires de connexions** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Gestionnaires de connexions&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md).  
+ Pour plus d’informations sur la page **Gestionnaires de connexions** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Gestionnaires de connexions&#41;](../data-flow/transformations/script-component.md).  
   
 ### <a name="configuring-inputs-and-input-columns"></a>Configuration d'entrées et de colonnes d'entrée  
  Un composant de destination possède une entrée et aucune sortie.  
   
  Dans la page **Colonnes d’entrée** de l’**Éditeur de transformation de script**, la liste des colonnes affiche les colonnes disponibles dans la sortie du composant en amont du flux de données. Sélectionnez les colonnes à enregistrer.  
   
- Pour plus d’informations sur la page **Colonnes d’entrée** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Colonnes d’entrée&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md).  
+ Pour plus d’informations sur la page **Colonnes d’entrée** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Colonnes d’entrée&#41;](../data-flow/transformations/script-component.md).  
   
  La page **Entrées et sorties** de l’**Éditeur de transformation de script** affiche une seule entrée que vous pouvez renommer. La propriété d'accesseur créée dans le code généré automatiquement vous permet de référencer l'entrée dans le script par son nom.  
   
- Pour plus d’informations sur la page **Entrées et sorties** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Entrées et sorties&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md).  
+ Pour plus d’informations sur la page **Entrées et sorties** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Entrées et sorties&#41;](../data-flow/transformations/script-component.md).  
   
 ### <a name="adding-variables"></a>Ajout de variables  
  Si vous voulez utiliser des variables existantes dans votre script, vous pouvez les ajouter dans les champs de propriété **ReadOnlyVariables** et **ReadWriteVariables** de la page **Script** de l’**Éditeur de transformation de script**.  
@@ -77,7 +77,7 @@ ms.locfileid: "88477253"
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
- Pour plus d’informations sur la page **Script** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Script&#41;](../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md).  
+ Pour plus d’informations sur la page **Script** de l’**Éditeur de transformation de script**, consultez [Éditeur de transformation de script &#40;page Script&#41;](../data-flow/transformations/script-component.md).  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>Script d'un composant de destination en mode Création de code  
  Après avoir configuré les métadonnées du composant, vous pouvez écrire votre script personnalisé. Dans l’**Éditeur de transformation de script**, dans la page **Script**, cliquez sur **Modifier le script** pour ouvrir l’environnement de développement intégré [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) où vous pouvez ajouter votre script personnalisé. Le langage de script utilisé varie selon que vous avez sélectionné [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# comme langage de script pour la propriété **ScriptLanguage** dans la page **Script**.  
@@ -357,5 +357,4 @@ public class ScriptMain:
 ## <a name="see-also"></a>Voir aussi  
  [Création d’une source à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
  [Développement d'un composant de destination personnalisé](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
-  
   

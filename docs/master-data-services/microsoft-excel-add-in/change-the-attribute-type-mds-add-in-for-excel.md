@@ -1,5 +1,6 @@
 ---
-title: Changer le type d’attribut (Complément MDS pour Excel) | Microsoft Docs
+description: Modifier le type d'attribut (complément MDS pour Excel)
+title: Modifier le type d'attribut
 ms.custom: microsoft-excel-add-in
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,30 +11,30 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 785d65d17f1f14cc7fb2e7b7ec80b609d2950fb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fd0e7f0acbe6792a5d303d50ef66014ebc5c1cf
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092482"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257554"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Modifier le type d'attribut (complément MDS pour Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], les administrateurs peuvent modifier le type d’attribut lorsque le type de données ou le nombre de caractères autorisé est incorrect.  
   
  Si vous souhaitez modifier le type d’attribut pour créer une liste contrainte (attribut basé sur un domaine), consultez [Créer un attribut basé sur un domaine &#40;Complément MDS pour Exce&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md).  
   
 > [!NOTE]  
->  Vous ne pouvez pas mettre à jour le type ou la longueur des colonnes **Nom** ou **Code**.  
+>   Vous ne pouvez pas mettre à jour le type ou la longueur des colonnes **Nom** ou **Code** .  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder aux zones fonctionnelles **Administration de système** et **Explorateur** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../../master-data-services/administrators-master-data-services.md).  
   
 -   Un modèle, une entité et un attribut doivent exister.  
   

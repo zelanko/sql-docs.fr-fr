@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9eb09d094ff5ce907479dacd848ca2a6010cee92
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: aa0bf307931b25b72a56e069e9f1c45b9e6c8b5d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88392915"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192779"
 ---
 # <a name="transfer-error-messages-task"></a>Tâche de transfert de messages d'erreur
 
@@ -53,7 +53,7 @@ ms.locfileid: "88392915"
  La tâche de transfert de messages d'erreur n'indique pas les stades intermédiaires de l'avancement du transfert des messages d'erreur : elle signale la tâche comme réalisée à 0 % ou à 100 %.  
   
 ## <a name="execution-value"></a>Valeur d'exécution  
- La valeur d’exécution, définie dans la propriété **ExecutionValue** de la tâche, retourne le nombre de messages d’erreur ayant été transférés. En affectant une variable définie par l’utilisateur à la propriété **ExecValueVariable** de la tâche de transfert de messages d’erreur, les informations sur le transfert de messages d’erreur peuvent être rendues disponibles aux autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ La valeur d’exécution, définie dans la propriété **ExecutionValue** de la tâche, retourne le nombre de messages d’erreur ayant été transférés. En affectant une variable définie par l’utilisateur à la propriété **ExecValueVariable** de la tâche de transfert de messages d’erreur, les informations sur le transfert de messages d’erreur peuvent être rendues disponibles aux autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Entrées du journal  
  La tâche de transfert de messages d'erreur comporte les entrées de journal personnalisées suivantes :  
@@ -81,7 +81,7 @@ ms.locfileid: "88392915"
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-error-messages-task-editor-general-page"></a>Éditeur de tâche de transfert de messages d'erreur (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de messages d'erreur** pour donner un nom et une description à la tâche de transfert de messages d'erreur. La tâche de transfert de messages d’erreur transfère un ou plusieurs messages d’erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définis par l’utilisateur entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
@@ -134,5 +134,4 @@ ms.locfileid: "88392915"
 ## <a name="see-also"></a>Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
-  
   

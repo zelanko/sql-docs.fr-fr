@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f6daf6002a66dcffc032e9953cf400f91d725d91
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: b3c2abcfbb15fa1d2adcd6683e2c2ead5e4572f1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480903"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193213"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
 
@@ -38,7 +38,7 @@ ms.locfileid: "89480903"
 
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
   
- Le dataset de référence peut être un fichier cache, une table ou une vue existante, une nouvelle table ou le résultat d'une requête SQL. La transformation de recherche utilise un gestionnaire de connexions OLE DB ou un gestionnaire de connexions du cache pour se connecter au dataset de référence. Pour plus d’informations, consultez [Gestionnaire de connexions OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) et [Gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md)  
+ Le dataset de référence peut être un fichier cache, une table ou une vue existante, une nouvelle table ou le résultat d'une requête SQL. La transformation de recherche utilise un gestionnaire de connexions OLE DB ou un gestionnaire de connexions du cache pour se connecter au dataset de référence. Pour plus d’informations, consultez [Gestionnaire de connexions OLE DB](../../../integration-services/connection-manager/ole-db-connection-manager.md) et [Gestionnaire de connexions du cache](../../connection-manager/cache-connection-manager.md)  
   
  Vous pouvez configurer la transformation de recherche comme suit :  
   
@@ -91,7 +91,7 @@ ms.locfileid: "89480903"
   
  La persistance du cache dans un fichier présente les autres avantages suivants :  
   
--   ***Partagez le fichier cache entre plusieurs packages. Pour plus d’informations, consultez***  [Implémenter une transformation de recherche en mode Cache complet à l’aide de la transformation du gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
+-   ***Partagez le fichier cache entre plusieurs packages. Pour plus d’informations, consultez***  [Implémenter une transformation de recherche en mode Cache complet à l’aide de la transformation du gestionnaire de connexions du cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
   
 -   Déployez le fichier cache avec un package. ***Vous pouvez alors utiliser les données sur plusieurs ordinateurs.*** Pour plus d’informations, consultez [Créer et déployer un cache pour la transformation de recherche](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
@@ -108,7 +108,7 @@ ms.locfileid: "89480903"
   
      Cette option de mise en cache est compatible avec l’option de mise en cache complète qui est disponible pour la transformation de recherche dans [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)].  
   
--   Le dataset de référence est généré à partir d'une source de données connectée dans le flux de données ou à partir d'un fichier cache et est chargé dans le cache avant l'exécution de la transformation de recherche. Vous utilisez le gestionnaire de connexions du cache et éventuellement la transformation du cache pour accéder au dataset. Pour plus d’informations, consultez [Gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/cache-connection-manager.md) et [Transformation du cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
+-   Le dataset de référence est généré à partir d'une source de données connectée dans le flux de données ou à partir d'un fichier cache et est chargé dans le cache avant l'exécution de la transformation de recherche. Vous utilisez le gestionnaire de connexions du cache et éventuellement la transformation du cache pour accéder au dataset. Pour plus d’informations, consultez [Gestionnaire de connexions du cache](../../connection-manager/cache-connection-manager.md) et [Transformation du cache](../../../integration-services/data-flow/transformations/cache-transform.md).  
   
 -   Le dataset de référence est généré à l'aide d'une table, d'une vue ou d'une requête SQL pendant l'exécution de la transformation de recherche. Les lignes avec des entrées correspondantes dans le dataset de référence et celles sans entrées correspondantes dans le dataset sont chargées dans le cache.  
   
@@ -127,15 +127,15 @@ ms.locfileid: "89480903"
   
 -   [Implémenter une recherche en mode Aucun cache ou Cache partiel](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions du cache](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+-   [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions du cache](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions OLE DB](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
+-   [Implémenter une transformation de recherche en mode Cache complet à l'aide du gestionnaire de connexions OLE DB](../../connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Vidéo, [Procédure : implémenter une transformation de recherche en mode Cache complet](https://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
+-   Vidéo, [Procédure : implémenter une transformation de recherche en mode Cache complet](/previous-versions/sql/sql-server-2008/cc952929(v=sql.100)), sur msdn.microsoft.com  
   
 -   Billet de blog, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bonnes pratiques pour l’utilisation des modes de cache de transformation de recherche), sur blogs.msdn.com  
   
@@ -198,7 +198,7 @@ ms.locfileid: "89480903"
  Sélectionnez une table ou une vue existante dans la liste ou créez une table en cliquant sur **Nouveau**.  
   
 > [!NOTE]  
->  Si vous spécifiez une instruction SQL dans la page **Avancé** de l’ **Éditeur de transformation de recherche**, cette instruction SQL substitue et remplace le nom de table a sélectionné ici. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Avancé&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md).  
+>  Si vous spécifiez une instruction SQL dans la page **Avancé** de l’ **Éditeur de transformation de recherche**, cette instruction SQL substitue et remplace le nom de table a sélectionné ici. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Avancé&#41;]().  
   
  **Nouveau**  
  Utilisez la boîte de dialogue **Créer une table** pour créer une table.  
@@ -270,7 +270,7 @@ ms.locfileid: "89480903"
  Modifiez l'instruction SQL utilisée pour générer le dataset de référence.  
   
 > [!NOTE]  
->  L’instruction SQL facultative que vous spécifiez dans cette page substitue et remplace le nom de table que vous avez spécifié dans la page **Connexion** de **l’Éditeur de transformation de recherche**. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Connexion&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md).  
+>  L’instruction SQL facultative que vous spécifiez dans cette page substitue et remplace le nom de table que vous avez spécifié dans la page **Connexion** de **l’Éditeur de transformation de recherche**. Pour plus d’informations, consultez [Éditeur de transformation de recherche &#40;page Connexion&#41;]().  
   
  **Définition des paramètres**  
  Mappez les colonnes d’entrée aux paramètres en utilisant la boîte de dialogue **Définition des paramètres de la requête** .  
@@ -283,5 +283,4 @@ ms.locfileid: "89480903"
  [Transformation de recherche de terme](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
-  
   

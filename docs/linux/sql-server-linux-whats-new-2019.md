@@ -7,12 +7,12 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9610ca6f434f78d332eb85fbf4ed71a4d477946a
-ms.sourcegitcommit: 039fb38c583019b3fd06894160568387a19ba04e
+ms.openlocfilehash: d0cd1e6c7af5fd4d2f8742e88b4b8853645fe5a7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2020
-ms.locfileid: "87442901"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115438"
 ---
 # <a name="whats-new-for-sql-server-2019-on-linux"></a>Nouveautés de SQL Server 2019 sur Linux
 
@@ -42,7 +42,7 @@ Les mises à jour ont été effectuées dans SQL Server 2019 sur Linux :
 | PolyBase sur Linux | [Installer PolyBase](../relational-databases/polybase/polybase-linux-setup.md) sur Linux pour les connecteurs non-Hadoop.<br/><br/>[Mappage de type PolyBase](../relational-databases/polybase/polybase-type-mapping.md). |
 | Prise en charge de la capture des changements de données (CDC) | La capture des changements de données (CDC) est désormais prise en charge sur Linux pour SQL Server 2019. |
 | Registre de conteneurs Microsoft | Le [registre de conteneurs Microsoft](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) remplace désormais Docker Hub pour les nouvelles images conteneur Microsoft officielles, notamment [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
-| Conteneurs non racines | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit la possibilité de créer des conteneurs plus sûrs en démarrant le processus [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] en tant qu’utilisateur non racine par défaut. Pour plus d’informations, consultez [Générer et exécuter des conteneurs SQL Server en tant qu’utilisateur non racine](sql-server-linux-configure-docker.md#buildnonrootcontainer). |
+| Conteneurs non racines | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit la possibilité de créer des conteneurs plus sûrs en démarrant le processus [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] en tant qu’utilisateur non racine par défaut. Pour plus d’informations, consultez [Générer et exécuter des conteneurs SQL Server en tant qu’utilisateur non racine](./sql-server-linux-docker-container-security.md#buildnonrootcontainer). |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

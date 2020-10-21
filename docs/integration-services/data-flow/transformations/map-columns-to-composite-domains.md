@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4508244cb9558cc63c9e1b2185c89c5a43d659cf
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: cc1bddc579ccce64b4068fd2a5235481fc7b7629
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88477666"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193199"
 ---
 # <a name="map-columns-to-composite-domains"></a>Mapper des colonnes à des domaines composites
 
@@ -41,7 +41,7 @@ ms.locfileid: "88477666"
   
 5.  Si nécessaire, modifiez les noms qui s’affichent dans les champs **Alias source**, **Alias de sortie**et **Alias d’état** .  
   
-6.  Si nécessaire, définissez des propriétés sous l’onglet **Avancé** . Pour plus d’informations sur les propriétés, consultez [Éditeur de transformation de nettoyage DQS (boîte de dialogue)](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+6.  Si nécessaire, définissez des propriétés sous l’onglet **Avancé** . Pour plus d’informations sur les propriétés, consultez [Éditeur de transformation de nettoyage DQS (boîte de dialogue)](./dqs-cleansing-transformation.md).  
   
 ### <a name="to-map-a-column-with-delimited-values-to-a-composite-domain"></a>Pour mapper une colonne de valeurs délimitées à un domaine composite  
   
@@ -55,9 +55,8 @@ ms.locfileid: "88477666"
   
 5.  Si nécessaire, modifiez les noms qui s’affichent dans les champs **Alias source**, **Alias de sortie**et **Alias d’état** .  
   
-6.  Si nécessaire, définissez des propriétés sous l’onglet **Avancé** . Pour plus d’informations sur les propriétés, consultez [Éditeur de transformation de nettoyage DQS (boîte de dialogue)](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation-editor-dialog-box.md).  
+6.  Si nécessaire, définissez des propriétés sous l’onglet **Avancé** . Pour plus d’informations sur les propriétés, consultez [Éditeur de transformation de nettoyage DQS (boîte de dialogue)](./dqs-cleansing-transformation.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Transformation de nettoyage DQS](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
-  
   

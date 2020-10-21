@@ -24,12 +24,12 @@ ms.assetid: 71b2c2a5-c83a-4dfe-8469-237987a6e503
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ca2f675704741c0bd48c8ffbf6be6037065075c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: add8da1ae3655364eaf20e15cec0b8f26af5ea26
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91670845"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196563"
 ---
 # <a name="set-arithignore-transact-sql"></a>SET ARITHIGNORE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -65,11 +65,10 @@ SET ARITHIGNORE OFF
   
  Pour afficher la valeur actuelle de ce paramètre, exécutez la requête suivante.  
   
-```  
+```sql  
 DECLARE @ARITHIGNORE VARCHAR(3) = 'OFF';  
 IF ( (128 & @@OPTIONS) = 128 ) SET @ARITHIGNORE = 'ON';  
 SELECT @ARITHIGNORE AS ARITHIGNORE;  
-  
 ```  
   
 ## <a name="permissions"></a>Autorisations  
@@ -78,7 +77,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
 ## <a name="examples"></a>Exemples  
  L'exemple suivant illustre l'utilisation des paramètres `SET ARITHIGNORE` avec les deux types d'erreur survenant dans une requête.  
   
-```  
+```sql  
 SET ARITHABORT OFF;  
 SET ANSI_WARNINGS OFF  
 GO  
@@ -107,12 +106,11 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant illustre les erreurs de dépassement et de division par zéro. Cet exemple ne retourne pas de message d’erreur pour ces erreurs, car ARITHIGNORE a la valeur OFF.  
   
-```  
+```sql  
 -- SET ARITHIGNORE OFF and testing.  
 SET ARITHIGNORE OFF;  
 SELECT 1 / 0 AS DivideByZero;  
 SELECT CAST(256 AS TINYINT) AS Overflow;  
-  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

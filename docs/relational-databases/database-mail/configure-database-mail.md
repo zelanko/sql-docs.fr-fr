@@ -40,12 +40,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ecf2233470afe15337c41a0a6051b41f18e0f40f
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: daf9915e1aff8cf800fbc68929e7efdd6f95f4a2
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88421083"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192590"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -440,7 +440,7 @@ ms.locfileid: "88421083"
  **mailitem_id** du message électronique de test.  
   
  **Résolution des problèmes**  
- Cliquez sur cette option pour ouvrir la rubrique de la documentation en ligne [Dépannage de la messagerie de base de données](https://msdn.microsoft.com/library/ms188663.aspx).  
+ Cliquez sur cette option pour ouvrir la rubrique de la documentation en ligne [Dépannage de la messagerie de base de données](/previous-versions/sql/sql-server-2008-r2/ms188663(v=sql.105)).  
   
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
@@ -460,5 +460,4 @@ ms.locfileid: "88421083"
 6.  Exécutez le script pour créer la configuration.  
   
 7.  Le script n'accorde l'accès au profil à aucun utilisateur de base de données. En conséquence, par défaut, seuls les membres du rôle de sécurité fixe **sysadmin** peuvent utiliser le profil. Pour plus d’informations sur l’octroi d’accès aux profils, consultez [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)  
-  
   

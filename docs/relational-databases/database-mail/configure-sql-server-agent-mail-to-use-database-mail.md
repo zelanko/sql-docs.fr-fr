@@ -13,12 +13,12 @@ ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 318ba0af0be327cbe938fd9498dcbce9e418650d
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 44252fa011dcdeaca457d6aa7f9819f581dbeb11
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88385805"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192577"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Configurer la messagerie de l'Agent SQL Server en vue de l'utilisation de la messagerie de base de données
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "88385805"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Avant de commencer  
   
   > [!NOTE]
-  > L’agent SQL sur Managed Instance est toujours configuré pour utiliser Database Mail. Ce contenu ne s’applique donc pas à Managed Instance. Dans Managed Instance, vous devez avoir un profil appelé **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** pour lier l’agent SQL à Database Mail. 
+  > L’agent SQL sur Managed Instance est toujours configuré pour utiliser Database Mail. Ce contenu ne s’applique donc pas à Managed Instance. Dans Managed Instance, vous devez avoir un profil appelé **[AzureManagedInstance_dbmail_profile](/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** pour lier l’agent SQL à Database Mail. 
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Conditions préalables  
   
@@ -81,5 +81,4 @@ ms.locfileid: "88385805"
 -   [Opérateurs](../../ssms/agent/operators.md)  
   
      Les opérateurs sont des alias pour les personnes ou les groupes qui peuvent recevoir une notification électronique  
-  
   

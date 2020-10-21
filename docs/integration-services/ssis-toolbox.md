@@ -15,12 +15,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2523c8ac095a576d243aef661092e7939e27863b
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9c67835df192436ce3b8264849589a1db3f66fee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487662"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192373"
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
 
@@ -34,7 +34,7 @@ ms.locfileid: "88487662"
  > [!NOTE]
 > Si vous ne voyez pas la boîte à outils, cliquez sur Affichage -> Autres fenêtres -> Boîte à outils SSIS.
  
-Vous pouvez obtenir des informations supplémentaires sur un composant de la boîte à outils en cliquant sur le composant pour afficher sa description en bas de la boîte à outils. Pour certains composants, vous pouvez également accéder à des exemples qui montrent comment configurer et utiliser les composants. Ces exemples sont disponibles sur [MSDN](https://go.microsoft.com/fwlink/?LinkId=259189). Pour accéder aux exemples depuis la **Boîte à outils SSIS**, cliquez sur le lien **Rechercher des exemples** qui apparaît sous la description.  
+Vous pouvez obtenir des informations supplémentaires sur un composant de la boîte à outils en cliquant sur le composant pour afficher sa description en bas de la boîte à outils. Pour certains composants, vous pouvez également accéder à des exemples qui montrent comment configurer et utiliser les composants. Ces exemples sont disponibles sur [MSDN](/samples/browse/). Pour accéder aux exemples depuis la **Boîte à outils SSIS**, cliquez sur le lien **Rechercher des exemples** qui apparaît sous la description.  
   
 > [!NOTE]
 > Vous ne pouvez pas *supprimer* les composants installés à partir de la boîte à outils.  
@@ -65,5 +65,4 @@ Vous pouvez obtenir des informations supplémentaires sur un composant de la bo�
   
 ## <a name="refresh-the-ssis-toolbox"></a>Actualiser la boîte à outils SSIS  
   
-1.  Cliquez avec le bouton droit dans la boîte à outils SSIS, puis cliquez sur **Actualiser boîte à outils**.  
-
+1.  Cliquez avec le bouton droit dans la boîte à outils SSIS, puis cliquez sur **Actualiser boîte à outils**.

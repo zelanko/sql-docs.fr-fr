@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f1812ac61d34e5d2d25738cffed0b5caf117ee82
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6dd901474ae9c866a7f0ac67b70b2a40a3611c4a
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425531"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196417"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Types de données Integration Services dans les expressions
 
@@ -135,12 +135,11 @@ ms.locfileid: "88425531"
  Les résultats de nombreuses opérations et fonctions ont des types de données prédéterminés. Il peut s'agir du type de données de l'argument ou du type de données vers lequel l'évaluateur d'expression convertit le résultat. Par exemple, le résultat d'un opérateur logique OU (||) est toujours booléen, le résultat de la fonction ABS a le type de données numérique de l'argument et le résultat de la multiplication est du plus petit type de données numérique pouvant contenir ce résultat sans perte de données. Pour plus d’informations sur les types de données des résultats, consultez [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Utiliser une expression dans un composant de flux de données](https://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
+ [Utiliser une expression dans un composant de flux de données](/previous-versions/sql/sql-server-2016/ms141007(v=sql.130))  
   
 ## <a name="related-content"></a>Contenu associé  
   
 -   Article technique, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=746575), sur pragmaticworks.com  
   
 -   Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
-  
   

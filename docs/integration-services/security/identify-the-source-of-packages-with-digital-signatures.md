@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d1d5d09d0c41de51d545ca68aa4509f8a6b240f5
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 0405dabd99568e09bc07502544db5a181bf357a5
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487772"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192419"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifier la source de packages à l'aide de signatures numériques
 
@@ -71,7 +71,7 @@ ms.locfileid: "88487772"
 |3|Bloquer les signatures non valides et non approuvées et les packages non signés.<br /><br /> Ce paramètre bloque lui aussi les signatures générées automatiquement.|  
   
 > [!NOTE]  
->  Le paramètre recommandé pour **BlockedSignatureStates** est 3. Ce paramètre offre une protection maximale contre des packages non signés ou des signatures non valides ou non approuvées. Néanmoins, ce paramètre recommandé peut ne pas convenir dans tous les cas. Pour plus d’informations sur la signature des ressources numériques, consultez la rubrique[Introduction to Code Signing](https://go.microsoft.com/fwlink/?LinkId=51414)(Introduction à la signature du code) dans MSDN Library.  
+>  Le paramètre recommandé pour **BlockedSignatureStates** est 3. Ce paramètre offre une protection maximale contre des packages non signés ou des signatures non valides ou non approuvées. Néanmoins, ce paramètre recommandé peut ne pas convenir dans tous les cas. Pour plus d’informations sur la signature des ressources numériques, consultez la rubrique[Introduction to Code Signing](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))(Introduction à la signature du code) dans MSDN Library.  
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>Pour implémenter une stratégie de signature pour des packages  
   
@@ -104,11 +104,11 @@ ms.locfileid: "88487772"
   
     -   Obtenez un certificat à partir d'une autorité de certification commerciale publique qui émet des certificats.  
   
-    -   Obtenez un certificat à partir d'un serveur de certificats, qui permet à une organisation d'émettre des certificats de façon interne. Vous devez ajouter le certificat racine utilisé pour signer le certificat dans le magasin **Autorités de certification racines de confiance** . Pour ajouter le certificat racine, vous pouvez utiliser le composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) Certificats. Pour plus d'informations, consultez la rubrique «[Services de certificats](https://go.microsoft.com/fwlink/?LinkId=100755)» dans MSDN Library (éventuellement en anglais).  
+    -   Obtenez un certificat à partir d'un serveur de certificats, qui permet à une organisation d'émettre des certificats de façon interne. Vous devez ajouter le certificat racine utilisé pour signer le certificat dans le magasin **Autorités de certification racines de confiance** . Pour ajouter le certificat racine, vous pouvez utiliser le composant logiciel enfichable MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console) Certificats. Pour plus d'informations, consultez la rubrique «[Services de certificats](/windows/win32/seccrypto/certificate-services)» dans MSDN Library (éventuellement en anglais).  
   
-    -   Créez votre propre certificat à des fins de test uniquement. L'outil de création de certificat Makecert.exe génère des certificats X.509 à des fins de tests. Pour plus d’informations, consultez la rubrique «[Outil Certificate Creation Tool (Makecert.exe)](https://go.microsoft.com/fwlink/?LinkId=100756)» dans MSDN Library.  
+    -   Créez votre propre certificat à des fins de test uniquement. L'outil de création de certificat Makecert.exe génère des certificats X.509 à des fins de tests. Pour plus d’informations, consultez la rubrique «[Outil Certificate Creation Tool (Makecert.exe)](/previous-versions/dotnet/netframework-2.0/bfsktky3(v=vs.80))» dans MSDN Library.  
   
-     Pour plus d'informations sur les certificats, recherchez le composant logiciel enfichable Certificats dans l'aide en ligne. Pour plus d'informations sur la façon de signer des ressources numériques, consultez la rubrique «[Signature et vérification de code à l'aide d'Authenticode](https://go.microsoft.com/fwlink/?LinkId=78100)» dans MSDN Library (éventuellement en anglais).  
+     Pour plus d'informations sur les certificats, recherchez le composant logiciel enfichable Certificats dans l'aide en ligne. Pour plus d'informations sur la façon de signer des ressources numériques, consultez la rubrique «[Signature et vérification de code à l'aide d'Authenticode](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537364(v=vs.85))» dans MSDN Library (éventuellement en anglais).  
   
 -   Assurez-vous que le certificat a été activé pour la signature de code. Pour déterminer si un certificat est activé pour la signature du code, examinez les propriétés du certificat dans le composant logiciel enfichable Certificats.  
   
@@ -153,5 +153,4 @@ ms.locfileid: "88487772"
 ## <a name="see-also"></a>Voir aussi  
  [Packages Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md)   
  [Vue d’ensemble de la sécurité &#40;Integration Services&#41;](../../integration-services/security/security-overview-integration-services.md)  
-  
   

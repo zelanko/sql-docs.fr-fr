@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 973c8eb74a26047dfa8472497e403385e3678326
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6b342052d848597a7422adf5594e25a2b799c7b3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445407"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193268"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instructions d’utilitaires SQL Server - GO
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "88445407"
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```syntaxsql  
 GO [count]  
 ```  
   
@@ -57,7 +57,7 @@ GO [count]
   
  Les utilisateurs doivent se conformer aux règles en vigueur concernant les traitements. Par exemple, toute exécution d'une procédure stockée faisant suite à la première instruction d'un lot doit inclure le mot clé EXECUTE. La portée des variables locales (personnalisées) se limite à un traitement et il est impossible d'y faire référence après une commande GO.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @MyMsg VARCHAR(50)  
@@ -81,7 +81,7 @@ GO
   
  N'utilisez pas un point-virgule comme terminateur d'instruction après GO.
  
-```
+```sql
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
@@ -93,21 +93,21 @@ GO;
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée deux traitements. Le premier lot contient uniquement une instruction `USE AdventureWorks2012` pour définir le contexte de la base de données. Les autres instructions utilisent une variable locale. Ainsi, toutes les déclarations de variables locales doivent être groupées en un seul traitement. Pour cela, aucune commande `GO` n'est utilisée avant la dernière instruction qui fait référence à la variable.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
-DECLARE @NmbrPeople int  
+DECLARE @NmbrPeople INT  
 SELECT @NmbrPeople = COUNT(*)  
 FROM Person.Person;  
 PRINT 'The number of people as of ' +  
-      CAST(GETDATE() AS char(20)) + ' is ' +  
-      CAST(@NmbrPeople AS char (10));  
+      CAST(GETDATE() AS CHAR(20)) + ' is ' +  
+      CAST(@NmbrPeople AS CHAR(10));  
 GO  
 ```  
   
  L'exemple suivant exécute les instructions dans le lot à deux reprises.  
   
-```  
+```sql  
 SELECT DB_NAME();  
 SELECT USER_NAME();  
 GO 2  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: db0b4fccce21cd319049a4e313c27da6c4202a72
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: a053581c9f6ca8f9592aef42c1649511ecc51a02
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495950"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194221"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Tâche de transfert de procédures stockées de master
 
@@ -52,7 +52,7 @@ ms.locfileid: "88495950"
  La tâche de transfert des procédures stockées de master n'indique pas les stades intermédiaires de l'avancement du transfert des connexions : elle signale la tâche comme réalisée à 0 % ou à 100 %.  
   
 ## <a name="execution-value"></a>Valeur d'exécution  
- La valeur d’exécution, définie dans la propriété **ExecutionValue** de la tâche, renvoie le nombre de procédures stockées transférées. En affectant une variable définie par l’utilisateur à la propriété **ExecValueVariable** de la tâche de transfert des procédures stockées de master, les informations sur le transfert des procédures stockées peuvent être rendues disponibles aux autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787).  
+ La valeur d’exécution, définie dans la propriété **ExecutionValue** de la tâche, renvoie le nombre de procédures stockées transférées. En affectant une variable définie par l’utilisateur à la propriété **ExecValueVariable** de la tâche de transfert des procédures stockées de master, les informations sur le transfert des procédures stockées peuvent être rendues disponibles aux autres objets du package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) et [Utiliser des variables dans des packages](../integration-services-ssis-variables.md).  
   
 ## <a name="log-entries"></a>Entrées du journal  
  La tâche de transfert des procédures stockées comporte les entrées de journal personnalisées suivantes :  
@@ -82,7 +82,7 @@ ms.locfileid: "88495950"
 ## <a name="related-tasks"></a>Tâches associées  
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d'une tâche ou d'un conteneur](https://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](./add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
   
 ## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Éditeur de tâche de transfert de procédures stockées de master (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de procédures stockées de master** pour nommer et décrire la tâche de transfert de procédures stockées de master.  
@@ -139,5 +139,4 @@ ms.locfileid: "88495950"
  [Tâche de transfert d'objets SQL Server](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  
-  
   

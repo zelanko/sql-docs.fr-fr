@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7e1d10976a795570a1bfded3d4d379284dc317b3
-ms.sourcegitcommit: 9122251ab8bbd46ea3c699e741d6842c995195fa
+ms.openlocfilehash: 39110067ea0abb2722da0ee88f70946d2875ccee
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91847349"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192569"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Créer un instantané de base de données (Transact-SQL)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -120,7 +120,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     Où *nom_base_de_données_**source* représente la base de données source, *nom_fichier_logique* le nom logique utilisé dans SQL Server pour référencer le fichier, *nom_fichier_se* le chemin et le nom de fichier utilisés par le système d’exploitation quand vous créez le fichier, et *nom_capture_instantanée_base_de_données* le nom de la capture instantanée à laquelle vous souhaitez restaurer la base de données. Pour obtenir une description complète de cette syntaxe, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)+.  
+     Où *nom_base_de_données_**source* représente la base de données source, *nom_fichier_logique* le nom logique utilisé dans SQL Server pour référencer le fichier, *nom_fichier_se* le chemin et le nom de fichier utilisés par le système d’exploitation quand vous créez le fichier, et *nom_capture_instantanée_base_de_données* le nom de la capture instantanée à laquelle vous souhaitez restaurer la base de données. Pour obtenir une description complète de cette syntaxe, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)+.  
   
     > [!NOTE]  
     >  Lorsque vous créez un instantané de base de données, les fichiers journaux, les fichiers hors connexion, les fichiers de restauration et les anciens fichiers ne sont pas autorisés dans l'instruction CREATE DATABASE.  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ####  <a name="b-creating-a-snapshot-on-the-sales-database"></a><a name="Creating_on_Sales"></a> B. Création d'un instantané sur la base de données Sales (Ventes)  
- Cet exemple montre comment créer un instantané de base de données, `sales_snapshot1200`, sur la base de données `Sales` . Cette base de données a été créée dans l’exemple illustrant la création d’une base de données dotée de groupes de fichiers dans la rubrique [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+ Cet exemple montre comment créer un instantané de base de données, `sales_snapshot1200`, sur la base de données `Sales` . Cette base de données a été créée dans l’exemple illustrant la création d’une base de données dotée de groupes de fichiers dans la rubrique [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md).  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -179,8 +179,6 @@ GO
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-transact-sql.md)   
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
-  
-

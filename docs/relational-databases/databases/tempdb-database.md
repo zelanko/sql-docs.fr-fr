@@ -16,12 +16,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30e481590a41e5c5670360bac265a0d7656fff9f
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: c49e89d9ed81950d0c8781d39c57eef3e408482b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024341"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195554"
 ---
 # <a name="tempdb-database"></a>base de données tempdb
 
@@ -40,9 +40,9 @@ La base de données système `tempdb` est une ressource globale à la dispositio
   > [!IMPORTANT]
   > Les pools élastiques et les bases de données uniques Azure SQL Database prennent en charge les tables temporaires globales et les procédures stockées temporaires globales qui sont stockées dans `tempdb` et dont l’étendue est limitée à la base de données. 
   >
-  > Les tables temporaires globales et les procédures stockées temporaires globales sont partagées pour toutes les sessions utilisateur exécutées dans la même instance de base de données SQL. Les sessions utilisateur d’autres instances de bases de données SQL n’ont pas accès aux tables temporaires globales. Pour plus d’informations, consultez [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) prend en charge les mêmes objets temporaires que SQL Server.
+  > Les tables temporaires globales et les procédures stockées temporaires globales sont partagées pour toutes les sessions utilisateur exécutées dans la même instance de base de données SQL. Les sessions utilisateur d’autres instances de bases de données SQL n’ont pas accès aux tables temporaires globales. Pour plus d’informations, consultez [Database scoped global temporary tables (Azure SQL Database)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance) prend en charge les mêmes objets temporaires que SQL Server.
   >
-  > Pour les pools élastiques et les bases de données uniques Azure SQL Database, seules les bases de données MASTER et `tempdb` s’appliquent. Pour plus d’informations, consultez [Qu’est-ce qu’un serveur Azure SQL Database ?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Pour une présentation de `tempdb` dans le contexte des bases de données uniques et des pools élastiques Azure SQL Database, consultez [Base de données tempdb dans les bases de données uniques et les pools élastiques Azure SQL Database](#tempdb-database-in-sql-database). 
+  > Pour les pools élastiques et les bases de données uniques Azure SQL Database, seules les bases de données MASTER et `tempdb` s’appliquent. Pour plus d’informations, consultez [Qu’est-ce qu’un serveur Azure SQL Database ?](/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server). Pour une présentation de `tempdb` dans le contexte des bases de données uniques et des pools élastiques Azure SQL Database, consultez [Base de données tempdb dans les bases de données uniques et les pools élastiques Azure SQL Database](#tempdb-database-in-sql-database). 
   >
   > Pour Azure SQL Managed Instance, toutes les bases de données système s’appliquent.
 
@@ -149,7 +149,7 @@ Pour obtenir une description de ces options de base de données, consultez [Opti
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>Tailles de tempdb pour les niveaux de service basés sur vCore
 
-Consultez les [limites des ressources basées sur vCore](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits).
+Consultez les [limites des ressources basées sur vCore](/azure/sql-database/sql-database-vcore-resource-limits).
 
 ## <a name="restrictions"></a>Restrictions
 
@@ -223,7 +223,7 @@ Placez la base de données `tempdb` sur des disques différents de ceux que les 
 - Toutes les allocations dans `tempdb` utilisent des extensions uniformes. [L’indicateur de trace 1118](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) n’est plus nécessaire.  
 - Pour le groupe de fichiers primaire, la propriété `AUTOGROW_ALL_FILES` est activée et la propriété ne peut pas être modifiée.
 
-Pour plus d’informations sur les améliorations des performances dans `tempdb`, consultez l’article de blog [TEMPDB – Fichiers, indicateurs de traces et mises à jour, Oh My !](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/).
+Pour plus d’informations sur les améliorations des performances dans `tempdb`, consultez l’article de blog [TEMPDB – Fichiers, indicateurs de traces et mises à jour, Oh My !](/archive/blogs/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my).
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Métadonnées tempdb à mémoire optimisée
 La contention de métadonnées dans `tempdb` a toujours été un goulot d’étranglement pour la scalabilité de nombreuses charges de travail s’exécutant sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit une nouvelle fonctionnalité qui fait partie de la famille de fonctionnalités [base de données en mémoire](../in-memory-database.md) : métadonnées tempdb à mémoire optimisée. 
@@ -355,4 +355,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)    
 [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)    
 [Déplacer des fichiers de bases de données](../../relational-databases/databases/move-database-files.md)    
-  

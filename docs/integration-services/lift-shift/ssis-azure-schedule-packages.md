@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 42624909f59c1e25d8c75b99c60c19da8b04da85
-ms.sourcegitcommit: c74bb5944994e34b102615b592fdaabe54713047
+ms.openlocfilehash: 7c61b1b032ef4ff08301c91f080f188d89e2aadc
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "90989970"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195171"
 ---
 # <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Planifier l’exécution de packages SSIS (SQL Server Integration Services) déployés dans Azure
 
@@ -44,13 +44,13 @@ Cette fonctionnalité nécessite SQL Server Management Studio version 17.7 ou ul
 
 ## <a name="schedule-a-package-with-sql-database-elastic-jobs"></a><a name="elastic"></a> Planifier un package avec des travaux élastiques SQL Database
 
-Pour plus d’informations sur les travaux élastiques SQL Database, consultez [Gestion des bases de données cloud avec augmentation de la taille des instances](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
+Pour plus d’informations sur les travaux élastiques SQL Database, consultez [Gestion des bases de données cloud avec augmentation de la taille des instances](/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Conditions préalables requises
 
 Pour pouvoir utiliser des travaux élastiques afin de planifier des packages SSIS stockés dans la base de données de catalogues SSISDB sur un serveur Azure SQL Database, vous devez effectuer les actions suivantes :
 
-1.  Installez et configurez les tâches de base de données élastique. Pour plus d’informations, consultez [Vue d’ensemble de l’installation des tâches de base de données élastique](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Installez et configurez les tâches de base de données élastique. Pour plus d’informations, consultez [Vue d’ensemble de l’installation des tâches de base de données élastique](/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Créez des informations d’identification au niveau de la base de données pour permettre aux travaux d’envoyer des commandes à la base de données de catalogues SSIS. Pour plus d’informations, consultez [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -166,17 +166,17 @@ Vous pouvez planifier un package indirectement à l’aide d’un déclencheur p
 
 Pour planifier un pipeline Data Factory, utilisez l’un des déclencheurs suivants :
 
-- [Déclencheur de planification](https://docs.microsoft.com/azure/data-factory/how-to-create-schedule-trigger)
+- [Déclencheur de planification](/azure/data-factory/how-to-create-schedule-trigger)
 
-- [Déclencheur de fenêtre bascule](https://docs.microsoft.com/azure/data-factory/how-to-create-tumbling-window-trigger)
+- [Déclencheur de fenêtre bascule](/azure/data-factory/how-to-create-tumbling-window-trigger)
 
-- [Déclencheur basé sur un événement](https://docs.microsoft.com/azure/data-factory/how-to-create-event-trigger)
+- [Déclencheur basé sur un événement](/azure/data-factory/how-to-create-event-trigger)
 
 Pour exécuter un package SSIS dans le cadre d’un pipeline Data Factory, utilisez l’une des activités suivantes :
 
-- [Activité Exécuter le package SSIS](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
+- [Activité Exécuter le package SSIS](/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).
 
-- [Activité Procédure stockée](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
+- [Activité Procédure stockée](/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

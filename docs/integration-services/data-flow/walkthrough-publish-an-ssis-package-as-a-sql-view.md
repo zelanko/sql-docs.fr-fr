@@ -1,5 +1,5 @@
 ---
-description: 'Procédure pas à pas : publier un package SSIS en tant que vue SQL'
+description: 'Procédure pas à pas : Publication d’un package SSIS sous la forme d’une vue SQL'
 title: 'Procédure pas à pas : publier un package SSIS en tant que vue SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1df84869443257dbfc73d5ef3984f3e37a15b6c0
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: d8a02e714f78f830da467cb35cf227d73e3a6277
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88425641"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194573"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Procédure pas à pas : publier un package SSIS en tant que vue SQL
 
@@ -256,7 +256,7 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
  Timeout indique le délai d’attente en secondes du fournisseur OLE DB pour SSIS avant l’arrivée de nouvelles données en provenance du package SSIS. Par défaut, le délai d’expiration est de 60 secondes. Vous pouvez spécifier une valeur entière pour indiquer un délai d’attente compris entre 20 et 32 000.  
   
- Parameters contient la valeur des paramètres du package et des paramètres du projet. Les règles des paramètres sont les mêmes que celles des paramètres dans [DTExec](https://msdn.microsoft.com/library/hh231187.aspx).  
+ Parameters contient la valeur des paramètres du package et des paramètres du projet. Les règles des paramètres sont les mêmes que celles des paramètres dans [DTExec](../packages/dtexec-utility.md).  
   
  La liste suivante indique les caractères spéciaux autorisés dans la clause de requête :  
   
@@ -270,6 +270,5 @@ SELECT * FROM OPENQUERY(<LinkedServer Name>, N'Folder=<Folder Name from SSIS Cat
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Streaming Destination](../../integration-services/data-flow/data-streaming-destination.md)   
- [Configurer Data Streaming Destination](../../integration-services/data-flow/configure-data-streaming-destination.md)  
-  
+ [Configurer Data Streaming Destination](./data-streaming-destination.md)  
   

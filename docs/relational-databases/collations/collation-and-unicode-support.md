@@ -33,12 +33,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed482982ecee2de572bc4241f199a7d16abc47d1
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: b574c9efb9f6c5d5cda38731546403e1219c8a36
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875568"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193509"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et des classements
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -428,7 +428,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ```    
     
 ###  <a name="locale"></a><a name="Locale_Defn"></a> Paramètres régionaux    
-Les paramètres régionaux sont un ensemble d’informations associées à un emplacement ou à une culture. Il peut s’agir du nom et de l’identificateur de la langue parlée, du script utilisé pour écrire la langue et des conventions culturelles. Les classements peuvent être associés à un ou plusieurs ensembles de paramètres régionaux. Pour plus d'informations, consultez [Locale IDs Assigned by Microsoft (en anglais)](https://msdn.microsoft.com/goglobal/bb964664.aspx).    
+Les paramètres régionaux sont un ensemble d’informations associées à un emplacement ou à une culture. Il peut s’agir du nom et de l’identificateur de la langue parlée, du script utilisé pour écrire la langue et des conventions culturelles. Les classements peuvent être associés à un ou plusieurs ensembles de paramètres régionaux. Pour plus d'informations, consultez [Locale IDs Assigned by Microsoft (en anglais)](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).    
     
 ###  <a name="code-page"></a><a name="Code_Page_Defn"></a> Page de codes    
 Une page de codes est le jeu ordonné de caractères d'un script donné dans lequel un index numérique (ou une valeur de point de code) est associé à chaque caractère. Une page de codes Windows est généralement appelée *jeu de caractères* ou *charset*. Les pages de codes permettent d'assurer la prise en charge des jeux de caractères et des dispositions du clavier utilisés par différents paramètres régionaux système Windows.     
@@ -655,4 +655,4 @@ Pour plus d’informations, consultez le contenu connexe suivante :
 [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)     
 [Choisir une langue lors de la création d’un index de recherche en texte intégral](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
-[Jeux de caractères codés sur un octet et multioctets](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
+[Jeux de caractères codés sur un octet et multioctets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

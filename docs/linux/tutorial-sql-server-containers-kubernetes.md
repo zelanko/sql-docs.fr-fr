@@ -9,12 +9,12 @@ ms.date: 09/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1e9234e6d429dcd95fa9556426871a4726f4f7f9
-ms.sourcegitcommit: 04cf7905fa32e0a9a44575a6f9641d9a2e5ac0f8
+ms.openlocfilehash: c8563738c8d1465c6573ca2a92f0839f54c8e29c
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2020
-ms.locfileid: "91808605"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155103"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Déployer un conteneur SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 
@@ -52,7 +52,7 @@ Dans le diagramme suivant, le nœud hébergeant le conteneur `mssql-server` a é
 * **Cluster Kubernetes**
    - Ce didacticiel requiert un cluster Kubernetes. Les étapes utilisent [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) pour gérer le cluster. 
 
-   - Consultez [Déployer un cluster Azure Kubernetes Service (AKS)](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) pour créer et se connecter à un cluster Kubernetes à nœud unique dans AKS avec `kubectl`. 
+   - Consultez [Déployer un cluster Azure Kubernetes Service (AKS)](/azure/aks/tutorial-kubernetes-deploy-cluster) pour créer et se connecter à un cluster Kubernetes à nœud unique dans AKS avec `kubectl`. 
 
    >[!NOTE]
    >Pour une protection contre les défaillances de nœuds, un cluster Kubernetes requiert plusieurs nœuds.
@@ -175,6 +175,7 @@ Dans cette étape, créez un manifeste pour décrire le conteneur en fonction de
            app: mssql
        spec:
          terminationGracePeriodSeconds: 30
+         hostname: mssqlinst
          securityContext:
            fsGroup: 10001
          containers:
@@ -296,9 +297,9 @@ Si vous avez configuré le conteneur comme décrit, vous pouvez vous connecter �
 
 Vous pouvez utiliser les applications suivantes pour vous connecter à l’instance. 
 
-* [SSMS](https://docs.microsoft.com/sql/linux/sql-server-linux-manage-ssms)
+* [SSMS](./sql-server-linux-manage-ssms.md)
 
-* [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
+* [SSDT](./sql-server-linux-develop-use-ssdt.md)
 
 * sqlcmd
 
@@ -349,4 +350,4 @@ Dans ce didacticiel, vous avez appris à déployer es conteneurs SQL Server sur 
 ## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
->[Présentation de Kubernetes](https://docs.microsoft.com/azure/aks/intro-kubernetes)
+>[Présentation de Kubernetes](/azure/aks/intro-kubernetes)

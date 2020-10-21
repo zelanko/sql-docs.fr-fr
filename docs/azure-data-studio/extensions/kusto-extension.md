@@ -9,12 +9,12 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.custom: ''
 ms.date: 09/22/2020
-ms.openlocfilehash: 2ffe3945f8dd7e8c0ce9cf504c09622ca1a20331
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c6e4dd8869c9f26adb34c5acb965241ff9a2198e
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725188"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098698"
 ---
 # <a name="kusto-kql-extension-for-azure-data-studio-preview"></a>Extension Kusto (KQL) pour Azure Data Studio (préversion)
 
@@ -124,7 +124,7 @@ Vos paramètres d’extension ressemblent à ceci :
 
 ## <a name="sanddance-visualization"></a>Visualisation SandDance
 
-L’extension [SandDance](../sanddance-extension.md) et l’extension Kusto (KQL) dans Azure Data Studio offrent une visualisation interactive riche. Dans le jeu de résultats de la requête KQL, sélectionnez le bouton **Visualiseur** pour lancer [SandDance](https://sanddance.js.org/).
+L’extension [SandDance](sanddance-extension.md) et l’extension Kusto (KQL) dans Azure Data Studio offrent une visualisation interactive riche. Dans le jeu de résultats de la requête KQL, sélectionnez le bouton **Visualiseur** pour lancer [SandDance](https://sanddance.js.org/).
 
 :::image type="content" source="media/kusto-extension/kusto-extension-sanddance-demo.gif" alt-text="Extension Kusto":::
 

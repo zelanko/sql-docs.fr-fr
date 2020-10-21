@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f620e240605b72e52b84204bed74ad083388fe01
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: db6bf2a03ee0b187345de9b9c406b9c2ca86cc29
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88445436"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195471"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "88445436"
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
-  
 scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
      { SOME | ANY } ( subquery )   
 ```  
@@ -73,9 +72,9 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
 ### <a name="a-running-a-simple-example"></a>R. Exécution d'un exemple simple  
  Les instructions suivantes créent une table simple et ajoutent les valeurs `1`, `2`, `3` et `4` à la colonne `ID`.  
   
-```  
+```sql  
 CREATE TABLE T1  
-(ID int) ;  
+(ID INT) ;  
 GO  
 INSERT T1 VALUES (1) ;  
 INSERT T1 VALUES (2) ;  
@@ -85,7 +84,7 @@ INSERT T1 VALUES (4) ;
   
  La requête suivante renvoie `TRUE` car `3` est inférieur à certaines des valeurs de la table.  
   
-```  
+```sql  
 IF 3 < SOME (SELECT ID FROM T1)  
 PRINT 'TRUE'   
 ELSE  
@@ -94,7 +93,7 @@ PRINT 'FALSE' ;
   
  La requête suivante retourne `FALSE`, car `3` n'est pas inférieur à toutes les valeurs de la table.  
   
-```  
+```sql  
 IF 3 < ALL (SELECT ID FROM T1)  
 PRINT 'TRUE'   
 ELSE  
@@ -104,10 +103,10 @@ PRINT 'FALSE' ;
 ### <a name="b-running-a-practical-example"></a>B. Exécution d'un exemple pratique  
  L’exemple suivant crée une procédure stockée qui détermine si tous les composants d’un `SalesOrderID` spécifié dans la base de données `AdventureWorks2012` peuvent être fabriqués dans le délai du nombre de jours spécifié. L'exemple utilise une sous-requête pour créer une liste du nombre de `DaysToManufacture` pour tous les composants du `SalesOrderID` spécifié, puis vérifie si parmi les valeurs retournées par la sous-requête certaines sont supérieures au nombre de jours spécifié. Si chaque valeur retournée pour `DaysToManufacture` est inférieure au nombre fourni, la condition a la valeur TRUE et le premier message est imprimé.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
-CREATE PROCEDURE ManyDaysToComplete @OrderID int, @NumberOfDays int  
+CREATE PROCEDURE ManyDaysToComplete @OrderID INT, @NumberOfDays INT  
 AS  
 IF   
 @NumberOfDays < SOME  
@@ -126,7 +125,7 @@ PRINT 'All items for this order can be manufactured in the specified number of d
   
  Pour tester la procédure, exécutez-la en utilisant le `SalesOrderID``49080` dont l’un des composants demande `2` jours de fabrication, tandis que les 2 autres en demandent 0. La première instruction remplit les critères, Ce n’est pas le cas de la deuxième requête.  
   
-```  
+```sql  
 EXECUTE ManyDaysToComplete 49080, 2 ;  
 ```  
   

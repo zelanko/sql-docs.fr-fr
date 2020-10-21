@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8cb194e8da7b64bef3cf6f33e65a5a5ee1ab136c
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 481f534c719d188d108ee1d9edd0776ee8b2bc9d
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88457091"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192446"
 ---
 # <a name="performance-counters"></a>Compteurs de performance
 
@@ -76,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Outil : [SSIS Performance Visualization for Business Intelligence Development Studio (projet CodePlex)](https://go.microsoft.com/fwlink/?LinkId=146626), sur le site codeplex.com.  
   
--   Vidéo : [Mesure et présentation des performances de vos packages SSIS dans l’entreprise (Vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=150497), sur le site msdn.microsoft.com.  
+-   Vidéo : [Mesure et présentation des performances de vos packages SSIS dans l’entreprise (Vidéo liée à SQL Server)](/previous-versions/sql/sql-server-2008/dd795223(v=sql.100)), sur le site msdn.microsoft.com.  
   
 -   Article du Support technique : [Le compteur de performance SSIS n’est plus disponible dans l’Analyseur de performances après la mise à niveau vers Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319), sur le site support.microsoft.com.  
 
@@ -122,4 +122,4 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  Vous devez démarrer le service Journaux et alertes de performance à l'aide d'un compte local ou d'un compte de domaine membre du groupe Administrateurs.  
 
 ## <a name="see-also"></a>Voir aussi  
- [Exécution de projets et de packages](../packages/run-integration-services-ssis-packages.md) [Événements journalisés par un package Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [Exécution de projets et de packages](../packages/run-integration-services-ssis-packages.md) [Événements journalisés par un package Integration Services](../../integration-services/performance/events-logged-by-an-integration-services-package.md)

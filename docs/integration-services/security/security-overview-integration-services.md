@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9e45f6fc97531038c7d1d16c34eb18fc19d189cb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 9d663d75f7588ad91973f3bce5f416136bc5583e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88487682"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193781"
 ---
 # <a name="security-overview-integration-services"></a>Vue d'ensemble de la sécurité (Integration Services)
 
@@ -100,7 +100,7 @@ ms.locfileid: "88487682"
   
  Si vous stockez des configurations dans le système de fichiers plutôt que dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veillez à sécuriser les dossiers qui contiennent les fichiers de configuration de package.  
   
- Pour plus d'informations sur les configurations, consultez [Package Configurations](../../integration-services/packages/package-configurations.md).  
+ Pour plus d'informations sur les configurations, consultez [Package Configurations](../packages/legacy-package-deployment-ssis.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Contrôle de l'accès au service Integration Services  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] utilise le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour établir la liste des packages stockés. Pour empêcher tout utilisateur non autorisé de consulter des informations sur les packages stockées sur des ordinateurs locaux et distants, et par conséquent d'accéder à des informations privées, restreignez l'accès aux ordinateurs qui exécutent le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -121,7 +121,7 @@ ms.locfileid: "88487682"
 ### <a name="configuration-files"></a>Fichiers de configuration  
  Si une configuration contient des informations sensibles, telles que des informations de connexion et de mot de passe, vous devez penser à enregistrer la configuration dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou à utiliser une liste de contrôle d’accès pour limiter l’accès à l’emplacement ou au dossier de stockage des fichiers et pour autoriser l’accès uniquement à certains comptes. En règle générale, vous accordez l'accès aux comptes que vous autorisez à exécuter des packages et à ceux qui gèrent et résolvent les problèmes des packages, ce qui peut comprendre l'inspection du contenu des fichiers de configuration, des fichiers de point de contrôle et des fichiers journaux. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit le stockage le plus sécurisé, car il offre une protection aux niveaux du serveur et des bases de données. Pour enregistrer des configurations dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous utilisez le type de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour enregistrer dans le système de fichiers, vous utilisez le type de configuration XML.  
   
- Pour plus d’informations, consultez [Configurations de package](../../integration-services/packages/package-configurations.md), [Créer des configurations de package](../../integration-services/packages/create-package-configurations.md)et [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
+ Pour plus d’informations, consultez [Configurations de package](../packages/legacy-package-deployment-ssis.md), [Créer des configurations de package](../packages/legacy-package-deployment-ssis.md)et [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
 ### <a name="checkpoint-files"></a>fichiers de point de contrôle  
  De même, si le fichier de point de contrôle utilisé par le package contient des informations sensibles, vous devez utiliser une liste de contrôle d'accès pour sécuriser l'emplacement ou le dossier de stockage du fichier. Les fichiers de points de contrôle contiennent des informations d'état relatives à la progression du package, ainsi que les valeurs actuelles de certaines variables. Par exemple, le package peut inclure une variable personnalisée qui contient un numéro de téléphone. Pour plus d'informations, consultez [Redémarrer des packages à l'aide de points de contrôle](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
@@ -147,4 +147,4 @@ ms.locfileid: "88487682"
   
 -   [Signer un package à l'aide d'un certificat numérique](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md#cert)  
   
--   [Définir ou modifier le niveau de protection des packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)  
+-   [Définir ou modifier le niveau de protection des packages](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#set_protection)

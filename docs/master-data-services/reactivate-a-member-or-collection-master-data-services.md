@@ -1,5 +1,6 @@
 ---
-title: Réactiver un membre ou une collection (Master Data Services) | Microsoft Docs
+description: Réactiver un membre ou une collection (Master Data Services)
+title: Réactiver un membre ou une collection
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dce90b3bf8b151ec5ea24dda8ea3628852a8dcfe
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093111"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92257936"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Réactiver un membre ou une collection (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez réactiver un membre qui a été :  
   
@@ -47,7 +48,7 @@ ms.locfileid: "68093111"
   
 -   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>Pour réactiver un membre ou une collection  
   
