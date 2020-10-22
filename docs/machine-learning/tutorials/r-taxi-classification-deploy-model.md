@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: ffebcaa9afc8f2caa8717170d9746787c17593b3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: d5132b0616dd223e195f47b1333308a920fb2572
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173597"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196268"
 ---
 # <a name="r-tutorial-run-predictions-in-sql-stored-procedures"></a>Didacticiel R : Exécuter des prédictions dans les procédures stockées SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -70,7 +70,7 @@ GO
 
 + L’instruction SELECT obtient le modèle sérialisé à partir de la base de données et stocke le modèle dans la variable R `mod` pour un traitement ultérieur en utilisant R.
 
-+ Les nouveaux cas de scoring sont obtenus à partir de la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifiée dans `@inquery`, premier paramètre de la procédure stockée. Lors de la lecture des données de requête, les lignes sont enregistrées dans la trame de données par défaut, `InputDataSet`. Cette trame de données est transmise à la fonction [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), qui génère les scores.
++ Les nouveaux cas de scoring sont obtenus à partir de la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] spécifiée dans `@inquery`, premier paramètre de la procédure stockée. Lors de la lecture des données de requête, les lignes sont enregistrées dans la trame de données par défaut, `InputDataSet`. Cette trame de données est transmise à la fonction [rxPredict](/machine-learning-server/r-reference/revoscaler/rxpredict) de [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler), qui génère les scores.
   
   `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
@@ -193,7 +193,7 @@ Si vous appelez la procédure stockée à partir d’une application externe, v�
    @dropoff_longitude = -73.977303
    ```
 
-   Vous pouvez aussi utiliser cette forme abrégée pour les [paramètres d’une procédure stockée](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters) :
+   Vous pouvez aussi utiliser cette forme abrégée pour les [paramètres d’une procédure stockée](../../relational-databases/stored-procedures/specify-parameters.md) :
   
    ```sql
    EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303

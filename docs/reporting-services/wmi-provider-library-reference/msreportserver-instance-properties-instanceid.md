@@ -1,4 +1,5 @@
 ---
+description: Propriété InstanceID (WMI MSReportServer_Instance)
 title: InstanceID, propriété (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -15,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 55c6c8b6-dfad-499f-befa-042c1caba17f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 924db3a5f26fad62baaded79471786619d1ef9ec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e20f04e837372c00c8646b5192873d61c318a2a8
+ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65569128"
+ms.lasthandoff: 08/17/2020
+ms.locfileid: "92255554"
 ---
 # <a name="msreportserver_instance-properties---instanceid"></a>Propriétés MSReportServer_Instance - InstanceID
   Cet objet prend en charge l'infrastructure [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et ne doit pas être utilisé directement à partir de votre code.  
   
-## <a name="syntax"></a>Syntaxe  
+## <a name="syntax"></a>Syntax  
   
 ```vb  
 public Dim InstanceID As String  

@@ -8,17 +8,17 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8273250360c9e60aae8ac1ae19ccebf4d76d8598
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: fcdb8353abe029291352f031d5261849514ef8fd
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180426"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92195753"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>Créer un nom de connexion pour SQLRUserGroup
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Créez un [nom de connexion dans SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) pour [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quand une [connexion de bouclage](../../machine-learning/concepts/security.md#implied-authentication) dans votre script indique une *connexion approuvée* et que l’identité utilisée pour exécuter un objet qui contient votre code est un compte d’utilisateur Windows.
+Créez un [nom de connexion dans SQL Server](../../relational-databases/security/authentication-access/create-a-login.md) pour [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quand une [connexion de bouclage](../../machine-learning/concepts/security.md#implied-authentication) dans votre script indique une *connexion approuvée* et que l’identité utilisée pour exécuter un objet qui contient votre code est un compte d’utilisateur Windows.
 
 Les connexions approuvées sont celles qui présentent `Trusted_Connection=True` dans la chaîne de connexion. Quand SQL Server reçoit une demande spécifiant une connexion approuvée, il vérifie si l’identité de l’utilisateur Windows actif dispose d’un nom de connexion. Pour les processus externes s’exécutant en tant que compte de travail (par exemple, MSSQLSERVER01 de **SQLRUserGroup**), la demande échoue parce que ces comptes n’ont pas de nom de connexion par défaut.
 

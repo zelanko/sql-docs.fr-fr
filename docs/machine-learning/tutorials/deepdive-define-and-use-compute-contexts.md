@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 62b18fbdd0a4c59b8458b2bc1f757ef189db5de3
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 7bf4385405c227fb337dda910c3f1ef158eff223
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178776"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195141"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>Définir et utiliser des contextes de calcul (didacticiel SQL Server et RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Il s’agit du tutoriel 4 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 4 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Dans le tutoriel précédent, vous avez utilisé les fonctions **RevoScaleR** pour inspecter les objets de données. Ce tutoriel présente la fonction [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver), qui vous permet de définir un contexte de calcul pour un SQL Server distant. Avec un contexte de calcul distant, vous pouvez déplacer l’exécution de R d’une session locale vers une session distante sur le serveur. 
+Dans le tutoriel précédent, vous avez utilisé les fonctions **RevoScaleR** pour inspecter les objets de données. Ce tutoriel présente la fonction [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver), qui vous permet de définir un contexte de calcul pour un SQL Server distant. Avec un contexte de calcul distant, vous pouvez déplacer l’exécution de R d’une session locale vers une session distante sur le serveur. 
 
 > [!div class="checklist"]
 > * Découvrir les éléments d’un contexte de calcul SQL Server distant
@@ -63,7 +63,7 @@ Cette section vous guide tout au long de chaque partie.
   
     L’argument *wait* pour **RxInSqlServer** prend en charge ces options :
   
-    -   **TRUE**. Le travail est configuré en tant qu’action bloquante et ne retourne aucun résultat tant qu’il n’est pas terminé ou qu’il n’a pas échoué.  Pour plus d’informations, consultez [Distributed and parallel computing in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing) (Calculs distribués et parallèle dans Machine Learning Server).
+    -   **TRUE**. Le travail est configuré en tant qu’action bloquante et ne retourne aucun résultat tant qu’il n’est pas terminé ou qu’il n’a pas échoué.  Pour plus d’informations, consultez [Distributed and parallel computing in Machine Learning Server](/machine-learning-server/r/how-to-revoscaler-distributed-computing) (Calculs distribués et parallèle dans Machine Learning Server).
   
     -   **FALSE**. Les travaux sont configurés en tant qu’actions non bloquantes et retournent immédiatement les résultats, ce qui vous permet de continuer à exécuter un autre code R. Toutefois, même en mode non bloquant, la connexion client à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être maintenue pendant l’exécution de la tâche.
 
@@ -90,9 +90,9 @@ Cette section vous guide tout au long de chaque partie.
     
     La syntaxe de **RxInSqlServer** est presque identique à celle de la fonction **RxSqlServerData** que vous avez utilisée précédemment pour définir la source de données. Toutefois, il existe des différences importantes.
       
-    - L’objet source de données (défini à l’aide de la fonction [RxSqlServerData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)) spécifie où sont stockées les données.
+    - L’objet source de données (défini à l’aide de la fonction [RxSqlServerData](/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)) spécifie où sont stockées les données.
     
-    - En revanche, le contexte de calcul, défini à l’aide de la fonction [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver), indique où doivent avoir lieu les agrégations et autres calculs.
+    - En revanche, le contexte de calcul, défini à l’aide de la fonction [RxInSqlServer](/machine-learning-server/r-reference/revoscaler/rxinsqlserver), indique où doivent avoir lieu les agrégations et autres calculs.
     
     La définition d’un contexte de calcul n’affecte pas les autres calculs R génériques que vous pouvez effectuer sur votre station de travail, et ne modifie pas la source des données. Vous pouvez par exemple, définir un fichier texte local comme source de données, mais modifier le contexte de calcul de SQL Server et effectuer toutes vos lectures et résumés des données sur l’ordinateur SQL Server.
 
@@ -135,7 +135,7 @@ Il arrive parfois que les opérations fonctionnent sur votre contexte local, mai
   
    Dans cet exemple, la propriété *traceLevel* a la valeur 7, ce qui signifie « afficher toutes les informations de traçage ».
 
-2. Utilisez la fonction [rxSetComputeContext](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) pour spécifier le contexte de calcul avec le traçage activé par son nom.
+2. Utilisez la fonction [rxSetComputeContext](/machine-learning-server/r-reference/revoscaler/rxsetcomputecontext) pour spécifier le contexte de calcul avec le traçage activé par son nom.
 
     ```R
     rxSetComputeContext(sqlComputeTrace)

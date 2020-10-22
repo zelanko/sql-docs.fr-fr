@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 664deeae61b664d3818f7d748ad6177b79917d86
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: e53accf27dbc3c573596c5ebaf1d83667480a34e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178806"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196281"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>Créer des objets de données SQL Server avec RxSqlServerData (tutoriel SQL Server et RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Il s’agit du tutoriel 2 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 2 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
 Ce tutoriel est la suite de la création d’une base de données : ajout de tables et chargement de données. Si un administrateur de base de données a créé la base de données et la connexion dans le [tutoriel 2](deepdive-work-with-sql-server-data-using-r.md), vous pouvez ajouter des tables en utilisant un IDE R comme RStudio ou un outil intégré comme **Rgui**.
 
@@ -103,7 +103,7 @@ Comme vous avez déjà défini la chaîne de connexion et d’autres paramètres
 
 Maintenant que vous avez créé les tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez y charger des données à l’aide de la fonction **Rx** appropriée.
 
-Le package **RevoScaleR** contient des fonctions spécifiques aux types de sources de données. Pour les données texte, utilisez [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata) pour générer l’objet de source de données. Il existe des fonctions supplémentaires pour créer des objets de source de données à partir des données Hadoop, des données ODBC et ainsi de suite.
+Le package **RevoScaleR** contient des fonctions spécifiques aux types de sources de données. Pour les données texte, utilisez [RxTextData](/machine-learning-server/r-reference/revoscaler/rxtextdata) pour générer l’objet de source de données. Il existe des fonctions supplémentaires pour créer des objets de source de données à partir des données Hadoop, des données ODBC et ainsi de suite.
 
 > [!NOTE]
 > Pour cette section, vous devez disposer des autorisations **Exécuter du DDL** sur la base de données.
@@ -116,7 +116,7 @@ Le package **RevoScaleR** contient des fonctions spécifiques aux types de sourc
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    Notez l’appel à **rxGetOption**, qui est la méthode GET associée à [rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions) dans **RevoScaleR**. Utilisez cet utilitaire pour définir et lister les options relatives aux contextes de calcul locaux et distants, comme le répertoire partagé par défaut ou le nombre de processeurs (cœurs) à utiliser dans les calculs.
+    Notez l’appel à **rxGetOption**, qui est la méthode GET associée à [rxOptions](/machine-learning-server/r-reference/revoscaler/rxoptions) dans **RevoScaleR**. Utilisez cet utilitaire pour définir et lister les options relatives aux contextes de calcul locaux et distants, comme le répertoire partagé par défaut ou le nombre de processeurs (cœurs) à utiliser dans les calculs.
     
     Cette appel particulier obtient les exemples à partir de la bibliothèque appropriée, quel que soit l’emplacement d’exécution de votre code. Par exemple, essayez d’exécuter la fonction sur SQL Server et sur votre ordinateur de développement, et voyez comment les chemins diffèrent.
   
@@ -137,7 +137,7 @@ Le package **RevoScaleR** contient des fonctions spécifiques aux types de sourc
   
     Vous pouvez voir que, même si les objets de données R ont été créés dans votre espace de travail local, les tables n’ont pas été créées dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De même, aucune donnée du fichier texte n’a été chargée dans la variable R.
   
-4. Insérez les données en appelant la fonction [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep).
+4. Insérez les données en appelant la fonction [rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep).
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -188,7 +188,7 @@ Là encore, si la connexion a réussi, vous devez voir un message indiquant l’
 
 ## <a name="more-about-rxdatastep"></a>En savoir plus sur rxDataStep
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) est une fonction puissante qui peut effectuer plusieurs transformations sur une trame de données R. Vous pouvez également utiliser rxDataStep pour convertir des données dans la représentation nécessaire pour la destination, qui est dans le cas présent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+[rxDataStep](/machine-learning-server/r-reference/revoscaler/rxdatastep) est une fonction puissante qui peut effectuer plusieurs transformations sur une trame de données R. Vous pouvez également utiliser rxDataStep pour convertir des données dans la représentation nécessaire pour la destination, qui est dans le cas présent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 Si vous le souhaitez, vous pouvez spécifier des transformations sur les données en utilisant des fonctions R dans les arguments de **rxDataStep**. Des exemples de ces opérations sont fournis plus loin dans ce tutoriel.
 

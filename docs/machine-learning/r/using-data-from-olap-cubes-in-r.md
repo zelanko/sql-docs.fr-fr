@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ae9985ae7d203387eb268a50d97ee91849b33a8
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5a5219b034abdd390a77e1dacd6b2b71d83a770e
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180443"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195763"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Utilisation de données à partir de cubes OLAP dans R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -30,7 +30,7 @@ Cet article décrit l’API, ainsi qu’une vue d’ensemble des utilisateurs OL
 
 OLAP signifie Traitement analytique en ligne. Les solutions OLAP sont couramment utilisées pour capturer et stocker des données métier critiques au fil du temps. Les données OLAP sont utilisées pour l’analytique d’entreprise par différents outils, tableaux de bord et visualisations. Pour plus d’informations, consultez [Traitement analytique en ligne](https://en.wikipedia.org/wiki/Online_analytical_processing).
 
-Microsoft fournit [Analysis Services](https://docs.microsoft.com/sql/analysis-services/analysis-services), qui permet de concevoir, de déployer et d’interroger des données OLAP sous la forme de _cubes_ ou de _modèles tabulaires_. Un cube est une base de données multidimensionnelle. Les _dimensions_ sont comme des facettes de données, ou des facteurs dans R : vous utilisez des dimensions pour identifier un sous-ensemble particulier de données que vous souhaitez synthétiser ou analyser. Par exemple, le temps est une dimension importante. C’est pourquoi de nombreuses solutions OLAP incluent plusieurs calendriers définis par défaut, à utiliser lors du découpage et de la synthèse des données. 
+Microsoft fournit [Analysis Services](/analysis-services/analysis-services-overview), qui permet de concevoir, de déployer et d’interroger des données OLAP sous la forme de _cubes_ ou de _modèles tabulaires_. Un cube est une base de données multidimensionnelle. Les _dimensions_ sont comme des facettes de données, ou des facteurs dans R : vous utilisez des dimensions pour identifier un sous-ensemble particulier de données que vous souhaitez synthétiser ou analyser. Par exemple, le temps est une dimension importante. C’est pourquoi de nombreuses solutions OLAP incluent plusieurs calendriers définis par défaut, à utiliser lors du découpage et de la synthèse des données. 
 
 Pour des raisons de performances, une base de données OLAP calcule souvent des résumés (ou des _agrégations_) à l’avance, puis les stocke pour une récupération plus rapide. Les résumés sont basés sur des *mesures*, qui représentent des formules qui peuvent être appliquées aux données numériques. Vous utilisez les dimensions pour définir un sous-ensemble de données, puis vous calculez la mesure sur ces données. Par exemple, vous pouvez utiliser une mesure pour calculer les ventes totales pour une ligne de produits donnée sur plusieurs trimestres moins les taxes, pour générer un rapport sur les frais d’expédition moyens d’un fournisseur particulier ou le cumul annuel des salaires jusqu’à ce jour etc.
 
@@ -95,11 +95,11 @@ Vous pouvez également afficher et interroger les propriétés du serveur pour d
 
 Pour obtenir des informations générales sur les deux types de modèles, consultez l’article suivant :
 
-+ [Comparaison de modèles multidimensionnels et tabulaires](https://docs.microsoft.com/sql/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
++ [Comparaison de modèles multidimensionnels et tabulaires](/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)
 
 Pour plus d’informations sur l’interrogation des propriétés du serveur, consultez l’article suivant :
 
-+ [Ensembles de lignes de schéma OLE DB pour OLAP](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
++ [Ensembles de lignes de schéma OLE DB pour OLAP](/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### <a name="writeback-is-not-supported"></a>L’écriture différée n’est pas prise en charge.
 
@@ -107,9 +107,9 @@ Il est impossible d’écrire en différé les résultats des calculs R personna
 
 En général, même lorsqu’un cube est compatible avec l’écriture différée, seules les opérations limitées sont prises en charge, et une configuration supplémentaire peut être nécessaire. Nous vous recommandons d’utiliser MDX pour ces opérations.
 
-+ [Dimensions activées en écriture](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
-+ [Partitions activées en écriture](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
-+ [Définir un accès personnalisé à des données de cellule](https://docs.microsoft.com/sql/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
++ [Dimensions activées en écriture](/analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions)
++ [Partitions activées en écriture](/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions)
++ [Définir un accès personnalisé à des données de cellule](/analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services)
 
 ### <a name="long-running-mdx-queries-block-cube-processing"></a>Les requêtes MDX de longue durée bloquent le traitement du cube
 

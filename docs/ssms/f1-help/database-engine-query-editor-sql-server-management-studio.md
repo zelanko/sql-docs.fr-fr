@@ -7,7 +7,12 @@ ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.tsqlquery.f1
-- sql23.swb.tsqlresults.f1
+- sql13.swb.tsqlresults.f1
+- sql13.swb.query.advanced.f1
+- sql13.swb.query.ansi.f1
+- sql13.swb.query.general.f1
+- sql13.swb.query.general.f1
+- sql13.swb.sqleditors.multiserverresultssettings
 dev_langs:
 - TSQL
 helpviewer_keywords:
@@ -38,12 +43,12 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019, contperfq1
 ms.date: 08/28/2020
-ms.openlocfilehash: 3ba349fc37aa4aae0aea7af7000380d1de031091
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 219ebb8a431b997951b22d443877dfb751665384
+ms.sourcegitcommit: 5f3e0eca9840db20038f0362e5d88a84ff3424af
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92035462"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92344065"
 ---
 # <a name="sql-server-management-studio-ssms-query-editor"></a>Éditeur de requêtes SQL Server Management Studio (SSMS)
 
@@ -300,8 +305,8 @@ Si le moteur de recherche d’aide ne trouve pas de rubrique comportant un mot c
 | Faire glisser le texte d'un emplacement dans un script et le placer à un nouvel emplacement.| [Glisser et déplacer du texte](../scripting/drag-and-drop-text.md) |
 | Définir des signets afin de rechercher plus facilement les segments de code importants. | [Gérer les signets](../scripting/manage-bookmarks.md) |
 | Imprimer des scripts ou les résultats dans une fenêtre ou une grille.| [Imprimer le code et les résultats](../scripting/print-code-and-results.md) |
-| Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX. | [Créer des scripts Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio?view=asallproducts-allversions) |
-| Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX. | [Créer une requête DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio?view=asallproducts-allversions) |
+| Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête MDX. | [Créer des scripts Analysis Services](/analysis-services/instances/create-analysis-services-scripts-in-management-studio) |
+| Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête DMX. | [Créer une requête DMX](/analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio) |
 | Afficher et utiliser les fonctionnalités de base dans l'éditeur de requête XML/A. | [Éditeur XML](../scripting/xml-editor-sql-server-management-studio.md) |
 | Utiliser les fonctionnalités sqlcmd dans l'éditeur de requête du moteur de base de données.| [Modifier des scripts SQLCMD](../scripting/edit-sqlcmd-scripts-with-query-editor.md) |
 | Comment utiliser des extraits de code dans l’éditeur de requête du moteur de base de données. Les extraits de code sont des modèles pour des instructions ou des blocs couramment utilisés, et peuvent être personnalisés ou étendus pour inclure les extraits de code spécifiques au site.| [Extraits de code T-SQL](../scripting/add-transact-sql-snippets.md) |

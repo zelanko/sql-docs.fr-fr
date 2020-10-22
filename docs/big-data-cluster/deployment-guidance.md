@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0564d83508dafa650735981537599c7b0068da67
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 870ff07f771f06acfb24e9883477b177af36d425
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725868"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257209"
 ---
 # <a name="how-to-deploy-big-data-clusters-2019-on-kubernetes"></a>Guide pratique pour déployer des [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] sur Kubernetes
 
@@ -23,7 +23,7 @@ ms.locfileid: "91725868"
 Un cluster Big Data SQL Server est déployé sous la forme de conteneurs Docker sur un cluster Kubernetes. Voici une vue d’ensemble des étapes d’installation et de configuration :
 
 - Configurez un cluster Kubernetes sur une seule machine virtuelle, un cluster de machines virtuelles ou dans AKS (Azure Kubernetes Service), Red Hat OpenShift ou dans Azure Red Hat OpenShift (ARO).
-- Installez l’outil de configuration de cluster `azdata` sur votre machine cliente.
+- Installez l’outil de configuration de cluster [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] sur votre machine cliente.
 - Déployez un cluster Big Data SQL Server dans un cluster Kubernetes.
 
 ## <a name="supported-platforms"></a>Plateformes prises en charge
@@ -77,7 +77,7 @@ Si vous déployez dans AKS, aucune configuration de stockage n’est nécessaire
 
 Avant de déployer un cluster Big Data SQL Server 2019, commencez par [installer les outils de Big Data](deploy-big-data-tools.md) :
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - Azure Data Studio
 - [Extension de virtualisation de données](../azure-data-studio/extensions/data-virtualization-extension.md) pour Azure Data Studio
@@ -91,10 +91,10 @@ Les sections suivantes fournissent plus d’informations sur la façon de config
 
 ## <a name="default-configurations"></a><a id="configfile"></a> Configurations par défaut
 
-Les options de déploiement d’un cluster Big Data sont définies dans les fichiers de configuration JSON. Vous pouvez démarrer votre personnalisation du déploiement de cluster à partir des profils de déploiement intégrés disponibles dans `azdata`. 
+Les options de déploiement d’un cluster Big Data sont définies dans les fichiers de configuration JSON. Vous pouvez démarrer votre personnalisation du déploiement de cluster à partir des profils de déploiement intégrés disponibles dans [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. 
 
 > [!NOTE]
-> Les images conteneur nécessaires pour le déploiement de cluster Big Data sont hébergées dans le registre de conteneurs Microsoft (`mcr.microsoft.com`), dans le référentiel `mssql/bdc`. Par défaut, ces paramètres sont déjà inclus dans le fichier de configuration `control.json` dans chacun des profils de déploiement inclus avec `azdata`. De plus, l’étiquette d’image conteneur pour chaque version est également préremplie dans le même fichier de configuration. Si vous devez extraire (pull) les images conteneur dans votre propre registre de conteneurs privé et/ou modifier les paramètres du référentiel/registre de conteneurs, suivez les instructions fournies dans l’[article sur l’installation hors connexion](deploy-offline.md)
+> Les images conteneur nécessaires pour le déploiement de cluster Big Data sont hébergées dans le registre de conteneurs Microsoft (`mcr.microsoft.com`), dans le référentiel `mssql/bdc`. Par défaut, ces paramètres sont déjà inclus dans le fichier de configuration `control.json` dans chacun des profils de déploiement inclus avec [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. De plus, l’étiquette d’image conteneur pour chaque version est également préremplie dans le même fichier de configuration. Si vous devez extraire (pull) les images conteneur dans votre propre registre de conteneurs privé et/ou modifier les paramètres du référentiel/registre de conteneurs, suivez les instructions fournies dans l’[article sur l’installation hors connexion](deploy-offline.md)
 
 Exécutez cette commande pour rechercher les modèles disponibles :
 
@@ -117,7 +117,7 @@ Les modèles suivants sont disponibles sur à compter de SQL Server 2019 CU5 :
 
 Vous pouvez déployer un cluster Big Data en exécutant `azdata bdc create`. Vous êtes alors invité à choisir l’une des configurations par défaut, puis à suivre la procédure de déploiement.
 
-La première fois que vous exécutez `azdata`, vous devez inclure `--accept-eula=yes` pour accepter le contrat de licence utilisateur final (CLUF).
+La première fois que vous exécutez [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], vous devez inclure `--accept-eula=yes` pour accepter le contrat de licence utilisateur final (CLUF).
 
 ```bash
 azdata bdc create --accept-eula=yes
@@ -176,7 +176,7 @@ Les variables d’environnement suivantes sont utilisées pour les paramètres d
 |---|---|---|
 | `AZDATA_USERNAME` | Obligatoire |Nom d’utilisateur de l’administrateur du cluster Big Data SQL Server. Une connexion sysadmin portant le même nom est créée dans l’instance principale SQL Server. En guise de bonne pratique de sécurité, le compte `sa` est désactivé. <br/><br/>[!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]|
 | `AZDATA_PASSWORD` | Obligatoire |Mot de passe des comptes d’utilisateur créés ci-dessus. Sur les clusters déployés avant SQL Server 2019 CU5, le même mot de passe est utilisé pour l’utilisateur `root`, afin de sécuriser la passerelle Knox et HDFS. |
-| `ACCEPT_EULA`| Obligatoire pour la première utilisation de `azdata`| Définie sur « oui ». Si vous la définissez en tant que variable d’environnement, elle applique le CLUF à SQL Server et `azdata`. Si vous ne la définissez pas en tant que variable d’environnement, vous pouvez inclure `--accept-eula=yes` dans la première utilisation de la commande `azdata`.|
+| `ACCEPT_EULA`| Obligatoire pour la première utilisation de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]| Définie sur « oui ». Si vous la définissez en tant que variable d’environnement, elle applique le CLUF à SQL Server et [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Si vous ne la définissez pas en tant que variable d’environnement, vous pouvez inclure `--accept-eula=yes` dans la première utilisation de la commande [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].|
 | `DOCKER_USERNAME` | Facultatif | Nom d’utilisateur utilisé pour accéder aux images de conteneur si elles sont stockées dans un dépôt privé. Pour plus d’informations sur l’utilisation d’un dépôt Docker privé pour le déploiement d’un cluster Big Data, consultez la rubrique [Déploiements hors connexion](deploy-offline.md).|
 | `DOCKER_PASSWORD` | Facultatif |Mot de passe nécessaire pour accéder au dépôt privé ci-dessus. |
 
@@ -424,7 +424,7 @@ Sql: ready                                                                      
 > [!IMPORTANT]
 > Lorsque vous utilisez le paramètre `--all`, la sortie de ces commandes contient des URL vers les tableaux de bord Kibana et Grafana pour une analyse plus détaillée.
 
-Outre `azdata`, vous pouvez utiliser Azure Data Studio pour rechercher les points de terminaison et des informations d’état. Pour plus d’informations sur l’affichage de l’état du cluster avec `azdata` et Azure Data Studio, consultez [Guide pratique pour afficher l’état d’un cluster Big Data](view-cluster-status.md).
+Outre [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], vous pouvez utiliser Azure Data Studio pour rechercher les points de terminaison et des informations d’état. Pour plus d’informations sur l’affichage de l’état du cluster avec [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] et Azure Data Studio, consultez [Guide pratique pour afficher l’état d’un cluster Big Data](view-cluster-status.md).
 
 ## <a name="connect-to-the-cluster"></a><a id="connect"></a> Se connecter au cluster
 

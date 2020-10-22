@@ -11,12 +11,12 @@ ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 43453738d9351a18e4ed6e9887fdf75bb2e9521a
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: e5a64e3de5dae2e879c4537783d33aab81dd9662
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834048"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194451"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-machine-learning"></a>Démarrage rapide : Création et scoring d’un modèle prédictif en Python avec le Machine Learning SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -95,7 +95,7 @@ Pour effectuer ce démarrage rapide, vous avez besoin de ce qui suit.
 
 À cette étape, vous allez exécuter la procédure pour exécuter le code incorporé, en créant un modèle formé et sérialisé en tant que sortie. 
 
-Les modèles destinés à être réutilisés dans la base de données sont sérialisés en tant que flux d’octets et stockés dans la colonne VARBINARY (MAX) d’une table de base de données. Une fois que le modèle est créé, entraîné, sérialisé et enregistré dans une base de données, il peut être appelé par d’autres procédures ou par la fonction [PREDICT T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) dans les charges de travail de scoring.
+Les modèles destinés à être réutilisés dans la base de données sont sérialisés en tant que flux d’octets et stockés dans la colonne VARBINARY (MAX) d’une table de base de données. Une fois que le modèle est créé, entraîné, sérialisé et enregistré dans une base de données, il peut être appelé par d’autres procédures ou par la fonction [PREDICT T-SQL](../../t-sql/queries/predict-transact-sql.md) dans les charges de travail de scoring.
 
 1. Exécutez le script suivant pour exécuter la procédure. L’instruction spécifique pour exécuter une procédure stockée est `EXECUTE` sur la quatrième ligne.
 

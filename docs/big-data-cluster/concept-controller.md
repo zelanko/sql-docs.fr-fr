@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8fd56c7b3c3177f1ae08c9b2c5d821d1c2552f70
-ms.sourcegitcommit: 7345e4f05d6c06e1bcd73747a4a47873b3f3251f
+ms.openlocfilehash: 97df8916b713feae56a7cd5344e7fbdc93038317
+ms.sourcegitcommit: 29a2be59c56f8a4b630af47760ef38d2bf56a3eb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/24/2020
-ms.locfileid: "88765678"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92358437"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Qu’est-ce que le contrôleur sur un cluster Big Data SQL Server ?
 
@@ -57,7 +57,7 @@ Toutes les communications à destination du service de contrôleur sont effectu�
 L’authentification auprès du point de terminaison du service de contrôleur utilise une identité Active Directory ou est basée sur un nom d’utilisateur et un mot de passe. Ces informations d’identification sont provisionnées au moment de l’amorçage du cluster à l’aide de l’entrée pour les variables d’environnement `AZDATA_USERNAME` et `AZDATA_PASSWORD`.
 
 > [!NOTE]
-> Vous devez fournir un mot de passe conforme aux [exigences en matière de complexité des mots de passe SQL Server](../relational-databases/security/password-policy.md?view=sql-server-2017).
+> Vous devez fournir un mot de passe conforme aux [exigences en matière de complexité des mots de passe SQL Server](../relational-databases/security/password-policy.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

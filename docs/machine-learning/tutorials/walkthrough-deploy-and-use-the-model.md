@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8eccd11403f93b1307995a44d38100d680fa8149
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 661ce31839d08b36e7a51f1d09965b68e5350317
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179747"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193641"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Déployer le modèle R et l’utiliser dans SQL Server (procédure pas à pas)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -216,7 +216,7 @@ La procédure stockée *PredictTipSingleMode* illustre cette approche. Elle pren
     ```
 
     >[!TIP]
-    > Outils R pour Visual Studio (RTVS) offre une intégration parfaite avec SQL Server et R. Consultez cet article pour obtenir plus d’exemples d’utilisation de RODBC avec une connexion SQL Server : [Utiliser SQL Server et R](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > Outils R pour Visual Studio (RTVS) offre une intégration parfaite avec SQL Server et R. Consultez cet article pour obtenir plus d’exemples d’utilisation de RODBC avec une connexion SQL Server : [Utiliser SQL Server et R](/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -229,5 +229,5 @@ Vous pouvez également explorer ces exemples et ressources supplémentaires :
 
 + [Scénarios de science des données et modèles de solutions](data-science-scenarios-and-solution-templates.md)
 + [Analytique avancée en base de données](r-taxi-classification-introduction.md)
-+ [How-to guides for data analysis and operationalization](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction) (Guides pratiques pour l’opérationnalisation et l’analyse des données)
-+ [Additional Resources for Machine Learning Server and Microsoft R](https://docs.microsoft.com//machine-learning-server/resources-more) (Ressources supplémentaires pour Machine Learning Server et Microsoft R)
++ [How-to guides for data analysis and operationalization](/machine-learning-server/r/how-to-introduction) (Guides pratiques pour l’opérationnalisation et l’analyse des données)
++ [Additional Resources for Machine Learning Server and Microsoft R](//machine-learning-server/resources-more) (Ressources supplémentaires pour Machine Learning Server et Microsoft R)

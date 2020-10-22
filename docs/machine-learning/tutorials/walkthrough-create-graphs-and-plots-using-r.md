@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5b6643cec32cc3581c0f91e4479fff0d908e7532
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 01fab32210e231b371ce31cd70a94bca1cb9455f
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178426"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196233"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Créer des graphiques et des tracés à l’aide de SQL et R (procédure pas à pas)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -33,7 +33,7 @@ Cette étape suppose que vous utilisez une session R ouverte basée sur les éta
 
 ## <a name="create-a-histogram"></a>Créer un histogramme
 
-1. Générez le premier tracé à l’aide de la fonction [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) .  La fonction rxHistogram fournit une fonctionnalité similaire à celle des packages R open source, mais peut s’exécuter dans un contexte d’exécution à distance.
+1. Générez le premier tracé à l’aide de la fonction [rxHistogram](/r-server/r-reference/revoscaler/rxdatasource) .  La fonction rxHistogram fournit une fonctionnalité similaire à celle des packages R open source, mais peut s’exécuter dans un contexte d’exécution à distance.
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -73,7 +73,7 @@ En règle générale, les serveurs de base de données bloquent l’accès à In
 
     + La fonction *mapPlot* prend deux arguments : un objet de données existant, que vous avez défini précédemment à l’aide de RxSqlServerData, et la représentation sous forme de carte transmise à partir du client.
     + Dans la ligne qui commence par la variable *ds*, rxImport est utilisé pour charger dans la mémoire les données issues de la source de données créée précédemment, *inDataSource*. (Cette source de données contient uniquement 1000 lignes ; si vous souhaitez créer une carte avec plus de points de données, vous pouvez substituer une autre source de données.)
-    + Chaque fois que vous utilisez des fonctions R open source, les données doivent être chargées dans des trames de données dans la mémoire locale. Toutefois, en appelant la fonction [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport), vous pouvez procéder à l’exécution dans la mémoire du contexte de calcul distant.
+    + Chaque fois que vous utilisez des fonctions R open source, les données doivent être chargées dans des trames de données dans la mémoire locale. Toutefois, en appelant la fonction [rxImport](/r-server/r-reference/revoscaler/rximport), vous pouvez procéder à l’exécution dans la mémoire du contexte de calcul distant.
 
 2. Basculez sur le contexte de calcul local et chargez les bibliothèques nécessaires pour créer les cartes.
 
@@ -89,7 +89,7 @@ En règle générale, les serveurs de base de données bloquent l’accès à In
 
     + La ligne commençant par `googmap` génère une carte avec les coordonnées spécifiées au centre.
 
-3. Basculez vers le contexte de calcul SQL Server et restituez les résultats en incluant dans un wrapper la fonction de tracé dans [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec), comme illustré ici. La fonction rxExec fait partie du package **RevoScaleR** et prend en charge l’exécution de fonctions R arbitraires dans un contexte de calcul distant.
+3. Basculez vers le contexte de calcul SQL Server et restituez les résultats en incluant dans un wrapper la fonction de tracé dans [rxExec](/r-server/r-reference/revoscaler/rxexec), comme illustré ici. La fonction rxExec fait partie du package **RevoScaleR** et prend en charge l’exécution de fonctions R arbitraires dans un contexte de calcul distant.
 
     ```R
     rxSetComputeContext(sqlcc)

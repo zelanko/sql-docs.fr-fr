@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6371d142609b095eb6d30fcdac63cb051db22c4f
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: e74e08146ea4c92f23ba17816738122147150e7b
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85218139"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257119"
 ---
 # <a name="non-root-big-data-clusters-containers"></a>Conteneurs Clusters Big Data non racine
 
@@ -47,7 +47,7 @@ Dans la mesure où les services Clusters Big Data s’exécutent en tant qu’ut
 
 Azure Data Studio gère la modification des informations d’identification de manière transparente pour la connexion établie via la passerelle afin d’activer l’expérience de navigation HDFS dans l’Explorateur d’objets ou la soumission de travaux Spark par le biais des notebooks. Installez la dernière version de la [build Insider Azure Data Studio](../azure-data-studio/download-azure-data-studio.md#download-insiders-build-of-azure-data-studio). Elle comprend les modifications nécessaires pour ce cas d’usage.
 
-En ce qui concerne les autres scénarios dans lesquels vous devez fournir des informations d’identification pour accéder au service via la passerelle (par exemple, connexion avec `azdata` ou accès aux tableaux de bord web pour Spark), vérifiez que les informations d’identification utilisées sont correctes. Si vous ciblez un cluster existant déployé avant CU5, continuez d’utiliser le nom d’utilisateur `root` pour vous connecter à la passerelle, même après la mise à niveau du cluster vers CU5. Si vous déployez un nouveau cluster à l’aide de la build CU5, connectez-vous en fournissant le nom d’utilisateur correspondant à la variable d’environnement `AZDATA_USERNAME`.
+En ce qui concerne les autres scénarios dans lesquels vous devez fournir des informations d’identification pour accéder au service via la passerelle (par exemple, connexion avec [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] ou accès aux tableaux de bord web pour Spark), vérifiez que les informations d’identification utilisées sont correctes. Si vous ciblez un cluster existant déployé avant CU5, continuez d’utiliser le nom d’utilisateur `root` pour vous connecter à la passerelle, même après la mise à niveau du cluster vers CU5. Si vous déployez un nouveau cluster à l’aide de la build CU5, connectez-vous en fournissant le nom d’utilisateur correspondant à la variable d’environnement `AZDATA_USERNAME`.
 
 ## <a name="configuration-file-switches"></a>Commutateurs du fichier de configuration
 

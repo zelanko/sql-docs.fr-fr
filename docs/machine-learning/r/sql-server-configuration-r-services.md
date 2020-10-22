@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f9d4d3eab9f8f6d1d19b107eaf3825e9488df382
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: feaa53fa47591ecdb3f1f0bc66ab390def8fbbb1
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180465"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195773"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuration de SQL Server pour une utilisation avec R
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "88180465"
 Cet article est le deuxième d’une série qui décrit l’optimisation des performances pour R Services sur la base de deux études de cas.  Cet article fournit des conseils sur la configuration matérielle et réseau de l’ordinateur utilisé pour exécuter SQL Server R Services. Il contient également des informations sur les méthodes de configuration de l’instance SQL Server, de la base de données ou des tables utilisées dans une solution. Étant donné que l’utilisation de NUMA dans SQL Server atténue la séparation entre les optimisations matérielles et celles de la base de données, une troisième section décrit en détail le processus pour configurer l’affinité et gouverner les ressources du processeur.
 
 > [!TIP]
-> Si vous débutez avec SQL Server, nous vous recommandons vivement de consulter aussi le guide d’optimisation des performances de SQL Server : [Surveiller et régler les performances](https://docs.microsoft.com/sql/relational-databases/performance/monitor-and-tune-for-performance).
+> Si vous débutez avec SQL Server, nous vous recommandons vivement de consulter aussi le guide d’optimisation des performances de SQL Server : [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md).
 
 ## <a name="hardware-optimization"></a>Optimisation matérielle
 
@@ -149,7 +149,7 @@ FROM sys.dm_os_memory_clerks
 
 Si la requête retourne un seul nœud mémoire (nœud 0), soit vous ne possédez pas de matériel NUMA, soit le matériel est configuré comme entrelacé (non-NUMA). SQL Server ignore également le NUMA matériel lorsqu’il y a quatre processeurs ou moins, ou si au moins un nœud n’a qu’un seul processeur.
 
-Si votre ordinateur possède plusieurs processeurs, mais pas de NUMA matériel, vous pouvez également utiliser le [NUMA logiciel](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server) pour subdiviser les processeurs en groupes plus petits.  Dans SQL Server 2016 et SQL Server 2017, la fonctionnalité NUMA logiciel est automatiquement activée au démarrage du service SQL Server.
+Si votre ordinateur possède plusieurs processeurs, mais pas de NUMA matériel, vous pouvez également utiliser le [NUMA logiciel](../../database-engine/configure-windows/soft-numa-sql-server.md) pour subdiviser les processeurs en groupes plus petits.  Dans SQL Server 2016 et SQL Server 2017, la fonctionnalité NUMA logiciel est automatiquement activée au démarrage du service SQL Server.
 
 Lorsque le NUMA logiciel est activé, SQL Server gère automatiquement les nœuds pour vous. Toutefois, pour optimiser en fonction de charges de travail spécifiques, vous pouvez désactiver _affinité logicielle_ et configurer manuellement l’affinité du processeur pour les nœuds NUMA logiciels. Cela peut vous permettre de mieux décider quelles charges de travail sont attribuées à quels nœuds, en particulier si vous utilisez une édition de SQL Server qui prend en charge la gouvernance des ressources. En spécifiant l’affinité du processeur et en alignant les pools de ressources avec des groupes de processeurs, vous pouvez réduire la latence et vous assurer que les processus associés sont exécutés dans le même nœud NUMA.
 
@@ -164,7 +164,7 @@ Pour plus d’informations, y compris des échantillons de code, consultez ce di
 
 **Autres ressources :**
 
-+ [NUMA logiciel dans SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [NUMA logiciel dans SQL Server](../../database-engine/configure-windows/soft-numa-sql-server.md)
     
     Comment mapper les nœuds NUMA logiciel aux processeurs
 
@@ -178,7 +178,7 @@ L’un des points faibles de R est qu’il est généralement traité sur un pro
 
 Il existe plusieurs façons d’améliorer les performances de l’ingénierie des caractéristiques. Vous pouvez soit optimiser votre code R et conserver l’extraction des caractéristiques au sein du processus de modélisation, soit déplacer le processus d’ingénierie des caractéristiques dans SQL.
 
-- Utilisation de R : vous définissez une fonction et la transmettez comme argument à [rxTransform](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxtransform) pendant l’apprentissage. Si le modèle prend en charge le traitement parallèle, la tâche d’ingénierie des caractéristiques peut être traitée à l’aide de plusieurs processeurs. À l’aide de cette approche, l’équipe de science des données a constaté une amélioration des performances de 16 % au niveau de la durée de scoring. Toutefois, cette approche nécessite un modèle qui prend en charge la mise en parallèle et une requête qui peut être exécutée à l’aide d’un plan parallèle.
+- Utilisation de R : vous définissez une fonction et la transmettez comme argument à [rxTransform](/r-server/r-reference/revoscaler/rxtransform) pendant l’apprentissage. Si le modèle prend en charge le traitement parallèle, la tâche d’ingénierie des caractéristiques peut être traitée à l’aide de plusieurs processeurs. À l’aide de cette approche, l’équipe de science des données a constaté une amélioration des performances de 16 % au niveau de la durée de scoring. Toutefois, cette approche nécessite un modèle qui prend en charge la mise en parallèle et une requête qui peut être exécutée à l’aide d’un plan parallèle.
 
 - Utilisation de R avec un contexte de calcul SQL : dans un environnement multiprocesseur avec des ressources isolées disponibles pour l’exécution de lots distincts, vous pouvez obtenir une plus grande efficacité en isolant les requêtes SQL utilisées pour chaque lot, pour extraire les données des tables et contraindre les données du même groupe de charge de travail. Les méthodes utilisées pour isoler les lots incluent le partitionnement et l’utilisation de PowerShell pour exécuter des requêtes distinctes en parallèle.
 

@@ -9,25 +9,25 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5f5cebd0fa6f45530ea5853cf365ea60a4c535ad
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 02b30a427865774a313b999c62376fd83aa4e632
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179708"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193631"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Utiliser Python avec revoscalepy pour créer un modèle qui s’exécute à distance sur SQL Server
 [!INCLUDE [SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
-La bibliothèque Python [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) de Microsoft fournit des algorithmes de science des données pour l’exploration, la visualisation, les transformations et l’analyse des données. Cette bibliothèque a une importance stratégique dans les scénarios d’intégration Python dans SQL Server. Sur un serveur à plusieurs cœurs, les fonctions **revoscalepy** peuvent s’exécuter en parallèle. Dans une architecture distribuée avec un serveur central et des stations de travail clientes (des ordinateurs physiques distincts, qui ont tous la même bibliothèque **revoscalepy**), vous pouvez écrire du code Python qui démarre localement, puis déplace l’exécution vers une instance SQL Server distante où les données résident.
+La bibliothèque Python [revoscalepy](/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) de Microsoft fournit des algorithmes de science des données pour l’exploration, la visualisation, les transformations et l’analyse des données. Cette bibliothèque a une importance stratégique dans les scénarios d’intégration Python dans SQL Server. Sur un serveur à plusieurs cœurs, les fonctions **revoscalepy** peuvent s’exécuter en parallèle. Dans une architecture distribuée avec un serveur central et des stations de travail clientes (des ordinateurs physiques distincts, qui ont tous la même bibliothèque **revoscalepy**), vous pouvez écrire du code Python qui démarre localement, puis déplace l’exécution vers une instance SQL Server distante où les données résident.
 
 Vous pouvez trouver **revoscalepy** dans les produits et distributions Microsoft suivants :
 
 + [SQL Server Machine Learning Services (en base de données)](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server (serveur autonome, non SQL)](https://docs.microsoft.com/machine-learning-server/index)
-+ [Bibliothèques Python côté client (pour les stations de travail de développement)](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter) 
++ [Microsoft Machine Learning Server (serveur autonome, non SQL)](/machine-learning-server/index)
++ [Bibliothèques Python côté client (pour les stations de travail de développement)](/machine-learning-server/install/python-libraries-interpreter) 
 
-Cet exercice montre comment créer un modèle de régression linéaire basé sur [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), l’un des algorithmes de **revoscalepy** qui accepte le contexte de calcul comme entrée. Le code que vous allez exécuter dans cet exercice bascule l’exécution du code d’un environnement de calcul local vers un environnement distant, activé par les fonctions **revoscalepy** qui permettent de bénéficier d’un contexte de calcul distant.
+Cet exercice montre comment créer un modèle de régression linéaire basé sur [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), l’un des algorithmes de **revoscalepy** qui accepte le contexte de calcul comme entrée. Le code que vous allez exécuter dans cet exercice bascule l’exécution du code d’un environnement de calcul local vers un environnement distant, activé par les fonctions **revoscalepy** qui permettent de bénéficier d’un contexte de calcul distant.
 
 En suivant ce didacticiel, vous allez apprendre à :
 
@@ -50,11 +50,11 @@ Pour effectuer un basculement de contexte de calcul, vous avez besoin d’une [s
 
 Cet exemple illustre le processus de création d’un modèle Python dans un contexte de calcul distant, qui vous permet de travailler à partir d’un client, mais de choisir un environnement distant, tel que SQL Server, Spark ou Machine Learning Server, où les opérations sont réellement effectuées. L’objectif du contexte de calcul distant est d’amener le calcul à l’emplacement où résident les données.
 
-Pour exécuter du code Python dans SQL Server, le package **revoscalepy** est nécessaire. Il s’agit d’un package Python spécial fourni par Microsoft, similaire au package **RevoScaleR** pour le langage R. Le package **revoscalepy** prend en charge la création de contextes de calcul et fournit l’infrastructure pour transmettre des données et des modèles entre une station de travail locale et un serveur distant. La fonction **revoscalepy** qui prend en charge l’exécution de code dans la base de données est [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
+Pour exécuter du code Python dans SQL Server, le package **revoscalepy** est nécessaire. Il s’agit d’un package Python spécial fourni par Microsoft, similaire au package **RevoScaleR** pour le langage R. Le package **revoscalepy** prend en charge la création de contextes de calcul et fournit l’infrastructure pour transmettre des données et des modèles entre une station de travail locale et un serveur distant. La fonction **revoscalepy** qui prend en charge l’exécution de code dans la base de données est [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver).
 
-Dans cette leçon, vous utilisez les données de SQL Server pour former un modèle linéaire basé sur [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), une fonction dans **revoscalepy** qui prend en charge la régression sur les jeux de données très volumineux. 
+Dans cette leçon, vous utilisez les données de SQL Server pour former un modèle linéaire basé sur [rx_lin_mod](/machine-learning-server/python-reference/revoscalepy/rx-lin-mod), une fonction dans **revoscalepy** qui prend en charge la régression sur les jeux de données très volumineux. 
 
-Cette leçon présente également les bases de la configuration et de l’utilisation d’un **contexte de calcul SQL Server** dans Python. Pour plus d’informations sur la façon dont les contextes de calcul fonctionnent avec d’autres plateformes, et sur les contextes de calcul pris en charge, consultez [Compute context for script execution in Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context) (Contexte de calcul pour l’exécution de scripts dans Machine Learning Server).
+Cette leçon présente également les bases de la configuration et de l’utilisation d’un **contexte de calcul SQL Server** dans Python. Pour plus d’informations sur la façon dont les contextes de calcul fonctionnent avec d’autres plateformes, et sur les contextes de calcul pris en charge, consultez [Compute context for script execution in Machine Learning Server](/machine-learning-server/r/concept-what-is-compute-context) (Contexte de calcul pour l’exécution de scripts dans Machine Learning Server).
 
 
 ## <a name="run-the-sample-code"></a>Exécuter l’exemple de code
@@ -129,9 +129,9 @@ Une source de données est différente d’un contexte de calcul. La *source de 
 
 + Les variables Python, telles que `sql_query` et `sql_connection_string`, définissent la source des données. 
 
-    Transmettez ces variables au constructeur [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) pour implémenter **l’objet de source de données** nommé `data_source`.
+    Transmettez ces variables au constructeur [RxSqlServerData](/r-server/python-reference/revoscalepy/rxsqlserverdata) pour implémenter **l’objet de source de données** nommé `data_source`.
 
-+ Vous créez un **objet de contexte de calcul** à l’aide du constructeur [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rxinsqlserver). **L’objet de contexte de calcul** obtenu est nommé `sql_cc`.
++ Vous créez un **objet de contexte de calcul** à l’aide du constructeur [RxInSqlServer](/machine-learning-server/python-reference/revoscalepy/rxinsqlserver). **L’objet de contexte de calcul** obtenu est nommé `sql_cc`.
 
     Cet exemple réutilise la même chaîne de connexion que celle que vous avez utilisée dans la source de données, en supposant que les données se trouvent sur la même instance SQL Server que celle que vous allez utiliser comme contexte de calcul. 
     
@@ -153,13 +153,13 @@ Dans cet exemple, vous définissez le contexte de calcul à l’aide d’un argu
     
 `linmod = rx_lin_mod_ex("ArrDelay ~ DayOfWeek", data = data, compute_context = sql_compute_context)`
 
-Ce contexte de calcul est réutilisé dans l’appel à [rxsummary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) :
+Ce contexte de calcul est réutilisé dans l’appel à [rxsummary](/machine-learning-server/python-reference/revoscalepy/rx-summary) :
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
 #### <a name="set-a-compute-context-explicitly-using-rx_set_compute_context"></a>Définir explicitement un contexte de calcul à l’aide de rx_set_compute_context
 
-La fonction [rx_set_compute_context](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) vous permet de basculer entre les contextes de calcul qui ont déjà été définis.
+La fonction [rx_set_compute_context](/machine-learning-server/python-reference/revoscalepy/rx-set-compute-context) vous permet de basculer entre les contextes de calcul qui ont déjà été définis.
 
 Une fois que vous avez défini le contexte de calcul actif, il reste actif jusqu’à ce que vous le changiez.
 

@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11c963405245b28efd40949c8fe1f8d6227d4119
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 203645002fcd6c46d1c1f786450e2c0c69e10d67
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179908"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195787"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Enregistrer et charger des objets R à partir de SQL Server à l’aide d’ODBC
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -45,7 +45,7 @@ Par défaut, tout objet que vous appelez à partir de R pour passer à SQL Serve
 
 - `rxListKeys` énumère comme paires clé-valeur tous les objets disponibles. Cela vous permet de déterminer les noms et les versions des objets R.
 
-Pour obtenir des informations détaillées sur la syntaxe de chaque fonction, utilisez l’aide de R. Les détails sont également disponibles dans la [référence ScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+Pour obtenir des informations détaillées sur la syntaxe de chaque fonction, utilisez l’aide de R. Les détails sont également disponibles dans la [référence ScaleR](/r-server/r-reference/revoscaler/revoscaler).
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>Guide pratique pour stocker des objets R dans SQL Server à l’aide d’ODBC
 

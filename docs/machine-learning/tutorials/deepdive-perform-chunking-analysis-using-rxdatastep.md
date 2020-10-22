@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a1dd8b47f7a251918eb87db9a8ec2dfd9d412a10
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: c636a33632a44e9cc5d1510bb73b5967a68f21ab
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88179880"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92195111"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Effectuer une analyse de segmentation à l’aide de rxDataStep (didacticiel SQL Server et RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Il s’agit du tutoriel 12 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 12 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
 Dans ce tutoriel, vous allez utiliser la fonction **rxDataStep** pour traiter les données en segments, plutôt que d’exiger que l’ensemble du jeu de données soit chargé en mémoire et traité en une seule fois, comme avec le langage R traditionnel. La fonction **rxDataStep** lit les segments de données, applique les fonctions R à chaque segment de données l’une après l’autre, puis enregistre la synthèse des résultats de chaque segment dans une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] commune. Lorsque toutes les données ont été lues, les résultats sont combinés.
 
@@ -118,4 +118,4 @@ Dans ce tutoriel, vous allez utiliser la fonction **rxDataStep** pour traiter le
 ## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
-> [Didacticiels R pour SQL Server](sql-server-r-tutorials.md)
+> [Didacticiels R pour SQL Server](./r-tutorials.md)
