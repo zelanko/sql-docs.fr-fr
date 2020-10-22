@@ -1,1 +1,0 @@
-**CETTE RUBRIQUE S’APPLIQUE À :**![non](media/no.png)SQL Server 2016![non](media/no.png)SQL Server 2017![oui](media/yes.png)Power BI Report Server
