@@ -1,6 +1,6 @@
 ---
 description: sys.dm_xtp_gc_queue_stats (Transact-SQL)
-title: sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 5431cba1f886aee939d9a70d9b05fd65398184ce
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: f1c2a816af4936d51473cd9770e6c52f46f277fa
+ms.sourcegitcommit: fb8724fb99c46ecf3a6d7b02a743af9b590402f0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89539228"
+ms.lasthandoff: 10/23/2020
+ms.locfileid: "92439482"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -55,7 +55,7 @@ ms.locfileid: "89539228"
 ## <a name="user-scenario"></a>Scénario d'utilisateur  
  Ce résultat montre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est exécuté sur 4 cœurs ou que l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède une affinité sur 4 cœurs :  
   
- Ce résultat montre qu'il n'existe aucun élément de travail à traiter dans les files d'attente. Pour la file d'attente 0, le total des éléments de travail enlevés de la file d'attente depuis le démarrage de SQL se monte à 15 625 et la profondeur de file d'attente maximale a été de 215 625.  
+ Ce résultat montre qu'il n'existe aucun élément de travail à traiter dans les files d'attente. Pour la file d’attente 0, le nombre total d’éléments de travail mis en file d’attente depuis le démarrage SQL est 15625 et la profondeur de file d’attente maximale est de 15625.  
   
 ```  
 queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth  last_service_ticks  
