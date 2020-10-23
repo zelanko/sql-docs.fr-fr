@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 98c7f5b8c7cc634212769f910152322a94054d66
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 18cd0c279493dcb41d043d3f76d6debe71eb402c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178556"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194468"
 ---
 # <a name="python-tutorial-train-and-save-a-python-model-using-t-sql"></a>Tutoriel Python : Entraîner et enregistrer un modèle Python à l’aide de T-SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
@@ -145,7 +145,7 @@ Pour faciliter la reformation du modèle sur les nouvelles données, vous encaps
 
 Cette procédure stockée utilise le nouveau package **revoscalepy**, qui est un nouveau package pour Python. Elle contient des objets, des transformations et des algorithmes similaires à ceux fournis pour le package **RevoScaleR** du langage R. 
 
-À l’aide du package **revoscalepy**, vous pouvez créer des contextes de calcul distants, déplacer des données entre des contextes de calcul, transformer des données et entraîner des modèles prédictifs à l’aide d’algorithmes populaires tels que la régression logistique et linéaire, les arbres de décision, etc. Pour plus d’informations, consultez le [module revoscalepy dans SQL Server](../python/ref-py-revoscalepy.md) et la [référence de fonction revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+À l’aide du package **revoscalepy**, vous pouvez créer des contextes de calcul distants, déplacer des données entre des contextes de calcul, transformer des données et entraîner des modèles prédictifs à l’aide d’algorithmes populaires tels que la régression logistique et linéaire, les arbres de décision, etc. Pour plus d’informations, consultez le [module revoscalepy dans SQL Server](../python/ref-py-revoscalepy.md) et la [référence de fonction revoscalepy](/r-server/python-reference/revoscalepy/revoscalepy-package).
 
 1. Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez une nouvelle fenêtre de **Requête** et exécutez l’instruction suivante pour créer la procédure stockée _TrainTipPredictionModelRxPy_.  Étant donné que la procédure stockée contient déjà une définition des données d’entrée, vous n’avez pas besoin de fournir de requête d’entrée.
 

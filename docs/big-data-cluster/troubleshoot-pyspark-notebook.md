@@ -9,12 +9,12 @@ ms.date: 06/01/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2de422caf8567f1473d1436a27a094fef9144085
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: d631a74bc71c814a70ef0ecfa33485ee4631ccd4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206043"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257072"
 ---
 # <a name="troubleshoot-pyspark-notebook"></a>Résolution des problèmes liés au notebook `pyspark`
 
@@ -30,7 +30,7 @@ Pour résoudre efficacement les problèmes de votre session PySpark, vous devez 
 
 Cette procédure de dépannage comporte plusieurs prérequis :
 
-1. Avoir installé `azdata` et défini correctement la configuration sur le cluster.
+1. Avoir installé [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] et défini correctement la configuration sur le cluster.
 2. Savoir exécuter des commandes Linux et posséder quelques compétences en résolution des problèmes liés aux journaux.
 
 ## <a name="troubleshooting-steps"></a>Étapes de dépannage
@@ -127,7 +127,7 @@ Cette procédure de dépannage comporte plusieurs prérequis :
 
 1. Vérifiez l’ID de l’application et les différents journaux application_master et container.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Examen de l’ID de l’application":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/15-hadoop-dashboard.png" alt-text="Cellule en échec":::
 
 1. Examinez les journaux des applications YARN.
 
@@ -165,7 +165,7 @@ Cette procédure de dépannage comporte plusieurs prérequis :
 
 1. Examinez l’interface utilisateur Spark.
 
-   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Interface utilisateur Spark":::
+   :::image type="content" source="media/troubleshoot-pyspark-notebook/30-spark-ui.png" alt-text="Cellule en échec":::
 
    Descendez dans la hiérarchie des étapes pour trouver des erreurs dans les tâches.
 

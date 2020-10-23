@@ -1,5 +1,5 @@
 ---
-title: sys. dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs
 description: Affiche des informations sur les fichiers de point de contrôle, y compris la taille de fichier, l’emplacement physique et l’ID de transaction. Découvrez en quoi cette vue diffère pour les versions de SQL Server.
 ms.date: 03/20/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: markingmyname
 ms.author: maghan
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb13f60dd50a324795b705b3b99d6cf842a23869
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 010b043bbaab3a5ce1712d32b1e94f800fa630d3
+ms.sourcegitcommit: ead0b8c334d487a07e41256ce5d6acafa2d23c9d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542275"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "92412656"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "89542275"
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] est fondamentalement différent des versions plus récentes et est abordé plus bas dans la rubrique [SQL Server 2014](#bkmk_2014).  
   
- Pour plus d’informations, consultez [création et gestion du stockage pour les objets optimisés en mémoire](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
+ Pour plus d’informations, consultez [création et gestion du stockage pour les objets Memory-Optimized](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et ultérieur  
  Le tableau suivant décrit les colonnes de `sys.dm_db_xtp_checkpoint_files` , à partir de **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
 |Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|ID du conteneur (représenté en tant que fichier de type FILESTREAM dans sys.database_files) dont les données ou le fichier delta font partie. Jointures avec file_id dans [sys. database_files &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
-|container_guid|**uniqueidentifier**|GUID du conteneur auquel appartient la racine, le fichier de données ou le fichier delta. Jointures avec file_guid dans la table sys. database_files.|  
+|container_id|**int**|ID du conteneur (représenté en tant que fichier de type FILESTREAM dans sys.database_files) dont les données ou le fichier delta font partie. Jointures avec file_id dans [sys.database_files &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_guid|**uniqueidentifier**|GUID du conteneur auquel appartient la racine, le fichier de données ou le fichier delta. Jointures avec file_guid dans la table sys.database_files.|  
 |checkpoint_file_id|**uniqueidentifier**|GUID du fichier de point de contrôle.|  
 |relative_file_path|**nvarchar (256)**|Chemin d’accès du fichier par rapport au conteneur auquel il est mappé.|  
 |file_type|**smallint**|-1 gratuitement<br /><br /> 0 pour le fichier de données.<br /><br /> 1 pour le fichier DELTA.<br /><br /> 2 pour le fichier racine<br /><br /> 3 pour un fichier de données volumineux|  
@@ -65,14 +65,14 @@ ms.locfileid: "89542275"
 |end_checkpoint_id|**bigint**|ID du point de contrôle de fin.|  
 |last_updated_checkpoint_id|**bigint**|ID du dernier point de contrôle qui a mis à jour ce fichier.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 => UNENCRTPTED<br /><br /> 1 => CHIFFRÉE AVEC LA CLÉ 1<br /><br /> 2 => CHIFFRÉE AVEC LA CLÉ 2. Valide uniquement pour les fichiers actifs.|  
+|encryption_status_desc|**nvarchar(60)**|0 => NON CHIFFRÉ<br /><br /> 1 => CHIFFRÉE AVEC LA CLÉ 1<br /><br /> 2 => CHIFFRÉE AVEC LA CLÉ 2. Valide uniquement pour les fichiers actifs.|  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  Le tableau suivant décrit les colonnes pour `sys.dm_db_xtp_checkpoint_files` , pour **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
 |Nom de la colonne|Type|Description|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|ID du conteneur (représenté en tant que fichier de type FILESTREAM dans sys.database_files) dont les données ou le fichier delta font partie. Jointures avec file_id dans [sys. database_files &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
+|container_id|**int**|ID du conteneur (représenté en tant que fichier de type FILESTREAM dans sys.database_files) dont les données ou le fichier delta font partie. Jointures avec file_id dans [sys.database_files &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID du conteneur dont les données ou le fichier delta font partie.|  
 |checkpoint_file_id|**GUID**|ID du fichier de données ou delta.|  
 |relative_file_path|**nvarchar (256)**|Chemin d'accès au fichier de données ou delta, relatif à l'emplacement du conteneur.|  
@@ -86,7 +86,7 @@ ms.locfileid: "89542275"
 |deleted_row_count|**bigint**|Nombre de lignes supprimées dans le fichier delta.|  
 |drop_table_deleted_row_count|**bigint**|Nombre de lignes dans les fichiers de données affectées par une table de suppression. S'applique aux fichiers de données lorsque la colonne d'état est égale à 1.<br /><br /> Affiche les lignes supprimées des tables supprimées. Les statistiques drop_table_deleted_row_count sont compilées après que l'opération de garbage collection pour libérer la mémoire des lignes des tables supprimées est terminée et un point de contrôle est effectué. Si vous redémarrez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avant que les statistiques des tables supprimées soient reflétées dans cette colonne, les statistiques seront mises à jour dans le cadre de la récupération. Le processus de récupération ne charge pas de lignes des tables supprimées. Les statistiques des tables supprimées sont compilées pendant la phase de chargement et reportées dans cette colonne lorsque la récupération est terminée.|  
 |state|**int**|0-PRÉCRÉÉ<br /><br /> 1-EN COURS DE CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3-CIBLE DE FUSION<br /><br /> 4-SOURCE FUSIONNÉE<br /><br /> 5-REQUIS POUR LA SAUVEGARDE/HAUTE DISPONIBILITÉ<br /><br /> 6-EN TRANSITION VERS L’OBJET TOMBSTONE<br /><br /> 7-DÉSACTIVÉ|  
-|state_desc|**nvarchar(60)**|Precreated : un petit ensemble de paires de fichiers de données et Delta, également appelé « paires de fichiers de point de contrôle » (paires), est conservé pré-alloué pour réduire ou éliminer les attentes d’allocation de nouveaux fichiers au fur et à mesure de l’exécution des transactions. Elles ont une taille complète avec un fichier de données de 128 Mo et un fichier delta de 8 Mo, mais ne contenant aucune donnée. Le nombre de paires de fichiers de point de contrôle est calculé en fonction du nombre de processeurs logiques ou de planificateurs (un par cœur, sans limitation) avec un minimum de 8. Il s'agit d'une charge de stockage fixe dans les bases de données avec des tables mémoire optimisées.<br /><br /> SOUS CONSTRUCTION : jeu de paires qui stocke les lignes de données nouvellement insérées et éventuellement supprimées depuis le dernier point de contrôle.<br /><br /> ACTIVE - Contient les lignes insérées et les lignes supprimées provenant des points de contrôle fermés précédents. Ces paires contiennent toutes les lignes insérées et supprimées requises avant d'appliquer la partie actuelle du journal des transactions au redémarrage de la base de données. La taille de ces paires de fichiers de point de contrôle sera approximativement 2 fois la taille en mémoire des tables mémoire optimisées, en supposant que l'opération de fusion est actualisée avec la charge de travail transactionnelle.<br /><br /> FUSIONNer la cible : la PCP stocke les lignes de données consolidées à partir de la PCP (s) qui ont été identifiées par la stratégie de fusion. Une fois que la fusion est installée, l'état MERGE TARGET passe à ACTIVE.<br /><br /> SOURCE FUSIONNée-une fois l’opération de fusion installée, les paires sources sont marqués comme SOURCE FUSIONNée. Notez que l'évaluateur de la stratégie de fusion peut identifier plusieurs fusions mais une paire de fichiers de point de contrôle ne peut participer qu'à une seule opération de fusion.<br /><br /> REQUIS pour BACKUP/HA-une fois que la fusion a été installée et que la PCP cible de fusion fait partie d’un point de contrôle durable, la source de fusion paires passe à cet État. Des paires de fichiers de point de contrôle ayant cet état sont nécessaires pour le bon fonctionnement de la base de données contenant la table mémoire optimisée.  Par exemple, pour la récupération à partir d'un point de contrôle durable afin de remonter dans le temps. Une paire de fichiers de point de contrôle peut être marquée pour l'opération de garbage collection une fois que le point de troncation de journal dépasse sa plage de transactions.<br /><br /> EN TRANSITION vers l’objet tombstone, ces paires ne sont pas nécessaires pour le moteur OLTP en mémoire et peuvent être récupérés par le garbage collector. Cet état indique que ces paires de fichiers de point de contrôle attendent que le thread d'arrière-plan les passe à l'état suivant, qui est TOMBSTONE.<br /><br /> TOMBSTONE : ces paires attendent d’être récupérés par le garbage collector FileStream. ([sp_filestream_force_garbage_collection &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state_desc|**nvarchar(60)**|Precreated : un petit ensemble de paires de fichiers de données et Delta, également appelé « paires de fichiers de point de contrôle » (paires), est conservé pré-alloué pour réduire ou éliminer les attentes d’allocation de nouveaux fichiers au fur et à mesure de l’exécution des transactions. Elles ont une taille complète avec un fichier de données de 128 Mo et un fichier delta de 8 Mo, mais ne contenant aucune donnée. Le nombre de paires de fichiers de point de contrôle est calculé en fonction du nombre de processeurs logiques ou de planificateurs (un par cœur, sans limitation) avec un minimum de 8. Il s'agit d'une charge de stockage fixe dans les bases de données avec des tables mémoire optimisées.<br /><br /> SOUS CONSTRUCTION : jeu de paires qui stocke les lignes de données nouvellement insérées et éventuellement supprimées depuis le dernier point de contrôle.<br /><br /> ACTIVE - Contient les lignes insérées et les lignes supprimées provenant des points de contrôle fermés précédents. Ces paires contiennent toutes les lignes insérées et supprimées requises avant d'appliquer la partie actuelle du journal des transactions au redémarrage de la base de données. La taille de ces paires de fichiers de point de contrôle sera approximativement 2 fois la taille en mémoire des tables mémoire optimisées, en supposant que l'opération de fusion est actualisée avec la charge de travail transactionnelle.<br /><br /> FUSIONNer la cible : la PCP stocke les lignes de données consolidées à partir de la PCP (s) qui ont été identifiées par la stratégie de fusion. Une fois que la fusion est installée, l'état MERGE TARGET passe à ACTIVE.<br /><br /> SOURCE FUSIONNée-une fois l’opération de fusion installée, les paires sources sont marqués comme SOURCE FUSIONNée. Notez que l'évaluateur de la stratégie de fusion peut identifier plusieurs fusions mais une paire de fichiers de point de contrôle ne peut participer qu'à une seule opération de fusion.<br /><br /> REQUIS pour BACKUP/HA-une fois que la fusion a été installée et que la PCP cible de fusion fait partie d’un point de contrôle durable, la source de fusion paires passe à cet État. Des paires de fichiers de point de contrôle ayant cet état sont nécessaires pour le bon fonctionnement de la base de données contenant la table mémoire optimisée.  Par exemple, pour la récupération à partir d'un point de contrôle durable afin de remonter dans le temps. Une paire de fichiers de point de contrôle peut être marquée pour l'opération de garbage collection une fois que le point de troncation de journal dépasse sa plage de transactions.<br /><br /> EN TRANSITION vers l’objet tombstone, ces paires ne sont pas nécessaires pour le moteur OLTP In-Memory et peuvent être récupérés par le garbage collector. Cet état indique que ces paires de fichiers de point de contrôle attendent que le thread d'arrière-plan les passe à l'état suivant, qui est TOMBSTONE.<br /><br /> TOMBSTONE : ces paires attendent d’être récupérés par le garbage collector FileStream. ([sp_filestream_force_garbage_collection &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|Limite inférieure des transactions contenues dans le fichier. Null si la colonne d'état a une valeur autre que 2, 3 ou 4.|  
 |upper_bound_tsn|**bigint**|Limite supérieure des transactions contenues dans le fichier. Null si la colonne d'état a une valeur autre que 2, 3 ou 4.|  
 |last_backup_page_count|**int**|Nombre de pages logiques déterminé lors de la dernière sauvegarde. S'applique quand la colonne d'état a la valeur 2, 3, 4 ou 5. NULL si le nombre de pages est inconnu.|  
@@ -98,8 +98,8 @@ ms.locfileid: "89542275"
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW DATABASE STATE` sur le serveur.  
   
-## <a name="use-cases"></a>Cas d'utilisation  
- Vous pouvez estimer le stockage utilisé par l’OLTP en mémoire comme suit :  
+## <a name="use-cases"></a>Scénarios d’utilisation  
+ Vous pouvez estimer le stockage utilisé par In-Memory OLTP comme suit :  
   
 ```  
 -- total storage used by In-Memory OLTP  

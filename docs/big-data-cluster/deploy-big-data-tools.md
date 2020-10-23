@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c901147ec1481f93bb76a9bf013d393b47be97ab
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 27248c9a8ef05b8662f56255cab47e47bd2959f4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725890"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257229"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installer les outils de Big Data SQL Server 2019
 
@@ -29,13 +29,13 @@ Le tableau suivant liste les outils de cluster Big Data courants et explique com
 | Outil | Obligatoire | Description | Installation |
 |---|---|---|---|
 | `python` | Oui | Python est un langage de programmation de haut niveau, orienté objet, interprété et doté d’une sémantique dynamique. De nombreuses parties des clusters Big Data pour SQL Server utilisent Python. | [Installer python](#python)|
-| `azdata` | Oui | Outil en ligne de commande pour l’installation et la gestion d’un cluster Big Data. | [Installer](../azdata/install/deploy-install-azdata.md) |
+| [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] | Oui | Outil en ligne de commande pour l’installation et la gestion d’un cluster Big Data. | [Installer](../azdata/install/deploy-install-azdata.md) |
 | `kubectl`<sup>1</sup> | Oui | Outil en ligne de commande permettant de superviser le cluster Kubernetes sous-jacent ([plus d’informations](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio** | Oui | Outil graphique multiplateforme permettant d’interroger SQL Server. | [Installer](../azure-data-studio/download-azure-data-studio.md) |
 | **Extension de virtualisation de données** | Oui | Extension pour Azure Data Studio qui fournit un Assistant Virtualisation de données. | [Installer](../azure-data-studio/extensions/data-virtualization-extension.md) |
-| **Azure CLI**<sup>2</sup> | Pour AKS | Interface de ligne de commande moderne pour la gestion des services Azure. Utilisée avec les déploiements de cluster Big Data AKS ([plus d’informations](/cli/azure/?view=azure-cli-latest)). | [Installer](/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Azure CLI**<sup>2</sup> | Pour AKS | Interface de ligne de commande moderne pour la gestion des services Azure. Utilisée avec les déploiements de cluster Big Data AKS ([plus d’informations](/cli/azure/?view=azure-cli-latest&preserve-view=true)). | [Installer](/cli/azure/install-azure-cli?view=azure-cli-latest&preserve-view=true) |
 | **mssql-cli** | Facultatif | Interface de ligne de commande moderne permettant d’interroger SQL Server ([plus d’informations](../tools/mssql-cli.md)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
-| **sqlcmd** | Pour certains scripts | Outil en ligne de commande hérité permettant d’interroger SQL Server ([plus d’informations](../tools/sqlcmd-utility.md?view=sql-server-ver15)). Vous devrez peut-être installer le pilote Microsoft ODBC 11 pour SQL Server avant d’installer le package SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
+| **sqlcmd** | Pour certains scripts | Outil en ligne de commande hérité permettant d’interroger SQL Server ([plus d’informations](../tools/sqlcmd-utility.md)). Vous devrez peut-être installer le pilote Microsoft ODBC 11 pour SQL Server avant d’installer le package SQLCMD. | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | `curl` <sup>3</sup> | Pour certains scripts | Outil en ligne de commande pour transférer des données avec des URL. | [Windows](https://curl.haxx.se/windows/) \| Linux : installer le package d’installation |
 | `oc` | Requis pour les déploiements Red Hat OpenShift et Azure RedHat OpenShift. |`oc` est l’interface de ligne de commande (CLI) Shift ouvert. | [Installation de l’interface CLI](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html#installing-the-cli)
 
@@ -56,7 +56,7 @@ Le tableau suivant liste les outils de cluster Big Data courants et explique com
 
 Le tableau précédent indique tous les outils courants qui sont utilisés avec les clusters Big Data. Les outils requis varient en fonction de votre scénario. Mais, en général, les outils suivants sont les plus importants pour gérer le cluster, s’y connecter et l’interroger :
 
-- `azdata`
+- [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 - `kubectl`
 - **Azure Data Studio**
 - **Extension de virtualisation de données**

@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9ab81bc27b2dfd8f32004b9289ab02a8ce1d3007
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 3a0a37da48ed367a3fc735e9bc6d805cfd5bfff3
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88178706"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196247"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Créer un modèle R et l’enregistrer dans SQL Server (procédure pas à pas)
 [!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
 
-Dans cette leçon, vous allez découvrir comment créer un modèle Machine Learning et enregistrer le modèle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En enregistrant un modèle, vous pouvez l’appeler directement à partir du code [!INCLUDE[tsql](../../includes/tsql-md.md)], à l’aide de la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ou de la [fonction PREDICT (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
+Dans cette leçon, vous allez découvrir comment créer un modèle Machine Learning et enregistrer le modèle dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En enregistrant un modèle, vous pouvez l’appeler directement à partir du code [!INCLUDE[tsql](../../includes/tsql-md.md)], à l’aide de la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ou de la [fonction PREDICT (T-SQL)](../../t-sql/queries/predict-transact-sql.md).
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -67,7 +67,7 @@ GO
 
 Le modèle est un classifieur binaire qui évalue la probabilité que le chauffeur de taxi obtienne un pourboire lors d’un trajet donné. Vous allez utiliser la source de données que vous avez créée dans la leçon précédente pour former le classifieur de pourboires, à l’aide de la régression logistique.
 
-1. Appelez la fonction [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) , comprise dans le package **RevoScaleR** , pour créer un modèle de régression logistique. 
+1. Appelez la fonction [rxLogit](/r-server/r-reference/revoscaler/rxlogit) , comprise dans le package **RevoScaleR** , pour créer un modèle de régression logistique. 
 
     ```R
     system.time(logitObj <- rxLogit(tipped ~ passenger_count + trip_distance + trip_time_in_secs + direct_distance, data = featureDataSource));
@@ -109,7 +109,7 @@ Le modèle est un classifieur binaire qui évalue la probabilité que le chauffe
 
 Maintenant que le modèle est créé, vous pouvez l’utiliser pour évaluer la probabilité que le conducteur obtienne un pourboire lors d’un trajet donné.
 
-1. Tout d’abord, utilisez la fonction [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) pour définir un objet de source de données pour le stockage du résultat de scoring.
+1. Tout d’abord, utilisez la fonction [RxSqlServerData](/r-server/r-reference/revoscaler/rxsqlserverdata) pour définir un objet de source de données pour le stockage du résultat de scoring.
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -123,7 +123,7 @@ Maintenant que le modèle est créé, vous pouvez l’utiliser pour évaluer la 
   
     + Pour créer la table qui stocke les valeurs prédites, le compte de connexion SQL qui exécute la fonction de données rxSqlServer doit disposer de privilèges DDL dans la base de données. Si le compte de connexion ne peut pas créer de table, l’instruction échoue.
 
-2. Appelez la fonction [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) pour générer les résultats.
+2. Appelez la fonction [rxPredict](/r-server/r-reference/revoscaler/rxpredict) pour générer les résultats.
 
     ```R
     rxPredict(modelObject = logitObj,
@@ -138,7 +138,7 @@ Maintenant que le modèle est créé, vous pouvez l’utiliser pour évaluer la 
 
 ## <a name="plot-model-accuracy"></a>Précision du modèle de tracé
 
-Pour avoir une idée de la précision du modèle, vous pouvez utiliser la fonction [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc) pour tracer la courbe Receiver Operating Curve. Comme rxRoc est l’une des nouvelles fonctions fournies par le package RevoScaleR qui prend en charge les contextes de calcul distants, vous avez deux options :
+Pour avoir une idée de la précision du modèle, vous pouvez utiliser la fonction [rxRoc](/r-server/r-reference/revoscaler/rxroc) pour tracer la courbe Receiver Operating Curve. Comme rxRoc est l’une des nouvelles fonctions fournies par le package RevoScaleR qui prend en charge les contextes de calcul distants, vous avez deux options :
 
 + Vous pouvez utiliser la fonction rxRoc pour exécuter le tracé dans le contexte de calcul distant, puis renvoyer le tracé à votre client local.
 
@@ -173,7 +173,7 @@ Dans cette section, vous allez tester les deux techniques.
 
 Vous pouvez vérifier que le contexte de calcul est local en exécutant `rxGetComputeContext()` à l’invite de commandes. La valeur renvoyée doit être « RxLocalSeq Compute Context ».
 
-1. Pour le contexte de calcul local, le processus est très similaire. Vous utilisez la fonction [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) pour ajouter les données spécifiées à votre environnement R local.
+1. Pour le contexte de calcul local, le processus est très similaire. Vous utilisez la fonction [rxImport](/r-server/r-reference/revoscaler/rximport) pour ajouter les données spécifiées à votre environnement R local.
 
     ```R
     scoredOutput = rxImport(scoredOutput)

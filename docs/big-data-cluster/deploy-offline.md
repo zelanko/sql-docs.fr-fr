@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0218bd24bd24ee17a8d6addfbcf071788a48156
-ms.sourcegitcommit: e274d51df09f9163fa6e22b36d48c60bc3d7c7d1
+ms.openlocfilehash: 0437880dbcf3bef50184daa9e52f8eba2a7e31b4
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89875558"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257179"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Effectuer un déploiement hors connexion d’un cluster Big Data SQL Server
 
@@ -77,7 +77,6 @@ Les images conteneur de cluster Big Data suivantes sont nécessaires pour une in
 - **mssql-monitor-influxdb**
 - **mssql-monitor-kibana**
 - **mssql-monitor-telegraf**
-- **mssql-security-domainctl**
 - **mssql-security-knox**
 - **mssql-security-support**
 - **mssql-server-controller**
@@ -121,7 +120,7 @@ Vous pouvez utiliser un script Python automatisé qui tire (pull) automatiquemen
 
 ## <a name="install-tools-offline"></a>Installer des outils hors connexion
 
-Les déploiements de clusters Big Data nécessitent plusieurs outils, tels que **Python**, `azdata` et **kubectl**. Suivez les étapes suivantes pour installer ces outils sur un serveur hors connexion.
+Les déploiements de clusters Big Data nécessitent plusieurs outils, tels que **Python**, [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] et **kubectl**. Suivez les étapes suivantes pour installer ces outils sur un serveur hors connexion.
 
 ### <a name="install-python-offline"></a><a id="python"></a> Installer Python hors connexion
 
@@ -143,7 +142,7 @@ Les déploiements de clusters Big Data nécessitent plusieurs outils, tels que *
 
 ### <a name="install-azdata-offline"></a><a id="azdata"></a> Installer azdata hors connexion
 
-1. Sur une machine disposant d’un accès à Internet et de [Python](https://wiki.python.org/moin/BeginnersGuide/Download), exécutez la commande suivante pour télécharger tous les packages `azdata` dans le dossier actif.
+1. Sur une machine disposant d’un accès à Internet et de [Python](https://wiki.python.org/moin/BeginnersGuide/Download), exécutez la commande suivante pour télécharger tous les packages [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] dans le dossier actif.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
@@ -167,7 +166,7 @@ Pour installer **kubectl** sur une machine hors connexion, utilisez les étapes 
 
 ## <a name="deploy-from-private-repository"></a>Effectuer le déploiement à partir d’un référentiel privé
 
-Pour effectuer un déploiement à partir du référentiel privé, utilisez les étapes décrites dans [le guide de déploiement](deployment-guidance.md), mais utilisez un fichier de configuration de déploiement personnalisé spécifiant les informations de votre référentiel Docker privé. Les commandes `azdata` suivantes montrent comment modifier les paramètres Docker dans un fichier de configuration de déploiement personnalisé nommé `control.json` :
+Pour effectuer un déploiement à partir du référentiel privé, utilisez les étapes décrites dans [le guide de déploiement](deployment-guidance.md), mais utilisez un fichier de configuration de déploiement personnalisé spécifiant les informations de votre référentiel Docker privé. Les commandes [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] suivantes montrent comment modifier les paramètres Docker dans un fichier de configuration de déploiement personnalisé nommé `control.json` :
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"

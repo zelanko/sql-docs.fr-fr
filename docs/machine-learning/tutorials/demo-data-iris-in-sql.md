@@ -11,12 +11,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: e5a1f9c36b6dc59988951a693be05b4e10e580f4
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 22695214f9f3b375d285a8b3bb03bc1471535b17
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495002"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92192372"
 ---
 # <a name="iris-demo-data-for-python-and-r-tutorials-with-sql-machine-learning"></a>Données de démonstration Iris pour les tutoriels Python et R dans le Machine Learning SQL
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -130,7 +130,7 @@ Vous pouvez obtenir les données Iris intégrées à partir de R ou de Python. V
     EXEC dbo.get_iris_dataset;
     ```
 
-    Si vous débutez avec T-SQL, sachez que l’instruction INSERT ajoute uniquement de nouvelles données ; elle ne recherche pas de données existantes ni ne supprime et regénère la table. Pour éviter d’avoir plusieurs copies des mêmes données dans une table, vous pouvez d’abord exécuter cette l’instruction : `TRUNCATE TABLE iris_data`. L’instruction T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) supprime les données existantes, mais conserve la structure de la table intacte.
+    Si vous débutez avec T-SQL, sachez que l’instruction INSERT ajoute uniquement de nouvelles données ; elle ne recherche pas de données existantes ni ne supprime et regénère la table. Pour éviter d’avoir plusieurs copies des mêmes données dans une table, vous pouvez d’abord exécuter cette l’instruction : `TRUNCATE TABLE iris_data`. L’instruction T-SQL [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md) supprime les données existantes, mais conserve la structure de la table intacte.
 
 ## <a name="query-the-data"></a>Interroger les données
 

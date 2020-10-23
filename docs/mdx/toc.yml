@@ -37,7 +37,7 @@
           href: ../mdx/set-operators.md
         - name: Opérateurs unaires
           href: ../mdx/unary-operators.md
-        - name: Opérateurs d’affectation
+        - name: Opérateurs d'assignation
           href: ../mdx/assignment-operators.md
     - name: Fonctions (syntaxe MDX)
       href: ../mdx/functions-mdx-syntax.md
@@ -169,7 +169,7 @@
           href: ../mdx/less-than-or-equal-to-mdx.md
         - name: <> (Différent de)
           href: ../mdx/not-equal-to-mdx.md
-        - name: = (Equal To)
+        - name: '= (Equal To)'
           href: ../mdx/equal-to-mdx.md
         - name: '> (supérieur à)'
           href: ../mdx/greater-than-mdx.md
@@ -222,7 +222,7 @@
           href: ../mdx/closingperiod-mdx.md
         - name: CoalesceEmpty
           href: ../mdx/coalesceempty-mdx.md
-        - name: Correlation
+        - name: Corrélation
           href: ../mdx/correlation-mdx.md
         - name: Count (Dimension)
           href: ../mdx/count-dimension-mdx.md
@@ -240,7 +240,7 @@
           href: ../mdx/covariancen-mdx.md
         - name: Crossjoin
           href: ../mdx/crossjoin-mdx.md
-        - name: Current
+        - name: Actuel
           href: ../mdx/current-mdx.md
         - name: CurrentMember
           href: ../mdx/currentmember-mdx.md
@@ -348,7 +348,7 @@
           href: ../mdx/leaves-mdx.md
         - name: Level
           href: ../mdx/level-mdx.md
-        - name: Levels
+        - name: Niveaux
           href: ../mdx/levels-mdx.md
         - name: LinkMember
           href: ../mdx/linkmember-mdx.md
@@ -382,7 +382,7 @@
           href: ../mdx/min-mdx.md
         - name: Mtd
           href: ../mdx/mtd-mdx.md
-        - name: Name
+        - name: Nom
           href: ../mdx/name-mdx.md
         - name: NameToSet
           href: ../mdx/nametoset-mdx.md

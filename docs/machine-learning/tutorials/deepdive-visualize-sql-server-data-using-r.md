@@ -9,17 +9,17 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 23f3eb157a76a9a197cf0f15a72ae0e51f7cf13b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 5d38c5de712b5e2f770f0129d6657cd330921608
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180386"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196263"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualiser des données SQL Server à l’aide de R (didacticiel sur SQL Server et RevoScaleR)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-Il s’agit du tutoriel 6 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Il s’agit du tutoriel 6 de la [série de tutoriels RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) qui traite de l’utilisation des [fonctions RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
 Dans ce tutoriel, vous allez utiliser les fonctions de R pour afficher la distribution des valeurs dans la colonne *creditLine* par sexe.
 
@@ -84,13 +84,13 @@ D’après les statistiques de synthèse calculées dans le tutoriel précédent
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualiser des données à l’aide de rxHistogram
 
-1. Le code R suivant permet d’appeler la fonction [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) et de passer une formule et une source de données. Le code peut être exécuté localement dans un premier temps, afin de voir les résultats attendus et combien de temps peut durer son exécution.
+1. Le code R suivant permet d’appeler la fonction [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) et de passer une formule et une source de données. Le code peut être exécuté localement dans un premier temps, afin de voir les résultats attendus et combien de temps peut durer son exécution.
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    En interne, **rxHistogram** appelle la fonction [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) , qui est incluse dans le package **RevoScaleR** . **rxCube** génère une liste unique (ou trame de données) qui contient une colonne pour chaque variable spécifiée dans la formule, plus une colonne de nombres.
+    En interne, **rxHistogram** appelle la fonction [rxCube](/machine-learning-server/r-reference/revoscaler/rxcube) , qui est incluse dans le package **RevoScaleR** . **rxCube** génère une liste unique (ou trame de données) qui contient une colonne pour chaque variable spécifiée dans la formule, plus une colonne de nombres.
     
 2. À présent, définissez le contexte de calcul sur l’ordinateur SQL Server distant, puis réexécutez **rxHistogram**.
   
@@ -108,7 +108,7 @@ D’après les statistiques de synthèse calculées dans le tutoriel précédent
 
 Les nuages de points sont souvent utilisés lors de l’exploration des données pour comparer la relation entre deux variables. Vous pouvez utiliser des packages R intégrés avec les entrées fournies par les fonctions **RevoScaleR**.
 
-1. Appelez la fonction [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcrosstabs) pour calculer la moyenne de *fraudRisk* pour chaque combinaison de *numTrans* et *numIntlTrans* :
+1. Appelez la fonction [rxCube](/machine-learning-server/r-reference/revoscaler/rxcrosstabs) pour calculer la moyenne de *fraudRisk* pour chaque combinaison de *numTrans* et *numIntlTrans* :
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
@@ -118,7 +118,7 @@ Les nuages de points sont souvent utilisés lors de l’exploration des données
   
     La valeur renvoyée par défaut de **rxCube** est un *objet rxCube*qui représente un tableau croisé. 
   
-2. Appelez la fonction [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) pour convertir les résultats en une trame de données facilement exploitable dans l’une des fonctions de traçage standard de R.
+2. Appelez la fonction [rxResultsDF](/machine-learning-server/r-reference/revoscaler/rxresultsdf) pour convertir les résultats en une trame de données facilement exploitable dans l’une des fonctions de traçage standard de R.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -142,7 +142,7 @@ Les nuages de points sont souvent utilisés lors de l’exploration des données
   
 À partir de cette analyse rapide, vous pouvez voir que le risque de fraude augmente avec le nombre de transactions et le nombre de transactions internationales.
 
-Pour plus d’informations sur la fonction **rxCube** et sur les analyses croisées en général, consultez [How to summarize data using RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries) (Comment synthétiser des données à l’aide de RevoScaleR).
+Pour plus d’informations sur la fonction **rxCube** et sur les analyses croisées en général, consultez [How to summarize data using RevoScaleR](/machine-learning-server/r/how-to-revoscaler-data-summaries) (Comment synthétiser des données à l’aide de RevoScaleR).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

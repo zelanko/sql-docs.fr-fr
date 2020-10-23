@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f74a46d13c907bd81e3afe4af7ba8db38a515e00
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 2c0b42a27fcb49835c33b45ee73a9d31151a5e28
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725771"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257159"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-red-hat-openshift-aro"></a>Déploiement d’un cluster Big Data SQL Server sur Azure Red Hat OpenShift (ARO) avec un script Python
 
@@ -37,7 +37,7 @@ Le déploiement de cluster Big Data par défaut utilisé ici se compose d’une 
 - [oc](https://docs.openshift.com/container-platform/4.4/cli_reference/openshift_cli/getting-started-cli.html)
 - [Python 3.0 minimum](https://www.python.org/downloads)
 - [Interface CLI `az`](/cli/azure/install-azure-cli/)
-- [Interface CLI `azdata`](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 - **Azure Data Studio**
 
 ## <a name="log-in-to-your-azure-account"></a>Se connecter à votre compte Azure
@@ -94,7 +94,7 @@ Le script de cette section déploie le cluster Big Data SQL Server dans Azure Re
 #
 # Prerequisites: 
 # 
-# Azure CLI (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli), azdata CLI (https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-azdata?view=sql-server-ver15), oc CLI (https://www.openshift.com/blog/installing-oc-tools-windows)
+# Azure CLI (https://docs.microsoft.com/en-us/cli/azure/install-azure-cli), Azure Data CLI (`azdata`) (https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-install-azdata?view=sql-server-ver15), oc CLI (https://www.openshift.com/blog/installing-oc-tools-windows)
 #
 # Run `az login` at least once BEFORE running this script
 #

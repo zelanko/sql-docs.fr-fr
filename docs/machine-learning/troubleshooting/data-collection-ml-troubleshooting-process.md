@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e0f7cf6f904768f8394b690c1a45d3cfb4c9bd71
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: cf9cf80d6ced7cfcfefecbff4f31095f82e04e1c
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88173470"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194511"
 ---
 # <a name="collect-data-to-troubleshoot-sql-machine-learning"></a>Collecte de données pour résoudre les problèmes du Machine Learning SQL
 
@@ -36,7 +36,7 @@ Selon l’édition de SQL Server que vous utilisez, certaines fonctionnalités d
 
 En général, la version de Microsoft R qui est installée quand vous sélectionnez la fonctionnalité R Services ou Machine Learning Services est déterminée par le numéro de build de SQL Server. Si vous mettez à niveau SQL Server ou appliquer un correctif, vous devez effectuer la même opération sur ses composants R.
 
-Pour obtenir la liste des versions et des liens vers les téléchargements des composants R, consultez [Installer des composants de machine learning sans accès à Internet](/sql/machine-learning/install/sql-ml-component-install-without-internet-access). Sur les ordinateurs disposant d’un accès à Internet, la version requise de R est identifiée et installée automatiquement.
+Pour obtenir la liste des versions et des liens vers les téléchargements des composants R, consultez [Installer des composants de machine learning sans accès à Internet](../install/sql-ml-component-install-without-internet-access.md). Sur les ordinateurs disposant d’un accès à Internet, la version requise de R est identifiée et installée automatiquement.
 
 Il est possible de mettre à niveau les composants R Server séparément du moteur de base de données SQL Server, dans un processus appelé « liaison ». La version de R que vous utilisez quand vous exécutez du code R dans SQL Server peut donc varier en fonction de la version de SQL Server installée et selon que vous ayez ou non migré le serveur vers la dernière version de R.
 

@@ -10,12 +10,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 070832ff6d934a8bcc4f8e88210f26205a92a48a
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 25f61771524d170ade9914605916c6f2cffc6d3b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180318"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193701"
 ---
 # <a name="r-tutorial-create-data-features"></a>Didacticiel R : Créer des caractéristiques de données
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
@@ -36,7 +36,7 @@ Dans la [quatrième partie](r-taxi-classification-train-model.md), vous chargez 
 
 Dans la [cinquième partie](r-taxi-classification-deploy-model.md), vous apprendrez à rendre opérationnels les modèles que vous avez formés et enregistrés dans la quatrième partie.
 
-Dans la [cinquième partie](sqldev-py6-operationalize-the-model.md), vous apprendrez à rendre opérationnels les modèles que vous avez formés et enregistrés dans la quatrième partie.
+Dans la [cinquième partie](./python-taxi-classification-deploy-model.md), vous apprendrez à rendre opérationnels les modèles que vous avez formés et enregistrés dans la quatrième partie.
 
 ## <a name="about-feature-engineering"></a>À propos de l’ingénierie des caractéristiques
 

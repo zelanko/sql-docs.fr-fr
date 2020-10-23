@@ -8,16 +8,16 @@ ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d312a74a8920031015e0a985d8b30933cfc039a
-ms.sourcegitcommit: afb02c275b7c79fbd90fac4bfcfd92b00a399019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
+ms.openlocfilehash: bbe54a44113ebadc07c837887f0d92e7bfb44cb4
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "91956842"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115336"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Surveiller les instructions PREDICT T-SQL avec des événements étendus dans SQL Server Machine Learning Services
-[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Découvrez comment utiliser des événements étendus pour surveiller et résoudre les problèmes liés aux instructions [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL dans SQL Server Machine Learning Services.
 
@@ -25,22 +25,22 @@ Découvrez comment utiliser des événements étendus pour surveiller et résoud
 
 Les événements étendus suivants sont disponibles dans toutes les versions de SQL Server prenant en charge l’instruction [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL. 
 
-|name |object_type|description| 
-|----|----|----|
-|predict_function_completed |événement  |Décomposition intégrée du temps d’exécution|
-|predict_model_cache_hit |événement|Se produit quand un modèle est récupéré auprès du cache des modèles de la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.|
-|predict_model_cache_insert |événement  |   Se produit quand un modèle est inséré dans le cache des modèles de la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.    |
-|predict_model_cache_miss   |événement|Se produit quand un modèle est introuvable dans le cache des modèles de la fonction PREDICT. De fréquentes occurrences de cet événement peuvent indiquer que SQL Server nécessite davantage de mémoire. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.|
-|predict_model_cache_remove |événement| Se produit quand un modèle est supprimé du cache des modèles de la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.|
+| name                       | object_type | description |
+|----------------------------|-------------|-------------|
+| predict_function_completed | événement       | Décomposition intégrée du temps d’exécution|
+| predict_model_cache_hit    | événement       | Se produit quand un modèle est récupéré auprès du cache des modèles de la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.|
+| predict_model_cache_insert | événement       | Se produit quand un modèle est inséré dans le cache des modèles de la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.   |
+| predict_model_cache_miss   | événement       | Se produit quand un modèle est introuvable dans le cache des modèles de la fonction PREDICT. De fréquentes occurrences de cet événement peuvent indiquer que SQL Server nécessite davantage de mémoire. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.|
+| predict_model_cache_remove | événement       | Se produit quand un modèle est supprimé du cache des modèles de la fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_* pour résoudre les problèmes provoqués par le cache des modèles de la fonction PREDICT.|
 
 ## <a name="query-for-related-events"></a>Requêtes pour les événements connexes
 
 Pour afficher la liste de toutes les colonnes retournées pour ces événements, exécutez la requête suivante dans SQL Server Management Studio :
 
 ```sql
-SELECT * 
-FROM sys.dm_xe_object_columns 
-WHERE object_name LIKE `predict%'
+SELECT *
+FROM sys.dm_xe_object_columns
+WHERE object_name LIKE 'predict%'
 ```
 
 ## <a name="examples"></a>Exemples

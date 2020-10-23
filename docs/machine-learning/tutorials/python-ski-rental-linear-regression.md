@@ -10,24 +10,24 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 8436564dc7e4aff17b280c136bf45040e18e583b
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: 17ed4f8f3cd938fe38dbee7dcc0933dae8109c65
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180362"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92194453"
 ---
 # <a name="python-tutorial-predict-ski-rental-with-linear-regression-with-sql-machine-learning"></a>Tutoriel Python : Prédire la location de skis avec la régression linéaire et le Machine Learning SQL
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-Dans cette série de tutoriels en quatre parties, vous allez utiliser Python et la régression linéaire dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [clusters Big Data](../../big-data-cluster/machine-learning-services.md) pour prédire le nombre de locations de skis. Le tutoriel utilise un [notebook Python dans Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+Dans cette série de tutoriels en quatre parties, vous allez utiliser Python et la régression linéaire dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) ou sur des [clusters Big Data](../../big-data-cluster/machine-learning-services.md) pour prédire le nombre de locations de skis. Le tutoriel utilise un [notebook Python dans Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-Dans ce tutoriel en quatre parties, vous allez utiliser Python et la régression linéaire dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) pour prédire le nombre de locations de ski. Le tutoriel utilise un [notebook Python dans Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+Dans ce tutoriel en quatre parties, vous allez utiliser Python et la régression linéaire dans [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) pour prédire le nombre de locations de ski. Le tutoriel utilise un [notebook Python dans Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-Dans cette série de quatre tutoriels, vous allez utiliser Python et la régression linéaire dans [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) pour prédire le nombre de locations de ski. Le tutoriel utilise un [notebook Python dans Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+Dans cette série de quatre tutoriels, vous allez utiliser Python et la régression linéaire dans [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview) pour prédire le nombre de locations de ski. Le tutoriel utilise un [notebook Python dans Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 ::: moniker-end
 
 Imaginez que vous êtes une entreprise de location de ski et que vous souhaitez prédire le nombre de locations à une date ultérieure. Ces informations vous aideront à préparer votre inventaire, votre personnel et vos installations.
@@ -59,7 +59,7 @@ Dans la [quatrième partie](python-ski-rental-linear-regression-deploy-model.md)
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) pour restaurer l’exemple de base de données sur Azure SQL Managed Instance.
 ::: moniker-end
 
-* Environnement de développement intégré (IDE) Python : ce didacticiel utilise un notebook Python dans [Azure Data Studio](../../azure-data-studio/what-is.md). Pour en savoir plus, consultez [Comment utiliser les notebooks dans Azure Data Studio](../../azure-data-studio/sql-notebooks.md).
+* Environnement de développement intégré (IDE) Python : ce didacticiel utilise un notebook Python dans [Azure Data Studio](../../azure-data-studio/what-is.md). Pour en savoir plus, consultez [Comment utiliser les notebooks dans Azure Data Studio](../../azure-data-studio/notebooks/notebooks-guidance.md).
 
 * Outil de requête SQL : ce didacticiel part du principe que vous utilisez [Azure Data Studio](../../azure-data-studio/what-is.md).
 

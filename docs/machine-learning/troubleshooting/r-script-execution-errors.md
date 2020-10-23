@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2982a0d449d031ba6f211f29a919c588a507a4ba
-ms.sourcegitcommit: 04fb4c2d7ccddd30745b334b319d9d2dd34325d6
+ms.openlocfilehash: 1a9a7dc3b4df2738d775cbb08ef8a7c547ec21aa
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89569911"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196333"
 ---
 # <a name="common-r-scripting-errors-in-sql-server"></a>Erreurs courantes de script R dans SQL Server
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -31,7 +31,7 @@ Cependant, il arrive parfois que du code qui fonctionne parfaitement dans un uti
 
 2. Examinez les messages pour voir si les données d’entrée ou de sortie contiennent des colonnes avec des types de données incompatibles ou non pris en charge. Par exemple, les requêtes sur une base de données SQL retournent souvent des GUID ou des RowGUID qui ne sont pas pris en charge. Pour plus d’informations, consultez [Types de données et bibliothèques R](../r/r-libraries-and-data-types.md).
 
-3. Passez en revue les pages d’aide des fonctions R individuelles pour déterminer si tous les paramètres sont pris en charge pour le contexte de calcul SQL Server. Pour obtenir de l’aide sur ScaleR, utilisez les commandes d’aide R inline ou consultez les [informations de référence sur le package](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+3. Passez en revue les pages d’aide des fonctions R individuelles pour déterminer si tous les paramètres sont pris en charge pour le contexte de calcul SQL Server. Pour obtenir de l’aide sur ScaleR, utilisez les commandes d’aide R inline ou consultez les [informations de référence sur le package](/r-server/r-reference/revoscaler/revoscaler).
 
 Si le runtime R fonctionne mais que votre script retourne des erreurs, nous vous recommandons d’essayer de déboguer le script dans un environnement de développement R dédié comme Outils R pour Visual Studio.
 
