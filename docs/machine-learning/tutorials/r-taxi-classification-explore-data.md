@@ -10,19 +10,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 12f964b71bd7dee79eeb3287efc7b67273abb65e
-ms.sourcegitcommit: 9b41725d6db9957dd7928a3620fe4db41eb51c6e
+ms.openlocfilehash: a0cacd4beee72cef845fa161d1a1bcd0263a7e6b
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "88180348"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193684"
 ---
 # <a name="r-tutorial-explore-and-visualize-data"></a>Didacticiel R : Explorer et visualiser des données
 [!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 Dans la deuxième des cinq parties de notre tutoriel, vous explorez les exemples de données et générez des tracés. Plus tard, vous allez apprendre à sérialiser des objets de graphiques dans Python, puis à désérialiser ces objets et à créer des tracés.
 
-Dans la partie deux de ce tutoriel en cinq parties, vous allez examiner les exemples de données, puis générer des tracés à l’aide de [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) à partir de [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) et de la fonction générique [hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) en base R.
+Dans la partie deux de ce tutoriel en cinq parties, vous allez examiner les exemples de données, puis générer des tracés à l’aide de [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram) à partir de [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler) et de la fonction générique [hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist) en base R.
 
 L’objectif principal de cet article est d’illustrer comment appeler des fonctions R à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] dans des procédures stockées et enregistrer les résultats dans des formats de fichiers d’application :
 
@@ -83,7 +83,7 @@ Dans le jeu de données public d’origine, les identificateurs de taxis et les 
 > À compter de SQL Server 2019, le mécanisme d’isolation vous oblige à accorder les autorisations appropriées au répertoire dans lequel le fichier de traçage est stocké. Pour savoir comment définir ces autorisations, consultez la [section Autorisations de fichiers dans SQL Server 2019 sur Windows : Modifications de l’isolation dans Machine Learning Services](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), l’une des fonctions R améliorées fournies dans [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Cette étape trace un histogramme basé sur les données d’une requête [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez envelopper cette fonction dans une procédure stockée, **RxPlotHistogram**.
+Pour créer le tracé, utilisez [rxHistogram](/machine-learning-server/r-reference/revoscaler/rxhistogram), l’une des fonctions R améliorées fournies dans [RevoScaleR](/machine-learning-server/r-reference/revoscaler/revoscaler). Cette étape trace un histogramme basé sur les données d’une requête [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez envelopper cette fonction dans une procédure stockée, **RxPlotHistogram**.
 
 1. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données **NYCTaxi_Sample**, et sélectionnez **Nouvelle requête**.
 
@@ -114,7 +114,7 @@ Pour créer le tracé, utilisez [rxHistogram](https://docs.microsoft.com/machine
 
 Les points clés à retenir dans ce script sont les suivants :
   
-+ La variable `@query` définit le texte de requête (`'SELECT tipped FROM nyctaxi_sample'`), qui est transmis au script R comme argument de la variable d’entrée du script, `@input_data_1`. Pour les scripts R qui s’exécutent en tant que processus externes, vous devez disposer d’un mappage un-à-un entre les entrées de votre script, et les entrées de la procédure stockée système [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) qui démarre la session R sur SQL Server.
++ La variable `@query` définit le texte de requête (`'SELECT tipped FROM nyctaxi_sample'`), qui est transmis au script R comme argument de la variable d’entrée du script, `@input_data_1`. Pour les scripts R qui s’exécutent en tant que processus externes, vous devez disposer d’un mappage un-à-un entre les entrées de votre script, et les entrées de la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) qui démarre la session R sur SQL Server.
   
 + Dans le script R, une variable (`image_file`) est définie pour stocker l’image.
 

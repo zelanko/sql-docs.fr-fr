@@ -8,13 +8,13 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 10/14/2020
-ms.openlocfilehash: f61e8a9cfab2de97ba21860833843609b50d934d
-ms.sourcegitcommit: 76ab3b57718341c6057613c9bd38cf82fb17786e
+ms.date: 10/20/2020
+ms.openlocfilehash: b3363e9b5b8872d3a78d7c5c0fa7f70a80c8d6f9
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92059245"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257363"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Télécharger et installer Azure Data Studio
 
@@ -35,39 +35,41 @@ Pour plus d’informations sur la dernière version, consultez les [notes de pub
 
 ## <a name="get-azure-data-studio-for-windows"></a>Obtenir Azure Data Studio pour Windows
 
+[!INCLUDE [ssms-ads-install](../includes/ssms-azure-data-studio-install.md)]
+
 Cette version d’Azure Data Studio comprend une expérience Windows Installer standard et un fichier .zip.
 
-Le *programme d’installation utilisateur* est recommandé, car il ne nécessite pas de privilèges administrateur, ce qui simplifie les installations et les mises à niveau. Le programme d’installation utilisateur ne requiert pas de privilèges administrateur, car il se trouve sous votre dossier utilisateur local AppData (LOCALAPPDATA). Le programme d’installation utilisateur fournit également une expérience de mise à jour en arrière-plan plus fluide. Pour plus d’informations, consultez [Configuration utilisateur pour Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+Nous recommandons le *programme d’installation utilisateur*, car il ne demande pas de privilèges administrateur, ce qui simplifie les installations et les mises à niveau. Le programme d’installation utilisateur ne demande pas de privilèges administrateur, car il se trouve sous votre dossier utilisateur local AppData (LOCALAPPDATA). Le programme d’installation utilisateur fournit également une expérience de mise à jour en arrière-plan plus fluide. Pour plus d’informations, consultez [Configuration utilisateur pour Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
 
 **Programme d' installation utilisateur** (recommandé)
 
-1. Téléchargez et exécutez le programme d’installation *utilisateur* [[!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Windows](https://go.microsoft.com/fwlink/?linkid=2145989).
-2. Démarrez l’application [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
+1. Téléchargez et exécutez le programme d’installation [Azure Data Studio *utilisateur* pour Windows](https://go.microsoft.com/fwlink/?linkid=2145989).
+2. Démarrez l’application Azure Data Studio.
 
 **Programme d’installation système**
 
-1. Téléchargez et exécutez le programme d’installation *système* [[!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Windows](https://go.microsoft.com/fwlink/?linkid=2145990).
-2. Démarrez l’application [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
+1. Téléchargez et exécutez le programme d’installation [Azure Data Studio *système* pour Windows](https://go.microsoft.com/fwlink/?linkid=2145990).
+2. Démarrez l’application Azure Data Studio.
 
 **Fichier zip**
 
-1. Téléchargez [[!INCLUDE[name-sos](../includes/name-sos-short.md)].zip pour Windows](https://go.microsoft.com/fwlink/?linkid=2145864).
+1. Téléchargez le [fichier .zip Azure Data Studio pour Windows](https://go.microsoft.com/fwlink/?linkid=2145864).
 2. Accédez au fichier téléchargé et extrayez-le.
 3. Exécutez `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## <a name="get-azure-data-studio-for-macos"></a>Obtenir Azure Data Studio pour macOS
 
-1. Téléchargez [[!INCLUDE[name-sos](../includes/name-sos-short.md)] pour macOS](https://go.microsoft.com/fwlink/?linkid=2145865).
+1. Téléchargez [Azure Data Studio pour macOS](https://go.microsoft.com/fwlink/?linkid=2145865).
 2. Pour développer le contenu du fichier zip, double-cliquez dessus.
 3. Pour rendre Azure Data Studio disponible dans le *Launchpad*, faites glisser *Azure Data Studio.app* vers le dossier *Applications*.
 
 ## <a name="get-azure-data-studio-for-linux"></a>Obtenir Azure Data Studio pour Linux
 
-1. Téléchargez [!INCLUDE[name-sos](../includes/name-sos-short.md)] à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
+1. Téléchargez Azure Data Studio pour Linux en utilisant l’un des programmes d’installation ou l’archive tar.gz :
     - [.deb](https://go.microsoft.com/fwlink/?linkid=2146016)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=2146015)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2145866)
-1. Pour extraire le fichier et lancer [!INCLUDE[name-sos](../includes/name-sos-short.md)], ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
+1. Pour extraire le fichier et lancer Azure Data Studio, ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
    **Installation Debian :**
 
@@ -125,13 +127,7 @@ Le *programme d’installation utilisateur* est recommandé, car il ne nécessit
 
 ## <a name="download-insiders-build-of-azure-data-studio"></a>Télécharger la version Insiders d’Azure Data Studio
 
-En général, les utilisateurs doivent télécharger la version stable de Azure Data Studio ci-dessus. Toutefois, si vous souhaitez essayer nos fonctionnalités bêta et nous faire part de vos commentaires, vous pouvez télécharger [une version Insiders de Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main)
-
-## <a name="uninstall-azure-data-studio"></a>Désinstaller Azure Data Studio
-
-Si vous avez installé [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] avec Windows Installer, désinstallez-le de la même manière que n’importe quelle application Windows.
-
-Si vous avez installé [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] avec un fichier .zip ou une archive, supprimez simplement les fichiers.
+En général, les utilisateurs doivent télécharger la version stable de Azure Data Studio ci-dessus. Toutefois, si vous souhaitez essayer les fonctionnalités bêta et envoyer vos commentaires, vous pouvez télécharger la [version Insiders d’Azure Data Studio](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
 
 ## <a name="supported-operating-systems"></a>Systèmes d’exploitation pris en charge
 
@@ -172,19 +168,13 @@ Azure Data Studio s’exécute sur Windows, macOS et Linux et est pris en charge
 
 ## <a name="check-for-updates"></a>Rechercher les mises à jour
 
-Pour rechercher les dernières mises à jour, cliquez sur l’icône d’engrenage située en bas à gauche de la fenêtre et cliquez sur **Rechercher les mises à jour**.
+Pour rechercher les dernières mises à jour, sélectionnez l’icône d’engrenage située en bas à gauche de la fenêtre, puis **Rechercher les mises à jour**.
 
-Dans un environnement hors connexion, les mises à jour peuvent être appliquées en [installant directement la dernière version](#download-and-install-azure-data-studio) sur une version déjà installée.  Il n’est pas nécessaire de désinstaller les versions antérieures d’Azure Data Studio, car le programme d’installation met à jour une application installée, le cas échéant.
+Les mises à jour d’environnement hors connexion peuvent être appliquées en [installant directement la dernière version](#download-and-install-azure-data-studio) sur une version déjà installée. La désinstallation des versions antérieures d’Azure Data Studio n’est pas nécessaire. Le programme d’installation met à jour une application actuellement installée, le cas échéant.
 
 ## <a name="supported-sql-offerings"></a>Produits SQL pris en charge
 
 - Cette version d’Azure Data Studio fonctionne avec toutes les [versions prises en charge de SQL Server 2014 - [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](https://support.microsoft.com/lifecycle?C2=1044) et offre la prise en charge d’une utilisation des dernières fonctionnalités cloud d’Azure SQL Database et d’Azure Synapse Analytics. Azure Data Studio fournit également l’aperçu en préversion pour Azure SQL Managed Instance.
-
-## <a name="upgrade-from-sql-operations-studio"></a>Mettre à niveau à partir de SQL Operations Studio
-
-Si vous utilisez toujours SQL Operations Studio, vous devez effectuer la mise à niveau vers Azure Data Studio. SQL Operations Studio était le nom de la préversion et de la version d’évaluation d’Azure Data Studio. En septembre 2018, nous avons modifié le nom en [Azure Data Studio](https://cloudblogs.microsoft.com/sqlserver/2018/09/25/azure-data-studio-for-sql-server/) et publié la version de disponibilité générale (GA). Étant donné que SQL Operations Studio n’est plus mis à jour ni pris en charge, nous demandons à tous les utilisateurs de SQL Operations Studio de télécharger la dernière version d’Azure Data Studio pour obtenir les fonctionnalités, les mises à jour de sécurité et les correctifs les plus récents.
-
-Lorsque vous effectuez une mise à niveau de l’ancienne préversion vers la version actuelle d’Azure Data Studio, vous perdrez vos extensions et paramètres actuels. Pour déplacer vos paramètres, suivez les instructions de la section *Déplacer les paramètres utilisateur* :
 
 ## <a name="move-user-settings"></a>Déplacer les paramètres utilisateur
 
@@ -192,11 +182,11 @@ Si vous souhaitez déplacer vos paramètres personnalisés, raccourcis clavier o
 
 *Si vous avez déjà Azure Data Studio ou si vous n’avez jamais installé ou personnalisé SQL Operations Studio, vous pouvez ignorer cette section.*
 
-1. Ouvrez les paramètres en cliquant sur l’engrenage en bas à gauche et en cliquant sur **Paramètres**.
+1. Ouvrez les paramètres en sélectionnant l’engrenage en bas à gauche, puis **Paramètres**.
 
    ![modifier les paramètres dans Azure Data Studio](./media/download/open-settings.png)
 
-2. Cliquez avec le bouton droit sur l’onglet **Paramètres utilisateur** en haut, puis cliquez sur **Afficher dans l’explorateur**
+2. Cliquez avec le bouton droit sur l’onglet **Paramètres utilisateur** en haut, puis sélectionnez **Afficher dans l’explorateur**
 
    ![lancez l’explorateur qui vous permet d’accéder à votre système de fichiers local](./media/download/reveal-in-explorer.png)
 
@@ -207,6 +197,43 @@ Si vous souhaitez déplacer vos paramètres personnalisés, raccourcis clavier o
 4. Dans votre nouvelle version d’Azure Data Studio, suivez les étapes 1-2, puis, pour l’étape 3, collez le contenu que vous avez enregistré dans le dossier. Vous pouvez également copier manuellement les paramètres, les combinaisons de touches ou les extraits de code dans leurs emplacements respectifs.
 
 5. Si vous remplacez une installation existante, supprimez l’ancien répertoire d’installation avant l’installation afin d’éviter les erreurs de connexion à votre compte Azure pour l’explorateur de ressources.
+
+## <a name="unattended-install-for-windows"></a>Installation sans assistance pour Windows
+
+Vous pouvez également installer Azure Data Studio en utilisant un script d’invite de commandes.
+
+Si vous souhaitez installer Azure Data Studio en arrière-plan sans aucune invite de l’interface graphique utilisateur et que vous êtes sur la plateforme Windows, suivez les étapes ci-dessous.
+
+1. Lancez l’invite de commandes avec des privilèges élevés.
+
+2. Tapez la commande ci-dessous dans l’invite de commandes.
+
+    ```console
+    <path where the azuredatastudio-windows-user-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    ```
+
+    Exemple :
+
+    ```console
+    %systemdrive%\azuredatastudio-windows-user-setup-1.23.0.exe /VERYSILENT /MERGETASKS=!runcode
+    ```
+
+    > [!Note]
+    > L’exemple fonctionne également avec le fichier du programme d’installation système.
+    > 
+    > ```console
+    > <path where the azuredatastudio-windows-setup-x.xx.x.exe file is located> /VERYSILENT /MERGETASKS=!runcode>
+    > ```
+
+    Vous pouvez aussi passer */SILENT* au lieu de */VERYSILENT* pour voir l’interface utilisateur du programme d’installation.
+
+3. Si tout se passe bien, vous pouvez voir Azure Data Studio installé.
+
+## <a name="uninstall-azure-data-studio"></a>Désinstaller Azure Data Studio
+
+Si vous avez installé Azure Data Studio avec Windows Installer, désinstallez-le de la même manière que n’importe quelle application Windows.
+
+Si vous avez installé Azure Data Studio avec un fichier .zip ou une autre archive, supprimez les fichiers.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
