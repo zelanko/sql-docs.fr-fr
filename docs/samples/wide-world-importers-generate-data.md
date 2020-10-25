@@ -1,7 +1,7 @@
 ---
 title: Générer des données dans les exemples SQL WideWorldImporters
 description: Utilisez ces instructions SQL pour générer et importer des exemples de données jusqu’à la date actuelle pour les exemples de bases de données WideWorldImporters.
-ms.date: 04/04/2018
+ms.date: 10/23/2020
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: sql
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 2936ac69cc4053e68fc92d2bb5c2cae95ac68673
-ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
+ms.openlocfilehash: f60ad250ea68f58a98fb93da9f3c5853ad68bd47
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86942190"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523934"
 ---
 # <a name="wideworldimporters-data-generation"></a>Génération de données WideWorldImporters
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -39,9 +39,12 @@ Pour générer des exemples de données jusqu’à la date actuelle :
             @AreDatesPrinted = 1;
     ```
 
-    Cette instruction ajoute des exemples de données de vente et d’achat à la base de données, jusqu’à la date actuelle. Il affiche la progression de la génération des données par jour. La génération de données peut prendre environ 10 minutes pour chaque année nécessitant des données. En raison d’un facteur aléatoire dans la génération de données, il existe des différences entre les données générées entre les exécutions.
+    Cette instruction ajoute des exemples de données de vente et d’achat à la base de données, jusqu’à la date actuelle. Il affiche la progression de la génération des données par jour. En raison d’un facteur aléatoire dans la génération de données, il existe des différences entre les données générées entre les exécutions.
 
     Pour augmenter ou diminuer la quantité de données générées pour les commandes par jour, modifiez la valeur du paramètre `@AverageNumberOfCustomerOrdersPerDay` . Utilisez les paramètres `@SaturdayPercentageOfNormalWorkDay` et `@SundayPercentageOfNormalWorkDay` pour déterminer le volume de commandes pour les jours du week-end.
+
+> [!TIP]
+> Forcer une [durabilité retardée](../relational-databases/logs/control-transaction-durability.md) sur la base de données peut améliorer la vitesse de génération des données, en particulier lorsque le journal des transactions de la base de données se trouve sur un sous-système de stockage à latence élevée. Tenez compte des implications potentielles de [perte de données](../relational-databases/logs/control-transaction-durability.md#bkmk_DataLoss) lors de l’utilisation d’une durabilité retardée et envisagez uniquement l’activation de la durabilité retardée pendant la génération de données.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importer des données générées dans WideWorldImportersDW
 
@@ -75,7 +78,7 @@ Vous pouvez utiliser la `Application.Configuration_PopulateLargeSaleTable` proc�
 
 `@EstimatedRowsFor2012`**bigint** (avec 12 millions comme valeur par défaut)
 
-#### <a name="result"></a>Résultats
+#### <a name="result"></a>Résultat
 
 Approximativement, le nombre de lignes requis est inséré dans la `Fact.Sale` table au cours de l’année 2012. La procédure limite artificiellement le nombre de lignes à 50 000 par jour. Vous pouvez modifier cette limitation, mais la limitation vous aide à éviter les surinflations accidentelles de la table.
 

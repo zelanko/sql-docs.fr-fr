@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: ''
-ms.openlocfilehash: f81cddcb5f1279bd444799884b150294a037b3e1
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: 35465a761258fb5a7865e711e2809d740b9b9fee
+ms.sourcegitcommit: d35d0901296580bfceda6e0ab2e14cf2b7e99a0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867689"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92496812"
 ---
 # <a name="dmacmd-assess-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql"></a>DMACMD : évaluer la préparation d’un SQL Server de données migration vers Azure SQL 
 
@@ -28,7 +28,12 @@ Dans le cas de nombreuses organisations tentant de migrer vers Azure, il est ess
 
 [Assistant Migration de données (DMA)](dma-overview.md) permet d’évaluer une instance SQL Server pour une cible SQL Azure spécifique et évalue la préparation des bases de données SQL Server qui migrent vers Azure SQL. Chargez les résultats de l’évaluation DMA dans Azure Migrate Hub pour une vue de préparation centralisée de l’ensemble de l’espace de données. 
 
-Cet article vous apprend à effectuer des évaluations à l’échelle et à charger les résultats dans Azure Migrate Hub à l’aide de l’interface de ligne de commande DMA (DMACMD). Vous pouvez également utiliser l' [interface graphique utilisateur DMA](dma-assess-sql-data-estate-to-sqldb.md) pour effectuer l’évaluation à la place. 
+Cet article vous apprend à effectuer des évaluations à l’échelle et à charger les résultats dans Azure Migrate Hub à l’aide de l’interface de ligne de commande DMA (DMACMD). Vous pouvez également utiliser l' [interface graphique utilisateur DMA](dma-assess-sql-data-estate-to-sqldb.md) pour effectuer l’évaluation à la place.
+
+Pour plus d’informations, consultez la vidéo channel9 suivante :
+
+>
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-to-Assess-Readiness-of-SQL-Server-Data-Estate-Migrating-to-Azure-SQL/player?WT.mc_id=dataexposed-c9-niner]
 
 ## <a name="prerequisites"></a>Prérequis 
 
@@ -139,3 +144,4 @@ Tenez compte des meilleures pratiques suivantes lors de l’utilisation de DMACM
 * [Assistant Migration de données (DMA)](../dma/dma-overview.md)
 * [Assistant Migration de données : paramètres de configuration](../dma/dma-configurationsettings.md)
 * [Assistant Migration de données : meilleures pratiques](../dma/dma-bestpractices.md)
+

@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: d44e90493c905764eaceea86b5cc3c3311091726
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: c4cdbd3a640e49bc9a43e30d4bf98cff7bf71194
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91379411"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523824"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installer les packs d’administration SQL Server Operations Manager (SCOM) pour Analytics Platform System
 Procédez comme suit pour télécharger et installer les packs d’administration System Center Operations Manager (SCOM) pour SQL Server PDW. Les packs d’administration sont requis pour analyser les SQL Server PDW à partir de SCOM.  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Avant de commencer  
-**Composants requis**  
+**Conditions préalables**  
   
 System Center Operations Manager doit être installé et en cours d’exécution. SQL Server PDW 2012 requiert System Center Operations Manager 2007 R2, System Center Operations Manager 2012 ou System Center Operations Manager 2012 Service Pack 1.  
   
@@ -49,7 +49,7 @@ Pour les anciennes versions de PDW sans APS, téléchargez le[Pack d’analyse S
   
 4.  Cliquez sur **Installer**.  
   
-    ![Confirmez l'installation](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
+    ![Capture d’écran de l’Assistant programme d’installation du pack d’administration de la surveillance de base de l’appliance SQL Server à l’étape de confirmation de l’installation avec l’option d’installation cerclée en rouge.](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
 5.  Cliquez sur **Fermer**.  
   
@@ -69,7 +69,7 @@ Pour les anciennes versions de PDW sans APS, téléchargez le[Pack d’analyse S
   
 4.  Cliquez sur **Installer**.  
   
-    ![Confirmez l'installation](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
+    ![Capture d’écran de l’Assistant PDWMP installer à l’étape de confirmation de l’installation avec l’option d’installation encerclée en rouge.](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
 5.  Cliquez sur **Fermer**.  
   

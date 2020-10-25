@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: e989e524a35763927ac949a88592b38c28a18dc5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 03ea9cc4d6b7842739f4431fea2e9a418e0f3f9e
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91727800"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523916"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation à l’aide de DMA
 
@@ -96,7 +96,7 @@ Créez une base de données appelée **EstateInventory** et une table appelée *
 - nom_base_de_données
 - AssessmentFlag
 
-![Contenu de la table SQL Server](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
+![Capture d’écran d’un contenu de table SQL Server si vous utilisez une table SQL Server.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 Si cette base de données ne se trouve pas sur l’ordinateur des outils, assurez-vous que l’ordinateur des outils dispose d’une connectivité réseau avec cette instance de SQL Server.
 
@@ -113,7 +113,7 @@ Créez une base de données appelée **EstateInventory** et une table appelée *
 - Port
 - AssessmentFlag
 
-![Contenu de la table SQL Server](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+![Capture d’écran d’un contenu de table SQL Server en cas d’utilisation d’un inventaire d’instance.](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## <a name="running-a-scaled-assessment"></a>Exécution d’une évaluation avec montée en charge
 

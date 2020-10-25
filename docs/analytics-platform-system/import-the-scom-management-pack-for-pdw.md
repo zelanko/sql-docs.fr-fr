@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 770359a9ddb04eb8aaf45af7dd5b95447c30f264
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401082"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523866"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importer le pack d’administration SCOM-Analytics Platform System
 Procédez comme suit pour importer les packs d’administration System Center Operations Manager (SCOM) pour Analytics Platform System (APS). Les packs d’administration sont requis pour analyser les Data Warehouse parallèles à partir de SCOM. 
@@ -50,7 +50,7 @@ Les packs d’administration doivent être installés. Consultez [installer les 
   
 7.  Cliquez sur **Installer**.  
   
-    ![Cliquez sur installer](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
+    ![Capture d’écran montrant l’Assistant Importer les packs d’administration sur l’étape sélectionner les packs d’administration avec l’option d’installation encerclée en rouge.](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP5.png "SCOM_IMP5")  
   
 8.  Une fois terminé, cliquez sur **Fermer**.  
   
@@ -70,7 +70,7 @@ Les packs d’administration doivent être installés. Consultez [installer les 
   
 4.  Cliquez sur **Installer**.  
   
-    ![Cliquez sur installer](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
+    ![Une autre capture d’écran de l’Assistant Importer les packs d’administration sur l’étape sélectionner les packs d’administration avec l’option d’installation encerclée en rouge.](./media/import-the-scom-management-pack-for-pdw/SCOM_PDW3.png "SCOM_PDW3")  
   
 5.  Cliquez sur **Fermer**.  
   

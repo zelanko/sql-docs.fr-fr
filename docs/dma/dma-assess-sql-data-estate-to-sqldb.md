@@ -15,12 +15,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 095c14150a3f78f49a8e1dd6d711b5fefc617d49
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 9aae42b92c6d7d9bb5c26c84e49c49a8cde6bc57
+ms.sourcegitcommit: 67befbf7435f256e766bbce6c1de57799e1db9ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91726340"
+ms.lasthandoff: 10/24/2020
+ms.locfileid: "92523876"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Évaluer la préparation d’un SQL Server de données qui migrent vers Azure SQL Database à l’aide de la Assistant Migration de données
 
@@ -101,7 +101,7 @@ Une fois que vous avez créé un projet de migration, sous **Outils d’évaluat
 
     Si vous effectuez la mise à niveau de votre instance locale de SQL Server vers une version ultérieure de SQL Server ou vers SQL Server hébergé sur une machine virtuelle Azure, définissez le type de serveur source et cible sur **SQL Server**. Définissez le type de serveur cible sur **Azure SQL Managed instance** pour une évaluation de la disponibilité cible du Azure SQL Database (PaaS).
 
-3. Sélectionnez **Créer**.
+3. Sélectionnez **Create** (Créer).
 
    ![Interface Azure Migrate Assistant Migration de données](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 
@@ -132,11 +132,11 @@ Une fois que vous avez créé un projet de migration, sous **Outils d’évaluat
 
 5. Une fois l’évaluation terminée, sélectionnez **charger pour Azure Migrate**.
 
-   ![Azure Migrate-Assistant Migration de données-écran de résultats de la révision](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
+   ![Capture d’écran montrant le Assistant Migration de données avec l’option Télécharger vers Azure Migrate appelée out.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
 6. Connectez-vous au portail Azure.
 
-   ![Azure Migrate-Assistant Migration de données-écran de résultats de la révision](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
+   ![Capture d’écran de la Assistant Migration de données montrant la fenêtre de connexion Portail Azure.](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
 7. Sélectionnez l’abonnement et le projet Azure Migrate dans lequel vous souhaitez télécharger les résultats de l’évaluation, puis sélectionnez **Télécharger**.
 
