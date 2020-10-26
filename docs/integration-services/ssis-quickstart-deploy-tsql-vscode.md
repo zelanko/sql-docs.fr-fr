@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dec289a898c25900afb7f5dd30ec2aa2fe9e34f1
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: e5ea310eb9054beb5fdab77e589ad9fbc2901cc7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88495412"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005733"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Déployer un projet SSIS à partir de Visual Studio Code avec Transact-SQL
 
@@ -23,7 +23,7 @@ ms.locfileid: "88495412"
 
 Ce guide de démarrage rapide montre comment utiliser Visual Studio Code pour se connecter à la base de données du catalogue SSIS, puis utiliser des instructions Transact-SQL pour déployer un projet SSIS dans le catalogue SSIS.
 
-Visual Studio Code est un éditeur de code pour Windows, Mac OS et Linux qui prend en charge les extensions, notamment l’extension `mssql` pour la connexion à Microsoft SQL Server, Azure SQL Database ou Azure SQL Data Warehouse. Pour plus d’informations sur VS Code, consultez [Visual Studio Code](https://code.visualstudio.com/).
+Visual Studio Code est un éditeur de code pour Windows, macOS et Linux qui prend en charge les extensions, notamment l’extension `mssql` pour la connexion à Microsoft SQL Server, à Azure SQL Database et à Azure Synapse Analytics. Pour plus d’informations sur VS Code, consultez [Visual Studio Code](https://code.visualstudio.com/).
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -49,7 +49,7 @@ Pour activer les commandes `mssql` et T-SQL IntelliSense, définissez **SQL** co
 
 2. Cliquez sur **Texte brut** dans le coin inférieur droit de la barre d’état.
  
-3. Dans le menu déroulant **Sélectionner le mode de langage** qui s’affiche, sélectionnez ou entrez **SQL**, puis appuyez sur **Entrée** pour définir SQL comme mode de langage. 
+3. Dans le menu déroulant **Sélectionner le mode de langage** qui s’affiche, sélectionnez ou entrez **SQL** , puis appuyez sur **Entrée** pour définir SQL comme mode de langage. 
 
 ## <a name="supported-authentication-method"></a>Méthode d’authentification prise en charge
 
@@ -59,11 +59,11 @@ Consultez [Méthodes d’authentification pour le déploiement](ssis-quickstart-
 
 Utilisez Visual Studio Code pour établir une connexion au catalogue SSIS.
 
-1. Dans VS Code, appuyez sur **CTRL+MAJ+P** (ou **F1**) pour ouvrir la Palette de commandes.
+1. Dans VS Code, appuyez sur **CTRL+MAJ+P** (ou **F1** ) pour ouvrir la Palette de commandes.
 
-2. Tapez **sqlcon**, puis appuyez sur **ENTRÉE**.
+2. Tapez **sqlcon** , puis appuyez sur **ENTRÉE** .
 
-3. Appuyez sur **ENTRÉE** pour sélectionner **Créer un profil de connexion**. Cette étape crée un profil de connexion pour votre instance de SQL Server.
+3. Appuyez sur **ENTRÉE** pour sélectionner **Créer un profil de connexion** . Cette étape crée un profil de connexion pour votre instance de SQL Server.
 
 4. Suivez les invites pour spécifier les propriétés de connexion de ce nouveau profil de connexion. Après avoir spécifié chaque valeur, appuyez sur **ENTRÉE** pour continuer. 
 
@@ -84,7 +84,7 @@ Utilisez Visual Studio Code pour établir une connexion au catalogue SSIS.
 ## <a name="run-the-t-sql-code"></a>Exécuter le code T-SQL
 Exécutez le code Transact-SQL suivant pour déployer un projet SSIS.
 
-1. Dans la fenêtre **Éditeur**, entrez la requête suivante dans la fenêtre de requête vide.
+1. Dans la fenêtre **Éditeur** , entrez la requête suivante dans la fenêtre de requête vide.
 
 2. Mettez à jour les valeurs de paramètres dans la procédure stockée `catalog.deploy_project` pour votre système.
 

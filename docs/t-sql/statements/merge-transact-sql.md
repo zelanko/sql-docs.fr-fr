@@ -23,18 +23,18 @@ helpviewer_keywords:
 - data manipulation language [SQL Server], MERGE statement
 - inserting data
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0e716d7405580dcda3cd4f3aa4d175141469b2b
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+author: XiaoyuMSFT
+ms.author: XiaoyuL
+ms.openlocfilehash: 86f620b1c99345134a0768574d44da2bbae11c6b
+ms.sourcegitcommit: 9774e2cb8c07d4f6027fa3a5bb2852e4396b3f68
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227298"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92098848"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 Exécute des opérations d'insertion, de mise à jour ou de suppression sur une table cible à partir des résultats d'une jointure avec une table source. Par exemple, synchronisez deux tables en insérant, mettant à jour ou supprimant des lignes dans une seule table selon les différences trouvées dans l'autre table.  
   
@@ -52,6 +52,8 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
+
+-- SQL Server and Azure SQL Database
 [ WITH <common_table_expression> [,...n] ]  
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
@@ -96,9 +98,25 @@ MERGE
 <clause_search_condition> ::=  
     <search_condition> 
 ```  
-  
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+```syntaxsql
+-- MERGE (Preview) for Azure Synapse Analytics 
+[ WITH <common_table_expression> [,...n] ]  
+MERGE
+    [ INTO ] <target_table> [ [ AS ] table_alias ]  
+    USING <table_source> [ [ AS ] table_alias ]
+    ON <merge_search_condition>  
+    [ WHEN MATCHED [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]  
+    [ WHEN NOT MATCHED [ BY TARGET ] [ AND <clause_search_condition> ]  
+        THEN <merge_not_matched> ]  
+    [ WHEN NOT MATCHED BY SOURCE [ AND <clause_search_condition> ]  
+        THEN <merge_matched> ] [ ...n ]
+    [ OPTION ( <query_hint> [ ,...n ] ) ]
+;  -- The semi-colon is required, or the query will return syntax  error. 
+```
+ 
 ## <a name="arguments"></a>Arguments
 
 WITH \<common_table_expression>  
@@ -112,7 +130,7 @@ La clause TOP est appliquée après la jointure de l'intégralité de la table s
 Étant donné que l'instruction MERGE effectue une analyse complète des tables source et cible, les performances d'E/S peuvent être affectées lorsque la clause TOP est utilisée pour modifier une table volumineuse en créant plusieurs lots. Dans ce scénario, il est important de s’assurer que tous les lots consécutifs ciblent les nouvelles lignes.  
   
 *database_name*  
-Nom de la base de données contenant *target_table*.  
+Nom de la base de données contenant *target_table* .  
   
 *schema_name*  
 Nom du schéma auquel *target_table* appartient.  
@@ -122,10 +140,10 @@ Table ou vue à laquelle les lignes de données de \<table_source> sont comparé
   
 Si *target_table* est une vue, toutes les opérations dont elle fait l’objet doivent satisfaire aux conditions requises pour la mise à jour des vues. Pour plus d’informations, consultez [Modifier les données par l’intermédiaire d’une vue](../../relational-databases/views/modify-data-through-a-view.md).  
   
-*target_table* ne peut pas être une table distante. Aucune règle ne peut être définie sur *target_table*.  
+*target_table* ne peut pas être une table distante. Aucune règle ne peut être définie sur *target_table* .  
   
 [ AS ] *table_alias*  
-Autre nom utilisé pour faire référence à une table pour *target_table*.  
+Autre nom utilisé pour faire référence à une table pour *target_table* .  
   
 USING \<table_source>  
 Spécifie la source de données correspondant aux lignes de données dans *target_table* en fonction de \<merge_search condition>. Le résultat de cette correspondance dicte les actions à effectuer par les clauses WHEN de l'instruction MERGE. \<table_source> peut être une table distante ou une table dérivée qui accède à des tables distantes.
@@ -149,7 +167,7 @@ Spécifie que toutes les lignes de *target_table qui correspondent aux lignes re
 L'instruction MERGE peut avoir au plus deux clauses WHEN MATCHED. Si deux clauses sont spécifiées, la première clause doit être accompagnée d’une clause AND \<search_condition>. Pour toute ligne donnée, la deuxième clause WHEN MATCHED est appliquée uniquement si la première ne l'est pas. En présence de deux clauses WHEN MATCHED, l'une d'elles doit spécifier une action UPDATE et l'autre une action DELETE. Lorsque l’action UPDATE est spécifiée dans la clause \<merge_matched> et que plusieurs lignes de \<table_source> correspondent à une ligne dans *target_table* en fonction de \<merge_search_condition>, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne une erreur. L'instruction MERGE ne peut pas mettre à jour la même ligne plus d'une fois, ou mettre à jour et supprimer la même ligne.  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-Spécifie qu’une ligne est insérée dans *target_table* pour chaque ligne retournée par \<table_source>ON \<merge_search_condition>qui ne correspond pas à une ligne dans *target_table*, mais satisfait à un critère de recherche supplémentaire, le cas échéant. Les valeurs à insérer sont spécifiées par la clause \<merge_not_matched>. L’instruction MERGE peut avoir une seule clause WHEN NOT MATCHED [ BY TARGET ].
+Spécifie qu’une ligne est insérée dans *target_table* pour chaque ligne retournée par \<table_source>ON \<merge_search_condition>qui ne correspond pas à une ligne dans *target_table* , mais satisfait à un critère de recherche supplémentaire, le cas échéant. Les valeurs à insérer sont spécifiées par la clause \<merge_not_matched>. L’instruction MERGE peut avoir une seule clause WHEN NOT MATCHED [ BY TARGET ].
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 Spécifie que toutes les lignes de *target_table qui correspondent aux lignes renvoyées par \<table_source> ON \<merge_search_condition>, et qui répondent aux conditions de recherche supplémentaires, sont mises à jour ou supprimées en fonction de la clause \<merge_matched>.  
@@ -194,10 +212,10 @@ Spécifie que les lignes qui correspondent aux lignes dans *target_table* sont s
 \<merge_not_matched>  
 Spécifie les valeurs à insérer dans la table cible.  
   
-(*column_list*)  
+( *column_list* )  
 Liste d'une ou de plusieurs colonnes de la table cible dans lesquelles insérer des données. Les colonnes doivent être spécifiées comme un nom en une seule partie sinon l'instruction MERGE échouera. *column_list* doit être placé entre parenthèses et délimité par des virgules.  
   
-VALUES ( *values_list*)  
+VALUES ( *values_list* )  
 Liste séparée par des virgules et contenant des constantes, variables ou expressions qui retourne les valeurs à insérer dans la table cible. Les expressions ne peuvent pas contenir d'instruction EXECUTE.  
   
 DEFAULT VALUES  
@@ -212,6 +230,16 @@ Spécifie les conditions de recherche pour spécifier \<merge_search_condition> 
 Spécifie le modèle de correspondance de graphe. Pour plus d’informations sur les arguments de cette clause, consultez [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
 ## <a name="remarks"></a>Notes
+>[!NOTE]
+> Dans Azure Synapse Analytics, la commande MERGE (préversion) présente les différences suivantes par rapport à SQL Server et à Azure SQL Database.  
+> - Une mise à jour MERGE correspond à une paire suppression-insertion. Le nombre de lignes affectées par une mise à jour MERGE comprend les lignes supprimées et insérées. 
+> - La prise en charge de tables présentant des types de distribution différents est décrite dans le tableau suivant :
+
+>|Clause MERGE dans Azure Synapse Analytics|Table de distribution CIBLE prise en charge| Table de distribution SOURCE prise en charge|Comment|  
+>|-----------------|---------------|-----------------|-----------|  
+>|**WHEN MATCHED**| HASH, ROUND_ROBIN, REPLICATE |Tous les points de distribution||  
+>|**NOT MATCHED BY TARGET**|HASH |Tous les points de distribution|Utilisez UPDATE/DELETE FROM… JOIN pour synchroniser deux tables. |
+>|**NOT MATCHED BY SOURCE**|Tous les points de distribution|Tous les points de distribution|Utilisez UPDATE/DELETE FROM… JOIN pour synchroniser deux tables.||  
 
 Au moins l'une des trois clauses MATCHED doit être spécifiée, mais cela peut être dans n'importe quel ordre. Une variable ne peut pas être mise à jour plus d'une fois dans la même clause MATCHED.  
   
@@ -224,16 +252,17 @@ En cas d’utilisation après MERGE, [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t
 MERGE est un mot clé entièrement réservé lorsque le niveau de compatibilité de la base de données a la valeur 100 ou une valeur supérieure. L'instruction MERGE est disponible sous les niveaux de compatibilité de base de données 90 et 100 ; cependant, le mot clé n'est pas entièrement réservé lorsque le niveau de compatibilité de la base de données a la valeur 90.  
   
 N’utilisez pas l’instruction **MERGE** avec la réplication de mise à jour en attente. **MERGE** et le déclencheur de mise à jour en attente ne sont pas compatibles. Remplacez l’instruction **MERGE** par une instruction d’insertion (INSERT) ou de mise à jour (UPDATE).  
-  
+
+
 ## <a name="trigger-implementation"></a>Implémentation de déclencheur
 
 Pour chaque opération INSERT, UPDATE ou DELETE spécifiée dans l'instruction MERGE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lance tous les déclencheurs AFTER correspondants définis sur la table cible, mais ne garantit pas l'opération sur laquelle les déclencheurs seront lancés en premier ou en dernier. Les déclencheurs définis pour la même opération respectent l'ordre que vous spécifiez. Pour plus d’informations sur le paramétrage de l’ordre de lancement des déclencheurs, consultez [Spécifier les premier et dernier déclencheurs](../../relational-databases/triggers/specify-first-and-last-triggers.md).  
   
 Si la table cible a un déclencheur INSTEAD OF actif défini pour une opération INSERT, UPDATE ou DELETE effectuée par une instruction MERGE, elle doit avoir un déclencheur INSTEAD OF actif pour toutes les opérations spécifiées dans l'instruction MERGE.  
   
-Si des déclencheurs INSTEAD OF UPDATE ou INSTEAD OF DELETE sont définis sur *target_table*, les opérations UPDATE ou DELETE ne sont pas exécutées. À la place, les déclencheurs sont lancés et les tables **insérées** et **supprimées** sont remplies en conséquence.  
+Si des déclencheurs INSTEAD OF UPDATE ou INSTEAD OF DELETE sont définis sur *target_table* , les opérations UPDATE ou DELETE ne sont pas exécutées. À la place, les déclencheurs sont lancés et les tables **insérées** et **supprimées** sont remplies en conséquence.  
   
-Si des déclencheurs INSTEAD OF INSERT sont définis sur *target_table*, l’opération INSERT n’est pas effectuée. Au lieu de cela, la table est remplie en conséquence.  
+Si des déclencheurs INSTEAD OF INSERT sont définis sur *target_table* , l’opération INSERT n’est pas effectuée. Au lieu de cela, la table est remplie en conséquence.  
   
 ## <a name="permissions"></a>Autorisations
 
@@ -483,9 +512,6 @@ GO
 ### <a name="e-using-merge-to-do-insert-or-update-on-a-target-edge-table-in-a-graph-database"></a>E. Utilisation de MERGE pour effectuer une opération INSERT ou UPDATE sur une table d’arêtes cible dans une base de données de graphes
 
 Dans cet exemple, vous créez des tables de nœuds `Person` et `City` et une table d’arêtes `livesIn`. Vous utilisez l’instruction MERGE sur l’arête `livesIn` et insérez une nouvelle ligne si l’arête n’existe pas encore entre une `Person` et `City`. Si l’arête existe déjà, vous mettez simplement à jour l’attribut StreetAddress sur l’arête `livesIn`.
-
-> [!NOTE]
-> L’exemple suivant s’applique à SQL Server à partir de 2019.
 
 ```sql
 -- CREATE node and edge tables

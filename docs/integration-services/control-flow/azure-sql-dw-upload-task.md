@@ -14,12 +14,12 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-ms.openlocfilehash: a374a5eaa64eb69d96ddfe609fb8561a1dc983b6
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: c0864f868cc046fcd1f0763fff7e5a97e2fe8607
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725977"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006209"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tâche de chargement Azure SQL Data Warehouse
 
@@ -27,14 +27,14 @@ ms.locfileid: "91725977"
 
 
 
-La **tâche de chargement Azure SQL DW** permet à un package SSIS de copier des données tabulaires du système de fichiers ou du Stockage Blob Azure vers Azure SQL Data Warehouse (DW).
-Elle s’appuie sur PolyBase pour améliorer les performances, comme le décrit l’article [Stratégies et modèles de chargement d’Azure SQL Data Warehouse](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies).
+La **tâche de chargement Azure SQL DW** permet à un package SSIS de copier des données tabulaires dans Azure Synapse Analytics (DW) à partir du système de fichiers ou du Stockage Blob Azure.
+Elle s’appuie sur PolyBase pour améliorer les performances (cf. article [Stratégies et modèles de chargement Azure Synapse Analytics](/archive/blogs/sqlcat/azure-sql-data-warehouse-loading-patterns-and-strategies)).
 Le format de fichier de données source pris en charge actuellement est le texte délimité dans l’encodage UTF-8.
 Les données copiées à partir du système de fichiers sont chargées tout d’abord sur le Stockage Blob Azure pour la gestion intermédiaire, puis sur Azure SQL DW. Un compte de Stockage Blob Azure est donc nécessaire.
 
 La **tâche de chargement Azure SQL Data Warehouse** est un composant de [SQL Server Integration Services (SSIS) Feature Pack pour Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-Pour ajouter une **tâche de chargement Azure SQL Data Warehouse**, faites-la glisser de la boîte à outils SSIS vers le canevas du concepteur, double-cliquez dessus ou cliquez dessus avec le bouton droit, puis cliquez sur **Modifier** pour afficher la boîte de dialogue de l’éditeur de tâche.
+Pour ajouter une **tâche de chargement Azure SQL Data Warehouse** , faites-la glisser de la boîte à outils SSIS vers le canevas du concepteur, double-cliquez dessus ou cliquez dessus avec le bouton droit, puis cliquez sur **Modifier** pour afficher la boîte de dialogue de l’éditeur de tâche.
 
 Dans la page **Général** , configurez les propriétés suivantes.
 
@@ -63,8 +63,8 @@ CompressionType|Spécifie le format de compression à utiliser lors du chargemen
 CompressionLevel|Spécifie le niveau de compression à utiliser pour le format de compression.
 AzureDwConnection|Spécifie un gestionnaire de connexions ADO.NET pour Azure SQL Data Warehouse.
 TableName|Spécifie le nom de la table de destination. Choisissez un nom de table existant ou créez-en un en choisissant **\<New Table ...>** .
-TableDistribution|Spécifie la méthode de distribution pour la nouvelle table. S’applique si un nouveau nom de table est spécifié pour **TableName**.
-HashColumnName|Spécifie la colonne utilisée pour la distribution de table de hachage. S’applique si la valeur **HASH** est spécifiée pour **TableDistribution**.
+TableDistribution|Spécifie la méthode de distribution pour la nouvelle table. S’applique si un nouveau nom de table est spécifié pour **TableName** .
+HashColumnName|Spécifie la colonne utilisée pour la distribution de table de hachage. S’applique si la valeur **HASH** est spécifiée pour **TableDistribution** .
 
 ### <a name="blobstorage"></a>BlobStorage
 
@@ -78,8 +78,8 @@ ColumnDelimiter|Spécifie un ou plusieurs caractères qui marquent la fin de cha
 CompressionType|Spécifie le format de compression utilisé pour les données sources.
 AzureDwConnection|Spécifie un gestionnaire de connexions ADO.NET pour Azure SQL Data Warehouse.
 TableName|Spécifie le nom de la table de destination. Choisissez un nom de table existant ou créez-en un en choisissant **\<New Table ...>** .
-TableDistribution|Spécifie la méthode de distribution pour la nouvelle table. S’applique si un nouveau nom de table est spécifié pour **TableName**.
-HashColumnName|Spécifie la colonne utilisée pour la distribution de table de hachage. S’applique si la valeur **HASH** est spécifiée pour **TableDistribution**.
+TableDistribution|Spécifie la méthode de distribution pour la nouvelle table. S’applique si un nouveau nom de table est spécifié pour **TableName** .
+HashColumnName|Spécifie la colonne utilisée pour la distribution de table de hachage. S’applique si la valeur **HASH** est spécifiée pour **TableDistribution** .
 
 La page **Mappages** sera différente selon que les données sont copiées sur une nouvelle table ou sur une table existante.
 Dans le premier cas, configurez les colonnes sources à mapper et les noms correspondants dans la table de destination à créer.

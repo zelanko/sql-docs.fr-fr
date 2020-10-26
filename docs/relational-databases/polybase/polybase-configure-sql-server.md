@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: 31b07b70e5a90d36a7094f38eab7b99f3bac821e
-ms.sourcegitcommit: 32135463a8494d9ed1600a58f51819359e3c09dc
+ms.openlocfilehash: 23eadb2089e3f692e5e054441b7617e09e71ac01
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "91834025"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005847"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurer PolyBase pour accéder à des données externes dans SQL Server
 
@@ -81,7 +81,7 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
 
 ## <a name="sql-server-connector-compatible-types"></a>Types compatibles avec le connecteur SQL Server
 
-Vous pouvez établir une connexion avec d’autres sources de données qui reconnaissent les connexions SQL Server. Utilisez le connecteur SQL Server PolyBase pour créer une table externe pour Azure SQL Data Warehouse et Azure SQL Database. Pour accomplir cette tâche, suivez les étapes indiquées précédemment. Vérifiez que les informations d’identification incluses dans l’étendue de la base de données, l’adresse du serveur, le port et la chaîne d’emplacement sont bien ceux de la source de données compatible à laquelle vous souhaitez vous connecter.
+Vous pouvez établir une connexion avec d’autres sources de données qui reconnaissent les connexions SQL Server. Utilisez le connecteur PolyBase SQL Server pour créer une table externe Azure Synapse Analytics et Azure SQL Database. Pour accomplir cette tâche, suivez les étapes indiquées précédemment. Vérifiez que les informations d’identification incluses dans l’étendue de la base de données, l’adresse du serveur, le port et la chaîne d’emplacement sont bien ceux de la source de données compatible à laquelle vous souhaitez vous connecter.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

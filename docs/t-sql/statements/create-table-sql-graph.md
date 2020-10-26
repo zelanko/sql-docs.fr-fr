@@ -33,12 +33,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc39fbcb191810f7e357167f15c4d0ca084711d8
-ms.sourcegitcommit: ac9feb0b10847b369b77f3c03f8200c86ee4f4e0
+ms.openlocfilehash: 325e6d949cfede5bec7ccdb958dac2c82e9d9efa
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "90688670"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005592"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
@@ -102,7 +102,7 @@ CREATE TABLE
 Ce document répertorie uniquement les arguments appartenant à un graphe SQL. Pour obtenir la liste complète des arguments pris en charge et leur description, consultez [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).
 
  *database_name*    
- Nom de la base de données dans laquelle la table est créée. *database_name* doit spécifier le nom d’une base de données existante. Si aucun nom n’est spécifié, *database_name* correspond par défaut à la base de données actuelle. Le nom d’accès de la connexion actuelle doit être associé à un ID d’utilisateur existant dans la base de données spécifiée par *database_name*, et cet ID d’utilisateur doit disposer des autorisations CREATE TABLE.  
+ Nom de la base de données dans laquelle la table est créée. *database_name* doit spécifier le nom d’une base de données existante. Si aucun nom n’est spécifié, *database_name* correspond par défaut à la base de données actuelle. Le nom d’accès de la connexion actuelle doit être associé à un ID d’utilisateur existant dans la base de données spécifiée par *database_name* , et cet ID d’utilisateur doit disposer des autorisations CREATE TABLE.  
   
  *schema_name*    
  Nom du schéma auquel appartient la nouvelle table.  
@@ -117,7 +117,10 @@ Ce document répertorie uniquement les arguments appartenant à un graphe SQL. P
  Crée une table d’arêtes.  
  
  *table_constraint*   
- Spécifie les propriétés d’une contrainte PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION ou CHECK, ou encore une définition DEFAULT ajoutée à une table.
+ Spécifie les propriétés d’une contrainte PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION ou CHECK, ou d’une définition DEFAULT ajoutée à une table.
+ 
+ > [!NOTE]   
+ > La contrainte CONNECTION ne s’applique qu’à un type de table d’arêtes.
  
  ON { partition_scheme | filegroup | "default" }    
  Spécifie le schéma de partition ou groupe de fichiers dans lequel la table est stockée. Si partition_scheme est spécifié, la table est partitionnée avec des partitions stockées dans un ensemble de fichiers ou groupes de fichiers spécifié dans partition_scheme. Si le groupe de fichiers est spécifié, la table est stockée dans le groupe de fichiers nommé. Le groupe de fichiers doit exister dans la base de données. Si "default" est spécifié, ou si ON n’est pas spécifié du tout, la table est stockée dans le groupe de fichiers par défaut. Le mécanisme de stockage d'une table tel que spécifié dans CREATE TABLE ne peut plus être modifié ultérieurement.
@@ -125,7 +128,8 @@ Ce document répertorie uniquement les arguments appartenant à un graphe SQL. P
  ON {partition_scheme | filegroup | "default"}    
  Peut également être spécifié dans une contrainte PRIMARY KEY ou UNIQUE. Ces contraintes créent des index. Si le groupe de fichiers est spécifié, l’index est stocké dans le groupe de fichiers nommé. Si "default" est spécifié, ou si ON n’est pas spécifié du tout, l’index est stocké dans le même groupe de fichiers que la table. Si la contrainte PRIMARY KEY ou UNIQUE crée un index cluster, les pages de données de la table sont stockées dans le même groupe de fichiers que l'index. Si CLUSTERED est spécifié ou la contrainte crée un index cluster d’une autre manière, et qu’une valeur partition_scheme est spécifiée qui diffère des valeurs partition_scheme ou le groupe de fichiers de la définition de table, ou vice versa, seule la définition de la contrainte sera honorée et l’autre sera ignorée.
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Remarques
+
 Le création d’une table temporaire en tant que nœud ou table d’arêtes n’est pas prise en charge.  
 
 Le création d’une table de nœuds ou d’arêtes temporelle n’est pas prise en charge.
@@ -163,6 +167,16 @@ Les exemples suivants montrent comment créer des tables `EDGE`.
 ```sql
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
+```
+
+L’exemple suivant modélise la règle selon laquelle **seules** des personnes peuvent être amies avec d’autres personnes. En d’autres termes, cette arête n’autorise pas les références à des nœuds autres que Person.
+
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

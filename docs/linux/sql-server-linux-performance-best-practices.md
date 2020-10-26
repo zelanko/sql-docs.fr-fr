@@ -4,16 +4,16 @@ description: Cet article fournit les meilleures pratiques en matière de perform
 author: tejasaks
 ms.author: tejasaks
 ms.reviewer: vanto
-ms.date: 09/16/2020
+ms.date: 10/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 41ed6122e2ff75220d0fc45a75d4769804d0638c
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ddeb5d106de872b507c88a199050cfc883a63a4c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91867212"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005692"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Meilleures pratiques en matière de performances et lignes directrices de configuration pour SQL Server sur Linux
 
@@ -31,7 +31,7 @@ Il est recommandé d’effectuer les tâches de configuration suivantes après a
 
 - **Utiliser PROCESS AFFINITY pour le nœud et/ou les UC**
 
-   Il est recommandé d’utiliser `ALTER SERVER CONFIGURATION` pour définir `PROCESS AFFINITY` pour tous les **NUMANODE** et/ou les UC que vous utilisez pour SQL Server (généralement pour tous les nœuds et toutes les UC) sur un système d’exploitation Linux. L’affinité du processus permet de conserver un comportement de planification Linux et SQL efficace. L’utilisation de l’option **NUMANODE** est la méthode la plus simple. Notez que vous devez utiliser **PROCESS AFFINITY** même si vous n’avez qu’un seul nœud NUMA sur votre ordinateur.  Consultez la documentation [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentation for more information on how to set **PROCESS AFFINITY**.
+   Il est recommandé d’utiliser `ALTER SERVER CONFIGURATION` pour définir `PROCESS AFFINITY` pour tous les **NUMANODE** et/ou les UC que vous utilisez pour SQL Server (généralement pour tous les nœuds et toutes les UC) sur un système d’exploitation Linux. L’affinité du processus permet de conserver un comportement de planification Linux et SQL efficace. L’utilisation de l’option **NUMANODE** est la méthode la plus simple. Notez que vous devez utiliser **PROCESS AFFINITY** même si vous n’avez qu’un seul nœud NUMA sur votre ordinateur.  Consultez la documentation [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md) documentation for more information on how to set **PROCESS AFFINITY** .
 
 - **Configurer plusieurs fichiers de données tempdb**
 
@@ -77,7 +77,7 @@ La table suivante fournit des suggestions pour les paramètres du disque :
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Paramètre de noyau d’équilibrage NUMA automatique pour les systèmes NUMA à plusieurs nœuds
 
-Si vous installez SQL Server sur des systèmes **NUMA** à plusieurs nœuds, le paramètre de noyau **kernel. numa_balancing** suivant est activé par défaut. Pour permettre à SQL Server de fonctionner avec un niveau d'efficacité maximal sur un système **NUMA**, désactivez l’équilibrage NUMA automatique sur un système NUMA à plusieurs nœuds :
+Si vous installez SQL Server sur des systèmes **NUMA** à plusieurs nœuds, le paramètre de noyau **kernel. numa_balancing** suivant est activé par défaut. Pour permettre à SQL Server de fonctionner avec un niveau d'efficacité maximal sur un système **NUMA** , désactivez l’équilibrage NUMA automatique sur un système NUMA à plusieurs nœuds :
 
 ```bash
 sysctl -w kernel.numa_balancing=0
@@ -85,10 +85,10 @@ sysctl -w kernel.numa_balancing=0
 
 ### <a name="kernel-settings-for-virtual-address-space"></a>Paramètres de noyau pour l’espace d’adressage virtuel
 
-La valeur par défaut de **vm. max _map_count** (65536) peut ne pas être suffisamment élevée pour une installation SQL Server. Pour cette raison, remplacez la valeur de **vm.max_map_count** par 262144 pour un déploiement SQL Server, et reportez-vous à la section [Paramètres Linux proposés à l’aide d’un profil MSSQL optimisé](#proposed-linux-settings-using-a-tuned-mssql-profile) pour affiner les paramètres de ce noyau. La valeur maximale pour vm.max_map_count est 2147483647.
+La valeur par défaut de **vm. max _map_count** (65536) peut ne pas être suffisamment élevée pour une installation SQL Server. Par conséquent, remplacez la valeur de **vm.max_map_count** par 262144 minimum pour un déploiement SQL Server. Reportez-vous à la section [Paramètres Linux proposés à l’aide d’un profil MSSQL ajusté](#proposed-linux-settings-using-a-tuned-mssql-profile) pour affiner ces paramètres de noyau. La valeur maximale pour vm.max_map_count est 2147483647.
 
 ```bash
-sysctl -w vm.max_map_count=262144
+sysctl -w vm.max_map_count=1600000
 ```
 
 ### <a name="proposed-linux-settings-using-a-tuned-mssql-profile"></a>Paramètres Linux proposés avec un profil MSSQL Tuned

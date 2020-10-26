@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 1699ac4a2ad49a6a65fafed6a75c71585514de51
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: dcad505d75528f17c65263f3b3a68defdcb6fb30
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868049"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92005580"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Utiliser un fichier de format pour importer des données en bloc (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -33,9 +33,9 @@ Cette rubrique illustre l'utilisation d'un fichier de format dans les importatio
   * SQLCHAR ou SQLVARYCHAR (les données sont envoyées dans la page de codes du client ou dans la page de codes impliquée par le classement)
   * SQLNCHAR ou SQLNVARCHAR (les données sont envoyées au format Unicode)
   * SQLBINARY ou SQLVARYBIN (les données sont envoyées sans être converties).
-* Azure SQL Database et Azure SQL Data Warehouse prennent uniquement en charge [bcp](../../tools/bcp-utility.md).  Si vous souhaitez en savoir plus, veuillez consulter :
-  * [Chargement de données dans Azure SQL Data Warehouse](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
-  * [Charger des données à partir de SQL Server dans Azure SQL Data Warehouse (fichiers plats)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+* Azure SQL Database et Azure Synapse Analytics ne prennent en charge que [bcp](../../tools/bcp-utility.md).  Si vous souhaitez en savoir plus, veuillez consulter :
+  * [Charger des données dans Azure Synapse Analytics](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
+  * [Charger des données de SQL Server dans Azure Synapse Analytics (fichiers plats)](/azure/synapse-analytics/sql-data-warehouse/design-elt-data-loading)
   * [Migration de vos données](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-develop)
 
 ## <a name="example-test-conditions"></a>Exemples de conditions de test

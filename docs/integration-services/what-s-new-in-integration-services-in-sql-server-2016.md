@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 16844bfb5c173fdb6527777950a8d80f1b177994
-ms.sourcegitcommit: 827ad02375793090fa8fee63cc372d130f11393f
+ms.openlocfilehash: a458d0bcf700341951d79c775fb06fde37585362
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2020
-ms.locfileid: "89480825"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92193729"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Nouveautés d’Integration Services dans SQL Server 2016
 
@@ -112,7 +112,7 @@ Ces nouvelles fonctionnalités nécessitent SQL Server Data Tools (SSDT) version
         
         -   [Prise en charge d’Azure Data Lake Store](#datalakestore)
         
-        -   [Prise en charge d’Azure SQL Data Warehouse](#sqldwupload)
+        -   [Prise en charge d’Azure Synapse Analytics](#sqldwupload)
   
 -   **Convivialité et productivité**  
   
@@ -203,7 +203,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
  Le nouveau niveau de journalisation **RuntimeLineage** dans le catalogue SSIS permet de collecter les données nécessaires pour le suivi des informations de lignage dans le flux de données. Vous pouvez analyser ces informations de lignage pour mapper la relation de lignage entre différentes tâches. Les éditeurs de logiciels indépendants et les développeurs peuvent créer des outils de mappage de lignage personnalisés à l’aide de ces informations. 
 
 ####  <a name="new-custom-logging-level-in-the-ssis-catalog"></a><a name="CustomLogging"></a> Nouveau niveau de journalisation personnalisé dans le catalogue SSIS  
- Dans les versions antérieures du catalogue SSIS, vous pouvez choisir l’un des quatre niveaux de journalisation intégrés ( **None, Basic, Performance ou Verbose**) quand vous exécutez un package. SQL Server 2016 ajoute le niveau de journalisation **RuntimeLineage**. En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
+ Dans les versions antérieures du catalogue SSIS, vous pouvez choisir l’un des quatre niveaux de journalisation intégrés ( **None, Basic, Performance ou Verbose** ) quand vous exécutez un package. SQL Server 2016 ajoute le niveau de journalisation **RuntimeLineage** . En outre, vous pouvez désormais créer et enregistrer plusieurs niveaux de journalisation personnalisés dans le catalogue SSIS, et choisir le niveau de journalisation à utiliser chaque fois que vous exécutez un package. Pour chaque niveau de journalisation personnalisé, sélectionnez uniquement les statistiques et les événements à capturer. Vous pouvez éventuellement inclure le contexte de l’événement pour voir les valeurs des variables, les chaînes de connexion et les propriétés de la tâche. Pour plus d’informations, consultez [Activer la journalisation des exécutions de package sur le serveur SSIS](../integration-services/performance/integration-services-ssis-logging.md#server_logging). 
 
 ####  <a name="column-names-for-errors-in-the-data-flow"></a><a name="ErrorColumn"></a> Noms de colonnes pour les erreurs contenues dans le flux de données  
  Lorsque vous redirigez les lignes contenant des erreurs vers une sortie d'erreur dans le flux de données, la sortie contient un identificateur numérique pour la colonne dans laquelle l'erreur s'est produite, mais n'affiche pas le nom de la colonne. Il existe désormais plusieurs façons de rechercher ou d’afficher le nom de la colonne dans laquelle l’erreur s’est produite.  
@@ -232,7 +232,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
 >  (Dans RC0, cette méthode a été déplacée dans la nouvelle interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Pour plus d’informations, consultez [Nouvelle interface IDTSComponentMetaData130 dans l’API](#CMD130).)  
 
 ####  <a name="support-for-server-wide-default-logging-level"></a><a name="ServerLogLevel"></a> Prise en charge du niveau de journalisation par défaut au niveau du serveur  
- Dans **Propriétés du serveur**de SQL Server, sous la propriété **Niveau de journalisation du serveur** , vous pouvez désormais sélectionner un niveau de journalisation par défaut au niveau du serveur. Vous pouvez choisir l’un des niveaux de journalisation intégrés (Basic, None, Verbose, Performance ou RuntimeLineage), ou choisir un niveau de journalisation personnalisé existant. Le niveau de journalisation sélectionné s’applique à tous les packages déployés dans le catalogue SSIS. Il s'applique également par défaut à une étape de travail de l'Agent SQL qui exécute un package SSIS.  
+ Dans **Propriétés du serveur** de SQL Server, sous la propriété **Niveau de journalisation du serveur** , vous pouvez désormais sélectionner un niveau de journalisation par défaut au niveau du serveur. Vous pouvez choisir l’un des niveaux de journalisation intégrés (Basic, None, Verbose, Performance ou RuntimeLineage), ou choisir un niveau de journalisation personnalisé existant. Le niveau de journalisation sélectionné s’applique à tous les packages déployés dans le catalogue SSIS. Il s'applique également par défaut à une étape de travail de l'Agent SQL qui exécute un package SSIS.  
 
 ####  <a name="new-idtscomponentmetadata130-interface-in-the-api"></a><a name="CMD130"></a> Nouvelle interface IDTSComponentMetaData130 dans l’API  
  Le nouveau niveau de journalisation <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> ajoute de nouvelles fonctionnalités à l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> existante dans SQL Server 2016, en particulier la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> . (La méthode **GetIdentificationStringByID** est déplacée de l’interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> dans la nouvelle interface.) Il y a également deux nouvelles interfaces, <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn130> et <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn130> , qui fournissent la propriété **LineageIdentificationString** . Pour plus d’informations, consultez [Noms de colonnes pour les erreurs contenues dans le flux de données](#ErrorColumn).  
@@ -243,7 +243,7 @@ La fonctionnalité de déploiement incrémentiel de packages vous permet de dép
  Durant la mise à niveau des projets SSIS de versions antérieures vers la version actuelle, les gestionnaires de connexions au niveau du projet continuent de fonctionner comme prévu. De plus, la disposition du package et les annotations sont conservées.  
 
 ####  <a name="autoadjustbuffersize-property-automatically-calculates-buffer-size-for-data-flow"></a><a name="BufferSize"></a> La propriété AutoAdjustBufferSize calcule automatiquement la taille de la mémoire tampon du flux de données  
- Quand vous définissez la nouvelle propriété **AutoAdjustBufferSize** à la valeur **true**, le moteur de flux de données calcule automatiquement la taille de la mémoire tampon pour le flux de données. Pour plus d’informations, consultez [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
+ Quand vous définissez la nouvelle propriété **AutoAdjustBufferSize** à la valeur **true** , le moteur de flux de données calcule automatiquement la taille de la mémoire tampon pour le flux de données. Pour plus d’informations, consultez [Data Flow Performance Features](../integration-services/data-flow/data-flow-performance-features.md).  
 
 ####  <a name="reusable-control-flow-templates"></a><a name="Templates"></a> Modèles de flux de contrôle réutilisables  
  Enregistrez une tâche de flux de contrôle ou un conteneur fréquemment utilisé dans un fichier de modèle autonome, puis réutilisez-le plusieurs fois dans un ou plusieurs packages d’un projet à l’aide de modèles de flux de contrôle. Cette possibilité de réutilisation facilite la conception et la gestion des packages SSIS. Pour plus d’informations, consultez [Réutiliser un flux de contrôle sur des packages à l’aide de composants de package de flux de contrôle](../integration-services/reuse-control-flow-across-packages-by-using-control-flow-package-parts.md).  
@@ -309,7 +309,7 @@ Quand SQL Server 2016 Service Pack 1 est installé, le Gestionnaire de connexion
 
 La dernière version du Feature Pack Azure inclut un gestionnaire de connexions, une source et une destination pour déplacer des données vers et depuis Azure Data Lake Store. Pour plus d’informations, consultez l’article [Le Feature Pack SQL Server Integration Services (SSIS) pour Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
-#### <a name="support-for-azure-sql-data-warehouse-released"></a><a name="sqldwupload"></a> Prise en charge d’Azure SQL Data Warehouse
+#### <a name="support-for-azure-synapse-analytics-released"></a><a name="sqldwupload"></a> Prise en charge d’Azure Synapse Analytics
 
 La dernière version du Feature Pack Azure inclut la tâche de chargement Azure SQL Data Warehouse pour renseigner SQL Data Warehouse avec des données. Pour plus d’informations, consultez l’article [Le Feature Pack SQL Server Integration Services (SSIS) pour Azure](../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -325,7 +325,7 @@ La dernière version du Feature Pack Azure inclut la tâche de chargement Azure 
 ####  <a name="multi-targeting-and-multi-version-support-in-ssis-designer"></a><a name="OneDesigner"></a> Prise en charge du multi-ciblage et de plusieurs versions dans le Concepteur SSIS  
  Vous pouvez désormais utiliser le Concepteur SSIS dans SQL Server Data Tools (SSDT) pour Visual Studio 2015 pour créer, gérer et exécuter les packages qui ciblent SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Pour obtenir SSDT, voir [Télécharger la dernière version de SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md). 
 
- Dans l’Explorateur de solutions, cliquez avec le bouton droit sur un projet Integration Services, puis sélectionnez **Propriétés** pour ouvrir les pages de propriétés du projet. Sous l’onglet **Général** de **Propriétés de configuration**, sélectionnez la propriété **TargetServerVersion** , puis choisissez SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
+ Dans l’Explorateur de solutions, cliquez avec le bouton droit sur un projet Integration Services, puis sélectionnez **Propriétés** pour ouvrir les pages de propriétés du projet. Sous l’onglet **Général** de **Propriétés de configuration** , sélectionnez la propriété **TargetServerVersion** , puis choisissez SQL Server 2016, SQL Server 2014 ou SQL Server 2012.  
    
  ![Propriété TargetServerVersion dans la boîte de dialogue Propriétés du projet](../integration-services/media/targetserverversion2.png "Propriété TargetServerVersion dans la boîte de dialogue Propriétés du projet")  
 
@@ -376,4 +376,4 @@ La dernière version du Feature Pack Azure inclut la tâche de chargement Azure 
 
 ## <a name="see-also"></a>Voir aussi  
  [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)   
- [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
+ [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../sql-server/editions-and-components-of-sql-server-2016.md)

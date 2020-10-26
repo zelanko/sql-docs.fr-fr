@@ -8,16 +8,16 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: 0174ce5aae88406719fbf57c53734d535476a799
-ms.sourcegitcommit: 4d370399f6f142e25075b3714e5c2ce056b1bfd0
+ms.openlocfilehash: ab9af4d073cbec00736bab6a24817502d353ffd8
+ms.sourcegitcommit: 2b6760408de3b99193edeccce4b92a2f9ed5bcc6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91868151"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92175926"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>Utilisation des SID de service pour accorder des autorisations aux services dans SQL Server
 
-SQL Server utilise [identificateurs de sécurité (SID) par service](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation) pour permettre d’accorder directement les autorisations à un service spécifique. Cette méthode est utilisée par SQL Server pour accorder des autorisations aux services de moteur et d’agent (NT SERVICE\MSSQL$<InstanceName> et NT SERVICE\SQLAGENT$<InstanceName> respectivement). Avec cette méthode, ces services peuvent accéder au moteur de base de données uniquement lorsque les services sont en cours d’exécution.
+SQL Server utilise des [identificateurs de sécurité (SID) par service](https://support.microsoft.com/help/2620201/sql-server-uses-a-service-sid-to-provide-service-isolation) (également connus sous le nom de principaux de sécurité de service) pour permettre d’accorder directement des autorisations à un service spécifique. Cette méthode est utilisée par SQL Server pour accorder des autorisations aux services de moteur et d’agent (NT SERVICE\MSSQL$<InstanceName> et NT SERVICE\SQLAGENT$<InstanceName> respectivement). Avec cette méthode, ces services peuvent accéder au moteur de base de données uniquement lorsque les services sont en cours d’exécution.
 
 Cette méthode peut aussi être utilisée lorsque vous accordez des autorisations à d’autres services. Avec l’ID de sécurité de service, vous éliminez la contrainte de gérer et maintenir les comptes de service et fournissez un contrôle plus strict et granulaire sur les autorisations accordées aux ressources système.
 
@@ -101,6 +101,35 @@ GO
 GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
+
+  > [!NOTE]
+  > Le fait de supprimer les connexions SID de service ou de leur retirer le rôle serveur sysadmin peut entraîner des problèmes pour différents composants de SQL Server qui se connectent au Moteur de base de données SQL Server, notamment :
+  > - SQL Server Agent ne peut pas démarrer ou se connecter à un service SQL Server.
+  > - Les programmes d’installation SQL Server rencontrent le problème mentionné dans l’article suivant de la Base de connaissances Microsoft : https://support.microsoft.com/help/955813/you-may-be-unable-to-restart-the-sql-server-agent-service-after-you-re.
+  >
+  > Pour une instance SQL Server par défaut, il est possible de corriger cette situation en ajoutant le SID de service à l’aide des commandes Transact-SQL suivantes :
+  >
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQLSERVER] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQLSERVER]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLSERVERAGENT] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLSERVERAGENT]
+  > ```
+  > Pour une instance SQL Server nommée, utilisez les commandes Transact-SQL suivantes :
+  > ```sql
+  > CREATE LOGIN [NT SERVICE\MSSQL$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\MSSQL$SQL2019]
+  > 
+  > CREATE LOGIN [NT SERVICE\SQLAgent$SQL2019] FROM WINDOWS WITH DEFAULT_DATABASE=[master], DEFAULT_LANGUAGE=[us_english]
+  > 
+  > ALTER ROLE sysadmin ADD MEMBER [NT SERVICE\SQLAgent$SQL2019]
+  > 
+  > ```
+  > Dans cet exemple, `SQL2019` est le nom de l’instance SQL Server.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

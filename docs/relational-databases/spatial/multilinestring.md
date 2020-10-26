@@ -14,16 +14,16 @@ ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7193675df9f142977325a1c198343497b9b7501
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 6caab752b3edc7c56d127fb3a378a9a5a69a18b7
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88403267"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006302"
 ---
 # <a name="multilinestring"></a>MultiLineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
-   Un objet **MultiLineString** est une collection de zéro ou de plusieurs instances de **geometry** ou **geographyLineString**.  
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+   Un objet **MultiLineString** est une collection de zéro ou de plusieurs instances de **geometry** ou **geographyLineString** .  
   
 ## <a name="multilinestring-instances"></a>Instances MultiLineString  
  L’illustration suivante montre des exemples d’instances **MultiLineString** .  
@@ -40,12 +40,12 @@ ms.locfileid: "88403267"
   
 -   La Figure 4 est une instance **MultiLineString** non simple et non fermée.  
   
--   La Figure 5 est une instance **MultiLineString**simple et non fermée. Elle n’est pas fermée, car ses éléments **LineStrings** ne sont pas fermés. Elle est simple, car aucun des intérieurs des instances **LineStrings** ne se croise.  
+-   La Figure 5 est une instance **MultiLineString** simple et non fermée. Elle n’est pas fermée, car ses éléments **LineStrings** ne sont pas fermés. Elle est simple, car aucun des intérieurs des instances **LineStrings** ne se croise.  
   
 -   La Figure 6 est une instance **MultiLineString** simple et fermée. Elle est fermée car tous ses éléments sont fermés. Elle est simple car aucun de ses éléments ne se croise aux intérieurs.  
   
 ### <a name="accepted-instances"></a>Instances acceptées  
- Pour qu’une instance **MultiLineString** soit acceptée, elle doit être vide ou contenir uniquement les instances **LineString** acceptées. Pour plus d’informations sur les instances **LineString** acceptées, consultez [LineString](../../relational-databases/spatial/linestring.md). Les exemples suivants illustrent des instances **MultiLineString** acceptées.  
+ Pour être acceptée, une instance **MultiLineString** doit être vide ou composée uniquement d’instances **LineString** acceptées. Pour plus d’informations sur les instances **LineString** acceptées, consultez [LineString](../../relational-databases/spatial/linestring.md). Les exemples suivants illustrent des instances **MultiLineString** acceptées.  
   
 ```sql  
 DECLARE @g1 geometry = 'MULTILINESTRING EMPTY';  

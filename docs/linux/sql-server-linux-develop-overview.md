@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 09bdea851ed3b9efeca1c69a09c12108706bbb22
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f9623feab13740d9b328d97a248742711871ffa3
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896498"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115482"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Comment commencer à développer des applications pour SQL Server sur Linux
 
@@ -24,7 +24,7 @@ Vous pouvez créer des applications qui se connectent à et utilisent SQL Server
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> Ces mêmes options de développement vous permettent également de cibler SQL Server sur d’autres plateformes. Les applications peuvent cibler SQL Server s’exécutant en local ou dans le cloud, sur Linux, Windows ou Docker sur macOS. Vous pouvez également cibler Azure SQL Database et Azure SQL Data Warehouse.
+> Ces mêmes options de développement vous permettent également de cibler SQL Server sur d’autres plateformes. Les applications peuvent cibler SQL Server s’exécutant en local ou dans le cloud, sur Linux, Windows ou Docker sur macOS. Vous pouvez également cibler Azure SQL Database et Azure Synapse Analytics.
 
 ## <a name="try-the-tutorials"></a>Essayer les tutoriels
 
@@ -35,7 +35,7 @@ La meilleure façon de commencer et de créer des applications avec SQL Server e
 - Essayez les exemples de code.
 
 > [!TIP]
-> Si vous souhaitez développer pour SQL Server sur Docker, jetez un coup d’œil aux tutoriels **macOS**.
+> Si vous souhaitez développer pour SQL Server sur Docker, jetez un coup d’œil aux tutoriels **macOS** .
 
 ## <a name="create-new-applications"></a>Créez des applications
 
@@ -62,7 +62,7 @@ Pour plus d'informations, consultez les rubriques ci-dessous :
 
 Vous pouvez utiliser la nouvelle [extension mssql](https://aka.ms/mssql-marketplace) pour [Visual Studio Code](https://code.visualstudio.com) sur Linux, macOS et Windows. Pour une procédure pas à pas, consultez le tutoriel suivant :
 
-- [Utiliser Visual Studio Code](sql-server-linux-develop-use-vscode.md)
+- [Utiliser Visual Studio Code](../tools/visual-studio-code/sql-server-develop-use-vscode.md)
 
 Vous pouvez également utiliser de nouveaux outils en ligne de commande qui sont natifs pour Linux. Ces outils incluent les éléments suivants :
 

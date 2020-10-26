@@ -20,19 +20,20 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 42c08d58ed1f5688d66ff6e903c27ba360d6a2d0
+ms.sourcegitcommit: 7eb80038c86acfef1d8e7bfd5f4e30e94aed3a75
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009395"
+ms.lasthandoff: 10/15/2020
+ms.locfileid: "92081948"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Chaque élément sécurisable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a des autorisations associées qui peuvent être accordées à un principal. Les autorisations dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont gérées au niveau du serveur pour les connexions et les rôles de serveur, et au niveau de la base de données pour les utilisateurs de base de données et les rôles de base de données. Le modèle pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] a le même système pour les autorisations de base de données, mais les autorisations de niveau serveur ne sont pas disponibles. Cette rubrique contient la liste complète des autorisations. Pour une implémentation classique des autorisations, consultez [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-Le nombre total d’autorisations pour [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] est 237. La plupart des autorisations s’appliquent à toutes les plates-formes, mais ce n’est pas le cas pour certaines d’entre elles. Par exemple, des autorisations de niveau serveur ne peuvent pas être accordées sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], et seules quelques autorisations sont pertinentes sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] exposait 230 autorisations. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposait 219 autorisations. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposait 214 autorisations. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] exposait 195 autorisations. La rubrique [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) spécifie les rubriques qui sont nouvelles dans les versions récentes.
+Le nombre total d’autorisations pour [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)] est de 248. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] expose 254 autorisations. La plupart des autorisations s’appliquent à toutes les plates-formes, mais ce n’est pas le cas pour certaines d’entre elles. Par exemple, des autorisations de niveau serveur ne peuvent pas être accordées sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], et seules quelques autorisations sont pertinentes sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] exposait 238 autorisations. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] exposait 230 autorisations. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] exposait 219 autorisations. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] exposait 214 autorisations. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] exposait 195 autorisations. La rubrique [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) spécifie les rubriques qui sont nouvelles dans les versions récentes.
 
 Une fois que vous comprenez les autorisations, appliquez des autorisations de niveau serveur aux connexions et des autorisations de niveau base de données aux utilisateurs avec les instructions [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)et [DENY](../../t-sql/statements/deny-transact-sql.md) . Par exemple :   
 ```sql
@@ -52,13 +53,13 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
   
      Confère la capacité de modifier les propriétés, excepté l'appartenance, d'un élément sécurisable particulier. Lorsque ALTER est accordé sur une portée, ALTER octroie également la capacité de modifier, de créer ou de supprimer tous les éléments sécurisables contenus dans cette portée. Par exemple, l'autorisation ALTER sur un schéma inclut la capacité de créer, de modifier et de supprimer les objets du schéma.  
   
--   ALTER ANY \<*Server Securable*>, où *Serveur Sécurisable*, désigne n’importe quel élément sécurisable du serveur.  
+-   ALTER ANY \<*Server Securable*>, où *Serveur Sécurisable* , désigne n’importe quel élément sécurisable du serveur.  
   
-     Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable du serveur*. Par exemple, ALTER ANY LOGIN confère la capacité de créer, de modifier ou de supprimer n'importe quelle connexion dans l'instance.  
+     Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable du serveur* . Par exemple, ALTER ANY LOGIN confère la capacité de créer, de modifier ou de supprimer n'importe quelle connexion dans l'instance.  
   
 -   ALTER ANY \<*Database Securable*> où *Élément sécurisable de la base de données* désigne n’importe quel élément sécurisable au niveau de la base de données.  
   
-     Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable de base de données*. Par exemple, ALTER ANY SCHEMA confère la capacité de créer, de modifier ou de supprimer n'importe quel schéma dans la base de données.  
+     Confère la capacité de créer, de modifier ou de supprimer des instances individuelles de l' *Élément sécurisable de base de données* . Par exemple, ALTER ANY SCHEMA confère la capacité de créer, de modifier ou de supprimer n'importe quel schéma dans la base de données.  
   
 -   TAKE OWNERSHIP  
   
@@ -74,11 +75,11 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
   
 -   CREATE \<*Server Securable*>  
   
-     Confère au bénéficiaire la capacité de créer l' *Élément sécurisable du serveur*.  
+     Confère au bénéficiaire la capacité de créer l' *Élément sécurisable du serveur* .  
   
 -   CREATE \<*Database Securable*>  
   
-     Confère au bénéficiaire la capacité de créer l' *Élément sécurisable de base de données*.  
+     Confère au bénéficiaire la capacité de créer l' *Élément sécurisable de base de données* .  
   
 -   CREATE \<*Schema-contained Securable*>  
   
@@ -363,7 +364,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
 ##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a> Résumé de l’algorithme de vérification des autorisations  
- La vérification des autorisations peut être complexe. L'algorithme de vérification des autorisations englobe les membres de groupes qui se chevauchent et le chaînage des propriétés, l'autorisation explicite et implicite, et peut être affecté par les autorisations sur les classes sécurisables qui contiennent l'entité sécurisable. Le processus général de l'algorithme consiste à collecter toutes les autorisations pertinentes. Si aucun blocage DENY n'est rencontré, l'algorithme recherche une instruction GRANT fournissant un accès suffisant. L'algorithme contient trois éléments essentiels : le **contexte de sécurité**, l' **espace d'autorisation**et l' **autorisation requise**.  
+ La vérification des autorisations peut être complexe. L'algorithme de vérification des autorisations englobe les membres de groupes qui se chevauchent et le chaînage des propriétés, l'autorisation explicite et implicite, et peut être affecté par les autorisations sur les classes sécurisables qui contiennent l'entité sécurisable. Le processus général de l'algorithme consiste à collecter toutes les autorisations pertinentes. Si aucun blocage DENY n'est rencontré, l'algorithme recherche une instruction GRANT fournissant un accès suffisant. L'algorithme contient trois éléments essentiels : le **contexte de sécurité** , l' **espace d'autorisation** et l' **autorisation requise** .  
   
 > [!NOTE]  
 >  Vous ne pouvez pas accorder, refuser ou révoquer des autorisations à sa, dbo, le propriétaire de l'entité (entity owner), information_schema, sys ou à vous-même.  
@@ -403,18 +404,18 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
   
 2.  Autorisation de l'accès si le chaînage des propriétés est applicable et si la vérification de l'accès sur l'objet plus tôt dans la chaîne a passé avec succès le contrôle de sécurité.  
   
-3.  Agrégation des identités de niveau serveur, base de données et du module signé qui sont associées à l'appelant pour créer le **contexte de sécurité**.  
+3.  Agrégation des identités de niveau serveur, base de données et du module signé qui sont associées à l'appelant pour créer le **contexte de sécurité** .  
   
-4.  Pour ce **contexte de sécurité**, collecte de toutes les autorisations accordées ou refusées pour l' **espace d'autorisation**. L'autorisation peut être explicitement déclarée comme une autorisation GRANT, GRANT WITH GRANT ou DENY ; les autorisations peuvent également correspondre à une autorisation implicite ou couvrante GRANT ou DENY. Par exemple, l'autorisation CONTROL sur un schéma implique une autorisation CONTROL sur une table. Et une autorisation CONTROL sur une table implique une autorisation SELECT. Par conséquent, si l'autorisation CONTROL a été accordée sur le schéma, l'autorisation SELECT l'est également sur la table. Si l'autorisation CONTROL a été refusée sur la table, l'autorisation SELECT l'est tout autant sur la table.  
+4.  Pour ce **contexte de sécurité** , collecte de toutes les autorisations accordées ou refusées pour l' **espace d'autorisation** . L'autorisation peut être explicitement déclarée comme une autorisation GRANT, GRANT WITH GRANT ou DENY ; les autorisations peuvent également correspondre à une autorisation implicite ou couvrante GRANT ou DENY. Par exemple, l'autorisation CONTROL sur un schéma implique une autorisation CONTROL sur une table. Et une autorisation CONTROL sur une table implique une autorisation SELECT. Par conséquent, si l'autorisation CONTROL a été accordée sur le schéma, l'autorisation SELECT l'est également sur la table. Si l'autorisation CONTROL a été refusée sur la table, l'autorisation SELECT l'est tout autant sur la table.  
   
     > [!NOTE]  
     >  Une instruction GRANT associée à une autorisation au niveau colonne se substitue à une instruction DENY au niveau objet.  
   
-5.  Identification de l' **autorisation requise**.  
+5.  Identification de l' **autorisation requise** .  
   
-6.  Échec de la vérification des autorisations si l' **autorisation requise** est directement ou implicitement refusée à l'une des identités dans le **contexte de sécurité** pour les objets contenus dans l' **espace d'autorisation**.  
+6.  Échec de la vérification des autorisations si l' **autorisation requise** est directement ou implicitement refusée à l'une des identités dans le **contexte de sécurité** pour les objets contenus dans l' **espace d'autorisation** .  
   
-7.  Succès de la vérification des autorisations si l' **autorisation requise** n'a pas été refusée et si l' **autorisation requise** contient une autorisation GRANT ou GRANT WITH GRANT directement ou implicitement accordée à l'une des identités dans le **contexte de sécurité** pour un objet contenu dans l' **espace d'autorisation**.  
+7.  Succès de la vérification des autorisations si l' **autorisation requise** n'a pas été refusée et si l' **autorisation requise** contient une autorisation GRANT ou GRANT WITH GRANT directement ou implicitement accordée à l'une des identités dans le **contexte de sécurité** pour un objet contenu dans l' **espace d'autorisation** .  
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Considérations spéciales relatives aux autorisations au niveau des colonnes
 

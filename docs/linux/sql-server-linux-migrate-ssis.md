@@ -8,12 +8,12 @@ ms.date: 01/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: a459924450582e57ff17af2cc8f48c9156ab8bb2
-ms.sourcegitcommit: 3ea082c778f6771b17d90fb597680ed334d3e0ec
+ms.openlocfilehash: e513f6783e827617a8c0cc4a1fa0ea4644dcb6e7
+ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "88088869"
+ms.lasthandoff: 10/16/2020
+ms.locfileid: "92115840"
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Extraire, transformer et charger des données sur Linux avec SSIS
 
@@ -21,7 +21,7 @@ ms.locfileid: "88088869"
 
 Cet article explique comment exécuter des packages SQL Server Integration Services (SSIS) sur Linux. SSIS résout des problèmes complexes d'intégration de données en extrayant des données de plusieurs sources et formats, en transformant et en nettoyant les données, puis en les chargeant vers différentes destinations. 
 
-Les packages SSIS fonctionnant sur Linux peuvent se connecter à Microsoft SQL Server sur Windows en local ou dans le cloud, sur Linux ou dans Docker. Ils peuvent également se connecter à Azure SQL Database, Azure SQL Data Warehouse, aux sources de données ODBC, aux fichiers plats et à d'autres sources de données, notamment les sources ADO.NET, les fichiers XML et les services OData.
+Les packages SSIS fonctionnant sur Linux peuvent se connecter à Microsoft SQL Server sur Windows en local ou dans le cloud, sur Linux ou dans Docker. Ils peuvent également se connecter à Azure SQL Database, à Azure Synapse Analytics, à des sources de données ODBC, à des fichiers plats et à d'autres sources de données, notamment des sources ADO.NET, des fichiers XML et des services OData.
 
 Pour plus d’informations sur les capacités de SSIS, consultez [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
@@ -71,9 +71,9 @@ Il existe trois façons d'exécuter un package SSIS chiffré avec un mot de pass
 
 ## <a name="design-packages"></a>Concevoir des packages
 
-**Se connecter à des sources de données ODBC**. Avec SSIS sur Linux CTP 2.1 Refresh et versions ultérieures, les packages SSIS peuvent utiliser les connexions ODBC sur Linux. Cette fonctionnalité a été testée avec les pilotes SQL Server et MySQL ODBC, mais elle devrait également fonctionner avec tout pilote ODBC Unicode conforme au standard ODBC. Au moment de la conception, vous pouvez fournir un DSN ou une chaîne de connexion pour vous connecter aux données ODBC ; vous pouvez également utiliser l'authentification Windows. Pour plus d'informations, consultez le [billet de blog annonçant le support d’ODBC sur Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
+**Se connecter à des sources de données ODBC** . Avec SSIS sur Linux CTP 2.1 Refresh et versions ultérieures, les packages SSIS peuvent utiliser les connexions ODBC sur Linux. Cette fonctionnalité a été testée avec les pilotes SQL Server et MySQL ODBC, mais elle devrait également fonctionner avec tout pilote ODBC Unicode conforme au standard ODBC. Au moment de la conception, vous pouvez fournir un DSN ou une chaîne de connexion pour vous connecter aux données ODBC ; vous pouvez également utiliser l'authentification Windows. Pour plus d'informations, consultez le [billet de blog annonçant le support d’ODBC sur Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
 
-**Chemins d'accès**. Fournissez des chemins de style Windows dans vos packages SSIS. SSIS sur Linux ne prend pas en charge les chemins de style Linux, mais mappe les chemins de style Windows aux chemins de style Linux lors de l'exécution. Ensuite, par exemple, SSIS sur Linux mappe le chemin de style Windows `C:\test` au chemin de style Linux `/test`.
+**Chemins d'accès** . Fournissez des chemins de style Windows dans vos packages SSIS. SSIS sur Linux ne prend pas en charge les chemins de style Linux, mais mappe les chemins de style Windows aux chemins de style Linux lors de l'exécution. Ensuite, par exemple, SSIS sur Linux mappe le chemin de style Windows `C:\test` au chemin de style Linux `/test`.
 
 ## <a name="deploy-packages"></a>Déployer des packages
 Vous ne pouvez stocker des packages dans le système de fichiers sur Linux que dans cette version. La base de données du catalogue SSIS et le service SSIS hérité ne sont pas disponibles sur Linux pour le déploiement et le stockage des packages.
@@ -94,7 +94,7 @@ Pour plus d’informations concernant SSIS sur Linux, consultez les billets de b
 
 ## <a name="more-info-about-ssis"></a>En savoir plus sur SSIS
 
-Microsoft SQL Server Integration Services (SSIS) est une plateforme conçue pour créer des solutions d’intégration de données à hautes performances, notamment des packages d’extraction, de transformation et de chargement (ETL) pour l’entreposage de données. Pour plus d’informations, consultez [SQL Server Integration Services](/sql/integration-services/sql-server-integration-services).
+Microsoft SQL Server Integration Services (SSIS) est une plateforme conçue pour créer des solutions d’intégration de données à hautes performances, notamment des packages d’extraction, de transformation et de chargement (ETL) pour l’entreposage de données. Pour plus d’informations, consultez [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
 SSIS inclut les fonctionnalités suivantes :
 - Des outils graphiques et des assistants pour construire et déboguer des packages sur Windows

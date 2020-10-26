@@ -2,7 +2,7 @@
 description: CREATE FUNCTION (Azure Synapse Analytics)
 title: CREATE FUNCTION (Azure Synapse Analytics) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,17 +14,17 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4dbe21949a1912eef8aad4de122a8b0a263eec7c
-ms.sourcegitcommit: 2f868a77903c1f1c4cecf4ea1c181deee12d5b15
+ms.openlocfilehash: 8a655a2226ff7104fa7649ce851cbf9bd6da9355
+ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "91671162"
+ms.lasthandoff: 10/14/2020
+ms.locfileid: "92037052"
 ---
 # <a name="create-function-azure-synapse-analytics"></a>CREATE FUNCTION (Azure Synapse Analytics)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Crée une fonction définie par l'utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Une fonction définie par l’utilisateur est une routine [!INCLUDE[tsql](../../includes/tsql-md.md)] qui accepte des paramètres, exécute une action, par exemple un calcul complexe, et retourne le résultat de cette action sous forme de valeur. La valeur de retour doit être une valeur scalaire (unique). Utilisez cette instruction pour créer une routine réutilisable, exploitable :  
+  Crée une fonction définie par l'utilisateur dans [!INCLUDE[ssSDW](../../includes/ssazuresynapse_md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Une fonction définie par l’utilisateur est une routine [!INCLUDE[tsql](../../includes/tsql-md.md)] qui accepte des paramètres, exécute une action, par exemple un calcul complexe, et retourne le résultat de cette action sous forme de valeur. Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], la valeur de retour doit être une valeur scalaire (unique). Dans [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], CREATE FUNCTION peut retourner une table suivant la syntaxe des fonctions table inline (préversion) ou bien une valeur unique suivant la syntaxe des fonctions scalaires. Utilisez cette instruction pour créer une routine réutilisable, exploitable :  
   
 -   dans des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] telles que SELECT ;  
   
@@ -36,12 +36,14 @@ ms.locfileid: "91671162"
   
 -   pour remplacer une procédure stockée.  
   
+-   Utiliser une fonction inline comme prédicat de filtre pour une stratégie de sécurité  
+  
  ![Icône du lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône du lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```syntaxsql
---Transact-SQL Scalar Function Syntax  
+-- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -62,10 +64,24 @@ RETURNS return_data_type
     [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
-  
 ```
 
 [!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
+```syntaxsql
+-- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
+CREATE FUNCTION [ schema_name. ] function_name
+( [ { @parameter_name [ AS ] parameter_data_type
+    [ = default ] }
+    [ ,...n ]
+  ]
+)
+RETURNS TABLE
+    [ WITH SCHEMABINDING ]
+    [ AS ]
+    RETURN [ ( ] select_stmt [ ) ]
+[ ; ]
+```
   
 ## <a name="arguments"></a>Arguments  
  *schema_name*  
@@ -90,7 +106,7 @@ RETURNS return_data_type
  *parameter_data_type*  
  Type de données du paramètre. Pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], tous les types de données scalaires pris en charge dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sont autorisés. Le type de données timestamp (rowversion) n’est pas un type pris en charge.  
   
- [ =*default* ]  
+ [ = *default* ]  
  Valeur par défaut pour le paramètre. Si une valeur *default* est définie, la fonction peut être exécutée sans spécifier de valeur pour ce paramètre.  
   
  Lorsque l'un des paramètres de la fonction possède une valeur par défaut, le mot clé DEFAULT doit être spécifié lors de l'appel de la fonction afin de récupérer la valeur par défaut. Ce comportement est différent de l'utilisation de paramètres avec des valeurs par défaut dans des procédures stockées pour lesquelles l'omission du paramètre implique également la prise en compte de la valeur par défaut.  
@@ -105,6 +121,14 @@ RETURNS return_data_type
   
  *scalar_expression*  
  Indique la valeur scalaire retournée par la fonction scalaire.  
+
+ *select_stmt* **S’APPLIQUE À** : Azure Synapse Analytics  
+ Représente l’instruction SELECT unique qui définit la valeur de retour d’une fonction table inline (préversion).
+
+ TABLE **S’APPLIQUE À** : Azure Synapse Analytics  
+ Indique que la valeur de retour de la fonction table est une table. Seules des constantes et des @ *local_variables* peuvent être passés aux fonctions table.
+
+ Dans les fonctions table inline (préversion), la valeur de retour TABLE est définie par une instruction SELECT unique. Aucune variable retournée n'est associée à une fonction en ligne.
   
  **\<function_option>::=** 
   
@@ -134,19 +158,21 @@ RETURNS return_data_type
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  Spécifie l’attribut **OnNULLCall** d’une fonction scalaire. S'il n'est pas spécifié, l'argument CALLED ON NULL INPUT est implicite par défaut. Cela signifie que le corps de la fonction est exécuté même si la valeur NULL est transmise comme argument.  
   
-## <a name="best-practices"></a>Bonnes pratiques  
+## <a name="best-practices"></a>Meilleures pratiques  
  Si une fonction définie par l'utilisateur n'est pas créée avec la clause SCHEMABINDING, les modifications apportées aux objets sous-jacents peuvent affecter la définition de la fonction et produire des résultats inattendus en cas d'appel. Nous vous recommandons d'implémenter l'une des méthodes suivantes pour vous assurer que la fonction ne devient pas obsolète en raison des modifications apportées à ses objets sous-jacents :  
   
 -   Spécifiez la clause WITH SCHEMABINDING lors de la création de la fonction. Vous vous assurez ainsi que les objets référencés dans la définition de la fonction ne peuvent pas être modifiés sauf si la fonction est également modifiée.  
   
 ## <a name="interoperability"></a>Interopérabilité  
- Les instructions suivantes sont valides dans une fonction :  
+ Les instructions suivantes sont valides dans une fonction scalaire :  
   
 -   Instructions d'affectation  
   
 -   Instructions de contrôle de flux à l'exception des instructions TRY...CATCH  
   
 -   Instructions DECLARE définissant des variables de données locales.  
+
+Dans une fonction table inline (préversion), une seule instruction SELECT est autorisée.
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Les fonctions définies par l'utilisateur ne permettent pas d'exécuter des actions qui modifient l'état des bases de données.  
@@ -193,6 +219,45 @@ GO
   
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
+
+## <a name="examples-sssdwfull"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+
+### <a name="a-creating-an-inline-table-valued-function-preview"></a>R. Création d'une fonction table inline (préversion)
+ L’exemple suivant crée une fonction table inline pour retourner des informations clés sur les modules, en filtrant selon le paramètre `objectType` . Il comprend une valeur par défaut permettant de retourner tous les modules lorsque la fonction est appelée avec le paramètre default. Cet exemple utilise certains des affichages catalogue système mentionnés dans [Métadonnées](#metadata).
+
+```sql
+CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')
+RETURNS TABLE
+AS
+RETURN
+(
+    SELECT 
+        sm.object_id AS 'Object Id',
+        o.create_date AS 'Date Created',
+        OBJECT_NAME(sm.object_id) AS 'Name',
+        o.type AS 'Type',
+        o.type_desc AS 'Type Description', 
+        sm.definition AS 'Module Description'
+    FROM sys.sql_modules AS sm  
+    JOIN sys.objects AS o ON sm.object_id = o.object_id
+    WHERE o.type like '%' + @objectType + '%'
+);
+GO
+```
+La fonction peut alors être appelée pour retourner tous les objets de vue ( **V** ) avec :
+```sql
+select * from dbo.ModulesByType('V');
+```
+
+### <a name="b-combining-results-of-an-inline-table-valued-function-preview"></a>B. Combinaison des résultats d'une fonction table inline (préversion)
+ Cet exemple simple utilise la fonction table inline qui a été créée pour montrer comment ses résultats peuvent être combinés avec d’autres tables à l’aide de CROSS APPLY. Ici sont sélectionnées toutes les colonnes de sys.objects et des résultats de `ModulesByType` pour toutes les lignes correspondant à la colonne *type* . Pour plus d’informations sur APPLY, consultez [clause FROM plus JOIN, APPLY, PIVOT](../../t-sql/queries/from-transact-sql.md).
+
+```sql
+SELECT * 
+FROM sys.objects o
+CROSS APPLY dbo.ModulesByType(o.type);
+GO
+```
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   

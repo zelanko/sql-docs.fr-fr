@@ -14,15 +14,15 @@ ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e1a16547649ce07eadf15942da8cb548e8e10bb
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: ea951183f9689597436b693e1238dab1a30c1c1c
+ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88455391"
+ms.lasthandoff: 10/13/2020
+ms.locfileid: "92006311"
 ---
 # <a name="linestring"></a>LineString
-[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [SQL Server Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
   Un **LineString** est un objet unidimensionnel qui représente une séquence de points et les segments de ligne qui les connectent.  
   
 ## <a name="linestring-instances"></a>Instances LINESTRING  
@@ -58,10 +58,10 @@ DECLARE @g geometry = 'LINESTRING(1 1)';
 ```  
   
 ### <a name="valid-instances"></a>Instances valides  
-Pour qu’une instance **LineString** soit valide, elle doit répondre aux critères ci-dessous.  
+Pour être valide, une instance LineString doit respecter les critères suivants.  
   
 1.  L’instance **LineString** doit être acceptée.  
-2.  Si une instance **LineString** n’est pas vide, elle doit contenir au moins deux points distincts.  
+2.  Si elle n’est pas vide, l’instance LineString doit contenir au moins deux points distincts.  
 3.  L’instance **LineString** ne peut pas se chevaucher sur un intervalle de plusieurs points consécutifs.  
   
 Les instances **LineString** suivantes sont valides.  
@@ -103,7 +103,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
 ```  
   
 ### <a name="example-c"></a>Exemple C.   
-L'exemple suivant montre comment créer une instance `geometry LineString` avec deux points identiques. Un appel à `IsValid` indique que l’instance **LineString** n’est pas valide et un appel à `MakeValid` convertira l’instance **LineString** en **Point**.  
+L'exemple suivant montre comment créer une instance `geometry LineString` avec deux points identiques. Un appel à `IsValid` indique que l’instance **LineString** n’est pas valide et un appel à `MakeValid` convertira l’instance **LineString** en **Point** .  
   
 ```sql  
 DECLARE @g geometry  
