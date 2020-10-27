@@ -9,14 +9,14 @@ ms.author: alayu
 ms.reviewer: alayu, jrasnick
 ms.custom: seodec18; seo-lt-2019
 ms.date: 10/15/2020
-ms.openlocfilehash: f0d6ba76868bb1b8a226145b2aa1306db46baa17
-ms.sourcegitcommit: 22102f25db5ccca39aebf96bc861c92f2367c77a
+ms.openlocfilehash: 1679f7416306b8dda564576779ae2e315f589311
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2020
-ms.locfileid: "92115885"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257331"
 ---
-# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-dedicated-sql-pool-in-azure-synapse-analytics"></a>Démarrage rapide : Utiliser Azure Data Studio pour se connecter et interroger des données à l’aide d’un pool SQL dédié dans Azure Synapse Analytics
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-using-a-dedicated-sql-pool-in-azure-synapse-analytics"></a>Démarrage rapide : Connexion et interrogation de données avec Azure Data Studio à l’aide d’un pool SQL dédié dans Azure Synapse Analytics
 
 Ce guide démarrage rapide montre comment se connecter à un pool SQL dédié dans Azure Synapse Analytics avec Azure Data Studio.
 
@@ -139,5 +139,6 @@ L’éditeur de requête est toujours connecté à la base de données *MASTER* 
 Si vous n’avez pas l’intention de continuer à utiliser les exemples de bases de données créés dans cet article, [supprimez le groupe de ressources](/azure/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal#clean-up-resources).
 
 ## <a name="next-steps"></a>Étapes suivantes
+Pour plus d’informations, consultez [Connexion à Synapse SQL avec Azure Data Studio](https://docs.microsoft.com/azure/synapse-analytics/sql/get-started-azure-data-studio).
 
 Maintenant que vous avez réussi à vous connecter à Azure Synapse Analytics et à exécuter une requête, essayez le [tutoriel de l’éditeur de code](tutorial-sql-editor.md).
