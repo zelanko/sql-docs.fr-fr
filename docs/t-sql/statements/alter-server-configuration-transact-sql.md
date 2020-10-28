@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 34fd954475d308d8989be17063e9122bf821c3da
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: d3381300671d2303f8766351e19018d8122c861f
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89547804"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300930"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -131,7 +131,7 @@ Spécifie qu'aucun thread n'est associé à une unité centrale. Le système d'e
 Spécifie l'unité centrale ou la plage d'unités centrales à laquelle affecter des threads.  
   
 { CPU_ID | CPU_ID  TO  CPU_ID } [ ,...n ]  
-Liste d'une ou de plusieurs unités centrales. Les ID d’unités centrales commencent à 0 et sont des valeurs de type **entier**.  
+Liste d'une ou de plusieurs unités centrales. Les ID d’unités centrales commencent à 0 et sont des valeurs de type **entier** .  
   
 NUMANODE = \<NUMA_node_range_spec>  
 Attribue des threads à toutes les unités centrales qui appartiennent au nœud NUMA spécifié ou à la page de nœuds.  
@@ -140,7 +140,7 @@ Attribue des threads à toutes les unités centrales qui appartiennent au nœud 
 Spécifie le nœud NUMA ou la plage de nœuds NUMA.  
   
 { NUMA_node_ID | NUMA_node_ID  TO NUMA_node_ID } [ ,...n ]  
-Liste d'un ou de plusieurs nœuds NUMA. Les ID de nœud NUMA commencent par 0 et sont des valeurs de type **entier**.  
+Liste d'un ou de plusieurs nœuds NUMA. Les ID de nœud NUMA commencent par 0 et sont des valeurs de type **entier** .  
   
 **\<diagnostic_log> ::=**  
   
@@ -227,7 +227,7 @@ Pour plus d’informations, consultez [Changer le contexte de cluster HADR de l�
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
 ACTIVÉ  
-Active l'option d'extension du pool de mémoires tampons. Cette option augmente la taille de pool de mémoires tampons en utilisant le stockage non volatile. Le stockage non volatile comme les disques SSD conserve les pages de données propres dans le pool. Pour plus d’informations sur cette fonctionnalité, consultez [Extension du pool de mémoires tampons](../../database-engine/configure-windows/buffer-pool-extension.md). L’extension du pool de mémoires tampons n’est pas disponible dans toutes les éditions de SQL Server. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+Active l'option d'extension du pool de mémoires tampons. Cette option augmente la taille de pool de mémoires tampons en utilisant le stockage non volatile. Le stockage non volatile comme les disques SSD conserve les pages de données propres dans le pool. Pour plus d’informations sur cette fonctionnalité, consultez [Extension du pool de mémoires tampons](../../database-engine/configure-windows/buffer-pool-extension.md). L’extension du pool de mémoires tampons n’est pas disponible dans toutes les éditions de SQL Server. Pour plus d’informations, consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
 Définit le chemin d'accès au répertoire et le nom du fichier du cache d'extension du pool de mémoires tampons. L'extension de fichier doit être spécifiée comme .BPE. Désactivez BUFFER POOL EXTENSION avant de modifier FILENAME.  
@@ -484,5 +484,4 @@ GO
 [sys.dm_os_memory_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md)   
 [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)   
 [Extension du pool de mémoires tampons](../../database-engine/configure-windows/buffer-pool-extension.md)  
-  
   

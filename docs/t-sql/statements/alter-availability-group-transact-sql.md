@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8b3953f0f0000ce67f3d58ffbc4be07b5d921734
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 5c80e55d2a2dc54e90d33785bc64153fa1dbf8a6
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88479211"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300848"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -210,7 +210,7 @@ ALTER AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  L’absence de réponse par une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aux requêtes des clients ne dépend pas des groupes de disponibilité.  
   
- Les valeurs de FAILURE_CONDITION_LEVEL et de HEALTH_CHECK_TIMEOUT définissent une *stratégie de basculement souple* pour un groupe donné. Cette stratégie de basculement souple vous offre un contrôle granulaire sur les conditions qui doivent entraîner un basculement automatique. Pour plus d’informations, consultez [Stratégie flexible pour le basculement automatique d’un groupe de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md).  
+ Les valeurs de FAILURE_CONDITION_LEVEL et de HEALTH_CHECK_TIMEOUT définissent une *stratégie de basculement souple* pour un groupe donné. Cette stratégie de basculement souple vous offre un contrôle granulaire sur les conditions qui doivent entraîner un basculement automatique. Pour plus d’informations, consultez [Stratégie flexible pour le basculement automatique d’un groupe de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/configure-flexible-automatic-failover-policy.md).  
   
  HEALTH_CHECK_TIMEOUT **=** *millisecondes*  
  Spécifie le temps d’attente (en millisecondes) nécessaire pour que la procédure stockée système [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) retourne les informations d’intégrité du serveur avant que le cluster WSFC ne suppose que l’instance de serveur est lente ou ne répond pas. HEALTH_CHECK_TIMEOUT est défini au niveau du groupe, mais s’applique uniquement aux réplicas de disponibilité configurés pour le mode de disponibilité de validation synchrone avec basculement automatique (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT).  De plus, l’expiration d’un délai de contrôle d’intégrité peut déclencher un basculement automatique uniquement si les réplicas principaux et secondaires sont configurés pour le mode de basculement automatique (FAILOVER_MODE **=** AUTOMATIC) et si le réplica secondaire est synchronisé avec le réplica principal.  
@@ -259,7 +259,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  \<server_instance>  
  Spécifie l’adresse de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui est l’hôte d’un réplica. Le format de l'adresse varie selon que l'instance est l'instance par défaut ou une instance nommée et s'il s'agit d'une instance autonome ou d'une instance de cluster de basculement (FCI). La syntaxe est la suivante :  
   
- { '*nom_système*[\\*nom_instance*]' | '*nom_réseau_FCI*[\\*nom_instance*]' }  
+ { ' *nom_système* [\\*nom_instance* ]' | ' *nom_réseau_FCI* [\\*nom_instance* ]' }  
   
  Les composants de cette adresse sont les suivants :  
   
@@ -267,17 +267,17 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  Nom NetBIOS du système informatique sur lequel réside l'instance cible de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet ordinateur doit être un nœud WSFC.  
   
  *nom_réseau_FCI*  
- Nom réseau utilisé pour accéder à un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez ce nom si l'instance de serveur participe en tant que serveur partenaire de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’exécution de SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) sur une instance de serveur FCI retourne l’intégralité de sa chaîne '*FCI_network_name*[\\*instance_name*]' (laquelle correspond au nom complet du réplica).  
+ Nom réseau utilisé pour accéder à un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez ce nom si l'instance de serveur participe en tant que serveur partenaire de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L’exécution de SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md) sur une instance de serveur FCI retourne l’intégralité de sa chaîne ' *FCI_network_name* [\\*instance_name* ]' (laquelle correspond au nom complet du réplica).  
   
  *instance_name*  
  Nom d’une instance d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hébergé par *system_name* ou *FCI_network_name* et où AlwaysOn est activé. Pour une instance de serveur par défaut, *nom_instance* est facultatif. Les noms d'instance ne respectent pas la casse. Sur une instance de serveur autonome, ce nom de valeur est le même que la valeur retournée en exécutant SELECT [@@SERVERNAME](../../t-sql/functions/servername-transact-sql.md).  
   
  \  
- Est un séparateur utilisé uniquement lors de la spécification de *instance_name* pour la séparer de *system_name* ou de *FCI_network_name*.  
+ Est un séparateur utilisé uniquement lors de la spécification de *instance_name* pour la séparer de *system_name* ou de *FCI_network_name* .  
   
  Pour plus d’informations sur les prérequis pour les nœuds WSFC et les instances de serveur, consultez [Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL ='TCP://*system-address*:*port*'  
+ ENDPOINT_URL ='TCP:// *system-address* : *port* '  
  Spécifie le chemin d’URL pour le [point de terminaison de mise en miroir de bases de données](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui va héberger le réplica de disponibilité que vous ajoutez ou modifiez.  
   
  ENDPOINT_URL est requis dans la clause ADD REPLICA ON et est facultatif dans la clause MODIFY REPLICA ON.  Pour plus d’informations, consultez [Spécifier l’URL de point de terminaison lors de l’ajout ou lors de la modification d’un réplica de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
@@ -324,7 +324,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
 >  Les instances de cluster de basculement (FCI) SQL Server ne prennent pas en charge le basculement automatique par les groupes de disponibilité. Par conséquent, tout réplica de disponibilité hébergé par une instance de cluster de basculement ne peut être configuré que pour un basculement manuel.  
   
  MANUAL  
- Active le basculement manuel ou le basculement manuel forcé (*basculement forcé*) par l’administrateur de base de données.  
+ Active le basculement manuel ou le basculement manuel forcé ( *basculement forcé* ) par l’administrateur de base de données.  
   
  FAILOVER_MODE est requis dans la clause ADD REPLICA ON et est facultatif dans la clause MODIFY REPLICA ON. Deux types de basculement manuel existent, le basculement manuel sans perte de données et le basculement forcé (avec perte de données possible) et sont pris en charge dans différentes conditions.  Pour plus d’informations, consultez [Basculement et modes de basculement &#40;groupes de disponibilité Always On&#41;](../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
@@ -335,7 +335,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  Permet l’amorçage direct. Cette méthode amorce le réplica secondaire sur le réseau. Cette méthode ne vous oblige pas à sauvegarder et à restaurer une copie de la base de données principal sur le réplica.  
   
 > [!NOTE]  
->  Pour l’amorçage direct, vous devez autoriser la création de la base de données sur chaque réplica secondaire en appelant **ALTER AVAILABILITY GROUP** avec l’option **GRANT CREATE ANY DATABASE**.  
+>  Pour l’amorçage direct, vous devez autoriser la création de la base de données sur chaque réplica secondaire en appelant **ALTER AVAILABILITY GROUP** avec l’option **GRANT CREATE ANY DATABASE** .  
   
  MANUAL  
  Spécifie l’amorçage manuel (par défaut). Cette méthode vous oblige à créer une sauvegarde de la base de données sur le réplica principal et à restaurer manuellement cette sauvegarde sur le réplica secondaire.  
@@ -361,7 +361,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  Aucune connexion utilisateur n'est autorisée aux bases de données secondaires de ce réplica. Elles ne sont pas disponibles pour l'accès en lecture. Il s'agit du comportement par défaut.  
   
  READ_ONLY  
- Seules sont autorisées les connexions aux bases de données dans le réplica secondaire où la propriété d’intention de l’application est définie sur **ReadOnly**. Pour plus d'informations sur cette propriété, consultez [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Seules sont autorisées les connexions aux bases de données dans le réplica secondaire où la propriété d’intention de l’application est définie sur **ReadOnly** . Pour plus d'informations sur cette propriété, consultez [Using Connection String Keywords with SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  ALL  
  Toutes les connexions sont autorisées aux bases de données dans le réplica secondaire pour un accès en lecture seule.  
@@ -371,9 +371,9 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Spécifie l'URL à utiliser pour le routage des demandes de connexion de tentative de lecture à ce réplica de disponibilité. Il s'agit de l'URL sur laquelle le moteur de base de données SQL Server écoute. En général, l'instance par défaut du moteur de base de données SQL Server écoute le port TCP 1433.  
   
- Pour une instance nommée, vous pouvez obtenir le numéro de port en interrogeant les colonnes **port** et **type_desc** de la vue de gestion dynamique [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L’instance de serveur utilise l’écouteur Transact-SQL (**type_desc='TSQL'** ).  
+ Pour une instance nommée, vous pouvez obtenir le numéro de port en interrogeant les colonnes **port** et **type_desc** de la vue de gestion dynamique [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). L’instance de serveur utilise l’écouteur Transact-SQL ( **type_desc='TSQL'** ).  
   
- Pour plus d’informations sur le calcul de l’URL de routage en lecture seule pour un réplica de disponibilité, consultez [Calcul de l’URL de routage en lecture seule pour AlwaysOn](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
+ Pour plus d’informations sur le calcul de l’URL de routage en lecture seule pour un réplica de disponibilité, consultez [Calcul de l’URL de routage en lecture seule pour AlwaysOn](/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
 > [!NOTE]  
 >  Pour une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'écouteur Transact-SQL doit être configuré pour utiliser un port spécifique. Pour plus d’informations, consultez [Configurer un serveur pour écouter un port TCP spécifique &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -392,7 +392,7 @@ Spécifie si les transactions distribuées sont activées pour ce groupe de disp
  ALL  
  Toutes les connexions aux bases de données sont autorisées dans le réplica principal. Il s'agit du comportement par défaut.  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n*] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ... *n* ] **)** | NONE }  
  Spécifie une liste séparée par des virgules des instances de serveur qui hébergent les réplicas de disponibilité pour ce groupe de disponibilité qui répondent aux conditions suivantes lors de l'exécution sous le rôle secondaire :  
   
 -   Être configurés pour autoriser les connexions ou connexions en lecture seule (voir l'argument ALLOW_CONNECTIONS de l'option de SECONDARY_ROLE, ci-dessus).  
@@ -449,7 +449,7 @@ Pour plus d’informations, consultez [Redirection de connexion en lecture/écri
  Pour plus d’informations, consultez [Joindre un réplica secondaire à un groupe de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
-Initialise un basculement manuel du groupe de disponibilité sur le réplica secondaire auquel vous êtes connecté, sans perte de données. Le réplica qui doit héberger le réplica principal est la *cible de basculement*.  La cible de basculement assure le rôle principal, récupère sa copie de chaque base de données et les met en ligne en tant que nouvelles bases de données principales. Le réplica principal précédent joue simultanément le rôle secondaire, et ses bases de données deviennent des bases de données secondaires et sont immédiatement suspendues. Éventuellement, ces rôles peuvent être basculés par une série d'échecs.  
+Initialise un basculement manuel du groupe de disponibilité sur le réplica secondaire auquel vous êtes connecté, sans perte de données. Le réplica qui doit héberger le réplica principal est la *cible de basculement* .  La cible de basculement assure le rôle principal, récupère sa copie de chaque base de données et les met en ligne en tant que nouvelles bases de données principales. Le réplica principal précédent joue simultanément le rôle secondaire, et ses bases de données deviennent des bases de données secondaires et sont immédiatement suspendues. Éventuellement, ces rôles peuvent être basculés par une série d'échecs.  
   
  Pris en charge uniquement sur un réplica secondaire de validation synchrone qui est actuellement synchronisé avec le réplica principal. Notez que pour qu'un réplica secondaire soit synchronisé, le réplica principal doit également d'exécuter en mode de validation synchrone.  
   
@@ -462,7 +462,7 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
  > [!CAUTION]  
 >  Forcer un basculement peut entraîner une perte de données et est à proprement parler une méthode de récupération après sinistre. Par conséquent, nous vous recommandons fortement de forcer le basculement uniquement si le réplica principal n'est plus exécuté, si vous êtes prêt à prendre le risque de perdre des données et si vous devez restaurer immédiatement le service dans le groupe de disponibilité.  
   
- Pris en chrage uniquement sur un réplica dont le rôle est dans l'état SECONDARY ou RESOLVING. --Le réplica sur lequel vous entrez une commande de basculement est appelé *cible de basculement*.  
+ Pris en chrage uniquement sur un réplica dont le rôle est dans l'état SECONDARY ou RESOLVING. --Le réplica sur lequel vous entrez une commande de basculement est appelé *cible de basculement* .  
   
  Force le basculement du groupe de disponibilité (avec possible perte de données) vers la cible de basculement. La cible de basculement assure le rôle principal, récupère sa copie de chaque base de données et les met en ligne en tant que nouvelles bases de données principales. Sur tous les réplicas secondaires restants, chaque base de données secondaire est suspendue jusqu'à ce qu'elle soit reprise manuellement. Lorsque le réplica principal précédent est disponible, il bascule sur le rôle secondaire, et ses bases de données deviennent des bases de données secondaires suspendues.  
   
@@ -493,7 +493,7 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
 >  NetBIOS identifie les 15 premiers caractères du nom_dns. Si vous avez deux clusters WSFC qui sont contrôlés par le même annuaire Active Directory et que vous tentez de créer des écouteurs de groupe de disponibilité dans les deux clusters à l'aide de noms contenant plus de 15 caractères et un préfixe identique de 15 caractères, vous obtenez une erreur signalant que la ressource de nom de réseau virtuel ne peut pas être mise en ligne. Pour plus d'informations sur les règles de préfixe des noms DNS, consultez [Attribution de noms de domaine](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
  JOIN AVAILABILITY GROUP ON  
- Joint à un *groupe de disponibilité distribué*. Quand vous créez un groupe de disponibilité distribué, le groupe de disponibilité du cluster sur lequel il est créé devient le groupe de disponibilité principal. Le groupe de disponibilité qui rejoint le groupe de disponibilité distribué devient le groupe de disponibilité secondaire.  
+ Joint à un *groupe de disponibilité distribué* . Quand vous créez un groupe de disponibilité distribué, le groupe de disponibilité du cluster sur lequel il est créé devient le groupe de disponibilité principal. Le groupe de disponibilité qui rejoint le groupe de disponibilité distribué devient le groupe de disponibilité secondaire.  
   
  \<ag_name>  
  Spécifie le nom du groupe de disponibilité qui constitue la moitié du groupe de disponibilité distribué.  
@@ -527,7 +527,7 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
  Spécifie le mode de basculement du groupe de disponibilité distribué.  
   
  MANUAL  
- Active le basculement manuel planifié ou le basculement manuel forcé (généralement appelé *basculement forcé*) par l’administrateur de base de données.  
+ Active le basculement manuel planifié ou le basculement manuel forcé (généralement appelé *basculement forcé* ) par l’administrateur de base de données.  
   
  Le basculement automatique vers le groupe de disponibilité secondaire n’est pas pris en charge.  
   
@@ -565,7 +565,7 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ..._n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ... _n_ ] **)** [ **,** PORT **=** _listener\_port_ ]  
  Spécifie que l'écouteur du groupe de disponibilité utilisera une ou plusieurs adresses IP statiques au lieu d'utiliser DHCP. Pour créer un groupe de service sur plusieurs sous-réseaux, chaque sous-réseau requiert une adresse IP statique dans la configuration de l'écouteur. Pour un sous-réseau donné, l'adresse IP statique peut être une adresse IPv4 ou une adresse IPv6. Contactez votre administrateur réseau pour obtenir une adresse IP statique pour chaque sous-réseau qui hébergera un réplica de disponibilité pour le nouveau groupe de disponibilité.  
   
  Par exemple :  
@@ -594,8 +594,8 @@ Initialise un basculement manuel du groupe de disponibilité sur le réplica sec
  \<modify\_listener\_option\>  
  MODIFY LISTENER prend l'une des options suivantes :  
   
- ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name*ipv6\_address* __')__ }  
- Ajoute l’adresse IP spécifiée à l’écouteur de groupe de disponibilité spécifié par *dns\_name*.  
+ ADD IP { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4_mask_ **')** \| <b>('</b>dns\_name *ipv6\_address* __')__ }  
+ Ajoute l’adresse IP spécifiée à l’écouteur de groupe de disponibilité spécifié par *dns\_name* .  
   
  PORT **=** *listener_port*  
  Une description de cet argument est fournie plus haut dans cette section.  
@@ -650,5 +650,4 @@ GO
  [Résoudre des problèmes de configuration des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)   
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
-  
   

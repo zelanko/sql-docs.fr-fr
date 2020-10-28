@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e6a2cb161ae00d9f77d50c7a702183927cc169d8
-ms.sourcegitcommit: 197a6ffb643f93592edf9e90b04810a18be61133
+ms.openlocfilehash: d2335b8015f0eb88821e94231ac8cf48d9bc0471
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/26/2020
-ms.locfileid: "91380195"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300389"
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -64,12 +64,12 @@ DROP AVAILABILITY GROUP group_name
     > [!IMPORTANT]  
     >  Évitez de supprimer un groupe de disponibilité lorsque le cluster de clustering de basculement Windows Server (WSFC) n'a aucun quorum. Si vous devez supprimer un groupe de disponibilité lorsque le cluster ne dispose pas de quorum, les métadonnées du groupe de disponibilité stockées dans le cluster nesont pas supprimées. Après que le cluster a regagné le quorum, vous devez supprimer à nouveau le groupe de disponibilité pour le supprimer du cluster WSFC.  
   
--   Sur un réplica secondaire, **DROP AVAILABILITY GROUP** ne doit être utilisé qu’en cas d’urgence. Cela est dû au fait que la suppression d'un groupe de disponibilité met le groupe de disponibilité hors connexion. Si vous supprimez le groupe de disponibilité d’un réplica secondaire, le réplica principal ne peut pas déterminer si l’état **OFFLINE** était la conséquence d’une perte de quorum, d’un basculement forcé ou d’une commande **DROP AVAILABILITY GROUP**. Le réplica principal passe à l’état **RESTORING** pour éviter un fractionnement possible des partitions. Pour plus d’informations, consultez [Fonctionnement : comportements de DROP AVAILABILITY GROUP](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (blog des ingénieurs du Service clientèle et du Support technique de SQL Server).  
+-   Sur un réplica secondaire, **DROP AVAILABILITY GROUP** ne doit être utilisé qu’en cas d’urgence. Cela est dû au fait que la suppression d'un groupe de disponibilité met le groupe de disponibilité hors connexion. Si vous supprimez le groupe de disponibilité d’un réplica secondaire, le réplica principal ne peut pas déterminer si l’état **OFFLINE** était la conséquence d’une perte de quorum, d’un basculement forcé ou d’une commande **DROP AVAILABILITY GROUP** . Le réplica principal passe à l’état **RESTORING** pour éviter un fractionnement possible des partitions. Pour plus d’informations, consultez [Fonctionnement : comportements de DROP AVAILABILITY GROUP](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (blog des ingénieurs du Service clientèle et du Support technique de SQL Server).  
   
 ## <a name="security"></a>Sécurité  
   
 ### <a name="permissions"></a>Autorisations  
- Nécessite une autorisation **ALTER AVAILABILITY GROUP** sur le groupe de disponibilité, une autorisation **CONTROL AVAILABILITY GROUP**, une autorisation **ALTER ANY AVAILABILITY GROUP** ou une autorisation **CONTROL SERVER**. Pour supprimer un groupe de disponibilité qui n’est pas hébergé par l’instance de serveur local, vous avez besoin d’une autorisation **CONTROL SERVER** ou **CONTROL** sur ce groupe de disponibilité.  
+ Nécessite une autorisation **ALTER AVAILABILITY GROUP** sur le groupe de disponibilité, une autorisation **CONTROL AVAILABILITY GROUP** , une autorisation **ALTER ANY AVAILABILITY GROUP** ou une autorisation **CONTROL SERVER** . Pour supprimer un groupe de disponibilité qui n’est pas hébergé par l’instance de serveur local, vous avez besoin d’une autorisation **CONTROL SERVER** ou **CONTROL** sur ce groupe de disponibilité.  
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant supprime le groupe de disponibilité `AccountsAG`.  
@@ -80,11 +80,10 @@ DROP AVAILABILITY GROUP AccountsAG;
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenu associé  
   
--   [Fonctionnement : comportements de DROP AVAILABILITY GROUP](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (blog des ingénieurs du Service clientèle et du Support technique de SQL Server)  
+-   [Fonctionnement : comportements de DROP AVAILABILITY GROUP](/archive/blogs/psssql/how-it-works-drop-availability-group-behaviors) (blog des ingénieurs du Service clientèle et du Support technique de SQL Server)  
   
 ## <a name="see-also"></a>Voir aussi  
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Supprimer un groupe de disponibilité &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
-  
   

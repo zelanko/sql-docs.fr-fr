@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: a92d256d376b9931924a7bf6672769bcd19917f4
-ms.sourcegitcommit: 331b8495e4ab37266945c81ff5b93d250bdaa6da
+ms.openlocfilehash: 081941d580e51188f63c54953caa30004c83c6d0
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2020
-ms.locfileid: "88645949"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300398"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
@@ -84,7 +84,7 @@ La table suivante affiche le nom des fournisseurs de système :
     |'MSSQL_CERTIFICATE_STORE'|Magasin de certificats Windows| 
     |'MSSQL_CSP_PROVIDER'|Un magasin, tel qu’un module de sécurité matériel (HSM), qui prend en charge Microsoft CryptoAPI.|
     |'MSSQL_CNG_STORE'|Un magasin, tel qu’un module de sécurité matériel (HSM), qui prend en charge l’API CNG (Cryptography Next Generation).|  
-    |'AZURE_KEY_VAULT'|Voir [Prise en main du coffre de clés Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
+    |'AZURE_KEY_VAULT'|Voir [Prise en main du coffre de clés Azure](/azure/key-vault/general/overview).|  
     |'MSSQL_JAVA_KEYSTORE'| Magasin de clés Java.}
   
 
@@ -101,7 +101,7 @@ Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de 
      Où :  
   
     *emplacement_magasin_certificats*  
-    Emplacement du magasin de certificats, qui doit être Current User ou Local Machine. Pour plus d’informations, consultez [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
+    Emplacement du magasin de certificats, qui doit être Current User ou Local Machine. Pour plus d’informations, consultez [Local Machine and Current User Certificate Stores](/windows-hardware/drivers/install/local-machine-and-current-user-certificate-stores).  
   
     *nom_magasin_certificats*  
     Nom du magasin de certificats, par exemple 'My'.  
@@ -176,7 +176,7 @@ Nous vous recommandons d’utiliser des outils, tels que SQL Server Management S
 
   
 ## <a name="permissions"></a>Autorisations  
-Nécessite l’autorisation **ALTER ANY COLUMN MASTER KEY**.  
+Nécessite l’autorisation **ALTER ANY COLUMN MASTER KEY** .  
   
 ## <a name="examples"></a>Exemples  
   
@@ -252,4 +252,3 @@ WITH (
 * [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
 * [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
 * [Gérer des clés pour Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
-  

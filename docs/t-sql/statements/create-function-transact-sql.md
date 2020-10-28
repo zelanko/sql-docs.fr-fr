@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6286c5804c30e021c794e8ecf69bdb328ab8db38
-ms.sourcegitcommit: 22dacedeb6e8721e7cdb6279a946d4002cfb5da3
+ms.openlocfilehash: 37904c7f99fc766913521bf9fd598941ec8407ef
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/14/2020
-ms.locfileid: "92037067"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300829"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 
@@ -357,7 +357,7 @@ Dans un exemple classique, pour MyFood.DLL, dans lequel tous les types sont dans
 
 *\<*table_type_definition*>* ( { \<column_definition> \<column_constraint>| \<computed_column_definition> } [ \<table_constraint> ] [ ,... *n* ] ) définit le type de données de table pour une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)]. La déclaration de table comprend des définitions de colonne et des contraintes de colonne ou de table. La table est toujours placée dans le groupe de fichiers primaire.
 
-*\< clr_table_type_definition >* ( { *nom_colonne**type_données* } [ ,... *n* ] ) **S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ( [préversion dans certaines régions](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).
+*\< clr_table_type_definition >* ( { *nom_colonne**type_données* } [ ,... *n* ] ) **S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 et versions ultérieures) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ( [préversion dans certaines régions](/azure/azure-sql/database/features-comparison?WT.mc_id=TSQL_GetItTag)).
 
 Définit les types de données de table pour une fonction CLR. La déclaration de table ne comprend que des types de données et des noms de colonne. La table est toujours placée dans le groupe de fichiers primaire.
 
@@ -538,7 +538,7 @@ Les fonctions ont les propriétés suivantes. Les valeurs de ces propriétés d�
 |**SystemDataAccess**|La fonction accède aux données système (catalogues système ou tables système virtuelles) dans l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].||
 |**UserDataAccess**|La fonction accède aux données utilisateur dans l'instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Comprend les tables définies par l'utilisateur et les tables temporaires, mais pas les variables de table.|
 
-Les propriétés de précision et de déterminisme des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] sont automatiquement déterminées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les propriétés d'accès aux données et de déterminisme des fonctions CLR peuvent être spécifiées par l'utilisateur. Pour plus d’informations, consultez [Vue d’ensemble des attributs personnalisés de l’intégration du CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820).
+Les propriétés de précision et de déterminisme des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] sont automatiquement déterminées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les propriétés d'accès aux données et de déterminisme des fonctions CLR peuvent être spécifiées par l'utilisateur. Pour plus d’informations, consultez [Vue d’ensemble des attributs personnalisés de l’intégration du CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).
 
 Pour afficher les valeurs actuelles de ces propriétés, utilisez [OBJECTPROPERTYEX](../../t-sql/functions/objectpropertyex-transact-sql.md).
 

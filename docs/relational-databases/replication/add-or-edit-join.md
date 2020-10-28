@@ -10,15 +10,16 @@ ms.technology: replication
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.addeditjoin.f1
+- sql13.sql13.swb.agdashboard.arp4joinstate.issues.f1
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 30d6302a53101e41c85292b776b1128421520e95
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 549970e81b86a8331c2d41afc3b01fab3eb7160b
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88423633"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300738"
 ---
 # <a name="add-or-edit-join"></a>Ajouter ou modifier une jointure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -39,15 +40,15 @@ ms.locfileid: "88423633"
   
 1.  **Vérifiez la table filtrée et sélectionnez la table jointe.**  
   
-    -   Si vous ajoutez une nouvelle jointure, vérifiez que la table dans la zone de texte **Table filtrée** est correcte (si elle n'est pas correcte, cliquez sur **Annuler**, sélectionnez la table appropriée dans la page **Filtrer les lignes de la table** et sur **Ajouter une jointure** pour revenir à cette boîte de dialogue). Sélectionnez ensuite une table dans la zone de liste déroulante **Table jointe** .  
+    -   Si vous ajoutez une nouvelle jointure, vérifiez que la table dans la zone de texte **Table filtrée** est correcte (si elle n'est pas correcte, cliquez sur **Annuler** , sélectionnez la table appropriée dans la page **Filtrer les lignes de la table** et sur **Ajouter une jointure** pour revenir à cette boîte de dialogue). Sélectionnez ensuite une table dans la zone de liste déroulante **Table jointe** .  
   
     -   Si vous ajoutez une jointure existante, les noms des tables sont déjà définis et ne peuvent pas être modifiés. Pour modifier les tables impliquées dans la jointure, vous devez supprimer le filtre de jointure existant dans la page **Filtrer les lignes de la table** et créer une nouvelle jointure entre les nouvelles tables.  
   
 2.  **Créez l'instruction de jointure.**  
   
-    -   Si vous ajoutez une nouvelle jointure, sélectionnez **Utiliser le générateur pour créer l'instruction** ou **Créer manuellement l'instruction de jointure**. Si vous créez une jointure manuellement, vous pouvez utiliser le générateur.  
+    -   Si vous ajoutez une nouvelle jointure, sélectionnez **Utiliser le générateur pour créer l'instruction** ou **Créer manuellement l'instruction de jointure** . Si vous créez une jointure manuellement, vous pouvez utiliser le générateur.  
   
-         Si vous sélectionnez le générateur, utilisez les colonnes de la grille (**Conjonction**, **Colonnes de table filtrée**, **Opérateur**et **Colonnes de table jointe**) pour créer une instruction de jointure. Chaque colonne de la grille contient une zone de liste déroulante qui vous permet de sélectionner deux colonnes et un opérateur ( **=** , **<>** , **<=** , **\<**, **>=** , **>** , **tel**). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure implique plusieurs paires de colonnes, sélectionnez une conjonction (**AND** ou **OR**) dans la colonne **Conjonction** , puis entrez au moins deux colonnes et un autre opérateur.  
+         Si vous sélectionnez le générateur, utilisez les colonnes de la grille ( **Conjonction** , **Colonnes de table filtrée** , **Opérateur** et **Colonnes de table jointe** ) pour créer une instruction de jointure. Chaque colonne de la grille contient une zone de liste déroulante qui vous permet de sélectionner deux colonnes et un opérateur ( **=** , **<>** , **<=** , **\<**, **>=** , **>** , **tel** ). Les résultats s'affichent dans la zone de texte **Aperçu** . Si la jointure implique plusieurs paires de colonnes, sélectionnez une conjonction ( **AND** ou **OR** ) dans la colonne **Conjonction** , puis entrez au moins deux colonnes et un autre opérateur.  
   
          Si vous créez l'instruction manuellement, écrivez l'instruction de jointure dans la zone de texte **Instruction de jointure** . Utilisez la zone de liste **Colonnes de table filtrée** et la zone de liste **Colonnes de table jointe** pour faire glisser les colonnes et les déposer dans la zone de texte **Instruction de jointure** .  
   
@@ -55,12 +56,12 @@ ms.locfileid: "88423633"
   
 3.  **Spécifiez les options de jointure.**  
 
-    -   Si la colonne sur laquelle vous effectuez la jointure dans la table filtrée est unique, sélectionnez **Clé unique**. Le processus de fusion possède des fonctionnalités d'optimisation de performances spéciales disponibles si la colonne est unique.  
+    -   Si la colonne sur laquelle vous effectuez la jointure dans la table filtrée est unique, sélectionnez **Clé unique** . Le processus de fusion possède des fonctionnalités d'optimisation de performances spéciales disponibles si la colonne est unique.  
   
         > [!CAUTION]  
         >  La sélection de cette option indique que la relation entre les tables enfant et parent dans un filtre de jointure correspond à une relation Un à un ou Un à plusieurs. Sélectionnez uniquement cette option s'il existe une contrainte sur la colonne de jointure dans la table parent qui garantit l'unicité. Si vous ne définissez pas correctement l'option, des erreurs de non-convergence de données peuvent se produire.  
   
-    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Par défaut, la réplication de fusion traite les modifications ligne par ligne lors de la synchronisation. Pour traiter les modifications associées sous la forme d'une unité, sélectionnez **Enregistrement logique**. Cette option est disponible uniquement si les conditions d'article et de publication d'utilisation d'enregistrements logiques sont satisfaites. Pour plus d’informations, consultez la section « Considérations relatives à l’utilisation d’enregistrements logiques » dans [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures uniquement. Par défaut, la réplication de fusion traite les modifications ligne par ligne lors de la synchronisation. Pour traiter les modifications associées sous la forme d'une unité, sélectionnez **Enregistrement logique** . Cette option est disponible uniquement si les conditions d'article et de publication d'utilisation d'enregistrements logiques sont satisfaites. Pour plus d’informations, consultez la section « Considérations relatives à l’utilisation d’enregistrements logiques » dans [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
  Après avoir ajouté ou modifié un filtre, cliquez sur **OK** pour enregistrer les modifications et fermer ainsi la boîte de dialogue. Le filtre que vous spécifiez est ensuite analysé et exécuté sur la table indiquée dans la clause SELECT. Si l'instruction de filtrage contient des erreurs de syntaxe ou d'autres erreurs, vous recevrez un message et pourrez modifier l'instruction de filtrage.  
   

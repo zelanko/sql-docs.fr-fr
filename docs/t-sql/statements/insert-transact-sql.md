@@ -33,12 +33,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64f8361faba39f948a5c2f35a32632fb3dd105c9
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: b44d9306d08d1e75f1d0f0477e0c58c207bd70e8
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227318"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300870"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -139,21 +139,21 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  WITH \<common_table_expression>  
  Spécifie le jeu de résultats nommé temporaire, également appelé expression de table commune, défini dans l'étendue de l'instruction INSERT. Le jeu de résultats est dérivé d'une instruction SELECT. Pour plus d’informations, consultez [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP (*expression*) [ PERCENT ]  
- Spécifie le nombre ou le pourcentage de lignes aléatoires qui seront insérées. L'argument*expression* peut être un nombre ou un pourcentage de lignes. Pour plus d’informations, consultez [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
+ TOP ( *expression* ) [ PERCENT ]  
+ Spécifie le nombre ou le pourcentage de lignes aléatoires qui seront insérées. L'argument *expression* peut être un nombre ou un pourcentage de lignes. Pour plus d’informations, consultez [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  INTO  
  Mot clé facultatif qui peut être inséré entre le mot clé INSERT et la table cible.  
   
  *server_name*  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+ **S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Nom du serveur lié sur lequel se trouve la table ou la vue. *server_name* peut être spécifié comme nom de [serveur lié](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou à l’aide de la fonction [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md).  
   
  Quand *server_name* est spécifié comme serveur lié, *database_name* et *schema_name* sont obligatoires. Quand *server_name* est spécifié avec OPENDATASOURCE, *database_name* et *schema_name* peuvent ne pas s’appliquer à toutes les sources de données ; par ailleurs, ils dépendent des fonctionnalités du fournisseur OLE DB qui accède à l’objet distant.  
   
  *database_name*  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+ **S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Nom de la base de données.  
   
@@ -168,7 +168,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  La vue référencée par *table_or_view_name* doit pouvoir être mise à jour et faire référence à une seule table de base dans la clause FROM de la vue. Par exemple, une instruction INSERT dans une vue contenant plusieurs tables doit utiliser un *column_list* qui référence uniquement les colonnes d’une seule table de base. Pour plus d’informations sur les vues pouvant être mises à jour, consultez [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+ **S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Fonction [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) ou [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). L'utilisation de ces fonctions dépend des fonctionnalités du fournisseur OLE DB qui accède à l'objet distant.  
   
@@ -182,16 +182,16 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
   
  La spécification de l'indicateur TABLOCK sur une table qui est la cible d'une instruction INSERT a le même effet que la spécification de l'indicateur TABLOCKX. Un verrou exclusif est appliqué à la table.  
   
- (*column_list*)  
+ ( *column_list* )  
  Liste d'une ou plusieurs colonnes dans lesquelles insérer des données. *column_list* doit être placé entre parenthèses et délimité par des virgules.  
   
- Si une colonne ne se trouve pas dans *column_list*, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit pouvoir fournir une valeur basée sur la définition de la colonne ; sinon, il n’est pas possible de charger la ligne. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fournit automatiquement une valeur pour la colonne si :  
+ Si une colonne ne se trouve pas dans *column_list* , le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit pouvoir fournir une valeur basée sur la définition de la colonne ; sinon, il n’est pas possible de charger la ligne. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fournit automatiquement une valeur pour la colonne si :  
   
 -   a une propriété IDENTITY. la valeur d'identité incrémentielle suivante est utilisée ;  
   
 -   elle a une valeur par défaut, la valeur par défaut de la colonne est utilisée ;  
   
--   la colonne a un type de données **timestamp** ; la valeur d'horodateur actuelle est utilisée ;  
+-   la colonne a un type de données **timestamp**  ; la valeur d'horodateur actuelle est utilisée ;  
   
 -   Autorise la valeur NULL. Une valeur Null est utilisée.  
   
@@ -202,7 +202,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 Clause OUTPUT  
  Retourne des lignes insérées dans le cadre de l'opération d'insertion. Les résultats peuvent être retournés à l'application de traitement ou être insérés dans une table ou une variable de table pour un traitement ultérieur.  
   
- La clause OUTPUT n’est pas prise en charge dans les instructions DML qui font référence à des vues partitionnées locales, à des vues partitionnées distribuées, à des tables distantes ou à des instructions INSERT contenant un *execute_statement*. La clause OUTPUT INTO n’est pas prise en charge dans les instructions INSERT qui contiennent une clause \<dml_table_source>. Pour plus d’informations sur les arguments et le comportement de cette clause, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
+ La clause OUTPUT n’est pas prise en charge dans les instructions DML qui font référence à des vues partitionnées locales, à des vues partitionnées distribuées, à des tables distantes ou à des instructions INSERT contenant un *execute_statement* . La clause OUTPUT INTO n’est pas prise en charge dans les instructions INSERT qui contiennent une clause \<dml_table_source>. Pour plus d’informations sur les arguments et le comportement de cette clause, consultez [Clause OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Présente la ou les listes de valeurs de données à insérer. Il doit y avoir une valeur de données pour chaque colonne de *column_list* (le cas échéant) ou de la table. La liste de valeurs doit être mise entre parenthèses.  
@@ -212,12 +212,12 @@ Clause OUTPUT
  Vous pouvez utiliser le constructeur ROW [!INCLUDE[tsql](../../includes/tsql-md.md)] (également appelé constructeur de valeurs de table) pour spécifier plusieurs lignes dans une seule instruction INSERT. Le constructeur ROW est constitué d'une seule clause VALUES comportant plusieurs listes de valeurs placées entre parenthèses et séparées par une virgule. Pour plus d’informations, consultez [Constructeur de valeurs de table &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  DEFAULT  
- Force le [!INCLUDE[ssDE](../../includes/ssde-md.md)] à charger la valeur par défaut définie pour une colonne. S'il n'existe pas de valeur par défaut pour la colonne et si celle-ci autorise les valeurs NULL, NULL est inséré. Pour une colonne définie avec le type de données **timestamp**, la valeur d’horodateur suivante est insérée. DEFAULT n'est pas valide pour une colonne d'identité.  
+ Force le [!INCLUDE[ssDE](../../includes/ssde-md.md)] à charger la valeur par défaut définie pour une colonne. S'il n'existe pas de valeur par défaut pour la colonne et si celle-ci autorise les valeurs NULL, NULL est inséré. Pour une colonne définie avec le type de données **timestamp** , la valeur d’horodateur suivante est insérée. DEFAULT n'est pas valide pour une colonne d'identité.  
   
  *expression*  
  Constante, variable ou expression. L'expression ne peut pas contenir d'instruction EXECUTE.  
   
- Quand vous faites référence aux types de données caractères Unicode **nchar**, **nvarchar** et **ntext**, '*expression*' doit être précédé de la majuscule « N ». Si vous ne spécifiez pas « N », [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit la chaîne dans la page de codes qui correspond au classement par défaut de la base de données ou de la colonne. Tous les caractères absents de cette page de codes sont alors perdus.  
+ Quand vous faites référence aux types de données caractères Unicode **nchar** , **nvarchar** et **ntext** , ' *expression* ' doit être précédé de la majuscule « N ». Si vous ne spécifiez pas « N », [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit la chaîne dans la page de codes qui correspond au classement par défaut de la base de données ou de la colonne. Tous les caractères absents de cette page de codes sont alors perdus.  
   
  *derived_table*  
  Toute instruction SELECT valide qui retourne des lignes de données à charger dans la table. L'instruction SELECT ne peut pas contenir une expression de table commune.  
@@ -227,7 +227,7 @@ Clause OUTPUT
   
  Les options RESULT SETS de l’instruction EXECUTE ne peuvent pas être spécifiées dans une instruction INSERT...EXEC.  
   
- Si *execute_statement* est utilisé avec INSERT, chaque jeu de résultats doit être compatible avec les colonnes de la table ou de *column_list*.  
+ Si *execute_statement* est utilisé avec INSERT, chaque jeu de résultats doit être compatible avec les colonnes de la table ou de *column_list* .  
   
  *execute_statement* peut être utilisé pour exécuter des procédures stockées sur le même serveur ou sur un serveur distant. La procédure du serveur distant est exécutée et les jeux de résultats sont retournés au serveur local où ils sont chargés dans la table. Dans une transaction distribuée, *execute_statement* ne peut pas être émis sur un serveur lié en boucle quand MARS (Multiple Active Result Set) est activé pour la connexion.  
   
@@ -263,35 +263,35 @@ Clause OUTPUT
  Toute clause WHERE contenant une \<search_condition> valide qui filtre les lignes retournées par l’\<dml_statement_with_output_clause>. Pour plus d’informations, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md). Utilisée dans ce contexte, la \<search_condition> ne peut pas contenir de sous-requêtes, de fonctions scalaires définies par l’utilisateur qui accèdent aux données, de fonctions d’agrégation, TEXTPTR ni de prédicats de recherche en texte intégral. 
   
  DEFAULT VALUES  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+ **S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Force la nouvelle ligne à prendre les valeurs par défaut définies pour chaque colonne.  
   
  BULK  
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Utilisé par les outils externes pour télécharger un flux de données binaires. Cette option n’est pas destinée à être utilisée avec des outils tels que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], SQLCMD, OSQL ou des interfaces de programmation d’applications d’accès aux données telles que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  FIRE_TRIGGERS  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+ **S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie que tous les déclencheurs d'insertion définis sur la table de destination seront exécutés au cours de l'opération de téléchargement de flux de données binaires. Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  CHECK_CONSTRAINTS  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+ **S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie que toutes les contraintes sur la table ou la vue cible doivent être vérifiées pendant l'opération de téléchargement de flux de données binaires. Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
  KEEPNULLS  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+ **S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Spécifie que les colonnes vides doivent conserver une valeur NULL pendant l'opération de téléchargement de flux de données binaires. Pour plus d’informations, consultez [Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l’importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  KILOBYTES_PER_BATCH = kilo-octets par lot  
- Indique le nombre approximatif de kilo-octets (Ko) de données par lot sous la forme *kilobytes_per_batch*. Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+ Indique le nombre approximatif de kilo-octets (Ko) de données par lot sous la forme *kilobytes_per_batch* . Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
- ROWS_PER_BATCH =*rows_per_batch*  
- **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+ ROWS_PER_BATCH = *rows_per_batch*  
+ **S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
  Nombre approximatif de lignes de données que compte le flux de données binaires. Pour plus d’informations, consultez [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
@@ -347,7 +347,7 @@ Ces optimisations sont similaires à celles disponibles avec la commande `BULK I
 ## <a name="data-types"></a>Types de données  
  Lorsque vous insérez des lignes, prenez en compte le comportement des types de données suivant :  
   
--   Si une valeur est chargée dans des colonnes ayant le type de données **char**, **varchar** ou **varbinary**, le remplissage ou la troncation des espaces blancs de fin (espaces pour **char** et **varchar**, zéros pour **varbinary**) est déterminé par le paramètre SET ANSI_PADDING défini pour la colonne lors de la création de la table. Pour plus d’informations, consultez [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
+-   Si une valeur est chargée dans des colonnes ayant le type de données **char** , **varchar** ou **varbinary** , le remplissage ou la troncation des espaces blancs de fin (espaces pour **char** et **varchar** , zéros pour **varbinary** ) est déterminé par le paramètre SET ANSI_PADDING défini pour la colonne lors de la création de la table. Pour plus d’informations, consultez [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md).  
   
      Le tableau suivant illustre l'opération par défaut pour SET ANSI_PADDING OFF.  
   
@@ -357,11 +357,11 @@ Ces optimisations sont similaires à celles disponibles avec la commande `BULK I
     |**varchar**|Supprime les espaces de fin jusqu’au dernier caractère différent d’un espace ou jusqu’au dernier caractère d’espacement simple pour les chaînes composées uniquement d’espaces.|  
     |**varbinary**|Supprime les zéros à droite.|  
   
--   Si une chaîne vide (' ') est chargée dans une colonne de type **varchar** ou **text**, l’opération par défaut consiste à charger une chaîne de longueur zéro.  
+-   Si une chaîne vide (' ') est chargée dans une colonne de type **varchar** ou **text** , l’opération par défaut consiste à charger une chaîne de longueur zéro.  
   
 -   L’insertion d’une valeur Null dans une colonne de type **text** ou **image** ne crée pas un pointeur de texte valide et ne préalloue pas une page texte de 8 Ko.  
   
--   Les colonnes créées à l’aide du type de données **uniqueidentifier** stockent les valeurs binaires au format spécial 16 octets. Contrairement aux colonnes d’identité, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne génère pas automatiquement de valeurs pour les colonnes comportant le type de données **uniqueidentifier**. Lors d’une opération d’insertion, les variables dont le type de données est **uniqueidentifier** et les constantes de chaîne au format *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (36 caractères, tirets inclus, où *x* correspond à un chiffre hexadécimal compris entre 0 et 9 ou a et f) peuvent être utilisées pour les colonnes **uniqueidentifier**. Par exemple, 6F9619FF-8B86-D011-B42D-00C04FC964FF est une valeur valide pour une colonne ou une variable **uniqueidentifier**. Utilisez la fonction [NEWID()](../../t-sql/functions/newid-transact-sql.md) pour obtenir un GUID (identificateur global unique).  
+-   Les colonnes créées à l’aide du type de données **uniqueidentifier** stockent les valeurs binaires au format spécial 16 octets. Contrairement aux colonnes d’identité, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne génère pas automatiquement de valeurs pour les colonnes comportant le type de données **uniqueidentifier** . Lors d’une opération d’insertion, les variables dont le type de données est **uniqueidentifier** et les constantes de chaîne au format *xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx* (36 caractères, tirets inclus, où *x* correspond à un chiffre hexadécimal compris entre 0 et 9 ou a et f) peuvent être utilisées pour les colonnes **uniqueidentifier** . Par exemple, 6F9619FF-8B86-D011-B42D-00C04FC964FF est une valeur valide pour une colonne ou une variable **uniqueidentifier** . Utilisez la fonction [NEWID()](../../t-sql/functions/newid-transact-sql.md) pour obtenir un GUID (identificateur global unique).  
   
 ### <a name="inserting-values-into-user-defined-type-columns"></a>Insertion de valeurs dans des colonnes de type défini par l'utilisateur  
  Vous pouvez insérer des valeurs dans des colonnes de type défini par l'utilisateur en procédant comme suit :  
@@ -454,7 +454,7 @@ VALUES (N'FT2', N'Square Feet ', '20080923'), (N'Y', N'Yards', '20080923')
 ```  
   
 #### <a name="c-inserting-data-that-is-not-in-the-same-order-as-the-table-columns"></a>C. Insertion de données qui ne sont pas dans le même ordre que les colonnes de la table  
- L'exemple suivant utilise une liste de colonnes afin de spécifier de manière explicite les valeurs insérées dans chaque colonne. L’ordre des colonnes de la table `Production.UnitMeasure` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] est `UnitMeasureCode`, `Name`, `ModifiedDate` ; cependant, les colonnes ne sont pas répertoriées dans cet ordre dans *column_list*.  
+ L'exemple suivant utilise une liste de colonnes afin de spécifier de manière explicite les valeurs insérées dans chaque colonne. L’ordre des colonnes de la table `Production.UnitMeasure` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] est `UnitMeasureCode`, `Name`, `ModifiedDate` ; cependant, les colonnes ne sont pas répertoriées dans cet ordre dans *column_list* .  
   
 ```sql
 INSERT INTO Production.UnitMeasure (Name, UnitMeasureCode,  
@@ -466,7 +466,7 @@ VALUES (N'Square Yards', N'Y2', GETDATE());
  Les exemples fournis dans cette section présentent des méthodes d’insertion de valeurs dans des colonnes qui sont définies avec une propriété IDENTITY ou avec une valeur DEFAULT, ou qui sont définies avec des types de données tels que **uniqueidentifer** ou des colonnes d’un type défini par l’utilisateur.  
   
 #### <a name="d-inserting-data-into-a-table-with-columns-that-have-default-values"></a>D. Insertion de données dans une table dont les colonnes ont des valeurs par défaut  
- L'exemple suivant montre l'insertion de lignes dans une table dont les colonnes génèrent automatiquement une valeur ou possèdent une valeur par défaut. `Column_1` est une colonne calculée qui génère automatiquement une valeur en concaténant une chaîne avec la valeur insérée dans `column_2`. `Column_2` est définie avec une contrainte par défaut. Si aucune valeur n'est spécifiée pour cette colonne, la valeur par défaut est utilisée. `Column_3` est défini avec le type de données **rowversion**, qui génère automatiquement un nombre binaire incrémentiel unique. `Column_4` ne génère pas automatiquement de valeur. Lorsqu'aucune valeur n'est spécifiée pour cette colonne, NULL est inséré. Les instructions INSERT insèrent des lignes qui contiennent des valeurs pour certaines colonnes, mais pas pour toutes. Dans la dernière instruction INSERT, aucune colonne n'est spécifiée et seules les valeurs par défaut sont insérées à l'aide de la clause DEFAULT VALUES.  
+ L'exemple suivant montre l'insertion de lignes dans une table dont les colonnes génèrent automatiquement une valeur ou possèdent une valeur par défaut. `Column_1` est une colonne calculée qui génère automatiquement une valeur en concaténant une chaîne avec la valeur insérée dans `column_2`. `Column_2` est définie avec une contrainte par défaut. Si aucune valeur n'est spécifiée pour cette colonne, la valeur par défaut est utilisée. `Column_3` est défini avec le type de données **rowversion** , qui génère automatiquement un nombre binaire incrémentiel unique. `Column_4` ne génère pas automatiquement de valeur. Lorsqu'aucune valeur n'est spécifiée pour cette colonne, NULL est inséré. Les instructions INSERT insèrent des lignes qui contiennent des valeurs pour certaines colonnes, mais pas pour toutes. Dans la dernière instruction INSERT, aucune colonne n'est spécifiée et seules les valeurs par défaut sont insérées à l'aide de la clause DEFAULT VALUES.  
   
 ```sql
 CREATE TABLE dbo.T1   
@@ -721,12 +721,12 @@ GO
 ```  
   
 ###  <a name="inserting-rows-into-a-remote-table"></a><a name="RemoteTables"></a> Insertion de lignes dans une table distante  
- Les exemples présentés dans cette section montrent comment insérer des lignes dans une table cible distante en utilisant un [serveur lié](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou une [fonction d’ensemble de lignes](../../t-sql/functions/rowset-functions-transact-sql.md) pour référencer la table distante.  
+ Les exemples présentés dans cette section montrent comment insérer des lignes dans une table cible distante en utilisant un [serveur lié](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ou une [fonction d’ensemble de lignes](../functions/opendatasource-transact-sql.md) pour référencer la table distante.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Insertion de données dans une table distante en utilisant un serveur lié  
- L'exemple suivant insère des lignes dans la table distante. L’exemple commence par créer un lien vers la source de données distante en utilisant [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Le nom du serveur lié, `MyLinkServer`, est ensuite spécifié comme partie du nom d’objet en quatre parties qui se présente sous la forme *serveur.catalogue.schéma.objet*.  
+ L'exemple suivant insère des lignes dans la table distante. L’exemple commence par créer un lien vers la source de données distante en utilisant [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Le nom du serveur lié, `MyLinkServer`, est ensuite spécifié comme partie du nom d’objet en quatre parties qui se présente sous la forme *serveur.catalogue.schéma.objet* .  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 ```sql
 USE master;  
@@ -755,7 +755,7 @@ GO
 #### <a name="n-inserting-data-into-a-remote-table-by-using-the-openquery-function"></a>N. Insertion de données dans une table distante en utilisant la fonction OPENQUERY  
  L’exemple suivant insère une ligne dans une table distante en spécifiant la fonction d’ensemble de lignes [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). Le nom de serveur lié créé dans l'exemple précédent est utilisé dans cet exemple.  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 ```sql
 INSERT OPENQUERY (MyLinkServer, 
@@ -766,9 +766,9 @@ GO
 ```  
   
 #### <a name="o-inserting-data-into-a-remote-table-by-using-the-opendatasource-function"></a>O. Insertion de données dans une table distante en utilisant la fonction OPENDATASOURCE  
- L’exemple suivant insère une ligne dans une table distante en spécifiant la fonction d’ensemble de lignes [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Spécifiez un nom de serveur valide pour la source de données en utilisant le format *server_name* ou *server_name\instance_name*.  
+ L’exemple suivant insère une ligne dans une table distante en spécifiant la fonction d’ensemble de lignes [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Spécifiez un nom de serveur valide pour la source de données en utilisant le format *server_name* ou *server_name\instance_name* .  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 ```sql
 -- Use the OPENDATASOURCE function to specify the remote data source.  
@@ -783,9 +783,9 @@ GO
 ```  
   
 #### <a name="p-inserting-into-an-external-table-created-using-polybase"></a>P. Insertion dans une table externe créée à l’aide de PolyBase  
- Exportez des données de SQL Server vers Hadoop ou le Stockage Azure. Commencez par créer une table externe pointant vers le fichier ou le répertoire de destination. Puis, utilisez INSERT INTO pour exporter les données d’une table SQL Server locale dans une source de données externe. l’instruction INSERT INTO crée le fichier ou le répertoire de destination s’il n’existe pas, et les résultats de l’instruction SELECT sont exportés à l’emplacement et au format spécifiés.  Pour plus d’informations, consultez [Prise en main de PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
+ Exportez des données de SQL Server vers Hadoop ou le Stockage Azure. Commencez par créer une table externe pointant vers le fichier ou le répertoire de destination. Puis, utilisez INSERT INTO pour exporter les données d’une table SQL Server locale dans une source de données externe. l’instruction INSERT INTO crée le fichier ou le répertoire de destination s’il n’existe pas, et les résultats de l’instruction SELECT sont exportés à l’emplacement et au format spécifiés.  Pour plus d’informations, consultez [Prise en main de PolyBase](../../relational-databases/polybase/polybase-guide.md).  
   
-**S'applique à**: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+**S'applique à** : [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 -- Create an external table.   
@@ -861,7 +861,7 @@ GO
 #### <a name="r-using-the-openrowset-function-with-bulk-to-bulk-load-data-into-a-table"></a>R. Utilisation de la fonction OPENROWSET avec BULK pour charger en masse des données dans une table  
  L'exemple suivant insère des lignes d'un fichier de données dans une table en spécifiant la fonction OPENROWSET. L'indicateur de table IGNORE_TRIGGERS est spécifié en vue d'optimiser les performances. Pour obtenir d’autres exemples, consultez [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
+**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.  
   
 ```sql
 INSERT INTO HumanResources.Department WITH (IGNORE_TRIGGERS) (Name, GroupName)  
@@ -881,7 +881,7 @@ FROM OPENROWSET (
 #### <a name="s-using-the-tablock-hint-to-specify-a-locking-method"></a>S. Utilisation de l'indicateur TABLOCK pour spécifier une méthode de verrouillage  
  L'exemple suivant spécifie qu'un verrou exclusif (X) est appliqué sur la table Production.Location et est maintenu jusqu'à la fin de l'instruction INSERT.  
   
-**S’applique à** : [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].  
+**S’applique à**  : [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].  
   
 ```sql
 INSERT INTO Production.Location WITH (XLOCK)  
@@ -1032,7 +1032,3 @@ OPTION ( LABEL = 'Add French Prospects', HASH JOIN);
  [OUTPUT, clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)   
  [Utiliser les tables inserted et deleted](../../relational-databases/triggers/use-the-inserted-and-deleted-tables.md)  
   
-  
-
-
-

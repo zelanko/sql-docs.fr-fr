@@ -28,12 +28,12 @@ ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b21487a6cfbe896dd81194710784a6cc148d389
-ms.sourcegitcommit: 3efd8bbf91f4f78dce3a4ac03348037d8c720e6a
+ms.openlocfilehash: 8fbb5128236808e6ac7ca833aa82280c68ca1263
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "91024261"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300536"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -101,9 +101,9 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 *login_name* Spécifie le nom de la connexion créée. Il existe quatre types de connexions : les connexions SQL Server, les connexions Windows, les connexions mappées par certificat et les connexions mappées par clé asymétrique. Quand vous créez des connexions mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session de l’utilisateur antérieur à Windows 2000 en respectant le format [\<domainName>\\<login_name>]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l’exemple D plus loin dans cet article. Les connexions d’authentification  sont de type **sysname** et doivent se conformer aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peuvent pas contenir de barre oblique inverse ( **\\** ). Les connexions Windows peuvent contenir une barre oblique inverse ( **\\** ). Les connexions basées sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.
 
-PASSWORD **=** '*password*' S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de l’algorithme SHA-512 du mot de passe salé.
+PASSWORD **=** ' *password* ' S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de l’algorithme SHA-512 du mot de passe salé.
 
-Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
+Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name* .
 
 PASSWORD **=** *hashed\_password* S’applique uniquement au mot clé HASHED. Spécifie la valeur hachée du mot de passe de la connexion créée.
 
@@ -113,7 +113,7 @@ MUST_CHANGE S’applique uniquement aux connexions SQL Server. Si vous incluez c
 
 CREDENTIAL **=** _credential\_name_ Nom des informations d’identification à mapper sur le nouveau compte de connexion SQL Server. Les informations d'identification doivent déjà exister sur le serveur. À l'heure actuelle, cette option lie uniquement l'information d'authentification à une connexion. Les informations d’identification ne peuvent pas être mappées à la connexion de l’administrateur système.
 
-SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. SID de connexion SQL Server : valeur littérale 16 octets (**binary(16)** ) basée sur un GUID. Par exemple : `SID = 0x14585E90117152449347750164BA00A7`.
+SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. SID de connexion SQL Server : valeur littérale 16 octets ( **binary(16)** ) basée sur un GUID. Par exemple : `SID = 0x14585E90117152449347750164BA00A7`.
 
 DEFAULT_DATABASE **=** _database_ Spécifie la base de données par défaut à attribuer à la connexion. Si cette option est omise, la base de données par défaut est master.
 
@@ -155,12 +155,12 @@ ASYMMETRIC KEY *asym_key_name* Spécifie le nom d’une clé asymétrique à ass
 
 ## <a name="permissions"></a>Autorisations
 
-- Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
+- Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 - Si l'option **CREDENTIAL** est utilisée, l'autorisation **ALTER ANY CREDENTIAL** est également exigée sur le serveur.
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
 
-Après la création d’une connexion, celle-ci peut se connecter à SQL Server, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
+Après la création d’une connexion, celle-ci peut se connecter à SQL Server, mais elle dispose uniquement des autorisations accordées au rôle **public** . Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Créez un rôle serveur défini par l’utilisateur à l’aide de [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Utilisez **ALTER SERVER ROLE** ... **ADD MEMBER** pour ajouter la nouvelle connexion au rôle serveur défini par l’utilisateur. Pour plus d’informations, consultez [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
@@ -182,7 +182,7 @@ GO
 
 L'exemple suivant crée une connexion pour un utilisateur particulier et attribue un mot de passe. L'option `MUST_CHANGE` exige que les utilisateurs modifient ce mot de passe la première fois qu'ils se connectent au serveur.
 
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>'
@@ -197,7 +197,7 @@ GO
 
 L'exemple suivant crée la connexion pour un utilisateur particulier, à l'aide de l'utilisateur. Cette connexion est mappée à l'information d'identification.
 
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>',
@@ -209,7 +209,7 @@ GO
 
 L’exemple suivant crée la connexion pour un utilisateur particulier à partir d’un certificat dans master.
 
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 USE MASTER;
@@ -225,7 +225,7 @@ GO
 
 L'exemple suivant crée une connexion à partir d'un compte de domaine Windows.
 
-**S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
+**S’applique à**  : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et versions ultérieures.
 
 ```sql
 CREATE LOGIN [<domainName>\<login_name>] FROM WINDOWS;
@@ -316,13 +316,13 @@ CREATE LOGIN login_name
 
 ## <a name="arguments"></a>Arguments
 
-*login_name* Spécifie le nom de la connexion créée. Les bases de données uniques et mises en pool dans Azure SQL Database et les bases de données dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] prennent uniquement en charge les connexions SQL. Pour créer des comptes pour les utilisateurs Azure Active Directory ou pour créer des comptes d’utilisateur non associés à une connexion, utilisez l’instruction [CREATE USER](create-user-transact-sql.md). Pour plus d’informations, consultez [Gérer des connexions dans Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+*login_name* Spécifie le nom de la connexion créée. Les bases de données uniques et mises en pool dans Azure SQL Database et les bases de données dans [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] prennent uniquement en charge les connexions SQL. Pour créer des comptes pour les utilisateurs Azure Active Directory ou pour créer des comptes d’utilisateur non associés à une connexion, utilisez l’instruction [CREATE USER](create-user-transact-sql.md). Pour plus d’informations, consultez [Gérer des connexions dans Azure SQL Database](/azure/sql-database/sql-database-manage-logins).
 
 PASSWORD **='** password* *'* Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
 
-Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
+Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name* .
 
-SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets ( **binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Notes
 
@@ -330,7 +330,7 @@ SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux co
 - La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur.
 
 > [!IMPORTANT]
-> Pour plus d’informations sur l’utilisation des connexions et des utilisateurs dans Azure SQL Database, consultez [Gérer des connexions dans Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+> Pour plus d’informations sur l’utilisation des connexions et des utilisateurs dans Azure SQL Database, consultez [Gérer des connexions dans Azure SQL Database](/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="login"></a>Connexion
 
@@ -338,9 +338,9 @@ SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux co
 
 L’instruction **CREATE LOGIN** doit être la seule instruction d’un traitement.
 
-Dans certaines méthodes de connexion à SQL Database, comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Database au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<login>* @ *\<server>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Database est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
+Dans certaines méthodes de connexion à SQL Database, comme **sqlcmd** , vous devez ajouter le nom du serveur SQL Database au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<login>* @ *\<server>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Database est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
 
-Dans SQL Database, vous devez être connecté à la base de données MASTER avec les autorisations appropriées pour créer une connexion. Pour plus d’informations, consultez [Créer des connexions et des utilisateurs supplémentaires disposant d’autorisations administratives](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
+Dans SQL Database, vous devez être connecté à la base de données MASTER avec les autorisations appropriées pour créer une connexion. Pour plus d’informations, consultez [Créer des connexions et des utilisateurs supplémentaires disposant d’autorisations administratives](/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
 Les règles SQL Server permettent de créer une connexion d’authentification SQL Server au format \<loginname>@\<servername>. Si votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] est **myazureserver** et que l’identifiant de connexion est **myemail@live.com** , vous devez fournir votre identifiant de connexion comme suit : **myemail@live.com@myazureserver** .
 
@@ -348,7 +348,7 @@ Dans SQL Database, les données de connexion exigées pour authentifier une conn
 
 ## <a name="permissions"></a>Autorisations
 
-Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Créer des connexions et des utilisateurs supplémentaires disposant d’autorisations administratives](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
+Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Créer des connexions et des utilisateurs supplémentaires disposant d’autorisations administratives](/azure/sql-database/sql-database-manage-logins#create-additional-logins-and-users-having-administrative-permissions).
 
 ## <a name="examples"></a>Exemples
 
@@ -435,40 +435,40 @@ CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 ## <a name="arguments"></a>Arguments
 
-*login_name* En cas d’utilisation avec la clause **FROM EXTERNAL PROVIDER**, la connexion spécifie le principal Azure Active Directory (AD), qui est un utilisateur, un groupe ou une application Azure AD. Autrement, la connexion représente le nom de la connexion SQL qui a été créée.
+*login_name* En cas d’utilisation avec la clause **FROM EXTERNAL PROVIDER** , la connexion spécifie le principal Azure Active Directory (AD), qui est un utilisateur, un groupe ou une application Azure AD. Autrement, la connexion représente le nom de la connexion SQL qui a été créée.
 
 FROM EXTERNAL PROVIDER </br>
 Spécifie que la connexion concerne l’authentification Azure AD.
 
-PASSWORD **=** '*password*' Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
+PASSWORD **=** ' *password* ' Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
 
-Les mots de passe respectent la casse. Les mots de passe doivent toujours comporter au moins dix caractères et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
+Les mots de passe respectent la casse. Les mots de passe doivent toujours comporter au moins dix caractères et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name* .
 
-SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Database, il s’agit d’un littéral 32 octets ( **binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Notes
 
 - Les mots de passe respectent la casse.
-- Une nouvelle syntaxe est introduite pour la création de principaux au niveau du serveur mappés à des comptes Azure AD (**FROM EXTERNAL PROVIDER**)
+- Une nouvelle syntaxe est introduite pour la création de principaux au niveau du serveur mappés à des comptes Azure AD ( **FROM EXTERNAL PROVIDER** )
 - Quand **FROM EXTERNAL PROVIDER** est spécifié :
 
   - login_name doit représenter un compte Azure AD existant (utilisateur, groupe ou application) qui est accessible dans Azure AD par l’instance Azure SQL Managed Instance active. Pour les principaux Azure AD, la syntaxe CREATE LOGIN exige les éléments suivants :
     - UserPrincipalName de l’objet Azure AD pour les utilisateurs Azure AD.
     - DisplayName de l’objet Azure AD pour les groupes Azure AD et les applications Azure AD.
-  - Vous ne pouvez pas utiliser l’option **PASSWORD**.
+  - Vous ne pouvez pas utiliser l’option **PASSWORD** .
 - Par défaut, quand la clause **FROM EXTERNAL PROVIDER** est omise, une connexion SQL standard est créée.
 - Les connexions AD Azure sont visibles dans sys.server_principals, avec une valeur de colonne de type définie sur **E** et une valeur type_desc définie sur **EXTERNAL_LOGIN** pour les connexions mappées à des utilisateurs d’Azure AD, ou une valeur de colonne de type définie sur  **X** et une valeur type_desc définie sur **EXTERNAL_GROUP** pour les connexions mappées à des groupes Azure AD.
 - Pour obtenir un script de transfert des connexions, consultez [Comment transférer les connexions et les mots de passe entre des instances de SQL Server 2005 et SQL Server 2008](https://support.microsoft.com/kb/918992).
 - La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur.
 
 > [!IMPORTANT]
-> Pour plus d’informations sur l’utilisation des connexions et des utilisateurs dans Azure SQL Database, consultez [Gérer des connexions dans Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+> Pour plus d’informations sur l’utilisation des connexions et des utilisateurs dans Azure SQL Database, consultez [Gérer des connexions dans Azure SQL Database](/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="logins-and-permissions"></a>Connexions et autorisations
 
-Seule la connexion principale au niveau du serveur (créée par le processus de provisionnement) ou les membres du rôle de base de données `securityadmin` ou `sysadmin` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
+Seule la connexion principale au niveau du serveur (créée par le processus de provisionnement) ou les membres du rôle de base de données `securityadmin` ou `sysadmin` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
-Par défaut, les autorisations standard accordées à une connexion Azure AD nouvellement créée dans master sont : **CONNECT SQL** et **VIEW ANY DATABASE**.
+Par défaut, les autorisations standard accordées à une connexion Azure AD nouvellement créée dans master sont : **CONNECT SQL** et **VIEW ANY DATABASE** .
 
 ### <a name="sql-managed-instance-logins"></a>Connexions SQL Managed Instance
 
@@ -481,11 +481,11 @@ Par défaut, les autorisations standard accordées à une connexion Azure AD nou
 > [!NOTE]
 > La fonctionnalité d’administration Azure AD pour Azure SQL Managed Instance a changé après la création. Pour plus d’informations, consultez [Nouvelle fonctionnalité d’administration Azure AD pour MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-Après la création d’une connexion, celle-ci peut se connecter à une instance managée, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
+Après la création d’une connexion, celle-ci peut se connecter à une instance managée, mais elle dispose uniquement des autorisations accordées au rôle **public** . Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour créer un utilisateur Azure AD à partir d’une connexion Azure AD, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, voir [Rôles non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Rôles d’administrateur au niveau du serveur supplémentaires](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et l’instruction [GRANT](grant-transact-sql.md).
-- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, voir [Rôles non administrateurs](/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Rôles d’administrateur au niveau du serveur supplémentaires](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et l’instruction [GRANT](grant-transact-sql.md).
+- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
   - Utilisez la commande suivante pour ajouter le rôle `sysadmin` à une connexion Azure AD : `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
@@ -541,7 +541,7 @@ Ma requête retourne 0x241C11948AEEB749B0D22646DB1A19F2 comme SID. Votre requêt
 
 ### <a name="c-creating-a-login-for-a-local-azure-ad-account"></a>C. Création d’une connexion pour un compte Azure AD local
 
- L’exemple suivant crée une connexion pour le compte Azure AD joe@myaad.onmicrosoft.com qui existe dans l’annuaire Azure AD de *myaad*.
+ L’exemple suivant crée une connexion pour le compte Azure AD joe@myaad.onmicrosoft.com qui existe dans l’annuaire Azure AD de *myaad* .
 
 ```sql
 CREATE LOGIN [joe@myaad.onmicrosoft.com] FROM EXTERNAL PROVIDER
@@ -550,7 +550,7 @@ GO
 
 ### <a name="d-creating-a-login-for-a-federated-azure-ad-account"></a>D. Création d’une connexion pour un compte Azure AD fédéré
 
- L’exemple suivant crée une connexion pour un compte Azure AD fédéré bob@contoso.com qui existe dans l’annuaire Azure AD nommé *contoso*. L’utilisateur bob peut également être un utilisateur invité.
+ L’exemple suivant crée une connexion pour un compte Azure AD fédéré bob@contoso.com qui existe dans l’annuaire Azure AD nommé *contoso* . L’utilisateur bob peut également être un utilisateur invité.
 
 ```sql
 CREATE LOGIN [bob@contoso.com] FROM EXTERNAL PROVIDER
@@ -559,7 +559,7 @@ GO
 
 ### <a name="e-creating-a-login-for-an-azure-ad-group"></a>E. Création d’une connexion pour un groupe Azure AD
 
- L’exemple suivant crée une connexion pour le groupe Azure AD *mygroup* qui existe dans l’annuaire Azure AD de *myaad*.
+ L’exemple suivant crée une connexion pour le groupe Azure AD *mygroup* qui existe dans l’annuaire Azure AD de *myaad* .
 
 ```sql
 CREATE LOGIN [mygroup] FROM EXTERNAL PROVIDER
@@ -568,7 +568,7 @@ GO
 
 ### <a name="f-creating-a-login-for-an-azure-ad-application"></a>F. Création d’une connexion pour une application Azure AD
 
-L’exemple suivant crée une connexion pour l’application Azure AD *myapp* qui existe dans l’annuaire Azure AD de *myaad*.
+L’exemple suivant crée une connexion pour l’application Azure AD *myapp* qui existe dans l’annuaire Azure AD de *myaad* .
 
 ```sql
 CREATE LOGIN [myapp] FROM EXTERNAL PROVIDER
@@ -637,9 +637,9 @@ CREATE LOGIN login_name
 
 PASSWORD **='** password* *'* Spécifie le mot de passe de la connexion SQL en cours de création. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). Depuis [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les informations de mot de passe stockées sont calculées à l’aide de la valeur salt SHA-512 du mot de passe.
 
-Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
+Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name* .
 
- SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Analytics, il s’agit d’un littéral 32 octets (**binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+ SID = *sid* Utilisé pour recréer une connexion. S’applique uniquement aux connexions d’authentification SQL Server, et non aux connexions d’authentification Windows. Spécifie le SID de la nouvelle connexion d’authentification SQL Server. Si cette option n’est pas sélectionnée, SQL Server attribue automatiquement un SID. La structure SID dépend de la version de SQL Server. Pour SQL Analytics, il s’agit d’un littéral 32 octets ( **binary(32)** ) composé de `0x01060000000000640000000000000000` plus 16 octets représentant un GUID. Par exemple : `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Notes
 
@@ -653,7 +653,7 @@ Les mots de passe respectent la casse. Les mots de passe doivent comporter au mo
 
 L’instruction **CREATE LOGIN** doit être la seule instruction d’un traitement.
 
-Lorsque vous vous connectez à Azure Synapse en utilisant des outils comme **sqlcmd**, vous devez ajouter le nom du serveur SQL Analytics au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<login>* @ *\<server>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Analytics est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
+Lorsque vous vous connectez à Azure Synapse en utilisant des outils comme **sqlcmd** , vous devez ajouter le nom du serveur SQL Analytics au nom de connexion dans la chaîne de connexion à l’aide de la notation *\<login>* @ *\<server>* . Par exemple, si votre connexion est `login1` et que le nom complet du serveur SQL Analytics est `servername.database.windows.net`, le paramètre *username* de la chaîne de connexion doit être `login1@servername`. Puisque la longueur totale du paramètre *username* est de 128 caractères, *login_name* est limité à 127 caractères moins la longueur du nom du serveur. Dans l'exemple, `login_name` peut contenir seulement 117 caractères car `servername` inclut 10 caractères.
 
 Pour créer une connexion, vous devez être connecté à la base de données master.
 
@@ -661,19 +661,19 @@ Les règles SQL Server permettent de créer une connexion d’authentification S
 
 Les données de connexion exigées pour authentifier une connexion et les règles de pare-feu au niveau du serveur sont temporairement mises en cache dans chaque base de données. Ce cache est régulièrement actualisé. Pour forcer une actualisation du cache d’authentification et garantir qu’une base de données a la version la plus récente de la table de connexions, exécutez [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
-Pour plus d'informations sur les connexions , consultez [Gestion des bases de données et des connexions](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
+Pour plus d'informations sur les connexions , consultez [Gestion des bases de données et des connexions](/azure/sql-database/sql-database-manage-logins).
 
 ## <a name="permissions"></a>Autorisations
 
-Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
+Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
 
-Après la création d’une connexion, celle-ci peut se connecter à Azure Synapse, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
+Après la création d’une connexion, celle-ci peut se connecter à Azure Synapse, mais elle dispose uniquement des autorisations accordées au rôle **public** . Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](grant-transact-sql.md). Pour plus d’informations, voir [Rôles non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Rôles d’administrateur au niveau du serveur supplémentaires](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et l’instruction [GRANT](grant-transact-sql.md).
-- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
+- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](grant-transact-sql.md). Pour plus d’informations, voir [Rôles non administrateurs](/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Rôles d’administrateur au niveau du serveur supplémentaires](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et l’instruction [GRANT](grant-transact-sql.md).
+- Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
@@ -766,9 +766,9 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 *login_name* Spécifie le nom de la connexion créée. Il existe quatre types de connexions : les connexions SQL Server, les connexions Windows, les connexions mappées par certificat et les connexions mappées par clé asymétrique. Quand vous créez des connexions mappées à partir d’un compte de domaine Windows, vous devez utiliser le nom d’ouverture de session de l’utilisateur antérieur à Windows 2000 en respectant le format [\<domainName>\\<login_name>]. Vous ne pouvez pas utiliser un nom UPN au format login_name@DomainName. Consultez l’exemple D plus loin dans cet article. Les connexions d’authentification  sont de type **sysname** et doivent se conformer aux règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peuvent pas contenir de barre oblique inverse ( **\\** ). Les connexions Windows peuvent contenir une barre oblique inverse ( **\\** ). Les connexions basées sur des utilisateurs Active Directory sont limités aux noms de moins de 21 caractères.
 
-PASSWORD **='** _password_' S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de l’algorithme SHA-512 du mot de passe salé.
+PASSWORD **='** _password_ ' S’applique uniquement aux connexions SQL Server. Spécifie le mot de passe de la connexion à créer. Utilisez un mot de passe fort. Pour plus d’informations, consultez [Mots de passe forts](../../relational-databases/security/strong-passwords.md) et [Stratégie de mot de passe](../../relational-databases/security/password-policy.md). À compter de SQL Server 2012 (11.x), les informations de mot de passe stockées sont calculées à l’aide de l’algorithme SHA-512 du mot de passe salé.
 
-Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name*.
+Les mots de passe respectent la casse. Les mots de passe doivent comporter au moins huit caractères, et ne peuvent pas dépasser 128 caractères. Les mots de passe peuvent inclure les caractères de A à Z, en minuscules ou en majuscules, les chiffres de 0 à 9 et la plupart des caractères non alphanumériques. Les mots de passe ne peuvent pas contenir de guillemets simples, ni le *login_name* .
 
 MUST_CHANGE S’applique uniquement aux connexions SQL Server. Si vous incluez cette option, SQL Server demande à l’utilisateur un nouveau mot de passe la première fois que la nouvelle connexion est utilisée.
 
@@ -801,11 +801,11 @@ WINDOWS Spécifie que la connexion doit être mappée sur une connexion Windows.
 
 ## <a name="permissions"></a>Autorisations
 
-Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
+Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
 
-Après la création d’une connexion, celle-ci peut se connecter à Azure Synapse Analytics, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
+Après la création d’une connexion, celle-ci peut se connecter à Azure Synapse Analytics, mais elle dispose uniquement des autorisations accordées au rôle **public** . Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - Créez un rôle serveur défini par l’utilisateur à l’aide de [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md). Utilisez **ALTER SERVER ROLE** ... **ADD MEMBER** pour ajouter la nouvelle connexion au rôle serveur défini par l’utilisateur. Pour plus d’informations, consultez [CREATE SERVER ROLE](../../t-sql/statements/create-server-role-transact-sql.md) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).

@@ -10,20 +10,20 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 24bdf85af4a165a77694af5e65c262fdf5b97edd
-ms.sourcegitcommit: e3460309b301a77d0babec032f53de330da001a9
+ms.openlocfilehash: 3e97f98a4e9080ceffdf4925c4467bfc27fc40d9
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2020
-ms.locfileid: "91136387"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300147"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
-Inscrit les extensions de langage externe dans la base de données à partir du flux d’octets ou du chemin de fichier spécifié. Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données d’inscrire de nouvelles extensions de langage externe sur toute plateforme de système d’exploitation prise en charge par SQL Server. Pour plus d’informations, consultez [Extensions de langage](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
+Inscrit les extensions de langage externe dans la base de données à partir du flux d’octets ou du chemin de fichier spécifié. Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données d’inscrire de nouvelles extensions de langage externe sur toute plateforme de système d’exploitation prise en charge par SQL Server. Pour plus d’informations, consultez [Extensions de langage](../../language-extensions/language-extensions-overview.md).
 
 > [!NOTE]
-> **R** et **Python** étant des noms réservés, aucun langage externe ne peut être créé avec ces derniers. Pour plus d’informations sur l’utilisation de **R** et de **Python**, consultez [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/machine-learning/).
+> **R** et **Python** étant des noms réservés, aucun langage externe ne peut être créé avec ces derniers. Pour plus d’informations sur l’utilisation de **R** et de **Python** , consultez [SQL Server Machine Learning Services](../../machine-learning/index.yml).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -109,7 +109,7 @@ Ce paramètre est nécessaire pour les scénarios de systèmes d’exploitation 
 
 ## <a name="permissions"></a>Autorisations
 
-Nécessite l’autorisation `CREATE EXTERNAL LANGUAGE`. Par défaut, les utilisateurs qui ont **dbo**, membre du rôle **db_owner**, disposent des autorisations nécessaires pour créer un langage externe. En ce qui concerne les autres utilisateurs, vous devez leur en donner l’autorisation explicitement à l’aide d’une instruction [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql), en spécifiant le privilège CREATE EXTERNAL LANGUAGE.
+Nécessite l’autorisation `CREATE EXTERNAL LANGUAGE`. Par défaut, les utilisateurs qui ont **dbo** , membre du rôle **db_owner** , disposent des autorisations nécessaires pour créer un langage externe. En ce qui concerne les autres utilisateurs, vous devez leur en donner l’autorisation explicitement à l’aide d’une instruction [GRANT](./grant-database-permissions-transact-sql.md), en spécifiant le privilège CREATE EXTERNAL LANGUAGE.
 
 La modification d’une bibliothèque nécessite l’autorisation distincte `ALTER ANY EXTERNAL LANGUAGE`.
 
@@ -117,7 +117,7 @@ La modification d’une bibliothèque nécessite l’autorisation distincte `ALT
 
 Vous pouvez utiliser des autorisations EXECUTE EXTERNAL SCRIPT afin qu’une exécution de script externe puisse être accordée sur des langages spécifiques. C’est différent de l’autorisation de base de données EXECUTE ANY EXTERNAL SCRIPT qui ne permet pas d’accorder d’autorisation d’exécution sur un langage spécifique.
 
-Cela signifie que les utilisateurs non-**dbo** doivent se voir accorder une autorisation pour exécuter un langage spécifique :
+Cela signifie que les utilisateurs non- **dbo** doivent se voir accorder une autorisation pour exécuter un langage spécifique :
 
 ```sql
 GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::language_name 
@@ -153,7 +153,7 @@ GO
 ```
 ### <a name="c-grant-permissions-to-execute-external-script"></a>C. Accorder des autorisations pour exécuter un script externe
 
-L’exemple suivant permet au principal **mylogin** d’exécuter des scripts à l’aide du langage externe **Java**.
+L’exemple suivant permet au principal **mylogin** d’exécuter des scripts à l’aide du langage externe **Java** .
 
 ```sql
 GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 
@@ -166,4 +166,4 @@ TO mylogin;
 [ALTER EXTERNAL LANGUAGE (Transact-SQL)](alter-external-language-transact-sql.md)  
 [DROP EXTERNAL LANGUAGE (Transact-SQL)](drop-external-language-transact-sql.md)  
 [sys.external_languages](../../relational-databases/system-catalog-views/sys-external-languages-transact-sql.md)  
-[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)  
+[sys.external_language_files](../../relational-databases/system-catalog-views/sys-external-language-files-transact-sql.md)

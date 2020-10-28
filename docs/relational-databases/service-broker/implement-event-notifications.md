@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f70601ac1b686576f643e511873e0dfb860ec771
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 91eef4cfd2a1097b7879c507cbccb0b3d3a7e909
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88447968"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679004"
 ---
 # <a name="implement-event-notifications"></a>Implémenter des notifications d'événements
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -38,12 +38,12 @@ https://schemas.microsoft.com/SQL/Notifications/PostEventNotification
   
  Le service cible qui reçoit les notifications d'événements doit respecter ce contrat préexistant.  
   
- **Pour créer un service cible**:  
+ **Pour créer un service cible** :  
   
 1.  Créez une file d'attente pour recevoir les messages.  
   
     > [!NOTE]  
-    >  Cette file d'attente reçoit le type de message suivant : `https://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
+    >  Cette file d'attente reçoit le type de message suivant : `http://schemas.microsoft.com/SQL/Notifications/QueryNotification`.  
   
 2.  Créez un service dans la file d'attente qui fasse référence au contrat de notification d'événement.  
   
@@ -60,7 +60,7 @@ GO
 CREATE SERVICE NotifyService  
 ON QUEUE NotifyQueue  
 (  
-[https://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
+[http://schemas.microsoft.com/SQL/Notifications/PostEventNotification]  
 );  
 GO  
 CREATE ROUTE NotifyRoute  

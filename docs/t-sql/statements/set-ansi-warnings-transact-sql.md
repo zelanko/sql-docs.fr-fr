@@ -24,12 +24,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d33d1b9e1369128bc3eeae3df1ca48c4dbbb69e8
-ms.sourcegitcommit: 8f062015c2a033f5a0d805ee4adabbe15e7c8f94
+ms.openlocfilehash: 8b41f37f996015de4b853c9443ef700b16242b44
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "91227083"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300835"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -59,10 +59,10 @@ SET ANSI_WARNINGS ON
   
 -   Lorsque la valeur est définie à ON et que des valeurs NULL figurent dans des fonctions d'agrégation (par exemple, SUM, AVG, MAX, MIN, STDEV, STDEVP, VAR, VARP ou COUNT), un message d'avertissement est généré. Lorsque la valeur est définie à OFF, aucun avertissement n'est émis.  
   
--   Lorsque la valeur est définie à ON, les erreurs de division par zéro et de dépassement de capacité arithmétique provoquent l'annulation de l'instruction et l'émission d'un message d'erreur. Lorsque la valeur est définie à OFF, les erreurs de division par zéro et de dépassement arithmétique entraînent le renvoi de valeurs NULL. Une erreur de division par zéro ou de dépassement arithmétique provoque le retour de valeurs NULL si une opération INSERT ou UPDATE est tentée sur une colonne de type **character**, Unicode ou **binary** contenant une nouvelle valeur dont la longueur est supérieure à la taille maximale de la colonne. Conformément à la norme ISO, si l’option SET ANSI_WARNINGS est activée (valeur ON), l’opération INSERT ou UPDATE est annulée. Les espaces blancs sont ignorés dans des colonnes de type caractère et les zéros sont ignorés dans les colonnes de type binaire. Lorsque la valeur est définie à OFF, les données sont tronquées de façon à correspondre à la taille de la colonne, et l'instruction s'exécute correctement.  
+-   Lorsque la valeur est définie à ON, les erreurs de division par zéro et de dépassement de capacité arithmétique provoquent l'annulation de l'instruction et l'émission d'un message d'erreur. Lorsque la valeur est définie à OFF, les erreurs de division par zéro et de dépassement arithmétique entraînent le renvoi de valeurs NULL. Une erreur de division par zéro ou de dépassement arithmétique provoque le retour de valeurs NULL si une opération INSERT ou UPDATE est tentée sur une colonne de type **character** , Unicode ou **binary** contenant une nouvelle valeur dont la longueur est supérieure à la taille maximale de la colonne. Conformément à la norme ISO, si l’option SET ANSI_WARNINGS est activée (valeur ON), l’opération INSERT ou UPDATE est annulée. Les espaces blancs sont ignorés dans des colonnes de type caractère et les zéros sont ignorés dans les colonnes de type binaire. Lorsque la valeur est définie à OFF, les données sont tronquées de façon à correspondre à la taille de la colonne, et l'instruction s'exécute correctement.  
   
 > [!NOTE]  
-> Quand la troncature se produit au cours d’une conversion à partir de ou vers des données de type **binary** ou **varbinary**, aucun message d’avertissement ou d’erreur n’est émis, quelles que soient les options SET.  
+> Quand la troncature se produit au cours d’une conversion à partir de ou vers des données de type **binary** ou **varbinary** , aucun message d’avertissement ou d’erreur n’est émis, quelles que soient les options SET.  
   
 > [!NOTE]  
 > L'option ANSI_WARNINGS n'est pas reconnue lors d'un passage de paramètres dans une procédure stockée ou dans une fonction définie par l'utilisateur, ou bien lors de la déclaration et de la définition de variables dans une instruction par lot. Par exemple, si une variable est définie comme **char(3)** , puis réglée sur une valeur supérieure à trois caractères, les données sont tronquées à la taille définie et l’instruction INSERT ou UPDATE réussit.  
@@ -76,7 +76,7 @@ ANSI_WARNINGS doit être activé (valeur ON) lors de la création ou de la manip
 > [!IMPORTANT]
 > La valeur de ANSI_WARNINGS doit être définie à ON lors de l'exécution de requêtes distribuées.  
   
-Les clients, tels que le pilote ODBC client natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le fournisseur OLE DB client natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le pilote Microsoft JDBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définissent automatiquement ANSI_WARNINGS sur ON avec un indicateur de connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, définis dans l'application avant la connexion. La valeur par défaut pour SET ANSI_WARNINGS est OFF lorsqu'il s'agit de connexions à partir d'applications de bibliothèques de bases de données. Pour plus d’informations, consultez [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) dans les spécifications du protocole TDS (Tabular Data Stream). 
+Les clients, tels que le pilote ODBC client natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le fournisseur OLE DB client natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le pilote Microsoft JDBC pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définissent automatiquement ANSI_WARNINGS sur ON avec un indicateur de connexion. Cette option peut être configurée dans les sources de données et les attributs de connexion ODBC, définis dans l'application avant la connexion. La valeur par défaut pour SET ANSI_WARNINGS est OFF lorsqu'il s'agit de connexions à partir d'applications de bibliothèques de bases de données. Pour plus d’informations, consultez [LOGIN7](/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) dans les spécifications du protocole TDS (Tabular Data Stream). 
 
 Quand ANSI_DEFAULTS est ON, ANSI_WARNINGS est activé.  
   
@@ -188,5 +188,4 @@ DROP TABLE T1;
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
-  
   

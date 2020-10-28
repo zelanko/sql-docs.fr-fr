@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: c916977259dc82638117b800e5fc6c2d306edf04
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 7644e25159a7df28d2de51d5e1a08a0e1b36ef05
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88454251"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300381"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (type de données geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
 
 ## <a name="arguments"></a>Arguments
  *distance*  
- Valeur de type **float** (**double** dans le .NET Framework), qui spécifie la distance de l’instance geometry autour de laquelle calculer la mémoire tampon.  
+ Valeur de type **float** ( **double** dans le .NET Framework), qui spécifie la distance de l’instance geometry autour de laquelle calculer la mémoire tampon.  
   
 ## <a name="return-types"></a>Types de retour  
  Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geometry**  
@@ -49,16 +49,16 @@ Retourne un objet géométrique qui représente l’union de tous les points don
  Type de retour CLR : **SqlGeometry**  
   
 ## <a name="remarks"></a>Remarques  
- `STBuffer()` calcule une mémoire tampon de la même manière que [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), en spécifiant *tolerance* = distance \* 0,001, et *relative* = **false**.  
+ `STBuffer()` calcule une mémoire tampon de la même manière que [BufferWithTolerance](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md), en spécifiant *tolerance* = distance \* 0,001, et *relative* = **false** .  
   
  Quand *distance* > 0, une instance **Polygon** ou **MultiPolygon** est retournée.  
   
 > [!NOTE]  
->  Dans la mesure où distance est de type **float**, une valeur très petite peut être équivalente à zéro dans les calculs.  Quand cela se produit, une copie de l’instance **geometry** appelante est retournée.  Consultez [float et real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+>  Dans la mesure où distance est de type **float** , une valeur très petite peut être équivalente à zéro dans les calculs.  Quand cela se produit, une copie de l’instance **geometry** appelante est retournée.  Consultez [float et real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
   
  Quand *distance* = 0, une copie de l’instance **geometry** appelante est retournée.  
   
- Quand *distance* < 0, alors  
+ Quand *distance*  < 0, alors  
   
 -   une instance **GeometryCollection** vide est retournée quand les dimensions de l’instance sont 0 ou 1.  
   
@@ -69,7 +69,7 @@ Retourne un objet géométrique qui représente l’union de tous les points don
   
  Une mémoire tampon négative supprime tous les points situés dans la distance donnée de la limite de la géométrie.  
   
- L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max (tolérance, étendues * 1E-7), où tolérance = distance \* 0,001. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geometry](https://msdn.microsoft.com/library/d88e632b-6b2f-4466-a15f-9fbef1a347a7).  
+ L’erreur entre la mémoire tampon théorique et la mémoire tampon calculée correspond à max (tolérance, étendues * 1E-7), où tolérance = distance \* 0,001. Pour plus d’informations sur les étendues, consultez [Référence de méthodes de type de données geometry](./spatial-types-geometry-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -169,5 +169,3 @@ Retourne un objet géométrique qui représente l’union de tous les points don
  [BufferWithTolerance &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/bufferwithtolerance-geometry-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
-  
-
