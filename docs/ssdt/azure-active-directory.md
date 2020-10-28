@@ -10,12 +10,12 @@ reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: cde082f95bc7ff150c263742450a69fa9c90e6b7
-ms.sourcegitcommit: a5398f107599102af7c8cda815d8e5e9a367ce7e
+ms.openlocfilehash: 4227c2ad60e30994287fd0fc8c2524787c19b534
+ms.sourcegitcommit: bd3a135f061e4a49183bbebc7add41ab11872bae
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/13/2020
-ms.locfileid: "92005913"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "92300371"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Prise en charge d’Azure Active Directory dans SQL Server Data Tools (SSDT)
 
@@ -23,7 +23,7 @@ ms.locfileid: "92005913"
 
 SQL Server Data Tools (SSDT) fournit plusieurs méthodes d’authentification [Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-whatis).
 
-Dans Visual Studio, ouvrez l’**Explorateur d’objets SQL Server** (dans le menu **Afficher**), puis sélectionnez **Ajouter SQL Server** :
+Dans Visual Studio, ouvrez l’ **Explorateur d’objets SQL Server** (dans le menu **Afficher** ), puis sélectionnez **Ajouter SQL Server**  :
 
 ![Boîte de dialogue de connexion à SSDT](media/azure-active-directory/interactive.png)
 
@@ -66,21 +66,21 @@ Si la méthode MFA est spécifiée, le **Nom d’utilisateur** doit être spéci
 
 #### <a name="password-entry"></a>Entrée de mot de passe
 
-Lors de l’authentification avec *l’authentification interactive Active Directory*, une fenêtre d’authentification s’ouvre qui oblige les utilisateurs à entrer un mot de passe manuellement.
+Lors de l’authentification avec *l’authentification interactive Active Directory* , une fenêtre d’authentification s’ouvre qui oblige les utilisateurs à entrer un mot de passe manuellement.
 
 ![boîte de dialogue de connexion](media/azure-active-directory/sign-in.png)
 
 La mise en œuvre de MFA est fournie par Azure AD par le biais de cette fenêtre contextuelle MFA supplémentaire.
 
 > [!NOTE]
-> Les flux de travail automatisés sont bloqués par l’utilisation de *l’authentification interactive Active Directory*. Une personne doit être disponible pour interagir avec le processus d’authentification, c’est-à-dire qu’elle doit entrer manuellement un mot de passe.
+> Les flux de travail automatisés sont bloqués par l’utilisation de *l’authentification interactive Active Directory* . Une personne doit être disponible pour interagir avec le processus d’authentification, c’est-à-dire qu’elle doit entrer manuellement un mot de passe.
 
 ## <a name="known-issues-and-limitations"></a>Problèmes connus et limitations
 
 - *L’authentification Interactive Active Directory* est uniquement prise en charge lors de la connexion aux produits SQL Azure répertoriés au début de cet article. Elle n’est pas prise en charge pour SQL Server (en local ou sur une machine virtuelle).
-- *L’authentification interactive Active Directory* n’est pas prise en charge dans la boîte de dialogue de connexion de *l’Explorateur de serveurs*. Vous devez vous connecter à l’aide de SSDT avec *l’Explorateur d’objets SQL Server*.
+- *L’authentification interactive Active Directory* n’est pas prise en charge dans la boîte de dialogue de connexion de *l’Explorateur de serveurs* . Vous devez vous connecter à l’aide de SSDT avec *l’Explorateur d’objets SQL Server* .
 - L’intégration de l’authentification unique avec le compte actuellement connecté dans Visual Studio n’est pas prise en charge pour SSDT.
-- Le fichier SQLPackage.exe installé dans le répertoire Extensions durant l’installation de Visual Studio n’est pas destiné à être utilisé à partir de cet emplacement. Pour utiliser SQLpackage.exe avec Azure AD, accédez à [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088). 
+- Le fichier SQLPackage.exe installé dans le répertoire Extensions durant l’installation de Visual Studio n’est pas destiné à être utilisé à partir de cet emplacement. Pour utiliser SQLPackage.exe avec Azure AD, accédez à [infrastructure d’application de la couche Données](https://www.microsoft.com/download/details.aspx?id=55088) 
 - La comparaison de données SSDT n’est pas prise en charge pour l’authentification Azure AD.  
 
 
@@ -90,5 +90,4 @@ La mise en œuvre de MFA est fournie par Azure AD par le biais de cette fenêtre
 [Authentification Azure Active Directory avec SQL Database](/azure/sql-database/sql-database-aad-authentication-configure)  
 [Forum MSDN SSDT](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [Blog de l’équipe SSDT](/archive/blogs/ssdt/)  
-[Référence de l’API DACFx](/previous-versions/sql/sql-server-2014/dn645454(v=sql.120))  
 [Télécharger SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)

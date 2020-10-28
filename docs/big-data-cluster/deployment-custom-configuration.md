@@ -9,18 +9,18 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 48a2c99a029517ebbab24b017bbaeba906b1c6cb
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: cef348aee2b917b0a6afd61d30b5e4f7fa7da665
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725860"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257199"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>Configurer les paramètres de déploiement de services et ressources de cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-En commençant avec un ensemble prédéfini de profils de configuration intégrés à l’outil de gestion `azdata`, vous pouvez facilement modifier les paramètres par défaut pour mieux répondre à vos exigences de charge de travail BDC. La structure des fichiers de configuration vous permet de mettre à jour précisément les paramètres de chaque service de la ressource.
+En commençant avec un ensemble prédéfini de profils de configuration intégrés à l’outil de gestion [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], vous pouvez facilement modifier les paramètres par défaut pour mieux répondre à vos exigences de charge de travail BDC. La structure des fichiers de configuration vous permet de mettre à jour précisément les paramètres de chaque service de la ressource.
 
 Regardez cette vidéo de 13 minutes pour obtenir une vue d’ensemble de la configuration de cluster Big Data :
 
@@ -648,7 +648,7 @@ Pour désactiver l’exécution en mode privilégié du conteneur qui exécute E
 }
 ```
 
-Vous pouvez modifier manuellement le fichier `control.json` et ajouter la section ci-dessus dans `spec`, ou vous pouvez créer un fichier de correctif `elasticsearch-patch.json` comme ci-dessous et utiliser l’interface de ligne de commande `azdata` pour corriger le fichier `control.json` :
+Vous pouvez modifier manuellement le `control.json` et ajouter la section ci-dessus dans `spec` ou vous pouvez créer un fichier correctifs `elasticsearch-patch.json` comme ci-dessous et utiliser [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] pour corriger le fichier `control.json` :
 
 ```json
 {
@@ -677,8 +677,8 @@ azdata bdc config patch --config-file custom-bdc/control.json --patch-file elast
 
 ## <a name="turn-pods-and-nodes-metrics-collection-onoff"></a>Activer/désactiver la collecte de métriques sur les pods et les nœuds
 
-SQL Server 2019 CU5 a activé deux commutateurs de fonctionnalités pour contrôler la collecte de métriques sur les pods et les nœuds. Si vous utilisez d’autres solutions pour superviser votre infrastructure Kubernetes, vous pouvez désactiver la collecte de métriques intégrée pour les pods et les nœuds hôtes en définissant *allowNodeMetricsCollection* et *allowPodMetricsCollection* sur *false* dans le fichier de configuration de déploiement *control.json*. Pour les environnements OpenShift, ces paramètres sont définis sur *false* par défaut dans les profils de déploiement intégrés, puisque la collecte des métriques sur les pods et les nœuds requiert des fonctionnalités privilégiées.
-Exécutez cette commande pour mettre à jour les valeurs de ces paramètres dans votre fichier de configuration personnalisé à l’aide de l’interface CLI *azdata* :
+SQL Server 2019 CU5 a activé deux commutateurs de fonctionnalités pour contrôler la collecte de métriques sur les pods et les nœuds. Si vous utilisez d’autres solutions pour superviser votre infrastructure Kubernetes, vous pouvez désactiver la collecte de métriques intégrée pour les pods et les nœuds hôtes en définissant *allowNodeMetricsCollection* et *allowPodMetricsCollection* sur *false* dans le fichier de configuration de déploiement *control.json* . Pour les environnements OpenShift, ces paramètres sont définis sur *false* par défaut dans les profils de déploiement intégrés, puisque la collecte des métriques sur les pods et les nœuds requiert des fonctionnalités privilégiées.
+Exécutez cette commande pour mettre à jour les valeurs de ces paramètres dans votre fichier de configuration personnalisé à l’aide de l’interface CLI *azdata*  :
 
 ```bash
  azdata bdc config replace -c custom-bdc/control.json -j "$.security.allowNodeMetricsCollection=false"

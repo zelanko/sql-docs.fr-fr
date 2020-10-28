@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ca15786b88c62b41202310bd537a3224ddea458e
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: 1583ab8c54d16d7bcf129e401c2e540fabb342b3
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934880"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92155097"
 ---
 # <a name="whats-new-in-sql-server-language-extensions"></a>Nouveautés des extensions de langage SQL Server
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -32,7 +32,7 @@ Des fonctionnalités propres aux [extensions de langage](language-extensions-ove
 
 Pour plus d’informations sur toutes les fonctionnalités de cette version, consultez [Nouveautés de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) et [Notes de publication pour SQL Server 2019](../sql-server/sql-server-version-15-release-notes.md).
 
-- Le runtime Java par défaut sur Windows et Linux est Open Zulu JRE. Il est fourni lors de l’installation des extensions de langage SQL Server [sur Windows](install/install-sql-server-language-extensions-on-windows.md) et [sur Linux](../linux/sql-server-linux-setup-language-extensions.md).
+- Le runtime Java par défaut sur Windows et Linux est Open Zulu JRE. Il est fourni lors de l’installation des extensions de langage SQL Server [sur Windows](install/windows-java.md) et [sur Linux](../linux/sql-server-linux-setup-language-extensions-java.md).
 - [Types de données Java](how-to/java-to-sql-data-types.md) pris en charge.
 - [CREATE EXTERNAL LANGUAGE](../t-sql/statements/create-external-language-transact-sql.md) pour l’inscription d’un langage externe (par exemple, Java) auprès de SQL Server.
 - [Kit SDK d’extensibilité Microsoft pour Java](how-to/extensibility-sdk-java-sql-server.md).
@@ -41,4 +41,4 @@ Pour plus d’informations sur toutes les fonctionnalités de cette version, con
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-+ Installer les [extensions de langage SQL Server sur Windows](install/install-sql-server-language-extensions-on-windows.md) ou [sur Linux](../linux/sql-server-linux-setup-language-extensions.md)
++ Installez les [Extensions de langage SQL Server sur Windows](install/windows-java.md) ou [sur Linux](../linux/sql-server-linux-setup-language-extensions-java.md).

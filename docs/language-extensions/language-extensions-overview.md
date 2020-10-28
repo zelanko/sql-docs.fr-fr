@@ -1,7 +1,7 @@
 ---
 title: Présentation des extensions de langage SQL Server
 titleSuffix: ''
-description: Les extensions de langage sont une fonctionnalité de SQL Server utilisée pour l’exécution de code externe. Dans SQL Server 2019, Java, Python et R sont pris en charge. Les données relationnelles peuvent être utilisées dans le code externe avec le framework d’extensibilité.
+description: Les extensions de langage sont une fonctionnalité de SQL Server utilisée pour l’exécution de code externe. Dans SQL Server 2019, Java, Python et R sont pris en charge. Les données relationnelles peuvent être utilisées dans le code externe avec l’infrastructure d’extensibilité.
 author: dphansen
 ms.author: davidph
 ms.date: 10/07/2020
@@ -9,12 +9,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 09d5643b3a39493843adc0ad2da716b7fda1b332
-ms.sourcegitcommit: fe59f8dc27fd633f5dfce54519d6f5dcea577f56
+ms.openlocfilehash: c4482adb86f9a2f205bd64044a18f342cf3e13c5
+ms.sourcegitcommit: 43b92518c5848489d03c68505bd9905f8686cbc0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91934904"
+ms.lasthandoff: 10/17/2020
+ms.locfileid: "92154942"
 ---
 # <a name="what-is-sql-server-language-extensions"></a>Présentation des extensions de langage SQL Server
 [!INCLUDE [SQL Server 2019 and later](../includes/applies-to-version/sqlserver2019.md)]
@@ -42,5 +42,5 @@ Les extensions de langage offrent plusieurs avantages :
 
 + Installer le [runtime personnalisé Python pour SQL Server](../machine-learning/install/custom-runtime-python.md)
 + Installer le [runtime personnalisé R pour SQL Server](../machine-learning/install/custom-runtime-r.md)
-+ Installer les [extensions de langage SQL Server sur Windows](install/install-sql-server-language-extensions-on-windows.md) ou [sur Linux](../linux/sql-server-linux-setup-language-extensions.md)
++ Installer les [extensions de langage SQL Server sur Windows](install/windows-java.md) ou [sur Linux](../linux/sql-server-linux-setup-language-extensions-java.md)
 + Installer le [kit SDK d’extensibilité Microsoft pour Java](how-to/extensibility-sdk-java-sql-server.md).

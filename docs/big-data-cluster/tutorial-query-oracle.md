@@ -3,24 +3,24 @@ title: Interroger des données externes dans Oracle
 titleSuffix: SQL Server big data clusters
 description: Ce tutoriel montre comment interroger les données Oracle à partir d’un cluster Big Data SQL Server 2019. Vous créez une table externe sur les données dans Oracle, puis exécutez une requête.
 author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: ''
-ms.date: 08/21/2019
+ms.author: dacoelho
+ms.reviewer: mikeray
+ms.date: 10/01/2020
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7695cf6d88fd05fdbffba28663c910889797ace9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 48d7fb0f41446fa54f1376a9a84f7dbff7017960
+ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772845"
+ms.lasthandoff: 10/19/2020
+ms.locfileid: "92196083"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutoriel : Interroger Oracle à partir d’un cluster Big Data SQL Server
+# <a name="tutorial-query-oracle-from-sql-server-big-data-cluster"></a>Tutoriel : Interroger Oracle à partir d’un cluster Big Data SQL Server
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Ce tutoriel montre comment interroger les données Oracle à partir d’un cluster Big Data SQL Server 2019. Pour exécuter ce tutoriel, vous devez avoir accès à un serveur Oracle. Si vous n’y avez pas accès, ce tutoriel peut vous donner une idée du fonctionnement de la virtualisation de données pour les sources de données externes dans un cluster Big Data SQL Server.
+Ce tutoriel montre comment interroger les données Oracle à partir d’un cluster Big Data SQL Server 2019. Pour exécuter ce tutoriel, vous devez avoir accès à un serveur Oracle. Un compte d’utilisateur Oracle avec des privilèges de lecture sur l’objet externe est requis. L’authentification des utilisateurs du proxy Oracle est prise en charge. Si vous n’y avez pas accès, ce tutoriel peut vous donner une idée du fonctionnement de la virtualisation de données pour les sources de données externes dans un cluster Big Data SQL Server.
 
 Dans ce tutoriel, vous allez apprendre à :
 
@@ -67,7 +67,7 @@ La première étape consiste à créer une source de données externe qui peut a
 
 1. Dans Azure Data Studio, connectez-vous à l’instance maître SQL Server de votre cluster Big Data. Pour plus d’informations, consultez [Se connecter à l’instance maître SQL Server](connect-to-big-data-cluster.md#master).
 
-1. Double-cliquez sur la connexion dans la fenêtre **Serveurs** pour afficher le tableau de bord de serveur de l’instance maître SQL Server. Sélectionnez **Nouvelle requête**.
+1. Double-cliquez sur la connexion dans la fenêtre **Serveurs** pour afficher le tableau de bord de serveur de l’instance maître SQL Server. Sélectionnez **Nouvelle requête** .
 
    ![Requête d’instance maître SQL Server](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
@@ -90,6 +90,30 @@ La première étape consiste à créer une source de données externe qui peut a
    ```sql
    CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
+   ```
+
+### <a name="optional-oracle-proxy-authentication"></a>Facultatif : Authentification du proxy Oracle
+
+Oracle prend en charge l’authentification du proxy pour fournir un contrôle d’accès précis. Un utilisateur proxy se connecte à la base de données Oracle à l’aide de ses informations d’identification et emprunte l’identité d’un autre utilisateur de la base de données. 
+
+Un utilisateur proxy peut être configuré pour disposer d’un accès limité par rapport à l’utilisateur dont l’identité est empruntée. Par exemple, un utilisateur proxy peut être autorisé à se connecter à l’aide d’un rôle de base de données spécifique de l’utilisateur dont l’identité est empruntée. L’identité de l’utilisateur qui se connecte à la base de données Oracle par le biais d’un utilisateur proxy est conservée dans la connexion, même si plusieurs utilisateurs se connectent à l’aide de l’authentification proxy. Cela permet à Oracle d’appliquer le contrôle d’accès et d’auditer les actions effectuées pour le compte de l’utilisateur réel.
+
+Si votre scénario requiert l’utilisation d’un utilisateur de proxy Oracle, __remplacez les étapes 4 et 5 précédentes par les suivantes__ .
+
+4. Créez des informations d’identification étendues à la base de données pour vous connecter au serveur Oracle. Fournissez les informations d’identification d’utilisateur de proxy appropriées à votre serveur Oracle dans l’instruction suivante.
+
+   ```sql
+   CREATE DATABASE SCOPED CREDENTIAL [OracleProxyCredential]
+   WITH IDENTITY = '<oracle_proxy_user,nvarchar(100),SYSTEM>', SECRET = '<oracle_proxy_user_password,nvarchar(100),manager>';
+   ```
+
+5. Créez une source de données externe qui pointe vers le serveur Oracle.
+
+   ```sql
+   CREATE EXTERNAL DATA SOURCE [OracleSalesSrvr]
+   WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',
+   CONNECTION_OPTIONS = 'ImpersonateUser=% CURRENT_USER',
+   CREDENTIAL = [OracleProxyCredential]);
    ```
 
 ## <a name="create-an-external-table"></a>Créer une table externe

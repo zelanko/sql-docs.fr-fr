@@ -9,12 +9,12 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 126bb1ae7daddbaeb4d0ab72440051807f71cd5c
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: ef2a1097d07494ca74ed2afe50c93922de83838c
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725830"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257169"
 ---
 # <a name="manage-hdfs-permissions-for-big-data-clusters-2019"></a>Gérer les autorisations HDFS pour [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -22,7 +22,7 @@ ms.locfileid: "91725830"
 
 HDFS, en tant que système de fichiers, est similaire aux systèmes de fichiers basés sur Linux qui utilisent POSIX pour les autorisations de fichier. En plus du modèle d’autorisations POSIX traditionnel, HDFS prend aussi en charge les listes de contrôle d’accès (ACL) POSIX. Pour plus d’informations, consultez l’[article Apache Hadoop sur les listes de contrôle d’accès](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#ACLs_.28Access_Control_Lists.29).
 
-Les sections suivantes fournissent des exemples d’utilisation de l’interface CLI `azdata` pour la gestion des autorisations de fichier et de répertoire HDFS.
+Les sections suivantes fournissent des exemples d’utilisation de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] pour la gestion des autorisations de fichier et de répertoire HDFS.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
@@ -31,7 +31,7 @@ Les sections suivantes fournissent des exemples d’utilisation de l’interface
   
 ## <a name="hdfs-shell"></a>Interpréteur de commandes HDFS
 
-La fonctionnalité d’interpréteur de commandes `hdfs` dans `azdata` vous permet d’émettre des commandes directement dans un interpréteur de commandes pour gérer les autorisations HDFS sur les fichiers et les répertoires. Le mécanisme sous-jacent utilise les appels WebHdfs pour émettre les commandes.
+La fonctionnalité d’interpréteur de commandes `hdfs` dans [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] vous permet d’émettre des commandes directement dans un interpréteur de commandes pour gérer les autorisations HDFS sur les fichiers et les répertoires. Le mécanisme sous-jacent utilise les appels WebHdfs pour émettre les commandes.
 
 La commande suivante ouvre l’interpréteur de commandes.
 
@@ -72,7 +72,7 @@ acl modify: Change completed.
 }
 ```
 
-## <a name="create-a-directory-in-hdfs-using-azdata"></a>Créer un répertoire dans HDFS en utilisant `azdata`
+## <a name="create-a-directory-in-hdfs-using-azure-data-cli-azdata"></a>Créer un répertoire dans HDFS en utilisant [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]
 
 Créez un répertoire appelé `data` dans `/sales`.
 
@@ -110,7 +110,7 @@ azdata bdc hdfs chmod --path /sales/users --permission 1750
 
 ## <a name="setting-acls-on-files-and-directories"></a>Définition de listes de contrôle d’accès sur des fichiers et des répertoires
 
-Pour définir des listes de contrôle d’accès sur des fichiers et des répertoires dans HDFS, utilisez les commandes `azdata`.
+Pour définir des listes de contrôle d’accès sur des fichiers et des répertoires dans HDFS, utilisez les commandes [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)].
 
 Définition de listes de contrôle d’accès sur un répertoire et attribution à un utilisateur nommé *`tom`* un accès en lecture, en écriture et en exécution au répertoire *`data`* . 
 
@@ -133,6 +133,6 @@ azdata bdc hdfs acl set --path '/sale' --aclspec  'user::rw-,user:tom:rwx,group:
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- [Référence `azdata`](../azdata/reference/reference-azdata.md)
+- [Référence [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/reference/reference-azdata.md)
 
 - [Que sont les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ?](big-data-cluster-overview.md)

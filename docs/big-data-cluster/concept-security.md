@@ -9,12 +9,12 @@ ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f0d19589c057df0af9ffea711edd8963bc381e2d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e3be3a3ea0d3f3b3d452bfea058ff85dd8a9141
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730679"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257249"
 ---
 # <a name="security-concepts-for-big-data-clusters-2019"></a>Concepts de sécurité pour les [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ Les points de terminaison de cluster externes prennent en charge l’authentific
 
 Il existe cinq points d’entrée pour le cluster Big Data
 
-* Instance maître : point de terminaison TDS permettant d’accéder à l’instance maître SQL Server dans le cluster, à l’aide d’outils de base de données et d’applications comme SSMS ou Azure Data Studio. Lorsque vous utilisez des commandes HDFS ou SQL Server à partir d’azdata, l’outil se connecte aux autres points de terminaison, en fonction de l’opération.
+* Instance maître : point de terminaison TDS permettant d’accéder à l’instance maître SQL Server dans le cluster, à l’aide d’outils de base de données et d’applications comme SSMS ou Azure Data Studio. Lorsque vous utilisez des commandes HDFS ou SQL Server à partir de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], l’outil se connecte aux autres points de terminaison, en fonction de l’opération.
 
 * Passerelle pour accéder aux fichiers HDFS, Spark (Knox) ; point de terminaison HTTPS pour accéder à des services tels que webHDFS et Spark.
 
@@ -61,14 +61,21 @@ Un cluster Big Data sécurisé implique une prise en charge uniforme et cohéren
 
 L’autorisation dans le contexte du Big Data est généralement effectuée par le biais de listes de contrôle d’accès (ACL) qui associent des identités d’utilisateur à des autorisations spécifiques. HDFS prend en charge l’autorisation en limitant l’accès aux API de service, aux fichiers HDFS et à l’exécution de travaux.
 
-## <a name="encryption-and-other-security-mechanisms"></a>Chiffrement et autres mécanismes de sécurité
+## <a name="encryption-in-flight-and-other-security-mechanisms"></a>Chiffrement en vol et autres mécanismes de sécurité
 
 Le chiffrement de la communication entre les clients et les points de terminaison externes, ainsi qu’entre les composants à l’intérieur du cluster, est sécurisé avec TLS/SSL, à l’aide de certificats.
 
 Toutes les communications de SQL Server à SQL Server, telles que l’instance maître SQL communiquant avec un pool de données, sont sécurisées à l’aide de connexions SQL.
 
 > [!IMPORTANT]
->  Les clusters Big Data utilisent etcd pour stocker les informations d’identification. En guise de bonne pratique, assurez-vous que votre cluster Kubernetes est configuré pour utiliser le chiffrement etcd au repos. Par défaut, les secrets stockés dans etcd ne sont pas chiffrés. La documentation Kubernetes fournit des détails sur cette tâche administrative : https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ et https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+>  Les Clusters Big Data utilisent `etcd` pour stocker les informations d’identification. En guise de bonne pratique, assurez-vous que votre cluster Kubernetes est configuré pour utiliser le chiffrement `etcd` au repos. Par défaut, les secrets stockés dans `etcd` ne sont pas chiffrés. La documentation Kubernetes fournit des détails sur cette tâche administrative : https://kubernetes.io/docs/tasks/administer-cluster/kms-provider/ et https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/.
+
+## <a name="data-encryption-at-rest"></a>Chiffrement des données au repos
+
+La fonctionnalité de chiffrement au repos sur des Clusters Big Data SQL Server prend en charge le scénario de base du chiffrement au niveau de l’application pour les composants SQL Server et HDFS. Pour obtenir des instructions complètes sur l’utilisation des fonctionnalités, suivez l’article [Guide de configuration et des concepts du chiffrement au repos](encryption-at-rest-concepts-and-configuration.md).
+
+> [!IMPORTANT]
+> Le chiffrement de volume est recommandé pour tous les déploiements de cluster Big Data SQL Server. Les volumes de stockage fournis par le client configurés dans les clusters Kubernetes doivent également être chiffrés, en tant qu’approche complète du chiffrement des données au repos. La fonctionnalité de chiffrement au repos sur le cluster Big Data SQL Server est une couche de sécurité supplémentaire, qui fournit le chiffrement au niveau de l’application des fichiers de données et journaux de SQL Server et du support des zones de chiffrement HDFS.
 
 
 ## <a name="basic-administrator-login"></a>Connexion administrateur de base

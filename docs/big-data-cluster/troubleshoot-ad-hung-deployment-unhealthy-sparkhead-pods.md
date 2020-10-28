@@ -9,12 +9,12 @@ ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a51f5efc0c4c9cd2a341efd158b271853c0fb936
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 521efff2d77f2d0b6423b61c9b9b74e507764ff0
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898692"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257099"
 ---
 # <a name="ad-mode-deployment-hangs--unhealthy-sparkhead-pods"></a>Blocage du déploiement en mode AD - Pods `sparkhead` défectueux
 
@@ -101,12 +101,12 @@ Extrayez les journaux et recherchez.
 `\mssql-cluster\control-<identifier>\controller\control-<identifier>-controller-stdout.log`.
 
 > [!TIP]
-> Il existe plusieurs façons de collecter les journaux. Au lieu de copier les journaux avec `azdata`, vous pouvez utiliser un notebook dans Azure Data Studio.
+> Il existe plusieurs façons de collecter les journaux. Au lieu de copier les journaux avec [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)], vous pouvez utiliser un notebook dans Azure Data Studio.
 > Dans Azure Data Studio, connectez-vous au cluster Kubernetes et exécutez un notebook de dépannage approprié. Voici quelques exemples de notebooks.
 >
 > - TSG027 - Observer le déploiement du cluster
 > - TSG061 - Obtenir la fin de tous les journaux de conteneurs pour les pods dans l’espace de noms BDC
-> - TSG001 - Exécutez `azdata` copy-logs
+> - TSG001 - Exécuter `azdata copy-logs`
 >
   
 ## <a name="inspect-the-logs"></a>Inspection des données

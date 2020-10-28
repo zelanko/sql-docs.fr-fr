@@ -9,12 +9,12 @@ ms.date: 09/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb42be7b0affc351a013e29af9370d1a109e3d93
-ms.sourcegitcommit: 783b35f6478006d654491cb52f6edf108acf2482
+ms.openlocfilehash: 48dde8000274ea74df1c6095714b54669c5becdd
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "91898709"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257289"
 ---
 # <a name="deploy-sql-server-big-data-cluster-in-active-directory-mode"></a>Déployer un cluster Big Data SQL Server en mode Active Directory
 
@@ -50,9 +50,9 @@ L’intégration AD nécessite les paramètres suivants. Ajoutez ces paramètre
 - `security.activeDirectory.domainControllerFullyQualifiedDns`: Liste des noms de domaine complets de contrôleur de domaine. Le nom de domaine complet contient le nom de l’ordinateur/hôte du contrôleur de domaine. Si vous avez plusieurs contrôleurs de domaine, vous pouvez fournir une liste ici. Exemple : `HOSTNAME.CONTOSO.LOCAL`.
 
   > [!IMPORTANT]
-  > Lorsque plusieurs contrôleurs de domaine servent un domaine, utilisez le contrôleur de domaine principal comme première entrée de la liste `domainControllerFullyQualifiedDns` dans la configuration de la sécurité. Pour récupérer le nom du contrôleur de domaine principal, tapez `netdom query fsmo` dans l’invite de commandes, puis appuyez sur **ENTRÉE**.
+  > Lorsque plusieurs contrôleurs de domaine servent un domaine, utilisez le contrôleur de domaine principal comme première entrée de la liste `domainControllerFullyQualifiedDns` dans la configuration de la sécurité. Pour récupérer le nom du contrôleur de domaine principal, tapez `netdom query fsmo` dans l’invite de commandes, puis appuyez sur **ENTRÉE** .
 
-- `security.activeDirectory.realm` **Paramètre facultatif** : Dans la majorité des cas, le domaine est égal au nom de domaine. Pour les cas où ils ne sont pas les mêmes, utilisez ce paramètre pour définir le nom du domaine (par exemple, `CONTOSO.LOCAL`). La valeur fournie pour ce paramètre doit être complète.
+- `security.activeDirectory.realm` **Paramètre facultatif**  : Dans la majorité des cas, le domaine est égal au nom de domaine. Pour les cas où ils ne sont pas les mêmes, utilisez ce paramètre pour définir le nom du domaine (par exemple, `CONTOSO.LOCAL`). La valeur fournie pour ce paramètre doit être complète.
 
   > [!IMPORTANT]
   > À ce stade, le BDC ne prend pas en charge une configuration où le nom de domaine Active Directory est différent du nom de **NETBIOS** du domaine Active Directory.
@@ -77,7 +77,7 @@ Pour savoir comment mettre à jour les groupes AD en ce qui concerne ces paramè
   >Créez ces groupes dans AD avant le début du déploiement. Si l’étendue de l’un de ces groupes AD est locale au niveau du domaine, le déploiement échoue.
 
   >[!IMPORTANT]
-  >Si vos utilisateurs de domaine présentent de nombreuses appartenances à des groupes, ajustez les valeurs du paramètre de passerelle `httpserver.requestHeaderBuffer` (valeur par défaut : `8192`) et du paramètre HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (valeur par défaut : `10`), à l’aide du fichier de configuration de déploiement *bdc.json* personnalisé. Cette meilleure pratique vise à éviter les délais de connexion à la passerelle et les réponses HTTP comportant le code d’état 431 (*Champs d’en-tête de demande trop volumineux*). Voici une section du fichier de configuration montrant comment définir les valeurs de ces paramètres et indiquant les valeurs recommandées pour un nombre élevé d’appartenance à des groupes :
+  >Si vos utilisateurs de domaine présentent de nombreuses appartenances à des groupes, ajustez les valeurs du paramètre de passerelle `httpserver.requestHeaderBuffer` (valeur par défaut : `8192`) et du paramètre HDFS `hadoop.security.group.mapping.ldap.search.group.hierarchy.levels` (valeur par défaut : `10`), à l’aide du fichier de configuration de déploiement *bdc.json* personnalisé. Cette meilleure pratique vise à éviter les délais de connexion à la passerelle et les réponses HTTP comportant le code d’état 431 ( *Champs d’en-tête de demande trop volumineux* ). Voici une section du fichier de configuration montrant comment définir les valeurs de ces paramètres et indiquant les valeurs recommandées pour un nombre élevé d’appartenance à des groupes :
 
 ```json
 {
@@ -113,13 +113,13 @@ Pour savoir comment mettre à jour les groupes AD en ce qui concerne ces paramè
   >[!IMPORTANT]
   >Créez les groupes fournis pour les paramètres ci-dessous dans AD avant le début du déploiement. Si l’étendue de l’un de ces groupes AD est locale au niveau du domaine, le déploiement échoue.
 
-- `security.activeDirectory.appOwners` **Paramètre facultatif** : Liste des groupes Active Directory qui sont autorisés à créer, supprimer et exécuter n’importe quelle application. La liste peut inclure des groupes AD dont l’étendue est universelle ou globale. Il ne peut pas s’agir de groupes locaux au niveau du domaine.
+- `security.activeDirectory.appOwners` **Paramètre facultatif**  : Liste des groupes Active Directory qui sont autorisés à créer, supprimer et exécuter n’importe quelle application. La liste peut inclure des groupes AD dont l’étendue est universelle ou globale. Il ne peut pas s’agir de groupes locaux au niveau du domaine.
 
-- `security.activeDirectory.appReaders` **Paramètre facultatif** : liste des groupes AD qui sont autorisés à exécuter n’importe quelle application. La liste peut inclure des groupes AD dont l’étendue est universelle ou globale. Il ne peut pas s’agir de groupes locaux au niveau du domaine.
+- `security.activeDirectory.appReaders` **Paramètre facultatif**  : liste des groupes AD qui sont autorisés à exécuter n’importe quelle application. La liste peut inclure des groupes AD dont l’étendue est universelle ou globale. Il ne peut pas s’agir de groupes locaux au niveau du domaine.
 
 Le tableau ci-dessous montre le modèle d’autorisation pour la gestion des applications :
 
-|   Rôles autorisés   |   Commande azdata   |
+|   Rôles autorisés   |   Commande [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]   |
 |----------------------|--------------------|
 |   appOwner           | azdata app create  |
 |   appOwner           | azdata app update  |
@@ -134,7 +134,7 @@ Le tableau ci-dessous montre le modèle d’autorisation pour la gestion des app
   >La valeur transmise par le biais du paramètre subdomain ne constitue pas un nouveau domaine AD, mais seulement un domaine DNS utilisé en interne par le cluster Big Data.
 
   >[!IMPORTANT]
-  >À partir de la version of SQL Server 2019 CU5, vous devez mettre à niveau **l’interface CLI azdata** ou en installer la dernière version pour tirer parti de ces nouvelles fonctionnalités et déployer plusieurs clusters Big Data dans le même domaine.
+  >À partir de la mise en production SQL Server 2019 CU5, vous devez installer ou mettre à niveau la dernière version de **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** pour tirer parti de ces nouvelles fonctionnalités et déployer plusieurs clusters Big Data dans le même domaine.
 
   Pour plus d’informations sur le déploiement de plusieurs clusters Big Data dans le même domaine Active Directory, consultez [Concept : Déploiement de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en mode Active Directory](active-directory-deployment-background.md).
 
@@ -151,7 +151,7 @@ Si vous n’avez pas encore initialisé le fichier de configuration de déploiem
 azdata bdc config init --source kubeadm-prod  --target custom-prod-kubeadm
 ```
 
-Pour définir les paramètres ci-dessus dans le fichier `control.json`, utilisez les commandes `azdata` suivantes. Ces commandes remplacent la configuration et fournissent vos propres valeurs avant le déploiement.
+Pour définir les paramètres ci-dessus dans le fichier `control.json`, utilisez les commandes [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] suivantes. Ces commandes remplacent la configuration et fournissent vos propres valeurs avant le déploiement.
 
 > [!IMPORTANT]
 > Dans la version SQL Server 2019 CU2, la section de la configuration de la sécurité dans le profil de déploiement a été restructurée : tous les paramètres Active Directory se trouvent maintenant dans le nouveau `activeDirectory` de l’arborescence JSON sous `security` dans le fichier `control.json`.
@@ -213,7 +213,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.spec.endpoin
 Vous trouverez un exemple de script ici pour [déployer un cluster Big Data SQL Server sur un cluster Kubernetes à nœud unique (kubeadm) avec l’intégration Active Directory](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm-ad).
 
 > [!Note]
-> Il peut exister des cas de figure dans lesquels la prise en compte du nouveau paramètre `subdomain` n’est pas possible, par exemple, si vous devez déployer une version antérieure à CU5 et que vous avez déjà mis à niveau **l’interface CLI azdata**. Même si cette situation est très improbable, vous pouvez définir le paramètre `useSubdomain` sur `false` dans la section Active Directory de `control.json` pour rétablir le comportement d’avant CU5.  Voici la commande à exécuter :
+> Il peut exister des cas de figure dans lesquels la prise en compte du nouveau paramètre `subdomain` n’est pas possible, par exemple, si vous devez déployer une version antérieure à CU5 et que vous avez déjà mis à niveau **[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]** . Même si cette situation est très improbable, vous pouvez définir le paramètre `useSubdomain` sur `false` dans la section Active Directory de `control.json` pour rétablir le comportement d’avant CU5.  Voici la commande à exécuter :
 
 ```bash
 azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.activeDirectory.useSubdomain=false"
@@ -221,7 +221,7 @@ azdata bdc config replace -c custom-prod-kubeadm/control.json -j "$.security.act
 
 Vous devez maintenant avoir défini tous les paramètres requis pour un déploiement du cluster BDC avec l’intégration Active Directory.
 
-Vous pouvez maintenant déployer le cluster BDC intégré à Active Directory à l’aide de la commande `azdata` et du profil de déploiement kubeadm-prod. Pour obtenir une documentation complète sur le déploiement des [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], consultez [Comment déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md).
+Vous pouvez maintenant déployer le cluster BDC intégré à Active Directory à l’aide de la commande [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] et du profil de déploiement kubeadm-prod. Pour obtenir une documentation complète sur le déploiement des [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)], consultez [Comment déployer des clusters Big Data SQL Server sur Kubernetes](deployment-guidance.md).
 
 ## <a name="verify-reverse-dns-entry-for-domain-controller"></a>Vérifier l’entrée DNS inversée pour le contrôleur de domaine
 

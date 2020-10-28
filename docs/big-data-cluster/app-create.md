@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 890b029833e7d34da7663b9f0e6ccfa63195c6d5
-ms.sourcegitcommit: c7f40918dc3ecdb0ed2ef5c237a3996cb4cd268d
+ms.openlocfilehash: 8e91315b5ec79c136b4d84a7fbc36a707cc3d82f
+ms.sourcegitcommit: ae474d21db4f724523e419622ce79f611e956a22
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/05/2020
-ms.locfileid: "91725080"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92257299"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-clusters"></a>Comment déployer une application sur un cluster Big Data SQL Server
 
@@ -32,11 +32,11 @@ Cet article explique comment déployer et gérer des scripts R et Python en tant
 - Prise en charge de l’hébergement de types d’application supplémentaires - SQL Server Integration Services (SSIS) et MLeap.
 - [Extension Visual Studio Code](app-deployment-extension.md) pour gérer le déploiement des applications
 
-Les applications sont déployées et gérées à l’aide de l’utilitaire de ligne de commande `azdata`. Cet article fournit des exemples de déploiement d’applications à partir de la ligne de commande. Pour savoir comment l’utiliser dans Visual Studio Code, consultez la section [Extension Visual Studio Code](app-deployment-extension.md).
+Les applications sont déployées et managées à l’aide de [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]. Cet article fournit des exemples de déploiement d’applications à partir de la ligne de commande. Pour savoir comment l’utiliser dans Visual Studio Code, consultez la section [Extension Visual Studio Code](app-deployment-extension.md).
 
 Les types d’applications suivants sont pris en charge :
 
-- **Python** : un des langages de programmation généraux les plus populaires pour différents profils, comme les ingénieurs de données, les scientifiques des données ou les ingénieurs DevOps ; il est adapté à de nombreux scénarios, comme le data wrangling, l’automatisation et le prototypage, dans une certaine mesure. Il est également utilisé pour programmer des applications professionnelles conjointement avec des infrastructures de développement web telles que Flask et Django pour répondre à différents besoins professionnels.  
+- **Python**  : un des langages de programmation généraux les plus populaires pour différents profils, comme les ingénieurs de données, les scientifiques des données ou les ingénieurs DevOps ; il est adapté à de nombreux scénarios, comme le data wrangling, l’automatisation et le prototypage, dans une certaine mesure. Il est également utilisé pour programmer des applications professionnelles conjointement avec des infrastructures de développement web telles que Flask et Django pour répondre à différents besoins professionnels.  
 - **R** : un autre langage de programmation populaire pour l’ingénierie des données et les scientifiques des données. Par rapport à Python, R est un langage de programmation avec une focalisation plus spécifique sur le calcul statistique et les graphiques.  
 - **SQL Server Integration Services (SSIS)** : des solutions d’intégration de données hautes performances pour la génération et le débogage de packages ETL. SSIS utilise le format de fichier de package de services de transformation de données (DTSX), un format de fichier XML qui stocke les instructions pour le traitement de la migration de données entre les bases de données et l’intégration de sources de données externes.   
 - **MLeap** : un format de sérialisation courant qui fournit tout ce qui est nécessaire pour exécuter et sérialiser des pipelines SparkML et d’autres qui peuvent être chargés au moment de l’exécution pour traiter les tâches de scoring ML en temps quasi-réel et proches des données.  
@@ -44,11 +44,11 @@ Les types d’applications suivants sont pris en charge :
 ## <a name="prerequisites"></a>Prérequis
 
 - [Cluster Big Data SQL Server 2019](deployment-guidance.md)
-- [Utilitaire de ligne de commande azdata](../azdata/install/deploy-install-azdata.md)
+- [[!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)]](../azdata/install/deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Fonctionnalités
 
-Dans SQL Server 2019, vous pouvez créer, supprimer, décrire, initialiser, exécuter et mettre à jour votre application. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **azdata**.
+Dans SQL Server 2019, vous pouvez créer, supprimer, décrire, initialiser, exécuter et mettre à jour votre application. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **azdata** .
 
 |Commande |Description |
 |:---|:---|
@@ -114,7 +114,7 @@ spec.yaml
 
 ## <a name="create-an-app"></a>Créer une application
 
-Pour créer une application, utilisez `azdata` avec la commande `app create`. Ces fichiers résident localement sur la machine à partir de laquelle vous créez l’application.
+Pour créer une application, utilisez [!INCLUDE [azure-data-cli-azdata](../includes/azure-data-cli-azdata.md)] avec la commande `app create`. Ces fichiers résident localement sur la machine à partir de laquelle vous créez l’application.
 
 Pour créer une application sur un cluster Big Data, utilisez la syntaxe suivante :
 

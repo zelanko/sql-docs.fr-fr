@@ -1,2 +1,2 @@
-  \<*lecteur*>:\Program Files\Microsoft SQL Server\\*nnn*\\
+  \<*drive*>:\Program Files\Microsoft SQL Server\\*nnn*\\
    
