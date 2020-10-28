@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9d764f4f2e56137dc89f346c6235d0978ef82a9
-ms.sourcegitcommit: dd36d1cbe32cd5a65c6638e8f252b0bd8145e165
+ms.openlocfilehash: 8c283777fea2999d7948a3282b623cd92f0baf54
+ms.sourcegitcommit: ea0bf89617e11afe85ad85309e0ec731ed265583
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/08/2020
-ms.locfileid: "89542104"
+ms.lasthandoff: 10/28/2020
+ms.locfileid: "92907381"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Vues de schémas d’informations système (Transact-SQL)
 
@@ -100,6 +100,12 @@ SELECT TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME, COLUMN_DEFAULT
 FROM AdventureWorks2012.INFORMATION_SCHEMA.COLUMNS
 WHERE TABLE_NAME = N'Product';
 ```
+
+## <a name="permissions"></a>Autorisations  
+La visibilité des métadonnées dans les vues de schémas d’informations est limitée aux éléments sécurisables qu’un utilisateur possède ou sur lesquels une autorisation a été accordée à l’utilisateur. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+
+> [!NOTE]  
+> Les vues de schémas d’informations sont définies au niveau du serveur et ne peuvent donc pas être refusées dans le contexte d’une base de données utilisateur. Pour RÉVOQUer ou refuser l’accès (SELECT), vous devez utiliser la base de données Master. Par défaut, le rôle public dispose de l’autorisation SELECT-SELECT pour toutes les vues de schémas d’informations, mais le contenu est limité par les règles de visibilité des métadonnées.
 
 ## <a name="see-also"></a>Voir aussi
 
