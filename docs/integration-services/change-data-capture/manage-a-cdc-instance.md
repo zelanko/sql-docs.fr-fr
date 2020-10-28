@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0190e48bb33b0e62eb711e0833de4492af9ad434
-ms.sourcegitcommit: e700497f962e4c2274df16d9e651059b42ff1a10
+ms.openlocfilehash: 247bbc38945edb8fe51e348d4515ee9f4231a9e0
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/17/2020
-ms.locfileid: "88426041"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679222"
 ---
 # <a name="manage-a-cdc-instance"></a>Gérer une instance de capture de données modifiées
 
@@ -70,42 +70,42 @@ ms.locfileid: "88426041"
  **État**  
  Cet onglet fournit des informations et des statistiques sur l'état actuel de l'instance CDC. Il contient les informations suivantes :  
   
--   **État**: icône indiquant l'état actuel de l'instance de capture de données modifiées. La section suivante décrit les états.  
+-   **État** : icône indiquant l'état actuel de l'instance de capture de données modifiées. La section suivante décrit les états.  
   
     |Icône|États et descriptions|  
     |-|-|  
-    |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**Error**. L'instance Oracle CDC n'est pas en cours d'exécution, car une erreur non renouvelable s'est produite. Les sous-états suivants sont disponibles :<br /><br /> **Misconfigured**: une erreur de configuration qui nécessite une intervention manuelle s'est produite.<br /><br /> **Password Required**: aucun mot de passe n'est défini pour l'instance Oracle CDC ou le mot de passe n'est pas valide.<br /><br /> **Unexpected**. Toutes les autres erreurs non récupérables.|  
-    |![Okay](../../integration-services/change-data-capture/media/okay.gif "OK")|**Running**: l'instance de capture de données modifiées s'exécute et traite les enregistrements de modification. Les sous-états suivants sont disponibles :<br /><br /> **Idle**: tous les enregistrements de modification ont été traités et stockés dans les tables de modifications cibles. Il n'y a plus de transactions actives.<br /><br /> **Processing**: il existe des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de modifications.|  
-    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Arrêter")|**Stopped**: l'instance de capture de données modifiées n'est pas en cours d'exécution. L'état Stopped indique que l'instance de capture de données modifiées a été arrêtée de manière régulière.|  
-    |![En pause](../../integration-services/change-data-capture/media/paused.gif "Suspendu")|**Paused**: l'instance de capture de données modifiées s'exécute mais le traitement est interrompu en raison d'une erreur renouvelable. Les sous-états suivants sont disponibles :<br /><br /> **Disconnected**: il est impossible d'établir la connexion à la base de données Oracle source. Le traitement reprend lorsque la connexion est restaurée.<br /><br /> **Storage** : le stockage est saturé. Le traitement reprend lorsque le stockage supplémentaire est disponible.<br /><br /> **Logger**: le journal est connecté à Oracle mais ne peut pas lire les journaux des transactions Oracle en raison d'un problème temporaire, par exemple, un journal des transactions n'est pas disponible.|  
+    |:::image type="icon" source="../../integration-services/change-data-capture/media/error.gif":::|**Error** . L'instance Oracle CDC n'est pas en cours d'exécution, car une erreur non renouvelable s'est produite. Les sous-états suivants sont disponibles :<br /><br /> **Misconfigured** : une erreur de configuration qui nécessite une intervention manuelle s'est produite.<br /><br /> **Password Required** : aucun mot de passe n'est défini pour l'instance Oracle CDC ou le mot de passe n'est pas valide.<br /><br /> **Unexpected** . Toutes les autres erreurs non récupérables.|  
+    |:::image type="icon" source="../../integration-services/change-data-capture/media/okay.gif":::|**Running** : l'instance de capture de données modifiées s'exécute et traite les enregistrements de modification. Les sous-états suivants sont disponibles :<br /><br /> **Idle** : tous les enregistrements de modification ont été traités et stockés dans les tables de modifications cibles. Il n'y a plus de transactions actives.<br /><br /> **Processing** : il existe des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de modifications.|  
+    |:::image type="icon" source="../../integration-services/change-data-capture/media/stop.gif":::|**Stopped** : l'instance de capture de données modifiées n'est pas en cours d'exécution. L'état Stopped indique que l'instance de capture de données modifiées a été arrêtée de manière régulière.|  
+    |:::image type="icon" source="../../integration-services/change-data-capture/media/paused.gif":::|**Paused** : l'instance de capture de données modifiées s'exécute mais le traitement est interrompu en raison d'une erreur renouvelable. Les sous-états suivants sont disponibles :<br /><br /> **Disconnected** : il est impossible d'établir la connexion à la base de données Oracle source. Le traitement reprend lorsque la connexion est restaurée.<br /><br /> **Storage**  : le stockage est saturé. Le traitement reprend lorsque le stockage supplémentaire est disponible.<br /><br /> **Logger** : le journal est connecté à Oracle mais ne peut pas lire les journaux des transactions Oracle en raison d'un problème temporaire, par exemple, un journal des transactions n'est pas disponible.|  
   
--   **Detailed Status**: le sous-statut actuel.  
+-   **Detailed Status** : le sous-statut actuel.  
   
--   **Status Message**: plus d'informations sur l'état actuel.  
+-   **Status Message** : plus d'informations sur l'état actuel.  
   
--   **Timestamp**: heure UTC indiquant la dernière lecture de l'état de capture de données modifiées dans la table d'état.  
+-   **Timestamp** : heure UTC indiquant la dernière lecture de l'état de capture de données modifiées dans la table d'état.  
   
--   **Currently Processing**: vous surveillez les informations suivantes dans cette section.  
+-   **Currently Processing** : vous surveillez les informations suivantes dans cette section.  
   
-    -   **Last transaction timestamp**: heure locale de la dernière transaction écrite dans les tables de modifications.  
+    -   **Last transaction timestamp** : heure locale de la dernière transaction écrite dans les tables de modifications.  
   
-    -   **Last change timestamp**: heure locale de la modification la plus récente détectée par l'instance Oracle CDC dans les journaux des transactions de la base de données Oracle source. Cela fournit des informations sur la latence actuelle de l'instance de capture de données modifiées lors de la lecture du journal des transactions Oracle.  
+    -   **Last change timestamp** : heure locale de la modification la plus récente détectée par l'instance Oracle CDC dans les journaux des transactions de la base de données Oracle source. Cela fournit des informations sur la latence actuelle de l'instance de capture de données modifiées lors de la lecture du journal des transactions Oracle.  
   
-    -   **Transaction log head CN**: numéro de modification le plus récent (CN) qui a été lu dans le journal des transactions Oracle.  
+    -   **Transaction log head CN** : numéro de modification le plus récent (CN) qui a été lu dans le journal des transactions Oracle.  
   
-    -   **Transaction log tail CN**: numéro de modification pour la récupération ou le redémarrage de l'instance de capture de données modifiées. L'instance Oracle CDC se replacera à cet emplacement en cas de redémarrage ou de tout autre type d'échec (notamment basculement de cluster).  
+    -   **Transaction log tail CN** : numéro de modification pour la récupération ou le redémarrage de l'instance de capture de données modifiées. L'instance Oracle CDC se replacera à cet emplacement en cas de redémarrage ou de tout autre type d'échec (notamment basculement de cluster).  
   
-    -   **Current CN**: dernier numéro de modification (SCN) trouvé dans la base de données Oracle source (pas dans le journal des transactions).  
+    -   **Current CN** : dernier numéro de modification (SCN) trouvé dans la base de données Oracle source (pas dans le journal des transactions).  
   
-    -   **Active transactions**: nombre actuel de transactions Oracle sources qui sont traitées par l’instance Oracle CDC et pour lesquelles aucune décision n’est encore prise (validation/restauration).  
+    -   **Active transactions** : nombre actuel de transactions Oracle sources qui sont traitées par l’instance Oracle CDC et pour lesquelles aucune décision n’est encore prise (validation/restauration).  
   
-    -   **Staged transactions**: nombre actuel de transactions Oracle sources intermédiaires dans la table [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) .  
+    -   **Staged transactions** : nombre actuel de transactions Oracle sources intermédiaires dans la table [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions) .  
   
--   **Counters**: vous surveillez les informations suivantes dans cette section.  
+-   **Counters** : vous surveillez les informations suivantes dans cette section.  
   
-    -   **Completed transactions**: nombre de transactions terminées depuis la dernière réinitialisation de l'instance de capture de données modifiées. Cela n'inclut pas les transactions qui ne contiennent pas les tables d'intérêt.  
+    -   **Completed transactions** : nombre de transactions terminées depuis la dernière réinitialisation de l'instance de capture de données modifiées. Cela n'inclut pas les transactions qui ne contiennent pas les tables d'intérêt.  
   
-    -   **Written changes**: nombre de modifications écrites dans les tables de modifications SQL Server.  
+    -   **Written changes** : nombre de modifications écrites dans les tables de modifications SQL Server.  
   
  **Oracle**  
  Affiche des informations sur l'instance de capture de données modifiées et sa connexion à la base de données Oracle. Cet onglet est en lecture seule. Pour modifier ces propriétés, cliquez avec le bouton droit sur l’instance dans le volet gauche et sélectionnez **Propriétés** ou cliquez sur **Propriétés** dans le volet droit pour ouvrir la boîte de dialogue Propriétés de \<instance>.  
