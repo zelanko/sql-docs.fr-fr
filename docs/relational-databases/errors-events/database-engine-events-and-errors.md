@@ -10,12 +10,12 @@ ms.topic: reference
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25afd0615066472ce8e7a63b757576b50629e15f
-ms.sourcegitcommit: cfa04a73b26312bf18d8f6296891679166e2754d
+ms.openlocfilehash: a799e90f659e02fcd02e72270684b968a58cc6b6
+ms.sourcegitcommit: 22e97435c8b692f7612c4a6d3fe9e9baeaecbb94
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "92194248"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "92679188"
 ---
 # <a name="database-engine-errors"></a>Erreurs du moteur de base de données
 
@@ -513,7 +513,7 @@ ORDER BY message_id
 |    829    |    21    |    Oui    |    L'ID de base de données %d, Page %S_PGID, est marqué RestorePending, ce qui peut indiquer un disque endommagé. Pour récupérer à partir de cet état, effectuez une restauration.    |
 |    830    |    10    |    Non    |    page périmée (une lecture de page a retourné un numéro séquentiel dans le journal (%u:%u:%u) qui est antérieur au dernier qui a été écrit (%u:%u:%u))    |
 |    831    |    20    |    Non    |    Impossible de désallouer une page contenant toutes les sections de la région de données.    |
-|    832    |    24    |    Oui    |    Une page qui aurait dû être constante a changé (somme de contrôle attendue : %08x, somme de contrôle réelle : %08x, base de données %d, fichier '%ls', page %S_PGID). Cela indique généralement une défaillance de la mémoire ou tout autre dommage au niveau du matériel ou du système d'exploitation.    |
+|    [832](mssqlserver-832-database-engine-error.md)    |    24    |    Oui    |    Une page qui aurait dû être constante a changé (somme de contrôle attendue : %08x, somme de contrôle réelle : %08x, base de données %d, fichier '%ls', page %S_PGID). Cela indique généralement une défaillance de la mémoire ou tout autre dommage au niveau du matériel ou du système d'exploitation.    |
 |    [833](mssqlserver-833-database-engine-error.md)    |    10    |    Non    |    SQL Server a rencontré %d occurrence(s) de requêtes d'E/S mettant plus de %d secondes à s'effectuer dans le fichier '%ls' de la base de données '%ls' (%d). Le descripteur de fichier du système d'exploitation est 0x%p. Le décalage de la dernière E/S longue est: %#016I64x    |
 |    [844](mssqlserver-844-database-engine-error.md)    |    10    |    Non    |    Un dépassement de délai s'est produit lors de l'attente du verrou de tampon -- type %d, bp %p, page %d:%d, état %#x, ID de base de données : %d, ID d'unité d'allocation : %I64d%ls, tâche 0x%p : %d, temps d'attente %d, indicateurs 0x%I64x, tâche propriétaire 0x%p. Poursuite de l'attente.    |
 |    [845](mssqlserver-845-database-engine-error.md)    |    17    |    Non    |    Dépassement du délai lors de l'attente du type de verrou de mémoire tampon %d, page %S_PGID, ID de base de données %d.    |
@@ -523,6 +523,9 @@ ORDER BY message_id
 |    849    |    10    |    Oui    |    Utilisation de pages verrouillées pour le pool de mémoires tampons.    |
 |    850    |    10    |    Oui    |    Allocation de %I64u Mo de mémoire de pages de grande taille.    |
 |    851    |    10    |    Non    |    la page se trouve dans un fichier OFFLINE qui ne peut pas être lu    |
+|    [854](mssqlserver-854-database-engine-error.md)    |    10    |    Oui    |    L’ordinateur prend en charge la récupération des erreurs de mémoire. La protection de la mémoire SQL est activée pour la récupération suite à une altération de la mémoire.    |
+|    [855](mssqlserver-855-database-engine-error.md)    |    10    |    Oui    |    Altération de la mémoire matérielle non corrigeable détectée. Votre système peut devenir instable. Pour plus de détails, consultez le journal des événements Windows.    |
+|    [856](mssqlserver-856-database-engine-error.md)    |    10    |    Oui    |    SQL Server a détecté une altération de la mémoire matérielle dans la base de données '%ls', ID de fichier : %u, ID de page : %u, adresse mémoire : 0x%I64X et a correctement récupéré la page.    |
 |    902    |    16    |    Non    |    Pour modifier le %ls, la base de données doit être dans un état permettant l'exécution d'un point de contrôle.    |
 |    904    |    16    |    Non    |    La base de données %ld ne peut pas être démarrée automatiquement pendant l'arrêt ou le démarrage du serveur.    |
 |    [905](mssqlserver-905-database-engine-error.md)    |    21    |    Oui    |    La base de données '%. *ls' ne peut pas être démarrée dans cette édition de SQL Server, car elle contient une fonction de partition '%.* ls'. Seule l'édition Entreprise de SQL Server prend en charge le partitionnement.    |
@@ -1432,7 +1435,7 @@ ORDER BY message_id
 |    3010    |    16    |    Non    |    Spécification de mise en miroir de sauvegarde non valide. Toutes les mises en miroir doivent comporter le même nombre de membres.    |
 |    3011    |    16    |    Non    |    Toutes les unités de sauvegarde doivent appartenir à la même classe générale (par exemple DISK et TAPE).    |
 |    3012    |    17    |    Non    |    VDI ne disposait pas de suffisamment de mémoire tampon quand SQL Server a tenté d'envoyer des informations différentielles à SQL Writer.    |
-|    3013    |    16    |    Non    |    %hs s'est terminé anormalement.    |
+|    [3013](mssqlserver-3013-database-engine-error.md)    |    16    |    Non    |    La sauvegarde de base de données s'est terminée anormalement.    |
 |    3014    |    10    |    Non    |    %hs a traité avec succès %I64d pages en %d.%03d secondes (%d.%03d Mo/s).    |
 |    3015    |    10    |    Non    |    %hs n'est pas encore implémenté.    |
 |    3016    |    16    |    Non    |    La sauvegarde du fichier '%.*ls' n'est pas autorisée car celui-ci contient des pages faisant l'objet d'une séquence de restauration en ligne. Terminez la séquence de restauration avant d'effectuer la sauvegarde ou restreignez la sauvegarde pour exclure ce fichier.    |
@@ -1441,7 +1444,7 @@ ORDER BY message_id
 |    3019    |    16    |    Non    |    Le fichier de point de contrôle de redémarrage '%.*ls' résulte d'une précédente opération RESTORE interrompue, qui n'est pas cohérente avec la commande RESTORE actuelle. La commande de redémarrage doit utiliser la même syntaxe que la commande interrompue à laquelle doit s'ajouter la clause RESTART. Vous pouvez également réexécuter l'instruction actuelle sans la clause RESTART.    |
 |    3021    |    16    |    Non    |    Impossible d'effectuer une sauvegarde ou une restauration dans une transaction.    |
 |    3022    |    10    |    Non    |    Cette sauvegarde est une sauvegarde de fichiers constituée de données en lecture-écriture issues d'une base de données qui utilise le modèle de récupération simple. Cela n'est approprié que si vous avez l'intention de définir le groupe de fichiers en lecture seule avant une sauvegarde de fichiers différentielle. Pour plus d'informations sur la gestion des données en lecture seule pour le modèle de récupération simple, consultez la documentation en ligne. Intéressez-vous tout particulièrement à l'utilisation des sauvegardes partielles.    |
-|    3023    |    16    |    Non    |    La sauvegarde, les opérations de manipulation de fichiers (comme ALTER DATABASE ADD FILE) et les changements de chiffrement sur une base de données doivent être sérialisés. Réexécutez l'instruction après la fin de la sauvegarde en cours ou de la manipulation de fichiers.    |
+|    [3023](mssqlserver-3023-database-engine-error.md)    |    16    |    Non    |    La sauvegarde, les opérations de manipulation de fichiers (comme ALTER DATABASE ADD FILE) et les changements de chiffrement sur une base de données doivent être sérialisés. Réexécutez l'instruction après la fin de la sauvegarde en cours ou de la manipulation de fichiers.    |
 |    3024    |    16    |    Non    |    Pour la base de données master, vous ne pouvez effectuer qu'une sauvegarde complète. Pour ce faire, utilisez BACKUP DATABASE.    |
 |    3025    |    16    |    Non    |    Nom de la base de données absent. Réexécutez l'instruction en spécifiant un nom de base de données valide.    |
 |    3027    |    16    |    Non    |    Le groupe de fichiers "%. *ls" ne fait pas partie de la base de données "%.* ls".    |
@@ -1767,7 +1770,7 @@ ORDER BY message_id
 |    3856    |    10    |    Non    |    L'attribut (%ls) existe alors qu'il ne le devrait pas pour la ligne (%ls) dans sys.%ls%4ls.    |
 |    3857    |    10    |    Non    |    L'attribut (%ls) est obligatoire mais il n'existe pas pour la ligne (%ls) dans sys.%ls%ls.    |
 |    3858    |    10    |    Non    |    L'attribut (%ls) de la ligne (%ls) dans sys.%ls%ls a une valeur non valide.    |
-|    3859    |    10    |    Non    |    Avertissement : le catalogue système a été mis à jour directement dans l’ID de base de données %d, le plus récemment à %S_DATE.    |
+|    [3859](mssqlserver-3859-database-engine-error.md)    |    10    |    Non    |    Avertissement : le catalogue système a été mis à jour directement dans l’ID de base de données %d, le plus récemment à %S_DATE.    |
 |    3860    |    10    |    Non    |    Impossible de mettre à jour la base de données ID 32767. Cette valeur d'ID est réservée à une utilisation interne dans SQL Server.    |
 |    3862    |    10    |    Non    |    Le type CLR '%. *ls'.'%.* ls' est désactivé, car le format utilisé sur le disque pour ce type CLR a changé. Utilisez DROP TYPE pour supprimer ce type désactivé.    |
 |    3864    |    23    |    Oui    |    Impossible de trouver une entrée pour l'index dont l'ID est %d sur l'objet avec l'ID %d dans la base de données portant l'ID %d. Altération possible du schéma. Exécutez DBCC CHECKDB.    |
@@ -1990,7 +1993,7 @@ ORDER BY message_id
 |    4202    |    16    |    Non    |    BACKUP LOG impossible car des modifications journalisées en bloc existent dans la base de données et un ou plusieurs groupes de fichiers ne sont pas disponibles.    |
 |    4208    |    16    |    Non    |    L'instruction %hs n'est pas autorisée lorsque le modèle de récupération est SIMPLE. Faites appel à BACKUP DATABASE ou modifiez le modèle de récupération au moyen de ALTER DATABASE.    |
 |    4212    |    16    |    Non    |    Impossible de sauvegarder le journal de la base de données master. L'exécution de BACKUP LOG est impossible en raison de l'absence de sauvegarde de la base de données actuelle.    |
-|    4214    |    16    |    Non    |    BACKUP LOG ne peut pas être effectué car il n'y a pas de sauvegarde actuelle.    |
+|    [4214](mssqlserver-4214-database-engine-error.md)    |    16    |    Non    |    BACKUP LOG ne peut pas être effectué car il n'y a pas de sauvegarde actuelle.    |
 |    4215    |    10    |    Non    |    Le journal n'a pas été tronqué, car les enregistrements du début sont en attente de réplication ou de capture de données modifiées. Assurez-vous que l'Agent de lecture du journal ou qu'un travail de capture est en cours d'exécution, ou faites appel à sp_repldone pour marquer les transactions comme étant distribuées ou capturées.    |
 |    4217    |    10    |    Non    |    BACKUP LOG ne peut pas modifier la base de données, car celle-ci est en lecture seule. La sauvegarde va se poursuivre, même si les sauvegardes suivantes vont dupliquer le travail de celle-ci.    |
 |    4218    |    16    |    Non    |    La base de données comporte des opérations journalisées en bloc. Exécutez une instruction BACKUP LOG.    |
@@ -2333,7 +2336,7 @@ ORDER BY message_id
 |    5004    |    16    |    Non    |    Pour utiliser ALTER DATABASE, la base de données doit être dans un état d'écriture pour lequel un point de contrôle peut être exécuté.    |
 |    5006    |    16    |    Non    |    Impossible d'obtenir l'utilisation exclusive de %S_MSG '%.*ls' pour effectuer l'opération demandée.    |
 |    5008    |    16    |    Non    |    Cette instruction ALTER DATABASE n'est pas prise en charge. Corrigez la syntaxe, puis réexécutez l'instruction.    |
-|    5009    |    16    |    Non    |    Un ou plusieurs fichiers répertoriés dans l'instruction sont introuvables ou n'ont pas pu être initialisés.    |
+|    [5009](mssqlserver-5009-database-engine-error.md)    |    16    |    Non    |    Un ou plusieurs fichiers répertoriés dans l'instruction sont introuvables ou n'ont pas pu être initialisés.    |
 |    5010    |    16    |    Non    |    Impossible de générer le nom de fichier journal à partir d'une unité brute. Le nom de fichier journal et le chemin d'accès doivent être spécifiés.    |
 |    5011    |    14    |    Non    |    L'utilisateur n'est pas autorisé à modifier la base de données '%.*ls', celle-ci n'existe pas ou son état ne permet pas les vérifications d'accès.    |
 |    5012    |    16    |    Non    |    Impossible de modifier le nom du groupe de fichiers primaire.    |
@@ -2463,7 +2466,7 @@ ORDER BY message_id
 |    5177    |    16    |    Oui    |    Une erreur inattendue s'est produite lors de la vérification de la taille des secteurs du fichier '%.*ls'. Déplacez le fichier vers un volume NTFS local, où il sera possible de récupérer la taille des secteurs. Consultez le journal des erreurs SQL Server pour plus d'informations.    |
 |    5178    |    16    |    Oui    |    Impossible d'utiliser le fichier '%.*ls' parce qu'il a été formaté à l'origine avec une taille de secteur égale à %d et qu'il se trouve à présent sur un volume dont la taille des secteurs est de %d. Déplacez le fichier vers un volume dont la taille des secteurs est inférieure ou égale à la taille des secteurs d'origine.    |
 |    5179    |    16    |    Oui    |    Impossible d'utiliser le fichier '%.*ls' parce qu'il se trouve sur un volume dont la taille des secteurs est égale à %d. SQL Server prend en charge les secteurs dont la taille maximale est de 4 096 octets. Déplacez le fichier vers un volume dont la taille des secteurs est compatible.    |
-|    5180    |    22    |    Oui    |    Impossible d'ouvrir FCB (File Control Bank) pour l'ID de fichier non valide %d dans la base de données '%.*ls'. Vérifiez l'emplacement du fichier. Exécutez DBCC CHECKDB.    |
+|    [5180](mssqlserver-5180-database-engine-error.md)    |    22    |    Oui    |    Impossible d'ouvrir FCB (File Control Bank) pour l'ID de fichier non valide %d dans la base de données '%.*ls'. Vérifiez l'emplacement du fichier. Exécutez DBCC CHECKDB.    |
 |    5181    |    16    |    Non    |    Impossible de redémarrer la base de données "%.*ls". Retour à l'état précédent.    |
 |    5182    |    10    |    Oui    |    Un nouveau fichier journal '%.*ls' a été créé.    |
 |    5183    |    16    |    Non    |    Impossible de créer le fichier "%ls". WITH MOVE permet de spécifier un nom de fichier physique utilisable. WITH REPLACE permet de remplacer un fichier existant.    |
@@ -3212,7 +3215,7 @@ ORDER BY message_id
 |    7101    |    16    |    Non    |    Vous avez besoin d'une transaction utilisateur active afin d'utiliser des pointeurs de texte pour une table dont l'option "texte dans la ligne" est définie sur ON.    |
 |    7102    |    20    |    Oui    |    Erreur interne : le gestionnaire de texte ne peut pas continuer avec l’instruction en cours. Exécutez DBCC CHECKTABLE.    |
 |    7104    |    16    |    Non    |    Le type de données de décalage ou de taille n'est pas valide. Le type de données doit être int ou smallint.    |
-|    7105    |    22    |    Oui    |    L'ID de base de données %d, page %S_PGID, emplacement %d du nœud de type de données LOB n'existe pas. Ceci est généralement causé par des transactions pouvant lire des données non validées sur une page de données. Exécutez DBCC CHECKTABLE.    |
+|    [7105](mssqlserver-7105-database-engine-error.md)    |    22    |    Oui    |    L'ID de base de données %d, page %S_PGID, emplacement %d du nœud de type de données LOB n'existe pas. Ceci est généralement causé par des transactions pouvant lire des données non validées sur une page de données. Exécutez DBCC CHECKTABLE.    |
 |    7106    |    16    |    Oui    |    Erreur interne : tentative de mise à jour d’un type de données LOB à l’aide d’un pointeur de texte en lecture seule.    |
 |    7107    |    16    |    Non    |    Le nombre de pointeurs de texte dans la ligne ne peut pas être supérieur à 1 024 dans une transaction    |
 |    7108    |    22    |    Oui    |    ID de base de données %d, page %S_PGID, emplacement %d, le numéro de liaison %d n'est pas valide. Exécutez DBCC CHECKTABLE.    |
@@ -6544,7 +6547,7 @@ ORDER BY message_id
 |    17109    |    10    |    Oui    |    Certificat FallBack créé.    |
 |    17110    |    10    |    Oui    |    Paramètres de démarrage du Registre : %.*ls    |
 |    17111    |    10    |    Oui    |    Enregistrement de messages SQL Server dans le fichier '%s'.    |
-|    17112    |    16    |    Oui    |    Une option de démarrage %c non valide a été fournie, soit à partir du Registre, soit depuis l'invite de commandes. Corrigez ou supprimez cette option.    |
+|    [17112](mssqlserver-17112-database-engine-error.md)    |    16    |    Oui    |    Une option de démarrage %c non valide a été fournie, soit à partir du Registre, soit depuis l'invite de commandes. Corrigez ou supprimez cette option.    |
 |    17113    |    16    |    Oui    |    L'erreur %ls s'est produite lors de l'ouverture du fichier '%ls' pour obtenir des informations de configuration au démarrage. Une option de démarrage non valide pourrait être à l'origine de cette erreur. Vérifiez vos options de démarrage, puis corrigez-les ou supprimez-les, le cas échéant.    |
 |    17114    |    16    |    Oui    |    L'erreur %ls s'est produite lors de l'ouverture du fichier '%ls' pour obtenir des informations de configuration au démarrage. Une option de démarrage non valide pourrait être à l'origine de cette erreur. Vérifiez vos options de démarrage, puis corrigez-les ou supprimez-les, le cas échéant.    |
 |    17115    |    10    |    Oui    |    Paramètres de démarrage de la ligne de commande : %.*ls    |
@@ -6657,7 +6660,7 @@ ORDER BY message_id
 |    17656    |    10    |    Oui    |    Avertissement ******************    |
 |    17657    |    10    |    Oui    |    Tentative de remplacer l'option de classement par défaut par %s.    |
 |    17658    |    10    |    Oui    |    SQL Server a démarré en mode mono-utilisateur. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.    |
-|    17659    |    10    |    Oui    |    Avertissement : l’ID de table système %d a été mis à jour directement dans l’ID de base de données %d et la cohérence du cache n’a peut-être pas été préservée. SQL Server doit être redémarré.    |
+|    [17659](mssqlserver-17659-database-engine-error.md)    |    10    |    Oui    |    Avertissement : l’ID de table système %d a été mis à jour directement dans l’ID de base de données %d et la cohérence du cache n’a peut-être pas été préservée. SQL Server doit être redémarré.    |
 |    [17660](mssqlserver-17660-database-engine-error.md)    |    10    |    Oui    |    Démarrage sans récupération. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.    |
 |    17661    |    10    |    Oui    |    Récupération de toutes les bases de données, mais sans effacer tempdb. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.    |
 |    17663    |    10    |    Oui    |    Le nom du serveur est ‘%s’. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.    |
@@ -6697,7 +6700,7 @@ ORDER BY message_id
 |    17889    |    16    |    Oui    |    Une nouvelle connexion a été rejetée, car le nombre maximal de connexions pour l'ID de session %d a été atteint. Fermez une connexion existante dans cette session, puis recommencez.%.*ls    |
 |    17890    |    10    |    Oui    |    Une partie significative de la mémoire du processus sql server a été hors page. Ce problème peut entraîner une dégradation des performances. Durée : %d secondes. Plage de travail (en Ko) : %I64d, validé (en Ko) : %I64d, utilisation de la mémoire : %d%%.    |
 |    17891    |    10    |    Oui    |    Le moniteur de ressource (0x%lx) travail 0x%p semble être improductif sur le nœud %ld. Mémoire libérée : %I64d Ko. Utilisation approximative de l'UC : noyau %I64d ms, utilisateur %I64d ms, intervalle : %I64d.    |
-|    17892    |    20    |    Oui    |    L'ouverture de session a échoué pour le nom d'ouverture de session '%. *ls' en raison de l'exécution d'un déclencheur.%.* ls    |
+|    [17892](mssqlserver-17892-database-engine-error.md)    |    14    |    Oui    |    L'ouverture de session a échoué pour le nom d'ouverture de session '%. *ls' en raison de l'exécution d'un déclencheur.%.* ls    |
 |    17894    |    10    |    Oui    |    Le répartiteur (0x%lx) du pool de répartiteurs '%.*ls', travail 0x%p, semble être improductif sur le nœud %ld. Utilisation approximative de l'UC : noyau %I64d ms, utilisateur %I64d ms, intervalle : %I64d.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 
@@ -8401,7 +8404,7 @@ ORDER BY message_id
 |    23207    |    16    |    Non    |    Impossible d'ajouter un élément de partage pour '%ls' dans le catalogue.    |
 |    23208    |    16    |    Non    |    L'élément ItemPath '%ls' n'existe pas dans le magasin.    |
 |    23209    |    16    |    Non    |    Impossible de mettre à jour l'état du magasin dans le catalogue.    |
-|    23210    |    16    |    Non    |    L'élément ItemPath '%ls' est un élément sauvegardé dans sa sous-arborescence.    |
+|    23210    |    16    |    Non    |    Itempath '%ls' est un élément de fichier ou est dans sa sous-arborescence.    |
 |    23211    |    16    |    Non    |    Impossible de démarrer le gestionnaire de magasins. Pour plus d’informations, consultez dans le journal UT WinFS.    |
 |    23212    |    16    |    Non    |    L'élément ItemPath '%ls' est un élément composé.    |
 |    23401    |    16    |    Non    |    Échec de l'opération avec HRESULT 0x%x.    |
@@ -8938,7 +8941,7 @@ ORDER BY message_id
 |    33024    |    16    |    Non    |    Le fournisseur de chiffrement %S_MSG '%ls' dans la DLL est différent du GUID enregistré dans le catalogue système pour le fournisseur avec l'ID %d.    |
 |    33025    |    16    |    Non    |    Propriété du fournisseur de chiffrement non valide : %S_MSG.    |
 |    33026    |    16    |    Non    |    Le fournisseur de chiffrement avec le GUID '%ls' existe déjà.    |
-|    [33027](mssqlserver-33027-database-engine-error.md)    |        |        |    Impossible de charger le fournisseur de services de chiffrement '%.*ls' en raison d'une signature Authenticode non valide ou d'un chemin d'accès non valide. Recherchez d'autres défaillances dans les messages précédents.    |
+|    [33027](mssqlserver-33027-database-engine-error.md)    |        |        |    Impossible de charger le fournisseur de services de chiffrement '%.*ls' en raison d'une signature Authenticode non valide ou d'un chemin d'accès non valide.  Recherchez d'autres défaillances dans les messages précédents.    |
 |    33027    |    16    |    Non    |    Impossible de charger la bibliothèque '%.*ls'. Pour plus d'informations, consultez le journal des erreurs.    |
 |    [33028](mssqlserver-33028-database-engine-error.md)    |    16    |    Non    |    Impossible d'ouvrir la session pour %S_MSG '%.*ls'. Code d'erreur du fournisseur : %d. (%S-MSG)    |
 |    33029    |    16    |    Non    |    Impossible d'initialiser le fournisseur de chiffrement. Code d'erreur du fournisseur : %d. (%S-MSG)    |

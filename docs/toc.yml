@@ -342,7 +342,7 @@
               href: big-data-cluster/notebooks-tutorial-spark.md
             - name: Répertorier les notebooks d’opérations
               href: big-data-cluster/cluster-manage-notebooks.md
-        - name: Monitor
+        - name: Superviser
           items:
             - name: Analyser avec Azure Data Studio
               href: big-data-cluster/cluster-monitor-ads.md
@@ -7143,7 +7143,7 @@
             - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
             - name: Microsoft Q & A >>
-              href: 'https://https://docs.microsoft.com/answers/products/sql-server'
+              href: 'https://docs.microsoft.com/answers/products/sql-server'
             - name: Envoyer des commentaires >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
             - name: Reddit >>
@@ -7996,8 +7996,6 @@
           href: tools/profiler-utility.md
         - name: application sqlagent90
           href: tools/sqlagent90-application.md
-        - name: sqlcmd
-          href: tools/sqlcmd-utility.md
         - name: SQLdiag
           href: tools/sqldiag-utility.md
         - name: sqlmaint
@@ -8291,6 +8289,8 @@
               href: tools/configuration-manager/viewing-the-windows-application-log.md
     - name: SQLCMD
       items:
+        - name: Vue d’ensemble de sqlcmd
+          href: tools/sqlcmd-utility.md
         - name: Démarrer l’utilitaire
           href: ssms/scripting/sqlcmd-start-the-utility.md
         - name: Utiliser l’utilitaire
